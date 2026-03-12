@@ -9,12 +9,12 @@ Innovation Policy/
 ├─ data/
 │  ├─ pdf/                          # Input PDFs (existing)
 │  └─ processed/                    # Generated outputs
-│     ├─ file_inventory.csv
-│     ├─ innovation_candidates.csv
 │     ├─ full_text/
 │     │  ├─ <file_id>_<name>.txt
 │     │  └─ <file_id>_<name>.docx   # optional if python-docx is available
 │     └─ intermediate/
+│        ├─ file_inventory.csv
+│        ├─ innovation_candidates.csv
 │        ├─ page_text.csv
 │        ├─ file_text_summary.csv
 │        ├─ keyword_hits.csv
@@ -38,7 +38,7 @@ Innovation Policy/
 
 1. File inventory stage
 - Recursively scans `data/pdf/` for `.pdf` files.
-- Builds `data/processed/file_inventory.csv` with:
+- Builds `data/processed/intermediate/file_inventory.csv` with:
   - `file_id`, `filepath`, `filename`, `country_guess`, `year_guess`, `extension`, `file_size`
 - Country/year are inferred from filename/path using heuristics.
 
@@ -65,7 +65,7 @@ Innovation Policy/
 - Adds:
   - `innovation_relevant`, `category_guess`, `confidence`, `rationale`
 - Final output:
-  - `data/processed/innovation_candidates.csv`
+  - `data/processed/intermediate/innovation_candidates.csv`
 
 ## Setup
 
@@ -105,9 +105,60 @@ From the project root:
 python main.py
 ```
 
+### Optional AI validation layer (post-processing only)
+
+The AI step does **not** rerun OCR or extraction. It only post-processes the already-generated structured output (default input: `data/processed/results.csv`, or `data/processed/results.json`).
+
+Requirements:
+- Install `openai` from `requirements.txt`.
+- Set an API key env var: `export OPENAI_API_KEY=...`.
+
+Commands:
+
+```bash
+# 1) Baseline extraction only (default)
+python main.py
+
+# 2) Baseline + AI validation using defaults (batches of 10)
+python main.py --run-ai-validation
+
+# 3) AI validation with explicit input and filters
+python main.py \
+  --run-ai-validation \
+  --input-file data/processed/results.csv \
+  --max-records-to-send 50 \
+  --min-amount-threshold 1000000 \
+  --include-review-only \
+  --batch-size 5 \
+  --ai-output-format json \
+  --ai-group-by-page \
+  --ai-include-context
+
+# 4) Run two passes without overwriting (e.g., results vs innovation candidates)
+python main.py --run-ai-validation --input-file data/processed/results.csv --ai-run-name results_pass
+python main.py --run-ai-validation --input-file data/processed/intermediate/innovation_candidates.csv --ai-run-name candidates_pass --ai-include-context --ai-group-by-page
+```
+
+Outputs written to `data/processed/ai_validation/`:
+- `<run_name>/ai_validated_candidates_raw.csv` — full AI JSON flattened.
+- `<run_name>/ai_validated_candidates_clean.csv` — baseline + AI columns merged.
+- `<run_name>/baseline_vs_ai_comparison.csv` / `.jsonl` — side-by-side baseline vs AI (format controlled by `--ai-output-format`).
+- `<run_name>/failed_batches.jsonl` — batches that failed after retry.
+- `<run_name>/ai_validation_run_summary.json` — counts, config, cache hits.
+- `<run_name>/ai_cache.jsonl` — cached normalized candidates to avoid repeated API calls.
+
+Cost controls:
+- Pre-AI filters (skip empty/invalid/low-amount rows; optional review-only flag).
+- `max_records_to_send` cap.
+- Batching (`--batch-size`, default 10) to reduce requests.
+- Result cache keyed on section_code + line_description + amount.
+- Single retry per failed batch; failures are logged, not re-sent indefinitely.
+- Optional `--ai-group-by-page` batches records from the same page together to avoid repeating page context.
+- Optional `--ai-include-context` adds surrounding text excerpts to prompts (disabled by default to save tokens).
+
 ## Expected outputs after running
 
-- `data/processed/file_inventory.csv`:
+- `data/processed/intermediate/file_inventory.csv`:
   - One row per PDF discovered.
 - `data/processed/intermediate/page_text.csv`:
   - One row per extracted page with method (`direct_text`, `ocr_fallback`, etc.).
@@ -121,7 +172,7 @@ python main.py
   - Export manifest with txt/docx paths and status.
 - `data/processed/intermediate/keyword_hits.csv`:
   - Candidate pages with multilingual keyword matches.
-- `data/processed/innovation_candidates.csv`:
+- `data/processed/intermediate/innovation_candidates.csv`:
   - Candidate pages + placeholder classification labels.
 
 ## Customization notes

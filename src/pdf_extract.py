@@ -5,7 +5,7 @@ from pathlib import Path
 import fitz
 import pandas as pd
 
-from src.config import MIN_ALNUM_RATIO, MIN_DIRECT_TEXT_CHARS
+from src.config import MIN_ALNUM_RATIO, MIN_DIRECT_TEXT_CHARS, PAGE_EXTRACTION_FILE
 from src.ocr_utils import is_ocr_available, run_ocr_on_page
 from src.utils import logger, text_quality_metrics
 
@@ -21,10 +21,21 @@ def _needs_ocr(text: str) -> bool:
 
 
 def extract_text_for_inventory(inventory_df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Extract page-level text for all files in inventory."""
+    """Extract page-level text for all files in inventory with simple caching.
+
+    If page_text.csv already contains rows for a file with the same filepath and
+    file_size, those rows are reused instead of re-extracting.
+    """
     page_records = []
     summary_records = []
     ocr_ready = is_ocr_available()
+
+    cache_df = None
+    if PAGE_EXTRACTION_FILE.exists():
+        try:
+            cache_df = pd.read_csv(PAGE_EXTRACTION_FILE)
+        except Exception:
+            cache_df = None
 
     if not ocr_ready:
         logger.warning(
@@ -37,6 +48,31 @@ def extract_text_for_inventory(inventory_df: pd.DataFrame) -> tuple[pd.DataFrame
         filepath = Path(row.filepath)
         country_guess = row.country_guess
         year_guess = row.year_guess
+        file_size = getattr(row, "file_size", None)
+
+        # Reuse cached pages if available and size matches
+        if cache_df is not None and "file_size" in cache_df.columns:
+            cached_rows = cache_df[cache_df["filepath"] == str(filepath)]
+            if file_size is not None:
+                cached_rows = cached_rows[cached_rows.get("file_size") == file_size]
+            if not cached_rows.empty:
+                page_records.extend(cached_rows.to_dict(orient="records"))
+                summary_records.append(
+                    {
+                        "file_id": file_id,
+                        "filepath": str(filepath),
+                        "country_guess": country_guess,
+                        "year_guess": year_guess,
+                        "file_size": file_size,
+                        "total_pages": cached_rows["page_number"].max(),
+                        "direct_pages": (cached_rows["extraction_method"] == "direct_text").sum(),
+                        "ocr_pages": (cached_rows["extraction_method"] == "ocr_fallback").sum(),
+                        "error_pages": (cached_rows["extraction_method"].str.contains("error").sum() if "extraction_method" in cached_rows else 0),
+                        "status": "cached",
+                    }
+                )
+                logger.info("Reused cached text for %s", filepath.name)
+                continue
 
         logger.info("Extracting file: %s", filepath.name)
         file_total_pages = 0
@@ -74,6 +110,7 @@ def extract_text_for_inventory(inventory_df: pd.DataFrame) -> tuple[pd.DataFrame
                         {
                             "file_id": file_id,
                             "filepath": str(filepath),
+                            "file_size": file_size,
                             "country_guess": country_guess,
                             "year_guess": year_guess,
                             "page_number": page_number,
@@ -91,6 +128,7 @@ def extract_text_for_inventory(inventory_df: pd.DataFrame) -> tuple[pd.DataFrame
             {
                 "file_id": file_id,
                 "filepath": str(filepath),
+                "file_size": file_size,
                 "country_guess": country_guess,
                 "year_guess": year_guess,
                 "total_pages": file_total_pages,
@@ -104,4 +142,3 @@ def extract_text_for_inventory(inventory_df: pd.DataFrame) -> tuple[pd.DataFrame
     pages_df = pd.DataFrame(page_records)
     summary_df = pd.DataFrame(summary_records)
     return pages_df, summary_df
-

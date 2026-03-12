@@ -1,0 +1,21 @@
+{
+  "input_file": "Data/processed/results.csv",
+  "total_baseline_rows": 1165,
+  "filtered_rows": 12,
+  "sent_to_api": 0,
+  "cache_hits": 12,
+  "model": "gpt-4o-mini",
+  "batch_size": 2,
+  "group_by_page": false,
+  "raw_output_file": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/data/processed/ai_validation/results_pass/ai_validated_candidates_raw.csv",
+  "clean_output_file": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/data/processed/ai_validation/results_pass/ai_validated_candidates_clean.csv",
+  "comparison_file_csv": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/data/processed/ai_validation/results_pass/baseline_vs_ai_comparison.csv",
+  "comparison_file_jsonl": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/data/processed/ai_validation/results_pass/baseline_vs_ai_comparison.jsonl",
+  "failed_batches_file": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/data/processed/ai_validation/results_pass/failed_batches.jsonl",
+  "cache_file": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/data/processed/ai_validation/results_pass/ai_cache.jsonl",
+  "output_format": "both",
+  "include_context": false,
+  "run_name": "results_pass",
+  "started_at_utc": "2026-03-12T05:03:54.766802",
+  "ended_at_utc": "2026-03-12T05:03:54.795410"
+}

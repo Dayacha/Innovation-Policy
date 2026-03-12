@@ -1,18 +1,13 @@
 ﻿"""Export utilities for saving full-document text outputs per PDF."""
 
 from pathlib import Path
+import gzip
 
 import pandas as pd
 
 from src.config import FULLTEXT_DIR, FULLTEXT_EN_DIR
 from src.translation_utils import translate_to_english_glossary
 from src.utils import logger
-
-try:
-    from docx import Document
-except Exception:  # pragma: no cover
-    Document = None
-
 
 def _safe_stem(value: str) -> str:
     """Create a filesystem-safe stem from arbitrary text."""
@@ -32,27 +27,6 @@ def _build_full_text_content(file_df: pd.DataFrame, translate_to_english: bool =
         lines.append(page_text)
         lines.append("")
     return "\n".join(lines)
-
-
-def _export_docx(filepath: Path, title: str, file_df: pd.DataFrame, translate_to_english: bool = False) -> str:
-    """Export one file to Word format if python-docx is available."""
-    if Document is None:
-        return "python-docx not installed; skipped"
-    try:
-        doc = Document()
-        doc.add_heading(title, level=1)
-        sorted_df = file_df.sort_values("page_number")
-        for row in sorted_df.itertuples(index=False):
-            doc.add_heading(f"Page {row.page_number}", level=2)
-            doc.add_paragraph(f"Extraction method: {row.extraction_method}")
-            page_text = row.text if isinstance(row.text, str) else ""
-            if translate_to_english:
-                page_text = translate_to_english_glossary(page_text)
-            doc.add_paragraph(page_text)
-        doc.save(filepath)
-        return "ok"
-    except Exception as exc:
-        return f"error: {exc}"
 
 
 def _export_full_documents_to_dir(
@@ -82,25 +56,16 @@ def _export_full_documents_to_dir(
     for (file_id, filepath), file_df in grouped:
         source_path = Path(str(filepath))
         base_name = _safe_stem(f"{file_id}_{source_path.stem}{filename_suffix}")
-        txt_path = target_dir / f"{base_name}.txt"
-        docx_path = target_dir / f"{base_name}.docx"
+        txt_path = target_dir / f"{base_name}.txt.gz"
+        # Word export disabled (not used downstream, saves space/time)
+        docx_path = None
 
         try:
             content = _build_full_text_content(file_df, translate_to_english=translate_to_english)
-            txt_path.write_text(content, encoding="utf-8")
-            docx_status = _export_docx(
-                docx_path,
-                source_path.name,
-                file_df,
-                translate_to_english=translate_to_english,
-            )
-            final_docx_path = str(docx_path) if docx_status == "ok" else ""
-
-            if docx_status != "ok" and docx_path.exists():
-                try:
-                    docx_path.unlink(missing_ok=True)
-                except Exception:
-                    pass
+            with gzip.open(txt_path, "wt", encoding="utf-8") as f:
+                f.write(content)
+            docx_status = "disabled"
+            final_docx_path = ""
 
             records.append(
                 {

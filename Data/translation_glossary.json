@@ -1,0 +1,734 @@
+[
+  {
+    "pattern": "\\bUndervisningsministeriet\\b",
+    "replacement": "Ministry of Education"
+  },
+  {
+    "pattern": "\\bForskningsministeriet\\b",
+    "replacement": "Ministry of Research"
+  },
+  {
+    "pattern": "\\bVidenskabsministeriet\\b",
+    "replacement": "Ministry of Science"
+  },
+  {
+    "pattern": "\\bUddannelsesministeriet\\b",
+    "replacement": "Ministry of Education and Research"
+  },
+  {
+    "pattern": "\\bUddannelse og [Ff]orskning\\b",
+    "replacement": "Education and Research"
+  },
+  {
+    "pattern": "\\bMilj[øo]ministeriet\\b",
+    "replacement": "Ministry of the Environment"
+  },
+  {
+    "pattern": "\\bSocialministeriet\\b",
+    "replacement": "Ministry of Social Affairs"
+  },
+  {
+    "pattern": "\\bForsvarsministeriet\\b",
+    "replacement": "Ministry of Defence"
+  },
+  {
+    "pattern": "\\bFinansministeriet\\b",
+    "replacement": "Ministry of Finance"
+  },
+  {
+    "pattern": "\\b[ØO]konomiministeriet\\b",
+    "replacement": "Ministry of Economic Affairs"
+  },
+  {
+    "pattern": "\\bHandelsministeriet\\b",
+    "replacement": "Ministry of Commerce"
+  },
+  {
+    "pattern": "\\bJustitsministeriet\\b",
+    "replacement": "Ministry of Justice"
+  },
+  {
+    "pattern": "\\bIndenrigsministeriet\\b",
+    "replacement": "Ministry of the Interior"
+  },
+  {
+    "pattern": "\\bUdenrigsministeriet\\b",
+    "replacement": "Ministry of Foreign Affairs"
+  },
+  {
+    "pattern": "\\bKirkeministeriet\\b",
+    "replacement": "Ministry of Ecclesiastical Affairs"
+  },
+  {
+    "pattern": "\\bBoligministeriet\\b",
+    "replacement": "Ministry of Housing"
+  },
+  {
+    "pattern": "\\bLandbrugsministeriet\\b",
+    "replacement": "Ministry of Agriculture"
+  },
+  {
+    "pattern": "\\bFiskeriministeri\\w+\\b",
+    "replacement": "Ministry of Fisheries"
+  },
+  {
+    "pattern": "\\bMinisteriet for [Oo]ffentlige [Aa]rbejder\\b",
+    "replacement": "Ministry of Public Works"
+  },
+  {
+    "pattern": "\\bMinisteriet for [Kk]ulturelle [Aa]nliggender\\b",
+    "replacement": "Ministry of Cultural Affairs"
+  },
+  {
+    "pattern": "\\bMinisteriet for [Ss]katter og [Aa]fgifter\\b",
+    "replacement": "Ministry of Taxation"
+  },
+  {
+    "pattern": "\\bMinisteriet for [Gg]r[øo]nland\\b",
+    "replacement": "Ministry for Greenland"
+  },
+  {
+    "pattern": "\\bArb[ej]+dsministeriet\\b",
+    "replacement": "Ministry of Labour"
+  },
+  {
+    "pattern": "\\bStatsministeriet\\b",
+    "replacement": "Prime Minister's Office"
+  },
+  {
+    "pattern": "\\bPensionsvæsenet\\b",
+    "replacement": "Pension Administration"
+  },
+  {
+    "pattern": "\\bPensionsvaesenet\\b",
+    "replacement": "Pension Administration"
+  },
+  {
+    "pattern": "\\bStatens [Tt]eknisk-[Vv]idenskabelige [Ff]orskningsfond\\b",
+    "replacement": "State Technical-Scientific Research Fund"
+  },
+  {
+    "pattern": "\\bStatens [Nn]aturvidenskabelige [Ff]orskningsr[åa]d\\b",
+    "replacement": "State Natural Science Research Council"
+  },
+  {
+    "pattern": "\\bStatens [Hh]umanistiske [Ff]orskningsr[åa]d\\b",
+    "replacement": "State Humanities Research Council"
+  },
+  {
+    "pattern": "\\bStatens [Ss]amfundsvidenskabelige [Ff]orskningsr[åa]d\\b",
+    "replacement": "State Social Science Research Council"
+  },
+  {
+    "pattern": "\\bStatens [Ll][æa]gevidenskabelige [Ff]orskningsr[åa]d\\b",
+    "replacement": "State Medical Research Council"
+  },
+  {
+    "pattern": "\\bStatens [Jj]ordbrugs- og [Vv]eterinerf[øo]rskning\\b",
+    "replacement": "State Agricultural and Veterinary Research"
+  },
+  {
+    "pattern": "\\bDanmarks [Tt]ekniske H[øo]jskole\\b",
+    "replacement": "Technical University of Denmark"
+  },
+  {
+    "pattern": "\\bDanmarks [Tt]ekniske [Uu]niversitet\\b",
+    "replacement": "Technical University of Denmark"
+  },
+  {
+    "pattern": "\\bPolyteknisk L(?:ae|æ|a)reanstalt\\b",
+    "replacement": "Polytechnic Institute"
+  },
+  {
+    "pattern": "\\b[Uu]niversiteter og [Hh][øo]jere [Ll](?:ae|æ|a)reanstalter\\b",
+    "replacement": "Universities and Higher Education Institutions"
+  },
+  {
+    "pattern": "\\b[Hh][øo]jere [Ll](?:ae|æ|a)reanstalter?\\b",
+    "replacement": "Higher Education Institutions"
+  },
+  {
+    "pattern": "\\bInnovationsfonden\\b",
+    "replacement": "Innovation Fund Denmark"
+  },
+  {
+    "pattern": "\\bForskningsr[åa]det\\b",
+    "replacement": "Research Council"
+  },
+  {
+    "pattern": "\\bForskningsr[åa]d\\b",
+    "replacement": "Research Council"
+  },
+  {
+    "pattern": "\\bStatens [Ff]orskningsr[åa]d\\b",
+    "replacement": "National Research Council"
+  },
+  {
+    "pattern": "\\bAkademiet for de [Tt]ekniske [Vv]idenskaber\\b",
+    "replacement": "Danish Academy of Technical Sciences"
+  },
+  {
+    "pattern": "\\bRis[øo] [Nn]ational[Ll]aboratoriet?\\b",
+    "replacement": "Risø National Laboratory"
+  },
+  {
+    "pattern": "\\bDanmarks [Mm]eteorologi Institut\\b",
+    "replacement": "Danish Meteorological Institute"
+  },
+  {
+    "pattern": "\\bCopenhagen [Uu]niversit\\w+\\b",
+    "replacement": "University of Copenhagen"
+  },
+  {
+    "pattern": "\\bAarhus [Uu]niversit\\w+\\b",
+    "replacement": "Aarhus University"
+  },
+  {
+    "pattern": "\\bUniversitets?et\\b",
+    "replacement": "University"
+  },
+  {
+    "pattern": "\\bUniversiteter\\b",
+    "replacement": "Universities"
+  },
+  {
+    "pattern": "\\bUniversiteterne\\b",
+    "replacement": "Universities"
+  },
+  {
+    "pattern": "\\bDriftsudgifter\\b",
+    "replacement": "Operating expenditures"
+  },
+  {
+    "pattern": "\\bDriftsbudget\\b",
+    "replacement": "Operating budget"
+  },
+  {
+    "pattern": "\\bDriftsbevillingen?\\b",
+    "replacement": "Operating appropriation"
+  },
+  {
+    "pattern": "\\bAnl[æa]gsudgifter\\b",
+    "replacement": "Capital expenditures"
+  },
+  {
+    "pattern": "\\bAnl[æa]gsbudget\\b",
+    "replacement": "Capital budget"
+  },
+  {
+    "pattern": "\\bAnl[æa]gstilskud\\b",
+    "replacement": "Capital grants"
+  },
+  {
+    "pattern": "\\bAnl[æa]gsbevillingen?\\b",
+    "replacement": "Capital appropriation"
+  },
+  {
+    "pattern": "\\bEjendomserhvervelser\\b",
+    "replacement": "Property acquisitions"
+  },
+  {
+    "pattern": "\\bKapitalindt[æa]gter\\b",
+    "replacement": "Capital revenues"
+  },
+  {
+    "pattern": "\\bIndt[æa]gter\\b",
+    "replacement": "Revenues"
+  },
+  {
+    "pattern": "\\bUdgifter\\b",
+    "replacement": "Expenditures"
+  },
+  {
+    "pattern": "\\bNettotal\\b",
+    "replacement": "Net total"
+  },
+  {
+    "pattern": "\\bTilskud\\b",
+    "replacement": "Grants"
+  },
+  {
+    "pattern": "\\bBevillingen?\\b",
+    "replacement": "Appropriation"
+  },
+  {
+    "pattern": "\\bBevillinger\\b",
+    "replacement": "Appropriations"
+  },
+  {
+    "pattern": "\\bForskningsbevillingen?\\b",
+    "replacement": "Research appropriation"
+  },
+  {
+    "pattern": "\\bForskningsbevillinger\\b",
+    "replacement": "Research appropriations"
+  },
+  {
+    "pattern": "\\bUdl[åa]n\\b",
+    "replacement": "Lending"
+  },
+  {
+    "pattern": "\\bL[øo]nninger\\b",
+    "replacement": "Salaries"
+  },
+  {
+    "pattern": "\\bPensioner\\b",
+    "replacement": "Pensions"
+  },
+  {
+    "pattern": "\\bVedligeholdelse\\b",
+    "replacement": "Maintenance"
+  },
+  {
+    "pattern": "\\bAnskaffelser\\b",
+    "replacement": "Acquisitions"
+  },
+  {
+    "pattern": "\\bFaste anl[æa]g\\b",
+    "replacement": "Fixed assets"
+  },
+  {
+    "pattern": "\\bNyanl[æa]g\\b",
+    "replacement": "New construction"
+  },
+  {
+    "pattern": "\\bRullende materiel\\b",
+    "replacement": "Rolling stock"
+  },
+  {
+    "pattern": "\\bForskning og [Uu]dvikling\\b",
+    "replacement": "Research and Development"
+  },
+  {
+    "pattern": "\\bForskningsvirksomhed\\b",
+    "replacement": "Research activities"
+  },
+  {
+    "pattern": "\\bVidenskabelig [Vv]irksomhed\\b",
+    "replacement": "Scientific activities"
+  },
+  {
+    "pattern": "\\bForsøgsvirksomhed\\b",
+    "replacement": "Experimental activities"
+  },
+  {
+    "pattern": "\\bTeknologisk [Uu]dvikling\\b",
+    "replacement": "Technological development"
+  },
+  {
+    "pattern": "\\bGrundforskning\\b",
+    "replacement": "Basic research"
+  },
+  {
+    "pattern": "\\bAnvendt [Ff]orskning\\b",
+    "replacement": "Applied research"
+  },
+  {
+    "pattern": "\\bKerneforskning\\b",
+    "replacement": "Nuclear research"
+  },
+  {
+    "pattern": "\\bKerneenergi\\b",
+    "replacement": "Nuclear energy"
+  },
+  {
+    "pattern": "\\bKernekraft\\b",
+    "replacement": "Nuclear power"
+  },
+  {
+    "pattern": "\\bEnergi[Ff]orskning\\b",
+    "replacement": "Energy research"
+  },
+  {
+    "pattern": "\\bBygge[Ff]orskning\\b",
+    "replacement": "Building research"
+  },
+  {
+    "pattern": "\\bByplan[Ff]orskning\\b",
+    "replacement": "Urban planning research"
+  },
+  {
+    "pattern": "\\bUddannelses[Ff]orskning\\b",
+    "replacement": "Education research"
+  },
+  {
+    "pattern": "\\bLandbrugs[Ff]orskning\\b",
+    "replacement": "Agricultural research"
+  },
+  {
+    "pattern": "\\bMiljø[Ff]orskning\\b",
+    "replacement": "Environmental research"
+  },
+  {
+    "pattern": "\\bSamfunds[Ff]orskning\\b",
+    "replacement": "Social science research"
+  },
+  {
+    "pattern": "\\bBiologi[Ff]orskning\\b",
+    "replacement": "Biology research"
+  },
+  {
+    "pattern": "\\bBiologi[Ff]orskningsprogram\\w*\\b",
+    "replacement": "Biology research programme"
+  },
+  {
+    "pattern": "\\bKomplementær\\w*\\b",
+    "replacement": "complementary"
+  },
+  {
+    "pattern": "\\b[Ee]fter[Ff]orskning\\b",
+    "replacement": "Exploration"
+  },
+  {
+    "pattern": "\\bForskning\\b",
+    "replacement": "Research"
+  },
+  {
+    "pattern": "\\bVidenskab\\b",
+    "replacement": "Science"
+  },
+  {
+    "pattern": "\\bTeknologi\\b",
+    "replacement": "Technology"
+  },
+  {
+    "pattern": "\\bInnovation\\b",
+    "replacement": "Innovation"
+  },
+  {
+    "pattern": "\\bForskerstipendier?\\b",
+    "replacement": "Research fellowships"
+  },
+  {
+    "pattern": "\\bKandidatstipendier?\\b",
+    "replacement": "Graduate fellowships"
+  },
+  {
+    "pattern": "\\bScholarstipendie[rn]?\\b",
+    "replacement": "Scholar fellowships"
+  },
+  {
+    "pattern": "\\bStipendier?\\b",
+    "replacement": "Fellowships"
+  },
+  {
+    "pattern": "\\bDoktordisputats\\w*\\b",
+    "replacement": "Doctoral dissertations"
+  },
+  {
+    "pattern": "\\bUdbygning\\b",
+    "replacement": "Expansion"
+  },
+  {
+    "pattern": "\\bUdvikling\\b",
+    "replacement": "Development"
+  },
+  {
+    "pattern": "\\bBidrag\\b",
+    "replacement": "Contribution"
+  },
+  {
+    "pattern": "\\bDansk[et]?\\b",
+    "replacement": "Danish"
+  },
+  {
+    "pattern": "\\bGeotermi\\w*\\b",
+    "replacement": "Geothermal"
+  },
+  {
+    "pattern": "\\b[Ee]nergi\\b",
+    "replacement": "Energy"
+  },
+  {
+    "pattern": "\\b[Aa]tom\\b",
+    "replacement": "Atomic/Nuclear"
+  },
+  {
+    "pattern": "\\bAtomenergik\\w+\\b",
+    "replacement": "Atomic Energy Commission"
+  },
+  {
+    "pattern": "\\bFysik\\b",
+    "replacement": "Physics"
+  },
+  {
+    "pattern": "\\bKemi\\b",
+    "replacement": "Chemistry"
+  },
+  {
+    "pattern": "\\bBiologi\\b",
+    "replacement": "Biology"
+  },
+  {
+    "pattern": "\\bMedicin\\b",
+    "replacement": "Medicine"
+  },
+  {
+    "pattern": "\\bIngeni[øo]r\\w*\\b",
+    "replacement": "Engineering"
+  },
+  {
+    "pattern": "\\bAlmindelig\\b",
+    "replacement": "General"
+  },
+  {
+    "pattern": "\\bVirksomhed\\b",
+    "replacement": "Activities"
+  },
+  {
+    "pattern": "\\bProgrammet?\\b",
+    "replacement": "Programme"
+  },
+  {
+    "pattern": "\\bInstitut(?:tet)?\\b",
+    "replacement": "Institute"
+  },
+  {
+    "pattern": "\\bCenter\\b",
+    "replacement": "Centre"
+  },
+  {
+    "pattern": "\\bCenter for\\b",
+    "replacement": "Centre for"
+  },
+  {
+    "pattern": "\\bKongresser?\\b",
+    "replacement": "Conferences"
+  },
+  {
+    "pattern": "\\bKonference[rn]?\\b",
+    "replacement": "Conferences"
+  },
+  {
+    "pattern": "\\bForsøg\\b",
+    "replacement": "Experiments"
+  },
+  {
+    "pattern": "\\bAfgifter\\b",
+    "replacement": "Duties/Fees"
+  },
+  {
+    "pattern": "\\bDrift\\b",
+    "replacement": "Operations"
+  },
+  {
+    "pattern": "\\bDriftstilskud\\b",
+    "replacement": "Operating grant"
+  },
+  {
+    "pattern": "\\bDrifts\\b",
+    "replacement": "Operating"
+  },
+  {
+    "pattern": "\\bUdenlandsk\\w*\\b",
+    "replacement": "Foreign"
+  },
+  {
+    "pattern": "\\bAfholdt\\b",
+    "replacement": "held"
+  },
+  {
+    "pattern": "\\bByggeforskningsinstitut\\w*\\b",
+    "replacement": "Building Research Institute"
+  },
+  {
+    "pattern": "\\bBygge[Ff]orskning\\b",
+    "replacement": "Building research"
+  },
+  {
+    "pattern": "\\bForskningscentret\\b",
+    "replacement": "Research Centre"
+  },
+  {
+    "pattern": "\\bog\\b",
+    "replacement": "and"
+  },
+  {
+    "pattern": "\\bved\\b",
+    "replacement": "at"
+  },
+  {
+    "pattern": "\\bEF[s']?\\b",
+    "replacement": "EC"
+  },
+  {
+    "pattern": "\\bEuroatom\\b",
+    "replacement": "Euratom"
+  },
+  {
+    "pattern": "\\bEurochemic\\b",
+    "replacement": "Eurochemic"
+  },
+  {
+    "pattern": "\\bNordisk\\b",
+    "replacement": "Nordic"
+  },
+  {
+    "pattern": "\\bInternationale?\\b",
+    "replacement": "International"
+  },
+  {
+    "pattern": "\\bF[øo]lles[Ee]uropæiske?\\b",
+    "replacement": "Pan-European"
+  },
+  {
+    "pattern": "\\bF[øo]lles\\b",
+    "replacement": "Joint/Common"
+  },
+  {
+    "pattern": "\\bOECD\\b",
+    "replacement": "OECD"
+  },
+  {
+    "pattern": "\\bFN\\b",
+    "replacement": "UN"
+  },
+  {
+    "pattern": "\\bNATO\\b",
+    "replacement": "NATO"
+  },
+  {
+    "pattern": "\\bCERN\\b",
+    "replacement": "CERN"
+  },
+  {
+    "pattern": "\\bIAEA\\b",
+    "replacement": "IAEA"
+  },
+  {
+    "pattern": "\\bEMBO\\b",
+    "replacement": "EMBO"
+  },
+  {
+    "pattern": "\\bESA\\b",
+    "replacement": "ESA"
+  },
+  {
+    "pattern": "\\bESRO\\b",
+    "replacement": "ESRO"
+  },
+  {
+    "pattern": "\\bISLand\\b",
+    "replacement": "Iceland"
+  },
+  {
+    "pattern": "\\bHalden\\b",
+    "replacement": "Halden (NO)"
+  },
+  {
+    "pattern": "\\bTrieste\\b",
+    "replacement": "Trieste (IT)"
+  },
+  {
+    "pattern": "\\bK[øo]benhavn\\w*\\b",
+    "replacement": "Copenhagen"
+  },
+  {
+    "pattern": "\\bUddannelse\\b",
+    "replacement": "Education"
+  },
+  {
+    "pattern": "\\bH[øo]jere [Uu]ddannelse\\b",
+    "replacement": "Higher education"
+  },
+  {
+    "pattern": "\\bGymnas\\w+\\b",
+    "replacement": "Upper secondary schools"
+  },
+  {
+    "pattern": "\\bFolkeh[øo]jskole\\b",
+    "replacement": "Folk high school"
+  },
+  {
+    "pattern": "\\bLandbrugsskole\\b",
+    "replacement": "Agricultural school"
+  },
+  {
+    "pattern": "\\bL(?:ae|æ|a)reanstalt\\b",
+    "replacement": "Educational institution"
+  },
+  {
+    "pattern": "\\bStatens\\b",
+    "replacement": "State"
+  },
+  {
+    "pattern": "\\bStatsvirksomhederne\\b",
+    "replacement": "State enterprises"
+  },
+  {
+    "pattern": "\\bStatsbaner\\w*\\b",
+    "replacement": "State railways"
+  },
+  {
+    "pattern": "\\bStatsbanerne\\b",
+    "replacement": "State railways"
+  },
+  {
+    "pattern": "\\bFolketinget\\b",
+    "replacement": "Parliament"
+  },
+  {
+    "pattern": "\\bDronningen\\b",
+    "replacement": "The Queen"
+  },
+  {
+    "pattern": "\\bDet kgl\\. hus\\b",
+    "replacement": "The Royal House"
+  },
+  {
+    "pattern": "\\bRentekonto\\b",
+    "replacement": "Interest account"
+  },
+  {
+    "pattern": "\\bDepartementet\\b",
+    "replacement": "Department (ministry HQ)"
+  },
+  {
+    "pattern": "\\bMinisteriets?\\b",
+    "replacement": "Ministry"
+  },
+  {
+    "pattern": "\\bm\\. v\\.\\b",
+    "replacement": "etc."
+  },
+  {
+    "pattern": "\\bm\\.v\\.\\b",
+    "replacement": "etc."
+  },
+  {
+    "pattern": "\\bf\\.eks\\.\\b",
+    "replacement": "e.g."
+  },
+  {
+    "pattern": "\\bjf\\.\\b",
+    "replacement": "cf."
+  },
+  {
+    "pattern": "\\brecherche\\b",
+    "replacement": "research"
+  },
+  {
+    "pattern": "\\btechnologie\\b",
+    "replacement": "technology"
+  },
+  {
+    "pattern": "\\buniversit[eé]\\b",
+    "replacement": "university"
+  },
+  {
+    "pattern": "\\benseignement sup[eé]rieur\\b",
+    "replacement": "higher education"
+  },
+  {
+    "pattern": "\\bministère\\b",
+    "replacement": "ministry"
+  },
+  {
+    "pattern": "\\bdotation\\b",
+    "replacement": "appropriation"
+  },
+  {
+    "pattern": "\\bcr[eé]dit\\b",
+    "replacement": "credit/appropriation"
+  }
+]

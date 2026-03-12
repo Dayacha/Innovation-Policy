@@ -5,24 +5,26 @@ from pathlib import Path
 
 # Paths
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-PDF_ROOT = PROJECT_ROOT / "data" / "pdf"
+PDF_ROOT = PROJECT_ROOT / "Data" / "PDF"         # correct on-disk casing
+TAXONOMY_FILE = PROJECT_ROOT / "Data" / "Full search library.xlsx"
+TAXONOMY_JSON = PROJECT_ROOT / "Data" / "search_library.json"
 PROCESSED_DIR = PROJECT_ROOT / "data" / "processed"
 INTERMEDIATE_DIR = PROCESSED_DIR / "intermediate"
 FULLTEXT_DIR = PROCESSED_DIR / "full_text"
 FULLTEXT_EN_DIR = PROCESSED_DIR / "full_text_en"
+TRANSLATION_GLOSSARY_FILE = PROJECT_ROOT / "Data" / "translation_glossary.json"
 
-FILE_INVENTORY_FILE = PROCESSED_DIR / "file_inventory.csv"
+FILE_INVENTORY_FILE = INTERMEDIATE_DIR / "file_inventory.csv"
 PAGE_EXTRACTION_FILE = INTERMEDIATE_DIR / "page_text.csv"
 PER_FILE_SUMMARY_FILE = INTERMEDIATE_DIR / "file_text_summary.csv"
 KEYWORD_HITS_FILE = INTERMEDIATE_DIR / "keyword_hits.csv"
 FULLTEXT_EXPORT_MANIFEST_FILE = INTERMEDIATE_DIR / "full_text_exports.csv"
-FULLTEXT_EN_EXPORT_MANIFEST_FILE = INTERMEDIATE_DIR / "full_text_en_exports.csv"
-CANDIDATES_FILE = PROCESSED_DIR / "innovation_candidates.csv"
+CANDIDATES_FILE = INTERMEDIATE_DIR / "innovation_candidates.csv"
 CANDIDATE_PAGES_FILE = PROCESSED_DIR / "candidate_pages_detected.csv"
-BUDGET_ITEMS_FILE = PROCESSED_DIR / "budget_items_detected.csv"
+BUDGET_ITEMS_FILE = INTERMEDIATE_DIR / "budget_items_detected.csv"
 RESULTS_FILE = PROCESSED_DIR / "results.txt"
 RESULTS_JSON_FILE = PROCESSED_DIR / "results.json"
-RESULTS_EXCEL_FILE = PROCESSED_DIR / "results.xlsx"
+RESULTS_CSV_FILE = PROCESSED_DIR / "results.csv"
 RUNS_DIR = PROCESSED_DIR / "runs"
 
 
