@@ -46,7 +46,7 @@ class ReformAnalyzer:
     def __init__(self, config):
         self.config = config
         self.llm = LLMClient(config)
-        self.chunk_size = config.get("processing", {}).get("chunk_size", 12000)
+        self.chunk_size = config.get("processing", {}).get("chunk_size", 20000)
         self.chunk_overlap = config.get("processing", {}).get(
             "chunk_overlap", 500
         )

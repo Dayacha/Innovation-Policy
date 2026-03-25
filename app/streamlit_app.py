@@ -1,21 +1,11 @@
 """
-Innovation Policy Dashboard
-============================
-Streamlit app combining both pipeline outputs:
-
-  Tab 1 — R&D Spending        (Stream 1: Finance Bill budget lines, 1975-1984)
-  Tab 2 — Innovation Reforms  (Stream 2: OECD Economic Survey reform events)
-  Tab 3 — Combined View       (dual-axis: spending trend + reform event markers)
-  Tab 4 — About               (methodology and data sources)
-
-Run with:
-    streamlit run app/streamlit_app.py
+Innovation Policy Dataset — Research Dashboard
+Run:  streamlit run app/streamlit_app.py
 """
 
 import sys
 from pathlib import Path
 
-# Allow imports from project root
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import pandas as pd
@@ -24,657 +14,1362 @@ import plotly.graph_objects as go
 import streamlit as st
 
 from app.data_loader import (
-    ACTOR_LABELS, ORIENTATION_COLORS, RD_CATEGORY_COLORS,
-    STAGE_LABELS, STATUS_LABELS, SUBTHEME_COLORS, SUBTHEME_LABELS,
-    budget_available, load_budget, load_reforms, reforms_available,
+    ACTOR_LABELS, ORIENTATION_COLORS, ORIENTATION_LABELS,
+    RD_CATEGORY_COLORS, RD_CATEGORY_LABELS,
+    REFORM_PANEL, STAGE_LABELS, STATUS_LABELS,
+    SUBTHEME_COLORS, SUBTHEME_LABELS, SUBTHEME_SHORT,
+    budget_available, load_budget, load_reform_panel, load_reforms,
+    reforms_available,
 )
 
-# ── Page config ─────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────────────────
+# PAGE CONFIG
+# ─────────────────────────────────────────────────────────────────────────────
 
 st.set_page_config(
-    page_title="Innovation Policy Dashboard",
-    page_icon="🔬",
+    page_title="Innovation Policy Dataset",
     layout="wide",
-    initial_sidebar_state="collapsed",
+    initial_sidebar_state="expanded",
 )
 
-# ── Global CSS ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────────────────
+# CSS  — pure white everywhere, no dark surfaces
+# ─────────────────────────────────────────────────────────────────────────────
 
 st.markdown("""
 <style>
-  .metric-card {
-    background: #f8f9fa;
-    border-left: 4px solid #1f77b4;
-    padding: 0.8rem 1rem;
-    border-radius: 0 6px 6px 0;
-    margin-bottom: 0.5rem;
-  }
-  .metric-card .label { font-size: 0.78rem; color: #666; text-transform: uppercase; letter-spacing: 0.05em; }
-  .metric-card .value { font-size: 1.6rem; font-weight: 700; color: #1a1a2e; }
-  .section-header {
-    font-size: 1.1rem; font-weight: 600; color: #1a1a2e;
-    border-bottom: 2px solid #e9ecef; padding-bottom: 0.4rem; margin: 1.2rem 0 0.8rem;
-  }
-  .tag {
-    display: inline-block; padding: 2px 8px; border-radius: 12px;
-    font-size: 0.75rem; font-weight: 600; margin: 2px;
-  }
-  .tag-green  { background: #d4edda; color: #155724; }
-  .tag-red    { background: #f8d7da; color: #721c24; }
-  .tag-orange { background: #fff3cd; color: #856404; }
-  .tag-grey   { background: #e2e3e5; color: #383d41; }
+/* ── Reset dark Streamlit chrome ── */
+#root > div, .main, .block-container,
+[data-testid="stAppViewContainer"],
+[data-testid="stAppViewBlockContainer"],
+[data-testid="stHeader"],
+header[data-testid="stHeader"],
+[data-testid="stDecoration"] {
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
+}
+/* Kill the coloured top decoration bar */
+[data-testid="stDecoration"] { display: none !important; }
+/* Remove hamburger / main menu bar */
+[data-testid="stToolbar"],
+[data-testid="stMainMenuPopover"],
+footer { display: none !important; }
+
+/* ── Sidebar ── */
+[data-testid="stSidebar"],
+[data-testid="stSidebar"] > div:first-child {
+    background-color: #F5F7FA !important;
+    border-right: 1px solid #DDE1E7 !important;
+}
+[data-testid="stSidebar"] * { color: #1a1a1a !important; }
+
+/* ── Tabs ── */
+[data-testid="stTabs"] [role="tablist"] {
+    border-bottom: 2px solid #DDE1E7;
+    gap: 0;
+}
+[data-testid="stTabs"] button[role="tab"] {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #555 !important;
+    padding: 0.5rem 1.1rem;
+    border-radius: 0;
+    background: transparent !important;
+    border: none !important;
+}
+[data-testid="stTabs"] button[role="tab"][aria-selected="true"] {
+    color: #003189 !important;
+    border-bottom: 2px solid #003189 !important;
+}
+
+/* ── Buttons ── */
+[data-testid="stBaseButton-secondary"],
+[data-testid="stDownloadButton"] button,
+.stDownloadButton > button {
+    background-color: #ffffff !important;
+    color: #003189 !important;
+    border: 1.5px solid #003189 !important;
+    border-radius: 3px !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    padding: 0.35rem 0.9rem !important;
+}
+[data-testid="stBaseButton-secondary"]:hover,
+[data-testid="stDownloadButton"] button:hover {
+    background-color: #003189 !important;
+    color: #ffffff !important;
+}
+
+/* ── Widget labels (uppercase caption style) ── */
+[data-testid="stSelectbox"] label,
+[data-testid="stMultiSelect"] label,
+[data-testid="stSlider"] label,
+[data-testid="stRadio"] label,
+[data-testid="stCheckbox"] label,
+[data-testid="stTextInput"] label {
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.06em !important;
+    color: #444 !important;
+}
+
+/* ── Selectbox & Multiselect — white box, dark text ── */
+[data-baseweb="select"] > div:first-child,
+[data-baseweb="select"] > div {
+    background-color: #ffffff !important;
+    border-color: #C0C4CC !important;
+}
+/* Selected value text */
+[data-baseweb="select"] [class*="ValueContainer"] *,
+[data-baseweb="select"] [class*="singleValue"],
+[data-baseweb="select"] [class*="placeholder"],
+[data-baseweb="select"] input {
+    color: #1a1a1a !important;
+    background-color: transparent !important;
+}
+/* Dropdown menu */
+[data-baseweb="menu"],
+[data-baseweb="popover"] {
+    background-color: #ffffff !important;
+    border: 1px solid #C0C4CC !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10) !important;
+}
+[data-baseweb="menu"] li,
+[data-baseweb="option"] {
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
+}
+[data-baseweb="menu"] li:hover,
+[data-baseweb="option"]:hover {
+    background-color: #EEF3FB !important;
+    color: #003189 !important;
+}
+
+/* ── Multiselect tag pills ── */
+[data-baseweb="tag"] {
+    background-color: #E8EEF9 !important;
+    color: #003189 !important;
+    border: 1px solid #C0CFEE !important;
+    border-radius: 3px !important;
+}
+[data-baseweb="tag"] span,
+[data-baseweb="tag"] * {
+    color: #003189 !important;
+    background-color: transparent !important;
+}
+
+/* ── Dataframe / table ── */
+[data-testid="stDataFrame"],
+[data-testid="stDataFrame"] iframe,
+.stDataFrame {
+    background-color: #ffffff !important;
+    border: 1px solid #DDE1E7 !important;
+    border-radius: 4px !important;
+}
+/* Text input (search box in table expanders) */
+[data-testid="stTextInput"] input {
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
+    border: 1px solid #C0C4CC !important;
+    border-radius: 3px !important;
+}
+
+/* ── Expander ── */
+[data-testid="stExpander"] summary {
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    color: #1a1a1a !important;
+    background-color: #F5F7FA !important;
+    border: 1px solid #DDE1E7 !important;
+    border-radius: 3px !important;
+    padding: 0.45rem 0.8rem !important;
+}
+[data-testid="stExpander"] summary:hover {
+    background-color: #E8EEF9 !important;
+}
+[data-testid="stExpander"] details[open] summary {
+    border-bottom: 1px solid #DDE1E7 !important;
+    border-radius: 3px 3px 0 0 !important;
+}
+
+/* ── Typography ── */
+body, p, li, td, th, span, div {
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !important;
+}
+h1, h2, h3 { color: #003189 !important; }
+
+/* ── Section dividers ── */
+hr { border-color: #DDE1E7 !important; }
 </style>
 """, unsafe_allow_html=True)
 
+# ─────────────────────────────────────────────────────────────────────────────
+# CONSTANTS
+# ─────────────────────────────────────────────────────────────────────────────
 
-def metric_card(label, value, color="#1f77b4"):
-    st.markdown(f"""
-    <div class="metric-card" style="border-left-color:{color}">
-      <div class="label">{label}</div>
-      <div class="value">{value}</div>
+NAVY   = "#003189"
+BLUE   = "#009FDA"
+TEAL   = "#00A389"
+GREEN  = "#3D9349"
+ORANGE = "#E86B33"
+GREY   = "#9B9B9B"
+LGREY  = "#F5F7FA"
+BORDER = "#DDE1E7"
+TEXT   = "#1a1a1a"
+
+PLOTLY_BASE = dict(
+    template="plotly_white",
+    font=dict(family="Source Sans Pro, Helvetica Neue, Arial", size=11.5, color=TEXT),
+    plot_bgcolor="#ffffff",
+    paper_bgcolor="#ffffff",
+)
+
+
+def render_table(df, col_labels=None, max_rows=500, num_cols=None, bool_cols=None, wide_cols=None):
+    """Render a styled HTML table — bypasses st.dataframe iframe limitations.
+
+    col_labels : dict mapping raw col name → display header
+    num_cols   : list of cols to right-align and format with thousands separator
+    bool_cols  : list of boolean cols (renders ✓ / —)
+    wide_cols  : list of cols that get extra width (long text)
+    """
+    import html as _html
+    col_labels = col_labels or {}
+    num_cols   = set(num_cols or [])
+    bool_cols  = set(bool_cols or [])
+    wide_cols  = set(wide_cols or [])
+
+    df = df.head(max_rows)
+
+    # Build header
+    ths = ""
+    for c in df.columns:
+        lbl = col_labels.get(c, c.replace("_", " ").title())
+        w   = "min-width:220px" if c in wide_cols else ("min-width:80px" if c in num_cols else "min-width:100px")
+        ths += (f'<th style="padding:.45rem .7rem;text-align:{"right" if c in num_cols else "left"};'
+                f'font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;'
+                f'color:{NAVY};white-space:nowrap;{w};">{_html.escape(lbl)}</th>')
+
+    # Build rows
+    rows_html = ""
+    for i, (_, row) in enumerate(df.iterrows()):
+        bg = "#F8F9FC" if i % 2 == 0 else "#ffffff"
+        tds = ""
+        for c in df.columns:
+            val = row[c]
+            if c in bool_cols:
+                cell = '<span style="color:#3D9349;font-weight:700;">✓</span>' if val else '<span style="color:#aaa;">—</span>'
+                align = "center"
+            elif c in num_cols:
+                try:
+                    cell = _html.escape(f"{float(val):,.0f}") if pd.notna(val) else "—"
+                except Exception:
+                    cell = _html.escape(str(val)) if pd.notna(val) else "—"
+                align = "right"
+            else:
+                raw = str(val) if pd.notna(val) else "—"
+                # Truncate very long text with tooltip
+                if len(raw) > 120 and c in wide_cols:
+                    cell = f'<span title="{_html.escape(raw)}">{_html.escape(raw[:120])}…</span>'
+                else:
+                    cell = _html.escape(raw)
+                align = "left"
+            tds += (f'<td style="padding:.38rem .7rem;font-size:.8rem;color:#1a1a1a;'
+                    f'vertical-align:top;text-align:{align};border-bottom:1px solid #EEF0F4;">'
+                    f'{cell}</td>')
+        rows_html += f'<tr style="background:{bg};">{tds}</tr>'
+
+    table_html = f"""
+    <div style="overflow-x:auto;overflow-y:auto;max-height:460px;
+                border:1px solid #DDE1E7;border-radius:4px;margin-top:.5rem;">
+      <table style="width:100%;border-collapse:collapse;font-family:'Source Sans Pro',Arial,sans-serif;">
+        <thead style="position:sticky;top:0;background:{LGREY};z-index:1;">
+          <tr>{ths}</tr>
+        </thead>
+        <tbody>{rows_html}</tbody>
+      </table>
     </div>
-    """, unsafe_allow_html=True)
+    """
+    st.markdown(table_html, unsafe_allow_html=True)
 
 
-# ── Header ───────────────────────────────────────────────────────────────────
+def apply_style(fig, height=340, title="", xtitle="", ytitle="",
+                legend_bottom=True, xangle=0):
+    """Apply uniform OECD-style formatting to a Plotly figure."""
+    fig.update_layout(
+        height=height,
+        title=dict(text=title, font=dict(size=12, color=NAVY, family="Source Sans Pro, Arial"),
+                   x=0, pad=dict(b=8)),
+        xaxis=dict(title=dict(text=xtitle, font=dict(size=11, color="#444")),
+                   tickangle=xangle, showgrid=False,
+                   linecolor="#AAAAAA", linewidth=1,
+                   tickcolor="#AAAAAA", tickfont=dict(size=10.5, color="#333")),
+        yaxis=dict(title=dict(text=ytitle, font=dict(size=11, color="#444")),
+                   gridcolor="#E0E0E0", gridwidth=0.8,
+                   linecolor="#AAAAAA", linewidth=1,
+                   tickfont=dict(size=10.5, color="#333")),
+        margin=dict(t=44, b=36, l=8, r=8),
+        legend=dict(
+            orientation="h",
+            yanchor="bottom", y=1.02,
+            xanchor="left", x=0,
+            font=dict(size=10.5),
+            bgcolor="rgba(0,0,0,0)",
+            borderwidth=0,
+        ) if legend_bottom else dict(font=dict(size=10.5)),
+        **PLOTLY_BASE,
+    )
+    return fig
 
-st.markdown("""
-# Innovation Policy Dashboard
-**Two complementary windows into how governments invest in innovation**
-""")
-st.markdown("---")
+
+def stat_row(items):
+    """Render a horizontal KPI strip. items = [(value, label), ...]"""
+    cols = st.columns(len(items))
+    for col, (val, lbl) in zip(cols, items):
+        with col:
+            st.markdown(
+                f"""<div style="border:1px solid {BORDER}; border-top:3px solid {NAVY};
+                    background:#fff; padding:.6rem .9rem; border-radius:0 0 4px 4px;">
+                    <div style="font-size:1.5rem;font-weight:800;color:{NAVY};line-height:1.1;">{val}</div>
+                    <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;
+                         letter-spacing:.06em;color:#777;margin-top:3px;">{lbl}</div>
+                </div>""",
+                unsafe_allow_html=True,
+            )
 
 
-# ── Tabs ─────────────────────────────────────────────────────────────────────
+def section_header(text):
+    st.markdown(
+        f'<div style="font-size:.72rem;font-weight:700;text-transform:uppercase;'
+        f'letter-spacing:.07em;color:#777;border-bottom:1px solid {BORDER};'
+        f'padding-bottom:.3rem;margin:1.4rem 0 .7rem;">{text}</div>',
+        unsafe_allow_html=True,
+    )
 
-tab1, tab2, tab3, tab4 = st.tabs([
-    "📊 R&D Spending",
-    "🔬 Innovation Reforms",
-    "🔗 Combined View",
-    "ℹ️ About",
+
+def caption_note(text):
+    st.markdown(
+        f'<div style="font-size:.7rem;color:#888;margin-top:.2rem;">{text}</div>',
+        unsafe_allow_html=True,
+    )
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SIDEBAR — all filters
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Defaults (used if data not available or no selection made)
+yr_b       = (1975, 1984)
+cat_b      = "All"
+sel_bud_ctry = []
+sel_ctry   = []
+sel_st     = []
+sel_stat   = ["implemented", "legislated"]
+only_major = False
+
+def _sidebar_label(text):
+    st.markdown(
+        f'<div style="font-size:.68rem;font-weight:700;text-transform:uppercase;'
+        f'letter-spacing:.07em;color:#777;margin:.6rem 0 .3rem;">{text}</div>',
+        unsafe_allow_html=True,
+    )
+
+with st.sidebar:
+    st.markdown(
+        f'<div style="font-size:1.05rem;font-weight:800;color:{NAVY};'
+        f'border-bottom:2px solid {NAVY};padding-bottom:.5rem;margin-bottom:1rem;">'
+        f'Innovation Policy Dataset</div>',
+        unsafe_allow_html=True,
+    )
+
+    # ── Stream 1 filters ──
+    _sidebar_label("Stream 1 — R&D Budget")
+    if budget_available():
+        _db = load_budget()
+        _yrs = sorted(_db["year"].unique())
+        yr_b = st.select_slider(
+            "Year range", options=_yrs,
+            value=(min(_yrs), max(_yrs)), key="yr_b",
+            label_visibility="collapsed",
+        )
+        # Country selector (currently Denmark only; ready for multi-country)
+        _bud_ctry_opts = sorted(_db["country"].dropna().unique()) \
+            if "country" in _db.columns else ["Denmark"]
+        sel_bud_ctry = st.multiselect(
+            "Country", _bud_ctry_opts, default=_bud_ctry_opts, key="bud_ctry",
+        )
+        _cats = ["All"] + sorted(_db["rd_category"].dropna().unique())
+        cat_b = st.selectbox(
+            "R&D category", _cats, key="cat_b",
+            format_func=lambda x: RD_CATEGORY_LABELS.get(x, x) if x != "All" else "All categories",
+        )
+    else:
+        st.caption("No data — run `python main.py --budget-only`")
+
+    st.markdown("<hr style='margin:.7rem 0;'>", unsafe_allow_html=True)
+
+    # ── Stream 2 filters ──
+    _sidebar_label("Stream 2 — Reforms")
+    if reforms_available():
+        _dr = load_reforms()
+        _ctry = sorted(_dr["country_name"].dropna().unique())
+        sel_ctry = st.multiselect("Country", _ctry, default=_ctry, key="ctry")
+
+        _st_opts = sorted(_dr["sub_theme"].dropna().unique()) if "sub_theme" in _dr.columns else []
+        sel_st = st.multiselect(
+            "Innovation type", _st_opts, default=_st_opts, key="st_filt",
+            format_func=lambda x: SUBTHEME_LABELS.get(x, x),
+        )
+        _stat_opts = sorted(_dr["status"].dropna().unique()) if "status" in _dr.columns else []
+        sel_stat = st.multiselect(
+            "Status", _stat_opts,
+            default=_stat_opts,
+            key="stat_filt",
+            format_func=lambda x: STATUS_LABELS.get(x, x),
+        )
+        only_major = st.checkbox("Major reforms only", key="maj_filt")
+        _ref_yrs = sorted(_dr["implementation_year"].dropna().astype(int).unique())
+        if len(_ref_yrs) > 1:
+            yr_r = st.select_slider(
+                "Year range", options=_ref_yrs,
+                value=(min(_ref_yrs), max(_ref_yrs)), key="yr_r",
+                label_visibility="collapsed",
+            )
+        else:
+            yr_r = (_ref_yrs[0], _ref_yrs[0]) if _ref_yrs else (1995, 2025)
+    else:
+        st.caption("No data — run `python main.py --reforms-only`")
+        yr_r = (1995, 2025)
+
+    st.markdown("<hr style='margin:.7rem 0;'>", unsafe_allow_html=True)
+    st.markdown(
+        f'<div style="font-size:.68rem;color:#aaa;">OECD Innovation Policy Pipeline</div>',
+        unsafe_allow_html=True,
+    )
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PAGE HEADER
+# ─────────────────────────────────────────────────────────────────────────────
+
+st.markdown(
+    f'<h1 style="font-size:1.4rem;font-weight:800;color:{NAVY};'
+    f'border-bottom:3px solid {NAVY};padding-bottom:.5rem;margin-bottom:1.2rem;">'
+    f'Innovation Policy Dataset'
+    f'<span style="font-size:.85rem;font-weight:400;color:#777;margin-left:.8rem;">'
+    f'R&D budget allocation &amp; structural reform tracking — Denmark pilot</span>'
+    f'</h1>',
+    unsafe_allow_html=True,
+)
+
+# ── Pre-compute filtered reforms dataframe (shared across all tabs) ──
+if reforms_available():
+    _dr_all = load_reforms()
+    dr_f = _dr_all.copy()
+    if sel_ctry:  dr_f = dr_f[dr_f["country_name"].isin(sel_ctry)]
+    if sel_st:    dr_f = dr_f[dr_f["sub_theme"].isin(sel_st)]
+    if sel_stat:  dr_f = dr_f[dr_f["status"].isin(sel_stat)]
+    if only_major and "is_major_reform" in dr_f.columns:
+        dr_f = dr_f[dr_f["is_major_reform"] == True]  # noqa: E712
+    if "implementation_year" in dr_f.columns:
+        dr_f = dr_f[
+            dr_f["implementation_year"].isna() |
+            ((dr_f["implementation_year"] >= yr_r[0]) & (dr_f["implementation_year"] <= yr_r[1]))
+        ]
+else:
+    dr_f = pd.DataFrame()
+
+TAB_BUDGET, TAB_REFORMS, TAB_COMBINED, TAB_TABLE, TAB_METHODS = st.tabs([
+    "R&D Budget",
+    "Innovation Reforms",
+    "Combined View",
+    "Data Table",
+    "Methodology",
 ])
 
 
-# ════════════════════════════════════════════════════════════════════════════
-# TAB 1 — R&D SPENDING (Stream 1)
-# ════════════════════════════════════════════════════════════════════════════
+# ═════════════════════════════════════════════════════════════════════════════
+# TAB 1 — R&D BUDGET
+# ═════════════════════════════════════════════════════════════════════════════
 
-with tab1:
-    st.markdown("## R&D Spending from Finance Bills")
-    st.caption("Stream 1 — Budget line items extracted from scanned Finance Bill PDFs using OCR + taxonomy scoring.")
-
+with TAB_BUDGET:
     if not budget_available():
-        st.warning("Budget data not found. Run `python main.py --budget-only` to generate it.")
+        st.info("Run `python main.py --budget-only` to generate budget data.")
         st.stop()
 
-    df_b = load_budget()
-    if df_b.empty:
-        st.warning("Budget results file is empty.")
-        st.stop()
+    db = load_budget()
+    # Always show only high-confidence (include) lines as default
+    m = (db["year"] >= yr_b[0]) & (db["year"] <= yr_b[1])
+    if "decision" in db.columns:
+        m &= db["decision"] == "include"
+    if cat_b != "All":
+        m &= db["rd_category"] == cat_b
+    if sel_bud_ctry and "country" in db.columns:
+        m &= db["country"].isin(sel_bud_ctry)
+    db_f = db[m].copy()
 
-    # ── Sidebar filters ──
-    col_f1, col_f2, col_f3 = st.columns([2, 2, 2])
-    with col_f1:
-        years_b = sorted(df_b["year"].unique())
-        sel_years = st.select_slider(
-            "Year range", options=years_b,
-            value=(min(years_b), max(years_b)),
-        )
-    with col_f2:
-        cats = ["All"] + sorted(df_b["rd_category"].dropna().unique().tolist())
-        sel_cat = st.selectbox("R&D category", cats)
-    with col_f3:
-        decisions = ["include + review", "include only"]
-        sel_dec = st.selectbox("Decision filter", decisions)
+    # ── KPI strip ──
+    n_inc = int((db_f["decision"] == "include").sum()) if "decision" in db_f.columns else 0
+    stat_row([
+        (f"{len(db_f):,}",                                   "Budget lines"),
+        (f"DKK {db_f['amount_local'].sum()/1e6:,.1f} M",     "Total R&D spend identified"),
+        (f"{n_inc:,}",                                        "High-confidence (include)"),
+        (f"{db_f['section_code'].nunique() if 'section_code' in db_f.columns else '—'}",
+                                                              "Ministries"),
+    ])
 
-    # Apply filters
-    mask = (df_b["year"] >= sel_years[0]) & (df_b["year"] <= sel_years[1])
-    if sel_cat != "All":
-        mask &= df_b["rd_category"] == sel_cat
-    if sel_dec == "include only":
-        mask &= df_b["decision"] == "include"
-    df_filtered = df_b[mask].copy()
+    # ── Chart 1: Stacked bar by year ──
+    section_header("R&D-related budget by year and category")
 
-    # ── Summary metrics ──
-    st.markdown('<div class="section-header">Summary</div>', unsafe_allow_html=True)
-    c1, c2, c3, c4 = st.columns(4)
-    total_dkk = df_filtered["amount_local"].sum()
-    with c1:
-        metric_card("Total budget lines", f"{len(df_filtered):,}")
-    with c2:
-        metric_card("Total amount (DKK)", f"{total_dkk/1e6:,.1f}M")
-    with c3:
-        metric_card("Years covered", f"{sel_years[0]}–{sel_years[1]}")
-    with c4:
-        n_sections = df_filtered["section_code"].nunique() if "section_code" in df_filtered.columns else "—"
-        metric_card("Ministries", str(n_sections))
+    gcol  = "rd_category"
+    glab  = "rd_category_label" if "rd_category_label" in db_f.columns else gcol
+    yr_ct = db_f.groupby(["year", gcol])["amount_local"].sum().reset_index()
+    yr_ct["DKK M"] = yr_ct["amount_local"] / 1e6
+    yr_ct["label"] = yr_ct[gcol].map(lambda x: RD_CATEGORY_LABELS.get(x, x))
 
-    # ── Chart 1: Total spending by year ──
-    st.markdown('<div class="section-header">R&D Budget by Year</div>', unsafe_allow_html=True)
-
-    group_col = "rd_category" if sel_cat == "All" else "section_code"
-    label_map = RD_CATEGORY_COLORS if group_col == "rd_category" else {}
-
-    yearly = (
-        df_filtered.groupby(["year", group_col])["amount_local"]
-        .sum()
-        .reset_index()
-    )
-    yearly["amount_M"] = yearly["amount_local"] / 1e6
-    yearly[group_col] = yearly[group_col].fillna("other")
-
-    color_map = RD_CATEGORY_COLORS if group_col == "rd_category" else None
-
-    fig_bar = px.bar(
-        yearly, x="year", y="amount_M", color=group_col,
-        color_discrete_map=color_map,
-        labels={"amount_M": "DKK (millions)", "year": "Year", group_col: "Category"},
-        title=f"R&D-related budget lines by year ({sel_dec})",
+    fig1 = px.bar(
+        yr_ct, x="year", y="DKK M", color="label",
+        color_discrete_map={v: RD_CATEGORY_COLORS.get(k, GREY)
+                            for k, v in RD_CATEGORY_LABELS.items()},
         barmode="stack",
-        template="plotly_white",
+        labels={"year": "Year", "DKK M": "DKK (millions)", "label": ""},
+        text_auto=".0f",
     )
-    fig_bar.update_layout(
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-        height=400,
+    fig1.update_traces(
+        marker_line_width=0,
+        textposition="inside",
+        textfont=dict(size=9.5, color="white"),
     )
-    st.plotly_chart(fig_bar, use_container_width=True)
+    apply_style(fig1, height=340, xtitle="Year", ytitle="DKK (millions)")
+    st.plotly_chart(fig1, use_container_width=True)
+    caption_note("Source: Danish Finance Bills (Finanslov) 1975–1984. "
+                 "Taxonomy: J-Rule scoring against OECD search library. "
+                 "Numbers shown in DKK millions.")
 
-    # ── Chart 2: Top ministries ──
-    if "section_name_en" in df_filtered.columns:
-        st.markdown('<div class="section-header">Top Ministries by R&D Budget</div>', unsafe_allow_html=True)
-        top_sec = (
-            df_filtered.groupby("section_name_en")["amount_local"]
-            .sum()
-            .sort_values(ascending=False)
-            .head(10)
-            .reset_index()
-        )
-        top_sec["amount_M"] = top_sec["amount_local"] / 1e6
-        fig_horiz = px.bar(
-            top_sec, x="amount_M", y="section_name_en",
-            orientation="h",
-            labels={"amount_M": "DKK (millions)", "section_name_en": ""},
-            title="Cumulative R&D spending by Ministry",
-            template="plotly_white",
-            color_discrete_sequence=["#1f77b4"],
-        )
-        fig_horiz.update_layout(yaxis=dict(autorange="reversed"), height=380)
-        st.plotly_chart(fig_horiz, use_container_width=True)
+    # ── Chart 2 & 3 side by side ──
+    col_a, col_b_ = st.columns(2)
+
+    with col_a:
+        section_header("Cumulative R&D spend by ministry (top 10)")
+        if "section_name_en" in db_f.columns:
+            top_min = (
+                db_f.groupby("section_name_en")["amount_local"]
+                .sum().sort_values(ascending=True).tail(10).reset_index()
+            )
+            top_min["DKK M"] = top_min["amount_local"] / 1e6
+            top_min["pct"]   = 100 * top_min["DKK M"] / top_min["DKK M"].sum()
+
+            fig2 = go.Figure(go.Bar(
+                x=top_min["DKK M"],
+                y=top_min["section_name_en"],
+                orientation="h",
+                marker_color=NAVY,
+                marker_line_width=0,
+                text=top_min["DKK M"].map(lambda x: f"{x:,.0f}"),
+                textposition="outside",
+                textfont=dict(size=9.5, color=TEXT),
+            ))
+            apply_style(fig2, height=380, xtitle="DKK (millions)", legend_bottom=False)
+            fig2.update_layout(showlegend=False,
+                               xaxis=dict(showgrid=True, gridcolor="#EBEBEB"))
+            st.plotly_chart(fig2, use_container_width=True)
+
+    with col_b_:
+        section_header("R&D category breakdown (% of total)")
+        if "rd_category" in db_f.columns:
+            cat_tot = (
+                db_f.groupby("rd_category")["amount_local"]
+                .sum().sort_values(ascending=False).reset_index()
+            )
+            cat_tot["DKK M"] = cat_tot["amount_local"] / 1e6
+            cat_tot["label"] = cat_tot["rd_category"].map(
+                lambda x: RD_CATEGORY_LABELS.get(x, x)
+            )
+            cat_tot["pct"]   = 100 * cat_tot["DKK M"] / cat_tot["DKK M"].sum()
+
+            fig3 = go.Figure(go.Bar(
+                x=cat_tot["label"],
+                y=cat_tot["DKK M"],
+                marker_color=[RD_CATEGORY_COLORS.get(c, GREY) for c in cat_tot["rd_category"]],
+                marker_line_width=0,
+                text=cat_tot["pct"].map(lambda x: f"{x:.1f}%"),
+                textposition="outside",
+                textfont=dict(size=10.5, color=TEXT),
+            ))
+            apply_style(fig3, height=380, ytitle="DKK (millions)", legend_bottom=False)
+            fig3.update_layout(showlegend=False, xaxis=dict(showgrid=False))
+            fig3.update_yaxes(range=[0, cat_tot["DKK M"].max() * 1.18])
+            st.plotly_chart(fig3, use_container_width=True)
+
+    # ── Chart 4: YoY growth ──
+    section_header("Year-over-year change in identified R&D budget (%)")
+    yr_tot = db_f.groupby("year")["amount_local"].sum().reset_index()
+    yr_tot["chg"] = yr_tot["amount_local"].pct_change() * 100
+    yr_tot_yoy = yr_tot.dropna(subset=["chg"])
+    if not yr_tot_yoy.empty:
+        colors_yoy = [GREEN if v >= 0 else "#C1272D" for v in yr_tot_yoy["chg"]]
+        fig_yoy = go.Figure(go.Bar(
+            x=yr_tot_yoy["year"], y=yr_tot_yoy["chg"],
+            marker_color=colors_yoy, marker_line_width=0,
+            text=yr_tot_yoy["chg"].map(lambda x: f"{x:+.1f}%"),
+            textposition="outside",
+            textfont=dict(size=10, color=TEXT),
+        ))
+        apply_style(fig_yoy, height=230, xtitle="Year", ytitle="% change",
+                    legend_bottom=False)
+        fig_yoy.add_hline(y=0, line_color=BORDER, line_width=1.5)
+        fig_yoy.update_yaxes(range=[
+            yr_tot_yoy["chg"].min() * 1.3,
+            yr_tot_yoy["chg"].max() * 1.3,
+        ])
+        fig_yoy.update_layout(showlegend=False)
+        st.plotly_chart(fig_yoy, use_container_width=True)
+        caption_note("Year-over-year change in total identified R&D-related spending.")
 
     # ── Data table ──
-    with st.expander("Show raw data table"):
-        show_cols = [c for c in [
-            "year", "section_code", "section_name_en",
-            "program_description_en", "line_description_en",
-            "amount_local", "currency", "rd_category", "decision", "taxonomy_score",
-        ] if c in df_filtered.columns]
-        st.dataframe(
-            df_filtered[show_cols].sort_values("year"),
-            use_container_width=True,
-            height=350,
-        )
-
-
-# ════════════════════════════════════════════════════════════════════════════
-# TAB 2 — INNOVATION REFORMS (Stream 2)
-# ════════════════════════════════════════════════════════════════════════════
-
-with tab2:
-    st.markdown("## Innovation Policy Reforms")
-    st.caption("Stream 2 — Reform events extracted from OECD Economic Survey PDFs using an LLM (GPT-4o / Claude).")
-
-    if not reforms_available():
-        st.warning("Reform data not found. Run `python main.py --reforms-only` to generate it.")
-        st.stop()
-
-    df_r = load_reforms()
-    if df_r.empty:
-        st.warning("No reform events found. Run the reform pipeline first.")
-        st.stop()
-
-    # ── Filters ──
-    col_f1, col_f2, col_f3, col_f4 = st.columns([2, 2, 2, 2])
-    with col_f1:
-        all_countries = sorted(df_r["country_name"].dropna().unique())
-        sel_countries = st.multiselect("Country", all_countries, default=all_countries)
-    with col_f2:
-        all_subtypes = sorted(df_r["sub_theme"].dropna().unique()) if "sub_theme" in df_r.columns else []
-        subtype_options = ["All"] + all_subtypes
-        sel_subtype = st.multiselect(
-            "Innovation type",
-            all_subtypes,
-            default=all_subtypes,
-            format_func=lambda x: SUBTHEME_LABELS.get(x, x),
-        )
-    with col_f3:
-        all_statuses = sorted(df_r["status"].dropna().unique()) if "status" in df_r.columns else []
-        sel_status = st.multiselect(
-            "Status", all_statuses,
-            default=[s for s in all_statuses if s in ("implemented", "legislated")],
-            format_func=lambda x: STATUS_LABELS.get(x, x),
-        )
-    with col_f4:
-        only_major = st.checkbox("Major reforms only", value=False)
-
-    # Apply filters
-    df_rf = df_r.copy()
-    if sel_countries:
-        df_rf = df_rf[df_rf["country_name"].isin(sel_countries)]
-    if sel_subtype:
-        df_rf = df_rf[df_rf["sub_theme"].isin(sel_subtype)]
-    if sel_status:
-        df_rf = df_rf[df_rf["status"].isin(sel_status)]
-    if only_major and "is_major_reform" in df_rf.columns:
-        df_rf = df_rf[df_rf["is_major_reform"] == True]
-
-    # ── Summary metrics ──
-    st.markdown('<div class="section-header">Summary</div>', unsafe_allow_html=True)
-    c1, c2, c3, c4 = st.columns(4)
-    with c1:
-        metric_card("Reform events", str(len(df_rf)))
-    with c2:
-        n_major = int(df_rf["is_major_reform"].sum()) if "is_major_reform" in df_rf.columns else "—"
-        metric_card("Major reforms", str(n_major), "#e74c3c")
-    with c3:
-        n_gs = int((df_rf["growth_orientation"] == "growth_supporting").sum()) if "growth_orientation" in df_rf.columns else "—"
-        metric_card("Growth-supporting", str(n_gs), "#2ecc71")
-    with c4:
-        countries_n = df_rf["country_name"].nunique()
-        metric_card("Countries", str(countries_n))
-
-    # ── Chart 1: Bubble timeline ──
-    st.markdown('<div class="section-header">Reform Timeline</div>', unsafe_allow_html=True)
-
-    year_col = "implementation_year"
-    if year_col in df_rf.columns and df_rf[year_col].notna().any():
-        df_timeline = df_rf.dropna(subset=[year_col]).copy()
-        df_timeline["year_int"] = df_timeline[year_col].astype(int)
-        df_timeline["sub_theme_label"] = df_timeline["sub_theme"].map(
-            lambda x: SUBTHEME_LABELS.get(x, x)
-        )
-        df_timeline["size"] = df_timeline["importance_bucket"].fillna(2).astype(float) * 10
-        df_timeline["orientation_color"] = df_timeline["growth_orientation"].map(
-            ORIENTATION_COLORS
-        ).fillna("#95a5a6")
-        df_timeline["status_label"] = df_timeline["status"].map(
-            lambda x: STATUS_LABELS.get(x, x)
-        )
-
-        fig_timeline = go.Figure()
-        for subtheme, color in SUBTHEME_COLORS.items():
-            sub_df = df_timeline[df_timeline["sub_theme"] == subtheme]
-            if sub_df.empty:
-                continue
-            fig_timeline.add_trace(go.Scatter(
-                x=sub_df["year_int"],
-                y=sub_df["sub_theme_label"],
-                mode="markers",
-                marker=dict(
-                    size=sub_df["size"],
-                    color=sub_df["orientation_color"],
-                    line=dict(width=1, color="white"),
-                    opacity=0.85,
-                ),
-                name=SUBTHEME_LABELS.get(subtheme, subtheme),
-                text=sub_df.apply(
-                    lambda r: (
-                        f"<b>{r.get('package_name', '')}</b><br>"
-                        f"{r.get('description', '')[:120]}...<br>"
-                        f"Status: {STATUS_LABELS.get(r.get('status',''), r.get('status',''))}<br>"
-                        f"Actor: {ACTOR_LABELS.get(r.get('rd_actor','unknown'), r.get('rd_actor',''))}<br>"
-                        f"Stage: {STAGE_LABELS.get(r.get('rd_stage','unknown'), r.get('rd_stage',''))}<br>"
-                        f"Growth: {r.get('growth_orientation','').replace('_',' ')}"
-                    ),
-                    axis=1,
-                ),
-                hovertemplate="%{text}<extra></extra>",
-            ))
-
-        fig_timeline.update_layout(
-            title="Innovation reform events by type and year<br><sup>Bubble size = importance | Color = growth orientation (green=supporting, red=hindering)</sup>",
-            xaxis_title="Year",
-            yaxis_title="",
-            template="plotly_white",
-            height=480,
-            legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-            showlegend=True,
-        )
-        # Add color legend annotation
-        fig_timeline.add_annotation(
-            text="● Growth-supporting  ● Growth-hindering  ● Mixed  ● Unclear",
-            xref="paper", yref="paper", x=0, y=-0.1,
-            font=dict(size=11, color="#666"),
-            showarrow=False,
-        )
-        st.plotly_chart(fig_timeline, use_container_width=True)
-    else:
-        st.info("No implementation year data available for timeline chart.")
-
-    # ── Chart 2: Sub-theme breakdown ──
-    col_a, col_b = st.columns(2)
-    with col_a:
-        st.markdown('<div class="section-header">Reforms by Type</div>', unsafe_allow_html=True)
-        if "sub_theme" in df_rf.columns:
-            st_counts = (
-                df_rf["sub_theme"].value_counts().reset_index()
-            )
-            st_counts.columns = ["sub_theme", "count"]
-            st_counts["label"] = st_counts["sub_theme"].map(
-                lambda x: SUBTHEME_LABELS.get(x, x)
-            )
-            st_counts["color"] = st_counts["sub_theme"].map(SUBTHEME_COLORS)
-            fig_pie = px.pie(
-                st_counts, values="count", names="label",
-                color="sub_theme",
-                color_discrete_map=SUBTHEME_COLORS,
-                template="plotly_white",
-                hole=0.4,
-            )
-            fig_pie.update_traces(textposition="outside", textinfo="percent+label")
-            fig_pie.update_layout(showlegend=False, height=360, margin=dict(t=20))
-            st.plotly_chart(fig_pie, use_container_width=True)
-
-    with col_b:
-        st.markdown('<div class="section-header">R&D Actor × Stage</div>', unsafe_allow_html=True)
-        if "rd_actor" in df_rf.columns and "rd_stage" in df_rf.columns:
-            heatmap_df = (
-                df_rf.groupby(["rd_actor", "rd_stage"])
-                .size()
-                .reset_index(name="count")
-            )
-            heatmap_df["actor_label"] = heatmap_df["rd_actor"].map(
-                lambda x: ACTOR_LABELS.get(x, x)
-            )
-            heatmap_df["stage_label"] = heatmap_df["rd_stage"].map(
-                lambda x: STAGE_LABELS.get(x, x)
-            )
-            fig_hm = px.density_heatmap(
-                heatmap_df, x="stage_label", y="actor_label", z="count",
-                color_continuous_scale="Blues",
-                labels={"stage_label": "R&D Stage", "actor_label": "Actor", "count": "Reforms"},
-                template="plotly_white",
-            )
-            fig_hm.update_layout(height=360, margin=dict(t=20),
-                                  xaxis_tickangle=-20)
-            st.plotly_chart(fig_hm, use_container_width=True)
-
-    # ── Reform cards ──
-    st.markdown('<div class="section-header">Reform Details</div>', unsafe_allow_html=True)
-    df_display = df_rf.sort_values(
-        ["implementation_year", "importance_bucket"],
-        ascending=[False, False]
-    ).head(50)
-
-    for _, row in df_display.iterrows():
-        major = row.get("is_major_reform", False)
-        orient = row.get("growth_orientation", "unclear_or_neutral")
-        color_cls = {
-            "growth_supporting": "tag-green",
-            "growth_hindering":  "tag-red",
-            "mixed":             "tag-orange",
-        }.get(orient, "tag-grey")
-
-        st_label = SUBTHEME_LABELS.get(row.get("sub_theme", "other"), "—")
-        status_label = STATUS_LABELS.get(row.get("status", ""), row.get("status", "—"))
-        year_str = str(int(row["implementation_year"])) if pd.notna(row.get("implementation_year")) else "?"
-
-        title = row.get("package_name") or row.get("description", "")[:80]
-        star = "★ " if major else ""
-
-        with st.expander(f"{star}{year_str} · {row.get('country_name','?')} · {st_label} — {title[:90]}"):
-            col1, col2 = st.columns([3, 1])
-            with col1:
-                st.markdown(f"**{row.get('description', '')}**")
-                if pd.notna(row.get("source_quote")):
-                    st.markdown(f"> *\"{row['source_quote']}\"*")
-                if pd.notna(row.get("importance_rationale")):
-                    st.caption(f"**Importance:** {row['importance_rationale']}")
-                if pd.notna(row.get("growth_orientation_rationale")):
-                    st.caption(f"**Growth:** {row['growth_orientation_rationale']}")
-            with col2:
-                st.markdown(
-                    f"<span class='tag {color_cls}'>{orient.replace('_',' ')}</span><br>"
-                    f"<span class='tag tag-grey'>{status_label}</span><br>"
-                    f"<span class='tag tag-grey'>Actor: {ACTOR_LABELS.get(row.get('rd_actor','unknown'), '?')}</span><br>"
-                    f"<span class='tag tag-grey'>Stage: {STAGE_LABELS.get(row.get('rd_stage','unknown'), '?')}</span>",
-                    unsafe_allow_html=True,
-                )
-                if "n_mentions" in row and pd.notna(row["n_mentions"]):
-                    st.caption(f"Mentioned in {int(row['n_mentions'])} survey(s)")
-
-
-# ════════════════════════════════════════════════════════════════════════════
-# TAB 3 — COMBINED VIEW
-# ════════════════════════════════════════════════════════════════════════════
-
-with tab3:
-    st.markdown("## Combined View: Spending × Policy Reforms")
-    st.caption(
-        "Stream 1 (budget lines, 1975–1984) and Stream 2 (reform events, 1995–present) "
-        "are complementary evidence of innovation policy effort. This view overlays reform "
-        "event markers onto the spending trend."
+    section_header("Budget line detail")
+    _BUD_DISP_COLS = [c for c in [
+        "year", "section_name_en", "line_description_en",
+        "amount_local", "rd_category", "taxonomy_score", "source_file",
+    ] if c in db_f.columns]
+    _BUD_COL_LABELS = {
+        "year": "Year", "section_name_en": "Ministry",
+        "line_description_en": "Budget line", "amount_local": "Amount (DKK)",
+        "rd_category": "R&D category", "taxonomy_score": "Score",
+        "source_file": "Source file",
+    }
+    _bud_search = st.text_input(
+        "Search table", key="bud_search", placeholder="Ministry, budget line, category…",
+        label_visibility="collapsed",
+    )
+    _tbl = db_f.copy()
+    if "rd_category" in _tbl.columns:
+        _tbl["rd_category"] = _tbl["rd_category"].map(lambda x: RD_CATEGORY_LABELS.get(x, x))
+    if _bud_search:
+        _mask = _tbl.astype(str).apply(
+            lambda col: col.str.contains(_bud_search, case=False, na=False)
+        ).any(axis=1)
+        _tbl = _tbl[_mask]
+    caption_note(f"{len(_tbl):,} rows  ·  DKK {_tbl['amount_local'].sum()/1e6:,.1f} M")
+    render_table(
+        _tbl[_BUD_DISP_COLS].sort_values("year"),
+        col_labels=_BUD_COL_LABELS,
+        num_cols=["amount_local", "taxonomy_score"],
+        wide_cols=["line_description_en", "section_name_en"],
+    )
+    st.download_button(
+        "Download CSV",
+        _tbl[_BUD_DISP_COLS].to_csv(index=False).encode("utf-8"),
+        "budget_lines.csv", "text/csv", key="bud_dl",
     )
 
-    budget_ok  = budget_available()
-    reforms_ok = reforms_available()
 
-    if not budget_ok and not reforms_ok:
-        st.warning("Neither pipeline has been run yet. Run `python main.py` to generate data.")
+# ═════════════════════════════════════════════════════════════════════════════
+# TAB 2 — INNOVATION REFORMS
+# ═════════════════════════════════════════════════════════════════════════════
+
+with TAB_REFORMS:
+    if not reforms_available():
+        st.info("Run `python main.py --reforms-only --reforms-country DNK` to generate reform data.")
         st.stop()
 
-    # ── Spending trend ──
-    if budget_ok:
-        df_b = load_budget()
-        yearly_total = (
-            df_b.groupby("year")["amount_local"].sum().reset_index()
+    # ── KPI strip ──
+    n_gs  = int((dr_f["growth_orientation"] == "growth_supporting").sum()) \
+            if "growth_orientation" in dr_f.columns else 0
+    n_gh  = int((dr_f["growth_orientation"] == "growth_hindering").sum()) \
+            if "growth_orientation" in dr_f.columns else 0
+    n_maj = int(dr_f["is_major_reform"].sum()) if "is_major_reform" in dr_f.columns else 0
+    stat_row([
+        (str(len(dr_f)), "Reform events"),
+        (str(n_maj),     "Major reforms"),
+        (str(n_gs),      "Growth-supporting"),
+        (str(n_gh),      "Growth-hindering"),
+        (str(dr_f["country_name"].nunique()), "Countries"),
+    ])
+
+    # ── Chart 1: reforms per year stacked by sub-type ──
+    section_header("Reform events per year by innovation sub-type")
+    YR_COL = "implementation_year"
+    if YR_COL in dr_f.columns and dr_f[YR_COL].notna().any():
+        df_yr = dr_f.dropna(subset=[YR_COL]).copy()
+        df_yr["yr"] = df_yr[YR_COL].astype(int)
+
+        # Build ordered stacks — sort sub-themes by total count descending
+        order = (df_yr.groupby("sub_theme").size()
+                 .sort_values(ascending=False).index.tolist())
+
+        yr_st = (df_yr.groupby(["yr","sub_theme"]).size().reset_index(name="n"))
+        yr_st["short"] = yr_st["sub_theme"].map(lambda x: SUBTHEME_SHORT.get(x, x))
+
+        fig_yr = px.bar(
+            yr_st, x="yr", y="n",
+            color="sub_theme",
+            color_discrete_map=SUBTHEME_COLORS,
+            barmode="stack",
+            category_orders={"sub_theme": order},
+            labels={"yr":"Year","n":"Reform events","sub_theme":""},
+            custom_data=["short"],
         )
-        yearly_total["amount_M"] = yearly_total["amount_local"] / 1e6
+        fig_yr.update_traces(
+            hovertemplate="<b>%{customdata[0]}</b><br>Year %{x}: %{y} reform(s)<extra></extra>",
+            marker_line_width=0,
+        )
+        # Rename traces to use short labels
+        for trace in fig_yr.data:
+            trace.name = SUBTHEME_SHORT.get(trace.name, trace.name)
+        apply_style(fig_yr, height=320, xtitle="Year", ytitle="Reform events")
+        st.plotly_chart(fig_yr, use_container_width=True)
+        caption_note(
+            "Source: OECD Economic Surveys. Extraction: GPT-4o / Claude Sonnet. "
+            "Year = implementation year (imputed to survey year when not stated)."
+        )
 
-        fig_combined = go.Figure()
-        fig_combined.add_trace(go.Bar(
-            x=yearly_total["year"],
-            y=yearly_total["amount_M"],
-            name="R&D Budget (Finance Bills, DKK M)",
-            marker_color="#1f77b4",
-            opacity=0.7,
-            yaxis="y1",
+    # ── Charts 2 & 3 side by side ──
+    col_a, col_b_ = st.columns(2)
+
+    with col_a:
+        section_header("Sub-type by growth orientation")
+        if "growth_orientation" in dr_f.columns and "sub_theme" in dr_f.columns and not dr_f.empty:
+            go_df = (dr_f.groupby(["sub_theme","growth_orientation"])
+                     .size().reset_index(name="n"))
+            go_df["sub_short"]    = go_df["sub_theme"].map(lambda x: SUBTHEME_SHORT.get(x, x))
+            go_df["orient_label"] = go_df["growth_orientation"].map(
+                lambda x: ORIENTATION_LABELS.get(x, x)
+            )
+            st_order = (go_df.groupby("sub_short")["n"].sum()
+                        .sort_values(ascending=False).index.tolist())
+            orient_order = [ORIENTATION_LABELS[k] for k in
+                            ["growth_supporting","mixed","unclear_or_neutral","growth_hindering"]
+                            if ORIENTATION_LABELS[k] in go_df["orient_label"].values]
+            orient_colors_mapped = {v: ORIENTATION_COLORS[k]
+                                    for k, v in ORIENTATION_LABELS.items()}
+            fig_go = px.bar(
+                go_df, x="sub_short", y="n",
+                color="orient_label",
+                color_discrete_map=orient_colors_mapped,
+                barmode="stack",
+                category_orders={"sub_short": st_order, "orient_label": orient_order},
+                labels={"sub_short":"","n":"Reforms","orient_label":""},
+            )
+            fig_go.update_traces(marker_line_width=0)
+            apply_style(fig_go, height=300, ytitle="Reform events", xangle=-28)
+            st.plotly_chart(fig_go, use_container_width=True)
+
+    with col_b_:
+        section_header("R&D actor and stage")
+        if "rd_actor" in dr_f.columns and "rd_stage" in dr_f.columns and not dr_f.empty:
+            as_df = (dr_f.groupby(["rd_actor_label","rd_stage_label"])
+                     .size().reset_index(name="n"))
+            stage_order = ["Basic research","Applied research",
+                           "Commercialisation","Adoption & diffusion","Unknown"]
+            actor_order = ["Public sector","Private sector","Public–Private","Unknown"]
+            fig_hm = px.density_heatmap(
+                as_df,
+                x="rd_stage_label", y="rd_actor_label", z="n",
+                color_continuous_scale=[[0,"#EEF3FB"],[0.5,"#6699CC"],[1,NAVY]],
+                labels={"rd_stage_label":"R&D Stage","rd_actor_label":"","n":"Reforms"},
+                text_auto=True,
+            )
+            fig_hm.update_xaxes(
+                categoryorder="array",
+                categoryarray=[s for s in stage_order if s in as_df["rd_stage_label"].values],
+            )
+            fig_hm.update_yaxes(
+                categoryorder="array",
+                categoryarray=[a for a in reversed(actor_order) if a in as_df["rd_actor_label"].values],
+            )
+            fig_hm.update_traces(textfont=dict(size=12, color="white"), texttemplate="%{z}")
+            apply_style(fig_hm, height=300, xangle=-20, legend_bottom=False)
+            fig_hm.update_coloraxes(
+                colorbar=dict(thickness=10, len=0.8, title=dict(text="n", font=dict(size=10)))
+            )
+            st.plotly_chart(fig_hm, use_container_width=True)
+
+    # ── Chart 4: status & importance ──
+    section_header("Status and importance breakdown")
+    col_c, col_d_ = st.columns(2)
+
+    with col_c:
+        if "status" in dr_f.columns and not dr_f.empty:
+            stat_df = dr_f["status_label"].value_counts().reset_index()
+            stat_df.columns = ["status_label", "n"]
+            stat_colors = {STATUS_LABELS[k]: c for k, c in
+                           {"implemented": NAVY, "legislated": BLUE,
+                            "announced": TEAL, "recommended": ORANGE}.items()
+                           if k in dr_f["status"].values}
+            fig_stat = go.Figure(go.Bar(
+                x=stat_df["n"], y=stat_df["status_label"],
+                orientation="h",
+                marker_color=[stat_colors.get(s, GREY) for s in stat_df["status_label"]],
+                marker_line_width=0,
+                text=stat_df["n"], textposition="outside",
+                textfont=dict(size=11, color=TEXT),
+            ))
+            apply_style(fig_stat, height=240, xtitle="Reform events", legend_bottom=False)
+            fig_stat.update_layout(showlegend=False, yaxis=dict(autorange="reversed"))
+            fig_stat.update_xaxes(range=[0, stat_df["n"].max() * 1.2])
+            st.plotly_chart(fig_stat, use_container_width=True)
+
+    with col_d_:
+        if "importance_bucket" in dr_f.columns and not dr_f.empty:
+            imp_df = (dr_f["importance_bucket"].value_counts()
+                      .reset_index().rename(columns={"count": "n"})
+                      .sort_values("importance_bucket"))
+            imp_df["label"] = imp_df["importance_bucket"].map(
+                {1: "Minor (1)", 2: "Moderate (2)", 3: "Major (3)"}
+            )
+            imp_colors = {1: "#DDE1E7", 2: BLUE, 3: NAVY}
+            fig_imp = go.Figure(go.Bar(
+                x=imp_df["label"], y=imp_df["n"],
+                marker_color=[imp_colors.get(b, GREY) for b in imp_df["importance_bucket"]],
+                marker_line_width=0,
+                text=imp_df["n"], textposition="outside",
+                textfont=dict(size=11, color=TEXT),
+            ))
+            apply_style(fig_imp, height=240, ytitle="Reform events", legend_bottom=False)
+            fig_imp.update_layout(showlegend=False, xaxis=dict(showgrid=False))
+            fig_imp.update_yaxes(range=[0, imp_df["n"].max() * 1.2])
+            st.plotly_chart(fig_imp, use_container_width=True)
+
+    # ── Reform catalogue ──
+    section_header(f"Reform catalogue  —  {len(dr_f)} events")
+
+    sort_opt = st.radio(
+        "Sort by",
+        ["Year (newest first)", "Importance (highest first)", "Sub-type (A–Z)"],
+        horizontal=True, key="sort_cat",
+        label_visibility="collapsed",
+    )
+    sort_map = {
+        "Year (newest first)":       ("implementation_year", False),
+        "Importance (highest first)":("importance_bucket",   False),
+        "Sub-type (A–Z)":            ("sub_theme",           True),
+    }
+    sc, sa = sort_map[sort_opt]
+    df_cat = dr_f.sort_values(sc, ascending=sa).head(80)
+
+    for _, row in df_cat.iterrows():
+        major    = bool(row.get("is_major_reform", False))
+        orient   = str(row.get("growth_orientation") or "unclear_or_neutral")
+        tag_col  = ORIENTATION_COLORS.get(orient, GREY)
+        tag_txt  = ORIENTATION_LABELS.get(orient, "Unclear / Neutral")
+        impl_yr  = row.get("implementation_year")
+        yr_s     = str(int(float(impl_yr))) if pd.notna(impl_yr) else "n.d."
+        sub_key  = str(row.get("sub_theme") or "other")
+        sub_s    = SUBTHEME_LABELS.get(sub_key, sub_key.replace("_"," ").title())
+        status_s = STATUS_LABELS.get(str(row.get("status") or ""), "—")
+        title    = str(row.get("package_name") or row.get("description") or "")[:100]
+        major_s  = "  [MAJOR]" if major else ""
+        lbl_clr  = SUBTHEME_COLORS.get(sub_key, GREY)
+
+        with st.expander(
+            f"{yr_s}  ·  {row.get('country_name','—')}  ·  {sub_s}{major_s}  —  {title}",
+            expanded=True,
+        ):
+            c_left, c_right = st.columns([3, 1])
+            with c_left:
+                st.markdown(f"**{row.get('description','')}**")
+                if pd.notna(row.get("source_quote")):
+                    st.markdown(
+                        f'<blockquote style="margin:.4rem 0;padding:.4rem .8rem;'
+                        f'border-left:3px solid {lbl_clr};color:#555;'
+                        f'font-size:.8rem;font-style:italic;">'
+                        f'&ldquo;{row["source_quote"]}&rdquo;</blockquote>',
+                        unsafe_allow_html=True,
+                    )
+                if pd.notna(row.get("importance_rationale")):
+                    caption_note(f"Importance: {row['importance_rationale']}")
+                if pd.notna(row.get("growth_orientation_rationale")):
+                    caption_note(f"Growth mechanism: {row['growth_orientation_rationale']}")
+            with c_right:
+                st.markdown(
+                    f'<div style="font-size:.74rem;color:{TEXT};line-height:1.9;">'
+                    f'<span style="display:inline-block;padding:2px 8px;border-radius:2px;'
+                    f'background:{tag_col}20;color:{tag_col};border:1px solid {tag_col}60;'
+                    f'font-weight:700;font-size:.7rem;">{tag_txt}</span><br>'
+                    f'<b style="color:#777;">Status:</b> {status_s}<br>'
+                    f'<b style="color:#777;">Actor:</b> {ACTOR_LABELS.get(str(row.get("rd_actor") or "unknown"),"—")}<br>'
+                    f'<b style="color:#777;">Stage:</b> {STAGE_LABELS.get(str(row.get("rd_stage") or "unknown"),"—")}<br>'
+                    f'<b style="color:#777;">Importance:</b> {row.get("importance_bucket") or "—"}/3'
+                    f'</div>',
+                    unsafe_allow_html=True,
+                )
+                if pd.notna(row.get("n_mentions")):
+                    caption_note(f"{int(row['n_mentions'])} survey mention(s)")
+
+    # ── Data table ──
+    section_header("Reform event detail")
+    _REF_DISP_COLS = [c for c in [
+        "country_name", "implementation_year", "sub_theme_label",
+        "orientation_label", "status_label", "is_major_reform",
+        "importance_bucket", "rd_actor_label", "rd_stage_label",
+        "package_name", "description",
+    ] if c in dr_f.columns]
+    _REF_COL_LABELS = {
+        "country_name": "Country", "implementation_year": "Year",
+        "sub_theme_label": "Innovation type", "orientation_label": "Growth orientation",
+        "status_label": "Status", "is_major_reform": "Major?",
+        "importance_bucket": "Importance", "rd_actor_label": "Actor",
+        "rd_stage_label": "Stage", "package_name": "Reform name",
+        "description": "Description",
+    }
+    _ref_search = st.text_input(
+        "Search table", key="ref_search",
+        placeholder="Innovation type, country, description…",
+        label_visibility="collapsed",
+    )
+    _tbl_r = dr_f.copy()
+    if _ref_search:
+        mask_r = _tbl_r.astype(str).apply(
+            lambda col: col.str.contains(_ref_search, case=False, na=False)
+        ).any(axis=1)
+        _tbl_r = _tbl_r[mask_r]
+    caption_note(f"{len(_tbl_r):,} reforms")
+    render_table(
+        _tbl_r[_REF_DISP_COLS].sort_values("implementation_year"
+                                            if "implementation_year" in _REF_DISP_COLS else _REF_DISP_COLS[0]),
+        col_labels=_REF_COL_LABELS,
+        num_cols=["implementation_year", "importance_bucket"],
+        bool_cols=["is_major_reform"],
+        wide_cols=["description", "package_name"],
+    )
+    st.download_button(
+        "Download CSV",
+        _tbl_r[_REF_DISP_COLS].to_csv(index=False).encode("utf-8"),
+        "reforms_filtered.csv", "text/csv", key="ref_dl",
+    )
+
+
+# ═════════════════════════════════════════════════════════════════════════════
+# TAB 3 — COMBINED VIEW
+# ═════════════════════════════════════════════════════════════════════════════
+
+with TAB_COMBINED:
+    bk = budget_available()
+    rk = reforms_available()
+
+    if not bk and not rk:
+        st.info("Run both pipelines to see the combined view.")
+        st.stop()
+
+    # ── Stream comparison ──
+    section_header("Stream comparison")
+    _cmp_rows = [
+        ("Measures",     "DKK amount budgeted for R&amp;D",           "Innovation policy reforms enacted"),
+        ("Time range",   "1975&#8211;1984 (Denmark pilot)",            "1997&#8211;present (multi-country)"),
+        ("Unit",         "Budget line &#8594; Ministry &#8594; R&amp;D category",
+                         "Reform event &#8594; sub-type &#8594; actor &#8594; stage"),
+        ("Method",       "OCR + J-Rule taxonomy scoring",              "LLM extraction + cross-survey dedup"),
+        ("Analytic use", "R&amp;D intensity (<em>how much</em>)",      "Reform direction (<em>what changed</em>)"),
+    ]
+    _cmp_body = ""
+    for i, (label, s1, s2) in enumerate(_cmp_rows):
+        bg = LGREY if i % 2 else "#fff"
+        _cmp_body += (
+            f'<tr style="border-bottom:1px solid {BORDER};background:{bg};">'
+            f'<td style="padding:.4rem .8rem;font-weight:700;color:#777;white-space:nowrap;">{label}</td>'
+            f'<td style="padding:.4rem .8rem;">{s1}</td>'
+            f'<td style="padding:.4rem .8rem;">{s2}</td>'
+            f'</tr>'
+        )
+    st.markdown(
+        f'<table style="width:100%;border-collapse:collapse;font-size:.82rem;color:{TEXT};">'
+        f'<thead><tr style="background:{LGREY};border-bottom:2px solid {BORDER};">'
+        f'<th style="padding:.45rem .8rem;text-align:left;color:{NAVY};"></th>'
+        f'<th style="padding:.45rem .8rem;text-align:left;color:{NAVY};">Stream 1 &#8212; Finance Bills</th>'
+        f'<th style="padding:.45rem .8rem;text-align:left;color:{NAVY};">Stream 2 &#8212; OECD Surveys</th>'
+        f'</tr></thead><tbody>{_cmp_body}</tbody></table>',
+        unsafe_allow_html=True,
+    )
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # ── Reform sub-type + orientation breakdown ──
+    if rk:
+        if not dr_f.empty:
+            col3a, col3b = st.columns(2)
+
+            with col3a:
+                section_header("Reforms by innovation sub-type")
+                st_cnt = (dr_f.groupby("sub_theme").size().reset_index(name="n")
+                          .sort_values("n", ascending=True))
+                st_cnt["label"] = st_cnt["sub_theme"].map(lambda x: SUBTHEME_SHORT.get(x, x))
+                fig_st = go.Figure(go.Bar(
+                    x=st_cnt["n"], y=st_cnt["label"],
+                    orientation="h",
+                    marker_color=[SUBTHEME_COLORS.get(k, GREY) for k in st_cnt["sub_theme"]],
+                    marker_line_width=0,
+                    text=st_cnt["n"], textposition="outside",
+                    textfont=dict(size=11, color=TEXT),
+                ))
+                apply_style(fig_st, height=280, xtitle="Reform events", legend_bottom=False)
+                fig_st.update_layout(showlegend=False, yaxis=dict(showgrid=False))
+                fig_st.update_xaxes(range=[0, st_cnt["n"].max() * 1.25])
+                st.plotly_chart(fig_st, use_container_width=True)
+
+            with col3b:
+                section_header("Reform timeline — year × sub-type")
+                _df_tl = dr_f.dropna(subset=["implementation_year"]).copy()
+                if not _df_tl.empty:
+                    _df_tl["yr"] = _df_tl["implementation_year"].astype(int)
+                    _df_tl["sub_short"] = _df_tl["sub_theme"].map(lambda x: SUBTHEME_SHORT.get(x, x))
+                    _df_tl["importance"] = _df_tl["importance_bucket"].fillna(1).astype(int)
+                    _df_tl["label"] = _df_tl.apply(
+                        lambda r: str(r.get("package_name") or r.get("description",""))[:60], axis=1
+                    )
+                    fig_tl = px.scatter(
+                        _df_tl, x="yr", y="sub_short",
+                        size="importance",
+                        color="sub_theme",
+                        color_discrete_map=SUBTHEME_COLORS,
+                        hover_name="label",
+                        hover_data={"yr": True, "sub_short": False,
+                                    "sub_theme": False, "importance": True},
+                        labels={"yr": "Year", "sub_short": "", "importance": "Importance"},
+                        size_max=20,
+                    )
+                    fig_tl.update_traces(marker_line_width=0)
+                    apply_style(fig_tl, height=280, xtitle="Year", legend_bottom=False)
+                    fig_tl.update_layout(showlegend=False, yaxis=dict(showgrid=True))
+                    st.plotly_chart(fig_tl, use_container_width=True)
+                    caption_note("Bubble size = importance (1–3). Hover for reform name.")
+                else:
+                    st.info("No reforms with an assigned year yet.")
+
+    # ── Dual-axis overlay ──
+    if bk and rk and not dr_f.empty:
+        section_header("R&D budget allocation vs. innovation reform activity")
+        _db3 = load_budget()
+        b_yr3 = _db3.groupby("year")["amount_local"].sum().reset_index()
+        b_yr3["DKK M"] = b_yr3["amount_local"] / 1e6
+        df_i3 = dr_f.dropna(subset=["implementation_year"]).copy()
+        df_i3["yr"] = df_i3["implementation_year"].astype(int)
+        rc3 = df_i3.groupby("yr").size().reset_index(name="n")
+        fig_dual = go.Figure()
+        fig_dual.add_trace(go.Bar(
+            x=b_yr3["year"], y=b_yr3["DKK M"],
+            name="R&D budget (DKK M)",
+            marker_color=NAVY, opacity=0.72, marker_line_width=0, yaxis="y1",
         ))
-
-    # ── Reform event markers ──
-    if reforms_ok:
-        df_r2 = load_reforms()
-        df_impl = df_r2.dropna(subset=["implementation_year"]).copy()
-        df_impl["year_int"] = df_impl["implementation_year"].astype(int)
-
-        # Count reforms per year
-        reform_counts = df_impl.groupby("year_int").size().reset_index(name="n_reforms")
-
-        if budget_ok:
-            fig_combined.add_trace(go.Scatter(
-                x=reform_counts["year_int"],
-                y=reform_counts["n_reforms"],
+        if not rc3.empty:
+            fig_dual.add_trace(go.Scatter(
+                x=rc3["yr"], y=rc3["n"],
+                name="Innovation reform events",
                 mode="lines+markers",
-                name="Innovation Reform Events (count)",
-                line=dict(color="#e74c3c", width=2.5),
-                marker=dict(size=9, color="#e74c3c"),
+                line=dict(color=ORANGE, width=2.5),
+                marker=dict(size=8, color=ORANGE, line=dict(width=2, color="white")),
                 yaxis="y2",
             ))
-
-            # Major reform stars
-            major_df = df_impl[df_impl.get("is_major_reform", pd.Series(False, index=df_impl.index)) == True] \
-                if "is_major_reform" in df_impl.columns else pd.DataFrame()
-            if not major_df.empty:
-                major_yr = major_df.groupby("year_int").size().reset_index(name="n")
-                fig_combined.add_trace(go.Scatter(
-                    x=major_yr["year_int"],
-                    y=major_yr["n"],
-                    mode="markers+text",
-                    marker_symbol="star",
-                    marker=dict(size=16, color="gold", line=dict(width=1, color="#333")),
-                    text=major_yr["n"].astype(str),
-                    textposition="top center",
+        if "is_major_reform" in df_i3.columns:
+            maj3 = df_i3[df_i3["is_major_reform"]].groupby("yr").size().reset_index(name="nm")
+            if not maj3.empty:
+                fig_dual.add_trace(go.Scatter(
+                    x=maj3["yr"], y=maj3["nm"],
                     name="Major reform events",
+                    mode="markers",
+                    marker=dict(symbol="diamond", size=14,
+                                color="white", line=dict(width=2.5, color=ORANGE)),
                     yaxis="y2",
                 ))
-        else:
-            # Only reforms available
-            fig_combined = px.bar(
-                reform_counts, x="year_int", y="n_reforms",
-                title="Innovation reform events by year",
-                labels={"year_int": "Year", "n_reforms": "Reforms"},
-                template="plotly_white",
-            )
-
-    if budget_ok:
-        fig_combined.update_layout(
-            title="R&D Budget (bars) vs. Innovation Reform Events (line)",
-            xaxis=dict(title="Year", dtick=1),
-            yaxis=dict(title="R&D Budget (DKK millions)", side="left"),
-            yaxis2=dict(
-                title="Reform event count",
-                side="right",
-                overlaying="y",
-                showgrid=False,
-            ),
-            legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-            template="plotly_white",
-            height=480,
-            barmode="group",
+        fig_dual.update_layout(
+            height=400,
+            xaxis=dict(title="Year", dtick=2, showgrid=False,
+                       linecolor=BORDER, tickfont=dict(size=10.5)),
+            yaxis=dict(title="R&D Budget (DKK millions)", side="left",
+                       gridcolor="#EBEBEB", linecolor=BORDER),
+            yaxis2=dict(title="Reform event count", side="right",
+                        overlaying="y", showgrid=False, linecolor=BORDER),
+            legend=dict(orientation="h", y=1.05, x=0, font=dict(size=10.5),
+                        bgcolor="rgba(0,0,0,0)"),
+            **PLOTLY_BASE,
+            margin=dict(t=44, b=36, l=8, r=8),
         )
-        st.plotly_chart(fig_combined, use_container_width=True)
+        st.plotly_chart(fig_dual, use_container_width=True)
+        caption_note(
+            "Finance Bills: 1975–1984. OECD Survey reforms: 1997 onwards. "
+            "The two streams are complementary evidence of innovation policy effort."
+        )
 
-    # ── Insight box ──
-    st.markdown('<div class="section-header">How the streams connect</div>', unsafe_allow_html=True)
-    st.markdown("""
-    | Dimension | Stream 1 (Finance Bills) | Stream 2 (OECD Surveys) |
-    |-----------|--------------------------|-------------------------|
-    | **What it measures** | DKK amounts budgeted for R&D | Policy reforms enacted |
-    | **Time coverage** | 1975–1984 (Denmark) | 1997–present (multi-country) |
-    | **Granularity** | Budget line → Ministry | Reform event → sub-type |
-    | **Method** | OCR + taxonomy scoring | LLM extraction (GPT-4o) |
-    | **Key output** | `results.csv` | `reforms_events.csv` |
-
-    Together, they enable a composite innovation policy indicator:
-    - **Stream 1** captures the *intensity* of public R&D investment (how much)
-    - **Stream 2** captures the *direction* of reform effort (what changed)
-    - A country-year panel combining both can be used for cross-country econometric analysis
-    """)
-
-    # ── Per-country reform intensity (if multi-country) ──
-    if reforms_ok:
-        df_r3 = load_reforms()
-        if df_r3["country_name"].nunique() > 1:
-            st.markdown('<div class="section-header">Reform intensity by country (heatmap)</div>',
-                        unsafe_allow_html=True)
-            pivot = (
-                df_r3.dropna(subset=["implementation_year"])
-                .assign(year=lambda d: d["implementation_year"].astype(int))
-                .groupby(["country_name", "year"])
-                .size()
-                .reset_index(name="n_reforms")
+    # ── Reform intensity score ──
+    if REFORM_PANEL.exists():
+        panel_df = load_reform_panel()
+        if "reform_intensity_score" in panel_df.columns:
+            section_header("Reform intensity score (composite 0–1 indicator)")
+            caption_note(
+                "Four equal-weighted components: (1) reform volume [log-scaled], "
+                "(2) share growth-supporting, (3) share major reforms, "
+                "(4) sub-type diversity.  Score = 0 for country-years with no reforms."
             )
-            fig_heat = px.density_heatmap(
-                pivot, x="year", y="country_name", z="n_reforms",
-                color_continuous_scale="YlOrRd",
-                labels={"year": "Year", "country_name": "Country", "n_reforms": "Reforms"},
-                template="plotly_white",
+            sc_df = panel_df[panel_df["reform_intensity_score"] > 0].copy()
+            if not sc_df.empty:
+                multi = sc_df["country_code"].nunique() > 1
+                fig_sc = px.line(
+                    sc_df, x="year", y="reform_intensity_score",
+                    color="country_code" if multi else None,
+                    markers=True,
+                    color_discrete_sequence=[NAVY, ORANGE, TEAL, GREEN],
+                    labels={"reform_intensity_score": "Intensity (0–1)",
+                            "year": "Year", "country_code": "Country"},
+                )
+                apply_style(fig_sc, height=270, ytitle="Intensity score (0–1)", xtitle="Year")
+                fig_sc.update_yaxes(range=[0, 1.05], gridcolor="#EBEBEB")
+                fig_sc.update_traces(line_width=2.2)
+                st.plotly_chart(fig_sc, use_container_width=True)
+            else:
+                st.info("Run the reform pipeline to populate the intensity score.")
+
+    # ── Budget trend (Stream 1 only, always show if available) ──
+    if bk:
+        section_header("R&D budget by year (Stream 1)")
+        _db3 = load_budget()
+        if not _db3.empty:
+            b_yr3 = _db3.groupby("year")["amount_local"].sum().reset_index()
+            b_yr3["DKK M"] = b_yr3["amount_local"] / 1e6
+            fig_b3 = px.bar(
+                b_yr3, x="year", y="DKK M",
+                labels={"year": "Year", "DKK M": "DKK (millions)"},
+                color_discrete_sequence=[NAVY],
             )
-            fig_heat.update_layout(height=max(300, pivot["country_name"].nunique() * 35))
-            st.plotly_chart(fig_heat, use_container_width=True)
+            fig_b3.update_traces(marker_color=NAVY, marker_line_width=0)
+            apply_style(fig_b3, height=240, xtitle="Year", ytitle="DKK (millions)")
+            st.plotly_chart(fig_b3, use_container_width=True)
+            caption_note("Finance Bills (Finanslov) 1975–1984. High-confidence R&D lines only.")
+
+    # ── Top reforms table ──
+    if rk and not dr_f.empty:
+        section_header("Key reform events")
+        _top = (dr_f.sort_values("importance_bucket", ascending=False)
+                .head(20).copy())
+        _top_cols = [c for c in ["country_name","implementation_year","sub_theme_label",
+                                  "status_label","importance_bucket","is_major_reform",
+                                  "package_name","description"] if c in _top.columns]
+        _top_labels = {
+            "country_name": "Country", "implementation_year": "Year",
+            "sub_theme_label": "Type", "status_label": "Status",
+            "importance_bucket": "Importance", "is_major_reform": "Major?",
+            "package_name": "Reform", "description": "Description",
+        }
+        render_table(_top[_top_cols], col_labels=_top_labels,
+                     num_cols=["implementation_year","importance_bucket"],
+                     bool_cols=["is_major_reform"], wide_cols=["description","package_name"])
+
+    # ── Multi-country heatmap (only when >1 country) ──
+    if rk and not dr_f.empty and dr_f["country_name"].nunique() > 1:
+        section_header("Reform activity — country × year")
+        pv4 = (
+            dr_f.dropna(subset=["implementation_year"])
+            .assign(yr=lambda d: d["implementation_year"].astype(int))
+            .groupby(["country_name","yr"]).size().reset_index(name="n")
+        )
+        fig_ht = px.density_heatmap(
+            pv4, x="yr", y="country_name", z="n",
+            color_continuous_scale=[[0,"#F0F4FF"],[0.5,"#6699CC"],[1,NAVY]],
+            labels={"yr":"Year","country_name":"","n":"Reforms"},
+            text_auto=True,
+        )
+        apply_style(fig_ht, height=max(280, pv4["country_name"].nunique() * 38),
+                    legend_bottom=False)
+        fig_ht.update_traces(textfont=dict(size=11, color="white"))
+        fig_ht.update_coloraxes(colorbar=dict(thickness=10))
+        st.plotly_chart(fig_ht, use_container_width=True)
 
 
-# ════════════════════════════════════════════════════════════════════════════
-# TAB 4 — ABOUT
-# ════════════════════════════════════════════════════════════════════════════
+# ═════════════════════════════════════════════════════════════════════════════
+# TAB 4 — DATA TABLE
+# ═════════════════════════════════════════════════════════════════════════════
 
-with tab4:
-    st.markdown("## About this Dashboard")
+with TAB_TABLE:
+    view = st.radio(
+        "Dataset", ["Budget lines", "Reform events"],
+        horizontal=True, label_visibility="collapsed",
+    )
 
+    _T5_BUD_LABELS = {
+        "country": "Country", "year": "Year", "section_code": "Ministry code",
+        "section_name_en": "Ministry", "line_description_en": "Budget line",
+        "amount_local": "Amount (DKK)", "currency": "Currency",
+        "rd_category": "R&D category", "taxonomy_score": "Score",
+        "source_file": "Source", "page_number": "Page",
+    }
+    _T5_REF_LABELS = {
+        "country_name": "Country", "survey_year": "Survey year",
+        "implementation_year": "Year", "sub_theme_label": "Innovation type",
+        "orientation_label": "Growth orientation", "status_label": "Status",
+        "is_major_reform": "Major?", "importance_bucket": "Importance",
+        "rd_actor_label": "Actor", "rd_stage_label": "Stage",
+        "package_name": "Reform name", "description": "Description",
+        "source_quote": "Source quote",
+    }
+
+    if view == "Budget lines":
+        if not budget_available():
+            st.info("No budget data.")
+        else:
+            _db5 = load_budget()
+            m5 = (_db5["year"] >= yr_b[0]) & (_db5["year"] <= yr_b[1])
+            if "decision" in _db5.columns: m5 &= _db5["decision"] == "include"
+            if cat_b != "All": m5 &= _db5["rd_category"] == cat_b
+            if sel_bud_ctry and "country" in _db5.columns:
+                m5 &= _db5["country"].isin(sel_bud_ctry)
+            df5 = _db5[m5]
+            cols5 = [c for c in _T5_BUD_LABELS if c in df5.columns]
+            _df5_disp = df5[cols5].copy()
+            if "rd_category" in _df5_disp.columns:
+                _df5_disp["rd_category"] = _df5_disp["rd_category"].map(
+                    lambda x: RD_CATEGORY_LABELS.get(x, x)
+                )
+            caption_note(f"{len(df5):,} rows  ·  DKK {df5['amount_local'].sum()/1e6:,.1f} M")
+            render_table(_df5_disp.sort_values(["year","section_code"] if "section_code" in cols5 else ["year"]),
+                         col_labels=_T5_BUD_LABELS,
+                         num_cols=["amount_local","taxonomy_score","page_number"],
+                         wide_cols=["line_description_en","section_name_en"])
+            st.download_button("Download (CSV)", df5[cols5].to_csv(index=False).encode(),
+                               "budget_lines.csv", "text/csv")
+    else:
+        if not reforms_available():
+            st.info("No reform data.")
+        else:
+            _dr5 = _dr_all if reforms_available() else pd.DataFrame()
+            cols5r = [c for c in _T5_REF_LABELS if c in _dr5.columns]
+            caption_note(f"{len(_dr5):,} reform events")
+            render_table(
+                _dr5[cols5r].sort_values(["country_name","implementation_year"]
+                                         if "implementation_year" in cols5r else cols5r[:1]),
+                col_labels=_T5_REF_LABELS,
+                num_cols=["implementation_year","importance_bucket","survey_year"],
+                bool_cols=["is_major_reform"],
+                wide_cols=["description","source_quote","package_name"],
+            )
+            st.download_button("Download (CSV)", _dr5[cols5r].to_csv(index=False).encode(),
+                               "reform_events.csv", "text/csv")
+
+
+# ═════════════════════════════════════════════════════════════════════════════
+# TAB 5 — METHODOLOGY
+# ═════════════════════════════════════════════════════════════════════════════
+
+with TAB_METHODS:
     col_l, col_r = st.columns([3, 2])
+
     with col_l:
+        section_header("Project overview")
         st.markdown("""
-### Project overview
+This dataset measures innovation policy effort along two dimensions:
 
-This dashboard is part of a research project measuring **innovation policy** across OECD
-countries using two complementary data sources:
+**Stream 1 — Budget allocation** tracks the monetary value of government R&D
+expenditure extracted from scanned Finance Bill PDFs. Budget line items are scored
+against a multilingual taxonomy (Balazs search library) using J-Rule scoring,
+producing a time series of DKK amounts classified by R&D category and Ministry.
 
-**Stream 1 — Finance Bill Extraction**
-Scanned government Finance Bill PDFs are processed with OCR and scored against a
-multilingual R&D taxonomy derived from Balazs's search library. Each budget line
-item is classified as direct R&D, innovation support, institutional, or sectoral R&D.
-
-**Stream 2 — OECD Economic Survey Extraction**
-OECD Economic Survey PDFs are processed with an LLM (GPT-4o or Claude) that extracts
-innovation policy reform events and classifies them along three dimensions:
-- **Sub-type** — what kind of innovation policy (8 types)
-- **R&D Actor** — who benefits (public / private / joint)
-- **R&D Stage** — where in the pipeline (basic → applied → commercialisation → adoption)
-
-### Innovation taxonomy
-
-| Sub-type | Description |
-|----------|-------------|
-| `rd_funding` | Public R&D funding (budgets, grants, research councils) |
-| `innovation_instruments` | R&D tax credits, direct grants, innovation agencies |
-| `research_infrastructure` | Labs, science parks, HPC, data infrastructure |
-| `knowledge_transfer` | TTOs, spinoffs, patents, university–industry collaboration |
-| `startup_ecosystem` | Incubators, accelerators, venture capital, clusters |
-| `human_capital` | Doctoral programmes, fellowships, researcher mobility |
-| `sectoral_rd` | Health, climate, AI, energy, defence R&D |
-| `other` | Innovation-relevant but does not fit the above |
-
-### Data pipeline
-
-```
-Finance Bill PDFs         OECD Survey PDFs
-      │                          │
-      ▼                          ▼
- OCR + taxonomy         LLM (GPT-4o / Claude)
-      │                          │
-      ▼                          ▼
- results.csv             reforms_events.csv
-      │                          │
-      └──────────┬───────────────┘
-                 ▼
-         Combined indicator
-         (future work)
-```
+**Stream 2 — Policy reforms** tracks structural changes in innovation policy extracted
+from OECD Economic Survey narratives. A large language model (GPT-4o or Claude) extracts
+reform events, which are deduplicated within and across survey vintages to produce a
+canonical reform event panel with full metadata.
         """)
 
+        section_header("Innovation taxonomy")
+        rows_tax = "".join(
+            f'<tr style="border-bottom:1px solid {BORDER};'
+            f'{"background:"+LGREY if i%2 else ""}">'
+            f'<td style="padding:.38rem .7rem;font-family:monospace;font-size:.75rem;'
+            f'color:{NAVY};">{k}</td>'
+            f'<td style="padding:.38rem .7rem;font-size:.8rem;">{v}</td>'
+            f'</tr>'
+            for i,(k,v) in enumerate({
+                "rd_funding":              "Public R&D budgets, research councils, universities",
+                "innovation_instruments":  "R&D tax credits, direct grants, innovation vouchers",
+                "research_infrastructure": "Shared labs, science parks, HPC, open data",
+                "knowledge_transfer":      "TTOs, spinoffs, IP regimes, university–industry collaboration",
+                "startup_ecosystem":       "Incubators, accelerators, venture capital, clusters",
+                "human_capital":           "Doctoral programmes, fellowships, researcher mobility",
+                "sectoral_rd":             "Mission R&D: health, climate, AI, energy, defence",
+                "other":                   "Innovation-relevant but does not fit above (use sparingly)",
+            }.items())
+        )
+        st.markdown(f"""
+        <table style="width:100%;border-collapse:collapse;font-size:.8rem;">
+          <thead><tr style="background:{LGREY};border-bottom:2px solid {BORDER};">
+            <th style="padding:.42rem .7rem;text-align:left;color:{NAVY};">Key</th>
+            <th style="padding:.42rem .7rem;text-align:left;color:{NAVY};">Description</th>
+          </tr></thead>
+          <tbody>{rows_tax}</tbody>
+        </table>
+        """, unsafe_allow_html=True)
+
+        section_header("Reform intensity score")
+        st.latex(r"""
+\text{Score}_{c,t} = \frac{1}{4}\Bigl(
+  \underbrace{\frac{\ln(1+n)}{\ln(11)}}_{\text{volume}}
+  +\underbrace{\frac{n_{gs}}{n}}_{\text{quality}}
+  +\underbrace{\frac{n_{major}}{n}}_{\text{depth}}
+  +\underbrace{\frac{k}{8}}_{\text{breadth}}
+\Bigr)
+        """)
+        caption_note(
+            "n = reform events · n_gs = growth-supporting · n_major = major reforms · "
+            "k = distinct sub-types · Score = 0 for country-years with no reforms."
+        )
+
     with col_r:
-        st.markdown("""
-### Technical details
-
-- **Budget pipeline**: PyMuPDF + pytesseract OCR → J-Rule taxonomy scoring
-- **Reform pipeline**: pdfplumber → chunked LLM extraction → within-survey dedup → cross-survey dedup → panel
-- **LLM models**: GPT-4o (default) or Claude Sonnet
-- **Languages**: Danish Finance Bills (1975–1984); OECD Surveys in English
-- **Taxonomy**: Balazs's search library (`Data/input/taxonomy/search_library.json`)
-
-### Running the pipelines
-
-```bash
+        section_header("Running the pipeline")
+        st.code("""
 # Finance Bills (no API key needed)
 python main.py --budget-only
 
-# OECD Surveys (needs LLM key)
-python main.py --reforms-only --reforms-country DNK
+# OECD Surveys (LLM key in config.yaml)
+python main.py --reforms-only \\
+    --reforms-country DNK
 
-# Rebuild panel without re-running LLM
+# Rebuild panel without LLM
 python main.py --reforms-build-panel-only
 
-# Launch this dashboard
+# Launch dashboard
 streamlit run app/streamlit_app.py
-```
+        """, language="bash")
 
-### Output files
+        section_header("Pipeline architecture")
+        st.markdown(f"""
+        <div style="font-size:.77rem;background:{LGREY};border:1px solid {BORDER};
+             border-radius:4px;padding:.9rem 1.1rem;font-family:'Courier New',monospace;
+             line-height:2;color:{TEXT};">
+        Finance Bill PDFs<br>
+        &nbsp; ↓ OCR (pytesseract / PyMuPDF)<br>
+        &nbsp; ↓ J-Rule taxonomy scoring<br>
+        &nbsp; ↓ <span style="color:{NAVY};font-weight:700;">results.csv</span><br>
+        <br>
+        OECD Survey PDFs<br>
+        &nbsp; ↓ pdfplumber + section prioritisation<br>
+        &nbsp; ↓ LLM extraction (chunked)<br>
+        &nbsp; ↓ Within-survey deduplication<br>
+        &nbsp; ↓ Cross-survey deduplication<br>
+        &nbsp; ↓ <span style="color:{NAVY};font-weight:700;">reform_panel.csv</span>
+        </div>
+        """, unsafe_allow_html=True)
 
-| File | Contents |
-|------|----------|
-| `Data/output/budget/results.csv` | Budget line items |
-| `Data/output/reforms/output/reforms_events.csv` | Reform events |
-| `Data/output/reforms/output/reform_panel.csv` | Country×year panel |
-        """)
+        section_header("Output files")
+        rows_out = "".join(
+            f'<tr style="border-bottom:1px solid {BORDER};'
+            f'{"background:"+LGREY if i%2 else ""}">'
+            f'<td style="padding:.35rem .6rem;font-family:monospace;font-size:.7rem;color:{NAVY};">{f}</td>'
+            f'<td style="padding:.35rem .6rem;font-size:.78rem;">{d}</td>'
+            f'</tr>'
+            for i,(f,d) in enumerate([
+                ("results.csv",                "R&D budget lines"),
+                ("results_ai_verified.csv",    "AI-validated subset"),
+                ("reforms_events.csv",         "Deduplicated reform events"),
+                ("reform_panel.csv",           "Country × year panel"),
+                ("reform_panel_subtheme.csv",  "Long panel by sub-type"),
+            ])
+        )
+        st.markdown(f"""
+        <table style="width:100%;border-collapse:collapse;">
+          <thead><tr style="background:{LGREY};border-bottom:2px solid {BORDER};">
+            <th style="padding:.35rem .6rem;text-align:left;font-size:.73rem;color:{NAVY};">File</th>
+            <th style="padding:.35rem .6rem;text-align:left;font-size:.73rem;color:{NAVY};">Contents</th>
+          </tr></thead>
+          <tbody>{rows_out}</tbody>
+        </table>
+        """, unsafe_allow_html=True)
 
-        st.markdown("---")
-        st.caption("Built with Streamlit · Plotly · pandas · pdfplumber · pytesseract · OpenAI / Anthropic")
+        st.markdown(f'<br><div style="font-size:.68rem;color:#aaa;">pandas · pdfplumber · pytesseract · openai / anthropic · streamlit · plotly</div>',
+                    unsafe_allow_html=True)

@@ -226,12 +226,23 @@ class LLMClient:
         wait=wait_exponential(multiplier=2, min=2, max=60),
     )
     def _call_anthropic(self, system_prompt, user_prompt, max_tokens):
-        """Call the Anthropic API."""
+        """Call the Anthropic API with prompt caching for the system prompt.
+
+        The system prompt is marked as cacheable — Anthropic caches it for 5
+        minutes across calls in the same process, reducing input token cost by
+        ~90% for surveys that require many chunks (the typical case).
+        """
         response = self._client.messages.create(
             model=self.model,
             max_tokens=max_tokens,
             temperature=self.temperature,
-            system=system_prompt,
+            system=[
+                {
+                    "type": "text",
+                    "text": system_prompt,
+                    "cache_control": {"type": "ephemeral"},
+                }
+            ],
             messages=[
                 {"role": "user", "content": user_prompt},
             ],
@@ -242,6 +253,13 @@ class LLMClient:
         if hasattr(response, "usage"):
             input_tokens = response.usage.input_tokens
             output_tokens = response.usage.output_tokens
+            # Cache read tokens are billed at 10% of normal input price — still
+            # count them as input_tokens so cost tracking stays accurate.
+            cache_read = getattr(response.usage, "cache_read_input_tokens", 0) or 0
+            cache_write = getattr(response.usage, "cache_creation_input_tokens", 0) or 0
+            # input_tokens already includes cache_read in the Anthropic SDK,
+            # so we only add cache_write overhead (billed at 125% for first write).
+            input_tokens += cache_write  # account for cache-write surcharge tokens
 
         return response.content[0].text, input_tokens, output_tokens
 

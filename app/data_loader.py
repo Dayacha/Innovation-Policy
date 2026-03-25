@@ -1,15 +1,10 @@
-"""
-Data loader for the Innovation Policy Dashboard.
-
-Reads both pipeline outputs and caches them in Streamlit's session cache.
-"""
+"""Data loader and color/label constants for the Innovation Policy Dashboard."""
 
 from pathlib import Path
 
 import pandas as pd
 import streamlit as st
 
-# Resolve project root from this file's location (app/ → project root)
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 BUDGET_RESULTS   = PROJECT_ROOT / "Data/output/budget/results.csv"
@@ -17,7 +12,7 @@ REFORMS_EVENTS   = PROJECT_ROOT / "Data/output/reforms/output/reforms_events.csv
 REFORMS_MENTIONS = PROJECT_ROOT / "Data/output/reforms/output/reforms_mentions.csv"
 REFORM_PANEL     = PROJECT_ROOT / "Data/output/reforms/output/reform_panel.csv"
 
-# ── Labels ──────────────────────────────────────────────────────────────────
+# ── Labels ────────────────────────────────────────────────────────────────────
 
 SUBTHEME_LABELS = {
     "rd_funding":              "Public R&D Funding",
@@ -31,9 +26,9 @@ SUBTHEME_LABELS = {
 }
 
 ACTOR_LABELS = {
-    "public":         "Public (universities, councils, PROs)",
-    "private":        "Private (firms)",
-    "public_private": "Public–Private (collaborative)",
+    "public":         "Public sector",
+    "private":        "Private sector",
+    "public_private": "Public–Private",
     "unknown":        "Unknown",
 }
 
@@ -41,7 +36,7 @@ STAGE_LABELS = {
     "basic":             "Basic research",
     "applied":           "Applied research",
     "commercialization": "Commercialisation",
-    "adoption":          "Diffusion & adoption",
+    "adoption":          "Adoption & diffusion",
     "unknown":           "Unknown",
 }
 
@@ -52,89 +47,120 @@ STATUS_LABELS = {
     "recommended": "OECD Recommended",
 }
 
-ORIENTATION_COLORS = {
-    "growth_supporting":  "#2ecc71",
-    "growth_hindering":   "#e74c3c",
-    "mixed":              "#f39c12",
-    "unclear_or_neutral": "#95a5a6",
-}
+# ── Color palettes ────────────────────────────────────────────────────────────
+# High-contrast, OECD-publication-quality categorical palettes.
+# Each color is tested for readability on a white background.
 
+# 8 innovation sub-types — ordered from warm to cool, all distinguishable
 SUBTHEME_COLORS = {
-    "rd_funding":              "#1f77b4",
-    "innovation_instruments":  "#ff7f0e",
-    "research_infrastructure": "#2ca02c",
-    "knowledge_transfer":      "#d62728",
-    "startup_ecosystem":       "#9467bd",
-    "human_capital":           "#8c564b",
-    "sectoral_rd":             "#e377c2",
-    "other":                   "#7f7f7f",
+    "rd_funding":              "#003189",   # OECD navy
+    "innovation_instruments":  "#009FDA",   # OECD sky blue
+    "research_infrastructure": "#00A389",   # teal
+    "knowledge_transfer":      "#3D9349",   # green
+    "human_capital":           "#8DC63F",   # lime green
+    "startup_ecosystem":       "#F0A500",   # amber
+    "sectoral_rd":             "#E86B33",   # OECD orange
+    "other":                   "#9B9B9B",   # neutral grey
 }
 
+# Shorter display names for legends/axes
+SUBTHEME_SHORT = {
+    "rd_funding":              "R&D Funding",
+    "innovation_instruments":  "Instruments",
+    "research_infrastructure": "Infrastructure",
+    "knowledge_transfer":      "Knowledge Transfer",
+    "human_capital":           "Human Capital",
+    "startup_ecosystem":       "Startups",
+    "sectoral_rd":             "Sectoral R&D",
+    "other":                   "Other",
+}
+
+# Budget R&D categories (actual values from pipeline output)
 RD_CATEGORY_COLORS = {
-    "direct_rd":          "#1f77b4",
-    "innovation":         "#ff7f0e",
-    "institutional":      "#2ca02c",
-    "sectoral_rd":        "#d62728",
-    "budget_instruments": "#9467bd",
-    "other":              "#7f7f7f",
+    "direct_rd":           "#003189",   # navy
+    "possible_rd":         "#009FDA",   # sky blue
+    "innovation_system":   "#3D9349",   # green
+    "institution_funding": "#E86B33",   # orange
+    "other":               "#9B9B9B",   # grey
+}
+
+RD_CATEGORY_LABELS = {
+    "direct_rd":           "Direct R&D",
+    "possible_rd":         "Possible R&D",
+    "innovation_system":   "Innovation System",
+    "institution_funding": "Institutional Funding",
+    "other":               "Other",
+}
+
+# Growth orientation — semantic colors, dark enough for chart labels
+ORIENTATION_COLORS = {
+    "growth_supporting":  "#3D9349",   # green
+    "growth_hindering":   "#C1272D",   # red
+    "mixed":              "#E86B33",   # orange
+    "unclear_or_neutral": "#9B9B9B",   # grey
+}
+
+ORIENTATION_LABELS = {
+    "growth_supporting":  "Growth-supporting",
+    "growth_hindering":   "Growth-hindering",
+    "mixed":              "Mixed",
+    "unclear_or_neutral": "Unclear / Neutral",
 }
 
 
-# ── Loaders ─────────────────────────────────────────────────────────────────
+# ── Data loaders ──────────────────────────────────────────────────────────────
 
 @st.cache_data
 def load_budget():
-    """Load Stream 1 — budget line items from Finance Bills."""
     if not BUDGET_RESULTS.exists():
         return pd.DataFrame()
-
     df = pd.read_csv(BUDGET_RESULTS)
     df["year"] = pd.to_numeric(df["year"], errors="coerce")
     df["amount_local"] = pd.to_numeric(df["amount_local"], errors="coerce")
     df = df.dropna(subset=["year", "amount_local"])
     df["year"] = df["year"].astype(int)
-
-    # Normalise rd_category to lowercase
     if "rd_category" in df.columns:
         df["rd_category"] = df["rd_category"].str.lower().fillna("other")
-
-    # Keep only include + review decisions
+        df["rd_category_label"] = df["rd_category"].map(
+            lambda x: RD_CATEGORY_LABELS.get(x, x)
+        )
     if "decision" in df.columns:
         df = df[df["decision"].isin(["include", "review"])]
-
     return df
 
 
 @st.cache_data
 def load_reforms():
-    """Load Stream 2 — deduplicated innovation reform events."""
     if not REFORMS_EVENTS.exists():
         return pd.DataFrame()
-
     df = pd.read_csv(REFORMS_EVENTS)
-
-    for col in ("implementation_year", "announcement_year", "legislation_year",
-                "survey_year"):
+    for col in ("implementation_year", "announcement_year", "legislation_year", "survey_year"):
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors="coerce")
-
     if "sub_theme" in df.columns:
-        df["sub_theme"] = df["sub_theme"].fillna("other")
+        df["sub_theme"]       = df["sub_theme"].fillna("other")
+        df["sub_theme_label"] = df["sub_theme"].map(lambda x: SUBTHEME_LABELS.get(x, x))
+        df["sub_theme_short"] = df["sub_theme"].map(lambda x: SUBTHEME_SHORT.get(x, x))
     if "rd_actor" in df.columns:
         df["rd_actor"] = df["rd_actor"].fillna("unknown")
+        df["rd_actor_label"] = df["rd_actor"].map(lambda x: ACTOR_LABELS.get(x, x))
     if "rd_stage" in df.columns:
         df["rd_stage"] = df["rd_stage"].fillna("unknown")
+        df["rd_stage_label"] = df["rd_stage"].map(lambda x: STAGE_LABELS.get(x, x))
     if "growth_orientation" in df.columns:
         df["growth_orientation"] = df["growth_orientation"].fillna("unclear_or_neutral")
+        df["orientation_label"]  = df["growth_orientation"].map(
+            lambda x: ORIENTATION_LABELS.get(x, x)
+        )
+    if "status" in df.columns:
+        df["status_label"] = df["status"].map(lambda x: STATUS_LABELS.get(x, x))
     if "is_major_reform" in df.columns:
         df["is_major_reform"] = df["is_major_reform"].astype(bool)
-
     return df
 
 
 @st.cache_data
 def load_reform_panel():
-    """Load the country×year reform panel."""
     if not REFORM_PANEL.exists():
         return pd.DataFrame()
     df = pd.read_csv(REFORM_PANEL)
@@ -144,7 +170,6 @@ def load_reform_panel():
 
 def budget_available():
     return BUDGET_RESULTS.exists()
-
 
 def reforms_available():
     return REFORMS_EVENTS.exists()

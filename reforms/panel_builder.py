@@ -826,6 +826,18 @@ class PanelBuilder:
         # ── Sub-theme level indicators ──
         sub_theme_panel = self._build_sub_theme_panel(actual, countries, years)
 
+        # ── rd_actor and rd_stage breakdown columns ──
+        panel = self._add_dimension_indicators(panel, actual, "rd_actor",
+            ["public", "private", "public_private"])
+        panel = self._add_dimension_indicators(panel, actual, "rd_stage",
+            ["basic", "applied", "commercialization", "adoption"])
+
+        # ── Reform intensity score (composite, 0–1) ──
+        # Combines: reform count (capped), share of growth-supporting reforms,
+        # share of major reforms, and sub_theme diversity (breadth).
+        # Useful as a single LHS / RHS variable in growth regressions.
+        panel = self._add_intensity_score(panel, actual)
+
         # Sort and save
         panel = panel.sort_values(
             ["country_code", "year"]
@@ -908,6 +920,101 @@ class PanelBuilder:
                 (panel[f"{prefix}{theme}_count"] > 0).astype(int)
             )
 
+        return panel
+
+    def _add_dimension_indicators(self, panel, actual, dim_col, categories):
+        """Add per-category count columns for an analytical dimension
+        (rd_actor or rd_stage).
+        """
+        if actual.empty or dim_col not in actual.columns:
+            for cat in categories:
+                panel[f"{dim_col}_{cat}_count"] = 0
+            return panel
+
+        for cat in categories:
+            cat_df = actual[actual[dim_col] == cat]
+            if cat_df.empty:
+                panel[f"{dim_col}_{cat}_count"] = 0
+                continue
+            counts = (
+                cat_df.groupby(["country_code", "panel_year"])
+                .size()
+                .reset_index(name=f"{dim_col}_{cat}_count")
+            )
+            counts.rename(columns={"panel_year": "year"}, inplace=True)
+            panel = panel.merge(counts, on=["country_code", "year"], how="left")
+            panel[f"{dim_col}_{cat}_count"] = (
+                panel[f"{dim_col}_{cat}_count"].fillna(0).astype(int)
+            )
+        return panel
+
+    def _add_intensity_score(self, panel, actual):
+        """Add a composite reform_intensity_score (0–1) per country-year.
+
+        Methodology:
+          Component 1 — volume:   log(1 + reform_count) / log(1 + cap)     [0-1]
+          Component 2 — quality:  share of growth_supporting among all      [0-1]
+          Component 3 — depth:    share of major (is_major_reform=True)     [0-1]
+          Component 4 — breadth:  sub_theme diversity / total sub_themes    [0-1]
+
+        Composite = mean of available components.
+        Score is zero if no reforms present.
+        Useful as a single indicator variable for regressions.
+        """
+        COUNT_CAP = 10          # log scale cap (counts above this give score ≈ 1)
+        N_SUBTHEMES = 8         # total innovation sub_themes
+
+        if actual.empty:
+            panel["reform_intensity_score"] = 0.0
+            panel["reform_intensity_components"] = ""
+            return panel
+
+        # Per country-year aggregations
+        agg = (
+            actual.groupby(["country_code", "panel_year"])
+            .apply(lambda g: pd.Series({
+                "n_reforms": len(g),
+                "n_growth_supporting": (
+                    (g.get("growth_orientation", pd.Series()) == "growth_supporting")
+                    .sum() if "growth_orientation" in g.columns else 0
+                ),
+                "n_major": (
+                    g["is_major_reform"].sum()
+                    if "is_major_reform" in g.columns else 0
+                ),
+                "n_subtypes": (
+                    g["sub_theme"].nunique()
+                    if "sub_theme" in g.columns else 0
+                ),
+            }), include_groups=False)
+            .reset_index()
+        )
+        agg.rename(columns={"panel_year": "year"}, inplace=True)
+
+        agg["c_volume"]  = (
+            (agg["n_reforms"].clip(upper=COUNT_CAP).apply(
+                lambda x: __import__("math").log1p(x)
+            )) / __import__("math").log1p(COUNT_CAP)
+        )
+        agg["c_quality"] = agg.apply(
+            lambda r: r["n_growth_supporting"] / r["n_reforms"] if r["n_reforms"] > 0 else 0,
+            axis=1,
+        )
+        agg["c_depth"]   = agg.apply(
+            lambda r: min(r["n_major"] / r["n_reforms"], 1.0) if r["n_reforms"] > 0 else 0,
+            axis=1,
+        )
+        agg["c_breadth"] = agg["n_subtypes"] / N_SUBTHEMES
+
+        agg["reform_intensity_score"] = (
+            (agg["c_volume"] + agg["c_quality"] + agg["c_depth"] + agg["c_breadth"]) / 4
+        ).round(4)
+
+        panel = panel.merge(
+            agg[["country_code", "year", "reform_intensity_score"]],
+            on=["country_code", "year"], how="left",
+        )
+        panel["reform_intensity_score"] = panel["reform_intensity_score"].fillna(0.0)
         return panel
 
     def _build_sub_theme_panel(self, actual_events, countries, years):
