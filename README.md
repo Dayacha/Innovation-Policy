@@ -1,182 +1,203 @@
-# Innovation Policy PDF Pipeline (Prototype)
+# Innovation Policy Pipeline
 
-Reusable Python pipeline for batch-processing government finance bill PDFs in `data/pdf/`, including OCR fallback and multilingual keyword detection (English, French, Danish).
+Automated pipeline for building cross-country time-series datasets on government
+investment in innovation and structural reform activity, using two complementary data sources.
 
-## Project tree
+---
 
-```text
-Innovation Policy/
-├─ data/
-│  ├─ pdf/                          # Input PDFs (existing)
-│  └─ processed/                    # Generated outputs
-│     ├─ full_text/
-│     │  ├─ <file_id>_<name>.txt
-│     │  └─ <file_id>_<name>.docx   # optional if python-docx is available
-│     └─ intermediate/
-│        ├─ file_inventory.csv
-│        ├─ innovation_candidates.csv
-│        ├─ page_text.csv
-│        ├─ file_text_summary.csv
-│        ├─ keyword_hits.csv
-│        └─ full_text_exports.csv
-├─ src/
-│  ├─ __init__.py
-│  ├─ config.py
-│  ├─ utils.py
-│  ├─ inventory.py
-│  ├─ ocr_utils.py
-│  ├─ pdf_extract.py
-│  ├─ language_utils.py
-│  ├─ keyword_detection.py
-│  └─ classifier.py
-├─ main.py
-├─ requirements.txt
-└─ README.md
-```
+## What this does
 
-## What the pipeline does
+Measuring innovation policy across countries and decades requires two types of evidence:
 
-1. File inventory stage
-- Recursively scans `data/pdf/` for `.pdf` files.
-- Builds `data/processed/intermediate/file_inventory.csv` with:
-  - `file_id`, `filepath`, `filename`, `country_guess`, `year_guess`, `extension`, `file_size`
-- Country/year are inferred from filename/path using heuristics.
+**How much money governments spent on R&D** is buried in scanned Finance Bill PDFs —
+thousands of budget line items in Danish, French, German, and other languages.
+Traditional approaches require manual coding of each document.
 
-2. PDF extraction stage
-- Reads each PDF page-by-page using PyMuPDF.
-- Uses direct extraction first.
-- If text is low quality (short or noisy), attempts OCR fallback (pytesseract).
-- Exports one combined full-document text file per PDF to `data/processed/full_text/*.txt`.
-- Also exports `.docx` when `python-docx` is installed.
-- Saves:
-  - `data/processed/intermediate/page_text.csv`
-  - `data/processed/intermediate/file_text_summary.csv`
-  - `data/processed/intermediate/full_text_exports.csv`
-- One bad PDF is logged and skipped without stopping the batch.
+**What structural reforms governments enacted** is described in OECD Economic Survey
+narratives — rich text that requires reading comprehension to extract reform events,
+classify their direction, and assign them to policy themes.
 
-3. Language-aware keyword detection
-- Uses multilingual keyword dictionaries from `src/config.py`.
-- Detects candidate innovation-policy pages.
-- Saves `data/processed/intermediate/keyword_hits.csv` with:
-  - `file_id`, `page_number`, `matched_keywords`, `keyword_count`, `candidate_score`, `text_snippet`, etc.
+This pipeline automates both.
 
-4. Placeholder classification stage
-- Applies a rule-based placeholder classifier (future LLM swap point).
-- Adds:
-  - `innovation_relevant`, `category_guess`, `confidence`, `rationale`
-- Final output:
-  - `data/processed/intermediate/innovation_candidates.csv`
+---
 
-## Setup
+## Two pipelines, one project
 
-## 1) Create and activate a virtual environment (recommended)
+### Pipeline 1 — Budget Extraction (Finance Bills)
+*Scanned government budget PDFs → R&D spending time-series*
 
-Windows PowerShell:
+- Reads Finance Bill PDFs for multiple countries and years
+- Applies OCR where needed (scanned documents)
+- Scores each budget line against a multilingual R&D/innovation taxonomy
+- Outputs a structured dataset: `country | year | section | amount | rd_category`
 
-```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-```
+Input:  `data/input/finance_bills/<Country>/<filename>.pdf`
+Output: `data/output/budget/results.csv` and `results.xlsx`
 
-## 2) Install Python dependencies
+### Pipeline 2 — Reform Extraction (OECD Economic Surveys)
+*OECD Economic Survey PDFs → structural reform panel dataset*
 
-```powershell
+- Downloads Survey PDFs automatically via the OECD Kappa API (or manually placed)
+- Uses an LLM (Claude or GPT-4o) to extract innovation policy reform events
+- Classifies each reform by sub-type (`rd_funding`, `knowledge_transfer`, etc.),
+  R&D actor (`public`/`private`/`public_private`), R&D stage (`basic`/`applied`/
+  `commercialization`/`adoption`), growth orientation, and implementation year
+- Outputs a country×year panel ready for econometric analysis
+
+Input:  `Data/input/surveys/<ISO3>_<YEAR>.pdf`  (e.g. `DNK_2019.pdf`)
+Output: `Data/output/reforms/output/reform_panel.csv`
+
+---
+
+## Quick start
+
+### 1. Install dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-## 3) Optional OCR system dependency (recommended for scanned PDFs)
+For Pipeline 1 (scanned PDFs), also install Tesseract OCR:
+- **macOS:** `brew install tesseract tesseract-lang`
+- **Windows:** [UB Mannheim builds](https://github.com/UB-Mannheim/tesseract/wiki)
+- **Linux:** `sudo apt install tesseract-ocr tesseract-ocr-dan tesseract-ocr-fra`
 
-`pytesseract` requires the external Tesseract OCR binary installed on your OS.
-
-Windows:
-- Install Tesseract OCR (for example from UB Mannheim builds).
-- Ensure `tesseract.exe` is on PATH.
-
-If Tesseract is missing:
-- The pipeline still runs for born-digital PDFs.
-- OCR fallback is skipped gracefully.
-- You will see a warning in logs.
-
-## Run
-
-From the project root:
-
-```powershell
-python main.py
-```
-
-### Optional AI validation layer (post-processing only)
-
-The AI step does **not** rerun OCR or extraction. It only post-processes the already-generated structured output (default input: `data/processed/results.csv`, or `data/processed/results.json`).
-
-Requirements:
-- Install `openai` from `requirements.txt`.
-- Set an API key env var: `export OPENAI_API_KEY=...`.
-
-Commands:
+### 2. Configure
 
 ```bash
-# 1) Baseline extraction only (default)
-python main.py
-
-# 2) Baseline + AI validation using defaults (batches of 10)
-python main.py --run-ai-validation
-
-# 3) AI validation with explicit input and filters
-python main.py \
-  --run-ai-validation \
-  --input-file data/processed/results.csv \
-  --max-records-to-send 50 \
-  --min-amount-threshold 1000000 \
-  --include-review-only \
-  --batch-size 5 \
-  --ai-output-format json \
-  --ai-group-by-page \
-  --ai-include-context
-
-# 4) Run two passes without overwriting (e.g., results vs innovation candidates)
-python main.py --run-ai-validation --input-file data/processed/results.csv --ai-run-name results_pass
-python main.py --run-ai-validation --input-file data/processed/intermediate/innovation_candidates.csv --ai-run-name candidates_pass --ai-include-context --ai-group-by-page
+cp config.yaml.example config.yaml
 ```
 
-Outputs written to `data/processed/ai_validation/`:
-- `<run_name>/ai_validated_candidates_raw.csv` — full AI JSON flattened.
-- `<run_name>/ai_validated_candidates_clean.csv` — baseline + AI columns merged.
-- `<run_name>/baseline_vs_ai_comparison.csv` / `.jsonl` — side-by-side baseline vs AI (format controlled by `--ai-output-format`).
-- `<run_name>/failed_batches.jsonl` — batches that failed after retry.
-- `<run_name>/ai_validation_run_summary.json` — counts, config, cache hits.
-- `<run_name>/ai_cache.jsonl` — cached normalized candidates to avoid repeated API calls.
+Open `config.yaml` and fill in your keys:
 
-Cost controls:
-- Pre-AI filters (skip empty/invalid/low-amount rows; optional review-only flag).
-- `max_records_to_send` cap.
-- Batching (`--batch-size`, default 10) to reduce requests.
-- Result cache keyed on section_code + line_description + amount.
-- Single retry per failed batch; failures are logged, not re-sent indefinitely.
-- Optional `--ai-group-by-page` batches records from the same page together to avoid repeating page context.
-- Optional `--ai-include-context` adds surrounding text excerpts to prompts (disabled by default to save tokens).
+```yaml
+llm:
+  provider: "anthropic"   # or "openai"
+  api_key: "sk-ant-..."   # LLM key for reform extraction
 
-## Expected outputs after running
+reforms:
+  kappa_api_key: "..."    # OECD Kappa key for auto-downloading Survey PDFs
+                          # Leave empty to place PDFs manually (see below)
+```
 
-- `data/processed/intermediate/file_inventory.csv`:
-  - One row per PDF discovered.
-- `data/processed/intermediate/page_text.csv`:
-  - One row per extracted page with method (`direct_text`, `ocr_fallback`, etc.).
-- `data/processed/intermediate/file_text_summary.csv`:
-  - Per-file stats (`total_pages`, `direct_pages`, `ocr_pages`, `status`).
-- `data/processed/full_text/*.txt`:
-  - Full text per PDF with page separators.
-- `data/processed/full_text/*.docx`:
-  - Same content in Word format when `python-docx` is available.
-- `data/processed/intermediate/full_text_exports.csv`:
-  - Export manifest with txt/docx paths and status.
-- `data/processed/intermediate/keyword_hits.csv`:
-  - Candidate pages with multilingual keyword matches.
-- `data/processed/intermediate/innovation_candidates.csv`:
-  - Candidate pages + placeholder classification labels.
+> **API keys are never committed to git** — `config.yaml` is in `.gitignore`.
+> You can also use environment variables: `ANTHROPIC_API_KEY` and `KAPPA_API_KEY`.
 
-## Customization notes
+### 3. Get OECD Economic Survey PDFs
 
-- Keyword dictionaries: edit `KEYWORDS_BY_LANGUAGE` in `src/config.py`.
-- OCR quality thresholds: adjust `MIN_DIRECT_TEXT_CHARS`, `MIN_ALNUM_RATIO` in `src/config.py`.
-- Future LLM integration: replace logic inside `src/classifier.py` while keeping output schema.
+**Option A — Auto-download via OECD Kappa API** (recommended):
+
+```bash
+# Build a catalog of all available surveys (saves kappa_catalog.json)
+python main.py --reforms-fetch-catalog
+
+# Download all surveys
+python main.py --reforms-download
+
+# Or download selectively
+python main.py --reforms-download --reforms-country DNK          # one country, all years
+python main.py --reforms-download --reforms-year 2024            # all countries, one year
+python main.py --reforms-download --reforms-country DNK --reforms-year 2024  # one survey
+```
+
+**Option B — No Kappa key** (public URL fallback or manual):
+
+Without a Kappa key, `--reforms-download` will try public OECD iLibrary URL patterns.
+Many surveys require institutional access, so not all will be available this way.
+
+You can also place PDFs manually — naming must be exact:
+
+```
+data/input/surveys/
+├── DNK_2019.pdf
+├── FRA_2022.pdf
+└── DEU_2021.pdf
+```
+
+### 4. Add Finance Bill PDFs (Pipeline 1)
+
+```
+data/input/finance_bills/
+└── Denmark/
+    ├── 1975_finanslov.pdf
+    └── 1976_finanslov.pdf
+```
+
+### 5. Run
+
+```bash
+# Run both pipelines
+python main.py
+
+# Run only Finance Bill extraction (no API key needed)
+python main.py --budget-only
+
+# Run only OECD Economic Survey reform extraction
+python main.py --reforms-only
+
+# Process a single country or year
+python main.py --reforms-only --reforms-country DNK
+python main.py --reforms-only --reforms-country DNK --reforms-year 2024
+
+# Rebuild the reform panel without any LLM calls (free, runs in seconds)
+python main.py --reforms-build-panel-only
+```
+
+---
+
+## Output files
+
+### Budget pipeline
+| File | Description |
+|------|-------------|
+| `data/output/budget/results.csv` | Main output — one row per budget line identified as R&D-related |
+| `data/output/budget/results.xlsx` | Same, formatted for review in Excel |
+| `data/output/budget/results_ai_verified.csv` | Rows confirmed by AI validation pass |
+
+### Reform pipeline
+| File | Description |
+|------|-------------|
+| `data/output/reforms/output/reform_panel.csv` | Country×year panel with reform indicators by theme |
+| `data/output/reforms/output/reforms_events.csv` | One row per deduplicated reform event |
+| `data/output/reforms/output/reforms_mentions.csv` | Raw extractions — full audit trail |
+
+---
+
+## Re-running is safe
+
+Both pipelines are **incremental and non-destructive**:
+
+- Adding new PDFs → only the new files are processed
+- Removing a PDF from disk → its results are **kept** in the database
+- Changing nothing → nothing is re-processed (full cache hit)
+- Re-running the reform panel with different settings → `--reforms-build-panel-only` rebuilds in seconds with no API cost
+
+---
+
+## Project structure
+
+```
+Innovation-Policy/
+│
+├── main.py                   unified entry point
+├── config.yaml.example       configuration template (copy to config.yaml)
+│
+├── budget/                   Finance Bill extraction modules
+├── reforms/                  OECD Economic Survey extraction modules
+│   └── pipeline_reforms.py   reform pipeline orchestration
+│
+├── app/                      Streamlit dashboard
+│   └── streamlit_app.py      interactive visualization (run with: streamlit run app/streamlit_app.py)
+│
+└── Data/
+    ├── input/
+    │   ├── finance_bills/    Finance Bill PDFs (tracked in git)
+    │   ├── surveys/          Economic Survey PDFs (gitignored — download via Kappa)
+    │   └── taxonomy/         Reference taxonomy files (tracked in git)
+    └── output/               All pipeline outputs
+        ├── budget/
+        └── reforms/
+```
+
+For the full technical reference — pipeline architecture, all CLI flags, config options,
+output schemas, and how to extend to new countries — see [TECHNICAL.md](TECHNICAL.md).

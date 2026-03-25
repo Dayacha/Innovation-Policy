@@ -1,0 +1,172 @@
+{
+  "DNK_1997": {
+    "country_code": "DNK",
+    "country_name": "Denmark",
+    "year": 1997,
+    "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DNK_1997.pdf",
+    "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_1997.txt",
+    "reforms_path": null,
+    "url": null,
+    "status": "text_extracted"
+  },
+  "DNK_1999": {
+    "country_code": "DNK",
+    "country_name": "Denmark",
+    "year": 1999,
+    "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DNK_1999.pdf",
+    "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_1999.txt",
+    "reforms_path": null,
+    "url": null,
+    "status": "text_extracted"
+  },
+  "DNK_2003": {
+    "country_code": "DNK",
+    "country_name": "Denmark",
+    "year": 2003,
+    "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DNK_2003.pdf",
+    "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_2003.txt",
+    "reforms_path": null,
+    "url": null,
+    "status": "text_extracted"
+  },
+  "DNK_2005": {
+    "country_code": "DNK",
+    "country_name": "Denmark",
+    "year": 2005,
+    "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DNK_2005.pdf",
+    "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_2005.txt",
+    "reforms_path": null,
+    "url": null,
+    "status": "text_extracted"
+  },
+  "DNK_2009": {
+    "country_code": "DNK",
+    "country_name": "Denmark",
+    "year": 2009,
+    "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DNK_2009.pdf",
+    "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_2009.txt",
+    "reforms_path": null,
+    "url": null,
+    "status": "text_extracted"
+  },
+  "DNK_2013": {
+    "country_code": "DNK",
+    "country_name": "Denmark",
+    "year": 2013,
+    "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DNK_2013.pdf",
+    "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_2013.txt",
+    "reforms_path": null,
+    "url": null,
+    "status": "text_extracted"
+  },
+  "DNK_2019": {
+    "country_code": "DNK",
+    "country_name": "Denmark",
+    "year": 2019,
+    "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DNK_2019.pdf",
+    "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_2019.txt",
+    "reforms_path": null,
+    "url": null,
+    "status": "text_extracted"
+  },
+  "DNK_2021": {
+    "country_code": "DNK",
+    "country_name": "Denmark",
+    "year": 2021,
+    "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DNK_2021.pdf",
+    "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_2021.txt",
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DNK_2021.json",
+    "url": null,
+    "status": "reforms_extracted"
+  },
+  "DNK_2024": {
+    "country_code": "DNK",
+    "country_name": "Denmark",
+    "year": 2024,
+    "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DNK_2024.pdf",
+    "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_2024.txt",
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DNK_2024.json",
+    "url": null,
+    "status": "text_extracted"
+  },
+  "DNK_1995": {
+    "country_code": "DNK",
+    "country_name": "Denmark",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-1995_en",
+    "status": "pending"
+  },
+  "DNK_2001": {
+    "country_code": "DNK",
+    "country_name": "Denmark",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-2001_en",
+    "status": "pending"
+  },
+  "DNK_2007": {
+    "country_code": "DNK",
+    "country_name": "Denmark",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-2007_en",
+    "status": "pending"
+  },
+  "DNK_2011": {
+    "country_code": "DNK",
+    "country_name": "Denmark",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-2011_en",
+    "status": "pending"
+  },
+  "DNK_2015": {
+    "country_code": "DNK",
+    "country_name": "Denmark",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-2015_en",
+    "status": "pending"
+  },
+  "DNK_2017": {
+    "country_code": "DNK",
+    "country_name": "Denmark",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-2017_en",
+    "status": "pending"
+  },
+  "DNK_2023": {
+    "country_code": "DNK",
+    "country_name": "Denmark",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-2023_en",
+    "status": "pending"
+  },
+  "DNK_2025": {
+    "country_code": "DNK",
+    "country_name": "Denmark",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-2025_en",
+    "status": "pending"
+  }
+}

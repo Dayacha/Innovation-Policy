@@ -1,0 +1,133 @@
+# =============================================================================
+# Innovation Policy Pipeline — Unified Configuration
+# =============================================================================
+# Copy this file to config.yaml and fill in your API key.
+#
+# This single file configures both pipelines:
+#   - budget:  Finance Bill extraction (R&D spending time-series)
+#   - reforms: OECD Economic Survey reform extraction (country×year panel)
+#
+# Usage:
+#   python main.py                      # run both pipelines
+#   python main.py --budget-only        # only Finance Bill extraction
+#   python main.py --reforms-only       # only reform extraction
+
+
+# =============================================================================
+# LLM / API settings  (shared across both pipelines)
+# =============================================================================
+llm:
+  # Provider: "anthropic" or "openai"
+  provider: "anthropic"
+
+  # API key — or set via environment variable:
+  #   Anthropic → ANTHROPIC_API_KEY
+  #   OpenAI    → OPENAI_API_KEY
+  api_key: ""
+
+  # Recommended models:
+  #   Anthropic: "claude-sonnet-4-6"  (best quality)
+  #              "claude-haiku-4-5-20251001"  (cheaper, high-volume runs)
+  #   OpenAI:    "gpt-4o", "gpt-4o-mini"
+  model: "claude-sonnet-4-6"
+
+  # Temperature 0 = fully deterministic (recommended for replicability)
+  temperature: 0
+
+  # Max tokens per LLM response
+  max_tokens: 4096
+
+
+# =============================================================================
+# Budget pipeline  — Finance Bills (scanned PDFs → R&D spending time-series)
+# =============================================================================
+# Input PDFs:  Data/PDF/<Country>/<filename>.pdf
+# Outputs:     data/processed/results.csv | results.xlsx | results.json
+#
+# Most budget pipeline settings live in budget/config.py (paths, OCR params,
+# taxonomy thresholds). The only budget setting here is the AI validation
+# model, which can differ from the main LLM used for reform extraction.
+budget:
+  # Model used for the optional AI validation step (--run-ai-validation).
+  # Can be any model supported by the llm.provider above.
+  # Examples: "gpt-4o", "gpt-4o-mini", "claude-sonnet-4-6"
+  ai_validation_model: "gpt-4o"
+
+
+# =============================================================================
+# Reform pipeline  — OECD Economic Surveys (digital PDFs → reform event panel)
+# =============================================================================
+# Input PDFs:  Data/surveys/<COUNTRY_CODE>_<YEAR>.pdf   (e.g. DNK_2019.pdf)
+# Outputs:     data/processed/reforms/output/
+#                reform_panel.csv         country×year panel
+#                reforms_events.csv       one row per deduplicated reform
+#                reforms_mentions.csv     raw per-survey audit trail
+#                oecd_recommendations.csv OECD-suggested (not enacted) reforms
+reforms:
+
+  # --- Kappa API (OECD internal catalogue API for auto-downloading PDFs) ---
+  # Set your key here OR via the KAPPA_API_KEY environment variable.
+  # Leave empty to place PDFs manually in data/input/surveys/.
+  #
+  # With a key, you can run:
+  #   python main.py --reforms-fetch-catalog              # save kappa_catalog.json
+  #   python main.py --reforms-download                   # download all surveys
+  #   python main.py --reforms-download --reforms-country DNK   # one country
+  #   python main.py --reforms-download --reforms-year 2019     # one year
+  kappa_api_key: ""
+
+  # --- Data directories (relative to project root) ---
+  pdf_dir:        "Data/input/surveys"
+  extracted_text: "Data/output/reforms/extracted_text"
+  reforms_json:   "Data/output/reforms/reforms_json"
+  output:         "Data/output/reforms/output"
+  kappa_catalog:  "Data/input/surveys/kappa_catalog.json"
+
+  # Optional: append a suffix to reforms_json and output directories.
+  # Useful when comparing results from different LLM providers.
+  # Example: "openai" → data/processed/reforms/reforms_json_openai/
+  output_suffix: ""
+
+  # --- Processing ---
+  chunk_size: 12000        # max characters per LLM chunk
+  chunk_overlap: 500       # overlap between chunks (avoids cutting reforms mid-sentence)
+  max_retries: 3
+  api_delay: 1.0           # seconds between API calls
+  skip_existing: true      # skip surveys already in reforms_json/
+  dedup_threshold: 0.65    # text-similarity threshold for within-survey dedup
+
+  # --- Countries to process (ISO 3166-1 alpha-3) ---
+  # Leave empty [] to process all OECD countries found in Data/surveys/.
+  # Example: ["DNK", "FRA", "DEU"]
+  countries: []
+
+  # --- Year range ---
+  year_range:
+    start: 1995
+    end: 2025
+
+  # --- Reform theme to extract ---
+  # This project extracts ONLY the "innovation" theme.
+  # Sub-type definitions (8 types) live in reforms/prompts.py:
+  #   rd_funding, innovation_instruments, research_infrastructure,
+  #   knowledge_transfer, startup_ecosystem, human_capital,
+  #   sectoral_rd, other
+  # Each reform is also tagged with rd_actor and rd_stage dimensions.
+  themes:
+    - innovation
+
+  # --- Panel construction ---
+  panel:
+    # "inclusive" — use all reforms, including those with imputed years
+    # "strict"    — exclude reforms where no explicit year was found
+    mode: "inclusive"
+
+    # Which date to use as the panel year:
+    #   "implementation" (default) — when the reform took effect
+    #   "legislation"              — when passed into law
+    #   "announcement"             — when the government announced it
+    year_assignment: "implementation"
+
+    major_reform_threshold: 3
+    cross_survey_dedup_threshold: 0.55
+    llm_cross_survey_dedup: true
