@@ -78,7 +78,7 @@ _RE_CODE_BUDGET = re.compile(
 # section-level totals (Anlægsudgifter, Tilskud, …) are NOT attributed to
 # the last program code carried over from the previous page.
 _RE_GROUP_HEADER = re.compile(
-    r"^(\d{1,2})\.\s+([A-ZÆØÅÖ].{8,})",
+    r"^(\d{1,2})[,\.]\s+([A-ZÆØÅÖ].{8,})",
     re.UNICODE,
 )
 
@@ -246,15 +246,20 @@ def parse_page_lines(
     Returns:
         (budget_lines, updated_section_code, updated_section_name, in_artsoversigt)
     """
-    raw = [ln.strip() for ln in re.split(r"\r?\n", page_text or "") if ln.strip()]
+    # Strip OCR noise lines: lines made entirely of non-Latin characters
+    # (e.g. Korean '홢', CJK symbols) that appear as scan artifacts in
+    # 1970s Danish Finance Bills and block amount detection.
+    _OCR_NOISE_RE = re.compile(r"^[\uAC00-\uD7FF\u4E00-\u9FFF\u3040-\u30FF\u0400-\u04FF\u0370-\u03FF]+$")
+    raw = [ln.strip() for ln in re.split(r"\r?\n", page_text or "")
+           if ln.strip() and not _OCR_NOISE_RE.match(ln.strip())]
     result: list[BudgetLine] = []
-    skip_next = False
+    lines_to_skip = 0
     current_item_code = ""
     current_item_desc = ""
 
     for i, line in enumerate(raw):
-        if skip_next:
-            skip_next = False
+        if lines_to_skip > 0:
+            lines_to_skip -= 1
             continue
 
         before = raw[i - 1] if i > 0 else ""
@@ -332,7 +337,7 @@ def parse_page_lines(
                     desc = _despace_ocr(am.group(1).lstrip("§&8 0123456789.").strip())
             elif (nla := _next_line_amount()):
                 tail = nla
-                skip_next = True
+                lines_to_skip = 1
 
             section_code = f"§{sec_num}"
             section_name = desc
@@ -364,7 +369,13 @@ def parse_page_lines(
                     desc2 = am2.group(1).strip().rstrip(". :")
             elif (nla2 := _next_line_amount()):
                 tail2 = nla2
-                skip_next = True
+                lines_to_skip = 1
+            elif re.match(r"^\(tekstanm\.", next_line or "", re.I) and _RE_STANDALONE_AMOUNT.match(after or ""):
+                # "(tekstanm. NN)" annotation sits between description and amount
+                val2 = _parse_danish_amount(after)
+                if val2 is not None:
+                    tail2 = (after.strip(), val2)
+                    lines_to_skip = 2
 
             # Keep item context in sync: otherwise generic lines that follow
             # this code (e.g. "Driftsudgifter ... 109M") inherit the PREVIOUS
@@ -446,7 +457,7 @@ def parse_page_lines(
                     continue
                 nla_sub = _next_line_amount()
                 if nla_sub:
-                    skip_next = True
+                    lines_to_skip = 1
                     result.append(BudgetLine(
                         line_code=full_code,
                         description=sub_desc,
@@ -501,14 +512,27 @@ def parse_page_lines(
 
         # ── Program header without inline amount (e.g. "62.02 Bidrag …") ──
         m_prog = _RE_PROGRAM_HEADER.match(line)
-        if m_prog and not _extract_tail_amount(line) and not _RE_STANDALONE_AMOUNT.match(next_line or ""):
+        if m_prog and not _extract_tail_amount(line):
             code = m_prog.group(1)
             desc_prog = m_prog.group(2).strip().rstrip(".: ")
+            tail_prog: tuple[str, int] | None = None
+            if _RE_STANDALONE_AMOUNT.match(next_line or ""):
+                # Amount on the very next line
+                val_prog = _parse_danish_amount(next_line)
+                if val_prog is not None:
+                    tail_prog = (next_line.strip(), val_prog)
+                    lines_to_skip = 1
+            elif re.match(r"^\(tekstanm\.", next_line or "", re.I) and _RE_STANDALONE_AMOUNT.match(after or ""):
+                # "(tekstanm. NN)" annotation sits between description and amount
+                val_prog = _parse_danish_amount(after)
+                if val_prog is not None:
+                    tail_prog = (after.strip(), val_prog)
+                    lines_to_skip = 2
             result.append(BudgetLine(
                 line_code=code,
                 description=desc_prog,
-                raw_amount="",
-                amount_value=0,
+                raw_amount=tail_prog[0] if tail_prog else "",
+                amount_value=tail_prog[1] if tail_prog else 0,
                 section_code=section_code,
                 section_name=section_name,
                 line_type="program_header",
@@ -579,7 +603,7 @@ def parse_page_lines(
         if len(line) > 3 and (nla3 := _next_line_amount()):
             desc4 = re.sub(r"[\.\,\;\s]+$", "", line).strip()
             if desc4:
-                skip_next = True
+                lines_to_skip = 1
                 result.append(BudgetLine(
                     line_code="",
                     description=desc4,

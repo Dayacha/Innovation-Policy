@@ -397,7 +397,7 @@ def caption_note(text):
 yr_b       = (1975, 1984)
 cat_b      = "All"
 conf_b     = (0.0, 1.0)
-ai_dec_b   = ["include", "review"]
+dec_b      = ["include"]
 sel_bud_ctry = []
 sel_ctry   = []
 sel_st     = []
@@ -424,6 +424,12 @@ with st.sidebar:
     if budget_available():
         _db = load_budget()
         _yrs = sorted(_db["year"].unique())
+        # Migrate old session state that was pinned to the historical 1975-1984 range.
+        if _yrs:
+            _yr_default = (min(_yrs), max(_yrs))
+            _yr_state = st.session_state.get("yr_b")
+            if _yr_state == (1975, 1984) and _yr_default != (1975, 1984):
+                st.session_state["yr_b"] = _yr_default
         yr_b = st.select_slider(
             "Year range", options=_yrs,
             value=(min(_yrs), max(_yrs)), key="yr_b",
@@ -440,13 +446,14 @@ with st.sidebar:
             "R&D category", _cats, key="cat_b",
             format_func=lambda x: x if x != "All" else "All categories",
         )
-        _ai_decisions = sorted(_db["ai_decision"].dropna().astype(str).unique()) if "ai_decision" in _db.columns else []
-        if _ai_decisions:
-            ai_dec_b = st.multiselect(
-                "AI decision",
-                _ai_decisions,
-                default=_ai_decisions,
-                key="ai_dec_b",
+        _decisions = sorted(_db["decision"].dropna().astype(str).unique()) if "decision" in _db.columns else []
+        if _decisions:
+            _default_decisions = ["include"] if "include" in _decisions else _decisions
+            dec_b = st.multiselect(
+                "Decision",
+                _decisions,
+                default=_default_decisions,
+                key="dec_b",
             )
         _conf_vals = pd.to_numeric(_db["confidence"], errors="coerce").dropna()
         if not _conf_vals.empty:
@@ -555,16 +562,13 @@ with TAB_BUDGET:
         st.stop()
 
     db = load_budget()
-    # Always show only high-confidence (include) lines as default
     m = (db["year"] >= yr_b[0]) & (db["year"] <= yr_b[1])
-    if "decision" in db.columns:
-        m &= db["decision"] == "include"
+    if dec_b and "decision" in db.columns:
+        m &= db["decision"].isin(dec_b)
     if cat_b != "All":
         m &= db["budget_category"] == cat_b
     if sel_bud_ctry and "country" in db.columns:
         m &= db["country"].isin(sel_bud_ctry)
-    if ai_dec_b and "ai_decision" in db.columns:
-        m &= db["ai_decision"].isin(ai_dec_b)
     if "confidence" in db.columns:
         _conf = pd.to_numeric(db["confidence"], errors="coerce")
         m &= _conf.between(conf_b[0], conf_b[1], inclusive="both")
@@ -700,7 +704,7 @@ with TAB_BUDGET:
         "source_file": "Source file",
     }
     _bud_search = st.text_input(
-        "Search table", key="bud_search", placeholder="Ministry, budget line, category…",
+        "Search table", key="bud_search", placeholder="Ministry, description, category…",
         label_visibility="collapsed",
     )
     _tbl = db_f.copy()
@@ -1266,12 +1270,11 @@ with TAB_TABLE:
         else:
             _db5 = load_budget()
             m5 = (_db5["year"] >= yr_b[0]) & (_db5["year"] <= yr_b[1])
-            if "decision" in _db5.columns: m5 &= _db5["decision"] == "include"
+            if dec_b and "decision" in _db5.columns:
+                m5 &= _db5["decision"].isin(dec_b)
             if cat_b != "All": m5 &= _db5["budget_category"] == cat_b
             if sel_bud_ctry and "country" in _db5.columns:
                 m5 &= _db5["country"].isin(sel_bud_ctry)
-            if ai_dec_b and "ai_decision" in _db5.columns:
-                m5 &= _db5["ai_decision"].isin(ai_dec_b)
             if "confidence" in _db5.columns:
                 _conf5 = pd.to_numeric(_db5["confidence"], errors="coerce")
                 m5 &= _conf5.between(conf_b[0], conf_b[1], inclusive="both")

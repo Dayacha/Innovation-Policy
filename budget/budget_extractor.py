@@ -432,6 +432,11 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
                 item_desc = bl.item_description or program_desc
 
                 scoring_text = prog_clean or desc_clean
+                # When prog_clean is a ministry/agency name (e.g. "Teknologistyrelsen")
+                # and desc_clean embeds a code+description (e.g. "52.01 Teknologisk
+                # Service"), combine both so taxonomy scoring sees the full context.
+                if prog_clean and _CODE_RE.search(desc_clean):
+                    scoring_text = f"{prog_clean} {desc_clean}".strip()
                 # When scoring_text is just a budget type (e.g. "Driftsudgifter")
                 # with no R&D signal, supplement with item_desc (e.g.
                 # "Forskningssekretariatet") so that the has_rd_word check succeeds
@@ -496,6 +501,11 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
                 has_neg = any(k in desc_clean.lower() for k in _NEG_KEYWORDS)
                 if has_neg and not has_pos:
                     continue
+                # "Tilskud under [Ministry]" is a Danish pension/transfer
+                # allocation pattern — grants routed through one ministry
+                # to pay pension obligations. Not R&D spending.
+                if re.search(r"\btilskud under\b.+\bministeriet\b", desc_clean, re.IGNORECASE):
+                    continue
                 if desc_clean.lower() in {
                     "tilskud", "driftsudgifter", "anlægsudgifter", "anlægstilskud",
                     "indtægter", "udlån", "kapitalindtægter",
@@ -504,17 +514,19 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
                 if desc_score == 0 and context_score < INCLUDE_THRESHOLD:
                     continue
 
+                # Pre-filter boost: ensure named innovation bodies are never
+                # filtered out even when surrounding context is sparse.
+                _boost_match = re.search(r"teknologisk service|teknologirådet|tekniske prøvenævn", scoring_text, re.IGNORECASE)
+                if _boost_match:
+                    content_score = max(content_score, INCLUDE_THRESHOLD)
+                    context_score = max(context_score, REVIEW_THRESHOLD)
+                    score = max(score, content_score, context_score)
+                    category = "innovation_system"
+
                 if context_score < REVIEW_THRESHOLD:
                     continue
 
                 dedup = (source_filename, int(row.page_number), program_code or bl.line_code, budget_type, bl.raw_amount)
-
-                # Boost for key innovation terms we care about
-                if re.search(r"teknologisk service|teknologirådet|tekniske prøvenævn", scoring_text, re.IGNORECASE):
-                    content_score = max(content_score, INCLUDE_THRESHOLD)
-                    score = max(score, content_score, context_score)
-                    category = "innovation_system"
-                    decision = "include"
 
                 # Skip generic legal adjustments not informative for R&D
                 if re.search(r"ændringer i medfør", desc_clean, re.IGNORECASE):
@@ -540,9 +552,19 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
                 ) else "review"
 
                 parse_error = False
-                # Validation: if description has a code different from item_code, flag
+                # Validation: if the ORIGINAL description (not merged) has a code
+                # different from item_code, flag. Using bl.description avoids
+                # false positives when context_after merge adds a code from the
+                # next item (that code belongs to the next item, not this one).
+                code_in_orig = _CODE_RE.search(preclean_text(bl.description))
                 code_in_desc = _CODE_RE.search(desc_clean)
-                if code_in_desc and item_code and code_in_desc.group() != item_code:
+                if (code_in_orig and item_code
+                        and code_in_orig.group() != item_code
+                        and code_in_orig.group() != bl.line_code):
+                    # Only flag if the description's code is neither the item's
+                    # own code nor its parent context — avoids false-flagging
+                    # correctly parsed program items whose inherited item_code
+                    # is the parent subsection.
                     parse_error = True
                 # If the ORIGINAL line (before merge) contains a budget keyword
                 # immediately followed by a code, the line is likely malformed.
@@ -553,6 +575,11 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
                     parse_error = True
                 if parse_error:
                     decision = "review"
+
+                # Post-parse_error boost: named innovation bodies always include,
+                # even if parse_error was set due to merged context_after codes.
+                if _boost_match:
+                    decision = "include"
 
                 # Confidence based on multiple signals
                 confidence = 0.40 + 0.10 * score
