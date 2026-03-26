@@ -83,6 +83,9 @@ def load_reforms_config(config_path="config.yaml"):
             "api_delay":        reforms_section.get("api_delay", 1.0),
             "skip_existing":    reforms_section.get("skip_existing", True),
             "dedup_threshold":  reforms_section.get("dedup_threshold", 0.65),
+            "include_remaining_sections": reforms_section.get("include_remaining_sections", True),
+            "remaining_min_taxonomy_score": reforms_section.get("remaining_min_taxonomy_score", 2.0),
+            "remaining_neighbor_pages": reforms_section.get("remaining_neighbor_pages", 0),
         },
         "countries":   reforms_section.get("countries", []),
         "year_range":  reforms_section.get("year_range", {"start": 1995, "end": 2025}),
@@ -251,19 +254,31 @@ def _step_download_pdfs(config, country=None, year=None) -> dict:
         ]
 
     # Load catalog for read_url/pdf_url hints even without a Kappa key
-    catalog_path = Path(config["paths"]["kappa_catalog"])
-    catalog = KappaClient.load_catalog(catalog_path) if catalog_path.exists() else {}
+    kappa_catalog_path = Path(config["paths"]["kappa_catalog"])
+    kappa_catalog = KappaClient.load_catalog(kappa_catalog_path) if kappa_catalog_path.exists() else {}
+
+    # Also load survey_catalog for manually-curated pdf_url/url fields
+    survey_catalog_path = Path(config["paths"]["output"]) / "survey_catalog.json"
+    import json as _json
+    survey_catalog = {}
+    if survey_catalog_path.exists():
+        with open(survey_catalog_path) as _f:
+            survey_catalog = _json.load(_f)
 
     stats = {"downloaded": 0, "skipped": 0, "failed": 0}
     for code, yr in pairs:
         if downloader.is_downloaded(code, yr):
             stats["skipped"] += 1
             continue
-        meta = catalog.get(code, {}).get(str(yr), {})
+        kappa_meta = kappa_catalog.get(code, {}).get(str(yr), {})
+        survey_meta = survey_catalog.get(f"{code}_{yr}", {})
+        # Prefer kappa pdf_url, fall back to survey_catalog pdf_url, then read_url
+        pdf_url = kappa_meta.get("pdf_url") or survey_meta.get("pdf_url")
+        read_url = kappa_meta.get("read_url") or survey_meta.get("url")
         result = downloader.download_survey(
             code, yr,
-            url=meta.get("pdf_url"),
-            read_url=meta.get("read_url"),
+            url=pdf_url,
+            read_url=read_url,
         )
         if result:
             stats["downloaded"] += 1

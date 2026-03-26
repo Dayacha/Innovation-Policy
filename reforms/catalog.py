@@ -109,6 +109,12 @@ class SurveyCatalog:
                 "url": None,
                 "status": "pending",
             }
+        # Never overwrite url/pdf_url with None or empty — these are set
+        # manually from raw_extracted_data and must not be clobbered by the pipeline.
+        for protected in ("url", "pdf_url"):
+            if protected in kwargs and not kwargs[protected]:
+                if self.catalog[key].get(protected):
+                    kwargs.pop(protected)
         self.catalog[key].update(kwargs)
         return self.catalog[key]
 
@@ -161,10 +167,16 @@ class SurveyCatalog:
                     )
                     continue
 
+            slug = CODE_TO_SLUG.get(country_code, "")
+            url = (
+                f"https://www.oecd-ilibrary.org/economics/"
+                f"oecd-economic-surveys-{slug}-{year}_en"
+            )
             self.add_entry(
                 country_code,
                 year,
                 pdf_path=str(pdf_file.resolve()),
+                url=url,
                 status="pdf_available",
             )
             count += 1

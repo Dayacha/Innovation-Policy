@@ -8,11 +8,13 @@ import streamlit as st
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-BUDGET_RESULTS_AI = PROJECT_ROOT / "Data/output/budget/results_ai_verified.csv"
-BUDGET_RESULTS   = PROJECT_ROOT / "Data/output/budget/results.csv"
-REFORMS_EVENTS   = PROJECT_ROOT / "Data/output/reforms/output/reforms_events.csv"
-REFORMS_MENTIONS = PROJECT_ROOT / "Data/output/reforms/output/reforms_mentions.csv"
-REFORM_PANEL     = PROJECT_ROOT / "Data/output/reforms/output/reform_panel.csv"
+BUDGET_RESULTS_AI      = PROJECT_ROOT / "Data/output/budget/results_ai_verified.csv"
+BUDGET_RESULTS         = PROJECT_ROOT / "Data/output/budget/results.csv"
+REFORMS_EVENTS         = PROJECT_ROOT / "Data/output/reforms/output/reforms_events.csv"
+REFORMS_MENTIONS       = PROJECT_ROOT / "Data/output/reforms/output/reforms_mentions.csv"
+REFORMS_RECOMMENDATIONS= PROJECT_ROOT / "Data/output/reforms/output/oecd_recommendations.csv"
+REFORM_PANEL           = PROJECT_ROOT / "Data/output/reforms/output/reform_panel.csv"
+REFORM_PANEL_SUBTHEME  = PROJECT_ROOT / "Data/output/reforms/output/reform_panel_subtheme.csv"
 
 # ── Labels ────────────────────────────────────────────────────────────────────
 
@@ -208,11 +210,59 @@ def load_reform_panel():
     return df
 
 
+@st.cache_data
+def load_reform_mentions():
+    if not REFORMS_MENTIONS.exists():
+        return pd.DataFrame()
+    df = pd.read_csv(REFORMS_MENTIONS)
+    for col in ("implementation_year", "announcement_year", "survey_year"):
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+    if "sub_theme" in df.columns:
+        df["sub_theme"] = df["sub_theme"].fillna("other")
+        df["sub_theme_label"] = df["sub_theme"].map(lambda x: SUBTHEME_LABELS.get(x, x))
+    if "status" in df.columns:
+        df["status_label"] = df["status"].map(lambda x: STATUS_LABELS.get(x, x))
+    return df
+
+
+@st.cache_data
+def load_recommendations():
+    if not REFORMS_RECOMMENDATIONS.exists():
+        return pd.DataFrame()
+    df = pd.read_csv(REFORMS_RECOMMENDATIONS)
+    for col in ("implementation_year", "announcement_year", "survey_year"):
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+    if "sub_theme" in df.columns:
+        df["sub_theme"] = df["sub_theme"].fillna("other")
+        df["sub_theme_label"] = df["sub_theme"].map(lambda x: SUBTHEME_LABELS.get(x, x))
+        df["sub_theme_short"] = df["sub_theme"].map(lambda x: SUBTHEME_SHORT.get(x, x))
+    if "growth_orientation" in df.columns:
+        df["growth_orientation"] = df["growth_orientation"].fillna("unclear_or_neutral")
+        df["orientation_label"] = df["growth_orientation"].map(
+            lambda x: ORIENTATION_LABELS.get(x, x)
+        )
+    return df
+
+
+@st.cache_data
+def load_reform_panel_subtheme():
+    if not REFORM_PANEL_SUBTHEME.exists():
+        return pd.DataFrame()
+    df = pd.read_csv(REFORM_PANEL_SUBTHEME)
+    df["year"] = pd.to_numeric(df["year"], errors="coerce").astype("Int64")
+    return df
+
+
 def budget_available():
     return BUDGET_RESULTS_AI.exists() or BUDGET_RESULTS.exists()
 
 def reforms_available():
     return REFORMS_EVENTS.exists()
+
+def recommendations_available():
+    return REFORMS_RECOMMENDATIONS.exists()
 
 
 def get_app_password() -> str:

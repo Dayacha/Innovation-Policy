@@ -324,10 +324,9 @@ def run_ai_validation(config: AIValidationConfig) -> bool:
                 skipped_verified_count,
                 config.verified_results_file,
             )
-    if "record_id" not in baseline_df.columns:
-        baseline_df["record_id"] = [
-            f"rec_{i:06d}" for i in range(len(baseline_df))
-        ]
+    # Use the stable MD5 hash as record_id so the same row gets the same ID
+    # across pipeline runs — enables reliable deduplication against ai_verified.
+    baseline_df["record_id"] = baseline_df.apply(_review_match_key, axis=1)
 
     filtered_df = _filter_candidates(baseline_df, config)
     if filtered_df.empty:

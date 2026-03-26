@@ -30,6 +30,7 @@ from budget.section_parser import (
     _RE_AMOUNT_TAIL, _RE_MILL_AMOUNT, _RE_STANDALONE_AMOUNT,
     _RE_SUBITEM, _RE_SUBSECTION, _RE_ITEM_HEADER, _RE_PROGRAM_HEADER,
 )
+from budget.temporal_smoothing import compute_temporal_prior
 from budget.taxonomy import INCLUDE_THRESHOLD, REVIEW_THRESHOLD, load_taxonomy, score_text
 from budget.translation_utils import translate_to_english_glossary, preclean_text
 from budget.utils import logger
@@ -234,7 +235,10 @@ def _empty_df() -> pd.DataFrame:
 
 # ── Main extractor ────────────────────────────────────────────────────────────
 
-def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
+def extract_budget_items(
+    pages_df: pd.DataFrame,
+    prior_results_df: pd.DataFrame | None = None,
+) -> pd.DataFrame:
     """Extract R&D-relevant budget line items from page-level text.
 
     Accepts either:
@@ -504,8 +508,13 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
                 # "Tilskud under [Ministry]" is a Danish pension/transfer
                 # allocation pattern — grants routed through one ministry
                 # to pay pension obligations. Not R&D spending.
-                _full_text = f"{desc_clean} {scoring_text}"
-                if re.search(r"\btilskud under\b.+ministeriet", _full_text, re.IGNORECASE):
+                # NOTE: use ORIGINAL text (before preclean_text) because preclean_text
+                # collapses "Tilskud under Undervisningsministeriet" → "Undervisningsministeriet",
+                # making the filter regex fail on the cleaned text.
+                _raw_prog = program_desc or bl.item_description or ""
+                _raw_desc = bl.description or ""
+                _full_text_raw = f"{_raw_prog} {_raw_desc} {merged_desc}"
+                if re.search(r"\btilskud under\b.+ministeriet", _full_text_raw, re.IGNORECASE):
                     continue
                 # Non-deductible VAT refunds and leisure education — not R&D
                 if re.search(r"\bkøbsmoms\b|\bfritidsundervisning\b", desc_clean, re.IGNORECASE):
@@ -527,7 +536,17 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
                     score = max(score, content_score, context_score)
                     category = "innovation_system"
 
-                if context_score < REVIEW_THRESHOLD:
+                temporal_prior = compute_temporal_prior(
+                    country=country,
+                    year=year,
+                    section_code=bl.section_code,
+                    program_code=program_code,
+                    program_description=program_desc,
+                    line_description=display_desc if "display_desc" in locals() else merged_desc,
+                    history_df=prior_results_df,
+                )
+                smoothed_score = score + temporal_prior.boost
+                if max(context_score, smoothed_score) < REVIEW_THRESHOLD:
                     continue
 
                 dedup = (source_filename, int(row.page_number), program_code or bl.line_code, budget_type, bl.raw_amount)
@@ -552,7 +571,7 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
 
                 has_rd_word = bool(re.search(r"forskning|forsøgs|udvikling|research|teknolog", scoring_text, re.IGNORECASE))
                 decision = "include" if (
-                    score >= INCLUDE_THRESHOLD and (desc_score > 0 or has_rd_word)
+                    smoothed_score >= INCLUDE_THRESHOLD and (desc_score > 0 or has_rd_word)
                 ) else "review"
 
                 parse_error = False
@@ -586,7 +605,7 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
                     decision = "include"
 
                 # Confidence based on multiple signals
-                confidence = 0.40 + 0.10 * score
+                confidence = 0.40 + 0.10 * smoothed_score
                 if has_code:
                     confidence += 0.10
                 if has_budget_kw:
@@ -595,6 +614,8 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
                     confidence += 0.05
                 if has_neg:
                     confidence -= 0.10
+                if temporal_prior.boost:
+                    confidence += 0.03
                 confidence = round(min(0.99, max(0.05, confidence)), 3)
                 # Enhance display description when the line is a generic budget type
                 display_desc = f"{program_code} {program_desc}".strip() if program_code else (program_desc or merged_desc)
@@ -612,6 +633,8 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
                     f"hits=[{', '.join(hits[:6])}]; "
                     f"section={bl.section_code}"
                 )
+                if temporal_prior.boost:
+                    rationale = f"{rationale}; prior_boost={temporal_prior.boost}; prior_match={temporal_prior.match_type}; prior_years={temporal_prior.matched_years}"
 
                 records.append({
                     # ── Time-series key ──────────────────────────────────
@@ -645,12 +668,16 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
                     "pillar": pillar,
                     "rd_label": pillar if pillar else category,
                     "taxonomy_score": score,
+                    "smoothed_taxonomy_score": smoothed_score,
                     "content_score": content_score,
                     "context_score": context_score,
                     "taxonomy_hits": "; ".join(hits[:8]),
                     "decision": decision,        # "include" | "review"
                     "confidence": confidence,
                     "parse_error": parse_error,
+                    "temporal_prior_boost": temporal_prior.boost,
+                    "temporal_prior_match_type": temporal_prior.match_type,
+                    "temporal_prior_years": temporal_prior.matched_years,
                     "rationale": rationale,
                     # ── Provenance ───────────────────────────────────────
                     "source_file": source_filename,

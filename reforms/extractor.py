@@ -5,6 +5,7 @@ Extracts text from OECD Economic Survey PDFs, handling multi-column
 layouts, headers/footers, and other formatting challenges.
 """
 
+import json
 import logging
 import re
 from pathlib import Path
@@ -327,3 +328,212 @@ def get_priority_sections(text):
     )
 
     return priority_text, remaining_text
+
+
+def _split_text_by_page_markers(text):
+    """Split extracted survey text into page-level blocks.
+
+    Returns a list of dicts with:
+      - page_number: int | None
+      - marker: the original page marker line when present
+      - text: page text excluding the marker
+    """
+    marker_re = re.compile(r"(?m)^--- Page (\d+) ---\s*$")
+    matches = list(marker_re.finditer(text))
+
+    if not matches:
+        return [{"page_number": None, "marker": "", "text": text}]
+
+    pages = []
+    for i, match in enumerate(matches):
+        start = match.end()
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(text)
+        pages.append(
+            {
+                "page_number": int(match.group(1)),
+                "marker": match.group(0),
+                "text": text[start:end].strip(),
+            }
+        )
+    return pages
+
+
+def filter_remaining_text_for_innovation(
+    text, keywords, min_hits=1, neighbor_pages=0
+):
+    """Keep only page blocks likely to contain innovation-relevant reforms.
+
+    This is a cheap lexical pre-filter for the non-priority remainder of the
+    survey. It reduces LLM cost by dropping pages with no innovation signal
+    before chunking.
+    """
+    text = (text or "").strip()
+    if not text:
+        return ""
+
+    pages = _split_text_by_page_markers(text)
+    if not pages:
+        return ""
+
+    keyword_patterns = [
+        re.compile(rf"\b{re.escape(kw.lower())}\b")
+        for kw in keywords
+        if kw and kw.strip()
+    ]
+
+    selected = set()
+    for idx, page in enumerate(pages):
+        page_text = page["text"].lower()
+        hits = sum(len(p.findall(page_text)) for p in keyword_patterns)
+        if hits >= min_hits:
+            selected.add(idx)
+            for offset in range(1, max(0, neighbor_pages) + 1):
+                if idx - offset >= 0:
+                    selected.add(idx - offset)
+                if idx + offset < len(pages):
+                    selected.add(idx + offset)
+
+    if not selected:
+        return ""
+
+    kept = []
+    for idx in sorted(selected):
+        page = pages[idx]
+        if page["marker"]:
+            kept.append(page["marker"])
+        if page["text"]:
+            kept.append(page["text"])
+    return "\n\n".join(kept).strip()
+
+
+def _load_search_library(taxonomy_path=None):
+    """Load the innovation search library used for budget/reform prefiltering."""
+    if taxonomy_path is None:
+        taxonomy_path = (
+            Path(__file__).resolve().parent.parent
+            / "Data"
+            / "input"
+            / "taxonomy"
+            / "search_library.json"
+        )
+
+    try:
+        with open(taxonomy_path, encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError) as exc:
+        logger.warning("Could not load search library from %s: %s", taxonomy_path, exc)
+        return {}
+
+
+def _count_phrase_hits(text_lower, phrases):
+    return sum(text_lower.count(phrase.lower()) for phrase in phrases if phrase)
+
+
+def _has_nearby_anchor(text_lower, term, anchors, window=120):
+    """Check whether any anchor appears near any occurrence of term."""
+    term_lower = term.lower()
+    start = 0
+    while True:
+        pos = text_lower.find(term_lower, start)
+        if pos == -1:
+            return False
+        left = max(0, pos - window)
+        right = min(len(text_lower), pos + len(term_lower) + window)
+        context = text_lower[left:right]
+        if any(anchor.lower() in context for anchor in anchors):
+            return True
+        start = pos + len(term_lower)
+
+
+def filter_remaining_text_with_taxonomy(
+    text,
+    taxonomy_path=None,
+    min_score=2.0,
+    neighbor_pages=0,
+):
+    """Keep non-priority pages that score as innovation-relevant via taxonomy.
+
+    Scoring logic:
+    - strong positives: auto_include
+    - medium positives: institutions / sectoral_rd
+    - weak positives: budget_terms
+    - ambiguous terms count only with nearby anchors
+    - exclusions down-rank pages heavily unless strong positives override
+    """
+    text = (text or "").strip()
+    if not text:
+        return ""
+
+    library = _load_search_library(taxonomy_path)
+    if not library:
+        return ""
+
+    auto_include = library.get("auto_include", {}).get("keywords", [])
+    institutions = library.get("institutions", {}).get("keywords", [])
+    sectoral_rd = library.get("sectoral_rd", {}).get("keywords", [])
+    budget_terms = library.get("budget_terms", {}).get("keywords", [])
+    exclusions = library.get("exclusions", {}).get("keywords", [])
+    ambiguous_terms = library.get("ambiguous", {}).get("terms", {})
+
+    pages = _split_text_by_page_markers(text)
+    selected = set()
+
+    for idx, page in enumerate(pages):
+        page_text = page["text"]
+        if not page_text:
+            continue
+        text_lower = page_text.lower()
+
+        auto_hits = _count_phrase_hits(text_lower, auto_include)
+        inst_hits = _count_phrase_hits(text_lower, institutions)
+        sector_hits = _count_phrase_hits(text_lower, sectoral_rd)
+        budget_hits = _count_phrase_hits(text_lower, budget_terms)
+        exclusion_hits = _count_phrase_hits(text_lower, exclusions)
+
+        ambiguous_hits = 0
+        for term, rules in ambiguous_terms.items():
+            anchors = rules.get("require_anchor", [])
+            excludes = rules.get("exclude_if_near", [])
+            if term.lower() in text_lower and _has_nearby_anchor(text_lower, term, anchors):
+                if not any(ex.lower() in text_lower for ex in excludes):
+                    ambiguous_hits += 1
+
+        score = 0.0
+        score += min(auto_hits, 4) * 2.0
+        score += min(inst_hits, 4) * 1.25
+        score += min(sector_hits, 4) * 1.5
+        score += min(budget_hits, 4) * 0.35
+        score += min(ambiguous_hits, 4) * 0.75
+
+        # Synergy rules from the taxonomy help recover pages where no single
+        # phrase is definitive but the combination strongly suggests relevance.
+        if inst_hits > 0 and budget_hits > 0:
+            score += 1.5
+        if sector_hits > 0 and budget_hits > 0:
+            score += 1.25
+        if ambiguous_hits > 0 and (auto_hits > 0 or inst_hits > 0 or sector_hits > 0):
+            score += 0.75
+
+        # Exclusions should usually block weak matches, but not erase clearly
+        # innovation-relevant pages with multiple strong positive signals.
+        score -= min(exclusion_hits, 3) * 1.5
+
+        if score >= float(min_score):
+            selected.add(idx)
+            for offset in range(1, max(0, neighbor_pages) + 1):
+                if idx - offset >= 0:
+                    selected.add(idx - offset)
+                if idx + offset < len(pages):
+                    selected.add(idx + offset)
+
+    if not selected:
+        return ""
+
+    kept = []
+    for idx in sorted(selected):
+        page = pages[idx]
+        if page["marker"]:
+            kept.append(page["marker"])
+        if page["text"]:
+            kept.append(page["text"])
+    return "\n\n".join(kept).strip()

@@ -19,7 +19,8 @@ from app.data_loader import (
     REFORM_PANEL, STAGE_LABELS, STATUS_LABELS,
     SUBTHEME_COLORS, SUBTHEME_LABELS, SUBTHEME_SHORT,
     budget_available, get_app_password, load_budget, load_reform_panel, load_reforms,
-    reforms_available,
+    load_reform_mentions, load_recommendations, load_reform_panel_subtheme,
+    reforms_available, recommendations_available,
 )
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -492,7 +493,11 @@ with st.sidebar:
             format_func=lambda x: STATUS_LABELS.get(x, x),
         )
         only_major = st.checkbox("Major reforms only", key="maj_filt")
-        _ref_yrs = sorted(_dr["implementation_year"].dropna().astype(int).unique())
+        # Year range — fall back to announcement_year when implementation_year sparse
+        _ref_yrs_impl = _dr["implementation_year"].dropna().astype(int).unique()
+        _ref_yrs_ann  = _dr["announcement_year"].dropna().astype(int).unique() \
+                        if "announcement_year" in _dr.columns else []
+        _ref_yrs = sorted(set(list(_ref_yrs_impl) + list(_ref_yrs_ann)))
         if len(_ref_yrs) > 1:
             yr_r = st.select_slider(
                 "Year range", options=_ref_yrs,
@@ -501,6 +506,20 @@ with st.sidebar:
             )
         else:
             yr_r = (_ref_yrs[0], _ref_yrs[0]) if _ref_yrs else (1995, 2025)
+
+        # Show which countries have data vs. just panel placeholders
+        _panel_df_sb = load_reform_panel()
+        if not _panel_df_sb.empty and "reform_count" in _panel_df_sb.columns:
+            _countries_with_data = sorted(
+                _panel_df_sb[_panel_df_sb["reform_count"] > 0]["country_code"].unique()
+            )
+            _total_panel = _panel_df_sb["country_code"].nunique()
+            st.markdown(
+                f'<div style="font-size:.67rem;color:#888;margin-top:.4rem;">'
+                f'<b style="color:#555;">{len(_countries_with_data)}</b> of {_total_panel} panel countries have reform data.<br>'
+                f'Add more: <code style="font-size:.65rem;">python main.py --reforms-country FRA</code></div>',
+                unsafe_allow_html=True,
+            )
     else:
         st.caption("No data — run `python main.py --reforms-only`")
         yr_r = (1995, 2025)
@@ -516,12 +535,29 @@ with st.sidebar:
 # PAGE HEADER
 # ─────────────────────────────────────────────────────────────────────────────
 
+# Dynamic subtitle based on what data is actually loaded
+_hdr_parts = []
+if budget_available():
+    _db_hdr = load_budget()
+    _bud_countries = sorted(_db_hdr["country"].dropna().unique()) if "country" in _db_hdr.columns else ["Denmark"]
+    _bud_yrs = sorted(_db_hdr["year"].dropna().unique())
+    _bud_span = f"{min(_bud_yrs)}–{max(_bud_yrs)}" if _bud_yrs else ""
+    _hdr_parts.append(f"Finance Bills: {', '.join(_bud_countries)} {_bud_span}")
+if reforms_available():
+    _dr_hdr = load_reforms()
+    _ref_countries = sorted(_dr_hdr["country_name"].dropna().unique()) if "country_name" in _dr_hdr.columns else []
+    _ref_surv = sorted(_dr_hdr["survey_year"].dropna().astype(int).unique()) if "survey_year" in _dr_hdr.columns else []
+    _ref_span = f"{min(_ref_surv)}–{max(_ref_surv)}" if _ref_surv else ""
+    if _ref_countries:
+        _hdr_parts.append(f"OECD Surveys: {', '.join(_ref_countries[:5])}{'…' if len(_ref_countries) > 5 else ''} {_ref_span}")
+_subtitle = "  ·  ".join(_hdr_parts) if _hdr_parts else "R&D budget allocation &amp; structural reform tracking"
+
 st.markdown(
     f'<h1 style="font-size:1.4rem;font-weight:800;color:{NAVY};'
     f'border-bottom:3px solid {NAVY};padding-bottom:.5rem;margin-bottom:1.2rem;">'
     f'Innovation Policy Dataset'
     f'<span style="font-size:.85rem;font-weight:400;color:#777;margin-left:.8rem;">'
-    f'R&D budget allocation &amp; structural reform tracking — Denmark pilot</span>'
+    f'{_subtitle}</span>'
     f'</h1>',
     unsafe_allow_html=True,
 )
@@ -737,17 +773,21 @@ with TAB_REFORMS:
         st.stop()
 
     # ── KPI strip ──
-    n_gs  = int((dr_f["growth_orientation"] == "growth_supporting").sum()) \
-            if "growth_orientation" in dr_f.columns else 0
-    n_gh  = int((dr_f["growth_orientation"] == "growth_hindering").sum()) \
-            if "growth_orientation" in dr_f.columns else 0
-    n_maj = int(dr_f["is_major_reform"].sum()) if "is_major_reform" in dr_f.columns else 0
+    _dr_all_tab2 = load_reforms()
+    n_gs   = int((dr_f["growth_orientation"] == "growth_supporting").sum()) \
+             if "growth_orientation" in dr_f.columns else 0
+    n_gh   = int((dr_f["growth_orientation"] == "growth_hindering").sum()) \
+             if "growth_orientation" in dr_f.columns else 0
+    n_maj  = int(dr_f["is_major_reform"].sum()) if "is_major_reform" in dr_f.columns else 0
+    n_surv = int(_dr_all_tab2["survey_year"].nunique()) if "survey_year" in _dr_all_tab2.columns else 0
+    n_recs = len(load_recommendations())
     stat_row([
         (str(len(dr_f)), "Reform events"),
         (str(n_maj),     "Major reforms"),
         (str(n_gs),      "Growth-supporting"),
         (str(n_gh),      "Growth-hindering"),
-        (str(dr_f["country_name"].nunique()), "Countries"),
+        (str(n_surv),    "Surveys analysed"),
+        (str(n_recs),    "OECD Recommendations"),
     ])
 
     # ── Chart 1: reforms per year stacked by sub-type ──
@@ -927,7 +967,7 @@ with TAB_REFORMS:
 
         with st.expander(
             f"{yr_s}  ·  {row.get('country_name','—')}  ·  {sub_s}{major_s}  —  {title}",
-            expanded=True,
+            expanded=False,
         ):
             c_left, c_right = st.columns([3, 1])
             with c_left:
@@ -1002,6 +1042,82 @@ with TAB_REFORMS:
         "reforms_filtered.csv", "text/csv", key="ref_dl",
     )
 
+    # ── Survey coverage ──
+    section_header("Survey coverage — mentions per reform")
+    _mentions = load_reform_mentions()
+    if not _mentions.empty and "survey_year" in _mentions.columns:
+        # Per-survey mention count
+        surv_cnt = (
+            _mentions.groupby("survey_year").size().reset_index(name="n")
+            .sort_values("survey_year")
+        )
+        fig_surv = go.Figure(go.Bar(
+            x=surv_cnt["survey_year"].astype(int),
+            y=surv_cnt["n"],
+            marker_color=NAVY, marker_line_width=0,
+            text=surv_cnt["n"], textposition="outside",
+            textfont=dict(size=10, color=TEXT),
+        ))
+        apply_style(fig_surv, height=210,
+                    xtitle="Survey year", ytitle="Reform mentions extracted",
+                    legend_bottom=False)
+        fig_surv.update_layout(showlegend=False, xaxis=dict(showgrid=False))
+        fig_surv.update_yaxes(range=[0, surv_cnt["n"].max() * 1.2])
+        st.plotly_chart(fig_surv, use_container_width=True)
+        caption_note(
+            f"{len(_mentions):,} raw mentions across {_mentions['survey_year'].nunique()} surveys "
+            f"→ {len(dr_f):,} deduplicated events after cross-survey deduplication."
+        )
+
+    # ── OECD Recommendations (not yet enacted) ──
+    _recs = load_recommendations()
+    if not _recs.empty:
+        section_header(f"OECD Recommendations — not yet enacted  ({len(_recs)})")
+        caption_note(
+            "These reforms were explicitly recommended by the OECD in Economic Surveys "
+            "but have no evidence of subsequent implementation or legislation."
+        )
+        for _, row in _recs.iterrows():
+            sub_key  = str(row.get("sub_theme") or "other")
+            sub_s    = SUBTHEME_LABELS.get(sub_key, sub_key.replace("_", " ").title())
+            lbl_clr  = SUBTHEME_COLORS.get(sub_key, GREY)
+            surv_yr  = row.get("survey_year")
+            yr_s     = str(int(surv_yr)) if pd.notna(surv_yr) else "n.d."
+            title    = str(row.get("package_name") or row.get("description") or "")[:100]
+            with st.expander(
+                f"{yr_s}  ·  {row.get('country_name', '—')}  ·  {sub_s}  —  {title}",
+                expanded=False,
+            ):
+                c_left, c_right = st.columns([3, 1])
+                with c_left:
+                    st.markdown(f"**{row.get('description', '')}**")
+                    if pd.notna(row.get("source_quote")):
+                        st.markdown(
+                            f'<blockquote style="margin:.4rem 0;padding:.4rem .8rem;'
+                            f'border-left:3px solid {lbl_clr};color:#555;'
+                            f'font-size:.8rem;font-style:italic;">'
+                            f'&ldquo;{row["source_quote"]}&rdquo;</blockquote>',
+                            unsafe_allow_html=True,
+                        )
+                    if pd.notna(row.get("importance_rationale")):
+                        caption_note(f"Importance: {row['importance_rationale']}")
+                with c_right:
+                    orient   = str(row.get("growth_orientation") or "unclear_or_neutral")
+                    tag_col  = ORIENTATION_COLORS.get(orient, GREY)
+                    tag_txt  = ORIENTATION_LABELS.get(orient, "Unclear / Neutral")
+                    st.markdown(
+                        f'<div style="font-size:.74rem;color:{TEXT};line-height:1.9;">'
+                        f'<span style="display:inline-block;padding:2px 8px;border-radius:2px;'
+                        f'background:{tag_col}20;color:{tag_col};border:1px solid {tag_col}60;'
+                        f'font-weight:700;font-size:.7rem;">{tag_txt}</span><br>'
+                        f'<b style="color:#777;">Survey year:</b> {yr_s}<br>'
+                        f'<b style="color:#777;">Actor:</b> {ACTOR_LABELS.get(str(row.get("rd_actor") or "unknown"), "—")}<br>'
+                        f'<b style="color:#777;">Stage:</b> {STAGE_LABELS.get(str(row.get("rd_stage") or "unknown"), "—")}<br>'
+                        f'<b style="color:#777;">Importance:</b> {row.get("importance_bucket") or "—"}/3'
+                        f'</div>',
+                        unsafe_allow_html=True,
+                    )
+
 
 # ═════════════════════════════════════════════════════════════════════════════
 # TAB 3 — COMBINED VIEW
@@ -1017,9 +1133,27 @@ with TAB_COMBINED:
 
     # ── Stream comparison ──
     section_header("Stream comparison")
+    # Build dynamic time-range labels from actual data
+    if bk:
+        _db_cmp = load_budget()
+        _bud_yrs_cmp = sorted(_db_cmp["year"].dropna().unique())
+        _bud_ctry_cmp = sorted(_db_cmp["country"].dropna().unique()) if "country" in _db_cmp.columns else ["Denmark"]
+        _s1_range = f"{min(_bud_yrs_cmp)}&#8211;{max(_bud_yrs_cmp)} ({', '.join(_bud_ctry_cmp)})" if _bud_yrs_cmp else "n/a"
+    else:
+        _s1_range = "n/a"
+    if rk:
+        _dr_cmp = load_reforms()
+        _surv_yrs_cmp = sorted(_dr_cmp["survey_year"].dropna().astype(int).unique()) if "survey_year" in _dr_cmp.columns else []
+        _ref_ctry_cmp = sorted(_dr_cmp["country_name"].dropna().unique()) if "country_name" in _dr_cmp.columns else []
+        _s2_range = (
+            f"{min(_surv_yrs_cmp)}&#8211;present ({', '.join(_ref_ctry_cmp[:3])}{'…' if len(_ref_ctry_cmp) > 3 else ''})"
+            if _surv_yrs_cmp else "n/a"
+        )
+    else:
+        _s2_range = "n/a"
     _cmp_rows = [
         ("Measures",     "DKK amount budgeted for R&amp;D",           "Innovation policy reforms enacted"),
-        ("Time range",   "1975&#8211;1984 (Denmark pilot)",            "1997&#8211;present (multi-country)"),
+        ("Time range",   _s1_range,                                    _s2_range),
         ("Unit",         "Budget line &#8594; Ministry &#8594; R&amp;D category",
                          "Reform event &#8594; sub-type &#8594; actor &#8594; stage"),
         ("Method",       "OCR + J-Rule taxonomy scoring",              "LLM extraction + cross-survey dedup"),
@@ -1147,10 +1281,46 @@ with TAB_COMBINED:
             margin=dict(t=44, b=36, l=8, r=8),
         )
         st.plotly_chart(fig_dual, use_container_width=True)
+        _b_span = f"{b_yr3['year'].min()}–{b_yr3['year'].max()}" if not b_yr3.empty else "n/a"
+        _r_span = f"{rc3['yr'].min()}–{rc3['yr'].max()}" if not rc3.empty else "n/a"
         caption_note(
-            "Finance Bills: 1975–1984. OECD Survey reforms: 1997 onwards. "
+            f"Finance Bills: {_b_span}. OECD Survey reforms: {_r_span}. "
             "The two streams are complementary evidence of innovation policy effort."
         )
+
+    # ── Subtheme composition over time (reform_panel_subtheme) ──
+    if rk:
+        _pst = load_reform_panel_subtheme()
+        _pst_f = _pst[_pst["country_code"].isin(sel_ctry)] if sel_ctry and not _pst.empty else _pst
+        if not _pst_f.empty and "reform_count" in _pst_f.columns and _pst_f["reform_count"].sum() > 0:
+            section_header("Innovation reform composition by sub-type over time")
+            _pst_act = _pst_f[_pst_f["reform_count"] > 0].copy()
+            if not _pst_act.empty:
+                _pst_act["year"] = _pst_act["year"].astype(int)
+                _pst_act["sub_short"] = _pst_act["sub_theme"].map(
+                    lambda x: SUBTHEME_SHORT.get(x, x)
+                )
+                pst_order = (
+                    _pst_act.groupby("sub_theme")["reform_count"]
+                    .sum().sort_values(ascending=False).index.tolist()
+                )
+                fig_pst = px.bar(
+                    _pst_act, x="year", y="reform_count",
+                    color="sub_theme",
+                    color_discrete_map=SUBTHEME_COLORS,
+                    barmode="stack",
+                    category_orders={"sub_theme": pst_order},
+                    labels={"year": "Year", "reform_count": "Reform events", "sub_theme": ""},
+                )
+                for trace in fig_pst.data:
+                    trace.name = SUBTHEME_SHORT.get(trace.name, trace.name)
+                fig_pst.update_traces(marker_line_width=0)
+                apply_style(fig_pst, height=300, xtitle="Year", ytitle="Reform events")
+                st.plotly_chart(fig_pst, use_container_width=True)
+                caption_note(
+                    "Each bar shows the mix of innovation sub-types enacted in a given year. "
+                    "Source: reform_panel_subtheme.csv — country × year × sub-type panel."
+                )
 
     # ── Reform intensity score ──
     if REFORM_PANEL.exists():

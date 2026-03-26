@@ -8,7 +8,7 @@ from budget.budget_extractor import extract_budget_items
 from budget.utils import logger
 
 
-def detect_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
+def detect_budget_items(pages_df: pd.DataFrame, prior_results_df: pd.DataFrame | None = None) -> pd.DataFrame:
     """Detect R&D-relevant budget amounts using taxonomy scoring and section-aware parsing.
 
     Delegates to budget_extractor.extract_budget_items which:
@@ -18,12 +18,12 @@ def detect_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
     """
     if pages_df.empty:
         logger.warning("detect_budget_items: received empty DataFrame.")
-        return extract_budget_items(pages_df)
+        return extract_budget_items(pages_df, prior_results_df=prior_results_df)
 
     logger.info("detect_budget_items: processing %s pages across %s files",
                 len(pages_df),
                 pages_df["file_id"].nunique() if "file_id" in pages_df.columns else "?")
-    return extract_budget_items(pages_df)
+    return extract_budget_items(pages_df, prior_results_df=prior_results_df)
 
 
 def build_results_json_records(budget_df: pd.DataFrame) -> list[dict]:

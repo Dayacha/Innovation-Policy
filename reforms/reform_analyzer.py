@@ -18,7 +18,11 @@ import time
 from difflib import SequenceMatcher
 from pathlib import Path
 
-from .extractor import chunk_text, get_priority_sections
+from .extractor import (
+    chunk_text,
+    filter_remaining_text_with_taxonomy,
+    get_priority_sections,
+)
 from .llm_client import LLMClient
 from .prompts import (
     DEDUP_PROMPT,
@@ -50,6 +54,15 @@ class ReformAnalyzer:
         self.chunk_overlap = config.get("processing", {}).get(
             "chunk_overlap", 500
         )
+        self.include_remaining_sections = config.get(
+            "processing", {}
+        ).get("include_remaining_sections", True)
+        self.remaining_neighbor_pages = config.get(
+            "processing", {}
+        ).get("remaining_neighbor_pages", 0)
+        self.remaining_min_taxonomy_score = config.get(
+            "processing", {}
+        ).get("remaining_min_taxonomy_score", 2.0)
         self.output_dir = Path(
             config.get("paths", {}).get("reforms_json", "data/reforms_json")
         )
@@ -93,11 +106,21 @@ class ReformAnalyzer:
         if use_priority_sections:
             priority_text, remaining_text = get_priority_sections(text)
             texts_to_process = [("priority sections", priority_text)]
-            if remaining_text and len(remaining_text.strip()) > 500:
-                texts_to_process.append(("remaining sections", remaining_text))
+            filtered_remaining = ""
+            if self.include_remaining_sections and remaining_text and len(remaining_text.strip()) > 500:
+                filtered_remaining = filter_remaining_text_with_taxonomy(
+                    remaining_text,
+                    min_score=self.remaining_min_taxonomy_score,
+                    neighbor_pages=self.remaining_neighbor_pages,
+                )
+                if filtered_remaining and len(filtered_remaining.strip()) > 500:
+                    texts_to_process.append(
+                        ("remaining sections (filtered)", filtered_remaining)
+                    )
             print(f"  [EXTRACTION] Split text: "
                   f"{len(priority_text):,} chars priority, "
-                  f"{len(remaining_text):,} chars remaining "
+                  f"{len(remaining_text):,} chars remaining, "
+                  f"{len(filtered_remaining):,} chars remaining kept "
                   f"(no overlap)")
         else:
             texts_to_process = [("full text", text)]

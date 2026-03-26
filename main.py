@@ -24,6 +24,8 @@ Usage:
 """
 
 import argparse
+from difflib import SequenceMatcher
+import hashlib
 import json
 from datetime import datetime
 from pathlib import Path
@@ -57,6 +59,7 @@ from budget.keyword_detection import detect_candidate_pages
 from budget.pdf_extract import extract_text_for_inventory
 from budget.reporting import build_results_json_records, detect_budget_items
 from budget.ai_validation_filter import filter_ai_validated
+from budget.temporal_smoothing import apply_temporal_smoother
 from budget.utils import configure_logging, ensure_directories, logger
 
 LEGACY_DEMO_RESULTS_FILE = PROCESSED_DIR / "demo_results.txt"
@@ -115,6 +118,7 @@ def save_run_snapshot(files_to_copy: list[Path]) -> Path:
 
 
 def _review_match_key(row: pd.Series) -> str:
+    """Stable MD5 hash key — identical to ai_validation._review_match_key."""
     parts: list[str] = []
     for col in _REVIEW_STATUS_KEY_COLS:
         value = row[col] if col in row.index else ""
@@ -126,7 +130,40 @@ def _review_match_key(row: pd.Series) -> str:
             except (TypeError, ValueError):
                 value = str(value)
         parts.append(str(value).strip().lower())
-    return "|".join(parts)
+    return hashlib.md5("|".join(parts).encode("utf-8")).hexdigest()
+
+
+def _normalize_program_code(value) -> str:
+    if pd.isna(value):
+        return ""
+    raw = str(value).strip()
+    if not raw:
+        return ""
+    parts = []
+    for part in raw.split("."):
+        part = part.strip()
+        if not part:
+            continue
+        if part.isdigit():
+            parts.append(str(int(part)))
+        else:
+            parts.append(part.lower())
+    return ".".join(parts)
+
+
+def _match_description(row: pd.Series) -> str:
+    for col in ("program_description", "line_description", "program_description_en", "line_description_en"):
+        if col in row.index:
+            value = str(row[col]).strip().lower() if pd.notna(row[col]) else ""
+            if value:
+                return " ".join(value.split())
+    return ""
+
+
+def _similarity(left: str, right: str) -> float:
+    if not left or not right:
+        return 0.0
+    return SequenceMatcher(None, left, right).ratio()
 
 
 def write_review_status_file(
@@ -171,6 +208,145 @@ def write_review_status_file(
         pending_count,
     )
     return output_file
+
+
+def reconcile_ai_verified_with_baseline(
+    baseline_file: Path = RESULTS_CSV_FILE,
+    verified_file: Path = RESULTS_AI_VERIFIED_FILE,
+) -> tuple[int, int]:
+    """Prune AI-verified rows that no longer exist in the current baseline.
+
+    Keeps the AI cache intact. Only the final verified view is reconciled.
+    Returns (kept_rows, removed_rows).
+    """
+    if not baseline_file.exists() or not verified_file.exists():
+        return 0, 0
+
+    baseline_df = _load_baseline(baseline_file)
+    verified_df = _load_existing_dataframe(verified_file)
+    if baseline_df.empty or verified_df.empty:
+        return len(verified_df), 0
+
+    baseline_df = baseline_df.copy()
+    verified_df = verified_df.copy()
+    baseline_df["review_key"] = baseline_df.apply(_review_match_key, axis=1)
+    verified_df["review_key"] = verified_df.apply(_review_match_key, axis=1)
+    baseline_df["program_code_norm"] = baseline_df["program_code"].map(_normalize_program_code) if "program_code" in baseline_df.columns else ""
+    verified_df["program_code_norm"] = verified_df["program_code"].map(_normalize_program_code) if "program_code" in verified_df.columns else ""
+    baseline_df["match_description"] = baseline_df.apply(_match_description, axis=1)
+    verified_df["match_description"] = verified_df.apply(_match_description, axis=1)
+    baseline_df["year_int"] = pd.to_numeric(baseline_df["year"], errors="coerce")
+    verified_df["year_int"] = pd.to_numeric(verified_df["year"], errors="coerce")
+    baseline_df["amount_num"] = pd.to_numeric(baseline_df["amount_local"], errors="coerce")
+    verified_df["amount_num"] = pd.to_numeric(verified_df["amount_local"], errors="coerce")
+
+    baseline_keys = set(baseline_df["review_key"].dropna().astype(str))
+    exact = verified_df[verified_df["review_key"].astype(str).isin(baseline_keys)].copy()
+    unresolved = verified_df[~verified_df["review_key"].astype(str).isin(baseline_keys)].copy()
+
+    # Sync `decision` from baseline for exact matches, unless AI explicitly decided.
+    # This propagates upgrades/downgrades made by clean_results.py or the temporal
+    # smoother into ai_verified without touching any AI-review columns.
+    _STRONG_AI_DECISIONS = {"include", "exclude", "excluded"}
+    baseline_key_to_decision = dict(
+        zip(baseline_df["review_key"].astype(str), baseline_df["decision"].fillna("").astype(str))
+    )
+    decision_synced = 0
+    for idx in exact.index:
+        ai_dec = ""
+        if "ai_decision" in exact.columns:
+            ai_dec = str(exact.at[idx, "ai_decision"]).strip().lower()
+        if ai_dec in _STRONG_AI_DECISIONS:
+            continue  # AI/human explicitly decided — don't overwrite
+        rkey = str(exact.at[idx, "review_key"])
+        baseline_decision = baseline_key_to_decision.get(rkey, "")
+        if baseline_decision and baseline_decision != exact.at[idx, "decision"]:
+            exact.at[idx, "decision"] = baseline_decision
+            decision_synced += 1
+
+    relinked_rows: list[pd.Series] = []
+    used_baseline_keys = set(exact["review_key"].astype(str))
+    fuzzy_relinked = 0
+    code_relinked = 0
+
+    for _, row in unresolved.iterrows():
+        candidates = baseline_df[
+            (baseline_df["country"].astype(str) == str(row["country"]))
+            & (baseline_df["section_code"].astype(str) == str(row["section_code"]))
+            & (baseline_df["year_int"] == row["year_int"])
+            & (~baseline_df["review_key"].astype(str).isin(used_baseline_keys))
+        ].copy()
+        if candidates.empty:
+            continue
+
+        matched = None
+        if row["program_code_norm"]:
+            code_matches = candidates[candidates["program_code_norm"] == row["program_code_norm"]]
+            if not code_matches.empty:
+                # Prefer same amount if available, else first match.
+                same_amount = code_matches[code_matches["amount_num"] == row["amount_num"]]
+                matched = same_amount.iloc[0] if not same_amount.empty else code_matches.iloc[0]
+                code_relinked += 1
+
+        if matched is None:
+            desc = row["match_description"]
+            if desc:
+                candidates["similarity"] = candidates["match_description"].map(lambda other: _similarity(desc, other))
+                close = candidates[candidates["similarity"] >= 0.85].sort_values(
+                    ["similarity", "amount_num"], ascending=[False, False]
+                )
+                if not close.empty:
+                    matched = close.iloc[0]
+                    fuzzy_relinked += 1
+
+        if matched is None:
+            continue
+
+        updated = row.copy()
+        for col in baseline_df.columns:
+            if col in updated.index and col not in {
+                "record_id",
+                "keep",
+                "clean_program_code",
+                "clean_program_description_da",
+                "clean_program_description_en",
+                "clean_budget_type_da",
+                "clean_budget_type_en",
+                "validated_amount_local",
+                "currency",
+                "ai_rd_category",
+                "ai_pillar",
+                "ai_confidence",
+                "ai_decision",
+                "ai_rationale",
+                "parse_issue",
+                "raw_page_text_excerpt",
+                "currency_baseline",
+            }:
+                updated[col] = matched[col]
+        updated["review_key"] = matched["review_key"]
+        relinked_rows.append(updated)
+        used_baseline_keys.add(str(matched["review_key"]))
+
+    reconciled = pd.concat([exact, pd.DataFrame(relinked_rows)], ignore_index=True, sort=False)
+    removed_rows = len(verified_df) - len(reconciled)
+
+    if removed_rows > 0 or relinked_rows:
+        reconciled = reconciled.drop(
+            columns=["review_key", "program_code_norm", "match_description", "year_int", "amount_num"],
+            errors="ignore",
+        )
+        reconciled.to_csv(verified_file, index=False, encoding="utf-8")
+        logger.info(
+            "Reconciled AI verified results against baseline: kept=%s removed_stale=%s relinked_code=%s relinked_fuzzy=%s decision_synced=%s file=%s",
+            len(reconciled),
+            removed_rows,
+            code_relinked,
+            fuzzy_relinked,
+            decision_synced,
+            verified_file,
+        )
+    return len(reconciled), removed_rows
 
 
 def _load_existing_dataframe(path: Path) -> pd.DataFrame:
@@ -301,6 +477,7 @@ def run_budget_pipeline() -> None:
     # Uses full pages_df (not just candidates) so the section parser can track
     # § context across consecutive pages of each document.
     previous_budget_df = _load_existing_dataframe(BUDGET_ITEMS_FILE)
+    prior_results_df = _load_existing_dataframe(RESULTS_CSV_FILE)
     previous_budget_file_ids = (
         set(previous_budget_df["file_id"].dropna().astype(str))
         if not previous_budget_df.empty and "file_id" in previous_budget_df.columns
@@ -316,7 +493,7 @@ def run_budget_pipeline() -> None:
     if file_ids_to_process:
         logger.info("Budget extraction will process %s new/changed PDF(s)", len(file_ids_to_process))
         budget_input_df = pages_df[pages_df["file_id"].astype(str).isin(file_ids_to_process)].copy()
-        incremental_budget_df = detect_budget_items(budget_input_df)
+        incremental_budget_df = detect_budget_items(budget_input_df, prior_results_df=prior_results_df)
     else:
         logger.info("No new PDF content detected; reusing existing budget extraction results.")
         incremental_budget_df = pd.DataFrame(columns=previous_budget_df.columns if not previous_budget_df.empty else None)
@@ -327,6 +504,7 @@ def run_budget_pipeline() -> None:
 
     # ── Stage 5: Outputs ──────────────────────────────────────────────────────
     budget_df = refresh_budget_metadata_from_pages(budget_df, pages_df)
+    budget_df = apply_temporal_smoother(budget_df)
     available_cols = [c for c in _RESULTS_EXPORT_COLS if c in budget_df.columns]
     results_df = budget_df[available_cols].copy() if not budget_df.empty else pd.DataFrame(columns=available_cols)
 
@@ -429,6 +607,9 @@ if __name__ == "__main__":
         run_budget = not args.reforms_only
         run_reforms = not args.budget_only
 
+        if not run_budget:
+            configure_logging()
+
         if run_budget:
             if not args.ai_only:
                 run_budget_pipeline()
@@ -436,6 +617,7 @@ if __name__ == "__main__":
                 configure_logging()
                 logger.info("AI-only mode enabled; skipping PDF extraction pipeline.")
 
+        reconcile_ai_verified_with_baseline()
         write_review_status_file()
         if args.run_ai_validation:
             # Resolve AI model: CLI arg → config.yaml llm.model → fallback
