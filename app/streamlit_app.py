@@ -18,7 +18,7 @@ from app.data_loader import (
     RD_CATEGORY_COLORS, RD_CATEGORY_LABELS,
     REFORM_PANEL, STAGE_LABELS, STATUS_LABELS,
     SUBTHEME_COLORS, SUBTHEME_LABELS, SUBTHEME_SHORT,
-    budget_available, load_budget, load_reform_panel, load_reforms,
+    budget_available, get_app_password, load_budget, load_reform_panel, load_reforms,
     reforms_available,
 )
 
@@ -31,6 +31,31 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+
+def require_password() -> None:
+    expected_password = get_app_password()
+    if not expected_password:
+        return
+
+    if st.session_state.get("app_authenticated") is True:
+        return
+
+    st.title("Protected Access")
+    st.caption("Enter the application password to continue.")
+    password = st.text_input("Password", type="password")
+    submitted = st.button("Enter")
+
+    if submitted:
+        if password == expected_password:
+            st.session_state["app_authenticated"] = True
+            st.rerun()
+        else:
+            st.error("Incorrect password.")
+    st.stop()
+
+
+require_password()
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CSS  — pure white everywhere, no dark surfaces
@@ -50,8 +75,7 @@ header[data-testid="stHeader"],
 }
 /* Kill the coloured top decoration bar */
 [data-testid="stDecoration"] { display: none !important; }
-/* Remove hamburger / main menu bar */
-[data-testid="stToolbar"],
+/* Keep the toolbar so the sidebar can always be reopened */
 [data-testid="stMainMenuPopover"],
 footer { display: none !important; }
 
@@ -218,6 +242,13 @@ LGREY  = "#F5F7FA"
 BORDER = "#DDE1E7"
 TEXT   = "#1a1a1a"
 
+BUDGET_CATEGORY_COLORS = {
+    "Direct R&D": NAVY,
+    "Innovation": GREEN,
+    "Ambiguous": ORANGE,
+    "Exclude": GREY,
+}
+
 PLOTLY_BASE = dict(
     template="plotly_white",
     font=dict(family="Source Sans Pro, Helvetica Neue, Arial", size=11.5, color=TEXT),
@@ -263,7 +294,10 @@ def render_table(df, col_labels=None, max_rows=500, num_cols=None, bool_cols=Non
                 align = "center"
             elif c in num_cols:
                 try:
-                    cell = _html.escape(f"{float(val):,.0f}") if pd.notna(val) else "—"
+                    if "confidence" in c:
+                        cell = _html.escape(f"{float(val):.2f}") if pd.notna(val) else "—"
+                    else:
+                        cell = _html.escape(f"{float(val):,.0f}") if pd.notna(val) else "—"
                 except Exception:
                     cell = _html.escape(str(val)) if pd.notna(val) else "—"
                 align = "right"
@@ -362,6 +396,8 @@ def caption_note(text):
 # Defaults (used if data not available or no selection made)
 yr_b       = (1975, 1984)
 cat_b      = "All"
+conf_b     = (0.0, 1.0)
+ai_dec_b   = ["include", "review"]
 sel_bud_ctry = []
 sel_ctry   = []
 sel_st     = []
@@ -399,11 +435,31 @@ with st.sidebar:
         sel_bud_ctry = st.multiselect(
             "Country", _bud_ctry_opts, default=_bud_ctry_opts, key="bud_ctry",
         )
-        _cats = ["All"] + sorted(_db["rd_category"].dropna().unique())
+        _cats = ["All"] + sorted(_db["budget_category"].dropna().astype(str).unique())
         cat_b = st.selectbox(
             "R&D category", _cats, key="cat_b",
-            format_func=lambda x: RD_CATEGORY_LABELS.get(x, x) if x != "All" else "All categories",
+            format_func=lambda x: x if x != "All" else "All categories",
         )
+        _ai_decisions = sorted(_db["ai_decision"].dropna().astype(str).unique()) if "ai_decision" in _db.columns else []
+        if _ai_decisions:
+            ai_dec_b = st.multiselect(
+                "AI decision",
+                _ai_decisions,
+                default=_ai_decisions,
+                key="ai_dec_b",
+            )
+        _conf_vals = pd.to_numeric(_db["confidence"], errors="coerce").dropna()
+        if not _conf_vals.empty:
+            _conf_min = float(_conf_vals.min())
+            _conf_max = float(_conf_vals.max())
+            conf_b = st.slider(
+                "Confidence",
+                min_value=round(_conf_min, 2),
+                max_value=round(_conf_max, 2),
+                value=(round(_conf_min, 2), round(_conf_max, 2)),
+                step=0.05,
+                key="conf_b",
+            )
     else:
         st.caption("No data — run `python main.py --budget-only`")
 
@@ -504,9 +560,14 @@ with TAB_BUDGET:
     if "decision" in db.columns:
         m &= db["decision"] == "include"
     if cat_b != "All":
-        m &= db["rd_category"] == cat_b
+        m &= db["budget_category"] == cat_b
     if sel_bud_ctry and "country" in db.columns:
         m &= db["country"].isin(sel_bud_ctry)
+    if ai_dec_b and "ai_decision" in db.columns:
+        m &= db["ai_decision"].isin(ai_dec_b)
+    if "confidence" in db.columns:
+        _conf = pd.to_numeric(db["confidence"], errors="coerce")
+        m &= _conf.between(conf_b[0], conf_b[1], inclusive="both")
     db_f = db[m].copy()
 
     # ── KPI strip ──
@@ -522,16 +583,16 @@ with TAB_BUDGET:
     # ── Chart 1: Stacked bar by year ──
     section_header("R&D-related budget by year and category")
 
-    gcol  = "rd_category"
-    glab  = "rd_category_label" if "rd_category_label" in db_f.columns else gcol
+    gcol  = "budget_category"
+    glab  = "budget_category_label" if "budget_category_label" in db_f.columns else gcol
     yr_ct = db_f.groupby(["year", gcol])["amount_local"].sum().reset_index()
     yr_ct["DKK M"] = yr_ct["amount_local"] / 1e6
-    yr_ct["label"] = yr_ct[gcol].map(lambda x: RD_CATEGORY_LABELS.get(x, x))
+    yr_ct["label"] = yr_ct[gcol]
 
     fig1 = px.bar(
         yr_ct, x="year", y="DKK M", color="label",
-        color_discrete_map={v: RD_CATEGORY_COLORS.get(k, GREY)
-                            for k, v in RD_CATEGORY_LABELS.items()},
+        color_discrete_map={k: BUDGET_CATEGORY_COLORS.get(k, GREY)
+                            for k in yr_ct["label"].dropna().unique()},
         barmode="stack",
         labels={"year": "Year", "DKK M": "DKK (millions)", "label": ""},
         text_auto=".0f",
@@ -552,9 +613,9 @@ with TAB_BUDGET:
 
     with col_a:
         section_header("Cumulative R&D spend by ministry (top 10)")
-        if "section_name_en" in db_f.columns:
+        if "ministry_display" in db_f.columns:
             top_min = (
-                db_f.groupby("section_name_en")["amount_local"]
+                db_f.groupby("ministry_display")["amount_local"]
                 .sum().sort_values(ascending=True).tail(10).reset_index()
             )
             top_min["DKK M"] = top_min["amount_local"] / 1e6
@@ -562,7 +623,7 @@ with TAB_BUDGET:
 
             fig2 = go.Figure(go.Bar(
                 x=top_min["DKK M"],
-                y=top_min["section_name_en"],
+                y=top_min["ministry_display"],
                 orientation="h",
                 marker_color=NAVY,
                 marker_line_width=0,
@@ -577,21 +638,19 @@ with TAB_BUDGET:
 
     with col_b_:
         section_header("R&D category breakdown (% of total)")
-        if "rd_category" in db_f.columns:
+        if "budget_category" in db_f.columns:
             cat_tot = (
-                db_f.groupby("rd_category")["amount_local"]
+                db_f.groupby("budget_category")["amount_local"]
                 .sum().sort_values(ascending=False).reset_index()
             )
             cat_tot["DKK M"] = cat_tot["amount_local"] / 1e6
-            cat_tot["label"] = cat_tot["rd_category"].map(
-                lambda x: RD_CATEGORY_LABELS.get(x, x)
-            )
+            cat_tot["label"] = cat_tot["budget_category"]
             cat_tot["pct"]   = 100 * cat_tot["DKK M"] / cat_tot["DKK M"].sum()
 
             fig3 = go.Figure(go.Bar(
                 x=cat_tot["label"],
                 y=cat_tot["DKK M"],
-                marker_color=[RD_CATEGORY_COLORS.get(c, GREY) for c in cat_tot["rd_category"]],
+                marker_color=[BUDGET_CATEGORY_COLORS.get(c, GREY) for c in cat_tot["budget_category"]],
                 marker_line_width=0,
                 text=cat_tot["pct"].map(lambda x: f"{x:.1f}%"),
                 textposition="outside",
@@ -630,13 +689,14 @@ with TAB_BUDGET:
     # ── Data table ──
     section_header("Budget line detail")
     _BUD_DISP_COLS = [c for c in [
-        "year", "section_name_en", "line_description_en",
-        "amount_local", "rd_category", "taxonomy_score", "source_file",
+        "year", "ministry_display", "budget_line_display",
+        "amount_local", "budget_category", "confidence", "ai_decision", "ai_rationale", "source_file",
     ] if c in db_f.columns]
     _BUD_COL_LABELS = {
-        "year": "Year", "section_name_en": "Ministry",
-        "line_description_en": "Budget line", "amount_local": "Amount (DKK)",
-        "rd_category": "R&D category", "taxonomy_score": "Score",
+        "year": "Year", "ministry_display": "Ministry",
+        "budget_line_display": "Description", "amount_local": "Amount (DKK)",
+        "budget_category": "R&D category", "confidence": "Confidence",
+        "ai_decision": "Decision", "ai_rationale": "Rationale",
         "source_file": "Source file",
     }
     _bud_search = st.text_input(
@@ -644,8 +704,6 @@ with TAB_BUDGET:
         label_visibility="collapsed",
     )
     _tbl = db_f.copy()
-    if "rd_category" in _tbl.columns:
-        _tbl["rd_category"] = _tbl["rd_category"].map(lambda x: RD_CATEGORY_LABELS.get(x, x))
     if _bud_search:
         _mask = _tbl.astype(str).apply(
             lambda col: col.str.contains(_bud_search, case=False, na=False)
@@ -655,8 +713,8 @@ with TAB_BUDGET:
     render_table(
         _tbl[_BUD_DISP_COLS].sort_values("year"),
         col_labels=_BUD_COL_LABELS,
-        num_cols=["amount_local", "taxonomy_score"],
-        wide_cols=["line_description_en", "section_name_en"],
+        num_cols=["amount_local", "confidence"],
+        wide_cols=["budget_line_display", "ministry_display", "ai_rationale"],
     )
     st.download_button(
         "Download CSV",
@@ -1186,9 +1244,10 @@ with TAB_TABLE:
 
     _T5_BUD_LABELS = {
         "country": "Country", "year": "Year", "section_code": "Ministry code",
-        "section_name_en": "Ministry", "line_description_en": "Budget line",
+        "ministry_display": "Ministry", "budget_line_display": "Description",
         "amount_local": "Amount (DKK)", "currency": "Currency",
-        "rd_category": "R&D category", "taxonomy_score": "Score",
+        "budget_category": "R&D category", "confidence": "Confidence",
+        "ai_decision": "Decision", "ai_rationale": "Rationale",
         "source_file": "Source", "page_number": "Page",
     }
     _T5_REF_LABELS = {
@@ -1208,21 +1267,22 @@ with TAB_TABLE:
             _db5 = load_budget()
             m5 = (_db5["year"] >= yr_b[0]) & (_db5["year"] <= yr_b[1])
             if "decision" in _db5.columns: m5 &= _db5["decision"] == "include"
-            if cat_b != "All": m5 &= _db5["rd_category"] == cat_b
+            if cat_b != "All": m5 &= _db5["budget_category"] == cat_b
             if sel_bud_ctry and "country" in _db5.columns:
                 m5 &= _db5["country"].isin(sel_bud_ctry)
+            if ai_dec_b and "ai_decision" in _db5.columns:
+                m5 &= _db5["ai_decision"].isin(ai_dec_b)
+            if "confidence" in _db5.columns:
+                _conf5 = pd.to_numeric(_db5["confidence"], errors="coerce")
+                m5 &= _conf5.between(conf_b[0], conf_b[1], inclusive="both")
             df5 = _db5[m5]
             cols5 = [c for c in _T5_BUD_LABELS if c in df5.columns]
             _df5_disp = df5[cols5].copy()
-            if "rd_category" in _df5_disp.columns:
-                _df5_disp["rd_category"] = _df5_disp["rd_category"].map(
-                    lambda x: RD_CATEGORY_LABELS.get(x, x)
-                )
             caption_note(f"{len(df5):,} rows  ·  DKK {df5['amount_local'].sum()/1e6:,.1f} M")
             render_table(_df5_disp.sort_values(["year","section_code"] if "section_code" in cols5 else ["year"]),
                          col_labels=_T5_BUD_LABELS,
-                         num_cols=["amount_local","taxonomy_score","page_number"],
-                         wide_cols=["line_description_en","section_name_en"])
+                         num_cols=["amount_local","confidence","page_number"],
+                         wide_cols=["budget_line_display","ministry_display","ai_rationale"])
             st.download_button("Download (CSV)", df5[cols5].to_csv(index=False).encode(),
                                "budget_lines.csv", "text/csv")
     else:

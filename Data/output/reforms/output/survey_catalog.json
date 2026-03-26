@@ -77,7 +77,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_2021.txt",
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DNK_2021.json",
     "url": null,
-    "status": "reforms_extracted"
+    "status": "text_extracted"
   },
   "DNK_2024": {
     "country_code": "DNK",
@@ -167,6 +167,5926 @@
     "text_path": null,
     "reforms_path": null,
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-2025_en",
+    "status": "pending"
+  },
+  "AUS_1995": {
+    "country_code": "AUS",
+    "country_name": "Australia",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-australia-1995_en",
+    "status": "pending"
+  },
+  "AUS_1997": {
+    "country_code": "AUS",
+    "country_name": "Australia",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-australia-1997_en",
+    "status": "pending"
+  },
+  "AUS_1999": {
+    "country_code": "AUS",
+    "country_name": "Australia",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-australia-1999_en",
+    "status": "pending"
+  },
+  "AUS_2001": {
+    "country_code": "AUS",
+    "country_name": "Australia",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-australia-2001_en",
+    "status": "pending"
+  },
+  "AUS_2003": {
+    "country_code": "AUS",
+    "country_name": "Australia",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-australia-2003_en",
+    "status": "pending"
+  },
+  "AUS_2005": {
+    "country_code": "AUS",
+    "country_name": "Australia",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-australia-2005_en",
+    "status": "pending"
+  },
+  "AUS_2007": {
+    "country_code": "AUS",
+    "country_name": "Australia",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-australia-2007_en",
+    "status": "pending"
+  },
+  "AUS_2009": {
+    "country_code": "AUS",
+    "country_name": "Australia",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-australia-2009_en",
+    "status": "pending"
+  },
+  "AUS_2011": {
+    "country_code": "AUS",
+    "country_name": "Australia",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-australia-2011_en",
+    "status": "pending"
+  },
+  "AUS_2013": {
+    "country_code": "AUS",
+    "country_name": "Australia",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-australia-2013_en",
+    "status": "pending"
+  },
+  "AUS_2015": {
+    "country_code": "AUS",
+    "country_name": "Australia",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-australia-2015_en",
+    "status": "pending"
+  },
+  "AUS_2017": {
+    "country_code": "AUS",
+    "country_name": "Australia",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-australia-2017_en",
+    "status": "pending"
+  },
+  "AUS_2019": {
+    "country_code": "AUS",
+    "country_name": "Australia",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-australia-2019_en",
+    "status": "pending"
+  },
+  "AUS_2021": {
+    "country_code": "AUS",
+    "country_name": "Australia",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-australia-2021_en",
+    "status": "pending"
+  },
+  "AUS_2023": {
+    "country_code": "AUS",
+    "country_name": "Australia",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-australia-2023_en",
+    "status": "pending"
+  },
+  "AUS_2025": {
+    "country_code": "AUS",
+    "country_name": "Australia",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-australia-2025_en",
+    "status": "pending"
+  },
+  "AUT_1995": {
+    "country_code": "AUT",
+    "country_name": "Austria",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-austria-1995_en",
+    "status": "pending"
+  },
+  "AUT_1997": {
+    "country_code": "AUT",
+    "country_name": "Austria",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-austria-1997_en",
+    "status": "pending"
+  },
+  "AUT_1999": {
+    "country_code": "AUT",
+    "country_name": "Austria",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-austria-1999_en",
+    "status": "pending"
+  },
+  "AUT_2001": {
+    "country_code": "AUT",
+    "country_name": "Austria",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-austria-2001_en",
+    "status": "pending"
+  },
+  "AUT_2003": {
+    "country_code": "AUT",
+    "country_name": "Austria",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-austria-2003_en",
+    "status": "pending"
+  },
+  "AUT_2005": {
+    "country_code": "AUT",
+    "country_name": "Austria",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-austria-2005_en",
+    "status": "pending"
+  },
+  "AUT_2007": {
+    "country_code": "AUT",
+    "country_name": "Austria",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-austria-2007_en",
+    "status": "pending"
+  },
+  "AUT_2009": {
+    "country_code": "AUT",
+    "country_name": "Austria",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-austria-2009_en",
+    "status": "pending"
+  },
+  "AUT_2011": {
+    "country_code": "AUT",
+    "country_name": "Austria",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-austria-2011_en",
+    "status": "pending"
+  },
+  "AUT_2013": {
+    "country_code": "AUT",
+    "country_name": "Austria",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-austria-2013_en",
+    "status": "pending"
+  },
+  "AUT_2015": {
+    "country_code": "AUT",
+    "country_name": "Austria",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-austria-2015_en",
+    "status": "pending"
+  },
+  "AUT_2017": {
+    "country_code": "AUT",
+    "country_name": "Austria",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-austria-2017_en",
+    "status": "pending"
+  },
+  "AUT_2019": {
+    "country_code": "AUT",
+    "country_name": "Austria",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-austria-2019_en",
+    "status": "pending"
+  },
+  "AUT_2021": {
+    "country_code": "AUT",
+    "country_name": "Austria",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-austria-2021_en",
+    "status": "pending"
+  },
+  "AUT_2023": {
+    "country_code": "AUT",
+    "country_name": "Austria",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-austria-2023_en",
+    "status": "pending"
+  },
+  "AUT_2025": {
+    "country_code": "AUT",
+    "country_name": "Austria",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-austria-2025_en",
+    "status": "pending"
+  },
+  "BEL_1995": {
+    "country_code": "BEL",
+    "country_name": "Belgium",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-belgium-1995_en",
+    "status": "pending"
+  },
+  "BEL_1997": {
+    "country_code": "BEL",
+    "country_name": "Belgium",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-belgium-1997_en",
+    "status": "pending"
+  },
+  "BEL_1999": {
+    "country_code": "BEL",
+    "country_name": "Belgium",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-belgium-1999_en",
+    "status": "pending"
+  },
+  "BEL_2001": {
+    "country_code": "BEL",
+    "country_name": "Belgium",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-belgium-2001_en",
+    "status": "pending"
+  },
+  "BEL_2003": {
+    "country_code": "BEL",
+    "country_name": "Belgium",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-belgium-2003_en",
+    "status": "pending"
+  },
+  "BEL_2005": {
+    "country_code": "BEL",
+    "country_name": "Belgium",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-belgium-2005_en",
+    "status": "pending"
+  },
+  "BEL_2007": {
+    "country_code": "BEL",
+    "country_name": "Belgium",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-belgium-2007_en",
+    "status": "pending"
+  },
+  "BEL_2009": {
+    "country_code": "BEL",
+    "country_name": "Belgium",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-belgium-2009_en",
+    "status": "pending"
+  },
+  "BEL_2011": {
+    "country_code": "BEL",
+    "country_name": "Belgium",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-belgium-2011_en",
+    "status": "pending"
+  },
+  "BEL_2013": {
+    "country_code": "BEL",
+    "country_name": "Belgium",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-belgium-2013_en",
+    "status": "pending"
+  },
+  "BEL_2015": {
+    "country_code": "BEL",
+    "country_name": "Belgium",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-belgium-2015_en",
+    "status": "pending"
+  },
+  "BEL_2017": {
+    "country_code": "BEL",
+    "country_name": "Belgium",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-belgium-2017_en",
+    "status": "pending"
+  },
+  "BEL_2019": {
+    "country_code": "BEL",
+    "country_name": "Belgium",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-belgium-2019_en",
+    "status": "pending"
+  },
+  "BEL_2021": {
+    "country_code": "BEL",
+    "country_name": "Belgium",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-belgium-2021_en",
+    "status": "pending"
+  },
+  "BEL_2023": {
+    "country_code": "BEL",
+    "country_name": "Belgium",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-belgium-2023_en",
+    "status": "pending"
+  },
+  "BEL_2025": {
+    "country_code": "BEL",
+    "country_name": "Belgium",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-belgium-2025_en",
+    "status": "pending"
+  },
+  "CAN_1995": {
+    "country_code": "CAN",
+    "country_name": "Canada",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada-1995_en",
+    "status": "pending"
+  },
+  "CAN_1997": {
+    "country_code": "CAN",
+    "country_name": "Canada",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada-1997_en",
+    "status": "pending"
+  },
+  "CAN_1999": {
+    "country_code": "CAN",
+    "country_name": "Canada",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada-1999_en",
+    "status": "pending"
+  },
+  "CAN_2001": {
+    "country_code": "CAN",
+    "country_name": "Canada",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada-2001_en",
+    "status": "pending"
+  },
+  "CAN_2003": {
+    "country_code": "CAN",
+    "country_name": "Canada",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada-2003_en",
+    "status": "pending"
+  },
+  "CAN_2005": {
+    "country_code": "CAN",
+    "country_name": "Canada",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada-2005_en",
+    "status": "pending"
+  },
+  "CAN_2007": {
+    "country_code": "CAN",
+    "country_name": "Canada",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada-2007_en",
+    "status": "pending"
+  },
+  "CAN_2009": {
+    "country_code": "CAN",
+    "country_name": "Canada",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada-2009_en",
+    "status": "pending"
+  },
+  "CAN_2011": {
+    "country_code": "CAN",
+    "country_name": "Canada",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada-2011_en",
+    "status": "pending"
+  },
+  "CAN_2013": {
+    "country_code": "CAN",
+    "country_name": "Canada",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada-2013_en",
+    "status": "pending"
+  },
+  "CAN_2015": {
+    "country_code": "CAN",
+    "country_name": "Canada",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada-2015_en",
+    "status": "pending"
+  },
+  "CAN_2017": {
+    "country_code": "CAN",
+    "country_name": "Canada",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada-2017_en",
+    "status": "pending"
+  },
+  "CAN_2019": {
+    "country_code": "CAN",
+    "country_name": "Canada",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada-2019_en",
+    "status": "pending"
+  },
+  "CAN_2021": {
+    "country_code": "CAN",
+    "country_name": "Canada",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada-2021_en",
+    "status": "pending"
+  },
+  "CAN_2023": {
+    "country_code": "CAN",
+    "country_name": "Canada",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada-2023_en",
+    "status": "pending"
+  },
+  "CAN_2025": {
+    "country_code": "CAN",
+    "country_name": "Canada",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada-2025_en",
+    "status": "pending"
+  },
+  "CHL_1995": {
+    "country_code": "CHL",
+    "country_name": "Chile",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-chile-1995_en",
+    "status": "pending"
+  },
+  "CHL_1997": {
+    "country_code": "CHL",
+    "country_name": "Chile",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-chile-1997_en",
+    "status": "pending"
+  },
+  "CHL_1999": {
+    "country_code": "CHL",
+    "country_name": "Chile",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-chile-1999_en",
+    "status": "pending"
+  },
+  "CHL_2001": {
+    "country_code": "CHL",
+    "country_name": "Chile",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-chile-2001_en",
+    "status": "pending"
+  },
+  "CHL_2003": {
+    "country_code": "CHL",
+    "country_name": "Chile",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-chile-2003_en",
+    "status": "pending"
+  },
+  "CHL_2005": {
+    "country_code": "CHL",
+    "country_name": "Chile",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-chile-2005_en",
+    "status": "pending"
+  },
+  "CHL_2007": {
+    "country_code": "CHL",
+    "country_name": "Chile",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-chile-2007_en",
+    "status": "pending"
+  },
+  "CHL_2009": {
+    "country_code": "CHL",
+    "country_name": "Chile",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-chile-2009_en",
+    "status": "pending"
+  },
+  "CHL_2011": {
+    "country_code": "CHL",
+    "country_name": "Chile",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-chile-2011_en",
+    "status": "pending"
+  },
+  "CHL_2013": {
+    "country_code": "CHL",
+    "country_name": "Chile",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-chile-2013_en",
+    "status": "pending"
+  },
+  "CHL_2015": {
+    "country_code": "CHL",
+    "country_name": "Chile",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-chile-2015_en",
+    "status": "pending"
+  },
+  "CHL_2017": {
+    "country_code": "CHL",
+    "country_name": "Chile",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-chile-2017_en",
+    "status": "pending"
+  },
+  "CHL_2019": {
+    "country_code": "CHL",
+    "country_name": "Chile",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-chile-2019_en",
+    "status": "pending"
+  },
+  "CHL_2021": {
+    "country_code": "CHL",
+    "country_name": "Chile",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-chile-2021_en",
+    "status": "pending"
+  },
+  "CHL_2023": {
+    "country_code": "CHL",
+    "country_name": "Chile",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-chile-2023_en",
+    "status": "pending"
+  },
+  "CHL_2025": {
+    "country_code": "CHL",
+    "country_name": "Chile",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-chile-2025_en",
+    "status": "pending"
+  },
+  "COL_1995": {
+    "country_code": "COL",
+    "country_name": "Colombia",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-colombia-1995_en",
+    "status": "pending"
+  },
+  "COL_1997": {
+    "country_code": "COL",
+    "country_name": "Colombia",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-colombia-1997_en",
+    "status": "pending"
+  },
+  "COL_1999": {
+    "country_code": "COL",
+    "country_name": "Colombia",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-colombia-1999_en",
+    "status": "pending"
+  },
+  "COL_2001": {
+    "country_code": "COL",
+    "country_name": "Colombia",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-colombia-2001_en",
+    "status": "pending"
+  },
+  "COL_2003": {
+    "country_code": "COL",
+    "country_name": "Colombia",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-colombia-2003_en",
+    "status": "pending"
+  },
+  "COL_2005": {
+    "country_code": "COL",
+    "country_name": "Colombia",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-colombia-2005_en",
+    "status": "pending"
+  },
+  "COL_2007": {
+    "country_code": "COL",
+    "country_name": "Colombia",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-colombia-2007_en",
+    "status": "pending"
+  },
+  "COL_2009": {
+    "country_code": "COL",
+    "country_name": "Colombia",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-colombia-2009_en",
+    "status": "pending"
+  },
+  "COL_2011": {
+    "country_code": "COL",
+    "country_name": "Colombia",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-colombia-2011_en",
+    "status": "pending"
+  },
+  "COL_2013": {
+    "country_code": "COL",
+    "country_name": "Colombia",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-colombia-2013_en",
+    "status": "pending"
+  },
+  "COL_2015": {
+    "country_code": "COL",
+    "country_name": "Colombia",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-colombia-2015_en",
+    "status": "pending"
+  },
+  "COL_2017": {
+    "country_code": "COL",
+    "country_name": "Colombia",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-colombia-2017_en",
+    "status": "pending"
+  },
+  "COL_2019": {
+    "country_code": "COL",
+    "country_name": "Colombia",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-colombia-2019_en",
+    "status": "pending"
+  },
+  "COL_2021": {
+    "country_code": "COL",
+    "country_name": "Colombia",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-colombia-2021_en",
+    "status": "pending"
+  },
+  "COL_2023": {
+    "country_code": "COL",
+    "country_name": "Colombia",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-colombia-2023_en",
+    "status": "pending"
+  },
+  "COL_2025": {
+    "country_code": "COL",
+    "country_name": "Colombia",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-colombia-2025_en",
+    "status": "pending"
+  },
+  "CRI_1995": {
+    "country_code": "CRI",
+    "country_name": "Costa Rica",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-costa-rica-1995_en",
+    "status": "pending"
+  },
+  "CRI_1997": {
+    "country_code": "CRI",
+    "country_name": "Costa Rica",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-costa-rica-1997_en",
+    "status": "pending"
+  },
+  "CRI_1999": {
+    "country_code": "CRI",
+    "country_name": "Costa Rica",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-costa-rica-1999_en",
+    "status": "pending"
+  },
+  "CRI_2001": {
+    "country_code": "CRI",
+    "country_name": "Costa Rica",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-costa-rica-2001_en",
+    "status": "pending"
+  },
+  "CRI_2003": {
+    "country_code": "CRI",
+    "country_name": "Costa Rica",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-costa-rica-2003_en",
+    "status": "pending"
+  },
+  "CRI_2005": {
+    "country_code": "CRI",
+    "country_name": "Costa Rica",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-costa-rica-2005_en",
+    "status": "pending"
+  },
+  "CRI_2007": {
+    "country_code": "CRI",
+    "country_name": "Costa Rica",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-costa-rica-2007_en",
+    "status": "pending"
+  },
+  "CRI_2009": {
+    "country_code": "CRI",
+    "country_name": "Costa Rica",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-costa-rica-2009_en",
+    "status": "pending"
+  },
+  "CRI_2011": {
+    "country_code": "CRI",
+    "country_name": "Costa Rica",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-costa-rica-2011_en",
+    "status": "pending"
+  },
+  "CRI_2013": {
+    "country_code": "CRI",
+    "country_name": "Costa Rica",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-costa-rica-2013_en",
+    "status": "pending"
+  },
+  "CRI_2015": {
+    "country_code": "CRI",
+    "country_name": "Costa Rica",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-costa-rica-2015_en",
+    "status": "pending"
+  },
+  "CRI_2017": {
+    "country_code": "CRI",
+    "country_name": "Costa Rica",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-costa-rica-2017_en",
+    "status": "pending"
+  },
+  "CRI_2019": {
+    "country_code": "CRI",
+    "country_name": "Costa Rica",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-costa-rica-2019_en",
+    "status": "pending"
+  },
+  "CRI_2021": {
+    "country_code": "CRI",
+    "country_name": "Costa Rica",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-costa-rica-2021_en",
+    "status": "pending"
+  },
+  "CRI_2023": {
+    "country_code": "CRI",
+    "country_name": "Costa Rica",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-costa-rica-2023_en",
+    "status": "pending"
+  },
+  "CRI_2025": {
+    "country_code": "CRI",
+    "country_name": "Costa Rica",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-costa-rica-2025_en",
+    "status": "pending"
+  },
+  "CZE_1995": {
+    "country_code": "CZE",
+    "country_name": "Czech Republic",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-czech-republic-1995_en",
+    "status": "pending"
+  },
+  "CZE_1997": {
+    "country_code": "CZE",
+    "country_name": "Czech Republic",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-czech-republic-1997_en",
+    "status": "pending"
+  },
+  "CZE_1999": {
+    "country_code": "CZE",
+    "country_name": "Czech Republic",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-czech-republic-1999_en",
+    "status": "pending"
+  },
+  "CZE_2001": {
+    "country_code": "CZE",
+    "country_name": "Czech Republic",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-czech-republic-2001_en",
+    "status": "pending"
+  },
+  "CZE_2003": {
+    "country_code": "CZE",
+    "country_name": "Czech Republic",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-czech-republic-2003_en",
+    "status": "pending"
+  },
+  "CZE_2005": {
+    "country_code": "CZE",
+    "country_name": "Czech Republic",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-czech-republic-2005_en",
+    "status": "pending"
+  },
+  "CZE_2007": {
+    "country_code": "CZE",
+    "country_name": "Czech Republic",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-czech-republic-2007_en",
+    "status": "pending"
+  },
+  "CZE_2009": {
+    "country_code": "CZE",
+    "country_name": "Czech Republic",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-czech-republic-2009_en",
+    "status": "pending"
+  },
+  "CZE_2011": {
+    "country_code": "CZE",
+    "country_name": "Czech Republic",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-czech-republic-2011_en",
+    "status": "pending"
+  },
+  "CZE_2013": {
+    "country_code": "CZE",
+    "country_name": "Czech Republic",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-czech-republic-2013_en",
+    "status": "pending"
+  },
+  "CZE_2015": {
+    "country_code": "CZE",
+    "country_name": "Czech Republic",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-czech-republic-2015_en",
+    "status": "pending"
+  },
+  "CZE_2017": {
+    "country_code": "CZE",
+    "country_name": "Czech Republic",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-czech-republic-2017_en",
+    "status": "pending"
+  },
+  "CZE_2019": {
+    "country_code": "CZE",
+    "country_name": "Czech Republic",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-czech-republic-2019_en",
+    "status": "pending"
+  },
+  "CZE_2021": {
+    "country_code": "CZE",
+    "country_name": "Czech Republic",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-czech-republic-2021_en",
+    "status": "pending"
+  },
+  "CZE_2023": {
+    "country_code": "CZE",
+    "country_name": "Czech Republic",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-czech-republic-2023_en",
+    "status": "pending"
+  },
+  "CZE_2025": {
+    "country_code": "CZE",
+    "country_name": "Czech Republic",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-czech-republic-2025_en",
+    "status": "pending"
+  },
+  "EST_1995": {
+    "country_code": "EST",
+    "country_name": "Estonia",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-estonia-1995_en",
+    "status": "pending"
+  },
+  "EST_1997": {
+    "country_code": "EST",
+    "country_name": "Estonia",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-estonia-1997_en",
+    "status": "pending"
+  },
+  "EST_1999": {
+    "country_code": "EST",
+    "country_name": "Estonia",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-estonia-1999_en",
+    "status": "pending"
+  },
+  "EST_2001": {
+    "country_code": "EST",
+    "country_name": "Estonia",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-estonia-2001_en",
+    "status": "pending"
+  },
+  "EST_2003": {
+    "country_code": "EST",
+    "country_name": "Estonia",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-estonia-2003_en",
+    "status": "pending"
+  },
+  "EST_2005": {
+    "country_code": "EST",
+    "country_name": "Estonia",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-estonia-2005_en",
+    "status": "pending"
+  },
+  "EST_2007": {
+    "country_code": "EST",
+    "country_name": "Estonia",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-estonia-2007_en",
+    "status": "pending"
+  },
+  "EST_2009": {
+    "country_code": "EST",
+    "country_name": "Estonia",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-estonia-2009_en",
+    "status": "pending"
+  },
+  "EST_2011": {
+    "country_code": "EST",
+    "country_name": "Estonia",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-estonia-2011_en",
+    "status": "pending"
+  },
+  "EST_2013": {
+    "country_code": "EST",
+    "country_name": "Estonia",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-estonia-2013_en",
+    "status": "pending"
+  },
+  "EST_2015": {
+    "country_code": "EST",
+    "country_name": "Estonia",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-estonia-2015_en",
+    "status": "pending"
+  },
+  "EST_2017": {
+    "country_code": "EST",
+    "country_name": "Estonia",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-estonia-2017_en",
+    "status": "pending"
+  },
+  "EST_2019": {
+    "country_code": "EST",
+    "country_name": "Estonia",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-estonia-2019_en",
+    "status": "pending"
+  },
+  "EST_2021": {
+    "country_code": "EST",
+    "country_name": "Estonia",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-estonia-2021_en",
+    "status": "pending"
+  },
+  "EST_2023": {
+    "country_code": "EST",
+    "country_name": "Estonia",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-estonia-2023_en",
+    "status": "pending"
+  },
+  "EST_2025": {
+    "country_code": "EST",
+    "country_name": "Estonia",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-estonia-2025_en",
+    "status": "pending"
+  },
+  "FIN_1995": {
+    "country_code": "FIN",
+    "country_name": "Finland",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-finland-1995_en",
+    "status": "pending"
+  },
+  "FIN_1997": {
+    "country_code": "FIN",
+    "country_name": "Finland",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-finland-1997_en",
+    "status": "pending"
+  },
+  "FIN_1999": {
+    "country_code": "FIN",
+    "country_name": "Finland",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-finland-1999_en",
+    "status": "pending"
+  },
+  "FIN_2001": {
+    "country_code": "FIN",
+    "country_name": "Finland",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-finland-2001_en",
+    "status": "pending"
+  },
+  "FIN_2003": {
+    "country_code": "FIN",
+    "country_name": "Finland",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-finland-2003_en",
+    "status": "pending"
+  },
+  "FIN_2005": {
+    "country_code": "FIN",
+    "country_name": "Finland",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-finland-2005_en",
+    "status": "pending"
+  },
+  "FIN_2007": {
+    "country_code": "FIN",
+    "country_name": "Finland",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-finland-2007_en",
+    "status": "pending"
+  },
+  "FIN_2009": {
+    "country_code": "FIN",
+    "country_name": "Finland",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-finland-2009_en",
+    "status": "pending"
+  },
+  "FIN_2011": {
+    "country_code": "FIN",
+    "country_name": "Finland",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-finland-2011_en",
+    "status": "pending"
+  },
+  "FIN_2013": {
+    "country_code": "FIN",
+    "country_name": "Finland",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-finland-2013_en",
+    "status": "pending"
+  },
+  "FIN_2015": {
+    "country_code": "FIN",
+    "country_name": "Finland",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-finland-2015_en",
+    "status": "pending"
+  },
+  "FIN_2017": {
+    "country_code": "FIN",
+    "country_name": "Finland",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-finland-2017_en",
+    "status": "pending"
+  },
+  "FIN_2019": {
+    "country_code": "FIN",
+    "country_name": "Finland",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-finland-2019_en",
+    "status": "pending"
+  },
+  "FIN_2021": {
+    "country_code": "FIN",
+    "country_name": "Finland",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-finland-2021_en",
+    "status": "pending"
+  },
+  "FIN_2023": {
+    "country_code": "FIN",
+    "country_name": "Finland",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-finland-2023_en",
+    "status": "pending"
+  },
+  "FIN_2025": {
+    "country_code": "FIN",
+    "country_name": "Finland",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-finland-2025_en",
+    "status": "pending"
+  },
+  "FRA_1995": {
+    "country_code": "FRA",
+    "country_name": "France",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-1995_en",
+    "status": "pending"
+  },
+  "FRA_1997": {
+    "country_code": "FRA",
+    "country_name": "France",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-1997_en",
+    "status": "pending"
+  },
+  "FRA_1999": {
+    "country_code": "FRA",
+    "country_name": "France",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-1999_en",
+    "status": "pending"
+  },
+  "FRA_2001": {
+    "country_code": "FRA",
+    "country_name": "France",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2001_en",
+    "status": "pending"
+  },
+  "FRA_2003": {
+    "country_code": "FRA",
+    "country_name": "France",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2003_en",
+    "status": "pending"
+  },
+  "FRA_2005": {
+    "country_code": "FRA",
+    "country_name": "France",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2005_en",
+    "status": "pending"
+  },
+  "FRA_2007": {
+    "country_code": "FRA",
+    "country_name": "France",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2007_en",
+    "status": "pending"
+  },
+  "FRA_2009": {
+    "country_code": "FRA",
+    "country_name": "France",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2009_en",
+    "status": "pending"
+  },
+  "FRA_2011": {
+    "country_code": "FRA",
+    "country_name": "France",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2011_en",
+    "status": "pending"
+  },
+  "FRA_2013": {
+    "country_code": "FRA",
+    "country_name": "France",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2013_en",
+    "status": "pending"
+  },
+  "FRA_2015": {
+    "country_code": "FRA",
+    "country_name": "France",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2015_en",
+    "status": "pending"
+  },
+  "FRA_2017": {
+    "country_code": "FRA",
+    "country_name": "France",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2017_en",
+    "status": "pending"
+  },
+  "FRA_2019": {
+    "country_code": "FRA",
+    "country_name": "France",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2019_en",
+    "status": "pending"
+  },
+  "FRA_2021": {
+    "country_code": "FRA",
+    "country_name": "France",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2021_en",
+    "status": "pending"
+  },
+  "FRA_2023": {
+    "country_code": "FRA",
+    "country_name": "France",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2023_en",
+    "status": "pending"
+  },
+  "FRA_2025": {
+    "country_code": "FRA",
+    "country_name": "France",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2025_en",
+    "status": "pending"
+  },
+  "DEU_1995": {
+    "country_code": "DEU",
+    "country_name": "Germany",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-1995_en",
+    "status": "pending"
+  },
+  "DEU_1997": {
+    "country_code": "DEU",
+    "country_name": "Germany",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-1997_en",
+    "status": "pending"
+  },
+  "DEU_1999": {
+    "country_code": "DEU",
+    "country_name": "Germany",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-1999_en",
+    "status": "pending"
+  },
+  "DEU_2001": {
+    "country_code": "DEU",
+    "country_name": "Germany",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2001_en",
+    "status": "pending"
+  },
+  "DEU_2003": {
+    "country_code": "DEU",
+    "country_name": "Germany",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2003_en",
+    "status": "pending"
+  },
+  "DEU_2005": {
+    "country_code": "DEU",
+    "country_name": "Germany",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2005_en",
+    "status": "pending"
+  },
+  "DEU_2007": {
+    "country_code": "DEU",
+    "country_name": "Germany",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2007_en",
+    "status": "pending"
+  },
+  "DEU_2009": {
+    "country_code": "DEU",
+    "country_name": "Germany",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2009_en",
+    "status": "pending"
+  },
+  "DEU_2011": {
+    "country_code": "DEU",
+    "country_name": "Germany",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2011_en",
+    "status": "pending"
+  },
+  "DEU_2013": {
+    "country_code": "DEU",
+    "country_name": "Germany",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2013_en",
+    "status": "pending"
+  },
+  "DEU_2015": {
+    "country_code": "DEU",
+    "country_name": "Germany",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2015_en",
+    "status": "pending"
+  },
+  "DEU_2017": {
+    "country_code": "DEU",
+    "country_name": "Germany",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2017_en",
+    "status": "pending"
+  },
+  "DEU_2019": {
+    "country_code": "DEU",
+    "country_name": "Germany",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2019_en",
+    "status": "pending"
+  },
+  "DEU_2021": {
+    "country_code": "DEU",
+    "country_name": "Germany",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2021_en",
+    "status": "pending"
+  },
+  "DEU_2023": {
+    "country_code": "DEU",
+    "country_name": "Germany",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2023_en",
+    "status": "pending"
+  },
+  "DEU_2025": {
+    "country_code": "DEU",
+    "country_name": "Germany",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2025_en",
+    "status": "pending"
+  },
+  "GRC_1995": {
+    "country_code": "GRC",
+    "country_name": "Greece",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-greece-1995_en",
+    "status": "pending"
+  },
+  "GRC_1997": {
+    "country_code": "GRC",
+    "country_name": "Greece",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-greece-1997_en",
+    "status": "pending"
+  },
+  "GRC_1999": {
+    "country_code": "GRC",
+    "country_name": "Greece",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-greece-1999_en",
+    "status": "pending"
+  },
+  "GRC_2001": {
+    "country_code": "GRC",
+    "country_name": "Greece",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-greece-2001_en",
+    "status": "pending"
+  },
+  "GRC_2003": {
+    "country_code": "GRC",
+    "country_name": "Greece",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-greece-2003_en",
+    "status": "pending"
+  },
+  "GRC_2005": {
+    "country_code": "GRC",
+    "country_name": "Greece",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-greece-2005_en",
+    "status": "pending"
+  },
+  "GRC_2007": {
+    "country_code": "GRC",
+    "country_name": "Greece",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-greece-2007_en",
+    "status": "pending"
+  },
+  "GRC_2009": {
+    "country_code": "GRC",
+    "country_name": "Greece",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-greece-2009_en",
+    "status": "pending"
+  },
+  "GRC_2011": {
+    "country_code": "GRC",
+    "country_name": "Greece",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-greece-2011_en",
+    "status": "pending"
+  },
+  "GRC_2013": {
+    "country_code": "GRC",
+    "country_name": "Greece",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-greece-2013_en",
+    "status": "pending"
+  },
+  "GRC_2015": {
+    "country_code": "GRC",
+    "country_name": "Greece",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-greece-2015_en",
+    "status": "pending"
+  },
+  "GRC_2017": {
+    "country_code": "GRC",
+    "country_name": "Greece",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-greece-2017_en",
+    "status": "pending"
+  },
+  "GRC_2019": {
+    "country_code": "GRC",
+    "country_name": "Greece",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-greece-2019_en",
+    "status": "pending"
+  },
+  "GRC_2021": {
+    "country_code": "GRC",
+    "country_name": "Greece",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-greece-2021_en",
+    "status": "pending"
+  },
+  "GRC_2023": {
+    "country_code": "GRC",
+    "country_name": "Greece",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-greece-2023_en",
+    "status": "pending"
+  },
+  "GRC_2025": {
+    "country_code": "GRC",
+    "country_name": "Greece",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-greece-2025_en",
+    "status": "pending"
+  },
+  "HUN_1995": {
+    "country_code": "HUN",
+    "country_name": "Hungary",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-hungary-1995_en",
+    "status": "pending"
+  },
+  "HUN_1997": {
+    "country_code": "HUN",
+    "country_name": "Hungary",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-hungary-1997_en",
+    "status": "pending"
+  },
+  "HUN_1999": {
+    "country_code": "HUN",
+    "country_name": "Hungary",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-hungary-1999_en",
+    "status": "pending"
+  },
+  "HUN_2001": {
+    "country_code": "HUN",
+    "country_name": "Hungary",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-hungary-2001_en",
+    "status": "pending"
+  },
+  "HUN_2003": {
+    "country_code": "HUN",
+    "country_name": "Hungary",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-hungary-2003_en",
+    "status": "pending"
+  },
+  "HUN_2005": {
+    "country_code": "HUN",
+    "country_name": "Hungary",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-hungary-2005_en",
+    "status": "pending"
+  },
+  "HUN_2007": {
+    "country_code": "HUN",
+    "country_name": "Hungary",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-hungary-2007_en",
+    "status": "pending"
+  },
+  "HUN_2009": {
+    "country_code": "HUN",
+    "country_name": "Hungary",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-hungary-2009_en",
+    "status": "pending"
+  },
+  "HUN_2011": {
+    "country_code": "HUN",
+    "country_name": "Hungary",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-hungary-2011_en",
+    "status": "pending"
+  },
+  "HUN_2013": {
+    "country_code": "HUN",
+    "country_name": "Hungary",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-hungary-2013_en",
+    "status": "pending"
+  },
+  "HUN_2015": {
+    "country_code": "HUN",
+    "country_name": "Hungary",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-hungary-2015_en",
+    "status": "pending"
+  },
+  "HUN_2017": {
+    "country_code": "HUN",
+    "country_name": "Hungary",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-hungary-2017_en",
+    "status": "pending"
+  },
+  "HUN_2019": {
+    "country_code": "HUN",
+    "country_name": "Hungary",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-hungary-2019_en",
+    "status": "pending"
+  },
+  "HUN_2021": {
+    "country_code": "HUN",
+    "country_name": "Hungary",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-hungary-2021_en",
+    "status": "pending"
+  },
+  "HUN_2023": {
+    "country_code": "HUN",
+    "country_name": "Hungary",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-hungary-2023_en",
+    "status": "pending"
+  },
+  "HUN_2025": {
+    "country_code": "HUN",
+    "country_name": "Hungary",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-hungary-2025_en",
+    "status": "pending"
+  },
+  "ISL_1995": {
+    "country_code": "ISL",
+    "country_name": "Iceland",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-iceland-1995_en",
+    "status": "pending"
+  },
+  "ISL_1997": {
+    "country_code": "ISL",
+    "country_name": "Iceland",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-iceland-1997_en",
+    "status": "pending"
+  },
+  "ISL_1999": {
+    "country_code": "ISL",
+    "country_name": "Iceland",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-iceland-1999_en",
+    "status": "pending"
+  },
+  "ISL_2001": {
+    "country_code": "ISL",
+    "country_name": "Iceland",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-iceland-2001_en",
+    "status": "pending"
+  },
+  "ISL_2003": {
+    "country_code": "ISL",
+    "country_name": "Iceland",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-iceland-2003_en",
+    "status": "pending"
+  },
+  "ISL_2005": {
+    "country_code": "ISL",
+    "country_name": "Iceland",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-iceland-2005_en",
+    "status": "pending"
+  },
+  "ISL_2007": {
+    "country_code": "ISL",
+    "country_name": "Iceland",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-iceland-2007_en",
+    "status": "pending"
+  },
+  "ISL_2009": {
+    "country_code": "ISL",
+    "country_name": "Iceland",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-iceland-2009_en",
+    "status": "pending"
+  },
+  "ISL_2011": {
+    "country_code": "ISL",
+    "country_name": "Iceland",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-iceland-2011_en",
+    "status": "pending"
+  },
+  "ISL_2013": {
+    "country_code": "ISL",
+    "country_name": "Iceland",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-iceland-2013_en",
+    "status": "pending"
+  },
+  "ISL_2015": {
+    "country_code": "ISL",
+    "country_name": "Iceland",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-iceland-2015_en",
+    "status": "pending"
+  },
+  "ISL_2017": {
+    "country_code": "ISL",
+    "country_name": "Iceland",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-iceland-2017_en",
+    "status": "pending"
+  },
+  "ISL_2019": {
+    "country_code": "ISL",
+    "country_name": "Iceland",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-iceland-2019_en",
+    "status": "pending"
+  },
+  "ISL_2021": {
+    "country_code": "ISL",
+    "country_name": "Iceland",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-iceland-2021_en",
+    "status": "pending"
+  },
+  "ISL_2023": {
+    "country_code": "ISL",
+    "country_name": "Iceland",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-iceland-2023_en",
+    "status": "pending"
+  },
+  "ISL_2025": {
+    "country_code": "ISL",
+    "country_name": "Iceland",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-iceland-2025_en",
+    "status": "pending"
+  },
+  "IRL_1995": {
+    "country_code": "IRL",
+    "country_name": "Ireland",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-ireland-1995_en",
+    "status": "pending"
+  },
+  "IRL_1997": {
+    "country_code": "IRL",
+    "country_name": "Ireland",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-ireland-1997_en",
+    "status": "pending"
+  },
+  "IRL_1999": {
+    "country_code": "IRL",
+    "country_name": "Ireland",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-ireland-1999_en",
+    "status": "pending"
+  },
+  "IRL_2001": {
+    "country_code": "IRL",
+    "country_name": "Ireland",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-ireland-2001_en",
+    "status": "pending"
+  },
+  "IRL_2003": {
+    "country_code": "IRL",
+    "country_name": "Ireland",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-ireland-2003_en",
+    "status": "pending"
+  },
+  "IRL_2005": {
+    "country_code": "IRL",
+    "country_name": "Ireland",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-ireland-2005_en",
+    "status": "pending"
+  },
+  "IRL_2007": {
+    "country_code": "IRL",
+    "country_name": "Ireland",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-ireland-2007_en",
+    "status": "pending"
+  },
+  "IRL_2009": {
+    "country_code": "IRL",
+    "country_name": "Ireland",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-ireland-2009_en",
+    "status": "pending"
+  },
+  "IRL_2011": {
+    "country_code": "IRL",
+    "country_name": "Ireland",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-ireland-2011_en",
+    "status": "pending"
+  },
+  "IRL_2013": {
+    "country_code": "IRL",
+    "country_name": "Ireland",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-ireland-2013_en",
+    "status": "pending"
+  },
+  "IRL_2015": {
+    "country_code": "IRL",
+    "country_name": "Ireland",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-ireland-2015_en",
+    "status": "pending"
+  },
+  "IRL_2017": {
+    "country_code": "IRL",
+    "country_name": "Ireland",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-ireland-2017_en",
+    "status": "pending"
+  },
+  "IRL_2019": {
+    "country_code": "IRL",
+    "country_name": "Ireland",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-ireland-2019_en",
+    "status": "pending"
+  },
+  "IRL_2021": {
+    "country_code": "IRL",
+    "country_name": "Ireland",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-ireland-2021_en",
+    "status": "pending"
+  },
+  "IRL_2023": {
+    "country_code": "IRL",
+    "country_name": "Ireland",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-ireland-2023_en",
+    "status": "pending"
+  },
+  "IRL_2025": {
+    "country_code": "IRL",
+    "country_name": "Ireland",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-ireland-2025_en",
+    "status": "pending"
+  },
+  "ISR_1995": {
+    "country_code": "ISR",
+    "country_name": "Israel",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-israel-1995_en",
+    "status": "pending"
+  },
+  "ISR_1997": {
+    "country_code": "ISR",
+    "country_name": "Israel",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-israel-1997_en",
+    "status": "pending"
+  },
+  "ISR_1999": {
+    "country_code": "ISR",
+    "country_name": "Israel",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-israel-1999_en",
+    "status": "pending"
+  },
+  "ISR_2001": {
+    "country_code": "ISR",
+    "country_name": "Israel",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-israel-2001_en",
+    "status": "pending"
+  },
+  "ISR_2003": {
+    "country_code": "ISR",
+    "country_name": "Israel",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-israel-2003_en",
+    "status": "pending"
+  },
+  "ISR_2005": {
+    "country_code": "ISR",
+    "country_name": "Israel",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-israel-2005_en",
+    "status": "pending"
+  },
+  "ISR_2007": {
+    "country_code": "ISR",
+    "country_name": "Israel",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-israel-2007_en",
+    "status": "pending"
+  },
+  "ISR_2009": {
+    "country_code": "ISR",
+    "country_name": "Israel",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-israel-2009_en",
+    "status": "pending"
+  },
+  "ISR_2011": {
+    "country_code": "ISR",
+    "country_name": "Israel",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-israel-2011_en",
+    "status": "pending"
+  },
+  "ISR_2013": {
+    "country_code": "ISR",
+    "country_name": "Israel",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-israel-2013_en",
+    "status": "pending"
+  },
+  "ISR_2015": {
+    "country_code": "ISR",
+    "country_name": "Israel",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-israel-2015_en",
+    "status": "pending"
+  },
+  "ISR_2017": {
+    "country_code": "ISR",
+    "country_name": "Israel",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-israel-2017_en",
+    "status": "pending"
+  },
+  "ISR_2019": {
+    "country_code": "ISR",
+    "country_name": "Israel",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-israel-2019_en",
+    "status": "pending"
+  },
+  "ISR_2021": {
+    "country_code": "ISR",
+    "country_name": "Israel",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-israel-2021_en",
+    "status": "pending"
+  },
+  "ISR_2023": {
+    "country_code": "ISR",
+    "country_name": "Israel",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-israel-2023_en",
+    "status": "pending"
+  },
+  "ISR_2025": {
+    "country_code": "ISR",
+    "country_name": "Israel",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-israel-2025_en",
+    "status": "pending"
+  },
+  "ITA_1995": {
+    "country_code": "ITA",
+    "country_name": "Italy",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-italy-1995_en",
+    "status": "pending"
+  },
+  "ITA_1997": {
+    "country_code": "ITA",
+    "country_name": "Italy",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-italy-1997_en",
+    "status": "pending"
+  },
+  "ITA_1999": {
+    "country_code": "ITA",
+    "country_name": "Italy",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-italy-1999_en",
+    "status": "pending"
+  },
+  "ITA_2001": {
+    "country_code": "ITA",
+    "country_name": "Italy",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-italy-2001_en",
+    "status": "pending"
+  },
+  "ITA_2003": {
+    "country_code": "ITA",
+    "country_name": "Italy",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-italy-2003_en",
+    "status": "pending"
+  },
+  "ITA_2005": {
+    "country_code": "ITA",
+    "country_name": "Italy",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-italy-2005_en",
+    "status": "pending"
+  },
+  "ITA_2007": {
+    "country_code": "ITA",
+    "country_name": "Italy",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-italy-2007_en",
+    "status": "pending"
+  },
+  "ITA_2009": {
+    "country_code": "ITA",
+    "country_name": "Italy",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-italy-2009_en",
+    "status": "pending"
+  },
+  "ITA_2011": {
+    "country_code": "ITA",
+    "country_name": "Italy",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-italy-2011_en",
+    "status": "pending"
+  },
+  "ITA_2013": {
+    "country_code": "ITA",
+    "country_name": "Italy",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-italy-2013_en",
+    "status": "pending"
+  },
+  "ITA_2015": {
+    "country_code": "ITA",
+    "country_name": "Italy",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-italy-2015_en",
+    "status": "pending"
+  },
+  "ITA_2017": {
+    "country_code": "ITA",
+    "country_name": "Italy",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-italy-2017_en",
+    "status": "pending"
+  },
+  "ITA_2019": {
+    "country_code": "ITA",
+    "country_name": "Italy",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-italy-2019_en",
+    "status": "pending"
+  },
+  "ITA_2021": {
+    "country_code": "ITA",
+    "country_name": "Italy",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-italy-2021_en",
+    "status": "pending"
+  },
+  "ITA_2023": {
+    "country_code": "ITA",
+    "country_name": "Italy",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-italy-2023_en",
+    "status": "pending"
+  },
+  "ITA_2025": {
+    "country_code": "ITA",
+    "country_name": "Italy",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-italy-2025_en",
+    "status": "pending"
+  },
+  "JPN_1995": {
+    "country_code": "JPN",
+    "country_name": "Japan",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-japan-1995_en",
+    "status": "pending"
+  },
+  "JPN_1997": {
+    "country_code": "JPN",
+    "country_name": "Japan",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-japan-1997_en",
+    "status": "pending"
+  },
+  "JPN_1999": {
+    "country_code": "JPN",
+    "country_name": "Japan",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-japan-1999_en",
+    "status": "pending"
+  },
+  "JPN_2001": {
+    "country_code": "JPN",
+    "country_name": "Japan",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-japan-2001_en",
+    "status": "pending"
+  },
+  "JPN_2003": {
+    "country_code": "JPN",
+    "country_name": "Japan",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-japan-2003_en",
+    "status": "pending"
+  },
+  "JPN_2005": {
+    "country_code": "JPN",
+    "country_name": "Japan",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-japan-2005_en",
+    "status": "pending"
+  },
+  "JPN_2007": {
+    "country_code": "JPN",
+    "country_name": "Japan",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-japan-2007_en",
+    "status": "pending"
+  },
+  "JPN_2009": {
+    "country_code": "JPN",
+    "country_name": "Japan",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-japan-2009_en",
+    "status": "pending"
+  },
+  "JPN_2011": {
+    "country_code": "JPN",
+    "country_name": "Japan",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-japan-2011_en",
+    "status": "pending"
+  },
+  "JPN_2013": {
+    "country_code": "JPN",
+    "country_name": "Japan",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-japan-2013_en",
+    "status": "pending"
+  },
+  "JPN_2015": {
+    "country_code": "JPN",
+    "country_name": "Japan",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-japan-2015_en",
+    "status": "pending"
+  },
+  "JPN_2017": {
+    "country_code": "JPN",
+    "country_name": "Japan",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-japan-2017_en",
+    "status": "pending"
+  },
+  "JPN_2019": {
+    "country_code": "JPN",
+    "country_name": "Japan",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-japan-2019_en",
+    "status": "pending"
+  },
+  "JPN_2021": {
+    "country_code": "JPN",
+    "country_name": "Japan",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-japan-2021_en",
+    "status": "pending"
+  },
+  "JPN_2023": {
+    "country_code": "JPN",
+    "country_name": "Japan",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-japan-2023_en",
+    "status": "pending"
+  },
+  "JPN_2025": {
+    "country_code": "JPN",
+    "country_name": "Japan",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-japan-2025_en",
+    "status": "pending"
+  },
+  "KOR_1995": {
+    "country_code": "KOR",
+    "country_name": "Korea",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-korea-1995_en",
+    "status": "pending"
+  },
+  "KOR_1997": {
+    "country_code": "KOR",
+    "country_name": "Korea",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-korea-1997_en",
+    "status": "pending"
+  },
+  "KOR_1999": {
+    "country_code": "KOR",
+    "country_name": "Korea",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-korea-1999_en",
+    "status": "pending"
+  },
+  "KOR_2001": {
+    "country_code": "KOR",
+    "country_name": "Korea",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-korea-2001_en",
+    "status": "pending"
+  },
+  "KOR_2003": {
+    "country_code": "KOR",
+    "country_name": "Korea",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-korea-2003_en",
+    "status": "pending"
+  },
+  "KOR_2005": {
+    "country_code": "KOR",
+    "country_name": "Korea",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-korea-2005_en",
+    "status": "pending"
+  },
+  "KOR_2007": {
+    "country_code": "KOR",
+    "country_name": "Korea",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-korea-2007_en",
+    "status": "pending"
+  },
+  "KOR_2009": {
+    "country_code": "KOR",
+    "country_name": "Korea",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-korea-2009_en",
+    "status": "pending"
+  },
+  "KOR_2011": {
+    "country_code": "KOR",
+    "country_name": "Korea",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-korea-2011_en",
+    "status": "pending"
+  },
+  "KOR_2013": {
+    "country_code": "KOR",
+    "country_name": "Korea",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-korea-2013_en",
+    "status": "pending"
+  },
+  "KOR_2015": {
+    "country_code": "KOR",
+    "country_name": "Korea",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-korea-2015_en",
+    "status": "pending"
+  },
+  "KOR_2017": {
+    "country_code": "KOR",
+    "country_name": "Korea",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-korea-2017_en",
+    "status": "pending"
+  },
+  "KOR_2019": {
+    "country_code": "KOR",
+    "country_name": "Korea",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-korea-2019_en",
+    "status": "pending"
+  },
+  "KOR_2021": {
+    "country_code": "KOR",
+    "country_name": "Korea",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-korea-2021_en",
+    "status": "pending"
+  },
+  "KOR_2023": {
+    "country_code": "KOR",
+    "country_name": "Korea",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-korea-2023_en",
+    "status": "pending"
+  },
+  "KOR_2025": {
+    "country_code": "KOR",
+    "country_name": "Korea",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-korea-2025_en",
+    "status": "pending"
+  },
+  "LVA_1995": {
+    "country_code": "LVA",
+    "country_name": "Latvia",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-latvia-1995_en",
+    "status": "pending"
+  },
+  "LVA_1997": {
+    "country_code": "LVA",
+    "country_name": "Latvia",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-latvia-1997_en",
+    "status": "pending"
+  },
+  "LVA_1999": {
+    "country_code": "LVA",
+    "country_name": "Latvia",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-latvia-1999_en",
+    "status": "pending"
+  },
+  "LVA_2001": {
+    "country_code": "LVA",
+    "country_name": "Latvia",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-latvia-2001_en",
+    "status": "pending"
+  },
+  "LVA_2003": {
+    "country_code": "LVA",
+    "country_name": "Latvia",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-latvia-2003_en",
+    "status": "pending"
+  },
+  "LVA_2005": {
+    "country_code": "LVA",
+    "country_name": "Latvia",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-latvia-2005_en",
+    "status": "pending"
+  },
+  "LVA_2007": {
+    "country_code": "LVA",
+    "country_name": "Latvia",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-latvia-2007_en",
+    "status": "pending"
+  },
+  "LVA_2009": {
+    "country_code": "LVA",
+    "country_name": "Latvia",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-latvia-2009_en",
+    "status": "pending"
+  },
+  "LVA_2011": {
+    "country_code": "LVA",
+    "country_name": "Latvia",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-latvia-2011_en",
+    "status": "pending"
+  },
+  "LVA_2013": {
+    "country_code": "LVA",
+    "country_name": "Latvia",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-latvia-2013_en",
+    "status": "pending"
+  },
+  "LVA_2015": {
+    "country_code": "LVA",
+    "country_name": "Latvia",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-latvia-2015_en",
+    "status": "pending"
+  },
+  "LVA_2017": {
+    "country_code": "LVA",
+    "country_name": "Latvia",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-latvia-2017_en",
+    "status": "pending"
+  },
+  "LVA_2019": {
+    "country_code": "LVA",
+    "country_name": "Latvia",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-latvia-2019_en",
+    "status": "pending"
+  },
+  "LVA_2021": {
+    "country_code": "LVA",
+    "country_name": "Latvia",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-latvia-2021_en",
+    "status": "pending"
+  },
+  "LVA_2023": {
+    "country_code": "LVA",
+    "country_name": "Latvia",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-latvia-2023_en",
+    "status": "pending"
+  },
+  "LVA_2025": {
+    "country_code": "LVA",
+    "country_name": "Latvia",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-latvia-2025_en",
+    "status": "pending"
+  },
+  "LTU_1995": {
+    "country_code": "LTU",
+    "country_name": "Lithuania",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-lithuania-1995_en",
+    "status": "pending"
+  },
+  "LTU_1997": {
+    "country_code": "LTU",
+    "country_name": "Lithuania",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-lithuania-1997_en",
+    "status": "pending"
+  },
+  "LTU_1999": {
+    "country_code": "LTU",
+    "country_name": "Lithuania",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-lithuania-1999_en",
+    "status": "pending"
+  },
+  "LTU_2001": {
+    "country_code": "LTU",
+    "country_name": "Lithuania",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-lithuania-2001_en",
+    "status": "pending"
+  },
+  "LTU_2003": {
+    "country_code": "LTU",
+    "country_name": "Lithuania",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-lithuania-2003_en",
+    "status": "pending"
+  },
+  "LTU_2005": {
+    "country_code": "LTU",
+    "country_name": "Lithuania",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-lithuania-2005_en",
+    "status": "pending"
+  },
+  "LTU_2007": {
+    "country_code": "LTU",
+    "country_name": "Lithuania",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-lithuania-2007_en",
+    "status": "pending"
+  },
+  "LTU_2009": {
+    "country_code": "LTU",
+    "country_name": "Lithuania",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-lithuania-2009_en",
+    "status": "pending"
+  },
+  "LTU_2011": {
+    "country_code": "LTU",
+    "country_name": "Lithuania",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-lithuania-2011_en",
+    "status": "pending"
+  },
+  "LTU_2013": {
+    "country_code": "LTU",
+    "country_name": "Lithuania",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-lithuania-2013_en",
+    "status": "pending"
+  },
+  "LTU_2015": {
+    "country_code": "LTU",
+    "country_name": "Lithuania",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-lithuania-2015_en",
+    "status": "pending"
+  },
+  "LTU_2017": {
+    "country_code": "LTU",
+    "country_name": "Lithuania",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-lithuania-2017_en",
+    "status": "pending"
+  },
+  "LTU_2019": {
+    "country_code": "LTU",
+    "country_name": "Lithuania",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-lithuania-2019_en",
+    "status": "pending"
+  },
+  "LTU_2021": {
+    "country_code": "LTU",
+    "country_name": "Lithuania",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-lithuania-2021_en",
+    "status": "pending"
+  },
+  "LTU_2023": {
+    "country_code": "LTU",
+    "country_name": "Lithuania",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-lithuania-2023_en",
+    "status": "pending"
+  },
+  "LTU_2025": {
+    "country_code": "LTU",
+    "country_name": "Lithuania",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-lithuania-2025_en",
+    "status": "pending"
+  },
+  "LUX_1995": {
+    "country_code": "LUX",
+    "country_name": "Luxembourg",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-luxembourg-1995_en",
+    "status": "pending"
+  },
+  "LUX_1997": {
+    "country_code": "LUX",
+    "country_name": "Luxembourg",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-luxembourg-1997_en",
+    "status": "pending"
+  },
+  "LUX_1999": {
+    "country_code": "LUX",
+    "country_name": "Luxembourg",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-luxembourg-1999_en",
+    "status": "pending"
+  },
+  "LUX_2001": {
+    "country_code": "LUX",
+    "country_name": "Luxembourg",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-luxembourg-2001_en",
+    "status": "pending"
+  },
+  "LUX_2003": {
+    "country_code": "LUX",
+    "country_name": "Luxembourg",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-luxembourg-2003_en",
+    "status": "pending"
+  },
+  "LUX_2005": {
+    "country_code": "LUX",
+    "country_name": "Luxembourg",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-luxembourg-2005_en",
+    "status": "pending"
+  },
+  "LUX_2007": {
+    "country_code": "LUX",
+    "country_name": "Luxembourg",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-luxembourg-2007_en",
+    "status": "pending"
+  },
+  "LUX_2009": {
+    "country_code": "LUX",
+    "country_name": "Luxembourg",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-luxembourg-2009_en",
+    "status": "pending"
+  },
+  "LUX_2011": {
+    "country_code": "LUX",
+    "country_name": "Luxembourg",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-luxembourg-2011_en",
+    "status": "pending"
+  },
+  "LUX_2013": {
+    "country_code": "LUX",
+    "country_name": "Luxembourg",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-luxembourg-2013_en",
+    "status": "pending"
+  },
+  "LUX_2015": {
+    "country_code": "LUX",
+    "country_name": "Luxembourg",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-luxembourg-2015_en",
+    "status": "pending"
+  },
+  "LUX_2017": {
+    "country_code": "LUX",
+    "country_name": "Luxembourg",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-luxembourg-2017_en",
+    "status": "pending"
+  },
+  "LUX_2019": {
+    "country_code": "LUX",
+    "country_name": "Luxembourg",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-luxembourg-2019_en",
+    "status": "pending"
+  },
+  "LUX_2021": {
+    "country_code": "LUX",
+    "country_name": "Luxembourg",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-luxembourg-2021_en",
+    "status": "pending"
+  },
+  "LUX_2023": {
+    "country_code": "LUX",
+    "country_name": "Luxembourg",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-luxembourg-2023_en",
+    "status": "pending"
+  },
+  "LUX_2025": {
+    "country_code": "LUX",
+    "country_name": "Luxembourg",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-luxembourg-2025_en",
+    "status": "pending"
+  },
+  "MEX_1995": {
+    "country_code": "MEX",
+    "country_name": "Mexico",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-mexico-1995_en",
+    "status": "pending"
+  },
+  "MEX_1997": {
+    "country_code": "MEX",
+    "country_name": "Mexico",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-mexico-1997_en",
+    "status": "pending"
+  },
+  "MEX_1999": {
+    "country_code": "MEX",
+    "country_name": "Mexico",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-mexico-1999_en",
+    "status": "pending"
+  },
+  "MEX_2001": {
+    "country_code": "MEX",
+    "country_name": "Mexico",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-mexico-2001_en",
+    "status": "pending"
+  },
+  "MEX_2003": {
+    "country_code": "MEX",
+    "country_name": "Mexico",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-mexico-2003_en",
+    "status": "pending"
+  },
+  "MEX_2005": {
+    "country_code": "MEX",
+    "country_name": "Mexico",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-mexico-2005_en",
+    "status": "pending"
+  },
+  "MEX_2007": {
+    "country_code": "MEX",
+    "country_name": "Mexico",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-mexico-2007_en",
+    "status": "pending"
+  },
+  "MEX_2009": {
+    "country_code": "MEX",
+    "country_name": "Mexico",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-mexico-2009_en",
+    "status": "pending"
+  },
+  "MEX_2011": {
+    "country_code": "MEX",
+    "country_name": "Mexico",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-mexico-2011_en",
+    "status": "pending"
+  },
+  "MEX_2013": {
+    "country_code": "MEX",
+    "country_name": "Mexico",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-mexico-2013_en",
+    "status": "pending"
+  },
+  "MEX_2015": {
+    "country_code": "MEX",
+    "country_name": "Mexico",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-mexico-2015_en",
+    "status": "pending"
+  },
+  "MEX_2017": {
+    "country_code": "MEX",
+    "country_name": "Mexico",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-mexico-2017_en",
+    "status": "pending"
+  },
+  "MEX_2019": {
+    "country_code": "MEX",
+    "country_name": "Mexico",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-mexico-2019_en",
+    "status": "pending"
+  },
+  "MEX_2021": {
+    "country_code": "MEX",
+    "country_name": "Mexico",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-mexico-2021_en",
+    "status": "pending"
+  },
+  "MEX_2023": {
+    "country_code": "MEX",
+    "country_name": "Mexico",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-mexico-2023_en",
+    "status": "pending"
+  },
+  "MEX_2025": {
+    "country_code": "MEX",
+    "country_name": "Mexico",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-mexico-2025_en",
+    "status": "pending"
+  },
+  "NLD_1995": {
+    "country_code": "NLD",
+    "country_name": "Netherlands",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-netherlands-1995_en",
+    "status": "pending"
+  },
+  "NLD_1997": {
+    "country_code": "NLD",
+    "country_name": "Netherlands",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-netherlands-1997_en",
+    "status": "pending"
+  },
+  "NLD_1999": {
+    "country_code": "NLD",
+    "country_name": "Netherlands",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-netherlands-1999_en",
+    "status": "pending"
+  },
+  "NLD_2001": {
+    "country_code": "NLD",
+    "country_name": "Netherlands",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-netherlands-2001_en",
+    "status": "pending"
+  },
+  "NLD_2003": {
+    "country_code": "NLD",
+    "country_name": "Netherlands",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-netherlands-2003_en",
+    "status": "pending"
+  },
+  "NLD_2005": {
+    "country_code": "NLD",
+    "country_name": "Netherlands",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-netherlands-2005_en",
+    "status": "pending"
+  },
+  "NLD_2007": {
+    "country_code": "NLD",
+    "country_name": "Netherlands",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-netherlands-2007_en",
+    "status": "pending"
+  },
+  "NLD_2009": {
+    "country_code": "NLD",
+    "country_name": "Netherlands",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-netherlands-2009_en",
+    "status": "pending"
+  },
+  "NLD_2011": {
+    "country_code": "NLD",
+    "country_name": "Netherlands",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-netherlands-2011_en",
+    "status": "pending"
+  },
+  "NLD_2013": {
+    "country_code": "NLD",
+    "country_name": "Netherlands",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-netherlands-2013_en",
+    "status": "pending"
+  },
+  "NLD_2015": {
+    "country_code": "NLD",
+    "country_name": "Netherlands",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-netherlands-2015_en",
+    "status": "pending"
+  },
+  "NLD_2017": {
+    "country_code": "NLD",
+    "country_name": "Netherlands",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-netherlands-2017_en",
+    "status": "pending"
+  },
+  "NLD_2019": {
+    "country_code": "NLD",
+    "country_name": "Netherlands",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-netherlands-2019_en",
+    "status": "pending"
+  },
+  "NLD_2021": {
+    "country_code": "NLD",
+    "country_name": "Netherlands",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-netherlands-2021_en",
+    "status": "pending"
+  },
+  "NLD_2023": {
+    "country_code": "NLD",
+    "country_name": "Netherlands",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-netherlands-2023_en",
+    "status": "pending"
+  },
+  "NLD_2025": {
+    "country_code": "NLD",
+    "country_name": "Netherlands",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-netherlands-2025_en",
+    "status": "pending"
+  },
+  "NZL_1995": {
+    "country_code": "NZL",
+    "country_name": "New Zealand",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-new-zealand-1995_en",
+    "status": "pending"
+  },
+  "NZL_1997": {
+    "country_code": "NZL",
+    "country_name": "New Zealand",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-new-zealand-1997_en",
+    "status": "pending"
+  },
+  "NZL_1999": {
+    "country_code": "NZL",
+    "country_name": "New Zealand",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-new-zealand-1999_en",
+    "status": "pending"
+  },
+  "NZL_2001": {
+    "country_code": "NZL",
+    "country_name": "New Zealand",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-new-zealand-2001_en",
+    "status": "pending"
+  },
+  "NZL_2003": {
+    "country_code": "NZL",
+    "country_name": "New Zealand",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-new-zealand-2003_en",
+    "status": "pending"
+  },
+  "NZL_2005": {
+    "country_code": "NZL",
+    "country_name": "New Zealand",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-new-zealand-2005_en",
+    "status": "pending"
+  },
+  "NZL_2007": {
+    "country_code": "NZL",
+    "country_name": "New Zealand",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-new-zealand-2007_en",
+    "status": "pending"
+  },
+  "NZL_2009": {
+    "country_code": "NZL",
+    "country_name": "New Zealand",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-new-zealand-2009_en",
+    "status": "pending"
+  },
+  "NZL_2011": {
+    "country_code": "NZL",
+    "country_name": "New Zealand",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-new-zealand-2011_en",
+    "status": "pending"
+  },
+  "NZL_2013": {
+    "country_code": "NZL",
+    "country_name": "New Zealand",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-new-zealand-2013_en",
+    "status": "pending"
+  },
+  "NZL_2015": {
+    "country_code": "NZL",
+    "country_name": "New Zealand",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-new-zealand-2015_en",
+    "status": "pending"
+  },
+  "NZL_2017": {
+    "country_code": "NZL",
+    "country_name": "New Zealand",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-new-zealand-2017_en",
+    "status": "pending"
+  },
+  "NZL_2019": {
+    "country_code": "NZL",
+    "country_name": "New Zealand",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-new-zealand-2019_en",
+    "status": "pending"
+  },
+  "NZL_2021": {
+    "country_code": "NZL",
+    "country_name": "New Zealand",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-new-zealand-2021_en",
+    "status": "pending"
+  },
+  "NZL_2023": {
+    "country_code": "NZL",
+    "country_name": "New Zealand",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-new-zealand-2023_en",
+    "status": "pending"
+  },
+  "NZL_2025": {
+    "country_code": "NZL",
+    "country_name": "New Zealand",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-new-zealand-2025_en",
+    "status": "pending"
+  },
+  "NOR_1995": {
+    "country_code": "NOR",
+    "country_name": "Norway",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-norway-1995_en",
+    "status": "pending"
+  },
+  "NOR_1997": {
+    "country_code": "NOR",
+    "country_name": "Norway",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-norway-1997_en",
+    "status": "pending"
+  },
+  "NOR_1999": {
+    "country_code": "NOR",
+    "country_name": "Norway",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-norway-1999_en",
+    "status": "pending"
+  },
+  "NOR_2001": {
+    "country_code": "NOR",
+    "country_name": "Norway",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-norway-2001_en",
+    "status": "pending"
+  },
+  "NOR_2003": {
+    "country_code": "NOR",
+    "country_name": "Norway",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-norway-2003_en",
+    "status": "pending"
+  },
+  "NOR_2005": {
+    "country_code": "NOR",
+    "country_name": "Norway",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-norway-2005_en",
+    "status": "pending"
+  },
+  "NOR_2007": {
+    "country_code": "NOR",
+    "country_name": "Norway",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-norway-2007_en",
+    "status": "pending"
+  },
+  "NOR_2009": {
+    "country_code": "NOR",
+    "country_name": "Norway",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-norway-2009_en",
+    "status": "pending"
+  },
+  "NOR_2011": {
+    "country_code": "NOR",
+    "country_name": "Norway",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-norway-2011_en",
+    "status": "pending"
+  },
+  "NOR_2013": {
+    "country_code": "NOR",
+    "country_name": "Norway",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-norway-2013_en",
+    "status": "pending"
+  },
+  "NOR_2015": {
+    "country_code": "NOR",
+    "country_name": "Norway",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-norway-2015_en",
+    "status": "pending"
+  },
+  "NOR_2017": {
+    "country_code": "NOR",
+    "country_name": "Norway",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-norway-2017_en",
+    "status": "pending"
+  },
+  "NOR_2019": {
+    "country_code": "NOR",
+    "country_name": "Norway",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-norway-2019_en",
+    "status": "pending"
+  },
+  "NOR_2021": {
+    "country_code": "NOR",
+    "country_name": "Norway",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-norway-2021_en",
+    "status": "pending"
+  },
+  "NOR_2023": {
+    "country_code": "NOR",
+    "country_name": "Norway",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-norway-2023_en",
+    "status": "pending"
+  },
+  "NOR_2025": {
+    "country_code": "NOR",
+    "country_name": "Norway",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-norway-2025_en",
+    "status": "pending"
+  },
+  "POL_1995": {
+    "country_code": "POL",
+    "country_name": "Poland",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-poland-1995_en",
+    "status": "pending"
+  },
+  "POL_1997": {
+    "country_code": "POL",
+    "country_name": "Poland",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-poland-1997_en",
+    "status": "pending"
+  },
+  "POL_1999": {
+    "country_code": "POL",
+    "country_name": "Poland",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-poland-1999_en",
+    "status": "pending"
+  },
+  "POL_2001": {
+    "country_code": "POL",
+    "country_name": "Poland",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-poland-2001_en",
+    "status": "pending"
+  },
+  "POL_2003": {
+    "country_code": "POL",
+    "country_name": "Poland",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-poland-2003_en",
+    "status": "pending"
+  },
+  "POL_2005": {
+    "country_code": "POL",
+    "country_name": "Poland",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-poland-2005_en",
+    "status": "pending"
+  },
+  "POL_2007": {
+    "country_code": "POL",
+    "country_name": "Poland",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-poland-2007_en",
+    "status": "pending"
+  },
+  "POL_2009": {
+    "country_code": "POL",
+    "country_name": "Poland",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-poland-2009_en",
+    "status": "pending"
+  },
+  "POL_2011": {
+    "country_code": "POL",
+    "country_name": "Poland",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-poland-2011_en",
+    "status": "pending"
+  },
+  "POL_2013": {
+    "country_code": "POL",
+    "country_name": "Poland",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-poland-2013_en",
+    "status": "pending"
+  },
+  "POL_2015": {
+    "country_code": "POL",
+    "country_name": "Poland",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-poland-2015_en",
+    "status": "pending"
+  },
+  "POL_2017": {
+    "country_code": "POL",
+    "country_name": "Poland",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-poland-2017_en",
+    "status": "pending"
+  },
+  "POL_2019": {
+    "country_code": "POL",
+    "country_name": "Poland",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-poland-2019_en",
+    "status": "pending"
+  },
+  "POL_2021": {
+    "country_code": "POL",
+    "country_name": "Poland",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-poland-2021_en",
+    "status": "pending"
+  },
+  "POL_2023": {
+    "country_code": "POL",
+    "country_name": "Poland",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-poland-2023_en",
+    "status": "pending"
+  },
+  "POL_2025": {
+    "country_code": "POL",
+    "country_name": "Poland",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-poland-2025_en",
+    "status": "pending"
+  },
+  "PRT_1995": {
+    "country_code": "PRT",
+    "country_name": "Portugal",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-portugal-1995_en",
+    "status": "pending"
+  },
+  "PRT_1997": {
+    "country_code": "PRT",
+    "country_name": "Portugal",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-portugal-1997_en",
+    "status": "pending"
+  },
+  "PRT_1999": {
+    "country_code": "PRT",
+    "country_name": "Portugal",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-portugal-1999_en",
+    "status": "pending"
+  },
+  "PRT_2001": {
+    "country_code": "PRT",
+    "country_name": "Portugal",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-portugal-2001_en",
+    "status": "pending"
+  },
+  "PRT_2003": {
+    "country_code": "PRT",
+    "country_name": "Portugal",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-portugal-2003_en",
+    "status": "pending"
+  },
+  "PRT_2005": {
+    "country_code": "PRT",
+    "country_name": "Portugal",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-portugal-2005_en",
+    "status": "pending"
+  },
+  "PRT_2007": {
+    "country_code": "PRT",
+    "country_name": "Portugal",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-portugal-2007_en",
+    "status": "pending"
+  },
+  "PRT_2009": {
+    "country_code": "PRT",
+    "country_name": "Portugal",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-portugal-2009_en",
+    "status": "pending"
+  },
+  "PRT_2011": {
+    "country_code": "PRT",
+    "country_name": "Portugal",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-portugal-2011_en",
+    "status": "pending"
+  },
+  "PRT_2013": {
+    "country_code": "PRT",
+    "country_name": "Portugal",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-portugal-2013_en",
+    "status": "pending"
+  },
+  "PRT_2015": {
+    "country_code": "PRT",
+    "country_name": "Portugal",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-portugal-2015_en",
+    "status": "pending"
+  },
+  "PRT_2017": {
+    "country_code": "PRT",
+    "country_name": "Portugal",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-portugal-2017_en",
+    "status": "pending"
+  },
+  "PRT_2019": {
+    "country_code": "PRT",
+    "country_name": "Portugal",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-portugal-2019_en",
+    "status": "pending"
+  },
+  "PRT_2021": {
+    "country_code": "PRT",
+    "country_name": "Portugal",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-portugal-2021_en",
+    "status": "pending"
+  },
+  "PRT_2023": {
+    "country_code": "PRT",
+    "country_name": "Portugal",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-portugal-2023_en",
+    "status": "pending"
+  },
+  "PRT_2025": {
+    "country_code": "PRT",
+    "country_name": "Portugal",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-portugal-2025_en",
+    "status": "pending"
+  },
+  "SVK_1995": {
+    "country_code": "SVK",
+    "country_name": "Slovak Republic",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovak-republic-1995_en",
+    "status": "pending"
+  },
+  "SVK_1997": {
+    "country_code": "SVK",
+    "country_name": "Slovak Republic",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovak-republic-1997_en",
+    "status": "pending"
+  },
+  "SVK_1999": {
+    "country_code": "SVK",
+    "country_name": "Slovak Republic",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovak-republic-1999_en",
+    "status": "pending"
+  },
+  "SVK_2001": {
+    "country_code": "SVK",
+    "country_name": "Slovak Republic",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovak-republic-2001_en",
+    "status": "pending"
+  },
+  "SVK_2003": {
+    "country_code": "SVK",
+    "country_name": "Slovak Republic",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovak-republic-2003_en",
+    "status": "pending"
+  },
+  "SVK_2005": {
+    "country_code": "SVK",
+    "country_name": "Slovak Republic",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovak-republic-2005_en",
+    "status": "pending"
+  },
+  "SVK_2007": {
+    "country_code": "SVK",
+    "country_name": "Slovak Republic",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovak-republic-2007_en",
+    "status": "pending"
+  },
+  "SVK_2009": {
+    "country_code": "SVK",
+    "country_name": "Slovak Republic",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovak-republic-2009_en",
+    "status": "pending"
+  },
+  "SVK_2011": {
+    "country_code": "SVK",
+    "country_name": "Slovak Republic",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovak-republic-2011_en",
+    "status": "pending"
+  },
+  "SVK_2013": {
+    "country_code": "SVK",
+    "country_name": "Slovak Republic",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovak-republic-2013_en",
+    "status": "pending"
+  },
+  "SVK_2015": {
+    "country_code": "SVK",
+    "country_name": "Slovak Republic",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovak-republic-2015_en",
+    "status": "pending"
+  },
+  "SVK_2017": {
+    "country_code": "SVK",
+    "country_name": "Slovak Republic",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovak-republic-2017_en",
+    "status": "pending"
+  },
+  "SVK_2019": {
+    "country_code": "SVK",
+    "country_name": "Slovak Republic",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovak-republic-2019_en",
+    "status": "pending"
+  },
+  "SVK_2021": {
+    "country_code": "SVK",
+    "country_name": "Slovak Republic",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovak-republic-2021_en",
+    "status": "pending"
+  },
+  "SVK_2023": {
+    "country_code": "SVK",
+    "country_name": "Slovak Republic",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovak-republic-2023_en",
+    "status": "pending"
+  },
+  "SVK_2025": {
+    "country_code": "SVK",
+    "country_name": "Slovak Republic",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovak-republic-2025_en",
+    "status": "pending"
+  },
+  "SVN_1995": {
+    "country_code": "SVN",
+    "country_name": "Slovenia",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-1995_en",
+    "status": "pending"
+  },
+  "SVN_1997": {
+    "country_code": "SVN",
+    "country_name": "Slovenia",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-1997_en",
+    "status": "pending"
+  },
+  "SVN_1999": {
+    "country_code": "SVN",
+    "country_name": "Slovenia",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-1999_en",
+    "status": "pending"
+  },
+  "SVN_2001": {
+    "country_code": "SVN",
+    "country_name": "Slovenia",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2001_en",
+    "status": "pending"
+  },
+  "SVN_2003": {
+    "country_code": "SVN",
+    "country_name": "Slovenia",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2003_en",
+    "status": "pending"
+  },
+  "SVN_2005": {
+    "country_code": "SVN",
+    "country_name": "Slovenia",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2005_en",
+    "status": "pending"
+  },
+  "SVN_2007": {
+    "country_code": "SVN",
+    "country_name": "Slovenia",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2007_en",
+    "status": "pending"
+  },
+  "SVN_2009": {
+    "country_code": "SVN",
+    "country_name": "Slovenia",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2009_en",
+    "status": "pending"
+  },
+  "SVN_2011": {
+    "country_code": "SVN",
+    "country_name": "Slovenia",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2011_en",
+    "status": "pending"
+  },
+  "SVN_2013": {
+    "country_code": "SVN",
+    "country_name": "Slovenia",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2013_en",
+    "status": "pending"
+  },
+  "SVN_2015": {
+    "country_code": "SVN",
+    "country_name": "Slovenia",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2015_en",
+    "status": "pending"
+  },
+  "SVN_2017": {
+    "country_code": "SVN",
+    "country_name": "Slovenia",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2017_en",
+    "status": "pending"
+  },
+  "SVN_2019": {
+    "country_code": "SVN",
+    "country_name": "Slovenia",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2019_en",
+    "status": "pending"
+  },
+  "SVN_2021": {
+    "country_code": "SVN",
+    "country_name": "Slovenia",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2021_en",
+    "status": "pending"
+  },
+  "SVN_2023": {
+    "country_code": "SVN",
+    "country_name": "Slovenia",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2023_en",
+    "status": "pending"
+  },
+  "SVN_2025": {
+    "country_code": "SVN",
+    "country_name": "Slovenia",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2025_en",
+    "status": "pending"
+  },
+  "ESP_1995": {
+    "country_code": "ESP",
+    "country_name": "Spain",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-spain-1995_en",
+    "status": "pending"
+  },
+  "ESP_1997": {
+    "country_code": "ESP",
+    "country_name": "Spain",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-spain-1997_en",
+    "status": "pending"
+  },
+  "ESP_1999": {
+    "country_code": "ESP",
+    "country_name": "Spain",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-spain-1999_en",
+    "status": "pending"
+  },
+  "ESP_2001": {
+    "country_code": "ESP",
+    "country_name": "Spain",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-spain-2001_en",
+    "status": "pending"
+  },
+  "ESP_2003": {
+    "country_code": "ESP",
+    "country_name": "Spain",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-spain-2003_en",
+    "status": "pending"
+  },
+  "ESP_2005": {
+    "country_code": "ESP",
+    "country_name": "Spain",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-spain-2005_en",
+    "status": "pending"
+  },
+  "ESP_2007": {
+    "country_code": "ESP",
+    "country_name": "Spain",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-spain-2007_en",
+    "status": "pending"
+  },
+  "ESP_2009": {
+    "country_code": "ESP",
+    "country_name": "Spain",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-spain-2009_en",
+    "status": "pending"
+  },
+  "ESP_2011": {
+    "country_code": "ESP",
+    "country_name": "Spain",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-spain-2011_en",
+    "status": "pending"
+  },
+  "ESP_2013": {
+    "country_code": "ESP",
+    "country_name": "Spain",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-spain-2013_en",
+    "status": "pending"
+  },
+  "ESP_2015": {
+    "country_code": "ESP",
+    "country_name": "Spain",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-spain-2015_en",
+    "status": "pending"
+  },
+  "ESP_2017": {
+    "country_code": "ESP",
+    "country_name": "Spain",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-spain-2017_en",
+    "status": "pending"
+  },
+  "ESP_2019": {
+    "country_code": "ESP",
+    "country_name": "Spain",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-spain-2019_en",
+    "status": "pending"
+  },
+  "ESP_2021": {
+    "country_code": "ESP",
+    "country_name": "Spain",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-spain-2021_en",
+    "status": "pending"
+  },
+  "ESP_2023": {
+    "country_code": "ESP",
+    "country_name": "Spain",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-spain-2023_en",
+    "status": "pending"
+  },
+  "ESP_2025": {
+    "country_code": "ESP",
+    "country_name": "Spain",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-spain-2025_en",
+    "status": "pending"
+  },
+  "SWE_1995": {
+    "country_code": "SWE",
+    "country_name": "Sweden",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-sweden-1995_en",
+    "status": "pending"
+  },
+  "SWE_1997": {
+    "country_code": "SWE",
+    "country_name": "Sweden",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-sweden-1997_en",
+    "status": "pending"
+  },
+  "SWE_1999": {
+    "country_code": "SWE",
+    "country_name": "Sweden",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-sweden-1999_en",
+    "status": "pending"
+  },
+  "SWE_2001": {
+    "country_code": "SWE",
+    "country_name": "Sweden",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-sweden-2001_en",
+    "status": "pending"
+  },
+  "SWE_2003": {
+    "country_code": "SWE",
+    "country_name": "Sweden",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-sweden-2003_en",
+    "status": "pending"
+  },
+  "SWE_2005": {
+    "country_code": "SWE",
+    "country_name": "Sweden",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-sweden-2005_en",
+    "status": "pending"
+  },
+  "SWE_2007": {
+    "country_code": "SWE",
+    "country_name": "Sweden",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-sweden-2007_en",
+    "status": "pending"
+  },
+  "SWE_2009": {
+    "country_code": "SWE",
+    "country_name": "Sweden",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-sweden-2009_en",
+    "status": "pending"
+  },
+  "SWE_2011": {
+    "country_code": "SWE",
+    "country_name": "Sweden",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-sweden-2011_en",
+    "status": "pending"
+  },
+  "SWE_2013": {
+    "country_code": "SWE",
+    "country_name": "Sweden",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-sweden-2013_en",
+    "status": "pending"
+  },
+  "SWE_2015": {
+    "country_code": "SWE",
+    "country_name": "Sweden",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-sweden-2015_en",
+    "status": "pending"
+  },
+  "SWE_2017": {
+    "country_code": "SWE",
+    "country_name": "Sweden",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-sweden-2017_en",
+    "status": "pending"
+  },
+  "SWE_2019": {
+    "country_code": "SWE",
+    "country_name": "Sweden",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-sweden-2019_en",
+    "status": "pending"
+  },
+  "SWE_2021": {
+    "country_code": "SWE",
+    "country_name": "Sweden",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-sweden-2021_en",
+    "status": "pending"
+  },
+  "SWE_2023": {
+    "country_code": "SWE",
+    "country_name": "Sweden",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-sweden-2023_en",
+    "status": "pending"
+  },
+  "SWE_2025": {
+    "country_code": "SWE",
+    "country_name": "Sweden",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-sweden-2025_en",
+    "status": "pending"
+  },
+  "CHE_1995": {
+    "country_code": "CHE",
+    "country_name": "Switzerland",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-switzerland-1995_en",
+    "status": "pending"
+  },
+  "CHE_1997": {
+    "country_code": "CHE",
+    "country_name": "Switzerland",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-switzerland-1997_en",
+    "status": "pending"
+  },
+  "CHE_1999": {
+    "country_code": "CHE",
+    "country_name": "Switzerland",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-switzerland-1999_en",
+    "status": "pending"
+  },
+  "CHE_2001": {
+    "country_code": "CHE",
+    "country_name": "Switzerland",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-switzerland-2001_en",
+    "status": "pending"
+  },
+  "CHE_2003": {
+    "country_code": "CHE",
+    "country_name": "Switzerland",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-switzerland-2003_en",
+    "status": "pending"
+  },
+  "CHE_2005": {
+    "country_code": "CHE",
+    "country_name": "Switzerland",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-switzerland-2005_en",
+    "status": "pending"
+  },
+  "CHE_2007": {
+    "country_code": "CHE",
+    "country_name": "Switzerland",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-switzerland-2007_en",
+    "status": "pending"
+  },
+  "CHE_2009": {
+    "country_code": "CHE",
+    "country_name": "Switzerland",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-switzerland-2009_en",
+    "status": "pending"
+  },
+  "CHE_2011": {
+    "country_code": "CHE",
+    "country_name": "Switzerland",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-switzerland-2011_en",
+    "status": "pending"
+  },
+  "CHE_2013": {
+    "country_code": "CHE",
+    "country_name": "Switzerland",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-switzerland-2013_en",
+    "status": "pending"
+  },
+  "CHE_2015": {
+    "country_code": "CHE",
+    "country_name": "Switzerland",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-switzerland-2015_en",
+    "status": "pending"
+  },
+  "CHE_2017": {
+    "country_code": "CHE",
+    "country_name": "Switzerland",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-switzerland-2017_en",
+    "status": "pending"
+  },
+  "CHE_2019": {
+    "country_code": "CHE",
+    "country_name": "Switzerland",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-switzerland-2019_en",
+    "status": "pending"
+  },
+  "CHE_2021": {
+    "country_code": "CHE",
+    "country_name": "Switzerland",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-switzerland-2021_en",
+    "status": "pending"
+  },
+  "CHE_2023": {
+    "country_code": "CHE",
+    "country_name": "Switzerland",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-switzerland-2023_en",
+    "status": "pending"
+  },
+  "CHE_2025": {
+    "country_code": "CHE",
+    "country_name": "Switzerland",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-switzerland-2025_en",
+    "status": "pending"
+  },
+  "TUR_1995": {
+    "country_code": "TUR",
+    "country_name": "Türkiye",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-turkey-1995_en",
+    "status": "pending"
+  },
+  "TUR_1997": {
+    "country_code": "TUR",
+    "country_name": "Türkiye",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-turkey-1997_en",
+    "status": "pending"
+  },
+  "TUR_1999": {
+    "country_code": "TUR",
+    "country_name": "Türkiye",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-turkey-1999_en",
+    "status": "pending"
+  },
+  "TUR_2001": {
+    "country_code": "TUR",
+    "country_name": "Türkiye",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-turkey-2001_en",
+    "status": "pending"
+  },
+  "TUR_2003": {
+    "country_code": "TUR",
+    "country_name": "Türkiye",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-turkey-2003_en",
+    "status": "pending"
+  },
+  "TUR_2005": {
+    "country_code": "TUR",
+    "country_name": "Türkiye",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-turkey-2005_en",
+    "status": "pending"
+  },
+  "TUR_2007": {
+    "country_code": "TUR",
+    "country_name": "Türkiye",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-turkey-2007_en",
+    "status": "pending"
+  },
+  "TUR_2009": {
+    "country_code": "TUR",
+    "country_name": "Türkiye",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-turkey-2009_en",
+    "status": "pending"
+  },
+  "TUR_2011": {
+    "country_code": "TUR",
+    "country_name": "Türkiye",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-turkey-2011_en",
+    "status": "pending"
+  },
+  "TUR_2013": {
+    "country_code": "TUR",
+    "country_name": "Türkiye",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-turkey-2013_en",
+    "status": "pending"
+  },
+  "TUR_2015": {
+    "country_code": "TUR",
+    "country_name": "Türkiye",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-turkey-2015_en",
+    "status": "pending"
+  },
+  "TUR_2017": {
+    "country_code": "TUR",
+    "country_name": "Türkiye",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-turkey-2017_en",
+    "status": "pending"
+  },
+  "TUR_2019": {
+    "country_code": "TUR",
+    "country_name": "Türkiye",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-turkey-2019_en",
+    "status": "pending"
+  },
+  "TUR_2021": {
+    "country_code": "TUR",
+    "country_name": "Türkiye",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-turkey-2021_en",
+    "status": "pending"
+  },
+  "TUR_2023": {
+    "country_code": "TUR",
+    "country_name": "Türkiye",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-turkey-2023_en",
+    "status": "pending"
+  },
+  "TUR_2025": {
+    "country_code": "TUR",
+    "country_name": "Türkiye",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-turkey-2025_en",
+    "status": "pending"
+  },
+  "GBR_1995": {
+    "country_code": "GBR",
+    "country_name": "United Kingdom",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-1995_en",
+    "status": "pending"
+  },
+  "GBR_1997": {
+    "country_code": "GBR",
+    "country_name": "United Kingdom",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-1997_en",
+    "status": "pending"
+  },
+  "GBR_1999": {
+    "country_code": "GBR",
+    "country_name": "United Kingdom",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-1999_en",
+    "status": "pending"
+  },
+  "GBR_2001": {
+    "country_code": "GBR",
+    "country_name": "United Kingdom",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2001_en",
+    "status": "pending"
+  },
+  "GBR_2003": {
+    "country_code": "GBR",
+    "country_name": "United Kingdom",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2003_en",
+    "status": "pending"
+  },
+  "GBR_2005": {
+    "country_code": "GBR",
+    "country_name": "United Kingdom",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2005_en",
+    "status": "pending"
+  },
+  "GBR_2007": {
+    "country_code": "GBR",
+    "country_name": "United Kingdom",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2007_en",
+    "status": "pending"
+  },
+  "GBR_2009": {
+    "country_code": "GBR",
+    "country_name": "United Kingdom",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2009_en",
+    "status": "pending"
+  },
+  "GBR_2011": {
+    "country_code": "GBR",
+    "country_name": "United Kingdom",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2011_en",
+    "status": "pending"
+  },
+  "GBR_2013": {
+    "country_code": "GBR",
+    "country_name": "United Kingdom",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2013_en",
+    "status": "pending"
+  },
+  "GBR_2015": {
+    "country_code": "GBR",
+    "country_name": "United Kingdom",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2015_en",
+    "status": "pending"
+  },
+  "GBR_2017": {
+    "country_code": "GBR",
+    "country_name": "United Kingdom",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2017_en",
+    "status": "pending"
+  },
+  "GBR_2019": {
+    "country_code": "GBR",
+    "country_name": "United Kingdom",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2019_en",
+    "status": "pending"
+  },
+  "GBR_2021": {
+    "country_code": "GBR",
+    "country_name": "United Kingdom",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2021_en",
+    "status": "pending"
+  },
+  "GBR_2023": {
+    "country_code": "GBR",
+    "country_name": "United Kingdom",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2023_en",
+    "status": "pending"
+  },
+  "GBR_2025": {
+    "country_code": "GBR",
+    "country_name": "United Kingdom",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2025_en",
+    "status": "pending"
+  },
+  "USA_1995": {
+    "country_code": "USA",
+    "country_name": "United States",
+    "year": 1995,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-1995_en",
+    "status": "pending"
+  },
+  "USA_1997": {
+    "country_code": "USA",
+    "country_name": "United States",
+    "year": 1997,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-1997_en",
+    "status": "pending"
+  },
+  "USA_1999": {
+    "country_code": "USA",
+    "country_name": "United States",
+    "year": 1999,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-1999_en",
+    "status": "pending"
+  },
+  "USA_2001": {
+    "country_code": "USA",
+    "country_name": "United States",
+    "year": 2001,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2001_en",
+    "status": "pending"
+  },
+  "USA_2003": {
+    "country_code": "USA",
+    "country_name": "United States",
+    "year": 2003,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2003_en",
+    "status": "pending"
+  },
+  "USA_2005": {
+    "country_code": "USA",
+    "country_name": "United States",
+    "year": 2005,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2005_en",
+    "status": "pending"
+  },
+  "USA_2007": {
+    "country_code": "USA",
+    "country_name": "United States",
+    "year": 2007,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2007_en",
+    "status": "pending"
+  },
+  "USA_2009": {
+    "country_code": "USA",
+    "country_name": "United States",
+    "year": 2009,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2009_en",
+    "status": "pending"
+  },
+  "USA_2011": {
+    "country_code": "USA",
+    "country_name": "United States",
+    "year": 2011,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2011_en",
+    "status": "pending"
+  },
+  "USA_2013": {
+    "country_code": "USA",
+    "country_name": "United States",
+    "year": 2013,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2013_en",
+    "status": "pending"
+  },
+  "USA_2015": {
+    "country_code": "USA",
+    "country_name": "United States",
+    "year": 2015,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2015_en",
+    "status": "pending"
+  },
+  "USA_2017": {
+    "country_code": "USA",
+    "country_name": "United States",
+    "year": 2017,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2017_en",
+    "status": "pending"
+  },
+  "USA_2019": {
+    "country_code": "USA",
+    "country_name": "United States",
+    "year": 2019,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2019_en",
+    "status": "pending"
+  },
+  "USA_2021": {
+    "country_code": "USA",
+    "country_name": "United States",
+    "year": 2021,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2021_en",
+    "status": "pending"
+  },
+  "USA_2023": {
+    "country_code": "USA",
+    "country_name": "United States",
+    "year": 2023,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2023_en",
+    "status": "pending"
+  },
+  "USA_2025": {
+    "country_code": "USA",
+    "country_name": "United States",
+    "year": 2025,
+    "pdf_path": null,
+    "text_path": null,
+    "reforms_path": null,
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2025_en",
     "status": "pending"
   }
 }

@@ -159,7 +159,7 @@ DK_SECTION_MAP: dict[str, str] = {
     "§21": "Ministry of Ecclesiastical Affairs",
     "§22": "Ministry of Defence",
     "§23": "Ministry of Justice",
-    "§24": "Ministry of the Environment",
+    "§24": "Ministry of Taxation",
     "§25": "State Railways (DSB)",
     "§26": "Post and Telecommunications",
     "§27": "Ministry of the Environment",       # renamed/split in some years

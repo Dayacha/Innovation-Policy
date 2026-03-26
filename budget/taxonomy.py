@@ -27,8 +27,8 @@ import pandas as pd
 
 from budget.utils import normalize_text
 
-_JSON_FILE = Path(__file__).resolve().parent.parent / "Data" / "search_library.json"
-_EXCEL_FILE = Path(__file__).resolve().parent.parent / "Data" / "Full search library.xlsx"
+_JSON_FILE = Path(__file__).resolve().parent.parent / "Data" / "input" / "taxonomy" / "search_library.json"
+_EXCEL_FILE = Path(__file__).resolve().parent.parent / "Data" / "input" / "taxonomy" / "Full search library.xlsx"
 
 # J_Rules scoring weights
 SCORE_CORE_RD = 3        # unambiguous R&D phrase

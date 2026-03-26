@@ -1,5 +1,6 @@
 """Data loader and color/label constants for the Innovation Policy Dashboard."""
 
+import os
 from pathlib import Path
 
 import pandas as pd
@@ -7,6 +8,7 @@ import streamlit as st
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
+BUDGET_RESULTS_AI = PROJECT_ROOT / "Data/output/budget/results_ai_verified.csv"
 BUDGET_RESULTS   = PROJECT_ROOT / "Data/output/budget/results.csv"
 REFORMS_EVENTS   = PROJECT_ROOT / "Data/output/reforms/output/reforms_events.csv"
 REFORMS_MENTIONS = PROJECT_ROOT / "Data/output/reforms/output/reforms_mentions.csv"
@@ -112,9 +114,26 @@ ORIENTATION_LABELS = {
 
 @st.cache_data
 def load_budget():
-    if not BUDGET_RESULTS.exists():
+    budget_path = BUDGET_RESULTS_AI if BUDGET_RESULTS_AI.exists() else BUDGET_RESULTS
+    if not budget_path.exists():
         return pd.DataFrame()
-    df = pd.read_csv(BUDGET_RESULTS)
+    df = pd.read_csv(budget_path)
+
+    # Normalize AI-verified schema to the baseline budget schema expected by the app.
+    if "validated_amount_local" in df.columns:
+        df["amount_local"] = pd.to_numeric(df["validated_amount_local"], errors="coerce").fillna(
+            pd.to_numeric(df.get("amount_local"), errors="coerce")
+        )
+    if "ai_rd_category" in df.columns:
+        df["rd_category"] = df["ai_rd_category"].fillna(df.get("rd_category"))
+    if "ai_decision" in df.columns:
+        df["decision"] = df["ai_decision"].fillna(df.get("decision"))
+    if "ai_confidence" in df.columns:
+        df["confidence"] = df["ai_confidence"].fillna(df.get("confidence"))
+    if "ai_pillar" in df.columns:
+        df["pillar"] = df["ai_pillar"].fillna(df.get("pillar"))
+    if "currency" not in df.columns and "currency_baseline" in df.columns:
+        df["currency"] = df["currency_baseline"]
     df["year"] = pd.to_numeric(df["year"], errors="coerce")
     df["amount_local"] = pd.to_numeric(df["amount_local"], errors="coerce")
     df = df.dropna(subset=["year", "amount_local"])
@@ -126,6 +145,27 @@ def load_budget():
         )
     if "decision" in df.columns:
         df = df[df["decision"].isin(["include", "review"])]
+
+    # Display-safe English fields for the app UI.
+    def _coalesce(cols):
+        existing = [c for c in cols if c in df.columns]
+        if not existing:
+            return pd.Series("", index=df.index, dtype="object")
+        out = df[existing[0]].copy()
+        for col in existing[1:]:
+            mask = out.isna() | (out.astype(str).str.strip() == "")
+            out = out.where(~mask, df[col])
+        return out
+
+    df["ministry_display"] = _coalesce(["section_name_en", "section_name"])
+    df["program_display"] = _coalesce(
+        ["clean_program_description_en", "program_description_en", "program_description"]
+    )
+    df["budget_line_display"] = _coalesce(
+        ["clean_program_description_en", "line_description_en", "line_description", "program_description_en", "program_description"]
+    )
+    df["budget_category"] = _coalesce(["ai_pillar", "pillar", "rd_category"])
+    df["budget_category_label"] = df["budget_category"]
     return df
 
 
@@ -169,7 +209,17 @@ def load_reform_panel():
 
 
 def budget_available():
-    return BUDGET_RESULTS.exists()
+    return BUDGET_RESULTS_AI.exists() or BUDGET_RESULTS.exists()
 
 def reforms_available():
     return REFORMS_EVENTS.exists()
+
+
+def get_app_password() -> str:
+    try:
+        secret_password = st.secrets.get("app_password", "")
+        if secret_password:
+            return str(secret_password)
+    except Exception:
+        pass
+    return os.getenv("APP_PASSWORD", "innovationextract26")

@@ -25,7 +25,11 @@ import pandas as pd
 import re
 
 from budget.config import DK_SECTION_MAP
-from budget.section_parser import parse_page_lines, _RE_AMOUNT_TAIL
+from budget.section_parser import (
+    parse_page_lines,
+    _RE_AMOUNT_TAIL, _RE_MILL_AMOUNT, _RE_STANDALONE_AMOUNT,
+    _RE_SUBITEM, _RE_SUBSECTION, _RE_ITEM_HEADER, _RE_PROGRAM_HEADER,
+)
 from budget.taxonomy import INCLUDE_THRESHOLD, REVIEW_THRESHOLD, load_taxonomy, score_text
 from budget.translation_utils import translate_to_english_glossary, preclean_text
 from budget.utils import logger
@@ -263,6 +267,29 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
         langs = _COUNTRY_LANGUAGES.get(country_for_file, ())
         tax = load_taxonomy(languages=tuple(langs))
 
+        # Detect if this file uses Mill. kr. amounts (1991+ Danish Finance Bills).
+        # Strategy: count standalone amounts in each format and use majority vote.
+        #   Old kr. format:    "7.711.455.939" — \d{1,3}([.,]\d{3})+
+        #   Mill. kr. format:  "745,0"          — \d{1,4}[,\s]\d{1,2}
+        # If mill-format amounts outnumber kr-format amounts, enable mill_kr_mode.
+        _re_old_amount = re.compile(
+            r"^\s*[÷\-\+]?\s*\d{1,3}(?:[.,]\d{3})+\s*\d?\)?\s*$"
+        )
+        _re_mill_amount_detect = re.compile(
+            r"^\s*[-÷]?\s*\d{1,4}(?:\.\d{3})*[,\s]\d{1,2}\s*\d?\)?\s*$"
+        )
+        mill_count = 0
+        old_count = 0
+        for r in sorted_pages.itertuples(index=False):
+            for line in str(r.text if isinstance(r.text, str) else "").splitlines():
+                if _re_mill_amount_detect.match(line):
+                    mill_count += 1
+                if _re_old_amount.match(line):
+                    old_count += 1
+        mill_kr_mode = mill_count > old_count and mill_count > 20
+
+        in_artsoversigt = False  # carried across pages within the same file
+
         for row in sorted_pages.itertuples(index=False):
             page_text = row.text if isinstance(row.text, str) else ""
             if not page_text.strip():
@@ -275,11 +302,28 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
             currency = _currency(country, year)
             file_lbl = _file_label(country, year, source_filename)
 
-            budget_lines, section_code, section_name = parse_page_lines(
-                page_text, section_code, section_name
+            budget_lines, section_code, section_name, in_artsoversigt = parse_page_lines(
+                page_text, section_code, section_name,
+                mill_kr_mode=mill_kr_mode, in_artsoversigt=in_artsoversigt,
             )
 
             for bl in budget_lines:
+                # Reset program context when a top-level group header is encountered
+                # (e.g. "20. Anlægs- og udlånsbevillinger"). Without this, section-level
+                # totals on the following lines (Anlægsudgifter 779M, etc.) would be
+                # falsely attributed to the last R&D program from the previous page.
+                if bl.line_type == "group_header":
+                    current_program_code = ""
+                    current_program_desc = ""
+                    continue
+
+                # Skip items from legal annotation sections ("Tekstanmærkninger").
+                # These have section_name like "ad 20.16.12., 20.17.01.,..."
+                # and contain legal references to specific budget lines, not
+                # actual budget appropriations.
+                if re.match(r"^ad\s+\d{1,2}\.\d{2}", preclean_text(bl.section_name), re.IGNORECASE):
+                    continue
+
                 # Maintain program context (headers with codes but no amount)
                 if bl.amount_value == 0:
                     if bl.line_code and _CODE_RE.match(bl.line_code) and not _LEGAL_REF_RE.match(preclean_text(bl.description)):
@@ -288,16 +332,41 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
                     continue  # no extractable amount on this line
 
                 # Merge description with next line only when the current line is very short
+                # and context_after is not a standalone amount (old-format or mill-kr).
+                # Merging with a bare number (e.g. the secondary column in 1991+ bills)
+                # adds spurious digits that confuse later digit-presence filters.
                 merged_desc = bl.description
+                _ctx_after_is_amount = bool(
+                    _RE_AMOUNT_TAIL.search(bl.context_after)
+                    or _RE_STANDALONE_AMOUNT.match(bl.context_after)
+                    or (mill_kr_mode and _RE_MILL_AMOUNT.match(bl.context_after))
+                )
+                # Don't merge when context_after starts a new budget line
+                _ctx_after_is_new_line = bool(
+                    _RE_SUBITEM.match(bl.context_after)
+                    or _RE_SUBSECTION.match(bl.context_after)
+                    or _RE_ITEM_HEADER.match(bl.context_after)
+                    or _RE_PROGRAM_HEADER.match(bl.context_after)
+                )
                 if (
                     bl.context_after
-                    and not _RE_AMOUNT_TAIL.search(bl.context_after)
+                    and not _ctx_after_is_amount
+                    and not _ctx_after_is_new_line
                     and len(bl.description.split()) < 5
                     and not _LEGAL_REF_RE.match(bl.description)
                 ):
                     merged_desc = f"{bl.description} {bl.context_after}".strip()
 
-                # Program inheritance: if this line has a code, refresh program context
+                # Program inheritance: if this line has a code, refresh program context.
+                # Lines without their own code (bl.line_code == "") are either sub-items
+                # (inherit parent program_code) or group-level labels (do NOT inherit).
+                # Distinguishing heuristic: a line with no code AND a very large amount
+                # that appears to be a group subtotal should not inherit program context.
+                # We detect this by checking bl.item_code: sub-items have it set to the
+                # PARENT subsection code (from the section parser's current_item_code);
+                # orphan group labels also have it set. So we use a secondary check:
+                # if bl.line_code is empty AND bl.item_code matches current_program_code,
+                # treat as a legitimate sub-item; otherwise it may be a group label.
                 program_code = current_program_code
                 program_desc = current_program_desc
                 if bl.line_code and _CODE_RE.match(bl.line_code):
@@ -305,17 +374,37 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
                     program_desc = merged_desc
                     current_program_code = program_code
                     current_program_desc = program_desc
+                elif not bl.line_code and bl.item_code and bl.item_code != current_program_code:
+                    # This line's inherited item_code differs from current program —
+                    # likely a group label appearing between subsections. Don't inherit.
+                    program_code = ""
+                    program_desc = ""
 
                 # Budget type detection
                 desc_clean = preclean_text(merged_desc)
                 desc_lower = merged_desc.lower()
                 budget_type = ""
-                for kw in ("tilskud", "driftsudgifter", "anlægsudgifter", "anlægstilskud"):
+                for kw in ("driftsudgifter", "anlægsudgifter", "anlægstilskud", "tilskud"):
                     if kw in desc_lower:
                         budget_type = kw
                         break
-                if not budget_type and merged_desc:
-                    budget_type = merged_desc.split()[0].lower()
+
+                # In mill_kr_mode, no-code lines whose ORIGINAL description contains no
+                # digits and no budget-type keyword are artsoversigt category labels
+                # (e.g. "Forskning og universitetsuddannelser", "Støtteordninger").
+                # They inherit program_code from the preceding subsection but represent
+                # ministry-level category subtotals. Clear inherited context so they
+                # fail the has_code filter below.
+                # NOTE: use bl.description (original line) not merged_desc to avoid
+                # spurious digits from merged context_after amounts.
+                # Strip parenthetical footnote refs like "(tekstanm. 184)" before the
+                # digit check — these are annotations, not program-code digits.
+                if mill_kr_mode and not bl.line_code and not budget_type:
+                    orig_desc_clean = preclean_text(bl.description)
+                    orig_no_parens = re.sub(r"\([^)]*\)", "", orig_desc_clean).strip()
+                    if not any(c.isdigit() for c in orig_no_parens):
+                        program_code = ""
+                        program_desc = ""
 
                 # Exclude revenue / income lines
                 if re.search(r"indtægter|revenue|income", desc_lower):
@@ -343,10 +432,21 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
                 item_desc = bl.item_description or program_desc
 
                 scoring_text = prog_clean or desc_clean
+                # When scoring_text is just a budget type (e.g. "Driftsudgifter")
+                # with no R&D signal, supplement with item_desc (e.g.
+                # "Forskningssekretariatet") so that the has_rd_word check succeeds
+                # and the item is correctly classified as "include".
+                _RD_SIGNAL_RE = re.compile(
+                    r"forskning|forsøgs|udvikling|research|teknolog|universit|videnskab",
+                    re.IGNORECASE,
+                )
+                item_clean = preclean_text(item_desc)
+                if item_clean and not _RD_SIGNAL_RE.search(scoring_text):
+                    scoring_text = f"{item_clean} {scoring_text}".strip()
                 content = f"{section_clean} {scoring_text}"
                 content_score, content_hits, content_cat = score_text(content, tax)
                 desc_score, desc_hits, _ = score_text(scoring_text, tax)
-                if re.search(r"forskning|forsøgs|udvikling|research|teknolog", scoring_text, re.IGNORECASE):
+                if _RD_SIGNAL_RE.search(scoring_text):
                     desc_score = max(desc_score, INCLUDE_THRESHOLD)
 
                 context = (
@@ -364,10 +464,24 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
                     score, hits, category = content_score, content_hits, content_cat
 
                 # ── Validation filters ─────────────────────────────────
+                # Always skip ministry-level aggregate labels (Artsoversigt block)
+                _desc_lower_clean = desc_clean.lower()
+                if _desc_lower_clean in {
+                    "bevilling i alt", "beviling i alt", "aktivitet i alt",
+                    "nettostyrede aktiviteter", "udgifter i alt",
+                    "artsoversigt", "artsoversigt:",
+                    "driftsindtægter", "anlægsindtægter", "overførselsudgifter",
+                    "skatter og overførselsindtægter",
+                    "overførsler mellem offentlige myndigheder", "finansielle poster",
+                }:
+                    continue
                 if not any(char.isdigit() for char in desc_clean) and not program_code:
                     continue  # likely headers
-                if re.fullmatch(r"[0-9 .]+", desc_clean.strip()):
-                    continue  # totals
+                if re.fullmatch(r"[0-9 .,÷\-]+", desc_clean.strip()):
+                    continue  # pure number (mill-kr or kr amount that became a description)
+                if ("......" in merged_desc or "......" in bl.description
+                        or "......" in program_desc):
+                    continue  # table-of-contents entry (dotted leaders + page number)
                 if _LEGAL_REF_RE.match(desc_clean):
                     continue
                 if len(desc_clean.split()) < 2 and not program_code:
@@ -382,7 +496,10 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
                 has_neg = any(k in desc_clean.lower() for k in _NEG_KEYWORDS)
                 if has_neg and not has_pos:
                     continue
-                if desc_clean.lower() in {"tilskud", "driftsudgifter", "indtægter"} and not program_code:
+                if desc_clean.lower() in {
+                    "tilskud", "driftsudgifter", "anlægsudgifter", "anlægstilskud",
+                    "indtægter", "udlån", "kapitalindtægter",
+                } and not program_code:
                     continue
                 if desc_score == 0 and context_score < INCLUDE_THRESHOLD:
                     continue
@@ -427,8 +544,12 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
                 code_in_desc = _CODE_RE.search(desc_clean)
                 if code_in_desc and item_code and code_in_desc.group() != item_code:
                     parse_error = True
-                # If budget_type contains an inline code pattern after keyword
-                if re.search(r"(tilskud|driftsudgifter|anlægsudgifter|indtægter)\s+\d{1,2}\.\d{2}", desc_lower):
+                # If the ORIGINAL line (before merge) contains a budget keyword
+                # immediately followed by a code, the line is likely malformed.
+                # Use bl.description (pre-merge) to avoid false positives when the
+                # context_after merge attaches a code-bearing header line.
+                orig_lower = bl.description.lower()
+                if re.search(r"(tilskud|driftsudgifter|anlægsudgifter|indtægter)\s+\d{1,2}\.\d{2}", orig_lower):
                     parse_error = True
                 if parse_error:
                     decision = "review"
@@ -523,6 +644,50 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
             ["taxonomy_score", "amount_local", "file_label", "page_number"],
             ascending=[False, False, True, True],
         ).reset_index(drop=True)
+
+        # Deduplicate: A.Oversigter. summary items and B.Bevillinger. detail items
+        # may both appear for the same program code and amount. Pages are in order,
+        # so keep the FIRST occurrence (A.Oversigter. comes before B.Bevillinger.).
+        # Key: (file_id, program_code, amount_local) — same program + same amount
+        # in the same file is almost certainly a duplicate.
+        if "file_id" in df.columns and "program_code" in df.columns:
+            dup_key = ["file_id", "program_code", "amount_local"]
+            has_prog = df["program_code"].notna() & (df["program_code"] != "")
+            df_with_prog = df[has_prog].copy()
+            df_no_prog = df[~has_prog].copy()
+            df_with_prog = (
+                df_with_prog.sort_values(["file_id", "program_code", "page_number"])
+                .drop_duplicates(subset=dup_key, keep="first")
+            )
+
+            # Remove parent subsection aggregates when their children are present.
+            # E.g. "20.61 Universiteter" (8.3B) should be dropped if "20.61.01",
+            # "20.61.02", etc. also appear — those children sum to ≈ parent total
+            # and keeping both inflates totals.
+            if not df_with_prog.empty:
+                prog = df_with_prog["program_code"].astype(str)
+                file_id_col = df_with_prog["file_id"].astype(str)
+                # Build set of (file_id, program_code) pairs already present
+                child_keys: set[tuple[str, str]] = set(
+                    zip(file_id_col, prog)
+                )
+                # A row is a "parent aggregate" if another row in the same file
+                # has a program_code that starts with this code + "."
+                def _is_covered_parent(row: "pd.Series") -> bool:
+                    prefix = str(row["program_code"]) + "."
+                    fid = str(row["file_id"])
+                    return any(
+                        pc.startswith(prefix) for (f, pc) in child_keys
+                        if f == fid and pc != str(row["program_code"])
+                    )
+                parent_mask = df_with_prog.apply(_is_covered_parent, axis=1)
+                df_with_prog = df_with_prog[~parent_mask]
+
+            df = pd.concat([df_with_prog, df_no_prog], ignore_index=True)
+            df = df.sort_values(
+                ["taxonomy_score", "amount_local", "file_label", "page_number"],
+                ascending=[False, False, True, True],
+            ).reset_index(drop=True)
 
     logger.info("Budget items extracted: %s", len(df))
     return df
