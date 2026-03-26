@@ -21,7 +21,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, atomenergi, atomenergikommissionen, undervisningsministeriet]; section=§20",
+        "rationale": "score=9.0; hits=[forskning, atomenergikommissionen, atomenergi, undervisningsministeriet]; section=§20",
         "page_number": 126,
         "source_file": "1975 19742_L1_som_vedtaget.pdf"
       },
@@ -105,7 +105,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[statens tekniske prøvenævn, teknologisk service, teknologiradet]; section=§17",
+        "rationale": "score=6.0; hits=[teknologiradet, teknologisk service, statens tekniske prøvenævn]; section=§17",
         "page_number": 97,
         "source_file": "1975 19742_L1_som_vedtaget.pdf"
       },
@@ -126,7 +126,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[atomenergi, atomenergikommissionen, undervisningsministeriet]; section=§20",
+        "rationale": "score=6.0; hits=[atomenergikommissionen, atomenergi, undervisningsministeriet]; section=§20",
         "page_number": 122,
         "source_file": "1975 19742_L1_som_vedtaget.pdf"
       },
@@ -168,7 +168,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[atomenergi, atomenergikommissionen, undervisningsministeriet]; section=§20",
+        "rationale": "score=6.0; hits=[atomenergikommissionen, atomenergi, undervisningsministeriet]; section=§20",
         "page_number": 122,
         "source_file": "1975 19742_L1_som_vedtaget.pdf"
       },
@@ -189,7 +189,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[atomenergi, atomenergikommissionen, undervisningsministeriet]; section=§20",
+        "rationale": "score=6.0; hits=[atomenergikommissionen, atomenergi, undervisningsministeriet]; section=§20",
         "page_number": 126,
         "source_file": "1975 19742_L1_som_vedtaget.pdf"
       },
@@ -210,7 +210,7 @@
         "taxonomy_score": 6.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[atomenergi, atomenergikommissionen, undervisningsministeriet]; section=§20",
+        "rationale": "score=6.0; hits=[atomenergikommissionen, atomenergi, undervisningsministeriet]; section=§20",
         "page_number": 122,
         "source_file": "1975 19742_L1_som_vedtaget.pdf"
       },
@@ -714,7 +714,7 @@
         "taxonomy_score": 4.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=4.0; hits=[statens tekniske prøvenævn, teknologiradet]; section=§17",
+        "rationale": "score=4.0; hits=[teknologiradet, statens tekniske prøvenævn]; section=§17",
         "page_number": 97,
         "source_file": "1975 19742_L1_som_vedtaget.pdf"
       },
@@ -2884,7 +2884,7 @@
         "taxonomy_score": 8.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning og udvikling, forskning, undervisningsministeriet]; section=§20",
+        "rationale": "score=8.0; hits=[forskning, forskning og udvikling, undervisningsministeriet]; section=§20",
         "page_number": 110,
         "source_file": "1976 19751_L100_som_vedtaget.pdf"
       },
@@ -2926,7 +2926,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[statens tekniske prøvenævn, teknologisk service, teknologiradet]; section=§17",
+        "rationale": "score=6.0; hits=[teknologiradet, teknologisk service, statens tekniske prøvenævn]; section=§17",
         "page_number": 95,
         "source_file": "1976 19751_L100_som_vedtaget.pdf"
       },
@@ -3409,7 +3409,7 @@
         "taxonomy_score": 4.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=4.0; hits=[atomenergi, atomenergikommissionen]; section=§17",
+        "rationale": "score=4.0; hits=[atomenergikommissionen, atomenergi]; section=§17",
         "page_number": 93,
         "source_file": "1976 19751_L100_som_vedtaget.pdf"
       },
@@ -3430,7 +3430,7 @@
         "taxonomy_score": 4.0,
         "decision": "include",
         "confidence": 0.9,
-        "rationale": "score=4.0; hits=[atomenergi, atomenergikommissionen]; section=§17",
+        "rationale": "score=4.0; hits=[atomenergikommissionen, atomenergi]; section=§17",
         "page_number": 96,
         "source_file": "1976 19751_L100_som_vedtaget.pdf"
       },
@@ -3451,7 +3451,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.9,
-        "rationale": "score=4.0; hits=[atomenergi, atomenergikommissionen]; section=§17",
+        "rationale": "score=4.0; hits=[atomenergikommissionen, atomenergi]; section=§17",
         "page_number": 93,
         "source_file": "1976 19751_L100_som_vedtaget.pdf"
       },
@@ -4543,7 +4543,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§17",
+        "rationale": "score=2.0; hits=[program, programme]; section=§17",
         "page_number": 92,
         "source_file": "1976 19751_L100_som_vedtaget.pdf"
       },
@@ -5348,7 +5348,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning og udvikling, forskning, undervisningsministeriet, program]; section=§20",
+        "rationale": "score=9.0; hits=[forskning, forskning og udvikling, undervisningsministeriet, program]; section=§20",
         "page_number": 106,
         "source_file": "1977 19762_L1_som_vedtaget.pdf"
       },
@@ -5411,7 +5411,7 @@
         "taxonomy_score": 8.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning og udvikling, forskning, undervisningsministeriet]; section=§20",
+        "rationale": "score=8.0; hits=[forskning, forskning og udvikling, undervisningsministeriet]; section=§20",
         "page_number": 106,
         "source_file": "1977 19762_L1_som_vedtaget.pdf"
       },
@@ -5873,7 +5873,7 @@
         "taxonomy_score": 4.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=4.0; hits=[statens tekniske prøvenævn, teknologiradet]; section=§17",
+        "rationale": "score=4.0; hits=[teknologiradet, statens tekniske prøvenævn]; section=§17",
         "page_number": 88,
         "source_file": "1977 19762_L1_som_vedtaget.pdf"
       },
@@ -5894,7 +5894,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.9,
-        "rationale": "score=4.0; hits=[statens tekniske prøvenævn, teknologiradet]; section=§17",
+        "rationale": "score=4.0; hits=[teknologiradet, statens tekniske prøvenævn]; section=§17",
         "page_number": 88,
         "source_file": "1977 19762_L1_som_vedtaget.pdf"
       },
@@ -6881,7 +6881,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§17",
+        "rationale": "score=2.0; hits=[program, programme]; section=§17",
         "page_number": 86,
         "source_file": "1977 19762_L1_som_vedtaget.pdf"
       },
@@ -7602,7 +7602,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning og udvikling, forskning, undervisningsministeriet, program]; section=§20",
+        "rationale": "score=9.0; hits=[forskning, forskning og udvikling, undervisningsministeriet, program]; section=§20",
         "page_number": 95,
         "source_file": "1978 19771_L101_som_vedtaget.pdf"
       },
@@ -7665,7 +7665,7 @@
         "taxonomy_score": 8.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning og udvikling, forskning, undervisningsministeriet]; section=§20",
+        "rationale": "score=8.0; hits=[forskning, forskning og udvikling, undervisningsministeriet]; section=§20",
         "page_number": 95,
         "source_file": "1978 19771_L101_som_vedtaget.pdf"
       },
@@ -8190,7 +8190,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.9,
-        "rationale": "score=4.0; hits=[statens tekniske prøvenævn, teknologiradet]; section=§17",
+        "rationale": "score=4.0; hits=[teknologiradet, statens tekniske prøvenævn]; section=§17",
         "page_number": 81,
         "source_file": "1978 19771_L101_som_vedtaget.pdf"
       },
@@ -9198,7 +9198,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§17",
+        "rationale": "score=2.0; hits=[program, programme]; section=§17",
         "page_number": 79,
         "source_file": "1978 19771_L101_som_vedtaget.pdf"
       },
@@ -9835,7 +9835,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning og udvikling, forskning, undervisningsministeriet, program]; section=§20",
+        "rationale": "score=9.0; hits=[forskning, forskning og udvikling, undervisningsministeriet, program]; section=§20",
         "page_number": 97,
         "source_file": "1979 9781_L1_som_vedtaget.pdf"
       },
@@ -9898,7 +9898,7 @@
         "taxonomy_score": 8.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning og udvikling, forskning, undervisningsministeriet]; section=§20",
+        "rationale": "score=8.0; hits=[forskning, forskning og udvikling, undervisningsministeriet]; section=§20",
         "page_number": 97,
         "source_file": "1979 9781_L1_som_vedtaget.pdf"
       },
@@ -9919,7 +9919,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 110,
         "source_file": "1979 9781_L1_som_vedtaget.pdf"
       },
@@ -9940,7 +9940,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsrad, forskningsradet]; section=§15",
+        "rationale": "score=7.0; hits=[forskning, forskningsradet, forskningsrad]; section=§15",
         "page_number": 64,
         "source_file": "1979 9781_L1_som_vedtaget.pdf"
       },
@@ -9961,7 +9961,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[statens tekniske prøvenævn, teknologisk service, teknologiradet]; section=§17",
+        "rationale": "score=6.0; hits=[teknologiradet, teknologisk service, statens tekniske prøvenævn]; section=§17",
         "page_number": 83,
         "source_file": "1979 9781_L1_som_vedtaget.pdf"
       },
@@ -10444,7 +10444,7 @@
         "taxonomy_score": 4.0,
         "decision": "include",
         "confidence": 0.95,
-        "rationale": "score=4.0; hits=[statens tekniske prøvenævn, teknologiradet]; section=§17",
+        "rationale": "score=4.0; hits=[teknologiradet, statens tekniske prøvenævn]; section=§17",
         "page_number": 83,
         "source_file": "1979 9781_L1_som_vedtaget.pdf"
       },
@@ -10465,7 +10465,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.95,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 110,
         "source_file": "1979 9781_L1_som_vedtaget.pdf"
       },
@@ -11389,7 +11389,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§17",
+        "rationale": "score=2.0; hits=[program, programme]; section=§17",
         "page_number": 80,
         "source_file": "1979 9781_L1_som_vedtaget.pdf"
       },
@@ -12131,7 +12131,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 112,
         "source_file": "1980 19792_L1_som_vedtaget.pdf"
       },
@@ -12194,7 +12194,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsrad, forskningsradet]; section=§15",
+        "rationale": "score=7.0; hits=[forskning, forskningsradet, forskningsrad]; section=§15",
         "page_number": 65,
         "source_file": "1980 19792_L1_som_vedtaget.pdf"
       },
@@ -12887,7 +12887,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 112,
         "source_file": "1980 19792_L1_som_vedtaget.pdf"
       },
@@ -12908,7 +12908,7 @@
         "taxonomy_score": 4.0,
         "decision": "include",
         "confidence": 0.9,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 112,
         "source_file": "1980 19792_L1_som_vedtaget.pdf"
       },
@@ -12929,7 +12929,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.95,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 112,
         "source_file": "1980 19792_L1_som_vedtaget.pdf"
       },
@@ -14063,7 +14063,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§17",
+        "rationale": "score=2.0; hits=[program, programme]; section=§17",
         "page_number": 80,
         "source_file": "1980 19792_L1_som_vedtaget.pdf"
       },
@@ -14826,7 +14826,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 119,
         "source_file": "1981 19801_L1_som_vedtaget.pdf"
       },
@@ -14889,7 +14889,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsrad, forskningsradet]; section=§15",
+        "rationale": "score=7.0; hits=[forskning, forskningsradet, forskningsrad]; section=§15",
         "page_number": 73,
         "source_file": "1981 19801_L1_som_vedtaget.pdf"
       },
@@ -15519,7 +15519,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 119,
         "source_file": "1981 19801_L1_som_vedtaget.pdf"
       },
@@ -15540,7 +15540,7 @@
         "taxonomy_score": 4.0,
         "decision": "include",
         "confidence": 0.9,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 119,
         "source_file": "1981 19801_L1_som_vedtaget.pdf"
       },
@@ -16569,7 +16569,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.8,
-        "rationale": "score=2.0; hits=[fund, funds]; section=§13",
+        "rationale": "score=2.0; hits=[funds, fund]; section=§13",
         "page_number": 63,
         "source_file": "1981 19801_L1_som_vedtaget.pdf"
       },
@@ -17122,7 +17122,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 112,
         "source_file": "1982 19812_L1_som_vedtaget.pdf"
       },
@@ -17269,7 +17269,7 @@
         "taxonomy_score": 5.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=5.0; hits=[forskning, programme, program]; section=§11",
+        "rationale": "score=5.0; hits=[forskning, program, programme]; section=§11",
         "page_number": 42,
         "source_file": "1982 19812_L1_som_vedtaget.pdf"
       },
@@ -17500,7 +17500,7 @@
         "taxonomy_score": 5.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=5.0; hits=[forskning, programme, program]; section=§11",
+        "rationale": "score=5.0; hits=[forskning, program, programme]; section=§11",
         "page_number": 42,
         "source_file": "1982 19812_L1_som_vedtaget.pdf"
       },
@@ -17731,7 +17731,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 112,
         "source_file": "1982 19812_L1_som_vedtaget.pdf"
       },
@@ -17752,7 +17752,7 @@
         "taxonomy_score": 4.0,
         "decision": "include",
         "confidence": 0.9,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 112,
         "source_file": "1982 19812_L1_som_vedtaget.pdf"
       },
@@ -18802,7 +18802,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§17",
+        "rationale": "score=2.0; hits=[program, programme]; section=§17",
         "page_number": 80,
         "source_file": "1982 19812_L1_som_vedtaget.pdf"
       },
@@ -19376,7 +19376,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 114,
         "source_file": "1983 19821_L1_som_vedtaget.pdf"
       },
@@ -19544,7 +19544,7 @@
         "taxonomy_score": 5.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=5.0; hits=[forskning, programme, program]; section=§11",
+        "rationale": "score=5.0; hits=[forskning, program, programme]; section=§11",
         "page_number": 42,
         "source_file": "1983 19821_L1_som_vedtaget.pdf"
       },
@@ -19733,7 +19733,7 @@
         "taxonomy_score": 5.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=5.0; hits=[forskning, programme, program]; section=§11",
+        "rationale": "score=5.0; hits=[forskning, program, programme]; section=§11",
         "page_number": 42,
         "source_file": "1983 19821_L1_som_vedtaget.pdf"
       },
@@ -19985,7 +19985,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 114,
         "source_file": "1983 19821_L1_som_vedtaget.pdf"
       },
@@ -20006,7 +20006,7 @@
         "taxonomy_score": 4.0,
         "decision": "include",
         "confidence": 0.9,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 114,
         "source_file": "1983 19821_L1_som_vedtaget.pdf"
       },
@@ -20027,7 +20027,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.95,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 114,
         "source_file": "1983 19821_L1_som_vedtaget.pdf"
       },
@@ -21518,7 +21518,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§17",
+        "rationale": "score=2.0; hits=[program, programme]; section=§17",
         "page_number": 82,
         "source_file": "1983 19821_L1_som_vedtaget.pdf"
       },
@@ -21945,7 +21945,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsrad, forskningsradet]; section=§15",
+        "rationale": "score=7.0; hits=[forskning, forskningsradet, forskningsrad]; section=§15",
         "page_number": 79,
         "source_file": "1984 19832_L1_som_vedtaget.pdf"
       },
@@ -22218,7 +22218,7 @@
         "taxonomy_score": 5.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=5.0; hits=[forskning, programme, program]; section=§11",
+        "rationale": "score=5.0; hits=[forskning, program, programme]; section=§11",
         "page_number": 50,
         "source_file": "1984 19832_L1_som_vedtaget.pdf"
       },
@@ -22407,7 +22407,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 140,
         "source_file": "1984 19832_L1_som_vedtaget.pdf"
       },
@@ -23863,7 +23863,7 @@
         "taxonomy_score": 10.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=10.0; hits=[forskning, grundforskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=10.0; hits=[forskning, grundforskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 146,
         "source_file": "1985 19841_L1_som_vedtaget.pdf"
       },
@@ -23884,7 +23884,7 @@
         "taxonomy_score": 10.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=10.0; hits=[forskning, grundforskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=10.0; hits=[forskning, grundforskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 146,
         "source_file": "1985 19841_L1_som_vedtaget.pdf"
       },
@@ -24367,7 +24367,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 146,
         "source_file": "1985 19841_L1_som_vedtaget.pdf"
       },
@@ -25585,7 +25585,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§17",
+        "rationale": "score=2.0; hits=[program, programme]; section=§17",
         "page_number": 104,
         "source_file": "1985 19841_L1_som_vedtaget.pdf"
       },
@@ -26033,7 +26033,7 @@
         "taxonomy_score": 10.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=10.0; hits=[forskning, grundforskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=10.0; hits=[forskning, grundforskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 144,
         "source_file": "1986 19851_L1_som_vedtaget.pdf"
       },
@@ -26054,7 +26054,7 @@
         "taxonomy_score": 10.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=10.0; hits=[forskning, grundforskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=10.0; hits=[forskning, grundforskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 144,
         "source_file": "1986 19851_L1_som_vedtaget.pdf"
       },
@@ -26117,7 +26117,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forsøgsvirksomhed, videnskab]; section=§29",
+        "rationale": "score=6.0; hits=[videnskab, forsøgsvirksomhed]; section=§29",
         "page_number": 202,
         "source_file": "1986 19851_L1_som_vedtaget.pdf"
       },
@@ -26642,7 +26642,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 144,
         "source_file": "1986 19851_L1_som_vedtaget.pdf"
       },
@@ -27692,7 +27692,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§17",
+        "rationale": "score=2.0; hits=[program, programme]; section=§17",
         "page_number": 100,
         "source_file": "1986 19851_L1_som_vedtaget.pdf"
       },
@@ -28035,7 +28035,7 @@
         "taxonomy_score": 10.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=10.0; hits=[forskning, grundforskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=10.0; hits=[forskning, grundforskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 144,
         "source_file": "1987 19861_L1_som_vedtaget.pdf"
       },
@@ -28056,7 +28056,7 @@
         "taxonomy_score": 10.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=10.0; hits=[forskning, grundforskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=10.0; hits=[forskning, grundforskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 144,
         "source_file": "1987 19861_L1_som_vedtaget.pdf"
       },
@@ -28140,7 +28140,7 @@
         "taxonomy_score": 6.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§23",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§23",
         "page_number": 175,
         "source_file": "1987 19861_L1_som_vedtaget.pdf"
       },
@@ -28644,7 +28644,7 @@
         "taxonomy_score": 5.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=5.0; hits=[forskning, programme, program]; section=§11",
+        "rationale": "score=5.0; hits=[forskning, program, programme]; section=§11",
         "page_number": 44,
         "source_file": "1987 19861_L1_som_vedtaget.pdf"
       },
@@ -28770,7 +28770,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 144,
         "source_file": "1987 19861_L1_som_vedtaget.pdf"
       },
@@ -29631,7 +29631,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§10",
+        "rationale": "score=2.0; hits=[program, programme]; section=§10",
         "page_number": 37,
         "source_file": "1987 19861_L1_som_vedtaget.pdf"
       },
@@ -30453,27 +30453,6 @@
         "rationale": "score=1.0; hits=[program]; section=§21",
         "page_number": 152,
         "source_file": "1987 19861_L1_som_vedtaget.pdf"
-      },
-      {
-        "section_code": "§23",
-        "section_name": "Finansministeriet",
-        "section_name_en": "Ministry of Justice",
-        "program_code": "55.01",
-        "program_description": "Ikke-fradragsberettiget købsmoms, der refunderes",
-        "program_description_en": "Ikke-fradragsberettiget købsmoms, der refunderes",
-        "line_description": "55.01 Ikke-fradragsberettiget købsmoms, der refunderes",
-        "line_description_en": "55.01 Ikke-fradragsberettiget købsmoms, der refunderes",
-        "budget_type": "",
-        "amount_local": 16500,
-        "currency": "DKK",
-        "rd_category": "possible_rd",
-        "pillar": "Ambiguous",
-        "taxonomy_score": 1.0,
-        "decision": "review",
-        "confidence": 0.6,
-        "rationale": "score=1.0; hits=[fund]; section=§23",
-        "page_number": 180,
-        "source_file": "1987 19861_L1_som_vedtaget.pdf"
       }
     ]
   },
@@ -30499,7 +30478,7 @@
         "taxonomy_score": 10.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=10.0; hits=[forskning, grundforskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=10.0; hits=[forskning, grundforskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 163,
         "source_file": "1988 19871_L1_som_vedtaget.pdf"
       },
@@ -30520,7 +30499,7 @@
         "taxonomy_score": 10.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=10.0; hits=[forskning, grundforskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=10.0; hits=[forskning, grundforskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 163,
         "source_file": "1988 19871_L1_som_vedtaget.pdf"
       },
@@ -31297,7 +31276,7 @@
         "taxonomy_score": 5.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=5.0; hits=[forskning, programme, program]; section=§11",
+        "rationale": "score=5.0; hits=[forskning, program, programme]; section=§11",
         "page_number": 56,
         "source_file": "1988 19871_L1_som_vedtaget.pdf"
       },
@@ -31402,7 +31381,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 163,
         "source_file": "1988 19871_L1_som_vedtaget.pdf"
       },
@@ -32263,7 +32242,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§10",
+        "rationale": "score=2.0; hits=[program, programme]; section=§10",
         "page_number": 48,
         "source_file": "1988 19871_L1_som_vedtaget.pdf"
       },
@@ -33131,7 +33110,7 @@
         "taxonomy_score": 12.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=12.0; hits=[forskning, videnskab, forskningsrad, statens teknisk-videnskabelige, undervisningsministeriet]; section=§20",
+        "rationale": "score=12.0; hits=[forskning, videnskab, statens teknisk-videnskabelige, forskningsrad, undervisningsministeriet]; section=§20",
         "page_number": 136,
         "source_file": "1989 19881_L1_som_vedtaget.pdf"
       },
@@ -33152,7 +33131,7 @@
         "taxonomy_score": 11.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=11.0; hits=[forskning og udvikling, forskning, undervisningsministeriet, tilskud til forskning, programme, program]; section=§20",
+        "rationale": "score=11.0; hits=[forskning, forskning og udvikling, undervisningsministeriet, program, tilskud til forskning, programme]; section=§20",
         "page_number": 137,
         "source_file": "1989 19881_L1_som_vedtaget.pdf"
       },
@@ -33215,7 +33194,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, forskningsministeriet]; section=§26",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, undervisningsministeriet]; section=§26",
         "page_number": 187,
         "source_file": "1989 19881_L1_som_vedtaget.pdf"
       },
@@ -33236,7 +33215,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 137,
         "source_file": "1989 19881_L1_som_vedtaget.pdf"
       },
@@ -33257,7 +33236,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, forskningsministeriet]; section=§23",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, undervisningsministeriet]; section=§23",
         "page_number": 178,
         "source_file": "1989 19881_L1_som_vedtaget.pdf"
       },
@@ -33845,7 +33824,7 @@
         "taxonomy_score": 5.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=5.0; hits=[forskning, programme, program]; section=§11",
+        "rationale": "score=5.0; hits=[forskning, program, programme]; section=§11",
         "page_number": 37,
         "source_file": "1989 19881_L1_som_vedtaget.pdf"
       },
@@ -33929,7 +33908,7 @@
         "taxonomy_score": 4.0,
         "decision": "include",
         "confidence": 0.9,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 137,
         "source_file": "1989 19881_L1_som_vedtaget.pdf"
       },
@@ -33950,7 +33929,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.9,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 137,
         "source_file": "1989 19881_L1_som_vedtaget.pdf"
       },
@@ -34727,7 +34706,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§17",
+        "rationale": "score=2.0; hits=[program, programme]; section=§17",
         "page_number": 94,
         "source_file": "1989 19881_L1_som_vedtaget.pdf"
       },
@@ -34748,7 +34727,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§10",
+        "rationale": "score=2.0; hits=[program, programme]; section=§10",
         "page_number": 29,
         "source_file": "1989 19881_L1_som_vedtaget.pdf"
       },
@@ -35383,27 +35362,6 @@
         "source_file": "1989 19881_L1_som_vedtaget.pdf"
       },
       {
-        "section_code": "§23",
-        "section_name": "Finansministeriet",
-        "section_name_en": "Ministry of Justice",
-        "program_code": "99.55",
-        "program_description": "Ikke-fradragsberettiget købsmoms, der refunderes",
-        "program_description_en": "Ikke-fradragsberettiget købsmoms, der refunderes",
-        "line_description": "99.55 Ikke-fradragsberettiget købsmoms, der refunderes",
-        "line_description_en": "99.55 Ikke-fradragsberettiget købsmoms, der refunderes",
-        "budget_type": "",
-        "amount_local": 2375000000,
-        "currency": "DKK",
-        "rd_category": "possible_rd",
-        "pillar": "Ambiguous",
-        "taxonomy_score": 1.0,
-        "decision": "review",
-        "confidence": 0.6,
-        "rationale": "score=1.0; hits=[fund]; section=§23",
-        "page_number": 175,
-        "source_file": "1989 19881_L1_som_vedtaget.pdf"
-      },
-      {
         "section_code": "§10",
         "section_name": "Udenrigsministeriet",
         "section_name_en": "Ministry of Foreign Affairs",
@@ -35553,7 +35511,7 @@
         "taxonomy_score": 12.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=12.0; hits=[forskning, videnskab, forskningsrad, statens teknisk-videnskabelige, undervisningsministeriet]; section=§20",
+        "rationale": "score=12.0; hits=[forskning, videnskab, statens teknisk-videnskabelige, forskningsrad, undervisningsministeriet]; section=§20",
         "page_number": 129,
         "source_file": "1990 19891_L1_som_vedtaget.pdf"
       },
@@ -35574,7 +35532,7 @@
         "taxonomy_score": 11.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=11.0; hits=[forskning og udvikling, forskning, undervisningsministeriet, tilskud til forskning, programme, program]; section=§20",
+        "rationale": "score=11.0; hits=[forskning, forskning og udvikling, undervisningsministeriet, program, tilskud til forskning, programme]; section=§20",
         "page_number": 129,
         "source_file": "1990 19891_L1_som_vedtaget.pdf"
       },
@@ -35637,7 +35595,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, forskningsministeriet]; section=§26",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, undervisningsministeriet]; section=§26",
         "page_number": 180,
         "source_file": "1990 19891_L1_som_vedtaget.pdf"
       },
@@ -35658,7 +35616,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 129,
         "source_file": "1990 19891_L1_som_vedtaget.pdf"
       },
@@ -36393,7 +36351,7 @@
         "taxonomy_score": 5.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=5.0; hits=[forskning, programme, program]; section=§11",
+        "rationale": "score=5.0; hits=[forskning, program, programme]; section=§11",
         "page_number": 38,
         "source_file": "1990 19891_L1_som_vedtaget.pdf"
       },
@@ -36561,7 +36519,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.9,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 129,
         "source_file": "1990 19891_L1_som_vedtaget.pdf"
       },
@@ -37611,7 +37569,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§10",
+        "rationale": "score=2.0; hits=[program, programme]; section=§10",
         "page_number": 28,
         "source_file": "1990 19891_L1_som_vedtaget.pdf"
       },
@@ -37632,7 +37590,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§17",
+        "rationale": "score=2.0; hits=[program, programme]; section=§17",
         "page_number": 88,
         "source_file": "1990 19891_L1_som_vedtaget.pdf"
       },
@@ -38309,27 +38267,6 @@
         "source_file": "1990 19891_L1_som_vedtaget.pdf"
       },
       {
-        "section_code": "§23",
-        "section_name": "Finansministeriet",
-        "section_name_en": "Ministry of Justice",
-        "program_code": "99.55",
-        "program_description": "Ikke-fradragsberettiget købsmoms, der refunderes",
-        "program_description_en": "Ikke-fradragsberettiget købsmoms, der refunderes",
-        "line_description": "99.55 Ikke-fradragsberettiget købsmoms, der refunderes",
-        "line_description_en": "99.55 Ikke-fradragsberettiget købsmoms, der refunderes",
-        "budget_type": "",
-        "amount_local": 2712000000,
-        "currency": "DKK",
-        "rd_category": "possible_rd",
-        "pillar": "Ambiguous",
-        "taxonomy_score": 1.0,
-        "decision": "review",
-        "confidence": 0.6,
-        "rationale": "score=1.0; hits=[fund]; section=§23",
-        "page_number": 168,
-        "source_file": "1990 19891_L1_som_vedtaget.pdf"
-      },
-      {
         "section_code": "§10",
         "section_name": "Udenrigsministeriet",
         "section_name_en": "Ministry of Foreign Affairs",
@@ -38542,7 +38479,7 @@
         "taxonomy_score": 12.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=12.0; hits=[forskning, videnskab, forskningsrad, statens teknisk-videnskabelige, undervisningsministeriet]; section=§20",
+        "rationale": "score=12.0; hits=[forskning, videnskab, statens teknisk-videnskabelige, forskningsrad, undervisningsministeriet]; section=§20",
         "page_number": 70,
         "source_file": "1991 19902_L1_som_vedtaget.pdf"
       },
@@ -38605,7 +38542,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 69,
         "source_file": "1991 19902_L1_som_vedtaget.pdf"
       },
@@ -38626,7 +38563,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 69,
         "source_file": "1991 19902_L1_som_vedtaget.pdf"
       },
@@ -38647,7 +38584,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 69,
         "source_file": "1991 19902_L1_som_vedtaget.pdf"
       },
@@ -38668,7 +38605,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 70,
         "source_file": "1991 19902_L1_som_vedtaget.pdf"
       },
@@ -38752,7 +38689,7 @@
         "taxonomy_score": 6.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§25",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§25",
         "page_number": 100,
         "source_file": "1991 19902_L1_som_vedtaget.pdf"
       },
@@ -39088,7 +39025,7 @@
         "taxonomy_score": 4.0,
         "decision": "include",
         "confidence": 0.9,
-        "rationale": "score=4.0; hits=[pro, programme, program]; section=§26",
+        "rationale": "score=4.0; hits=[pro, program, programme]; section=§26",
         "page_number": 104,
         "source_file": "1991 19902_L1_som_vedtaget.pdf"
       },
@@ -39109,7 +39046,7 @@
         "taxonomy_score": 4.0,
         "decision": "include",
         "confidence": 0.9,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 69,
         "source_file": "1991 19902_L1_som_vedtaget.pdf"
       },
@@ -39613,7 +39550,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§24",
+        "rationale": "score=2.0; hits=[program, programme]; section=§24",
         "page_number": 93,
         "source_file": "1991 19902_L1_som_vedtaget.pdf"
       },
@@ -39977,7 +39914,7 @@
         "taxonomy_score": 12.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=12.0; hits=[forskning, videnskab, forskningsrad, statens teknisk-videnskabelige, undervisningsministeriet]; section=§20",
+        "rationale": "score=12.0; hits=[forskning, videnskab, statens teknisk-videnskabelige, forskningsrad, undervisningsministeriet]; section=§20",
         "page_number": 71,
         "source_file": "1992 19911_L1_som_vedtaget.pdf"
       },
@@ -40061,7 +39998,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 71,
         "source_file": "1992 19911_L1_som_vedtaget.pdf"
       },
@@ -40082,7 +40019,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 71,
         "source_file": "1992 19911_L1_som_vedtaget.pdf"
       },
@@ -40103,7 +40040,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 71,
         "source_file": "1992 19911_L1_som_vedtaget.pdf"
       },
@@ -40124,7 +40061,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 71,
         "source_file": "1992 19911_L1_som_vedtaget.pdf"
       },
@@ -40208,7 +40145,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§29",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§29",
         "page_number": 117,
         "source_file": "1992 19911_L1_som_vedtaget.pdf"
       },
@@ -41111,7 +41048,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§24",
+        "rationale": "score=2.0; hits=[program, programme]; section=§24",
         "page_number": 91,
         "source_file": "1992 19911_L1_som_vedtaget.pdf"
       },
@@ -41433,7 +41370,7 @@
         "taxonomy_score": 12.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=12.0; hits=[forskning, videnskab, forskningsrad, undervisningsministeriet, fund, funds]; section=§20",
+        "rationale": "score=12.0; hits=[forskning, videnskab, forskningsrad, undervisningsministeriet, funds, fund]; section=§20",
         "page_number": 74,
         "source_file": "1993 19921_L1_som_vedtaget.pdf"
       },
@@ -41475,7 +41412,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 73,
         "source_file": "1993 19921_L1_som_vedtaget.pdf"
       },
@@ -41496,7 +41433,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 73,
         "source_file": "1993 19921_L1_som_vedtaget.pdf"
       },
@@ -41517,7 +41454,7 @@
         "taxonomy_score": 7.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 68,
         "source_file": "1993 19921_L1_som_vedtaget.pdf"
       },
@@ -41538,7 +41475,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 73,
         "source_file": "1993 19921_L1_som_vedtaget.pdf"
       },
@@ -41559,7 +41496,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 73,
         "source_file": "1993 19921_L1_som_vedtaget.pdf"
       },
@@ -41580,7 +41517,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 74,
         "source_file": "1993 19921_L1_som_vedtaget.pdf"
       },
@@ -41727,7 +41664,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§29",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§29",
         "page_number": 123,
         "source_file": "1993 19921_L1_som_vedtaget.pdf"
       },
@@ -42084,7 +42021,7 @@
         "taxonomy_score": 4.0,
         "decision": "include",
         "confidence": 0.9,
-        "rationale": "score=4.0; hits=[pro, programme, program]; section=§26",
+        "rationale": "score=4.0; hits=[pro, program, programme]; section=§26",
         "page_number": 108,
         "source_file": "1993 19921_L1_som_vedtaget.pdf"
       },
@@ -43015,7 +42952,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, forskningsrad, statens forskningsrad, programme, program]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, statens forskningsrad, forskningsrad, program, programme]; section=§19",
         "page_number": 79,
         "source_file": "1994 19931_L1_som_vedtaget.pdf"
       },
@@ -43036,7 +42973,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsrad, statens forskningsrad]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, statens forskningsrad, forskningsrad]; section=§19",
         "page_number": 77,
         "source_file": "1994 19931_L1_som_vedtaget.pdf"
       },
@@ -43099,7 +43036,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§25",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§25",
         "page_number": 114,
         "source_file": "1994 19931_L1_som_vedtaget.pdf"
       },
@@ -43120,7 +43057,7 @@
         "taxonomy_score": 6.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§25",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§25",
         "page_number": 113,
         "source_file": "1994 19931_L1_som_vedtaget.pdf"
       },
@@ -43414,7 +43351,7 @@
         "taxonomy_score": 5.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=5.0; hits=[forskning, programme, program]; section=§19",
+        "rationale": "score=5.0; hits=[forskning, program, programme]; section=§19",
         "page_number": 79,
         "source_file": "1994 19931_L1_som_vedtaget.pdf"
       },
@@ -43477,7 +43414,7 @@
         "taxonomy_score": 5.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=5.0; hits=[forskning, programme, program]; section=§19",
+        "rationale": "score=5.0; hits=[forskning, program, programme]; section=§19",
         "page_number": 78,
         "source_file": "1994 19931_L1_som_vedtaget.pdf"
       },
@@ -43582,7 +43519,7 @@
         "taxonomy_score": 5.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=5.0; hits=[forskning, programme, program]; section=§19",
+        "rationale": "score=5.0; hits=[forskning, program, programme]; section=§19",
         "page_number": 78,
         "source_file": "1994 19931_L1_som_vedtaget.pdf"
       },
@@ -43687,7 +43624,7 @@
         "taxonomy_score": 4.0,
         "decision": "include",
         "confidence": 0.9,
-        "rationale": "score=4.0; hits=[pro, programme, program]; section=§26",
+        "rationale": "score=4.0; hits=[pro, program, programme]; section=§26",
         "page_number": 118,
         "source_file": "1994 19931_L1_som_vedtaget.pdf"
       },
@@ -44485,7 +44422,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§26",
+        "rationale": "score=2.0; hits=[program, programme]; section=§26",
         "page_number": 118,
         "source_file": "1994 19931_L1_som_vedtaget.pdf"
       },
@@ -44933,7 +44870,7 @@
         "taxonomy_score": 11.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=11.0; hits=[forskning, forskningsrad, forskningsministeriet, statens forskningsrad, programme, program]; section=§19",
+        "rationale": "score=11.0; hits=[forskning, statens forskningsrad, forskningsministeriet, forskningsrad, program, programme]; section=§19",
         "page_number": 82,
         "source_file": "1995 19941_L1_som_vedtaget.pdf"
       },
@@ -44954,7 +44891,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, forskningsrad, forskningsministeriet, statens forskningsrad]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, statens forskningsrad, forskningsministeriet, forskningsrad]; section=§19",
         "page_number": 82,
         "source_file": "1995 19941_L1_som_vedtaget.pdf"
       },
@@ -44975,7 +44912,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 83,
         "source_file": "1995 19941_L1_som_vedtaget.pdf"
       },
@@ -44996,7 +44933,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 84,
         "source_file": "1995 19941_L1_som_vedtaget.pdf"
       },
@@ -45017,7 +44954,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 83,
         "source_file": "1995 19941_L1_som_vedtaget.pdf"
       },
@@ -45710,7 +45647,7 @@
         "taxonomy_score": 4.0,
         "decision": "include",
         "confidence": 0.9,
-        "rationale": "score=4.0; hits=[pro, programme, program]; section=§26",
+        "rationale": "score=4.0; hits=[pro, program, programme]; section=§26",
         "page_number": 128,
         "source_file": "1995 19941_L1_som_vedtaget.pdf"
       },
@@ -46256,7 +46193,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§26",
+        "rationale": "score=2.0; hits=[program, programme]; section=§26",
         "page_number": 128,
         "source_file": "1995 19941_L1_som_vedtaget.pdf"
       },
@@ -46298,7 +46235,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§26",
+        "rationale": "score=2.0; hits=[program, programme]; section=§26",
         "page_number": 128,
         "source_file": "1995 19941_L1_som_vedtaget.pdf"
       },
@@ -46403,7 +46340,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§26",
+        "rationale": "score=2.0; hits=[program, programme]; section=§26",
         "page_number": 128,
         "source_file": "1995 19941_L1_som_vedtaget.pdf"
       },
@@ -46445,7 +46382,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§13",
+        "rationale": "score=2.0; hits=[program, programme]; section=§13",
         "page_number": 42,
         "source_file": "1995 19941_L1_som_vedtaget.pdf"
       },
@@ -46683,7 +46620,7 @@
         "taxonomy_score": 11.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=11.0; hits=[forskning, forskningsrad, forskningsministeriet, statens forskningsrad, programme, program]; section=§19",
+        "rationale": "score=11.0; hits=[forskning, statens forskningsrad, forskningsministeriet, forskningsrad, program, programme]; section=§19",
         "page_number": 82,
         "source_file": "1996 19951_L1_som_vedtaget.pdf"
       },
@@ -46704,7 +46641,7 @@
         "taxonomy_score": 11.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=11.0; hits=[forskning, forskningsrad, forskningsministeriet, statens forskningsrad, programme, program]; section=§19",
+        "rationale": "score=11.0; hits=[forskning, statens forskningsrad, forskningsministeriet, forskningsrad, program, programme]; section=§19",
         "page_number": 82,
         "source_file": "1996 19951_L1_som_vedtaget.pdf"
       },
@@ -46725,7 +46662,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, forskningsrad, forskningsministeriet, statens forskningsrad]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, statens forskningsrad, forskningsministeriet, forskningsrad]; section=§19",
         "page_number": 82,
         "source_file": "1996 19951_L1_som_vedtaget.pdf"
       },
@@ -46746,7 +46683,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, forskningsministeriet]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, undervisningsministeriet]; section=§19",
         "page_number": 82,
         "source_file": "1996 19951_L1_som_vedtaget.pdf"
       },
@@ -46767,7 +46704,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 83,
         "source_file": "1996 19951_L1_som_vedtaget.pdf"
       },
@@ -46788,7 +46725,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 83,
         "source_file": "1996 19951_L1_som_vedtaget.pdf"
       },
@@ -46809,7 +46746,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, undervisningsministeriet, forskningsministeriet]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, undervisningsministeriet]; section=§19",
         "page_number": 82,
         "source_file": "1996 19951_L1_som_vedtaget.pdf"
       },
@@ -46830,7 +46767,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 83,
         "source_file": "1996 19951_L1_som_vedtaget.pdf"
       },
@@ -46851,7 +46788,7 @@
         "taxonomy_score": 6.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§23",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§23",
         "page_number": 111,
         "source_file": "1996 19951_L1_som_vedtaget.pdf"
       },
@@ -46872,7 +46809,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§23",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§23",
         "page_number": 108,
         "source_file": "1996 19951_L1_som_vedtaget.pdf"
       },
@@ -48580,7 +48517,7 @@
         "taxonomy_score": 11.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=11.0; hits=[forskning, forskningsrad, forskningsministeriet, statens forskningsrad, programme, program]; section=§19",
+        "rationale": "score=11.0; hits=[forskning, statens forskningsrad, forskningsministeriet, forskningsrad, program, programme]; section=§19",
         "page_number": 82,
         "source_file": "1997 19961_L1_som_vedtaget.pdf"
       },
@@ -48601,7 +48538,7 @@
         "taxonomy_score": 11.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=11.0; hits=[forskning, forskningsrad, forskningsministeriet, statens forskningsrad, programme, program]; section=§19",
+        "rationale": "score=11.0; hits=[forskning, statens forskningsrad, forskningsministeriet, forskningsrad, program, programme]; section=§19",
         "page_number": 82,
         "source_file": "1997 19961_L1_som_vedtaget.pdf"
       },
@@ -48622,7 +48559,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, forskningsrad, forskningsministeriet, statens forskningsrad]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, statens forskningsrad, forskningsministeriet, forskningsrad]; section=§19",
         "page_number": 82,
         "source_file": "1997 19961_L1_som_vedtaget.pdf"
       },
@@ -48643,7 +48580,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 83,
         "source_file": "1997 19961_L1_som_vedtaget.pdf"
       },
@@ -48664,7 +48601,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 83,
         "source_file": "1997 19961_L1_som_vedtaget.pdf"
       },
@@ -48706,7 +48643,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§23",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§23",
         "page_number": 109,
         "source_file": "1997 19961_L1_som_vedtaget.pdf"
       },
@@ -48853,7 +48790,7 @@
         "taxonomy_score": 6.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§23",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§23",
         "page_number": 112,
         "source_file": "1997 19961_L1_som_vedtaget.pdf"
       },
@@ -49966,7 +49903,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 16,
         "source_file": "1997 19961_L1_som_vedtaget.pdf"
       },
@@ -49987,7 +49924,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 16,
         "source_file": "1997 19961_L1_som_vedtaget.pdf"
       },
@@ -50008,7 +49945,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 16,
         "source_file": "1997 19961_L1_som_vedtaget.pdf"
       },
@@ -50435,7 +50372,7 @@
         "taxonomy_score": 11.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=11.0; hits=[forskning, forskningsrad, forskningsministeriet, statens forskningsrad, programme, program]; section=§19",
+        "rationale": "score=11.0; hits=[forskning, statens forskningsrad, forskningsministeriet, forskningsrad, program, programme]; section=§19",
         "page_number": 91,
         "source_file": "1998 19971_L1_som_vedtaget.pdf"
       },
@@ -50456,7 +50393,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, forskningsrad, forskningsministeriet, statens forskningsrad]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, statens forskningsrad, forskningsministeriet, forskningsrad]; section=§19",
         "page_number": 91,
         "source_file": "1998 19971_L1_som_vedtaget.pdf"
       },
@@ -50477,7 +50414,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, forskningsrad, forskningsministeriet, statens forskningsrad]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, statens forskningsrad, forskningsministeriet, forskningsrad]; section=§19",
         "page_number": 92,
         "source_file": "1998 19971_L1_som_vedtaget.pdf"
       },
@@ -50498,7 +50435,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 92,
         "source_file": "1998 19971_L1_som_vedtaget.pdf"
       },
@@ -50519,7 +50456,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 92,
         "source_file": "1998 19971_L1_som_vedtaget.pdf"
       },
@@ -50540,7 +50477,7 @@
         "taxonomy_score": 7.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 93,
         "source_file": "1998 19971_L1_som_vedtaget.pdf"
       },
@@ -50561,7 +50498,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§23",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§23",
         "page_number": 122,
         "source_file": "1998 19971_L1_som_vedtaget.pdf"
       },
@@ -50687,7 +50624,7 @@
         "taxonomy_score": 6.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§23",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§23",
         "page_number": 125,
         "source_file": "1998 19971_L1_som_vedtaget.pdf"
       },
@@ -51926,7 +51863,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 18,
         "source_file": "1998 19971_L1_som_vedtaget.pdf"
       },
@@ -51947,7 +51884,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 18,
         "source_file": "1998 19971_L1_som_vedtaget.pdf"
       },
@@ -51989,7 +51926,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 18,
         "source_file": "1998 19971_L1_som_vedtaget.pdf"
       },
@@ -52073,7 +52010,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[fund, funds]; section=§28",
+        "rationale": "score=2.0; hits=[funds, fund]; section=§28",
         "page_number": 153,
         "source_file": "1998 19971_L1_som_vedtaget.pdf"
       },
@@ -52395,7 +52332,7 @@
         "taxonomy_score": 11.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=11.0; hits=[forskning, forskningsrad, forskningsministeriet, statens forskningsrad, programme, program]; section=§19",
+        "rationale": "score=11.0; hits=[forskning, statens forskningsrad, forskningsministeriet, forskningsrad, program, programme]; section=§19",
         "page_number": 86,
         "source_file": "1999 19981_L1_som_vedtaget.pdf"
       },
@@ -52416,7 +52353,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, forskningsrad, forskningsministeriet, statens forskningsrad]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, statens forskningsrad, forskningsministeriet, forskningsrad]; section=§19",
         "page_number": 86,
         "source_file": "1999 19981_L1_som_vedtaget.pdf"
       },
@@ -52479,7 +52416,7 @@
         "taxonomy_score": 7.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 87,
         "source_file": "1999 19981_L1_som_vedtaget.pdf"
       },
@@ -52500,7 +52437,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 87,
         "source_file": "1999 19981_L1_som_vedtaget.pdf"
       },
@@ -52521,7 +52458,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 87,
         "source_file": "1999 19981_L1_som_vedtaget.pdf"
       },
@@ -52542,7 +52479,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 87,
         "source_file": "1999 19981_L1_som_vedtaget.pdf"
       },
@@ -52563,7 +52500,7 @@
         "taxonomy_score": 7.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 90,
         "source_file": "1999 19981_L1_som_vedtaget.pdf"
       },
@@ -52605,7 +52542,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§23",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§23",
         "page_number": 119,
         "source_file": "1999 19981_L1_som_vedtaget.pdf"
       },
@@ -52689,7 +52626,7 @@
         "taxonomy_score": 6.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§23",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§23",
         "page_number": 122,
         "source_file": "1999 19981_L1_som_vedtaget.pdf"
       },
@@ -53445,7 +53382,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.9,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 101,
         "source_file": "1999 19981_L1_som_vedtaget.pdf"
       },
@@ -53466,7 +53403,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.9,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 101,
         "source_file": "1999 19981_L1_som_vedtaget.pdf"
       },
@@ -53865,7 +53802,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 18,
         "source_file": "1999 19981_L1_som_vedtaget.pdf"
       },
@@ -53886,7 +53823,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 18,
         "source_file": "1999 19981_L1_som_vedtaget.pdf"
       },
@@ -53907,7 +53844,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 18,
         "source_file": "1999 19981_L1_som_vedtaget.pdf"
       },
@@ -53991,7 +53928,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[fund, funds]; section=§28",
+        "rationale": "score=2.0; hits=[funds, fund]; section=§28",
         "page_number": 145,
         "source_file": "1999 19981_L1_som_vedtaget.pdf"
       },
@@ -54292,7 +54229,7 @@
         "taxonomy_score": 11.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=11.0; hits=[forskning, forskningsrad, forskningsministeriet, statens forskningsrad, programme, program]; section=§19",
+        "rationale": "score=11.0; hits=[forskning, statens forskningsrad, forskningsministeriet, forskningsrad, program, programme]; section=§19",
         "page_number": 87,
         "source_file": "2000 19991_L1_som_vedtaget.pdf"
       },
@@ -54313,7 +54250,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, forskningsrad, forskningsministeriet, statens forskningsrad]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, statens forskningsrad, forskningsministeriet, forskningsrad]; section=§19",
         "page_number": 90,
         "source_file": "2000 19991_L1_som_vedtaget.pdf"
       },
@@ -54334,7 +54271,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 88,
         "source_file": "2000 19991_L1_som_vedtaget.pdf"
       },
@@ -54355,7 +54292,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 88,
         "source_file": "2000 19991_L1_som_vedtaget.pdf"
       },
@@ -54376,7 +54313,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 88,
         "source_file": "2000 19991_L1_som_vedtaget.pdf"
       },
@@ -54418,7 +54355,7 @@
         "taxonomy_score": 7.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 91,
         "source_file": "2000 19991_L1_som_vedtaget.pdf"
       },
@@ -54460,7 +54397,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§23",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§23",
         "page_number": 124,
         "source_file": "2000 19991_L1_som_vedtaget.pdf"
       },
@@ -54502,7 +54439,7 @@
         "taxonomy_score": 6.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[teknologisk forskning, forskning]; section=§16",
+        "rationale": "score=6.0; hits=[forskning, teknologisk forskning]; section=§16",
         "page_number": 71,
         "source_file": "2000 19991_L1_som_vedtaget.pdf"
       },
@@ -55153,7 +55090,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 105,
         "source_file": "2000 19991_L1_som_vedtaget.pdf"
       },
@@ -55531,7 +55468,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 18,
         "source_file": "2000 19991_L1_som_vedtaget.pdf"
       },
@@ -55552,7 +55489,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 18,
         "source_file": "2000 19991_L1_som_vedtaget.pdf"
       },
@@ -55594,7 +55531,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[fund, funds]; section=§28",
+        "rationale": "score=2.0; hits=[funds, fund]; section=§28",
         "page_number": 151,
         "source_file": "2000 19991_L1_som_vedtaget.pdf"
       },
@@ -55783,7 +55720,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 18,
         "source_file": "2000 19991_L1_som_vedtaget.pdf"
       },
@@ -56042,7 +55979,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, forskningsrad, forskningsministeriet, statens forskningsrad]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, statens forskningsrad, forskningsministeriet, forskningsrad]; section=§19",
         "page_number": 88,
         "source_file": "2001 20001_L1_som_vedtaget.pdf"
       },
@@ -56063,7 +56000,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 86,
         "source_file": "2001 20001_L1_som_vedtaget.pdf"
       },
@@ -56084,7 +56021,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 86,
         "source_file": "2001 20001_L1_som_vedtaget.pdf"
       },
@@ -56105,7 +56042,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 86,
         "source_file": "2001 20001_L1_som_vedtaget.pdf"
       },
@@ -56189,7 +56126,7 @@
         "taxonomy_score": 6.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[teknologisk forskning, forskning]; section=§16",
+        "rationale": "score=6.0; hits=[forskning, teknologisk forskning]; section=§16",
         "page_number": 70,
         "source_file": "2001 20001_L1_som_vedtaget.pdf"
       },
@@ -56861,7 +56798,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.9,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 101,
         "source_file": "2001 20001_L1_som_vedtaget.pdf"
       },
@@ -56882,7 +56819,7 @@
         "taxonomy_score": 4.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=4.0; hits=[undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=4.0; hits=[undervisningsministeriet, program, programme]; section=§20",
         "page_number": 102,
         "source_file": "2001 20001_L1_som_vedtaget.pdf"
       },
@@ -57428,7 +57365,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 18,
         "source_file": "2001 20001_L1_som_vedtaget.pdf"
       },
@@ -57449,7 +57386,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 18,
         "source_file": "2001 20001_L1_som_vedtaget.pdf"
       },
@@ -57491,7 +57428,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 18,
         "source_file": "2001 20001_L1_som_vedtaget.pdf"
       },
@@ -57512,7 +57449,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[fund, funds]; section=§28",
+        "rationale": "score=2.0; hits=[funds, fund]; section=§28",
         "page_number": 143,
         "source_file": "2001 20001_L1_som_vedtaget.pdf"
       },
@@ -57575,7 +57512,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§13",
+        "rationale": "score=2.0; hits=[program, programme]; section=§13",
         "page_number": 43,
         "source_file": "2001 20001_L1_som_vedtaget.pdf"
       },
@@ -58023,7 +57960,7 @@
         "taxonomy_score": 10.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=10.0; hits=[forskning, videnskab, forskningsrad, statens forskningsrad]; section=§19",
+        "rationale": "score=10.0; hits=[forskning, videnskab, statens forskningsrad, forskningsrad]; section=§19",
         "page_number": 89,
         "source_file": "2003 20021_L1_som_vedtaget.pdf"
       },
@@ -58044,7 +57981,7 @@
         "taxonomy_score": 8.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning, videnskab, programme, program]; section=§19",
+        "rationale": "score=8.0; hits=[forskning, videnskab, program, programme]; section=§19",
         "page_number": 87,
         "source_file": "2003 20021_L1_som_vedtaget.pdf"
       },
@@ -58065,7 +58002,7 @@
         "taxonomy_score": 8.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning, videnskab, programme, program]; section=§19",
+        "rationale": "score=8.0; hits=[forskning, videnskab, program, programme]; section=§19",
         "page_number": 87,
         "source_file": "2003 20021_L1_som_vedtaget.pdf"
       },
@@ -58086,7 +58023,7 @@
         "taxonomy_score": 8.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning, videnskab, programme, program]; section=§19",
+        "rationale": "score=8.0; hits=[forskning, videnskab, program, programme]; section=§19",
         "page_number": 87,
         "source_file": "2003 20021_L1_som_vedtaget.pdf"
       },
@@ -58107,7 +58044,7 @@
         "taxonomy_score": 8.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning, videnskab, programme, program]; section=§19",
+        "rationale": "score=8.0; hits=[forskning, videnskab, program, programme]; section=§19",
         "page_number": 87,
         "source_file": "2003 20021_L1_som_vedtaget.pdf"
       },
@@ -58233,7 +58170,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§8",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§8",
         "page_number": 29,
         "source_file": "2003 20021_L1_som_vedtaget.pdf"
       },
@@ -58317,7 +58254,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§8",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§8",
         "page_number": 29,
         "source_file": "2003 20021_L1_som_vedtaget.pdf"
       },
@@ -58422,7 +58359,7 @@
         "taxonomy_score": 6.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§8",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§8",
         "page_number": 29,
         "source_file": "2003 20021_L1_som_vedtaget.pdf"
       },
@@ -59262,7 +59199,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 17,
         "source_file": "2003 20021_L1_som_vedtaget.pdf"
       },
@@ -59283,7 +59220,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 17,
         "source_file": "2003 20021_L1_som_vedtaget.pdf"
       },
@@ -59325,7 +59262,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 17,
         "source_file": "2003 20021_L1_som_vedtaget.pdf"
       },
@@ -59346,7 +59283,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[fund, funds]; section=§28",
+        "rationale": "score=2.0; hits=[funds, fund]; section=§28",
         "page_number": 140,
         "source_file": "2003 20021_L1_som_vedtaget.pdf"
       },
@@ -59710,7 +59647,7 @@
         "taxonomy_score": 10.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=10.0; hits=[forskning, videnskab, forskningsrad, programme, program]; section=§19",
+        "rationale": "score=10.0; hits=[forskning, videnskab, forskningsrad, program, programme]; section=§19",
         "page_number": 86,
         "source_file": "2004 20031_L1_som_vedtaget.pdf"
       },
@@ -59752,7 +59689,7 @@
         "taxonomy_score": 8.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning, videnskab, programme, program]; section=§19",
+        "rationale": "score=8.0; hits=[forskning, videnskab, program, programme]; section=§19",
         "page_number": 84,
         "source_file": "2004 20031_L1_som_vedtaget.pdf"
       },
@@ -59773,7 +59710,7 @@
         "taxonomy_score": 8.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning, videnskab, programme, program]; section=§19",
+        "rationale": "score=8.0; hits=[forskning, videnskab, program, programme]; section=§19",
         "page_number": 84,
         "source_file": "2004 20031_L1_som_vedtaget.pdf"
       },
@@ -59815,7 +59752,7 @@
         "taxonomy_score": 8.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning, videnskab, programme, program]; section=§19",
+        "rationale": "score=8.0; hits=[forskning, videnskab, program, programme]; section=§19",
         "page_number": 84,
         "source_file": "2004 20031_L1_som_vedtaget.pdf"
       },
@@ -59836,7 +59773,7 @@
         "taxonomy_score": 8.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning, videnskab, programme, program]; section=§19",
+        "rationale": "score=8.0; hits=[forskning, videnskab, program, programme]; section=§19",
         "page_number": 84,
         "source_file": "2004 20031_L1_som_vedtaget.pdf"
       },
@@ -59878,7 +59815,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[innovation, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=6.0; hits=[innovation, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 94,
         "source_file": "2004 20031_L1_som_vedtaget.pdf"
       },
@@ -59941,7 +59878,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§8",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§8",
         "page_number": 30,
         "source_file": "2004 20031_L1_som_vedtaget.pdf"
       },
@@ -60046,7 +59983,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§8",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§8",
         "page_number": 29,
         "source_file": "2004 20031_L1_som_vedtaget.pdf"
       },
@@ -60214,7 +60151,7 @@
         "taxonomy_score": 6.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§8",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§8",
         "page_number": 30,
         "source_file": "2004 20031_L1_som_vedtaget.pdf"
       },
@@ -60256,7 +60193,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[innovation, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=6.0; hits=[innovation, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 94,
         "source_file": "2004 20031_L1_som_vedtaget.pdf"
       },
@@ -60277,7 +60214,7 @@
         "taxonomy_score": 6.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§8",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§8",
         "page_number": 25,
         "source_file": "2004 20031_L1_som_vedtaget.pdf"
       },
@@ -60970,7 +60907,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 17,
         "source_file": "2004 20031_L1_som_vedtaget.pdf"
       },
@@ -61012,7 +60949,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 17,
         "source_file": "2004 20031_L1_som_vedtaget.pdf"
       },
@@ -61033,7 +60970,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 17,
         "source_file": "2004 20031_L1_som_vedtaget.pdf"
       },
@@ -61054,7 +60991,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[fund, funds]; section=§28",
+        "rationale": "score=2.0; hits=[funds, fund]; section=§28",
         "page_number": 134,
         "source_file": "2004 20031_L1_som_vedtaget.pdf"
       },
@@ -61376,7 +61313,7 @@
         "taxonomy_score": 10.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=10.0; hits=[forskning, videnskab, forskningsrad, programme, program]; section=§19",
+        "rationale": "score=10.0; hits=[forskning, videnskab, forskningsrad, program, programme]; section=§19",
         "page_number": 87,
         "source_file": "2005 20041_L1_som_vedtaget.pdf"
       },
@@ -61418,7 +61355,7 @@
         "taxonomy_score": 8.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning, videnskab, programme, program]; section=§19",
+        "rationale": "score=8.0; hits=[forskning, videnskab, program, programme]; section=§19",
         "page_number": 85,
         "source_file": "2005 20041_L1_som_vedtaget.pdf"
       },
@@ -61439,7 +61376,7 @@
         "taxonomy_score": 8.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning, videnskab, programme, program]; section=§19",
+        "rationale": "score=8.0; hits=[forskning, videnskab, program, programme]; section=§19",
         "page_number": 85,
         "source_file": "2005 20041_L1_som_vedtaget.pdf"
       },
@@ -61523,7 +61460,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§8",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§8",
         "page_number": 29,
         "source_file": "2005 20041_L1_som_vedtaget.pdf"
       },
@@ -61628,7 +61565,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§8",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§8",
         "page_number": 29,
         "source_file": "2005 20041_L1_som_vedtaget.pdf"
       },
@@ -61754,7 +61691,7 @@
         "taxonomy_score": 6.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§8",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§8",
         "page_number": 29,
         "source_file": "2005 20041_L1_som_vedtaget.pdf"
       },
@@ -62447,7 +62384,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 18,
         "source_file": "2005 20041_L1_som_vedtaget.pdf"
       },
@@ -62468,7 +62405,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 18,
         "source_file": "2005 20041_L1_som_vedtaget.pdf"
       },
@@ -62510,7 +62447,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 18,
         "source_file": "2005 20041_L1_som_vedtaget.pdf"
       },
@@ -62552,7 +62489,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[fund, funds]; section=§28",
+        "rationale": "score=2.0; hits=[funds, fund]; section=§28",
         "page_number": 140,
         "source_file": "2005 20041_L1_som_vedtaget.pdf"
       },
@@ -62874,7 +62811,7 @@
         "taxonomy_score": 8.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning, videnskab, programme, program]; section=§19",
+        "rationale": "score=8.0; hits=[forskning, videnskab, program, programme]; section=§19",
         "page_number": 82,
         "source_file": "2006 20051_L2_som_vedtaget.pdf"
       },
@@ -62895,7 +62832,7 @@
         "taxonomy_score": 8.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning, videnskab, programme, program]; section=§19",
+        "rationale": "score=8.0; hits=[forskning, videnskab, program, programme]; section=§19",
         "page_number": 82,
         "source_file": "2006 20051_L2_som_vedtaget.pdf"
       },
@@ -62916,7 +62853,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[videnskab, innovation, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[videnskab, innovation, program, programme]; section=§19",
         "page_number": 85,
         "source_file": "2006 20051_L2_som_vedtaget.pdf"
       },
@@ -63000,7 +62937,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§28",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§28",
         "page_number": 138,
         "source_file": "2006 20051_L2_som_vedtaget.pdf"
       },
@@ -63105,7 +63042,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§8",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§8",
         "page_number": 26,
         "source_file": "2006 20051_L2_som_vedtaget.pdf"
       },
@@ -63189,7 +63126,7 @@
         "taxonomy_score": 6.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§28",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§28",
         "page_number": 138,
         "source_file": "2006 20051_L2_som_vedtaget.pdf"
       },
@@ -63861,7 +63798,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 17,
         "source_file": "2006 20051_L2_som_vedtaget.pdf"
       },
@@ -63903,7 +63840,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 17,
         "source_file": "2006 20051_L2_som_vedtaget.pdf"
       },
@@ -63924,7 +63861,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§6",
+        "rationale": "score=2.0; hits=[program, programme]; section=§6",
         "page_number": 17,
         "source_file": "2006 20051_L2_som_vedtaget.pdf"
       },
@@ -64008,7 +63945,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[fund, funds]; section=§28",
+        "rationale": "score=2.0; hits=[funds, fund]; section=§28",
         "page_number": 137,
         "source_file": "2006 20051_L2_som_vedtaget.pdf"
       },
@@ -64351,7 +64288,7 @@
         "taxonomy_score": 12.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=12.0; hits=[forskning, videnskab, universiteter, universiteterne, forskningsbevilling, forskningsbevillinger]; section=§19",
+        "rationale": "score=12.0; hits=[forskning, videnskab, universiteter, universiteterne, forskningsbevillinger, forskningsbevilling]; section=§19",
         "page_number": 82,
         "source_file": "2007 20061_L1_som_vedtaget.pdf"
       },
@@ -64372,7 +64309,7 @@
         "taxonomy_score": 10.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=10.0; hits=[forskning, videnskab, forskningsrad, programme, program]; section=§19",
+        "rationale": "score=10.0; hits=[forskning, videnskab, forskningsrad, program, programme]; section=§19",
         "page_number": 82,
         "source_file": "2007 20061_L1_som_vedtaget.pdf"
       },
@@ -64435,7 +64372,7 @@
         "taxonomy_score": 8.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning, videnskab, programme, program]; section=§19",
+        "rationale": "score=8.0; hits=[forskning, videnskab, program, programme]; section=§19",
         "page_number": 80,
         "source_file": "2007 20061_L1_som_vedtaget.pdf"
       },
@@ -64477,7 +64414,7 @@
         "taxonomy_score": 8.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning, videnskab, programme, program]; section=§19",
+        "rationale": "score=8.0; hits=[forskning, videnskab, program, programme]; section=§19",
         "page_number": 80,
         "source_file": "2007 20061_L1_som_vedtaget.pdf"
       },
@@ -64498,7 +64435,7 @@
         "taxonomy_score": 8.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning, videnskab, programme, program]; section=§19",
+        "rationale": "score=8.0; hits=[forskning, videnskab, program, programme]; section=§19",
         "page_number": 80,
         "source_file": "2007 20061_L1_som_vedtaget.pdf"
       },
@@ -64540,7 +64477,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[innovation, undervisningsministeriet, programme, program]; section=§20",
+        "rationale": "score=6.0; hits=[innovation, undervisningsministeriet, program, programme]; section=§20",
         "page_number": 90,
         "source_file": "2007 20061_L1_som_vedtaget.pdf"
       },
@@ -64582,7 +64519,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§28",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§28",
         "page_number": 135,
         "source_file": "2007 20061_L1_som_vedtaget.pdf"
       },
@@ -64729,7 +64666,7 @@
         "taxonomy_score": 6.0,
         "decision": "review",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§28",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§28",
         "page_number": 139,
         "source_file": "2007 20061_L1_som_vedtaget.pdf"
       },
@@ -65590,7 +65527,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§16",
+        "rationale": "score=2.0; hits=[program, programme]; section=§16",
         "page_number": 60,
         "source_file": "2007 20061_L1_som_vedtaget.pdf"
       },
@@ -65632,7 +65569,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[fund, funds]; section=§28",
+        "rationale": "score=2.0; hits=[funds, fund]; section=§28",
         "page_number": 138,
         "source_file": "2007 20061_L1_som_vedtaget.pdf"
       },
@@ -65786,7 +65723,7 @@
         "taxonomy_score": 12.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=12.0; hits=[forskning, videnskab, universiteter, universiteterne, forskningsbevilling, forskningsbevillinger]; section=§19",
+        "rationale": "score=12.0; hits=[forskning, videnskab, universiteter, universiteterne, forskningsbevillinger, forskningsbevilling]; section=§19",
         "page_number": 87,
         "source_file": "2008 A20080000130.pdf"
       },
@@ -65828,7 +65765,7 @@
         "taxonomy_score": 8.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning, videnskab, programme, program]; section=§19",
+        "rationale": "score=8.0; hits=[forskning, videnskab, program, programme]; section=§19",
         "page_number": 87,
         "source_file": "2008 A20080000130.pdf"
       },
@@ -65912,7 +65849,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§29",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§29",
         "page_number": 147,
         "source_file": "2008 A20080000130.pdf"
       },
@@ -66339,7 +66276,7 @@
         "taxonomy_score": 12.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=12.0; hits=[forskning, videnskab, universiteter, universiteterne, forskningsbevilling, forskningsbevillinger]; section=§19",
+        "rationale": "score=12.0; hits=[forskning, videnskab, universiteter, universiteterne, forskningsbevillinger, forskningsbevilling]; section=§19",
         "page_number": 92,
         "source_file": "2009 A20080000330.pdf"
       },
@@ -66381,7 +66318,7 @@
         "taxonomy_score": 8.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning, videnskab, programme, program]; section=§19",
+        "rationale": "score=8.0; hits=[forskning, videnskab, program, programme]; section=§19",
         "page_number": 92,
         "source_file": "2009 A20080000330.pdf"
       },
@@ -66465,7 +66402,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§29",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§29",
         "page_number": 151,
         "source_file": "2009 A20080000330.pdf"
       },
@@ -66913,7 +66850,7 @@
         "taxonomy_score": 8.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning, videnskab, programme, program]; section=§19",
+        "rationale": "score=8.0; hits=[forskning, videnskab, program, programme]; section=§19",
         "page_number": 90,
         "source_file": "2010 A20090000230.pdf"
       },
@@ -66934,7 +66871,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[videnskab, innovation, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[videnskab, innovation, program, programme]; section=§19",
         "page_number": 93,
         "source_file": "2010 A20090000230.pdf"
       },
@@ -66955,7 +66892,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[videnskab, innovation, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[videnskab, innovation, program, programme]; section=§19",
         "page_number": 96,
         "source_file": "2010 A20090000230.pdf"
       },
@@ -66976,7 +66913,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[videnskab, innovation, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[videnskab, innovation, program, programme]; section=§19",
         "page_number": 96,
         "source_file": "2010 A20090000230.pdf"
       },
@@ -66997,7 +66934,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[videnskab, innovation, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[videnskab, innovation, program, programme]; section=§19",
         "page_number": 95,
         "source_file": "2010 A20090000230.pdf"
       },
@@ -67018,7 +66955,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[videnskab, innovation, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[videnskab, innovation, program, programme]; section=§19",
         "page_number": 97,
         "source_file": "2010 A20090000230.pdf"
       },
@@ -67039,7 +66976,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[videnskab, innovation, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[videnskab, innovation, program, programme]; section=§19",
         "page_number": 95,
         "source_file": "2010 A20090000230.pdf"
       },
@@ -67060,7 +66997,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[videnskab, innovation, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[videnskab, innovation, program, programme]; section=§19",
         "page_number": 97,
         "source_file": "2010 A20090000230.pdf"
       },
@@ -67081,7 +67018,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§29",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§29",
         "page_number": 149,
         "source_file": "2010 A20090000230.pdf"
       },
@@ -67123,7 +67060,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§24",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§24",
         "page_number": 138,
         "source_file": "2010 A20090000230.pdf"
       },
@@ -67718,7 +67655,7 @@
         "taxonomy_score": 8.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=8.0; hits=[forskning, videnskab, programme, program]; section=§19",
+        "rationale": "score=8.0; hits=[forskning, videnskab, program, programme]; section=§19",
         "page_number": 89,
         "source_file": "2011 A20100000230.pdf"
       },
@@ -67739,7 +67676,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[videnskab, innovation, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[videnskab, innovation, program, programme]; section=§19",
         "page_number": 95,
         "source_file": "2011 A20100000230.pdf"
       },
@@ -67760,7 +67697,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[videnskab, innovation, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[videnskab, innovation, program, programme]; section=§19",
         "page_number": 95,
         "source_file": "2011 A20100000230.pdf"
       },
@@ -67781,7 +67718,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[videnskab, innovation, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[videnskab, innovation, program, programme]; section=§19",
         "page_number": 94,
         "source_file": "2011 A20100000230.pdf"
       },
@@ -67802,7 +67739,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[videnskab, innovation, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[videnskab, innovation, program, programme]; section=§19",
         "page_number": 96,
         "source_file": "2011 A20100000230.pdf"
       },
@@ -67823,7 +67760,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[videnskab, innovation, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[videnskab, innovation, program, programme]; section=§19",
         "page_number": 94,
         "source_file": "2011 A20100000230.pdf"
       },
@@ -67844,7 +67781,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[videnskab, innovation, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[videnskab, innovation, program, programme]; section=§19",
         "page_number": 96,
         "source_file": "2011 A20100000230.pdf"
       },
@@ -67886,7 +67823,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§29",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§29",
         "page_number": 147,
         "source_file": "2011 A20100000230.pdf"
       },
@@ -68369,7 +68306,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§15",
+        "rationale": "score=2.0; hits=[program, programme]; section=§15",
         "page_number": 59,
         "source_file": "2011 A20100000230.pdf"
       },
@@ -68481,7 +68418,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, innovation, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, innovation, program, programme]; section=§19",
         "page_number": 101,
         "source_file": "2012 A20120000130.pdf"
       },
@@ -68502,7 +68439,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§29",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§29",
         "page_number": 160,
         "source_file": "2012 A20120000130.pdf"
       },
@@ -69412,7 +69349,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, innovation, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, innovation, program, programme]; section=§19",
         "page_number": 94,
         "source_file": "2013 A20120000330.pdf"
       },
@@ -69454,7 +69391,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§29",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§29",
         "page_number": 153,
         "source_file": "2013 A20120000330.pdf"
       },
@@ -70266,7 +70203,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, innovation, innovationsfond, forskningsministeriet]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, innovation, forskningsministeriet, innovationsfond]; section=§19",
         "page_number": 105,
         "source_file": "2015 A20140000230.pdf"
       },
@@ -70308,7 +70245,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsrad, forskningsministeriet]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, forskningsrad]; section=§19",
         "page_number": 101,
         "source_file": "2015 A20140000230.pdf"
       },
@@ -70329,7 +70266,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 102,
         "source_file": "2015 A20140000230.pdf"
       },
@@ -70350,7 +70287,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§29",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§29",
         "page_number": 158,
         "source_file": "2015 A20140000230.pdf"
       },
@@ -70959,7 +70896,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§17",
+        "rationale": "score=2.0; hits=[program, programme]; section=§17",
         "page_number": 95,
         "source_file": "2015 A20140000230.pdf"
       },
@@ -71029,7 +70966,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, innovation, innovationsfond, forskningsministeriet]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, innovation, forskningsministeriet, innovationsfond]; section=§19",
         "page_number": 101,
         "source_file": "2016 A20150000230.pdf"
       },
@@ -71071,7 +71008,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsrad, forskningsministeriet]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, forskningsrad]; section=§19",
         "page_number": 97,
         "source_file": "2016 A20150000230.pdf"
       },
@@ -71092,7 +71029,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, programme, program]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, program, programme]; section=§19",
         "page_number": 99,
         "source_file": "2016 A20150000230.pdf"
       },
@@ -71113,7 +71050,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§29",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§29",
         "page_number": 152,
         "source_file": "2016 A20150000230.pdf"
       },
@@ -71813,7 +71750,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, innovation, innovationsfond, forskningsministeriet]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, innovation, forskningsministeriet, innovationsfond]; section=§19",
         "page_number": 101,
         "source_file": "2017 A20160000230.pdf"
       },
@@ -71855,7 +71792,7 @@
         "taxonomy_score": 7.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=7.0; hits=[forskning, forskningsrad, forskningsministeriet]; section=§19",
+        "rationale": "score=7.0; hits=[forskning, forskningsministeriet, forskningsrad]; section=§19",
         "page_number": 97,
         "source_file": "2017 A20160000230.pdf"
       },
@@ -71897,7 +71834,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§29",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§29",
         "page_number": 153,
         "source_file": "2017 A20160000230.pdf"
       },
@@ -71918,7 +71855,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§24",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§24",
         "page_number": 137,
         "source_file": "2017 A20160000230.pdf"
       },
@@ -72618,7 +72555,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, innovation, innovationsfond, forskningsministeriet]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, innovation, forskningsministeriet, innovationsfond]; section=§19",
         "page_number": 107,
         "source_file": "2019 AE2602.pdf"
       },
@@ -72639,7 +72576,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, innovation, innovationsfond, forskningsministeriet]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, innovation, forskningsministeriet, innovationsfond]; section=§19",
         "page_number": 107,
         "source_file": "2019 AE2602.pdf"
       },
@@ -72702,7 +72639,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§29",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§29",
         "page_number": 161,
         "source_file": "2019 AE2602.pdf"
       },
@@ -72723,7 +72660,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§24",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§24",
         "page_number": 141,
         "source_file": "2019 AE2602.pdf"
       },
@@ -73423,7 +73360,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, innovation, innovationsfond, forskningsministeriet]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, innovation, forskningsministeriet, innovationsfond]; section=§19",
         "page_number": 109,
         "source_file": "2020 AE2755 (3).pdf"
       },
@@ -73486,7 +73423,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§29",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§29",
         "page_number": 170,
         "source_file": "2020 AE2755 (3).pdf"
       },
@@ -73507,7 +73444,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§24",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§24",
         "page_number": 147,
         "source_file": "2020 AE2755 (3).pdf"
       },
@@ -74158,7 +74095,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[programme, program]; section=§21",
+        "rationale": "score=2.0; hits=[program, programme]; section=§21",
         "page_number": 138,
         "source_file": "2020 AE2755 (3).pdf"
       },
@@ -74249,7 +74186,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, innovation, innovationsfond, forskningsministeriet]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, innovation, forskningsministeriet, innovationsfond]; section=§19",
         "page_number": 111,
         "source_file": "2021 AE2845.pdf"
       },
@@ -74312,7 +74249,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§29",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§29",
         "page_number": 182,
         "source_file": "2021 AE2845.pdf"
       },
@@ -74333,7 +74270,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§24",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§24",
         "page_number": 157,
         "source_file": "2021 AE2845.pdf"
       },
@@ -75033,7 +74970,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, innovation, innovationsfond, forskningsministeriet]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, innovation, forskningsministeriet, innovationsfond]; section=§19",
         "page_number": 118,
         "source_file": "2022 AE2954.pdf"
       },
@@ -75096,7 +75033,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§29",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§29",
         "page_number": 187,
         "source_file": "2022 AE2954.pdf"
       },
@@ -75117,7 +75054,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§24",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§24",
         "page_number": 172,
         "source_file": "2022 AE2954.pdf"
       },
@@ -75138,7 +75075,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§23",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§23",
         "page_number": 161,
         "source_file": "2022 AE2954.pdf"
       },
@@ -75859,7 +75796,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, innovation, innovationsfond, forskningsministeriet]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, innovation, forskningsministeriet, innovationsfond]; section=§19",
         "page_number": 121,
         "source_file": "2023 AE3069.pdf"
       },
@@ -75880,7 +75817,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, innovation, innovationsfond, forskningsministeriet]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, innovation, forskningsministeriet, innovationsfond]; section=§19",
         "page_number": 121,
         "source_file": "2023 AE3069.pdf"
       },
@@ -75943,7 +75880,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§24",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§24",
         "page_number": 175,
         "source_file": "2023 AE3069.pdf"
       },
@@ -75964,7 +75901,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§29",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§29",
         "page_number": 194,
         "source_file": "2023 AE3069.pdf"
       },
@@ -75985,7 +75922,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§23",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§23",
         "page_number": 165,
         "source_file": "2023 AE3069.pdf"
       },
@@ -76706,7 +76643,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, innovation, innovationsfond, forskningsministeriet]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, innovation, forskningsministeriet, innovationsfond]; section=§19",
         "page_number": 115,
         "source_file": "2024 AE3126 (3).pdf"
       },
@@ -76769,7 +76706,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§29",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§29",
         "page_number": 186,
         "source_file": "2024 AE3126 (3).pdf"
       },
@@ -76790,7 +76727,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§24",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§24",
         "page_number": 170,
         "source_file": "2024 AE3126 (3).pdf"
       },
@@ -76811,7 +76748,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§23",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§23",
         "page_number": 160,
         "source_file": "2024 AE3126 (3).pdf"
       },
@@ -77532,7 +77469,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, innovation, innovationsfond, forskningsministeriet]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, innovation, forskningsministeriet, innovationsfond]; section=§19",
         "page_number": 125,
         "source_file": "2025 AE3209.pdf"
       },
@@ -77553,7 +77490,7 @@
         "taxonomy_score": 9.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=9.0; hits=[forskning, innovation, innovationsfond, forskningsministeriet]; section=§19",
+        "rationale": "score=9.0; hits=[forskning, innovation, forskningsministeriet, innovationsfond]; section=§19",
         "page_number": 125,
         "source_file": "2025 AE3209.pdf"
       },
@@ -77826,7 +77763,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§29",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§29",
         "page_number": 202,
         "source_file": "2025 AE3209.pdf"
       },
@@ -77847,7 +77784,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§24",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§24",
         "page_number": 183,
         "source_file": "2025 AE3209.pdf"
       },
@@ -77868,7 +77805,7 @@
         "taxonomy_score": 6.0,
         "decision": "include",
         "confidence": 0.99,
-        "rationale": "score=6.0; hits=[forskning og udvikling, forskning]; section=§23",
+        "rationale": "score=6.0; hits=[forskning, forskning og udvikling]; section=§23",
         "page_number": 174,
         "source_file": "2025 AE3209.pdf"
       },
@@ -80430,7 +80367,7 @@
         "taxonomy_score": 2.0,
         "decision": "review",
         "confidence": 0.7,
-        "rationale": "score=2.0; hits=[fund, funds]; section=§6",
+        "rationale": "score=2.0; hits=[funds, fund]; section=§6",
         "page_number": 19,
         "source_file": "2025 AE3209.pdf"
       },

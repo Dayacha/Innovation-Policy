@@ -504,7 +504,11 @@ def extract_budget_items(pages_df: pd.DataFrame) -> pd.DataFrame:
                 # "Tilskud under [Ministry]" is a Danish pension/transfer
                 # allocation pattern — grants routed through one ministry
                 # to pay pension obligations. Not R&D spending.
-                if re.search(r"\btilskud under\b.+\bministeriet\b", desc_clean, re.IGNORECASE):
+                _full_text = f"{desc_clean} {scoring_text}"
+                if re.search(r"\btilskud under\b.+ministeriet", _full_text, re.IGNORECASE):
+                    continue
+                # Non-deductible VAT refunds and leisure education — not R&D
+                if re.search(r"\bkøbsmoms\b|\bfritidsundervisning\b", desc_clean, re.IGNORECASE):
                     continue
                 if desc_clean.lower() in {
                     "tilskud", "driftsudgifter", "anlægsudgifter", "anlægstilskud",
