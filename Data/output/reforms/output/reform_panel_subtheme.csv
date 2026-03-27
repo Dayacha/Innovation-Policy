@@ -2567,7 +2567,7 @@ DNK,Denmark,2005,innovation,rd_funding,1,1,0,0,1,1,0,0
 DNK,Denmark,2005,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DNK,Denmark,2005,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DNK,Denmark,2005,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-DNK,Denmark,2006,innovation,human_capital,0,0,0,0,0,0,0,0
+DNK,Denmark,2006,innovation,human_capital,1,1,1,1,1,1,0,0
 DNK,Denmark,2006,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DNK,Denmark,2006,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DNK,Denmark,2006,innovation,other,0,0,0,0,0,0,0,0
@@ -2582,21 +2582,21 @@ DNK,Denmark,2007,innovation,other,0,0,0,0,0,0,0,0
 DNK,Denmark,2007,innovation,rd_funding,1,1,1,1,1,1,0,0
 DNK,Denmark,2007,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DNK,Denmark,2007,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-DNK,Denmark,2007,innovation,startup_ecosystem,1,1,0,0,1,1,0,0
+DNK,Denmark,2007,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 DNK,Denmark,2008,innovation,human_capital,0,0,0,0,0,0,0,0
 DNK,Denmark,2008,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DNK,Denmark,2008,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DNK,Denmark,2008,innovation,other,0,0,0,0,0,0,0,0
-DNK,Denmark,2008,innovation,rd_funding,0,0,0,0,0,0,0,0
+DNK,Denmark,2008,innovation,rd_funding,1,1,0,0,1,1,0,0
 DNK,Denmark,2008,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DNK,Denmark,2008,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-DNK,Denmark,2008,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+DNK,Denmark,2008,innovation,startup_ecosystem,1,1,0,0,1,1,0,0
 DNK,Denmark,2009,innovation,human_capital,0,0,0,0,0,0,0,0
 DNK,Denmark,2009,innovation,innovation_instruments,1,1,1,1,1,1,0,0
 DNK,Denmark,2009,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DNK,Denmark,2009,innovation,other,0,0,0,0,0,0,0,0
 DNK,Denmark,2009,innovation,rd_funding,0,0,0,0,0,0,0,0
-DNK,Denmark,2009,innovation,research_infrastructure,1,2,1,2,1,2,0,0
+DNK,Denmark,2009,innovation,research_infrastructure,1,1,1,1,1,1,0,0
 DNK,Denmark,2009,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DNK,Denmark,2009,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 DNK,Denmark,2010,innovation,human_capital,0,0,0,0,0,0,0,0
@@ -2606,7 +2606,7 @@ DNK,Denmark,2010,innovation,other,0,0,0,0,0,0,0,0
 DNK,Denmark,2010,innovation,rd_funding,0,0,0,0,0,0,0,0
 DNK,Denmark,2010,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DNK,Denmark,2010,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-DNK,Denmark,2010,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+DNK,Denmark,2010,innovation,startup_ecosystem,1,1,0,0,1,1,0,0
 DNK,Denmark,2011,innovation,human_capital,0,0,0,0,0,0,0,0
 DNK,Denmark,2011,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DNK,Denmark,2011,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
@@ -2616,10 +2616,10 @@ DNK,Denmark,2011,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DNK,Denmark,2011,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DNK,Denmark,2011,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 DNK,Denmark,2012,innovation,human_capital,0,0,0,0,0,0,0,0
-DNK,Denmark,2012,innovation,innovation_instruments,1,1,1,1,1,1,0,0
+DNK,Denmark,2012,innovation,innovation_instruments,1,2,1,1,1,2,0,0
 DNK,Denmark,2012,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DNK,Denmark,2012,innovation,other,0,0,0,0,0,0,0,0
-DNK,Denmark,2012,innovation,rd_funding,0,0,0,0,0,0,0,0
+DNK,Denmark,2012,innovation,rd_funding,1,2,1,1,1,2,0,0
 DNK,Denmark,2012,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DNK,Denmark,2012,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DNK,Denmark,2012,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
@@ -2630,7 +2630,7 @@ DNK,Denmark,2013,innovation,other,0,0,0,0,0,0,0,0
 DNK,Denmark,2013,innovation,rd_funding,0,0,0,0,0,0,0,0
 DNK,Denmark,2013,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DNK,Denmark,2013,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-DNK,Denmark,2013,innovation,startup_ecosystem,1,2,1,1,1,2,0,0
+DNK,Denmark,2013,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 DNK,Denmark,2014,innovation,human_capital,0,0,0,0,0,0,0,0
 DNK,Denmark,2014,innovation,innovation_instruments,1,1,1,1,1,1,0,0
 DNK,Denmark,2014,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
@@ -3719,7 +3719,7 @@ FRA,France,2025,innovation,rd_funding,0,0,0,0,0,0,0,0
 FRA,France,2025,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,2025,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 FRA,France,2025,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-GBR,United Kingdom,1995,innovation,human_capital,0,0,0,0,0,0,0,0
+GBR,United Kingdom,1995,innovation,human_capital,1,1,1,1,1,1,0,0
 GBR,United Kingdom,1995,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 GBR,United Kingdom,1995,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 GBR,United Kingdom,1995,innovation,other,0,0,0,0,0,0,0,0
@@ -3760,7 +3760,7 @@ GBR,United Kingdom,1999,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 GBR,United Kingdom,1999,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 GBR,United Kingdom,1999,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2000,innovation,human_capital,0,0,0,0,0,0,0,0
-GBR,United Kingdom,2000,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2000,innovation,innovation_instruments,1,2,1,1,1,2,0,0
 GBR,United Kingdom,2000,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2000,innovation,other,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2000,innovation,rd_funding,0,0,0,0,0,0,0,0
@@ -3791,7 +3791,7 @@ GBR,United Kingdom,2003,innovation,rd_funding,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2003,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2003,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2003,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-GBR,United Kingdom,2004,innovation,human_capital,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2004,innovation,human_capital,1,1,1,1,1,1,0,0
 GBR,United Kingdom,2004,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2004,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2004,innovation,other,0,0,0,0,0,0,0,0
@@ -3802,8 +3802,8 @@ GBR,United Kingdom,2004,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2005,innovation,human_capital,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2005,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2005,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
-GBR,United Kingdom,2005,innovation,other,0,0,0,0,0,0,0,0
-GBR,United Kingdom,2005,innovation,rd_funding,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2005,innovation,other,1,1,1,1,1,1,0,0
+GBR,United Kingdom,2005,innovation,rd_funding,1,1,1,1,1,1,0,0
 GBR,United Kingdom,2005,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2005,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2005,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
@@ -3815,9 +3815,9 @@ GBR,United Kingdom,2006,innovation,rd_funding,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2006,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2006,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2006,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-GBR,United Kingdom,2007,innovation,human_capital,0,0,0,0,0,0,0,0
-GBR,United Kingdom,2007,innovation,innovation_instruments,0,0,0,0,0,0,0,0
-GBR,United Kingdom,2007,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2007,innovation,human_capital,1,1,1,1,1,1,0,0
+GBR,United Kingdom,2007,innovation,innovation_instruments,1,2,1,2,1,2,0,0
+GBR,United Kingdom,2007,innovation,knowledge_transfer,1,1,1,1,1,1,0,0
 GBR,United Kingdom,2007,innovation,other,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2007,innovation,rd_funding,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2007,innovation,research_infrastructure,0,0,0,0,0,0,0,0
@@ -3828,7 +3828,7 @@ GBR,United Kingdom,2008,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2008,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2008,innovation,other,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2008,innovation,rd_funding,0,0,0,0,0,0,0,0
-GBR,United Kingdom,2008,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2008,innovation,research_infrastructure,1,1,1,1,1,1,0,0
 GBR,United Kingdom,2008,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2008,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2009,innovation,human_capital,0,0,0,0,0,0,0,0
@@ -3845,7 +3845,7 @@ GBR,United Kingdom,2010,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2010,innovation,other,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2010,innovation,rd_funding,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2010,innovation,research_infrastructure,0,0,0,0,0,0,0,0
-GBR,United Kingdom,2010,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2010,innovation,sectoral_rd,1,1,1,1,1,1,0,0
 GBR,United Kingdom,2010,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2011,innovation,human_capital,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2011,innovation,innovation_instruments,0,0,0,0,0,0,0,0
@@ -3854,12 +3854,12 @@ GBR,United Kingdom,2011,innovation,other,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2011,innovation,rd_funding,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2011,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2011,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-GBR,United Kingdom,2011,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2011,innovation,startup_ecosystem,1,1,0,0,1,1,0,0
 GBR,United Kingdom,2012,innovation,human_capital,0,0,0,0,0,0,0,0
-GBR,United Kingdom,2012,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2012,innovation,innovation_instruments,1,2,1,1,1,2,0,0
 GBR,United Kingdom,2012,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2012,innovation,other,0,0,0,0,0,0,0,0
-GBR,United Kingdom,2012,innovation,rd_funding,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2012,innovation,rd_funding,1,1,1,1,1,1,0,0
 GBR,United Kingdom,2012,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2012,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2012,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
@@ -3884,7 +3884,7 @@ GBR,United Kingdom,2015,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2015,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2015,innovation,other,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2015,innovation,rd_funding,0,0,0,0,0,0,0,0
-GBR,United Kingdom,2015,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2015,innovation,research_infrastructure,1,1,1,1,1,1,0,0
 GBR,United Kingdom,2015,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2015,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2016,innovation,human_capital,0,0,0,0,0,0,0,0
@@ -3896,7 +3896,7 @@ GBR,United Kingdom,2016,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2016,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2016,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2017,innovation,human_capital,0,0,0,0,0,0,0,0
-GBR,United Kingdom,2017,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2017,innovation,innovation_instruments,1,1,0,0,1,1,0,0
 GBR,United Kingdom,2017,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2017,innovation,other,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2017,innovation,rd_funding,0,0,0,0,0,0,0,0
@@ -3931,7 +3931,7 @@ GBR,United Kingdom,2021,innovation,human_capital,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2021,innovation,other,0,0,0,0,0,0,0,0
-GBR,United Kingdom,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2021,innovation,rd_funding,1,1,1,1,1,1,0,0
 GBR,United Kingdom,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 GBR,United Kingdom,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0

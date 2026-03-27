@@ -61,7 +61,7 @@ Data/processed/
 
 # ── Intermediate pipeline outputs (large, regenerable) ───────────────────────
 Data/output/reforms/extracted_text/
-Data/output/reforms/reforms_json*/
+#Data/output/reforms/reforms_json*/
 
 # ── Final results are NOT ignored — commit them so others can see them ────────
 # Data/output/budget/results*    ← tracked

@@ -7,7 +7,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_1997.txt",
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DNK_1997.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-1997_en",
-    "status": "pdf_available",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/1997/06/oecd-economic-surveys-denmark-1997_g1ghg4ed/eco_surveys-dnk-1997-en.pdf"
   },
   "DNK_1999": {
@@ -18,7 +18,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_1999.txt",
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DNK_1999.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-1999_en",
-    "status": "pdf_available",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/1999/01/oecd-economic-surveys-denmark-1999_g1ghg5ad/eco_surveys-dnk-1999-en.pdf"
   },
   "DNK_2003": {
@@ -29,7 +29,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_2003.txt",
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DNK_2003.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-2003_en",
-    "status": "pdf_available",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2003/05/oecd-economic-surveys-denmark-2003_g1gh3296/eco_surveys-dnk-2003-en.pdf"
   },
   "DNK_2005": {
@@ -40,7 +40,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_2005.txt",
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DNK_2005.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-2005_en",
-    "status": "pdf_available",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2005/03/oecd-economic-surveys-denmark-2005_g1gh494f/eco_surveys-dnk-2005-en.pdf"
   },
   "DNK_2009": {
@@ -51,7 +51,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_2009.txt",
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DNK_2009.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-2009_en",
-    "status": "pdf_available",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2009/11/oecd-economic-surveys-denmark-2009_g1ghbbed/eco_surveys-dnk-2009-en.pdf"
   },
   "DNK_2013": {
@@ -62,7 +62,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_2013.txt",
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DNK_2013.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-2013_en",
-    "status": "pdf_available",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2014/01/oecd-economic-surveys-denmark-2013_g1g3b817/eco_surveys-dnk-2013-en.pdf"
   },
   "DNK_2019": {
@@ -73,7 +73,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_2019.txt",
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DNK_2019.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-2019_en",
-    "status": "pdf_available",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2019/01/oecd-economic-surveys-denmark-2019_g1g9b002/eco_surveys-dnk-2019-en.pdf"
   },
   "DNK_2021": {
@@ -84,7 +84,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_2021.txt",
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DNK_2021.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-2021_en",
-    "status": "pdf_available",
+    "status": "reforms_extracted",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/b7/b7ac0285fa78e7d7183d4c457739d77886381bc3.pdf"
   },
   "DNK_2024": {
@@ -95,7 +95,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_2024.txt",
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DNK_2024.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-2024_en",
-    "status": "pdf_available",
+    "status": "reforms_extracted",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/08/089a3045a76466e11c6cc7c42a6a47f0e9274a1c.pdf"
   },
   "DNK_1995": {
@@ -6057,10 +6057,10 @@
     "country_name": "United Kingdom",
     "year": 1995,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/GBR_1995.pdf",
-    "text_path": null,
-    "reforms_path": null,
+    "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/GBR_1995.txt",
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_1995.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-1995_en",
-    "status": "pdf_available",
+    "status": "text_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/1995/01/oecd-economic-surveys-united-kingdom-1995_g1g1723d/eco_surveys-gbr-1995-en.pdf"
   },
   "GBR_1997": {
@@ -6108,10 +6108,10 @@
     "country_name": "United Kingdom",
     "year": 2005,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/GBR_2005.pdf",
-    "text_path": null,
-    "reforms_path": null,
+    "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/GBR_2005.txt",
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_2005.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2005_en",
-    "status": "pdf_available",
+    "status": "text_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2005/11/oecd-economic-surveys-united-kingdom-2005_g1gh5f46/eco_surveys-gbr-2005-en.pdf"
   },
   "GBR_2007": {
@@ -6119,10 +6119,10 @@
     "country_name": "United Kingdom",
     "year": 2007,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/GBR_2007.pdf",
-    "text_path": null,
-    "reforms_path": null,
+    "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/GBR_2007.txt",
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_2007.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2007_en",
-    "status": "pdf_available",
+    "status": "text_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2007/09/oecd-economic-surveys-united-kingdom-2007_g1gh75ab/eco_surveys-gbr-2007-en.pdf"
   },
   "GBR_2009": {
@@ -6130,10 +6130,10 @@
     "country_name": "United Kingdom",
     "year": 2009,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/GBR_2009.pdf",
-    "text_path": null,
-    "reforms_path": null,
+    "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/GBR_2009.txt",
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_2009.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2009_en",
-    "status": "pdf_available",
+    "status": "text_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2009/06/oecd-economic-surveys-united-kingdom-2009_g1gh9a71/eco_surveys-gbr-2009-en.pdf"
   },
   "GBR_2011": {
@@ -6141,10 +6141,10 @@
     "country_name": "United Kingdom",
     "year": 2011,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/GBR_2011.pdf",
-    "text_path": null,
-    "reforms_path": null,
+    "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/GBR_2011.txt",
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_2011.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2011_en",
-    "status": "pdf_available",
+    "status": "text_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2011/03/oecd-economic-surveys-united-kingdom-2011_g1g11662/eco_surveys-gbr-2011-en.pdf"
   },
   "GBR_2013": {
@@ -6152,10 +6152,10 @@
     "country_name": "United Kingdom",
     "year": 2013,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/GBR_2013.pdf",
-    "text_path": null,
-    "reforms_path": null,
+    "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/GBR_2013.txt",
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_2013.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2013_en",
-    "status": "pdf_available",
+    "status": "text_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2013/02/oecd-economic-surveys-united-kingdom-2013_g1g2207d/eco_surveys-gbr-2013-en.pdf"
   },
   "GBR_2015": {
@@ -6165,7 +6165,7 @@
     "pdf_path": null,
     "text_path": null,
     "reforms_path": null,
-    "url": "https://read.oecd.org/10.1787/eco_surveys-gbr-2015-en",
+    "url": "https://www.oecd.org/en/publications/oecd-economic-surveys-united-kingdom-2015_eco_surveys-gbr-2015-en.html",
     "status": "pending",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/c6/c6ec66a39bbde03b2a87935385700d5537ff3a45.pdf"
   },
@@ -6174,10 +6174,10 @@
     "country_name": "United Kingdom",
     "year": 2017,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/GBR_2017.pdf",
-    "text_path": null,
-    "reforms_path": null,
+    "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/GBR_2017.txt",
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_2017.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2017_en",
-    "status": "pdf_available",
+    "status": "text_extracted",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/16/16835bf410ec369f63f404a7182caf8eadab2722.pdf"
   },
   "GBR_2019": {
@@ -10452,7 +10452,7 @@
     "pdf_path": null,
     "text_path": null,
     "reforms_path": null,
-    "url": "https://read.oecd.org/10.1787/709e70b8-en",
+    "url": "https://www.oecd.org/en/publications/oecd-economic-surveys-united-kingdom-2024_709e70b8-en.html",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/bf/bf57952ee22c2afa9593ee7c1ebda122e7784532.pdf",
     "status": "pending"
   },
@@ -10463,7 +10463,7 @@
     "pdf_path": null,
     "text_path": null,
     "reforms_path": null,
-    "url": "https://read.oecd.org/10.1787/7c0f1268-en",
+    "url": "https://www.oecd.org/en/publications/oecd-economic-surveys-united-kingdom-2022_7c0f1268-en.html",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/bd/bd7fe9765aff0784e8881998449bdaa4516a4017.pdf",
     "status": "pending"
   },
@@ -10474,7 +10474,7 @@
     "pdf_path": null,
     "text_path": null,
     "reforms_path": null,
-    "url": "https://read.oecd.org/10.1787/2f684241-en",
+    "url": "https://www.oecd.org/en/publications/oecd-economic-surveys-united-kingdom-2020_eco_surveys-gbr-2020-en.html",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/ae/ae15c5a132e53675200b79937d26a947970c67e8.pdf",
     "status": "pending"
   },
@@ -10562,7 +10562,7 @@
     "pdf_path": null,
     "text_path": null,
     "reforms_path": null,
-    "url": "https://www.oecd.org/en/publications/oecd-economic-surveys-united-kingdom-1991_eco_surveys-gbr-1991-en.html",
+    "url": "https://www.oecd.org/en/publications/1991/01/oecd-economic-surveys-united-kingdom-1991_g1g171a5.html",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/1991/01/oecd-economic-surveys-united-kingdom-1991_g1g171a5/eco_surveys-gbr-1991-en.pdf",
     "status": "pending"
   },
@@ -14302,7 +14302,7 @@
     "pdf_path": null,
     "text_path": null,
     "reforms_path": null,
-    "url": "https://www.oecd.org/en/publications/oecd-economic-surveys-denmark-2016_eco_surveys-dnk-2016-en.html",
+    "url": "https://www.oecd.org/en/publications/2016/05/oecd-economic-surveys-denmark-2016_g1g6741f.html",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2016/05/oecd-economic-surveys-denmark-2016_g1g6741f/eco_surveys-dnk-2016-en.pdf",
     "status": "pending"
   },
@@ -14310,23 +14310,23 @@
     "country_code": "DNK",
     "country_name": "Denmark",
     "year": 2012,
-    "pdf_path": null,
-    "text_path": null,
-    "reforms_path": null,
-    "url": "https://www.oecd.org/en/publications/oecd-economic-surveys-denmark-2012_eco_surveys-dnk-2012-en.html",
+    "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DNK_2012.pdf",
+    "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_2012.txt",
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DNK_2012.json",
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-2012_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2012/01/oecd-economic-surveys-denmark-2012_g1g156d8/eco_surveys-dnk-2012-en.pdf",
-    "status": "pending"
+    "status": "reforms_extracted"
   },
   "DNK_2008": {
     "country_code": "DNK",
     "country_name": "Denmark",
     "year": 2008,
-    "pdf_path": null,
-    "text_path": null,
-    "reforms_path": null,
-    "url": "https://www.oecd.org/en/publications/oecd-economic-surveys-denmark-2008_eco_surveys-dnk-2008-en.html",
+    "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DNK_2008.pdf",
+    "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DNK_2008.txt",
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DNK_2008.json",
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-denmark-2008_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2008/02/oecd-economic-surveys-denmark-2008_g1gh88f3/eco_surveys-dnk-2008-en.pdf",
-    "status": "pending"
+    "status": "reforms_extracted"
   },
   "DNK_2006": {
     "country_code": "DNK",
@@ -14379,7 +14379,7 @@
     "pdf_path": null,
     "text_path": null,
     "reforms_path": null,
-    "url": "https://www.oecd.org/en/publications/oecd-economic-surveys-denmark-1994_eco_surveys-dnk-1994-en.html",
+    "url": "https://www.oecd.org/en/publications/1994/01/oecd-economic-surveys-denmark-1994_g1g17213.html",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/1994/01/oecd-economic-surveys-denmark-1994_g1g17213/eco_surveys-dnk-1994-en.pdf",
     "status": "pending"
   },
@@ -14687,7 +14687,7 @@
     "pdf_path": null,
     "text_path": null,
     "reforms_path": null,
-    "url": "https://read.oecd.org/10.1787/3d6cb4b8-en",
+    "url": "https://www.oecd.org/en/publications/oecd-economic-surveys-denmark-2026_3d6cb4b8-en.html",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/e6/e687473d24d465576f8d48489fe3f480d4d108ab.pdf",
     "status": "pending"
   },
