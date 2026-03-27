@@ -6060,7 +6060,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/GBR_1995.txt",
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_1995.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-1995_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/1995/01/oecd-economic-surveys-united-kingdom-1995_g1g1723d/eco_surveys-gbr-1995-en.pdf"
   },
   "GBR_1997": {
@@ -6111,7 +6111,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/GBR_2005.txt",
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_2005.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2005_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2005/11/oecd-economic-surveys-united-kingdom-2005_g1gh5f46/eco_surveys-gbr-2005-en.pdf"
   },
   "GBR_2007": {
@@ -6122,7 +6122,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/GBR_2007.txt",
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_2007.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2007_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2007/09/oecd-economic-surveys-united-kingdom-2007_g1gh75ab/eco_surveys-gbr-2007-en.pdf"
   },
   "GBR_2009": {
@@ -6133,7 +6133,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/GBR_2009.txt",
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_2009.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2009_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2009/06/oecd-economic-surveys-united-kingdom-2009_g1gh9a71/eco_surveys-gbr-2009-en.pdf"
   },
   "GBR_2011": {
@@ -6144,7 +6144,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/GBR_2011.txt",
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_2011.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2011_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2011/03/oecd-economic-surveys-united-kingdom-2011_g1g11662/eco_surveys-gbr-2011-en.pdf"
   },
   "GBR_2013": {
@@ -6155,7 +6155,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/GBR_2013.txt",
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_2013.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2013_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2013/02/oecd-economic-surveys-united-kingdom-2013_g1g2207d/eco_surveys-gbr-2013-en.pdf"
   },
   "GBR_2015": {
@@ -6177,7 +6177,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/GBR_2017.txt",
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_2017.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2017_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/16/16835bf410ec369f63f404a7182caf8eadab2722.pdf"
   },
   "GBR_2019": {

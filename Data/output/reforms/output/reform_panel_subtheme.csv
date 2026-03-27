@@ -2616,10 +2616,10 @@ DNK,Denmark,2011,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DNK,Denmark,2011,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DNK,Denmark,2011,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 DNK,Denmark,2012,innovation,human_capital,0,0,0,0,0,0,0,0
-DNK,Denmark,2012,innovation,innovation_instruments,1,2,1,1,1,2,0,0
+DNK,Denmark,2012,innovation,innovation_instruments,1,2,1,2,1,2,0,0
 DNK,Denmark,2012,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DNK,Denmark,2012,innovation,other,0,0,0,0,0,0,0,0
-DNK,Denmark,2012,innovation,rd_funding,1,2,1,1,1,2,0,0
+DNK,Denmark,2012,innovation,rd_funding,1,1,0,0,1,1,0,0
 DNK,Denmark,2012,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DNK,Denmark,2012,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DNK,Denmark,2012,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
@@ -2632,7 +2632,7 @@ DNK,Denmark,2013,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DNK,Denmark,2013,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DNK,Denmark,2013,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 DNK,Denmark,2014,innovation,human_capital,0,0,0,0,0,0,0,0
-DNK,Denmark,2014,innovation,innovation_instruments,1,1,1,1,1,1,0,0
+DNK,Denmark,2014,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DNK,Denmark,2014,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DNK,Denmark,2014,innovation,other,0,0,0,0,0,0,0,0
 DNK,Denmark,2014,innovation,rd_funding,0,0,0,0,0,0,0,0
