@@ -741,8 +741,7 @@ class ReformAnalyzer:
     def _validate_reform(self, reform, country_code, survey_year):
         """Ensure a reform dict has all required fields with valid values."""
         valid_statuses = {
-            "implemented", "legislated", "announced", "recommended",
-            "unclear",
+            "implemented", "legislated", "announced", "unclear",
         }
         valid_year_sources = {
             "explicit", "inferred", "imputed_survey_year",

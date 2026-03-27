@@ -5,8 +5,7 @@ Creates the final output datasets:
 1. reforms_mentions.csv  – one row per mention (raw, as extracted per survey)
 2. reforms_events.csv   – one row per deduplicated real-world reform event
 3. reform_panel.csv     – country×year panel built from events (for regressions)
-4. oecd_recommendations.csv – recommended but not (yet) implemented reforms
-5. summary_statistics.txt
+4. summary_statistics.txt
 """
 
 import json
@@ -526,7 +525,7 @@ class PanelBuilder:
                 for idx in cluster_indices:
                     mention_to_event[idx] = event_id
 
-        # Also pass through recommendations/announced as events (no dedup)
+        # Also pass through announced as events (no dedup)
         for idx, row_data in other.iterrows():
             event_counter += 1
             row = row_data.to_dict()
@@ -1182,19 +1181,6 @@ class PanelBuilder:
     # Step 4: Recommendations
     # ──────────────────────────────────────────────────────────
 
-    def build_recommendations_dataset(self, events_df):
-        """Build a separate dataset of OECD recommendations."""
-        if events_df.empty:
-            return pd.DataFrame()
-
-        recs = events_df[events_df["status"] == "recommended"].copy()
-        if not recs.empty:
-            rec_path = self.output_dir / "oecd_recommendations.csv"
-            recs.to_csv(rec_path, index=False, encoding="utf-8")
-            print(f"  Recommendations: {len(recs)} rows -> {rec_path.name}")
-
-        return recs
-
     # ──────────────────────────────────────────────────────────
     # Main entry point
     # ──────────────────────────────────────────────────────────
@@ -1206,7 +1192,6 @@ class PanelBuilder:
         1. Load all survey-level JSONs -> mentions
         2. Cross-survey dedup -> events
         3. Build panel from events
-        4. Extract recommendations
 
         Returns:
             Dict with DataFrames.
@@ -1222,7 +1207,6 @@ class PanelBuilder:
                 "mentions": mentions_df,
                 "events": pd.DataFrame(),
                 "panel": pd.DataFrame(),
-                "recommendations": pd.DataFrame(),
             }
 
         # Step 2: Cross-survey canonicalization
@@ -1231,9 +1215,6 @@ class PanelBuilder:
         # Step 3: Panel
         panel_df = self.build_panel_dataset(events_df)
 
-        # Step 4: Recommendations
-        recs_df = self.build_recommendations_dataset(events_df)
-
         # Summary
         self._generate_summary(mentions_df, events_df, panel_df)
 
@@ -1241,7 +1222,6 @@ class PanelBuilder:
             "mentions": mentions_df,
             "events": events_df,
             "panel": panel_df,
-            "recommendations": recs_df,
         }
 
     def _generate_summary(self, mentions_df, events_df, panel_df):

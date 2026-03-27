@@ -370,7 +370,6 @@ Classify the expected medium- to long-run effect on GDP per capita:
 - "implemented": the reform is in force
 - "legislated": passed into law but not yet implemented
 - "announced": officially announced but not yet legislated
-- "recommended": OECD recommends it but no government action yet
 
 ── IMPORTANCE ───────────────────────────────────────────────────────────────────
 - is_major_reform=true / importance_bucket=3: structural, system-wide change \
@@ -523,10 +522,9 @@ minister, president, minister, ministry, European Commission, independent \
 regulatory authority) has announced, publicly introduced, proposed, unveiled \
 or communicated the reform, but it has not been formally legislated yet. \
 Evidence: "the government announced", "plans to", "intends to introduce", \
-"proposed".
-- "recommended": The OECD is recommending this reform but the government has \
-not (yet) adopted it as policy. Evidence: "should", "it would be desirable", \
-appears in "Key recommendations" boxes.
+"proposed". Also use this for reforms the OECD recommends that the government \
+has signalled intent to pursue. If the OECD is merely recommending without \
+any government signal, skip the reform entirely — do not extract it.
 
 For TEMPORAL assignment:
 - "announcement_year": When the government or public authority announced, \
@@ -696,7 +694,7 @@ Null if legislation_year is null.
 Null if implementation_year is null.
 22. "implementation_year_confidence": "high", "medium", or "low". \
 Null if implementation_year is null.
-23. "status": One of: "implemented", "legislated", "announced", "recommended".
+23. "status": One of: "implemented", "legislated", "announced".
 24. "status_evidence": Brief quote or paraphrase justifying the status.
 25. "status_confidence": "high", "medium", or "low".
 26. "is_major_reform": true or false (decide this first).
@@ -840,7 +838,7 @@ Rules:
 - Reforms that are genuinely different should be in separate single-element \
 groups (e.g., {{"indices": [3], "merged_description": "...", ...}}).
 - When merging, keep the most specific year and the most advanced status \
-(implemented > legislated > announced > recommended).
+(implemented > legislated > announced).
 - The merged description should be 1-3 sentences capturing the key details \
 from all grouped entries.
 - If multiple groups are components of the SAME reform package, give them \

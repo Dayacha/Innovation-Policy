@@ -19,8 +19,8 @@ from app.data_loader import (
     REFORM_PANEL, STAGE_LABELS, STATUS_LABELS,
     SUBTHEME_COLORS, SUBTHEME_LABELS, SUBTHEME_SHORT,
     budget_available, get_app_password, load_budget, load_reform_panel, load_reforms,
-    load_reform_mentions, load_recommendations, load_reform_panel_subtheme,
-    reforms_available, recommendations_available,
+    load_reform_mentions, load_reform_panel_subtheme,
+    reforms_available,
 )
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -780,14 +780,12 @@ with TAB_REFORMS:
              if "growth_orientation" in dr_f.columns else 0
     n_maj  = int(dr_f["is_major_reform"].sum()) if "is_major_reform" in dr_f.columns else 0
     n_surv = int(_dr_all_tab2["survey_year"].nunique()) if "survey_year" in _dr_all_tab2.columns else 0
-    n_recs = len(load_recommendations())
     stat_row([
         (str(len(dr_f)), "Reform events"),
         (str(n_maj),     "Major reforms"),
         (str(n_gs),      "Growth-supporting"),
         (str(n_gh),      "Growth-hindering"),
         (str(n_surv),    "Surveys analysed"),
-        (str(n_recs),    "OECD Recommendations"),
     ])
 
     # ── Chart 1: reforms per year stacked by sub-type ──
@@ -937,68 +935,136 @@ with TAB_REFORMS:
     # ── Reform catalogue ──
     section_header(f"Reform catalogue  —  {len(dr_f)} events")
 
-    sort_opt = st.radio(
-        "Sort by",
-        ["Year (newest first)", "Importance (highest first)", "Sub-type (A–Z)"],
-        horizontal=True, key="sort_cat",
-        label_visibility="collapsed",
-    )
+    import html as _html
+
+    _cat_cols_top = st.columns([2, 1])
+    with _cat_cols_top[0]:
+        sort_opt = st.radio(
+            "Sort by",
+            ["Year (newest first)", "Importance (highest first)", "Sub-type (A–Z)"],
+            horizontal=True, key="sort_cat",
+            label_visibility="collapsed",
+        )
     sort_map = {
         "Year (newest first)":       ("implementation_year", False),
         "Importance (highest first)":("importance_bucket",   False),
         "Sub-type (A–Z)":            ("sub_theme",           True),
     }
     sc, sa = sort_map[sort_opt]
-    df_cat = dr_f.sort_values(sc, ascending=sa).head(80)
+    df_cat_all = dr_f.sort_values(sc, ascending=sa)
 
+    # Pagination via session state — reset when sort or filters change
+    _cat_page_key = f"cat_n_{sc}_{sa}_{len(dr_f)}"
+    if st.session_state.get("_last_cat_key") != _cat_page_key:
+        st.session_state["cat_visible"] = 10
+        st.session_state["_last_cat_key"] = _cat_page_key
+    _n_visible = st.session_state.get("cat_visible", 10)
+    df_cat = df_cat_all.head(_n_visible)
+
+    # Render cards as pure HTML block — fast and always visible
+    cards_html = ""
     for _, row in df_cat.iterrows():
-        major    = bool(row.get("is_major_reform", False))
-        orient   = str(row.get("growth_orientation") or "unclear_or_neutral")
-        tag_col  = ORIENTATION_COLORS.get(orient, GREY)
-        tag_txt  = ORIENTATION_LABELS.get(orient, "Unclear / Neutral")
-        impl_yr  = row.get("implementation_year")
-        yr_s     = str(int(float(impl_yr))) if pd.notna(impl_yr) else "n.d."
-        sub_key  = str(row.get("sub_theme") or "other")
-        sub_s    = SUBTHEME_LABELS.get(sub_key, sub_key.replace("_"," ").title())
+        import html as _html2
+        major   = bool(row.get("is_major_reform", False))
+        orient  = str(row.get("growth_orientation") or "unclear_or_neutral")
+        tag_col = ORIENTATION_COLORS.get(orient, GREY)
+        tag_txt = ORIENTATION_LABELS.get(orient, "Unclear / Neutral")
+        impl_yr = row.get("implementation_year")
+        yr_s    = str(int(float(impl_yr))) if pd.notna(impl_yr) else "n.d."
+        sub_key = str(row.get("sub_theme") or "other")
+        sub_s   = SUBTHEME_LABELS.get(sub_key, sub_key.replace("_", " ").title())
+        lbl_clr = SUBTHEME_COLORS.get(sub_key, GREY)
         status_s = STATUS_LABELS.get(str(row.get("status") or ""), "—")
-        title    = str(row.get("package_name") or row.get("description") or "")[:100]
-        major_s  = "  [MAJOR]" if major else ""
-        lbl_clr  = SUBTHEME_COLORS.get(sub_key, GREY)
+        actor_s  = ACTOR_LABELS.get(str(row.get("rd_actor") or "unknown"), "—")
+        stage_s  = STAGE_LABELS.get(str(row.get("rd_stage") or "unknown"), "—")
+        imp      = row.get("importance_bucket")
+        imp_s    = f"{int(imp)}/3" if pd.notna(imp) else "—"
+        country_s = _html2.escape(str(row.get("country_name") or "—"))
+        desc_s   = _html2.escape(str(row.get("description") or ""))
+        quote_s  = str(row.get("source_quote") or "")
+        imp_rat  = str(row.get("importance_rationale") or "")
+        go_rat   = str(row.get("growth_orientation_rationale") or "")
+        mentions = row.get("n_mentions")
 
-        with st.expander(
-            f"{yr_s}  ·  {row.get('country_name','—')}  ·  {sub_s}{major_s}  —  {title}",
-            expanded=False,
-        ):
-            c_left, c_right = st.columns([3, 1])
-            with c_left:
-                st.markdown(f"**{row.get('description','')}**")
-                if pd.notna(row.get("source_quote")):
-                    st.markdown(
-                        f'<blockquote style="margin:.4rem 0;padding:.4rem .8rem;'
-                        f'border-left:3px solid {lbl_clr};color:#555;'
-                        f'font-size:.8rem;font-style:italic;">'
-                        f'&ldquo;{row["source_quote"]}&rdquo;</blockquote>',
-                        unsafe_allow_html=True,
-                    )
-                if pd.notna(row.get("importance_rationale")):
-                    caption_note(f"Importance: {row['importance_rationale']}")
-                if pd.notna(row.get("growth_orientation_rationale")):
-                    caption_note(f"Growth mechanism: {row['growth_orientation_rationale']}")
-            with c_right:
-                st.markdown(
-                    f'<div style="font-size:.74rem;color:{TEXT};line-height:1.9;">'
-                    f'<span style="display:inline-block;padding:2px 8px;border-radius:2px;'
-                    f'background:{tag_col}20;color:{tag_col};border:1px solid {tag_col}60;'
-                    f'font-weight:700;font-size:.7rem;">{tag_txt}</span><br>'
-                    f'<b style="color:#777;">Status:</b> {status_s}<br>'
-                    f'<b style="color:#777;">Actor:</b> {ACTOR_LABELS.get(str(row.get("rd_actor") or "unknown"),"—")}<br>'
-                    f'<b style="color:#777;">Stage:</b> {STAGE_LABELS.get(str(row.get("rd_stage") or "unknown"),"—")}<br>'
-                    f'<b style="color:#777;">Importance:</b> {row.get("importance_bucket") or "—"}/3'
-                    f'</div>',
-                    unsafe_allow_html=True,
-                )
-                if pd.notna(row.get("n_mentions")):
-                    caption_note(f"{int(row['n_mentions'])} survey mention(s)")
+        major_badge = (
+            f'<span style="display:inline-block;padding:1px 7px;border-radius:2px;'
+            f'background:{NAVY};color:#fff;font-weight:700;font-size:.66rem;'
+            f'letter-spacing:.04em;margin-left:6px;">MAJOR</span>'
+            if major else ""
+        )
+        quote_block = (
+            f'<div style="margin:.5rem 0 .3rem;padding:.35rem .75rem;'
+            f'border-left:3px solid {lbl_clr};color:#666;font-size:.79rem;font-style:italic;">'
+            f'&ldquo;{_html2.escape(quote_s)}&rdquo;</div>'
+            if quote_s else ""
+        )
+        imp_rat_block = (
+            f'<div style="font-size:.7rem;color:#888;margin-top:.25rem;">'
+            f'<b>Importance:</b> {_html2.escape(imp_rat)}</div>'
+            if imp_rat else ""
+        )
+        go_rat_block = (
+            f'<div style="font-size:.7rem;color:#888;margin-top:.15rem;">'
+            f'<b>Growth mechanism:</b> {_html2.escape(go_rat)}</div>'
+            if go_rat else ""
+        )
+        mentions_block = (
+            f'<div style="font-size:.69rem;color:#aaa;margin-top:.4rem;">'
+            f'{int(mentions)} survey mention(s)</div>'
+            if pd.notna(mentions) else ""
+        )
+
+        cards_html += f"""
+        <div style="border:1px solid {BORDER};border-radius:5px;padding:.75rem 1rem;
+                    margin-bottom:.6rem;background:#fff;">
+          <!-- header row -->
+          <div style="display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin-bottom:.45rem;">
+            <span style="font-size:.75rem;font-weight:700;color:{NAVY};
+                         background:#EEF3FB;padding:2px 8px;border-radius:3px;">{yr_s}</span>
+            <span style="font-size:.75rem;color:#555;">{country_s}</span>
+            <span style="display:inline-block;padding:2px 9px;border-radius:2px;
+                         background:{lbl_clr}18;color:{lbl_clr};border:1px solid {lbl_clr}50;
+                         font-weight:700;font-size:.68rem;">{_html2.escape(sub_s)}</span>
+            {major_badge}
+            <span style="margin-left:auto;font-size:.72rem;color:#777;">{_html2.escape(status_s)}</span>
+          </div>
+          <!-- body -->
+          <div style="display:grid;grid-template-columns:1fr 160px;gap:.75rem;">
+            <div>
+              <div style="font-size:.83rem;font-weight:700;color:{TEXT};line-height:1.45;">
+                {desc_s}
+              </div>
+              {quote_block}
+              {imp_rat_block}
+              {go_rat_block}
+              {mentions_block}
+            </div>
+            <div style="font-size:.73rem;color:{TEXT};line-height:2;border-left:1px solid {BORDER};
+                        padding-left:.75rem;">
+              <span style="display:inline-block;padding:2px 8px;border-radius:2px;
+                           background:{tag_col}18;color:{tag_col};border:1px solid {tag_col}50;
+                           font-weight:700;font-size:.67rem;">{_html2.escape(tag_txt)}</span><br>
+              <span style="color:#777;"><b>Actor:</b></span> {_html2.escape(actor_s)}<br>
+              <span style="color:#777;"><b>Stage:</b></span> {_html2.escape(stage_s)}<br>
+              <span style="color:#777;"><b>Importance:</b></span> {_html2.escape(imp_s)}
+            </div>
+          </div>
+        </div>
+        """
+
+    st.markdown(cards_html, unsafe_allow_html=True)
+
+    # Load more / count indicator
+    _remaining = len(df_cat_all) - _n_visible
+    if _remaining > 0:
+        _load_cols = st.columns([1, 2, 1])
+        with _load_cols[1]:
+            caption_note(f"Showing {_n_visible} of {len(df_cat_all)} reforms")
+            if st.button(f"Load {min(10, _remaining)} more", key="cat_load_more", use_container_width=True):
+                st.session_state["cat_visible"] = _n_visible + 10
+                st.rerun()
+    else:
+        caption_note(f"Showing all {len(df_cat_all)} reforms")
 
     # ── Data table ──
     section_header("Reform event detail")
@@ -1069,54 +1135,6 @@ with TAB_REFORMS:
             f"→ {len(dr_f):,} deduplicated events after cross-survey deduplication."
         )
 
-    # ── OECD Recommendations (not yet enacted) ──
-    _recs = load_recommendations()
-    if not _recs.empty:
-        section_header(f"OECD Recommendations — not yet enacted  ({len(_recs)})")
-        caption_note(
-            "These reforms were explicitly recommended by the OECD in Economic Surveys "
-            "but have no evidence of subsequent implementation or legislation."
-        )
-        for _, row in _recs.iterrows():
-            sub_key  = str(row.get("sub_theme") or "other")
-            sub_s    = SUBTHEME_LABELS.get(sub_key, sub_key.replace("_", " ").title())
-            lbl_clr  = SUBTHEME_COLORS.get(sub_key, GREY)
-            surv_yr  = row.get("survey_year")
-            yr_s     = str(int(surv_yr)) if pd.notna(surv_yr) else "n.d."
-            title    = str(row.get("package_name") or row.get("description") or "")[:100]
-            with st.expander(
-                f"{yr_s}  ·  {row.get('country_name', '—')}  ·  {sub_s}  —  {title}",
-                expanded=False,
-            ):
-                c_left, c_right = st.columns([3, 1])
-                with c_left:
-                    st.markdown(f"**{row.get('description', '')}**")
-                    if pd.notna(row.get("source_quote")):
-                        st.markdown(
-                            f'<blockquote style="margin:.4rem 0;padding:.4rem .8rem;'
-                            f'border-left:3px solid {lbl_clr};color:#555;'
-                            f'font-size:.8rem;font-style:italic;">'
-                            f'&ldquo;{row["source_quote"]}&rdquo;</blockquote>',
-                            unsafe_allow_html=True,
-                        )
-                    if pd.notna(row.get("importance_rationale")):
-                        caption_note(f"Importance: {row['importance_rationale']}")
-                with c_right:
-                    orient   = str(row.get("growth_orientation") or "unclear_or_neutral")
-                    tag_col  = ORIENTATION_COLORS.get(orient, GREY)
-                    tag_txt  = ORIENTATION_LABELS.get(orient, "Unclear / Neutral")
-                    st.markdown(
-                        f'<div style="font-size:.74rem;color:{TEXT};line-height:1.9;">'
-                        f'<span style="display:inline-block;padding:2px 8px;border-radius:2px;'
-                        f'background:{tag_col}20;color:{tag_col};border:1px solid {tag_col}60;'
-                        f'font-weight:700;font-size:.7rem;">{tag_txt}</span><br>'
-                        f'<b style="color:#777;">Survey year:</b> {yr_s}<br>'
-                        f'<b style="color:#777;">Actor:</b> {ACTOR_LABELS.get(str(row.get("rd_actor") or "unknown"), "—")}<br>'
-                        f'<b style="color:#777;">Stage:</b> {STAGE_LABELS.get(str(row.get("rd_stage") or "unknown"), "—")}<br>'
-                        f'<b style="color:#777;">Importance:</b> {row.get("importance_bucket") or "—"}/3'
-                        f'</div>',
-                        unsafe_allow_html=True,
-                    )
 
 
 # ═════════════════════════════════════════════════════════════════════════════
