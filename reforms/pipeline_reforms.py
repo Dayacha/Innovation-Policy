@@ -34,6 +34,24 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 logger = logging.getLogger(__name__)
 
 
+def _cleanup_source_files(entry, reforms_path: Path, cleanup_enabled: bool) -> None:
+    """Delete intermediate text/PDF files after a successful JSON save."""
+    if not cleanup_enabled or not reforms_path.exists():
+        return
+
+    for key in ("text_path", "pdf_path"):
+        raw_path = entry.get(key)
+        if not raw_path:
+            continue
+        path = Path(raw_path)
+        try:
+            if path.exists():
+                path.unlink()
+                logger.info("Deleted %s after successful JSON save: %s", key, path.name)
+        except Exception as exc:
+            logger.warning("Could not delete %s for %s_%d: %s", key, entry["country_code"], entry["year"], exc)
+
+
 # ---------------------------------------------------------------------------
 # Config helpers
 # ---------------------------------------------------------------------------
@@ -82,6 +100,7 @@ def load_reforms_config(config_path="config.yaml"):
             "max_retries":      reforms_section.get("max_retries", 3),
             "api_delay":        reforms_section.get("api_delay", 1.0),
             "skip_existing":    reforms_section.get("skip_existing", True),
+            "cleanup_after_success": reforms_section.get("cleanup_after_success", False),
             "dedup_threshold":  reforms_section.get("dedup_threshold", 0.65),
             "include_remaining_sections": reforms_section.get("include_remaining_sections", True),
             "remaining_min_taxonomy_score": reforms_section.get("remaining_min_taxonomy_score", 2.0),
@@ -342,6 +361,7 @@ def _step_extract_text(config, catalog):
 def _step_analyze_reforms(config, catalog, country=None, year=None):
     analyzer = ReformAnalyzer(config)
     skip_existing = config.get("processing", {}).get("skip_existing", True)
+    cleanup_after_success = config.get("processing", {}).get("cleanup_after_success", False)
 
     surveys = catalog.get_surveys_with_text()
     if not surveys:
@@ -383,6 +403,7 @@ def _step_analyze_reforms(config, catalog, country=None, year=None):
                 Path(config["paths"]["reforms_json"]) / f"{code}_{yr}.json"
             )
             catalog.add_entry(code, yr, reforms_path=str(reforms_path), status="reforms_extracted")
+            _cleanup_source_files(entry, reforms_path, cleanup_after_success)
             analyzed += 1
         except Exception as exc:
             logger.error("Reform analysis failed for %s_%d: %s", code, yr, exc)

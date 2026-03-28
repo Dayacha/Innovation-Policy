@@ -3094,6 +3094,11 @@
       "pdf_url": "https://pac-files.oecd.org/LibraryV3/c8/c8b8f7a1ad27d527e21de364c4a4c45f9d5d55c7.pdf",
       "read_url": "https://read.oecd.org/10.1787/eco_surveys-aut-1962-en",
       "publication_date": "1962-02-01"
+    },
+    "2026": {
+      "pdf_url": "https://pac-files.oecd.org/LibraryV3/93/938645101500b50b14d456a3d4a2454e3944ad2b.pdf",
+      "read_url": "https://read.oecd.org/10.1787/7cea027b-en",
+      "publication_date": "2026-03-19"
     }
   },
   "SVN": {
@@ -4334,6 +4339,11 @@
       "pdf_url": "https://pac-files.oecd.org/LibraryV3/4e/4ec4191cf8710a5bfb098474b3b653b4729200f8.pdf",
       "read_url": "https://read.oecd.org/10.1787/eco_surveys-mex-1992-en",
       "publication_date": "1992-01-01"
+    },
+    "2026": {
+      "pdf_url": "https://pac-files.oecd.org/LibraryV3/63/63d875d93838616ec707b768ea8bcd2df7a22e11.pdf",
+      "read_url": "https://read.oecd.org/10.1787/8a7c0ac4-en",
+      "publication_date": "2026-02-26"
     }
   },
   "ITA": {
@@ -5089,7 +5099,7 @@
       "publication_date": "1999-12-20"
     },
     "2026": {
-      "pdf_url": "https://pac-files.oecd.org/LibraryV3/5d/5dbbe1d0907ac6ebe3b1b1aa5a8687f1fdbf1978.pdf",
+      "pdf_url": "https://pac-files.oecd.org/LibraryV3/17/17ec0e49d3d7099d2c82e7e58deef44abe3474b1.pdf",
       "read_url": "https://read.oecd.org/10.1787/d22a1efd-en",
       "publication_date": "2026-01-21"
     },

@@ -52,6 +52,8 @@ htmlcov/
 
 # ── All PDFs (too large for git) ──────────────────────────────────────────────
 *.pdf
+!Data/input/surveys/
+!Data/input/surveys/*.pdf
 
 # ── Survey catalog ─────────────────────────
 #Data/input/surveys/kappa_catalog.json

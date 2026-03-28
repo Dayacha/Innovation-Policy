@@ -94,6 +94,7 @@ reforms:
   max_retries: 3
   api_delay: 1.0           # seconds between API calls
   skip_existing: true      # skip surveys already in reforms_json/
+  cleanup_after_success: false  # delete source PDF and extracted TXT once JSON is saved
   dedup_threshold: 0.65    # text-similarity threshold for within-survey dedup
   include_remaining_sections: true    # set false for cheaper runs using priority sections only
   remaining_min_taxonomy_score: 2.0   # when remaining sections are enabled, only keep pages scoring high in search_library.json
