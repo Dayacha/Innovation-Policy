@@ -2235,13 +2235,13 @@ DEU,Germany,1995,innovation,human_capital,0,0,0,0,0,0,0,0
 DEU,Germany,1995,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DEU,Germany,1995,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DEU,Germany,1995,innovation,other,0,0,0,0,0,0,0,0
-DEU,Germany,1995,innovation,rd_funding,0,0,0,0,0,0,0,0
+DEU,Germany,1995,innovation,rd_funding,1,1,0,0,1,1,0,0
 DEU,Germany,1995,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DEU,Germany,1995,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-DEU,Germany,1995,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+DEU,Germany,1995,innovation,startup_ecosystem,1,1,1,1,1,1,0,0
 DEU,Germany,1996,innovation,human_capital,0,0,0,0,0,0,0,0
 DEU,Germany,1996,innovation,innovation_instruments,0,0,0,0,0,0,0,0
-DEU,Germany,1996,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+DEU,Germany,1996,innovation,knowledge_transfer,1,1,0,0,1,1,0,0
 DEU,Germany,1996,innovation,other,0,0,0,0,0,0,0,0
 DEU,Germany,1996,innovation,rd_funding,0,0,0,0,0,0,0,0
 DEU,Germany,1996,innovation,research_infrastructure,0,0,0,0,0,0,0,0
@@ -2250,28 +2250,28 @@ DEU,Germany,1996,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 DEU,Germany,1997,innovation,human_capital,0,0,0,0,0,0,0,0
 DEU,Germany,1997,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DEU,Germany,1997,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
-DEU,Germany,1997,innovation,other,0,0,0,0,0,0,0,0
+DEU,Germany,1997,innovation,other,1,1,0,0,1,1,0,0
 DEU,Germany,1997,innovation,rd_funding,0,0,0,0,0,0,0,0
 DEU,Germany,1997,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DEU,Germany,1997,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DEU,Germany,1997,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-DEU,Germany,1998,innovation,human_capital,0,0,0,0,0,0,0,0
-DEU,Germany,1998,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+DEU,Germany,1998,innovation,human_capital,1,1,0,0,1,1,0,0
+DEU,Germany,1998,innovation,innovation_instruments,1,1,0,0,1,1,0,0
 DEU,Germany,1998,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
-DEU,Germany,1998,innovation,other,0,0,0,0,0,0,0,0
+DEU,Germany,1998,innovation,other,1,1,0,0,1,1,0,0
 DEU,Germany,1998,innovation,rd_funding,0,0,0,0,0,0,0,0
 DEU,Germany,1998,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DEU,Germany,1998,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DEU,Germany,1998,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-DEU,Germany,1999,innovation,human_capital,0,0,0,0,0,0,0,0
-DEU,Germany,1999,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+DEU,Germany,1999,innovation,human_capital,1,1,1,1,1,1,0,0
+DEU,Germany,1999,innovation,innovation_instruments,1,1,1,1,1,1,0,0
 DEU,Germany,1999,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DEU,Germany,1999,innovation,other,0,0,0,0,0,0,0,0
-DEU,Germany,1999,innovation,rd_funding,0,0,0,0,0,0,0,0
+DEU,Germany,1999,innovation,rd_funding,1,1,1,1,1,1,0,0
 DEU,Germany,1999,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DEU,Germany,1999,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DEU,Germany,1999,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-DEU,Germany,2000,innovation,human_capital,0,0,0,0,0,0,0,0
+DEU,Germany,2000,innovation,human_capital,1,1,0,0,1,1,0,0
 DEU,Germany,2000,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DEU,Germany,2000,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DEU,Germany,2000,innovation,other,0,0,0,0,0,0,0,0
@@ -2286,15 +2286,15 @@ DEU,Germany,2001,innovation,other,0,0,0,0,0,0,0,0
 DEU,Germany,2001,innovation,rd_funding,0,0,0,0,0,0,0,0
 DEU,Germany,2001,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DEU,Germany,2001,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-DEU,Germany,2001,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+DEU,Germany,2001,innovation,startup_ecosystem,1,1,1,1,1,1,0,0
 DEU,Germany,2002,innovation,human_capital,0,0,0,0,0,0,0,0
 DEU,Germany,2002,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DEU,Germany,2002,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DEU,Germany,2002,innovation,other,0,0,0,0,0,0,0,0
 DEU,Germany,2002,innovation,rd_funding,0,0,0,0,0,0,0,0
 DEU,Germany,2002,innovation,research_infrastructure,0,0,0,0,0,0,0,0
-DEU,Germany,2002,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-DEU,Germany,2002,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+DEU,Germany,2002,innovation,sectoral_rd,1,1,1,1,1,1,0,0
+DEU,Germany,2002,innovation,startup_ecosystem,1,1,1,1,1,1,0,0
 DEU,Germany,2003,innovation,human_capital,0,0,0,0,0,0,0,0
 DEU,Germany,2003,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DEU,Germany,2003,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
@@ -2302,44 +2302,44 @@ DEU,Germany,2003,innovation,other,0,0,0,0,0,0,0,0
 DEU,Germany,2003,innovation,rd_funding,0,0,0,0,0,0,0,0
 DEU,Germany,2003,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DEU,Germany,2003,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-DEU,Germany,2003,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-DEU,Germany,2004,innovation,human_capital,0,0,0,0,0,0,0,0
+DEU,Germany,2003,innovation,startup_ecosystem,1,1,0,0,1,1,0,0
+DEU,Germany,2004,innovation,human_capital,1,1,0,0,1,1,0,0
 DEU,Germany,2004,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DEU,Germany,2004,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DEU,Germany,2004,innovation,other,0,0,0,0,0,0,0,0
 DEU,Germany,2004,innovation,rd_funding,0,0,0,0,0,0,0,0
 DEU,Germany,2004,innovation,research_infrastructure,0,0,0,0,0,0,0,0
-DEU,Germany,2004,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+DEU,Germany,2004,innovation,sectoral_rd,1,1,1,1,1,1,0,0
 DEU,Germany,2004,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 DEU,Germany,2005,innovation,human_capital,0,0,0,0,0,0,0,0
-DEU,Germany,2005,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+DEU,Germany,2005,innovation,innovation_instruments,1,1,1,1,1,1,0,0
 DEU,Germany,2005,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
-DEU,Germany,2005,innovation,other,0,0,0,0,0,0,0,0
+DEU,Germany,2005,innovation,other,1,1,0,0,0,0,1,1
 DEU,Germany,2005,innovation,rd_funding,0,0,0,0,0,0,0,0
 DEU,Germany,2005,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DEU,Germany,2005,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DEU,Germany,2005,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 DEU,Germany,2006,innovation,human_capital,0,0,0,0,0,0,0,0
-DEU,Germany,2006,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+DEU,Germany,2006,innovation,innovation_instruments,1,1,0,0,1,1,0,0
 DEU,Germany,2006,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DEU,Germany,2006,innovation,other,0,0,0,0,0,0,0,0
-DEU,Germany,2006,innovation,rd_funding,0,0,0,0,0,0,0,0
+DEU,Germany,2006,innovation,rd_funding,1,4,1,3,1,4,0,0
 DEU,Germany,2006,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DEU,Germany,2006,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DEU,Germany,2006,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-DEU,Germany,2007,innovation,human_capital,0,0,0,0,0,0,0,0
+DEU,Germany,2007,innovation,human_capital,1,1,1,1,1,1,0,0
 DEU,Germany,2007,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DEU,Germany,2007,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DEU,Germany,2007,innovation,other,0,0,0,0,0,0,0,0
 DEU,Germany,2007,innovation,rd_funding,0,0,0,0,0,0,0,0
 DEU,Germany,2007,innovation,research_infrastructure,0,0,0,0,0,0,0,0
-DEU,Germany,2007,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+DEU,Germany,2007,innovation,sectoral_rd,1,1,1,1,1,1,0,0
 DEU,Germany,2007,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-DEU,Germany,2008,innovation,human_capital,0,0,0,0,0,0,0,0
+DEU,Germany,2008,innovation,human_capital,1,1,0,0,1,1,0,0
 DEU,Germany,2008,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DEU,Germany,2008,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DEU,Germany,2008,innovation,other,0,0,0,0,0,0,0,0
-DEU,Germany,2008,innovation,rd_funding,0,0,0,0,0,0,0,0
+DEU,Germany,2008,innovation,rd_funding,1,1,1,1,1,1,0,0
 DEU,Germany,2008,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DEU,Germany,2008,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DEU,Germany,2008,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
@@ -2347,7 +2347,7 @@ DEU,Germany,2009,innovation,human_capital,0,0,0,0,0,0,0,0
 DEU,Germany,2009,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DEU,Germany,2009,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DEU,Germany,2009,innovation,other,0,0,0,0,0,0,0,0
-DEU,Germany,2009,innovation,rd_funding,0,0,0,0,0,0,0,0
+DEU,Germany,2009,innovation,rd_funding,1,1,1,1,1,1,0,0
 DEU,Germany,2009,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DEU,Germany,2009,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DEU,Germany,2009,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
@@ -2358,12 +2358,12 @@ DEU,Germany,2010,innovation,other,0,0,0,0,0,0,0,0
 DEU,Germany,2010,innovation,rd_funding,0,0,0,0,0,0,0,0
 DEU,Germany,2010,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DEU,Germany,2010,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-DEU,Germany,2010,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+DEU,Germany,2010,innovation,startup_ecosystem,1,1,0,0,1,1,0,0
 DEU,Germany,2011,innovation,human_capital,0,0,0,0,0,0,0,0
 DEU,Germany,2011,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DEU,Germany,2011,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DEU,Germany,2011,innovation,other,0,0,0,0,0,0,0,0
-DEU,Germany,2011,innovation,rd_funding,0,0,0,0,0,0,0,0
+DEU,Germany,2011,innovation,rd_funding,1,1,1,1,1,1,0,0
 DEU,Germany,2011,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DEU,Germany,2011,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DEU,Germany,2011,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
@@ -2374,12 +2374,12 @@ DEU,Germany,2012,innovation,other,0,0,0,0,0,0,0,0
 DEU,Germany,2012,innovation,rd_funding,0,0,0,0,0,0,0,0
 DEU,Germany,2012,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DEU,Germany,2012,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-DEU,Germany,2012,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+DEU,Germany,2012,innovation,startup_ecosystem,1,1,0,0,1,1,0,0
 DEU,Germany,2013,innovation,human_capital,0,0,0,0,0,0,0,0
 DEU,Germany,2013,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DEU,Germany,2013,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DEU,Germany,2013,innovation,other,0,0,0,0,0,0,0,0
-DEU,Germany,2013,innovation,rd_funding,0,0,0,0,0,0,0,0
+DEU,Germany,2013,innovation,rd_funding,1,1,0,0,1,1,0,0
 DEU,Germany,2013,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DEU,Germany,2013,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DEU,Germany,2013,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
@@ -2396,7 +2396,7 @@ DEU,Germany,2015,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DEU,Germany,2015,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DEU,Germany,2015,innovation,other,0,0,0,0,0,0,0,0
 DEU,Germany,2015,innovation,rd_funding,0,0,0,0,0,0,0,0
-DEU,Germany,2015,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+DEU,Germany,2015,innovation,research_infrastructure,1,1,0,0,1,1,0,0
 DEU,Germany,2015,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DEU,Germany,2015,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 DEU,Germany,2016,innovation,human_capital,0,0,0,0,0,0,0,0
@@ -2406,7 +2406,7 @@ DEU,Germany,2016,innovation,other,0,0,0,0,0,0,0,0
 DEU,Germany,2016,innovation,rd_funding,0,0,0,0,0,0,0,0
 DEU,Germany,2016,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DEU,Germany,2016,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-DEU,Germany,2016,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+DEU,Germany,2016,innovation,startup_ecosystem,1,1,1,1,1,1,0,0
 DEU,Germany,2017,innovation,human_capital,0,0,0,0,0,0,0,0
 DEU,Germany,2017,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DEU,Germany,2017,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
@@ -2414,7 +2414,7 @@ DEU,Germany,2017,innovation,other,0,0,0,0,0,0,0,0
 DEU,Germany,2017,innovation,rd_funding,0,0,0,0,0,0,0,0
 DEU,Germany,2017,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DEU,Germany,2017,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-DEU,Germany,2017,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+DEU,Germany,2017,innovation,startup_ecosystem,1,1,0,0,1,1,0,0
 DEU,Germany,2018,innovation,human_capital,0,0,0,0,0,0,0,0
 DEU,Germany,2018,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DEU,Germany,2018,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
@@ -2423,40 +2423,40 @@ DEU,Germany,2018,innovation,rd_funding,0,0,0,0,0,0,0,0
 DEU,Germany,2018,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DEU,Germany,2018,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DEU,Germany,2018,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-DEU,Germany,2019,innovation,human_capital,0,0,0,0,0,0,0,0
-DEU,Germany,2019,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+DEU,Germany,2019,innovation,human_capital,1,1,0,0,1,1,0,0
+DEU,Germany,2019,innovation,innovation_instruments,1,2,1,1,1,2,0,0
 DEU,Germany,2019,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DEU,Germany,2019,innovation,other,0,0,0,0,0,0,0,0
 DEU,Germany,2019,innovation,rd_funding,0,0,0,0,0,0,0,0
 DEU,Germany,2019,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DEU,Germany,2019,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DEU,Germany,2019,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-DEU,Germany,2020,innovation,human_capital,0,0,0,0,0,0,0,0
-DEU,Germany,2020,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+DEU,Germany,2020,innovation,human_capital,1,2,1,1,1,2,0,0
+DEU,Germany,2020,innovation,innovation_instruments,1,1,1,1,1,1,0,0
 DEU,Germany,2020,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DEU,Germany,2020,innovation,other,0,0,0,0,0,0,0,0
 DEU,Germany,2020,innovation,rd_funding,0,0,0,0,0,0,0,0
-DEU,Germany,2020,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+DEU,Germany,2020,innovation,research_infrastructure,1,3,1,2,1,3,0,0
 DEU,Germany,2020,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-DEU,Germany,2020,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+DEU,Germany,2020,innovation,startup_ecosystem,1,1,0,0,1,1,0,0
 DEU,Germany,2021,innovation,human_capital,0,0,0,0,0,0,0,0
-DEU,Germany,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+DEU,Germany,2021,innovation,innovation_instruments,1,1,1,1,1,1,0,0
 DEU,Germany,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DEU,Germany,2021,innovation,other,0,0,0,0,0,0,0,0
 DEU,Germany,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
 DEU,Germany,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
-DEU,Germany,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-DEU,Germany,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+DEU,Germany,2021,innovation,sectoral_rd,1,1,1,1,1,1,0,0
+DEU,Germany,2021,innovation,startup_ecosystem,1,1,0,0,1,1,0,0
 DEU,Germany,2022,innovation,human_capital,0,0,0,0,0,0,0,0
-DEU,Germany,2022,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+DEU,Germany,2022,innovation,innovation_instruments,1,1,0,0,1,1,0,0
 DEU,Germany,2022,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
-DEU,Germany,2022,innovation,other,0,0,0,0,0,0,0,0
-DEU,Germany,2022,innovation,rd_funding,0,0,0,0,0,0,0,0
+DEU,Germany,2022,innovation,other,1,1,1,1,1,1,0,0
+DEU,Germany,2022,innovation,rd_funding,1,1,0,0,1,1,0,0
 DEU,Germany,2022,innovation,research_infrastructure,0,0,0,0,0,0,0,0
-DEU,Germany,2022,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-DEU,Germany,2022,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+DEU,Germany,2022,innovation,sectoral_rd,1,1,1,1,1,1,0,0
+DEU,Germany,2022,innovation,startup_ecosystem,1,1,0,0,1,1,0,0
 DEU,Germany,2023,innovation,human_capital,0,0,0,0,0,0,0,0
-DEU,Germany,2023,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+DEU,Germany,2023,innovation,innovation_instruments,1,2,1,2,1,2,0,0
 DEU,Germany,2023,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DEU,Germany,2023,innovation,other,0,0,0,0,0,0,0,0
 DEU,Germany,2023,innovation,rd_funding,0,0,0,0,0,0,0,0
@@ -2470,7 +2470,7 @@ DEU,Germany,2024,innovation,other,0,0,0,0,0,0,0,0
 DEU,Germany,2024,innovation,rd_funding,0,0,0,0,0,0,0,0
 DEU,Germany,2024,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DEU,Germany,2024,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-DEU,Germany,2024,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+DEU,Germany,2024,innovation,startup_ecosystem,1,1,1,1,1,1,0,0
 DEU,Germany,2025,innovation,human_capital,0,0,0,0,0,0,0,0
 DEU,Germany,2025,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DEU,Germany,2025,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
@@ -2665,7 +2665,7 @@ DNK,Denmark,2017,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DNK,Denmark,2017,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 DNK,Denmark,2018,innovation,human_capital,1,1,0,0,1,1,0,0
 DNK,Denmark,2018,innovation,innovation_instruments,0,0,0,0,0,0,0,0
-DNK,Denmark,2018,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+DNK,Denmark,2018,innovation,knowledge_transfer,1,1,1,1,1,1,0,0
 DNK,Denmark,2018,innovation,other,1,1,0,0,1,1,0,0
 DNK,Denmark,2018,innovation,rd_funding,0,0,0,0,0,0,0,0
 DNK,Denmark,2018,innovation,research_infrastructure,0,0,0,0,0,0,0,0
@@ -2680,12 +2680,12 @@ DNK,Denmark,2019,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 DNK,Denmark,2019,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DNK,Denmark,2019,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 DNK,Denmark,2020,innovation,human_capital,0,0,0,0,0,0,0,0
-DNK,Denmark,2020,innovation,innovation_instruments,1,1,0,0,1,1,0,0
+DNK,Denmark,2020,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 DNK,Denmark,2020,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DNK,Denmark,2020,innovation,other,0,0,0,0,0,0,0,0
 DNK,Denmark,2020,innovation,rd_funding,0,0,0,0,0,0,0,0
 DNK,Denmark,2020,innovation,research_infrastructure,0,0,0,0,0,0,0,0
-DNK,Denmark,2020,innovation,sectoral_rd,1,1,1,1,1,1,0,0
+DNK,Denmark,2020,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DNK,Denmark,2020,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 DNK,Denmark,2021,innovation,human_capital,0,0,0,0,0,0,0,0
 DNK,Denmark,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
@@ -2693,7 +2693,7 @@ DNK,Denmark,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 DNK,Denmark,2021,innovation,other,0,0,0,0,0,0,0,0
 DNK,Denmark,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
 DNK,Denmark,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
-DNK,Denmark,2021,innovation,sectoral_rd,1,1,0,0,1,1,0,0
+DNK,Denmark,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 DNK,Denmark,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 DNK,Denmark,2022,innovation,human_capital,0,0,0,0,0,0,0,0
 DNK,Denmark,2022,innovation,innovation_instruments,0,0,0,0,0,0,0,0
@@ -3476,9 +3476,9 @@ FRA,France,1995,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 FRA,France,1995,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,1995,innovation,other,0,0,0,0,0,0,0,0
 FRA,France,1995,innovation,rd_funding,0,0,0,0,0,0,0,0
-FRA,France,1995,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+FRA,France,1995,innovation,research_infrastructure,1,1,1,1,1,1,0,0
 FRA,France,1995,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-FRA,France,1995,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+FRA,France,1995,innovation,startup_ecosystem,1,1,1,1,1,1,0,0
 FRA,France,1996,innovation,human_capital,0,0,0,0,0,0,0,0
 FRA,France,1996,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 FRA,France,1996,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
@@ -3486,8 +3486,8 @@ FRA,France,1996,innovation,other,0,0,0,0,0,0,0,0
 FRA,France,1996,innovation,rd_funding,0,0,0,0,0,0,0,0
 FRA,France,1996,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,1996,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-FRA,France,1996,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-FRA,France,1997,innovation,human_capital,0,0,0,0,0,0,0,0
+FRA,France,1996,innovation,startup_ecosystem,1,2,1,1,1,2,0,0
+FRA,France,1997,innovation,human_capital,1,1,1,1,1,1,0,0
 FRA,France,1997,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 FRA,France,1997,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,1997,innovation,other,0,0,0,0,0,0,0,0
@@ -3496,7 +3496,7 @@ FRA,France,1997,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,1997,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 FRA,France,1997,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 FRA,France,1998,innovation,human_capital,0,0,0,0,0,0,0,0
-FRA,France,1998,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+FRA,France,1998,innovation,innovation_instruments,1,1,1,1,1,1,0,0
 FRA,France,1998,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,1998,innovation,other,0,0,0,0,0,0,0,0
 FRA,France,1998,innovation,rd_funding,0,0,0,0,0,0,0,0
@@ -3504,42 +3504,42 @@ FRA,France,1998,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,1998,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 FRA,France,1998,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 FRA,France,1999,innovation,human_capital,0,0,0,0,0,0,0,0
-FRA,France,1999,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+FRA,France,1999,innovation,innovation_instruments,1,3,1,1,1,3,0,0
 FRA,France,1999,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,1999,innovation,other,0,0,0,0,0,0,0,0
 FRA,France,1999,innovation,rd_funding,0,0,0,0,0,0,0,0
 FRA,France,1999,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,1999,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-FRA,France,1999,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+FRA,France,1999,innovation,startup_ecosystem,1,1,0,0,1,1,0,0
 FRA,France,2000,innovation,human_capital,0,0,0,0,0,0,0,0
-FRA,France,2000,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+FRA,France,2000,innovation,innovation_instruments,1,1,1,1,1,1,0,0
 FRA,France,2000,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,2000,innovation,other,0,0,0,0,0,0,0,0
 FRA,France,2000,innovation,rd_funding,0,0,0,0,0,0,0,0
 FRA,France,2000,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,2000,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-FRA,France,2000,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+FRA,France,2000,innovation,startup_ecosystem,1,1,1,1,1,1,0,0
 FRA,France,2001,innovation,human_capital,0,0,0,0,0,0,0,0
-FRA,France,2001,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+FRA,France,2001,innovation,innovation_instruments,1,1,1,1,1,1,0,0
 FRA,France,2001,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,2001,innovation,other,0,0,0,0,0,0,0,0
 FRA,France,2001,innovation,rd_funding,0,0,0,0,0,0,0,0
 FRA,France,2001,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,2001,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-FRA,France,2001,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+FRA,France,2001,innovation,startup_ecosystem,1,1,0,0,1,1,0,0
 FRA,France,2002,innovation,human_capital,0,0,0,0,0,0,0,0
 FRA,France,2002,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 FRA,France,2002,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,2002,innovation,other,0,0,0,0,0,0,0,0
 FRA,France,2002,innovation,rd_funding,0,0,0,0,0,0,0,0
-FRA,France,2002,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+FRA,France,2002,innovation,research_infrastructure,1,1,1,1,1,1,0,0
 FRA,France,2002,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 FRA,France,2002,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 FRA,France,2003,innovation,human_capital,0,0,0,0,0,0,0,0
-FRA,France,2003,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+FRA,France,2003,innovation,innovation_instruments,1,1,0,0,1,1,0,0
 FRA,France,2003,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,2003,innovation,other,0,0,0,0,0,0,0,0
-FRA,France,2003,innovation,rd_funding,0,0,0,0,0,0,0,0
+FRA,France,2003,innovation,rd_funding,1,1,1,1,1,1,0,0
 FRA,France,2003,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,2003,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 FRA,France,2003,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
@@ -3550,7 +3550,7 @@ FRA,France,2004,innovation,other,0,0,0,0,0,0,0,0
 FRA,France,2004,innovation,rd_funding,0,0,0,0,0,0,0,0
 FRA,France,2004,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,2004,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-FRA,France,2004,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+FRA,France,2004,innovation,startup_ecosystem,1,1,1,1,1,1,0,0
 FRA,France,2005,innovation,human_capital,0,0,0,0,0,0,0,0
 FRA,France,2005,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 FRA,France,2005,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
@@ -3559,30 +3559,30 @@ FRA,France,2005,innovation,rd_funding,0,0,0,0,0,0,0,0
 FRA,France,2005,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,2005,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 FRA,France,2005,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-FRA,France,2006,innovation,human_capital,0,0,0,0,0,0,0,0
+FRA,France,2006,innovation,human_capital,1,1,0,0,1,1,0,0
 FRA,France,2006,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 FRA,France,2006,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
-FRA,France,2006,innovation,other,0,0,0,0,0,0,0,0
+FRA,France,2006,innovation,other,1,1,1,1,1,1,0,0
 FRA,France,2006,innovation,rd_funding,0,0,0,0,0,0,0,0
 FRA,France,2006,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,2006,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 FRA,France,2006,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-FRA,France,2007,innovation,human_capital,0,0,0,0,0,0,0,0
+FRA,France,2007,innovation,human_capital,1,1,0,0,1,1,0,0
 FRA,France,2007,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 FRA,France,2007,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,2007,innovation,other,0,0,0,0,0,0,0,0
-FRA,France,2007,innovation,rd_funding,0,0,0,0,0,0,0,0
+FRA,France,2007,innovation,rd_funding,1,1,1,1,1,1,0,0
 FRA,France,2007,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,2007,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-FRA,France,2007,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+FRA,France,2007,innovation,startup_ecosystem,1,1,0,0,1,1,0,0
 FRA,France,2008,innovation,human_capital,0,0,0,0,0,0,0,0
-FRA,France,2008,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+FRA,France,2008,innovation,innovation_instruments,1,3,1,2,1,3,0,0
 FRA,France,2008,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,2008,innovation,other,0,0,0,0,0,0,0,0
 FRA,France,2008,innovation,rd_funding,0,0,0,0,0,0,0,0
-FRA,France,2008,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+FRA,France,2008,innovation,research_infrastructure,1,1,1,1,1,1,0,0
 FRA,France,2008,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-FRA,France,2008,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+FRA,France,2008,innovation,startup_ecosystem,1,1,1,1,1,1,0,0
 FRA,France,2009,innovation,human_capital,0,0,0,0,0,0,0,0
 FRA,France,2009,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 FRA,France,2009,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
@@ -3595,12 +3595,12 @@ FRA,France,2010,innovation,human_capital,0,0,0,0,0,0,0,0
 FRA,France,2010,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 FRA,France,2010,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,2010,innovation,other,0,0,0,0,0,0,0,0
-FRA,France,2010,innovation,rd_funding,0,0,0,0,0,0,0,0
-FRA,France,2010,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+FRA,France,2010,innovation,rd_funding,1,1,1,1,1,1,0,0
+FRA,France,2010,innovation,research_infrastructure,1,1,0,0,1,1,0,0
 FRA,France,2010,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 FRA,France,2010,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 FRA,France,2011,innovation,human_capital,0,0,0,0,0,0,0,0
-FRA,France,2011,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+FRA,France,2011,innovation,innovation_instruments,1,1,1,1,1,1,0,0
 FRA,France,2011,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,2011,innovation,other,0,0,0,0,0,0,0,0
 FRA,France,2011,innovation,rd_funding,0,0,0,0,0,0,0,0
@@ -3616,15 +3616,15 @@ FRA,France,2012,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,2012,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 FRA,France,2012,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 FRA,France,2013,innovation,human_capital,0,0,0,0,0,0,0,0
-FRA,France,2013,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+FRA,France,2013,innovation,innovation_instruments,1,1,1,1,1,1,0,0
 FRA,France,2013,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,2013,innovation,other,0,0,0,0,0,0,0,0
 FRA,France,2013,innovation,rd_funding,0,0,0,0,0,0,0,0
 FRA,France,2013,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,2013,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-FRA,France,2013,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+FRA,France,2013,innovation,startup_ecosystem,1,1,1,1,1,1,0,0
 FRA,France,2014,innovation,human_capital,0,0,0,0,0,0,0,0
-FRA,France,2014,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+FRA,France,2014,innovation,innovation_instruments,1,1,0,0,1,1,0,0
 FRA,France,2014,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,2014,innovation,other,0,0,0,0,0,0,0,0
 FRA,France,2014,innovation,rd_funding,0,0,0,0,0,0,0,0
@@ -3632,7 +3632,7 @@ FRA,France,2014,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,2014,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 FRA,France,2014,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 FRA,France,2015,innovation,human_capital,0,0,0,0,0,0,0,0
-FRA,France,2015,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+FRA,France,2015,innovation,innovation_instruments,1,2,1,2,1,2,0,0
 FRA,France,2015,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,2015,innovation,other,0,0,0,0,0,0,0,0
 FRA,France,2015,innovation,rd_funding,0,0,0,0,0,0,0,0
@@ -3647,7 +3647,7 @@ FRA,France,2016,innovation,rd_funding,0,0,0,0,0,0,0,0
 FRA,France,2016,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,2016,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 FRA,France,2016,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-FRA,France,2017,innovation,human_capital,0,0,0,0,0,0,0,0
+FRA,France,2017,innovation,human_capital,1,1,1,1,1,1,0,0
 FRA,France,2017,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 FRA,France,2017,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,2017,innovation,other,0,0,0,0,0,0,0,0
@@ -3655,15 +3655,15 @@ FRA,France,2017,innovation,rd_funding,0,0,0,0,0,0,0,0
 FRA,France,2017,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,2017,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 FRA,France,2017,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-FRA,France,2018,innovation,human_capital,0,0,0,0,0,0,0,0
+FRA,France,2018,innovation,human_capital,1,2,1,2,1,2,0,0
 FRA,France,2018,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 FRA,France,2018,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,2018,innovation,other,0,0,0,0,0,0,0,0
-FRA,France,2018,innovation,rd_funding,0,0,0,0,0,0,0,0
+FRA,France,2018,innovation,rd_funding,1,3,1,2,1,3,0,0
 FRA,France,2018,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,2018,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 FRA,France,2018,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-FRA,France,2019,innovation,human_capital,0,0,0,0,0,0,0,0
+FRA,France,2019,innovation,human_capital,1,1,0,0,1,1,0,0
 FRA,France,2019,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 FRA,France,2019,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,2019,innovation,other,0,0,0,0,0,0,0,0
@@ -3679,16 +3679,16 @@ FRA,France,2020,innovation,rd_funding,0,0,0,0,0,0,0,0
 FRA,France,2020,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,2020,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 FRA,France,2020,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-FRA,France,2021,innovation,human_capital,0,0,0,0,0,0,0,0
-FRA,France,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+FRA,France,2021,innovation,human_capital,1,2,1,2,1,2,0,0
+FRA,France,2021,innovation,innovation_instruments,1,3,1,2,1,3,0,0
 FRA,France,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,2021,innovation,other,0,0,0,0,0,0,0,0
-FRA,France,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+FRA,France,2021,innovation,rd_funding,1,1,1,1,1,1,0,0
 FRA,France,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 FRA,France,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 FRA,France,2022,innovation,human_capital,0,0,0,0,0,0,0,0
-FRA,France,2022,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+FRA,France,2022,innovation,innovation_instruments,1,1,1,1,1,1,0,0
 FRA,France,2022,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 FRA,France,2022,innovation,other,0,0,0,0,0,0,0,0
 FRA,France,2022,innovation,rd_funding,0,0,0,0,0,0,0,0
@@ -3696,8 +3696,8 @@ FRA,France,2022,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,2022,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 FRA,France,2022,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 FRA,France,2023,innovation,human_capital,0,0,0,0,0,0,0,0
-FRA,France,2023,innovation,innovation_instruments,0,0,0,0,0,0,0,0
-FRA,France,2023,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+FRA,France,2023,innovation,innovation_instruments,1,1,1,1,1,1,0,0
+FRA,France,2023,innovation,knowledge_transfer,1,1,1,1,1,1,0,0
 FRA,France,2023,innovation,other,0,0,0,0,0,0,0,0
 FRA,France,2023,innovation,rd_funding,0,0,0,0,0,0,0,0
 FRA,France,2023,innovation,research_infrastructure,0,0,0,0,0,0,0,0
@@ -3706,7 +3706,7 @@ FRA,France,2023,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 FRA,France,2024,innovation,human_capital,0,0,0,0,0,0,0,0
 FRA,France,2024,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 FRA,France,2024,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
-FRA,France,2024,innovation,other,0,0,0,0,0,0,0,0
+FRA,France,2024,innovation,other,1,1,1,1,1,1,0,0
 FRA,France,2024,innovation,rd_funding,0,0,0,0,0,0,0,0
 FRA,France,2024,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 FRA,France,2024,innovation,sectoral_rd,0,0,0,0,0,0,0,0
@@ -9184,8 +9184,8 @@ USA,United States,1995,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 USA,United States,1995,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 USA,United States,1995,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 USA,United States,1996,innovation,human_capital,0,0,0,0,0,0,0,0
-USA,United States,1996,innovation,innovation_instruments,0,0,0,0,0,0,0,0
-USA,United States,1996,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+USA,United States,1996,innovation,innovation_instruments,1,2,1,1,1,2,0,0
+USA,United States,1996,innovation,knowledge_transfer,1,1,0,0,1,1,0,0
 USA,United States,1996,innovation,other,0,0,0,0,0,0,0,0
 USA,United States,1996,innovation,rd_funding,0,0,0,0,0,0,0,0
 USA,United States,1996,innovation,research_infrastructure,0,0,0,0,0,0,0,0
@@ -9193,12 +9193,12 @@ USA,United States,1996,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 USA,United States,1996,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 USA,United States,1997,innovation,human_capital,0,0,0,0,0,0,0,0
 USA,United States,1997,innovation,innovation_instruments,0,0,0,0,0,0,0,0
-USA,United States,1997,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+USA,United States,1997,innovation,knowledge_transfer,1,1,1,1,1,1,0,0
 USA,United States,1997,innovation,other,0,0,0,0,0,0,0,0
-USA,United States,1997,innovation,rd_funding,0,0,0,0,0,0,0,0
-USA,United States,1997,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+USA,United States,1997,innovation,rd_funding,1,1,0,0,1,1,0,0
+USA,United States,1997,innovation,research_infrastructure,1,1,0,0,1,1,0,0
 USA,United States,1997,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-USA,United States,1997,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+USA,United States,1997,innovation,startup_ecosystem,1,1,0,0,1,1,0,0
 USA,United States,1998,innovation,human_capital,0,0,0,0,0,0,0,0
 USA,United States,1998,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 USA,United States,1998,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
@@ -9216,15 +9216,15 @@ USA,United States,1999,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 USA,United States,1999,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 USA,United States,1999,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 USA,United States,2000,innovation,human_capital,0,0,0,0,0,0,0,0
-USA,United States,2000,innovation,innovation_instruments,0,0,0,0,0,0,0,0
-USA,United States,2000,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+USA,United States,2000,innovation,innovation_instruments,1,1,1,1,1,1,0,0
+USA,United States,2000,innovation,knowledge_transfer,1,1,0,0,1,1,0,0
 USA,United States,2000,innovation,other,0,0,0,0,0,0,0,0
 USA,United States,2000,innovation,rd_funding,0,0,0,0,0,0,0,0
 USA,United States,2000,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 USA,United States,2000,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 USA,United States,2000,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 USA,United States,2001,innovation,human_capital,0,0,0,0,0,0,0,0
-USA,United States,2001,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+USA,United States,2001,innovation,innovation_instruments,1,1,1,1,1,1,0,0
 USA,United States,2001,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 USA,United States,2001,innovation,other,0,0,0,0,0,0,0,0
 USA,United States,2001,innovation,rd_funding,0,0,0,0,0,0,0,0
@@ -9232,7 +9232,7 @@ USA,United States,2001,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 USA,United States,2001,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 USA,United States,2001,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 USA,United States,2002,innovation,human_capital,0,0,0,0,0,0,0,0
-USA,United States,2002,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+USA,United States,2002,innovation,innovation_instruments,1,2,1,2,1,2,0,0
 USA,United States,2002,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 USA,United States,2002,innovation,other,0,0,0,0,0,0,0,0
 USA,United States,2002,innovation,rd_funding,0,0,0,0,0,0,0,0
@@ -9260,8 +9260,8 @@ USA,United States,2005,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 USA,United States,2005,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 USA,United States,2005,innovation,other,0,0,0,0,0,0,0,0
 USA,United States,2005,innovation,rd_funding,0,0,0,0,0,0,0,0
-USA,United States,2005,innovation,research_infrastructure,0,0,0,0,0,0,0,0
-USA,United States,2005,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+USA,United States,2005,innovation,research_infrastructure,1,1,1,1,1,1,0,0
+USA,United States,2005,innovation,sectoral_rd,1,1,1,1,1,1,0,0
 USA,United States,2005,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 USA,United States,2006,innovation,human_capital,0,0,0,0,0,0,0,0
 USA,United States,2006,innovation,innovation_instruments,0,0,0,0,0,0,0,0
@@ -9277,7 +9277,7 @@ USA,United States,2007,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 USA,United States,2007,innovation,other,0,0,0,0,0,0,0,0
 USA,United States,2007,innovation,rd_funding,0,0,0,0,0,0,0,0
 USA,United States,2007,innovation,research_infrastructure,0,0,0,0,0,0,0,0
-USA,United States,2007,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+USA,United States,2007,innovation,sectoral_rd,1,1,1,1,1,1,0,0
 USA,United States,2007,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 USA,United States,2008,innovation,human_capital,0,0,0,0,0,0,0,0
 USA,United States,2008,innovation,innovation_instruments,0,0,0,0,0,0,0,0
@@ -9291,34 +9291,34 @@ USA,United States,2009,innovation,human_capital,0,0,0,0,0,0,0,0
 USA,United States,2009,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 USA,United States,2009,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 USA,United States,2009,innovation,other,0,0,0,0,0,0,0,0
-USA,United States,2009,innovation,rd_funding,0,0,0,0,0,0,0,0
+USA,United States,2009,innovation,rd_funding,1,1,1,1,1,1,0,0
 USA,United States,2009,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 USA,United States,2009,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 USA,United States,2009,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 USA,United States,2010,innovation,human_capital,0,0,0,0,0,0,0,0
-USA,United States,2010,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+USA,United States,2010,innovation,innovation_instruments,1,1,1,1,1,1,0,0
 USA,United States,2010,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 USA,United States,2010,innovation,other,0,0,0,0,0,0,0,0
-USA,United States,2010,innovation,rd_funding,0,0,0,0,0,0,0,0
+USA,United States,2010,innovation,rd_funding,1,1,0,0,1,1,0,0
 USA,United States,2010,innovation,research_infrastructure,0,0,0,0,0,0,0,0
-USA,United States,2010,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+USA,United States,2010,innovation,sectoral_rd,1,1,1,1,1,1,0,0
 USA,United States,2010,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 USA,United States,2011,innovation,human_capital,0,0,0,0,0,0,0,0
-USA,United States,2011,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+USA,United States,2011,innovation,innovation_instruments,1,1,1,1,1,1,0,0
 USA,United States,2011,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 USA,United States,2011,innovation,other,0,0,0,0,0,0,0,0
-USA,United States,2011,innovation,rd_funding,0,0,0,0,0,0,0,0
+USA,United States,2011,innovation,rd_funding,1,1,1,1,1,1,0,0
 USA,United States,2011,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 USA,United States,2011,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 USA,United States,2011,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-USA,United States,2012,innovation,human_capital,0,0,0,0,0,0,0,0
+USA,United States,2012,innovation,human_capital,1,1,0,0,1,1,0,0
 USA,United States,2012,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 USA,United States,2012,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 USA,United States,2012,innovation,other,0,0,0,0,0,0,0,0
 USA,United States,2012,innovation,rd_funding,0,0,0,0,0,0,0,0
 USA,United States,2012,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 USA,United States,2012,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-USA,United States,2012,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+USA,United States,2012,innovation,startup_ecosystem,1,1,0,0,1,1,0,0
 USA,United States,2013,innovation,human_capital,0,0,0,0,0,0,0,0
 USA,United States,2013,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 USA,United States,2013,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
@@ -9327,7 +9327,7 @@ USA,United States,2013,innovation,rd_funding,0,0,0,0,0,0,0,0
 USA,United States,2013,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 USA,United States,2013,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 USA,United States,2013,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-USA,United States,2014,innovation,human_capital,0,0,0,0,0,0,0,0
+USA,United States,2014,innovation,human_capital,1,1,1,1,1,1,0,0
 USA,United States,2014,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 USA,United States,2014,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 USA,United States,2014,innovation,other,0,0,0,0,0,0,0,0
@@ -9336,10 +9336,10 @@ USA,United States,2014,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 USA,United States,2014,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 USA,United States,2014,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 USA,United States,2015,innovation,human_capital,0,0,0,0,0,0,0,0
-USA,United States,2015,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+USA,United States,2015,innovation,innovation_instruments,1,2,1,2,1,2,0,0
 USA,United States,2015,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 USA,United States,2015,innovation,other,0,0,0,0,0,0,0,0
-USA,United States,2015,innovation,rd_funding,0,0,0,0,0,0,0,0
+USA,United States,2015,innovation,rd_funding,1,1,1,1,1,1,0,0
 USA,United States,2015,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 USA,United States,2015,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 USA,United States,2015,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
@@ -9352,7 +9352,7 @@ USA,United States,2016,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 USA,United States,2016,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 USA,United States,2016,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 USA,United States,2017,innovation,human_capital,0,0,0,0,0,0,0,0
-USA,United States,2017,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+USA,United States,2017,innovation,innovation_instruments,1,1,1,1,1,1,0,0
 USA,United States,2017,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 USA,United States,2017,innovation,other,0,0,0,0,0,0,0,0
 USA,United States,2017,innovation,rd_funding,0,0,0,0,0,0,0,0
@@ -9364,7 +9364,7 @@ USA,United States,2018,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 USA,United States,2018,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 USA,United States,2018,innovation,other,0,0,0,0,0,0,0,0
 USA,United States,2018,innovation,rd_funding,0,0,0,0,0,0,0,0
-USA,United States,2018,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+USA,United States,2018,innovation,research_infrastructure,1,1,1,1,1,1,0,0
 USA,United States,2018,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 USA,United States,2018,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 USA,United States,2019,innovation,human_capital,0,0,0,0,0,0,0,0
@@ -9374,16 +9374,16 @@ USA,United States,2019,innovation,other,0,0,0,0,0,0,0,0
 USA,United States,2019,innovation,rd_funding,0,0,0,0,0,0,0,0
 USA,United States,2019,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 USA,United States,2019,innovation,sectoral_rd,0,0,0,0,0,0,0,0
-USA,United States,2019,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-USA,United States,2020,innovation,human_capital,0,0,0,0,0,0,0,0
-USA,United States,2020,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+USA,United States,2019,innovation,startup_ecosystem,1,1,0,0,1,1,0,0
+USA,United States,2020,innovation,human_capital,1,1,0,0,1,1,0,0
+USA,United States,2020,innovation,innovation_instruments,1,1,1,1,1,1,0,0
 USA,United States,2020,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 USA,United States,2020,innovation,other,0,0,0,0,0,0,0,0
 USA,United States,2020,innovation,rd_funding,0,0,0,0,0,0,0,0
 USA,United States,2020,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 USA,United States,2020,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 USA,United States,2020,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
-USA,United States,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+USA,United States,2021,innovation,human_capital,1,1,0,0,1,1,0,0
 USA,United States,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 USA,United States,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 USA,United States,2021,innovation,other,0,0,0,0,0,0,0,0
@@ -9396,8 +9396,8 @@ USA,United States,2022,innovation,innovation_instruments,0,0,0,0,0,0,0,0
 USA,United States,2022,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 USA,United States,2022,innovation,other,0,0,0,0,0,0,0,0
 USA,United States,2022,innovation,rd_funding,0,0,0,0,0,0,0,0
-USA,United States,2022,innovation,research_infrastructure,0,0,0,0,0,0,0,0
-USA,United States,2022,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+USA,United States,2022,innovation,research_infrastructure,1,1,1,1,1,1,0,0
+USA,United States,2022,innovation,sectoral_rd,1,2,1,2,1,2,0,0
 USA,United States,2022,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 USA,United States,2023,innovation,human_capital,0,0,0,0,0,0,0,0
 USA,United States,2023,innovation,innovation_instruments,0,0,0,0,0,0,0,0
@@ -9408,11 +9408,11 @@ USA,United States,2023,innovation,research_infrastructure,0,0,0,0,0,0,0,0
 USA,United States,2023,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 USA,United States,2023,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 USA,United States,2024,innovation,human_capital,0,0,0,0,0,0,0,0
-USA,United States,2024,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+USA,United States,2024,innovation,innovation_instruments,1,1,1,1,1,1,0,0
 USA,United States,2024,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
 USA,United States,2024,innovation,other,0,0,0,0,0,0,0,0
-USA,United States,2024,innovation,rd_funding,0,0,0,0,0,0,0,0
-USA,United States,2024,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+USA,United States,2024,innovation,rd_funding,1,1,1,1,1,1,0,0
+USA,United States,2024,innovation,research_infrastructure,1,1,0,0,1,1,0,0
 USA,United States,2024,innovation,sectoral_rd,0,0,0,0,0,0,0,0
 USA,United States,2024,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
 USA,United States,2025,innovation,human_capital,0,0,0,0,0,0,0,0
