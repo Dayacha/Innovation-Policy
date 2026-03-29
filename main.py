@@ -363,6 +363,7 @@ def merge_incremental_budget_results(
     current_budget_df: pd.DataFrame,
     pages_df: pd.DataFrame,
     budget_items_file: Path = BUDGET_ITEMS_FILE,
+    actually_processed_ids: set | None = None,
 ) -> pd.DataFrame:
     """Merge newly extracted budget items with previously saved ones.
 
@@ -375,9 +376,14 @@ def merge_incremental_budget_results(
     if previous_budget_df.empty:
         return current_budget_df
 
-    current_file_ids = set()
+    # A file is "processed in this run" if it produced output OR if it is
+    # explicitly listed in actually_processed_ids (files the extractor ran on
+    # but produced 0 rows — those should still replace stale old rows).
+    current_file_ids: set[str] = set()
     if not current_budget_df.empty and "file_id" in current_budget_df.columns:
         current_file_ids = set(current_budget_df["file_id"].dropna().astype(str))
+    if actually_processed_ids:
+        current_file_ids |= set(str(fid) for fid in actually_processed_ids)
 
     # Keep ALL previous rows except those being replaced in this run.
     # Deleted PDFs are intentionally kept — their data is not lost.
@@ -498,7 +504,10 @@ def run_budget_pipeline() -> None:
         logger.info("No new PDF content detected; reusing existing budget extraction results.")
         incremental_budget_df = pd.DataFrame(columns=previous_budget_df.columns if not previous_budget_df.empty else None)
 
-    budget_df = merge_incremental_budget_results(incremental_budget_df, pages_df, BUDGET_ITEMS_FILE)
+    budget_df = merge_incremental_budget_results(
+        incremental_budget_df, pages_df, BUDGET_ITEMS_FILE,
+        actually_processed_ids=set(str(fid) for fid in file_ids_to_process),
+    )
     budget_df.to_csv(BUDGET_ITEMS_FILE, index=False, encoding="utf-8")
     logger.info("Budget items saved: %s (rows=%s)", BUDGET_ITEMS_FILE, len(budget_df))
 

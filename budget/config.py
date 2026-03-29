@@ -73,6 +73,9 @@ COUNTRY_TOKEN_MAP = {
     "britain": "United Kingdom",
     "hmtreasury": "United Kingdom",
     "supply_estimates": "United Kingdom",
+    "uk": "United Kingdom",            # directory name "UK" or filename suffix "_UK"
+    "uk_budget": "United Kingdom",
+    "budget_uk": "United Kingdom",
     # ── Sweden ────────────────────────────────────────────────────────────────
     "sweden": "Sweden",
     "sverige": "Sweden",

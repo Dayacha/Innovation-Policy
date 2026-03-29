@@ -34,10 +34,15 @@ from budget.temporal_smoothing import compute_temporal_prior
 from budget.taxonomy import INCLUDE_THRESHOLD, REVIEW_THRESHOLD, load_taxonomy, score_text
 from budget.translation_utils import translate_to_english_glossary, preclean_text
 from budget.spain_extractor import extract_spain_items
+from budget.uk_extractor import extract_uk_items
+from budget.canada_extractor import extract_canada_items
 from budget.utils import logger
 
 # Countries with dedicated extractors that bypass the Danish pipeline entirely
-_COUNTRY_DEDICATED_EXTRACTORS: frozenset[str] = frozenset({"Spain"})
+_COUNTRY_DEDICATED_EXTRACTORS: frozenset[str] = frozenset({"Spain", "United Kingdom", "Canada"})
+
+# Countries whose available PDFs are not suitable for R&D extraction
+_COUNTRY_SKIP_EXTRACTORS: frozenset[str] = frozenset()
 
 # Country → primary document language (for taxonomy extensions)
 _COUNTRY_LANGUAGES: dict[str, tuple[str, ...]] = {
@@ -273,6 +278,15 @@ def extract_budget_items(
                                if hasattr(first_row, "get") else
                                getattr(first_row, "country_guess", "Unknown"))
 
+        # ── Countries to skip (wrong document type) ──────────────────────────
+        if country_for_file in _COUNTRY_SKIP_EXTRACTORS:
+            filepath_val = _filepath_from_row(first_row, filepath_col)
+            logger.debug(
+                "Skipping %s (country=%s): PDF type not suitable for R&D extraction.",
+                Path(filepath_val).name, country_for_file,
+            )
+            continue
+
         # ── Country-specific extractors (bypass Danish pipeline) ──────────────
         if country_for_file in _COUNTRY_DEDICATED_EXTRACTORS:
             year_for_file = str(first_row.get("year_guess", "Unknown")
@@ -301,6 +315,47 @@ def extract_budget_items(
                     if key not in existing_keys:
                         records.append(rec)
                         existing_keys.add(key)
+
+            elif country_for_file == "United Kingdom":
+                uk_records = extract_uk_items(
+                    sorted_pages,
+                    file_id=str(file_id),
+                    country=country_for_file,
+                    year=year_for_file,
+                    source_filename=source_fn,
+                )
+                # Deduplicate by year + program_code
+                existing_keys_uk = {
+                    (r.get("year", ""), r.get("program_code", ""))
+                    for r in records
+                    if r.get("country") == "United Kingdom"
+                }
+                for rec in uk_records:
+                    key = (rec.get("year", ""), rec.get("program_code", ""))
+                    if key not in existing_keys_uk:
+                        records.append(rec)
+                        existing_keys_uk.add(key)
+
+            elif country_for_file == "Canada":
+                canada_records = extract_canada_items(
+                    sorted_pages,
+                    file_id=str(file_id),
+                    country=country_for_file,
+                    year=year_for_file,
+                    source_filename=source_fn,
+                )
+                # Deduplicate: same (year, program_code, amount_bin) across multiple Acts
+                existing_keys_ca = {
+                    (r.get("year", ""), r.get("program_code", ""), int(round(r.get("amount_local", 0), -4)))
+                    for r in records
+                    if r.get("country") == "Canada"
+                }
+                for rec in canada_records:
+                    key = (rec.get("year", ""), rec.get("program_code", ""), int(round(rec.get("amount_local", 0), -4)))
+                    if key not in existing_keys_ca:
+                        records.append(rec)
+                        existing_keys_ca.add(key)
+
             continue  # skip Danish pipeline for this file
 
         langs = _COUNTRY_LANGUAGES.get(country_for_file, ())
@@ -733,6 +788,13 @@ def extract_budget_items(
 
     df = pd.DataFrame(records)
     if not df.empty:
+        # Ensure legacy columns exist (dedicated extractors may not set them)
+        for _col in ("file_label", "source_filename", "keywords_matched",
+                     "text_snippet", "text_snippet_en", "detected_amount_raw",
+                     "detected_amount_value", "detected_currency",
+                     "is_header_total", "is_program_level"):
+            if _col not in df.columns:
+                df[_col] = ""
         df = df.sort_values(
             ["taxonomy_score", "amount_local", "file_label", "page_number"],
             ascending=[False, False, True, True],
