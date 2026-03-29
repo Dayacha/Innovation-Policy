@@ -1854,9 +1854,9 @@
     "year": 1995,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/FRA_1995.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/FRA_1995.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/FRA_1995.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-1995_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/1995/01/oecd-economic-surveys-france-1995_g1g17249/eco_surveys-fra-1995-en.pdf"
   },
   "FRA_1997": {
@@ -1865,9 +1865,9 @@
     "year": 1997,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/FRA_1997.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/FRA_1997.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/FRA_1997.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-1997_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/1997/02/oecd-economic-surveys-france-1997_g1ghg4f1/eco_surveys-fra-1997-en.pdf"
   },
   "FRA_1999": {
@@ -1876,9 +1876,9 @@
     "year": 1999,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/FRA_1999.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/FRA_1999.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/FRA_1999.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-1999_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/1999/02/oecd-economic-surveys-france-1999_g1ghg5b1/eco_surveys-fra-1999-en.pdf"
   },
   "FRA_2001": {
@@ -1887,9 +1887,9 @@
     "year": 2001,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/FRA_2001.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/FRA_2001.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/FRA_2001.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2001_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2001/11/oecd-economic-surveys-france-2001_g1ghg67e/eco_surveys-fra-2001-en.pdf"
   },
   "FRA_2003": {
@@ -1898,9 +1898,9 @@
     "year": 2003,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/FRA_2003.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/FRA_2003.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/FRA_2003.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2003_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2003/07/oecd-economic-surveys-france-2003_g1gh3297/eco_surveys-fra-2003-en.pdf"
   },
   "FRA_2005": {
@@ -1909,9 +1909,9 @@
     "year": 2005,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/FRA_2005.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/FRA_2005.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/FRA_2005.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2005_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2005/08/oecd-economic-surveys-france-2005_g1gh4961/eco_surveys-fra-2005-en.pdf"
   },
   "FRA_2007": {
@@ -1920,9 +1920,9 @@
     "year": 2007,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/FRA_2007.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/FRA_2007.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/FRA_2007.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2007_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2007/06/oecd-economic-surveys-france-2007_g1gh75a3/eco_surveys-fra-2007-en.pdf"
   },
   "FRA_2009": {
@@ -1931,9 +1931,9 @@
     "year": 2009,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/FRA_2009.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/FRA_2009.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/FRA_2009.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2009_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2009/04/oecd-economic-surveys-france-2009_g1gh9a69/eco_surveys-fra-2009-en.pdf"
   },
   "FRA_2011": {
@@ -1942,9 +1942,9 @@
     "year": 2011,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/FRA_2011.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/FRA_2011.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/FRA_2011.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2011_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2011/04/oecd-economic-surveys-france-2011_g1g11664/eco_surveys-fra-2011-en.pdf"
   },
   "FRA_2013": {
@@ -1953,9 +1953,9 @@
     "year": 2013,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/FRA_2013.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/FRA_2013.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/FRA_2013.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2013_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2013/03/oecd-economic-surveys-france-2013_g1g22064/eco_surveys-fra-2013-en.pdf"
   },
   "FRA_2015": {
@@ -1964,9 +1964,9 @@
     "year": 2015,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/FRA_2015.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/FRA_2015.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/FRA_2015.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2015_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2015/04/oecd-economic-surveys-france-2015_g1g507ce/eco_surveys-fra-2015-en.pdf"
   },
   "FRA_2017": {
@@ -1975,9 +1975,9 @@
     "year": 2017,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/FRA_2017.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/FRA_2017.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/FRA_2017.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2017_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2017/09/oecd-economic-surveys-france-2017_g1g7cdf6/eco_surveys-fra-2017-en.pdf"
   },
   "FRA_2019": {
@@ -1986,9 +1986,9 @@
     "year": 2019,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/FRA_2019.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/FRA_2019.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/FRA_2019.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2019_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2019/04/oecd-economic-surveys-france-2019_57df0ee4/a0eee144-en.pdf"
   },
   "FRA_2021": {
@@ -1997,9 +1997,9 @@
     "year": 2021,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/FRA_2021.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/FRA_2021.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/FRA_2021.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2021_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/71/71b7f945762cbd40d5106ee49bb3b58404caed7b.pdf"
   },
   "FRA_2023": {
@@ -2028,9 +2028,9 @@
     "year": 1995,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DEU_1995.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DEU_1995.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DEU_1995.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-1995_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/16/16723c583171f40536f7950f81e9cb40c6ddb078.pdf"
   },
   "DEU_1997": {
@@ -2039,9 +2039,9 @@
     "year": 1997,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DEU_1997.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DEU_1997.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DEU_1997.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-1997_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/56/5697df63963b883db38841c37963cba5da57d88d.pdf"
   },
   "DEU_1999": {
@@ -2050,9 +2050,9 @@
     "year": 1999,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DEU_1999.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DEU_1999.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DEU_1999.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-1999_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/be/bee8c8445f356916286242043d221fdd35f6ca91.pdf"
   },
   "DEU_2001": {
@@ -2061,9 +2061,9 @@
     "year": 2001,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DEU_2001.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DEU_2001.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DEU_2001.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2001_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2001/05/oecd-economic-surveys-germany-2001_g1ghg686/eco_surveys-deu-2001-en.pdf"
   },
   "DEU_2003": {
@@ -2172,9 +2172,9 @@
     "year": 2023,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DEU_2023.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DEU_2023.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DEU_2023.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2023_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/b8/b8037bbf43cf6a7fcec6a8dbcfc33bd0e34ef7f9.pdf"
   },
   "DEU_2025": {
@@ -2183,9 +2183,9 @@
     "year": 2025,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DEU_2025.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DEU_2025.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DEU_2025.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2025_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/38/38105101cee827dea60e5cf9ea25386d5d58ab22.pdf"
   },
   "GRC_1995": {
@@ -6226,9 +6226,9 @@
     "year": 1995,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/USA_1995.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/USA_1995.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/USA_1995.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-1995_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/21/2127f861ae0a3c8bb9fe66b976d9e61415f38236.pdf"
   },
   "USA_1997": {
@@ -6237,9 +6237,9 @@
     "year": 1997,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/USA_1997.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/USA_1997.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/USA_1997.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-1997_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/82/822bdb471f15c577123bc3b4ad82638dc5379295.pdf"
   },
   "USA_1999": {
@@ -6248,9 +6248,9 @@
     "year": 1999,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/USA_1999.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/USA_1999.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/USA_1999.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-1999_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/c3/c3b0906a8ae62c13d9985571ce817c47405e4a08.pdf"
   },
   "USA_2001": {
@@ -6259,9 +6259,9 @@
     "year": 2001,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/USA_2001.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/USA_2001.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/USA_2001.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2001_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2001/11/oecd-economic-surveys-united-states-2001_g1ghg67a/eco_surveys-usa-2001-en.pdf"
   },
   "USA_2003": {
@@ -6280,9 +6280,9 @@
     "year": 2005,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/USA_2005.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/USA_2005.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/USA_2005.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2005_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2005/10/oecd-economic-surveys-united-states-2005_g1gh5fe3/eco_surveys-usa-2005-en.pdf"
   },
   "USA_2007": {
@@ -6291,9 +6291,9 @@
     "year": 2007,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/USA_2007.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/USA_2007.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/USA_2007.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2007_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2007/05/oecd-economic-surveys-united-states-2007_g1gh759b/eco_surveys-usa-2007-en.pdf"
   },
   "USA_2009": {
@@ -6722,10 +6722,10 @@
     "year": 2020,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DEU_2020.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DEU_2020.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DEU_2020.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2020_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/45/450e2f2da2b32e1e55db55d288bf97551e7c6a68.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "DEU_2018": {
     "country_code": "DEU",
@@ -6733,10 +6733,10 @@
     "year": 2018,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DEU_2018.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DEU_2018.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DEU_2018.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2018_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/dd/ddf56330f11074f411898706a5e25a8c9a157d89.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "DEU_2016": {
     "country_code": "DEU",
@@ -6744,10 +6744,10 @@
     "year": 2016,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DEU_2016.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DEU_2016.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DEU_2016.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2016_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/3c/3cb3ec5bf76b79df79c4f3d2286383e6998d89ad.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "DEU_2014": {
     "country_code": "DEU",
@@ -6755,10 +6755,10 @@
     "year": 2014,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DEU_2014.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DEU_2014.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DEU_2014.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2014_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2014/05/oecd-economic-surveys-germany-2014_g1g394df/eco_surveys-deu-2014-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "DEU_2012": {
     "country_code": "DEU",
@@ -6766,10 +6766,10 @@
     "year": 2012,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DEU_2012.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DEU_2012.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DEU_2012.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2012_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2012/02/oecd-economic-surveys-germany-2012_g1g156dc/eco_surveys-deu-2012-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "DEU_2010": {
     "country_code": "DEU",
@@ -6777,10 +6777,10 @@
     "year": 2010,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DEU_2010.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DEU_2010.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DEU_2010.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2010_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2010/03/oecd-economic-surveys-germany-2010_g1ghbd50/eco_surveys-deu-2010-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "DEU_2008": {
     "country_code": "DEU",
@@ -6788,10 +6788,10 @@
     "year": 2008,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DEU_2008.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DEU_2008.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DEU_2008.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2008_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2008/04/oecd-economic-surveys-germany-2008_g1gh8906/eco_surveys-deu-2008-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "DEU_2006": {
     "country_code": "DEU",
@@ -6799,10 +6799,10 @@
     "year": 2006,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DEU_2006.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DEU_2006.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DEU_2006.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2006_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2006/07/oecd-economic-surveys-germany-2006_g1gh6798/eco_surveys-deu-2006-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "DEU_2004": {
     "country_code": "DEU",
@@ -6810,10 +6810,10 @@
     "year": 2004,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DEU_2004.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DEU_2004.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DEU_2004.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2004_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2004/08/oecd-economic-surveys-germany-2004_g1gh3fdc/eco_surveys-deu-2004-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "DEU_2002": {
     "country_code": "DEU",
@@ -6821,10 +6821,10 @@
     "year": 2002,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DEU_2002.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DEU_2002.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DEU_2002.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-2002_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2002/12/oecd-economic-surveys-germany-2002_g1gh2fed/eco_surveys-deu-2002-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "DEU_1998": {
     "country_code": "DEU",
@@ -6832,10 +6832,10 @@
     "year": 1998,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DEU_1998.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DEU_1998.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DEU_1998.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-1998_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/97/971b96aa802e55b521f19eaf0c2b65a77219c809.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "DEU_1996": {
     "country_code": "DEU",
@@ -6843,10 +6843,10 @@
     "year": 1996,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/DEU_1996.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/DEU_1996.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/DEU_1996.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-germany-1996_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/68/6878528196710b4d4e9eabbda59c727c0b817b2c.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "DEU_1994": {
     "country_code": "DEU",
@@ -10476,7 +10476,7 @@
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_2020.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2020_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/ae/ae15c5a132e53675200b79937d26a947970c67e8.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "GBR_2004": {
     "country_code": "GBR",
@@ -10487,7 +10487,7 @@
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_2004.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2004_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2004/01/oecd-economic-surveys-united-kingdom-2004_g1gh3f4f/eco_surveys-gbr-2004-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "GBR_2002": {
     "country_code": "GBR",
@@ -10498,7 +10498,7 @@
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_2002.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2002_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2001/11/oecd-economic-surveys-united-kingdom-2002_g1ghg6b8/eco_surveys-gbr-2002-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "GBR_2000": {
     "country_code": "GBR",
@@ -10509,7 +10509,7 @@
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_2000.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-2000_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2000/06/oecd-economic-surveys-united-kingdom-2000_g1ghg630/eco_surveys-gbr-2000-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "GBR_1998": {
     "country_code": "GBR",
@@ -10520,7 +10520,7 @@
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_1998.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-1998_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/1998/06/oecd-economic-surveys-united-kingdom-1998_g1ghg575/eco_surveys-gbr-1998-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "GBR_1996": {
     "country_code": "GBR",
@@ -10531,7 +10531,7 @@
     "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/GBR_1996.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-kingdom-1996_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/1996/01/oecd-economic-surveys-united-kingdom-1996_g1g17261/eco_surveys-gbr-1996-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "GBR_1994": {
     "country_code": "GBR",
@@ -11012,10 +11012,10 @@
     "year": 2024,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/FRA_2024.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/FRA_2024.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/FRA_2024.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2024_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/c5/c593107317859057fd7e4bc5a629b64b8b6546cc.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "FRA_2000": {
     "country_code": "FRA",
@@ -11023,10 +11023,10 @@
     "year": 2000,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/FRA_2000.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/FRA_2000.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/FRA_2000.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-france-2000_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2000/07/oecd-economic-surveys-france-2000_g1ghg615/eco_surveys-fra-2000-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "FRA_1994": {
     "country_code": "FRA",
@@ -11727,10 +11727,10 @@
     "year": 2024,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/USA_2024.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/USA_2024.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/USA_2024.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2024_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/96/96a5f566ab4524c0ada8ec2bd32699130b033069.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "USA_2022": {
     "country_code": "USA",
@@ -11738,10 +11738,10 @@
     "year": 2022,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/USA_2022.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/USA_2022.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/USA_2022.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2022_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/ed/edf2c8d84f36392954d7cdaed084d01bc911fea5.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "USA_2020": {
     "country_code": "USA",
@@ -11749,10 +11749,10 @@
     "year": 2020,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/USA_2020.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/USA_2020.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/USA_2020.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2020_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/40/403a065f14b659073e73978aac89f0aebf4444d0.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "USA_2018": {
     "country_code": "USA",
@@ -11760,10 +11760,10 @@
     "year": 2018,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/USA_2018.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/USA_2018.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/USA_2018.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2018_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/52/52f3ee6b62fbfe2cf2f26d71aa88b91ea13e021d.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "USA_2016": {
     "country_code": "USA",
@@ -11771,10 +11771,10 @@
     "year": 2016,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/USA_2016.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/USA_2016.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/USA_2016.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2016_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/58/58bd302f8c9c8457ca688d82e7d803d303c9ed2b.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "USA_2014": {
     "country_code": "USA",
@@ -11782,10 +11782,10 @@
     "year": 2014,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/USA_2014.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/USA_2014.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/USA_2014.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2014_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2014/06/oecd-economic-surveys-united-states-2014_g1g394e8/eco_surveys-usa-2014-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "USA_2012": {
     "country_code": "USA",
@@ -11793,10 +11793,10 @@
     "year": 2012,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/USA_2012.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/USA_2012.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/USA_2012.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2012_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2012/06/oecd-economic-surveys-united-states-2012_g1g156f2/eco_surveys-usa-2012-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "USA_2010": {
     "country_code": "USA",
@@ -11804,10 +11804,10 @@
     "year": 2010,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/USA_2010.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/USA_2010.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/USA_2010.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2010_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2010/09/oecd-economic-surveys-united-states-2010_g1ghbd5c/eco_surveys-usa-2010-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "USA_2008": {
     "country_code": "USA",
@@ -11815,10 +11815,10 @@
     "year": 2008,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/USA_2008.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/USA_2008.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/USA_2008.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2008_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2008/12/oecd-economic-surveys-united-states-2008_g1gh907e/eco_surveys-usa-2008-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "USA_2004": {
     "country_code": "USA",
@@ -11826,10 +11826,10 @@
     "year": 2004,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/USA_2004.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/USA_2004.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/USA_2004.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2004_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2004/04/oecd-economic-surveys-united-states-2004_g1gh3fd7/eco_surveys-usa-2004-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "USA_2002": {
     "country_code": "USA",
@@ -11837,10 +11837,10 @@
     "year": 2002,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/USA_2002.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/USA_2002.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/USA_2002.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2002_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2002/10/oecd-economic-surveys-united-states-2002_g1ghg6fe/eco_surveys-usa-2002-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "USA_2000": {
     "country_code": "USA",
@@ -11848,10 +11848,10 @@
     "year": 2000,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/USA_2000.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/USA_2000.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/USA_2000.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-2000_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2000/05/oecd-economic-surveys-united-states-2000_g1ghg600/eco_surveys-usa-2000-en.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "USA_1996": {
     "country_code": "USA",
@@ -11859,10 +11859,10 @@
     "year": 1996,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/USA_1996.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/USA_1996.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/USA_1996.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-united-states-1996_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/59/59c47289b602f9627805281a9e389fd343f7591a.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "USA_1994": {
     "country_code": "USA",
