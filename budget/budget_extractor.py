@@ -36,10 +36,12 @@ from budget.translation_utils import translate_to_english_glossary, preclean_tex
 from budget.spain_extractor import extract_spain_items
 from budget.uk_extractor import extract_uk_items
 from budget.canada_extractor import extract_canada_items
+from budget.australia_extractor import extract_australia_items
+from budget.belgium_extractor import extract_belgium_items
 from budget.utils import logger
 
 # Countries with dedicated extractors that bypass the Danish pipeline entirely
-_COUNTRY_DEDICATED_EXTRACTORS: frozenset[str] = frozenset({"Spain", "United Kingdom", "Canada"})
+_COUNTRY_DEDICATED_EXTRACTORS: frozenset[str] = frozenset({"Spain", "United Kingdom", "Canada", "Australia", "Belgium"})
 
 # Countries whose available PDFs are not suitable for R&D extraction
 _COUNTRY_SKIP_EXTRACTORS: frozenset[str] = frozenset()
@@ -355,6 +357,44 @@ def extract_budget_items(
                     if key not in existing_keys_ca:
                         records.append(rec)
                         existing_keys_ca.add(key)
+
+            elif country_for_file == "Australia":
+                au_records = extract_australia_items(
+                    sorted_pages,
+                    file_id=str(file_id),
+                    country=country_for_file,
+                    year=year_for_file,
+                    source_filename=source_fn,
+                )
+                existing_keys_au = {
+                    (r.get("year", ""), r.get("program_code", ""))
+                    for r in records
+                    if r.get("country") == "Australia"
+                }
+                for rec in au_records:
+                    key = (rec.get("year", ""), rec.get("program_code", ""))
+                    if key not in existing_keys_au:
+                        records.append(rec)
+                        existing_keys_au.add(key)
+
+            elif country_for_file == "Belgium":
+                be_records = extract_belgium_items(
+                    sorted_pages,
+                    file_id=str(file_id),
+                    country=country_for_file,
+                    year=year_for_file,
+                    source_filename=source_fn,
+                )
+                existing_keys_be = {
+                    (r.get("year", ""), r.get("program_code", ""), int(round(r.get("amount_local") or 0, -3)))
+                    for r in records
+                    if r.get("country") == "Belgium"
+                }
+                for rec in be_records:
+                    key = (rec.get("year", ""), rec.get("program_code", ""), int(round(rec.get("amount_local") or 0, -3)))
+                    if key not in existing_keys_be:
+                        records.append(rec)
+                        existing_keys_be.add(key)
 
             continue  # skip Danish pipeline for this file
 

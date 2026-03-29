@@ -36,7 +36,7 @@ def build_file_inventory(pdf_root: Path) -> pd.DataFrame:
 
     for file_path in files:
         extension = file_path.suffix.lower()
-        if extension != ".pdf":
+        if extension not in (".pdf", ".docx"):
             continue
 
         country_guess, year_guess = infer_country_year(file_path)

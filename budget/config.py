@@ -131,6 +131,43 @@ COUNTRY_TOKEN_MAP = {
     # ── Japan ─────────────────────────────────────────────────────────────────
     "japan": "Japan",
     "kokka_yosan": "Japan",
+    # ── Colombia ──────────────────────────────────────────────────────────────
+    "colombia": "Colombia",
+    "presupuesto_general_nacion": "Colombia",
+    "decreto_de_liquidacion": "Colombia",
+    # ── Chile ─────────────────────────────────────────────────────────────────
+    "chile": "Chile",
+    "ley_de_presupuestos": "Chile",
+    # ── Costa Rica ────────────────────────────────────────────────────────────
+    "costa rica": "Costa Rica",   # directory name with space
+    "costa_rica": "Costa Rica",
+    "costarica": "Costa Rica",
+    # ── Czech Republic ────────────────────────────────────────────────────────
+    "czech republic": "Czech Republic",  # directory name with space
+    "czech_republic": "Czech Republic",
+    "czechrepublic": "Czech Republic",
+    "czech": "Czech Republic",
+    "ceska_republika": "Czech Republic",
+    "statni_rozpocet": "Czech Republic",
+    # ── Ireland ───────────────────────────────────────────────────────────────
+    "ireland": "Ireland",
+    "eire": "Ireland",
+    # ── Mexico ────────────────────────────────────────────────────────────────
+    "mexico": "Mexico",
+    "presupuesto_egresos": "Mexico",
+    # ── Poland ────────────────────────────────────────────────────────────────
+    "poland": "Poland",
+    "polska": "Poland",
+    "budzet_panstwa": "Poland",
+    # ── Portugal ──────────────────────────────────────────────────────────────
+    "portugal": "Portugal",
+    "orcamento_estado": "Portugal",
+    # ── New Zealand ───────────────────────────────────────────────────────────
+    "new_zealand": "New Zealand",
+    "newzealand": "New Zealand",
+    # ── South Korea ───────────────────────────────────────────────────────────
+    "korea": "Korea",
+    "south_korea": "Korea",
 }
 
 

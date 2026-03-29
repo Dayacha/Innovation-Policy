@@ -73,6 +73,26 @@ _SKIP_HEADING_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Patterns that indicate the matched amount is NOT government science spending:
+# - Business R&D statistics (£47.5B companies claimed)
+# - R&D tax relief/credit figures
+# - General investment funds not specific to science (NPIF)
+# - Retrospective statistics ("invested X between 2010 and 2019")
+_EXCLUDE_CONTEXT_RE = re.compile(
+    r"(compan(?:y|ies)\s+claimed"
+    r"|businesses?\s+(?:spend|spent|invest|claimed)"
+    r"|private\s+sector\s+R&D"
+    r"|R&D\s+tax\s+(?:credit|relief|incentive)"
+    r"|tax\s+(?:credit|relief)\s+on\s+R&D"
+    r"|tax\s+relief\s+on\s+[£\d]"
+    r"|NPIF\b"
+    r"|National\s+Productivity\s+Investment\s+Fund"
+    r"|between\s+20\d\d\s+and\s+20\d\d"
+    r"|by\s+20\d\d[,\s])"
+    ,
+    re.IGNORECASE,
+)
+
 # Headings that signal a science/innovation section
 _SCIENCE_HEADING_RE = re.compile(
     r"(science\s+and\s+(technology|innovation)|"
@@ -114,12 +134,17 @@ def _extract_from_page(text: str) -> list[tuple[str, float, str]]:
             amount = _parse_amount(amt_m)
             if amount is None or amount < 1e6:  # ignore amounts < £1 million
                 continue
+            snippet = m.group()[:300].replace("\n", " ").strip()
+            # Skip if the matched context indicates business R&D stats, tax relief, or
+            # non-science-specific funds (NPIF, retrospective comparisons, etc.)
+            if _EXCLUDE_CONTEXT_RE.search(snippet):
+                continue
             # Deduplicate by amount (same figure mentioned twice)
             rounded = round(amount, -5)
             if rounded in seen_amounts:
                 continue
             seen_amounts.add(rounded)
-            snippet = m.group()[:200].replace("\n", " ").strip()
+            snippet = snippet[:200]
             results.append((label, amount, snippet))
             if len(results) >= 5:
                 break

@@ -16,6 +16,7 @@ Called from the unified entry point:
 """
 
 import logging
+import json
 import sys
 import time
 from pathlib import Path
@@ -34,16 +35,40 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 logger = logging.getLogger(__name__)
 
 
+def _json_has_reforms(reforms_path: Path) -> bool:
+    """Return True when the saved JSON contains at least one reform."""
+    try:
+        with open(reforms_path, encoding="utf-8") as f:
+            payload = json.load(f)
+    except Exception as exc:
+        logger.warning("Could not inspect saved JSON %s: %s", reforms_path.name, exc)
+        return False
+
+    reforms = payload.get("reforms", [])
+    return isinstance(reforms, list) and len(reforms) > 0
+
+
 def _cleanup_source_files(entry, reforms_path: Path, cleanup_enabled: bool) -> None:
     """Delete intermediate text/PDF files after a successful JSON save."""
     if not cleanup_enabled or not reforms_path.exists():
         return
+
+    has_reforms = _json_has_reforms(reforms_path)
 
     for key in ("text_path", "pdf_path"):
         raw_path = entry.get(key)
         if not raw_path:
             continue
         path = Path(raw_path)
+
+        if key == "pdf_path" and not has_reforms:
+            logger.info(
+                "Keeping %s after empty JSON result: %s",
+                key,
+                path.name,
+            )
+            continue
+
         try:
             if path.exists():
                 path.unlink()

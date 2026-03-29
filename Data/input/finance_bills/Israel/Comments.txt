@@ -1,0 +1,17 @@
+1993 missing from the Knesset database - looks like a bug (it has number and publication date, just no file where there usually is one)
+
+2003 - wrong document in the Knesset database (Budget of the State Comptroller Office)
+
+2006 - the document in the dataset contains only the first two pages of the budget (including the table of contents, clearly indicating it should be longer)
+
+2020 - no budget (political crisis). Until Nov 2021 gov operated under 2019 budget + emergency legislation (e.g. for Covid)
+
+2021 - budget passed in November
+
+2023 and 2024 budgets were later replaced, during the corresponding fiscal years. I will use the original budgets.
+
+
+
+In biannual budgets, budgets for the first year come first and for the second come second. Might be worth it to simply separate them
+
+Quite often, budgets are passed during the fiscal year. until then, the government automatically can use previous year budget, pro-rated on monthly basis

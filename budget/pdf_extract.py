@@ -1,6 +1,7 @@
-"""PDF text extraction stage with OCR fallback when direct extraction is weak."""
+"""PDF and DOCX text extraction stage with OCR fallback when direct extraction is weak."""
 
 from pathlib import Path
+from typing import Optional
 
 import fitz
 import pandas as pd
@@ -8,6 +9,57 @@ import pandas as pd
 from budget.config import MIN_ALNUM_RATIO, MIN_DIRECT_TEXT_CHARS, PAGE_EXTRACTION_FILE
 from budget.ocr_utils import is_ocr_available, run_ocr_on_page
 from budget.utils import logger, text_quality_metrics
+
+
+def _extract_docx_pages(filepath: Path) -> list[dict]:
+    """Extract text from a .docx file, returning one 'page' per table plus one for paragraphs.
+
+    Tables are converted to tab-separated rows so that structured data
+    (like Australian Appropriation Act schedule tables) remains parseable.
+    """
+    try:
+        from docx import Document  # python-docx
+    except ImportError:
+        logger.warning("python-docx not installed; skipping docx extraction for %s", filepath.name)
+        return []
+
+    try:
+        doc = Document(filepath)
+    except Exception as exc:
+        logger.error("Failed to open docx %s: %s", filepath, exc)
+        return []
+
+    pages = []
+
+    # Page 1: all paragraph text
+    para_text = "\n".join(p.text for p in doc.paragraphs if p.text.strip())
+    if para_text.strip():
+        pages.append({"page_number": 1, "text": para_text, "extraction_method": "docx_paragraphs"})
+
+    # Pages 2+: one page per table (tab-separated cells)
+    for i, table in enumerate(doc.tables):
+        rows_text = []
+        for row in table.rows:
+            cells = [c.text.strip() for c in row.cells]
+            # Deduplicate merged cells (python-docx repeats merged cells)
+            seen = []
+            prev = None
+            for c in cells:
+                if c != prev:
+                    seen.append(c)
+                prev = c
+            row_line = "\t".join(seen)
+            if row_line.strip():
+                rows_text.append(row_line)
+        table_text = "\n".join(rows_text)
+        if table_text.strip():
+            pages.append({
+                "page_number": i + 2,
+                "text": table_text,
+                "extraction_method": "docx_table",
+            })
+
+    return pages
 
 
 def _needs_ocr(text: str) -> bool:
@@ -62,6 +114,9 @@ def extract_text_for_inventory(inventory_df: pd.DataFrame) -> tuple[pd.DataFrame
                     cached_rows = cached_rows[cached_rows.get("file_size") == file_size]
             if not cached_rows.empty:
                 cached_rows = cached_rows.copy()
+                # Deduplicate by page_number to prevent exponential CSV growth
+                # when the cache itself already contains duplicate rows
+                cached_rows = cached_rows.drop_duplicates(subset=["page_number"], keep="last")
                 cached_rows["file_id"] = file_id
                 cached_rows["filepath"] = str(filepath)
                 cached_rows["file_size"] = file_size
@@ -93,6 +148,46 @@ def extract_text_for_inventory(inventory_df: pd.DataFrame) -> tuple[pd.DataFrame
         ocr_pages = 0
         error_pages = 0
         file_status = "ok"
+
+        # ── DOCX branch ──────────────────────────────────────────────────────
+        if filepath.suffix.lower() == ".docx":
+            try:
+                docx_pages = _extract_docx_pages(filepath)
+                file_total_pages = len(docx_pages)
+                direct_pages = file_total_pages
+                for pg in docx_pages:
+                    char_count = len(pg["text"])
+                    page_records.append({
+                        "file_id": file_id,
+                        "filepath": str(filepath),
+                        "file_size": file_size,
+                        "content_hash": content_hash,
+                        "country_guess": country_guess,
+                        "year_guess": year_guess,
+                        "page_number": pg["page_number"],
+                        "extraction_method": pg["extraction_method"],
+                        "text": pg["text"],
+                        "char_count": char_count,
+                    })
+            except Exception as exc:
+                file_status = f"error: {exc}"
+                logger.error("Failed to process docx %s: %s", filepath, exc)
+                error_pages += 1
+            summary_records.append({
+                "file_id": file_id,
+                "filepath": str(filepath),
+                "file_size": file_size,
+                "content_hash": content_hash,
+                "country_guess": country_guess,
+                "year_guess": year_guess,
+                "total_pages": file_total_pages,
+                "direct_pages": direct_pages,
+                "ocr_pages": 0,
+                "error_pages": error_pages,
+                "status": file_status,
+            })
+            continue
+        # ── PDF branch ───────────────────────────────────────────────────────
 
         try:
             with fitz.open(filepath) as doc:

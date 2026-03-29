@@ -155,15 +155,19 @@ _ANY_AGENCY_RE = re.compile(
 # English format: 1,234,567 or 1,234,567.00
 _RE_AMT_COMMA = re.compile(r"\b(\d{1,3}(?:,\d{3})+(?:\.\d+)?)\b")
 
-# French/2018+ format: 1 234 567 (non-breaking or regular space as thousands sep)
-# Must be ≥ 6 digits total (≥ 100,000) to avoid matching page numbers, vote numbers
-_RE_AMT_SPACE = re.compile(r"\b(\d{1,3}(?: \d{3}){2,})\b")
+# French/2018+ format: thousands separated by space, no-break space (U+00A0),
+# or narrow no-break space (U+202F).  Must be ≥ 3 groups (≥ 100 000).
+_SPACE_CHARS = r"[ \u00a0\u202f]"
+_RE_AMT_SPACE = re.compile(
+    r"\b(\d{1,3}(?:" + _SPACE_CHARS + r"\d{3}){2,})\b"
+)
 
 
 def _parse_amount(raw: str) -> Optional[float]:
     """Parse a raw amount string to float, returning None if unparseable."""
     try:
-        cleaned = raw.replace(",", "").replace(" ", "").strip()
+        # Strip commas and all space variants used as thousands separators
+        cleaned = raw.replace(",", "").replace("\u00a0", "").replace("\u202f", "").replace(" ", "").strip()
         return float(cleaned)
     except ValueError:
         return None
@@ -183,43 +187,38 @@ def _extract_amounts_from_block(block: str) -> list[float]:
     return sorted(amounts)
 
 
+MAX_SINGLE_AGENCY_CAD = 3_000_000_000  # $3B — no R&D agency ever exceeded this
+
+
 def _get_block_total(amounts: list[float]) -> Optional[float]:
     """
     Given the sorted list of amounts found in an agency block, return the most
     likely total for that specific agency.
 
     Strategy:
-    1. Remove amounts that represent schedule/appropriation grand totals (detected
-       by a sudden large jump: any amount > 8x the previous amount in the sorted
-       list is assumed to be a running total, not the agency's own subtotal).
-    2. Return the maximum of the remaining amounts (the agency subtotal).
+    1. Exclude amounts > MAX_SINGLE_AGENCY_CAD (no R&D agency had such a budget).
+       This handles schedule-level totals like '$23B for all departments'.
+    2. Return the maximum of remaining amounts (the agency subtotal or the
+       largest vote amount if no explicit subtotal).
 
-    This handles the pattern where the last agency in a schedule has the
-    schedule-level running total appearing immediately after its own amounts.
+    Note: The jump-filter approach was removed because operating ($46M) to
+    grants ($1.2B) looks like a suspicious jump but is completely legitimate.
+    The $3B hard cap is sufficient to filter out real schedule totals.
     """
     if not amounts:
         return None
-
-    # Filter out schedule-level totals (large jumps in sorted amount sequence)
-    filtered: list[float] = []
-    for i, amt in enumerate(amounts):
-        if filtered and amt > filtered[-1] * 8:
-            # Sudden jump — this and all subsequent amounts are likely
-            # schedule-level totals rather than agency-specific amounts
-            break
-        filtered.append(amt)
-
-    if not filtered:
-        return None
-    return max(filtered)
+    # Hard cap: no Canadian R&D agency ever had >$3B in a single appropriation
+    filtered = [a for a in amounts if a <= MAX_SINGLE_AGENCY_CAD]
+    return max(filtered) if filtered else None
 
 
 # ── Page-level extraction ──────────────────────────────────────────────────────
 
 # Pattern that marks the START of a new top-level agency/department heading.
 # We use ALL-CAPS lines (≥ 10 chars) as block boundaries.
-# Allow periods for agency names like "VIA RAIL CANADA INC." or "ATOMIC ENERGY OF CANADA LTD."
-_RE_HEADING = re.compile(r"^[A-ZÀ-ÖØ-Ü][A-ZÀ-ÖØ-Ü\s,''()\-.]{9,}$", re.MULTILINE)
+# Allow: periods ("VIA RAIL CANADA INC."), straight apostrophes ("L'IMMIGRATION"),
+# curly apostrophes, hyphens, parentheses.
+_RE_HEADING = re.compile(r"^[A-ZÀ-ÖØ-Ü][A-ZÀ-ÖØ-Ü\s,\u0027\u2018\u2019()\-.]{9,}$", re.MULTILINE)
 
 
 def _split_into_blocks(text: str) -> list[tuple[str, str]]:
@@ -227,8 +226,15 @@ def _split_into_blocks(text: str) -> list[tuple[str, str]]:
     Split page text into (heading, body) pairs at ALL-CAPS headings.
 
     Heuristic: a line is a heading if it is ALL-CAPS (allowing accents, commas,
-    hyphens, apostrophes) and at least 10 characters long.
+    hyphens, apostrophes, periods) and at least 10 characters long.
+
+    Body is limited to MAX_BODY_LINES lines after the heading to handle two-column
+    OCR layouts where amounts from all agencies on a page appear at the bottom
+    (after all descriptions). This prevents the last agency's block from
+    absorbing amounts belonging to earlier agencies.
     """
+    MAX_BODY_LINES = 25  # generous window for any agency's votes
+
     lines = text.splitlines()
     blocks: list[tuple[str, str]] = []
     current_heading = ""
@@ -243,7 +249,9 @@ def _split_into_blocks(text: str) -> list[tuple[str, str]]:
             current_heading = stripped
             current_body_lines = []
         else:
-            current_body_lines.append(stripped)
+            # Only add to body if within window (prevents two-column layout issues)
+            if len(current_body_lines) < MAX_BODY_LINES:
+                current_body_lines.append(stripped)
 
     # Don't forget final block
     if current_heading or current_body_lines:
