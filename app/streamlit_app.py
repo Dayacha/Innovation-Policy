@@ -779,45 +779,69 @@ with TAB_REFORMS:
     n_gh   = int((dr_f["growth_orientation"] == "growth_hindering").sum()) \
              if "growth_orientation" in dr_f.columns else 0
     n_maj  = int(dr_f["is_major_reform"].sum()) if "is_major_reform" in dr_f.columns else 0
+    n_ctry = int(dr_f["country_name"].nunique()) if "country_name" in dr_f.columns else 0
     n_surv = int(_dr_all_tab2["survey_year"].nunique()) if "survey_year" in _dr_all_tab2.columns else 0
     stat_row([
         (str(len(dr_f)), "Reform events"),
         (str(n_maj),     "Major reforms"),
         (str(n_gs),      "Growth-supporting"),
         (str(n_gh),      "Growth-hindering"),
-        (str(n_surv),    "Surveys analysed"),
+        (str(n_ctry),    "Countries"),
+        (str(n_surv),    "Surveys"),
     ])
 
-    # ── Chart 1: reforms per year stacked by sub-type ──
+    # ── Chart 1: reforms per year ──
     section_header("Reform events per year by innovation sub-type")
     YR_COL = "implementation_year"
+    _multi_ctry = "country_name" in dr_f.columns and dr_f["country_name"].nunique() > 1
     if YR_COL in dr_f.columns and dr_f[YR_COL].notna().any():
         df_yr = dr_f.dropna(subset=[YR_COL]).copy()
         df_yr["yr"] = df_yr[YR_COL].astype(int)
 
-        # Build ordered stacks — sort sub-themes by total count descending
-        order = (df_yr.groupby("sub_theme").size()
-                 .sort_values(ascending=False).index.tolist())
+        _c1_col_opts = ["Innovation sub-type", "Country"] if _multi_ctry else ["Innovation sub-type"]
+        _c1_color_by = st.radio(
+            "Color by", _c1_col_opts, horizontal=True, key="ref_c1_color",
+            label_visibility="collapsed",
+        ) if _multi_ctry else "Innovation sub-type"
 
-        yr_st = (df_yr.groupby(["yr","sub_theme"]).size().reset_index(name="n"))
-        yr_st["short"] = yr_st["sub_theme"].map(lambda x: SUBTHEME_SHORT.get(x, x))
+        if _c1_color_by == "Country":
+            # Country palette — consistent across app
+            _ctry_names = sorted(df_yr["country_name"].dropna().unique())
+            _ctry_pal = [NAVY, ORANGE, TEAL, GREEN, BLUE, GREY]
+            _ctry_color_map = {c: _ctry_pal[i % len(_ctry_pal)] for i, c in enumerate(_ctry_names)}
+            yr_st = df_yr.groupby(["yr", "country_name"]).size().reset_index(name="n")
+            fig_yr = px.bar(
+                yr_st, x="yr", y="n",
+                color="country_name",
+                color_discrete_map=_ctry_color_map,
+                barmode="stack",
+                labels={"yr": "Year", "n": "Reform events", "country_name": ""},
+            )
+            fig_yr.update_traces(
+                hovertemplate="<b>%{fullData.name}</b><br>Year %{x}: %{y} reform(s)<extra></extra>",
+                marker_line_width=0,
+            )
+        else:
+            order = (df_yr.groupby("sub_theme").size()
+                     .sort_values(ascending=False).index.tolist())
+            yr_st = df_yr.groupby(["yr", "sub_theme"]).size().reset_index(name="n")
+            yr_st["short"] = yr_st["sub_theme"].map(lambda x: SUBTHEME_SHORT.get(x, x))
+            fig_yr = px.bar(
+                yr_st, x="yr", y="n",
+                color="sub_theme",
+                color_discrete_map=SUBTHEME_COLORS,
+                barmode="stack",
+                category_orders={"sub_theme": order},
+                labels={"yr": "Year", "n": "Reform events", "sub_theme": ""},
+                custom_data=["short"],
+            )
+            fig_yr.update_traces(
+                hovertemplate="<b>%{customdata[0]}</b><br>Year %{x}: %{y} reform(s)<extra></extra>",
+                marker_line_width=0,
+            )
+            for trace in fig_yr.data:
+                trace.name = SUBTHEME_SHORT.get(trace.name, trace.name)
 
-        fig_yr = px.bar(
-            yr_st, x="yr", y="n",
-            color="sub_theme",
-            color_discrete_map=SUBTHEME_COLORS,
-            barmode="stack",
-            category_orders={"sub_theme": order},
-            labels={"yr":"Year","n":"Reform events","sub_theme":""},
-            custom_data=["short"],
-        )
-        fig_yr.update_traces(
-            hovertemplate="<b>%{customdata[0]}</b><br>Year %{x}: %{y} reform(s)<extra></extra>",
-            marker_line_width=0,
-        )
-        # Rename traces to use short labels
-        for trace in fig_yr.data:
-            trace.name = SUBTHEME_SHORT.get(trace.name, trace.name)
         apply_style(fig_yr, height=320, xtitle="Year", ytitle="Reform events")
         st.plotly_chart(fig_yr, use_container_width=True)
         caption_note(
@@ -896,7 +920,7 @@ with TAB_REFORMS:
             stat_df.columns = ["status_label", "n"]
             stat_colors = {STATUS_LABELS[k]: c for k, c in
                            {"implemented": NAVY, "legislated": BLUE,
-                            "announced": TEAL, "recommended": ORANGE}.items()
+                            "announced": TEAL}.items()
                            if k in dr_f["status"].values}
             fig_stat = go.Figure(go.Bar(
                 x=stat_df["n"], y=stat_df["status_label"],
@@ -937,11 +961,11 @@ with TAB_REFORMS:
 
     import html as _html
 
-    _cat_cols_top = st.columns([2, 1])
-    with _cat_cols_top[0]:
+    _cat_sort_cols = st.columns([3, 1])
+    with _cat_sort_cols[0]:
         sort_opt = st.radio(
             "Sort by",
-            ["Year (newest first)", "Importance (highest first)", "Sub-type (A–Z)"],
+            ["Year (newest first)", "Importance (highest first)", "Sub-type (A–Z)", "Country (A–Z)"],
             horizontal=True, key="sort_cat",
             label_visibility="collapsed",
         )
@@ -949,9 +973,15 @@ with TAB_REFORMS:
         "Year (newest first)":       ("implementation_year", False),
         "Importance (highest first)":("importance_bucket",   False),
         "Sub-type (A–Z)":            ("sub_theme",           True),
+        "Country (A–Z)":             ("country_name",        True),
     }
     sc, sa = sort_map[sort_opt]
     df_cat_all = dr_f.sort_values(sc, ascending=sa)
+
+    # Stable country palette for card left-border accent
+    _cat_ctry_names = sorted(dr_f["country_name"].dropna().unique()) if "country_name" in dr_f.columns else []
+    _cat_ctry_pal   = [NAVY, ORANGE, TEAL, GREEN, BLUE, GREY]
+    _cat_ctry_color = {c: _cat_ctry_pal[i % len(_cat_ctry_pal)] for i, c in enumerate(_cat_ctry_names)}
 
     # Pagination via session state — reset when sort or filters change
     _cat_page_key = f"cat_n_{sc}_{sa}_{len(dr_f)}"
@@ -965,37 +995,41 @@ with TAB_REFORMS:
     cards_html = ""
     for _, row in df_cat.iterrows():
         import html as _html2
-        major   = bool(row.get("is_major_reform", False))
-        orient  = str(row.get("growth_orientation") or "unclear_or_neutral")
-        tag_col = ORIENTATION_COLORS.get(orient, GREY)
-        tag_txt = ORIENTATION_LABELS.get(orient, "Unclear / Neutral")
-        impl_yr = row.get("implementation_year")
-        yr_s    = str(int(float(impl_yr))) if pd.notna(impl_yr) else "n.d."
-        sub_key = str(row.get("sub_theme") or "other")
-        sub_s   = SUBTHEME_LABELS.get(sub_key, sub_key.replace("_", " ").title())
-        lbl_clr = SUBTHEME_COLORS.get(sub_key, GREY)
-        status_s = STATUS_LABELS.get(str(row.get("status") or ""), "—")
+        major    = bool(row.get("is_major_reform", False))
+        orient   = str(row.get("growth_orientation") or "unclear_or_neutral")
+        tag_col  = ORIENTATION_COLORS.get(orient, GREY)
+        tag_txt  = ORIENTATION_LABELS.get(orient, "Unclear / Neutral")
+        impl_yr  = row.get("implementation_year")
+        yr_s     = str(int(float(impl_yr))) if pd.notna(impl_yr) else "n.d."
+        surv_yr  = row.get("survey_year")
+        surv_s   = f"Survey {int(float(surv_yr))}" if pd.notna(surv_yr) else ""
+        sub_key  = str(row.get("sub_theme") or "other")
+        sub_s    = SUBTHEME_LABELS.get(sub_key, sub_key.replace("_", " ").title())
+        lbl_clr  = SUBTHEME_COLORS.get(sub_key, GREY)
+        status_s = STATUS_LABELS.get(str(row.get("status") or ""), str(row.get("status") or "—").title())
         actor_s  = ACTOR_LABELS.get(str(row.get("rd_actor") or "unknown"), "—")
         stage_s  = STAGE_LABELS.get(str(row.get("rd_stage") or "unknown"), "—")
         imp      = row.get("importance_bucket")
         imp_s    = f"{int(imp)}/3" if pd.notna(imp) else "—"
-        country_s = _html2.escape(str(row.get("country_name") or "—"))
+        country_s  = _html2.escape(str(row.get("country_name") or "—"))
+        ctry_color = _cat_ctry_color.get(str(row.get("country_name") or ""), NAVY)
         desc_s   = _html2.escape(str(row.get("description") or ""))
         quote_s  = str(row.get("source_quote") or "")
         imp_rat  = str(row.get("importance_rationale") or "")
         go_rat   = str(row.get("growth_orientation_rationale") or "")
         mentions = row.get("n_mentions")
+        mention_yrs = str(row.get("mention_survey_years") or "")
 
         major_badge = (
             f'<span style="display:inline-block;padding:1px 7px;border-radius:2px;'
             f'background:{NAVY};color:#fff;font-weight:700;font-size:.66rem;'
-            f'letter-spacing:.04em;margin-left:6px;">MAJOR</span>'
+            f'letter-spacing:.04em;">MAJOR</span>'
             if major else ""
         )
         quote_block = (
             f'<div style="margin:.5rem 0 .3rem;padding:.35rem .75rem;'
-            f'border-left:3px solid {lbl_clr};color:#666;font-size:.79rem;font-style:italic;">'
-            f'&ldquo;{_html2.escape(quote_s)}&rdquo;</div>'
+            f'border-left:3px solid {lbl_clr};color:#555;font-size:.79rem;font-style:italic;">'
+            f'&ldquo;{_html2.escape(quote_s[:300])}{"…" if len(quote_s) > 300 else ""}&rdquo;</div>'
             if quote_s else ""
         )
         imp_rat_block = (
@@ -1010,28 +1044,34 @@ with TAB_REFORMS:
         )
         mentions_block = (
             f'<div style="font-size:.69rem;color:#aaa;margin-top:.4rem;">'
-            f'{int(mentions)} survey mention(s)</div>'
-            if pd.notna(mentions) else ""
+            f'First seen: {_html2.escape(surv_s)}'
+            f'{(" · mentioned in surveys: " + _html2.escape(str(mention_yrs))) if mention_yrs and pd.notna(mentions) and int(mentions) > 1 else ""}'
+            f'</div>'
+            if surv_s else ""
         )
 
         cards_html += f"""
-        <div style="border:1px solid {BORDER};border-radius:5px;padding:.75rem 1rem;
-                    margin-bottom:.6rem;background:#fff;">
+        <div style="border:1px solid {BORDER};border-left:4px solid {ctry_color};
+                    border-radius:0 5px 5px 0;padding:.75rem 1rem;
+                    margin-bottom:.55rem;background:#fff;">
           <!-- header row -->
-          <div style="display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin-bottom:.45rem;">
+          <div style="display:flex;align-items:center;gap:.45rem;flex-wrap:wrap;margin-bottom:.4rem;">
+            <span style="font-size:.75rem;font-weight:700;color:{ctry_color};
+                         background:{ctry_color}12;padding:2px 8px;border-radius:3px;
+                         border:1px solid {ctry_color}40;">{country_s}</span>
             <span style="font-size:.75rem;font-weight:700;color:{NAVY};
                          background:#EEF3FB;padding:2px 8px;border-radius:3px;">{yr_s}</span>
-            <span style="font-size:.75rem;color:#555;">{country_s}</span>
             <span style="display:inline-block;padding:2px 9px;border-radius:2px;
-                         background:{lbl_clr}18;color:{lbl_clr};border:1px solid {lbl_clr}50;
+                         background:{lbl_clr}15;color:{lbl_clr};border:1px solid {lbl_clr}40;
                          font-weight:700;font-size:.68rem;">{_html2.escape(sub_s)}</span>
             {major_badge}
-            <span style="margin-left:auto;font-size:.72rem;color:#777;">{_html2.escape(status_s)}</span>
+            <span style="margin-left:auto;font-size:.71rem;color:#888;font-weight:600;">
+              {_html2.escape(status_s)}</span>
           </div>
           <!-- body -->
-          <div style="display:grid;grid-template-columns:1fr 160px;gap:.75rem;">
+          <div style="display:grid;grid-template-columns:1fr 155px;gap:.75rem;">
             <div>
-              <div style="font-size:.83rem;font-weight:700;color:{TEXT};line-height:1.45;">
+              <div style="font-size:.84rem;font-weight:700;color:{TEXT};line-height:1.45;">
                 {desc_s}
               </div>
               {quote_block}
@@ -1039,14 +1079,20 @@ with TAB_REFORMS:
               {go_rat_block}
               {mentions_block}
             </div>
-            <div style="font-size:.73rem;color:{TEXT};line-height:2;border-left:1px solid {BORDER};
+            <div style="font-size:.73rem;color:{TEXT};line-height:1.9;border-left:1px solid {BORDER};
                         padding-left:.75rem;">
               <span style="display:inline-block;padding:2px 8px;border-radius:2px;
-                           background:{tag_col}18;color:{tag_col};border:1px solid {tag_col}50;
+                           background:{tag_col}15;color:{tag_col};border:1px solid {tag_col}40;
                            font-weight:700;font-size:.67rem;">{_html2.escape(tag_txt)}</span><br>
-              <span style="color:#777;"><b>Actor:</b></span> {_html2.escape(actor_s)}<br>
-              <span style="color:#777;"><b>Stage:</b></span> {_html2.escape(stage_s)}<br>
-              <span style="color:#777;"><b>Importance:</b></span> {_html2.escape(imp_s)}
+              <span style="color:#888;font-size:.69rem;font-weight:700;text-transform:uppercase;
+                           letter-spacing:.04em;">Actor</span><br>
+              <span style="color:{TEXT};">{_html2.escape(actor_s)}</span><br>
+              <span style="color:#888;font-size:.69rem;font-weight:700;text-transform:uppercase;
+                           letter-spacing:.04em;">Stage</span><br>
+              <span style="color:{TEXT};">{_html2.escape(stage_s)}</span><br>
+              <span style="color:#888;font-size:.69rem;font-weight:700;text-transform:uppercase;
+                           letter-spacing:.04em;">Importance</span><br>
+              <span style="color:{TEXT};">{_html2.escape(imp_s)}</span>
             </div>
           </div>
         </div>
@@ -1109,29 +1155,54 @@ with TAB_REFORMS:
     )
 
     # ── Survey coverage ──
-    section_header("Survey coverage — mentions per reform")
+    section_header("Survey coverage — mentions per survey")
     _mentions = load_reform_mentions()
     if not _mentions.empty and "survey_year" in _mentions.columns:
-        # Per-survey mention count
-        surv_cnt = (
-            _mentions.groupby("survey_year").size().reset_index(name="n")
-            .sort_values("survey_year")
-        )
-        fig_surv = go.Figure(go.Bar(
-            x=surv_cnt["survey_year"].astype(int),
-            y=surv_cnt["n"],
-            marker_color=NAVY, marker_line_width=0,
-            text=surv_cnt["n"], textposition="outside",
-            textfont=dict(size=10, color=TEXT),
-        ))
-        apply_style(fig_surv, height=210,
-                    xtitle="Survey year", ytitle="Reform mentions extracted",
-                    legend_bottom=False)
-        fig_surv.update_layout(showlegend=False, xaxis=dict(showgrid=False))
-        fig_surv.update_yaxes(range=[0, surv_cnt["n"].max() * 1.2])
+        _multi_surv = "country_code" in _mentions.columns and _mentions["country_code"].nunique() > 1
+
+        if _multi_surv:
+            # Stacked bar: year × country
+            _ctry_names_m = sorted(_mentions["country_code"].dropna().unique())
+            _surv_pal = [NAVY, ORANGE, TEAL, GREEN, BLUE, GREY]
+            _surv_color_map = {c: _surv_pal[i % len(_surv_pal)] for i, c in enumerate(_ctry_names_m)}
+            surv_cnt = (
+                _mentions.groupby(["survey_year", "country_code"]).size()
+                .reset_index(name="n").sort_values("survey_year")
+            )
+            fig_surv = px.bar(
+                surv_cnt, x="survey_year", y="n",
+                color="country_code",
+                color_discrete_map=_surv_color_map,
+                barmode="stack",
+                labels={"survey_year": "Survey year", "n": "Mentions extracted", "country_code": ""},
+            )
+            fig_surv.update_traces(marker_line_width=0)
+            apply_style(fig_surv, height=240, xtitle="Survey year", ytitle="Mentions extracted")
+            fig_surv.update_xaxes(showgrid=False)
+        else:
+            surv_cnt = (
+                _mentions.groupby("survey_year").size().reset_index(name="n")
+                .sort_values("survey_year")
+            )
+            fig_surv = go.Figure(go.Bar(
+                x=surv_cnt["survey_year"].astype(int),
+                y=surv_cnt["n"],
+                marker_color=NAVY, marker_line_width=0,
+                text=surv_cnt["n"], textposition="outside",
+                textfont=dict(size=10, color=TEXT),
+            ))
+            apply_style(fig_surv, height=240,
+                        xtitle="Survey year", ytitle="Mentions extracted",
+                        legend_bottom=False)
+            fig_surv.update_layout(showlegend=False, xaxis=dict(showgrid=False))
+            fig_surv.update_yaxes(range=[0, surv_cnt["n"].max() * 1.2])
+
         st.plotly_chart(fig_surv, use_container_width=True)
+        _surv_n = _mentions["survey_year"].nunique()
+        _ctry_n = _mentions["country_code"].nunique() if "country_code" in _mentions.columns else 1
         caption_note(
-            f"{len(_mentions):,} raw mentions across {_mentions['survey_year'].nunique()} surveys "
+            f"{len(_mentions):,} raw mentions across {_surv_n} surveys "
+            f"({_ctry_n} {'country' if _ctry_n == 1 else 'countries'}) "
             f"→ {len(dr_f):,} deduplicated events after cross-survey deduplication."
         )
 

@@ -16,6 +16,7 @@ from budget.ai_batch_runner import run_batches
 from budget.ai_client import AIClient, AIClientConfig, MissingAPIKeyError, MissingOpenAIDependencyError
 from budget.compare_outputs import build_comparison
 from budget.config import (
+    BUDGET_ITEMS_FILE,
     CANDIDATES_FILE,
     PROCESSED_DIR,
     RESULTS_AI_VERIFIED_FILE,
@@ -64,6 +65,19 @@ _REVIEW_MATCH_COLUMNS = [
     "amount_local",
     "page_number",
     "source_file",
+]
+
+_CONTEXT_MERGE_COLUMNS = [
+    "section_name",
+    "item_code",
+    "item_description",
+    "line_code",
+    "line_type",
+    "raw_line",
+    "merged_line",
+    "context_before",
+    "context_after",
+    "amount_raw",
 ]
 
 
@@ -174,6 +188,128 @@ def _review_match_key(row: pd.Series) -> str:
     return hashlib.md5("|".join(parts).encode("utf-8")).hexdigest()
 
 
+def _merge_budget_context(df: pd.DataFrame, context_file: Path = BUDGET_ITEMS_FILE) -> pd.DataFrame:
+    """Backfill parser-rich context from budget_items_detected.csv when available.
+
+    AI validation usually reads from results.csv, which intentionally exports a
+    compact review surface. The richer extractor output still exists in
+    budget_items_detected.csv, so merge it in opportunistically using the same
+    stable content key used elsewhere in review workflows.
+    """
+    if df.empty or not context_file.exists():
+        return df
+
+    needed = [col for col in _CONTEXT_MERGE_COLUMNS if col not in df.columns]
+    if not needed:
+        return df
+
+    try:
+        context_df = pd.read_csv(context_file)
+    except Exception as exc:
+        logger.warning("Could not read budget context file %s: %s", context_file, exc)
+        return df
+
+    if context_df.empty:
+        return df
+
+    available = [col for col in _CONTEXT_MERGE_COLUMNS if col in context_df.columns]
+    if not available:
+        return df
+
+    working = df.copy()
+    if "__review_match_key" not in working.columns:
+        working["__review_match_key"] = working.apply(_review_match_key, axis=1)
+
+    context_working = context_df.copy()
+    context_working["__review_match_key"] = context_working.apply(_review_match_key, axis=1)
+    context_working = context_working.drop_duplicates(subset=["__review_match_key"], keep="first")
+
+    merged = working.merge(
+        context_working[["__review_match_key", *available]],
+        on="__review_match_key",
+        how="left",
+        suffixes=("", "__ctx"),
+    )
+
+    for col in available:
+        ctx_col = f"{col}__ctx"
+        if col in merged.columns and ctx_col in merged.columns:
+            merged[col] = merged[col].where(merged[col].notna(), merged[ctx_col])
+            merged = merged.drop(columns=[ctx_col])
+        elif ctx_col in merged.columns:
+            merged = merged.rename(columns={ctx_col: col})
+
+    return merged.drop(columns=["__review_match_key"], errors="ignore")
+
+
+def _split_context_lines(text: str | None, max_lines: int = 4) -> list[str]:
+    if not text or pd.isna(text):
+        return []
+    raw = str(text).strip()
+    if not raw:
+        return []
+    parts = [seg.strip(" .;:-") for seg in re.split(r"\s*\|\s*|\s{2,}|\n+", raw) if seg and seg.strip(" .;:-")]
+    if not parts:
+        parts = [_normalize_text(raw)]
+    return parts[:max_lines]
+
+
+def _extract_amount_tokens(lines: list[str]) -> list[str]:
+    amounts: list[str] = []
+    seen: set[str] = set()
+    for line in lines:
+        for match in re.finditer(r"[÷\-\+]?\s*\d{1,3}(?:[.,\s]\d{3})*(?:[.,]\d{1,2})?", line):
+            token = _normalize_text(match.group(0))
+            digits = re.sub(r"[^\d]", "", token)
+            if len(digits) < 4:
+                continue
+            if token not in seen:
+                seen.add(token)
+                amounts.append(token)
+    return amounts[:8]
+
+
+def _build_budget_window(record: dict) -> dict:
+    previous_lines = _split_context_lines(record.get("context_before"))
+    next_lines = _split_context_lines(record.get("context_after"))
+    current_line = _normalize_text(
+        str(
+            record.get("raw_line")
+            or record.get("merged_line")
+            or record.get("line_description")
+            or ""
+        )
+    )
+
+    amount_neighbors = _extract_amount_tokens(previous_lines + next_lines)
+    window = {
+        "section": {
+            "code": record.get("section_code"),
+            "name": record.get("section_name") or record.get("section_name_en"),
+        },
+        "program": {
+            "code": record.get("program_code"),
+            "description": record.get("program_description"),
+        },
+        "item": {
+            "code": record.get("item_code"),
+            "description": record.get("item_description"),
+        },
+        "current_line": {
+            "line_code": record.get("line_code"),
+            "line_type": record.get("line_type"),
+            "text": current_line,
+            "amount_raw": record.get("amount_raw"),
+            "amount_local": record.get("amount_local"),
+            "currency": record.get("currency"),
+        },
+        "previous_lines": previous_lines,
+        "next_lines": next_lines,
+        "neighbor_amounts": amount_neighbors,
+    }
+    return window
+
+
 def _filter_candidates(df: pd.DataFrame, config: AIValidationConfig) -> pd.DataFrame:
     df = df.copy()
 
@@ -235,7 +371,18 @@ def exclude_verified_candidates(
 
 def _prepare_records(df: pd.DataFrame, include_context: bool) -> List[dict]:
     records: List[dict] = []
-    optional_fields = {"context_before", "context_after", "raw_page_text_excerpt"} if include_context else set()
+    optional_fields = {
+        "section_name",
+        "item_code",
+        "item_description",
+        "line_code",
+        "line_type",
+        "raw_line",
+        "merged_line",
+        "amount_raw",
+    }
+    if include_context:
+        optional_fields |= {"context_before", "context_after", "raw_page_text_excerpt"}
 
     def _safe(val):
         if pd.isna(val):
@@ -288,9 +435,7 @@ def _prepare_records(df: pd.DataFrame, include_context: bool) -> List[dict]:
             if not ctx_source:
                 ctx_source = " ".join(str(record.get(k, "") or "") for k in ("context_before", "line_description", "context_after"))
             record["raw_page_text_excerpt"] = _trim_context(ctx_source, record["line_description"], before=150, after=100)
-            # Drop the other noisy context fields to avoid sending long blobs
-            record.pop("context_before", None)
-            record.pop("context_after", None)
+            record["budget_window"] = _build_budget_window(record)
         records.append(record)
     return records
 
@@ -308,6 +453,7 @@ def run_ai_validation(config: AIValidationConfig) -> bool:
         return False
 
     baseline_df = _load_baseline(input_path)
+    baseline_df = _merge_budget_context(baseline_df)
     if config.filter_country:
         baseline_df = baseline_df[baseline_df["country"].astype(str).str.lower() == str(config.filter_country).lower()]
     if config.filter_year:

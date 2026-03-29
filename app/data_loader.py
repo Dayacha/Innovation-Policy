@@ -47,7 +47,6 @@ STATUS_LABELS = {
     "implemented": "Implemented",
     "legislated":  "Legislated",
     "announced":   "Announced",
-    "recommended": "OECD Recommended",
 }
 
 # ── Color palettes ────────────────────────────────────────────────────────────

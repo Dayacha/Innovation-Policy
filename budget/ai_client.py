@@ -56,13 +56,14 @@ class AIClient:
             "You are validating pre-extracted government budget items from finance bills. "
             "Goal: determine whether each line is a real budget item relevant to research/innovation "
             "and capture the plausible invested amount. "
-            "Use only the provided fields (and optional short context). Do not invent data or infer beyond them. "
+            "Use only the provided fields and structured budget context. Do not invent data or infer beyond them. "
             "For each record, clean the original-language description, translate that cleaned description to English, "
             "validate that it is a real budget item, adjust the amount if the description contradicts it, classify R&D relevance, "
             "and return strict JSON only. "
             "Ignore totals, ministry-wide aggregates, revenue lines, or legal-reference-only lines. "
-            "Preserve record_id for alignment. When optional context fields (context_before, context_after, raw_page_text_excerpt) are provided, "
-            "use them only to disambiguate the line description. "
+            "Preserve record_id for alignment. When budget_window is provided, use section/program/item metadata, "
+            "previous_lines, next_lines, and neighbor_amounts to decide whether the current line is a real item or a subtotal/header. "
+            "Treat raw_page_text_excerpt as secondary fallback context only. "
             "Do NOT wrap the JSON in markdown code fences or any extra text."
         )
 
@@ -86,7 +87,7 @@ class AIClient:
             "items": batch_payload,
             "requirements": {
                 "return_format": "JSON array, same order as items",
-                "language_notes": "Danish input, provide English translation for cleaned description only",
+                "language_notes": "Input may be multilingual; provide English translation for the cleaned description only",
             },
         }
 

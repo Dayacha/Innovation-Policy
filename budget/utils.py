@@ -76,8 +76,15 @@ def infer_country_year(path: Path) -> tuple[str, str]:
 
     # ── Year: look for 4-digit year in range 1945-2030 ───────────────────────
     full_text = normalize_text(path_str)
-    year_match = re.search(r"(?<!\d)(19[4-9]\d|20[0-2]\d)(?!\d)", full_text)
-    year_guess = year_match.group(0) if year_match else "Unknown"
+    # Spanish BOE filenames: "BOE-A-YYYY-NNNNN-consolidado para BUDGET_YEAR.pdf"
+    # The "para YYYY" token is the actual budget year; prefer it over the
+    # BOE publication year that appears earlier in the filename.
+    para_match = re.search(r"\bpara[_ -]?(19[4-9]\d|20[0-2]\d)\b", full_text)
+    if para_match:
+        year_guess = para_match.group(1)
+    else:
+        year_match = re.search(r"(?<!\d)(19[4-9]\d|20[0-2]\d)(?!\d)", full_text)
+        year_guess = year_match.group(0) if year_match else "Unknown"
 
     return country_guess, year_guess
 
