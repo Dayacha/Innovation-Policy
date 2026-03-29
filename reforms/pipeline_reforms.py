@@ -284,8 +284,14 @@ def _step_download_pdfs(config, country=None, year=None) -> dict:
         with open(survey_catalog_path) as _f:
             survey_catalog = _json.load(_f)
 
+    reforms_json_dir = Path(config["paths"]["reforms_json"])
+
     stats = {"downloaded": 0, "skipped": 0, "failed": 0}
     for code, yr in pairs:
+        if (reforms_json_dir / f"{code}_{yr}.json").exists():
+            logger.info("Skipping download (JSON already exists): %s %d", code, yr)
+            stats["skipped"] += 1
+            continue
         if downloader.is_downloaded(code, yr):
             stats["skipped"] += 1
             continue
