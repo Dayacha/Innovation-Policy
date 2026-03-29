@@ -33,7 +33,11 @@ from budget.section_parser import (
 from budget.temporal_smoothing import compute_temporal_prior
 from budget.taxonomy import INCLUDE_THRESHOLD, REVIEW_THRESHOLD, load_taxonomy, score_text
 from budget.translation_utils import translate_to_english_glossary, preclean_text
+from budget.spain_extractor import extract_spain_items
 from budget.utils import logger
+
+# Countries with dedicated extractors that bypass the Danish pipeline entirely
+_COUNTRY_DEDICATED_EXTRACTORS: frozenset[str] = frozenset({"Spain"})
 
 # Country → primary document language (for taxonomy extensions)
 _COUNTRY_LANGUAGES: dict[str, tuple[str, ...]] = {
@@ -268,6 +272,37 @@ def extract_budget_items(
         country_for_file = str(first_row.get("country_guess", "Unknown")
                                if hasattr(first_row, "get") else
                                getattr(first_row, "country_guess", "Unknown"))
+
+        # ── Country-specific extractors (bypass Danish pipeline) ──────────────
+        if country_for_file in _COUNTRY_DEDICATED_EXTRACTORS:
+            year_for_file = str(first_row.get("year_guess", "Unknown")
+                                if hasattr(first_row, "get") else
+                                getattr(first_row, "year_guess", "Unknown"))
+            filepath_val = _filepath_from_row(first_row, filepath_col)
+            source_fn = Path(filepath_val).name
+            if country_for_file == "Spain":
+                spain_records = extract_spain_items(
+                    sorted_pages,
+                    file_id=str(file_id),
+                    country=country_for_file,
+                    year=year_for_file,
+                    source_filename=source_fn,
+                )
+                # Deduplicate: if two files have the same year and program code,
+                # keep only the first (handles duplicate BOE files like
+                # "2023 BOE-A-2022-22128.pdf" vs "BOE-A-2022-22128-consolidado para 2023.pdf")
+                existing_keys = {
+                    (r.get("year", ""), r.get("program_code", ""))
+                    for r in records
+                    if r.get("country") == "Spain"
+                }
+                for rec in spain_records:
+                    key = (rec.get("year", ""), rec.get("program_code", ""))
+                    if key not in existing_keys:
+                        records.append(rec)
+                        existing_keys.add(key)
+            continue  # skip Danish pipeline for this file
+
         langs = _COUNTRY_LANGUAGES.get(country_for_file, ())
         tax = load_taxonomy(languages=tuple(langs))
 
