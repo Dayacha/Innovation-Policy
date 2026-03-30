@@ -425,49 +425,51 @@ with st.sidebar:
     if budget_available():
         _db = load_budget()
         _yrs = sorted(_db["year"].unique())
-        # Migrate old session state that was pinned to the historical 1975-1984 range.
-        if _yrs:
+        if not _yrs:
+            st.caption("No budget data available.")
+        else:
+            # Migrate old session state that was pinned to the historical 1975-1984 range.
             _yr_default = (min(_yrs), max(_yrs))
             _yr_state = st.session_state.get("yr_b")
             if _yr_state == (1975, 1984) and _yr_default != (1975, 1984):
                 st.session_state["yr_b"] = _yr_default
-        yr_b = st.select_slider(
-            "Year range", options=_yrs,
-            value=(min(_yrs), max(_yrs)), key="yr_b",
-            label_visibility="collapsed",
-        )
-        # Country selector (currently Denmark only; ready for multi-country)
-        _bud_ctry_opts = sorted(_db["country"].dropna().unique()) \
-            if "country" in _db.columns else ["Denmark"]
-        sel_bud_ctry = st.multiselect(
-            "Country", _bud_ctry_opts, default=_bud_ctry_opts, key="bud_ctry",
-        )
-        _cats = ["All"] + sorted(_db["budget_category"].dropna().astype(str).unique())
-        cat_b = st.selectbox(
-            "R&D category", _cats, key="cat_b",
-            format_func=lambda x: x if x != "All" else "All categories",
-        )
-        _decisions = sorted(_db["decision"].dropna().astype(str).unique()) if "decision" in _db.columns else []
-        if _decisions:
-            _default_decisions = ["include"] if "include" in _decisions else _decisions
-            dec_b = st.multiselect(
-                "Decision",
-                _decisions,
-                default=_default_decisions,
-                key="dec_b",
+            yr_b = st.select_slider(
+                "Year range", options=_yrs,
+                value=(min(_yrs), max(_yrs)), key="yr_b",
+                label_visibility="collapsed",
             )
-        _conf_vals = pd.to_numeric(_db["confidence"], errors="coerce").dropna()
-        if not _conf_vals.empty:
-            _conf_min = float(_conf_vals.min())
-            _conf_max = float(_conf_vals.max())
-            conf_b = st.slider(
-                "Confidence",
-                min_value=round(_conf_min, 2),
-                max_value=round(_conf_max, 2),
-                value=(round(_conf_min, 2), round(_conf_max, 2)),
-                step=0.05,
-                key="conf_b",
+            # Country selector (currently Denmark only; ready for multi-country)
+            _bud_ctry_opts = sorted(_db["country"].dropna().unique()) \
+                if "country" in _db.columns else ["Denmark"]
+            sel_bud_ctry = st.multiselect(
+                "Country", _bud_ctry_opts, default=_bud_ctry_opts, key="bud_ctry",
             )
+            _cats = ["All"] + sorted(_db["budget_category"].dropna().astype(str).unique())
+            cat_b = st.selectbox(
+                "R&D category", _cats, key="cat_b",
+                format_func=lambda x: x if x != "All" else "All categories",
+            )
+            _decisions = sorted(_db["decision"].dropna().astype(str).unique()) if "decision" in _db.columns else []
+            if _decisions:
+                _default_decisions = ["include"] if "include" in _decisions else _decisions
+                dec_b = st.multiselect(
+                    "Decision",
+                    _decisions,
+                    default=_default_decisions,
+                    key="dec_b",
+                )
+            _conf_vals = pd.to_numeric(_db["confidence"], errors="coerce").dropna()
+            if not _conf_vals.empty:
+                _conf_min = float(_conf_vals.min())
+                _conf_max = float(_conf_vals.max())
+                conf_b = st.slider(
+                    "Confidence",
+                    min_value=round(_conf_min, 2),
+                    max_value=round(_conf_max, 2),
+                    value=(round(_conf_min, 2), round(_conf_max, 2)),
+                    step=0.05,
+                    key="conf_b",
+                )
     else:
         st.caption("No data — run `python main.py --budget-only`")
 

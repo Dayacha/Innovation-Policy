@@ -39,7 +39,7 @@ _OLDER_EXP_TABLE_RE = re.compile(
     re.IGNORECASE,
 )
 _INVESTMENT_TABLE_RE = re.compile(r"investic\w*\s+vydaj\w*", re.IGNORECASE)
-_VYDAJE_CELKEM_RE = re.compile(r"vydaje\s+celkem", re.IGNORECASE)
+_VYDAJE_CELKEM_RE = re.compile(r"v\w*daje\s+celkem", re.IGNORECASE)
 _AMOUNT_RE = re.compile(r"(?<!\d)(\d{1,3}(?:[ \xa0]\d{3})+|\d{6,})(?!\d)")
 _CHAPTER_CODE_LINE_RE = re.compile(r"^\s*(3\d{2})\s*$")
 _ANY_CHAPTER_LINE_RE = re.compile(r"^\s*(3\d{2})\b")
@@ -212,7 +212,7 @@ def _build_candidate(
 
 def _extract_chapter_page(page: dict, agency: dict) -> Optional[dict]:
     chapter_match = re.search(
-        rf"ukazatele\s+kapitoly\s+{agency['chapter_code']}\b.*?{agency['name_re'].pattern}.*?vydaje\s+celkem\s+(\d{{1,3}}(?:[ \xa0]\d{{3}})+|\d{{6,}})",
+        rf"ukazatele\s+kapitoly\s+{agency['chapter_code']}\b.*?v\w*daje\s+celkem\s+(\d{{1,3}}(?:[ \xa0]\d{{3}})+|\d{{6,}})",
         page["norm_text"],
         re.IGNORECASE | re.DOTALL,
     )
@@ -339,6 +339,29 @@ def _extract_appendix_row(page: dict, agency: dict) -> Optional[dict]:
 def _extract_investment_fallback(page: dict, agency: dict) -> Optional[dict]:
     lines = page["lines"]
     norm_text = page["norm_text"]
+
+    row_match = re.search(
+        rf"{agency['name_re'].pattern}\s+celkem\s+(\d{{1,3}}(?:[ \xa0]\d{{3}})+|\d{{6,}})",
+        norm_text,
+        re.IGNORECASE,
+    )
+    if row_match:
+        amount_raw = row_match.group(1)
+        amount = _parse_czk_tis(amount_raw)
+        if amount is not None:
+            return _build_candidate(
+                agency=agency,
+                amount=amount,
+                amount_raw=amount_raw,
+                page_number=page["page_number"],
+                source_variant="investment_fallback",
+                confidence=0.68,
+                merged_line=row_match.group(0),
+                page_text=page["raw_text"],
+                context_before="Investiční výdaje / reprodukce investičního majetku",
+                context_after="celkem",
+            )
+
     if not _INVESTMENT_TABLE_RE.search(norm_text):
         return None
 
