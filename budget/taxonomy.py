@@ -137,6 +137,51 @@ _LANGUAGE_EXTENSIONS: dict[str, dict[str, frozenset[str]]] = {
             "bevilgning", "forskningsmidler", "tilskudd til forskning",
         }),
     },
+    "finnish": {
+        "core_rd": frozenset({
+            "tiede", "tutkimus", "tiede ja tutkimus",
+            "tutkimus ja kehitys", "tutkimus- ja kehitys",
+            "tutkimus-, kehittamis- ja innovaatiotoiminta",
+            "perustutkimus", "soveltava tutkimus",
+            "tieteellinen tutkimus", "teknologian kehittaminen",
+            "innovaatiotoiminta", "tki", "tki-toiminta",
+        }),
+        "institutions": frozenset({
+            "suomen akatemia", "finlands akademi",
+            "tekes", "teknologian kehittamiskeskus",
+            "business finland", "innovaatiorahoituskeskus business finland",
+            "innovationsfinansieringsverket business finland",
+            "opetusministerio", "opetus- ja kulttuuriministerio",
+            "kauppa- ja teollisuusministerio",
+            "tyo- ja elinkeinoministerio",
+            "yliopisto", "yliopistot", "korkeakoulu", "korkeakoulut",
+            "tiedeakatemia", "tutkimuslaitos", "tutkimuskeskus",
+        }),
+        "instruments": frozenset({
+            "maararaha", "tutkimusmaararahat", "toimintamenot",
+            "avustukset", "lainat", "voittovarat",
+            "tieteen edistamiseen", "tieteen tukemiseen",
+            "tukeminen", "rahoitus", "anslag", "omkostnader",
+            "forskningsanslag",
+        }),
+    },
+    "japanese": {
+        "core_rd": frozenset({
+            "研究", "科学", "科学技術", "科学技術振興",
+            "研究開発", "学術", "学術研究", "基礎研究",
+            "応用研究", "実験開発", "科学研究費",
+        }),
+        "institutions": frozenset({
+            "文部科学省", "文部省", "科学技術庁",
+            "日本学術会議", "日本学術振興会", "科学技術振興機構",
+            "理化学研究所", "宇宙航空研究開発機構",
+            "大学", "国立大学", "研究所", "研究機構",
+        }),
+        "instruments": frozenset({
+            "所管合計", "歳出合計", "計", "運営費",
+            "施設整備費", "補助金", "交付金", "振興費",
+        }),
+    },
 }
 
 _SKIP_TERMS: frozenset[str] = frozenset({

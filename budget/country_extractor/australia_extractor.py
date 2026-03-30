@@ -182,6 +182,24 @@ def _extract_from_table_text(table_text: str) -> list[tuple[str, str, float]]:
             if c and re.match(r"^[\d,\s\.—–\-]+$", c) and re.search(r"\d", c)
         ]
 
+    def _collect_numeric_block(start_idx: int) -> list[str]:
+        """Collect numeric cells from the current agency block.
+
+        DOCX budget tables often wrap each entity across several rows:
+        heading row, one or more outcome rows, then a total row. The real
+        appropriation is frequently 2-5 lines below the agency label.
+        """
+        cands: list[str] = []
+        for j in range(start_idx, min(len(lines), start_idx + 8)):
+            line_j = lines[j]
+            if j > start_idx and _is_new_agency_line(line_j):
+                break
+            if re.search(r"^Total:\s", line_j, re.IGNORECASE) and j > start_idx:
+                cands.extend(_numeric_cells_from_line(line_j))
+                break
+            cands.extend(_numeric_cells_from_line(line_j))
+        return cands
+
     for i, line in enumerate(lines):
         cells = [c.strip() for c in line.split("\t")]
 
@@ -194,15 +212,8 @@ def _extract_from_table_text(table_text: str) -> list[tuple[str, str, float]]:
             if prog_code == "AU_DEPT_SCIENCE" and has_csiro:
                 continue
 
-            # Collect numeric candidates from this row
-            numeric_cands = _numeric_cells_from_line(line)
-
-            # If this row has no amounts, check the immediately next row
-            # (but stop if next row is a new agency — that's a different entity)
-            if not numeric_cands and i + 1 < len(lines):
-                next_line = lines[i + 1]
-                if not _is_new_agency_line(next_line):
-                    numeric_cands = _numeric_cells_from_line(next_line)
+            # Search across the current agency block rather than a single row.
+            numeric_cands = _collect_numeric_block(i)
 
             amount = _largest_amount(numeric_cands, is_thousands)
             if amount is None or amount < 100_000:

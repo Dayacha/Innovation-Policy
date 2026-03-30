@@ -69,6 +69,15 @@ _ANNEX3_AVCR_RE = re.compile(
     re.IGNORECASE,
 )
 
+_CELKEM_GACR_RE = re.compile(
+    r"Grantov.{0,40}?agentura.{0,80}?celkem\s+([\d\s]+)",
+    re.IGNORECASE | re.DOTALL,
+)
+_CELKEM_AVCR_RE = re.compile(
+    r"Akademie.{0,80}?celkem\s+([\d\s]+)",
+    re.IGNORECASE | re.DOTALL,
+)
+
 
 def _parse_czk_tis(raw: str) -> Optional[float]:
     """Parse a CZK amount in tisíce (thousands) to full CZK value.
@@ -80,7 +89,7 @@ def _parse_czk_tis(raw: str) -> Optional[float]:
     m = re.match(r"(\d[\d\s]*)", cleaned)
     if not m:
         return None
-    num_str = m.group(1).replace(" ", "").strip()
+    num_str = re.sub(r"\s+", "", m.group(1)).strip()
     try:
         val = float(num_str)
         return val * 1000  # convert tis. Kč → Kč
@@ -115,6 +124,19 @@ def _extract_annex3_amount(text: str, annex_re: re.Pattern) -> Optional[float]:
         val = _parse_czk_tis(n)
         if val and val >= 100_000_000:  # at least 100M CZK
             return val
+    return None
+
+
+def _extract_celkem_amount(text: str, celkem_re: re.Pattern) -> Optional[float]:
+    """Extract amount from '{agency} celkem {amount}' lines."""
+    m = celkem_re.search(text)
+    if not m:
+        return None
+    for line in m.group(1).splitlines():
+        for token in re.findall(r"\d{1,3}(?:[ \xa0]\d{3})+|\d{6,}", line):
+            val = _parse_czk_tis(token)
+            if val and val >= 100_000_000:
+                return val
     return None
 
 
@@ -175,6 +197,42 @@ def extract_czech_items(
     if records:
         logger.info(
             "Czech extractor: %s (year %s) → %d records (Ukazatele format)",
+            source_filename, year, len(records),
+        )
+        return records
+
+    # ── Fallback: agency 'celkem' totals visible in appendix tables ──────────
+    celkem_agencies = [
+        ("CZ_GACR", "Grantová agentura České republiky (GAČR)", _CELKEM_GACR_RE),
+        ("CZ_AVCR", "Akademie věd České republiky (AV ČR)", _CELKEM_AVCR_RE),
+    ]
+    for code, name, celkem_re in celkem_agencies:
+        amount = _extract_celkem_amount(all_text, celkem_re)
+        if amount and amount >= 100_000_000:
+            records.append({
+                "country": country,
+                "year": year,
+                "section_code": "CZ_RD",
+                "section_name": "Věda a výzkum (státní rozpočet)",
+                "section_name_en": "Science and Research (State Budget)",
+                "program_code": code,
+                "line_description": name,
+                "line_description_en": name,
+                "amount_local": amount,
+                "currency": "CZK",
+                "unit": "CZK",
+                "rd_category": "direct_rd",
+                "taxonomy_score": 8.0,
+                "decision": "include",
+                "confidence": 0.80,
+                "source_file": source_filename,
+                "file_id": file_id,
+                "page_number": 1,
+            })
+
+    if records:
+        logger.info(
+            "Czech extractor: %s (year %s) → %d records (celkem fallback)",
             source_filename, year, len(records),
         )
         return records

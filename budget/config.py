@@ -168,6 +168,32 @@ COUNTRY_TOKEN_MAP = {
     # ── South Korea ───────────────────────────────────────────────────────────
     "korea": "Korea",
     "south_korea": "Korea",
+    # ── Israel ────────────────────────────────────────────────────────────────
+    "israel": "Israel",
+    "hok_hatakziv": "Israel",
+    "state_budget_israel": "Israel",
+    # ── Estonia ───────────────────────────────────────────────────────────────
+    "estonia": "Estonia",
+    "eesti": "Estonia",
+    "riigieelarve": "Estonia",
+    # ── Hungary ───────────────────────────────────────────────────────────────
+    "hungary": "Hungary",
+    "magyarorszag": "Hungary",
+    "allami_koltsegvetes": "Hungary",
+    # ── Iceland ───────────────────────────────────────────────────────────────
+    "iceland": "Iceland",
+    "island": "Iceland",
+    "fjarlaga": "Iceland",
+    # ── Latvia ────────────────────────────────────────────────────────────────
+    "latvia": "Latvia",
+    "latvija": "Latvia",
+    "valsts_budzets": "Latvia",
+    # ── Lithuania ─────────────────────────────────────────────────────────────
+    "lithuania": "Lithuania",
+    "lietuva": "Lithuania",
+    "valstybes_biudzetas": "Lithuania",
+    # ── New Zealand ───────────────────────────────────────────────────────────
+    "new zealand": "New Zealand",  # directory name with space
 }
 
 

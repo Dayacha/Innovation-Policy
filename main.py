@@ -398,6 +398,90 @@ def merge_incremental_budget_results(
     return merged.reset_index(drop=True)
 
 
+def _normalize_country_filter(values: list[str] | None) -> set[str]:
+    out: set[str] = set()
+    for value in values or []:
+        for part in str(value).split(","):
+            clean = part.strip()
+            if clean:
+                out.add(clean)
+    return out
+
+
+def sanitize_budget_outputs(budget_df: pd.DataFrame) -> pd.DataFrame:
+    """Drop unusable rows before writing persistent outputs."""
+    if budget_df.empty:
+        return budget_df
+
+    cleaned = budget_df.copy()
+    if "country" in cleaned.columns:
+        country_series = cleaned["country"].fillna("").astype(str).str.strip()
+        cleaned = cleaned[country_series.ne("") & country_series.ne("Unknown")].copy()
+    if "amount_local" in cleaned.columns:
+        cleaned["amount_local"] = pd.to_numeric(cleaned["amount_local"], errors="coerce")
+        cleaned = cleaned[cleaned["amount_local"].notna()].copy()
+    return cleaned.reset_index(drop=True)
+
+
+def backfill_budget_context_fields(budget_df: pd.DataFrame) -> pd.DataFrame:
+    """Ensure AI-review context fields are populated even for thin extractor rows."""
+    if budget_df.empty:
+        return budget_df
+
+    filled = budget_df.copy()
+    required = [
+        "section_code",
+        "section_name",
+        "program_code",
+        "program_description",
+        "line_description",
+        "line_description_en",
+        "amount_raw",
+        "amount_local",
+        "currency",
+        "raw_line",
+        "merged_line",
+        "context_before",
+        "context_after",
+    ]
+    for col in required:
+        if col not in filled.columns:
+            filled[col] = ""
+
+    def _clean(value) -> str:
+        if pd.isna(value):
+            return ""
+        text = str(value).strip()
+        return "" if text.lower() == "nan" else text
+
+    for idx, row in filled.iterrows():
+        section = " ".join(part for part in (_clean(row["section_code"]), _clean(row["section_name"])) if part)
+        program = " ".join(part for part in (_clean(row["program_code"]), _clean(row["program_description"])) if part)
+        line = _clean(row["line_description"])
+        line_en = _clean(row["line_description_en"])
+        merged_line = _clean(row["merged_line"]) or line or program
+        raw_line = _clean(row["raw_line"]) or merged_line
+        amount_raw = _clean(row["amount_raw"])
+        amount_local = _clean(row["amount_local"])
+        currency = _clean(row["currency"])
+
+        context_before = _clean(row["context_before"])
+        if not context_before:
+            context_before = " | ".join(part for part in (section, program) if part)
+
+        context_after = _clean(row["context_after"])
+        if not context_after:
+            amount_display = " ".join(part for part in (amount_local, currency) if part)
+            context_after = " | ".join(part for part in (amount_raw, amount_display, line_en or line) if part)
+
+        filled.at[idx, "merged_line"] = merged_line
+        filled.at[idx, "raw_line"] = raw_line
+        filled.at[idx, "context_before"] = context_before
+        filled.at[idx, "context_after"] = context_after
+
+    return filled
+
+
 def refresh_budget_metadata_from_pages(
     budget_df: pd.DataFrame,
     pages_df: pd.DataFrame,
@@ -433,7 +517,12 @@ def refresh_budget_metadata_from_pages(
     return merged
 
 
-def run_budget_pipeline() -> None:
+def run_budget_pipeline(
+    *,
+    budget_filter_countries: set[str] | None = None,
+    rerun_countries: set[str] | None = None,
+    use_page_cache: bool = False,
+) -> None:
     """Run the full budget pipeline from inventory to budget item extraction."""
     configure_logging()
     ensure_directories(
@@ -453,31 +542,44 @@ def run_budget_pipeline() -> None:
     logger.info("Input PDF directory:    %s", PDF_ROOT.resolve())
     logger.info("Processed output:       %s", PROCESSED_DIR.resolve())
 
-    # ── Stage 1: Inventory ────────────────────────────────────────────────────
-    inventory_df = build_file_inventory(PDF_ROOT)
-    inventory_df.to_csv(FILE_INVENTORY_FILE, index=False, encoding="utf-8")
-    logger.info("Inventory saved: %s (rows=%s)", FILE_INVENTORY_FILE, len(inventory_df))
+    if use_page_cache and PAGE_EXTRACTION_FILE.exists():
+        pages_df = pd.read_csv(PAGE_EXTRACTION_FILE, low_memory=False)
+        if budget_filter_countries:
+            pages_df = pages_df[
+                pages_df["country_guess"].fillna("").astype(str).isin(budget_filter_countries)
+            ].copy()
+        inventory_df = pd.DataFrame()
+        logger.info("Using cached page extraction file: %s (rows=%s)", PAGE_EXTRACTION_FILE, len(pages_df))
+        if pages_df.empty:
+            logger.warning("Cached page extraction did not contain requested budget countries.")
+            return
+    else:
+        # ── Stage 1: Inventory ────────────────────────────────────────────────
+        inventory_df = build_file_inventory(PDF_ROOT)
+        if budget_filter_countries:
+            inventory_df = inventory_df[
+                inventory_df["country_guess"].fillna("").astype(str).isin(budget_filter_countries)
+            ].copy()
+        inventory_df.to_csv(FILE_INVENTORY_FILE, index=False, encoding="utf-8")
+        logger.info("Inventory saved: %s (rows=%s)", FILE_INVENTORY_FILE, len(inventory_df))
 
-    if inventory_df.empty:
-        logger.warning("No PDF files found. Pipeline ended after inventory stage.")
-        return
+        if inventory_df.empty:
+            logger.warning("No PDF files found. Pipeline ended after inventory stage.")
+            return
 
-    # ── Stage 2: OCR / text extraction ───────────────────────────────────────
-    pages_df, summary_df = extract_text_for_inventory(inventory_df)
-    pages_df.to_csv(PAGE_EXTRACTION_FILE, index=False, encoding="utf-8")
-    summary_df.to_csv(PER_FILE_SUMMARY_FILE, index=False, encoding="utf-8")
-    logger.info("Page extraction saved: %s (rows=%s)", PAGE_EXTRACTION_FILE, len(pages_df))
+        # ── Stage 2: OCR / text extraction ───────────────────────────────────
+        pages_df, summary_df = extract_text_for_inventory(inventory_df)
+        pages_df.to_csv(PAGE_EXTRACTION_FILE, index=False, encoding="utf-8")
+        summary_df.to_csv(PER_FILE_SUMMARY_FILE, index=False, encoding="utf-8")
+        logger.info("Page extraction saved: %s (rows=%s)", PAGE_EXTRACTION_FILE, len(pages_df))
 
-    # Save full raw text per document (useful for OCR quality inspection)
-    exports_df = export_full_documents(pages_df)
-    exports_df.to_csv(FULLTEXT_EXPORT_MANIFEST_FILE, index=False, encoding="utf-8")
-    logger.info("Full text exports: %s files", len(exports_df))
+        exports_df = export_full_documents(pages_df)
+        exports_df.to_csv(FULLTEXT_EXPORT_MANIFEST_FILE, index=False, encoding="utf-8")
+        logger.info("Full text exports: %s files", len(exports_df))
 
-    # ── Stage 3: Keyword detection (intermediate output, not used for budget) ─
-    # Saves keyword_hits.csv — useful for debugging which pages were flagged
-    candidates_df = detect_candidate_pages(pages_df)
-    candidates_df.to_csv(CANDIDATES_FILE, index=False, encoding="utf-8")
-    logger.info("Keyword candidates saved: %s (rows=%s)", CANDIDATES_FILE, len(candidates_df))
+        candidates_df = detect_candidate_pages(pages_df)
+        candidates_df.to_csv(CANDIDATES_FILE, index=False, encoding="utf-8")
+        logger.info("Keyword candidates saved: %s (rows=%s)", CANDIDATES_FILE, len(candidates_df))
 
     # ── Stage 4: Budget extraction ────────────────────────────────────────────
     # Uses full pages_df (not just candidates) so the section parser can track
@@ -494,7 +596,16 @@ def run_budget_pipeline() -> None:
         if not pages_df.empty and "file_id" in pages_df.columns
         else set()
     )
-    file_ids_to_process = sorted(current_page_file_ids - previous_budget_file_ids)
+    rerun_countries = rerun_countries or set()
+    rerun_file_ids: set[str] = set()
+    if rerun_countries and not pages_df.empty:
+        rerun_file_ids = set(
+            pages_df.loc[
+                pages_df["country_guess"].fillna("").astype(str).isin(rerun_countries),
+                "file_id",
+            ].dropna().astype(str)
+        )
+    file_ids_to_process = sorted((current_page_file_ids - previous_budget_file_ids) | rerun_file_ids)
 
     if file_ids_to_process:
         logger.info("Budget extraction will process %s new/changed PDF(s)", len(file_ids_to_process))
@@ -508,12 +619,15 @@ def run_budget_pipeline() -> None:
         incremental_budget_df, pages_df, BUDGET_ITEMS_FILE,
         actually_processed_ids=set(str(fid) for fid in file_ids_to_process),
     )
+    budget_df = refresh_budget_metadata_from_pages(budget_df, pages_df)
+    budget_df = backfill_budget_context_fields(budget_df)
+    budget_df = sanitize_budget_outputs(budget_df)
     budget_df.to_csv(BUDGET_ITEMS_FILE, index=False, encoding="utf-8")
     logger.info("Budget items saved: %s (rows=%s)", BUDGET_ITEMS_FILE, len(budget_df))
 
     # ── Stage 5: Outputs ──────────────────────────────────────────────────────
-    budget_df = refresh_budget_metadata_from_pages(budget_df, pages_df)
     budget_df = apply_temporal_smoother(budget_df)
+    budget_df = sanitize_budget_outputs(budget_df)
     available_cols = [c for c in _RESULTS_EXPORT_COLS if c in budget_df.columns]
     results_df = budget_df[available_cols].copy() if not budget_df.empty else pd.DataFrame(columns=available_cols)
 
@@ -569,6 +683,23 @@ if __name__ == "__main__":
 
     # ── Budget pipeline flags ─────────────────────────────────────────────────
     parser.add_argument("--ai-only", action="store_true", help="Skip PDF extraction and run only AI validation/status checks on existing results")
+    parser.add_argument(
+        "--budget-filter-country",
+        action="append",
+        default=[],
+        help="Only process the listed budget country or countries. Repeat the flag or use comma-separated values.",
+    )
+    parser.add_argument(
+        "--budget-rerun-country",
+        action="append",
+        default=[],
+        help="Force re-extraction for the listed budget country or countries even if cached rows already exist.",
+    )
+    parser.add_argument(
+        "--budget-use-page-cache",
+        action="store_true",
+        help="Reuse the existing page_text.csv cache instead of rerunning inventory/OCR extraction.",
+    )
     parser.add_argument("--run-ai-validation", action="store_true", help="Run optional AI validation on extracted candidates")
     parser.add_argument("--input-file", type=Path, default=RESULTS_CSV_FILE, help="Baseline extraction file for AI validation (CSV or JSON)")
     parser.add_argument("--max-records-to-send", type=int, default=None, help="Cap the number of records sent to the AI model")
@@ -621,7 +752,11 @@ if __name__ == "__main__":
 
         if run_budget:
             if not args.ai_only:
-                run_budget_pipeline()
+                run_budget_pipeline(
+                    budget_filter_countries=_normalize_country_filter(args.budget_filter_country),
+                    rerun_countries=_normalize_country_filter(args.budget_rerun_country),
+                    use_page_cache=args.budget_use_page_cache,
+                )
             else:
                 configure_logging()
                 logger.info("AI-only mode enabled; skipping PDF extraction pipeline.")

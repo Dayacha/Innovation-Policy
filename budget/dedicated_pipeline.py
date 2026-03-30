@@ -1,0 +1,177 @@
+"""Dedicated country-extractor dispatch for budget extraction."""
+
+from __future__ import annotations
+
+from pathlib import Path
+import re
+
+from budget.country_extractor import (
+    extract_australia_items,
+    extract_belgium_items,
+    extract_canada_items,
+    extract_chile_items,
+    extract_colombia_items,
+    extract_costa_rica_items,
+    extract_czech_items,
+    extract_denmark_items,
+    extract_estonia_items,
+    extract_finland_items,
+    extract_germany_items,
+    extract_israel_items,
+    extract_japan_items,
+    extract_korea_items,
+    extract_spain_items,
+    extract_uk_items,
+)
+from budget.extractor_common import enrich_dedicated_record, filepath_from_row
+
+
+COUNTRY_DEDICATED_EXTRACTORS: frozenset[str] = frozenset({
+    "Denmark", "Spain", "United Kingdom", "Canada", "Australia", "Belgium",
+    "Finland", "Germany", "Japan", "Colombia", "Chile", "Czech Republic",
+    "Israel", "Estonia", "Korea", "Costa Rica",
+})
+
+COUNTRY_SKIP_EXTRACTORS: frozenset[str] = frozenset()
+
+
+def handle_dedicated_country(
+    *,
+    records: list[dict],
+    sorted_pages,
+    file_id: str,
+    country_for_file: str,
+    year_for_file: str,
+    filepath_col: str,
+    tax,
+    prior_results_df=None,
+) -> bool:
+    """Run a dedicated extractor for one file if available.
+
+    Returns True when the file was fully handled and the caller should skip
+    the generic parser path.
+    """
+    if country_for_file not in COUNTRY_DEDICATED_EXTRACTORS:
+        return False
+
+    first_row = sorted_pages.iloc[0]
+    filepath_val = filepath_from_row(first_row, filepath_col)
+    source_fn = Path(filepath_val).name
+
+    if country_for_file == "Denmark":
+        records.extend(
+            extract_denmark_items(
+                sorted_pages,
+                file_id=str(file_id),
+                filepath_col=filepath_col,
+                tax=tax,
+                prior_results_df=prior_results_df,
+            )
+        )
+        return True
+
+    extractor_map = {
+        "Spain": extract_spain_items,
+        "United Kingdom": extract_uk_items,
+        "Canada": extract_canada_items,
+        "Australia": extract_australia_items,
+        "Belgium": extract_belgium_items,
+        "Finland": extract_finland_items,
+        "Germany": extract_germany_items,
+        "Japan": extract_japan_items,
+        "Colombia": extract_colombia_items,
+        "Chile": extract_chile_items,
+        "Czech Republic": extract_czech_items,
+        "Israel": extract_israel_items,
+        "Estonia": extract_estonia_items,
+        "Korea": extract_korea_items,
+        "Costa Rica": extract_costa_rica_items,
+    }
+
+    dedupe_rounding = {
+        "Canada": -4,
+        "Belgium": -3,
+        "Finland": -3,
+        "Estonia": -3,
+        "Costa Rica": -3,
+    }
+
+    extractor = extractor_map.get(country_for_file)
+    if extractor is None:
+        return False
+
+    raw_records = extractor(
+        sorted_pages,
+        file_id=str(file_id),
+        country=country_for_file,
+        year=year_for_file,
+        source_filename=source_fn,
+    )
+
+    existing_by_key = {
+        _dedupe_key(existing, country_for_file, dedupe_rounding.get(country_for_file)): idx
+        for idx, existing in enumerate(records)
+        if existing.get("country") == country_for_file
+    }
+    for rec in raw_records:
+        enriched = enrich_dedicated_record(rec, tax)
+        key = _dedupe_key(enriched, country_for_file, dedupe_rounding.get(country_for_file))
+        existing_idx = existing_by_key.get(key)
+        if existing_idx is None:
+            records.append(enriched)
+            existing_by_key[key] = len(records) - 1
+            continue
+
+        current = records[existing_idx]
+        if _record_priority(enriched, country_for_file) > _record_priority(current, country_for_file):
+            records[existing_idx] = enriched
+    return True
+
+
+def _dedupe_key(rec: dict, country: str, rounding_digits: int | None) -> tuple:
+    year = rec.get("year", "")
+    program_code = rec.get("program_code", "")
+    if country == "Germany":
+        return year, program_code
+    if rounding_digits is None:
+        return year, program_code
+    amount = int(round(rec.get("amount_local") or 0, rounding_digits))
+    return year, program_code, amount
+
+
+def _record_priority(rec: dict, country: str) -> tuple:
+    confidence = float(rec.get("confidence") or 0)
+    source = str(rec.get("source_file", "") or "").lower()
+    page_number = int(rec.get("page_number") or 0)
+    amount = float(rec.get("amount_local") or 0)
+
+    if country == "Australia":
+        source_score = 0
+        if "no1" in source:
+            source_score = 4
+        elif "dept" in source:
+            source_score = 3
+        elif "no2" in source:
+            source_score = 2
+        elif "no3" in source or "no4" in source or "no5" in source or "no6" in source:
+            source_score = 1
+        return source_score, amount, confidence, page_number
+
+    if country != "Germany":
+        return confidence, page_number
+
+    source_score = 0
+    if "gesamtplan" in source or "uebersichten" in source or "übersichten" in source:
+        source_score = 3
+    elif re.match(r"^\d{4}\s+\d{6,7}\.pdf$", str(rec.get("source_file", ""))):
+        source_score = 2
+    elif "bgbl" in source:
+        source_score = 1
+    return confidence, amount, source_score, page_number
+
+
+__all__ = [
+    "COUNTRY_DEDICATED_EXTRACTORS",
+    "COUNTRY_SKIP_EXTRACTORS",
+    "handle_dedicated_country",
+]

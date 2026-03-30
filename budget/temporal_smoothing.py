@@ -32,6 +32,10 @@ MIN_NEIGHBORS_TO_UPGRADE: int = 1       # ≥N include neighbors (T±1) → upgr
 MIN_GLOBAL_INCLUDE_TO_UPGRADE: int = 2  # ≥N include years in series → upgrade remaining reviews
 MIN_REVIEW_TO_DOWNGRADE: int = 3        # 0 include + ≥N review years → downgrade to skip
 
+# Stage 2 Pass 3: spike / low-budget anomaly detection
+SPIKE_RATIO_THRESHOLD: float = 5.0      # flag if amount > N × median of neighbors
+DROP_RATIO_THRESHOLD: float = 0.10      # flag if amount < N × median of neighbors
+
 
 # ── Data structures ───────────────────────────────────────────────────────────
 
@@ -298,6 +302,43 @@ def apply_temporal_smoother(
                     df, idx,
                     f"global downgrade: 0 include years, {n_review} review-only year(s) in series",
                 )
+
+    # ── Pass 3: SPIKE / ANOMALY DETECTION ────────────────────────────────────
+    # For each program series with ≥3 'include' years, flag rows whose amount
+    # deviates more than SPIKE_RATIO_THRESHOLD above or DROP_RATIO_THRESHOLD
+    # below the series median.  These are marked decision="review" (downgrade)
+    # with an explanatory note — they won't be silently included.
+    if "amount_local" in df.columns:
+        df["_amount_num"] = pd.to_numeric(df["amount_local"], errors="coerce")
+        for prog_key, grp in df.groupby("_prog_key", sort=False):
+            key_body = str(prog_key).rsplit("|", 1)[-1]
+            if not key_body:
+                continue
+            inc_idx = grp.index[grp["decision"].str.lower() == "include"]
+            if len(inc_idx) < 3:
+                continue  # not enough data for reliable spike detection
+            amounts = df.loc[inc_idx, "_amount_num"].dropna()
+            if amounts.empty or amounts.median() == 0:
+                continue
+            series_median = amounts.median()
+            for idx in inc_idx:
+                amt = df.at[idx, "_amount_num"]
+                if pd.isna(amt):
+                    continue
+                ratio = amt / series_median
+                if ratio > SPIKE_RATIO_THRESHOLD:
+                    df.at[idx, "decision"] = "review"
+                    _append_reason(
+                        df, idx,
+                        f"spike detected: amount={amt:.0f} is {ratio:.1f}× series median={series_median:.0f}; needs AI verification",
+                    )
+                elif ratio < DROP_RATIO_THRESHOLD:
+                    df.at[idx, "decision"] = "review"
+                    _append_reason(
+                        df, idx,
+                        f"low-budget anomaly: amount={amt:.0f} is {ratio:.3f}× series median={series_median:.0f}; needs AI verification",
+                    )
+        df = df.drop(columns=["_amount_num"], errors="ignore")
 
     return df.drop(
         columns=["year_int", "program_code_norm", "match_description", "_prog_key"],

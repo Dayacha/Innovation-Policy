@@ -5225,7 +5225,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/SVN_1997.txt",
     "reforms_path": null,
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-1997_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/1997/05/oecd-economic-surveys-slovenia-1997_g1ghg531/eco_surveys-svn-1997-en.pdf"
   },
   "SVN_1999": {
@@ -5286,7 +5286,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/SVN_2009.txt",
     "reforms_path": null,
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2009_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2009/07/oecd-economic-surveys-slovenia-2009_g1gh9a6d/eco_surveys-svn-2009-en.pdf"
   },
   "SVN_2011": {
@@ -5297,7 +5297,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/SVN_2011.txt",
     "reforms_path": null,
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2011_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2011/02/oecd-economic-surveys-slovenia-2011_g1g1165c/eco_surveys-svn-2011-en.pdf"
   },
   "SVN_2013": {
@@ -5308,7 +5308,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/SVN_2013.txt",
     "reforms_path": null,
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2013_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2013/04/oecd-economic-surveys-slovenia-2013_g1g22066/eco_surveys-svn-2013-en.pdf"
   },
   "SVN_2015": {
@@ -5319,7 +5319,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/SVN_2015.txt",
     "reforms_path": null,
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2015_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/a7/a794fd90e7f79605679f924462d12cdba38e541f.pdf"
   },
   "SVN_2017": {
@@ -5330,7 +5330,7 @@
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/SVN_2017.txt",
     "reforms_path": null,
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2017_en",
-    "status": "text_extracted",
+    "status": "reforms_extracted",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/c7/c7df7a5ac17f47a28e1f76433bf453b61ceac95c.pdf"
   },
   "SVN_2019": {
@@ -11697,7 +11697,7 @@
     "reforms_path": null,
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2024_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/13/13fc93143bb6cdb6200c9f5e95ca3f0a516d60c7.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "SVN_2022": {
     "country_code": "SVN",
@@ -11708,7 +11708,7 @@
     "reforms_path": null,
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2022_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/b0/b0ef02a93378c7c4070e51f3003bf676b24543d7.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "SVN_2020": {
     "country_code": "SVN",
@@ -11719,7 +11719,7 @@
     "reforms_path": null,
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-slovenia-2020_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/5a/5a50c3f1c06049bb35f41c348ad7dece498d7e03.pdf",
-    "status": "text_extracted"
+    "status": "reforms_extracted"
   },
   "USA_2024": {
     "country_code": "USA",
@@ -12662,7 +12662,7 @@
     "year": 2024,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/EST_2024.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/EST_2024.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/EST_2024.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-estonia-2024_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/d0/d0f5bd026739ef550cc778793fcc26811c99b601.pdf",
     "status": "text_extracted"
@@ -12673,7 +12673,7 @@
     "year": 2022,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/EST_2022.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/EST_2022.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/EST_2022.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-estonia-2022_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/4e/4eeb3e27243f0023079e829bb8bfbb6749120019.pdf",
     "status": "text_extracted"
@@ -12684,7 +12684,7 @@
     "year": 2012,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/EST_2012.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/EST_2012.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/EST_2012.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-estonia-2012_en",
     "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2012/10/oecd-economic-surveys-estonia-2012_g1g156fb/eco_surveys-est-2012-en.pdf",
     "status": "text_extracted"
@@ -12904,7 +12904,7 @@
     "year": 2024,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/LVA_2024.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/LVA_2024.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/LVA_2024.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-latvia-2024_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/ca/ca38d798e0f4e1169c4f8b2f6bc544e40ea69f75.pdf",
     "status": "text_extracted"
@@ -12915,7 +12915,7 @@
     "year": 2022,
     "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/LVA_2022.pdf",
     "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/LVA_2022.txt",
-    "reforms_path": null,
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/LVA_2022.json",
     "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-latvia-2022_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/06/061faa0d9ee7ef1a3205c1bdb8aeef1a1f34a05e.pdf",
     "status": "text_extracted"

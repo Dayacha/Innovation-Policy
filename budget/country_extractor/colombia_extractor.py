@@ -49,7 +49,7 @@ _SCIENCE_SECTION_NAMES = re.compile(
 # Format: "TOTAL PRESUPUESTO SECCION  {nat}  {ext}  {total}"
 # or:     "TOTAL PRESUPUESTO SECCIÓN\n{nat}\n{ext}\n{total}"
 _TOTAL_RE = re.compile(
-    r"TOTAL\s+PRESUPUESTO\s+SECCI[ÓO]N[:\s]*([\d,\.\s\xa0]+)",
+    r"TOTAL\s+PRESUPUESTO(?:\s+SECCI[ÓO]N)?[:\s]*([\d,\.\s\xa0]+)",
     re.IGNORECASE,
 )
 
