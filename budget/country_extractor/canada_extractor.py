@@ -243,6 +243,9 @@ def _split_into_blocks(text: str) -> list[tuple[str, str]]:
     for line in lines:
         stripped = line.strip()
         if _RE_HEADING.fullmatch(stripped) and len(stripped) >= 10:
+            if current_heading and not current_body_lines:
+                current_heading = f"{current_heading}\n{stripped}"
+                continue
             # Save previous block
             if current_heading or current_body_lines:
                 blocks.append((current_heading, "\n".join(current_body_lines)))
@@ -258,6 +261,40 @@ def _split_into_blocks(text: str) -> list[tuple[str, str]]:
         blocks.append((current_heading, "\n".join(current_body_lines)))
 
     return blocks
+
+
+def _schedule_variant(block_text: str) -> str:
+    """Classify the appropriation table type for a matched block."""
+    lowered = block_text.lower()
+    if (
+        "interim appropriation granted by this act" in lowered
+        or "crédit provisoire accordé par la présente loi" in lowered
+    ):
+        return "interim"
+    if (
+        "total ($)" in lowered
+        or "amount ($)" in lowered
+        or "montant ($)" in lowered
+        or "total\n" in lowered
+    ):
+        return "full_schedule"
+    return "fragment"
+
+
+def _variant_confidence(variant: str) -> float:
+    if variant == "full_schedule":
+        return 0.9
+    if variant == "interim":
+        return 0.82
+    return 0.68
+
+
+def _variant_rank(variant: str) -> int:
+    if variant == "full_schedule":
+        return 3
+    if variant == "interim":
+        return 2
+    return 1
 
 
 def _extract_from_page(
@@ -277,11 +314,13 @@ def _extract_from_page(
 
     for heading, body in blocks:
         block_text = heading + "\n" + body
+        variant = _schedule_variant(text + "\n" + block_text)
+        heading_norm = re.sub(r"\s+", " ", heading).strip()
 
         for agency_re, prog_code, canonical_name in _AGENCY_PATTERNS:
             # Only match agency names in the HEADING line (ALL-CAPS), not in body text.
             # This prevents footnotes/references to agency names from triggering false matches.
-            if not agency_re.search(heading):
+            if not agency_re.search(heading_norm):
                 continue
 
             amounts = _extract_amounts_from_block(block_text)
@@ -306,10 +345,16 @@ def _extract_from_page(
                     "rd_category": "direct_rd",
                     "taxonomy_score": 8.0,
                     "decision": "include",
-                    "confidence": 0.75,
+                    "confidence": _variant_confidence(variant),
                     "source_file": source_filename,
                     "file_id": file_id,
                     "page_number": page_number,
+                    "text_snippet": snippet,
+                    "raw_line": block_text[:1200].strip(),
+                    "merged_line": snippet,
+                    "context_before": heading.strip(),
+                    "context_after": body[:900].replace("\n", " ").strip(),
+                    "source_variant": variant,
                 }
             )
             # Only match each agency once per block
@@ -358,15 +403,32 @@ def extract_canada_items(
         )
         return []
 
-    # Deduplicate within this file: same (prog_code, amount_bin) → keep first
-    # This prevents the same agency total appearing on multiple pages of the same Act.
-    seen: set[tuple[str, int]] = set()
-    deduped: list[dict] = []
+    # Keep the single strongest record per agency within a file.  This prevents
+    # bilingual/interim/full-schedule duplication while preserving a fallback
+    # fragment if that is the only signal present in the Act.
+    best_by_program: dict[str, dict] = {}
     for rec in all_records:
-        key = (rec["program_code"], int(round(rec["amount_local"], -4)))
-        if key not in seen:
-            seen.add(key)
-            deduped.append(rec)
+        key = rec["program_code"]
+        current = best_by_program.get(key)
+        if current is None:
+            best_by_program[key] = rec
+            continue
+        new_rank = (
+            _variant_rank(str(rec.get("source_variant", ""))),
+            float(rec.get("amount_local") or 0),
+            float(rec.get("confidence") or 0),
+            -int(rec.get("page_number") or 0),
+        )
+        old_rank = (
+            _variant_rank(str(current.get("source_variant", ""))),
+            float(current.get("amount_local") or 0),
+            float(current.get("confidence") or 0),
+            -int(current.get("page_number") or 0),
+        )
+        if new_rank > old_rank:
+            best_by_program[key] = rec
+
+    deduped = list(best_by_program.values())
 
     logger.info(
         "Canada extractor: %s (year %s) → %d agency records (from %d raw)",

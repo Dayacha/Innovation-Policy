@@ -1,146 +1,392 @@
-"""Czech Republic State Budget (Zákon o státním rozpočtu) extractor.
+"""Czech Republic state-budget extractor.
 
-Czech R&D spending tracked through:
-- **Chapter 321** — Grantová agentura České republiky (Czech Science Foundation / GAČR)
-  Main competitive R&D grant agency.
-- **Chapter 361** — Akademie věd České republiky (Academy of Sciences of the Czech Republic)
-  Main public research institute network.
+Manual review of the Czech archive showed three usable source layouts:
 
-Document formats handled
-------------------------
-1. **PDF annexes 1997–2000**: "Přílohy k zákonu o státním rozpočtu" PDFs with
-   chapter-level detail sections titled "Ukazatele kapitoly {code} {name} v tisících Kč".
-   The key line is "Výdaje celkem {amount}".
+1. Chapter pages headed `Ukazatele kapitoly 321/361 ...`, where the relevant
+   amount is the local `Výdaje celkem` line.
+2. Appendix expenditure tables such as `Příloha č. 3` / `Celkový přehled výdajů
+   státního rozpočtu podle kapitol`, where chapters `321` and `361` appear as
+   rows with their total expenditures.
+3. Older investment-only tables using `{agency} celkem`, which are weaker but
+   still useful as a last resort for 1997-style annexes.
 
-2. **DOCX annexes 2001–2004**: "czech_budget_annexes_CONTENT_{year}.docx" files with
-   an "Annex 3" section listing all chapters and total expenditures in tis. Kč:
-   "{code} {name} {amount}" format (all on one line in extracted text).
-
-3. **PDF 2009**: Same "Ukazatele kapitoly" format as 1997-2000 PDFs.
-
-Note: 2005-2008 and 2010+ PDFs have scanned annexes — chapter amounts are images,
-not extractable via OCR (or insufficient OCR coverage). These years are skipped.
-
-Currency: CZK (Czech Crown / koruna česká), amounts in tis. Kč (multiply by 1000).
+The extractor therefore works page-first and prefers locally anchored chapter
+totals over whole-document keyword scans.
 """
 
 from __future__ import annotations
 
-import re
 import logging
+import re
 from typing import Optional
+
+from budget.utils import normalize_text
+
 
 logger = logging.getLogger("innovation_pipeline")
 
-# ── Chapter patterns ───────────────────────────────────────────────────────────
 
-# Chapter 321 — Czech Science Foundation (GAČR)
-_GACR_RE = re.compile(
-    r"321\s+Grantov[aá]\s+agentura\s+[CČ]esk[eé]\s+republiky"
-    r"|Grantov[aá]\s+agentura\s+[CČ]esk[eé]\s+republiky"
-    r"|GRANTOV[AÁ]\s+AGENTURA\s+[CČ]ESK[EÉ]\s+REPUBLIKY",
+_SECTION_CODE = "CZ_RD"
+_SECTION_NAME = "Věda a výzkum (státní rozpočet)"
+_SECTION_NAME_EN = "Science and Research (State Budget)"
+
+_APPENDIX_EXP_RE = re.compile(
+    r"celkov\w*\s+prehled\s+vydaj\w*\s+statniho\s+rozpoctu\s+podle\s+kapitol",
     re.IGNORECASE,
 )
-
-# Chapter 361 — Academy of Sciences
-_AVCR_RE = re.compile(
-    r"361\s+Akademie\s+v[eě]d\s+[CČ]esk[eé]\s+republiky"
-    r"|Akademie\s+v[eě]d\s+[CČ]esk[eé]\s+republiky"
-    r"|AKADEMIE\s+V[EĚ]D\s+[CČ]ESK[EÉ]\s+REPUBLIKY"
-    # Handle garbled encoding (MFKD decomposition artifacts in some PDFs)
-    r"|Akademie\s+ve\xcc\x8f\s*d\s+C\xcc\x8c",
+_OLDER_EXP_TABLE_RE = re.compile(
+    r"(?:rozdeleni|celkove?)\s+vydaj\w*.*podle\s+kapitol",
     re.IGNORECASE,
 )
+_INVESTMENT_TABLE_RE = re.compile(r"investic\w*\s+vydaj\w*", re.IGNORECASE)
+_VYDAJE_CELKEM_RE = re.compile(r"vydaje\s+celkem", re.IGNORECASE)
+_AMOUNT_RE = re.compile(r"(?<!\d)(\d{1,3}(?:[ \xa0]\d{3})+|\d{6,})(?!\d)")
+_CHAPTER_CODE_LINE_RE = re.compile(r"^\s*(3\d{2})\s*$")
+_ANY_CHAPTER_LINE_RE = re.compile(r"^\s*(3\d{2})\b")
 
-# "Výdaje celkem {amount}" pattern (in chapter-level sections)
-_VYDAJE_RE = re.compile(
-    r"V[yý]daje\s+celkem\s+([\d\s\xa0]+)",
-    re.IGNORECASE,
-)
 
-# Annex 3 summary table format: "{3-digit code} {name} {space-separated amount}"
-# e.g. "321 Grantová agentura České republiky 1 197 097"
-_ANNEX3_GACR_RE = re.compile(
-    r"321\s+Grantov[aá]\s+agentura\s+[CČ]esk[eé]\s+republiky\s+([\d\s]+)",
-    re.IGNORECASE,
-)
-_ANNEX3_AVCR_RE = re.compile(
-    r"361\s+Akademie\s+v[eě]d\s+[CČ]esk[eé]\s+republiky\s+([\d\s]+)",
-    re.IGNORECASE,
-)
-
-_CELKEM_GACR_RE = re.compile(
-    r"Grantov.{0,40}?agentura.{0,80}?celkem\s+([\d\s]+)",
-    re.IGNORECASE | re.DOTALL,
-)
-_CELKEM_AVCR_RE = re.compile(
-    r"Akademie.{0,80}?celkem\s+([\d\s]+)",
-    re.IGNORECASE | re.DOTALL,
+_AGENCIES = (
+    {
+        "program_code": "CZ_GACR",
+        "name": "Grantová agentura České republiky (GAČR)",
+        "name_en": "Czech Science Foundation (GAČR)",
+        "chapter_code": "321",
+        "line_description": "Grantová agentura České republiky - výdaje celkem",
+        "line_description_en": "Czech Science Foundation total expenditure",
+        "name_re": re.compile(
+            r"grantov\w*\s+agentur\w*(?:\s+c\w*esk\w*\s+republik\w*)?",
+            re.IGNORECASE,
+        ),
+    },
+    {
+        "program_code": "CZ_AVCR",
+        "name": "Akademie věd České republiky (AV ČR)",
+        "name_en": "Academy of Sciences of the Czech Republic",
+        "chapter_code": "361",
+        "line_description": "Akademie věd České republiky - výdaje celkem",
+        "line_description_en": "Academy of Sciences total expenditure",
+        "name_re": re.compile(
+            r"akademi\w*\s+v\w*d(?:\s+c\w*esk\w*\s+republik\w*)?",
+            re.IGNORECASE,
+        ),
+    },
 )
 
 
 def _parse_czk_tis(raw: str) -> Optional[float]:
-    """Parse a CZK amount in tisíce (thousands) to full CZK value.
-
-    Handles space-separated thousands: "1 197 097" → 1197097 * 1000
-    """
-    cleaned = raw.replace("\xa0", " ").strip()
-    # Take first token sequence that looks like a space-separated number
-    m = re.match(r"(\d[\d\s]*)", cleaned)
-    if not m:
+    cleaned = re.sub(r"[^\d]", "", raw or "")
+    if not cleaned:
         return None
-    num_str = re.sub(r"\s+", "", m.group(1)).strip()
     try:
-        val = float(num_str)
-        return val * 1000  # convert tis. Kč → Kč
+        value = float(cleaned)
     except ValueError:
         return None
-
-
-def _extract_vydaje_after_chapter(text: str, chapter_re: re.Pattern) -> Optional[float]:
-    """Find a chapter header in text, then extract 'Výdaje celkem' amount nearby."""
-    m = chapter_re.search(text)
-    if not m:
+    if value <= 0:
         return None
-    # Look within 500 chars after the chapter header
-    window = text[m.start(): min(m.start() + 500, len(text))]
-    vm = _VYDAJE_RE.search(window)
-    if not vm:
-        return None
-    raw = vm.group(1)
-    return _parse_czk_tis(raw)
+    return value * 1000.0
 
 
-def _extract_annex3_amount(text: str, annex_re: re.Pattern) -> Optional[float]:
-    """Extract amount from Annex 3 summary table (docx format)."""
-    m = annex_re.search(text)
-    if not m:
+def _normalize_lines(text: str) -> list[tuple[str, str]]:
+    rows: list[tuple[str, str]] = []
+    for raw_line in text.splitlines():
+        raw = raw_line.strip()
+        if not raw:
+            continue
+        rows.append((raw, normalize_text(raw)))
+    return rows
+
+
+def _normalize_snippet(text: str) -> str:
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def _extract_last_amount(lines: list[tuple[str, str]]) -> tuple[Optional[float], str]:
+    best_value: Optional[float] = None
+    best_raw = ""
+    for raw_line, _ in lines:
+        for match in _AMOUNT_RE.finditer(raw_line):
+            value = _parse_czk_tis(match.group(1))
+            if value is None:
+                continue
+            if best_value is None or value > best_value:
+                best_value = value
+                best_raw = match.group(1)
+    return best_value, best_raw
+
+
+def _find_vydaje_amount(
+    lines: list[tuple[str, str]],
+    start_idx: int,
+) -> tuple[Optional[float], str, str]:
+    for idx in range(start_idx, min(len(lines), start_idx + 20)):
+        raw_line, norm_line = lines[idx]
+        if not _VYDAJE_CELKEM_RE.search(norm_line):
+            continue
+        local_lines = lines[idx:min(len(lines), idx + 3)]
+        value, raw_amount = _extract_last_amount(local_lines)
+        if value is not None:
+            merged = " | ".join(raw for raw, _ in local_lines)
+            return value, raw_amount, merged
+    return None, "", ""
+
+
+def _find_row_block(
+    lines: list[tuple[str, str]],
+    chapter_code: str,
+    name_re: re.Pattern,
+) -> tuple[Optional[float], str, str]:
+    for idx, (raw_line, norm_line) in enumerate(lines):
+        if not _ANY_CHAPTER_LINE_RE.match(norm_line):
+            continue
+        if not norm_line.startswith(chapter_code):
+            continue
+
+        block = [lines[idx]]
+        for next_idx in range(idx + 1, min(len(lines), idx + 8)):
+            next_norm = lines[next_idx][1]
+            if _ANY_CHAPTER_LINE_RE.match(next_norm):
+                break
+            block.append(lines[next_idx])
+
+        block_norm = " ".join(norm for _, norm in block)
+        if not name_re.search(block_norm):
+            continue
+
+        value, raw_amount = _extract_last_amount(block)
+        if value is None:
+            continue
+
+        merged = " | ".join(raw for raw, _ in block)
+        return value, raw_amount, merged
+
+    return None, "", ""
+
+
+def _build_candidate(
+    *,
+    agency: dict,
+    amount: float,
+    amount_raw: str,
+    page_number: int,
+    source_variant: str,
+    confidence: float,
+    merged_line: str,
+    page_text: str,
+    context_before: str,
+    context_after: str,
+) -> Optional[dict]:
+    if amount < 100_000_000 or amount > 20_000_000_000:
         return None
-    raw = m.group(1)
-    # Take the first space-delimited number group (may have multiple columns)
-    # Format: "1 197 097 ..." — take first 7+ digit group
-    nums = re.findall(r"\d[\d\s]+\d", raw[:50])
-    for n in nums:
-        val = _parse_czk_tis(n)
-        if val and val >= 100_000_000:  # at least 100M CZK
-            return val
+    return {
+        "country": "",
+        "year": "",
+        "section_code": _SECTION_CODE,
+        "section_name": _SECTION_NAME,
+        "section_name_en": _SECTION_NAME_EN,
+        "program_code": agency["program_code"],
+        "program_description": agency["name"],
+        "program_description_en": agency["name_en"],
+        "line_description": agency["line_description"],
+        "line_description_en": agency["line_description_en"],
+        "amount_local": amount,
+        "currency": "CZK",
+        "unit": "CZK",
+        "rd_category": "direct_rd",
+        "taxonomy_score": 8.0,
+        "decision": "include",
+        "confidence": confidence,
+        "page_number": page_number,
+        "amount_raw": amount_raw,
+        "source_variant": source_variant,
+        "text_snippet": _normalize_snippet(page_text[:1800]),
+        "raw_line": merged_line,
+        "merged_line": merged_line,
+        "context_before": context_before,
+        "context_after": context_after,
+        "rationale": (
+            f"Czech dedicated extractor; source_variant={source_variant}; "
+            f"page={page_number}; amount_raw={amount_raw}"
+        ),
+    }
+
+
+def _extract_chapter_page(page: dict, agency: dict) -> Optional[dict]:
+    chapter_match = re.search(
+        rf"ukazatele\s+kapitoly\s+{agency['chapter_code']}\b.*?{agency['name_re'].pattern}.*?vydaje\s+celkem\s+(\d{{1,3}}(?:[ \xa0]\d{{3}})+|\d{{6,}})",
+        page["norm_text"],
+        re.IGNORECASE | re.DOTALL,
+    )
+    if chapter_match:
+        amount_raw = chapter_match.group(1)
+        amount = _parse_czk_tis(amount_raw)
+        if amount is not None:
+            return _build_candidate(
+                agency=agency,
+                amount=amount,
+                amount_raw=amount_raw,
+                page_number=page["page_number"],
+                source_variant="chapter_page",
+                confidence=0.96,
+                merged_line=chapter_match.group(0),
+                page_text=page["raw_text"],
+                context_before=f"Ukazatele kapitoly {agency['chapter_code']}",
+                context_after="Výdaje celkem",
+            )
+
+    lines = page["lines"]
+    for idx, (_, norm_line) in enumerate(lines):
+        if "ukazatele kapitoly" not in norm_line:
+            continue
+        if agency["chapter_code"] not in norm_line:
+            continue
+        window_norm = " ".join(norm for _, norm in lines[idx:min(len(lines), idx + 8)])
+        if not agency["name_re"].search(window_norm):
+            continue
+
+        amount, raw_amount, merged = _find_vydaje_amount(lines, idx)
+        if amount is None:
+            continue
+        return _build_candidate(
+            agency=agency,
+            amount=amount,
+            amount_raw=raw_amount,
+            page_number=page["page_number"],
+            source_variant="chapter_page",
+            confidence=0.96,
+            merged_line=merged,
+            page_text=page["raw_text"],
+            context_before=f"Ukazatele kapitoly {agency['chapter_code']}",
+            context_after="Výdaje celkem",
+        )
     return None
 
 
-def _extract_celkem_amount(text: str, celkem_re: re.Pattern) -> Optional[float]:
-    """Extract amount from '{agency} celkem {amount}' lines."""
-    m = celkem_re.search(text)
-    if not m:
+def _extract_appendix_row(page: dict, agency: dict) -> Optional[dict]:
+    lines = page["lines"]
+    norm_text = page["norm_text"]
+    if not (_APPENDIX_EXP_RE.search(norm_text) or _OLDER_EXP_TABLE_RE.search(norm_text)):
         return None
-    for line in m.group(1).splitlines():
-        for token in re.findall(r"\d{1,3}(?:[ \xa0]\d{3})+|\d{6,}", line):
-            val = _parse_czk_tis(token)
-            if val and val >= 100_000_000:
-                return val
+
+    anchor_positions = [
+        norm_text.rfind("annex 3"),
+        norm_text.rfind("priloha c. 3"),
+        norm_text.rfind("celkovy prehled vydaju"),
+    ]
+    anchor_pos = max(pos for pos in anchor_positions if pos >= 0) if any(pos >= 0 for pos in anchor_positions) else 0
+    scoped_norm = norm_text[anchor_pos:]
+    row_match = re.search(
+        rf"{agency['chapter_code']}\s+{agency['name_re'].pattern}\s+(\d{{1,3}}(?:[ \xa0]\d{{3}})+|\d{{6,}})",
+        scoped_norm,
+        re.IGNORECASE,
+    )
+    if row_match:
+        amount_raw = row_match.group(1)
+        amount = _parse_czk_tis(amount_raw)
+        if amount is not None:
+            variant = "appendix3_row" if _APPENDIX_EXP_RE.search(norm_text) else "chapter_table"
+            confidence = 0.92 if variant == "appendix3_row" else 0.84
+            return _build_candidate(
+                agency=agency,
+                amount=amount,
+                amount_raw=amount_raw,
+                page_number=page["page_number"],
+                source_variant=variant,
+                confidence=confidence,
+                merged_line=row_match.group(0),
+                page_text=page["raw_text"],
+                context_before="Celkový přehled výdajů státního rozpočtu podle kapitol",
+                context_after=f"Kapitola {agency['chapter_code']}",
+            )
+
+    anchor_idx = 0
+    for idx, (_, norm_line) in enumerate(lines):
+        if _APPENDIX_EXP_RE.search(norm_line) or _OLDER_EXP_TABLE_RE.search(norm_line):
+            anchor_idx = idx
+            break
+
+    scoped_lines = lines[anchor_idx:]
+    amount, raw_amount, merged = _find_row_block(scoped_lines, agency["chapter_code"], agency["name_re"])
+    if amount is None:
+        section_norm = " ".join(norm for _, norm in scoped_lines)
+        row_match = re.search(
+            rf"{agency['chapter_code']}\s+{agency['name_re'].pattern}\s+(\d{{1,3}}(?:[ \xa0]\d{{3}})+|\d{{6,}})",
+            section_norm,
+            re.IGNORECASE,
+        )
+        if row_match:
+            raw_amount = row_match.group(1)
+            amount = _parse_czk_tis(raw_amount)
+            merged = row_match.group(0)
+        if amount is None:
+            return None
+
+    variant = "appendix3_row" if _APPENDIX_EXP_RE.search(norm_text) else "chapter_table"
+    confidence = 0.92 if variant == "appendix3_row" else 0.84
+    return _build_candidate(
+        agency=agency,
+        amount=amount,
+        amount_raw=raw_amount,
+        page_number=page["page_number"],
+        source_variant=variant,
+        confidence=confidence,
+        merged_line=merged,
+        page_text=page["raw_text"],
+        context_before="Celkový přehled výdajů státního rozpočtu podle kapitol",
+        context_after=f"Kapitola {agency['chapter_code']}",
+    )
+
+
+def _extract_investment_fallback(page: dict, agency: dict) -> Optional[dict]:
+    lines = page["lines"]
+    norm_text = page["norm_text"]
+    if not _INVESTMENT_TABLE_RE.search(norm_text):
+        return None
+
+    for idx, (_, norm_line) in enumerate(lines):
+        if not agency["name_re"].search(norm_line):
+            continue
+        block = lines[idx:min(len(lines), idx + 5)]
+        block_norm = " ".join(norm for _, norm in block)
+        if "celkem" not in block_norm:
+            continue
+        value, raw_amount = _extract_last_amount(block)
+        if value is None:
+            continue
+        merged = " | ".join(raw for raw, _ in block)
+        return _build_candidate(
+            agency=agency,
+            amount=value,
+            amount_raw=raw_amount,
+            page_number=page["page_number"],
+            source_variant="investment_fallback",
+            confidence=0.68,
+            merged_line=merged,
+            page_text=page["raw_text"],
+            context_before="Investiční výdaje / reprodukce investičního majetku",
+            context_after="celkem",
+        )
     return None
 
 
-# ── Public API ─────────────────────────────────────────────────────────────────
+def _best_candidate(candidates: list[dict]) -> Optional[dict]:
+    if not candidates:
+        return None
+    priority = {
+        "chapter_page": 4,
+        "appendix3_row": 3,
+        "chapter_table": 2,
+        "investment_fallback": 1,
+    }
+    return max(
+        candidates,
+        key=lambda rec: (
+            priority.get(str(rec.get("source_variant", "")), 0),
+            float(rec.get("confidence") or 0),
+            float(rec.get("amount_local") or 0),
+            -int(rec.get("page_number") or 0),
+        ),
+    )
+
 
 def extract_czech_items(
     sorted_pages,
@@ -149,134 +395,65 @@ def extract_czech_items(
     year: str,
     source_filename: str,
 ) -> list[dict]:
-    """Extract R&D budget records from a Czech State Budget annex file.
+    """Extract Czech R&D budget records from page-level budget text."""
+    pages: list[dict] = []
+    for row in sorted_pages.itertuples(index=False):
+        raw_text = row.text if isinstance(row.text, str) else ""
+        if not raw_text.strip():
+            continue
+        pages.append({
+            "page_number": int(getattr(row, "page_number", 1) or 1),
+            "raw_text": raw_text,
+            "norm_text": normalize_text(raw_text),
+            "lines": _normalize_lines(raw_text),
+        })
 
-    Returns list of dicts matching the standard budget item schema.
-    Amounts are in CZK (full, not thousands).
-    """
-    records: list[dict] = []
-
-    # Concatenate all pages
-    all_pages = [(int(row.page_number), row.text if isinstance(row.text, str) else "")
-                 for row in sorted_pages.itertuples(index=False)]
-    all_text = " ".join(t for _, t in all_pages)
-
-    if not all_text.strip():
+    if not pages:
         return []
 
-    # ── Try "Ukazatele kapitoly" format (PDFs 1997-2000, 2009) ────────────────
-    agencies = [
-        ("CZ_GACR", "Grantová agentura České republiky (GAČR)", _GACR_RE),
-        ("CZ_AVCR", "Akademie věd České republiky (AV ČR)", _AVCR_RE),
-    ]
+    records: list[dict] = []
+    for agency in _AGENCIES:
+        candidates: list[dict] = []
+        for page in pages:
+            chapter_candidate = _extract_chapter_page(page, agency)
+            if chapter_candidate:
+                candidates.append(chapter_candidate)
 
-    for code, name, re_pattern in agencies:
-        amount = _extract_vydaje_after_chapter(all_text, re_pattern)
-        if amount and amount >= 100_000_000:  # at least 100M CZK
-            records.append({
-                "country": country,
-                "year": year,
-                "section_code": "CZ_RD",
-                "section_name": "Věda a výzkum (státní rozpočet)",
-                "section_name_en": "Science and Research (State Budget)",
-                "program_code": code,
-                "line_description": name,
-                "line_description_en": name,
-                "amount_local": amount,
-                "currency": "CZK",
-                "unit": "CZK",
-                "rd_category": "direct_rd",
-                "taxonomy_score": 8.0,
-                "decision": "include",
-                "confidence": 0.85,
-                "source_file": source_filename,
-                "file_id": file_id,
-                "page_number": 1,
-            })
+            appendix_candidate = _extract_appendix_row(page, agency)
+            if appendix_candidate:
+                candidates.append(appendix_candidate)
+
+            investment_candidate = _extract_investment_fallback(page, agency)
+            if investment_candidate:
+                candidates.append(investment_candidate)
+
+        best = _best_candidate(candidates)
+        if best is None:
+            continue
+
+        best.update({
+            "country": country,
+            "year": year,
+            "source_file": source_filename,
+            "file_id": file_id,
+        })
+        records.append(best)
 
     if records:
         logger.info(
-            "Czech extractor: %s (year %s) → %d records (Ukazatele format)",
-            source_filename, year, len(records),
-        )
-        return records
-
-    # ── Fallback: agency 'celkem' totals visible in appendix tables ──────────
-    celkem_agencies = [
-        ("CZ_GACR", "Grantová agentura České republiky (GAČR)", _CELKEM_GACR_RE),
-        ("CZ_AVCR", "Akademie věd České republiky (AV ČR)", _CELKEM_AVCR_RE),
-    ]
-    for code, name, celkem_re in celkem_agencies:
-        amount = _extract_celkem_amount(all_text, celkem_re)
-        if amount and amount >= 100_000_000:
-            records.append({
-                "country": country,
-                "year": year,
-                "section_code": "CZ_RD",
-                "section_name": "Věda a výzkum (státní rozpočet)",
-                "section_name_en": "Science and Research (State Budget)",
-                "program_code": code,
-                "line_description": name,
-                "line_description_en": name,
-                "amount_local": amount,
-                "currency": "CZK",
-                "unit": "CZK",
-                "rd_category": "direct_rd",
-                "taxonomy_score": 8.0,
-                "decision": "include",
-                "confidence": 0.80,
-                "source_file": source_filename,
-                "file_id": file_id,
-                "page_number": 1,
-            })
-
-    if records:
-        logger.info(
-            "Czech extractor: %s (year %s) → %d records (celkem fallback)",
-            source_filename, year, len(records),
-        )
-        return records
-
-    # ── Try Annex 3 summary table format (docx 2001-2004) ────────────────────
-    annex_agencies = [
-        ("CZ_GACR", "Grantová agentura České republiky (GAČR)", _ANNEX3_GACR_RE),
-        ("CZ_AVCR", "Akademie věd České republiky (AV ČR)", _ANNEX3_AVCR_RE),
-    ]
-
-    for code, name, annex_re in annex_agencies:
-        amount = _extract_annex3_amount(all_text, annex_re)
-        if amount and amount >= 100_000_000:
-            records.append({
-                "country": country,
-                "year": year,
-                "section_code": "CZ_RD",
-                "section_name": "Věda a výzkum (státní rozpočet)",
-                "section_name_en": "Science and Research (State Budget)",
-                "program_code": code,
-                "line_description": name,
-                "line_description_en": name,
-                "amount_local": amount,
-                "currency": "CZK",
-                "unit": "CZK",
-                "rd_category": "direct_rd",
-                "taxonomy_score": 8.0,
-                "decision": "include",
-                "confidence": 0.85,
-                "source_file": source_filename,
-                "file_id": file_id,
-                "page_number": 1,
-            })
-
-    if records:
-        logger.info(
-            "Czech extractor: %s (year %s) → %d records (Annex 3 format)",
-            source_filename, year, len(records),
+            "Czech extractor: %s (year %s) -> %d records",
+            source_filename,
+            year,
+            len(records),
         )
     else:
         logger.debug(
-            "Czech extractor: no extractable amounts in %s (year %s). "
-            "PDF annexes for this year are likely scanned images.",
-            source_filename, year,
+            "Czech extractor: no extractable science chapter totals in %s (year %s)",
+            source_filename,
+            year,
         )
 
     return records
+
+
+__all__ = ["extract_czech_items"]

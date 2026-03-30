@@ -1,108 +1,283 @@
-"""Colombian Presupuesto General de la Nación extractor.
+"""Colombian Presupuesto General de la Nacion extractor.
 
-Colombian R&D spending is managed by:
-- **COLCIENCIAS** (Departamento Administrativo de Ciencia, Tecnología e Innovación)
-  Old section code: 0320 (pre-2019)
-- **MinCiencias** (Ministerio de Ciencia, Tecnología e Innovación)
-  New section code: 3901 (from 2019)
+Colombian science spending appears in two main archive regimes:
 
-Document structure
-------------------
-The "Ley de Apropiaciones" lists all budget entities. Each section has:
+1. Older law tables, where COLCIENCIAS is section ``0320`` and the usable
+   amount is the section total for the appropriations page.
+2. Modern decree / annex tables, where MinCiencias is section ``3901`` and
+   the usable amount is the page-level ``TOTAL PRESUPUESTO`` for that section.
 
-  SECCION: {code}
-  {ENTITY NAME}
-  A. PRESUPUESTO DE FUNCIONAMIENTO  {national}  {external}  {total}
-  C. PRESUPUESTO DE INVERSION       {national}  {external}  {total}
-  ...sub-programs...
-  TOTAL PRESUPUESTO SECCIÓN  {national}  {external}  {total}
-  SECCION: {next_code}
-
-The three columns are: national resources | external resources | grand total.
-Amounts are in Colombian Pesos (COP), unscaled.
-
-NOTE: Sections often span multiple PDF pages. The approach is to process the
-full document text, locate each science section, and extract the TOTAL line.
+The most reliable approach in the current archive is page-anchored extraction:
+find the page that explicitly contains ``SECCION 0320`` or ``SECCION 3901``,
+read the local page window, then extract the total that belongs to that same
+section. When a total is not printed cleanly, fall back to the sum of the
+section's A/B/C budget components.
 """
 
 from __future__ import annotations
 
-import re
 import logging
-from typing import Optional
+import os
+import re
+from dataclasses import dataclass
+from typing import Iterable, Optional
 
 logger = logging.getLogger("innovation_pipeline")
 
-# ── Section detection ─────────────────────────────────────────────────────────
 
-_SECTION_CODE_RE = re.compile(r"SECCI[ÓO]N[:\s]+(\d{3,4})", re.IGNORECASE)
-
-# Science section identifiers (section codes 0320 / 3901 — and name variations)
-_SCIENCE_SECTION_NAMES = re.compile(
-    r"INSTITUTO\s+COLOMBIANO\s+PARA\s+EL\s+DESARROLLO\s+DE\s+LA\s+CIENCIA"
-    r"|DEPARTAMENTO\s+ADMINISTRATIVO\s+DE(?:\s+LA)?\s+CIENCIA[,\s]+TECNOLOG"
-    r"|MINISTERIO\s+DE\s+CIENCIA[,\s]+TECNOLOG",
+_SECTION_RE = re.compile(
+    r"SECCI[ÓO]N\s*:?\s*(0320|3901)\b|SECCI[ÓO]N\s*:?\s*(0320|3901)\b",
     re.IGNORECASE,
 )
-
-# TOTAL PRESUPUESTO SECCIÓN line — last column is the grand total
-# Format: "TOTAL PRESUPUESTO SECCION  {nat}  {ext}  {total}"
-# or:     "TOTAL PRESUPUESTO SECCIÓN\n{nat}\n{ext}\n{total}"
-_TOTAL_RE = re.compile(
-    r"TOTAL\s+PRESUPUESTO(?:\s+SECCI[ÓO]N)?[:\s]*([\d,\.\s\xa0]+)",
+_SCIENCE_NAME_RE = re.compile(
+    r"COLCIENCIAS"
+    r"|INSTITUTO\s+COLOMBIANO\s+PARA\s+EL\s+DESARROLLO\s+DE\s+LA\s+CIENCIA"
+    r"|DEPARTAMENTO\s+ADMINISTRATIVO\s+DE\s+CIENCIA"
+    r"|MINISTERIO\s+DE\s+CIENCIA[\s,\.]+TECNOLOG"
+    r"|MINISTERIO\s+DE\s+CIENCIA\s+TECNOLOG[ÍI]A\s+E\s+INNOVACI[ÓO]N",
     re.IGNORECASE,
 )
+_NEXT_SECTION_RE = re.compile(r"SECCI[ÓO]N\s*:?\s*\d{3,4}\b", re.IGNORECASE)
+_TOTAL_LINE_RE = re.compile(
+    r"TOTAL\s+PRESUPUESTO(?:\s+SECCI[ÓO]N)?\s*[:\-]?\s*([\d\.,\s\xa0]+)",
+    re.IGNORECASE,
+)
+_TOTAL_TOKEN_RE = re.compile(
+    r"TOTAL\s+PRESUPUESTO(?:\s+SECCI[ÓO]N)?\s*[:\-]?", re.IGNORECASE
+)
+_BUDGET_COMPONENT_RE = re.compile(
+    r"\b([ABC])\s*[\.,]?\s*PRESUPUESTO\s+DE\s+"
+    r"(FUNCIONAMIENTO|SERVICIO\s+DE\s+LA\s+DEUDA(?:\s+P[ÚU]BLICA)?|INVERSION|INVERSI[ÓO]N)"
+    r"\s*([\d\.,\s\xa0]+)",
+    re.IGNORECASE,
+)
+_COMPONENT_LABEL_PATTERNS = {
+    "A": re.compile(r"A\s*[\.,]?\s*PRESUPUESTO\s+DE\s+FUNCIONAMIENTO", re.IGNORECASE),
+    "B": re.compile(r"B\s*[\.,]?\s*PRESUPUESTO\s+DE\s+SERVICIO\s+DE\s+LA\s+DEUDA(?:\s+P[ÚU]BLICA)?", re.IGNORECASE),
+    "C": re.compile(r"C\s*[\.,]?\s*PRESUPUESTO\s+DE\s+INVERSI?[ÓO]?N|C\s*[\.,]?\s*PRESUPUESTO\s+DE\s+INVERSION", re.IGNORECASE),
+}
+_AMOUNT_RE = re.compile(r"\d{1,3}(?:[.,]\d{3})+(?:[.,]\d+)?|\d{7,}")
 
-# COP amount: comma-thousands (most files) or dot-thousands (some older files)
-_COP_RE = re.compile(r"([\d]{1,3}(?:[,\.]\d{3})+)", re.IGNORECASE)
+
+@dataclass
+class _Candidate:
+    amount: float
+    page_number: int
+    program_code: str
+    source_variant: str
+    source_score: int
+    confidence: float
+    section_text: str
+    rationale: str
+    amount_raw: str
+    section_code_raw: str
 
 
-def _parse_cop(raw: str) -> Optional[float]:
-    """Parse COP amount string to float. Handles comma or dot thousands separators."""
-    raw = raw.strip()
-    # "52,602,221,417" — comma-thousands
-    if re.match(r"^\d{1,3}(?:,\d{3})+$", raw):
-        return float(raw.replace(",", ""))
-    # "52.602.221.417" — dot-thousands (European style)
-    if re.match(r"^\d{1,3}(?:\.\d{3})+$", raw):
-        return float(raw.replace(".", ""))
-    # Space or plain digits
-    cleaned = re.sub(r"[,\.\s]", "", raw)
-    try:
-        val = float(cleaned)
-        return val if val > 0 else None
-    except ValueError:
+def _parse_amount(raw: str) -> Optional[float]:
+    token = re.sub(r"\s+", "", raw or "")
+    token = token.strip(".,;:-")
+    if not token:
         return None
 
+    if re.fullmatch(r"\d{1,3}(?:[.,]\d{3})+", token):
+        return float(token.replace(".", "").replace(",", ""))
 
-def _extract_total_from_section_text(section_text: str) -> Optional[float]:
-    """Extract the TOTAL PRESUPUESTO SECCIÓN from a section text window.
+    if re.fullmatch(r"\d{7,}", token):
+        return float(token)
 
-    Handles both single-column and three-column (national|external|total) formats.
-    Returns the grand total (last column when 3 columns, or first when 1 column).
-    """
-    m = _TOTAL_RE.search(section_text)
-    if not m:
+    cleaned = re.sub(r"[^\d]", "", token)
+    if len(cleaned) < 7:
+        return None
+    return float(cleaned)
+
+
+def _extract_amounts(text: str) -> list[tuple[str, float]]:
+    out: list[tuple[str, float]] = []
+    seen: set[tuple[str, float]] = set()
+    for match in _AMOUNT_RE.finditer(text or ""):
+        raw = match.group(0)
+        value = _parse_amount(raw)
+        if value is None:
+            continue
+        key = (raw, value)
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(key)
+    return out
+
+
+def _normalize_section_text(text: str) -> str:
+    return re.sub(r"[ \t]+", " ", (text or "").replace("\x0c", " ")).strip()
+
+
+def _window_text(pages: Iterable[str]) -> str:
+    return "\n".join(_normalize_section_text(page) for page in pages if page)
+
+
+def _section_program(code: str, text: str) -> tuple[str, str]:
+    if re.search(r"DEPARTAMENTO\s+ADMINISTRATIVO\s+DE\s+LA?\s*CIENCIA|COLCIENCIAS", text, re.IGNORECASE):
+        return (
+            "CO_COLCIENCIAS",
+            "Departamento Administrativo de Ciencia, Tecnologia e Innovacion (Colciencias)",
+        )
+    if code == "3901" or re.search(r"MINISTERIO\s+DE\s+CIENCIA", text, re.IGNORECASE):
+        return (
+            "CO_MINCIENCIAS",
+            "Ministerio de Ciencia, Tecnologia e Innovacion (MinCiencias)",
+        )
+    return (
+        "CO_COLCIENCIAS",
+        "Departamento Administrativo de Ciencia, Tecnologia e Innovacion (Colciencias)",
+    )
+
+
+def _extract_total_amount(section_text: str) -> tuple[Optional[float], str]:
+    total_matches = list(_TOTAL_LINE_RE.finditer(section_text))
+    for total_match in reversed(total_matches):
+        amounts = _extract_amounts(total_match.group(1)[:160])
+        if amounts:
+            return amounts[-1][1], amounts[-1][0]
+
+    token_matches = list(_TOTAL_TOKEN_RE.finditer(section_text))
+    for token_match in reversed(token_matches):
+        tail = section_text[token_match.end(): token_match.end() + 500]
+        amounts = [item for item in _extract_amounts(tail) if item[1] >= 1_000_000]
+        if amounts:
+            return amounts[-1][1], amounts[-1][0]
+    return None, ""
+
+
+def _extract_component_sum(section_text: str) -> tuple[Optional[float], list[tuple[str, float]]]:
+    components: dict[str, float] = {}
+    for match in _BUDGET_COMPONENT_RE.finditer(section_text):
+        letter = match.group(1).upper()
+        values = [value for _, value in _extract_amounts(match.group(3)[:120]) if value >= 1_000_000]
+        if not values:
+            continue
+        components[letter] = values[-1]
+
+    for letter, label_re in _COMPONENT_LABEL_PATTERNS.items():
+        if letter in components:
+            continue
+        label_match = label_re.search(section_text)
+        if not label_match:
+            continue
+        tail = section_text[label_match.end(): label_match.end() + 220]
+        values = [value for _, value in _extract_amounts(tail) if value >= 1_000_000]
+        if values:
+            components[letter] = values[0]
+
+    if not components:
+        return None, []
+
+    ordered = [(key, components[key]) for key in ("A", "B", "C") if key in components]
+    return sum(value for _, value in ordered), ordered
+
+
+def _section_window(sorted_pages, start_idx: int) -> str:
+    pages: list[str] = []
+    upper = min(len(sorted_pages), start_idx + 3)
+    for idx in range(start_idx, upper):
+        row = sorted_pages.iloc[idx]
+        text = row.text if isinstance(row.text, str) else ""
+        pages.append(text)
+        if idx > start_idx and _NEXT_SECTION_RE.search(text):
+            break
+    return _window_text(pages)
+
+
+def _slice_science_section(window_text: str) -> tuple[str, str]:
+    section_match = _SECTION_RE.search(window_text)
+    name_match = _SCIENCE_NAME_RE.search(window_text)
+
+    anchors: list[tuple[int, str]] = []
+    if section_match:
+        code = next((group for group in section_match.groups() if group), "")
+        anchors.append((section_match.start(), code))
+    if name_match:
+        anchors.append((name_match.start(), "3901" if re.search(r"MINISTERIO\s+DE\s+CIENCIA", name_match.group(0), re.IGNORECASE) else "0320"))
+
+    if not anchors:
+        return "", ""
+
+    start_pos, code = min(anchors, key=lambda item: item[0])
+    text = window_text[start_pos:]
+    next_match = _NEXT_SECTION_RE.search(text[1:])
+    if next_match:
+        text = text[: 1 + next_match.start()]
+    return text, code
+
+
+def _candidate_from_page(sorted_pages, idx: int, source_filename: str) -> Optional[_Candidate]:
+    row = sorted_pages.iloc[idx]
+    page_text = row.text if isinstance(row.text, str) else ""
+    page_number = int(row.page_number or 1)
+    local_text = _section_window(sorted_pages, idx)
+    section_text, section_code = _slice_science_section(local_text)
+    if not section_text:
+        return None
+    if not section_code and not re.search(r"PRESUPUESTO\s+DE\s+FUNCIONAMIENTO|PRESUPUESTO\s+DE\s+INVERSION|TOTAL\s+PRESUPUESTO", section_text, re.IGNORECASE):
         return None
 
-    raw = m.group(1)
-    # Extract all large COP amounts after the TOTAL keyword
-    amounts = []
-    for am in _COP_RE.finditer(raw[:200]):
-        val = _parse_cop(am.group(1))
-        if val and val >= 1_000_000_000:  # at least 1B COP
-            amounts.append(val)
+    program_code, _ = _section_program(section_code, section_text)
+    total_amount, amount_raw = _extract_total_amount(section_text)
+    component_sum, components = _extract_component_sum(section_text)
 
-    if not amounts:
+    amount: Optional[float] = None
+    rationale_bits: list[str] = []
+    confidence = 0.74
+
+    if total_amount and total_amount >= 1_000_000_000:
+        amount = total_amount
+        rationale_bits.append("explicit total")
+        confidence = 0.88
+
+    if component_sum and component_sum >= 1_000_000_000:
+        if amount is None:
+            amount = component_sum
+            amount_raw = "+".join(label for label, _ in components)
+            rationale_bits.append("sum of section components")
+            confidence = 0.82
+        elif abs(component_sum - amount) <= 2:
+            rationale_bits.append("components reconcile with total")
+            confidence = 0.93
+        elif abs(component_sum - amount) / max(amount, component_sum) <= 0.02:
+            rationale_bits.append("components close to total")
+            confidence = max(confidence, 0.9)
+
+    if amount is None or amount < 1_000_000_000:
         return None
 
-    # If 3 columns: [national, external, total] — take last (largest or last listed)
-    # If 1 column: take the only value
-    # Heuristic: the grand total column is often the last value
-    return amounts[-1]
+    source_variant = "law"
+    source_score = 1
+    source_name = source_filename.lower()
+    if "anexo" in source_name:
+        source_variant = "decree_annex"
+        source_score = 4
+    elif "decreto" in source_name:
+        source_variant = "decree"
+        source_score = 3
+    elif "ley" in source_name:
+        source_variant = "law"
+        source_score = 2
 
+    if page_number > 1:
+        source_score += 1
 
-# ── Public API ─────────────────────────────────────────────────────────────────
+    return _Candidate(
+        amount=amount,
+        page_number=page_number,
+        program_code=program_code,
+        source_variant=source_variant,
+        source_score=source_score,
+        confidence=confidence,
+        section_text=section_text[:4000],
+        rationale="; ".join(rationale_bits) or "page-anchored section extraction",
+        amount_raw=amount_raw or str(int(amount)),
+        section_code_raw=section_code,
+    )
+
 
 def extract_colombia_items(
     sorted_pages,
@@ -111,145 +286,88 @@ def extract_colombia_items(
     year: str,
     source_filename: str,
 ) -> list[dict]:
-    """Extract science budget records from a Colombian Ley de Apropiaciones PDF.
-
-    Strategy: concatenate all page texts, locate science section header, then
-    find the TOTAL PRESUPUESTO SECCIÓN line that follows it (before the next
-    SECCION: header starts).
-    """
-    records: list[dict] = []
-
-    # Concatenate all page texts
-    all_pages_text = "\n".join(
-        (row.text if isinstance(row.text, str) else "")
-        for row in sorted_pages.itertuples(index=False)
-    )
-
-    if not all_pages_text.strip():
+    """Extract Colombian science budget records from law / decree budget PDFs."""
+    if sorted_pages is None or getattr(sorted_pages, "empty", True):
         return []
 
-    # Find all SECCION: headers and their positions
-    section_positions = [(m.start(), m.group(1))
-                         for m in _SECTION_CODE_RE.finditer(all_pages_text)]
+    candidates: list[_Candidate] = []
 
-    # Target section codes for science
-    science_codes = {"0320", "3901"}
+    for idx in range(len(sorted_pages)):
+        candidate = _candidate_from_page(sorted_pages, idx, source_filename)
+        if candidate is not None:
+            candidates.append(candidate)
 
-    # Process each section
-    for idx, (start_pos, code) in enumerate(section_positions):
-        if code not in science_codes:
-            # Also check by name if no code match
-            name_window = all_pages_text[start_pos: start_pos + 200]
-            if not _SCIENCE_SECTION_NAMES.search(name_window):
-                continue
+    if not candidates:
+        logger.debug(
+            "Colombia extractor: no anchored science section found in %s (year %s).",
+            source_filename,
+            year,
+        )
+        return []
 
-        # Extract text from this section to the next section header
-        end_pos = (section_positions[idx + 1][0]
-                   if idx + 1 < len(section_positions)
-                   else start_pos + 5000)
-        section_text = all_pages_text[start_pos: min(end_pos, start_pos + 5000)]
-
-        # Determine agency identity
-        is_minciencias = bool(re.search(
-            r"MINISTERIO\s+DE\s+CIENCIA|3901", section_text[:300], re.IGNORECASE
-        ))
-        if is_minciencias:
-            agency_code = "CO_MINCIENCIAS"
-            agency_name = "Ministerio de Ciencia, Tecnología e Innovación (MinCiencias)"
-        else:
-            agency_code = "CO_COLCIENCIAS"
-            agency_name = "Departamento Administrativo de Ciencia, Tecnología e Innovación (Colciencias)"
-
-        amount = _extract_total_from_section_text(section_text)
-        if amount is None or amount < 1_000_000_000:
-            # Fallback: sum FUNCIONAMIENTO + INVERSIÓN
-            func_m = re.search(
-                r"A\.\s*PRESUPUESTO\s+DE\s+FUNCIONAMIENTO\s*([\d,\.\s]+)",
-                section_text, re.IGNORECASE
-            )
-            inv_m = re.search(
-                r"C\.\s*PRESUPUESTO\s+DE\s+INVERS[IÍ]ON\s*([\d,\.\s]+)",
-                section_text, re.IGNORECASE
-            )
-            func_amt = None
-            inv_amt = None
-            if func_m:
-                amounts = [_parse_cop(a.group(1)) for a in _COP_RE.finditer(func_m.group(1)[:100])
-                           if _parse_cop(a.group(1)) and _parse_cop(a.group(1)) > 1e8]
-                func_amt = amounts[-1] if amounts else None  # last = total column
-            if inv_m:
-                amounts = [_parse_cop(a.group(1)) for a in _COP_RE.finditer(inv_m.group(1)[:100])
-                           if _parse_cop(a.group(1)) and _parse_cop(a.group(1)) > 1e8]
-                inv_amt = amounts[-1] if amounts else None
-            if func_amt or inv_amt:
-                amount = (func_amt or 0) + (inv_amt or 0)
-
-        if not amount or amount < 1_000_000_000:
+    best_by_program: dict[str, _Candidate] = {}
+    for cand in candidates:
+        current = best_by_program.get(cand.program_code)
+        if current is None:
+            best_by_program[cand.program_code] = cand
             continue
+        cand_priority = (cand.source_score, cand.confidence, cand.amount, -cand.page_number)
+        current_priority = (current.source_score, current.confidence, current.amount, -current.page_number)
+        if cand_priority > current_priority:
+            best_by_program[cand.program_code] = cand
 
+    records: list[dict] = []
+    for program_code, cand in best_by_program.items():
+        _, agency_name = _section_program(cand.section_code_raw, cand.section_text)
+        section_name = "Ciencia, Tecnologia e Innovacion"
+        section_name_en = "Science, Technology and Innovation"
+        line_description = (
+            "Ministerio de Ciencia, Tecnologia e Innovacion - Total presupuesto seccion"
+            if program_code == "CO_MINCIENCIAS"
+            else "Colciencias - Total presupuesto seccion"
+        )
         records.append({
             "country": country,
             "year": year,
             "section_code": "CO_SCIENCE",
-            "section_name": "Ciencia, Tecnología e Innovación",
-            "section_name_en": "Science, Technology and Innovation",
-            "program_code": agency_code,
-            "line_description": agency_name,
-            "line_description_en": agency_name,
-            "amount_local": amount,
+            "section_name": section_name,
+            "section_name_en": section_name_en,
+            "program_code": program_code,
+            "program_description": agency_name,
+            "program_description_en": agency_name,
+            "line_description": line_description,
+            "line_description_en": line_description,
+            "amount_local": cand.amount,
             "currency": "COP",
             "unit": "COP",
             "rd_category": "direct_rd",
-            "taxonomy_score": 8.0,
+            "taxonomy_score": 8.4,
             "decision": "include",
-            "confidence": 0.85,
+            "confidence": cand.confidence,
             "source_file": source_filename,
+            "source_filename": source_filename,
+            "source_variant": cand.source_variant,
             "file_id": file_id,
-            "page_number": 1,
+            "page_number": cand.page_number,
+            "amount_raw": cand.amount_raw,
+            "detected_amount_raw": cand.amount_raw,
+            "detected_amount_value": cand.amount,
+            "text_snippet": cand.section_text[:1500],
+            "raw_line": cand.section_text[:800],
+            "merged_line": line_description,
+            "context_before": f"SECCION {cand.section_code_raw} | {agency_name}",
+            "context_after": f"TOTAL PRESUPUESTO | {cand.amount_raw} | {int(cand.amount)} COP",
+            "rationale": (
+                f"Colombia page-anchored section extraction; {cand.rationale}; "
+                f"variant={cand.source_variant}; page={cand.page_number}"
+            ),
+            "temporal_prior_match_type": "country_series_anchor",
         })
 
-    # Also search by name if no section code found
-    if not records and _SCIENCE_SECTION_NAMES.search(all_pages_text):
-        for m in _SCIENCE_SECTION_NAMES.finditer(all_pages_text):
-            window = all_pages_text[m.start(): m.start() + 4000]
-            amount = _extract_total_from_section_text(window)
-            if amount and amount >= 1_000_000_000:
-                is_minciencias = bool(re.search(r"MINISTERIO\s+DE\s+CIENCIA", window[:200], re.IGNORECASE))
-                records.append({
-                    "country": country,
-                    "year": year,
-                    "section_code": "CO_SCIENCE",
-                    "section_name": "Ciencia, Tecnología e Innovación",
-                    "section_name_en": "Science, Technology and Innovation",
-                    "program_code": "CO_MINCIENCIAS" if is_minciencias else "CO_COLCIENCIAS",
-                    "line_description": ("Ministerio de Ciencia, Tecnología e Innovación"
-                                         if is_minciencias else
-                                         "Departamento Administrativo de Ciencia (Colciencias)"),
-                    "line_description_en": ("Ministry of Science, Technology and Innovation"
-                                            if is_minciencias else
-                                            "Department of Science (Colciencias)"),
-                    "amount_local": amount,
-                    "currency": "COP",
-                    "unit": "COP",
-                    "rd_category": "direct_rd",
-                    "taxonomy_score": 8.0,
-                    "decision": "include",
-                    "confidence": 0.80,
-                    "source_file": source_filename,
-                    "file_id": file_id,
-                    "page_number": 1,
-                })
-                break  # one record per file
-
-    if records:
-        logger.info(
-            "Colombia extractor: %s (year %s) → %d records",
-            source_filename, year, len(records),
-        )
-    else:
-        logger.debug(
-            "Colombia extractor: no science section found in %s (year %s).",
-            source_filename, year,
-        )
-
+    logger.info(
+        "Colombia extractor: %s (year %s) -> %d records",
+        source_filename,
+        year,
+        len(records),
+    )
     return records

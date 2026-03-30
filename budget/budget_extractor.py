@@ -27,6 +27,8 @@ _COUNTRY_LANGUAGES: dict[str, tuple[str, ...]] = {
     "France": ("french",),
     "Germany": ("german",),
     "Japan": ("japanese",),
+    "Costa Rica": ("spanish",),
+    "Czech Republic": ("czech",),
     "Sweden": ("swedish",),
     "Norway": ("norwegian",),
     "Finland": ("finnish", "swedish"),

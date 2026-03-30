@@ -131,7 +131,7 @@ def handle_dedicated_country(
 def _dedupe_key(rec: dict, country: str, rounding_digits: int | None) -> tuple:
     year = rec.get("year", "")
     program_code = rec.get("program_code", "")
-    if country == "Germany":
+    if country in {"Germany", "Canada", "Belgium", "Costa Rica", "Czech Republic"}:
         return year, program_code
     if rounding_digits is None:
         return year, program_code
@@ -156,6 +156,65 @@ def _record_priority(rec: dict, country: str) -> tuple:
         elif "no3" in source or "no4" in source or "no5" in source or "no6" in source:
             source_score = 1
         return source_score, amount, confidence, page_number
+
+    if country == "Canada":
+        variant = str(rec.get("source_variant", "") or "")
+        source_score = 0
+        if variant == "full_schedule":
+            source_score = 3
+        elif variant == "interim":
+            source_score = 2
+        elif variant == "fragment":
+            source_score = 1
+
+        if re.search(r"(?:^|[^0-9])1(?:\.pdf)?$", source) or re.search(r"(?:^|[^a-z])a(?:\.pdf)?$", source):
+            source_score += 1
+
+        return source_score, confidence, amount, -page_number
+
+    if country == "Belgium":
+        has_amount = 1 if rec.get("amount_local") not in (None, "", 0) else 0
+        raw_len = len(str(rec.get("raw_line", "") or ""))
+        return has_amount, confidence, raw_len, -page_number
+
+    if country == "Colombia":
+        variant = str(rec.get("source_variant", "") or "")
+        source_score = 0
+        if variant == "decree_annex":
+            source_score = 4
+        elif variant == "decree":
+            source_score = 3
+        elif variant == "law":
+            source_score = 2
+        elif "decreto" in source:
+            source_score = 1
+        return source_score, confidence, amount, -page_number
+
+    if country == "Costa Rica":
+        variant = str(rec.get("source_variant", "") or "")
+        source_score = 0
+        if variant == "title_page":
+            source_score = 4
+        elif variant == "program_transfer_block":
+            source_score = 3
+        elif variant == "program_total":
+            source_score = 2
+        elif variant == "summary_annex":
+            source_score = 1
+        return source_score, confidence, amount, -page_number
+
+    if country == "Czech Republic":
+        variant = str(rec.get("source_variant", "") or "")
+        source_score = 0
+        if variant == "chapter_page":
+            source_score = 4
+        elif variant == "appendix3_row":
+            source_score = 3
+        elif variant == "chapter_table":
+            source_score = 2
+        elif variant == "investment_fallback":
+            source_score = 1
+        return source_score, confidence, amount, -page_number
 
     if country != "Germany":
         return confidence, page_number

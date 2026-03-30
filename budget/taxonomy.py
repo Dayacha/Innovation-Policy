@@ -182,6 +182,47 @@ _LANGUAGE_EXTENSIONS: dict[str, dict[str, frozenset[str]]] = {
             "施設整備費", "補助金", "交付金", "振興費",
         }),
     },
+    "spanish": {
+        "core_rd": frozenset({
+            "ciencia", "tecnologia", "innovacion", "investigacion",
+            "investigacion y desarrollo", "i+d", "i+d+i",
+            "desarrollo cientifico", "desarrollo tecnologico",
+            "coordinacion y des cientif y tecnologico",
+        }),
+        "institutions": frozenset({
+            "ministerio de ciencia", "ministerio de ciencia tecnologia",
+            "ministerio de ciencia tecnologia y telecomunicaciones",
+            "ministerio de ciencia innovacion tecnologia y telecomunicaciones",
+            "micit", "micitt", "miciitt", "conicit",
+            "consejo nacional de investigaciones cientificas y tecnologicas",
+            "academia nacional de ciencias", "universidad de costa rica",
+            "ente costarricense de acreditacion",
+        }),
+        "instruments": frozenset({
+            "programas presupuestarios", "registro contable", "transferencias corrientes",
+            "presupuesto total", "total del programa", "totales",
+            "fondo de incentivos", "fondo propyme",
+        }),
+    },
+    "czech": {
+        "core_rd": frozenset({
+            "veda", "vyzkum", "vyvoj", "veda a vyzkum",
+            "vyzkum a vyvoj", "zakladni vyzkum", "aplikovany vyzkum",
+            "vedecky vyzkum", "technologicky rozvoj",
+        }),
+        "institutions": frozenset({
+            "grantova agentura ceske republiky", "gacr",
+            "akademie ved ceske republiky", "av cr",
+            "ministerstvo skolstvi", "vyzkumne organizace",
+            "vedecka pracoviste", "univerzita", "univerzity",
+        }),
+        "instruments": frozenset({
+            "vydaje celkem", "ukazatele kapitoly", "kapitola",
+            "ucelove vydaje", "institucionalni vydaje",
+            "programy vyzkumu", "infrastruktura vyzkumu",
+            "dotace jinym subjektum",
+        }),
+    },
 }
 
 _SKIP_TERMS: frozenset[str] = frozenset({

@@ -1,185 +1,218 @@
-"""Costa Rican Presupuesto Ordinario y Extraordinario de la República extractor.
+"""Costa Rican Presupuesto Ordinario y Extraordinario extractor.
 
-The Costa Rican budget ("Ley de Presupuesto Ordinario y Extraordinario de la
-República") allocates funds to government institutions via transfer lines.
+The Costa Rican archive is not stable enough for whole-document keyword scans.
+Manual review across the available PDFs showed two reliable sources:
 
-Structure observed in files (2010–2021):
-  Transfer lines appear in the expenditure section with format:
-    {registro_number}
-    60103       ← object code (transfer to decentralized institution)
-    001         ← source
-    {programa}  ← program code
-    {ff}        ← funding source
-    {INSTITUTION NAME AND DESCRIPTION}
-    {amount_in_colones}
+1. Ministry title pages for section `1.1.1.1.218.000`, which list the
+   programme totals for the science ministry (MICIT / MICITT / MICIITT).
+2. Older `1.1.1.1.218.000-893-00` transfer blocks, which list the explicit
+   CONICIT transfers line by line.
 
-Key entities:
-  CONICIT  : Consejo Nacional de Investigaciones Científicas y Tecnológicas
-             (Ley No. 5048, 1972) — national science funding agency
-  MICIT    : Ministerio de Ciencia, Tecnología y Telecomunicaciones
-             (renamed MICITT after 2012)
-  UCR      : Universidad de Costa Rica (substantial research)
-
-Programs extracted:
-  CR_CONICIT : CONICIT operating budget + incentives fund
-  CR_MICIT   : MICIT/MICITT total appropriation
-
-Currency: CRC (Costa Rican colón, ¢), full values (no scaling needed).
-Amounts use dot as thousands separator: "1.250.000.000" = 1,250,000,000 CRC.
+The extractor therefore anchors extraction to those page-local layouts and
+ignores later summary annexes that produce inflated ministry-wide totals.
 """
 
 from __future__ import annotations
 
-import re
 import logging
+import re
 from typing import Optional
 
 logger = logging.getLogger("innovation_pipeline")
 
-# ── Regex constants ─────────────────────────────────────────────────────────────
 
-# CONICIT institution name — may appear with slight variations
-_CONICIT_RE = re.compile(
-    r'CONSEJO\s+NACIONAL\s+DE\s+INVESTIGACIONES\s+CIENT[IÍ]FICAS'
-    r'(?:\s+Y\s+TECNOL[OÓ]GICAS?)?'
-    r'|CONICIT\b',
+_MINISTRY_TITLE_RE = re.compile(
+    r"1\.1\.1\.1\.218\.000-(MINISTERIO DE CIENCIA[^\n]+)",
     re.IGNORECASE,
 )
-
-# MICIT / MICITT ministry
-_MICIT_RE = re.compile(
-    r'MINISTERIO\s+DE\s+CIENCIA[,\s]+TECNOLOG[IÍ]A'
-    r'|MICITT?\b',
-    re.IGNORECASE,
-)
-
-# CRC amount: dot-thousands format "1.250.000.000" or comma "1,250,000,000"
-# or space-separated, or plain
-_CRC_RE = re.compile(
-    r'(?<!\d)'
-    r'(\d{1,3}(?:\.\d{3})+|\d{1,3}(?:,\d{3})+|\d{7,})'
-    r'(?!\d)',
-)
-
-# Transfer object code 60103 or 60402 or 60199 (transfers to non-financial entities)
-_TRANSFER_CODE_RE = re.compile(r'\b6010[1-9]\b|\b604\d{2}\b|\b601\d{2}\b')
-
-# Ministry section header — "Título" or "SECCIÓN" followed by MICIT/science
-_TITLE_RE = re.compile(
-    r'(?:T[IÍ]TULO|SECCI[OÓ]N)\s*[:\s]*(?:\d+\s*)?\n?'
-    r'(?:[^\n]*\n){0,3}'
-    r'(?:MINISTERIO|MICIT|MICITT)',
+_PROGRAMS_RE = re.compile(r"PROGRAMAS PRESUPUESTARIOS", re.IGNORECASE)
+_TITLE_TOTAL_RE = re.compile(r"([0-9][0-9\.,]{5,})\s+Totales\b", re.IGNORECASE)
+_PROGRAM_893_RE = re.compile(r"(?:1\.1\.1\.1\.218\.000-893-00|218-893-00)", re.IGNORECASE)
+_PROGRAM_893_TOTAL_RE = re.compile(
+    r"(?:Programa:\s*893-00\s*Total Aumento del|RESUMEN (?:POR FUENTE DE FINANCIAMIENTO|DE FUENTE DE FINANCIAMIENTO).*?TOTAL(?:\s+C[ÓO]DIGO)?\s+CONCEPTO)\s*([0-9][0-9\.,]{5,})",
     re.IGNORECASE | re.DOTALL,
 )
+_CONICIT_RE = re.compile(
+    r"CONSEJO\s+NACIONAL\s+DE\s+INVESTIGACIONES\s+CIENT[IÍ]FICAS\s+Y\s+TECNOL[OÓ]GICAS\s*\(CONICIT\)"
+    r"|CONICIT\)",
+    re.IGNORECASE,
+)
+_CRC_RE = re.compile(r"(?<!\d)(\d{1,3}(?:[\.,]\d{3})+|\d{7,})(?!\d)")
+_CONICIT_RECORD_RE = re.compile(r"(?m)^\s*(210|211|212)\s*$")
 
 
 def _parse_crc(raw: str) -> Optional[float]:
-    """Parse CRC amount string to float.
-
-    Handles:
-      "1.250.000.000" — dot-thousands (most common in CR)
-      "1,250,000,000" — comma-thousands
-      "1250000000"    — plain digits
-    """
     raw = raw.strip()
-    # Dot-thousands: "1.250.000.000"
-    if re.match(r'^\d{1,3}(?:\.\d{3})+$', raw):
-        return float(raw.replace('.', ''))
-    # Comma-thousands: "1,250,000,000"
-    if re.match(r'^\d{1,3}(?:,\d{3})+$', raw):
-        return float(raw.replace(',', ''))
-    # Plain digits
-    cleaned = re.sub(r'[,\.]', '', raw)
+    if not raw:
+        return None
+    cleaned = re.sub(r"[.,]", "", raw)
     try:
-        val = float(cleaned)
-        return val if val > 0 else None
+        value = float(cleaned)
     except ValueError:
         return None
+    return value if value > 0 else None
 
 
-def _first_large_crc(text: str, min_val: float = 1_000_000) -> Optional[float]:
-    """Return the first CRC amount >= min_val in the text window."""
-    for m in _CRC_RE.finditer(text):
-        val = _parse_crc(m.group(1))
-        if val and val >= min_val:
-            return val
-    return None
+def _normalize_snippet(text: str) -> str:
+    return re.sub(r"\s+", " ", text).strip()
 
 
-def _extract_conicit_total(full_text: str) -> Optional[float]:
-    """Extract CONICIT total appropriation by summing transfer lines.
-
-    CONICIT appears as multiple transfer lines (operating budget + incentives fund).
-    We extract the largest individual transfer, which is typically the incentives fund
-    (~650M-1.25B CRC), or sum all transfers if clearly labelled.
-    """
-    total = 0.0
-    found_transfers = []
-
-    for m in _CONICIT_RE.finditer(full_text):
-        # Look backwards for the amount (comes before the text in some formats)
-        # and forwards for the amount (comes after in other formats)
-        window_back = full_text[max(0, m.start() - 200): m.start()]
-        window_fwd  = full_text[m.start(): m.start() + 600]
-
-        # Check forward first (amount usually comes after institution name)
-        val_fwd = _first_large_crc(window_fwd, min_val=1_000_000)
-        val_bck = _first_large_crc(window_back, min_val=1_000_000)
-
-        val = val_fwd or val_bck
-        if val and val not in found_transfers:
-            found_transfers.append(val)
-            total += val
-
-    if found_transfers:
-        # Return sum if multiple transfers found, else just the one
-        return total if total > 0 else None
-    return None
+def _page_text(row: object) -> str:
+    text = getattr(row, "text", "")
+    return text if isinstance(text, str) else ""
 
 
-def _extract_micit_total(full_text: str) -> Optional[float]:
-    """Extract MICIT/MICITT ministry total appropriation.
+def _extract_title_page(sorted_pages) -> Optional[dict]:
+    best: Optional[dict] = None
 
-    MICIT/MICITT appears as a Título (budget title) section header in the full
-    budget law. Look for the ministry name as a section title followed by a
-    programme total.
+    for row in sorted_pages.itertuples(index=False):
+        text = _page_text(row)
+        if not text or not _MINISTRY_TITLE_RE.search(text):
+            continue
+        if not _PROGRAMS_RE.search(text):
+            continue
 
-    Note: In many Costa Rican budget files, MICIT appears only in cross-references
-    to enabling laws (e.g. "Ley 7169 MICIT"). Only extract when MICITT/MICIT
-    appears as a proper budget section header, not a reference.
-    """
-    # Strategy: find MICIT as a section/título header (not as a law reference)
-    # Típical format: "MINISTERIO DE CIENCIA, TECNOLOGÍA Y TELECOMUNICACIONES" as section
-    for m in re.finditer(
-        r'MINISTERIO\s+DE\s+CIENCIA[,\s]+TECNOLOG[IÍ]A\b',
-        full_text, re.IGNORECASE,
-    ):
-        # Check it's a section header (appears on its own line, not inside parentheses)
-        before = full_text[max(0, m.start()-5): m.start()]
-        if '(' in before or 'LEY' in before.upper():
-            continue  # Skip law references like "(Ley Nº 7169 MICIT)"
+        total_match = _TITLE_TOTAL_RE.search(text)
+        if not total_match:
+            continue
 
-        window = full_text[m.start(): m.start() + 3000]
-        # Look for a "Total" line or "Programa: {xxx}-00 Total" line
-        for total_pat in [
-            r'(?:Total\s+T[ií]tulo|TOTAL\s+PRESUPUESTO|Total\s+General)[^\n]*\n?\s*([\d\.,]{7,})',
-            r'Total\s+(?:del\s+)?T[ií]tulo[^\n]*\n?\s*([\d\.,]{7,})',
-        ]:
-            tm = re.search(total_pat, window, re.IGNORECASE)
-            if tm:
-                val = _parse_crc(tm.group(1))
-                if val and val >= 1_000_000:
-                    return val
+        amount = _parse_crc(total_match.group(1))
+        if not amount or amount < 500_000_000 or amount > 20_000_000_000:
+            continue
 
-        # Fallback: first very large amount (>= 500M CRC = 0.5B) in the section
-        val = _first_large_crc(window[:2000], min_val=500_000_000)
-        if val:
-            return val
+        ministry_name = _MINISTRY_TITLE_RE.search(text)
+        section_name = ministry_name.group(1).strip() if ministry_name else (
+            "Ministerio de Ciencia, Tecnología y Telecomunicaciones"
+        )
+        candidate = {
+            "amount_local": amount,
+            "amount_raw": total_match.group(1),
+            "page_number": int(getattr(row, "page_number", 1) or 1),
+            "section_name": section_name,
+            "text_snippet": _normalize_snippet(text[:1600]),
+            "raw_line": total_match.group(0).strip(),
+            "merged_line": total_match.group(0).strip(),
+            "source_variant": "title_page",
+            "confidence": 0.92,
+        }
+        if best is None or candidate["amount_local"] > best["amount_local"]:
+            best = candidate
 
-    return None
+    return best
 
 
-# ── Public API ─────────────────────────────────────────────────────────────────
+def _extract_program_893_total(sorted_pages) -> Optional[dict]:
+    best: Optional[dict] = None
+
+    for row in sorted_pages.itertuples(index=False):
+        text = _page_text(row)
+        if not text or not _PROGRAM_893_RE.search(text):
+            continue
+
+        match = _PROGRAM_893_TOTAL_RE.search(text)
+        if not match:
+            continue
+
+        amount = _parse_crc(match.group(1))
+        if not amount or amount < 500_000_000 or amount > 15_000_000_000:
+            continue
+
+        candidate = {
+            "amount_local": amount,
+            "amount_raw": match.group(1),
+            "page_number": int(getattr(row, "page_number", 1) or 1),
+            "text_snippet": _normalize_snippet(text[:1600]),
+            "raw_line": match.group(0).strip(),
+            "merged_line": match.group(0).strip(),
+            "source_variant": "program_total",
+            "confidence": 0.74,
+        }
+        if best is None or candidate["amount_local"] > best["amount_local"]:
+            best = candidate
+
+    return best
+
+
+def _extract_conicit_total(sorted_pages) -> Optional[dict]:
+    best: Optional[dict] = None
+
+    for row in sorted_pages.itertuples(index=False):
+        text = _page_text(row)
+        if not text or not _PROGRAM_893_RE.search(text):
+            continue
+        if not _CONICIT_RE.search(text):
+            continue
+
+        amounts: list[tuple[float, str, str]] = []
+        seen: set[int] = set()
+        record_matches = list(_CONICIT_RECORD_RE.finditer(text))
+        if record_matches:
+            for idx, record_match in enumerate(record_matches):
+                block_start = record_match.start()
+                block_end = record_matches[idx + 1].start() if idx + 1 < len(record_matches) else len(text)
+                block = text[block_start:block_end]
+                if not _CONICIT_RE.search(block):
+                    continue
+                values = []
+                for raw_match in _CRC_RE.finditer(block):
+                    value = _parse_crc(raw_match.group(1))
+                    if value and 1_000_000 <= value <= 5_000_000_000:
+                        values.append((value, raw_match.group(1)))
+                if not values:
+                    continue
+                value, raw_amount = max(values, key=lambda item: item[0])
+                rounded = int(round(value))
+                if rounded in seen:
+                    continue
+                seen.add(rounded)
+                amounts.append((value, raw_amount, _normalize_snippet(block[:700])))
+
+        for match in _CONICIT_RE.finditer(text):
+            before = text[max(0, match.start() - 180): match.start()]
+            after = text[match.start(): min(len(text), match.end() + 180)]
+            local_values = []
+            for raw_match in _CRC_RE.finditer(before):
+                value = _parse_crc(raw_match.group(1))
+                if value and 1_000_000 <= value <= 5_000_000_000:
+                    local_values.append((value, raw_match.group(1)))
+            for raw_match in _CRC_RE.finditer(after):
+                value = _parse_crc(raw_match.group(1))
+                if value and 1_000_000 <= value <= 5_000_000_000:
+                    local_values.append((value, raw_match.group(1)))
+
+            if not local_values:
+                continue
+            value, raw_amount = max(local_values, key=lambda item: item[0])
+            rounded = int(round(value))
+            if rounded in seen:
+                continue
+            seen.add(rounded)
+            line = _normalize_snippet(text[max(0, match.start() - 120): min(len(text), match.end() + 260)])
+            amounts.append((value, raw_amount, line))
+
+        if not amounts:
+            continue
+
+        total = sum(v for v, _, _ in amounts)
+        if total < 50_000_000 or total > 5_000_000_000:
+            continue
+
+        detail_lines = [line for _, _, line in amounts]
+        candidate = {
+            "amount_local": float(total),
+            "amount_raw": " + ".join(raw for _, raw, _ in amounts),
+            "page_number": int(getattr(row, "page_number", 1) or 1),
+            "text_snippet": _normalize_snippet(text[:2000]),
+            "raw_line": " | ".join(detail_lines),
+            "merged_line": " | ".join(detail_lines),
+            "source_variant": "program_transfer_block",
+            "confidence": 0.93,
+        }
+        if best is None or candidate["amount_local"] > best["amount_local"]:
+            best = candidate
+
+    return best
+
 
 def extract_costa_rica_items(
     sorted_pages,
@@ -188,35 +221,51 @@ def extract_costa_rica_items(
     year: str,
     source_filename: str,
 ) -> list[dict]:
-    """Extract science budget records from a Costa Rican Ley de Presupuesto PDF.
-
-    Extracts:
-    - CR_CONICIT: CONICIT total appropriation (operating + incentives fund)
-    - CR_MICIT:   Ministry of Science (MICIT/MICITT) total (if identifiable)
-
-    All amounts are in CRC (Costa Rican colón), full values.
-    Returns [] on failure.
-    """
+    """Extract science budget records from Costa Rican budget files."""
     records: list[dict] = []
 
-    try:
-        all_text = "\n".join(
-            (row.text if isinstance(row.text, str) else "")
-            for row in sorted_pages.itertuples(index=False)
-        )
-    except Exception as exc:
-        logger.warning(
-            "Costa Rica extractor: failed to read pages for %s: %s", source_filename, exc
-        )
-        return []
+    title_page = _extract_title_page(sorted_pages)
+    program_total = _extract_program_893_total(sorted_pages)
+    conicit_total = _extract_conicit_total(sorted_pages)
 
-    if not all_text.strip():
-        logger.debug("Costa Rica extractor: no text in %s.", source_filename)
-        return []
+    micit_source = title_page or program_total
+    if micit_source:
+        section_name = micit_source.get(
+            "section_name",
+            "Ministerio de Ciencia, Tecnología y Telecomunicaciones",
+        )
+        records.append({
+            "country": country,
+            "year": year,
+            "section_code": "CR_SCIENCE",
+            "section_name": section_name,
+            "section_name_en": "Ministry of Science, Technology and Telecommunications",
+            "program_code": "CR_MICIT",
+            "program_description": "Presupuesto total del ministerio de ciencia",
+            "program_description_en": "Total appropriation of the science ministry",
+            "line_description": "MICIT/MICITT/MICIITT - total presupuestario",
+            "line_description_en": "Science ministry total appropriation",
+            "amount_local": micit_source["amount_local"],
+            "currency": "CRC",
+            "unit": "CRC",
+            "rd_category": "direct_rd",
+            "taxonomy_score": 8.5,
+            "decision": "include",
+            "confidence": micit_source["confidence"],
+            "source_file": source_filename,
+            "file_id": file_id,
+            "page_number": micit_source["page_number"],
+            "amount_raw": micit_source["amount_raw"],
+            "source_variant": micit_source["source_variant"],
+            "text_snippet": micit_source["text_snippet"],
+            "raw_line": micit_source["raw_line"],
+            "merged_line": micit_source["merged_line"],
+            "context_before": section_name,
+            "context_after": "Programa presupuestario 893 / Totales",
+            "rationale": "Costa Rica ministry title page or programme summary anchored to section 218.",
+        })
 
-    # ── 1. CONICIT ─────────────────────────────────────────────────────────────
-    conicit_total = _extract_conicit_total(all_text)
-    if conicit_total and conicit_total >= 1_000_000:
+    if conicit_total:
         records.append({
             "country": country,
             "year": year,
@@ -224,47 +273,33 @@ def extract_costa_rica_items(
             "section_name": "Consejo Nacional de Investigaciones Científicas y Tecnológicas",
             "section_name_en": "National Council for Scientific and Technological Research",
             "program_code": "CR_CONICIT",
-            "line_description": "CONICIT - presupuesto total (gastos operativos + fondo de incentivos)",
-            "line_description_en": "CONICIT - total appropriation (operating + incentives fund)",
-            "amount_local": conicit_total,
+            "program_description": "Transferencias del CONICIT dentro del programa 893",
+            "program_description_en": "CONICIT transfers within programme 893",
+            "line_description": "CONICIT - transferencias corrientes y fondos de incentivos",
+            "line_description_en": "CONICIT transfers and incentives funds",
+            "amount_local": conicit_total["amount_local"],
             "currency": "CRC",
             "unit": "CRC",
             "rd_category": "direct_rd",
             "taxonomy_score": 9.0,
             "decision": "include",
-            "confidence": 0.85,
+            "confidence": conicit_total["confidence"],
             "source_file": source_filename,
             "file_id": file_id,
-            "page_number": 1,
-        })
-
-    # ── 2. MICIT/MICITT ────────────────────────────────────────────────────────
-    micit_total = _extract_micit_total(all_text)
-    if micit_total and micit_total >= 1_000_000:
-        records.append({
-            "country": country,
-            "year": year,
-            "section_code": "CR_SCIENCE",
-            "section_name": "Ministerio de Ciencia, Tecnología y Telecomunicaciones",
-            "section_name_en": "Ministry of Science, Technology and Telecommunications (MICITT)",
-            "program_code": "CR_MICIT",
-            "line_description": "MICIT/MICITT - transferencias y presupuesto total",
-            "line_description_en": "Ministry of Science (MICIT/MICITT) - total transfers and budget",
-            "amount_local": micit_total,
-            "currency": "CRC",
-            "unit": "CRC",
-            "rd_category": "direct_rd",
-            "taxonomy_score": 8.0,
-            "decision": "include",
-            "confidence": 0.75,
-            "source_file": source_filename,
-            "file_id": file_id,
-            "page_number": 1,
+            "page_number": conicit_total["page_number"],
+            "amount_raw": conicit_total["amount_raw"],
+            "source_variant": conicit_total["source_variant"],
+            "text_snippet": conicit_total["text_snippet"],
+            "raw_line": conicit_total["raw_line"],
+            "merged_line": conicit_total["merged_line"],
+            "context_before": "1.1.1.1.218.000-893-00 Registro Contable",
+            "context_after": "Transferencias corrientes al sector público",
+            "rationale": "Costa Rica CONICIT lines extracted only from anchored 218-893 transfer blocks.",
         })
 
     if records:
         logger.info(
-            "Costa Rica extractor: %s (year %s) → %d records",
+            "Costa Rica extractor: %s (year %s) -> %d records",
             source_filename, year, len(records),
         )
     else:
