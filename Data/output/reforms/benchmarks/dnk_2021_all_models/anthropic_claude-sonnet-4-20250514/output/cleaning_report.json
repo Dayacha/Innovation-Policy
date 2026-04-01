@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-03-30T22:32:21.756879",
+  "counts": {
+    "raw": 13,
+    "pass1_keep": 6,
+    "pass1_borderline": 5,
+    "pass1_drop": 2,
+    "pass2_rescued": 4,
+    "pass2_excluded": 1,
+    "final_clean": 10,
+    "retention_pct": 76.9
+  },
+  "subtheme_breakdown": {
+    "innovation_instruments": {
+      "n": 2,
+      "pct": 20.0,
+      "n_positive": 2
+    },
+    "research_infrastructure": {
+      "n": 1,
+      "pct": 10.0,
+      "n_positive": 1
+    },
+    "sectoral_rd": {
+      "n": 7,
+      "pct": 70.0,
+      "n_positive": 7
+    }
+  },
+  "activity_lens": {
+    "K2": 6,
+    "K5": 2,
+    "K7": 1,
+    "K3": 1
+  },
+  "defence_scope": {
+    "None": 10
+  },
+  "coverage": {
+    "n_countries": 1,
+    "n_country_years": 1
+  },
+  "intensity_summary": {
+    "mean_weighted_score": 6.4,
+    "max_weighted_score": 6.4,
+    "mean_net_reforms": 10.0
+  },
+  "elapsed_seconds": 15.9
+}

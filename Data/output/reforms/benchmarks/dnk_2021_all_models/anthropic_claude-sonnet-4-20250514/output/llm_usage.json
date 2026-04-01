@@ -1,0 +1,333 @@
+{
+  "generated_at": "2026-03-30T22:31:40.770701",
+  "provider": "anthropic",
+  "model": "claude-sonnet-4-20250514",
+  "pricing_per_million": {
+    "input": 3.0,
+    "output": 15.0
+  },
+  "summary": {
+    "total_calls": 26,
+    "total_input_tokens": 154481,
+    "total_output_tokens": 13251,
+    "total_tokens": 167732,
+    "total_cost_usd": 0.6622
+  },
+  "by_operation": {
+    "extraction": {
+      "calls": 25,
+      "input_tokens": 152452,
+      "output_tokens": 9155,
+      "total_tokens": 161607,
+      "cost_usd": 0.5947,
+      "elapsed_seconds": 231.84
+    },
+    "within_survey_dedup": {
+      "calls": 1,
+      "input_tokens": 2029,
+      "output_tokens": 4096,
+      "total_tokens": 6125,
+      "cost_usd": 0.0675,
+      "elapsed_seconds": 41.55
+    }
+  },
+  "by_survey": [
+    {
+      "country_code": null,
+      "survey_year": null,
+      "calls": 26,
+      "input_tokens": 154481,
+      "output_tokens": 13251,
+      "total_tokens": 167732,
+      "cost_usd": 0.6622
+    }
+  ],
+  "records": [
+    {
+      "timestamp": "2026-03-30T22:26:45.881499",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 8430,
+      "output_tokens": 123,
+      "total_tokens": 8553,
+      "elapsed_seconds": 4.675,
+      "cost_usd": 0.027135
+    },
+    {
+      "timestamp": "2026-03-30T22:26:51.293528",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 4069,
+      "output_tokens": 120,
+      "total_tokens": 4189,
+      "elapsed_seconds": 4.408,
+      "cost_usd": 0.014007
+    },
+    {
+      "timestamp": "2026-03-30T22:26:56.619600",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 6887,
+      "output_tokens": 115,
+      "total_tokens": 7002,
+      "elapsed_seconds": 4.321,
+      "cost_usd": 0.022386
+    },
+    {
+      "timestamp": "2026-03-30T22:27:08.506644",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 6346,
+      "output_tokens": 572,
+      "total_tokens": 6918,
+      "elapsed_seconds": 10.885,
+      "cost_usd": 0.027618
+    },
+    {
+      "timestamp": "2026-03-30T22:27:21.090575",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 6031,
+      "output_tokens": 636,
+      "total_tokens": 6667,
+      "elapsed_seconds": 11.579,
+      "cost_usd": 0.027633
+    },
+    {
+      "timestamp": "2026-03-30T22:27:26.519523",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 6787,
+      "output_tokens": 117,
+      "total_tokens": 6904,
+      "elapsed_seconds": 4.424,
+      "cost_usd": 0.022116
+    },
+    {
+      "timestamp": "2026-03-30T22:27:33.479750",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 5984,
+      "output_tokens": 153,
+      "total_tokens": 6137,
+      "elapsed_seconds": 5.955,
+      "cost_usd": 0.020247
+    },
+    {
+      "timestamp": "2026-03-30T22:27:39.729660",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 5944,
+      "output_tokens": 138,
+      "total_tokens": 6082,
+      "elapsed_seconds": 5.245,
+      "cost_usd": 0.019902
+    },
+    {
+      "timestamp": "2026-03-30T22:27:52.631109",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 6159,
+      "output_tokens": 580,
+      "total_tokens": 6739,
+      "elapsed_seconds": 11.896,
+      "cost_usd": 0.027177
+    },
+    {
+      "timestamp": "2026-03-30T22:27:58.874741",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 7660,
+      "output_tokens": 141,
+      "total_tokens": 7801,
+      "elapsed_seconds": 5.238,
+      "cost_usd": 0.025095
+    },
+    {
+      "timestamp": "2026-03-30T22:28:03.385245",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 6356,
+      "output_tokens": 81,
+      "total_tokens": 6437,
+      "elapsed_seconds": 3.505,
+      "cost_usd": 0.020283
+    },
+    {
+      "timestamp": "2026-03-30T22:28:09.455865",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 6110,
+      "output_tokens": 136,
+      "total_tokens": 6246,
+      "elapsed_seconds": 5.065,
+      "cost_usd": 0.02037
+    },
+    {
+      "timestamp": "2026-03-30T22:28:30.418220",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 5769,
+      "output_tokens": 109,
+      "total_tokens": 5878,
+      "elapsed_seconds": 19.958,
+      "cost_usd": 0.018942
+    },
+    {
+      "timestamp": "2026-03-30T22:28:35.951949",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 6100,
+      "output_tokens": 110,
+      "total_tokens": 6210,
+      "elapsed_seconds": 4.529,
+      "cost_usd": 0.01995
+    },
+    {
+      "timestamp": "2026-03-30T22:29:00.113751",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 5364,
+      "output_tokens": 550,
+      "total_tokens": 5914,
+      "elapsed_seconds": 23.153,
+      "cost_usd": 0.024342
+    },
+    {
+      "timestamp": "2026-03-30T22:29:16.259050",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 5322,
+      "output_tokens": 1067,
+      "total_tokens": 6389,
+      "elapsed_seconds": 15.14,
+      "cost_usd": 0.031971
+    },
+    {
+      "timestamp": "2026-03-30T22:29:30.396967",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 6433,
+      "output_tokens": 648,
+      "total_tokens": 7081,
+      "elapsed_seconds": 13.133,
+      "cost_usd": 0.029019
+    },
+    {
+      "timestamp": "2026-03-30T22:29:44.453862",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 7436,
+      "output_tokens": 692,
+      "total_tokens": 8128,
+      "elapsed_seconds": 13.052,
+      "cost_usd": 0.032688
+    },
+    {
+      "timestamp": "2026-03-30T22:30:03.295126",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 6769,
+      "output_tokens": 1078,
+      "total_tokens": 7847,
+      "elapsed_seconds": 17.84,
+      "cost_usd": 0.036477
+    },
+    {
+      "timestamp": "2026-03-30T22:30:10.671155",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 5170,
+      "output_tokens": 147,
+      "total_tokens": 5317,
+      "elapsed_seconds": 6.371,
+      "cost_usd": 0.017715
+    },
+    {
+      "timestamp": "2026-03-30T22:30:16.643440",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 6201,
+      "output_tokens": 121,
+      "total_tokens": 6322,
+      "elapsed_seconds": 4.967,
+      "cost_usd": 0.020418
+    },
+    {
+      "timestamp": "2026-03-30T22:30:22.342074",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 5670,
+      "output_tokens": 131,
+      "total_tokens": 5801,
+      "elapsed_seconds": 4.693,
+      "cost_usd": 0.018975
+    },
+    {
+      "timestamp": "2026-03-30T22:30:38.670265",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 5045,
+      "output_tokens": 1016,
+      "total_tokens": 6061,
+      "elapsed_seconds": 15.323,
+      "cost_usd": 0.030375
+    },
+    {
+      "timestamp": "2026-03-30T22:30:52.343209",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 7446,
+      "output_tokens": 493,
+      "total_tokens": 7939,
+      "elapsed_seconds": 12.669,
+      "cost_usd": 0.029733
+    },
+    {
+      "timestamp": "2026-03-30T22:30:57.158768",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "extraction",
+      "input_tokens": 2964,
+      "output_tokens": 81,
+      "total_tokens": 3045,
+      "elapsed_seconds": 3.812,
+      "cost_usd": 0.010107
+    },
+    {
+      "timestamp": "2026-03-30T22:31:39.758301",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "operation": "within_survey_dedup",
+      "input_tokens": 2029,
+      "output_tokens": 4096,
+      "total_tokens": 6125,
+      "elapsed_seconds": 41.554,
+      "cost_usd": 0.067527
+    }
+  ]
+}

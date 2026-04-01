@@ -1,0 +1,244 @@
+REFORM EXTRACTION PIPELINE: PLAIN-LANGUAGE EXPLANATION FOR SHARING
+
+Project:
+Innovation-policy reform extraction from OECD Economic Surveys
+
+Purpose of this note:
+This document explains, in non-technical language, how the reform-extraction
+pipeline uses prompts. It is a readable companion to the underlying code in
+`reforms/prompts.py`.
+
+
+1. OVERALL LOGIC
+
+The pipeline does not use many different "search prompts" in the substantive
+sense. It uses:
+
+- one main extraction prompt;
+- one prompt for deduplicating repeated mentions within the same survey;
+- one prompt for deduplicating the same reform event across different survey
+  years.
+
+So the core workflow is:
+
+1. Extract text from the OECD survey PDF.
+2. Preserve page markers in the extracted text.
+3. Split the text into chunks.
+4. Ask the model to extract innovation-related reforms from each chunk.
+5. Merge duplicate mentions within the same survey.
+6. Match the quoted evidence back to the text to recover page numbers.
+7. Merge the same reform event across different survey vintages if needed.
+8. Build the final output tables.
+
+
+2. MAIN SETTINGS
+
+The current pipeline is configured with:
+
+- temperature = 0
+- structured JSON output
+- one short supporting quote required for every extracted reform
+
+This means the model is already being used in the most deterministic available
+mode in the current setup.
+
+
+3. WHAT THE MAIN EXTRACTION PROMPT DOES
+
+The main extraction stage has two parts:
+
+- a system prompt: this defines the model's role and the classification rules;
+- a user/extraction prompt: this gives the survey text chunk and asks for the
+  structured reform output.
+
+Together, these two prompts tell the model to do the following:
+
+- read OECD Economic Survey text;
+- extract only reforms that are directly related to innovation policy;
+- ignore reforms outside the innovation-policy scope;
+- classify each reform into a single innovation-policy sub-theme;
+- assign additional labels such as:
+  - target actor;
+  - stage in the R&D-to-market pipeline;
+  - growth orientation;
+  - implementation / announcement / legislation year;
+  - status;
+  - importance;
+- provide a short verbatim source quote from the text as evidence.
+
+
+4. WHAT COUNTS AS AN INNOVATION REFORM
+
+The system prompt narrows extraction to innovation-policy reforms only.
+
+These include:
+
+- public R&D funding;
+- innovation instruments and governance;
+- research infrastructure;
+- knowledge transfer and commercialisation;
+- startup and venture ecosystem support;
+- human capital for innovation;
+- sectoral or mission-oriented R&D;
+- "other" innovation policy only if none of the above clearly fits.
+
+The prompt also uses a taxonomy/search library so that the model follows the
+same inclusion and exclusion logic as the project taxonomy.
+
+
+5. WHAT THE MODEL MUST RETURN FOR EACH REFORM
+
+For each extracted reform, the model is asked to return a structured JSON
+record with fields such as:
+
+- description
+- theme
+- sub_theme
+- secondary_type
+- alternative_theme
+- rd_actor
+- rd_stage
+- package_name
+- component_name
+- is_component
+- growth_orientation
+- growth_orientation_rationale
+- growth_orientation_confidence
+- implementation_year
+- announcement_year
+- legislation_year
+- status
+- status_evidence
+- status_confidence
+- is_major_reform
+- importance_bucket
+- importance_rationale
+- importance_confidence
+- source_quote
+
+The `source_quote` field is especially important because it is later used to
+recover the page number programmatically.
+
+
+6. HOW PAGE NUMBERS ARE HANDLED
+
+The model is not asked to guess page numbers directly.
+
+Instead, the process is:
+
+1. the extracted survey text contains markers such as `--- Page 20 ---`;
+2. the model returns a short supporting quote for each reform;
+3. the pipeline searches for that quote in the extracted text;
+4. once the quote is found, the nearest page markers are used to assign:
+   - source_page_start
+   - source_page_end
+
+So the page number is derived after extraction, from the text and the quote.
+
+
+7. WITHIN-SURVEY DEDUPLICATION PROMPT
+
+Because the survey text is split into overlapping chunks, the same reform may
+appear more than once in the raw extraction results.
+
+The within-survey deduplication prompt is used to:
+
+- identify entries that refer to the same reform;
+- group them together;
+- produce one merged description;
+- keep the best metadata for that reform;
+- preserve the most useful status, year, and classification information.
+
+This prompt is not a new extraction prompt. It is a cleanup and consolidation
+step after the main extraction.
+
+
+8. CROSS-SURVEY DEDUPLICATION PROMPT
+
+The same real-world reform can appear in several OECD survey vintages.
+
+For example, a reform implemented in one year may still be discussed in later
+surveys.
+
+The cross-survey deduplication prompt is used to:
+
+- identify entries from different survey years that refer to the same
+  real-world reform event;
+- group them together;
+- create one canonical event description;
+- choose the best year and status metadata for the event.
+
+Again, this is not a new search prompt. It is a consolidation step across
+survey years.
+
+
+9. WHY RESULTS CAN STILL DIFFER ACROSS RUNS
+
+Even with temperature set to 0, results can still differ slightly across runs
+because:
+
+- LLM APIs are not always perfectly deterministic in practice;
+- small differences in model version or backend routing can matter;
+- borderline cases may be interpreted differently by different models;
+- some reforms are genuinely ambiguous and require judgment.
+
+So temperature = 0 reduces variability strongly, but does not guarantee perfect
+replication in all cases.
+
+
+10. WHAT THE CURRENT PROMPTS ALREADY DO WELL
+
+The current prompts already:
+
+- restrict extraction to innovation-policy reforms;
+- require structured output;
+- require supporting textual evidence;
+- distinguish status, timing, and importance;
+- support auditability through the source quote;
+- enable page-number recovery after extraction.
+
+
+11. WHAT COULD STILL BE STRENGTHENED
+
+To improve replicability further, the extraction prompt could be made more
+explicit on the following points:
+
+- do not hallucinate;
+- if the text does not support a reform clearly enough, do not return it;
+- do not infer a reform unless there is direct textual evidence;
+- prefer omission over over-interpretation in borderline cases.
+
+These additions would make the abstention rule clearer.
+
+
+12. FILES THAT BEST DOCUMENT THE PROCESS
+
+If someone wants to understand or replicate the pipeline, the most relevant
+files are:
+
+- `config.yaml`
+  Shows the model settings, including temperature = 0.
+
+- `reforms/prompts.py`
+  Contains:
+  - the innovation system prompt;
+  - the main extraction prompt;
+  - the within-survey deduplication prompt;
+  - the cross-survey deduplication prompt.
+
+- `reforms/reform_analyzer.py`
+  Shows how the prompts are used in sequence and how page numbers are resolved.
+
+
+13. SHORT SUMMARY
+
+In short:
+
+- there is one real extraction prompt;
+- the other prompts are consolidation prompts;
+- the model must provide a supporting quote for each reform;
+- the page number is computed afterward from the quote;
+- temperature is already set to 0;
+- further gains in replicability would mainly come from stronger
+  anti-hallucination / abstention instructions and independent cross-checking.
+

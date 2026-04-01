@@ -14,7 +14,8 @@ Each program entry occupies exactly 5 lines in the extracted text:
     14.537,16                              ← Total (= Cap 1-8 + Cap 9)
 
 Amounts are in miles de euros (year ≥ 2002) or millones de pesetas (year < 2002).
-We always extract the TOTAL column (line index + 4 relative to code line).
+We always extract the TOTAL column (line index + 4 relative to code line) and
+scale it to full EUR / ESP values.
 """
 
 from __future__ import annotations
@@ -50,6 +51,11 @@ _RE_LOOSE_NUM = re.compile(r"^\d{4,9}(?:[.,]\d{1,2})?$|^\d{1,6}\.\d{3}(?:,\d{1,2
 # Function 46 header (to confirm we're in the right section; not strictly needed
 # since we match by code prefix, but useful for diagnostics)
 _RE_FUNCION_46 = re.compile(r"funci[oó]n[\s.:]*46\b", re.IGNORECASE)
+_RE_FUNCION_46_TOTAL = re.compile(
+    r"Investigaci[oó]n\s+Cient[ií]fica,\s*T[eé]cnica\s+y\s+Aplicada"
+    r"[.\s]+(?P<amount>\d{1,3}(?:\.\d{3})*(?:,\d{1,2})?)",
+    re.IGNORECASE,
+)
 
 # Pre-2003 name-based R&D program detection (no codes in these PDFs)
 # These descriptions are stable across 1990-2002 BOE editions
@@ -64,7 +70,7 @@ _RD_PROGRAM_NAMES: list[tuple[str, str]] = [
     (r"investigaci[oó]n\s+y\s+evaluaci[oó]n\s+educativa", "542G"),
     (r"investigaci[oó]n\s+sanitaria", "542H"),
     (r"investigaci[oó]n\s+y\s+estudios\s+estad[ií]sticos", "542I"),
-    (r"investigaci[oó]n\s+y\s+experimentaci[oó]n\s+agraria", "542J"),
+    (r"investigaci[oó]n\s+y\s+experimentaci[oó]n\s+agraria(?:\s+y\s+pesquera)?", "542J"),
     (r"investigaci[oó]n\s+oceanogr[aá]fica\s+y\s+pesquera", "542K"),
     (r"investigaci[oó]n\s+geol[oó]gico.minera", "542L"),
     (r"fomento\s+y\s+coordinaci[oó]n\s+de\s+la\s+investigaci[oó]n", "542M"),
@@ -130,12 +136,49 @@ def _currency_for_year(year: str) -> str:
         return "EUR"
 
 
-def _unit_label(year: str) -> str:
+def _source_unit_label(year: str) -> str:
     try:
         y = int(year)
     except (ValueError, TypeError):
         return "miles de euros"
     return "miles de pesetas" if y < 2002 else "miles de euros"
+
+
+def _scale_amount(total_val: float) -> float:
+    """Convert source-table amounts to full currency units."""
+    return total_val * 1000.0
+
+
+def _summary_scale_factor(page_text: str) -> int:
+    lowered = page_text.lower()
+    if "miles de euros" in lowered or "miles de pesetas" in lowered:
+        return 1000
+    return 1
+
+
+def _build_line_context(lines: list[str], line_idx: int, raw_total: str) -> tuple[str, str, str, str]:
+    lo = max(0, line_idx - 1)
+    hi = min(len(lines), line_idx + 5)
+    block = [ln.strip() for ln in lines[lo:hi]]
+    merged = "\n".join(ln for ln in block if ln)
+    raw_line = lines[line_idx].strip() if 0 <= line_idx < len(lines) else ""
+    before = "\n".join(ln.strip() for ln in lines[max(0, line_idx - 2):line_idx] if ln.strip())
+    after = "\n".join(ln.strip() for ln in lines[line_idx + 1:min(len(lines), line_idx + 4)] if ln.strip())
+    if raw_total and raw_total not in merged:
+        merged = f"{merged}\n{raw_total}".strip()
+    return before, raw_line, after, merged
+
+
+def _find_function_total(page_text: str) -> tuple[float, str, int] | None:
+    match = _RE_FUNCION_46_TOTAL.search(page_text)
+    if not match:
+        return None
+    amount_raw = match.group("amount")
+    amount_val = _parse_esp_number(amount_raw)
+    if amount_val <= 0:
+        return None
+    line_idx = max(0, page_text[:match.start()].count("\n"))
+    return amount_val, amount_raw, line_idx
 
 
 # ── State-machine parser ──────────────────────────────────────────────────────
@@ -237,11 +280,12 @@ def _parse_name_blocks(lines: list[str]) -> list[tuple[str, str, float, str, int
     results = []
     for i, raw_line in enumerate(lines):
         desc = raw_line.strip()
+        desc_norm = desc.rstrip(" .;:")
 
         # Match against known R&D program names
         code = None
         for regex, synthetic_code in _RE_RD_PROGRAMS:
-            if regex.search(desc):
+            if regex.search(desc_norm):
                 code = synthetic_code
                 break
         if code is None:
@@ -287,7 +331,7 @@ def extract_spain_items(
     budget_extractor.extract_budget_items().
     """
     currency = _currency_for_year(year)
-    unit = _unit_label(year)
+    source_unit = _source_unit_label(year)
     records: list[dict] = []
     seen_codes: set[str] = set()
 
@@ -321,17 +365,25 @@ def extract_spain_items(
             if any(regex.search(ln.strip()) for ln in lines for regex, _ in _RE_RD_PROGRAMS):
                 pages_with_matches.append(pg)
 
+    function_total_hits: list[tuple[int, float, str, int]] = []
     if not pages_with_matches:
+        for pg in sorted(all_texts.keys()):
+            hit = _find_function_total(all_texts[pg])
+            if hit:
+                total_val, raw_total, line_idx = hit
+                function_total_hits.append((pg, total_val, raw_total, line_idx))
+
+    if not pages_with_matches and not function_total_hits:
         logger.warning(
-            "Spain extractor: no R&D program codes or names found in %s (year %s).",
+            "Spain extractor: no R&D program codes, names, or Función 46 summary found in %s (year %s).",
             source_filename, year,
         )
         return []
 
     logger.info(
         "Spain extractor: %s (year %s) — scanning %d pages (%s)",
-        source_filename, year, len(pages_with_matches),
-        "name-based" if use_name_scanner else "code-based",
+        source_filename, year, len(pages_with_matches) if pages_with_matches else len(function_total_hits),
+        "function-total" if function_total_hits and not pages_with_matches else "name-based" if use_name_scanner else "code-based",
     )
 
     # ── Extract program blocks ────────────────────────────────────────────────
@@ -344,6 +396,8 @@ def extract_spain_items(
                 logger.debug("Spain: skipping duplicate %s (already seen)", code)
                 continue
             seen_codes.add(code)
+            before, raw_line, after, merged = _build_line_context(lines, line_idx, raw_total)
+            scaled_val = _scale_amount(total_val)
 
             records.append({
                 # ── Time-series key ──────────────────────────────
@@ -363,9 +417,10 @@ def extract_spain_items(
                 "line_description": f"{code} {desc}".strip(),
                 "line_description_en": "",
                 # ── Amount ───────────────────────────────────────
-                "amount_local": total_val,
+                "amount_local": scaled_val,
                 "currency": currency,
                 "amount_raw": raw_total,
+                "unit": currency,
                 # ── Classification ───────────────────────────────
                 "rd_category": "direct_rd",
                 "pillar": "Direct R&D",
@@ -381,7 +436,7 @@ def extract_spain_items(
                 "temporal_prior_boost": 0,
                 "temporal_prior_match_type": "",
                 "temporal_prior_years": "",
-                "rationale": f"Función 46 program; unit={unit}; page={pg}; line={line_idx}",
+                "rationale": f"Función 46 program; source_unit={source_unit}; scaled_to_full_{currency}; page={pg}; line={line_idx}",
                 # ── Provenance ───────────────────────────────────
                 "source_file": source_filename,
                 "page_number": pg,
@@ -390,19 +445,86 @@ def extract_spain_items(
                 "file_label": f"Spain {year}",
                 "source_filename": source_filename,
                 "keywords_matched": "Función 46",
-                "text_snippet": f"{code}  {desc}  {raw_total}",
+                "text_snippet": merged,
                 "text_snippet_en": "",
                 "detected_amount_raw": raw_total,
-                "detected_amount_value": total_val,
+                "detected_amount_value": scaled_val,
                 "detected_currency": currency,
                 "is_header_total": False,
                 "is_program_level": True,
+                "raw_line": raw_line,
+                "merged_line": merged,
+                "context_before": before,
+                "context_after": after,
+                "source_variant": "program_name_block" if use_name_scanner else "program_block",
             })
+
+    if function_total_hits and not records:
+        best_pg, best_val, best_raw, best_line_idx = max(function_total_hits, key=lambda item: item[1])
+        page_text = all_texts[best_pg]
+        lines = page_text.splitlines()
+        before, raw_line, after, merged = _build_line_context(lines, best_line_idx, best_raw)
+        scale_factor = _summary_scale_factor(page_text)
+        scaled_val = best_val * scale_factor
+        summary_unit = source_unit if scale_factor == 1000 else currency
+        records.append({
+            "country": country,
+            "year": year,
+            "section_code": "46",
+            "section_name": "Función 46: Investigación científica, técnica y aplicada",
+            "section_name_en": "Function 46: Scientific, Technical and Applied Research",
+            "program_code": "FUNC46_TOTAL",
+            "program_description": "Investigación científica, técnica y aplicada",
+            "program_description_en": "Scientific, technical and applied research",
+            "budget_type": "function_total",
+            "item_code": "FUNC46_TOTAL",
+            "item_description": "Función 46 total",
+            "line_code": "FUNC46_TOTAL",
+            "line_description": "Función 46 total",
+            "line_description_en": "Function 46 total",
+            "amount_local": scaled_val,
+            "currency": currency,
+            "amount_raw": best_raw,
+            "unit": currency,
+            "rd_category": "direct_rd",
+            "pillar": "Direct R&D",
+            "rd_label": "Direct R&D",
+            "taxonomy_score": 9.5,
+            "smoothed_taxonomy_score": 9.5,
+            "content_score": 9.5,
+            "context_score": 9.0,
+            "taxonomy_hits": "Función 46 summary total (Spain R&D classification)",
+            "decision": "include",
+            "confidence": 0.9,
+            "parse_error": False,
+            "temporal_prior_boost": 0,
+            "temporal_prior_match_type": "",
+            "temporal_prior_years": "",
+            "rationale": f"Función 46 summary total; source_unit={summary_unit}; scale_factor={scale_factor}; page={best_pg}; line={best_line_idx}",
+            "source_file": source_filename,
+            "page_number": best_pg,
+            "file_id": file_id,
+            "file_label": f"Spain {year}",
+            "source_filename": source_filename,
+            "keywords_matched": "Función 46 summary",
+            "text_snippet": merged,
+            "text_snippet_en": "",
+            "detected_amount_raw": best_raw,
+            "detected_amount_value": scaled_val,
+            "detected_currency": currency,
+            "is_header_total": True,
+            "is_program_level": False,
+            "raw_line": raw_line,
+            "merged_line": merged,
+            "context_before": before,
+            "context_after": after,
+            "source_variant": "function_total_summary",
+        })
 
     logger.info(
         "Spain extractor: %s (year %s) → %d programs, total = %s %s %s",
         source_filename, year, len(records),
-        f"{sum(r['amount_local'] for r in records):,.2f}", currency, unit,
+        f"{sum(r['amount_local'] for r in records):,.2f}", currency, currency,
     )
 
     return records

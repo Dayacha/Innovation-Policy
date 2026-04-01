@@ -1,0 +1,13 @@
+{
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "country": "DNK",
+  "year": 2021,
+  "paths": {
+    "raw_pdfs": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys",
+    "extracted_text": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text",
+    "reforms_json": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/benchmarks/dnk_2021_gpt4omini/openai_gpt-4o-mini/reforms_json",
+    "output": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/benchmarks/dnk_2021_gpt4omini/openai_gpt-4o-mini/output",
+    "kappa_catalog": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/data/input/surveys/kappa_catalog.json"
+  }
+}

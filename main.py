@@ -408,6 +408,69 @@ def _normalize_country_filter(values: list[str] | None) -> set[str]:
     return out
 
 
+def _reuse_cached_pages_for_inventory(
+    inventory_df: pd.DataFrame,
+    cached_pages_df: pd.DataFrame,
+) -> pd.DataFrame:
+    """Return cached page rows aligned to the current inventory selection.
+
+    Matching is content-hash first, with filepath fallback for older caches.
+    Returned rows are rewritten with current inventory metadata so reruns stay
+    consistent even if filenames or derived ids changed.
+    """
+    if inventory_df.empty or cached_pages_df.empty:
+        return pd.DataFrame()
+
+    cache = cached_pages_df.copy()
+    inventory = inventory_df.copy()
+
+    if "content_hash" in cache.columns and "content_hash" in inventory.columns:
+        cache["__content_hash"] = cache["content_hash"].fillna("").astype(str)
+        inventory["__content_hash"] = inventory["content_hash"].fillna("").astype(str)
+        valid_hashes = set(inventory.loc[inventory["__content_hash"].ne(""), "__content_hash"])
+        matched = cache[cache["__content_hash"].isin(valid_hashes)].copy()
+        if not matched.empty:
+            meta = (
+                inventory.loc[inventory["__content_hash"].isin(valid_hashes), [
+                    "__content_hash", "file_id", "filepath", "file_size", "country_guess", "year_guess", "content_hash"
+                ]]
+                .drop_duplicates(subset=["__content_hash"], keep="last")
+            )
+            matched = matched.drop(columns=["file_id", "filepath", "file_size", "country_guess", "year_guess", "content_hash"], errors="ignore")
+            matched = matched.merge(meta, on="__content_hash", how="left")
+            return matched.drop(columns=["__content_hash"], errors="ignore").reset_index(drop=True)
+
+    cache["__filepath"] = cache["filepath"].fillna("").astype(str)
+    inventory["__filepath"] = inventory["filepath"].fillna("").astype(str)
+    valid_paths = set(inventory.loc[inventory["__filepath"].ne(""), "__filepath"])
+    matched = cache[cache["__filepath"].isin(valid_paths)].copy()
+    if matched.empty:
+        return pd.DataFrame()
+
+    meta = (
+        inventory.loc[inventory["__filepath"].isin(valid_paths), [
+            "__filepath", "file_id", "filepath", "file_size", "country_guess", "year_guess", "content_hash"
+        ]]
+        .drop_duplicates(subset=["__filepath"], keep="last")
+    )
+    matched = matched.drop(columns=["file_id", "filepath", "file_size", "country_guess", "year_guess", "content_hash"], errors="ignore")
+    matched = matched.merge(meta, on="__filepath", how="left")
+    return matched.drop(columns=["__filepath"], errors="ignore").reset_index(drop=True)
+
+
+def _inventory_fully_cached(
+    inventory_df: pd.DataFrame,
+    cached_pages_df: pd.DataFrame,
+) -> bool:
+    """True when every requested inventory file already has cached page rows."""
+    matched = _reuse_cached_pages_for_inventory(inventory_df, cached_pages_df)
+    if matched.empty:
+        return False
+    cached_file_ids = set(matched["file_id"].dropna().astype(str))
+    inventory_file_ids = set(inventory_df["file_id"].dropna().astype(str))
+    return inventory_file_ids.issubset(cached_file_ids)
+
+
 def sanitize_budget_outputs(budget_df: pd.DataFrame) -> pd.DataFrame:
     """Drop unusable rows before writing persistent outputs."""
     if budget_df.empty:
@@ -542,44 +605,53 @@ def run_budget_pipeline(
     logger.info("Input PDF directory:    %s", PDF_ROOT.resolve())
     logger.info("Processed output:       %s", PROCESSED_DIR.resolve())
 
-    if use_page_cache and PAGE_EXTRACTION_FILE.exists():
-        pages_df = pd.read_csv(PAGE_EXTRACTION_FILE, low_memory=False)
-        if budget_filter_countries:
-            pages_df = pages_df[
-                pages_df["country_guess"].fillna("").astype(str).isin(budget_filter_countries)
-            ].copy()
-        inventory_df = pd.DataFrame()
+    # ── Stage 1: Inventory ────────────────────────────────────────────────
+    inventory_df = build_file_inventory(PDF_ROOT)
+    if budget_filter_countries:
+        inventory_df = inventory_df[
+            inventory_df["country_guess"].fillna("").astype(str).isin(budget_filter_countries)
+        ].copy()
+    inventory_df.to_csv(FILE_INVENTORY_FILE, index=False, encoding="utf-8")
+    logger.info("Inventory saved: %s (rows=%s)", FILE_INVENTORY_FILE, len(inventory_df))
+
+    if inventory_df.empty:
+        logger.warning("No PDF files found. Pipeline ended after inventory stage.")
+        return
+
+    cache_pages_df = _load_existing_dataframe(PAGE_EXTRACTION_FILE)
+    pages_df = pd.DataFrame()
+    reused_cache = False
+
+    if use_page_cache and not cache_pages_df.empty:
+        pages_df = _reuse_cached_pages_for_inventory(inventory_df, cache_pages_df)
+        reused_cache = not pages_df.empty
         logger.info("Using cached page extraction file: %s (rows=%s)", PAGE_EXTRACTION_FILE, len(pages_df))
-        if pages_df.empty:
-            logger.warning("Cached page extraction did not contain requested budget countries.")
-            return
-    else:
-        # ── Stage 1: Inventory ────────────────────────────────────────────────
-        inventory_df = build_file_inventory(PDF_ROOT)
-        if budget_filter_countries:
-            inventory_df = inventory_df[
-                inventory_df["country_guess"].fillna("").astype(str).isin(budget_filter_countries)
-            ].copy()
-        inventory_df.to_csv(FILE_INVENTORY_FILE, index=False, encoding="utf-8")
-        logger.info("Inventory saved: %s (rows=%s)", FILE_INVENTORY_FILE, len(inventory_df))
+        if not reused_cache:
+            logger.warning("Cached page extraction did not contain the requested file set; falling back to extraction.")
 
-        if inventory_df.empty:
-            logger.warning("No PDF files found. Pipeline ended after inventory stage.")
-            return
+    if not reused_cache and not cache_pages_df.empty and _inventory_fully_cached(inventory_df, cache_pages_df):
+        pages_df = _reuse_cached_pages_for_inventory(inventory_df, cache_pages_df)
+        reused_cache = True
+        logger.info(
+            "Detected full cached page coverage for requested files; reusing %s without re-extraction (rows=%s)",
+            PAGE_EXTRACTION_FILE,
+            len(pages_df),
+        )
 
-        # ── Stage 2: OCR / text extraction ───────────────────────────────────
+    if not reused_cache:
+        # ── Stage 2: OCR / text extraction ───────────────────────────────
         pages_df, summary_df = extract_text_for_inventory(inventory_df)
         pages_df.to_csv(PAGE_EXTRACTION_FILE, index=False, encoding="utf-8")
         summary_df.to_csv(PER_FILE_SUMMARY_FILE, index=False, encoding="utf-8")
         logger.info("Page extraction saved: %s (rows=%s)", PAGE_EXTRACTION_FILE, len(pages_df))
 
-        exports_df = export_full_documents(pages_df)
-        exports_df.to_csv(FULLTEXT_EXPORT_MANIFEST_FILE, index=False, encoding="utf-8")
-        logger.info("Full text exports: %s files", len(exports_df))
+    exports_df = export_full_documents(pages_df)
+    exports_df.to_csv(FULLTEXT_EXPORT_MANIFEST_FILE, index=False, encoding="utf-8")
+    logger.info("Full text exports: %s files", len(exports_df))
 
-        candidates_df = detect_candidate_pages(pages_df)
-        candidates_df.to_csv(CANDIDATES_FILE, index=False, encoding="utf-8")
-        logger.info("Keyword candidates saved: %s (rows=%s)", CANDIDATES_FILE, len(candidates_df))
+    candidates_df = detect_candidate_pages(pages_df)
+    candidates_df.to_csv(CANDIDATES_FILE, index=False, encoding="utf-8")
+    logger.info("Keyword candidates saved: %s (rows=%s)", CANDIDATES_FILE, len(candidates_df))
 
     # ── Stage 4: Budget extraction ────────────────────────────────────────────
     # Uses full pages_df (not just candidates) so the section parser can track

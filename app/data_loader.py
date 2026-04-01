@@ -14,6 +14,50 @@ REFORMS_EVENTS         = PROJECT_ROOT / "Data/output/reforms/output/reforms_even
 REFORMS_MENTIONS       = PROJECT_ROOT / "Data/output/reforms/output/reforms_mentions.csv"
 REFORM_PANEL           = PROJECT_ROOT / "Data/output/reforms/output/reform_panel.csv"
 REFORM_PANEL_SUBTHEME  = PROJECT_ROOT / "Data/output/reforms/output/reform_panel_subtheme.csv"
+REFORM_PANEL_CLEAN     = PROJECT_ROOT / "Data/output/reforms/output/reform_panel_clean.csv"
+REFORM_INTENSITY       = PROJECT_ROOT / "Data/output/reforms/output/reform_intensity_score.csv"
+
+
+def _parse_survey_year_list(value) -> list[int]:
+    """Parse a comma-separated survey-year list into sorted unique ints."""
+    if pd.isna(value):
+        return []
+    years: list[int] = []
+    for part in str(value).split(","):
+        token = part.strip()
+        if not token:
+            continue
+        try:
+            years.append(int(float(token)))
+        except Exception:
+            continue
+    return sorted(set(years))
+
+
+def _apply_clean_filter(df: pd.DataFrame) -> pd.DataFrame:
+    """Return only clean rows when cleaning columns exist.
+
+    If scoring_filter (Pass 1) and adjudicator (Pass 2) have run, the
+    mentions file contains score_band and llm_decision columns.  The clean
+    view keeps:
+      • rows with score_band == "keep"               (clear R&D content)
+      • rows with score_band == "borderline" AND
+                  llm_decision == "include"           (rescued by LLM)
+    Falls back to the full dataset when those columns are absent so the app
+    still works before cleaning has been run.
+    """
+    if "score_band" not in df.columns:
+        return df  # cleaning hasn't run yet — show everything
+
+    keep_mask = df["score_band"] == "keep"
+
+    if "llm_decision" in df.columns:
+        rescued = (df["score_band"] == "borderline") & (df["llm_decision"] == "include")
+    else:
+        # Pass 1 done but Pass 2 not yet — keep only the high-confidence band
+        rescued = pd.Series(False, index=df.index)
+
+    return df[keep_mask | rescued].copy()
 
 # ── Labels ────────────────────────────────────────────────────────────────────
 
@@ -196,23 +240,63 @@ def load_reforms():
         df["status_label"] = df["status"].map(lambda x: STATUS_LABELS.get(x, x))
     if "is_major_reform" in df.columns:
         df["is_major_reform"] = df["is_major_reform"].astype(bool)
+
+    if "mention_survey_years" in df.columns or "survey_year" in df.columns:
+        parsed_lists: list[list[int]] = []
+        for _, row in df.iterrows():
+            years = _parse_survey_year_list(row.get("mention_survey_years"))
+            survey_year = row.get("survey_year")
+            if pd.notna(survey_year):
+                years = sorted(set(years + [int(float(survey_year))]))
+            parsed_lists.append(years)
+
+        df["all_seen_survey_years_list"] = parsed_lists
+        df["all_seen_survey_years"] = [
+            ", ".join(str(y) for y in years) if years else ""
+            for years in parsed_lists
+        ]
+        df["first_seen_survey_year"] = [
+            years[0] if years else pd.NA
+            for years in parsed_lists
+        ]
+        df["last_seen_survey_year"] = [
+            years[-1] if years else pd.NA
+            for years in parsed_lists
+        ]
+        df["first_seen_survey_year"] = pd.to_numeric(
+            df["first_seen_survey_year"], errors="coerce"
+        ).astype("Int64")
+        df["last_seen_survey_year"] = pd.to_numeric(
+            df["last_seen_survey_year"], errors="coerce"
+        ).astype("Int64")
     return df
 
 
 @st.cache_data
 def load_reform_panel():
-    if not REFORM_PANEL.exists():
+    """Load the reform panel. Prefers the clean panel when available."""
+    path = REFORM_PANEL_CLEAN if REFORM_PANEL_CLEAN.exists() else REFORM_PANEL
+    if not path.exists():
         return pd.DataFrame()
-    df = pd.read_csv(REFORM_PANEL)
-    df["year"] = pd.to_numeric(df["year"], errors="coerce").astype("Int64")
+    df = pd.read_csv(path)
+    for col in ("year", "survey_year"):
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce").astype("Int64")
     return df
 
 
 @st.cache_data
 def load_reform_mentions():
+    """Load reform mentions, applying the clean filter if cleaning has run.
+
+    When score_band / llm_decision columns are present (added by the
+    two-pass cleaning pipeline), only clean rows are returned.  Before
+    cleaning runs, all rows are returned so the app still works.
+    """
     if not REFORMS_MENTIONS.exists():
         return pd.DataFrame()
     df = pd.read_csv(REFORMS_MENTIONS)
+    df = _apply_clean_filter(df)
     for col in ("implementation_year", "announcement_year", "survey_year"):
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors="coerce")
@@ -230,6 +314,20 @@ def load_reform_panel_subtheme():
         return pd.DataFrame()
     df = pd.read_csv(REFORM_PANEL_SUBTHEME)
     df["year"] = pd.to_numeric(df["year"], errors="coerce").astype("Int64")
+    return df
+
+
+@st.cache_data
+def load_reform_intensity():
+    """Load the reform intensity score panel (country × year).
+
+    Built by the two-pass cleaning pipeline.  Returns an empty DataFrame
+    before cleaning has been run.
+    """
+    if not REFORM_INTENSITY.exists():
+        return pd.DataFrame()
+    df = pd.read_csv(REFORM_INTENSITY)
+    df["survey_year"] = pd.to_numeric(df["survey_year"], errors="coerce").astype("Int64")
     return df
 
 

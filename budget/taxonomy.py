@@ -14,6 +14,10 @@ JSON scoring mapping (implements J_Rules from sheet J):
   exclusions             → -3  (H-pillar false positives)
 
 Include if score >= 3 | Review 1–2 | Skip <= 0
+
+New K/L pillars (revised taxonomy):
+  activity_lens: K1–K8 activity classification (basic/applied/experimental/etc.)
+  defence_lens:  L1–L7 defence-scope classification (defence/non-defence/dual-use)
 """
 
 from __future__ import annotations
@@ -54,6 +58,9 @@ _LANGUAGE_EXTENSIONS: dict[str, dict[str, frozenset[str]]] = {
             "grundforskning", "anvendt forskning", "forsøgsvirksomhed",
             "teknologisk forskning", "videnskabelig forskning",
             "eksperimentel udvikling",
+            # new: curiosity/defence/civilian signals
+            "nysgerrighedsdrevet forskning", "civil forskning",
+            "forsvarsforskning",
         }),
         "institutions": frozenset({
             "universitetet", "universiteter", "universiteterne",
@@ -69,6 +76,8 @@ _LANGUAGE_EXTENSIONS: dict[str, dict[str, frozenset[str]]] = {
             "innovationsfond", "innovationsfonden",
             "akademiet for de tekniske videnskaber",
             "atomenergikommissionen", "atomenergi",
+            # new: defence institutions
+            "forsvarets forskningstjeneste", "ddis",
         }),
         "instruments": frozenset({
             "forskningsbevilling", "forskningsbevillinger",
@@ -80,6 +89,10 @@ _LANGUAGE_EXTENSIONS: dict[str, dict[str, frozenset[str]]] = {
             "recherche", "recherche et developpement", "r&d",
             "recherche fondamentale", "recherche appliquee",
             "recherche scientifique", "developpement experimental",
+            # new: curiosity/use-inspired/defence signals
+            "recherche exploratoire", "recherche d'interet general",
+            "recherche de defense", "recherche militaire",
+            "recherche duale",
         }),
         "institutions": frozenset({
             "universite", "universites", "cnrs", "inria", "inserm",
@@ -87,6 +100,10 @@ _LANGUAGE_EXTENSIONS: dict[str, dict[str, frozenset[str]]] = {
             "conseil de la recherche", "agence nationale de la recherche",
             "anr", "ministere de la recherche", "ministere de l education",
             "laboratoire", "laboratoires nationaux",
+            # new: defence institutions
+            "direction generale de l armement", "dga",
+            "agence de l innovation de defense", "aid",
+            "onera",
         }),
         "instruments": frozenset({
             "credit", "credits", "dotation", "subvention de recherche",
@@ -98,6 +115,10 @@ _LANGUAGE_EXTENSIONS: dict[str, dict[str, frozenset[str]]] = {
             "forschung", "forschung und entwicklung", "fou",
             "grundlagenforschung", "angewandte forschung",
             "wissenschaft", "technologieentwicklung",
+            # new: curiosity-driven/use-inspired/defence signals
+            "neugiergetriebene forschung", "wehrforschung",
+            "verteidigungsforschung", "militarforschung",
+            "zivile forschung", "dual-use-forschung",
         }),
         "institutions": frozenset({
             "universitat", "universitaten", "hochschule", "hochschulen",
@@ -105,6 +126,10 @@ _LANGUAGE_EXTENSIONS: dict[str, dict[str, frozenset[str]]] = {
             "fraunhofer", "max-planck", "helmholtz",
             "bundesministerium fur bildung und forschung", "bmbf",
             "wissenschaftsrat",
+            # new: defence institutions
+            "bundesministerium der verteidigung",
+            "wehrwissenschaftliches institut", "fkie",
+            "wehrtechnische dienststelle",
         }),
         "instruments": frozenset({
             "forderung", "forschungsforderung", "zuweisung",
@@ -115,10 +140,15 @@ _LANGUAGE_EXTENSIONS: dict[str, dict[str, frozenset[str]]] = {
         "core_rd": frozenset({
             "forskning", "forskning och utveckling", "fou",
             "grundforskning", "tillampad forskning", "vetenskap",
+            # new: curiosity/defence signals
+            "nyfikenhetsdrivendforskning", "forsvarsforskning",
+            "civil forskning", "dual-use-forskning",
         }),
         "institutions": frozenset({
             "universitet", "hogskola", "vetenskapsradet",
             "vinnova", "riksdagen", "kungliga tekniska hogskolan", "kth",
+            # new: defence institutions
+            "totalforsvarets forskningsinstitut", "foi",
         }),
         "instruments": frozenset({
             "anslag", "bidrag till forskning", "forskningsanslag",
@@ -128,13 +158,114 @@ _LANGUAGE_EXTENSIONS: dict[str, dict[str, frozenset[str]]] = {
         "core_rd": frozenset({
             "forskning", "forskning og utvikling", "fou",
             "grunnforskning", "anvendt forskning",
+            # new: curiosity/defence signals
+            "nysgjerrigdrevet forskning", "forsvarsforskning",
+            "sivil forskning", "dual-use-forskning",
         }),
         "institutions": frozenset({
             "universitet", "norges forskningsrad", "forskningsradet",
             "ntnu", "universitetet i oslo",
+            # new: defence institutions
+            "forsvarets forskningsinstitutt", "ffi",
         }),
         "instruments": frozenset({
             "bevilgning", "forskningsmidler", "tilskudd til forskning",
+        }),
+    },
+    "icelandic": {
+        "core_rd": frozenset({
+            "rannsókn", "rannsóknir", "rannsókna", "rannsóknastarf",
+            "rannsóknir og þróun", "þróun", "vísindi", "vísinda",
+            "vísindaleg", "nýsköpun", "tækni",
+        }),
+        "institutions": frozenset({
+            "rannsóknamiðstöð íslands", "rannís", "rannsóknarráð íslands",
+            "rannsóknasjóður", "vísindasjóður", "háskóli íslands",
+            "mennta- og menningarmálaráðuneyti",
+            "háskóla-, iðnaðar- og nýsköpunarráðuneyti",
+        }),
+        "instruments": frozenset({
+            "framlag úr ríkissjóði", "greitt úr ríkissjóði",
+            "gjöld samtals", "gjöld umfram tekjur", "fjármögnun",
+        }),
+    },
+    "dutch": {
+        "core_rd": frozenset({
+            "onderzoek", "wetenschap", "wetenschapsbeleid",
+            "onderzoek en ontwikkeling", "onderzoek en wetenschapsbeleid",
+            "technologiebeleid", "innovatie", "innovatiebeleid",
+            "wetenschappelijk onderwijs", "kennisontwikkeling",
+        }),
+        "institutions": frozenset({
+            "ministerie van onderwijs cultuur en wetenschap", "ocw",
+            "ministerie van economische zaken", "ministerie van economische zaken en klimaat",
+            "nwo", "nederlandse organisatie voor wetenschappelijk onderzoek",
+            "tno", "toegepast natuurwetenschappelijk onderzoek",
+            "universiteit", "universiteiten", "kennisinstellingen",
+        }),
+        "instruments": frozenset({
+            "uitgaven", "begrotingsstaat", "beleidsartikelen",
+            "onderzoek en wetenschapsbeleid", "een sterk innovatievermogen",
+            "bevorderen van innovatiekracht",
+            "bedrijvenbeleid innovatie en ondernemerschap voor duurzame welvaartsgroei",
+            "industrieel en algemeen technologiebeleid",
+        }),
+    },
+    "hungarian": {
+        "core_rd": frozenset({
+            "kutatas", "kutatasi", "kutatas-fejlesztes", "kutatas fejlesztes",
+            "fejlesztes", "innovacio", "innovacios", "tudomany",
+            "tudomanyos", "tudomanypolitika",
+        }),
+        "institutions": frozenset({
+            "orszagos tudomanyos kutatasi alapprogramok", "otka",
+            "nemzeti kutatasi fejlesztesi es innovacios alap",
+            "nemzeti kutatasi fejlesztesi es innovacios hivatal",
+            "nkfi", "nkfih", "nkth",
+            "magyar tudomanyos akademia",
+            "kutatasi alapresz", "innovacios alapresz",
+        }),
+        "instruments": frozenset({
+            "fejezet osszesen", "kiadas", "koltsegvetes", "koltsegvetesi tamogatas",
+            "kutatasi temapalyazatok", "tamogatas", "fejezeti tartalek",
+        }),
+    },
+    "latvian": {
+        "core_rd": frozenset({
+            "zinatne", "zinatnes", "zinatnisks", "zinatniska",
+            "petijumi", "petijums", "petnieciba", "petniecibas",
+            "zinatniskas darbibas", "zinatniskas darbibas nodrosinasana",
+            "zinatnes bazes finansējums", "zinatnes konkuretspejas veicinasana",
+            "tirgus orientetie petijumi", "pasutitie petijumi",
+        }),
+        "institutions": frozenset({
+            "izglitibas un zinatnes ministrija",
+            "latvijas zinatnes padome", "latvijas zinatnes padomes",
+            "zinatnes padome", "universitate", "universitates",
+            "valsts parvaldes instituciju pasutitie petijumi",
+        }),
+        "instruments": frozenset({
+            "izdevumi kopa", "resursi izdevumu segsanai", "valsts pamatbudzets",
+            "programmas", "apakšprogramma", "apakšprogramma",
+            "bazes finansējums", "bazes finansējums", "finansejums",
+        }),
+    },
+    "lithuanian": {
+        "core_rd": frozenset({
+            "mokslas", "mokslo", "moksliniai tyrimai", "tyrimai",
+            "mokslas ir studijos", "mokslo ir studiju", "tyrimu",
+            "inovacijos", "technologijos", "mokslo politika",
+        }),
+        "institutions": frozenset({
+            "lietuvos mokslo taryba", "lietuvos mokslu taryba",
+            "lietuvos mokslo akademija", "mokslo ir studiju institucijos",
+            "svietimo mokslo ir sporto ministerija",
+            "svietimo ir mokslo ministerija",
+            "valstybinis moksliniu tyrimu institutas",
+        }),
+        "instruments": frozenset({
+            "is viso", "asignavimai", "biudzetas", "islaidos",
+            "mokslas ir studijos", "valstybes biudzetas",
         }),
     },
     "finnish": {
@@ -145,6 +276,8 @@ _LANGUAGE_EXTENSIONS: dict[str, dict[str, frozenset[str]]] = {
             "perustutkimus", "soveltava tutkimus",
             "tieteellinen tutkimus", "teknologian kehittaminen",
             "innovaatiotoiminta", "tki", "tki-toiminta",
+            # new: defence signals
+            "puolustusalan tutkimus", "siviilitutkimus",
         }),
         "institutions": frozenset({
             "suomen akatemia", "finlands akademi",
@@ -156,6 +289,8 @@ _LANGUAGE_EXTENSIONS: dict[str, dict[str, frozenset[str]]] = {
             "tyo- ja elinkeinoministerio",
             "yliopisto", "yliopistot", "korkeakoulu", "korkeakoulut",
             "tiedeakatemia", "tutkimuslaitos", "tutkimuskeskus",
+            # new: defence institution
+            "puolustusvoimien tutkimuslaitos", "pvtutkl",
         }),
         "instruments": frozenset({
             "maararaha", "tutkimusmaararahat", "toimintamenot",
@@ -170,12 +305,16 @@ _LANGUAGE_EXTENSIONS: dict[str, dict[str, frozenset[str]]] = {
             "研究", "科学", "科学技術", "科学技術振興",
             "研究開発", "学術", "学術研究", "基礎研究",
             "応用研究", "実験開発", "科学研究費",
+            # new: defence/civilian signals
+            "防衛研究", "防衛装備", "民生研究", "軍民両用",
         }),
         "institutions": frozenset({
             "文部科学省", "文部省", "科学技術庁",
             "日本学術会議", "日本学術振興会", "科学技術振興機構",
             "理化学研究所", "宇宙航空研究開発機構",
             "大学", "国立大学", "研究所", "研究機構",
+            # new: defence institutions
+            "防衛省", "防衛装備庁",
         }),
         "instruments": frozenset({
             "所管合計", "歳出合計", "計", "運営費",
@@ -188,6 +327,12 @@ _LANGUAGE_EXTENSIONS: dict[str, dict[str, frozenset[str]]] = {
             "investigacion y desarrollo", "i+d", "i+d+i",
             "desarrollo cientifico", "desarrollo tecnologico",
             "coordinacion y des cientif y tecnologico",
+            "investigacion cientifica tecnica y aplicada",
+            "funcion 46",
+            # new: basic/applied/defence signals
+            "investigacion basica", "investigacion aplicada",
+            "investigacion de defensa", "investigacion militar",
+            "uso dual", "investigacion civil",
         }),
         "institutions": frozenset({
             "ministerio de ciencia", "ministerio de ciencia tecnologia",
@@ -197,11 +342,19 @@ _LANGUAGE_EXTENSIONS: dict[str, dict[str, frozenset[str]]] = {
             "consejo nacional de investigaciones cientificas y tecnologicas",
             "academia nacional de ciencias", "universidad de costa rica",
             "ente costarricense de acreditacion",
+            "ministerio de ciencia e innovacion",
+            "ministerio de ciencia innovacion y universidades",
+            "csic", "centro para el desarrollo tecnologico industrial", "cdti",
+            # new: defence institutions
+            "ministerio de defensa", "inta", "instituto nacional de tecnica aeroespacial",
+            "dgam", "direccion general de armamento y material",
         }),
         "instruments": frozenset({
             "programas presupuestarios", "registro contable", "transferencias corrientes",
             "presupuesto total", "total del programa", "totales",
             "fondo de incentivos", "fondo propyme",
+            "clasificacion por programas", "resumen por programas",
+            "miles de euros", "miles de pesetas",
         }),
     },
     "czech": {
@@ -223,6 +376,66 @@ _LANGUAGE_EXTENSIONS: dict[str, dict[str, frozenset[str]]] = {
             "dotace jinym subjektum",
         }),
     },
+    "estonian": {
+        "core_rd": frozenset({
+            "teadus", "teadus ja arendustegevus", "teadus- ja arendustegevus",
+            "arendustegevus", "innovatsioon", "teadussuesteemi programm",
+            "teadussusteemi programm", "teadustaristu",
+            "teaduse sihtfinantseerimine", "baasfinantseerimine",
+            "teadusteemade sihtfinantseerimine",
+        }),
+        "institutions": frozenset({
+            "haridus- ja teadusministeerium", "haridusministeerium",
+            "eesti teadusfond", "sihtasutus eesti teadusfond",
+            "eesti teadusagentuur", "etag", "eesti teaduste akadeemia",
+            "teaduskeskus", "uurimisasutus", "teadusasutus",
+        }),
+        "instruments": frozenset({
+            "kulud kokku", "riigieelarve kulud kokku", "eraldised",
+            "sihtotstarbelised eraldised", "tegevuskulud",
+            "teadustoo toetuseks", "uurimistoetused", "grantideks",
+            "teaduse rahastamine",
+        }),
+    },
+    "hebrew": {
+        "core_rd": frozenset({
+            "מדע", "מחקר", "פיתוח", "מחקר ופיתוח", "מו\"פ",
+            "טכנולוגיה", "חדשנות", "חלל", "תשתיות מדע",
+        }),
+        "institutions": frozenset({
+            "משרד המדע", "משרד המדע והפיתוח", "משרד מדע וטכנולוגיה",
+            "משרד המדע הטכנולוגיה והחלל", "משרד המדע החדשנות והטכנולוגיה",
+            "הקרן הלאומית למדע", "האקדמיה הלאומית למדעים",
+        }),
+        "instruments": frozenset({
+            "הוצאה", "הוצאה מותנית בהכנסה", "הרשאה להתחייב",
+            "תוספת ראשונה", "ריכוז התוספת הראשונה", "סעיף 19",
+        }),
+    },
+    "korean": {
+        "core_rd": frozenset({
+            "연구개발", "국가연구개발", "정부 연구개발", "r&d",
+            "전체 r&d", "국가연구개발예산", "정부 r&d",
+            "과학기술", "과학기술혁신", "기초연구",
+            "응용연구", "원천기술", "연구개발예산",
+            # new: activity type signals
+            "순수기초연구", "응용연구사업", "개발연구",
+            # new: defence/civilian signals
+            "국방연구개발", "민군기술협력", "민수연구개발",
+        }),
+        "institutions": frozenset({
+            "과학기술정보통신부", "미래창조과학부", "과학기술부",
+            "과학기술처", "한국연구재단", "기초과학연구원",
+            "국가과학기술연구회", "출연연", "우주항공청",
+            # new: defence institutions
+            "국방과학연구소", "add",
+        }),
+        "instruments": frozenset({
+            "예산안", "정부안", "재원배분", "재원배분계획",
+            "재정운용계획", "총지출", "총예산", "조원",
+            "억원", "정부 r&d 투자", "국가연구개발사업",
+        }),
+    },
 }
 
 _SKIP_TERMS: frozenset[str] = frozenset({
@@ -238,6 +451,7 @@ class Taxonomy:
         "core_rd", "auto_include", "institutions", "sectoral",
         "instruments", "ambiguous", "ambiguous_anchors",
         "ambiguous_exclude", "exclusions",
+        "activity_lens", "defence_lens",
     )
 
     def __init__(self) -> None:
@@ -250,6 +464,10 @@ class Taxonomy:
         self.ambiguous_anchors: dict[str, frozenset[str]] = {}
         self.ambiguous_exclude: dict[str, frozenset[str]] = {}
         self.exclusions: frozenset[str] = frozenset()
+        # K-pillar: activity-type lens {code: {keywords, anchors, exclude}}
+        self.activity_lens: dict[str, dict] = {}
+        # L-pillar: defence-scope lens {code: {keywords, anchors, exclude}}
+        self.defence_lens: dict[str, dict] = {}
 
 
 def _norm_set(items: list[str]) -> frozenset[str]:
@@ -293,6 +511,32 @@ def _load_from_json() -> Taxonomy:
     tax.ambiguous_anchors = anchors
     tax.ambiguous_exclude = excl_ctx
     tax.core_rd = frozenset()  # populated by language extensions
+
+    # K-pillar: activity lens
+    tax.activity_lens = {}
+    for code, lens in data.get("activity_lens", {}).get("lenses", {}).items():
+        tax.activity_lens[code] = {
+            "class": lens.get("class", ""),
+            "code": lens.get("code", ""),
+            "keywords": frozenset(normalize_text(k) for k in lens.get("keywords", []) if k),
+            "anchors": frozenset(normalize_text(a) for a in lens.get("anchors", []) if a),
+            "exclude": frozenset(normalize_text(e) for e in lens.get("exclude", []) if e),
+        }
+
+    # L-pillar: defence lens
+    tax.defence_lens = {}
+    for code, lens in data.get("defence_lens", {}).get("lenses", {}).items():
+        tax.defence_lens[code] = {
+            "scope": lens.get("scope", ""),
+            "code": lens.get("code", ""),
+            "keywords": frozenset(normalize_text(k) for k in lens.get("keywords", []) if k),
+            "anchors": frozenset(normalize_text(a) for a in lens.get("anchors", []) if a),
+            "exclude": frozenset(normalize_text(e) for e in lens.get("exclude", []) if e),
+            "exclude_override": frozenset(
+                normalize_text(e) for e in lens.get("exclude_override", []) if e
+            ),
+        }
+
     return tax
 
 
@@ -336,6 +580,55 @@ def load_taxonomy(languages: tuple[str, ...] = ("danish",)) -> Taxonomy:
 
     tax = _apply_language_extensions(tax, list(languages))
     return tax
+
+
+def classify_activity(text: str, tax: Taxonomy | None = None) -> str:
+    """Return K-pillar activity code for `text` (K1–K8 or 'General R&D').
+
+    Walks K1→K8 in priority order; returns the first lens whose keywords match.
+    Falls back to 'General R&D' if nothing matches.
+    """
+    if tax is None:
+        tax = load_taxonomy()
+    norm = normalize_text(text)
+    # Priority: K1 (basic) > K2 (applied) > K3 (experimental) > K4 (general R&D)
+    # > K5 (innovation) > K6 (bridge) > K7 (infrastructure) > K8 (system)
+    for code in ("K1", "K2", "K3", "K4", "K5", "K6", "K7", "K8"):
+        lens = tax.activity_lens.get(code)
+        if not lens:
+            continue
+        if any(_term_in(kw, norm) for kw in lens["keywords"]):
+            return lens["code"]
+    return "General R&D"
+
+
+def classify_defence_scope(text: str, tax: Taxonomy | None = None) -> str:
+    """Return L-pillar defence scope for `text`.
+
+    Returns one of: 'Defence R&D', 'Defence innovation', 'Dual-use',
+    'Non-defence R&D', 'Non-defence innovation', 'Exclude', or 'Unspecified'.
+    """
+    if tax is None:
+        tax = load_taxonomy()
+    norm = normalize_text(text)
+    # Check exclude lenses first (L6/L7) — unless an override term is present
+    for code in ("L6", "L7"):
+        lens = tax.defence_lens.get(code)
+        if not lens:
+            continue
+        if any(_term_in(kw, norm) for kw in lens["keywords"]):
+            # Check if a positive override term cancels the exclusion
+            overrides = lens.get("exclude_override", frozenset())
+            if not any(_term_in(ov, norm) for ov in overrides):
+                return "Exclude"
+    # Check positive lenses L1→L5
+    for code in ("L1", "L2", "L3", "L4", "L5"):
+        lens = tax.defence_lens.get(code)
+        if not lens:
+            continue
+        if any(_term_in(kw, norm) for kw in lens["keywords"]):
+            return lens["code"]
+    return "Unspecified"
 
 
 def _term_in(term: str, norm: str) -> bool:

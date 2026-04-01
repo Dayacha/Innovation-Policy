@@ -403,6 +403,10 @@ sel_bud_ctry = []
 sel_ctry   = []
 sel_st     = []
 sel_stat   = ["implemented", "legislated"]
+sel_svy    = []
+sel_first_svy = []
+sel_last_svy = []
+sel_seen_svy = []
 only_major = False
 
 def _sidebar_label(text):
@@ -494,6 +498,34 @@ with st.sidebar:
             key="stat_filt",
             format_func=lambda x: STATUS_LABELS.get(x, x),
         )
+        _svy_opts = sorted(_dr["survey_year"].dropna().astype(int).unique()) if "survey_year" in _dr.columns else []
+        sel_svy = st.multiselect(
+            "Survey year", _svy_opts,
+            default=_svy_opts,
+            key="svy_filt",
+        )
+        _first_svy_opts = sorted(_dr["first_seen_survey_year"].dropna().astype(int).unique()) if "first_seen_survey_year" in _dr.columns else []
+        sel_first_svy = st.multiselect(
+            "First seen in survey year", _first_svy_opts,
+            default=_first_svy_opts,
+            key="first_svy_filt",
+        )
+        _last_svy_opts = sorted(_dr["last_seen_survey_year"].dropna().astype(int).unique()) if "last_seen_survey_year" in _dr.columns else []
+        sel_last_svy = st.multiselect(
+            "Last seen in survey year", _last_svy_opts,
+            default=_last_svy_opts,
+            key="last_svy_filt",
+        )
+        _seen_svy_opts = sorted({
+            yr
+            for years in _dr.get("all_seen_survey_years_list", pd.Series(dtype="object"))
+            for yr in (years if isinstance(years, list) else [])
+        })
+        sel_seen_svy = st.multiselect(
+            "Seen in any survey year", _seen_svy_opts,
+            default=_seen_svy_opts,
+            key="seen_svy_filt",
+        )
         only_major = st.checkbox("Major reforms only", key="maj_filt")
         # Year range — fall back to announcement_year when implementation_year sparse
         _ref_yrs_impl = _dr["implementation_year"].dropna().astype(int).unique()
@@ -571,6 +603,18 @@ if reforms_available():
     if sel_ctry:  dr_f = dr_f[dr_f["country_name"].isin(sel_ctry)]
     if sel_st:    dr_f = dr_f[dr_f["sub_theme"].isin(sel_st)]
     if sel_stat:  dr_f = dr_f[dr_f["status"].isin(sel_stat)]
+    if sel_svy and "survey_year" in dr_f.columns:
+        dr_f = dr_f[dr_f["survey_year"].isin(sel_svy)]
+    if sel_first_svy and "first_seen_survey_year" in dr_f.columns:
+        dr_f = dr_f[dr_f["first_seen_survey_year"].isin(sel_first_svy)]
+    if sel_last_svy and "last_seen_survey_year" in dr_f.columns:
+        dr_f = dr_f[dr_f["last_seen_survey_year"].isin(sel_last_svy)]
+    if sel_seen_svy and "all_seen_survey_years_list" in dr_f.columns:
+        dr_f = dr_f[
+            dr_f["all_seen_survey_years_list"].apply(
+                lambda years: any(y in years for y in sel_seen_svy) if isinstance(years, list) else False
+            )
+        ]
     if only_major and "is_major_reform" in dr_f.columns:
         dr_f = dr_f[dr_f["is_major_reform"] == True]  # noqa: E712
     if "implementation_year" in dr_f.columns:
@@ -1005,6 +1049,10 @@ with TAB_REFORMS:
         yr_s     = str(int(float(impl_yr))) if pd.notna(impl_yr) else "n.d."
         surv_yr  = row.get("survey_year")
         surv_s   = f"Survey {int(float(surv_yr))}" if pd.notna(surv_yr) else ""
+        first_seen = row.get("first_seen_survey_year")
+        last_seen = row.get("last_seen_survey_year")
+        first_seen_s = str(int(float(first_seen))) if pd.notna(first_seen) else "—"
+        last_seen_s = str(int(float(last_seen))) if pd.notna(last_seen) else "—"
         sub_key  = str(row.get("sub_theme") or "other")
         sub_s    = SUBTHEME_LABELS.get(sub_key, sub_key.replace("_", " ").title())
         lbl_clr  = SUBTHEME_COLORS.get(sub_key, GREY)
@@ -1020,13 +1068,16 @@ with TAB_REFORMS:
         imp_rat  = str(row.get("importance_rationale") or "")
         go_rat   = str(row.get("growth_orientation_rationale") or "")
         mentions = row.get("n_mentions")
-        mention_yrs = str(row.get("mention_survey_years") or "")
+        mention_yrs = str(row.get("all_seen_survey_years") or row.get("mention_survey_years") or "")
 
         major_badge = (
             f'<span style="display:inline-block;padding:1px 7px;border-radius:2px;'
             f'background:{NAVY};color:#fff;font-weight:700;font-size:.66rem;'
             f'letter-spacing:.04em;">MAJOR</span>'
-            if major else ""
+            if major else
+            f'<span style="display:inline-block;padding:1px 7px;border-radius:2px;'
+            f'background:#F1F3F6;color:#666;border:1px solid #D7DCE3;'
+            f'font-weight:700;font-size:.66rem;letter-spacing:.04em;">NOT MAJOR</span>'
         )
         quote_block = (
             f'<div style="margin:.5rem 0 .3rem;padding:.35rem .75rem;'
@@ -1046,10 +1097,12 @@ with TAB_REFORMS:
         )
         mentions_block = (
             f'<div style="font-size:.69rem;color:#aaa;margin-top:.4rem;">'
-            f'First seen: {_html2.escape(surv_s)}'
-            f'{(" · mentioned in surveys: " + _html2.escape(str(mention_yrs))) if mention_yrs and pd.notna(mentions) and int(mentions) > 1 else ""}'
+            f'Anchor survey: {_html2.escape(surv_s) if surv_s else "—"}'
+            f' · First seen: {_html2.escape(first_seen_s)}'
+            f' · Last seen: {_html2.escape(last_seen_s)}'
+            f'{(" · Seen in: " + _html2.escape(str(mention_yrs))) if mention_yrs else ""}'
             f'</div>'
-            if surv_s else ""
+            if surv_s or mention_yrs or pd.notna(first_seen) or pd.notna(last_seen) else ""
         )
 
         cards_html += f"""
@@ -1117,13 +1170,18 @@ with TAB_REFORMS:
     # ── Data table ──
     section_header("Reform event detail")
     _REF_DISP_COLS = [c for c in [
-        "country_name", "implementation_year", "sub_theme_label",
+        "country_name", "survey_year", "first_seen_survey_year", "last_seen_survey_year",
+        "all_seen_survey_years", "implementation_year", "sub_theme_label",
         "orientation_label", "status_label", "is_major_reform",
         "importance_bucket", "rd_actor_label", "rd_stage_label",
         "package_name", "description",
     ] if c in dr_f.columns]
     _REF_COL_LABELS = {
-        "country_name": "Country", "implementation_year": "Year",
+        "country_name": "Country", "survey_year": "Anchor survey",
+        "first_seen_survey_year": "First seen",
+        "last_seen_survey_year": "Last seen",
+        "all_seen_survey_years": "Seen in surveys",
+        "implementation_year": "Year",
         "sub_theme_label": "Innovation type", "orientation_label": "Growth orientation",
         "status_label": "Status", "is_major_reform": "Major?",
         "importance_bucket": "Importance", "rd_actor_label": "Actor",
@@ -1146,9 +1204,9 @@ with TAB_REFORMS:
         _tbl_r[_REF_DISP_COLS].sort_values("implementation_year"
                                             if "implementation_year" in _REF_DISP_COLS else _REF_DISP_COLS[0]),
         col_labels=_REF_COL_LABELS,
-        num_cols=["implementation_year", "importance_bucket"],
+        num_cols=["survey_year", "first_seen_survey_year", "last_seen_survey_year", "implementation_year", "importance_bucket"],
         bool_cols=["is_major_reform"],
-        wide_cols=["description", "package_name"],
+        wide_cols=["all_seen_survey_years", "description", "package_name"],
     )
     st.download_button(
         "Download CSV",
@@ -1463,18 +1521,21 @@ with TAB_COMBINED:
         section_header("Key reform events")
         _top = (dr_f.sort_values("importance_bucket", ascending=False)
                 .head(20).copy())
-        _top_cols = [c for c in ["country_name","implementation_year","sub_theme_label",
+        _top_cols = [c for c in ["country_name","survey_year","first_seen_survey_year","last_seen_survey_year",
+                                  "all_seen_survey_years","implementation_year","sub_theme_label",
                                   "status_label","importance_bucket","is_major_reform",
                                   "package_name","description"] if c in _top.columns]
         _top_labels = {
-            "country_name": "Country", "implementation_year": "Year",
+            "country_name": "Country", "survey_year": "Anchor survey",
+            "first_seen_survey_year": "First seen", "last_seen_survey_year": "Last seen",
+            "all_seen_survey_years": "Seen in surveys", "implementation_year": "Year",
             "sub_theme_label": "Type", "status_label": "Status",
             "importance_bucket": "Importance", "is_major_reform": "Major?",
             "package_name": "Reform", "description": "Description",
         }
         render_table(_top[_top_cols], col_labels=_top_labels,
-                     num_cols=["implementation_year","importance_bucket"],
-                     bool_cols=["is_major_reform"], wide_cols=["description","package_name"])
+                     num_cols=["survey_year","first_seen_survey_year","last_seen_survey_year","implementation_year","importance_bucket"],
+                     bool_cols=["is_major_reform"], wide_cols=["all_seen_survey_years","description","package_name"])
 
     # ── Multi-country heatmap (only when >1 country) ──
     if rk and not dr_f.empty and dr_f["country_name"].nunique() > 1:
@@ -1517,6 +1578,9 @@ with TAB_TABLE:
     }
     _T5_REF_LABELS = {
         "country_name": "Country", "survey_year": "Survey year",
+        "first_seen_survey_year": "First seen",
+        "last_seen_survey_year": "Last seen",
+        "all_seen_survey_years": "Seen in surveys",
         "implementation_year": "Year", "sub_theme_label": "Innovation type",
         "orientation_label": "Growth orientation", "status_label": "Status",
         "is_major_reform": "Major?", "importance_bucket": "Importance",
@@ -1560,9 +1624,9 @@ with TAB_TABLE:
                 _dr5[cols5r].sort_values(["country_name","implementation_year"]
                                          if "implementation_year" in cols5r else cols5r[:1]),
                 col_labels=_T5_REF_LABELS,
-                num_cols=["implementation_year","importance_bucket","survey_year"],
+                num_cols=["survey_year","first_seen_survey_year","last_seen_survey_year","implementation_year","importance_bucket"],
                 bool_cols=["is_major_reform"],
-                wide_cols=["description","source_quote","package_name"],
+                wide_cols=["all_seen_survey_years","description","source_quote","package_name"],
             )
             st.download_button("Download (CSV)", _dr5[cols5r].to_csv(index=False).encode(),
                                "reform_events.csv", "text/csv")

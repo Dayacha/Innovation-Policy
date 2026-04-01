@@ -1,0 +1,305 @@
+country_code,country_name,year,theme,sub_theme,has_reform,reform_count,has_major,major_count,has_growth_supporting,growth_supporting_count,has_growth_hindering,growth_hindering_count
+AUS,Australia,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+AUS,Australia,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+AUS,Australia,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+AUS,Australia,2021,innovation,other,0,0,0,0,0,0,0,0
+AUS,Australia,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+AUS,Australia,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+AUS,Australia,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+AUS,Australia,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+AUT,Austria,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+AUT,Austria,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+AUT,Austria,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+AUT,Austria,2021,innovation,other,0,0,0,0,0,0,0,0
+AUT,Austria,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+AUT,Austria,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+AUT,Austria,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+AUT,Austria,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+BEL,Belgium,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+BEL,Belgium,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+BEL,Belgium,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+BEL,Belgium,2021,innovation,other,0,0,0,0,0,0,0,0
+BEL,Belgium,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+BEL,Belgium,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+BEL,Belgium,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+BEL,Belgium,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+CAN,Canada,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+CAN,Canada,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+CAN,Canada,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+CAN,Canada,2021,innovation,other,0,0,0,0,0,0,0,0
+CAN,Canada,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+CAN,Canada,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+CAN,Canada,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+CAN,Canada,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+CHE,Switzerland,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+CHE,Switzerland,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+CHE,Switzerland,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+CHE,Switzerland,2021,innovation,other,0,0,0,0,0,0,0,0
+CHE,Switzerland,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+CHE,Switzerland,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+CHE,Switzerland,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+CHE,Switzerland,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+CHL,Chile,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+CHL,Chile,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+CHL,Chile,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+CHL,Chile,2021,innovation,other,0,0,0,0,0,0,0,0
+CHL,Chile,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+CHL,Chile,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+CHL,Chile,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+CHL,Chile,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+COL,Colombia,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+COL,Colombia,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+COL,Colombia,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+COL,Colombia,2021,innovation,other,0,0,0,0,0,0,0,0
+COL,Colombia,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+COL,Colombia,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+COL,Colombia,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+COL,Colombia,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+CRI,Costa Rica,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+CRI,Costa Rica,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+CRI,Costa Rica,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+CRI,Costa Rica,2021,innovation,other,0,0,0,0,0,0,0,0
+CRI,Costa Rica,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+CRI,Costa Rica,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+CRI,Costa Rica,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+CRI,Costa Rica,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+CZE,Czech Republic,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+CZE,Czech Republic,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+CZE,Czech Republic,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+CZE,Czech Republic,2021,innovation,other,0,0,0,0,0,0,0,0
+CZE,Czech Republic,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+CZE,Czech Republic,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+CZE,Czech Republic,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+CZE,Czech Republic,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+DEU,Germany,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+DEU,Germany,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+DEU,Germany,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+DEU,Germany,2021,innovation,other,0,0,0,0,0,0,0,0
+DEU,Germany,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+DEU,Germany,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+DEU,Germany,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+DEU,Germany,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+DNK,Denmark,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+DNK,Denmark,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+DNK,Denmark,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+DNK,Denmark,2021,innovation,other,0,0,0,0,0,0,0,0
+DNK,Denmark,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+DNK,Denmark,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+DNK,Denmark,2021,innovation,sectoral_rd,1,5,1,1,1,5,0,0
+DNK,Denmark,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+ESP,Spain,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+ESP,Spain,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+ESP,Spain,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+ESP,Spain,2021,innovation,other,0,0,0,0,0,0,0,0
+ESP,Spain,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+ESP,Spain,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+ESP,Spain,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+ESP,Spain,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+EST,Estonia,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+EST,Estonia,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+EST,Estonia,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+EST,Estonia,2021,innovation,other,0,0,0,0,0,0,0,0
+EST,Estonia,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+EST,Estonia,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+EST,Estonia,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+EST,Estonia,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+FIN,Finland,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+FIN,Finland,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+FIN,Finland,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+FIN,Finland,2021,innovation,other,0,0,0,0,0,0,0,0
+FIN,Finland,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+FIN,Finland,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+FIN,Finland,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+FIN,Finland,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+FRA,France,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+FRA,France,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+FRA,France,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+FRA,France,2021,innovation,other,0,0,0,0,0,0,0,0
+FRA,France,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+FRA,France,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+FRA,France,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+FRA,France,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2021,innovation,other,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+GBR,United Kingdom,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+GRC,Greece,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+GRC,Greece,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+GRC,Greece,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+GRC,Greece,2021,innovation,other,0,0,0,0,0,0,0,0
+GRC,Greece,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+GRC,Greece,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+GRC,Greece,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+GRC,Greece,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+HUN,Hungary,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+HUN,Hungary,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+HUN,Hungary,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+HUN,Hungary,2021,innovation,other,0,0,0,0,0,0,0,0
+HUN,Hungary,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+HUN,Hungary,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+HUN,Hungary,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+HUN,Hungary,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+IRL,Ireland,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+IRL,Ireland,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+IRL,Ireland,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+IRL,Ireland,2021,innovation,other,0,0,0,0,0,0,0,0
+IRL,Ireland,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+IRL,Ireland,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+IRL,Ireland,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+IRL,Ireland,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+ISL,Iceland,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+ISL,Iceland,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+ISL,Iceland,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+ISL,Iceland,2021,innovation,other,0,0,0,0,0,0,0,0
+ISL,Iceland,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+ISL,Iceland,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+ISL,Iceland,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+ISL,Iceland,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+ISR,Israel,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+ISR,Israel,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+ISR,Israel,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+ISR,Israel,2021,innovation,other,0,0,0,0,0,0,0,0
+ISR,Israel,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+ISR,Israel,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+ISR,Israel,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+ISR,Israel,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+ITA,Italy,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+ITA,Italy,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+ITA,Italy,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+ITA,Italy,2021,innovation,other,0,0,0,0,0,0,0,0
+ITA,Italy,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+ITA,Italy,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+ITA,Italy,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+ITA,Italy,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+JPN,Japan,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+JPN,Japan,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+JPN,Japan,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+JPN,Japan,2021,innovation,other,0,0,0,0,0,0,0,0
+JPN,Japan,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+JPN,Japan,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+JPN,Japan,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+JPN,Japan,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+KOR,Korea,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+KOR,Korea,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+KOR,Korea,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+KOR,Korea,2021,innovation,other,0,0,0,0,0,0,0,0
+KOR,Korea,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+KOR,Korea,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+KOR,Korea,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+KOR,Korea,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+LTU,Lithuania,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+LTU,Lithuania,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+LTU,Lithuania,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+LTU,Lithuania,2021,innovation,other,0,0,0,0,0,0,0,0
+LTU,Lithuania,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+LTU,Lithuania,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+LTU,Lithuania,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+LTU,Lithuania,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+LUX,Luxembourg,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+LUX,Luxembourg,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+LUX,Luxembourg,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+LUX,Luxembourg,2021,innovation,other,0,0,0,0,0,0,0,0
+LUX,Luxembourg,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+LUX,Luxembourg,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+LUX,Luxembourg,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+LUX,Luxembourg,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+LVA,Latvia,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+LVA,Latvia,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+LVA,Latvia,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+LVA,Latvia,2021,innovation,other,0,0,0,0,0,0,0,0
+LVA,Latvia,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+LVA,Latvia,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+LVA,Latvia,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+LVA,Latvia,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+MEX,Mexico,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+MEX,Mexico,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+MEX,Mexico,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+MEX,Mexico,2021,innovation,other,0,0,0,0,0,0,0,0
+MEX,Mexico,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+MEX,Mexico,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+MEX,Mexico,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+MEX,Mexico,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+NLD,Netherlands,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+NLD,Netherlands,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+NLD,Netherlands,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+NLD,Netherlands,2021,innovation,other,0,0,0,0,0,0,0,0
+NLD,Netherlands,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+NLD,Netherlands,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+NLD,Netherlands,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+NLD,Netherlands,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+NOR,Norway,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+NOR,Norway,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+NOR,Norway,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+NOR,Norway,2021,innovation,other,0,0,0,0,0,0,0,0
+NOR,Norway,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+NOR,Norway,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+NOR,Norway,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+NOR,Norway,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+NZL,New Zealand,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+NZL,New Zealand,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+NZL,New Zealand,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+NZL,New Zealand,2021,innovation,other,0,0,0,0,0,0,0,0
+NZL,New Zealand,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+NZL,New Zealand,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+NZL,New Zealand,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+NZL,New Zealand,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+POL,Poland,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+POL,Poland,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+POL,Poland,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+POL,Poland,2021,innovation,other,0,0,0,0,0,0,0,0
+POL,Poland,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+POL,Poland,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+POL,Poland,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+POL,Poland,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+PRT,Portugal,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+PRT,Portugal,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+PRT,Portugal,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+PRT,Portugal,2021,innovation,other,0,0,0,0,0,0,0,0
+PRT,Portugal,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+PRT,Portugal,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+PRT,Portugal,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+PRT,Portugal,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+SVK,Slovak Republic,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+SVK,Slovak Republic,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+SVK,Slovak Republic,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+SVK,Slovak Republic,2021,innovation,other,0,0,0,0,0,0,0,0
+SVK,Slovak Republic,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+SVK,Slovak Republic,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+SVK,Slovak Republic,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+SVK,Slovak Republic,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+SVN,Slovenia,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+SVN,Slovenia,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+SVN,Slovenia,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+SVN,Slovenia,2021,innovation,other,0,0,0,0,0,0,0,0
+SVN,Slovenia,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+SVN,Slovenia,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+SVN,Slovenia,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+SVN,Slovenia,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+SWE,Sweden,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+SWE,Sweden,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+SWE,Sweden,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+SWE,Sweden,2021,innovation,other,0,0,0,0,0,0,0,0
+SWE,Sweden,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+SWE,Sweden,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+SWE,Sweden,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+SWE,Sweden,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+TUR,Türkiye,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+TUR,Türkiye,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+TUR,Türkiye,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+TUR,Türkiye,2021,innovation,other,0,0,0,0,0,0,0,0
+TUR,Türkiye,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+TUR,Türkiye,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+TUR,Türkiye,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+TUR,Türkiye,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0
+USA,United States,2021,innovation,human_capital,0,0,0,0,0,0,0,0
+USA,United States,2021,innovation,innovation_instruments,0,0,0,0,0,0,0,0
+USA,United States,2021,innovation,knowledge_transfer,0,0,0,0,0,0,0,0
+USA,United States,2021,innovation,other,0,0,0,0,0,0,0,0
+USA,United States,2021,innovation,rd_funding,0,0,0,0,0,0,0,0
+USA,United States,2021,innovation,research_infrastructure,0,0,0,0,0,0,0,0
+USA,United States,2021,innovation,sectoral_rd,0,0,0,0,0,0,0,0
+USA,United States,2021,innovation,startup_ecosystem,0,0,0,0,0,0,0,0

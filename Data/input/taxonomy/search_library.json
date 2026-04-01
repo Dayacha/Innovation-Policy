@@ -1,8 +1,8 @@
 {
   "_meta": {
     "description": "Innovation policy keyword dictionary for finance bill extraction",
-    "source": "Full_search_library.xlsx",
-    "pillars": "A=Direct R&D, B=Innovation, C=Infrastructure, D=Institutional, E=Sectoral, F=Budget, G=Ambiguous, H=Exclusions, I=Stems, J=Rules"
+    "source": "Full_search_library_revised.xlsx",
+    "pillars": "A=Direct R&D, B=Innovation, C=Infrastructure, D=Institutional, E=Sectoral, F=Budget, G=Ambiguous, H=Exclusions, I=Stems, J=Rules, K=Activity_Lens, L=Defence_Lens"
   },
   "auto_include": {
     "description": "Any of these → high confidence relevant. Include automatically.",
@@ -99,7 +99,6 @@
       "process innovation",
       "digital innovation",
       "deep tech innovation",
-      "social innovation",
       "innovation ecosystem",
       "innovation system",
       "innovation voucher",
@@ -203,7 +202,44 @@
       "metrology laboratory",
       "Teknologirådet",
       "Teknologisk Service",
-      "Statens Tekniske Prøvenævn"
+      "Statens Tekniske Prøvenævn",
+      "curiosity-driven research",
+      "blue-sky research",
+      "discovery research",
+      "use-inspired research",
+      "problem-oriented research",
+      "solution-oriented research",
+      "civilian R&D",
+      "civil R&D",
+      "non-defence R&D",
+      "non-defense R&D",
+      "defence R&D",
+      "defense R&D",
+      "military R&D",
+      "defence science and technology",
+      "defense science and technology",
+      "defence S&T",
+      "defense S&T",
+      "military research",
+      "armed forces research",
+      "military scientific research",
+      "civilian innovation",
+      "non-defence innovation",
+      "non-defense innovation",
+      "defence innovation",
+      "defense innovation",
+      "military innovation",
+      "dual-use innovation",
+      "dual use innovation",
+      "defense innovation unit",
+      "defence innovation unit",
+      "DIU",
+      "technology diffusion",
+      "innovation diffusion",
+      "diffusion of innovation",
+      "testbed",
+      "testing bed",
+      "test bed"
     ]
   },
   "institutions": {
@@ -268,7 +304,16 @@
       "doctoral training",
       "doctoral programme",
       "postdoctoral programme",
-      "research fellowship programme"
+      "research fellowship programme",
+      "defence research agency",
+      "defense research agency",
+      "military research agency",
+      "defence laboratory",
+      "defense laboratory",
+      "military laboratory",
+      "advanced research projects agency",
+      "DARPA-style agency",
+      "advanced projects agency"
     ]
   },
   "sectoral_rd": {
@@ -325,7 +370,14 @@
       "space research",
       "aerospace research",
       "satellite research",
-      "earth observation research"
+      "earth observation research",
+      "defence innovation",
+      "defense innovation",
+      "military technology",
+      "defence technology",
+      "defense technology",
+      "homeland security research",
+      "civil security research"
     ]
   },
   "budget_terms": {
@@ -593,7 +645,17 @@
       "standards compliance",
       "statistics office",
       "archives, libraries, museums",
-      "consultancy services"
+      "consultancy services",
+      "weapons procurement",
+      "equipment acquisition",
+      "military operations",
+      "force readiness",
+      "personnel costs",
+      "veterans benefits",
+      "base construction",
+      "border security operations",
+      "peacekeeping operations",
+      "intelligence operations"
     ]
   },
   "stems_regex": {
@@ -648,7 +710,20 @@
       "machine learning",
       "develop*",
       "science*",
-      "lab*"
+      "lab*",
+      "basic research",
+      "fundamental research",
+      "applied research",
+      "translational research",
+      "use-inspired research",
+      "curiosity-driven",
+      "defen?e",
+      "militar*",
+      "civilian research",
+      "civilian R&D",
+      "non[- ]defen[cs]e R&D",
+      "dual-use",
+      "security research"
     ]
   },
   "decision_rules": {
@@ -699,6 +774,11 @@
         "rule": "Only 'development' appears",
         "action": "Review manually",
         "examples": "Very noisy"
+      },
+      {
+        "rule": "If dual-use / security / critical technology appears and the beneficiary is unclear",
+        "action": "Review and consider coding as Dual-use",
+        "examples": "dual-use research; security research; strategic technology"
       }
     ],
     "exclude": [
@@ -721,7 +801,448 @@
         "rule": "Laboratory appears only in a routine diagnostics or clinical services context",
         "action": "Exclude unless strong positive override exists",
         "examples": "diagnostic lab services"
+      },
+      {
+        "rule": "Defence or security spending with procurement / operations / readiness / personnel but no research anchor",
+        "action": "Exclude unless strong positive override exists",
+        "examples": "weapons procurement; military operations; force readiness"
+      }
+    ],
+    "auto_classify": [
+      {
+        "rule": "If basic / fundamental / frontier / curiosity-driven appears near research",
+        "action": "Code as Basic research",
+        "examples": "basic research; fundamental research; frontier research; curiosity-driven research"
+      },
+      {
+        "rule": "If applied / industrial / translational / use-inspired / mission-oriented appears near research",
+        "action": "Code as Applied research",
+        "examples": "applied research; industrial research; translational research; use-inspired research"
+      },
+      {
+        "rule": "If experimental development / prototype / testbed / pilot / demonstration / validation appears with R&D anchors",
+        "action": "Code as Experimental development",
+        "examples": "experimental development; prototype development; pilot plant; demonstration project; testbed"
+      },
+      {
+        "rule": "If innovation / adoption / diffusion / incubator / accelerator / voucher appears without a core R&D phrase",
+        "action": "Code as Innovation (not R&D)",
+        "examples": "innovation voucher; startup support; technology diffusion; incubator; accelerator"
+      },
+      {
+        "rule": "If defence / military / armed forces / ministry of defence appears near research or innovation",
+        "action": "Code defence scope as Defence",
+        "examples": "defence R&D; military research; defence innovation; defence laboratory"
+      },
+      {
+        "rule": "If civilian / non-military / non-defence appears near research or innovation, or clearly civilian sectors with no defence anchor",
+        "action": "Code defence scope as Non-defence",
+        "examples": "civilian R&D; health research; agricultural research; civilian innovation"
+      },
+      {
+        "rule": "Record both an activity code and a defence-scope code for every retained hit",
+        "action": "Apply everywhere",
+        "examples": "Activity: Basic / Applied / Experimental development / General R&D / Innovation / Bridge / Infrastructure / System support; Defence scope: Defence / Non-defence / Dual-use / Unspecified"
       }
     ]
+  },
+  "activity_lens": {
+    "description": "K-pillar: classify each retained hit by activity type (basic research, applied, experimental development, innovation, etc.)",
+    "lenses": {
+      "K1": {
+        "class": "Basic research",
+        "code": "Basic research",
+        "keywords": [
+          "basic research",
+          "fundamental research",
+          "frontier research",
+          "curiosity-driven research",
+          "blue-sky research",
+          "discovery research"
+        ],
+        "anchors": [
+          "excellence",
+          "frontier",
+          "science foundation",
+          "academy",
+          "university",
+          "investigator-led",
+          "fellowship"
+        ],
+        "exclude": [
+          "basic education",
+          "basic services",
+          "basic infrastructure"
+        ],
+        "notes": "Treat as upstream R&D even without near-market language"
+      },
+      "K2": {
+        "class": "Applied research",
+        "code": "Applied research",
+        "keywords": [
+          "applied research",
+          "industrial research",
+          "use-inspired research",
+          "mission-oriented research",
+          "challenge-led research",
+          "translational research",
+          "pre-competitive research"
+        ],
+        "anchors": [
+          "prototype",
+          "disease",
+          "product",
+          "industrial",
+          "mission",
+          "challenge",
+          "solution",
+          "problem-oriented"
+        ],
+        "exclude": [
+          "applied teaching only",
+          "applied training only"
+        ],
+        "notes": "Use when geared to specific applications but not yet full demonstration/procurement"
+      },
+      "K3": {
+        "class": "Experimental development",
+        "code": "Experimental development",
+        "keywords": [
+          "experimental development",
+          "technology development",
+          "prototype development",
+          "pilot plant",
+          "demonstration project",
+          "testbed",
+          "validation",
+          "proof of concept"
+        ],
+        "anchors": [
+          "prototype",
+          "pilot",
+          "demonstration",
+          "test",
+          "validation",
+          "engineering",
+          "scale-up preparation"
+        ],
+        "exclude": [
+          "generic software development",
+          "website development",
+          "infrastructure development"
+        ],
+        "notes": "Downstream R&D stage just before commercial deployment or procurement"
+      },
+      "K4": {
+        "class": "General / undifferentiated R&D",
+        "code": "General R&D",
+        "keywords": [
+          "research and development",
+          "R&D",
+          "scientific research",
+          "scientific and technological research",
+          "STI",
+          "research programme",
+          "research grant"
+        ],
+        "anchors": [
+          "research fund",
+          "laboratory",
+          "research council",
+          "science foundation",
+          "university",
+          "public research"
+        ],
+        "exclude": [
+          "market research",
+          "policy research",
+          "survey research"
+        ],
+        "notes": "Use when text clearly indicates R&D but does not separate stage"
+      },
+      "K5": {
+        "class": "Innovation (non-R&D)",
+        "code": "Innovation",
+        "keywords": [
+          "innovation",
+          "innovation policy",
+          "innovation fund",
+          "innovation voucher",
+          "business innovation",
+          "product innovation",
+          "process innovation",
+          "startup support",
+          "incubator",
+          "accelerator",
+          "technology adoption",
+          "technology diffusion"
+        ],
+        "anchors": [
+          "enterprise",
+          "startup",
+          "SME",
+          "commercialization",
+          "adoption",
+          "scale-up",
+          "agency"
+        ],
+        "exclude": [
+          "administrative innovation",
+          "classroom innovation",
+          "social innovation without tech link"
+        ],
+        "notes": "Keep separate from R&D unless explicit research/prototype anchors exist"
+      },
+      "K6": {
+        "class": "Commercialisation / bridge",
+        "code": "Innovation-R&D bridge",
+        "keywords": [
+          "technology transfer",
+          "research commercialisation",
+          "proof of concept",
+          "spin-off",
+          "licensing",
+          "patenting",
+          "university-industry cooperation",
+          "collaborative research"
+        ],
+        "anchors": [
+          "university",
+          "laboratory",
+          "patent",
+          "prototype",
+          "proof of concept",
+          "market translation"
+        ],
+        "exclude": [
+          "generic procurement",
+          "plain business promotion"
+        ],
+        "notes": "Review whether to count under innovation or applied R&D based on nearby research anchors"
+      },
+      "K7": {
+        "class": "Research infrastructure",
+        "code": "Infrastructure",
+        "keywords": [
+          "research infrastructure",
+          "research laboratory",
+          "test facility",
+          "instrumentation",
+          "observatory",
+          "supercomputing",
+          "data infrastructure"
+        ],
+        "anchors": [
+          "lab",
+          "facility",
+          "equipment",
+          "platform",
+          "scientific services"
+        ],
+        "exclude": [
+          "routine diagnostics lab",
+          "hospital operations",
+          "general IT"
+        ],
+        "notes": "Code separately if infrastructure is a distinct budget bucket"
+      },
+      "K8": {
+        "class": "Science system / human capital",
+        "code": "System support",
+        "keywords": [
+          "research excellence",
+          "centre of excellence",
+          "competitive research funding",
+          "doctoral research",
+          "postdoctoral programme",
+          "research fellowships"
+        ],
+        "anchors": [
+          "university",
+          "council",
+          "foundation",
+          "excellence initiative",
+          "doctoral",
+          "postdoctoral"
+        ],
+        "exclude": [
+          "general teaching",
+          "student welfare",
+          "university operations"
+        ],
+        "notes": "Cross-cutting support that can sit underneath basic or applied research"
+      }
+    }
+  },
+  "defence_lens": {
+    "description": "L-pillar: separate defence, non-defence, and dual-use research and innovation spending",
+    "lenses": {
+      "L1": {
+        "scope": "Defence",
+        "code": "Defence R&D",
+        "keywords": [
+          "defence research",
+          "defense research",
+          "military research",
+          "defence R&D",
+          "defense R&D",
+          "military R&D",
+          "defence science and technology",
+          "weapons research"
+        ],
+        "anchors": [
+          "ministry of defence",
+          "armed forces",
+          "army",
+          "navy",
+          "air force",
+          "defence laboratory",
+          "defence research agency"
+        ],
+        "exclude": [
+          "weapons procurement",
+          "operations",
+          "readiness",
+          "personnel",
+          "bases"
+        ],
+        "notes": "Count as defence R&D when explicit defence or military anchors are present"
+      },
+      "L2": {
+        "scope": "Defence",
+        "code": "Defence innovation",
+        "keywords": [
+          "defence innovation",
+          "defense innovation",
+          "military innovation",
+          "defence innovation fund",
+          "defence accelerator",
+          "defense innovation unit"
+        ],
+        "anchors": [
+          "ministry of defence",
+          "armed forces",
+          "defence startup",
+          "defence innovation unit",
+          "military capability"
+        ],
+        "exclude": [
+          "generic procurement or force-modernisation language without R&D/innovation anchors"
+        ],
+        "notes": "Separate from defence R&D if the line is adoption, accelerator, or commercialisation-led"
+      },
+      "L3": {
+        "scope": "Dual-use / review",
+        "code": "Dual-use",
+        "keywords": [
+          "dual-use research",
+          "dual-use innovation",
+          "security research",
+          "homeland security research",
+          "critical technology",
+          "strategic technology"
+        ],
+        "anchors": [
+          "cybersecurity",
+          "space",
+          "drones",
+          "semiconductors",
+          "AI",
+          "quantum",
+          "critical infrastructure",
+          "civil security agencies"
+        ],
+        "exclude": [
+          "routine security operations",
+          "policing",
+          "border operations"
+        ],
+        "notes": "Use review bucket unless the civil or defence beneficiary is explicit"
+      },
+      "L4": {
+        "scope": "Non-defence",
+        "code": "Non-defence R&D",
+        "keywords": [
+          "civilian research",
+          "non-military research",
+          "civil research",
+          "civilian R&D",
+          "non-defence R&D",
+          "public research"
+        ],
+        "anchors": [
+          "science ministry",
+          "university",
+          "health",
+          "agriculture",
+          "climate",
+          "energy",
+          "civil space"
+        ],
+        "exclude": [],
+        "notes": "Default for clearly civilian research lines when no defence anchor exists"
+      },
+      "L5": {
+        "scope": "Non-defence",
+        "code": "Non-defence innovation",
+        "keywords": [
+          "civilian innovation",
+          "industrial innovation",
+          "SME innovation",
+          "technology adoption",
+          "technology diffusion",
+          "innovation voucher"
+        ],
+        "anchors": [
+          "SME",
+          "industry",
+          "university",
+          "enterprise agency",
+          "startup support"
+        ],
+        "exclude": [
+          "military adoption or procurement without civilian anchors"
+        ],
+        "notes": "Default innovation bucket outside defence institutions"
+      },
+      "L6": {
+        "scope": "Exclude",
+        "code": "Not defence R&D / innovation",
+        "keywords": [
+          "weapons procurement",
+          "equipment acquisition",
+          "military operations",
+          "force readiness",
+          "personnel costs",
+          "veterans benefits"
+        ],
+        "anchors": [],
+        "exclude_override": [
+          "research",
+          "prototype",
+          "testbed",
+          "laboratory",
+          "innovation fund"
+        ],
+        "notes": "Do not count ordinary defence spending as defence R&D or innovation"
+      },
+      "L7": {
+        "scope": "Exclude",
+        "code": "Not civilian R&D / innovation",
+        "keywords": [
+          "public administration reform",
+          "digital government operations",
+          "hospital operations",
+          "school facilities",
+          "generic economic development"
+        ],
+        "anchors": [],
+        "exclude_override": [
+          "research",
+          "innovation"
+        ],
+        "notes": "Avoid overcounting operational civilian spending"
+      }
+    }
   }
 }

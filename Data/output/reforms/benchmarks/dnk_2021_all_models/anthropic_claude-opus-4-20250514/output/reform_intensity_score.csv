@@ -1,0 +1,2 @@
+country_code,country_name,survey_year,n_reforms_clean,n_positive,n_negative,net_reforms,weighted_score,weighted_net_score,n_innovation_instruments,n_sectoral_rd,k_k2
+DNK,Denmark,2021,3,3,0,3,2.0,2.0,2,1,2

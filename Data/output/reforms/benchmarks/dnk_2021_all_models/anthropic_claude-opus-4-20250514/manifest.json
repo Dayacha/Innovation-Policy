@@ -1,0 +1,13 @@
+{
+  "provider": "anthropic",
+  "model": "claude-opus-4-20250514",
+  "country": "DNK",
+  "year": 2021,
+  "paths": {
+    "raw_pdfs": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys",
+    "extracted_text": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text",
+    "reforms_json": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/benchmarks/dnk_2021_claude_only/anthropic_claude-opus-4-20250514/reforms_json",
+    "output": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/benchmarks/dnk_2021_claude_only/anthropic_claude-opus-4-20250514/output",
+    "kappa_catalog": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/data/input/surveys/kappa_catalog.json"
+  }
+}

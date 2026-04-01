@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-03-30T22:53:06.260774",
+  "counts": {
+    "raw": 3930,
+    "pass1_keep": 1897,
+    "pass1_borderline": 982,
+    "pass1_drop": 1051,
+    "pass2_rescued": 333,
+    "pass2_excluded": 649,
+    "final_clean": 2230,
+    "retention_pct": 56.7
+  },
+  "subtheme_breakdown": {
+    "human_capital": {
+      "n": 220,
+      "pct": 9.9,
+      "n_positive": 220
+    },
+    "innovation_instruments": {
+      "n": 704,
+      "pct": 31.6,
+      "n_positive": 693
+    },
+    "knowledge_transfer": {
+      "n": 186,
+      "pct": 8.3,
+      "n_positive": 186
+    },
+    "other": {
+      "n": 19,
+      "pct": 0.9,
+      "n_positive": 14
+    },
+    "rd_funding": {
+      "n": 594,
+      "pct": 26.6,
+      "n_positive": 588
+    },
+    "research_infrastructure": {
+      "n": 75,
+      "pct": 3.4,
+      "n_positive": 75
+    },
+    "sectoral_rd": {
+      "n": 118,
+      "pct": 5.3,
+      "n_positive": 118
+    },
+    "startup_ecosystem": {
+      "n": 314,
+      "pct": 14.1,
+      "n_positive": 312
+    }
+  },
+  "activity_lens": {
+    "K2": 515,
+    "None": 461,
+    "K4": 453,
+    "K5": 444,
+    "K6": 143,
+    "K8": 104,
+    "K7": 64,
+    "K1": 28,
+    "K3": 18
+  },
+  "defence_scope": {
+    "None": 2230
+  },
+  "coverage": {
+    "n_countries": 38,
+    "n_country_years": 468
+  },
+  "intensity_summary": {
+    "mean_weighted_score": 3.341,
+    "max_weighted_score": 20.7,
+    "mean_net_reforms": 4.701
+  },
+  "elapsed_seconds": 4219.7
+}

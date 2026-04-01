@@ -2,7 +2,7 @@
 LLM prompt templates for reform extraction, classification, and assessment.
 
 These prompts are carefully designed to extract structured information
-about economic reforms from OECD Economic Survey text.
+about economic reforms from Economic Survey text.
 """
 
 # =============================================================================
@@ -76,9 +76,11 @@ THEMES_SUBTHEMES = {
                 "label": "Research Infrastructure",
                 "description": (
                     "Policies investing in or governing the shared physical "
-                    "and digital infrastructure underpinning research — "
-                    "laboratories, science parks, supercomputers, large-scale "
-                    "equipment, data infrastructure."
+                    "and digital infrastructure directly enabling scientific "
+                    "research — laboratories, science parks, supercomputers, "
+                    "large-scale equipment, research data infrastructure. "
+                    "NOT physical energy, transport, or communications "
+                    "infrastructure, which are deployment projects."
                 ),
                 "cue_keywords": [
                     "research infrastructure", "science park", "technology park",
@@ -312,11 +314,22 @@ def build_innovation_system_prompt(taxonomy_path=None):
 
     return f"""\
 You are an expert political economist specialising in science, technology \
-and innovation (STI) policy in OECD countries. Your task is to extract and \
-classify innovation policy reforms from OECD Economic Survey text.
+and innovation (STI) policy. Your task is to extract and \
+classify innovation policy reforms from text.
 
 You must return your analysis as valid JSON only — no commentary, no markdown \
 fences, no explanation outside the JSON structure.
+
+CRITICAL ACCURACY RULES:
+- Only extract reforms explicitly stated in the text — do not infer, assume, or \
+invent content that is not present.
+- If a field value cannot be determined from the text, use null — never guess.
+- source_quote must be copied verbatim from the input text — do not paraphrase \
+or construct it from memory.
+- If the text contains no relevant reforms, return \
+{{"reforms": [], "chunk_notes": "..."}} — do not force-fit unrelated content.
+- When uncertain about a classification, express that uncertainty via the \
+corresponding confidence field ("low") rather than choosing an overconfident label.
 
 ── SCOPE ───────────────────────────────────────────────────────────────────────
 Extract ONLY reforms that directly relate to innovation policy: R&D funding, \
@@ -326,7 +339,38 @@ ecosystems, human capital for research, or sectoral/mission R&D.
 A reform must represent a significant policy change — not a minor administrative \
 adjustment or a general statement about innovation ambitions.
 
+PRIMARY MECHANISM TEST — apply before extracting any reform:
+Ask: is the PRIMARY mechanism of this reform to fund, incentivise, or govern \
+research, development, or the transfer of knowledge? If the answer is no, do \
+not extract it, even if the reform concerns green technology, digital \
+transformation, or other innovation-adjacent topics.
+
 {taxonomy_guidance}
+
+── COMMON FALSE POSITIVES — DO NOT EXTRACT ─────────────────────────────────────
+The following are frequently confused with innovation reforms but are OUT OF SCOPE:
+
+· Green finance and investment funds — primary mechanism = capital deployment or \
+  risk finance for green transition, not R&D funding. A fund that provides equity \
+  or debt for green infrastructure is a finance instrument, not an innovation \
+  instrument, even if it accelerates the green transition.
+· Physical energy and transport infrastructure — wind farms, energy islands, EV \
+  charging networks, electricity grids, and transport networks are deployment \
+  projects, not research programmes. Do not classify as research_infrastructure.
+· National digitalisation or AI strategies — policies promoting digital adoption \
+  or transformation among firms are NOT in scope unless they specifically fund or \
+  govern R&D or technology transfer. A digitalisation strategy is out of scope; \
+  a programme funding AI research or digital R&D is in scope.
+· OECD survey recommendations not adopted by the government — text phrased as \
+  "should", "could", "it is recommended that", "Denmark should provide", etc. \
+  Do NOT extract these unless the text also explicitly states the government has \
+  adopted or is implementing the recommendation.
+· Macroeconomic or policy-analysis modelling tools — a model used for budget \
+  or policy simulation is not a research programme.
+· Carbon pricing, emissions trading, and environmental regulations — these are \
+  not innovation instruments unless they explicitly fund or govern R&D activity.
+
+────────────────────────────────────────────────────────────────────────────────
 
 ── INNOVATION TYPE (sub_theme) ─────────────────────────────────────────────────
 Classify every reform into exactly ONE of these eight types:
@@ -335,9 +379,11 @@ Classify every reform into exactly ONE of these eight types:
 
 Rules for "other":
 - Use ONLY when the reform is unambiguously innovation-relevant but truly \
-does not fit any of the seven types above.
+does not fit any of the seven specific types above.
 - You must explain why in the description field.
 - If in doubt between two types, choose the more specific one.
+- If you cannot confidently assign one of the seven types, do NOT force the \
+reform into "other" — omit the reform entirely instead.
 
 ── R&D ACTOR (rd_actor) ────────────────────────────────────────────────────────
 Who is the primary target or beneficiary of the reform?
@@ -386,11 +432,23 @@ Classify the expected medium- to long-run effect on GDP per capita:
 
 SYSTEM_PROMPT = """\
 You are an expert political economist specializing in structural economic \
-reforms in OECD countries. Your task is to extract and classify economic \
-reforms discussed in OECD Economic Surveys.
+reforms. Your task is to extract and classify economic \
+reforms discussed in Economic Surveys.
 
 You must return your analysis as valid JSON only — no commentary, no markdown \
 fences, no explanation outside the JSON structure.
+
+CRITICAL ACCURACY RULES:
+- Only extract reforms explicitly stated in the text — do not infer, assume, or \
+invent content that is not present.
+- If a field value cannot be determined from the text, use null — never guess.
+- source_quote must be copied verbatim from the input text — do not paraphrase \
+or construct it from memory.
+- If the text contains no relevant reforms, return \
+{{"reforms": [], "chunk_notes": "..."}} — do not force-fit unrelated content.
+- When uncertain about a classification (sub_theme, status, years), express that \
+uncertainty via the corresponding confidence field ("low") and alternative_theme, \
+rather than choosing an overconfident label.
 
 Key definitions:
 - A "reform" is a significant policy change that alters the regulatory, \
@@ -407,7 +465,9 @@ The cue keywords are illustrative, not exhaustive.
 THEME CLASSIFICATION GUIDANCE:
 - "theme": Always provide the single best-fitting primary theme.
 - "sub_theme": Always provide the single best-fitting sub-theme \
-within the chosen theme. Avoid "other".
+within the chosen theme. Avoid "other"; if you cannot confidently \
+assign one of the named sub-themes, omit the reform entirely rather \
+than forcing it into "other".
 - "secondary_type": Use this when the reform GENUINELY AND \
 SUBSTANTIALLY spans a second innovation sub-type (e.g., a sectoral \
 health R&D fund that also builds a new lab). Leave null otherwise.
@@ -415,6 +475,33 @@ health R&D fund that also builds a new lab). Leave null otherwise.
 primary sub_theme assignment — provide the most plausible alternative \
 here. Leave null if you are confident. \
 Do NOT set both secondary_type and alternative_theme.
+
+PRIMARY MECHANISM TEST — apply before extracting any reform:
+Ask: is the PRIMARY mechanism of this reform to fund, incentivise, or \
+govern research, development, or the transfer of knowledge? If no, do \
+not extract it, even if the reform concerns green or digital technology.
+
+COMMON FALSE POSITIVES — DO NOT EXTRACT:
+· Green finance / investment funds — capital deployment for green \
+transition is a finance instrument, not an innovation instrument.
+· Physical energy, transport, or communications infrastructure — \
+wind farms, EV charging networks, grids, and cables are deployment \
+projects. Do NOT classify as research_infrastructure.
+· National digitalisation or AI strategies — in scope only if they \
+specifically fund or govern R&D or technology transfer. A general \
+digitalisation strategy is out of scope.
+· OECD recommendations not adopted by the government — text reading \
+"should", "could", "it is recommended that" is NOT an enacted reform. \
+Do not extract unless the text also states the government has adopted \
+or is implementing the recommendation.
+· Macroeconomic / policy-analysis modelling tools — not R&D programmes.
+· Carbon pricing, emissions trading, environmental regulations — not \
+innovation instruments unless they explicitly fund R&D activity.
+
+For research_infrastructure: only classify as such if the infrastructure \
+directly enables scientific research (labs, supercomputers, HPC, science \
+parks, research data centres). Physical energy or transport infrastructure \
+is NOT research infrastructure.
 
 PACKAGE vs COMPONENT distinction:
 - A "reform package" is a major legislative or policy initiative that may \
@@ -428,7 +515,7 @@ the same package.
 package_name as the reform's own canonical name.
 
 For GROWTH ORIENTATION — classify each reform according to its expected \
-medium- to long-run effect on GDP per capita, in the spirit of OECD \
+medium- to long-run effect on GDP per capita, in the spirit of \
 structural policy analysis (Going for Growth / Foundations for Growth).
 
 Important framing rules:
@@ -522,9 +609,14 @@ minister, president, minister, ministry, European Commission, independent \
 regulatory authority) has announced, publicly introduced, proposed, unveiled \
 or communicated the reform, but it has not been formally legislated yet. \
 Evidence: "the government announced", "plans to", "intends to introduce", \
-"proposed". Also use this for reforms the OECD recommends that the government \
-has signalled intent to pursue. If the OECD is merely recommending without \
-any government signal, skip the reform entirely — do not extract it.
+"proposed". Use this when the government itself has signalled intent to \
+pursue the reform. \
+IMPORTANT: If the text only contains an OECD recommendation (phrased as \
+"should", "could", "it is recommended that", "Denmark should provide", \
+"the government could consider") and there is no accompanying statement \
+that the government has adopted or is implementing the recommendation, \
+do NOT extract the reform. OECD advice that has not been acted on is \
+out of scope.
 
 For TEMPORAL assignment:
 - "announcement_year": When the government or public authority announced, \
@@ -637,7 +729,7 @@ text is vague or insufficiently specific.
 # =============================================================================
 
 EXTRACTION_PROMPT = """\
-Analyze the following text from an OECD Economic Survey for {country} \
+Analyze the following text from an Economic Survey for {country} \
 (published in {survey_year}).
 
 Extract ONLY reforms that belong to the following themes: {theme_keys}. \
@@ -764,7 +856,7 @@ TEXT:
 # =============================================================================
 
 DEDUP_PROMPT = """\
-Below are reform descriptions extracted from different parts of the same OECD \
+Below are reform descriptions extracted from different parts of the same \
 Economic Survey for {country} ({survey_year}). They relate to the theme(s) \
 "{theme}".
 
@@ -851,7 +943,7 @@ the same package_name but distinct component_names and set is_component=true.
 
 CROSS_SURVEY_DEDUP_PROMPT = """\
 Below are reform descriptions for {country} that share the theme "{theme}" \
-and have overlapping implementation years. They come from DIFFERENT OECD \
+and have overlapping implementation years. They come from DIFFERENT \
 Economic Surveys (survey years shown in brackets).
 
 Some of these may describe the SAME real-world reform event observed from \
@@ -901,4 +993,3 @@ Rules:
 the actual implementation year.
 - The canonical description should be 1-3 sentences.
 """
-

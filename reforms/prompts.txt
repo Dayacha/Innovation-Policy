@@ -1,0 +1,904 @@
+"""
+LLM prompt templates for reform extraction, classification, and assessment.
+
+These prompts are carefully designed to extract structured information
+about economic reforms from Economic Survey text.
+"""
+
+# =============================================================================
+# THEMES AND SUBTHEMES: Innovation policy taxonomy
+# This project extracts only the "innovation" theme (8 sub-types).
+# The theme/subtheme structure is kept generic so additional themes
+# could be added later without changing the extraction logic.
+#
+# Structure:
+#   THEMES_SUBTHEMES[theme_key] = {
+#       "label":       human-readable theme name,
+#       "description": scope of the theme,
+#       "subthemes": {
+#           subtheme_key: {
+#               "label":        human-readable subtheme name,
+#               "description":  scope of the subtheme,
+#               "cue_keywords": list of indicative keywords,
+#           },
+#           ...
+#           "other": {...},   # always present as fallback
+#       }
+#   }
+# =============================================================================
+
+THEMES_SUBTHEMES = {
+    "innovation": {
+        "label": "Innovation Policy",
+        "description": (
+            "Policies fostering R&D, innovation and commercialisation — "
+            "covering the full pipeline from basic research to market adoption."
+        ),
+        "subthemes": {
+            # ── 1. Public R&D funding ─────────────────────────────────────
+            "rd_funding": {
+                "label": "Public R&D Funding",
+                "description": (
+                    "Policies that set the level, allocation, or instruments "
+                    "of public funding for research and development — budgets "
+                    "for research councils, competitive grants, institutional "
+                    "block funding for universities and PROs."
+                ),
+                "cue_keywords": [
+                    "research fund", "research grant", "public R&D",
+                    "research programme", "research appropriation",
+                    "basic research funding", "applied research funding",
+                    "publicly funded research", "research expenditure",
+                    "R&D spending", "science budget",
+                ],
+            },
+            # ── 2. Innovation instruments ─────────────────────────────────
+            "innovation_instruments": {
+                "label": "Innovation Instruments & Governance",
+                "description": (
+                    "Policies designing, reforming or evaluating instruments "
+                    "that support innovation — R&D tax credits, direct grants "
+                    "to firms, innovation vouchers, innovation agencies, "
+                    "evaluation frameworks, and governance of the innovation "
+                    "support system."
+                ),
+                "cue_keywords": [
+                    "R&D tax credit", "innovation fund", "innovation agency",
+                    "innovation voucher", "direct support for innovation",
+                    "indirect support for innovation", "seed funding",
+                    "innovation scheme", "innovation programme",
+                    "innovation governance", "evaluation of innovation support",
+                    "targeting of R&D subsidies",
+                ],
+            },
+            # ── 3. Research infrastructure ────────────────────────────────
+            "research_infrastructure": {
+                "label": "Research Infrastructure",
+                "description": (
+                    "Policies investing in or governing the shared physical "
+                    "and digital infrastructure underpinning research — "
+                    "laboratories, science parks, supercomputers, large-scale "
+                    "equipment, data infrastructure."
+                ),
+                "cue_keywords": [
+                    "research infrastructure", "science park", "technology park",
+                    "national laboratory", "research laboratory",
+                    "supercomputing", "high-performance computing", "HPC",
+                    "research equipment", "scientific instrumentation",
+                    "data infrastructure", "research data centre",
+                    "innovation hub", "technology hub",
+                ],
+            },
+            # ── 4. Knowledge transfer & commercialisation ─────────────────
+            "knowledge_transfer": {
+                "label": "Knowledge Transfer & Commercialisation",
+                "description": (
+                    "Policies facilitating the transfer of knowledge and "
+                    "technology from research to the market — TTOs, spinoffs, "
+                    "intellectual property regimes, licensing, proof-of-concept "
+                    "funds, university-industry collaboration."
+                ),
+                "cue_keywords": [
+                    "technology transfer", "knowledge transfer",
+                    "spinoff", "spin-off", "patent", "intellectual property",
+                    "licensing", "university-industry cooperation",
+                    "collaborative research", "proof of concept",
+                    "research commercialisation", "TTO",
+                    "joint R&D programme", "public-private research",
+                ],
+            },
+            # ── 5. Startup & venture ecosystem ────────────────────────────
+            "startup_ecosystem": {
+                "label": "Startup & Venture Ecosystem",
+                "description": (
+                    "Policies supporting the creation and growth of innovative "
+                    "firms — incubators, accelerators, venture capital, "
+                    "startup grants, scale-up support, innovation clusters."
+                ),
+                "cue_keywords": [
+                    "startup support", "start-up support", "incubator",
+                    "accelerator", "venture capital", "scale-up support",
+                    "innovation cluster", "innovation ecosystem",
+                    "innovation network", "deep tech",
+                    "pre-commercial procurement", "business incubator",
+                ],
+            },
+            # ── 6. Human capital for innovation ───────────────────────────
+            "human_capital": {
+                "label": "Human Capital for Innovation",
+                "description": (
+                    "Policies building the supply of skilled researchers and "
+                    "innovators — doctoral programmes, postdoctoral fellowships, "
+                    "researcher mobility schemes, excellence scholarships, "
+                    "STEM talent pipelines for R&D."
+                ),
+                "cue_keywords": [
+                    "research fellowship", "doctoral programme",
+                    "postdoctoral programme", "doctoral training",
+                    "researcher mobility", "excellence initiative",
+                    "scholarships for research", "scientific excellence",
+                    "research career", "attract researchers",
+                ],
+            },
+            # ── 7. Sectoral R&D ───────────────────────────────────────────
+            "sectoral_rd": {
+                "label": "Sectoral / Mission R&D",
+                "description": (
+                    "Policies directing R&D towards specific sectors or "
+                    "societal missions — health, energy, climate, agriculture, "
+                    "defence, digital/AI, space."
+                ),
+                "cue_keywords": [
+                    "medical research", "biomedical research", "health research",
+                    "energy research", "clean energy research",
+                    "climate research", "agricultural research",
+                    "AI research", "artificial intelligence research",
+                    "quantum research", "defence research", "space research",
+                    "digital research", "semiconductor research",
+                    "mission-oriented research",
+                ],
+            },
+            # ── 8. Other (strict — requires justification) ────────────────
+            "other": {
+                "label": "Other Innovation Policy",
+                "description": (
+                    "Use ONLY when the reform is clearly an innovation policy "
+                    "but genuinely does not fit any of the seven types above. "
+                    "You must provide a reason in the description."
+                ),
+                "cue_keywords": [],
+            },
+        },
+    },
+}
+
+# Flat sets for validation
+VALID_THEMES = set(THEMES_SUBTHEMES.keys()) | {"other"}
+VALID_SUBTHEMES = {
+    st
+    for info in THEMES_SUBTHEMES.values()
+    for st in info["subthemes"]   # dict → iterates over keys
+}
+THEME_LIST = sorted(THEMES_SUBTHEMES.keys())
+
+# =============================================================================
+# INNOVATION-SPECIFIC DIMENSIONS
+# Two extra analytical axes extracted for every innovation reform.
+# =============================================================================
+
+# Who is the primary target / actor of the reform?
+RD_ACTORS = {
+    "public":         "Public sector — research councils, universities, PROs, national labs.",
+    "private":        "Private sector — firms receiving R&D tax credits, direct grants, vouchers.",
+    "public_private": "Both sectors jointly — collaborative programmes, matched funding, PPPs.",
+    "unknown":        "Cannot be determined from the text.",
+}
+
+# Where in the research-to-market pipeline does the reform intervene?
+RD_STAGES = {
+    "basic":             "Basic / fundamental research — knowledge creation without specific application.",
+    "applied":           "Applied / experimental research — research aimed at practical problems.",
+    "commercialization": "Commercialisation — spinoffs, licensing, TTOs, proof-of-concept, IP.",
+    "adoption":          "Diffusion & adoption — technology upgrading, demonstration, cluster support.",
+    "unknown":           "Cannot be determined from the text.",
+}
+
+
+def build_innovation_guidance(taxonomy_path=None):
+    """Return a concise include/exclude keyword block built from search_library.json.
+
+    Used to enrich the LLM system prompt so its understanding of 'innovation'
+    matches the project's taxonomy exactly.
+    """
+    import json, pathlib
+
+    if taxonomy_path is None:
+        here = pathlib.Path(__file__).resolve().parent.parent
+        taxonomy_path = here / "Data" / "input" / "taxonomy" / "search_library.json"
+
+    try:
+        with open(taxonomy_path) as f:
+            lib = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return ""   # graceful degradation — guidance is optional
+
+    # Representative keywords per category (top 12 most distinctive each)
+    core_rd   = lib["auto_include"]["keywords"][:20]
+    inst      = lib["institutions"]["keywords"][:12]
+    sectoral  = lib["sectoral_rd"]["keywords"][:12]
+    budget    = lib["budget_terms"]["keywords"][:10]
+    exclusions = lib["exclusions"]["keywords"][:20]
+
+    # Ambiguous terms with their required anchors
+    ambig_lines = []
+    for term, rules in lib["ambiguous"]["terms"].items() if isinstance(lib["ambiguous"]["terms"], dict) else []:
+        anchors = ", ".join(rules.get("require_anchor", [])[:4])
+        ambig_lines.append(f'  · "{term}" — only if near: {anchors}')
+
+    lines = [
+        "── INNOVATION TAXONOMY (from project search library) ──────────────────",
+        "",
+        "INCLUDE: a reform is innovation-relevant if the text contains at least one of:",
+        f"  Core R&D: {', '.join(core_rd[:15])}",
+        f"  Institutions: {', '.join(inst[:10])}",
+        f"  Sectoral R&D: {', '.join(sectoral[:10])}",
+        f"  Budget instruments (combined with above): {', '.join(budget[:8])}",
+        "",
+        "AMBIGUOUS — include only if a required anchor is nearby:",
+    ] + ambig_lines + [
+        "",
+        "EXCLUDE — these are false positives, do not classify as innovation:",
+        f"  {', '.join(exclusions)}",
+        "",
+        "────────────────────────────────────────────────────────────────────────",
+    ]
+    return "\n".join(lines)
+
+
+def _build_theme_block():
+    """Build the theme/subtheme definition block for prompts.
+
+    For each theme we emit the theme key, label and description, then for
+    every sub-theme the key, short description and cue keywords.  This
+    richer format helps the LLM distinguish adjacent themes and pick the
+    right sub-theme.
+    """
+    lines = []
+    for theme_key, info in THEMES_SUBTHEMES.items():
+        lines.append(
+            f'- "{theme_key}" ({info["label"]}): {info["description"]}'
+        )
+        lines.append("  Sub-themes:")
+        for st_key, st_info in info["subthemes"].items():
+            kw = ", ".join(st_info["cue_keywords"]) if st_info["cue_keywords"] else "—"
+            lines.append(
+                f'    · "{st_key}" — {st_info["description"]}'
+                f'\n      Keywords: {kw}'
+            )
+        lines.append("")   # blank line between themes
+    return "\n".join(lines)
+
+
+THEME_DEFINITIONS_BLOCK = _build_theme_block()
+
+
+def build_innovation_system_prompt(taxonomy_path=None):
+    """Build the specialised system prompt for innovation-only extraction.
+
+    Loads the project taxonomy from search_library.json and embeds the
+    include/exclude rules directly into the system prompt so the LLM
+    applies the same criteria as the budget pipeline (Stream 1).
+    """
+    # Build the innovation subtheme block (only the innovation theme)
+    innovation_info = THEMES_SUBTHEMES["innovation"]
+    st_lines = []
+    for st_key, st_info in innovation_info["subthemes"].items():
+        kw = ", ".join(st_info["cue_keywords"]) if st_info["cue_keywords"] else "—"
+        st_lines.append(
+            f'  · "{st_key}" ({st_info["label"]})\n'
+            f'    {st_info["description"]}\n'
+            f'    Keywords: {kw}'
+        )
+    subtheme_block = "\n\n".join(st_lines)
+
+    rd_actor_block = "\n".join(
+        f'  · "{k}": {v}' for k, v in RD_ACTORS.items()
+    )
+    rd_stage_block = "\n".join(
+        f'  · "{k}": {v}' for k, v in RD_STAGES.items()
+    )
+
+    taxonomy_guidance = build_innovation_guidance(taxonomy_path)
+
+    return f"""\
+You are an expert political economist specialising in science, technology \
+and innovation (STI) policy. Your task is to extract and \
+classify innovation policy reforms from text.
+
+You must return your analysis as valid JSON only — no commentary, no markdown \
+fences, no explanation outside the JSON structure.
+
+── SCOPE ───────────────────────────────────────────────────────────────────────
+Extract ONLY reforms that directly relate to innovation policy: R&D funding, \
+innovation instruments, research infrastructure, knowledge transfer, startup \
+ecosystems, human capital for research, or sectoral/mission R&D.
+
+A reform must represent a significant policy change — not a minor administrative \
+adjustment or a general statement about innovation ambitions.
+
+{taxonomy_guidance}
+
+── INNOVATION TYPE (sub_theme) ─────────────────────────────────────────────────
+Classify every reform into exactly ONE of these eight types:
+
+{subtheme_block}
+
+Rules for "other":
+- Use ONLY when the reform is unambiguously innovation-relevant but truly \
+does not fit any of the seven types above.
+- You must explain why in the description field.
+- If in doubt between two types, choose the more specific one.
+
+── R&D ACTOR (rd_actor) ────────────────────────────────────────────────────────
+Who is the primary target or beneficiary of the reform?
+
+{rd_actor_block}
+
+── R&D STAGE (rd_stage) ────────────────────────────────────────────────────────
+Where in the research-to-market pipeline does this reform intervene?
+
+{rd_stage_block}
+
+── SECONDARY TYPE (secondary_type) ─────────────────────────────────────────────
+If a reform GENUINELY AND SUBSTANTIALLY spans a second innovation type, provide \
+it in secondary_type (use the same eight values as sub_theme). Set to null if \
+the reform clearly belongs to one type. Examples:
+- A sectoral health R&D fund that also builds a new lab → \
+sub_theme="sectoral_rd", secondary_type="research_infrastructure"
+- A doctoral fellowship programme tied to an industry collaboration scheme → \
+sub_theme="human_capital", secondary_type="knowledge_transfer"
+
+── GROWTH ORIENTATION ───────────────────────────────────────────────────────────
+Classify the expected medium- to long-run effect on GDP per capita:
+- "growth_supporting": raises productivity, innovation, human capital, or \
+  allocative efficiency
+- "growth_hindering": reduces incentives or creates distortions
+- "mixed": meaningful trade-offs in both directions
+- "unclear_or_neutral": genuinely ambiguous or minor
+
+── STATUS ───────────────────────────────────────────────────────────────────────
+- "implemented": the reform is in force
+- "legislated": passed into law but not yet implemented
+- "announced": officially announced but not yet legislated
+
+── IMPORTANCE ───────────────────────────────────────────────────────────────────
+- is_major_reform=true / importance_bucket=3: structural, system-wide change \
+  (e.g., creation of a national research agency, major overhaul of R&D tax credits)
+- importance_bucket=2: significant but narrower (e.g., new sectoral fund, \
+  extension of an existing scheme)
+- importance_bucket=1: minor or incremental adjustment
+"""
+
+
+# =============================================================================
+# SYSTEM PROMPT: Sets the LLM's role and output expectations
+# =============================================================================
+
+SYSTEM_PROMPT = """\
+You are an expert political economist specializing in structural economic \
+reforms. Your task is to extract and classify economic \
+reforms discussed in Economic Surveys.
+
+You must return your analysis as valid JSON only — no commentary, no markdown \
+fences, no explanation outside the JSON structure.
+
+Key definitions:
+- A "reform" is a significant policy change that alters the regulatory, \
+institutional, or fiscal framework of the economy. Minor administrative \
+adjustments do not count.
+
+THEMES AND SUBTHEMES:
+Each reform must be classified into the theme(s) listed below, \
+and assigned one of the listed sub_themes (use "other" only as a last resort). \
+The cue keywords are illustrative, not exhaustive.
+
+""" + THEME_DEFINITIONS_BLOCK + """
+
+THEME CLASSIFICATION GUIDANCE:
+- "theme": Always provide the single best-fitting primary theme.
+- "sub_theme": Always provide the single best-fitting sub-theme \
+within the chosen theme. Avoid "other".
+- "secondary_type": Use this when the reform GENUINELY AND \
+SUBSTANTIALLY spans a second innovation sub-type (e.g., a sectoral \
+health R&D fund that also builds a new lab). Leave null otherwise.
+- "alternative_theme": Use this when you are UNCERTAIN about the \
+primary sub_theme assignment — provide the most plausible alternative \
+here. Leave null if you are confident. \
+Do NOT set both secondary_type and alternative_theme.
+
+PACKAGE vs COMPONENT distinction:
+- A "reform package" is a major legislative or policy initiative that may \
+contain multiple components (e.g., "2023 Pension Reform" is a package; \
+"raise statutory retirement age from 62 to 64" and "abolish special \
+retirement regimes" are components of that package).
+- When a reform is part of a broader package, set is_component=true and \
+provide a package_name that would be shared across all components of \
+the same package.
+- When a reform stands alone, set is_component=false and leave \
+package_name as the reform's own canonical name.
+
+For GROWTH ORIENTATION — classify each reform according to its expected \
+medium- to long-run effect on GDP per capita, in the spirit of \
+structural policy analysis (Going for Growth / Foundations for Growth).
+
+Important framing rules:
+- This is a classification of the reform's expected structural orientation, \
+not a claim about its realised causal effect in practice.
+- Base the label on the reform description and quoted evidence provided.
+- Focus on likely effects through productivity, employment and \
+labour-force participation, capital deepening, innovation, allocative \
+efficiency, competition, skill formation, resilience, and the reduction of \
+persistent distortions or bottlenecks.
+- If the description is too vague or the growth implications are genuinely \
+ambiguous, use "unclear_or_neutral".
+- Do not infer a strong growth orientation unless the description supports it.
+- Minor reforms with a clear growth direction should not be classified as \
+"unclear_or_neutral" just because they are minor.
+
+Allowed values for "growth_orientation":
+- "growth_supporting": The reform is expected to raise medium- to long-run \
+GDP per capita by improving productivity, labour utilisation, investment \
+incentives, innovation, competition, resource allocation, human capital, or \
+the efficiency/resilience of key economic systems.
+- "growth_hindering": The reform is expected to reduce medium- to long-run \
+GDP per capita by increasing distortions, weakening competition, reducing \
+investment or innovation incentives, lowering labour mobility/participation, \
+worsening resource allocation, or creating persistent inefficiencies/barriers.
+- "mixed": The reform contains both growth-supporting and growth-hindering \
+elements, or involves material trade-offs such that no single direction \
+clearly dominates from the description alone.
+- "unclear_or_neutral": The reform is mainly administrative, institutional, \
+distributive, or social in nature with no clear growth direction from the \
+description, or the text does not provide enough information to classify \
+it confidently.
+
+Decision rules:
+1. Classify based on the expected structural effect on growth, not on \
+political desirability or social equity.
+2. Use the reform's likely medium- to long-run economic mechanism, \
+not short-run demand effects.
+3. If a reform has clear trade-offs and neither side clearly dominates, \
+choose "mixed".
+4. If the reform is primarily about redistribution, governance, coverage, \
+fairness, or institutional organisation and the growth channel is weak or \
+unclear in the text, choose "unclear_or_neutral".
+5. If the reform is a package, classify the package as a whole; if the \
+mention is only one component, classify that component.
+6. Be conservative: when uncertain, prefer "unclear_or_neutral" over an \
+overconfident directional label.
+
+Theme-specific guidance for innovation reforms:
+- innovation / rd_funding: growth_supporting if it increases the quantity \
+or quality of public R&D funding, improves allocation efficiency, or \
+strengthens research councils and universities; growth_hindering if it cuts \
+funding without strategic rationale or distorts allocation.
+- innovation / innovation_instruments: growth_supporting if it introduces \
+or improves R&D tax credits, direct grants, or innovation governance in \
+ways that raise private R&D incentives; growth_hindering if it creates \
+poorly targeted subsidies or bureaucratic duplication.
+- innovation / research_infrastructure: growth_supporting if it expands \
+shared labs, science parks, or data infrastructure that raise research \
+productivity; "unclear_or_neutral" if it is mainly administrative.
+- innovation / knowledge_transfer: growth_supporting if it reduces \
+university-industry friction, strengthens TTOs, or improves IP regimes; \
+growth_hindering if it creates IP barriers or weakens open science.
+- innovation / startup_ecosystem: growth_supporting if it lowers entry \
+costs for innovative firms or expands early-stage financing; growth_hindering \
+if it creates poorly targeted support or displaces private capital.
+- innovation / human_capital: growth_supporting if it expands the supply \
+of researchers or improves mobility and career incentives; growth_hindering \
+if it reduces research career attractiveness or worsens brain drain.
+- innovation / sectoral_rd: growth_supporting if it directs R&D toward \
+areas of high social return (health, climate, digital); "mixed" if it \
+crowds out basic research or introduces mission-specific distortions.
+- innovation / other: apply the general growth_supporting / growth_hindering \
+logic described above, noting the specific innovation channel in the rationale.
+
+For STATUS classification:
+- "implemented": The reform has begun to be implemented, applied, enforced, \
+rolled out, or put into effect/force by the responsible administrative body \
+(e.g., Ministry, implementing agency, regulator, tax authority, employment \
+service, or sector-specific body). Evidence: past-tense language about the \
+reform being in effect ("came into force", "was implemented", "has been \
+operational since", "began to be applied").
+- "legislated": The reform has been formally enacted, passed, approved, \
+ratified, promulgated, adopted or codified into law, via legislative or \
+executive legal procedure (e.g., parliament/congress vote, decree/executive \
+order, presidential signature/royal assent), but has not yet taken effect. \
+Evidence: "was passed by parliament", "signed into law", "adopted by decree", \
+but without indication it is yet in force.
+- "announced": The government or relevant public authority (e.g., prime \
+minister, president, minister, ministry, European Commission, independent \
+regulatory authority) has announced, publicly introduced, proposed, unveiled \
+or communicated the reform, but it has not been formally legislated yet. \
+Evidence: "the government announced", "plans to", "intends to introduce", \
+"proposed". Also use this for reforms the recommends that the government \
+has signalled intent to pursue. If the OECD is merely recommending without \
+any government signal, skip the reform entirely — do not extract it.
+
+For TEMPORAL assignment:
+- "announcement_year": When the government or public authority announced, \
+publicly introduced or communicated, proposed, unveiled or announced the reform.
+- "legislation_year": When the policy was formally enacted, passed, approved, \
+ratified, promulgated, adopted or codified into law, via legislative or \
+executive legal procedure.
+- "implementation_year": When the policy began to be implemented, applied, \
+enforced, rolled out and put into effect or force.
+- If any year cannot be reliably identified in the text, use null for that field.
+- CRITICAL: For each year field that is non-null, also provide a source and \
+a confidence level:
+  - source — one of:
+    - "explicit": the text states a specific year (e.g., "enacted in 2019")
+    - "inferred": you inferred the year from context (e.g., "the recent reform" \
+in a 2019 survey → inferred as 2019)
+    - "imputed_survey_year": no temporal information available, you defaulted \
+to the survey publication year
+  - confidence — one of: "high", "medium", or "low"
+- If a year field is null, its source and confidence must also be null.
+
+For REFORM IMPORTANCE, the canonical measure is the binary flag \
+"is_major_reform". Focus your assessment on this field first.
+
+Core principle: assess the importance of the UNDERLYING REFORM PACKAGE or \
+POLICY CHANGE described in the text, not merely the narrow wording of the \
+extracted mention. Focus on the reform's likely structural significance for \
+the economy, not on its political salience or media attention.
+
+Important framing rules:
+- This is a classification of expected structural importance, not a claim \
+about realised causal impact.
+- Judge importance using the reform description and supporting quote.
+- Consider the likely breadth, depth, and persistence of the reform.
+- Be conservative: only classify a reform as major when the text clearly \
+supports that conclusion.
+- If the mention is only a small sub-component of a broader package, score \
+the component actually described, unless the text clearly indicates the \
+broader package.
+- Do not inflate scores simply because a reform is recent, controversial, \
+or politically visible.
+
+Decision dimensions (consider jointly):
+1. Breadth: does the reform affect a large share of the economy, workforce, \
+firms, households, or public finances?
+2. Depth: does it fundamentally change rules, incentives, entitlements, \
+market structure, or institutional arrangements — rather than tweaking \
+parameters?
+3. Persistence: are the effects likely to be durable rather than temporary \
+or administrative?
+4. Economic relevance: is the reform likely to matter for productivity, \
+employment, participation, investment, competition, innovation, skills, \
+housing supply/mobility, or the efficiency of public policy?
+5. Scope within policy area: is it a landmark reform in its policy domain, \
+or a narrower adjustment?
+
+Canonical field — binary flag (decide this first):
+- "is_major_reform": true or false
+- Use true only if the reform is clearly a major structural reform, i.e. at \
+least one of: it fundamentally reshapes a major policy area; it affects a \
+broad segment of the economy or population; it is a landmark package or \
+comprehensive overhaul; it is among the most economically consequential \
+reforms discussed in the survey.
+- Major reforms should be relatively rare. When in doubt, return false.
+
+Examples of major reforms (is_major_reform = true):
+- major pension system overhaul
+- comprehensive tax reform
+- broad labour-market reform affecting hiring, firing, benefits, or \
+participation incentives
+- major product-market liberalisation or competition reform
+- major housing or planning reform affecting supply at scale
+- major education reform reshaping curriculum, governance, funding, or \
+vocational pathways nationwide
+
+Examples of non-major reforms (is_major_reform = false):
+- minor adjustment to an existing subsidy
+- technical change in an administrative procedure
+- small threshold or fee revision
+- narrow pilot programme
+- modest extension of an existing scheme
+
+Supporting field — optional finer granularity:
+- "importance_bucket": 1, 2, or 3
+- Derive this from is_major_reform: if is_major_reform = true, set \
+importance_bucket = 3. If is_major_reform = false, choose 1 or 2:
+  - 2 (Moderate): meaningful reform with notable but limited scope — changes \
+policy in a non-trivial way but is not a landmark or economy-wide reform.
+  - 1 (Minor): incremental adjustment, technical amendment, narrow pilot, \
+limited parameter change, or reform with small or unclear structural \
+significance.
+
+AUDITABILITY — for each reform, you must provide:
+- "status_evidence": A brief quote or paraphrase from the text that \
+justifies your choice of status (implemented/legislated/announced/recommended).
+- "status_confidence": "high", "medium", or "low" — how confident you are \
+in the status classification.
+- "growth_orientation_rationale": 1-2 sentences explaining the main \
+economic mechanism behind the growth_orientation label.
+- "growth_orientation_confidence": "high", "medium", or "low".
+- "importance_rationale": 1-3 sentences explaining the rating, grounded in \
+breadth, depth, persistence, and likely economic relevance.
+- "importance_confidence": "high" if the text clearly indicates the reform's \
+scale and significance; "medium" if some ambiguity remains; "low" if the \
+text is vague or insufficiently specific.
+"""
+
+# =============================================================================
+# REFORM EXTRACTION PROMPT: Extracts reforms from a text chunk
+# =============================================================================
+
+EXTRACTION_PROMPT = """\
+Analyze the following text from an Economic Survey for {country} \
+(published in {survey_year}).
+
+Extract ONLY reforms that belong to the following themes: {theme_keys}. \
+Completely ignore and skip any reforms that do not relate to these themes. \
+Do not mention, list, or classify reforms outside these themes.
+
+For each relevant reform, provide:
+
+1. "description": A concise but informative description (1-3 sentences)
+2. "theme": One of: {theme_keys}
+3. "sub_theme": One of the valid sub_themes for the chosen theme (see \
+instructions). Avoid "other" — choose the most specific type that fits. \
+Use "other" only as a last resort and explain why in the description.
+4. "secondary_type": If this reform GENUINELY AND SUBSTANTIALLY spans a \
+second innovation type, provide it here (same values as sub_theme); \
+otherwise null. Use for clearly cross-cutting reforms only. \
+(e.g., a sectoral health R&D fund that also builds a lab: \
+sub_theme="sectoral_rd", secondary_type="research_infrastructure")
+5. "alternative_theme": If you are UNCERTAIN which sub_theme is the primary \
+one, provide the most plausible alternative here; otherwise null. \
+Do NOT set both secondary_type and alternative_theme.
+6. "rd_actor": Who is the primary target of the reform. One of: \
+"public", "private", "public_private", "unknown". \
+(public = research councils/universities/PROs; \
+private = firms receiving tax credits/grants; \
+public_private = collaborative/matched programmes)
+7. "rd_stage": Where in the R&D pipeline. One of: \
+"basic", "applied", "commercialization", "adoption", "unknown". \
+(basic = fundamental research; applied = problem-oriented research; \
+commercialization = spinoffs/patents/TTOs/licensing; \
+adoption = diffusion/demonstration/tech upgrading)
+8. "package_name": A short canonical name for the reform package this belongs \
+to (e.g., "2024 Research Excellence Initiative"). Use a consistent name \
+that would be the same for all components of the same package.
+9. "component_name": If this is a component of a larger package, give a short \
+name for this specific component. Use null if standalone.
+10. "is_component": true if part of a broader reform package, false if standalone.
+11. "growth_orientation": One of: "growth_supporting", "growth_hindering", \
+"mixed", "unclear_or_neutral".
+12. "growth_orientation_rationale": 1-2 sentences on the economic mechanism.
+13. "growth_orientation_confidence": "high", "medium", or "low".
+14. "implementation_year": Year the reform took effect. Null if unclear.
+15. "announcement_year": Year publicly announced, if distinct. Null otherwise.
+16. "announcement_year_source": "explicit", "inferred", or "imputed_survey_year". \
+Null if announcement_year is null.
+17. "announcement_year_confidence": "high", "medium", or "low". \
+Null if announcement_year is null.
+18. "legislation_year": Year passed into law, if distinct. Null otherwise.
+19. "legislation_year_source": "explicit", "inferred", or "imputed_survey_year". \
+Null if legislation_year is null.
+20. "legislation_year_confidence": "high", "medium", or "low". \
+Null if legislation_year is null.
+21. "implementation_year_source": "explicit", "inferred", or "imputed_survey_year". \
+Null if implementation_year is null.
+22. "implementation_year_confidence": "high", "medium", or "low". \
+Null if implementation_year is null.
+23. "status": One of: "implemented", "legislated", "announced".
+24. "status_evidence": Brief quote or paraphrase justifying the status.
+25. "status_confidence": "high", "medium", or "low".
+26. "is_major_reform": true or false (decide this first).
+27. "importance_bucket": 1, 2, or 3 — must be 3 if is_major_reform=true; \
+1 or 2 if false.
+28. "importance_rationale": 1-3 sentences on breadth, depth, persistence, \
+and economic relevance.
+29. "importance_confidence": "high", "medium", or "low".
+30. "source_quote": Short verbatim quote from the text (max 100 words).
+
+Return a JSON object with this structure. Every value must be valid JSON — \
+no type annotations, alternatives, or prose inside the object. The example \
+below shows one innovation reform; include as many as the text contains.
+
+{{
+  "reforms": [
+    {{
+      "description": "Denmark expanded its Industrial PhD programme, \
+co-funding doctoral research conducted in collaboration between \
+universities and private firms.",
+      "theme": "innovation",
+      "sub_theme": "human_capital",
+      "secondary_type": "knowledge_transfer",
+      "alternative_theme": null,
+      "rd_actor": "public_private",
+      "rd_stage": "applied",
+      "package_name": "2024 Research and Innovation Strategy",
+      "component_name": "Industrial PhD expansion",
+      "is_component": true,
+      "growth_orientation": "growth_supporting",
+      "growth_orientation_rationale": "Builds human capital for private-sector \
+innovation and strengthens university-industry knowledge flows.",
+      "growth_orientation_confidence": "high",
+      "implementation_year": 2024,
+      "announcement_year": 2023,
+      "announcement_year_source": "explicit",
+      "announcement_year_confidence": "high",
+      "legislation_year": null,
+      "legislation_year_source": null,
+      "legislation_year_confidence": null,
+      "implementation_year_source": "explicit",
+      "implementation_year_confidence": "high",
+      "status": "implemented",
+      "status_evidence": "The programme was expanded with additional co-funding.",
+      "status_confidence": "high",
+      "is_major_reform": false,
+      "importance_bucket": 2,
+      "importance_rationale": "Meaningful expansion of an established instrument \
+linking academia and industry, with positive effects on applied research capacity \
+and firm-level innovation.",
+      "importance_confidence": "medium",
+      "source_quote": "The Industrial PhD programme was expanded to increase \
+the number of PhD students conducting research in collaboration with firms."
+    }}
+  ],
+  "chunk_notes": "..."
+}}
+
+If the text contains NO reforms, return: {{"reforms": [], "chunk_notes": "..."}}
+
+TEXT:
+{text}
+"""
+
+# =============================================================================
+# DEDUP PROMPT: Identifies duplicate reforms within a thematic group
+# =============================================================================
+
+DEDUP_PROMPT = """\
+Below are reform descriptions extracted from different parts of the same \
+Economic Survey for {country} ({survey_year}). They relate to the theme(s) \
+"{theme}".
+
+Some of these may describe the SAME reform (or the same component of a \
+reform package) from different angles, with different levels of detail, or \
+focusing on different aspects. Others may be genuinely DIFFERENT reforms.
+
+Your task:
+1. Identify which descriptions refer to the same reform and group them.
+2. For each group, produce a single merged description combining the most \
+useful information from all entries.
+3. Assign a package_name for the reform (if several groups belong to the \
+same overarching reform package, give them the SAME package_name).
+4. Select the most appropriate importance, implementation year, and status.
+5. Determine the growth orientation for each merged reform.
+6. Select the best sub_theme from the valid sub_themes for this theme.
+7. Assign rd_actor ("public", "private", "public_private", "unknown") and \
+rd_stage ("basic", "applied", "commercialization", "adoption", "unknown").
+8. Set secondary_type if the merged reform genuinely spans a second innovation \
+type; null otherwise.
+
+Valid sub_themes for "{theme}": {valid_subthemes}
+
+Descriptions:
+{descriptions}
+
+Note: is_major_reform is the canonical importance field — decide it first. \
+Set importance_bucket = 3 if is_major_reform is true; 1 or 2 otherwise.
+
+Return a JSON object with this structure. Every value must be valid JSON — \
+no type annotations, alternatives, or prose inside the object.
+
+{{
+  "groups": [
+    {{
+      "indices": [0, 2, 5],
+      "merged_description": "...",
+      "package_name": "...",
+      "component_name": null,
+      "is_component": false,
+      "sub_theme": "rd_funding",
+      "secondary_type": null,
+      "alternative_theme": null,
+      "rd_actor": "public",
+      "rd_stage": "basic",
+      "growth_orientation": "growth_supporting",
+      "growth_orientation_rationale": "...",
+      "growth_orientation_confidence": "high",
+      "is_major_reform": false,
+      "importance_bucket": 2,
+      "importance_rationale": "...",
+      "importance_confidence": "medium",
+      "implementation_year": 2019,
+      "announcement_year": null,
+      "announcement_year_source": null,
+      "announcement_year_confidence": null,
+      "legislation_year": null,
+      "legislation_year_source": null,
+      "legislation_year_confidence": null,
+      "implementation_year_source": "explicit",
+      "implementation_year_confidence": "high",
+      "status": "implemented",
+      "status_evidence": "...",
+      "status_confidence": "high"
+    }}
+  ]
+}}
+
+Rules:
+- Every index (0 to {max_index}) must appear in exactly one group.
+- Reforms that are genuinely different should be in separate single-element \
+groups (e.g., {{"indices": [3], "merged_description": "...", ...}}).
+- When merging, keep the most specific year and the most advanced status \
+(implemented > legislated > announced).
+- The merged description should be 1-3 sentences capturing the key details \
+from all grouped entries.
+- If multiple groups are components of the SAME reform package, give them \
+the same package_name but distinct component_names and set is_component=true.
+"""
+
+# =============================================================================
+# CROSS-SURVEY DEDUP PROMPT: Canonicalizes events across surveys
+# =============================================================================
+
+CROSS_SURVEY_DEDUP_PROMPT = """\
+Below are reform descriptions for {country} that share the theme "{theme}" \
+and have overlapping implementation years. They come from DIFFERENT \
+Economic Surveys (survey years shown in brackets).
+
+Some of these may describe the SAME real-world reform event observed from \
+different survey vintages (e.g., a reform implemented in 2019 might be \
+discussed in the 2019, 2021, and 2023 surveys). Others are genuinely \
+different events.
+
+Your task: identify which descriptions refer to the same real-world reform \
+event. Group them together. For each group, produce a canonical description \
+and select the best metadata.
+
+Entries:
+{descriptions}
+
+Note: is_major_reform is the canonical importance field. Set \
+importance_bucket = 3 if is_major_reform is true; 1 or 2 otherwise.
+
+Return a JSON object with this structure. Every value must be valid JSON — \
+no type annotations, alternatives, or prose inside the object.
+
+{{
+  "events": [
+    {{
+      "indices": [0, 3, 7],
+      "canonical_description": "...",
+      "package_name": "...",
+      "growth_orientation": "growth_supporting",
+      "implementation_year": 2019,
+      "implementation_year_source": "explicit",
+      "implementation_year_confidence": "high",
+      "status": "implemented",
+      "is_major_reform": false,
+      "importance_bucket": 2,
+      "importance_rationale": "...",
+      "announcement_year_source": null,
+      "announcement_year_confidence": null,
+      "legislation_year_source": null,
+      "legislation_year_confidence": null
+    }}
+  ]
+}}
+
+Rules:
+- Every index (0 to {max_index}) must appear in exactly one event.
+- Different events should be in separate groups, even if related.
+- Prefer the description, year, and status from the survey closest to \
+the actual implementation year.
+- The canonical description should be 1-3 sentences.
+"""
+

@@ -141,7 +141,8 @@ class LLMClient:
             "survey_year": survey_year,
         }
 
-    def call(self, system_prompt, user_prompt, max_tokens=None, operation=None):
+    def call(self, system_prompt, user_prompt, max_tokens=None, operation=None,
+             json_mode: bool = False):
         """Make an LLM API call.
 
         Args:
@@ -150,6 +151,8 @@ class LLMClient:
             max_tokens: Override default max_tokens for this call.
             operation: Operation type for usage tracking. Use class constants:
                        OP_EXTRACTION, OP_WITHIN_SURVEY_DEDUP, OP_CROSS_SURVEY_DEDUP.
+            json_mode: If True and provider is OpenAI, sets response_format=json_object.
+                       The prompt must explicitly request JSON output.
 
         Returns:
             The LLM's text response.
@@ -166,7 +169,7 @@ class LLMClient:
                 )
             elif self.provider == "openai":
                 response, input_tokens, output_tokens = self._call_openai(
-                    system_prompt, user_prompt, max_tokens
+                    system_prompt, user_prompt, max_tokens, json_mode=json_mode
                 )
             else:
                 raise ValueError(f"Unknown provider: {self.provider}")
@@ -267,9 +270,10 @@ class LLMClient:
         stop=stop_after_attempt(3),
         wait=wait_exponential(multiplier=2, min=2, max=60),
     )
-    def _call_openai(self, system_prompt, user_prompt, max_tokens):
+    def _call_openai(self, system_prompt, user_prompt, max_tokens,
+                     json_mode: bool = False):
         """Call the OpenAI API."""
-        response = self._client.chat.completions.create(
+        kwargs = dict(
             model=self.model,
             max_tokens=max_tokens,
             temperature=self.temperature,
@@ -278,6 +282,9 @@ class LLMClient:
                 {"role": "user", "content": user_prompt},
             ],
         )
+        if json_mode:
+            kwargs["response_format"] = {"type": "json_object"}
+        response = self._client.chat.completions.create(**kwargs)
 
         input_tokens = 0
         output_tokens = 0

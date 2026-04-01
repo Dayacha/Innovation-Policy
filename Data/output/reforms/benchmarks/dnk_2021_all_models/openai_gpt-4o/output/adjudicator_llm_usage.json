@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-03-30T22:12:55.579179",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "pricing_per_million": {
+    "input": 0.15,
+    "output": 0.6
+  },
+  "summary": {
+    "total_calls": 1,
+    "total_input_tokens": 1474,
+    "total_output_tokens": 241,
+    "total_tokens": 1715,
+    "total_cost_usd": 0.0004
+  },
+  "by_operation": {
+    "adjudication": {
+      "calls": 1,
+      "input_tokens": 1474,
+      "output_tokens": 241,
+      "total_tokens": 1715,
+      "cost_usd": 0.0004,
+      "elapsed_seconds": 4.02
+    }
+  },
+  "by_survey": [
+    {
+      "country_code": null,
+      "survey_year": null,
+      "calls": 1,
+      "input_tokens": 1474,
+      "output_tokens": 241,
+      "total_tokens": 1715,
+      "cost_usd": 0.0004
+    }
+  ],
+  "records": [
+    {
+      "timestamp": "2026-03-30T22:12:54.571038",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "adjudication",
+      "input_tokens": 1474,
+      "output_tokens": 241,
+      "total_tokens": 1715,
+      "elapsed_seconds": 4.016,
+      "cost_usd": 0.000366
+    }
+  ]
+}

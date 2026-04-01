@@ -1,0 +1,4 @@
+country_code,country_name,survey_year,sub_theme,n_reforms,n_positive,has_positive_reform
+DNK,Denmark,2021,innovation_instruments,1,1,1
+DNK,Denmark,2021,rd_funding,4,4,1
+DNK,Denmark,2021,research_infrastructure,1,1,1

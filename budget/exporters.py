@@ -5,7 +5,7 @@ import gzip
 
 import pandas as pd
 
-from budget.config import FULLTEXT_DIR, FULLTEXT_EN_DIR
+from budget.config import FULLTEXT_DIR, FULLTEXT_EN_DIR, PDF_ROOT
 from budget.translation_utils import translate_to_english_glossary
 from budget.utils import logger
 
@@ -27,6 +27,29 @@ def _build_full_text_content(file_df: pd.DataFrame, translate_to_english: bool =
         lines.append(page_text)
         lines.append("")
     return "\n".join(lines)
+
+
+def _target_path_for_source(
+    *,
+    source_path: Path,
+    target_dir: Path,
+    file_id: str,
+    filename_suffix: str = "",
+) -> Path:
+    """Mirror the finance_bills folder structure inside the export directory."""
+    try:
+        rel = source_path.relative_to(PDF_ROOT)
+        rel_parent = rel.parent
+        stem = rel.stem
+    except Exception:
+        rel_parent = Path()
+        stem = source_path.stem
+
+    safe_stem = _safe_stem(stem)
+    export_name = f"{file_id}__{safe_stem}{filename_suffix}.txt.gz"
+    out_dir = target_dir / rel_parent
+    out_dir.mkdir(parents=True, exist_ok=True)
+    return out_dir / export_name
 
 
 def _export_full_documents_to_dir(
@@ -55,8 +78,12 @@ def _export_full_documents_to_dir(
     grouped = pages_df.groupby(["file_id", "filepath"], dropna=False)
     for (file_id, filepath), file_df in grouped:
         source_path = Path(str(filepath))
-        base_name = _safe_stem(f"{file_id}_{source_path.stem}{filename_suffix}")
-        txt_path = target_dir / f"{base_name}.txt.gz"
+        txt_path = _target_path_for_source(
+            source_path=source_path,
+            target_dir=target_dir,
+            file_id=str(file_id),
+            filename_suffix=filename_suffix,
+        )
         # Word export disabled (not used downstream, saves space/time)
         docx_path = None
 

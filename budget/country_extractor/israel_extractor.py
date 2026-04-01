@@ -1,94 +1,64 @@
 """Israeli State Budget (Hok HaTakaziv) extractor.
 
-The Israeli budget is published as the "חוק התקציב" (State Budget Law).
-Structure:
-- Budget amounts are in thousands of new Israeli shekels (NIS) in older files
-  (pre-2000) and the denomination shifts over time.
-- The summary table (first supplement / נספת ראשונה) lists ministries by
-  section number, each on a line like:
-    19והפיתוח\nהמדע\nמשרד6,540\n453\n54\n50.0
-  (right-to-left Hebrew, section number + ministry name fragments + amounts)
-- Ministry of Science section number: 19 (Ministry of Science and Development,
-  משרד המדע והפיתוח) in earlier years; section number may change in later years.
-- Currency: ILS (new shekel). Amounts in the summary table are in thousands NIS.
-  Full value = extracted_amount × 1000.
+The Israeli budget archive mixes several OCR regimes:
 
-Key Hebrew terms:
-  מחקר ופיתוח  = R&D (research and development)
-  מדע           = science
-  משרד המדע     = Ministry of Science
-  פיתוח         = development
-  ישראל מדע קרן = Israel Science Foundation (ISF)
+1. Historical summary tables with section 19 for the Ministry of Science
+2. Detail pages for section 19 ("סעיף 19")
+3. Modern summary tables where section 19 is often a combined ministry row
+   such as "משרד המדע, הטכנולוגיה והחלל" or
+   "משרד המדע החדשנות והטכנולוגיה, משרד התרבות"
 
-OCR quality varies significantly — many files are scanned images with poor text
-quality.  The extractor tries multiple search strategies and returns [] on failure.
+This extractor is page-local and row-driven. It prefers explicit section-19
+summary rows and falls back to section detail pages when the summary OCR is
+too noisy.
 """
 
 from __future__ import annotations
 
-import re
 import logging
+import re
 from typing import Optional
+
 
 logger = logging.getLogger("innovation_pipeline")
 
-# ── Regex patterns ─────────────────────────────────────────────────────────────
+_AMOUNT_RE = r"(\d{1,3}(?:,\d{3})+|\d{4,})"
+_HEBREW_SCIENCE_RE = (
+    r"(?:משרד\s*)?(?:"
+    r"המדע(?:\s*והפיתוח)?"
+    r"|מדע(?:\s*וטכנולוגיה)?"
+    r"|משרד\s*מדע\s*וטכנולוגיה"
+    r"|משרד\s*המדע\s*,?\s*הטכנולוגיה\s*והחלל"
+    r"|משרד\s*המדע\s*התרבות\s*והספורט"
+    r"|משרד\s*המדע\s*החדשנות\s*והטכנולוגיה"
+    r")"
+)
 
-# Hebrew ministry-of-science name fragments (RTL text may be split across lines)
-# "משרד המדע" = Ministry of Science
-_SCIENCE_MINISTRY_RE = re.compile(
-    r'(?:'
-    r'(?:19)\s*\n?\s*(?:והפיתוח|המדע|מדע)'      # section 19 + science word
-    r'|'
-    r'(?:המדע|מדע)\s*\n?\s*(?:משרד|והפיתוח)'     # science + ministry word
-    r'|'
-    r'משרד\s*\n?\s*המדע'                          # explicit "Ministry of Science"
-    r'|'
-    r'Ministry\s+of\s+Science'                    # English fallback
-    r')',
+_SUMMARY_HEADER_RE = re.compile(
+    r"(?:ריכוז\s+התוספת\s+הראשונה|הראשונה\s+התוספת\s+ריכוז|תוספת\s+ראשונה)",
+    re.IGNORECASE,
+)
+_MODERN_ROW_RE = re.compile(
+    rf"(?<!\d)19(?!\d)\s*{_HEBREW_SCIENCE_RE}[\s\S]{{0,100}}?{_AMOUNT_RE}",
+    re.IGNORECASE,
+)
+_LEGACY_ROW_RE = re.compile(
+    rf"(?<!\d)19(?!\d)[\s\S]{{0,40}}?(?:והפיתוח|פיתוח|טכנולוגיה)?[\s\S]{{0,40}}?(?:המדע|מדע|המרע)"
+    rf"[\s\S]{{0,80}}?{_AMOUNT_RE}",
+    re.IGNORECASE,
+)
+_DETAIL_ROW_RE = re.compile(
+    rf"סעיף[\s\S]{{0,60}}?{_HEBREW_SCIENCE_RE}[\s\S]{{0,20}}?19[\s\S]{{0,120}}?{_AMOUNT_RE}",
+    re.IGNORECASE,
+)
+_ENGLISH_ROW_RE = re.compile(
+    rf"(?<!\d)19(?!\d)[\s\S]{{0,60}}?Ministry\s+of\s+Science[\s\S]{{0,80}}?{_AMOUNT_RE}",
     re.IGNORECASE,
 )
 
-# Section 19 at the start of a summary line
-# Pattern matches: "19" followed (possibly with newlines) by Hebrew ministry name
-# and then an amount like "6,540" or "6540"
-_SECTION19_RE = re.compile(
-    r'19\s*\n?\s*'
-    r'(?:[^\d\n]{0,60}\n?){0,5}'   # ministry name fragments (up to 5 lines)
-    r'([\d,]+(?:\.\d+)?)',           # first numeric amount
-    re.DOTALL,
-)
 
-# Standalone amount at start/end of a line — matches NIS amounts in summary tables
-# Amounts are comma-grouped thousands: "6,540" or "147,093,437"
-_AMOUNT_RE = re.compile(r'(?<!\d)([\d]{1,3}(?:,\d{3})+)(?!\d)')
-
-# Pattern for the summary table line with section 19 and amount on same/adjacent lines
-# Actual OCR text: "14מפלגות\nמימון22,123\n19והפיתוח\nהמדע\nמשרד6,540\n453\n54\n50.0"
-# Note: "19" is immediately followed by Hebrew with NO whitespace, amount may be on same
-# or next lines embedded in Hebrew text.
-# We need to find amounts that appear AFTER the "19" marker, not before.
-# The ministry name spans 2-3 lines before the first amount appears.
-# The summary table in early Israeli budgets looks like:
-#   "14מפלגות\nמימון22,123\n19והפיתוח\nהמדע\nמשרד6,540\n"
-# Section 19 is immediately followed by Hebrew text (Unicode range U+0590-U+05FF),
-# NOT by whitespace/newlines alone.
-_HEBREW_CHAR = r'[\u0590-\u05FF\uFB1D-\uFB4F]'
-
-_SUMMARY_LINE_RE = re.compile(
-    r'(?<!\d)19(?!\d)'              # standalone "19"
-    + _HEBREW_CHAR +                # MUST be immediately followed by Hebrew char
-    r'[^\d\n]*\n'                   # rest of first line (Hebrew, no digits)
-    r'(?:[^\d\n]*\n){0,4}'          # up to 4 more name lines (Hebrew, no digits)
-    r'[^\d\n]*'                     # prefix on amount line
-    r'([\d,]{3,})',                 # amount (first numeric value after name)
-    re.DOTALL,
-)
-
-
-def _parse_ils(raw: str) -> Optional[float]:
-    """Parse ILS amount string to float (removes commas)."""
-    cleaned = raw.replace(',', '').strip()
+def _parse_thousands(raw: str) -> Optional[float]:
+    cleaned = raw.replace(",", "").strip()
     try:
         val = float(cleaned)
         return val if val > 0 else None
@@ -96,55 +66,151 @@ def _parse_ils(raw: str) -> Optional[float]:
         return None
 
 
-def _extract_amount_from_section19(text: str) -> Optional[float]:
-    """Try to extract the Ministry of Science budget from section 19 in the summary table.
+def _build_context(text: str, start: int, end: int, radius: int = 220) -> tuple[str, str, str, str]:
+    lo = max(0, start - radius)
+    hi = min(len(text), end + radius)
+    before = text[lo:start].strip()
+    raw = text[start:end].strip()
+    after = text[end:hi].strip()
+    merged = text[lo:hi].strip()
+    return before, raw, after, merged
 
-    The summary table in the first supplement lists sections as:
-        {section_number}{ministry_name_fragments}{amount}{...other columns}
 
-    For section 19 (Ministry of Science):
-        "19והפיתוח\nהמדע\nמשרד6,540\n453\n54\n50.0"
+def _plausible(amount_thousands: float) -> bool:
+    return 1_000 <= amount_thousands <= 30_000_000
 
-    Returns the first (expenditure) amount, or None.
-    """
-    # Strategy 1: direct SUMMARY_LINE_RE
-    m = _SUMMARY_LINE_RE.search(text)
-    if m:
-        val = _parse_ils(m.group(1))
-        if val and val > 0:
-            return val
 
-    # Strategy 2: find standalone "19" then walk forward for amounts near science words
-    for m19 in re.finditer(r'(?<!\d)19(?!\d)', text):
-        window = text[m19.start(): m19.start() + 500]
-        # Check that science-related Hebrew text is nearby
-        if re.search(r'מדע|פיתוח|Ministry', window, re.IGNORECASE):
-            amounts = _AMOUNT_RE.findall(window[:300])
-            for amt_str in amounts:
-                val = _parse_ils(amt_str)
-                if val and val >= 100:   # at least 100 (thousands NIS = 100K NIS)
-                    return val
+def _is_summary_like(page_text: str, page_number: int) -> bool:
+    head = page_text[:600]
+    return page_number <= 15 and any(token in head for token in ("ריכוז", "תוספת", "תקציב לשנת", "הצעת התקציב"))
 
+
+def _scan_legacy_section_19(page_text: str) -> Optional[tuple[float, str, int, int, str, str]]:
+    for sec in re.finditer(r"(?<!\d)19(?!\d)", page_text):
+        window = page_text[sec.start():sec.start() + 120]
+        science_match = re.search(r"מדע|המרע|והפיתוח|פיתוח|טכנולוג", window)
+        if not science_match:
+            continue
+        amount_match = re.search(_AMOUNT_RE, window[science_match.end():science_match.end() + 60])
+        if not amount_match:
+            continue
+        amount = _parse_thousands(amount_match.group(1))
+        if amount and 1_000 <= amount <= 1_000_000:
+            offset = science_match.end()
+            absolute_start = sec.start() + offset + amount_match.start(1)
+            absolute_end = sec.start() + offset + amount_match.end(1)
+            return amount, amount_match.group(1), absolute_start, absolute_end, "legacy_summary_row", (
+                "Historical section-19 science row on a summary page."
+            )
     return None
 
 
-def _search_full_text(text: str) -> Optional[float]:
-    """Search full document text for science/R&D appropriation amounts.
+def _extract_from_page(page_text: str, page_number: int) -> Optional[tuple[float, str, int, int, str, str]]:
+    if not page_text.strip():
+        return None
 
-    Used as fallback when section 19 approach fails.
-    """
-    # Look for R&D / science context
-    for m in _SCIENCE_MINISTRY_RE.finditer(text):
-        window = text[max(0, m.start() - 50): m.start() + 400]
-        amounts = _AMOUNT_RE.findall(window)
-        for amt_str in amounts:
-            val = _parse_ils(amt_str)
-            if val and val >= 100:
-                return val
+    # Modern clean summary page.
+    if _SUMMARY_HEADER_RE.search(page_text):
+        match = _MODERN_ROW_RE.search(page_text)
+        if match:
+            amount = _parse_thousands(match.group(1))
+            if amount and _plausible(amount):
+                return amount, match.group(1), match.start(1), match.end(1), "summary_row", (
+                    "Explicit section-19 science-ministry row on the summary table."
+                )
+
+        match = _LEGACY_ROW_RE.search(page_text)
+        if match:
+            amount = _parse_thousands(match.group(1))
+            if amount and _plausible(amount):
+                return amount, match.group(1), match.start(1), match.end(1), "legacy_summary_row", (
+                    "Legacy section-19 science row on the summary table."
+                )
+
+        match = _ENGLISH_ROW_RE.search(page_text)
+        if match:
+            amount = _parse_thousands(match.group(1))
+            if amount and _plausible(amount):
+                return amount, match.group(1), match.start(1), match.end(1), "summary_row", (
+                    "English OCR fallback for the section-19 science row."
+                )
+
+    # Detail pages for section 19, common in mid-period files.
+    match = _DETAIL_ROW_RE.search(page_text)
+    if match:
+        amount = _parse_thousands(match.group(1))
+        if amount and _plausible(amount):
+            return amount, match.group(1), match.start(1), match.end(1), "detail_section_page", (
+                "Section 19 detail page for the science ministry."
+            )
+
+    # Historical OCR where summary pages lack the explicit header but still carry the row.
+    if _is_summary_like(page_text, page_number):
+        hit = _scan_legacy_section_19(page_text)
+        if hit:
+            return hit
     return None
 
 
-# ── Public API ─────────────────────────────────────────────────────────────────
+def _build_record(
+    *,
+    country: str,
+    year: str,
+    source_filename: str,
+    file_id: str,
+    page_number: int,
+    amount_thousands: float,
+    amount_raw: str,
+    start: int,
+    end: int,
+    source_variant: str,
+    rationale: str,
+    page_text: str,
+) -> dict:
+    before, raw_line, after, merged = _build_context(page_text, start, end)
+    return {
+        "country": country,
+        "year": year,
+        "section_code": "IL_SCIENCE",
+        "section_name": "משרד המדע",
+        "section_name_en": "Ministry of Science",
+        "program_code": "IL_SCIENCE_MINISTRY",
+        "line_description": "סעיף 19 - משרד המדע",
+        "line_description_en": "Section 19 - Ministry of Science total appropriation",
+        "amount_local": amount_thousands * 1000,
+        "currency": "ILS",
+        "unit": "ILS",
+        "rd_category": "direct_rd",
+        "taxonomy_score": 8.0,
+        "decision": "include",
+        "confidence": 0.86 if source_variant == "summary_row" else 0.8 if source_variant == "legacy_summary_row" else 0.74,
+        "source_file": source_filename,
+        "file_id": file_id,
+        "page_number": page_number,
+        "amount_raw": amount_raw,
+        "raw_line": raw_line,
+        "merged_line": merged,
+        "context_before": before,
+        "context_after": after,
+        "text_snippet": merged,
+        "source_variant": source_variant,
+        "rationale": rationale,
+    }
+
+
+def _record_key(rec: dict) -> tuple:
+    variant_order = {
+        "summary_row": 4,
+        "legacy_summary_row": 3,
+        "detail_section_page": 2,
+    }
+    return (
+        variant_order.get(str(rec.get("source_variant", "")), 0),
+        float(rec.get("confidence") or 0),
+        float(rec.get("amount_local") or 0),
+        -int(rec.get("page_number") or 0),
+    )
+
 
 def extract_israel_items(
     sorted_pages,
@@ -153,82 +219,39 @@ def extract_israel_items(
     year: str,
     source_filename: str,
 ) -> list[dict]:
-    """Extract Ministry of Science budget from an Israeli State Budget PDF.
+    """Extract the Israel science-ministry budget from one PDF."""
+    best: Optional[dict] = None
 
-    Strategy:
-    1. Concatenate all page texts.
-    2. Search for section 19 (Ministry of Science and Development) in the budget
-       summary table — amounts are in thousands of NIS.
-    3. Multiply extracted amount by 1000 to get full NIS value.
-    4. Return [] if no reliable amount found (Hebrew OCR often fails).
-
-    Note: Hebrew is right-to-left; PyMuPDF may reverse word/character order.
-    The extractor searches for section number 19 and science keywords in proximity.
-    """
-    records: list[dict] = []
-
-    try:
-        all_text = "\n".join(
-            (row.text if isinstance(row.text, str) else "")
-            for row in sorted_pages.itertuples(index=False)
+    for row in sorted_pages.itertuples(index=False):
+        page_text = row.text if isinstance(row.text, str) else ""
+        if not page_text.strip():
+            continue
+        page_number = int(getattr(row, "page_number", 1) or 1)
+        hit = _extract_from_page(page_text, page_number)
+        if not hit:
+            continue
+        amount_thousands, amount_raw, start, end, source_variant, rationale = hit
+        rec = _build_record(
+            country=country,
+            year=year,
+            source_filename=source_filename,
+            file_id=file_id,
+            page_number=page_number,
+            amount_thousands=amount_thousands,
+            amount_raw=amount_raw,
+            start=start,
+            end=end,
+            source_variant=source_variant,
+            rationale=rationale,
+            page_text=page_text,
         )
-    except Exception as exc:
-        logger.warning("Israel extractor: failed to read pages for %s: %s", source_filename, exc)
+        if best is None or _record_key(rec) > _record_key(best):
+            best = rec
+
+    if best is None:
+        logger.debug("Israel extractor: no section-19 science row found in %s", source_filename)
         return []
+    return [best]
 
-    if not all_text.strip():
-        logger.debug("Israel extractor: no text in %s — likely scanned image.", source_filename)
-        return []
 
-    # Try section 19 extraction (primary strategy)
-    amount_thousands = _extract_amount_from_section19(all_text)
-
-    # Fallback: search by science ministry name
-    if amount_thousands is None:
-        amount_thousands = _search_full_text(all_text)
-
-    if amount_thousands is None:
-        logger.debug(
-            "Israel extractor: no science section found in %s (year %s).",
-            source_filename, year,
-        )
-        return []
-
-    # Amounts in the summary table are in thousands of NIS
-    full_amount = amount_thousands * 1000
-
-    # Sanity check: Ministry of Science budget should be reasonable
-    # In 1990: ~6,540 thousands NIS = 6.5M NIS; by 2000s it grows significantly
-    if full_amount < 1_000_000 or full_amount > 50_000_000_000:
-        logger.debug(
-            "Israel extractor: amount %s outside plausible range for %s (year %s).",
-            full_amount, source_filename, year,
-        )
-        return []
-
-    records.append({
-        "country": country,
-        "year": year,
-        "section_code": "IL_SCIENCE",
-        "section_name": "משרד המדע והפיתוח",
-        "section_name_en": "Ministry of Science and Development",
-        "program_code": "IL_SCIENCE_MINISTRY",
-        "line_description": "Ministry of Science - total budget (section 19)",
-        "line_description_en": "Ministry of Science and Development - total appropriation",
-        "amount_local": full_amount,
-        "currency": "ILS",
-        "unit": "ILS",
-        "rd_category": "direct_rd",
-        "taxonomy_score": 8.0,
-        "decision": "include",
-        "confidence": 0.75,
-        "source_file": source_filename,
-        "file_id": file_id,
-        "page_number": 1,
-    })
-
-    logger.info(
-        "Israel extractor: %s (year %s) → %d records, amount=%.0f ILS",
-        source_filename, year, len(records), full_amount,
-    )
-    return records
+__all__ = ["extract_israel_items"]

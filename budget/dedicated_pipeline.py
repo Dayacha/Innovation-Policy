@@ -16,11 +16,20 @@ from budget.country_extractor import (
     extract_denmark_items,
     extract_estonia_items,
     extract_finland_items,
+    extract_france_items,
     extract_germany_items,
+    extract_hungary_items,
+    extract_iceland_items,
     extract_israel_items,
     extract_japan_items,
     extract_korea_items,
+    extract_latvia_items,
+    extract_lithuania_items,
+    extract_new_zealand_items,
+    extract_netherlands_items,
+    extract_norway_items,
     extract_spain_items,
+    extract_switzerland_items,
     extract_uk_items,
 )
 from budget.extractor_common import enrich_dedicated_record, filepath_from_row
@@ -28,8 +37,9 @@ from budget.extractor_common import enrich_dedicated_record, filepath_from_row
 
 COUNTRY_DEDICATED_EXTRACTORS: frozenset[str] = frozenset({
     "Denmark", "Spain", "United Kingdom", "Canada", "Australia", "Belgium",
-    "Finland", "Germany", "Japan", "Colombia", "Chile", "Czech Republic",
+    "Finland", "France", "Germany", "Japan", "Colombia", "Chile", "Czech Republic",
     "Israel", "Estonia", "Korea", "Costa Rica",
+    "Hungary", "Iceland", "Netherlands", "Norway", "Latvia", "Lithuania", "New Zealand", "Switzerland",
 })
 
 COUNTRY_SKIP_EXTRACTORS: frozenset[str] = frozenset()
@@ -77,6 +87,7 @@ def handle_dedicated_country(
         "Australia": extract_australia_items,
         "Belgium": extract_belgium_items,
         "Finland": extract_finland_items,
+        "France": extract_france_items,
         "Germany": extract_germany_items,
         "Japan": extract_japan_items,
         "Colombia": extract_colombia_items,
@@ -86,6 +97,14 @@ def handle_dedicated_country(
         "Estonia": extract_estonia_items,
         "Korea": extract_korea_items,
         "Costa Rica": extract_costa_rica_items,
+        "Hungary": extract_hungary_items,
+        "Iceland": extract_iceland_items,
+        "Netherlands": extract_netherlands_items,
+        "Norway": extract_norway_items,
+        "Latvia": extract_latvia_items,
+        "Lithuania": extract_lithuania_items,
+        "New Zealand": extract_new_zealand_items,
+        "Switzerland": extract_switzerland_items,
     }
 
     dedupe_rounding = {
@@ -131,7 +150,7 @@ def handle_dedicated_country(
 def _dedupe_key(rec: dict, country: str, rounding_digits: int | None) -> tuple:
     year = rec.get("year", "")
     program_code = rec.get("program_code", "")
-    if country in {"Germany", "Canada", "Belgium", "Costa Rica", "Czech Republic"}:
+    if country in {"Germany", "Canada", "Belgium", "Costa Rica", "Czech Republic", "Estonia", "Israel", "Korea", "Spain"}:
         return year, program_code
     if rounding_digits is None:
         return year, program_code
@@ -156,6 +175,11 @@ def _record_priority(rec: dict, country: str) -> tuple:
         elif "no3" in source or "no4" in source or "no5" in source or "no6" in source:
             source_score = 1
         return source_score, amount, confidence, page_number
+
+    if country == "France":
+        variant = str(rec.get("source_variant", "") or "")
+        source_score = 2 if variant.startswith("mission_total") else 1
+        return source_score, confidence, amount, -page_number
 
     if country == "Canada":
         variant = str(rec.get("source_variant", "") or "")
@@ -215,6 +239,81 @@ def _record_priority(rec: dict, country: str) -> tuple:
         elif variant == "investment_fallback":
             source_score = 1
         return source_score, confidence, amount, -page_number
+
+    if country == "Estonia":
+        variant = str(rec.get("source_variant", "") or "")
+        source_score = 0
+        if variant == "modern_program_page":
+            source_score = 5
+        elif variant == "legacy_science_line":
+            source_score = 4
+        elif variant == "legacy_science_section":
+            source_score = 3
+        elif variant == "ministry_spending_page":
+            source_score = 3
+        elif variant == "ministry_agency_page":
+            source_score = 2
+        elif variant == "legacy_line_item":
+            source_score = 2
+        elif variant == "ministry_header_total":
+            source_score = 1
+        return source_score, confidence, amount, -page_number
+
+    if country == "Israel":
+        variant = str(rec.get("source_variant", "") or "")
+        source_score = 0
+        if variant == "summary_row":
+            source_score = 4
+        elif variant == "legacy_summary_row":
+            source_score = 3
+        elif variant == "detail_section_page":
+            source_score = 2
+        law_score = 0 if "bill" in source else 1
+        return source_score, law_score, confidence, amount, -page_number
+
+    if country == "Korea":
+        variant = str(rec.get("source_variant", "") or "")
+        source_score = 0
+        if variant == "annual_budget_table":
+            source_score = 4
+        elif variant == "rd_total_line":
+            source_score = 3
+        elif variant == "fiscal_plan_table":
+            source_score = 2
+        elif variant == "ministry_total_page":
+            source_score = 1
+
+        file_score = 0
+        if "예산안" in str(rec.get("source_file", "")):
+            file_score = 2
+        elif "홍보자료" in str(rec.get("source_file", "")) or "개요" in str(rec.get("source_file", "")):
+            file_score = 1
+        elif "국가재정운용계획" in str(rec.get("source_file", "")):
+            file_score = 0
+        elif "인포그래픽" in str(rec.get("source_file", "")) or "핵심과제" in str(rec.get("source_file", "")):
+            file_score = -1
+
+        return source_score, file_score, confidence, amount, -page_number
+
+    if country == "Spain":
+        variant = str(rec.get("source_variant", "") or "")
+        source_score = 0
+        if variant == "program_block":
+            source_score = 4
+        elif variant == "program_name_block":
+            source_score = 3
+        elif variant == "function_total_summary":
+            source_score = 2
+
+        file_score = 0
+        source_name = str(rec.get("source_file", "") or "").lower()
+        if "consolidado" in source_name and "boe-a" in source_name:
+            file_score = 3
+        elif "boe-a" in source_name:
+            file_score = 2
+        elif "draft" in source_name or "bocg" in source_name:
+            file_score = 0
+        return source_score, file_score, confidence, amount, -page_number
 
     if country != "Germany":
         return confidence, page_number

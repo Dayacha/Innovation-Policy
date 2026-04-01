@@ -463,6 +463,27 @@ def _step_build_panel(config):
         )
     else:
         logger.info("No reform data available to build panel")
+
+    # ── Two-pass cleaning: score + LLM adjudication + intensity score ──────
+    mentions_path = Path(config["paths"]["output"]) / "reforms_mentions.csv"
+    if mentions_path.exists() and not mentions_df.empty:
+        logger.info("Running two-pass cleaning on reforms_mentions.csv …")
+        try:
+            from reforms.clean_pipeline import run_clean_pipeline
+            run_clean_pipeline(
+                input_path=mentions_path,
+                output_dir=Path(config["paths"]["output"]),
+                config_path=PROJECT_ROOT / "config.yaml",
+                skip_llm=False,
+                verbose=False,
+            )
+            logger.info("Cleaning complete — reform_intensity_score.csv updated.")
+        except Exception as exc:
+            logger.warning(
+                "Two-pass cleaning failed (non-fatal — raw panel still saved): %s", exc
+            )
+    # ───────────────────────────────────────────────────────────────────────
+
     return datasets
 
 
