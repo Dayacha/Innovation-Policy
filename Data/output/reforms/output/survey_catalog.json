@@ -14805,12 +14805,12 @@
     "country_code": "AUS",
     "country_name": "Australia",
     "year": 1992,
-    "pdf_path": null,
-    "text_path": null,
-    "reforms_path": null,
-    "url": "https://read.oecd.org/10.1787/eco_surveys-aus-1992-en",
+    "pdf_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/surveys/AUS_1992.pdf",
+    "text_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/extracted_text/AUS_1992.txt",
+    "reforms_path": "/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/reforms/reforms_json/AUS_1992.json",
+    "url": "https://www.oecd-ilibrary.org/economics/oecd-economic-surveys-australia-1992_en",
     "pdf_url": "https://pac-files.oecd.org/LibraryV3/a6/a6cd7dcdba04c691229e92877c0c6b1e397eaaa2.pdf",
-    "status": "pending"
+    "status": "reforms_extracted"
   },
   "AUS_1990": {
     "country_code": "AUS",
