@@ -27,12 +27,87 @@ from .catalog import SurveyCatalog
 from .countries import CODE_TO_NAME, get_country_list
 from .downloader import PDFDownloader
 from .extractor import extract_text_from_pdf
+from .llm_client import LLMClient
 from .panel_builder import PanelBuilder
 from .reform_analyzer import ReformAnalyzer
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 logger = logging.getLogger(__name__)
+
+
+def _print_final_llm_run_summary(config):
+    """Print a final usage summary grouped by pipeline stage.
+
+    Uses the persisted llm_usage.json after all stages that may call the LLM.
+    """
+    usage_path = Path(config["paths"]["output"]) / "llm_usage.json"
+    if not usage_path.exists():
+        return
+
+    try:
+        with open(usage_path, encoding="utf-8") as f:
+            payload = json.load(f)
+    except Exception as exc:
+        logger.warning("Could not load final usage summary from %s: %s", usage_path, exc)
+        return
+
+    provider = payload.get("provider", "?")
+    model = payload.get("model", "?")
+    records = payload.get("records", []) or []
+
+    def _bucket():
+        return {"calls": 0, "input_tokens": 0, "output_tokens": 0, "total_tokens": 0, "cost_usd": 0.0}
+
+    survey_ops = {LLMClient.OP_EXTRACTION, LLMClient.OP_WITHIN_SURVEY_DEDUP}
+    cross_ops = {LLMClient.OP_CROSS_SURVEY_DEDUP}
+
+    survey = _bucket()
+    cross = _bucket()
+    total = _bucket()
+
+    for rec in records:
+        op = rec.get("operation", "")
+        target = None
+        if op in survey_ops:
+            target = survey
+        elif op in cross_ops:
+            target = cross
+
+        for bucket in ([target] if target is not None else []) + [total]:
+            bucket["calls"] += int(rec.get("calls", 0) or 1)
+            bucket["input_tokens"] += int(rec.get("input_tokens", 0) or 0)
+            bucket["output_tokens"] += int(rec.get("output_tokens", 0) or 0)
+            bucket["total_tokens"] += int(rec.get("total_tokens", 0) or 0)
+            bucket["cost_usd"] += float(rec.get("cost_usd", 0) or 0.0)
+
+    print("\n" + "=" * 60)
+    print("FINAL LLM RUN SUMMARY")
+    print("=" * 60)
+    print(f"Provider: {provider}")
+    print(f"Model: {model}")
+    print("")
+    print("--- Survey Extraction Usage ---")
+    print(f"  Calls: {survey['calls']:,}")
+    print(f"  Tokens: {survey['total_tokens']:,}")
+    print(f"    Input: {survey['input_tokens']:,}")
+    print(f"    Output: {survey['output_tokens']:,}")
+    print(f"  Cost: ${survey['cost_usd']:.4f}")
+    print("")
+    print("--- Cross-Survey Dedup Usage ---")
+    print(f"  Calls: {cross['calls']:,}")
+    print(f"  Tokens: {cross['total_tokens']:,}")
+    print(f"    Input: {cross['input_tokens']:,}")
+    print(f"    Output: {cross['output_tokens']:,}")
+    print(f"  Cost: ${cross['cost_usd']:.4f}")
+    print("")
+    print("--- Total Final Usage ---")
+    print(f"  Calls: {total['calls']:,}")
+    print(f"  Tokens: {total['total_tokens']:,}")
+    print(f"    Input: {total['input_tokens']:,}")
+    print(f"    Output: {total['output_tokens']:,}")
+    print(f"  Cost: ${total['cost_usd']:.4f}")
+    print("=" * 60 + "\n")
 
 
 def _json_has_reforms(reforms_path: Path) -> bool:
@@ -442,6 +517,7 @@ def _step_analyze_reforms(config, catalog, country=None, year=None):
 
     catalog.save_catalog()
     analyzer.llm.save_usage()
+    print("\n[Survey extraction stage]")
     analyzer.llm.print_usage_report()
     logger.info(
         "LLM analysis complete — analyzed: %d  skipped: %d  errors: %d",
@@ -453,6 +529,8 @@ def _step_analyze_reforms(config, catalog, country=None, year=None):
 def _step_build_panel(config):
     builder = PanelBuilder(config)
     datasets = builder.build_all_datasets()
+    if getattr(builder, "_llm", None) is not None:
+        builder._llm.save_usage()
     mentions_df = datasets["mentions"]
     events_df = datasets["events"]
     panel_df = datasets["panel"]
@@ -483,7 +561,7 @@ def _step_build_panel(config):
                 "Two-pass cleaning failed (non-fatal — raw panel still saved): %s", exc
             )
     # ───────────────────────────────────────────────────────────────────────
-
+    _print_final_llm_run_summary(config)
     return datasets
 
 

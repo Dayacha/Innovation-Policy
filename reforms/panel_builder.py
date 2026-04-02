@@ -67,6 +67,21 @@ def _parse_json_response(response_text):
     return None
 
 
+def _has_complete_event_coverage(result, expected_n: int) -> bool:
+    """Return True when a parsed cross-dedup result covers all indices exactly once."""
+    if not result or "events" not in result or not isinstance(result["events"], list):
+        return False
+    all_idxs = set()
+    for ev in result["events"]:
+        if not isinstance(ev, dict):
+            return False
+        indices = ev.get("indices", [])
+        if not isinstance(indices, list):
+            return False
+        all_idxs.update(indices)
+    return all_idxs == set(range(expected_n))
+
+
 class PanelBuilder:
     """Builds panel datasets from extracted reform data."""
 
@@ -628,18 +643,35 @@ class PanelBuilder:
         try:
             llm = self._get_llm()
             response = llm.call(
-                SYSTEM_PROMPT, prompt, operation=LLMClient.OP_CROSS_SURVEY_DEDUP
+                SYSTEM_PROMPT,
+                prompt,
+                operation=LLMClient.OP_CROSS_SURVEY_DEDUP,
+                json_mode=(llm.provider == "openai"),
             )
             result = _parse_json_response(response)
 
-            if not result or "events" not in result:
-                return initial_clusters
+            if not _has_complete_event_coverage(result, len(group_indices)):
+                repair_prompt = (
+                    "Repair the following malformed or schema-invalid JSON so it becomes a valid JSON object "
+                    "with a top-level key `events`. Preserve the intended grouping if possible. "
+                    f"Every index from 0 to {len(group_indices) - 1} must appear exactly once in the repaired output. "
+                    "Return valid JSON only.\n\n"
+                    f"JSON to repair:\n{response}"
+                )
+                repaired = llm.call(
+                    SYSTEM_PROMPT,
+                    repair_prompt,
+                    operation=LLMClient.OP_CROSS_SURVEY_DEDUP,
+                    json_mode=(llm.provider == "openai"),
+                )
+                result = _parse_json_response(repaired)
 
-            # Validate all indices covered
-            all_idxs = set()
-            for ev in result["events"]:
-                all_idxs.update(ev.get("indices", []))
-            if all_idxs != set(range(len(group_indices))):
+            if not _has_complete_event_coverage(result, len(group_indices)):
+                logger.warning(
+                    "Cross-survey dedup JSON invalid after automatic repair; "
+                    "falling back to initial clusters for %s / %s (%d mentions).",
+                    country_name, theme, len(group_indices),
+                )
                 return initial_clusters
 
             # Convert prompt indices back to dataframe indices
