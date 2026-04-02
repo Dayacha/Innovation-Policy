@@ -404,9 +404,6 @@ sel_ctry   = []
 sel_st     = []
 sel_stat   = ["implemented", "legislated"]
 sel_svy    = []
-sel_first_svy = []
-sel_last_svy = []
-sel_seen_svy = []
 only_major = False
 
 def _sidebar_label(text):
@@ -504,28 +501,6 @@ with st.sidebar:
             default=_svy_opts,
             key="svy_filt",
         )
-        _first_svy_opts = sorted(_dr["first_seen_survey_year"].dropna().astype(int).unique()) if "first_seen_survey_year" in _dr.columns else []
-        sel_first_svy = st.multiselect(
-            "First seen in survey year", _first_svy_opts,
-            default=_first_svy_opts,
-            key="first_svy_filt",
-        )
-        _last_svy_opts = sorted(_dr["last_seen_survey_year"].dropna().astype(int).unique()) if "last_seen_survey_year" in _dr.columns else []
-        sel_last_svy = st.multiselect(
-            "Last seen in survey year", _last_svy_opts,
-            default=_last_svy_opts,
-            key="last_svy_filt",
-        )
-        _seen_svy_opts = sorted({
-            yr
-            for years in _dr.get("all_seen_survey_years_list", pd.Series(dtype="object"))
-            for yr in (years if isinstance(years, list) else [])
-        })
-        sel_seen_svy = st.multiselect(
-            "Seen in any survey year", _seen_svy_opts,
-            default=_seen_svy_opts,
-            key="seen_svy_filt",
-        )
         only_major = st.checkbox("Major reforms only", key="maj_filt")
         # Year range — fall back to announcement_year when implementation_year sparse
         _ref_yrs_impl = _dr["implementation_year"].dropna().astype(int).unique()
@@ -605,16 +580,6 @@ if reforms_available():
     if sel_stat:  dr_f = dr_f[dr_f["status"].isin(sel_stat)]
     if sel_svy and "survey_year" in dr_f.columns:
         dr_f = dr_f[dr_f["survey_year"].isin(sel_svy)]
-    if sel_first_svy and "first_seen_survey_year" in dr_f.columns:
-        dr_f = dr_f[dr_f["first_seen_survey_year"].isin(sel_first_svy)]
-    if sel_last_svy and "last_seen_survey_year" in dr_f.columns:
-        dr_f = dr_f[dr_f["last_seen_survey_year"].isin(sel_last_svy)]
-    if sel_seen_svy and "all_seen_survey_years_list" in dr_f.columns:
-        dr_f = dr_f[
-            dr_f["all_seen_survey_years_list"].apply(
-                lambda years: any(y in years for y in sel_seen_svy) if isinstance(years, list) else False
-            )
-        ]
     if only_major and "is_major_reform" in dr_f.columns:
         dr_f = dr_f[dr_f["is_major_reform"] == True]  # noqa: E712
     if "implementation_year" in dr_f.columns:
@@ -642,6 +607,8 @@ with TAB_BUDGET:
     if not budget_available():
         st.info("Run `python main.py --budget-only` to generate budget data.")
         st.stop()
+
+    st.caption("R&D budget module: work in progress. Coverage and classifications may still change as extractors are refined.")
 
     db = load_budget()
     m = (db["year"] >= yr_b[0]) & (db["year"] <= yr_b[1])
