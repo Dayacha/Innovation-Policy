@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-01T21:43:55.868986",
+  "generated_at": "2026-04-01T23:16:30.000117",
   "counts": {
     "raw": 3963,
     "pass1_keep": 1904,
@@ -75,5 +75,5 @@
     "max_weighted_score": 20.7,
     "mean_net_reforms": 4.647
   },
-  "elapsed_seconds": 34.7
+  "elapsed_seconds": 3.8
 }

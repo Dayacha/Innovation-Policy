@@ -36,6 +36,63 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 logger = logging.getLogger(__name__)
 
 
+def _read_csv_if_exists(path: Path):
+    if not path.exists():
+        return None
+    import pandas as pd
+    return pd.read_csv(path)
+
+
+def _merge_country_slice(existing_df, updated_df, countries):
+    import pandas as pd
+
+    countries = set(countries or [])
+    if existing_df is None or existing_df.empty:
+        return updated_df.copy()
+    if "country_code" not in existing_df.columns:
+        return updated_df.copy()
+    keep = existing_df[~existing_df["country_code"].isin(countries)].copy()
+    if updated_df is None or updated_df.empty:
+        merged = keep
+    else:
+        merged = pd.concat([keep, updated_df.copy()], ignore_index=True, sort=False)
+    return merged
+
+
+def _sort_output_df(name, df):
+    if df is None or df.empty:
+        return df
+    sort_map = {
+        "mentions": ["country_code", "implementation_year", "survey_year"],
+        "events": ["country_code", "implementation_year", "survey_year"],
+        "panel": ["country_code", "year"],
+        "subtheme_panel": ["country_code", "year", "theme", "sub_theme"],
+    }
+    cols = [c for c in sort_map.get(name, []) if c in df.columns]
+    if cols:
+        return df.sort_values(cols).reset_index(drop=True)
+    return df.reset_index(drop=True)
+
+
+def _detect_changed_reform_countries(config):
+    output_dir = Path(config["paths"]["output"])
+    reforms_dir = Path(config["paths"]["reforms_json"])
+    output_paths = [
+        output_dir / "reforms_mentions.csv",
+        output_dir / "reforms_events.csv",
+        output_dir / "reform_panel.csv",
+    ]
+    if any(not p.exists() for p in output_paths):
+        return None
+
+    baseline_mtime = min(p.stat().st_mtime for p in output_paths)
+    changed = set()
+    for json_file in reforms_dir.glob("*.json"):
+        if json_file.stat().st_mtime > baseline_mtime:
+            changed.add(json_file.stem.split("_", 1)[0])
+    return sorted(changed)
+
+
 def _print_final_llm_run_summary(config):
     """Print a final usage summary grouped by pipeline stage.
 
@@ -526,9 +583,65 @@ def _step_analyze_reforms(config, catalog, country=None, year=None):
     return analyzed
 
 
-def _step_build_panel(config):
+def _step_build_panel(config, country=None):
     builder = PanelBuilder(config)
-    datasets = builder.build_all_datasets()
+    output_dir = Path(config["paths"]["output"])
+
+    target_countries = [country] if country else _detect_changed_reform_countries(config)
+    incremental = bool(target_countries)
+
+    if incremental:
+        if country:
+            logger.info(
+                "Incremental panel rebuild requested via --reforms-country: %s",
+                ", ".join(target_countries),
+            )
+        else:
+            logger.info(
+                "Detected changed reform JSON countries: %s",
+                ", ".join(target_countries),
+            )
+        logger.info(
+            "Incremental panel rebuild — rebuilding dedup/output slices only for: %s",
+            ", ".join(target_countries),
+        )
+        datasets = builder.build_all_datasets(countries=target_countries, save=False)
+        if datasets["mentions"].empty:
+            logger.info("No reform data found for incremental rebuild countries")
+            return datasets
+
+        existing = {
+            "mentions": _read_csv_if_exists(output_dir / "reforms_mentions.csv"),
+            "events": _read_csv_if_exists(output_dir / "reforms_events.csv"),
+            "panel": _read_csv_if_exists(output_dir / "reform_panel.csv"),
+            "subtheme_panel": _read_csv_if_exists(output_dir / "reform_panel_subtheme.csv"),
+        }
+        merged = {}
+        for name in ("mentions", "events", "panel", "subtheme_panel"):
+            merged[name] = _sort_output_df(
+                name,
+                _merge_country_slice(existing.get(name), datasets.get(name), target_countries),
+            )
+
+        (output_dir / "reforms_mentions.csv").parent.mkdir(parents=True, exist_ok=True)
+        merged["mentions"].to_csv(output_dir / "reforms_mentions.csv", index=False, encoding="utf-8")
+        merged["events"].to_csv(output_dir / "reforms_events.csv", index=False, encoding="utf-8")
+        merged["panel"].to_csv(output_dir / "reform_panel.csv", index=False, encoding="utf-8")
+        if merged["subtheme_panel"] is not None and not merged["subtheme_panel"].empty:
+            merged["subtheme_panel"].to_csv(
+                output_dir / "reform_panel_subtheme.csv", index=False, encoding="utf-8"
+            )
+        try:
+            merged["panel"].to_excel(output_dir / "reform_panel.xlsx", index=False)
+        except Exception as exc:
+            logger.warning("Could not save Excel file: %s", exc)
+
+        builder._generate_summary(merged["mentions"], merged["events"], merged["panel"])
+        datasets = merged
+    else:
+        logger.info("No country filter and no changed-country JSON detected — rebuilding full outputs")
+        datasets = builder.build_all_datasets()
+
     if getattr(builder, "_llm", None) is not None:
         builder._llm.save_usage()
     mentions_df = datasets["mentions"]
@@ -602,13 +715,13 @@ def run_reforms_pipeline(
         _step_download_pdfs(config, country=country, year=year)
 
     elif build_panel_only:
-        _step_build_panel(config)
+        _step_build_panel(config, country=country)
 
     else:
         catalog = _step_catalog(config, country=country)
         _step_extract_text(config, catalog)
         _step_analyze_reforms(config, catalog, country=country, year=year)
-        _step_build_panel(config)
+        _step_build_panel(config, country=country)
 
     logger.info("Reform pipeline finished in %.1fs", time.time() - start)
     logger.info("Output: %s", config["paths"]["output"])

@@ -952,14 +952,10 @@ discussed in the 2019, 2021, and 2023 surveys). Others are genuinely \
 different events.
 
 Your task: identify which descriptions refer to the same real-world reform \
-event. Group them together. For each group, produce a canonical description \
-and select the best metadata.
+event. Group them together.
 
 Entries:
 {descriptions}
-
-Note: is_major_reform is the canonical importance field. Set \
-importance_bucket = 3 if is_major_reform is true; 1 or 2 otherwise.
 
 Return a JSON object with this structure. Every value must be valid JSON — \
 no type annotations, alternatives, or prose inside the object.
@@ -967,21 +963,7 @@ no type annotations, alternatives, or prose inside the object.
 {{
   "events": [
     {{
-      "indices": [0, 3, 7],
-      "canonical_description": "...",
-      "package_name": "...",
-      "growth_orientation": "growth_supporting",
-      "implementation_year": 2019,
-      "implementation_year_source": "explicit",
-      "implementation_year_confidence": "high",
-      "status": "implemented",
-      "is_major_reform": false,
-      "importance_bucket": 2,
-      "importance_rationale": "...",
-      "announcement_year_source": null,
-      "announcement_year_confidence": null,
-      "legislation_year_source": null,
-      "legislation_year_confidence": null
+      "indices": [0, 3, 7]
     }}
   ]
 }}
@@ -989,7 +971,6 @@ no type annotations, alternatives, or prose inside the object.
 Rules:
 - Every index (0 to {max_index}) must appear in exactly one event.
 - Different events should be in separate groups, even if related.
-- Prefer the description, year, and status from the survey closest to \
-the actual implementation year.
-- The canonical description should be 1-3 sentences.
+- Return ONLY grouping indices. Do not return descriptions, package names, \
+years, status, importance, or any other fields.
 """

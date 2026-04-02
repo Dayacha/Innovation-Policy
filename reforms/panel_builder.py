@@ -21,7 +21,6 @@ from .countries import CODE_TO_NAME, get_country_list
 from .llm_client import LLMClient
 from .prompts import (
     CROSS_SURVEY_DEDUP_PROMPT,
-    SYSTEM_PROMPT,
     THEME_LIST,
     THEMES_SUBTHEMES,
 )
@@ -30,6 +29,18 @@ logger = logging.getLogger(__name__)
 
 # Reform themes (imported from the canonical definitions in prompts.py)
 THEMES = THEME_LIST
+
+_CROSS_SURVEY_SYSTEM_PROMPT = """\
+You are a strict JSON clustering service.
+
+Task:
+- Group reform mentions that refer to the same real-world reform event.
+- Return valid JSON only.
+- Return exactly one top-level key: "events".
+- Each event must be an object with exactly one key: "indices".
+- "indices" must be an array of integer indices.
+- Do not return descriptions, rationales, notes, markdown, or code fences.
+"""
 
 
 def _similarity(a, b):
@@ -71,15 +82,20 @@ def _has_complete_event_coverage(result, expected_n: int) -> bool:
     """Return True when a parsed cross-dedup result covers all indices exactly once."""
     if not result or "events" not in result or not isinstance(result["events"], list):
         return False
-    all_idxs = set()
+    seen = []
     for ev in result["events"]:
         if not isinstance(ev, dict):
             return False
         indices = ev.get("indices", [])
         if not isinstance(indices, list):
             return False
-        all_idxs.update(indices)
-    return all_idxs == set(range(expected_n))
+        for idx in indices:
+            if not isinstance(idx, int):
+                return False
+            if idx < 0 or idx >= expected_n:
+                return False
+            seen.append(idx)
+    return len(seen) == expected_n and set(seen) == set(range(expected_n))
 
 
 class PanelBuilder:
@@ -153,13 +169,14 @@ class PanelBuilder:
     # Loading
     # ──────────────────────────────────────────────────────────
 
-    def load_all_reforms(self):
+    def load_all_reforms(self, countries=None):
         """Load all reform JSON files and compile into a single list.
 
         Returns:
             List of all reform dicts with country/year metadata.
         """
         all_reforms = []
+        countries = set(countries or [])
 
         for json_file in sorted(self.reforms_dir.glob("*.json")):
             try:
@@ -167,6 +184,8 @@ class PanelBuilder:
                     data = json.load(f)
 
                 country_code = data.get("country_code", "")
+                if countries and country_code not in countries:
+                    continue
                 country_name = data.get("country_name", "")
                 survey_year = data.get("survey_year", 0)
 
@@ -186,7 +205,7 @@ class PanelBuilder:
     # Step 1: Mentions dataset (raw, one row per extraction)
     # ──────────────────────────────────────────────────────────
 
-    def build_mentions_dataset(self, reforms=None):
+    def build_mentions_dataset(self, reforms=None, save=True):
         """Build the mentions-level dataset (one row per survey mention).
 
         Returns:
@@ -252,9 +271,12 @@ class PanelBuilder:
             ["country_code", "implementation_year", "survey_year"]
         ).reset_index(drop=True)
 
-        output_path = self.output_dir / "reforms_mentions.csv"
-        df.to_csv(output_path, index=False, encoding="utf-8")
-        print(f"  Mentions dataset: {len(df)} rows -> {output_path.name}")
+        if save:
+            output_path = self.output_dir / "reforms_mentions.csv"
+            df.to_csv(output_path, index=False, encoding="utf-8")
+            print(f"  Mentions dataset: {len(df)} rows -> {output_path.name}")
+        else:
+            print(f"  Mentions dataset: {len(df)} rows")
 
         return df
 
@@ -262,7 +284,7 @@ class PanelBuilder:
     # Step 2: Cross-survey event canonicalization
     # ──────────────────────────────────────────────────────────
 
-    def canonicalize_events(self, mentions_df):
+    def canonicalize_events(self, mentions_df, save=True):
         """Deduplicate reform mentions across surveys to produce
         one row per real-world reform event.
 
@@ -473,12 +495,8 @@ class PanelBuilder:
                 event_id = f"EVT_{country}_{cluster_year}_{event_counter:04d}"
 
                 cluster_rows = group_df.loc[cluster_indices]
-                # Pick the mention from the survey closest to cluster_year
-                best_idx = min(
-                    cluster_indices,
-                    key=lambda idx: abs(
-                        actual.loc[idx, "survey_year"] - cluster_year
-                    ),
+                best_idx = self._pick_best_event_representative(
+                    group_df, cluster_indices, cluster_year
                 )
                 row = group_df.loc[best_idx].to_dict()
                 row["event_id"] = event_id
@@ -578,10 +596,13 @@ class PanelBuilder:
             ["country_code", "implementation_year", "survey_year"]
         ).reset_index(drop=True)
 
-        events_path = self.output_dir / "reforms_events.csv"
-        events_df.to_csv(events_path, index=False, encoding="utf-8")
-        print(f"  Events dataset: {len(events_df)} rows -> "
-              f"{events_path.name}")
+        if save:
+            events_path = self.output_dir / "reforms_events.csv"
+            events_df.to_csv(events_path, index=False, encoding="utf-8")
+            print(f"  Events dataset: {len(events_df)} rows -> "
+                  f"{events_path.name}")
+        else:
+            print(f"  Events dataset: {len(events_df)} rows")
 
         return events_df, mention_to_event
 
@@ -616,6 +637,34 @@ class PanelBuilder:
 
         return clusters
 
+    def _pick_best_event_representative(self, group_df, cluster_indices, cluster_year):
+        """Choose the best mention row to represent an event cluster."""
+        status_rank = {"implemented": 2, "legislated": 1, "announced": 0}
+
+        def _score(idx):
+            row = group_df.loc[idx]
+            survey_year = row.get("survey_year")
+            year_distance = (
+                abs(float(survey_year) - float(cluster_year))
+                if pd.notna(survey_year) else 999
+            )
+            impl_src = str(row.get("implementation_year_source") or "")
+            impl_src_rank = 1 if impl_src == "explicit" else 0
+            status = str(row.get("status") or "")
+            status_score = status_rank.get(status, -1)
+            quote_len = len(str(row.get("source_quote") or "").strip())
+            desc_len = len(str(row.get("description") or "").strip())
+            return (
+                year_distance,
+                -impl_src_rank,
+                -status_score,
+                -quote_len,
+                -desc_len,
+                idx,
+            )
+
+        return min(cluster_indices, key=_score)
+
     def _llm_cross_dedup(self, group_df, group_indices, initial_clusters,
                          country_name, theme):
         """Use one LLM call to refine cross-survey clustering."""
@@ -642,9 +691,11 @@ class PanelBuilder:
 
         try:
             llm = self._get_llm()
+            max_tokens = min(5000, max(600, len(group_indices) * 12))
             response = llm.call(
-                SYSTEM_PROMPT,
+                _CROSS_SURVEY_SYSTEM_PROMPT,
                 prompt,
+                max_tokens=max_tokens,
                 operation=LLMClient.OP_CROSS_SURVEY_DEDUP,
                 json_mode=(llm.provider == "openai"),
             )
@@ -654,13 +705,15 @@ class PanelBuilder:
                 repair_prompt = (
                     "Repair the following malformed or schema-invalid JSON so it becomes a valid JSON object "
                     "with a top-level key `events`. Preserve the intended grouping if possible. "
+                    "Each event must contain only an `indices` array of integers. "
                     f"Every index from 0 to {len(group_indices) - 1} must appear exactly once in the repaired output. "
                     "Return valid JSON only.\n\n"
                     f"JSON to repair:\n{response}"
                 )
                 repaired = llm.call(
-                    SYSTEM_PROMPT,
+                    _CROSS_SURVEY_SYSTEM_PROMPT,
                     repair_prompt,
+                    max_tokens=max_tokens,
                     operation=LLMClient.OP_CROSS_SURVEY_DEDUP,
                     json_mode=(llm.provider == "openai"),
                 )
@@ -714,7 +767,7 @@ class PanelBuilder:
             return int(year)
         return 0
 
-    def build_panel_dataset(self, events_df):
+    def build_panel_dataset(self, events_df, countries=None, save=True):
         """Build the country×year panel dataset with reform indicators.
 
         Uses the events dataset (not mentions) to avoid double-counting
@@ -799,7 +852,10 @@ class PanelBuilder:
                       f"with imputed {self.year_assignment} years")
 
         # Build panel skeleton
-        countries = get_country_list()
+        countries = (
+            [(code, name) for code, name in get_country_list()
+             if not countries or code in set(countries)]
+        )
         years = range(self.start_year, self.end_year + 1)
 
         panel_rows = []
@@ -874,25 +930,30 @@ class PanelBuilder:
             ["country_code", "year"]
         ).reset_index(drop=True)
 
-        panel_path = self.output_dir / "reform_panel.csv"
-        panel.to_csv(panel_path, index=False, encoding="utf-8")
-        print(f"  Panel dataset (theme-level): "
-              f"{len(panel)} rows -> {panel_path.name}")
+        if save:
+            panel_path = self.output_dir / "reform_panel.csv"
+            panel.to_csv(panel_path, index=False, encoding="utf-8")
+            print(f"  Panel dataset (theme-level): "
+                  f"{len(panel)} rows -> {panel_path.name}")
 
-        if not sub_theme_panel.empty:
-            sub_path = self.output_dir / "reform_panel_subtheme.csv"
-            sub_theme_panel.to_csv(sub_path, index=False, encoding="utf-8")
-            print(f"  Panel dataset (sub-theme-level): "
-                  f"{len(sub_theme_panel)} rows -> {sub_path.name}")
+            if not sub_theme_panel.empty:
+                sub_path = self.output_dir / "reform_panel_subtheme.csv"
+                sub_theme_panel.to_csv(sub_path, index=False, encoding="utf-8")
+                print(f"  Panel dataset (sub-theme-level): "
+                      f"{len(sub_theme_panel)} rows -> {sub_path.name}")
 
-        # Try to save Excel versions
-        try:
-            xlsx_path = self.output_dir / "reform_panel.xlsx"
-            panel.to_excel(xlsx_path, index=False)
-        except Exception as e:
-            logger.warning(f"Could not save Excel file: {e}")
+            # Try to save Excel versions
+            try:
+                xlsx_path = self.output_dir / "reform_panel.xlsx"
+                panel.to_excel(xlsx_path, index=False)
+            except Exception as e:
+                logger.warning(f"Could not save Excel file: {e}")
+        else:
+            print(f"  Panel dataset (theme-level): {len(panel)} rows")
+            if not sub_theme_panel.empty:
+                print(f"  Panel dataset (sub-theme-level): {len(sub_theme_panel)} rows")
 
-        return panel
+        return panel, sub_theme_panel
 
     def _add_theme_indicators(self, panel, events_subset, prefix):
         """Add count + binary indicators at the overall and per-theme level.
@@ -1217,7 +1278,7 @@ class PanelBuilder:
     # Main entry point
     # ──────────────────────────────────────────────────────────
 
-    def build_all_datasets(self):
+    def build_all_datasets(self, countries=None, save=True):
         """Build all output datasets.
 
         Pipeline:
@@ -1233,27 +1294,35 @@ class PanelBuilder:
               f"year_assignment: {self.year_assignment}")
 
         # Step 1: Mentions
-        mentions_df = self.build_mentions_dataset()
+        mentions_df = self.build_mentions_dataset(
+            reforms=self.load_all_reforms(countries=countries),
+            save=save,
+        )
         if mentions_df.empty:
             return {
                 "mentions": mentions_df,
                 "events": pd.DataFrame(),
                 "panel": pd.DataFrame(),
+                "subtheme_panel": pd.DataFrame(),
             }
 
         # Step 2: Cross-survey canonicalization
-        events_df, mention_map = self.canonicalize_events(mentions_df)
+        events_df, mention_map = self.canonicalize_events(mentions_df, save=save)
 
         # Step 3: Panel
-        panel_df = self.build_panel_dataset(events_df)
+        panel_df, subtheme_panel_df = self.build_panel_dataset(
+            events_df, countries=countries, save=save
+        )
 
         # Summary
-        self._generate_summary(mentions_df, events_df, panel_df)
+        if save:
+            self._generate_summary(mentions_df, events_df, panel_df)
 
         return {
             "mentions": mentions_df,
             "events": events_df,
             "panel": panel_df,
+            "subtheme_panel": subtheme_panel_df,
         }
 
     def _generate_summary(self, mentions_df, events_df, panel_df):
