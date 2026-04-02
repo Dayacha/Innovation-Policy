@@ -1,4 +1,14 @@
 country_code,country_name,survey_year,sub_theme,n_reforms,n_positive,has_positive_reform
+AUS,Australia,1979,rd_funding,1,1,1
+AUS,Australia,1980,rd_funding,1,1,1
+AUS,Australia,1983,rd_funding,1,1,1
+AUS,Australia,1987,innovation_instruments,1,1,1
+AUS,Australia,1987,rd_funding,1,1,1
+AUS,Australia,1988,innovation_instruments,1,1,1
+AUS,Australia,1988,rd_funding,1,1,1
+AUS,Australia,1992,human_capital,1,1,1
+AUS,Australia,1994,knowledge_transfer,1,1,1
+AUS,Australia,1994,rd_funding,1,1,1
 AUS,Australia,1995,rd_funding,1,1,1
 AUS,Australia,1995,sectoral_rd,1,1,1
 AUS,Australia,1997,human_capital,1,1,1
@@ -37,6 +47,8 @@ AUS,Australia,2021,sectoral_rd,2,2,1
 AUS,Australia,2021,startup_ecosystem,3,3,1
 AUS,Australia,2023,rd_funding,4,4,1
 AUS,Australia,2023,sectoral_rd,1,1,1
+AUS,Australia,2026,innovation_instruments,1,1,1
+AUS,Australia,2026,rd_funding,1,1,1
 AUT,Austria,1995,startup_ecosystem,1,1,1
 AUT,Austria,1997,innovation_instruments,1,1,1
 AUT,Austria,1997,knowledge_transfer,2,2,1
