@@ -151,7 +151,7 @@ def _line_agency_codes(line: str) -> set[str]:
     return codes
 
 
-def _select_row_amount(numeric_rows: list[list[str]], is_thousands: bool) -> Optional[float]:
+def _select_row_amount(numeric_rows: list[list[str]], is_thousands: bool) -> tuple[Optional[float], bool]:
     """Pick the current-year amount from row-local numeric cells.
 
     Heuristic:
@@ -160,15 +160,39 @@ def _select_row_amount(numeric_rows: list[list[str]], is_thousands: bool) -> Opt
     - old-format lines usually have 1-2 year columns
       -> choose the first numeric value from the first row
     - if the matched row has no numeric cells, fall back to the first continuation row
+
+    Returns
+    -------
+    (amount, needs_review)
+
+    `needs_review=True` flags the transition-year pattern where a corporate-entity
+    row only shows a single current-year figure and the immediately following
+    comparison row is an order of magnitude larger. In those cases we keep the
+    current-year amount but ask for manual review instead of silently upgrading
+    to the prior-year figure.
     """
+    suspicious_single_amount = False
+
+    if len(numeric_rows) >= 2 and len(numeric_rows[0]) == 1 and len(numeric_rows[1]) == 1:
+        current_amt = _parse_dollar_amount(numeric_rows[0][0], is_thousands)
+        prior_amt = _parse_dollar_amount(numeric_rows[1][0], is_thousands)
+        if (
+            current_amt is not None
+            and prior_amt is not None
+            and current_amt >= 100_000
+            and current_amt < 50_000_000
+            and prior_amt >= current_amt * 10
+        ):
+            suspicious_single_amount = True
+
     for row_values in numeric_rows:
         if not row_values:
             continue
         chosen = row_values[-1] if len(row_values) >= 3 else row_values[0]
         amount = _parse_dollar_amount(chosen, is_thousands)
         if amount is not None and 100_000 <= amount <= 50_000_000_000:
-            return amount
-    return None
+            return amount, suspicious_single_amount
+    return None, False
 
 
 # ── Table-level extraction ─────────────────────────────────────────────────────
@@ -248,7 +272,7 @@ def _extract_from_table_text(table_text: str) -> list[tuple[str, str, float]]:
                 continue
 
             numeric_rows = _collect_row_numeric_lines(i, prog_code)
-            amount = _select_row_amount(numeric_rows, is_thousands)
+            amount, needs_review = _select_row_amount(numeric_rows, is_thousands)
             if amount is None or amount < 100_000:
                 continue
 
@@ -256,7 +280,7 @@ def _extract_from_table_text(table_text: str) -> list[tuple[str, str, float]]:
             if amount > 50_000_000_000:
                 continue
 
-            results.append((prog_code, canonical_name, amount))
+            results.append((prog_code, canonical_name, amount, needs_review))
             seen_codes.add(prog_code)
             break  # Only one agency match per line
 
@@ -305,7 +329,7 @@ def extract_australia_items(
         # Only process table pages (docx_table) or any page with agency keywords
         if extraction_method == "docx_table" or _ANY_AGENCY_RE.search(text):
             items = _extract_from_table_text(text)
-            for prog_code, canonical_name, amount in items:
+            for prog_code, canonical_name, amount, needs_review in items:
                 # Suppress department-level proxy when specific agency is present
                 if prog_code == "AU_DEPT_SCIENCE" and file_has_csiro:
                     continue
@@ -329,8 +353,8 @@ def extract_australia_items(
                     "unit": "AUD",
                     "rd_category": "direct_rd",
                     "taxonomy_score": 8.0,
-                    "decision": "include",
-                    "confidence": 0.80,
+                    "decision": "review" if needs_review else "include",
+                    "confidence": 0.62 if needs_review else 0.80,
                     "source_file": source_filename,
                     "file_id": file_id,
                     "page_number": pg,

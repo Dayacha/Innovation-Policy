@@ -297,6 +297,32 @@ def _variant_rank(variant: str) -> int:
     return 1
 
 
+def _is_tiny_transfer_fragment(block_text: str, total: float, variant: str) -> bool:
+    """Identify fragmentary transfer-only blocks that should be ignored.
+
+    In older supplementary Acts, some agency headings are followed only by
+    transfer-authorisation prose like "to authorize the transfer of $492,999"
+    without any standalone schedule amount for the agency itself. Those tiny
+    transfer figures are not the agency appropriation and create obvious false
+    lows in the time series.
+    """
+    if variant != "fragment":
+        return False
+
+    lowered = block_text.lower()
+    has_transfer = "transfer of $" in lowered or "virement au présent crédit" in lowered
+    has_further_amount = (
+        "further amount" in lowered
+        or "provide a further amount" in lowered
+        or "pourvoir une somme supplémentaire" in lowered
+    )
+    if has_transfer and not has_further_amount and total < 5_000_000:
+        return True
+    if not has_further_amount and total < 1_000_000:
+        return True
+    return False
+
+
 def _extract_from_page(
     text: str,
     year: str,
@@ -326,6 +352,8 @@ def _extract_from_page(
             amounts = _extract_amounts_from_block(block_text)
             total = _get_block_total(amounts)
             if total is None or total < 100_000:
+                continue
+            if _is_tiny_transfer_fragment(block_text, total, variant):
                 continue
 
             snippet = block_text[:300].replace("\n", " ").strip()

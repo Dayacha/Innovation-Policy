@@ -1,21 +1,29 @@
-"""UK Budget Red Book extractor.
+"""UK Budget Red Book / DEL table extractor.
 
-The UK Red Book is a narrative budget document, not an appropriations table.
-For consistency, this extractor only returns records when the document states an
-explicit annual aggregate for science/R&D spending. It intentionally skips small
-package announcements, historical retrospective figures, and programme-specific
-subcomponents that are not comparable across years.
+Two complementary extraction approaches:
 
-Empirically validated anchor styles
------------------------------------
-- 1996: "Total central government spending on Science and Technology ... about £6 billion"
-- 2020: "public R&D investment to £22 billion per year by 2024-25"
-- 2021 Autumn Budget: "providing £20 billion across the UK by 2024-25"
-- 2025: "annual government investment in R&D will grow to £22.6 billion by 2029-30"
+1. **DEL table parsing** (2008+, primary method)
+   Modern UK Budget documents include Departmental Expenditure Limits (DEL) tables
+   with rows for science/R&D-related departments. We extract:
 
-The middle Red Books (roughly 2000s to late 2010s) often contain only packages
-and programme announcements rather than a clean annual aggregate. Those years
-should return no rows rather than low-quality pseudo-totals.
+   - 2023+: "Science, Innovation and Technology" (DSIT) — dedicated R&D dept.
+     Capital DEL is primarily UKRI + Innovate UK; high confidence GBARD proxy.
+   - 2016-2022: "Business, Energy and Industrial Strategy" (BEIS) — includes UKRI
+     and science budget; Capital DEL is primary R&D vehicle under ESA10.
+   - 2010-2016: "Business, Innovation and Skills" (BIS) — science budget was a core
+     component; Capital DEL includes research council grants.
+   - 2008-2010: "Innovation, Universities and Skills" (DIUS) — dedicated science
+     department that existed before BIS was created.
+
+   DEL tables appear in both tab-separated (older) and newline-per-value (newer)
+   formats.  The parser handles both.
+
+2. **Narrative science budget figures** (all years, secondary method)
+   Some Red Books explicitly state the total UK science budget or government R&D
+   spending as a single aggregate figure. These are extracted as high-confidence
+   "include" records where they match the current budget year, not future targets.
+
+Currency: GBP; DEL table amounts are in £ billion → converted to full pounds.
 """
 
 from __future__ import annotations
@@ -27,84 +35,258 @@ from typing import Optional
 logger = logging.getLogger("innovation_pipeline")
 
 
-_GBP_AMOUNT_RE = re.compile(
-    r"£\s*([\d,]+(?:\.\d+)?)\s*(billion|bn|million|m(?:illion)?)\b",
-    re.IGNORECASE,
-)
-
-_AGGREGATE_PATTERNS: list[tuple[re.Pattern, str, str, str, float]] = [
+# ── Department registry ────────────────────────────────────────────────────────
+# (name_substring, program_code, canonical_name, decision, confidence)
+_DEPT_REGISTRY: list[tuple[str, str, str, str, float]] = [
     (
-        re.compile(
-            r"total\s+central\s+government\s+spending\s+on\s+science\s+and\s+technology"
-            r".{0,120}?£\s*[\d,]+(?:\.\d+)?\s*(?:billion|bn)",
-            re.IGNORECASE | re.DOTALL,
-        ),
-        "UK_ST_TOTAL",
-        "Science and Technology",
-        "Total central government spending on Science and Technology",
+        "Science, Innovation and Technology",
+        "UK_DSIT",
+        "Dept for Science, Innovation and Technology",
+        "include",
         0.92,
     ),
     (
-        re.compile(
-            r"public\s+r&d\s+investment.{0,120}?£\s*[\d,]+(?:\.\d+)?\s*(?:billion|bn)"
-            r".{0,60}?(?:per\s+year|by\s+\d{4}(?:-\d{2})?)",
-            re.IGNORECASE | re.DOTALL,
-        ),
-        "UK_RD_TOTAL",
-        "Public R&D investment",
-        "Public R&D investment",
-        0.95,
+        "Business, Energy and Industrial Strategy",
+        "UK_BEIS",
+        "Dept for Business, Energy and Industrial Strategy",
+        "review",
+        0.72,
     ),
     (
-        re.compile(
-            r"total\s+direct\s+r&d\s+spending\s+to\s+£\s*[\d,]+(?:\.\d+)?\s*(?:billion|bn)"
-            r".{0,60}?(?:per\s+annum|per\s+year|by\s+\d{4}(?:-\d{2})?)",
-            re.IGNORECASE | re.DOTALL,
-        ),
-        "UK_RD_TOTAL",
-        "Total direct R&D spending",
-        "Total direct R&D spending",
-        0.95,
+        "Business, Innovation and Skills",
+        "UK_BIS",
+        "Dept for Business, Innovation and Skills",
+        "review",
+        0.68,
     ),
     (
-        re.compile(
-            r"annual\s+government\s+investment\s+in\s+r&d\s+will\s+grow\s+to\s+£\s*[\d,]+(?:\.\d+)?\s*(?:billion|bn)",
-            re.IGNORECASE | re.DOTALL,
-        ),
-        "UK_RD_TOTAL",
-        "Government R&D investment",
-        "Annual government investment in R&D",
-        0.95,
-    ),
-    (
-        re.compile(
-            r"increase\s+investment\s+in\s+science,\s*innovation\s+and\s+technology\s+to\s+£\s*[\d,]+(?:\.\d+)?\s*(?:billion|bn)",
-            re.IGNORECASE | re.DOTALL,
-        ),
-        "UK_RD_TOTAL",
-        "Science, innovation and technology investment",
-        "Science, innovation and technology investment",
-        0.90,
+        "Innovation, Universities and Skills",
+        "UK_DIUS",
+        "Dept for Innovation, Universities and Skills",
+        "review",
+        0.70,
     ),
 ]
 
-_EXCLUDE_CONTEXT_RE = re.compile(
-    r"(tax\s+relief|r&d\s+tax|businesses?\s+spend|private\s+sector\s+r&d|"
-    r"metascience|women\s+in\s+innovation|fellowships?|catapult|satellite|"
-    r"quantum|faraday|green\s+future|marketplace|concrete|ai\s+for\s+science)",
+# ── Regex helpers ──────────────────────────────────────────────────────────────
+
+# Fiscal year label: 2011-12, 2023-24 etc.
+_FY_LABEL_RE = re.compile(r"\b(\d{4})-(\d{2})\b")
+
+# A line that is purely a fiscal year (possibly with trailing footnote digits)
+_FY_LINE_RE = re.compile(r"^(\d{4})-(\d{2})\d*$")
+
+# A line that is a numeric DEL amount (£bn): 0.0, 17.2, 116.1, -0.8 etc.
+# Also matches plain dash ("-") for N/A
+_AMOUNT_LINE_RE = re.compile(r"^-?\s*\d[\d,. ]*\d?\s*$|^-$")
+
+# Table page detection
+_DEL_TABLE_RE = re.compile(
+    r"Departmental\s+(?:Expenditure\s+Limits|(?:Resource|Capital)\s+Budgets)",
+    re.IGNORECASE,
+)
+_GBP_BN_HEADER_RE = re.compile(r"£\s*billion", re.IGNORECASE)
+
+# Capital DEL section marker
+_CAPITAL_DEL_RE = re.compile(r"\bCapital DEL\b", re.IGNORECASE)
+_RESOURCE_DEL_RE = re.compile(r"\bResource DEL\b", re.IGNORECASE)
+
+# Narrative science budget patterns
+_NARRATIVE_PATTERNS: list[tuple[re.Pattern, str, str, float]] = [
+    (
+        re.compile(
+            r"total\s+UK\s+science\s+spending.{0,60}£\s*([\d,.]+)\s*(billion|bn)",
+            re.IGNORECASE | re.DOTALL,
+        ),
+        "UK_SCIENCE_TOTAL",
+        "Total UK science spending",
+        0.88,
+    ),
+    (
+        re.compile(
+            r"ring.fenced\s+science\s+budget.{0,80}£\s*([\d,.]+)\s*(billion|bn)",
+            re.IGNORECASE | re.DOTALL,
+        ),
+        "UK_SCIENCE_BUDGET",
+        "Ring-fenced science budget",
+        0.90,
+    ),
+    (
+        re.compile(
+            r"(?:government|public)\s+(?:investment\s+in|spending\s+on)\s+"
+            r"science.{0,80}£\s*([\d,.]+)\s*(billion|bn)",
+            re.IGNORECASE | re.DOTALL,
+        ),
+        "UK_SCIENCE_INVEST",
+        "Government investment in science",
+        0.85,
+    ),
+]
+
+# Exclude context: these indicate the amount is private-sector, cumulative, or
+# a far-future target — not current government budget
+_EXCLUDE_NARRATIVE_RE = re.compile(
+    r"(tax\s+relief|r&d\s+tax|private\s+sector|businesses?\s+spend|"
+    r"over\s+(?:the\s+)?(?:next\s+)?\d+\s*years?|by\s+20[2-9]\d|"
+    r"catapult|satellite|quantum\s+computing|ai\s+for\s+science|"
+    r"metascience|cumulative)",
     re.IGNORECASE,
 )
 
 
-def _parse_amount_from_snippet(snippet: str) -> Optional[float]:
-    match = _GBP_AMOUNT_RE.search(snippet)
-    if not match:
-        return None
-    value = float(match.group(1).replace(",", ""))
-    unit = match.group(2).lower()
-    if unit in ("billion", "bn"):
-        return value * 1e9
-    return value * 1e6
+# ── DEL table parsing ──────────────────────────────────────────────────────────
+
+
+def _is_del_page(text: str) -> bool:
+    return bool(_DEL_TABLE_RE.search(text) and _GBP_BN_HEADER_RE.search(text))
+
+
+def _extract_fiscal_years(lines: list[str]) -> list[str]:
+    """Return ordered list of fiscal year labels found in the table header."""
+    fiscal_years: list[str] = []
+    seen: set[str] = set()
+    for line in lines[:60]:  # headers are always near the top
+        # Single year on a line (strip trailing footnote digits)
+        m = _FY_LINE_RE.match(line)
+        if m:
+            fy = f"{m.group(1)}-{m.group(2)}"
+            if fy not in seen:
+                fiscal_years.append(fy)
+                seen.add(fy)
+            continue
+        # Multiple years on one line (tab- or space-separated)
+        for m2 in _FY_LABEL_RE.finditer(line):
+            fy = f"{m2.group(1)}-{m2.group(2)}"
+            if fy not in seen:
+                fiscal_years.append(fy)
+                seen.add(fy)
+    return fiscal_years
+
+
+def _parse_del_page(
+    page_text: str,
+) -> list[dict]:
+    """
+    Parse a DEL table page and return raw extraction records.
+    Each record: {dept_code, fiscal_year, budget_year, del_type, amount_bn, decision, confidence}
+    """
+    lines = [line.strip() for line in page_text.split("\n")]
+    fiscal_years = _extract_fiscal_years(lines)
+    if not fiscal_years:
+        return []
+
+    n_years = len(fiscal_years)
+    results: list[dict] = []
+    current_del_type = "Resource DEL"  # default; updated when we see section headers
+
+    i = 0
+    while i < len(lines):
+        raw_line = lines[i]
+
+        # Track section type
+        if _CAPITAL_DEL_RE.search(raw_line):
+            current_del_type = "Capital DEL"
+        elif _RESOURCE_DEL_RE.search(raw_line):
+            current_del_type = "Resource DEL"
+
+        # Skip "of which:" sub-rows
+        if raw_line.lower().startswith("of which"):
+            i += 1
+            continue
+
+        # Try to match a target department
+        # Strip trailing footnote superscripts (1-2 digits)
+        clean_line = re.sub(r"\d{1,2}$", "", raw_line).strip()
+
+        for dept_name, dept_code, canonical, decision, confidence in _DEPT_REGISTRY:
+            if dept_name not in clean_line:
+                i += 1
+                continue
+
+            # Found department row — collect amounts
+            # Format A: tab-separated values on same line
+            parts = re.split(r"\t+", raw_line)
+            if len(parts) >= n_years + 1:
+                amounts_raw = parts[1 : n_years + 1]
+            else:
+                # Format B: values on subsequent lines
+                amounts_raw = []
+                j = i + 1
+                while j < len(lines) and len(amounts_raw) < n_years:
+                    val = lines[j].replace(",", "").replace(" ", "")
+                    if _AMOUNT_LINE_RE.match(lines[j]):
+                        amounts_raw.append(val)
+                        j += 1
+                    elif not lines[j]:
+                        j += 1  # skip blank lines
+                    else:
+                        break  # stop at next non-numeric line
+
+            for fy, amt_str in zip(fiscal_years, amounts_raw):
+                amt_str = str(amt_str).strip()
+                if not amt_str or amt_str == "-":
+                    continue
+                try:
+                    amount_bn = float(amt_str.replace(",", "").replace(" ", ""))
+                except ValueError:
+                    continue
+                if amount_bn < 0.5:
+                    continue  # filter out tiny/zero amounts
+                # Fiscal year YYYY-YY → calendar year YYYY
+                budget_year = str(int(fy[:4]))
+                results.append(
+                    {
+                        "dept_code": dept_code,
+                        "canonical": canonical,
+                        "fiscal_year": fy,
+                        "budget_year": budget_year,
+                        "del_type": current_del_type,
+                        "amount_bn": amount_bn,
+                        "decision": decision,
+                        "confidence": confidence,
+                    }
+                )
+            break  # matched a department; move to next line
+
+        i += 1
+
+    return results
+
+
+# ── Narrative science total patterns ───────────────────────────────────────────
+
+
+def _parse_narrative(text: str, doc_year: str) -> list[dict]:
+    """Extract aggregate science/R&D totals from narrative text."""
+    results: list[dict] = []
+    for pattern, prog_code, label, confidence in _NARRATIVE_PATTERNS:
+        for m in pattern.finditer(text):
+            snippet = " ".join(m.group(0).split())
+            if _EXCLUDE_NARRATIVE_RE.search(snippet):
+                continue
+            # Parse amount
+            raw_num = m.group(1).replace(",", "")
+            try:
+                value = float(raw_num)
+            except ValueError:
+                continue
+            unit = m.group(2).lower()
+            amount = value * 1e9 if unit in ("billion", "bn") else value * 1e6
+            if amount < 1e9:
+                continue  # require ≥ £1 billion
+            results.append(
+                {
+                    "prog_code": prog_code,
+                    "label": label,
+                    "amount": amount,
+                    "confidence": confidence,
+                    "snippet": snippet[:240],
+                }
+            )
+    return results
+
+
+# ── Record builder ─────────────────────────────────────────────────────────────
 
 
 def _build_record(
@@ -117,8 +299,9 @@ def _build_record(
     program_code: str,
     label: str,
     amount: float,
-    snippet: str,
     confidence: float,
+    decision: str,
+    line_description: str,
 ) -> dict:
     return {
         "country": country,
@@ -127,14 +310,14 @@ def _build_record(
         "section_name": "Science and innovation",
         "section_name_en": "Science and innovation",
         "program_code": program_code,
-        "line_description": snippet,
-        "line_description_en": snippet,
+        "line_description": line_description,
+        "line_description_en": line_description,
         "amount_local": amount,
         "currency": "GBP",
         "unit": "GBP",
         "rd_category": "direct_rd",
         "taxonomy_score": 8.5,
-        "decision": "include",
+        "decision": decision,
         "confidence": confidence,
         "source_file": source_filename,
         "file_id": file_id,
@@ -144,6 +327,9 @@ def _build_record(
     }
 
 
+# ── Main extractor ─────────────────────────────────────────────────────────────
+
+
 def extract_uk_items(
     sorted_pages,
     file_id: str,
@@ -151,9 +337,10 @@ def extract_uk_items(
     year: str,
     source_filename: str,
 ) -> list[dict]:
-    """Extract explicit aggregate science/R&D totals from UK Red Books."""
+    """Extract R&D budget data from UK Red Book PDFs."""
     records: list[dict] = []
-    seen_keys: set[tuple[str, int]] = set()
+    # Deduplicate: (program_code, budget_year, del_type)
+    seen_keys: set[tuple] = set()
 
     for row in sorted_pages.itertuples(index=False):
         page_number = int(row.page_number)
@@ -161,25 +348,41 @@ def extract_uk_items(
         if not text.strip():
             continue
 
-        for pattern, program_code, label, description, confidence in _AGGREGATE_PATTERNS:
-            match = pattern.search(text)
-            if not match:
-                continue
+        # 1. DEL table extraction
+        if _is_del_page(text):
+            del_records = _parse_del_page(text)
+            for r in del_records:
+                del_label = f"{r['del_type']}"
+                prog_code = f"{r['dept_code']}_{r['del_type'].replace(' ', '_').replace('DEL', 'DEL').upper()}"
+                prog_code = f"{r['dept_code']}_{r['del_type'].split()[0].upper()}"
+                dedup_key = (r["dept_code"], r["budget_year"], r["del_type"])
+                if dedup_key in seen_keys:
+                    continue
+                seen_keys.add(dedup_key)
+                description = f"{r['canonical']} — {r['del_type']} (FY {r['fiscal_year']})"
+                records.append(
+                    _build_record(
+                        country=country,
+                        year=r["budget_year"],
+                        source_filename=source_filename,
+                        file_id=file_id,
+                        page_number=page_number,
+                        program_code=prog_code,
+                        label=r["canonical"],
+                        amount=r["amount_bn"] * 1e9,
+                        confidence=r["confidence"],
+                        decision=r["decision"],
+                        line_description=description,
+                    )
+                )
 
-            snippet = " ".join(match.group(0).split())
-            if _EXCLUDE_CONTEXT_RE.search(snippet):
+        # 2. Narrative science total extraction
+        narrative_records = _parse_narrative(text, year)
+        for r in narrative_records:
+            dedup_key = (r["prog_code"], year)
+            if dedup_key in seen_keys:
                 continue
-
-            amount = _parse_amount_from_snippet(snippet)
-            if amount is None:
-                continue
-            if amount < 1_000_000_000:
-                continue
-            dedupe_key = (program_code, int(round(amount)))
-            if dedupe_key in seen_keys:
-                break
-            seen_keys.add(dedupe_key)
-
+            seen_keys.add(dedup_key)
             records.append(
                 _build_record(
                     country=country,
@@ -187,18 +390,18 @@ def extract_uk_items(
                     source_filename=source_filename,
                     file_id=file_id,
                     page_number=page_number,
-                    program_code=program_code,
-                    label=description,
-                    amount=amount,
-                    snippet=snippet[:240],
-                    confidence=confidence,
+                    program_code=r["prog_code"],
+                    label=r["label"],
+                    amount=r["amount"],
+                    confidence=r["confidence"],
+                    decision="include",
+                    line_description=r["snippet"],
                 )
             )
-            break
 
     if not records:
         logger.debug(
-            "UK extractor: no explicit aggregate science/R&D total found in %s (year %s).",
+            "UK extractor: no science/R&D data found in %s (year %s).",
             source_filename,
             year,
         )
