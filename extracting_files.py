@@ -1,4 +1,5 @@
 ﻿import argparse
+import csv
 import os
 import json
 import re
@@ -20,6 +21,8 @@ KAPPA_API_HOST = "https://kappa.oecd.org/catalogue/api"
 REPO_ROOT = Path(__file__).resolve().parent
 DEFAULT_OUTPUT_DIR = REPO_ROOT / "Data" / "input" / "surveys"
 DEFAULT_CATALOG_PATH = DEFAULT_OUTPUT_DIR / "kappa_catalog.json"
+DEFAULT_REFORMS_JSON_DIR = REPO_ROOT / "Data" / "output" / "reforms" / "reforms_json"
+DEFAULT_FAILED_DOWNLOADS_PATH = REPO_ROOT / "Data" / "output" / "reforms" / "output" / "failed_survey_downloads.csv"
 NS = {"schema": "http://www.oecd.org/ns/lambda/schema/"}
 
 
@@ -264,6 +267,67 @@ def remove_partial_file(path: Path) -> None:
         pass
 
 
+def get_reforms_json_dir() -> Path:
+    config_path = REPO_ROOT / "config.yaml"
+    if config_path.exists():
+        try:
+            with config_path.open("r", encoding="utf-8") as handle:
+                config = yaml.safe_load(handle) or {}
+            configured = str((config.get("reforms", {}) or {}).get("reforms_json", "")).strip()
+            if configured:
+                path = Path(configured)
+                return path if path.is_absolute() else REPO_ROOT / path
+        except Exception:
+            pass
+    return DEFAULT_REFORMS_JSON_DIR
+
+
+def has_processed_json(iso3: str, year: str | int) -> bool:
+    return (get_reforms_json_dir() / f"{iso3}_{year}.json").exists()
+
+
+def remove_pdf_if_json_exists(pdf_path: Path) -> bool:
+    stem = pdf_path.stem
+    if "_" not in stem:
+        return False
+
+    iso3, year = stem.rsplit("_", 1)
+    if not iso3 or not year:
+        return False
+
+    if not has_processed_json(iso3, year):
+        return False
+
+    try:
+        pdf_path.unlink()
+        print(f"Removed PDF because JSON exists: {pdf_path.name}")
+        return True
+    except OSError as exc:
+        print(f"Could not remove {pdf_path.name}: {exc}")
+        return False
+
+
+def cleanup_processed_pdfs(output_dir: Path) -> int:
+    removed = 0
+    if not output_dir.exists():
+        return removed
+
+    for pdf_path in sorted(output_dir.glob("*.pdf")):
+        if remove_pdf_if_json_exists(pdf_path):
+            removed += 1
+    return removed
+
+
+def write_failed_downloads_report(failures: List[Dict[str, str]], report_path: Path = DEFAULT_FAILED_DOWNLOADS_PATH) -> None:
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    fieldnames = ["iso3", "year", "pdf_name", "pdf_url", "read_url", "error"]
+    with report_path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer.writeheader()
+        for failure in failures:
+            writer.writerow({key: failure.get(key, "") for key in fieldnames})
+
+
 def download_file_via_browser(read_url: str, destination: Path) -> bool:
     downloader = PDFDownloader(
         {
@@ -328,12 +392,16 @@ def download_surveys(
     end_date: Optional[str],
     output_dir: Path,
     delay_seconds: float = 2.0,
+    failed_report_path: Path = DEFAULT_FAILED_DOWNLOADS_PATH,
 ) -> int:
     api_key = load_kappa_api_key()
     if not api_key:
         raise RuntimeError("KAPPA_API_KEY is missing. Set it in the environment or config.yaml.")
 
     output_dir.mkdir(parents=True, exist_ok=True)
+    removed = cleanup_processed_pdfs(output_dir)
+    if removed:
+        print(f"Pre-run cleanup removed {removed} PDF(s) with existing JSON.")
     catalog = load_kappa_catalog()
     publications = publications_from_catalog(country_query, start_date, end_date, catalog=catalog)
     if publications:
@@ -349,6 +417,7 @@ def download_surveys(
 
     downloaded = 0
     failed = 0
+    failures: List[Dict[str, str]] = []
     for publication in publications:
         parsed = parse_country_and_year(publication["title"])
         if not parsed:
@@ -361,10 +430,10 @@ def download_surveys(
             print(f"Skipping because ISO3 could not be resolved: {country_name}")
             continue
 
-        destination = output_dir / f"{iso3}_{year}.pdf"
-        if destination.exists() and destination.stat().st_size > 0:
-            print(f"Skipping existing file: {destination.name}")
+        if has_processed_json(iso3, year):
+            print(f"Skipping because JSON exists: {iso3}_{year}.json")
             continue
+        destination = output_dir / f"{iso3}_{year}.pdf"
         try:
             download_file(
                 publication["pdf_url"],
@@ -378,9 +447,21 @@ def download_surveys(
                 time.sleep(delay_seconds)
         except Exception as exc:
             failed += 1
+            failures.append(
+                {
+                    "iso3": iso3,
+                    "year": year,
+                    "pdf_name": destination.name,
+                    "pdf_url": publication.get("pdf_url", ""),
+                    "read_url": publication.get("read_url", ""),
+                    "error": str(exc),
+                }
+            )
             print(f"Failed {destination.name}: {exc}")
 
     if failed:
+        write_failed_downloads_report(failures, failed_report_path)
+        print(f"Failed download report saved to: {failed_report_path}")
         print(f"Completed with {failed} failed download(s).")
     return downloaded
 
@@ -390,17 +471,22 @@ def download_all_surveys(
     end_date: Optional[str],
     output_dir: Path,
     delay_seconds: float = 2.0,
+    failed_report_path: Path = DEFAULT_FAILED_DOWNLOADS_PATH,
 ) -> int:
     api_key = load_kappa_api_key()
     if not api_key:
         raise RuntimeError("KAPPA_API_KEY is missing. Set it in the environment or config.yaml.")
 
     output_dir.mkdir(parents=True, exist_ok=True)
+    removed = cleanup_processed_pdfs(output_dir)
+    if removed:
+        print(f"Pre-run cleanup removed {removed} PDF(s) with existing JSON.")
     catalog = load_kappa_catalog()
     start_year, end_year = _year_range_from_dates(start_date, end_date)
 
     downloaded = 0
     failed = 0
+    failures: List[Dict[str, str]] = []
     for iso3, years in sorted(catalog.items()):
         if not isinstance(years, dict):
             continue
@@ -421,10 +507,10 @@ def download_all_surveys(
             if not pdf_url:
                 continue
 
-            destination = output_dir / f"{iso3}_{year}.pdf"
-            if destination.exists() and destination.stat().st_size > 0:
-                print(f"Skipping existing file: {destination.name}")
+            if has_processed_json(iso3, year):
+                print(f"Skipping because JSON exists: {iso3}_{year}.json")
                 continue
+            destination = output_dir / f"{iso3}_{year}.pdf"
 
             try:
                 download_file(
@@ -439,9 +525,21 @@ def download_all_surveys(
                     time.sleep(delay_seconds)
             except Exception as exc:
                 failed += 1
+                failures.append(
+                    {
+                        "iso3": iso3,
+                        "year": str(year),
+                        "pdf_name": destination.name,
+                        "pdf_url": pdf_url,
+                        "read_url": str(meta.get("read_url", "")).strip(),
+                        "error": str(exc),
+                    }
+                )
                 print(f"Failed {destination.name}: {exc}")
 
     if failed:
+        write_failed_downloads_report(failures, failed_report_path)
+        print(f"Failed download report saved to: {failed_report_path}")
         print(f"Completed with {failed} failed download(s).")
     return downloaded
 
@@ -454,6 +552,7 @@ def main() -> int:
     parser.add_argument("--start-date", default="1900-01-01", help="Inclusive start date, YYYY-MM-DD")
     parser.add_argument("--end-date", default=None, help="Inclusive end date, YYYY-MM-DD")
     parser.add_argument("--delay-seconds", type=float, default=2.0, help="Pause between successful downloads")
+    parser.add_argument("--failed-report", default=str(DEFAULT_FAILED_DOWNLOADS_PATH), help="CSV path for failed downloads")
     parser.add_argument(
         "--output-dir",
         default=str(DEFAULT_OUTPUT_DIR),
@@ -477,6 +576,7 @@ def main() -> int:
                 end_date=end_date,
                 output_dir=Path(args.output_dir),
                 delay_seconds=args.delay_seconds,
+                failed_report_path=Path(args.failed_report),
             )
         else:
             count = download_surveys(
@@ -485,6 +585,7 @@ def main() -> int:
                 end_date=end_date,
                 output_dir=Path(args.output_dir),
                 delay_seconds=args.delay_seconds,
+                failed_report_path=Path(args.failed_report),
             )
     except Exception as exc:
         print(f"Download failed: {exc}")
