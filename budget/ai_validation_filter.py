@@ -3,6 +3,18 @@ from __future__ import annotations
 from pathlib import Path
 import pandas as pd
 
+# Columns to keep in the final clean output — everything else is internal processing noise
+_OUTPUT_COLS = [
+    "country", "year",
+    "section_code", "section_name", "section_name_en",
+    "program_code", "clean_program_description_en", "line_description", "line_description_en",
+    "amount_local", "currency",
+    "rd_category", "ai_rd_category", "ai_pillar",
+    "ai_decision", "ai_confidence", "ai_rationale",
+    "taxonomy_score", "confidence", "decision",
+    "source_file", "page_number",
+]
+
 NOISE_PATTERNS = [
     r"\bsvømme\w*",           # swimming pools/baths
     r"swimming pool",
@@ -55,6 +67,18 @@ def filter_ai_validated(root: Path) -> list[Path]:
         if subset_cols:
             out_df = out_df.drop_duplicates(subset=subset_cols, keep="first")
         out_df = out_df.drop(columns="__len")
+
+        # Keep only clean output columns — drop internal processing fields
+        keep_cols = [c for c in _OUTPUT_COLS if c in out_df.columns]
+        out_df = out_df[keep_cols].copy()
+
+        # Write amounts as plain integers (no scientific notation)
+        if "amount_local" in out_df.columns:
+            out_df["amount_local"] = (
+                pd.to_numeric(out_df["amount_local"], errors="coerce")
+                .round(0)
+                .astype("Int64")
+            )
 
         out_file = csv_path.with_name("ai_ready_for_verification.csv")
         out_df.to_csv(out_file, index=False)

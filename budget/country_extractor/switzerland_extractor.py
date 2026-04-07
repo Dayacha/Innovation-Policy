@@ -118,9 +118,14 @@ def _extract_row(sorted_pages, row_re: re.Pattern[str], min_amount: float) -> Op
             else:
                 candidate = f"{line.strip()} {next_line}".strip()
             values = _row_amounts(candidate)
-            if not values and idx + 1 < len(lines):
-                candidate = f"{candidate} {lines[idx + 1].strip()}".strip()
-                values = _row_amounts(candidate)
+            if not values:
+                for step in range(1, 5):
+                    if idx + step >= len(lines):
+                        break
+                    candidate = f"{candidate} {lines[idx + step].strip()}".strip()
+                    values = _row_amounts(candidate)
+                    if values:
+                        break
             amount = _pick_current_amount(values)
             if amount is None:
                 continue

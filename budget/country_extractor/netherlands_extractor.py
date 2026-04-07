@@ -165,64 +165,49 @@ def extract_netherlands_items(
             if not stripped:
                 continue
             line_norm = _normalize_without_amounts(stripped)
-            line_has_label = any(label in line_norm for label in meta["labels"])
-            line_has_prefix = bool(line_norm) and any(label.startswith(line_norm) for label in meta["labels"])
-            line_has_amount = bool(_AMOUNT_RE.search(stripped))
-            if not (line_has_label or line_has_prefix) and line_has_amount:
+            if not any(label in line_norm or label.startswith(line_norm) for label in meta["labels"]):
                 continue
-            label_match_idx = idx
-            for candidate in _build_candidates(lines, idx):
-                norm = _normalize_without_amounts(candidate)
-                if not any(label in norm for label in meta["labels"]):
-                    # Track how far label spans
-                    label_match_idx = idx + 1
-                    continue
-                amounts = _AMOUNT_RE.findall(candidate)
-                # If amounts aren't on the same lines as the label, look ahead
-                if _select_uitgaven(amounts) is None:
-                    lookahead = _gather_amounts_lookahead(lines, label_match_idx + candidate.count("\n") + 1)
-                    amounts = amounts + lookahead
-                amount_local = _select_uitgaven(amounts)
-                if amount_local is None:
-                    continue
-                before, raw_line, after, merged = _build_context(lines, idx, candidate)
-                record = {
-                    "country": country,
-                    "year": year,
-                    "section_code": meta["section_code"],
-                    "section_name": meta["section_name"],
-                    "section_name_en": meta["section_name_en"],
-                    "program_code": meta["program_code"],
-                    "line_description": meta["line_description"],
-                    "line_description_en": meta["line_description_en"],
-                    "amount_local": amount_local * 1000.0,
-                    "currency": meta["currency"],
-                    "unit": meta["unit"],
-                    "rd_category": "direct_rd",
-                    "taxonomy_score": meta["taxonomy_score"],
-                    "decision": "include",
-                    "confidence": meta["confidence"],
-                    "source_file": source_filename,
-                    "file_id": file_id,
-                    "page_number": page_number,
-                    "amount_raw": amounts[1] if len(amounts) >= 3 else amounts[-1],
-                    "raw_line": raw_line,
-                    "merged_line": merged,
-                    "context_before": before,
-                    "context_after": after,
-                    "text_snippet": merged,
-                    "source_variant": meta["source_variant"],
-                    "rationale": "Dutch ministry article row; uitgaven column extracted from the article-level budget table.",
-                }
-                if best is None or (
-                    float(record["amount_local"]),
-                    -page_number,
-                ) > (
-                    float(best["amount_local"]),
-                    -int(best["page_number"]),
-                ):
-                    best = record
-                break
+            amounts = _gather_amounts_lookahead(lines, idx)
+            amount_local = _select_uitgaven(amounts)
+            if amount_local is None:
+                continue
+            before, raw_line, after, merged = _build_context(lines, idx, stripped)
+            record = {
+                "country": country,
+                "year": year,
+                "section_code": meta["section_code"],
+                "section_name": meta["section_name"],
+                "section_name_en": meta["section_name_en"],
+                "program_code": meta["program_code"],
+                "line_description": meta["line_description"],
+                "line_description_en": meta["line_description_en"],
+                "amount_local": amount_local * 1000.0,
+                "currency": meta["currency"],
+                "unit": meta["unit"],
+                "rd_category": "direct_rd",
+                "taxonomy_score": meta["taxonomy_score"],
+                "decision": "include",
+                "confidence": meta["confidence"],
+                "source_file": source_filename,
+                "file_id": file_id,
+                "page_number": page_number,
+                "amount_raw": amounts[1] if len(amounts) >= 2 else amounts[-1],
+                "raw_line": raw_line,
+                "merged_line": merged,
+                "context_before": before,
+                "context_after": after,
+                "text_snippet": merged,
+                "source_variant": meta["source_variant"],
+                "rationale": "Dutch ministry article row; uitgaven column extracted from the article-level budget table.",
+            }
+            if best is None or (
+                float(record["amount_local"]),
+                -page_number,
+            ) > (
+                float(best["amount_local"]),
+                -int(best["page_number"]),
+            ):
+                best = record
 
     return [best] if best else []
 
