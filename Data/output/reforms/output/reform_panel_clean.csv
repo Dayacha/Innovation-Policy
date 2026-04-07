@@ -49,6 +49,16 @@ AUS,Australia,2023,rd_funding,4,4,1
 AUS,Australia,2023,sectoral_rd,1,1,1
 AUS,Australia,2026,innovation_instruments,1,1,1
 AUS,Australia,2026,rd_funding,1,1,1
+AUT,Austria,1978,innovation_instruments,2,2,1
+AUT,Austria,1980,innovation_instruments,1,1,1
+AUT,Austria,1982,innovation_instruments,1,1,1
+AUT,Austria,1983,innovation_instruments,1,1,1
+AUT,Austria,1983,rd_funding,1,1,1
+AUT,Austria,1984,innovation_instruments,2,2,1
+AUT,Austria,1985,innovation_instruments,1,1,1
+AUT,Austria,1985,startup_ecosystem,1,1,1
+AUT,Austria,1988,sectoral_rd,1,1,1
+AUT,Austria,1990,innovation_instruments,1,1,1
 AUT,Austria,1995,startup_ecosystem,1,1,1
 AUT,Austria,1997,innovation_instruments,1,1,1
 AUT,Austria,1997,knowledge_transfer,2,2,1
@@ -98,6 +108,9 @@ AUT,Austria,2024,innovation_instruments,3,3,1
 AUT,Austria,2024,rd_funding,2,2,1
 AUT,Austria,2024,research_infrastructure,1,1,1
 AUT,Austria,2024,sectoral_rd,3,3,1
+AUT,Austria,2026,innovation_instruments,1,1,1
+AUT,Austria,2026,sectoral_rd,1,1,1
+AUT,Austria,2026,startup_ecosystem,1,1,1
 BEL,Belgium,1997,innovation_instruments,1,1,1
 BEL,Belgium,1997,knowledge_transfer,1,1,1
 BEL,Belgium,1997,sectoral_rd,1,1,1
@@ -124,6 +137,29 @@ BEL,Belgium,2024,knowledge_transfer,1,1,1
 BEL,Belgium,2024,rd_funding,1,1,1
 BEL,Belgium,2024,sectoral_rd,1,1,1
 BEL,Belgium,2024,startup_ecosystem,2,2,1
+CAN,Canada,1971,startup_ecosystem,1,1,1
+CAN,Canada,1972,human_capital,1,1,1
+CAN,Canada,1972,innovation_instruments,1,1,1
+CAN,Canada,1976,sectoral_rd,1,1,1
+CAN,Canada,1976,startup_ecosystem,1,1,1
+CAN,Canada,1979,innovation_instruments,1,1,1
+CAN,Canada,1979,rd_funding,1,1,1
+CAN,Canada,1983,innovation_instruments,1,1,1
+CAN,Canada,1983,rd_funding,1,1,1
+CAN,Canada,1984,innovation_instruments,1,1,1
+CAN,Canada,1985,human_capital,1,1,1
+CAN,Canada,1985,innovation_instruments,1,1,1
+CAN,Canada,1985,rd_funding,1,1,1
+CAN,Canada,1988,rd_funding,1,1,1
+CAN,Canada,1988,startup_ecosystem,1,1,1
+CAN,Canada,1989,human_capital,1,1,1
+CAN,Canada,1989,innovation_instruments,1,1,1
+CAN,Canada,1989,rd_funding,1,1,1
+CAN,Canada,1992,knowledge_transfer,1,1,1
+CAN,Canada,1993,human_capital,1,1,1
+CAN,Canada,1993,innovation_instruments,1,1,1
+CAN,Canada,1994,innovation_instruments,1,1,1
+CAN,Canada,1994,rd_funding,1,1,1
 CAN,Canada,1995,rd_funding,1,1,1
 CAN,Canada,1996,rd_funding,1,1,1
 CAN,Canada,1996,startup_ecosystem,1,1,1
@@ -393,6 +429,9 @@ DNK,Denmark,2024,human_capital,1,1,1
 DNK,Denmark,2024,innovation_instruments,1,1,1
 DNK,Denmark,2024,knowledge_transfer,1,1,1
 DNK,Denmark,2024,rd_funding,1,1,1
+DNK,Denmark,2026,human_capital,1,1,1
+DNK,Denmark,2026,knowledge_transfer,1,1,1
+DNK,Denmark,2026,rd_funding,1,1,1
 ESP,Spain,1996,human_capital,1,1,1
 ESP,Spain,1996,innovation_instruments,1,1,1
 ESP,Spain,1996,research_infrastructure,1,1,1
@@ -465,6 +504,13 @@ EST,Estonia,2024,innovation_instruments,1,1,1
 EST,Estonia,2024,knowledge_transfer,1,1,1
 EST,Estonia,2024,rd_funding,2,2,1
 EST,Estonia,2024,startup_ecosystem,1,1,1
+FIN,Finland,1975,innovation_instruments,1,1,1
+FIN,Finland,1979,innovation_instruments,1,1,1
+FIN,Finland,1981,rd_funding,1,1,1
+FIN,Finland,1983,rd_funding,1,1,1
+FIN,Finland,1985,innovation_instruments,1,1,1
+FIN,Finland,1988,rd_funding,1,1,1
+FIN,Finland,1991,rd_funding,1,1,1
 FIN,Finland,1995,rd_funding,1,1,1
 FIN,Finland,1996,human_capital,1,1,1
 FIN,Finland,1996,innovation_instruments,1,1,1
@@ -674,6 +720,10 @@ IRL,Ireland,2020,rd_funding,1,1,1
 IRL,Ireland,2022,rd_funding,1,1,1
 IRL,Ireland,2025,other,1,1,1
 IRL,Ireland,2025,startup_ecosystem,1,1,1
+ISL,Iceland,1971,innovation_instruments,1,1,1
+ISL,Iceland,1972,sectoral_rd,1,1,1
+ISL,Iceland,1994,rd_funding,1,1,1
+ISL,Iceland,1994,sectoral_rd,1,1,1
 ISL,Iceland,1997,innovation_instruments,1,1,1
 ISL,Iceland,1997,rd_funding,1,1,1
 ISL,Iceland,1998,innovation_instruments,1,1,1
@@ -951,6 +1001,8 @@ MEX,Mexico,2017,innovation_instruments,1,1,1
 MEX,Mexico,2017,rd_funding,1,1,1
 MEX,Mexico,2017,startup_ecosystem,1,1,1
 MEX,Mexico,2019,rd_funding,1,1,1
+MEX,Mexico,2026,human_capital,1,1,1
+MEX,Mexico,2026,research_infrastructure,1,1,1
 NLD,Netherlands,1996,human_capital,2,2,1
 NLD,Netherlands,1996,innovation_instruments,2,2,1
 NLD,Netherlands,1996,rd_funding,2,2,1
@@ -1156,6 +1208,10 @@ PRT,Portugal,2023,human_capital,1,1,1
 PRT,Portugal,2023,innovation_instruments,1,1,1
 PRT,Portugal,2023,rd_funding,1,1,1
 PRT,Portugal,2023,startup_ecosystem,1,1,1
+PRT,Portugal,2026,human_capital,1,1,1
+PRT,Portugal,2026,innovation_instruments,2,2,1
+PRT,Portugal,2026,rd_funding,2,2,1
+PRT,Portugal,2026,startup_ecosystem,1,1,1
 SVK,Slovak Republic,1996,startup_ecosystem,1,1,1
 SVK,Slovak Republic,2004,human_capital,1,1,1
 SVK,Slovak Republic,2004,startup_ecosystem,1,1,1

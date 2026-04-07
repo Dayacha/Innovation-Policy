@@ -7,12 +7,14 @@ classified by theme, growth orientation, and importance.
 
 Standalone usage (from project root):
     python -m reforms.pipeline_reforms
-    python -m reforms.pipeline_reforms --country FRA --year 2024
-    python -m reforms.pipeline_reforms --build-panel-only
+    python -m reforms.pipeline_reforms --reforms-country FRA --reforms-year 2024
+    python -m reforms.pipeline_reforms --reforms-extract-text-only
+    python -m reforms.pipeline_reforms --reforms-build-panel-only
 
 Called from the unified entry point:
     python main.py --reforms-only
     python main.py --reforms-country FRA --reforms-year 2024
+    python main.py --reforms-extract-text-only
 """
 
 import logging
@@ -687,6 +689,7 @@ def run_reforms_pipeline(
     country=None,
     year=None,
     build_panel_only=False,
+    extract_text_only=False,
     fetch_catalog=False,
     download_only=False,
 ):
@@ -697,6 +700,7 @@ def run_reforms_pipeline(
         country:          ISO 3166-1 alpha-3 code to filter to one country.
         year:             Survey year to filter to one year.
         build_panel_only: Rebuild panel from cached JSON — no LLM calls.
+        extract_text_only: Run catalog + text extraction only. No LLM calls.
         fetch_catalog:    Query Kappa API and save kappa_catalog.json, then stop.
         download_only:    Download PDFs from Kappa catalog, then stop.
     """
@@ -716,6 +720,10 @@ def run_reforms_pipeline(
 
     elif build_panel_only:
         _step_build_panel(config, country=country)
+
+    elif extract_text_only:
+        catalog = _step_catalog(config, country=country)
+        _step_extract_text(config, catalog)
 
     else:
         catalog = _step_catalog(config, country=country)
@@ -759,6 +767,10 @@ def add_arguments(parser):
         help="Download Survey PDFs from catalog (Kappa if key set, else public URLs)",
     )
     mode.add_argument(
+        "--reforms-extract-text-only", action="store_true",
+        help="Extract survey text files only for matching PDFs, then stop before any LLM reform analysis",
+    )
+    mode.add_argument(
         "--reforms-build-panel-only", action="store_true",
         help="Rebuild reform panel from cached JSON without LLM calls (free, instant)",
     )
@@ -774,6 +786,7 @@ def run_from_args(args):
         country=args.reforms_country,
         year=args.reforms_year,
         build_panel_only=args.reforms_build_panel_only,
+        extract_text_only=args.reforms_extract_text_only,
         fetch_catalog=args.reforms_fetch_catalog,
         download_only=args.reforms_download,
     )

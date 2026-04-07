@@ -16,6 +16,7 @@ Usage:
     python main.py --reforms-only           # only reform extraction
     python main.py --reforms-country FRA    # reforms for one country
     python main.py --reforms-year 2019      # reforms for one year
+    python main.py --reforms-extract-text-only  # extract text only, no LLM calls
     python main.py --reforms-build-panel-only  # rebuild reform panel, no LLM calls
     python main.py --reforms-fetch-catalog     # query Kappa API, update kappa_catalog.json
     python main.py --reforms-download          # download PDFs from catalog
