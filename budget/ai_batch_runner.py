@@ -24,10 +24,18 @@ def run_batches(
     retry_delay: float = 1.0,
     max_retries: int = 1,
     precomputed_batches: Optional[List[List[dict]]] = None,
+    mode: str = "include",
 ) -> list[dict]:
     """Send records in batches with a single retry per failed batch.
 
-    Failed batches are appended to failed_batches_file as JSON lines for later debugging.
+    Parameters
+    ----------
+    mode : "include" | "review"
+        Passed to client.validate_batch() to select the correct prompt.
+        - "include" : amount validation + Frascati classification
+        - "review"  : binary include/exclude decision
+
+    Failed batches are appended to failed_batches_file as JSON lines for debugging.
     """
     results: list[dict] = []
     failed_batches_file.parent.mkdir(parents=True, exist_ok=True)
@@ -38,7 +46,7 @@ def run_batches(
         attempt = 0
         while True:
             try:
-                batch_result = client.validate_batch(batch)
+                batch_result = client.validate_batch(batch, mode=mode)
                 results.extend(batch_result)
                 break
             except Exception as exc:  # pragma: no cover - runtime behavior
@@ -46,6 +54,7 @@ def run_batches(
                 if attempt > max_retries:
                     failed_entry = {
                         "error": str(exc),
+                        "mode": mode,
                         "records": batch,
                     }
                     with failed_batches_file.open("a", encoding="utf-8") as fh:

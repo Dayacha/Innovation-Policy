@@ -55,13 +55,6 @@ _SCIENCE_TERMS = (
     "gene technology regulatory functions",
 )
 
-_SCIENCE_PREFIXES = (
-    "science and innovation:",
-    "research, science and innovation:",
-    "science, innovation and technology:",
-)
-
-
 def _parse_amount(raw: str) -> float:
     return float(raw.replace(",", "").replace(".", "").replace(" ", ""))
 
@@ -142,11 +135,6 @@ def _extract_science_package(sorted_pages) -> tuple[dict | None, dict | None]:
         idx = 0
         while idx < len(lines):
             stripped = lines[idx].strip()
-            lower = normalize_text(stripped)
-            if not any(prefix in lower for prefix in _SCIENCE_PREFIXES):
-                idx += 1
-                continue
-
             candidate_lines = [stripped]
             amount_line_idx = idx
             for step in (1, 2):
@@ -158,8 +146,10 @@ def _extract_science_package(sorted_pages) -> tuple[dict | None, dict | None]:
                     amount_line_idx = idx + step
 
             candidate = " ".join(part for part in candidate_lines if part)
+            primary_candidate = " ".join(part for part in candidate_lines[:2] if part)
             candidate_norm = _normalize_without_amounts(candidate)
-            term = next((t for t in _SCIENCE_TERMS if t in candidate_norm), None)
+            primary_norm = _normalize_without_amounts(primary_candidate)
+            term = next((t for t in _SCIENCE_TERMS if t in primary_norm), None)
             if term is None:
                 idx += 1
                 continue
@@ -196,7 +186,7 @@ def _extract_science_package(sorted_pages) -> tuple[dict | None, dict | None]:
             "section_code": "NZ_SCIENCE",
             "section_name": "Research, Science and Innovation appropriations",
             "section_name_en": "Research, Science and Innovation appropriations",
-            "line_description": "Samlet eksplisitt vitenskaps- og innovasjonspakke i appropriation schedule",
+            "line_description": "Summed explicit science and innovation package in appropriation schedule",
             "line_description_en": "Summed explicit science and innovation package in the appropriation schedule",
             "amount_local": total,
             "page_number": first_page,

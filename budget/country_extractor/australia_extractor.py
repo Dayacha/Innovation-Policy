@@ -142,6 +142,35 @@ def _largest_amount(candidates: list[str], is_thousands: bool) -> Optional[float
     return max(amounts) if amounts else None
 
 
+def _line_agency_codes(line: str) -> set[str]:
+    """Return agency codes matched on a single line."""
+    codes: set[str] = set()
+    for agency_re, prog_code, _ in _AGENCY_PATTERNS:
+        if agency_re.search(line):
+            codes.add(prog_code)
+    return codes
+
+
+def _select_row_amount(numeric_rows: list[list[str]], is_thousands: bool) -> Optional[float]:
+    """Pick the current-year amount from row-local numeric cells.
+
+    Heuristic:
+    - modern summary rows usually have 3 columns: departmental, administered, total
+      -> choose the last numeric value from the first row
+    - old-format lines usually have 1-2 year columns
+      -> choose the first numeric value from the first row
+    - if the matched row has no numeric cells, fall back to the first continuation row
+    """
+    for row_values in numeric_rows:
+        if not row_values:
+            continue
+        chosen = row_values[-1] if len(row_values) >= 3 else row_values[0]
+        amount = _parse_dollar_amount(chosen, is_thousands)
+        if amount is not None and 100_000 <= amount <= 50_000_000_000:
+            return amount
+    return None
+
+
 # ── Table-level extraction ─────────────────────────────────────────────────────
 
 def _extract_from_table_text(table_text: str) -> list[tuple[str, str, float]]:
@@ -170,11 +199,6 @@ def _extract_from_table_text(table_text: str) -> list[tuple[str, str, float]]:
 
     lines = table_text.splitlines()
 
-    def _is_new_agency_line(line: str) -> bool:
-        """Return True if this line starts a new (different) agency."""
-        cells = [c.strip() for c in line.split("\t")]
-        return bool(_ANY_AGENCY_RE.search(line)) and any(len(c) > 8 for c in cells if c)
-
     def _numeric_cells_from_line(line: str) -> list[str]:
         cells = [c.strip() for c in line.split("\t")]
         return [
@@ -182,23 +206,34 @@ def _extract_from_table_text(table_text: str) -> list[tuple[str, str, float]]:
             if c and re.match(r"^[\d,\s\.—–\-]+$", c) and re.search(r"\d", c)
         ]
 
-    def _collect_numeric_block(start_idx: int) -> list[str]:
-        """Collect numeric cells from the current agency block.
+    def _collect_row_numeric_lines(start_idx: int, prog_code: str) -> list[list[str]]:
+        """Collect numeric cells for the matched agency row only.
 
-        DOCX budget tables often wrap each entity across several rows:
-        heading row, one or more outcome rows, then a total row. The real
-        appropriation is frequently 2-5 lines below the agency label.
+        We keep the current line plus immediate continuation lines when the
+        label wraps. We do not scan until the portfolio total because that can
+        incorrectly capture `Total:` rows instead of the entity amount.
         """
-        cands: list[str] = []
-        for j in range(start_idx, min(len(lines), start_idx + 8)):
+        collected: list[list[str]] = []
+        for j in range(start_idx, min(len(lines), start_idx + 3)):
             line_j = lines[j]
-            if j > start_idx and _is_new_agency_line(line_j):
+            if j > start_idx and re.search(r"^\s*Total:\s", line_j, re.IGNORECASE):
                 break
-            if re.search(r"^Total:\s", line_j, re.IGNORECASE) and j > start_idx:
-                cands.extend(_numeric_cells_from_line(line_j))
+
+            codes = _line_agency_codes(line_j)
+            if j > start_idx and codes and prog_code not in codes:
                 break
-            cands.extend(_numeric_cells_from_line(line_j))
-        return cands
+
+            numerics = _numeric_cells_from_line(line_j)
+            if numerics:
+                collected.append(numerics)
+
+            # Stop once we have a row with numbers unless the next physical line
+            # is still clearly part of the same wrapped label.
+            if numerics and j == start_idx:
+                continue
+            if numerics and j > start_idx:
+                break
+        return collected
 
     for i, line in enumerate(lines):
         cells = [c.strip() for c in line.split("\t")]
@@ -212,10 +247,8 @@ def _extract_from_table_text(table_text: str) -> list[tuple[str, str, float]]:
             if prog_code == "AU_DEPT_SCIENCE" and has_csiro:
                 continue
 
-            # Search across the current agency block rather than a single row.
-            numeric_cands = _collect_numeric_block(i)
-
-            amount = _largest_amount(numeric_cands, is_thousands)
+            numeric_rows = _collect_row_numeric_lines(i, prog_code)
+            amount = _select_row_amount(numeric_rows, is_thousands)
             if amount is None or amount < 100_000:
                 continue
 
@@ -321,8 +354,8 @@ def extract_australia_items(
             source_filename, year,
         )
     else:
-        logger.info(
-            "Australia extractor: %s (year %s) → %d records",
+        logger.debug(
+            "Australia extractor: %s (year %s) -> %d records",
             source_filename, year, len(records),
         )
 

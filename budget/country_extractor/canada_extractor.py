@@ -430,8 +430,8 @@ def extract_canada_items(
 
     deduped = list(best_by_program.values())
 
-    logger.info(
-        "Canada extractor: %s (year %s) → %d agency records (from %d raw)",
+    logger.debug(
+        "Canada extractor: %s (year %s) -> %d agency records (from %d raw)",
         source_filename, year, len(deduped), len(all_records),
     )
     return deduped

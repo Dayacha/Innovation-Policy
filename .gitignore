@@ -29,6 +29,10 @@ config.yaml
 .idea/
 .claude/
 
+# ── Local recordings / archives ───────────────────────────────────────────────
+create_llm_apikey.mov
+Screen Recording *.zip
+
 # ── Test / coverage ───────────────────────────────────────────────────────────
 .pytest_cache/
 .coverage
@@ -73,3 +77,6 @@ Data/output/budget/ai_validation
 Data/output/budget/full_text
 Data/output/budget/intermediate
 Data/output/budget/results.xlsx
+
+create_llm_apikey.mov
+Screen Recording *.zip

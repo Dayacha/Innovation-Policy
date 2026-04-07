@@ -7,25 +7,11 @@ import re
 
 import pandas as pd
 
-from budget.config import DK_SECTION_MAP
 from budget.taxonomy import INCLUDE_THRESHOLD, REVIEW_THRESHOLD, score_text
 from budget.translation_utils import translate_to_english_glossary, preclean_text
 
-# Heuristics / keyword sets for validation
-_BUDGET_KEYWORDS = {
-    "driftsudgifter", "tilskud", "anlaegsudgifter", "anlægstilskud",
-    "operating", "grants", "appropriation", "budget", "udgifter", "indtægter",
-}
-_POS_KEYWORDS = {
-    "forskning", "forsknings", "videnskab", "videnskabelige",
-    "teknologisk", "rumforskning", "laboratorium", "laboratoriet",
-    "institut", "undersøgelser", "research", "science", "technology",
-}
-_NEG_KEYWORDS = {
-    "kursus", "skole", "pension", "bibliotek", "social", "blindesamfund",
-    "kultur", "stipendier", "kirke", "bolig", "kørsel",
-}
-_LEGAL_REF_RE = re.compile(r"^(ændringer i medfør|medfør af|L\s*\d{2,3}|\d{4}\s*§|§\s*\d{2,3})", re.IGNORECASE)
+# Generic program code pattern (e.g. "20.31", "3.02.1")
+# Used internally by clean_legal_prefix and extract_budget_fields.
 _CODE_RE = re.compile(r"\b\d{1,2}\.\d{2}(?:\.\d{1,2})?\b")
 
 
@@ -344,12 +330,7 @@ def enrich_dedicated_record(rec: dict, tax) -> dict:
 
 
 __all__ = [
-    "_BUDGET_KEYWORDS",
     "_CODE_RE",
-    "_LEGAL_REF_RE",
-    "_NEG_KEYWORDS",
-    "_POS_KEYWORDS",
-    "DK_SECTION_MAP",
     "clean_legal_prefix",
     "currency",
     "empty_df",

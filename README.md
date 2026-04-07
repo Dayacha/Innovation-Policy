@@ -24,10 +24,16 @@ Extracted from OECD Economic Survey narratives. Measures the *stated intent*: re
 ### Pipeline 1 — Budget Extraction (Finance Bills)
 *Scanned government budget PDFs → R&D spending time-series*
 
-- Reads Finance Bill PDFs for 25 countries with country-specific extractors
-- Applies OCR where needed (scanned documents)
-- Scores each budget line against a multilingual R&D/innovation taxonomy (search_library.json, pillars A–L)
-- Country-specific extractors in `budget/country_extractor/` handle exact budget formats (program codes, currency scaling, era-specific layouts)
+**Step 1a — Extraction**
+- Reads Finance Bill PDFs for 25+ countries with country-specific extractors
+- Applies OCR where needed (scanned documents, pytesseract)
+- Scores each budget line against a multilingual R&D/innovation taxonomy (`search_library.json`, pillars A–L)
+- Routing: each file is dispatched to a **dedicated country extractor** (`budget/country_extractor/<country>_extractor.py`) if one exists, or to the **generic taxonomy-driven parser** otherwise
+  - Dedicated extractors handle country-specific document formats (program codes, currency scaling, table structures, era-specific layouts)
+  - The generic parser is language-neutral — no country-specific keyword filters — and uses only taxonomy scoring + section structure detection
+- Results are accumulated **incrementally by file ID**: only new files are re-extracted on each run; existing results are preserved
+
+**Step 1b — Optional AI validation** (see [Budget AI validation](#budget-ai-validation) below)
 
 **Covered countries:** Australia, Belgium, Canada, Chile, Colombia, Costa Rica, Czech Republic, Denmark, Estonia, Finland, France, Germany, Hungary, Iceland, Israel, Japan, Korea, Latvia, Lithuania, Netherlands, New Zealand, Norway, Spain, Switzerland, United Kingdom
 
@@ -191,6 +197,82 @@ reforms:
 
 ---
 
+## Budget AI validation
+
+An optional post-extraction validation layer (`budget/ai_validation.py`) runs after `results.csv` is produced. It improves data quality for the R&D time-series database through three sequential AI passes.
+
+> The AI is **grounded in the OECD researchers' own taxonomy** (`search_library.json`). All prompts explicitly load the taxonomy's keyword lists and instruct the model to base decisions strictly on those definitions — not on general intuitions about R&D. Strict anti-hallucination rules are enforced: the AI may not invent data, must return `null` for uncertain fields, and must cite the specific taxonomy term that drove each decision.
+
+### Pass 1 — Individual record validation (split by decision tier)
+
+Records are routed to two different prompts depending on their taxonomy score:
+
+| Tier | Records | AI task |
+|------|---------|---------|
+| **Include** (taxonomy score ≥ 3) | High-confidence R&D lines | Validate amount, classify by Frascati type, flag double-counting risk, clean and translate description |
+| **Review** (taxonomy score 1–2) | Borderline lines | Binary **include / exclude** decision — `review` is not a valid output; must cite the taxonomy term that drove the decision; default to `exclude` when uncertain |
+
+New fields added per record:
+
+| Field | Description |
+|-------|-------------|
+| `frascati_type` | `intramural_rd` / `extramural_grants` / `rd_coordination` / `rd_infrastructure` / `higher_ed_rd` / `not_rd` |
+| `ai_rd_category` | `direct_rd` / `innovation_system` / `possible_rd` / `not_rd` |
+| `ai_decision` | `include` / `review` / `exclude` |
+| `ai_confidence` | 0–1 float |
+| `ai_rationale` | One sentence citing the taxonomy term that drove the decision |
+| `validated_amount_local` | Corrected amount if a unit error (e.g. `$'000` header) was detected in the surrounding context |
+| `double_counting_risk` | `true` if the record may duplicate another line in the same batch |
+| `parse_issue` | `none` / `legal_reference_noise` / `merged_adjacent_items` / `unit_conversion_applied` / etc. |
+
+Cache key: `MD5(year | section_code | line_description | amount_local)` — year is included so per-year evolution is captured independently.
+
+### Pass 2 — Country-year aggregation
+
+After all individual records are validated, one AI call is made **per (country, year)**. The AI receives every validated include-decision record for that country-year and:
+
+1. Identifies double-counting (e.g. a department total that already includes a specific agency listed separately)
+2. Produces a deduplicated total R&D appropriation estimate with confidence rating
+3. Lists which record IDs were included in / excluded from the total and why
+
+Output: `aggregation_results.csv` — one row per (country, year) with `estimated_total_rd`, `double_counting_flags`, `included_record_ids`, `excluded_record_ids`, `confidence`, `coverage_notes`.
+
+### Pass 3 — Time-series anomaly detection
+
+After the full time series is assembled, one AI call is made **per country** across all years. The AI receives per-program time series (amount by year) and flags:
+
+- **Unit errors** — amounts that are 10× or 0.1× neighboring years (likely `$'000` vs full-dollar confusion)
+- **Implausible spikes / drops** — year-over-year ratio > 5× or < 0.1× with no programmatic explanation
+- **Gaps** — missing years in an otherwise continuous series
+
+The AI may suggest a corrected amount only when the evidence is strong (explicit unit header in the extracted data). Otherwise `suggested_amount` is `null`. When uncertain, the AI does not flag — the conservative default is to not raise a false alarm.
+
+Output: `anomaly_flags.csv` — one row per flagged program-year with `anomaly_type`, `suspected_cause`, `suggested_amount`, `confidence`.
+
+### Running AI validation
+
+```bash
+# Full AI validation on all results (all 3 passes)
+python main.py --run-ai-validation
+
+# Single country only
+python main.py --run-ai-validation --filter-country Australia
+
+# Skip aggregation or anomaly passes
+python main.py --run-ai-validation --no-aggregation-pass
+python main.py --run-ai-validation --no-anomaly-pass
+
+# Review-tier records only (fastest, resolves borderline cases)
+python main.py --run-ai-validation --include-review-only
+```
+
+Each pass has its own cache file so re-runs are free for already-processed records:
+- Individual validation: `ai_cache.jsonl`
+- Aggregation: `aggregation_cache.jsonl`
+- Anomaly detection: `anomaly_cache.jsonl`
+
+---
+
 ## Commands
 
 ### Stream 1 — Budget extraction
@@ -251,8 +333,25 @@ python main.py
 |------|-------------|
 | `results.csv` | Main output — one row per R&D budget line identified |
 | `results.xlsx` | Same, formatted for Excel review |
-| `results_ai_verified.csv` | Rows confirmed by optional AI validation pass |
+| `results.json` | Same, grouped by country / year / source file |
+| `results_ai_verified.csv` | Rows confirmed by AI validation (Pass 1 decisions) |
+| `results_review_status.csv` | Tracks which rows are pending / reviewed |
 | `audits/country_audit_summary.csv` | Per-country extraction quality summary |
+
+AI validation outputs (under `Data/output/budget/ai_validation/<run_name>/`):
+
+| File | Description |
+|------|-------------|
+| `ai_validated_candidates_raw.csv` | Raw AI output — one row per record sent |
+| `ai_validated_candidates_clean.csv` | Merged baseline + AI fields side-by-side |
+| `baseline_vs_ai_comparison.csv` | Taxonomy decision vs AI decision for review |
+| `aggregation_results.csv` | **Pass 2** — per (country, year): estimated total R&D, double-counting flags, included / excluded record IDs, confidence |
+| `anomaly_flags.csv` | **Pass 3** — per program-year: anomaly type, suspected cause, suggested corrected amount |
+| `ai_cache.jsonl` | Individual validation cache (keyed by year + section + description + amount) |
+| `aggregation_cache.jsonl` | Aggregation pass cache (keyed by country + year) |
+| `anomaly_cache.jsonl` | Anomaly pass cache (keyed by country + program) |
+| `ai_validation_run_summary.json` | Stats: cache hits, API calls, records per tier, flags |
+| `failed_batches.jsonl` | Any batches that failed after retries (for debugging) |
 
 ### Reform pipeline — raw (`Data/output/reforms/output/`)
 
@@ -302,10 +401,17 @@ Innovation-Policy/
 ├── config.yaml.example             Configuration template
 │
 ├── budget/                         Pipeline 1 — Finance Bill extraction
-│   ├── budget_extractor.py         Orchestration engine
-│   ├── dedicated_pipeline.py       Country dispatcher (25 countries)
-│   ├── taxonomy.py                 Taxonomy loader + K/L classification
-│   └── country_extractor/          Country-specific extractors (25 files)
+│   ├── budget_extractor.py         Orchestration engine (file grouping, routing)
+│   ├── dedicated_pipeline.py       Country dispatcher → dedicated or generic parser
+│   ├── generic_budget_pipeline.py  Generic taxonomy-driven parser (language-neutral)
+│   ├── extractor_common.py         Shared helpers (currency, pillar, filepath utils)
+│   ├── taxonomy.py                 Taxonomy loader + multilingual extensions
+│   ├── section_parser.py           § section structure parser (OCR-aware)
+│   ├── ai_client.py                AI client — 4 prompt modes (include/review/agg/anomaly)
+│   ├── ai_validation.py            3-stage AI validation pipeline
+│   ├── ai_batch_runner.py          Batching + retry logic
+│   ├── temporal_smoothing.py       Cross-year score smoothing + anomaly thresholds
+│   └── country_extractor/          Country-specific extractors (25+ files)
 │
 ├── reforms/                        Pipeline 2 — OECD Survey reform extraction
 │   ├── pipeline_reforms.py         Step 2a: extraction
@@ -331,6 +437,10 @@ Innovation-Policy/
 
 ## Taxonomy reference (`search_library.json`)
 
+The taxonomy is the OECD researchers' authoritative definition of what counts as R&D in this project. It is used at two points: (1) deterministic keyword scoring during extraction, and (2) as grounding material injected into every AI prompt so the model cannot substitute its own judgment.
+
+### Scoring pillars
+
 | Pillar | Type | Scoring effect |
 |--------|------|----------------|
 | A | Direct R&D terms | +3 per hit |
@@ -339,18 +449,38 @@ Innovation-Policy/
 | D | Institutions (universities, research councils) | +2 per hit |
 | E | Sectoral R&D | +1 per hit |
 | F | Budget instruments | +1 per hit |
-| G | Ambiguous terms | −2 if unanchored |
+| G | Ambiguous terms | −2 if unanchored, +0.5 if anchored |
 | H | Exclusions (market research, housing, etc.) | −3 per hit |
 | I | Stems / regex patterns | Pattern matching |
-| J | Decision rules | Include ≥3, Review 1–2, Exclude ≤0 |
+| J | Decision rules | Include ≥3 · Review 1–2 · Exclude ≤0 |
 | K | Activity lens (K1–K8) | Type classification |
 | L | Defence lens (L1–L6) | Scope classification |
+
+### Frascati budget types (GBARD classification — AI Pass 1 output)
+
+The AI validation layer classifies each included record by Frascati Manual Chapter 12 budget type:
+
+| Type | Description |
+|------|-------------|
+| `intramural_rd` | R&D performed inside a government agency or national laboratory |
+| `extramural_grants` | Grants / contracts from government to universities, firms, or research institutes |
+| `rd_coordination` | Funding for research councils, academies, or bodies that allocate R&D spending |
+| `rd_infrastructure` | Large research facilities, equipment, observatories, scientific databases |
+| `higher_ed_rd` | Block grants to universities where the R&D share cannot be separated from teaching |
+| `not_rd` | Education (non-research), administration, social transfers, infrastructure maintenance |
 
 ---
 
 ## Re-running is safe
 
-- Adding new PDFs → only new files are processed
+**Budget pipeline**
+- Adding new PDFs → only new files are processed (tracked by `file_id`)
+- Deleting a PDF → its rows are intentionally kept in `results.csv` (time-series preservation)
+- Re-running `--rerun-countries Australia` → all Australia rows are replaced from scratch
+- AI validation caches (`ai_cache.jsonl`, `aggregation_cache.jsonl`, `anomaly_cache.jsonl`) are append-only — re-running costs nothing for already-processed records
+- AI decisions for confirmed records are never overwritten by re-extraction
+
+**Reform pipeline**
 - The LLM adjudicator checkpoints after every batch → safe to interrupt and resume
 - `--reforms-build-panel-only` rebuilds the raw panel in seconds at zero API cost
 - `--skip-llm` gives a fast taxonomy-only cleaning pass for inspection before committing to LLM calls

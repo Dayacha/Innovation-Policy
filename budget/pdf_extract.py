@@ -72,7 +72,11 @@ def _needs_ocr(text: str) -> bool:
     return False
 
 
-def extract_text_for_inventory(inventory_df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+def extract_text_for_inventory(
+    inventory_df: pd.DataFrame,
+    *,
+    retain_orphaned_cache: bool = True,
+) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Extract page-level text for all files in inventory with simple caching.
 
     If page_text.csv already contains rows for a file with the same content hash,
@@ -253,7 +257,7 @@ def extract_text_for_inventory(inventory_df: pd.DataFrame) -> tuple[pd.DataFrame
     # This allows deleting PDFs after extraction while keeping results intact.
     # Any file in page_text.csv that isn't in the current inventory is an
     # "orphaned" cached entry — include it so downstream stages still see it.
-    if cache_df is not None:
+    if retain_orphaned_cache and cache_df is not None:
         current_paths = set(str(Path(row.filepath)) for row in inventory_df.itertuples(index=False))
         orphaned = cache_df[~cache_df["filepath"].isin(current_paths)].copy()
         if "content_hash" in cache_df.columns and "content_hash" in inventory_df.columns:

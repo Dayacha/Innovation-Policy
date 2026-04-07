@@ -197,7 +197,7 @@ def extract_uk_items(
             break
 
     if not records:
-        logger.warning(
+        logger.debug(
             "UK extractor: no explicit aggregate science/R&D total found in %s (year %s).",
             source_filename,
             year,

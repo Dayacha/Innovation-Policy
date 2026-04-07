@@ -1,17 +1,44 @@
-"""Lightweight AI client abstraction for post-processing validation batches."""
+"""Lightweight AI client abstraction for post-processing validation batches.
+
+Architecture
+------------
+Three distinct prompt modes are used, each targeting a different task:
+
+1. INCLUDE mode  (build_messages_include)
+   Records already classified as "include" by the taxonomy.
+   AI task: validate the amount, classify by Frascati type, flag double-counting risk.
+   NOT re-deciding R&D status — the taxonomy already decided that.
+
+2. REVIEW mode  (build_messages_review)
+   Borderline records the taxonomy scored 1–2 (insufficient for automatic include).
+   AI task: make a binary include/exclude decision based strictly on OECD taxonomy
+   definitions provided in the prompt. Must give an explicit rationale.
+
+3. AGGREGATION mode  (build_aggregation_messages)
+   One call per (country, year) after individual records are validated.
+   AI task: detect double-counting across records, produce a total R&D estimate.
+
+4. ANOMALY mode  (build_anomaly_messages)
+   One call per country after the full time series is assembled.
+   AI task: flag year-over-year anomalies (unit errors, spikes, gaps).
+
+All prompts share:
+- Taxonomy grounding loaded from search_library.json (OECD researchers' definitions)
+- Strict anti-hallucination rules (never invent data not present in the input)
+"""
 
 from __future__ import annotations
 
 import json
 import os
-from dataclasses import dataclass
-from typing import List
 import re
-from json import JSONDecodeError
+from dataclasses import dataclass
+from pathlib import Path
+from typing import List
 
 try:
     from openai import OpenAI
-except Exception:  # pragma: no cover - optional dependency until installed
+except Exception:  # pragma: no cover - optional dependency
     OpenAI = None  # type: ignore
 
 
@@ -26,10 +53,153 @@ class MissingOpenAIDependencyError(RuntimeError):
 @dataclass
 class AIClientConfig:
     model: str = "gpt-4o-mini"
-    temperature: float = 0.1
-    max_output_tokens: int = 1500
+    temperature: float = 0
+    max_output_tokens: int = 2000
     api_key_env: str = "OPENAI_API_KEY"
 
+
+# ── Taxonomy grounding ────────────────────────────────────────────────────────
+
+def _load_taxonomy_grounding() -> dict[str, list[str]]:
+    """Extract keyword samples from search_library.json for prompt grounding.
+
+    Loads the OECD researchers' own definitions so the AI uses the same
+    vocabulary and never substitutes its own intuition about what "R&D" means.
+    """
+    json_file = (
+        Path(__file__).resolve().parent.parent
+        / "Data" / "input" / "taxonomy" / "search_library.json"
+    )
+    try:
+        data = json.loads(json_file.read_text(encoding="utf-8"))
+
+        # Ambiguous keywords may be dicts {term, anchors} or plain strings
+        raw_ambiguous = data.get("ambiguous", {}).get("keywords", [])
+        ambiguous_terms = []
+        for kw in raw_ambiguous[:15]:
+            if isinstance(kw, dict):
+                ambiguous_terms.append(str(kw.get("term", "")))
+            else:
+                ambiguous_terms.append(str(kw))
+        ambiguous_terms = [t for t in ambiguous_terms if t]
+
+        return {
+            "core_rd": data.get("auto_include", {}).get("keywords", [])[:30],
+            "institutions": data.get("institutions", {}).get("keywords", [])[:20],
+            "sectoral_rd": data.get("sectoral_rd", {}).get("keywords", [])[:15],
+            "exclusions": data.get("exclusions", {}).get("keywords", [])[:20],
+            "ambiguous": ambiguous_terms,
+        }
+    except Exception:
+        return {
+            "core_rd": ["research and development", "R&D", "scientific research",
+                        "basic research", "applied research", "experimental development"],
+            "institutions": ["university", "research council", "national laboratory",
+                             "research institute"],
+            "sectoral_rd": [],
+            "exclusions": ["market research", "regional development", "social work",
+                           "vocational training", "public order"],
+            "ambiguous": ["development", "programme", "innovation"],
+        }
+
+
+_TAXONOMY = _load_taxonomy_grounding()
+
+
+# ── Shared prompt blocks ──────────────────────────────────────────────────────
+
+_ANTI_HALLUCINATION_RULES = """\
+STRICT RULES — violations will invalidate results:
+1. Use ONLY data present in the record fields provided. Never invent program codes,
+   agency names, amounts, years, descriptions, or classifications.
+2. If a field is missing or ambiguous, return null for that field — do not guess.
+3. Do not use general world knowledge to fill in amounts or names.
+   Your sole source of truth is the record fields you receive.
+4. validated_amount_local MUST equal amount_local from the input UNLESS the budget
+   context window (previous_lines / next_lines / neighbor_amounts) explicitly shows
+   the line is a sub-total, aggregate, or that the unit header says "$'000" or similar.
+5. If you cannot make a confident determination, set ai_decision to "review" and
+   describe the uncertainty clearly in ai_rationale. Never force a decision.
+6. Do NOT wrap your JSON in markdown fences or add any prose outside the JSON."""
+
+_TAXONOMY_GROUNDING = f"""\
+OECD TAXONOMY — what counts as R&D for this project:
+Base classifications STRICTLY on this list. Do not substitute your own judgment about R&D.
+
+HIGH-CONFIDENCE R&D (auto-include keywords):
+{", ".join(_TAXONOMY["core_rd"])}
+
+KNOWN R&D INSTITUTIONS (funding these = R&D):
+{", ".join(_TAXONOMY["institutions"])}
+
+SECTOR-SPECIFIC R&D:
+{", ".join(_TAXONOMY["sectoral_rd"]) if _TAXONOMY["sectoral_rd"] else "(see core_rd)"}
+
+EXCLUSIONS — these are DEFINITIVELY NOT R&D for this project:
+{", ".join(_TAXONOMY["exclusions"])}
+
+AMBIGUOUS — only count as R&D if an explicit R&D anchor appears nearby:
+{", ".join(_TAXONOMY["ambiguous"])}
+
+FRASCATI BUDGET TYPES (GBARD classification per Frascati Manual Ch. 12):
+- intramural_rd       : R&D performed inside a government agency or national lab
+- extramural_grants   : Grants / contracts from government to universities, firms,
+                        or research institutes to conduct R&D
+- rd_coordination     : Funding for research councils, science academies, or bodies
+                        that coordinate/allocate R&D spending
+- rd_infrastructure   : Large research facilities, equipment, observatories, databases
+- higher_ed_rd        : Block grants to universities where the R&D share cannot be
+                        separated from teaching/admin
+- not_rd              : Education (non-research), administration, social transfers,
+                        infrastructure maintenance, market research, regional policy"""
+
+_OUTPUT_SCHEMA_INCLUDE = """\
+Required JSON keys per record (include mode):
+  record_id                    : string  — echo back unchanged
+  keep                         : bool    — true if this is a valid R&D budget line
+  clean_program_code           : string | null
+  clean_program_description_da : string | null — cleaned original-language description
+  clean_program_description_en : string | null — English translation of cleaned description
+  clean_budget_type_da         : string | null
+  clean_budget_type_en         : string | null
+  validated_amount_local       : number | null — corrected amount (see Rule 4 above)
+  currency                     : string | null
+  frascati_type                : one of [intramural_rd, extramural_grants, rd_coordination,
+                                          rd_infrastructure, higher_ed_rd, not_rd]
+  ai_rd_category               : one of [direct_rd, innovation_system, possible_rd, not_rd]
+  ai_pillar                    : one of [Direct R&D, Innovation, Ambiguous, Exclude]
+  ai_confidence                : float 0–1
+  ai_decision                  : one of [include, review, exclude]
+  ai_rationale                 : string — one sentence citing which taxonomy term matched
+  parse_issue                  : one of [none, legal_reference_noise, merged_adjacent_items,
+                                          malformed_budget_type, missing_program_code,
+                                          amount_alignment_uncertain, duplicate_candidate,
+                                          unit_conversion_applied, other]
+  double_counting_risk         : bool — true if this record may duplicate another line"""
+
+_OUTPUT_SCHEMA_REVIEW = """\
+Required JSON keys per record (review mode):
+  record_id                    : string  — echo back unchanged
+  keep                         : bool    — true only if clearly R&D per taxonomy
+  clean_program_description_en : string | null — English translation only if keep=true
+  validated_amount_local       : number | null — null if keep=false
+  currency                     : string | null
+  frascati_type                : one of [intramural_rd, extramural_grants, rd_coordination,
+                                          rd_infrastructure, higher_ed_rd, not_rd]
+  ai_rd_category               : one of [direct_rd, innovation_system, possible_rd, not_rd]
+  ai_pillar                    : one of [Direct R&D, Innovation, Ambiguous, Exclude]
+  ai_confidence                : float 0–1
+  ai_decision                  : one of [include, exclude]  — NO "review" allowed here;
+                                  you MUST make a binary decision
+  ai_rationale                 : string — cite the specific taxonomy term (include list or
+                                  exclusion list) that drove your decision. If neither
+                                  list applies, classify as exclude.
+  parse_issue                  : one of [none, legal_reference_noise, merged_adjacent_items,
+                                          malformed_budget_type, missing_program_code,
+                                          amount_alignment_uncertain, other]"""
+
+
+# ── AI Client ─────────────────────────────────────────────────────────────────
 
 class AIClient:
     """Wrapper around an OpenAI-style chat/completions API."""
@@ -39,117 +209,402 @@ class AIClient:
 
         if OpenAI is None:
             raise MissingOpenAIDependencyError(
-                "openai package is not installed. Add it to requirements and install dependencies."
+                "openai package is not installed. Add it to requirements."
             )
 
         api_key = os.getenv(self.config.api_key_env)
         if not api_key:
             raise MissingAPIKeyError(
-                f"API key missing. Set {self.config.api_key_env} in your environment to enable AI validation."
+                f"API key missing. Set {self.config.api_key_env} in your environment."
             )
 
         self.client = OpenAI(api_key=api_key)
 
-    def build_messages(self, batch: List[dict]) -> list[dict]:
-        """Construct chat messages for the batch of candidate records."""
-        instructions = (
-            "You are validating pre-extracted government budget items from finance bills. "
-            "Goal: determine whether each line is a real budget item relevant to research/innovation "
-            "and capture the plausible invested amount. "
-            "Use only the provided fields and structured budget context. Do not invent data or infer beyond them. "
-            "For each record, clean the original-language description, translate that cleaned description to English, "
-            "validate that it is a real budget item, adjust the amount if the description contradicts it, classify R&D relevance, "
-            "and return strict JSON only. "
-            "Ignore totals, ministry-wide aggregates, revenue lines, or legal-reference-only lines. "
-            "Preserve record_id for alignment. When budget_window is provided, use section/program/item metadata, "
-            "previous_lines, next_lines, and neighbor_amounts to decide whether the current line is a real item or a subtotal/header. "
-            "Treat raw_page_text_excerpt as secondary fallback context only. "
-            "Do NOT wrap the JSON in markdown code fences or any extra text."
-        )
+    # ── Include-mode prompt ───────────────────────────────────────────────────
 
-        fields_instruction = (
-            "Required JSON keys per record: record_id, keep (bool), clean_program_code, "
-            "clean_program_description_da, clean_program_description_en, clean_budget_type_da, clean_budget_type_en, "
-            "validated_amount_local, currency, ai_rd_category, ai_pillar, ai_confidence, ai_decision, ai_rationale, parse_issue. "
-            "Categories: ai_rd_category in [direct_rd, innovation_system, possible_rd, not_rd]; "
-            "ai_pillar in [Direct R&D, Innovation, Ambiguous, Exclude]; ai_decision in [include, review, exclude]. "
-            "Confidence 0-1. parse_issue options: none, legal_reference_noise, merged_adjacent_items, malformed_budget_type, "
-            "missing_program_code, amount_alignment_uncertain, duplicate_candidate, other."
-        )
+    def build_messages_include(self, batch: List[dict]) -> list[dict]:
+        """Prompt for high-confidence "include" records.
 
-        batch_payload = []
-        for record in batch:
-            # Keep raw dict but ensure JSON-serializable.
-            batch_payload.append(record)
+        These records were already classified as R&D by the taxonomy keyword
+        scoring. The AI's job is NOT to re-evaluate R&D status but to:
+        - Validate and correct the amount if context shows a unit issue
+        - Classify by Frascati budget type
+        - Flag potential double-counting within the batch
+        - Clean and translate descriptions
+        """
+        system = "\n\n".join([
+            (
+                "You are a specialist in OECD government R&D budget statistics. "
+                "You are reviewing budget line items that have ALREADY been identified as "
+                "R&D-relevant by a keyword taxonomy. Your task is to re-decide if they "
+                "are R&D — assume they are. The extractionare from finance bills documents"
+                " Your tasks are:\n"
+                "1. Validate and correct the reported amount if the surrounding budget "
+                "context (previous_lines, next_lines, neighbor_amounts) clearly shows a "
+                "unit conversion issue (e.g. heading says '$000' but amount looks like full dollars).\n"
+                "2. Classify each item by Frascati budget type.\n"
+                "3. Clean the original-language description and provide an English translation.\n"
+                "4. Flag double_counting_risk=true if this record appears to be a subtotal "
+                "or aggregate of another record in the same batch."
+            ),
+            _ANTI_HALLUCINATION_RULES,
+            _TAXONOMY_GROUNDING,
+            _OUTPUT_SCHEMA_INCLUDE,
+        ])
+
+        # If the batch was grouped by page, the first record carries a shared
+        # page_context field with the full page text — sent once for all records
+        # in this batch instead of repeated as a trimmed excerpt per record.
+        page_context = None
+        clean_batch = []
+        for rec in batch:
+            rec = dict(rec)
+            if "page_context" in rec:
+                page_context = rec.pop("page_context")
+            clean_batch.append(rec)
 
         user_content = {
-            "task": "validate_budget_items",
-            "items": batch_payload,
+            "task": "validate_include_records",
+            "mode": "include",
+            "items": clean_batch,
             "requirements": {
-                "return_format": "JSON array, same order as items",
-                "language_notes": "Input may be multilingual; provide English translation for the cleaned description only",
+                "return_format": "JSON array, one object per input record, same order",
+                "language_notes": (
+                    "Input may be multilingual. Provide English translation in "
+                    "clean_program_description_en only. Do not translate if input is "
+                    "already English."
+                ),
+                "amount_rule": (
+                    "Only change validated_amount_local if the budget_window context "
+                    "or page_context contains explicit evidence of a unit error "
+                    "(e.g. '$000' or \"$'000\" in a column header). "
+                    "Document the change in parse_issue=unit_conversion_applied."
+                ),
             },
         }
+        if page_context:
+            user_content["page_context"] = (
+                "The following is the full text of the budget page from which ALL "
+                "records in this batch were extracted. Use it to understand the "
+                "surrounding structure and detect subtotals or aggregates:\n\n"
+                + page_context
+            )
 
         return [
-            {"role": "system", "content": instructions},
-            {"role": "system", "content": fields_instruction},
+            {"role": "system", "content": system},
             {
                 "role": "user",
                 "content": (
-                    "Process these items and return only JSON (no prose). "
-                    "Respond with a JSON array where each element maps to the input order.\n" + json.dumps(user_content)
+                    "Process these pre-validated R&D items. Return only a JSON array "
+                    "with no prose.\n" + json.dumps(user_content)
                 ),
             },
         ]
 
-    def validate_batch(self, batch: List[dict]) -> list[dict]:
-        """Send a batch to the model and return parsed JSON list."""
-        messages = self.build_messages(batch)
+    # ── Review-mode prompt ────────────────────────────────────────────────────
+
+    def build_messages_review(self, batch: List[dict]) -> list[dict]:
+        """Prompt for borderline "review" records.
+
+        These records scored 1–2 on the taxonomy (below the include threshold of 3).
+        The AI must make a BINARY include/exclude decision based strictly on the
+        OECD taxonomy definitions in the prompt. "review" is not a valid output.
+        """
+        system = "\n\n".join([
+            (
+                "You are a specialist in OECD government R&D budget statistics (GBARD). "
+                "You are reviewing borderline budget line items that scored just below the "
+                "R&D include threshold in a keyword taxonomy. For each record you must make "
+                "a BINARY decision: include (it is R&D per the OECD taxonomy) or exclude "
+                "(it is not). You may NOT return 'review' — a decision is required.\n\n"
+                "Decision rules:\n"
+                "- If the line description or surrounding context contains a HIGH-CONFIDENCE "
+                "R&D keyword from the taxonomy → include.\n"
+                "- If it contains an EXCLUSION term from the taxonomy → exclude.\n"
+                "- If it contains only AMBIGUOUS terms with NO explicit R&D anchor in "
+                "the surrounding context → exclude.\n"
+                "- If the record is a ministry-wide aggregate, revenue line, or administrative "
+                "overhead with no R&D qualifier → exclude.\n"
+                "- When genuinely uncertain after applying the above rules → exclude "
+                "(conservative default) and explain in ai_rationale."
+            ),
+            _ANTI_HALLUCINATION_RULES,
+            _TAXONOMY_GROUNDING,
+            _OUTPUT_SCHEMA_REVIEW,
+        ])
+
+        page_context = None
+        clean_batch = []
+        for rec in batch:
+            rec = dict(rec)
+            if "page_context" in rec:
+                page_context = rec.pop("page_context")
+            clean_batch.append(rec)
+
+        user_content = {
+            "task": "classify_borderline_records",
+            "mode": "review",
+            "items": clean_batch,
+            "requirements": {
+                "return_format": "JSON array, one object per input record, same order",
+                "decision_rule": (
+                    "ai_decision must be 'include' or 'exclude' — never 'review'. "
+                    "ai_rationale must cite the specific taxonomy term that drove the decision."
+                ),
+                "conservative_default": (
+                    "When evidence is absent or ambiguous, default to exclude."
+                ),
+            },
+        }
+        if page_context:
+            user_content["page_context"] = (
+                "The following is the full text of the budget page from which ALL "
+                "records in this batch were extracted. Use it as context when "
+                "deciding whether borderline lines have an R&D anchor nearby:\n\n"
+                + page_context
+            )
+
+        return [
+            {"role": "system", "content": system},
+            {
+                "role": "user",
+                "content": (
+                    "Classify each borderline record. Return only a JSON array "
+                    "with no prose.\n" + json.dumps(user_content)
+                ),
+            },
+        ]
+
+    # ── Aggregation-mode prompt ───────────────────────────────────────────────
+
+    def build_aggregation_messages(
+        self,
+        records: list[dict],
+        country: str,
+        year: str | int,
+    ) -> list[dict]:
+        """Prompt for the country-year aggregation pass.
+
+        Receives ALL validated records for one (country, year). Checks for
+        double-counting and produces a total R&D estimate with confidence.
+        """
+        system = "\n\n".join([
+            (
+                "You are a specialist in OECD government R&D budget statistics (GBARD). "
+                "You are reviewing ALL validated R&D budget line items for a single "
+                f"country-year: {country} {year}.\n\n"
+                "Your tasks:\n"
+                "1. Identify double-counting: flag pairs of records where one appears "
+                "to be a subtotal or aggregate of another (e.g. a department total that "
+                "includes a specific agency already listed separately).\n"
+                "2. Estimate the total government R&D appropriation for this country-year "
+                "by summing non-duplicated records. State which records you excluded from "
+                "the sum and why.\n"
+                "3. Rate your confidence in the total (0–1).\n"
+                "4. Note any data quality issues that limit comparability "
+                "(e.g. partial coverage, mixed budget types, unclear units)."
+            ),
+            _ANTI_HALLUCINATION_RULES,
+            (
+                "ADDITIONAL RULE for aggregation:\n"
+                "Do not add records to the total that are not present in the input. "
+                "Do not subtract records unless you have explicit evidence they are "
+                "duplicates of another listed record. State your reasoning for every "
+                "exclusion from the sum."
+            ),
+        ])
+
+        output_schema = """\
+Return a single JSON object (not an array) with these keys:
+  country                  : string
+  year                     : string or int
+  double_counting_flags    : array of objects, each with:
+      record_ids           : array of record_id strings that overlap
+      reason               : string — why they overlap
+      recommended_action   : "keep_first" | "keep_largest" | "manual_review"
+  included_record_ids      : array of record_id strings used in the total
+  excluded_record_ids      : array of record_id strings excluded (duplicates)
+  estimated_total_rd       : number | null — sum in local currency
+  currency                 : string
+  confidence               : float 0–1
+  coverage_notes           : string — data quality caveats (null if none)"""
+
+        user_content = {
+            "task": "aggregate_country_year_rd",
+            "country": country,
+            "year": year,
+            "validated_records": records,
+            "output_schema": output_schema,
+        }
+
+        return [
+            {"role": "system", "content": system},
+            {
+                "role": "user",
+                "content": (
+                    f"Aggregate R&D records for {country} {year}. "
+                    "Return only the JSON object, no prose.\n"
+                    + json.dumps(user_content)
+                ),
+            },
+        ]
+
+    # ── Anomaly-mode prompt ───────────────────────────────────────────────────
+
+    def build_anomaly_messages(
+        self,
+        timeseries_data: list[dict],
+        country: str,
+    ) -> list[dict]:
+        """Prompt for the time-series anomaly detection pass.
+
+        Receives per-program time series for one country. Flags year-over-year
+        anomalies: unit errors, implausible spikes/drops, missing years.
+        """
+        system = "\n\n".join([
+            (
+                "You are a specialist in OECD government R&D budget statistics (GBARD). "
+                f"You are reviewing the extracted R&D time series for {country}.\n\n"
+                "Your tasks:\n"
+                "1. For each program/agency series, assess whether all values are "
+                "plausible and internally consistent.\n"
+                "2. Flag any year where the amount is anomalous relative to neighbors "
+                "(e.g. 10× or 0.1× the surrounding years — likely a unit error).\n"
+                "3. Identify gaps (years with no data between years that have data).\n"
+                "4. Where you flag an anomaly, suggest a corrected amount ONLY if the "
+                "evidence is strong (e.g. explicit '$000' header on that year's extract). "
+                "Otherwise leave suggested_amount as null.\n"
+                "5. Rate confidence in each flag (0–1)."
+            ),
+            _ANTI_HALLUCINATION_RULES,
+            (
+                "ADDITIONAL RULE for anomaly detection:\n"
+                "Do not flag a year as anomalous solely because the amount is large. "
+                "Government R&D budgets do grow. Only flag when the year-over-year ratio "
+                "is implausible (>5× or <0.1×) AND there is no obvious programmatic "
+                "explanation visible in the data provided. When in doubt, do NOT flag."
+            ),
+        ])
+
+        output_schema = """\
+Return a JSON array (one object per anomalous program-year). Each object:
+  program_code      : string
+  program_name      : string | null
+  country           : string
+  anomaly_year      : string or int
+  anomaly_type      : one of [spike, drop, unit_error, gap, other]
+  neighboring_years : object mapping year → amount for context (from input only)
+  suspected_cause   : string — one sentence; null if unknown
+  suggested_amount  : number | null — corrected amount in local currency; null if uncertain
+  currency          : string
+  confidence        : float 0–1
+If no anomalies are found, return an empty array []."""
+
+        user_content = {
+            "task": "detect_timeseries_anomalies",
+            "country": country,
+            "timeseries": timeseries_data,
+            "output_schema": output_schema,
+        }
+
+        return [
+            {"role": "system", "content": system},
+            {
+                "role": "user",
+                "content": (
+                    f"Detect anomalies in the {country} R&D time series. "
+                    "Return only the JSON array, no prose.\n"
+                    + json.dumps(user_content)
+                ),
+            },
+        ]
+
+    # ── Shared batch runner ───────────────────────────────────────────────────
+
+    def _call(self, messages: list[dict]) -> str:
+        """Send messages and return raw response content string."""
         response = self.client.chat.completions.create(
             model=self.config.model,
             messages=messages,
             temperature=self.config.temperature,
             max_tokens=self.config.max_output_tokens,
         )
-
         content = response.choices[0].message.content if response.choices else ""
         if not content:
             raise ValueError("Empty response from AI model")
+        return content
 
-        def extract_json(txt: str) -> str:
-            txt = txt.strip()
-            # Case 1: fenced block somewhere in the message
-            if "```" in txt:
-                parts = txt.split("```")
-                # pick the part inside the first fence if possible
-                if len(parts) >= 3:
-                    candidate = parts[1]
-                    # drop a leading language token like json
-                    candidate = re.sub(r"^\\s*json\\s*", "", candidate, flags=re.IGNORECASE)
-                    return candidate.strip()
-            # Case 2: find first JSON array/object
-            for opener in ["[", "{"]:
-                idx = txt.find(opener)
-                if idx != -1:
-                    return txt[idx:].strip()
-            return txt
+    @staticmethod
+    def _extract_json(txt: str) -> str:
+        """Strip markdown fences and return the raw JSON string."""
+        txt = txt.strip()
+        if "```" in txt:
+            parts = txt.split("```")
+            if len(parts) >= 3:
+                candidate = parts[1]
+                candidate = re.sub(r"^\s*json\s*", "", candidate, flags=re.IGNORECASE)
+                return candidate.strip()
+        for opener in ["[", "{"]:
+            idx = txt.find(opener)
+            if idx != -1:
+                return txt[idx:]
+        return txt
 
-        cleaned = extract_json(content)
-        # Try strict parse, then a lenient fallback (strip trailing commas, fix quotes)
-        try:
-            parsed = json.loads(cleaned)
-        except JSONDecodeError:
-            repaired = re.sub(r",\\s*}", "}", cleaned)
-            repaired = re.sub(r",\\s*]", "]", repaired)
-            # remove stray backticks
-            repaired = repaired.replace("`", "")
-            try:
-                parsed = json.loads(repaired)
-            except JSONDecodeError as exc:  # pragma: no cover - runtime path
-                raise ValueError(f"Failed to parse AI JSON: {exc}: {content[:200]}")
+    def validate_batch(self, batch: List[dict], mode: str = "include") -> list[dict]:
+        """Send a batch to the model and return a parsed JSON list.
 
-        if not isinstance(parsed, list):
-            raise ValueError("AI response is not a list; ensure model returns JSON array.")
+        Parameters
+        ----------
+        batch : list of record dicts
+        mode  : "include" | "review"
+        """
+        if mode == "review":
+            messages = self.build_messages_review(batch)
+        else:
+            messages = self.build_messages_include(batch)
 
-        return parsed
+        content = self._call(messages)
+        raw = self._extract_json(content)
+        result = json.loads(raw)
+        if isinstance(result, dict) and "items" in result:
+            return result["items"]
+        if isinstance(result, list):
+            return result
+        return []
+
+    def run_aggregation(
+        self,
+        records: list[dict],
+        country: str,
+        year: str | int,
+    ) -> dict:
+        """Run the country-year aggregation pass. Returns a single dict."""
+        messages = self.build_aggregation_messages(records, country, year)
+        content = self._call(messages)
+        raw = self._extract_json(content)
+        result = json.loads(raw)
+        if isinstance(result, list) and result:
+            return result[0]
+        if isinstance(result, dict):
+            return result
+        return {}
+
+    def run_anomaly_detection(
+        self,
+        timeseries_data: list[dict],
+        country: str,
+    ) -> list[dict]:
+        """Run the time-series anomaly detection pass. Returns a list of flags."""
+        messages = self.build_anomaly_messages(timeseries_data, country)
+        content = self._call(messages)
+        raw = self._extract_json(content)
+        result = json.loads(raw)
+        if isinstance(result, list):
+            return result
+        return []
+
+    # ── Backward-compat shim ──────────────────────────────────────────────────
+
+    def build_messages(self, batch: List[dict]) -> list[dict]:
+        """Legacy entry point — routes to include-mode prompt."""
+        return self.build_messages_include(batch)

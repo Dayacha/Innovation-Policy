@@ -364,6 +364,7 @@ def merge_incremental_budget_results(
     pages_df: pd.DataFrame,
     budget_items_file: Path = BUDGET_ITEMS_FILE,
     actually_processed_ids: set | None = None,
+    replace_countries: set[str] | None = None,
 ) -> pd.DataFrame:
     """Merge newly extracted budget items with previously saved ones.
 
@@ -388,6 +389,10 @@ def merge_incremental_budget_results(
     # Keep ALL previous rows except those being replaced in this run.
     # Deleted PDFs are intentionally kept — their data is not lost.
     keep_previous = previous_budget_df.copy()
+    if replace_countries and "country" in keep_previous.columns:
+        keep_previous = keep_previous[
+            ~keep_previous["country"].fillna("").astype(str).isin(replace_countries)
+        ].copy()
     if current_file_ids and "file_id" in keep_previous.columns:
         keep_previous = keep_previous[~keep_previous["file_id"].astype(str).isin(current_file_ids)]
 
@@ -469,6 +474,74 @@ def _inventory_fully_cached(
     cached_file_ids = set(matched["file_id"].dropna().astype(str))
     inventory_file_ids = set(inventory_df["file_id"].dropna().astype(str))
     return inventory_file_ids.issubset(cached_file_ids)
+
+
+def _build_page_summary(pages_df: pd.DataFrame) -> pd.DataFrame:
+    """Build per-file extraction summary from page-level text rows."""
+    if pages_df.empty:
+        return pd.DataFrame(
+            columns=[
+                "file_id",
+                "filepath",
+                "file_size",
+                "content_hash",
+                "country_guess",
+                "year_guess",
+                "total_pages",
+                "direct_pages",
+                "ocr_pages",
+                "error_pages",
+                "status",
+            ]
+        )
+
+    summary_df = (
+        pages_df.groupby(
+            ["file_id", "filepath", "file_size", "content_hash", "country_guess", "year_guess"],
+            dropna=False,
+            sort=True,
+        )
+        .agg(
+            total_pages=("page_number", "nunique"),
+            direct_pages=("extraction_method", lambda s: int(s.fillna("").astype(str).eq("direct_text").sum())),
+            ocr_pages=("extraction_method", lambda s: int(s.fillna("").astype(str).eq("ocr_fallback").sum())),
+            error_pages=("extraction_method", lambda s: int(s.fillna("").astype(str).str.contains("error").sum())),
+        )
+        .reset_index()
+    )
+    summary_df["status"] = summary_df["error_pages"].map(lambda count: "ok" if int(count) == 0 else "error")
+    return summary_df
+
+
+def _merge_requested_pages_into_cache(
+    requested_pages_df: pd.DataFrame,
+    inventory_df: pd.DataFrame,
+    cached_pages_df: pd.DataFrame,
+) -> pd.DataFrame:
+    """Replace cached rows for the requested inventory slice while preserving all others."""
+    if cached_pages_df.empty:
+        return requested_pages_df.reset_index(drop=True)
+
+    keep_cached = cached_pages_df.copy()
+    requested_paths = set(inventory_df["filepath"].dropna().astype(str)) if "filepath" in inventory_df.columns else set()
+    requested_hashes = set(
+        inventory_df["content_hash"].dropna().astype(str)
+    ) if "content_hash" in inventory_df.columns else set()
+
+    if requested_paths and "filepath" in keep_cached.columns:
+        keep_cached = keep_cached[~keep_cached["filepath"].fillna("").astype(str).isin(requested_paths)].copy()
+    if requested_hashes and "content_hash" in keep_cached.columns:
+        keep_cached = keep_cached[~keep_cached["content_hash"].fillna("").astype(str).isin(requested_hashes)].copy()
+
+    merged = pd.concat([keep_cached, requested_pages_df], ignore_index=True, sort=False)
+    return merged.drop_duplicates(subset=["file_id", "page_number"], keep="last").reset_index(drop=True)
+
+
+def _count_duplicate_inventory_rows(inventory_df: pd.DataFrame) -> int:
+    """Return duplicate inventory rows after collapsing by logical file id."""
+    if inventory_df.empty or "file_id" not in inventory_df.columns:
+        return 0
+    return int(len(inventory_df) - inventory_df["file_id"].dropna().astype(str).nunique())
 
 
 def sanitize_budget_outputs(budget_df: pd.DataFrame) -> pd.DataFrame:
@@ -612,7 +685,12 @@ def run_budget_pipeline(
             inventory_df["country_guess"].fillna("").astype(str).isin(budget_filter_countries)
         ].copy()
     inventory_df.to_csv(FILE_INVENTORY_FILE, index=False, encoding="utf-8")
-    logger.info("Inventory saved: %s (rows=%s)", FILE_INVENTORY_FILE, len(inventory_df))
+    duplicate_inventory_rows = _count_duplicate_inventory_rows(inventory_df)
+    logger.info(
+        "Inventory: %s files selected%s",
+        len(inventory_df),
+        f" ({duplicate_inventory_rows} duplicate path entries collapse to existing file_ids)" if duplicate_inventory_rows else "",
+    )
 
     if inventory_df.empty:
         logger.warning("No PDF files found. Pipeline ended after inventory stage.")
@@ -623,35 +701,67 @@ def run_budget_pipeline(
     reused_cache = False
 
     if use_page_cache and not cache_pages_df.empty:
-        pages_df = _reuse_cached_pages_for_inventory(inventory_df, cache_pages_df)
-        reused_cache = not pages_df.empty
-        logger.info("Using cached page extraction file: %s (rows=%s)", PAGE_EXTRACTION_FILE, len(pages_df))
-        if not reused_cache:
+        cached_pages = _reuse_cached_pages_for_inventory(inventory_df, cache_pages_df)
+        cached_file_ids = set(cached_pages["file_id"].dropna().astype(str)) if not cached_pages.empty else set()
+        missing_inventory_df = inventory_df[~inventory_df["file_id"].astype(str).isin(cached_file_ids)].copy()
+
+        if not cached_pages.empty:
+            logger.info("Page-text cache: reused %s files (%s rows)", len(cached_file_ids), len(cached_pages))
+
+        if not missing_inventory_df.empty:
+            logger.info(
+                "Page-text cache: extracting %s missing files",
+                len(missing_inventory_df),
+            )
+            extracted_pages_df, _ = extract_text_for_inventory(
+                missing_inventory_df,
+                retain_orphaned_cache=False,
+            )
+            pages_df = pd.concat([cached_pages, extracted_pages_df], ignore_index=True, sort=False)
+        else:
+            pages_df = cached_pages
+
+        if not pages_df.empty:
+            pages_df = pages_df.drop_duplicates(subset=["file_id", "page_number"], keep="last").reset_index(drop=True)
+            reused_cache = True
+            logger.info(
+                "Page extraction ready: %s files, %s rows",
+                pages_df["file_id"].nunique() if "file_id" in pages_df.columns else "?",
+                len(pages_df),
+            )
+        else:
             logger.warning("Cached page extraction did not contain the requested file set; falling back to extraction.")
 
     if not reused_cache and not cache_pages_df.empty and _inventory_fully_cached(inventory_df, cache_pages_df):
         pages_df = _reuse_cached_pages_for_inventory(inventory_df, cache_pages_df)
         reused_cache = True
         logger.info(
-            "Detected full cached page coverage for requested files; reusing %s without re-extraction (rows=%s)",
-            PAGE_EXTRACTION_FILE,
+            "Page-text cache: full coverage, reusing %s rows without extraction",
             len(pages_df),
         )
 
     if not reused_cache:
         # ── Stage 2: OCR / text extraction ───────────────────────────────
         pages_df, summary_df = extract_text_for_inventory(inventory_df)
-        pages_df.to_csv(PAGE_EXTRACTION_FILE, index=False, encoding="utf-8")
-        summary_df.to_csv(PER_FILE_SUMMARY_FILE, index=False, encoding="utf-8")
-        logger.info("Page extraction saved: %s (rows=%s)", PAGE_EXTRACTION_FILE, len(pages_df))
+    else:
+        summary_df = _build_page_summary(pages_df)
+
+    cache_pages_to_save = _merge_requested_pages_into_cache(pages_df, inventory_df, cache_pages_df)
+    cache_pages_to_save.to_csv(PAGE_EXTRACTION_FILE, index=False, encoding="utf-8")
+    summary_df.to_csv(PER_FILE_SUMMARY_FILE, index=False, encoding="utf-8")
+    logger.info(
+        "Page-text cache updated: %s requested rows, %s total cached rows",
+        len(pages_df),
+        len(cache_pages_to_save),
+    )
 
     exports_df = export_full_documents(pages_df)
     exports_df.to_csv(FULLTEXT_EXPORT_MANIFEST_FILE, index=False, encoding="utf-8")
-    logger.info("Full text exports: %s files", len(exports_df))
+    logger.info("Full-text exports: %s files", len(exports_df))
 
     candidates_df = detect_candidate_pages(pages_df)
     candidates_df.to_csv(CANDIDATES_FILE, index=False, encoding="utf-8")
-    logger.info("Keyword candidates saved: %s (rows=%s)", CANDIDATES_FILE, len(candidates_df))
+    logger.info("Keyword candidates: %s pages", len(candidates_df))
 
     # ── Stage 4: Budget extraction ────────────────────────────────────────────
     # Uses full pages_df (not just candidates) so the section parser can track
@@ -680,7 +790,7 @@ def run_budget_pipeline(
     file_ids_to_process = sorted((current_page_file_ids - previous_budget_file_ids) | rerun_file_ids)
 
     if file_ids_to_process:
-        logger.info("Budget extraction will process %s new/changed PDF(s)", len(file_ids_to_process))
+        logger.info("Budget extraction: processing %s files", len(file_ids_to_process))
         budget_input_df = pages_df[pages_df["file_id"].astype(str).isin(file_ids_to_process)].copy()
         incremental_budget_df = detect_budget_items(budget_input_df, prior_results_df=prior_results_df)
     else:
@@ -690,12 +800,13 @@ def run_budget_pipeline(
     budget_df = merge_incremental_budget_results(
         incremental_budget_df, pages_df, BUDGET_ITEMS_FILE,
         actually_processed_ids=set(str(fid) for fid in file_ids_to_process),
+        replace_countries=rerun_countries,
     )
     budget_df = refresh_budget_metadata_from_pages(budget_df, pages_df)
     budget_df = backfill_budget_context_fields(budget_df)
     budget_df = sanitize_budget_outputs(budget_df)
     budget_df.to_csv(BUDGET_ITEMS_FILE, index=False, encoding="utf-8")
-    logger.info("Budget items saved: %s (rows=%s)", BUDGET_ITEMS_FILE, len(budget_df))
+    logger.info("Budget items: %s total rows after merge", len(budget_df))
 
     # ── Stage 5: Outputs ──────────────────────────────────────────────────────
     budget_df = apply_temporal_smoother(budget_df)
@@ -705,12 +816,12 @@ def run_budget_pipeline(
 
     # CSV — machine-readable, UTF-8
     results_df.to_csv(RESULTS_CSV_FILE, index=False, encoding="utf-8")
-    logger.info("Results CSV saved: %s (rows=%s)", RESULTS_CSV_FILE, len(results_df))
+    logger.info("Results CSV: %s rows", len(results_df))
 
     # Excel — human review (Balazs): original + English side-by-side
     try:
         results_df.to_excel(RESULTS_EXCEL_FILE, index=False, engine="openpyxl")
-        logger.info("Results Excel saved: %s", RESULTS_EXCEL_FILE)
+        logger.info("Results Excel written")
     except Exception as exc:
         logger.warning("Excel export failed (openpyxl not installed?): %s", exc)
 
@@ -721,13 +832,13 @@ def run_budget_pipeline(
         json.dumps(results_json_records, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
-    logger.info("Results JSON saved: %s", RESULTS_JSON_FILE)
+    logger.info("Results JSON written")
 
     # ── Stage 6: Clean AI validation candidates from previous runs ────────
     ai_root = PROCESSED_DIR / "ai_validation"
     written = filter_ai_validated(ai_root)
     if written:
-        logger.info("AI validation cleaned files: %s", ", ".join(str(p) for p in written))
+        logger.info("AI validation cleanup: %s file(s)", len(written))
 
     logger.info("Pipeline finished successfully.")
 

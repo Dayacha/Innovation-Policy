@@ -1,4 +1,9 @@
-"""Generic Danish-structure budget parsing pipeline."""
+"""Generic budget parsing pipeline for countries without a dedicated extractor.
+
+Applies taxonomy scoring and section-aware parsing without any country-specific
+keyword filters. All language-specific logic belongs in the dedicated country
+extractors (e.g. budget/country_extractor/denmark_extractor.py).
+"""
 
 from __future__ import annotations
 
@@ -8,24 +13,24 @@ import pandas as pd
 
 from budget.section_parser import (
     parse_page_lines,
-    _RE_AMOUNT_TAIL, _RE_MILL_AMOUNT, _RE_STANDALONE_AMOUNT,
+    _RE_AMOUNT_TAIL, _RE_STANDALONE_AMOUNT,
     _RE_SUBITEM, _RE_SUBSECTION, _RE_ITEM_HEADER, _RE_PROGRAM_HEADER,
 )
 from budget.temporal_smoothing import compute_temporal_prior
 from budget.taxonomy import INCLUDE_THRESHOLD, REVIEW_THRESHOLD, score_text
 from budget.translation_utils import translate_to_english_glossary, preclean_text
 from budget.extractor_common import (
-    _BUDGET_KEYWORDS,
-    _CODE_RE,
-    _LEGAL_REF_RE,
-    _NEG_KEYWORDS,
-    _POS_KEYWORDS,
-    DK_SECTION_MAP,
     currency,
     file_label,
     filepath_from_row,
     pillar,
 )
+
+# Generic program code pattern (e.g. "20.31", "3.02.1")
+_CODE_RE = re.compile(r"\b\d{1,2}\.\d{2}(?:\.\d{1,2})?\b")
+
+# Legal reference lines to skip — language-neutral patterns only
+_LEGAL_REF_RE = re.compile(r"^(L\s*\d{2,3}|\d{4}\s*§|§\s*\d{2,3})", re.IGNORECASE)
 
 
 def process_generic_file(
@@ -37,25 +42,16 @@ def process_generic_file(
     records: list[dict],
     tax,
 ) -> None:
-    """Process one file through the generic Danish-style parser."""
+    """Process one file through the generic taxonomy-driven parser.
+
+    Uses section structure detection and taxonomy scoring only — no language-specific
+    keyword filters. Countries with custom document formats should have a dedicated
+    extractor in budget/country_extractor/.
+    """
     section_code = ""
     section_name = ""
     current_program_code = ""
     current_program_desc = ""
-
-    _re_old_amount = re.compile(r"^\s*[÷\-\+]?\s*\d{1,3}(?:[.,]\d{3})+\s*\d?\)?\s*$")
-    _re_mill_amount_detect = re.compile(r"^\s*[-÷]?\s*\d{1,4}(?:\.\d{3})*[,\s]\d{1,2}\s*\d?\)?\s*$")
-    mill_count = 0
-    old_count = 0
-    for r in sorted_pages.itertuples(index=False):
-        for line in str(r.text if isinstance(r.text, str) else "").splitlines():
-            if _re_mill_amount_detect.match(line):
-                mill_count += 1
-            if _re_old_amount.match(line):
-                old_count += 1
-    mill_kr_mode = mill_count > old_count and mill_count > 20
-
-    in_artsoversigt = False
 
     for row in sorted_pages.itertuples(index=False):
         page_text = row.text if isinstance(row.text, str) else ""
@@ -69,9 +65,8 @@ def process_generic_file(
         row_currency = currency(country, year)
         file_lbl = file_label(country, year, source_filename)
 
-        budget_lines, section_code, section_name, in_artsoversigt = parse_page_lines(
+        budget_lines, section_code, section_name, _ = parse_page_lines(
             page_text, section_code, section_name,
-            mill_kr_mode=mill_kr_mode, in_artsoversigt=in_artsoversigt,
         )
 
         for bl in budget_lines:
@@ -80,20 +75,17 @@ def process_generic_file(
                 current_program_desc = ""
                 continue
 
-            if re.match(r"^ad\s+\d{1,2}\.\d{2}", preclean_text(bl.section_name), re.IGNORECASE):
-                continue
-
             if bl.amount_value == 0:
                 if bl.line_code and _CODE_RE.match(bl.line_code) and not _LEGAL_REF_RE.match(preclean_text(bl.description)):
                     current_program_code = bl.line_code
                     current_program_desc = bl.description
                 continue
 
+            # Merge short description with context_after when it's a continuation
             merged_desc = bl.description
             ctx_after_is_amount = bool(
                 _RE_AMOUNT_TAIL.search(bl.context_after)
                 or _RE_STANDALONE_AMOUNT.match(bl.context_after)
-                or (mill_kr_mode and _RE_MILL_AMOUNT.match(bl.context_after))
             )
             ctx_after_is_new_line = bool(
                 _RE_SUBITEM.match(bl.context_after)
@@ -122,23 +114,6 @@ def process_generic_file(
                 program_desc = ""
 
             desc_clean = preclean_text(merged_desc)
-            desc_lower = merged_desc.lower()
-            budget_type = ""
-            for kw in ("driftsudgifter", "anlægsudgifter", "anlægstilskud", "tilskud"):
-                if kw in desc_lower:
-                    budget_type = kw
-                    break
-
-            if mill_kr_mode and not bl.line_code and not budget_type:
-                orig_desc_clean = preclean_text(bl.description)
-                orig_no_parens = re.sub(r"\([^)]*\)", "", orig_desc_clean).strip()
-                if not any(c.isdigit() for c in orig_no_parens):
-                    program_code = ""
-                    program_desc = ""
-
-            if re.search(r"indtægter|revenue|income", desc_lower):
-                continue
-
             code_in_line = _CODE_RE.search(desc_clean)
             if code_in_line:
                 derived_code = code_in_line.group()
@@ -151,27 +126,19 @@ def process_generic_file(
                     current_program_desc = derived_desc
 
             section_clean = preclean_text(bl.section_name)
-            desc_clean = preclean_text(merged_desc)
             prog_clean = preclean_text(program_desc)
-
             item_code = bl.item_code or program_code
             item_desc = bl.item_description or program_desc
+            item_clean = preclean_text(item_desc)
 
             scoring_text = prog_clean or desc_clean
             if prog_clean and _CODE_RE.search(desc_clean):
                 scoring_text = f"{prog_clean} {desc_clean}".strip()
-            rd_signal_re = re.compile(
-                r"forskning|forsøgs|udvikling|research|teknolog|universit|videnskab",
-                re.IGNORECASE,
-            )
-            item_clean = preclean_text(item_desc)
-            if item_clean and not rd_signal_re.search(scoring_text):
+            if item_clean and item_clean not in scoring_text:
                 scoring_text = f"{item_clean} {scoring_text}".strip()
+
             content = f"{section_clean} {scoring_text}"
             content_score, content_hits, content_cat = score_text(content, tax)
-            desc_score, _, _ = score_text(scoring_text, tax)
-            if rd_signal_re.search(scoring_text):
-                desc_score = max(desc_score, INCLUDE_THRESHOLD)
 
             context = f"{section_clean} {scoring_text} {bl.context_before} {bl.context_after}"
             context_score, context_hits, context_cat = score_text(context, tax)
@@ -181,57 +148,15 @@ def process_generic_file(
             else:
                 score, hits, category = content_score, content_hits, content_cat
 
-            desc_lower_clean = desc_clean.lower()
-            if desc_lower_clean in {
-                "bevilling i alt", "beviling i alt", "aktivitet i alt",
-                "nettostyrede aktiviteter", "udgifter i alt",
-                "artsoversigt", "artsoversigt:",
-                "driftsindtægter", "anlægsindtægter", "overførselsudgifter",
-                "skatter og overførselsindtægter",
-                "overførsler mellem offentlige myndigheder", "finansielle poster",
-            }:
-                continue
-            if not any(char.isdigit() for char in desc_clean) and not program_code:
-                continue
+            # Skip purely numeric or trivially short lines
             if re.fullmatch(r"[0-9 .,÷\-]+", desc_clean.strip()):
-                continue
-            if "......" in merged_desc or "......" in bl.description or "......" in program_desc:
                 continue
             if _LEGAL_REF_RE.match(desc_clean):
                 continue
-            if len(desc_clean.split()) < 2 and not program_code:
-                continue
             if program_code and _LEGAL_REF_RE.match(prog_clean):
                 continue
-            has_code = bool(program_code or _CODE_RE.search(desc_clean) or _CODE_RE.search(section_clean))
-            has_budget_kw = any(k in desc_clean.lower() for k in _BUDGET_KEYWORDS)
-            if not (has_code or has_budget_kw):
+            if len(desc_clean.split()) < 2 and not program_code:
                 continue
-            has_pos = any(k in desc_clean.lower() for k in _POS_KEYWORDS)
-            has_neg = any(k in desc_clean.lower() for k in _NEG_KEYWORDS)
-            if has_neg and not has_pos:
-                continue
-            raw_prog = program_desc or bl.item_description or ""
-            raw_desc = bl.description or ""
-            full_text_raw = f"{raw_prog} {raw_desc} {merged_desc}"
-            if re.search(r"\btilskud under\b.+ministeriet", full_text_raw, re.IGNORECASE):
-                continue
-            if re.search(r"\bkøbsmoms\b|\bfritidsundervisning\b", desc_clean, re.IGNORECASE):
-                continue
-            if desc_clean.lower() in {
-                "tilskud", "driftsudgifter", "anlægsudgifter", "anlægstilskud",
-                "indtægter", "udlån", "kapitalindtægter",
-            } and not program_code:
-                continue
-            if desc_score == 0 and context_score < INCLUDE_THRESHOLD:
-                continue
-
-            boost_match = re.search(r"teknologisk service|teknologirådet|tekniske prøvenævn", scoring_text, re.IGNORECASE)
-            if boost_match:
-                content_score = max(content_score, INCLUDE_THRESHOLD)
-                context_score = max(context_score, REVIEW_THRESHOLD)
-                score = max(score, content_score, context_score)
-                category = "innovation_system"
 
             temporal_prior = compute_temporal_prior(
                 country=country,
@@ -244,9 +169,6 @@ def process_generic_file(
             )
             smoothed_score = score + temporal_prior.boost
             if max(context_score, smoothed_score) < REVIEW_THRESHOLD:
-                continue
-
-            if re.search(r"ændringer i medfør", desc_clean, re.IGNORECASE):
                 continue
 
             if not program_code:
@@ -262,8 +184,7 @@ def process_generic_file(
             if not item_desc and program_desc:
                 item_desc = program_desc
 
-            has_rd_word = bool(re.search(r"forskning|forsøgs|udvikling|research|teknolog", scoring_text, re.IGNORECASE))
-            decision = "include" if (smoothed_score >= INCLUDE_THRESHOLD and (desc_score > 0 or has_rd_word)) else "review"
+            decision = "include" if smoothed_score >= INCLUDE_THRESHOLD else "review"
 
             parse_error = False
             code_in_orig = _CODE_RE.search(preclean_text(bl.description))
@@ -273,34 +194,22 @@ def process_generic_file(
                 and code_in_orig.group() != bl.line_code
             ):
                 parse_error = True
-            orig_lower = bl.description.lower()
-            if re.search(r"(tilskud|driftsudgifter|anlægsudgifter|indtægter)\s+\d{1,2}\.\d{2}", orig_lower):
-                parse_error = True
             if parse_error:
                 decision = "review"
-            if boost_match:
-                decision = "include"
 
+            has_code = bool(program_code or _CODE_RE.search(desc_clean) or _CODE_RE.search(section_clean))
             confidence = 0.40 + 0.10 * smoothed_score
             if has_code:
                 confidence += 0.10
-            if has_budget_kw:
-                confidence += 0.10
-            if has_pos:
-                confidence += 0.05
-            if has_neg:
-                confidence -= 0.10
             if temporal_prior.boost:
                 confidence += 0.03
             confidence = round(min(0.99, max(0.05, confidence)), 3)
-            display_desc = f"{program_code} {program_desc}".strip() if program_code else (program_desc or merged_desc)
 
+            display_desc = f"{program_code} {program_desc}".strip() if program_code else (program_desc or merged_desc)
             snippet_en = translate_to_english_glossary(display_desc)
             merged_en = translate_to_english_glossary(desc_clean)
             program_desc_en = translate_to_english_glossary(program_desc) if program_desc else ""
             section_en = translate_to_english_glossary(section_clean)
-            if country.lower() == "denmark":
-                section_en = DK_SECTION_MAP.get(bl.section_code, section_en)
             row_pillar = pillar(category, hits, scoring_text)
 
             rationale = f"score={score}; hits=[{', '.join(hits[:6])}]; section={bl.section_code}"
@@ -319,7 +228,7 @@ def process_generic_file(
                 "program_code": program_code,
                 "program_description": program_desc,
                 "program_description_en": program_desc_en,
-                "budget_type": budget_type,
+                "budget_type": "",
                 "item_code": item_code,
                 "item_description": item_desc,
                 "line_code": bl.line_code,
