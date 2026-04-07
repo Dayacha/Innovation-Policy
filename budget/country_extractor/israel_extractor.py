@@ -168,6 +168,8 @@ def _build_record(
     page_text: str,
 ) -> dict:
     before, raw_line, after, merged = _build_context(page_text, start, end)
+    amount_local = amount_thousands * 1000
+    legacy_weak = source_variant == "legacy_summary_row" and amount_local < 100_000_000
     return {
         "country": country,
         "year": year,
@@ -177,13 +179,13 @@ def _build_record(
         "program_code": "IL_SCIENCE_MINISTRY",
         "line_description": "סעיף 19 - משרד המדע",
         "line_description_en": "Section 19 - Ministry of Science total appropriation",
-        "amount_local": amount_thousands * 1000,
+        "amount_local": amount_local,
         "currency": "ILS",
         "unit": "ILS",
         "rd_category": "direct_rd",
         "taxonomy_score": 8.0,
-        "decision": "include",
-        "confidence": 0.86 if source_variant == "summary_row" else 0.8 if source_variant == "legacy_summary_row" else 0.74,
+        "decision": "review" if legacy_weak else "include",
+        "confidence": 0.62 if legacy_weak else 0.86 if source_variant == "summary_row" else 0.8 if source_variant == "legacy_summary_row" else 0.74,
         "source_file": source_filename,
         "file_id": file_id,
         "page_number": page_number,

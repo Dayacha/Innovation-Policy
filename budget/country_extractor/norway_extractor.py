@@ -47,6 +47,15 @@ def _amounts_in(text: str) -> list[float]:
     return values
 
 
+def _last_amount_in_lines(lines: list[str]) -> Optional[float]:
+    values: list[float] = []
+    for line in lines:
+        values.extend(_amounts_in(line))
+    if not values:
+        return None
+    return values[-1]
+
+
 def _build_context(lines: list[str], idx: int, raw_line: str) -> tuple[str, str, str, str]:
     before = "\n".join(ln.strip() for ln in lines[max(0, idx - 2):idx] if ln.strip())
     after = "\n".join(ln.strip() for ln in lines[idx + 1:min(len(lines), idx + 3)] if ln.strip())
@@ -71,8 +80,9 @@ def _extract_chapter_285(sorted_pages, year_int: int) -> Optional[dict]:
                 header_idx = idx
             else:
                 continue
-            # Collect up to 30 lines, stopping when the next chapter number starts
-            _next_chapter_re = re.compile(r"^\s*28[6-9]\b|^\s*29\d\b|^\s*3\d\d\b")
+            # Collect up to 30 lines, stopping when the NEXT chapter number appears as
+            # a standalone short line (not as part of a large number like "289 240 000")
+            _next_chapter_re = re.compile(r"^\s*(28[6-9]|29\d|[3-9]\d\d)\s*$")
             raw_block = []
             for k in range(header_idx, min(len(lines), header_idx + 30)):
                 ln = lines[k].rstrip()
@@ -81,10 +91,9 @@ def _extract_chapter_285(sorted_pages, year_int: int) -> Optional[dict]:
                 if ln.strip():
                     raw_block.append(ln)
             block_text = "\n".join(raw_block)
-            amounts = _amounts_in(block_text)
-            if not amounts:
+            total = _last_amount_in_lines(raw_block)
+            if total is None:
                 continue
-            total = max(amounts)
             if total < 100_000_000:
                 continue
             before, raw_line, after, merged = _build_context(lines, header_idx, block_text)

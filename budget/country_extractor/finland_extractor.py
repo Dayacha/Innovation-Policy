@@ -518,6 +518,7 @@ def _make_record(
     page_number: int,
     taxonomy_score: float,
     confidence: float,
+    decision: str = "include",
 ) -> dict:
     """Build a standard budget record."""
     metadata = _PROGRAM_METADATA.get(program_code, {})
@@ -540,7 +541,7 @@ def _make_record(
         "unit": currency,
         "rd_category": "direct_rd",
         "taxonomy_score": taxonomy_score,
-        "decision": "include",
+        "decision": decision,
         "confidence": confidence,
         "source_file": source_filename,
         "file_id": file_id,
@@ -775,7 +776,7 @@ def extract_finland_items(
 
     if "FI_TEKES" not in existing_codes:
         amount = _extract_amount_after_match(all_text, _TEKES_RAW_RE)
-        if amount is not None:
+        if amount is not None and amount >= 10_000_000:
             records.append(
                 _make_record(
                     country=country,
@@ -792,7 +793,8 @@ def extract_finland_items(
                     file_id=file_id,
                     page_number=1,
                     taxonomy_score=8.2,
-                    confidence=0.68,
+                    confidence=0.62,
+                    decision="review",
                 )
             )
 

@@ -366,6 +366,7 @@ def merge_incremental_budget_results(
     budget_items_file: Path = BUDGET_ITEMS_FILE,
     actually_processed_ids: set | None = None,
     replace_countries: set[str] | None = None,
+    filter_countries: set[str] | None = None,
 ) -> pd.DataFrame:
     """Merge newly extracted budget items with previously saved ones.
 
@@ -373,6 +374,11 @@ def merge_incremental_budget_results(
     removing a file from Data/PDF does not erase its contribution to the
     cumulative time-series database.  Only records whose file_id is being
     actively re-processed in this run are replaced.
+
+    When ``filter_countries`` is provided (set by ``--budget-filter-country``),
+    only rows for those countries are kept from the previous file.  This
+    prevents stale rows for other countries from re-polluting the output when
+    the pipeline is run with a country filter.
     """
     previous_budget_df = _load_existing_dataframe(budget_items_file)
     if previous_budget_df.empty:
@@ -390,6 +396,14 @@ def merge_incremental_budget_results(
     # Keep ALL previous rows except those being replaced in this run.
     # Deleted PDFs are intentionally kept — their data is not lost.
     keep_previous = previous_budget_df.copy()
+
+    # When a country filter is active, restrict previous rows to those countries
+    # so that rows from other countries never pollute a filtered run's output.
+    if filter_countries and "country" in keep_previous.columns:
+        keep_previous = keep_previous[
+            keep_previous["country"].fillna("").astype(str).isin(filter_countries)
+        ].copy()
+
     if replace_countries and "country" in keep_previous.columns:
         keep_previous = keep_previous[
             ~keep_previous["country"].fillna("").astype(str).isin(replace_countries)
@@ -802,6 +816,7 @@ def run_budget_pipeline(
         incremental_budget_df, pages_df, BUDGET_ITEMS_FILE,
         actually_processed_ids=set(str(fid) for fid in file_ids_to_process),
         replace_countries=rerun_countries,
+        filter_countries=budget_filter_countries or None,
     )
     budget_df = refresh_budget_metadata_from_pages(budget_df, pages_df)
     budget_df = backfill_budget_context_fields(budget_df)

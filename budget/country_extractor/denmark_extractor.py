@@ -61,6 +61,16 @@ _NON_RD_BROAD_RE = re.compile(
     r"multilateral bistand|udviklingsbistand|humanitær bistand|flygtningebistand",
     re.IGNORECASE,
 )
+_CLEAR_NON_RD_RE = re.compile(
+    r"kunstnere\s+og\s+videnskabsm[aæ]nd"
+    r"|videnskabeligt\s+kursus\s+for\s+pr[aæ]ster"
+    r"|sociale,\s+videnskabelige\s+og\s+kulturelle\s+form[aå]l"
+    r"|rejsetilskud"
+    r"|rejseunderst[oø]tt"
+    r"|stipendier,\s*rejseunderst[oø]ttelser"
+    r"|frirejser",
+    re.IGNORECASE,
+)
 _SUBITEM_ONLY_RE = re.compile(r"^\d{1,2}\.$")
 
 
@@ -315,6 +325,8 @@ def extract_denmark_items(
             if re.search(r"\btilskud under\b.+ministeriet", full_text_raw, re.IGNORECASE):
                 continue
             if re.search(r"\bkøbsmoms\b|\bfritidsundervisning\b", desc_clean, re.IGNORECASE):
+                continue
+            if _CLEAR_NON_RD_RE.search(full_text_raw):
                 continue
             if desc_clean.lower() in {
                 "tilskud", "driftsudgifter", "anlægsudgifter", "anlægstilskud",

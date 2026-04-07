@@ -26,6 +26,7 @@ _AMOUNT_PAIR_RE = re.compile(
     r"(?P<ae>\d{1,3}(?:\s\d{3}){2,})\s+(?P<cp>\d{1,3}(?:\s\d{3}){2,})$"
 )
 _SINGLE_AMOUNT_RE = re.compile(r"(?P<amount>\d{1,3}(?:\s\d{3}){2,})$")
+_GROUPED_AMOUNT_RE = re.compile(r"\d{1,3}(?:\s\d{3}){2,}")
 
 _TRACKED_LABELS: list[tuple[str, dict[str, str]]] = [
     (
@@ -153,15 +154,35 @@ def _parse_amount(raw: str) -> float:
 
 def _build_candidates(lines: list[str], idx: int) -> list[str]:
     parts = [lines[idx].strip()]
-    candidates = [" ".join(part for part in parts if part)]
+    candidates = [(parts[0], parts.copy())]
     for step in (1, 2):
         if idx + step >= len(lines):
             break
         nxt = lines[idx + step].strip()
         if nxt:
             parts.append(nxt)
-            candidates.append(" ".join(parts))
+            candidates.append((" ".join(parts), parts.copy()))
     return candidates
+
+
+def _extract_single_amount(parts: list[str], program_code: str) -> tuple[Optional[str], Optional[float]]:
+    """Pick the last real amount from a multi-line JORF programme block.
+
+    OCR sometimes renders the programme code on its own line directly above the
+    amount columns, which can produce a false merged token like
+    "142 382 498 634". Parsing per source line avoids swallowing the code.
+    """
+    suffix = program_code.split("_")[-1]
+    amounts_raw: list[str] = []
+    for part in parts:
+        cleaned = part.strip()
+        if not cleaned or cleaned == suffix:
+            continue
+        amounts_raw.extend(_GROUPED_AMOUNT_RE.findall(cleaned))
+    if not amounts_raw:
+        return None, None
+    amount_raw = amounts_raw[-1]
+    return amount_raw, _parse_amount(amount_raw)
 
 
 def _build_context(lines: list[str], idx: int, raw_line: str) -> tuple[str, str, str, str]:
@@ -180,13 +201,13 @@ def _extract_from_page(lines: list[str], page_number: int) -> list[dict]:
     for idx, line in enumerate(lines):
         if not line.strip():
             continue
-        for candidate in _build_candidates(lines, idx):
+        for candidate, candidate_parts in _build_candidates(lines, idx):
             norm = normalize_text(candidate)
             amount_match = _AMOUNT_PAIR_RE.search(candidate)
-            single_amount_match: Optional[re.Match[str]] = None
+            single_amount_raw: Optional[str] = None
+            single_amount_val: Optional[float] = None
             if not amount_match:
-                single_amount_match = _SINGLE_AMOUNT_RE.search(candidate)
-                if not single_amount_match:
+                if not _SINGLE_AMOUNT_RE.search(candidate):
                     continue
             for label_norm, meta in _TRACKED_LABELS:
                 if label_norm not in norm:
@@ -194,13 +215,17 @@ def _extract_from_page(lines: list[str], page_number: int) -> list[dict]:
                 code = meta["program_code"]
                 if code in seen_codes:
                     continue
+                if not amount_match:
+                    single_amount_raw, single_amount_val = _extract_single_amount(candidate_parts, code)
+                    if single_amount_raw is None or single_amount_val is None:
+                        continue
                 seen_codes.add(code)
                 amount_raw = (
                     amount_match.group("cp")
                     if amount_match
-                    else single_amount_match.group("amount")
+                    else single_amount_raw
                 )
-                cp_val = _parse_amount(amount_raw)
+                cp_val = _parse_amount(amount_raw) if amount_match else single_amount_val
                 before, raw_line, after, merged = _build_context(lines, idx, candidate)
                 source_variant = "mission_total" if code == "FR_MIRES" else "programme_line"
                 if not amount_match:
@@ -237,6 +262,67 @@ def _extract_from_page(lines: list[str], page_number: int) -> list[dict]:
     return hits
 
 
+_PRE_LOLF_LABEL_RE = re.compile(
+    r"^Recherche\s+et\s+(?:technolog|science)", re.IGNORECASE
+)
+_PRE_LOLF_AMOUNT_RE = re.compile(r"\d{1,3}(?:[ \xa0]\d{3})+|\d{6,}")
+
+
+def _extract_pre_lolf(sorted_pages) -> Optional[dict]:
+    """Extract 'Recherche et technologie' total from pre-LOLF JORF finance laws.
+
+    Format: label line followed by 2-3 numeric lines (ordinary, extraordinary, total).
+    We take the largest value as the total credits (dépenses ordinaires + crédits
+    de paiement extraordinaires).  Currency: FRF (pre-2002) or EUR (2002+).
+    """
+    best: Optional[dict] = None
+    for row in sorted_pages.itertuples(index=False):
+        page_number = int(getattr(row, "page_number", 1) or 1)
+        page_text = row.text if isinstance(row.text, str) else ""
+        if not page_text.strip():
+            continue
+        lines = page_text.splitlines()
+        for j, line in enumerate(lines):
+            if not _PRE_LOLF_LABEL_RE.match(line.strip()):
+                continue
+            # Collect amounts from this line + next 7
+            amounts_raw: list[str] = []
+            for k in range(j, min(j + 8, len(lines))):
+                amounts_raw.extend(_PRE_LOLF_AMOUNT_RE.findall(lines[k]))
+            if not amounts_raw:
+                continue
+            # Parse and take the largest (= total column)
+            values: list[float] = []
+            for raw in amounts_raw:
+                try:
+                    values.append(float(re.sub(r"[\s\xa0]", "", raw)))
+                except ValueError:
+                    pass
+            if not values:
+                continue
+            total = max(values)
+            if total < 100_000_000:
+                continue
+            if best is None or total > best["amount_local"]:
+                merged = "\n".join(l.strip() for l in lines[j: j + 5] if l.strip())
+                best = {
+                    "page_number": page_number,
+                    "amount_local": total,
+                    "amount_raw": str(int(total)),
+                    "raw_line": line.strip(),
+                    "merged_line": merged,
+                    "context_before": "",
+                    "context_after": "",
+                    "text_snippet": merged,
+                    "source_variant": "pre_lolf_recherche_technologie",
+                    "rationale": (
+                        "Pre-LOLF JORF global budget table: 'Recherche et technologie' row; "
+                        "largest amount taken as the total (DO + CP extraordinary)."
+                    ),
+                }
+    return best
+
+
 def _record_key(rec: dict) -> tuple:
     variant_score = 2 if rec.get("source_variant") == "mission_total" else 1
     return (variant_score, float(rec.get("amount_local") or 0), -int(rec.get("page_number") or 0))
@@ -251,10 +337,45 @@ def extract_france_items(
 ) -> list[dict]:
     """Extract France research-mission amounts from JORF finance-law PDFs."""
     try:
-        if int(year) < 2006:
-            return []
+        year_int = int(year)
     except ValueError:
         return []
+
+    # Pre-LOLF years (before 2006): extract 'Recherche et technologie' total
+    if year_int < 2006:
+        item = _extract_pre_lolf(sorted_pages)
+        if item is None:
+            logger.debug("France extractor: no pre-LOLF research row found in %s", source_filename)
+            return []
+        currency = "FRF" if year_int < 2002 else "EUR"
+        return [{
+            "country": country,
+            "year": year,
+            "section_code": "FR_RESEARCH",
+            "section_name": "Recherche et technologie",
+            "section_name_en": "Research and Technology",
+            "program_code": "FR_RECHERCHE",
+            "line_description": "Recherche et technologie - crédits totaux",
+            "line_description_en": "Research and Technology - total credits",
+            "amount_local": item["amount_local"],
+            "currency": currency,
+            "unit": currency,
+            "rd_category": "direct_rd",
+            "taxonomy_score": 8.0,
+            "decision": "include",
+            "confidence": 0.75,
+            "source_file": source_filename,
+            "file_id": file_id,
+            "page_number": item["page_number"],
+            "amount_raw": item["amount_raw"],
+            "raw_line": item["raw_line"],
+            "merged_line": item["merged_line"],
+            "context_before": item["context_before"],
+            "context_after": item["context_after"],
+            "text_snippet": item["text_snippet"],
+            "source_variant": item["source_variant"],
+            "rationale": item["rationale"],
+        }]
 
     best_by_code: dict[str, dict] = {}
     for row in sorted_pages.itertuples(index=False):

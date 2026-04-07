@@ -40,7 +40,7 @@ _OLDER_EXP_TABLE_RE = re.compile(
 )
 _INVESTMENT_TABLE_RE = re.compile(r"investic\w*\s+vydaj\w*", re.IGNORECASE)
 _VYDAJE_CELKEM_RE = re.compile(r"v\w*daje\s+celkem", re.IGNORECASE)
-_AMOUNT_RE = re.compile(r"(?<!\d)(\d{1,3}(?:[ \xa0]\d{3})+|\d{6,})(?!\d)")
+_AMOUNT_RE = re.compile(r"(?<!\d)(\d{1,4}(?:[ \xa0]\d{3})+|\d{6,})(?!\d)")
 _CHAPTER_CODE_LINE_RE = re.compile(r"^\s*(3\d{2})\s*$")
 _ANY_CHAPTER_LINE_RE = re.compile(r"^\s*(3\d{2})\b")
 
@@ -177,6 +177,8 @@ def _build_candidate(
 ) -> Optional[dict]:
     if amount < 100_000_000 or amount > 20_000_000_000:
         return None
+    decision = "review" if source_variant == "investment_fallback" else "include"
+    adjusted_confidence = min(confidence, 0.58) if source_variant == "investment_fallback" else confidence
     return {
         "country": "",
         "year": "",
@@ -193,8 +195,8 @@ def _build_candidate(
         "unit": "CZK",
         "rd_category": "direct_rd",
         "taxonomy_score": 8.0,
-        "decision": "include",
-        "confidence": confidence,
+        "decision": decision,
+        "confidence": adjusted_confidence,
         "page_number": page_number,
         "amount_raw": amount_raw,
         "source_variant": source_variant,
@@ -212,7 +214,7 @@ def _build_candidate(
 
 def _extract_chapter_page(page: dict, agency: dict) -> Optional[dict]:
     chapter_match = re.search(
-        rf"ukazatele\s+kapitoly\s+{agency['chapter_code']}\b.*?v\w*daje\s+celkem\s+(\d{{1,3}}(?:[ \xa0]\d{{3}})+|\d{{6,}})",
+        rf"ukazatele\s+kapitoly\s+{agency['chapter_code']}\b.*?v\w*daje\s+celkem\s+(\d{{1,4}}(?:[ \xa0]\d{{3}})+|\d{{6,}})",
         page["norm_text"],
         re.IGNORECASE | re.DOTALL,
     )
@@ -275,7 +277,7 @@ def _extract_appendix_row(page: dict, agency: dict) -> Optional[dict]:
     anchor_pos = max(pos for pos in anchor_positions if pos >= 0) if any(pos >= 0 for pos in anchor_positions) else 0
     scoped_norm = norm_text[anchor_pos:]
     row_match = re.search(
-        rf"{agency['chapter_code']}\s+{agency['name_re'].pattern}\s+(\d{{1,3}}(?:[ \xa0]\d{{3}})+|\d{{6,}})",
+        rf"{agency['chapter_code']}\s+{agency['name_re'].pattern}\s+(\d{{1,4}}(?:[ \xa0]\d{{3}})+|\d{{6,}})",
         scoped_norm,
         re.IGNORECASE,
     )
@@ -309,7 +311,7 @@ def _extract_appendix_row(page: dict, agency: dict) -> Optional[dict]:
     if amount is None:
         section_norm = " ".join(norm for _, norm in scoped_lines)
         row_match = re.search(
-            rf"{agency['chapter_code']}\s+{agency['name_re'].pattern}\s+(\d{{1,3}}(?:[ \xa0]\d{{3}})+|\d{{6,}})",
+            rf"{agency['chapter_code']}\s+{agency['name_re'].pattern}\s+(\d{{1,4}}(?:[ \xa0]\d{{3}})+|\d{{6,}})",
             section_norm,
             re.IGNORECASE,
         )
@@ -341,7 +343,7 @@ def _extract_investment_fallback(page: dict, agency: dict) -> Optional[dict]:
     norm_text = page["norm_text"]
 
     row_match = re.search(
-        rf"{agency['name_re'].pattern}\s+celkem\s+(\d{{1,3}}(?:[ \xa0]\d{{3}})+|\d{{6,}})",
+        rf"{agency['name_re'].pattern}\s+celkem\s+(\d{{1,4}}(?:[ \xa0]\d{{3}})+|\d{{6,}})",
         norm_text,
         re.IGNORECASE,
     )
