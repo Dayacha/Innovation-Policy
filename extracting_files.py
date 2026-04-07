@@ -327,6 +327,7 @@ def download_surveys(
     start_date: str,
     end_date: Optional[str],
     output_dir: Path,
+    delay_seconds: float = 2.0,
 ) -> int:
     api_key = load_kappa_api_key()
     if not api_key:
@@ -373,6 +374,8 @@ def download_surveys(
             )
             downloaded += 1
             print(f"Downloaded {publication['title']} -> {destination.name}")
+            if delay_seconds > 0:
+                time.sleep(delay_seconds)
         except Exception as exc:
             failed += 1
             print(f"Failed {destination.name}: {exc}")
@@ -386,6 +389,7 @@ def download_all_surveys(
     start_date: str,
     end_date: Optional[str],
     output_dir: Path,
+    delay_seconds: float = 2.0,
 ) -> int:
     api_key = load_kappa_api_key()
     if not api_key:
@@ -431,6 +435,8 @@ def download_all_surveys(
                 )
                 downloaded += 1
                 print(f"Downloaded {destination.name}")
+                if delay_seconds > 0:
+                    time.sleep(delay_seconds)
             except Exception as exc:
                 failed += 1
                 print(f"Failed {destination.name}: {exc}")
@@ -447,6 +453,7 @@ def main() -> int:
     parser.add_argument("--year", type=int, default=None, help="Optional publication year filter")
     parser.add_argument("--start-date", default="1900-01-01", help="Inclusive start date, YYYY-MM-DD")
     parser.add_argument("--end-date", default=None, help="Inclusive end date, YYYY-MM-DD")
+    parser.add_argument("--delay-seconds", type=float, default=2.0, help="Pause between successful downloads")
     parser.add_argument(
         "--output-dir",
         default=str(DEFAULT_OUTPUT_DIR),
@@ -469,6 +476,7 @@ def main() -> int:
                 start_date=start_date,
                 end_date=end_date,
                 output_dir=Path(args.output_dir),
+                delay_seconds=args.delay_seconds,
             )
         else:
             count = download_surveys(
@@ -476,6 +484,7 @@ def main() -> int:
                 start_date=start_date,
                 end_date=end_date,
                 output_dir=Path(args.output_dir),
+                delay_seconds=args.delay_seconds,
             )
     except Exception as exc:
         print(f"Download failed: {exc}")
