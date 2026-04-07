@@ -451,7 +451,9 @@ def _name_patterns(year_int: int) -> list[tuple[re.Pattern, str, str, str, str]]
 
 def _is_summary_like_source(source_filename: str) -> bool:
     name = source_filename.lower()
-    preferred_tokens = ("gesamtplan", "haushalt", "uebersichten", "übersichten", "bgbl")
+    if "regelungstext" in name or re.search(r"(?:^|[_\s])hg[_\s]", name):
+        return False
+    preferred_tokens = ("gesamtplan", "haushalt", "uebersichten", "übersichten")
     if any(token in name for token in preferred_tokens):
         return True
     if re.match(r"^\d{4}\s+\d{6,7}\.pdf$", source_filename):
@@ -701,6 +703,14 @@ def extract_germany_items(
     ]
     all_text = "\n".join(text for _, text in pages)
     if not all_text.strip():
+        return []
+
+    if year_int >= 2005 and not re.match(r"^\d{4}_\d{6,7}\.pdf$", source_filename):
+        logger.debug(
+            "Germany extractor: skipping non-canonical modern source %s (%s)",
+            source_filename,
+            year,
+        )
         return []
 
     records: list[dict] = []

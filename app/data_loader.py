@@ -8,8 +8,9 @@ import streamlit as st
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-BUDGET_RESULTS_AI      = PROJECT_ROOT / "Data/output/budget/results_ai_verified.csv"
-BUDGET_RESULTS         = PROJECT_ROOT / "Data/output/budget/results.csv"
+BUDGET_RESULTS_AI            = PROJECT_ROOT / "Data/output/budget/results_ai_verified.csv"
+BUDGET_RESULTS_REVIEW_STATUS = PROJECT_ROOT / "Data/output/budget/results_review_status.csv"
+BUDGET_RESULTS               = PROJECT_ROOT / "Data/output/budget/results.csv"
 REFORMS_EVENTS         = PROJECT_ROOT / "Data/output/reforms/output/reforms_events.csv"
 REFORMS_MENTIONS       = PROJECT_ROOT / "Data/output/reforms/output/reforms_mentions.csv"
 REFORM_PANEL           = PROJECT_ROOT / "Data/output/reforms/output/reform_panel.csv"
@@ -158,7 +159,13 @@ ORIENTATION_LABELS = {
 
 @st.cache_data
 def load_budget():
-    budget_path = BUDGET_RESULTS_AI if BUDGET_RESULTS_AI.exists() else BUDGET_RESULTS
+    # Priority: AI-verified → review_status (most recent pipeline run) → raw results
+    if BUDGET_RESULTS_AI.exists():
+        budget_path = BUDGET_RESULTS_AI
+    elif BUDGET_RESULTS_REVIEW_STATUS.exists():
+        budget_path = BUDGET_RESULTS_REVIEW_STATUS
+    else:
+        budget_path = BUDGET_RESULTS
     if not budget_path.exists():
         return pd.DataFrame()
     df = pd.read_csv(budget_path)
@@ -346,7 +353,11 @@ def load_reform_intensity():
 
 
 def budget_available():
-    return BUDGET_RESULTS_AI.exists() or BUDGET_RESULTS.exists()
+    return (
+        BUDGET_RESULTS_AI.exists()
+        or BUDGET_RESULTS_REVIEW_STATUS.exists()
+        or BUDGET_RESULTS.exists()
+    )
 
 def reforms_available():
     return REFORMS_EVENTS.exists()

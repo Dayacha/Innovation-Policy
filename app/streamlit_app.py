@@ -624,31 +624,62 @@ with TAB_BUDGET:
         m &= _conf.between(conf_b[0], conf_b[1], inclusive="both")
     db_f = db[m].copy()
 
+    # ── Currency helpers ──
+    _currencies = db_f["currency"].dropna().unique() if "currency" in db_f.columns else []
+    _multi_currency = len(_currencies) > 1
+    _ccy = _currencies[0] if len(_currencies) == 1 else "local currency"
+    _amt_col = "Amount (M)"  # generic column name for charts
+
+    def _fmt_amt(df_col):
+        """Format amount column label for axis/legend."""
+        return f"{_ccy} (millions)" if not _multi_currency else "Amount (millions, local currency)"
+
+    def _to_millions(series):
+        return series / 1e6
+
     # ── KPI strip ──
     n_inc = int((db_f["decision"] == "include").sum()) if "decision" in db_f.columns else 0
+    _n_countries = db_f["country"].nunique() if "country" in db_f.columns else 1
+    if _multi_currency:
+        _spend_kpi = f"{_n_countries} countries (multi-currency)"
+    else:
+        _spend_kpi = f"{_ccy} {db_f['amount_local'].sum()/1e6:,.1f} M"
     stat_row([
         (f"{len(db_f):,}",                                   "Budget lines"),
-        (f"DKK {db_f['amount_local'].sum()/1e6:,.1f} M",     "Total R&D spend identified"),
+        (_spend_kpi,                                          "Total R&D spend identified"),
         (f"{n_inc:,}",                                        "High-confidence (include)"),
         (f"{db_f['section_code'].nunique() if 'section_code' in db_f.columns else '—'}",
-                                                              "Ministries"),
+                                                              "Ministries / programmes"),
     ])
 
     # ── Chart 1: Stacked bar by year ──
-    section_header("R&D-related budget by year and category")
-
-    gcol  = "budget_category"
-    glab  = "budget_category_label" if "budget_category_label" in db_f.columns else gcol
-    yr_ct = db_f.groupby(["year", gcol])["amount_local"].sum().reset_index()
-    yr_ct["DKK M"] = yr_ct["amount_local"] / 1e6
-    yr_ct["label"] = yr_ct[gcol]
+    if _multi_currency:
+        # Multi-currency: group by country (summing different currencies is meaningless)
+        section_header("R&D-related budget by year and country (local currency)")
+        gcol1 = "country"
+        yr_ct = db_f.groupby(["year", gcol1, "currency"])["amount_local"].sum().reset_index()
+        yr_ct[_amt_col] = _to_millions(yr_ct["amount_local"])
+        yr_ct["label"] = yr_ct[gcol1]
+        _ytitle1 = "Amount (millions, local currency)"
+        _cap1 = ("Each bar shows amounts in local currency — figures are not directly comparable across countries. "
+                 "Filter to a single country for absolute comparison.")
+    else:
+        section_header(f"R&D-related budget by year and category ({_ccy} millions)")
+        gcol1 = "budget_category"
+        yr_ct = db_f.groupby(["year", gcol1])["amount_local"].sum().reset_index()
+        yr_ct[_amt_col] = _to_millions(yr_ct["amount_local"])
+        yr_ct["label"] = yr_ct[gcol1]
+        _ytitle1 = _fmt_amt(None)
+        _countries_in_data = sorted(db_f["country"].dropna().unique()) if "country" in db_f.columns else []
+        _cap1 = (f"Source: Finance Bills — {', '.join(_countries_in_data)}. "
+                 f"Taxonomy: J-Rule scoring. Numbers in {_ccy} millions.")
 
     fig1 = px.bar(
-        yr_ct, x="year", y="DKK M", color="label",
+        yr_ct, x="year", y=_amt_col, color="label",
         color_discrete_map={k: BUDGET_CATEGORY_COLORS.get(k, GREY)
-                            for k in yr_ct["label"].dropna().unique()},
+                            for k in yr_ct["label"].dropna().unique()} if not _multi_currency else {},
         barmode="stack",
-        labels={"year": "Year", "DKK M": "DKK (millions)", "label": ""},
+        labels={"year": "Year", _amt_col: _ytitle1, "label": ""},
         text_auto=".0f",
     )
     fig1.update_traces(
@@ -656,36 +687,35 @@ with TAB_BUDGET:
         textposition="inside",
         textfont=dict(size=9.5, color="white"),
     )
-    apply_style(fig1, height=340, xtitle="Year", ytitle="DKK (millions)")
+    apply_style(fig1, height=340, xtitle="Year", ytitle=_ytitle1)
     st.plotly_chart(fig1, use_container_width=True)
-    caption_note("Source: Danish Finance Bills (Finanslov) 1975–1984. "
-                 "Taxonomy: J-Rule scoring against OECD search library. "
-                 "Numbers shown in DKK millions.")
+    caption_note(_cap1)
 
     # ── Chart 2 & 3 side by side ──
     col_a, col_b_ = st.columns(2)
 
     with col_a:
-        section_header("Cumulative R&D spend by ministry (top 10)")
+        _min_title = "Cumulative R&D spend by ministry (top 10)" + ("" if not _multi_currency else " — local currency")
+        section_header(_min_title)
         if "ministry_display" in db_f.columns:
             top_min = (
                 db_f.groupby("ministry_display")["amount_local"]
                 .sum().sort_values(ascending=True).tail(10).reset_index()
             )
-            top_min["DKK M"] = top_min["amount_local"] / 1e6
-            top_min["pct"]   = 100 * top_min["DKK M"] / top_min["DKK M"].sum()
+            top_min["Amt M"] = _to_millions(top_min["amount_local"])
+            top_min["pct"]   = 100 * top_min["Amt M"] / top_min["Amt M"].sum()
 
             fig2 = go.Figure(go.Bar(
-                x=top_min["DKK M"],
+                x=top_min["Amt M"],
                 y=top_min["ministry_display"],
                 orientation="h",
                 marker_color=NAVY,
                 marker_line_width=0,
-                text=top_min["DKK M"].map(lambda x: f"{x:,.0f}"),
+                text=top_min["Amt M"].map(lambda x: f"{x:,.0f}"),
                 textposition="outside",
                 textfont=dict(size=9.5, color=TEXT),
             ))
-            apply_style(fig2, height=380, xtitle="DKK (millions)", legend_bottom=False)
+            apply_style(fig2, height=380, xtitle=_fmt_amt(None), legend_bottom=False)
             fig2.update_layout(showlegend=False,
                                xaxis=dict(showgrid=True, gridcolor="#EBEBEB"))
             st.plotly_chart(fig2, use_container_width=True)
@@ -697,22 +727,22 @@ with TAB_BUDGET:
                 db_f.groupby("budget_category")["amount_local"]
                 .sum().sort_values(ascending=False).reset_index()
             )
-            cat_tot["DKK M"] = cat_tot["amount_local"] / 1e6
+            cat_tot["Amt M"] = _to_millions(cat_tot["amount_local"])
             cat_tot["label"] = cat_tot["budget_category"]
-            cat_tot["pct"]   = 100 * cat_tot["DKK M"] / cat_tot["DKK M"].sum()
+            cat_tot["pct"]   = 100 * cat_tot["Amt M"] / cat_tot["Amt M"].sum()
 
             fig3 = go.Figure(go.Bar(
                 x=cat_tot["label"],
-                y=cat_tot["DKK M"],
+                y=cat_tot["Amt M"],
                 marker_color=[BUDGET_CATEGORY_COLORS.get(c, GREY) for c in cat_tot["budget_category"]],
                 marker_line_width=0,
                 text=cat_tot["pct"].map(lambda x: f"{x:.1f}%"),
                 textposition="outside",
                 textfont=dict(size=10.5, color=TEXT),
             ))
-            apply_style(fig3, height=380, ytitle="DKK (millions)", legend_bottom=False)
+            apply_style(fig3, height=380, ytitle=_fmt_amt(None), legend_bottom=False)
             fig3.update_layout(showlegend=False, xaxis=dict(showgrid=False))
-            fig3.update_yaxes(range=[0, cat_tot["DKK M"].max() * 1.18])
+            fig3.update_yaxes(range=[0, cat_tot["Amt M"].max() * 1.18])
             st.plotly_chart(fig3, use_container_width=True)
 
     # ── Chart 4: YoY growth ──
@@ -743,13 +773,13 @@ with TAB_BUDGET:
     # ── Data table ──
     section_header("Budget line detail")
     _BUD_DISP_COLS = [c for c in [
-        "year", "ministry_display", "budget_line_display",
-        "amount_local", "budget_category", "confidence", "ai_decision", "ai_rationale", "source_file",
+        "country", "year", "ministry_display", "budget_line_display",
+        "amount_local", "currency", "budget_category", "confidence", "ai_decision", "ai_rationale", "source_file",
     ] if c in db_f.columns]
     _BUD_COL_LABELS = {
-        "year": "Year", "ministry_display": "Ministry",
-        "budget_line_display": "Description", "amount_local": "Amount (DKK)",
-        "budget_category": "R&D category", "confidence": "Confidence",
+        "country": "Country", "year": "Year", "ministry_display": "Ministry",
+        "budget_line_display": "Description", "amount_local": f"Amount ({_ccy})",
+        "currency": "Currency", "budget_category": "R&D category", "confidence": "Confidence",
         "ai_decision": "Decision", "ai_rationale": "Rationale",
         "source_file": "Source file",
     }
@@ -763,7 +793,10 @@ with TAB_BUDGET:
             lambda col: col.str.contains(_bud_search, case=False, na=False)
         ).any(axis=1)
         _tbl = _tbl[_mask]
-    caption_note(f"{len(_tbl):,} rows  ·  DKK {_tbl['amount_local'].sum()/1e6:,.1f} M")
+    if _multi_currency:
+        caption_note(f"{len(_tbl):,} rows  ·  {_n_countries} countries (amounts in local currency)")
+    else:
+        caption_note(f"{len(_tbl):,} rows  ·  {_ccy} {_tbl['amount_local'].sum()/1e6:,.1f} M")
     render_table(
         _tbl[_BUD_DISP_COLS].sort_values("year"),
         col_labels=_BUD_COL_LABELS,
@@ -1269,7 +1302,7 @@ with TAB_COMBINED:
     else:
         _s2_range = "n/a"
     _cmp_rows = [
-        ("Measures",     "DKK amount budgeted for R&amp;D",           "Innovation policy reforms enacted"),
+        ("Measures",     "Amount budgeted for R&amp;D (local currency)",  "Innovation policy reforms enacted"),
         ("Time range",   _s1_range,                                    _s2_range),
         ("Unit",         "Budget line &#8594; Ministry &#8594; R&amp;D category",
                          "Reform event &#8594; sub-type &#8594; actor &#8594; stage"),
@@ -1353,15 +1386,17 @@ with TAB_COMBINED:
     if bk and rk and not dr_f.empty:
         section_header("R&D budget allocation vs. innovation reform activity")
         _db3 = load_budget()
+        _db3_ccy = _db3["currency"].dropna().unique() if "currency" in _db3.columns else []
+        _db3_lbl = _db3_ccy[0] if len(_db3_ccy) == 1 else "local currency"
         b_yr3 = _db3.groupby("year")["amount_local"].sum().reset_index()
-        b_yr3["DKK M"] = b_yr3["amount_local"] / 1e6
+        b_yr3["Amt M"] = b_yr3["amount_local"] / 1e6
         df_i3 = dr_f.dropna(subset=["display_year"]).copy()
         df_i3["yr"] = df_i3["display_year"].astype(int)
         rc3 = df_i3.groupby("yr").size().reset_index(name="n")
         fig_dual = go.Figure()
         fig_dual.add_trace(go.Bar(
-            x=b_yr3["year"], y=b_yr3["DKK M"],
-            name="R&D budget (DKK M)",
+            x=b_yr3["year"], y=b_yr3["Amt M"],
+            name=f"R&D budget ({_db3_lbl} M)",
             marker_color=NAVY, opacity=0.72, marker_line_width=0, yaxis="y1",
         ))
         if not rc3.empty:
@@ -1388,7 +1423,7 @@ with TAB_COMBINED:
             height=400,
             xaxis=dict(title="Year", dtick=2, showgrid=False,
                        linecolor=BORDER, tickfont=dict(size=10.5)),
-            yaxis=dict(title="R&D Budget (DKK millions)", side="left",
+            yaxis=dict(title=f"R&D Budget ({_db3_lbl} millions)", side="left",
                        gridcolor="#EBEBEB", linecolor=BORDER),
             yaxis2=dict(title="Reform event count", side="right",
                         overlaying="y", showgrid=False, linecolor=BORDER),
@@ -1472,17 +1507,27 @@ with TAB_COMBINED:
         section_header("R&D budget by year (Stream 1)")
         _db3 = load_budget()
         if not _db3.empty:
-            b_yr3 = _db3.groupby("year")["amount_local"].sum().reset_index()
-            b_yr3["DKK M"] = b_yr3["amount_local"] / 1e6
+            _b3_ccy = _db3["currency"].dropna().unique() if "currency" in _db3.columns else []
+            _b3_lbl = _b3_ccy[0] if len(_b3_ccy) == 1 else "local currency"
+            _b3_multi = len(_b3_ccy) > 1
+            if _b3_multi:
+                b_yr3 = _db3.groupby(["year", "country"])["amount_local"].sum().reset_index()
+            else:
+                b_yr3 = _db3.groupby("year")["amount_local"].sum().reset_index()
+            b_yr3["Amt M"] = b_yr3["amount_local"] / 1e6
+            _b3_ytitle = f"{_b3_lbl} (millions)"
             fig_b3 = px.bar(
-                b_yr3, x="year", y="DKK M",
-                labels={"year": "Year", "DKK M": "DKK (millions)"},
+                b_yr3, x="year", y="Amt M",
+                color="country" if _b3_multi else None,
+                labels={"year": "Year", "Amt M": _b3_ytitle, "country": "Country"},
                 color_discrete_sequence=[NAVY],
+                barmode="group" if _b3_multi else "relative",
             )
-            fig_b3.update_traces(marker_color=NAVY, marker_line_width=0)
-            apply_style(fig_b3, height=240, xtitle="Year", ytitle="DKK (millions)")
+            fig_b3.update_traces(marker_line_width=0)
+            apply_style(fig_b3, height=240, xtitle="Year", ytitle=_b3_ytitle)
             st.plotly_chart(fig_b3, use_container_width=True)
-            caption_note("Finance Bills (Finanslov) 1975–1984. High-confidence R&D lines only.")
+            _b3_countries = sorted(_db3["country"].dropna().unique()) if "country" in _db3.columns else []
+            caption_note(f"Finance Bills — {', '.join(_b3_countries) if _b3_countries else 'all countries'}. High-confidence R&D lines only.")
 
     # ── Top reforms table ──
     if rk and not dr_f.empty:
@@ -1539,7 +1584,7 @@ with TAB_TABLE:
     _T5_BUD_LABELS = {
         "country": "Country", "year": "Year", "section_code": "Ministry code",
         "ministry_display": "Ministry", "budget_line_display": "Description",
-        "amount_local": "Amount (DKK)", "currency": "Currency",
+        "amount_local": "Amount (local currency)", "currency": "Currency",
         "budget_category": "R&D category", "confidence": "Confidence",
         "ai_decision": "Decision", "ai_rationale": "Rationale",
         "source_file": "Source", "page_number": "Page",
@@ -1574,7 +1619,11 @@ with TAB_TABLE:
             df5 = _db5[m5]
             cols5 = [c for c in _T5_BUD_LABELS if c in df5.columns]
             _df5_disp = df5[cols5].copy()
-            caption_note(f"{len(df5):,} rows  ·  DKK {df5['amount_local'].sum()/1e6:,.1f} M")
+            _t5_ccy = df5["currency"].dropna().unique() if "currency" in df5.columns else []
+            if len(_t5_ccy) == 1:
+                caption_note(f"{len(df5):,} rows  ·  {_t5_ccy[0]} {df5['amount_local'].sum()/1e6:,.1f} M")
+            else:
+                caption_note(f"{len(df5):,} rows  ·  multiple currencies (see Currency column)")
             render_table(_df5_disp.sort_values(["year","section_code"] if "section_code" in cols5 else ["year"]),
                          col_labels=_T5_BUD_LABELS,
                          num_cols=["amount_local","confidence","page_number"],
@@ -1615,7 +1664,7 @@ This dataset measures innovation policy effort along two dimensions:
 **Stream 1 — Budget allocation** tracks the monetary value of government R&D
 expenditure extracted from scanned Finance Bill PDFs. Budget line items are scored
 against a multilingual taxonomy (Balazs search library) using J-Rule scoring,
-producing a time series of DKK amounts classified by R&D category and Ministry.
+producing a time series of budget amounts classified by R&D category and Ministry.
 
 **Stream 2 — Policy reforms** tracks structural changes in innovation policy extracted
 from OECD Economic Survey narratives. A large language model (GPT-4o or Claude) extracts

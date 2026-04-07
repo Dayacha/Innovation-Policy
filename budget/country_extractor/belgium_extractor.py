@@ -131,6 +131,22 @@ _NON_SCIENCE_AMOUNT_RE = re.compile(
 _BASE_ALLOCATION_RE = re.compile(r"\b(?:46\.)?60\.\d{2}\.\d{2}\.\d{2}\.\d{2}(?:\.\d{2})?\b")
 _SECTION_MARKER_RE = re.compile(r"\b(?:sectie|section)\s+(\d{1,2})\b", re.IGNORECASE)
 _ARTICLE_MARKER_RE = re.compile(r"\bart\.?\s*2\.(\d{1,2})\b", re.IGNORECASE)
+_PROGRAM_TOTAL_HEADER_RE = re.compile(
+    r"(?:Totalen\s+voor\s+het\s+programma|Totaux\s+pour\s+le\s+programme)\s+11\.60\.(?P<prog>[1-3])",
+    re.IGNORECASE,
+)
+_TOTAL_AFTER_RE = re.compile(
+    r"\btot\b[\s:.-]*(?P<amount>\d{1,3}(?:[.\s\xa0]\d{3})+)",
+    re.IGNORECASE,
+)
+_TOTAL_BEFORE_RE = re.compile(
+    r"(?P<amount>\d{1,3}(?:[.\s\xa0]\d{3})+)[\s:.-]*\btot\b",
+    re.IGNORECASE,
+)
+_NON_APPROPRIATION_CUE_RE = re.compile(
+    r"(maximumbedrag|montant\s+maximum|maximum\s+de|voorschotten|avances\s+de\s+fonds|debetpositie)",
+    re.IGNORECASE,
+)
 
 
 def _parse_amount(raw: str) -> Optional[float]:
@@ -152,6 +168,31 @@ def _currency_for_year(year: str) -> str:
         return "BEF" if int(year) < 2002 else "EUR"
     except ValueError:
         return "EUR"
+
+
+def _program_metadata(program_suffix: str) -> tuple[str, str, str, str]:
+    if program_suffix == "1":
+        return (
+            "BE_RD_NATIONAL",
+            "Onderzoek en ontwikkeling op nationaal vlak",
+            "Research and Development at National Level",
+            "Federal science policy: national R&D programmes",
+        )
+    if program_suffix == "2":
+        return (
+            "BE_RD_INTERNATIONAL",
+            "Onderzoek en ontwikkeling op internationaal vlak",
+            "Research and Development at International Level",
+            "Federal science policy: international R&D and ESA participation",
+        )
+    if program_suffix == "3":
+        return (
+            "BE_FED_SCI_INST",
+            "Federale wetenschappelijke instellingen",
+            "Federal Scientific Institutions",
+            "Federal science policy: federal scientific institutions",
+        )
+    raise ValueError(f"Unexpected Section 46 program suffix: {program_suffix}")
 
 
 def _science_scope_ok(prefix: str) -> bool:
@@ -257,6 +298,86 @@ def _program_records_from_page(
     return records
 
 
+def _programme_total_records_from_page(
+    text: str,
+    year: str,
+    source_filename: str,
+    page_number: int,
+    file_id: str,
+    country: str,
+) -> list[dict]:
+    if not (_SECTION_46_RE.search(text) or _SCIENCE_ANCHOR_RE.search(text) or "11.60." in text):
+        return []
+
+    records: list[dict] = []
+    seen: set[str] = set()
+
+    lines = text.splitlines()
+    for idx, raw_line in enumerate(lines):
+        match = _PROGRAM_TOTAL_HEADER_RE.search(raw_line)
+        if not match:
+            continue
+        program_suffix = match.group("prog")
+
+        total_match = None
+        total_line = raw_line
+        for candidate in lines[idx: min(len(lines), idx + 5)]:
+            total_match = _TOTAL_AFTER_RE.search(candidate)
+            if total_match is None:
+                total_match = _TOTAL_BEFORE_RE.search(candidate)
+            if total_match is not None:
+                total_line = candidate
+                break
+        if total_match is None:
+            continue
+
+        amount = _parse_amount(total_match.group("amount"))
+        if amount is None or amount <= 0:
+            continue
+        amount *= 1000.0
+
+        program_code, line_description, line_description_en, summary = _program_metadata(program_suffix)
+        if program_code in seen:
+            continue
+        seen.add(program_code)
+
+        joined = "\n".join(lines[max(0, idx - 4): min(len(lines), idx + 6)])
+        context = joined
+        records.append(
+            {
+                "country": country,
+                "year": year,
+                "section_code": "BE_SCIENCE",
+                "section_name": "POD Wetenschapsbeleid / SPP Politique scientifique",
+                "section_name_en": "Federal Science Policy",
+                "program_code": program_code,
+                "line_description": line_description,
+                "line_description_en": line_description_en,
+                "program_description": summary,
+                "program_description_en": summary,
+                "amount_local": amount,
+                "currency": _currency_for_year(year),
+                "unit": _currency_for_year(year),
+                "rd_category": "direct_rd",
+                "taxonomy_score": 8.8,
+                "decision": "include",
+                "confidence": 0.86,
+                "source_file": source_filename,
+                "file_id": file_id,
+                "page_number": page_number,
+                "text_snippet": context[:700].replace("\n", " ").strip(),
+                "raw_line": context[:1800].strip(),
+                "merged_line": total_line.strip(),
+                "context_before": context[:500].replace("\n", " ").strip(),
+                "context_after": context[500:1200].replace("\n", " ").strip(),
+                "amount_raw": total_match.group("amount"),
+                "parse_quality": "medium",
+            }
+        )
+
+    return records
+
+
 def _amount_records_from_page(
     text: str,
     year: str,
@@ -299,6 +420,8 @@ def _amount_records_from_page(
         if not _science_scope_ok(prefix):
             continue
         if not _SCIENCE_AMOUNT_ANCHOR_RE.search(prefix):
+            continue
+        if _NON_APPROPRIATION_CUE_RE.search(context):
             continue
 
         if re.search(r"(agentschap|agence\s+spatiale|\bESA\b|ruimtevaart|spatiale)", context, re.IGNORECASE):
@@ -373,6 +496,16 @@ def extract_belgium_items(
         text = row.text if isinstance(row.text, str) else ""
         if not text.strip():
             continue
+        all_records.extend(
+            _programme_total_records_from_page(
+                text=text,
+                year=year,
+                source_filename=source_filename,
+                page_number=pg,
+                file_id=file_id,
+                country=country,
+            )
+        )
         all_records.extend(
             _program_records_from_page(
                 text=text,

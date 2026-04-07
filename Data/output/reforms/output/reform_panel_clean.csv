@@ -216,6 +216,20 @@ CAN,Canada,2025,innovation_instruments,4,4,1
 CAN,Canada,2025,rd_funding,4,4,1
 CAN,Canada,2025,research_infrastructure,1,1,1
 CAN,Canada,2025,startup_ecosystem,1,1,1
+CHE,Switzerland,1979,innovation_instruments,1,1,1
+CHE,Switzerland,1979,rd_funding,1,1,1
+CHE,Switzerland,1982,innovation_instruments,1,1,1
+CHE,Switzerland,1983,innovation_instruments,1,1,1
+CHE,Switzerland,1983,sectoral_rd,1,1,1
+CHE,Switzerland,1985,human_capital,1,1,1
+CHE,Switzerland,1985,innovation_instruments,4,4,1
+CHE,Switzerland,1985,knowledge_transfer,1,1,1
+CHE,Switzerland,1985,rd_funding,1,1,1
+CHE,Switzerland,1986,rd_funding,1,1,1
+CHE,Switzerland,1987,rd_funding,1,1,1
+CHE,Switzerland,1988,rd_funding,1,1,1
+CHE,Switzerland,1992,rd_funding,1,1,1
+CHE,Switzerland,1994,innovation_instruments,2,2,1
 CHE,Switzerland,1995,innovation_instruments,1,1,1
 CHE,Switzerland,1995,rd_funding,1,1,1
 CHE,Switzerland,1996,rd_funding,1,1,1
@@ -347,6 +361,21 @@ CZE,Czech Republic,2023,human_capital,1,1,1
 CZE,Czech Republic,2023,innovation_instruments,1,1,1
 CZE,Czech Republic,2023,sectoral_rd,1,1,1
 CZE,Czech Republic,2023,startup_ecosystem,1,1,1
+DEU,Germany,1974,innovation_instruments,1,1,1
+DEU,Germany,1976,human_capital,1,1,1
+DEU,Germany,1976,innovation_instruments,1,1,1
+DEU,Germany,1978,rd_funding,1,1,1
+DEU,Germany,1980,innovation_instruments,1,1,1
+DEU,Germany,1980,startup_ecosystem,1,1,1
+DEU,Germany,1982,startup_ecosystem,1,1,1
+DEU,Germany,1983,rd_funding,1,1,1
+DEU,Germany,1986,innovation_instruments,1,1,1
+DEU,Germany,1986,startup_ecosystem,1,1,1
+DEU,Germany,1988,sectoral_rd,1,1,1
+DEU,Germany,1991,startup_ecosystem,1,1,1
+DEU,Germany,1992,innovation_instruments,1,1,1
+DEU,Germany,1994,human_capital,1,1,1
+DEU,Germany,1994,startup_ecosystem,1,1,1
 DEU,Germany,1995,startup_ecosystem,1,1,1
 DEU,Germany,1996,other,1,1,1
 DEU,Germany,1996,rd_funding,1,1,1
@@ -600,6 +629,9 @@ GBR,United Kingdom,2011,sectoral_rd,1,1,1
 GBR,United Kingdom,2013,innovation_instruments,7,7,1
 GBR,United Kingdom,2013,research_infrastructure,1,1,1
 GBR,United Kingdom,2013,startup_ecosystem,1,1,1
+GBR,United Kingdom,2015,human_capital,1,1,1
+GBR,United Kingdom,2015,innovation_instruments,1,1,1
+GBR,United Kingdom,2015,startup_ecosystem,1,1,1
 GBR,United Kingdom,2017,rd_funding,5,5,1
 GBR,United Kingdom,2020,human_capital,1,1,1
 GBR,United Kingdom,2020,innovation_instruments,4,4,1
@@ -675,6 +707,19 @@ HUN,Hungary,2021,startup_ecosystem,1,1,1
 HUN,Hungary,2024,research_infrastructure,1,1,1
 HUN,Hungary,2024,sectoral_rd,1,1,1
 HUN,Hungary,2024,startup_ecosystem,1,1,1
+IRL,Ireland,1970,human_capital,1,1,1
+IRL,Ireland,1973,innovation_instruments,1,1,1
+IRL,Ireland,1973,rd_funding,1,1,1
+IRL,Ireland,1974,sectoral_rd,1,1,1
+IRL,Ireland,1976,rd_funding,1,1,1
+IRL,Ireland,1978,innovation_instruments,1,1,1
+IRL,Ireland,1979,innovation_instruments,1,1,1
+IRL,Ireland,1979,rd_funding,1,1,1
+IRL,Ireland,1985,innovation_instruments,1,1,1
+IRL,Ireland,1985,knowledge_transfer,1,1,1
+IRL,Ireland,1989,innovation_instruments,2,1,1
+IRL,Ireland,1989,sectoral_rd,1,1,1
+IRL,Ireland,1993,innovation_instruments,1,1,1
 IRL,Ireland,1995,human_capital,1,1,1
 IRL,Ireland,1995,innovation_instruments,1,1,1
 IRL,Ireland,1999,human_capital,1,1,1
@@ -794,6 +839,17 @@ ITA,Italy,2021,rd_funding,1,1,1
 ITA,Italy,2021,startup_ecosystem,2,2,1
 ITA,Italy,2024,human_capital,1,1,1
 ITA,Italy,2024,innovation_instruments,1,1,1
+JPN,Japan,1972,innovation_instruments,1,1,1
+JPN,Japan,1977,human_capital,1,1,1
+JPN,Japan,1978,human_capital,1,1,1
+JPN,Japan,1980,sectoral_rd,1,1,1
+JPN,Japan,1981,rd_funding,1,1,1
+JPN,Japan,1981,startup_ecosystem,1,1,1
+JPN,Japan,1985,other,1,0,0
+JPN,Japan,1985,sectoral_rd,1,1,1
+JPN,Japan,1989,rd_funding,1,1,1
+JPN,Japan,1994,innovation_instruments,1,1,1
+JPN,Japan,1995,startup_ecosystem,1,1,1
 JPN,Japan,1996,rd_funding,3,3,1
 JPN,Japan,1996,sectoral_rd,1,1,1
 JPN,Japan,1996,startup_ecosystem,1,1,1
@@ -1164,6 +1220,13 @@ POL,Poland,2023,startup_ecosystem,1,1,1
 POL,Poland,2025,innovation_instruments,1,1,1
 POL,Poland,2025,rd_funding,1,1,1
 POL,Poland,2025,startup_ecosystem,2,2,1
+PRT,Portugal,1971,innovation_instruments,1,1,1
+PRT,Portugal,1976,innovation_instruments,2,2,1
+PRT,Portugal,1980,innovation_instruments,1,1,1
+PRT,Portugal,1983,startup_ecosystem,1,1,1
+PRT,Portugal,1988,innovation_instruments,1,1,1
+PRT,Portugal,1992,human_capital,1,1,1
+PRT,Portugal,1992,innovation_instruments,1,1,1
 PRT,Portugal,1995,human_capital,1,1,1
 PRT,Portugal,1996,innovation_instruments,1,1,1
 PRT,Portugal,1996,knowledge_transfer,1,1,1
@@ -1263,6 +1326,15 @@ SVN,Slovenia,2022,innovation_instruments,2,2,1
 SVN,Slovenia,2022,knowledge_transfer,3,3,1
 SVN,Slovenia,2022,rd_funding,2,2,1
 SVN,Slovenia,2022,startup_ecosystem,1,1,1
+SWE,Sweden,1973,innovation_instruments,1,1,1
+SWE,Sweden,1974,innovation_instruments,1,1,1
+SWE,Sweden,1976,innovation_instruments,1,1,1
+SWE,Sweden,1977,startup_ecosystem,1,1,1
+SWE,Sweden,1978,human_capital,1,1,1
+SWE,Sweden,1985,innovation_instruments,1,1,1
+SWE,Sweden,1985,rd_funding,1,1,1
+SWE,Sweden,1985,sectoral_rd,1,1,1
+SWE,Sweden,1985,startup_ecosystem,1,1,1
 SWE,Sweden,1995,human_capital,1,1,1
 SWE,Sweden,1995,startup_ecosystem,1,1,1
 SWE,Sweden,1997,rd_funding,1,1,1
@@ -1320,6 +1392,17 @@ TUR,Türkiye,2025,human_capital,3,3,1
 TUR,Türkiye,2025,innovation_instruments,2,2,1
 TUR,Türkiye,2025,knowledge_transfer,3,3,1
 TUR,Türkiye,2025,rd_funding,3,3,1
+USA,United States,1979,sectoral_rd,1,1,1
+USA,United States,1982,innovation_instruments,1,1,1
+USA,United States,1989,knowledge_transfer,1,1,1
+USA,United States,1990,innovation_instruments,1,1,1
+USA,United States,1990,rd_funding,1,1,1
+USA,United States,1991,innovation_instruments,1,1,1
+USA,United States,1991,rd_funding,1,1,1
+USA,United States,1993,rd_funding,1,1,1
+USA,United States,1993,sectoral_rd,1,1,1
+USA,United States,1994,human_capital,1,1,1
+USA,United States,1994,innovation_instruments,1,1,1
 USA,United States,1995,rd_funding,1,1,1
 USA,United States,1996,innovation_instruments,1,1,1
 USA,United States,1996,knowledge_transfer,1,1,1

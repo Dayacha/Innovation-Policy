@@ -1,79 +1,79 @@
 {
-  "generated_at": "2026-04-07T00:24:34.098310",
+  "generated_at": "2026-04-07T02:54:56.816037",
   "counts": {
-    "raw": 4070,
-    "pass1_keep": 1954,
-    "pass1_borderline": 1026,
-    "pass1_drop": 1090,
-    "pass2_rescued": 348,
-    "pass2_excluded": 678,
-    "final_clean": 2302,
+    "raw": 4228,
+    "pass1_keep": 2011,
+    "pass1_borderline": 1081,
+    "pass1_drop": 1136,
+    "pass2_rescued": 380,
+    "pass2_excluded": 701,
+    "final_clean": 2391,
     "retention_pct": 56.6
   },
   "subtheme_breakdown": {
     "human_capital": {
-      "n": 228,
-      "pct": 9.9,
-      "n_positive": 228
+      "n": 238,
+      "pct": 10.0,
+      "n_positive": 238
     },
     "innovation_instruments": {
-      "n": 731,
-      "pct": 31.8,
-      "n_positive": 720
+      "n": 769,
+      "pct": 32.2,
+      "n_positive": 757
     },
     "knowledge_transfer": {
-      "n": 189,
-      "pct": 8.2,
-      "n_positive": 189
+      "n": 192,
+      "pct": 8.0,
+      "n_positive": 192
     },
     "other": {
-      "n": 19,
+      "n": 20,
       "pct": 0.8,
       "n_positive": 14
     },
     "rd_funding": {
-      "n": 616,
-      "pct": 26.8,
-      "n_positive": 610
+      "n": 633,
+      "pct": 26.5,
+      "n_positive": 627
     },
     "research_infrastructure": {
       "n": 76,
-      "pct": 3.3,
+      "pct": 3.2,
       "n_positive": 76
     },
     "sectoral_rd": {
-      "n": 123,
-      "pct": 5.3,
-      "n_positive": 123
+      "n": 132,
+      "pct": 5.5,
+      "n_positive": 132
     },
     "startup_ecosystem": {
-      "n": 320,
-      "pct": 13.9,
-      "n_positive": 318
+      "n": 331,
+      "pct": 13.8,
+      "n_positive": 329
     }
   },
   "activity_lens": {
-    "K2": 533,
-    "None": 484,
-    "K4": 468,
-    "K5": 454,
-    "K6": 146,
-    "K8": 106,
+    "K2": 549,
+    "None": 539,
+    "K4": 472,
+    "K5": 463,
+    "K6": 148,
+    "K8": 107,
     "K7": 65,
-    "K1": 28,
+    "K1": 30,
     "K3": 18
   },
   "defence_scope": {
-    "nan": 2302
+    "nan": 2391
   },
   "coverage": {
     "n_countries": 38,
-    "n_country_years": 510
+    "n_country_years": 568
   },
   "intensity_summary": {
-    "mean_weighted_score": 3.168,
+    "mean_weighted_score": 2.947,
     "max_weighted_score": 20.7,
-    "mean_net_reforms": 4.455
+    "mean_net_reforms": 4.153
   },
-  "elapsed_seconds": 68.8
+  "elapsed_seconds": 176.6
 }

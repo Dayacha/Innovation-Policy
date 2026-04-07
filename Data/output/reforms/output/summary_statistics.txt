@@ -1,50 +1,50 @@
 OECD Reform Extraction - Summary Statistics
 ==================================================
 
-Total mentions (across all surveys): 4070
-Unique reform events (after cross-survey dedup): 1472
+Total mentions (across all surveys): 4228
+Unique reform events (after cross-survey dedup): 1563
 Countries covered: 38
 
 Events by theme:
-  innovation: 1459
-  other: 13
+  innovation: 1548
+  other: 15
 
 Top sub-themes:
-  innovation_instruments: 413
-  startup_ecosystem: 285
-  human_capital: 249
-  rd_funding: 215
-  sectoral_rd: 94
-  research_infrastructure: 79
-  knowledge_transfer: 77
-  other: 60
+  innovation_instruments: 449
+  startup_ecosystem: 304
+  human_capital: 260
+  rd_funding: 228
+  sectoral_rd: 98
+  knowledge_transfer: 82
+  research_infrastructure: 81
+  other: 61
 
 Events by status:
-  announced: 1640
-  implemented: 1446
+  announced: 1678
+  implemented: 1537
   legislated: 26
   recommended: 14
-  unclear: 4
+  unclear: 5
 
 Events by growth orientation:
-  growth_supporting: 1457
-  mixed: 7
-  unclear_or_neutral: 5
+  growth_supporting: 1546
+  mixed: 8
+  unclear_or_neutral: 6
   growth_hindering: 3
 
-Major reform events (is_major_reform=True): 811
+Major reform events (is_major_reform=True): 852
 
 Events by importance bucket:
-  Bucket 1: 13
-  Bucket 2: 648
-  Bucket 3: 811
+  Bucket 1: 17
+  Bucket 2: 694
+  Bucket 3: 852
 
 Year source breakdown:
-  explicit: 1279
-  unknown: 189
-  inferred: 4
+  explicit: 1288
+  unknown: 272
+  inferred: 3
 
 Panel: 2166 country-year observations
-Country-years with at least one reform: 761 (35.1%)
+Country-years with at least one reform: 822 (38.0%)
 Panel mode: inclusive
 Year assignment: implementation
