@@ -71,8 +71,16 @@ def _extract_chapter_285(sorted_pages, year_int: int) -> Optional[dict]:
                 header_idx = idx
             else:
                 continue
-            block_lines = [ln.rstrip() for ln in lines[header_idx:min(len(lines), header_idx + 14)] if ln.strip()]
-            block_text = "\n".join(block_lines)
+            # Collect up to 30 lines, stopping when the next chapter number starts
+            _next_chapter_re = re.compile(r"^\s*28[6-9]\b|^\s*29\d\b|^\s*3\d\d\b")
+            raw_block = []
+            for k in range(header_idx, min(len(lines), header_idx + 30)):
+                ln = lines[k].rstrip()
+                if k > header_idx + 1 and _next_chapter_re.match(ln.strip()):
+                    break
+                if ln.strip():
+                    raw_block.append(ln)
+            block_text = "\n".join(raw_block)
             amounts = _amounts_in(block_text)
             if not amounts:
                 continue

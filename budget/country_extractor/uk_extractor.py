@@ -177,7 +177,13 @@ def _parse_del_page(
 
     n_years = len(fiscal_years)
     results: list[dict] = []
-    current_del_type = "Resource DEL"  # default; updated when we see section headers
+    # Detect page-level DEL type from table title
+    if re.search(r"Capital\s+Departmental\s+Expenditure", page_text, re.IGNORECASE):
+        current_del_type = "Capital DEL"
+    elif re.search(r"Total\s+Departmental\s+Expenditure", page_text, re.IGNORECASE):
+        current_del_type = "Total DEL"
+    else:
+        current_del_type = "Resource DEL"
 
     i = 0
     while i < len(lines):
@@ -198,11 +204,12 @@ def _parse_del_page(
         # Strip trailing footnote superscripts (1-2 digits)
         clean_line = re.sub(r"\d{1,2}$", "", raw_line).strip()
 
+        matched = False
         for dept_name, dept_code, canonical, decision, confidence in _DEPT_REGISTRY:
             if dept_name not in clean_line:
-                i += 1
                 continue
 
+            matched = True
             # Found department row — collect amounts
             # Format A: tab-separated values on same line
             parts = re.split(r"\t+", raw_line)
@@ -213,9 +220,8 @@ def _parse_del_page(
                 amounts_raw = []
                 j = i + 1
                 while j < len(lines) and len(amounts_raw) < n_years:
-                    val = lines[j].replace(",", "").replace(" ", "")
                     if _AMOUNT_LINE_RE.match(lines[j]):
-                        amounts_raw.append(val)
+                        amounts_raw.append(lines[j])
                         j += 1
                     elif not lines[j]:
                         j += 1  # skip blank lines
@@ -246,7 +252,7 @@ def _parse_del_page(
                         "confidence": confidence,
                     }
                 )
-            break  # matched a department; move to next line
+            break  # matched a department; stop checking others
 
         i += 1
 
@@ -352,8 +358,6 @@ def extract_uk_items(
         if _is_del_page(text):
             del_records = _parse_del_page(text)
             for r in del_records:
-                del_label = f"{r['del_type']}"
-                prog_code = f"{r['dept_code']}_{r['del_type'].replace(' ', '_').replace('DEL', 'DEL').upper()}"
                 prog_code = f"{r['dept_code']}_{r['del_type'].split()[0].upper()}"
                 dedup_key = (r["dept_code"], r["budget_year"], r["del_type"])
                 if dedup_key in seen_keys:
