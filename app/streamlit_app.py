@@ -502,11 +502,12 @@ with st.sidebar:
             key="svy_filt",
         )
         only_major = st.checkbox("Major reforms only", key="maj_filt")
-        # Year range — fall back to announcement_year when implementation_year sparse
-        _ref_yrs_impl = _dr["implementation_year"].dropna().astype(int).unique()
-        _ref_yrs_ann  = _dr["announcement_year"].dropna().astype(int).unique() \
-                        if "announcement_year" in _dr.columns else []
-        _ref_yrs = sorted(set(list(_ref_yrs_impl) + list(_ref_yrs_ann)))
+        # Year range for charts: use display_year so pre-1990 survey-era reforms
+        # still appear when implementation_year is missing.
+        _ref_yrs = (
+            sorted(_dr["display_year"].dropna().astype(int).unique())
+            if "display_year" in _dr.columns else []
+        )
         if len(_ref_yrs) > 1:
             yr_r = st.select_slider(
                 "Year range", options=_ref_yrs,
@@ -582,10 +583,10 @@ if reforms_available():
         dr_f = dr_f[dr_f["survey_year"].isin(sel_svy)]
     if only_major and "is_major_reform" in dr_f.columns:
         dr_f = dr_f[dr_f["is_major_reform"] == True]  # noqa: E712
-    if "implementation_year" in dr_f.columns:
+    if "display_year" in dr_f.columns:
         dr_f = dr_f[
-            dr_f["implementation_year"].isna() |
-            ((dr_f["implementation_year"] >= yr_r[0]) & (dr_f["implementation_year"] <= yr_r[1]))
+            dr_f["display_year"].isna() |
+            ((dr_f["display_year"] >= yr_r[0]) & (dr_f["display_year"] <= yr_r[1]))
         ]
 else:
     dr_f = pd.DataFrame()
@@ -805,7 +806,7 @@ with TAB_REFORMS:
 
     # ── Chart 1: reforms per year ──
     section_header("Reform events per year by innovation sub-type")
-    YR_COL = "implementation_year"
+    YR_COL = "display_year"
     _multi_ctry = "country_name" in dr_f.columns and dr_f["country_name"].nunique() > 1
     if YR_COL in dr_f.columns and dr_f[YR_COL].notna().any():
         df_yr = dr_f.dropna(subset=[YR_COL]).copy()
@@ -1321,9 +1322,9 @@ with TAB_COMBINED:
 
             with col3b:
                 section_header("Reform timeline — year × sub-type")
-                _df_tl = dr_f.dropna(subset=["implementation_year"]).copy()
+                _df_tl = dr_f.dropna(subset=["display_year"]).copy()
                 if not _df_tl.empty:
-                    _df_tl["yr"] = _df_tl["implementation_year"].astype(int)
+                    _df_tl["yr"] = _df_tl["display_year"].astype(int)
                     _df_tl["sub_short"] = _df_tl["sub_theme"].map(lambda x: SUBTHEME_SHORT.get(x, x))
                     _df_tl["importance"] = _df_tl["importance_bucket"].fillna(1).astype(int)
                     _df_tl["label"] = _df_tl.apply(
@@ -1354,8 +1355,8 @@ with TAB_COMBINED:
         _db3 = load_budget()
         b_yr3 = _db3.groupby("year")["amount_local"].sum().reset_index()
         b_yr3["DKK M"] = b_yr3["amount_local"] / 1e6
-        df_i3 = dr_f.dropna(subset=["implementation_year"]).copy()
-        df_i3["yr"] = df_i3["implementation_year"].astype(int)
+        df_i3 = dr_f.dropna(subset=["display_year"]).copy()
+        df_i3["yr"] = df_i3["display_year"].astype(int)
         rc3 = df_i3.groupby("yr").size().reset_index(name="n")
         fig_dual = go.Figure()
         fig_dual.add_trace(go.Bar(
@@ -1508,8 +1509,8 @@ with TAB_COMBINED:
     if rk and not dr_f.empty and dr_f["country_name"].nunique() > 1:
         section_header("Reform activity — country × year")
         pv4 = (
-            dr_f.dropna(subset=["implementation_year"])
-            .assign(yr=lambda d: d["implementation_year"].astype(int))
+            dr_f.dropna(subset=["display_year"])
+            .assign(yr=lambda d: d["display_year"].astype(int))
             .groupby(["country_name","yr"]).size().reset_index(name="n")
         )
         fig_ht = px.density_heatmap(

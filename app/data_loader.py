@@ -269,6 +269,20 @@ def load_reforms():
         df["last_seen_survey_year"] = pd.to_numeric(
             df["last_seen_survey_year"], errors="coerce"
         ).astype("Int64")
+
+    # Display year for app charts: prefer enacted timing, then survey timing.
+    display_year = pd.Series(pd.NA, index=df.index, dtype="Int64")
+    for col in (
+        "implementation_year",
+        "announcement_year",
+        "first_seen_survey_year",
+        "survey_year",
+    ):
+        if col not in df.columns:
+            continue
+        candidate = pd.to_numeric(df[col], errors="coerce").astype("Int64")
+        display_year = display_year.fillna(candidate)
+    df["display_year"] = display_year
     return df
 
 
