@@ -13,6 +13,7 @@ import requests
 import yaml
 
 from reforms.countries import CODE_TO_NAME, NAME_TO_CODE, NAME_VARIANTS
+from reforms.downloader import PDFDownloader
 
 
 KAPPA_API_HOST = "https://kappa.oecd.org/catalogue/api"
@@ -86,6 +87,7 @@ def parse_publications(xml_text: str) -> Tuple[List[Dict[str, str]], int]:
     for result in root.findall(".//schema:result[@slice='expression']", NS):
         title = result.findtext("schema:title", default="", namespaces=NS).strip()
         publication_date = result.findtext("schema:dateOfPublication", default="", namespaces=NS).strip()
+        read_url = result.findtext("schema:readUrl", default="", namespaces=NS).strip()
         pdf_url = ""
 
         for manifestation in result.findall("schema:result[@slice='manifestation']", NS):
@@ -106,6 +108,7 @@ def parse_publications(xml_text: str) -> Tuple[List[Dict[str, str]], int]:
                 {
                     "title": title,
                     "publication_date": publication_date,
+                    "read_url": read_url,
                     "pdf_url": pdf_url,
                 }
             )
@@ -245,6 +248,7 @@ def publications_from_catalog(
             {
                 "title": f"OECD Economic Surveys: {country_name} {year}",
                 "publication_date": publication_date,
+                "read_url": str(meta.get("read_url", "")).strip(),
                 "pdf_url": pdf_url,
             }
         )
@@ -260,10 +264,22 @@ def remove_partial_file(path: Path) -> None:
         pass
 
 
+def download_file_via_browser(read_url: str, destination: Path) -> bool:
+    downloader = PDFDownloader(
+        {
+            "paths": {"raw_pdfs": str(destination.parent)},
+            "processing": {"api_delay": 0},
+        }
+    )
+    result = downloader._download_with_playwright(read_url, destination)
+    return bool(result and destination.exists() and destination.stat().st_size > 0)
+
+
 def download_file(
     pdf_url: str,
     destination: Path,
     api_key: str,
+    read_url: Optional[str] = None,
     timeout: float = 60.0,
     retries: int = 3,
 ) -> None:
@@ -297,6 +313,11 @@ def download_file(
             remove_partial_file(destination)
             if attempt < retries:
                 time.sleep(min(attempt * 2, 10))
+
+    if read_url:
+        remove_partial_file(destination)
+        if download_file_via_browser(read_url, destination):
+            return
 
     raise RuntimeError(f"Download failed after {retries} attempts for {destination.name}: {last_error}")
 
@@ -344,7 +365,12 @@ def download_surveys(
             print(f"Skipping existing file: {destination.name}")
             continue
         try:
-            download_file(publication["pdf_url"], destination, api_key)
+            download_file(
+                publication["pdf_url"],
+                destination,
+                api_key,
+                read_url=publication.get("read_url"),
+            )
             downloaded += 1
             print(f"Downloaded {publication['title']} -> {destination.name}")
         except Exception as exc:
@@ -397,7 +423,12 @@ def download_all_surveys(
                 continue
 
             try:
-                download_file(pdf_url, destination, api_key)
+                download_file(
+                    pdf_url,
+                    destination,
+                    api_key,
+                    read_url=str(meta.get("read_url", "")).strip() or None,
+                )
                 downloaded += 1
                 print(f"Downloaded {destination.name}")
             except Exception as exc:
