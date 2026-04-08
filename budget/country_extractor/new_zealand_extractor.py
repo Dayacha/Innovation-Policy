@@ -30,6 +30,7 @@ _SCIENCE_TERMS = (
     "contract management",
     "crown research institute core funding",
     "cri capability fund",
+    "development of international linkages",
     "endeavour fund",
     "engaging new zealanders with science and technology",
     "energy and minerals research",
@@ -42,10 +43,13 @@ _SCIENCE_TERMS = (
     "marsden fund",
     "national measurement standards",
     "new economy research fund",
+    "pre-seed accelerator fund",
     "partnered research fund",
     "promoting an innovation culture",
     "research and development facilitation and promotion service",
     "research contract management",
+    "research for industry",
+    "social research",
     "strategic science investment fund",
     "supporting promising individuals",
     "talent and science promotion",
@@ -53,9 +57,52 @@ _SCIENCE_TERMS = (
     "innovative partnerships",
     "digital technologies sector initiatives",
     "gene technology regulatory functions",
+    "technology new zealand",
+)
+
+_TRANSITION_SCIENCE_TERMS = (
+    "marsden fund",
+    "new economy research fund",
+    "non-specific output funding",
+    "non-specific output funding for public good science and technology",
+    "public good science and technology",
+    "promotion of science and technology",
+    "promotion of technology for business growth",
+    "provision of national measurement standards",
+    "national measurement standards",
+    "science and technology publications",
+    "human resources development for science and technology",
+    "international science and technology linkages",
+    "research for industry",
+    "technology new zealand",
+    "grants for private sector research and development",
+    "environmental research",
+    "health research",
+    "social research",
+    "maori knowledge and development research",
+    "research contract management",
+    "supporting promising individuals",
+    "promoting an innovation culture",
+)
+
+_NZ1997_SEQUENCE_TERMS = (
+    "public good science and technology",
+    "non.specific output funding for pubhc good science and technology",
+    "promotion of technology for business growth",
+    "science and technology publications",
+    "provision of national measurement stan",
+    "marsden fund",
+    "promotion of science and technology",
+    "human resources development for science and technology",
+    "international science and technology linkages",
+    "convention du metre",
 )
 
 def _parse_amount(raw: str) -> float:
+    raw = raw.strip()
+    if re.fullmatch(r"\d{1,2},\d{4}", raw):
+        whole, frac = raw.split(",", 1)
+        raw = f"{whole},{frac[:3]}"
     return float(raw.replace(",", "").replace(".", "").replace(" ", ""))
 
 
@@ -84,13 +131,18 @@ def _extract_dsir(sorted_pages) -> dict | None:
         for idx, line in enumerate(text.splitlines()):
             if not _DSIR_LINE_RE.search(line):
                 continue
-            amounts = _AMOUNT_RE.findall(line)
+            lines = text.splitlines()
+            window = " ".join(
+                ln.strip()
+                for ln in lines[idx:min(len(lines), idx + 4)]
+                if isinstance(ln, str) and ln.strip()
+            )
+            amounts = _AMOUNT_RE.findall(window)
             if not amounts:
                 continue
             amount = max(_parse_amount(a) for a in amounts) * 1000.0
             if amount < 1_000_000:
                 continue
-            lines = text.splitlines()
             before, raw_line, after, merged = _build_context(lines, idx, line.strip())
             record = {
                 "program_code": "NZ_DSIR",
@@ -115,6 +167,127 @@ def _extract_dsir(sorted_pages) -> dict | None:
             if best is None or amount > best["amount_local"]:
                 best = record
     return best
+
+
+def _extract_transition_science_package(sorted_pages) -> dict | None:
+    """Extract 1996-2001 science appropriations from inline schedule rows.
+
+    These files often flatten whole appropriation schedules into long text
+    spans where label and amount still remain adjacent. We sum the strongest
+    amount seen for each recurring science programme label.
+    """
+    term_amounts: dict[str, float] = {}
+    snippets: dict[str, str] = {}
+    first_page = 1
+
+    for row in sorted_pages.itertuples(index=False):
+        page_number = int(getattr(row, "page_number", 1) or 1)
+        text = row.text if isinstance(row.text, str) else ""
+        if not text.strip():
+            continue
+
+        flattened = re.sub(r"\s+", " ", text)
+        lowered = flattened.lower()
+
+        for term in _TRANSITION_SCIENCE_TERMS:
+            for match in re.finditer(re.escape(term), lowered):
+                tail = flattened[match.end():match.end() + 120]
+                amounts = _AMOUNT_RE.findall(tail)
+                if not amounts:
+                    continue
+                amount = _parse_amount(amounts[0]) * 1000.0
+                if amount < 1_000_000:
+                    continue
+                if amount > 1_000_000_000:
+                    continue
+                if amount > term_amounts.get(term, 0.0):
+                    term_amounts[term] = amount
+                    snippets[term] = f"{term} {amounts[0]}"
+                    if len(term_amounts) == 1:
+                        first_page = page_number
+
+    total = sum(term_amounts.values())
+    if total < 20_000_000:
+        return None
+
+    snippet = "\n".join(f"{term}: {snippets[term]}" for term in sorted(term_amounts))
+    return {
+        "program_code": "NZ_SCIENCE_PACKAGE",
+        "section_code": "NZ_SCIENCE",
+        "section_name": "Research, Science and Technology appropriations",
+        "section_name_en": "Research, Science and Technology appropriations",
+        "line_description": "Summed transition-era science appropriations in appropriation schedule",
+        "line_description_en": "Summed transition-era science appropriations in the appropriation schedule",
+        "amount_local": total,
+        "page_number": first_page,
+        "amount_raw": str(int(total)),
+        "raw_line": snippet,
+        "merged_line": snippet,
+        "context_before": "",
+        "context_after": "",
+        "text_snippet": snippet,
+        "source_variant": "transition_science_package_sum",
+        "rationale": "Sum of explicit transition-era science appropriations with inline amounts in the Estimates act.",
+        "confidence": 0.8,
+        "taxonomy_score": 8.4,
+    }
+
+
+def _extract_1997_sequence_fallback(sorted_pages) -> dict | None:
+    """Recover 1997 from the flattened science sequence plus trailing values."""
+    for row in sorted_pages.itertuples(index=False):
+        page_number = int(getattr(row, "page_number", 1) or 1)
+        text = row.text if isinstance(row.text, str) else ""
+        if not text.strip():
+            continue
+        flattened = re.sub(r"\s+", " ", text)
+        lowered = flattened.lower()
+        if _NZ1997_SEQUENCE_TERMS[0] not in lowered or "marsden fund" not in lowered:
+            continue
+
+        start = lowered.find(_NZ1997_SEQUENCE_TERMS[0])
+        end = lowered.find("=== page 25.0", start)
+        if end == -1:
+            end = min(len(flattened), start + 2500)
+        block = flattened[start:end]
+        amounts = [_parse_amount(a) for a in _AMOUNT_RE.findall(block)]
+        if len(amounts) < 10:
+            continue
+
+        max_idx = max(range(len(amounts)), key=lambda i: amounts[i])
+        candidate = amounts[max_idx:max_idx + 8]
+        if len(candidate) != 8:
+            continue
+
+        total = sum(candidate) * 1000.0
+        if total < 50_000_000:
+            continue
+
+        snippet = "\n".join(
+            f"{term}: {int(amount)}"
+            for term, amount in zip(_NZ1997_SEQUENCE_TERMS, candidate)
+        )
+        return {
+            "program_code": "NZ_SCIENCE_PACKAGE",
+            "section_code": "NZ_SCIENCE",
+            "section_name": "Research, Science and Technology appropriations",
+            "section_name_en": "Research, Science and Technology appropriations",
+            "line_description": "Summed 1997 transition-era science appropriations in flattened schedule",
+            "line_description_en": "Summed 1997 transition-era science appropriations in the flattened schedule",
+            "amount_local": total,
+            "page_number": page_number,
+            "amount_raw": str(int(total)),
+            "raw_line": snippet,
+            "merged_line": snippet,
+            "context_before": "",
+            "context_after": "",
+            "text_snippet": snippet,
+            "source_variant": "transition_1997_sequence_sum",
+            "rationale": "Sum of 1997 science appropriations recovered from the flattened non-departmental sequence and trailing amount block in the Estimates act.",
+            "confidence": 0.72,
+            "taxonomy_score": 8.0,
+        }
+    return None
 
 
 def _extract_science_package(sorted_pages) -> tuple[dict | None, dict | None]:
@@ -225,6 +398,60 @@ def _extract_science_package(sorted_pages) -> tuple[dict | None, dict | None]:
             "taxonomy_score": 8.0,
         }
 
+    if package_record is None:
+        flat_total = 0.0
+        flat_snippets: list[str] = []
+        flat_page = 1
+        flat_seen: set[str] = set()
+
+        for row in sorted_pages.itertuples(index=False):
+            page_number = int(getattr(row, "page_number", 1) or 1)
+            text = row.text if isinstance(row.text, str) else ""
+            if not text.strip():
+                continue
+            flattened = re.sub(r"\s+", " ", text)
+            lowered = flattened.lower()
+            for term in _SCIENCE_TERMS:
+                for match in re.finditer(re.escape(term), lowered):
+                    tail = flattened[match.end():match.end() + 140]
+                    amounts = _AMOUNT_RE.findall(tail)
+                    if not amounts:
+                        continue
+                    amount = _parse_amount(amounts[0]) * 1000.0
+                    if amount < 500_000 or amount > 500_000_000:
+                        continue
+                    if term in flat_seen:
+                        continue
+                    flat_seen.add(term)
+                    flat_total += amount
+                    if not flat_snippets:
+                        flat_page = page_number
+                    if len(flat_snippets) < 10:
+                        flat_snippets.append(f"{term} {amounts[0]}")
+
+        if flat_total >= 50_000_000:
+            snippet = "\n".join(flat_snippets)
+            package_record = {
+                "program_code": "NZ_SCIENCE_PACKAGE",
+                "section_code": "NZ_SCIENCE",
+                "section_name": "Research, Science and Innovation appropriations",
+                "section_name_en": "Research, Science and Innovation appropriations",
+                "line_description": "Summed explicit science and innovation package in flattened appropriation schedule",
+                "line_description_en": "Summed explicit science and innovation package in the flattened appropriation schedule",
+                "amount_local": flat_total,
+                "page_number": flat_page,
+                "amount_raw": str(int(flat_total)),
+                "raw_line": snippet,
+                "merged_line": snippet,
+                "context_before": "",
+                "context_after": "",
+                "text_snippet": snippet,
+                "source_variant": "science_package_flat_sum",
+                "rationale": "Sum of explicit science appropriations recovered from flattened schedule text in the Estimates act.",
+                "confidence": 0.77,
+                "taxonomy_score": 8.3,
+            }
+
     return package_record, callaghan_record
 
 
@@ -247,6 +474,15 @@ def extract_new_zealand_items(
         dsir = _extract_dsir(sorted_pages)
         if dsir is not None:
             items.append(dsir)
+
+    if 1996 <= year_int <= 2001:
+        transition_package = _extract_transition_science_package(sorted_pages)
+        if transition_package is not None:
+            items.append(transition_package)
+        elif year_int == 1997:
+            transition_1997 = _extract_1997_sequence_fallback(sorted_pages)
+            if transition_1997 is not None:
+                items.append(transition_1997)
 
     if year_int >= 2002:
         package_record, callaghan_record = _extract_science_package(sorted_pages)
