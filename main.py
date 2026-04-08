@@ -28,6 +28,7 @@ import argparse
 from difflib import SequenceMatcher
 import hashlib
 import json
+import re
 from datetime import datetime
 from pathlib import Path
 import shutil
@@ -881,7 +882,11 @@ if __name__ == "__main__":
     _add_reform_args(parser)
 
     # ── Budget pipeline flags ─────────────────────────────────────────────────
-    parser.add_argument("--ai-only", action="store_true", help="Skip PDF extraction and run only AI validation/status checks on existing results")
+    parser.add_argument(
+        "--ai-only",
+        action="store_true",
+        help="Skip extraction pipelines and run only budget AI validation/status checks on existing results",
+    )
     parser.add_argument(
         "--budget-filter-country",
         action="append",
@@ -944,7 +949,7 @@ if __name__ == "__main__":
 
     try:
         run_budget = not args.reforms_only
-        run_reforms = not args.budget_only
+        run_reforms = (not args.budget_only) and (not args.ai_only)
 
         if not run_budget:
             configure_logging()
@@ -1022,17 +1027,17 @@ if __name__ == "__main__":
                 except Exception as _e:
                     logger.debug("Stale-cache check failed (non-fatal): %s", _e)
 
-            # Determine which years to send. If user didn't pass --ai-filter-year,
-            # iterate per year (after optional country filter) to merge gradually.
+            # Determine which countries to send. Country-first execution keeps the
+            # AI workflow, aggregation, and anomaly checks aligned with the actual
+            # unit of analysis and avoids overwriting per-year run artifacts.
             baseline_df = _load_baseline(Path(args.input_file))
             if args.ai_filter_country:
                 baseline_df = baseline_df[baseline_df["country"].astype(str).str.lower() == str(args.ai_filter_country).lower()]
-            if args.ai_filter_year:
-                years_to_run = [args.ai_filter_year]
-            else:
-                years_to_run = sorted(baseline_df["year"].dropna().unique().tolist())
+            countries_to_run = sorted(baseline_df["country"].dropna().astype(str).unique().tolist())
 
-            for yr in years_to_run:
+            for country_name in countries_to_run:
+                country_slug = re.sub(r"[^A-Za-z0-9]+", "_", str(country_name)).strip("_") or "unknown"
+                country_run_name = ai_run_name if args.ai_filter_country else f"{ai_run_name}__{country_slug}"
                 ai_config = AIValidationConfig(
                     input_file=args.input_file,
                     max_records_to_send=args.max_records_to_send,
@@ -1044,19 +1049,23 @@ if __name__ == "__main__":
                     output_format=args.ai_output_format,
                     group_by_page=ai_group_by_page,
                     include_context=ai_include_context,
-                    run_name=ai_run_name,
-                    filter_country=args.ai_filter_country,
-                    filter_year=yr,
+                    run_name=country_run_name,
+                    filter_country=country_name,
+                    filter_year=args.ai_filter_year,
                     skip_verified_records=args.skip_verified_records,
                 )
-                logger.info("AI validation pass for year=%s country=%s", yr, args.ai_filter_country or "ALL")
+                logger.info(
+                    "AI validation pass for country=%s year=%s",
+                    country_name,
+                    args.ai_filter_year if args.ai_filter_year is not None else "ALL",
+                )
                 ai_completed = run_ai_validation(ai_config)
                 if not ai_completed:
-                    logger.warning("Skipping merge for year=%s because AI validation did not complete.", yr)
+                    logger.warning("Skipping merge for country=%s because AI validation did not complete.", country_name)
                     continue
 
                 # Re-run cleaning for the current AI run to produce ai_ready_for_verification.csv
-                run_root = PROCESSED_DIR / "ai_validation" / ai_run_name
+                run_root = PROCESSED_DIR / "ai_validation" / country_run_name
                 filter_ai_validated(run_root)
 
                 # Copy (and merge) final verified file next to main results
@@ -1097,6 +1106,26 @@ if __name__ == "__main__":
                     write_review_status_file()
                 else:
                     logger.warning("AI verified file not found: %s", verified_src)
+
+                # Clean transient per-country AI outputs after merge, but keep
+                # cache files so reruns can reuse prior API work.
+                for transient_name in [
+                    "ai_ready_for_verification.csv",
+                    "ai_validated_candidates_clean.csv",
+                    "ai_validated_candidates_raw.csv",
+                    "baseline_vs_ai_comparison.csv",
+                    "baseline_vs_ai_comparison.jsonl",
+                    "ai_validation_run_summary.json",
+                    "aggregation_results.csv",
+                    "anomaly_flags.csv",
+                    "failed_batches.jsonl",
+                ]:
+                    transient_path = run_root / transient_name
+                    if transient_path.exists():
+                        try:
+                            transient_path.unlink()
+                        except Exception as exc:
+                            logger.debug("Could not remove transient AI file %s: %s", transient_path, exc)
 
         # ── Reform pipeline ───────────────────────────────────────────────────
         if run_reforms:
