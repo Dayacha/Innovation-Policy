@@ -39,6 +39,20 @@ logger = logging.getLogger("innovation_pipeline")
 # (name_substring, program_code, canonical_name, decision, confidence)
 _DEPT_REGISTRY: list[tuple[str, str, str, str, float]] = [
     (
+        "Department of Trade and Industry",
+        "UK_SCIMINISTRY",
+        "UK Science Ministry (BEIS / BIS / DIUS / DTI)",
+        "review",
+        0.65,
+    ),
+    (
+        "Trade and Industry",
+        "UK_SCIMINISTRY",
+        "UK Science Ministry (BEIS / BIS / DIUS / DTI)",
+        "review",
+        0.62,
+    ),
+    (
         "Science, Innovation and Technology",
         "UK_DSIT",
         "Dept for Science, Innovation and Technology",
@@ -165,6 +179,36 @@ def _extract_fiscal_years(lines: list[str]) -> list[str]:
     return fiscal_years
 
 
+def _normalize_ocr_amount_tokens(tokens: list[str]) -> list[str]:
+    """Repair common DEL OCR collapses like 163 -> 16.3 or 12 -> 1.2.
+
+    UK DEL rows often contain values in a narrow range of £bn amounts. When OCR
+    drops decimal points, sequences such as:
+      163 15.9 149 13.9  -> 16.3 15.9 14.9 13.9
+      12 13 1.0 12       -> 1.2  1.3  1.0  1.2
+    become tractable again. Very large integers (e.g. "2021" from FY labels)
+    are left untouched here and later filtered out as implausible.
+    """
+    normalized: list[str] = []
+    for tok in tokens:
+        clean = tok.replace(",", "").replace(" ", "").strip()
+        if not clean:
+            normalized.append(tok)
+            continue
+        if "." in clean or clean.startswith("-"):
+            normalized.append(clean)
+            continue
+        if clean.isdigit():
+            if len(clean) == 2:
+                normalized.append(f"{clean[0]}.{clean[1]}")
+                continue
+            if len(clean) == 3:
+                normalized.append(f"{clean[:2]}.{clean[2]}")
+                continue
+        normalized.append(clean)
+    return normalized
+
+
 def _parse_del_page(
     page_text: str,
 ) -> list[dict]:
@@ -242,10 +286,10 @@ def _parse_del_page(
                     suffix = re.sub(re.escape(dept_name), "", clean_line, count=1)
                 tokens = re.findall(r"-?\d[\d,.]*", suffix.strip())
                 if len(tokens) >= n_years:
-                    amounts_raw = tokens[:n_years]
+                    amounts_raw = _normalize_ocr_amount_tokens(tokens[:n_years])
                     format_c_used = True
                 elif tokens:
-                    amounts_raw = tokens
+                    amounts_raw = _normalize_ocr_amount_tokens(tokens)
                     format_c_used = True
 
             for fy, amt_str in zip(fiscal_years, amounts_raw):
@@ -256,6 +300,8 @@ def _parse_del_page(
                     amount_bn = float(amt_str.replace(",", "").replace(" ", ""))
                 except ValueError:
                     continue
+                if format_c_used and amount_bn > 100:
+                    continue  # likely a fiscal-year token or missing decimal OCR
                 if amount_bn < 0.5:
                     continue  # filter out tiny/zero amounts
                 # Fiscal year YYYY-YY → calendar year YYYY
