@@ -1076,19 +1076,23 @@ if __name__ == "__main__":
                     if verified_dst.exists():
                         try:
                             prior_df = pd.read_csv(verified_dst)
+                            dedup_subset = [
+                                c
+                                for c in [
+                                    "country",
+                                    "year",
+                                    "section_code",
+                                    "program_code",
+                                    "clean_program_description_en",
+                                    "line_description",
+                                    "amount_local",
+                                    "page_number",
+                                ]
+                                if c in prior_df.columns and c in new_df.columns
+                            ]
                             combined = (
                                 pd.concat([prior_df, new_df], ignore_index=True)
-                                .drop_duplicates(
-                                    subset=[
-                                        "country",
-                                        "year",
-                                        "section_code",
-                                        "program_code",
-                                        "program_description",
-                                        "amount_local",
-                                        "page_number",
-                                    ]
-                                )
+                                .drop_duplicates(subset=dedup_subset if dedup_subset else None)
                             )
                             combined.to_csv(verified_dst, index=False)
                             logger.info(

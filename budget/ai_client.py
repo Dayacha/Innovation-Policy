@@ -703,6 +703,31 @@ If no anomalies are found, return an empty array []."""
                 return txt[idx:]
         return txt
 
+    @staticmethod
+    def _parse_json_loose(txt: str):
+        """Parse the first valid JSON value from a model response.
+
+        This is more tolerant than json.loads() on the whole string and handles
+        common model behaviors such as:
+        - explanatory prose before JSON
+        - valid JSON followed by stray text
+        - fenced JSON blocks with trailing commentary
+        """
+        raw = AIClient._extract_json(txt)
+        decoder = json.JSONDecoder()
+        raw = raw.strip()
+        for opener in ("{", "["):
+            idx = raw.find(opener)
+            if idx == -1:
+                continue
+            candidate = raw[idx:].lstrip()
+            try:
+                obj, _end = decoder.raw_decode(candidate)
+                return obj
+            except json.JSONDecodeError:
+                continue
+        return json.loads(raw)
+
     def validate_batch(self, batch: List[dict], mode: str = "unified") -> list[dict]:
         """Send a batch to the model and return a parsed JSON list.
 
@@ -719,8 +744,7 @@ If no anomalies are found, return an empty array []."""
             messages = self.build_messages_unified(batch)
 
         content = self._call(messages)
-        raw = self._extract_json(content)
-        result = json.loads(raw)
+        result = self._parse_json_loose(content)
         if isinstance(result, dict) and "items" in result:
             return result["items"]
         if isinstance(result, list):
@@ -736,8 +760,7 @@ If no anomalies are found, return an empty array []."""
         """Run the country-year aggregation pass. Returns a single dict."""
         messages = self.build_aggregation_messages(records, country, year)
         content = self._call(messages)
-        raw = self._extract_json(content)
-        result = json.loads(raw)
+        result = self._parse_json_loose(content)
         if isinstance(result, list) and result:
             return result[0]
         if isinstance(result, dict):
@@ -752,8 +775,7 @@ If no anomalies are found, return an empty array []."""
         """Run the time-series anomaly detection pass. Returns a list of flags."""
         messages = self.build_anomaly_messages(timeseries_data, country)
         content = self._call(messages)
-        raw = self._extract_json(content)
-        result = json.loads(raw)
+        result = self._parse_json_loose(content)
         if isinstance(result, list):
             return result
         return []
