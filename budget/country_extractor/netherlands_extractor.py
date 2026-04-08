@@ -18,6 +18,7 @@ from budget.utils import normalize_text
 
 
 _AMOUNT_RE = re.compile(r"\d{1,3}(?:[ .]\d{3})+")
+_ROW_VALUE_RE = r"(\d+(?:\.\d{3})*)"
 
 _OCW_LABELS = (
     normalize_text("Onderzoek en wetenschapsbeleid"),
@@ -33,6 +34,24 @@ _EZ_LABELS = (
     normalize_text("Bedrijvenbeleid: innovatief en duurzaam ondernemen"),
     normalize_text("Bedrijvenbeleid innovatie en ondernemerschap voor duurzame welvaartsgroei"),
     normalize_text("Bedrijvenbeleid: innovatie en ondernemerschap voor duurzame welvaartsgroei"),
+)
+
+_OCW_ARTICLE_ROW_RE = re.compile(
+    r"(?:^|\n)\s*16\s*\n\s*"
+    r"(Onderzoek\s+en\s+wetenschapsbeleid|Onderzoek\s+en\s+wetenschappen|Coordinatie\s+wetenschapsbeleid)"
+    r"\s*\n\s*" + _ROW_VALUE_RE + r"\s*\n\s*" + _ROW_VALUE_RE + r"\s*\n\s*" + _ROW_VALUE_RE,
+    re.IGNORECASE,
+)
+
+_EZ_ARTICLE_ROW_RE = re.compile(
+    r"(?:^|\n)\s*2\s+"
+    r"(Industrieel\s+en\s+Algemeen\s+Technologiebeleid|"
+    r"Bevorderen\s+van\s+innovatiekracht|"
+    r"Een\s+sterk\s+innovatievermogen|"
+    r"Bedrijvenbeleid(?::)?\s+innovatie(?:f)?\s+en\s+duurzaam\s+ondernemen|"
+    r"Bedrijvenbeleid(?::)?\s+innovatie\s+en\s+ondernemerschap\s+voor\s+duurzame\s+welvaartsgroei)"
+    r"\s*\n\s*" + _ROW_VALUE_RE + r"\s*\n\s*" + _ROW_VALUE_RE + r"\s*\n\s*" + _ROW_VALUE_RE,
+    re.IGNORECASE,
 )
 
 
@@ -76,6 +95,19 @@ def _normalize_without_amounts(text: str) -> str:
     cleaned = re.sub(r"\b\d+\b", " ", cleaned)
     cleaned = re.sub(r"\s+", " ", cleaned).strip()
     return normalize_text(cleaned)
+
+
+def _extract_article_row(page_text: str, source_filename: str) -> tuple[str, float, str] | None:
+    lower = source_filename.lower()
+    pattern = _OCW_ARTICLE_ROW_RE if "ministry8" in lower else _EZ_ARTICLE_ROW_RE if "ministry13" in lower else None
+    if pattern is None:
+        return None
+    match = pattern.search(page_text)
+    if not match:
+        return None
+    amounts = [match.group(i) for i in range(2, 5)]
+    amount_local = _parse_amount(amounts[1])
+    return match.group(0).strip(), amount_local * 1000.0, amounts[1]
 
 
 def _meta_for_source(source_filename: str, year: int) -> dict | None:
@@ -153,63 +185,45 @@ def extract_netherlands_items(
     if meta is None:
         return []
 
-    best: dict | None = None
     for row in sorted_pages.itertuples(index=False):
         page_number = int(getattr(row, "page_number", 1) or 1)
         page_text = row.text if isinstance(row.text, str) else ""
         if not page_text.strip():
             continue
-        lines = page_text.splitlines()
-        for idx, line in enumerate(lines):
-            stripped = line.strip()
-            if not stripped:
-                continue
-            line_norm = _normalize_without_amounts(stripped)
-            if not any(label in line_norm or label.startswith(line_norm) for label in meta["labels"]):
-                continue
-            amounts = _gather_amounts_lookahead(lines, idx)
-            amount_local = _select_uitgaven(amounts)
-            if amount_local is None:
-                continue
-            before, raw_line, after, merged = _build_context(lines, idx, stripped)
-            record = {
-                "country": country,
-                "year": year,
-                "section_code": meta["section_code"],
-                "section_name": meta["section_name"],
-                "section_name_en": meta["section_name_en"],
-                "program_code": meta["program_code"],
-                "line_description": meta["line_description"],
-                "line_description_en": meta["line_description_en"],
-                "amount_local": amount_local * 1000.0,
-                "currency": meta["currency"],
-                "unit": meta["unit"],
-                "rd_category": "direct_rd",
-                "taxonomy_score": meta["taxonomy_score"],
-                "decision": "include",
-                "confidence": meta["confidence"],
-                "source_file": source_filename,
-                "file_id": file_id,
-                "page_number": page_number,
-                "amount_raw": amounts[1] if len(amounts) >= 2 else amounts[-1],
-                "raw_line": raw_line,
-                "merged_line": merged,
-                "context_before": before,
-                "context_after": after,
-                "text_snippet": merged,
-                "source_variant": meta["source_variant"],
-                "rationale": "Dutch ministry article row; uitgaven column extracted from the article-level budget table.",
-            }
-            if best is None or (
-                float(record["amount_local"]),
-                -page_number,
-            ) > (
-                float(best["amount_local"]),
-                -int(best["page_number"]),
-            ):
-                best = record
+        extracted = _extract_article_row(page_text, source_filename)
+        if extracted is None:
+            continue
+        raw_block, amount_local, amount_raw = extracted
+        return [{
+            "country": country,
+            "year": year,
+            "section_code": meta["section_code"],
+            "section_name": meta["section_name"],
+            "section_name_en": meta["section_name_en"],
+            "program_code": meta["program_code"],
+            "line_description": meta["line_description"],
+            "line_description_en": meta["line_description_en"],
+            "amount_local": amount_local,
+            "currency": meta["currency"],
+            "unit": meta["unit"],
+            "rd_category": "direct_rd",
+            "taxonomy_score": meta["taxonomy_score"],
+            "decision": "include",
+            "confidence": meta["confidence"],
+            "source_file": source_filename,
+            "file_id": file_id,
+            "page_number": page_number,
+            "amount_raw": amount_raw,
+            "raw_line": raw_block,
+            "merged_line": raw_block,
+            "context_before": "",
+            "context_after": "",
+            "text_snippet": raw_block,
+            "source_variant": meta["source_variant"],
+            "rationale": "Dutch ministry article row; uitgaven column extracted from the article-level budget table.",
+        }]
 
-    return [best] if best else []
+    return []
 
 
 __all__ = ["extract_netherlands_items"]

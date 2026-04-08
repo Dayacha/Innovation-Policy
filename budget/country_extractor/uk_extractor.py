@@ -47,24 +47,26 @@ _DEPT_REGISTRY: list[tuple[str, str, str, str, float]] = [
     ),
     (
         "Business, Energy and Industrial Strategy",
-        "UK_BEIS",
-        "Dept for Business, Energy and Industrial Strategy",
-        "review",
-        0.72,
+        # Consolidated code: BEIS was the UK science ministry 2016-2023.
+        # Capital DEL is the primary R&D vehicle (UKRI + Innovate UK grants).
+        "UK_SCIMINISTRY",
+        "UK Science Ministry (BEIS / BIS / DIUS)",
+        "include",
+        0.78,
     ),
     (
         "Business, Innovation and Skills",
-        "UK_BIS",
-        "Dept for Business, Innovation and Skills",
-        "review",
-        0.68,
+        "UK_SCIMINISTRY",
+        "UK Science Ministry (BEIS / BIS / DIUS)",
+        "include",
+        0.75,
     ),
     (
         "Innovation, Universities and Skills",
-        "UK_DIUS",
-        "Dept for Innovation, Universities and Skills",
-        "review",
-        0.70,
+        "UK_SCIMINISTRY",
+        "UK Science Ministry (BEIS / BIS / DIUS)",
+        "include",
+        0.78,
     ),
 ]
 
@@ -210,13 +212,14 @@ def _parse_del_page(
                 continue
 
             matched = True
+            format_c_used = False
             # Found department row — collect amounts
             # Format A: tab-separated values on same line
             parts = re.split(r"\t+", raw_line)
             if len(parts) >= n_years + 1:
                 amounts_raw = parts[1 : n_years + 1]
             else:
-                # Format B: values on subsequent lines
+                # Format B: values on subsequent lines (direct_text extraction)
                 amounts_raw = []
                 j = i + 1
                 while j < len(lines) and len(amounts_raw) < n_years:
@@ -227,6 +230,23 @@ def _parse_del_page(
                         j += 1  # skip blank lines
                     else:
                         break  # stop at next non-numeric line
+
+            # Format C: space-separated amounts on the same line (OCR fallback).
+            # E.g. "Business, Innovation and Skills 163 15.9 149 13.9"
+            # Used when OCR collapses multi-column rows onto a single line.
+            if not amounts_raw:
+                name_idx = raw_line.find(dept_name)
+                if name_idx >= 0:
+                    suffix = raw_line[name_idx + len(dept_name):]
+                else:
+                    suffix = re.sub(re.escape(dept_name), "", clean_line, count=1)
+                tokens = re.findall(r"-?\d[\d,.]*", suffix.strip())
+                if len(tokens) >= n_years:
+                    amounts_raw = tokens[:n_years]
+                    format_c_used = True
+                elif tokens:
+                    amounts_raw = tokens
+                    format_c_used = True
 
             for fy, amt_str in zip(fiscal_years, amounts_raw):
                 amt_str = str(amt_str).strip()
@@ -240,6 +260,11 @@ def _parse_del_page(
                     continue  # filter out tiny/zero amounts
                 # Fiscal year YYYY-YY → calendar year YYYY
                 budget_year = str(int(fy[:4]))
+                # Format C (OCR) values may have dropped decimal points;
+                # mark as 'review' with lower confidence so anomaly detection
+                # and AI validation can catch bad OCR (e.g. "13" for "1.3").
+                row_decision = decision if not format_c_used else "review"
+                row_confidence = confidence if not format_c_used else round(confidence * 0.7, 2)
                 results.append(
                     {
                         "dept_code": dept_code,
@@ -248,8 +273,8 @@ def _parse_del_page(
                         "budget_year": budget_year,
                         "del_type": current_del_type,
                         "amount_bn": amount_bn,
-                        "decision": decision,
-                        "confidence": confidence,
+                        "decision": row_decision,
+                        "confidence": row_confidence,
                     }
                 )
             break  # matched a department; stop checking others
@@ -358,6 +383,12 @@ def extract_uk_items(
         if _is_del_page(text):
             del_records = _parse_del_page(text)
             for r in del_records:
+                # Only keep the row whose fiscal year matches the document year.
+                # UK DEL tables span multiple years (outturn + plans); data for
+                # year X should come from the X budget document, not a later one
+                # that shows X as a historical comparison column.
+                if r["budget_year"] != str(year):
+                    continue
                 prog_code = f"{r['dept_code']}_{r['del_type'].split()[0].upper()}"
                 dedup_key = (r["dept_code"], r["budget_year"], r["del_type"])
                 if dedup_key in seen_keys:

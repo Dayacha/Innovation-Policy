@@ -60,11 +60,11 @@ class AIClientConfig:
 
 # ── Taxonomy grounding ────────────────────────────────────────────────────────
 
-def _load_taxonomy_grounding() -> dict[str, list[str]]:
-    """Extract keyword samples from search_library.json for prompt grounding.
+def _load_taxonomy_grounding() -> dict:
+    """Load the full OECD taxonomy from search_library.json.
 
-    Loads the OECD researchers' own definitions so the AI uses the same
-    vocabulary and never substitutes its own intuition about what "R&D" means.
+    Returns a structured dict with keyword lists AND decision rules so the AI
+    uses the researchers' own definitions — not its generic intuition.
     """
     json_file = (
         Path(__file__).resolve().parent.parent
@@ -73,33 +73,54 @@ def _load_taxonomy_grounding() -> dict[str, list[str]]:
     try:
         data = json.loads(json_file.read_text(encoding="utf-8"))
 
-        # Ambiguous keywords may be dicts {term, anchors} or plain strings
-        raw_ambiguous = data.get("ambiguous", {}).get("keywords", [])
-        ambiguous_terms = []
-        for kw in raw_ambiguous[:15]:
-            if isinstance(kw, dict):
-                ambiguous_terms.append(str(kw.get("term", "")))
-            else:
-                ambiguous_terms.append(str(kw))
+        # Ambiguous section: "terms" is a dict {term: {require_anchor, ...}}
+        raw_ambiguous = data.get("ambiguous", {}).get("terms", {})
+        if isinstance(raw_ambiguous, dict):
+            ambiguous_terms = list(raw_ambiguous.keys())[:20]
+        elif isinstance(raw_ambiguous, list):
+            ambiguous_terms = []
+            for kw in raw_ambiguous[:20]:
+                if isinstance(kw, dict):
+                    ambiguous_terms.append(str(kw.get("term", kw.get("keyword", ""))))
+                else:
+                    ambiguous_terms.append(str(kw))
+        else:
+            ambiguous_terms = []
         ambiguous_terms = [t for t in ambiguous_terms if t]
 
+        # Activity lens codes (K1-K8) for GBARD classification
+        activity_lenses = {}
+        for code, lens in data.get("activity_lens", {}).get("lenses", {}).items():
+            activity_lenses[code] = {
+                "class": lens.get("class"),
+                "keywords": lens.get("keywords", [])[:6],
+                "notes": lens.get("notes", ""),
+            }
+
+        # Decision rules from the taxonomy
+        decision_rules = data.get("decision_rules", {})
+
         return {
-            "core_rd": data.get("auto_include", {}).get("keywords", [])[:30],
-            "institutions": data.get("institutions", {}).get("keywords", [])[:20],
-            "sectoral_rd": data.get("sectoral_rd", {}).get("keywords", [])[:15],
-            "exclusions": data.get("exclusions", {}).get("keywords", [])[:20],
+            "core_rd": data.get("auto_include", {}).get("keywords", []),
+            "institutions": data.get("institutions", {}).get("keywords", []),
+            "sectoral_rd": data.get("sectoral_rd", {}).get("keywords", []),
+            "budget_terms": data.get("budget_terms", {}).get("keywords", []),
+            "exclusions": data.get("exclusions", {}).get("keywords", []),
             "ambiguous": ambiguous_terms,
+            "decision_rules": decision_rules,
+            "activity_lenses": activity_lenses,
         }
     except Exception:
         return {
             "core_rd": ["research and development", "R&D", "scientific research",
                         "basic research", "applied research", "experimental development"],
-            "institutions": ["university", "research council", "national laboratory",
-                             "research institute"],
+            "institutions": ["research council", "national laboratory", "research institute"],
             "sectoral_rd": [],
-            "exclusions": ["market research", "regional development", "social work",
-                           "vocational training", "public order"],
+            "budget_terms": [],
+            "exclusions": ["market research", "regional development", "vocational training"],
             "ambiguous": ["development", "programme", "innovation"],
+            "decision_rules": {},
+            "activity_lenses": {},
         }
 
 
@@ -122,36 +143,68 @@ STRICT RULES — violations will invalidate results:
    describe the uncertainty clearly in ai_rationale. Never force a decision.
 6. Do NOT wrap your JSON in markdown fences or add any prose outside the JSON."""
 
-_TAXONOMY_GROUNDING = f"""\
-OECD TAXONOMY — what counts as R&D for this project:
-Base classifications STRICTLY on this list. Do not substitute your own judgment about R&D.
+def _build_taxonomy_grounding() -> str:
+    """Build the taxonomy grounding block from the loaded JSON taxonomy."""
+    t = _TAXONOMY
+    dr = t.get("decision_rules", {})
 
-HIGH-CONFIDENCE R&D (auto-include keywords):
-{", ".join(_TAXONOMY["core_rd"])}
+    # Summarise decision rules from the taxonomy JSON
+    auto_include_rules = "; ".join(
+        r.get("rule", "") for r in dr.get("auto_include", [])
+    )
+    exclude_rules = "; ".join(
+        r.get("rule", "") for r in dr.get("exclude", [])
+    )
+    review_rules = "; ".join(
+        r.get("rule", "") for r in dr.get("review_needed", [])
+    )
 
-KNOWN R&D INSTITUTIONS (funding these = R&D):
-{", ".join(_TAXONOMY["institutions"])}
+    # Activity lens codes
+    lens_lines = []
+    for code, lens in t.get("activity_lenses", {}).items():
+        kws = ", ".join(lens.get("keywords", [])[:4])
+        lens_lines.append(f"  {code} {lens.get('class','')}: {kws}")
+    lens_block = "\n".join(lens_lines) if lens_lines else "  (see Frascati Manual Ch. 12)"
 
-SECTOR-SPECIFIC R&D:
-{", ".join(_TAXONOMY["sectoral_rd"]) if _TAXONOMY["sectoral_rd"] else "(see core_rd)"}
+    return f"""\
+OECD TAXONOMY (from project search_library.json) — base ALL decisions on this:
 
-EXCLUSIONS — these are DEFINITIVELY NOT R&D for this project:
-{", ".join(_TAXONOMY["exclusions"])}
+HIGH-CONFIDENCE R&D keywords (auto-include when present):
+{", ".join(t["core_rd"][:35])}
 
-AMBIGUOUS — only count as R&D if an explicit R&D anchor appears nearby:
-{", ".join(_TAXONOMY["ambiguous"])}
+KNOWN R&D INSTITUTION keywords (funding these = R&D):
+{", ".join(t["institutions"][:25])}
 
-FRASCATI BUDGET TYPES (GBARD classification per Frascati Manual Ch. 12):
+SECTOR-SPECIFIC R&D keywords:
+{", ".join(t["sectoral_rd"][:20]) if t["sectoral_rd"] else "(see core_rd)"}
+
+BUDGET INSTRUMENT keywords (grants, appropriations, transfers to R&D bodies):
+{", ".join(t["budget_terms"][:15]) if t.get("budget_terms") else "(appropriation, grant, transfer, allocation)"}
+
+EXCLUSION keywords — these are DEFINITIVELY NOT R&D:
+{", ".join(t["exclusions"][:25])}
+
+AMBIGUOUS terms — only count as R&D when an explicit R&D anchor appears nearby:
+{", ".join(t["ambiguous"][:20])}
+
+DECISION RULES (from taxonomy):
+- AUTO-INCLUDE when: {auto_include_rules or 'a core R&D phrase or institution keyword + budget instrument appears'}
+- EXCLUDE when: {exclude_rules or 'exclusion keyword present and no R&D override'}
+- REVIEW when uncertain: {review_rules or 'only ambiguous terms present with no R&D anchor'}
+
+ACTIVITY LENS (GBARD R&D stage codes — use for frascati_type):
+{lens_block}
+
+FRASCATI BUDGET TYPES (map to frascati_type field):
 - intramural_rd       : R&D performed inside a government agency or national lab
-- extramural_grants   : Grants / contracts from government to universities, firms,
-                        or research institutes to conduct R&D
-- rd_coordination     : Funding for research councils, science academies, or bodies
-                        that coordinate/allocate R&D spending
-- rd_infrastructure   : Large research facilities, equipment, observatories, databases
-- higher_ed_rd        : Block grants to universities where the R&D share cannot be
-                        separated from teaching/admin
-- not_rd              : Education (non-research), administration, social transfers,
-                        infrastructure maintenance, market research, regional policy"""
+- extramural_grants   : Grants to universities / firms / research institutes for R&D
+- rd_coordination     : Research councils, science academies allocating R&D funds
+- rd_infrastructure   : Large research facilities, observatories, supercomputing, databases
+- higher_ed_rd        : Block grants to universities where R&D share is inseparable from teaching
+- not_rd              : Education, admin, social transfers, infrastructure maintenance, market research"""
+
+
+_TAXONOMY_GROUNDING = _build_taxonomy_grounding()
 
 _OUTPUT_SCHEMA_INCLUDE = """\
 Required JSON keys per record (include mode):
@@ -197,6 +250,31 @@ Required JSON keys per record (review mode):
   parse_issue                  : one of [none, legal_reference_noise, merged_adjacent_items,
                                           malformed_budget_type, missing_program_code,
                                           amount_alignment_uncertain, other]"""
+
+_OUTPUT_SCHEMA_UNIFIED = """\
+Required JSON keys per record (unified row-validation mode):
+  record_id                    : string  — echo back unchanged
+  keep                         : bool    — true if this is a valid R&D budget line
+  clean_program_code           : string | null
+  clean_program_description_da : string | null — cleaned original-language description
+  clean_program_description_en : string | null — English translation of cleaned description
+  clean_budget_type_da         : string | null
+  clean_budget_type_en         : string | null
+  validated_amount_local       : number | null — corrected amount only if page/budget context
+                                  explicitly shows a unit or alignment error
+  currency                     : string | null
+  frascati_type                : one of [intramural_rd, extramural_grants, rd_coordination,
+                                          rd_infrastructure, higher_ed_rd, not_rd]
+  ai_rd_category               : one of [direct_rd, innovation_system, possible_rd, not_rd]
+  ai_pillar                    : one of [Direct R&D, Innovation, Ambiguous, Exclude]
+  ai_confidence                : float 0–1
+  ai_decision                  : one of [include, review, exclude]
+  ai_rationale                 : string — cite the specific taxonomy term or exclusion that drove the decision
+  parse_issue                  : one of [none, legal_reference_noise, merged_adjacent_items,
+                                          malformed_budget_type, missing_program_code,
+                                          amount_alignment_uncertain, duplicate_candidate,
+                                          unit_conversion_applied, other]
+  double_counting_risk         : bool — true if this record may duplicate another line on the same page/batch"""
 
 
 # ── AI Client ─────────────────────────────────────────────────────────────────
@@ -370,6 +448,81 @@ class AIClient:
                 "role": "user",
                 "content": (
                     "Classify each borderline record. Return only a JSON array "
+                    "with no prose.\n" + json.dumps(user_content)
+                ),
+            },
+        ]
+
+    def build_messages_unified(self, batch: List[dict]) -> list[dict]:
+        """Prompt for a single row-validation pass over all candidate records.
+
+        Unlike the old include/review split, this prompt applies the same
+        OECD taxonomy, amount-validation, and duplicate-risk logic to every row.
+        """
+        system = "\n\n".join([
+            (
+                "You are a specialist in OECD government R&D budget statistics (GBARD). "
+                "You are validating extracted budget line items from finance bills. "
+                "Treat every record with the same standard.\n\n"
+                "Your tasks:\n"
+                "1. Decide whether each record should be include, review, or exclude.\n"
+                "2. Validate the amount and correct it ONLY if the surrounding budget "
+                "context explicitly shows a unit or alignment error.\n"
+                "3. Classify each kept record by Frascati budget type.\n"
+                "4. Clean the original-language description and provide an English translation.\n"
+                "5. Flag double_counting_risk=true if this record appears to be a subtotal "
+                "or aggregate of another record in the same batch."
+            ),
+            _ANTI_HALLUCINATION_RULES,
+            _TAXONOMY_GROUNDING,
+            (
+                "Decision rules:\n"
+                "- include: clear R&D line, institution, or appropriation per the taxonomy.\n"
+                "- exclude: clear exclusion, non-R&D aggregate, revenue line, or administrative line.\n"
+                "- review: likely relevant but amount alignment, aggregation status, or R&D scope remains uncertain.\n"
+                "- Be conservative with amount corrections; use review rather than guessing."
+            ),
+            _OUTPUT_SCHEMA_UNIFIED,
+        ])
+
+        page_context = None
+        clean_batch = []
+        for rec in batch:
+            rec = dict(rec)
+            if "page_context" in rec:
+                page_context = rec.pop("page_context")
+            clean_batch.append(rec)
+
+        user_content = {
+            "task": "validate_budget_records",
+            "mode": "unified",
+            "items": clean_batch,
+            "requirements": {
+                "return_format": "JSON array, one object per input record, same order",
+                "decision_rule": (
+                    "ai_decision must be one of include, review, exclude. "
+                    "Use review only when the line may be R&D but uncertainty remains."
+                ),
+                "amount_rule": (
+                    "Only change validated_amount_local when explicit page context "
+                    "shows a unit or line-alignment problem."
+                ),
+            },
+        }
+        if page_context:
+            user_content["page_context"] = (
+                "The following is the full text of the budget page from which ALL "
+                "records in this batch were extracted. Use it to understand the "
+                "page structure, subtotals, and nearby R&D anchors:\n\n"
+                + page_context
+            )
+
+        return [
+            {"role": "system", "content": system},
+            {
+                "role": "user",
+                "content": (
+                    "Validate these extracted budget records. Return only a JSON array "
                     "with no prose.\n" + json.dumps(user_content)
                 ),
             },
@@ -550,18 +703,20 @@ If no anomalies are found, return an empty array []."""
                 return txt[idx:]
         return txt
 
-    def validate_batch(self, batch: List[dict], mode: str = "include") -> list[dict]:
+    def validate_batch(self, batch: List[dict], mode: str = "unified") -> list[dict]:
         """Send a batch to the model and return a parsed JSON list.
 
         Parameters
         ----------
         batch : list of record dicts
-        mode  : "include" | "review"
+        mode  : "unified" | "include" | "review"
         """
         if mode == "review":
             messages = self.build_messages_review(batch)
-        else:
+        elif mode == "include":
             messages = self.build_messages_include(batch)
+        else:
+            messages = self.build_messages_unified(batch)
 
         content = self._call(messages)
         raw = self._extract_json(content)
@@ -606,5 +761,5 @@ If no anomalies are found, return an empty array []."""
     # ── Backward-compat shim ──────────────────────────────────────────────────
 
     def build_messages(self, batch: List[dict]) -> list[dict]:
-        """Legacy entry point — routes to include-mode prompt."""
-        return self.build_messages_include(batch)
+        """Legacy entry point — routes to unified row-validation prompt."""
+        return self.build_messages_unified(batch)

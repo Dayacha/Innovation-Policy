@@ -1,21 +1,24 @@
 """Icelandic Fjarlög extractor.
 
 Pragmatic scope after manual archive review:
-- searchable budget tables from 2003-2016
+- searchable budget tables from 2003-2016 and again in 2021-2024
 - science-administration block:
   - ``02-231 Rannsóknarráð Íslands`` in the early years
   - ``02-231 Rannsóknamiðstöð Íslands`` in the later years
+  - ``17-580 Rannsóknamiðstöð Íslands`` in the newer chapter layout
 - science-fund block:
   - ``02-236 Vísindasjóður``
   - ``02-236 Rannsóknasjóður``
+  - ``17-550 Rannsóknasjóður``
 
 The Iceland files in this era expose stable local section blocks with explicit
 treasury-financed totals such as ``Greitt úr ríkissjóði`` or ``Gjöld umfram
 tekjur``. Those amounts are more comparable than the broader gross totals and
 much more defensible than the full university chapter.
 
-Later files (2017+) change presentation substantially in the currently
-available text extraction, so this extractor prefers omission over weak totals.
+Some later files still expose the same local fund rows under the newer
+``17-...`` chapter codes. The extractor accepts those specific rows and still
+prefers omission for years where only broader aggregates are visible.
 """
 
 from __future__ import annotations
@@ -33,13 +36,14 @@ _MILLION_KR_RE = re.compile(r"m\.\s*kr\.", re.IGNORECASE)
 _THOUSAND_KR_RE = re.compile(r"Þús\.\s*kr\.?", re.IGNORECASE)
 
 _ADMIN_HEADER_RE = re.compile(
-    r"^\s*02-231\s+(Rannsóknarráð\s+Íslands|Rannsóknamiðstöð\s+Íslands)\b",
+    r"^\s*(?:02-231|17-580)\s+(Rannsóknarráð\s+Íslands|Rannsóknamiðstöð\s+Íslands)\b",
     re.IGNORECASE,
 )
 _SCIENCE_FUND_HEADER_RE = re.compile(
-    r"^\s*02-236\s+(Vísindasjóður|Rannsóknasjóður)\b",
+    r"^\s*(?:02-236|17-550)\s+(Vísindasjóður|Rannsóknasjóður)\b",
     re.IGNORECASE,
 )
+_NEXT_CODE_RE = re.compile(r"\b(?:\d{2}-\d{3}|17-\d{3})\s+")
 
 _STATE_LABELS = (
     "Greitt úr ríkissjóði",
@@ -110,6 +114,30 @@ def _find_block(entries: list[tuple[int, str]], header_re: re.Pattern[str]) -> O
     return None
 
 
+def _find_inline_block(sorted_pages, header_re: re.Pattern[str]) -> Optional[dict]:
+    for row in sorted_pages.itertuples(index=False):
+        page_number = int(getattr(row, "page_number", 1) or 1)
+        page_text = row.text if isinstance(row.text, str) else ""
+        if not page_text.strip():
+            continue
+
+        match = header_re.search(page_text)
+        if not match:
+            continue
+
+        tail = page_text[match.end():]
+        next_match = _NEXT_CODE_RE.search(tail)
+        block_end = match.end() + (next_match.start() if next_match else min(len(tail), 900))
+        block_text = re.sub(r"\s+", " ", page_text[match.start():block_end]).strip()
+        return {
+            "page_number": page_number,
+            "header_line": re.sub(r"\s+", " ", match.group(0)).strip(),
+            "block_lines": [block_text],
+            "start_idx": 0,
+        }
+    return None
+
+
 def _pick_amount(block_lines: list[str], factor: float) -> tuple[Optional[float], str, float]:
     for label in _STATE_LABELS:
         for idx, line in enumerate(block_lines):
@@ -123,6 +151,13 @@ def _pick_amount(block_lines: list[str], factor: float) -> tuple[Optional[float]
                 confidence = 0.9 if label == "Greitt úr ríkissjóði" else 0.86
                 raw_line = candidate if candidate != line else line
                 return amount, raw_line, confidence
+
+    if block_lines:
+        header_amounts = _AMOUNT_RE.findall(block_lines[0])
+        if len(header_amounts) >= 2:
+            amount = _parse_amount(header_amounts[-1], factor)
+            if amount is not None:
+                return amount, block_lines[0], 0.82
 
     for idx, line in enumerate(block_lines):
         if not re.search(r"\b(?:1\.0[15]|1\.10|6\.60)\b", line):
@@ -220,7 +255,7 @@ def extract_iceland_items(
     except ValueError:
         return []
 
-    if year_int < 2003 or year_int > 2016:
+    if year_int < 2003 or year_int > 2024:
         return []
 
     all_text = "\n".join(
@@ -239,6 +274,10 @@ def extract_iceland_items(
 
     for kind, header_re in (("admin", _ADMIN_HEADER_RE), ("fund", _SCIENCE_FUND_HEADER_RE)):
         block = _find_block(entries, header_re)
+        if block and len(re.findall(r"(?:\d{2}-\d{3}|17-\d{3})", block["header_line"])) > 1:
+            block = None
+        if not block:
+            block = _find_inline_block(sorted_pages, header_re)
         if not block:
             continue
 
@@ -259,18 +298,18 @@ def extract_iceland_items(
                 program_code = "IS_RESEARCH_COUNCIL"
                 section_name = "Rannsóknarráð Íslands"
                 section_name_en = "Research Council of Iceland"
-                line_description = "02-231 Rannsóknarráð Íslands - framlag úr ríkissjóði"
-                line_description_en = "02-231 Research Council of Iceland - treasury-financed appropriation"
-                source_variant = "section_02_231_research_council"
-                rationale = "Local 02-231 budget block for the research council with treasury-financed amount extracted from the section totals."
+                line_description = f"{header_line} - framlag úr ríkissjóði"
+                line_description_en = "Research Council of Iceland - treasury-financed appropriation"
+                source_variant = "science_admin_research_council"
+                rationale = "Local Iceland science-administration budget block for the research council with treasury-financed amount extracted from the section totals."
             else:
                 program_code = "IS_RANNIS"
                 section_name = "Rannsóknamiðstöð Íslands (RANNÍS)"
                 section_name_en = "Icelandic Centre for Research (RANNÍS)"
-                line_description = "02-231 RANNÍS - framlag úr ríkissjóði"
-                line_description_en = "02-231 RANNÍS - treasury-financed appropriation"
-                source_variant = "section_02_231_rannis"
-                rationale = "Local 02-231 RANNÍS block with treasury-financed amount extracted from the section totals."
+                line_description = f"{header_line} - framlag úr ríkissjóði"
+                line_description_en = "RANNÍS - treasury-financed appropriation"
+                source_variant = "science_admin_rannis"
+                rationale = "Local Iceland RANNÍS block with treasury-financed amount extracted from the section totals."
             taxonomy_score = 9.0
         else:
             program_code = "IS_SCIENCE_FUND"
@@ -280,10 +319,10 @@ def extract_iceland_items(
             else:
                 section_name = "Rannsóknasjóður"
                 section_name_en = "Research Fund"
-            line_description = "02-236 Vísinda-/Rannsóknasjóður - framlag úr ríkissjóði"
-            line_description_en = "02-236 Science/Research Fund - treasury-financed appropriation"
-            source_variant = "section_02_236_science_fund"
-            rationale = "Local 02-236 science-fund block with treasury-financed amount extracted from the section totals."
+            line_description = f"{header_line} - framlag úr ríkissjóði"
+            line_description_en = "Science/Research Fund - treasury-financed appropriation"
+            source_variant = "science_fund_block"
+            rationale = "Local Iceland science-fund block with treasury-financed amount extracted from the section totals."
             taxonomy_score = 9.2
 
         records.append(

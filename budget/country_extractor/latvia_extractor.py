@@ -45,17 +45,14 @@ _MINISTRY_TOTAL_RE = re.compile(
 )
 
 _SCIENCE_LINE_SPECS: tuple[tuple[str, str], ...] = (
-    ("05.01.00", r"05\.01\.00[\s\S]{0,260}?Zin[aā]tnisk[āa]s\s+darb[iī]bas\s+nodro[sš]in[aā](?:jums|[sš]ana)"),
-    ("05.02.00", r"05\.02\.00[\s\S]{0,260}?Zin[aā]tnes\s+b[aā]zes\s+finans[eē]jums"),
-    ("05.05.00", r"05\.05\.00[\s\S]{0,260}?Tirgus[\s\S]{0,90}?p[eē]t[iī]jumi"),
-    ("05.06.00", r"05\.06\.00[\s\S]{0,280}?Valsts\s+p[aā]rvaldes\s+instit[uū]ciju\s+pas[uū]t[iī]tie\s+p[eē]t[iī]jumi|05\.06\.00[\s\S]{0,220}?Valsts\s+instit[uū]ciju\s+pas[uū]t[iī]tie\s+p[eē]t[iī]jumi"),
-    ("05.12.00", r"05\.12\.00[\s\S]{0,260}?Zin[aā]tnes\s+konkur[eē]tsp[eē]jas\s+veicin[aā](?:[sš]ana)?"),
+    ("05.01.00", r"05\.01\.00\s+\d{2}\.\d{3}\s+Zin[aā]tnisk[āa]s\s+darb[iī]bas\s+nodro[sš]in[aā](?:jums|[sš]ana)"),
+    ("05.02.00", r"05\.02\.00\s+\d{2}\.\d{3}\s+Zin[aā]tnes\s+b[aā]zes\s+finans[eē]jums"),
+    ("05.05.00", r"05\.05\.00\s+\d{2}\.\d{3}\s+Tirgus\s+orient[eē]tie\s+p[eē]t[iī]jumi"),
+    ("05.06.00", r"05\.06\.00\s+\d{2}\.\d{3}\s+Valsts(?:\s+p[aā]rvaldes)?\s+instit[uū]ciju\s+pas[uū]t[iī]tie\s+p[eē]t[iī]jumi"),
+    ("05.12.00", r"05\.12\.00\s+\d{2}\.\d{3}\s+Valsts\s+p[eē]t[iī]jumu\s+programmas"),
+    ("05.15.00", r"05\.15\.00\s+\d{2}\.\d{3}\s+Latvijas\s+Zin[aā]tnes\s+padomes\s+darb[iī]bas\s+nodro[sš]in[aā][sš]ana"),
 )
 
-_COUNCIL_RE = re.compile(
-    r"Latvijas\s+Zin[aā]tnes\s+padomes\s+darb[iī]bas\s+nodro[sš]in[aā][sš]ana",
-    re.IGNORECASE,
-)
 _ARTICLE_ONLY_RE = re.compile(
     r"\b\d+\.\s*pants\b|P[aā]rejas\s+noteikumi|Ministru\s+kabinets",
     re.IGNORECASE,
@@ -179,18 +176,6 @@ def _extract_science_lines(page_text: str) -> list[tuple[str, float, str, int, i
         label = re.sub(r"\s+", " ", match.group(0)).strip()
         hits.append((code, amount, raw_amount, absolute_start, absolute_end, label))
         seen_codes.add(code)
-
-    council_match = _COUNCIL_RE.search(page_text)
-    if council_match and "05.15.00" not in seen_codes:
-        window = page_text[council_match.start(): min(len(page_text), council_match.end() + 200)]
-        amount_match = _AMOUNT_RE.search(window)
-        if amount_match:
-            amount = _parse_amount(amount_match.group(1))
-            if amount is not None and amount >= 10_000:
-                absolute_start = council_match.start() + amount_match.start(1)
-                absolute_end = council_match.start() + amount_match.end(1)
-                label = re.sub(r"\s+", " ", council_match.group(0)).strip()
-                hits.append(("05.15.00", amount, amount_match.group(1), absolute_start, absolute_end, label))
 
     return hits
 

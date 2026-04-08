@@ -90,8 +90,31 @@ _PAGE_NOISE_RE = re.compile(
     re.IGNORECASE,
 )
 
-_MIN_TOTAL_AMOUNT = 50_000_000
+_MIN_TOTAL_AMOUNT = 50_000_000   # absolute floor (very early years / fallback)
 _ABSOLUTE_MAX_TOTAL = 100_000_000_000
+
+
+def _min_total_for_year(year_int: int) -> float:
+    """Conservative ministry-budget floor.
+
+    Prevents the extractor from accepting sub-chapter line amounts when the
+    full ministry total should be an order of magnitude larger.
+
+    Calibrated against known BMFT/BMBW/BMBF totals:
+    - 1975-1979: BMFT ~3-6B DEM, BMBW ~3-5B DEM
+    - 1980-1994: BMFT ~5-10B DEM, BMBW ~3-7B DEM
+    - 1995-2001: BMBF (merged) ~10-16B DEM
+    - 2002+: BMBF ~7-17B EUR
+    """
+    if year_int < 1970:
+        return 100_000_000          # 100M DEM (early years, small budget)
+    if year_int < 1980:
+        return 1_000_000_000        # 1B DEM
+    if year_int < 1995:
+        return 2_000_000_000        # 2B DEM
+    if year_int < 2002:
+        return 6_000_000_000        # 6B DEM (BMBF was 10-16B)
+    return 5_000_000_000            # 5B EUR
 
 
 # ── Amount parsing ─────────────────────────────────────────────────────────────
@@ -139,7 +162,7 @@ def _pick_amount_near_column(
     """Pick the amount nearest the Summe-Ausgaben column center."""
     matches = [
         item for item in _amount_matches(line)
-        if _MIN_TOTAL_AMOUNT <= item[0] <= min(_ABSOLUTE_MAX_TOTAL, _max_total_for_year(year_int))
+        if _min_total_for_year(year_int) <= item[0] <= min(_ABSOLUTE_MAX_TOTAL, _max_total_for_year(year_int))
     ]
     if not matches:
         return None
@@ -323,7 +346,7 @@ def _extract_from_total_pages(
                     candidate_line = lines[candidate_idx]
                     cand_amounts = [
                         v for v, *_ in _amount_matches(candidate_line)
-                        if v >= _MIN_TOTAL_AMOUNT
+                        if v >= _min_total_for_year(year_int)
                     ]
                     if len(cand_amounts) == 1:
                         amount = cand_amounts[0]
@@ -453,10 +476,13 @@ def _is_summary_like_source(source_filename: str) -> bool:
     name = source_filename.lower()
     if "regelungstext" in name or re.search(r"(?:^|[_\s])hg[_\s]", name):
         return False
+    if "bgbl" in name:
+        return False  # Official Gazette files rarely contain Gesamtplan tables
     preferred_tokens = ("gesamtplan", "haushalt", "uebersichten", "übersichten")
     if any(token in name for token in preferred_tokens):
         return True
-    if re.match(r"^\d{4}\s+\d{6,7}\.pdf$", source_filename):
+    # Numbered budget files: "YYYY NNNNNNN.pdf" or "YYYY_NNNNNNN.pdf"
+    if re.match(r"^\d{4}[\s_]\d{5,7}\.pdf$", source_filename):
         return True
     return False
 
@@ -578,7 +604,7 @@ def _extract_from_name_search(
     results: list[tuple[str, str, str, str, float]] = []
     seen_codes: set[str] = set()
     max_total = _max_total_for_year(year_int)
-    min_total = 5_000_000_000 if year_int >= 1995 else 1_000_000_000
+    min_total = _min_total_for_year(year_int)
 
     for pattern, program_code, section_name, section_name_en, line_description in _name_patterns(year_int):
         for match in pattern.finditer(all_text):
@@ -613,7 +639,7 @@ def _extract_from_einzelplan_pages(
     results: list[tuple[str, str, str, str, float, int]] = []
     seen_codes: set[str] = set()
     max_total = _max_total_for_year(year_int)
-    min_total = 5_000_000_000 if year_int >= 1995 else 1_000_000_000
+    min_total = _min_total_for_year(year_int)
 
     patterns = _name_patterns(year_int)
     for page_number, page_text in pages:
@@ -705,9 +731,18 @@ def extract_germany_items(
     if not all_text.strip():
         return []
 
-    if year_int >= 2005 and not re.match(r"^\d{4}_\d{6,7}\.pdf$", source_filename):
+    # Skip files that are clearly regulation-text-only (regelungstext) or
+    # Haushaltsgesetz full-text files — these don't have the Gesamtplan summary.
+    # Keep: numbered budget files (e.g. "2005 1503660.pdf") and
+    #        Gesamtplan/Uebersichten files.
+    _skip_patterns = (r"bgbl", r"regelungstext", r"\bhg_\d{4}\b")
+    _is_skip = any(re.search(pat, source_filename, re.IGNORECASE) for pat in _skip_patterns)
+    _is_numbered = bool(re.match(r"^\d{4}[\s_]\d{5,7}\.pdf$", source_filename))
+    _is_gesamtplan = bool(re.search(r"gesamtplan|uebersichten|übersichten", source_filename, re.IGNORECASE))
+
+    if year_int >= 2005 and _is_skip and not _is_gesamtplan:
         logger.debug(
-            "Germany extractor: skipping non-canonical modern source %s (%s)",
+            "Germany extractor: skipping non-summary source %s (%s)",
             source_filename,
             year,
         )

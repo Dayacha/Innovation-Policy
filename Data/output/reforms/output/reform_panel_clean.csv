@@ -919,6 +919,9 @@ JPN,Japan,2024,rd_funding,3,3,1
 JPN,Japan,2024,research_infrastructure,1,1,1
 JPN,Japan,2024,sectoral_rd,2,2,1
 JPN,Japan,2024,startup_ecosystem,1,1,1
+KOR,Korea,1994,human_capital,1,1,1
+KOR,Korea,1994,innovation_instruments,1,1,1
+KOR,Korea,1994,rd_funding,1,1,1
 KOR,Korea,1996,innovation_instruments,1,1,1
 KOR,Korea,1996,rd_funding,1,1,1
 KOR,Korea,1996,sectoral_rd,1,1,1
@@ -1036,6 +1039,8 @@ LVA,Latvia,2024,innovation_instruments,2,2,1
 LVA,Latvia,2024,knowledge_transfer,1,1,1
 LVA,Latvia,2024,research_infrastructure,1,1,1
 LVA,Latvia,2024,startup_ecosystem,3,3,1
+MEX,Mexico,1992,knowledge_transfer,1,1,1
+MEX,Mexico,1992,startup_ecosystem,1,1,1
 MEX,Mexico,1997,innovation_instruments,2,2,1
 MEX,Mexico,1997,knowledge_transfer,2,2,1
 MEX,Mexico,2000,innovation_instruments,5,5,1
@@ -1112,6 +1117,13 @@ NLD,Netherlands,2025,rd_funding,7,4,1
 NLD,Netherlands,2025,research_infrastructure,1,1,1
 NLD,Netherlands,2025,sectoral_rd,3,3,1
 NLD,Netherlands,2025,startup_ecosystem,2,2,1
+NOR,Norway,1981,rd_funding,1,1,1
+NOR,Norway,1983,startup_ecosystem,1,1,1
+NOR,Norway,1985,innovation_instruments,1,1,1
+NOR,Norway,1990,rd_funding,1,1,1
+NOR,Norway,1990,sectoral_rd,1,1,1
+NOR,Norway,1990,startup_ecosystem,1,1,1
+NOR,Norway,1993,startup_ecosystem,1,1,1
 NOR,Norway,1997,knowledge_transfer,1,1,1
 NOR,Norway,1998,startup_ecosystem,1,1,1
 NOR,Norway,1999,knowledge_transfer,1,1,1
@@ -1144,6 +1156,9 @@ NOR,Norway,2019,innovation_instruments,1,1,1
 NOR,Norway,2019,rd_funding,1,1,1
 NOR,Norway,2022,innovation_instruments,1,1,1
 NOR,Norway,2024,sectoral_rd,1,1,1
+NZL,New Zealand,1987,human_capital,1,1,1
+NZL,New Zealand,1993,rd_funding,1,1,1
+NZL,New Zealand,1994,rd_funding,1,1,1
 NZL,New Zealand,1999,rd_funding,1,1,1
 NZL,New Zealand,2000,innovation_instruments,1,1,1
 NZL,New Zealand,2000,rd_funding,4,4,1

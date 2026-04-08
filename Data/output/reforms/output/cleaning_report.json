@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-04-07T02:54:56.816037",
+  "generated_at": "2026-04-07T21:23:17.113939",
   "counts": {
-    "raw": 4228,
-    "pass1_keep": 2011,
-    "pass1_borderline": 1081,
-    "pass1_drop": 1136,
-    "pass2_rescued": 380,
-    "pass2_excluded": 701,
-    "final_clean": 2391,
-    "retention_pct": 56.6
+    "raw": 4260,
+    "pass1_keep": 2024,
+    "pass1_borderline": 1093,
+    "pass1_drop": 1143,
+    "pass2_rescued": 382,
+    "pass2_excluded": 711,
+    "final_clean": 2406,
+    "retention_pct": 56.5
   },
   "subtheme_breakdown": {
     "human_capital": {
-      "n": 238,
+      "n": 240,
       "pct": 10.0,
-      "n_positive": 238
+      "n_positive": 240
     },
     "innovation_instruments": {
-      "n": 769,
-      "pct": 32.2,
-      "n_positive": 757
+      "n": 771,
+      "pct": 32.0,
+      "n_positive": 759
     },
     "knowledge_transfer": {
-      "n": 192,
+      "n": 193,
       "pct": 8.0,
-      "n_positive": 192
+      "n_positive": 193
     },
     "other": {
       "n": 20,
@@ -32,9 +32,9 @@
       "n_positive": 14
     },
     "rd_funding": {
-      "n": 633,
+      "n": 638,
       "pct": 26.5,
-      "n_positive": 627
+      "n_positive": 632
     },
     "research_infrastructure": {
       "n": 76,
@@ -42,38 +42,38 @@
       "n_positive": 76
     },
     "sectoral_rd": {
-      "n": 132,
+      "n": 133,
       "pct": 5.5,
-      "n_positive": 132
+      "n_positive": 133
     },
     "startup_ecosystem": {
-      "n": 331,
-      "pct": 13.8,
-      "n_positive": 329
+      "n": 335,
+      "pct": 13.9,
+      "n_positive": 333
     }
   },
   "activity_lens": {
-    "K2": 549,
-    "None": 539,
-    "K4": 472,
-    "K5": 463,
-    "K6": 148,
-    "K8": 107,
+    "K2": 550,
+    "None": 542,
+    "K4": 477,
+    "K5": 467,
+    "K6": 149,
+    "K8": 108,
     "K7": 65,
     "K1": 30,
     "K3": 18
   },
   "defence_scope": {
-    "nan": 2391
+    "None": 2406
   },
   "coverage": {
     "n_countries": 38,
-    "n_country_years": 568
+    "n_country_years": 578
   },
   "intensity_summary": {
-    "mean_weighted_score": 2.947,
+    "mean_weighted_score": 2.914,
     "max_weighted_score": 20.7,
-    "mean_net_reforms": 4.153
+    "mean_net_reforms": 4.107
   },
-  "elapsed_seconds": 176.6
+  "elapsed_seconds": 4.2
 }

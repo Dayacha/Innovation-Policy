@@ -375,10 +375,14 @@ def merge_incremental_budget_results(
     cumulative time-series database.  Only records whose file_id is being
     actively re-processed in this run are replaced.
 
-    When ``filter_countries`` is provided (set by ``--budget-filter-country``),
-    only rows for those countries are kept from the previous file.  This
-    prevents stale rows for other countries from re-polluting the output when
-    the pipeline is run with a country filter.
+    When ``replace_countries`` is provided (set by ``--budget-rerun-country``),
+    only rows for those countries are removed from the previous file before the
+    fresh rows are appended. Other countries are preserved.
+
+    ``filter_countries`` limits which files are processed in the current run,
+    but it must not shrink the cumulative saved outputs. A filtered rerun should
+    refresh the requested country slice while leaving every other country's
+    historical rows intact.
     """
     previous_budget_df = _load_existing_dataframe(budget_items_file)
     if previous_budget_df.empty:
@@ -396,13 +400,6 @@ def merge_incremental_budget_results(
     # Keep ALL previous rows except those being replaced in this run.
     # Deleted PDFs are intentionally kept — their data is not lost.
     keep_previous = previous_budget_df.copy()
-
-    # When a country filter is active, restrict previous rows to those countries
-    # so that rows from other countries never pollute a filtered run's output.
-    if filter_countries and "country" in keep_previous.columns:
-        keep_previous = keep_previous[
-            keep_previous["country"].fillna("").astype(str).isin(filter_countries)
-        ].copy()
 
     if replace_countries and "country" in keep_previous.columns:
         keep_previous = keep_previous[
@@ -757,7 +754,10 @@ def run_budget_pipeline(
 
     if not reused_cache:
         # ── Stage 2: OCR / text extraction ───────────────────────────────
-        pages_df, summary_df = extract_text_for_inventory(inventory_df)
+        pages_df, summary_df = extract_text_for_inventory(
+            inventory_df,
+            retain_orphaned_cache=not bool(budget_filter_countries),
+        )
     else:
         summary_df = _build_page_summary(pages_df)
 
@@ -985,6 +985,42 @@ if __name__ == "__main__":
             ai_batch_size = args.batch_size or 4
             ai_include_context = True if args.ai_include_context is None else args.ai_include_context
             ai_group_by_page = True if args.ai_group_by_page is None else args.ai_group_by_page
+
+            # ── Stale-cache guard ──────────────────────────────────────────────
+            # If results.csv has changed since the last AI run, the ai_run folder
+            # and results_ai_verified.csv are stale and must be cleared.
+            # We compare a lightweight hash (row count + country set + year range)
+            # stored in the previous run summary against the current baseline.
+            import hashlib as _hashlib
+            _baseline_path = Path(args.input_file)
+            _run_root_check = PROCESSED_DIR / "ai_validation" / (args.ai_run_name or "ai_run")
+            _summary_path = _run_root_check / "ai_validation_run_summary.json"
+            if _summary_path.exists() and _baseline_path.exists():
+                try:
+                    _prev = json.load(open(_summary_path))
+                    _prev_rows = _prev.get("total_baseline_rows", -1)
+                    _curr_df_check = _load_baseline(_baseline_path)
+                    _curr_rows = len(_curr_df_check)
+                    _curr_countries = set(_curr_df_check["country"].dropna().astype(str).unique()) if "country" in _curr_df_check.columns else set()
+                    _prev_countries = set(_prev.get("_baseline_countries", []))
+                    if _prev_rows != _curr_rows or _curr_countries != _prev_countries:
+                        logger.warning(
+                            "AI run cache is STALE: previous run had %s rows (%s), "
+                            "current results.csv has %s rows (%s). "
+                            "Clearing stale ai_ready_for_verification.csv and results_ai_verified.csv.",
+                            _prev_rows, sorted(_prev_countries),
+                            _curr_rows, sorted(_curr_countries),
+                        )
+                        # Remove stale verified file so old results don't pollute the merge
+                        if RESULTS_AI_VERIFIED_FILE.exists():
+                            RESULTS_AI_VERIFIED_FILE.unlink()
+                            logger.info("Removed stale results_ai_verified.csv")
+                        stale_ready = _run_root_check / "ai_ready_for_verification.csv"
+                        if stale_ready.exists():
+                            stale_ready.unlink()
+                            logger.info("Removed stale ai_ready_for_verification.csv")
+                except Exception as _e:
+                    logger.debug("Stale-cache check failed (non-fatal): %s", _e)
 
             # Determine which years to send. If user didn't pass --ai-filter-year,
             # iterate per year (after optional country filter) to merge gradually.

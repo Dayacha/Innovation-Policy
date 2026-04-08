@@ -42,8 +42,11 @@ logger = logging.getLogger("innovation_pipeline")
 # ── Agency patterns ────────────────────────────────────────────────────────────
 
 # Each entry: (pattern, program_code, canonical_name, is_department_level)
-# is_department_level=True means the whole department is our R&D proxy
-# (used for old-format docs where CSIRO isn't a standalone table row)
+# Department-level science proxies are only defensible in the old transition
+# era where CSIRO is not exposed as a stable standalone entity row. In modern
+# appropriation acts, "Industry, Science ..." department rows and No. 2
+# administered/non-operating tables can coexist with direct agency rows,
+# causing double counting if we keep the broad department proxy.
 _AGENCY_PATTERNS: list[tuple[re.Pattern, str, str]] = [
     # Match full name OR just the distinctive first part (for split-row tables)
     (
@@ -121,6 +124,11 @@ _RE_NIL = re.compile(r"^[—–\-\.]+$")
 
 def _parse_dollar_amount(raw: str, is_thousands: bool = False) -> Optional[float]:
     """Parse a dollar amount string to float (in AUD)."""
+    # Australian appropriation tables use grouped integers, not decimal values.
+    # Mixed comma+period tokens like "13,149.2324" are OCR/line-wrap artifacts
+    # and should not outrank the clean summary-row amounts.
+    if "," in raw and "." in raw:
+        return None
     cleaned = raw.replace(",", "").replace(" ", "").strip()
     try:
         val = float(cleaned)
@@ -154,25 +162,52 @@ def _line_agency_codes(line: str) -> set[str]:
 def _select_row_amount(numeric_rows: list[list[str]], is_thousands: bool) -> tuple[Optional[float], bool]:
     """Pick the current-year amount from row-local numeric cells.
 
-    Heuristic:
-    - modern summary rows usually have 3 columns: departmental, administered, total
-      -> choose the last numeric value from the first row
-    - old-format lines usually have 1-2 year columns
-      -> choose the first numeric value from the first row
-    - if the matched row has no numeric cells, fall back to the first continuation row
+    Modern Australian appropriation tables (2003+, $'000 format) use a
+    3-column structure: Departmental | Administered | Total, shown twice
+    (current year then prior year).  When extracted as text without tabs,
+    these produce 6 consecutive single-value rows in order:
+        [Dept-cur, Admin-cur, Total-cur, Dept-prior, Admin-prior, Total-prior]
+    We want Total-cur = index 2.  Similarly, 3 single-value rows → index 2.
+
+    Tab-separated rows (docx_table extraction) arrive as a single multi-value
+    row; we take the last value (Total column).
 
     Returns
     -------
     (amount, needs_review)
-
-    `needs_review=True` flags the transition-year pattern where a corporate-entity
-    row only shows a single current-year figure and the immediately following
-    comparison row is an order of magnitude larger. In those cases we keep the
-    current-year amount but ask for manual review instead of silently upgrading
-    to the prior-year figure.
     """
     suspicious_single_amount = False
 
+    # Flatten single-value rows into a flat list for pattern analysis
+    flat_singles = []
+    for row in numeric_rows:
+        if len(row) == 1:
+            flat_singles.append(row[0])
+        else:
+            flat_singles = []  # mixed format — fall through to existing logic
+            break
+
+    if flat_singles:
+        # All rows are single-value (doc_textutil / non-tabbed extraction).
+        # Pattern: [Dept-cur, Admin-cur, Total-cur, Dept-prior, Admin-prior, Total-prior]
+        # We want index 2 for both 3-value and 6-value cases (the Total column).
+        n = len(flat_singles)
+        if n >= 3:
+            idx = 2  # Total-current
+            amount = _parse_dollar_amount(flat_singles[idx], is_thousands)
+            if amount is not None and 100_000 <= amount <= 50_000_000_000:
+                return amount, False
+        # Fallback: return the largest valid value
+        valid = [
+            v for s in flat_singles
+            for v in [_parse_dollar_amount(s, is_thousands)]
+            if v is not None and 100_000 <= v <= 50_000_000_000
+        ]
+        if valid:
+            return max(valid), False
+        return None, False
+
+    # Tab-separated / multi-value rows (original logic)
     if len(numeric_rows) >= 2 and len(numeric_rows[0]) == 1 and len(numeric_rows[1]) == 1:
         current_amt = _parse_dollar_amount(numeric_rows[0][0], is_thousands)
         prior_amt = _parse_dollar_amount(numeric_rows[1][0], is_thousands)
@@ -197,7 +232,7 @@ def _select_row_amount(numeric_rows: list[list[str]], is_thousands: bool) -> tup
 
 # ── Table-level extraction ─────────────────────────────────────────────────────
 
-def _extract_from_table_text(table_text: str) -> list[tuple[str, str, float]]:
+def _extract_from_table_text(table_text: str, year: str) -> list[tuple[str, str, float]]:
     """Extract (prog_code, canonical_name, amount) from a single table's text.
 
     Table text is tab-separated rows (one row per line), as produced by
@@ -233,12 +268,18 @@ def _extract_from_table_text(table_text: str) -> list[tuple[str, str, float]]:
     def _collect_row_numeric_lines(start_idx: int, prog_code: str) -> list[list[str]]:
         """Collect numeric cells for the matched agency row only.
 
-        We keep the current line plus immediate continuation lines when the
-        label wraps. We do not scan until the portfolio total because that can
-        incorrectly capture `Total:` rows instead of the entity amount.
+        For tab-separated (docx_table) pages the agency name and all values
+        appear on ONE line separated by tabs; we return a single multi-value row.
+
+        For non-tabbed (doc_textutil) pages, values appear on consecutive
+        separate lines.  Modern Australian $'000 tables have up to 6 such
+        values: [Dept-cur, Admin-cur, Total-cur, Dept-prior, Admin-prior,
+        Total-prior].  We collect up to 8 lines so that _select_row_amount
+        can pick the Total-current (index 2).
         """
         collected: list[list[str]] = []
-        for j in range(start_idx, min(len(lines), start_idx + 3)):
+        MAX_WINDOW = 9
+        for j in range(start_idx, min(len(lines), start_idx + MAX_WINDOW)):
             line_j = lines[j]
             if j > start_idx and re.search(r"^\s*Total:\s", line_j, re.IGNORECASE):
                 break
@@ -251,12 +292,21 @@ def _extract_from_table_text(table_text: str) -> list[tuple[str, str, float]]:
             if numerics:
                 collected.append(numerics)
 
-            # Stop once we have a row with numbers unless the next physical line
-            # is still clearly part of the same wrapped label.
+            # If the header line itself has multiple tab-separated values, we
+            # already have everything — stop immediately.
             if numerics and j == start_idx:
-                continue
+                if len(numerics) > 1:
+                    break
+                continue  # single value on header line — keep scanning
+
             if numerics and j > start_idx:
-                break
+                # Multi-value continuation row → tab-separated, stop now.
+                if len(numerics) > 1:
+                    break
+                # Single-value rows: continue collecting up to 8 values.
+                if len(collected) >= 8:
+                    break
+                continue
         return collected
 
     for i, line in enumerate(lines):
@@ -270,6 +320,15 @@ def _extract_from_table_text(table_text: str) -> list[tuple[str, str, float]]:
             # Skip department-level proxy when the specific agency is present
             if prog_code == "AU_DEPT_SCIENCE" and has_csiro:
                 continue
+            # Restrict the department proxy to the old transition era. Modern
+            # No. 2 industry/science tables list broad portfolio flows that are
+            # not comparable to the direct agency appropriations we already
+            # extract elsewhere.
+            try:
+                if prog_code == "AU_DEPT_SCIENCE" and int(year) >= 2000:
+                    continue
+            except Exception:
+                pass
 
             numeric_rows = _collect_row_numeric_lines(i, prog_code)
             amount, needs_review = _select_row_amount(numeric_rows, is_thousands)
@@ -328,7 +387,7 @@ def extract_australia_items(
 
         # Only process table pages (docx_table) or any page with agency keywords
         if extraction_method == "docx_table" or _ANY_AGENCY_RE.search(text):
-            items = _extract_from_table_text(text)
+            items = _extract_from_table_text(text, year)
             for prog_code, canonical_name, amount, needs_review in items:
                 # Suppress department-level proxy when specific agency is present
                 if prog_code == "AU_DEPT_SCIENCE" and file_has_csiro:

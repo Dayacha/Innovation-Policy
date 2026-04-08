@@ -55,6 +55,115 @@ BASE_AI_VALIDATION_DIR = PROCESSED_DIR / "ai_validation"
 
 FILTER_DECISIONS = {"include", "review"}
 
+# ── Known R&D agency auto-classification ──────────────────────────────────────
+# Program codes whose R&D status is unambiguous (specialist extractors).
+# For "include" rows matching these codes AND from English-language countries,
+# we skip the AI validation call — saving tokens where no translation is needed.
+# Non-English countries always go to AI so descriptions get translated to English.
+# Format: program_code_prefix → (frascati_type, ai_rd_category, rationale)
+#
+# ENGLISH-LANGUAGE COUNTRIES: descriptions already in English, no translation needed.
+_ENGLISH_LANGUAGE_COUNTRIES: frozenset[str] = frozenset({
+    "Australia", "Canada", "New Zealand", "United Kingdom", "United States",
+    "Ireland", "South Africa",
+})
+_KNOWN_RD_AGENCIES: dict[str, tuple[str, str, str]] = {
+    # Australia
+    "AU_CSIRO":       ("intramural_rd",    "direct_rd",        "CSIRO: Australia's national science agency — intramural R&D"),
+    "AU_ANSTO":       ("intramural_rd",    "direct_rd",        "ANSTO: Australian nuclear science and technology — intramural R&D"),
+    "AU_AIMS":        ("intramural_rd",    "direct_rd",        "AIMS: Australian Institute of Marine Science — intramural R&D"),
+    "AU_ARC":         ("extramural_grants","direct_rd",        "ARC: Australian Research Council — competitive grants to universities"),
+    "AU_NHMRC":       ("extramural_grants","direct_rd",        "NHMRC: National Health & Medical Research Council — health R&D grants"),
+    "AU_DEPT_SCIENCE":("rd_coordination",  "direct_rd",        "Department of Science: portfolio coordination of R&D agencies"),
+    # Canada
+    "CA_NRC":         ("intramural_rd",    "direct_rd",        "NRC: National Research Council Canada — intramural R&D labs"),
+    "CA_NSERC":       ("extramural_grants","direct_rd",        "NSERC: Natural Sciences & Engineering Research Council — university grants"),
+    "CA_SSHRC":       ("extramural_grants","direct_rd",        "SSHRC: Social Sciences & Humanities Research Council — university grants"),
+    "CA_CIHR":        ("extramural_grants","direct_rd",        "CIHR: Canadian Institutes of Health Research — health R&D grants"),
+    "CA_CHARS":       ("intramural_rd",    "direct_rd",        "CHARS: Canadian High Arctic Research Station — intramural R&D"),
+    "CA_AECL":        ("intramural_rd",    "direct_rd",        "AECL: Atomic Energy of Canada Limited — nuclear R&D"),
+    "CA_CFI":         ("rd_infrastructure","innovation_system", "CFI: Canada Foundation for Innovation — research infrastructure"),
+    "CA_SCITECH_MINISTRY": ("rd_coordination","direct_rd",     "Ministry of State for Science & Technology — R&D coordination"),
+    # New Zealand
+    "NZ_":            ("extramural_grants","direct_rd",        "NZ R&D agency — government R&D funding"),
+    # United Kingdom
+    "UK_DSIT":        ("rd_coordination",  "direct_rd",        "DSIT: Dept for Science, Innovation & Technology — R&D ministry capital (UKRI, Innovate UK)"),
+    "UK_SCIMINISTRY": ("rd_coordination",  "direct_rd",        "UK Science Ministry (BEIS/BIS/DIUS): Capital DEL includes research council grants"),
+    "UK_SCIENCE_":    ("rd_coordination",  "direct_rd",        "UK government science budget aggregate"),
+}
+
+
+def _auto_classify_row(program_code: str | None) -> dict | None:
+    """Return pre-filled AI fields for a known R&D agency, or None if unknown."""
+    if not program_code:
+        return None
+    pc = str(program_code).strip()
+    for prefix, (frascati, rd_cat, rationale) in _KNOWN_RD_AGENCIES.items():
+        if pc == prefix or pc.startswith(prefix):
+            return {
+                "keep": True,
+                "clean_program_code": pc,
+                "clean_program_description_en": None,
+                "validated_amount_local": None,  # trust extractor amount
+                "frascati_type": frascati,
+                "ai_rd_category": rd_cat,
+                "ai_pillar": "Direct R&D",
+                "ai_confidence": 0.95,
+                "ai_decision": "include",
+                "ai_rationale": rationale,
+                "parse_issue": "none",
+                "double_counting_risk": False,
+                "_auto_classified": True,
+            }
+    return None
+
+
+def _split_auto_classify(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Split into (auto-classified include rows, rows that need AI validation).
+
+    Auto-classify only when ALL conditions hold:
+      1. decision == "include" (review rows always go to AI for judgment)
+      2. program_code matches a known R&D agency
+      3. country is English-language (descriptions already in English —
+         non-English countries need AI for translation regardless)
+
+    All other rows (review, unknown programs, non-English countries) → AI.
+    """
+    if df.empty:
+        return df.copy(), df.copy()
+
+    country_col = df.get("country", pd.Series("", index=df.index)).fillna("").astype(str)
+
+    auto_mask = (
+        (df["decision"].str.lower() == "include")
+        & country_col.isin(_ENGLISH_LANGUAGE_COUNTRIES)
+        & df["program_code"].fillna("").apply(lambda pc: _auto_classify_row(pc) is not None)
+    )
+
+    auto_df = df[auto_mask].copy()
+    ai_df = df[~auto_mask].copy()
+    return auto_df, ai_df
+
+
+def _apply_auto_classification(df: pd.DataFrame) -> pd.DataFrame:
+    """Fill AI output columns for auto-classified rows."""
+    if df.empty:
+        return df
+
+    rows = []
+    for _, row in df.iterrows():
+        fields = _auto_classify_row(row.get("program_code")) or {}
+        combined = row.to_dict()
+        combined.update(fields)
+        rows.append(combined)
+    return pd.DataFrame(rows, columns=list(df.columns) + [
+        c for c in ["keep", "clean_program_code", "clean_program_description_en",
+                    "validated_amount_local", "frascati_type", "ai_rd_category",
+                    "ai_pillar", "ai_confidence", "ai_decision", "ai_rationale",
+                    "parse_issue", "double_counting_risk", "_auto_classified"]
+        if c not in df.columns
+    ])
+
 
 @dataclass
 class AIValidationConfig:
@@ -732,9 +841,7 @@ def _resolve_paths(config: AIValidationConfig) -> AIValidationConfig:
 def run_ai_validation(config: AIValidationConfig) -> bool:
     """Run the full AI validation pipeline.
 
-    Stage 1: Individual record validation, split by decision tier
-             (include records → amount/Frascati validation;
-              review records  → binary include/exclude decision)
+    Stage 1: Unified individual record validation for all candidate rows
     Stage 2: Country-year aggregation (double-counting check, total estimate)
     Stage 3: Time-series anomaly detection (unit errors, spikes, gaps)
     """
@@ -778,32 +885,26 @@ def run_ai_validation(config: AIValidationConfig) -> bool:
         logger.warning("No records passed the filter; exiting without API calls.")
         return False
 
-    logger.info(
-        "Filtered to %d records (include=%d, review=%d).",
-        len(filtered_df),
-        int((filtered_df.get("decision", pd.Series(dtype=str)).str.lower() == "include").sum()),
-        int((filtered_df.get("decision", pd.Series(dtype=str)).str.lower() == "review").sum()),
-    )
+    # ── Auto-classify known R&D agencies (no AI call needed) ─────────────────
+    # Split: known agencies with "include" decision → auto-classify immediately.
+    # All "review" rows + unknown include rows → send to AI.
+    auto_df, ai_needed_df = _split_auto_classify(filtered_df)
+    auto_classified_df = _apply_auto_classification(auto_df)
 
-    # ── Split by decision tier ────────────────────────────────────────────────
-    if "decision" in filtered_df.columns:
-        include_mask = filtered_df["decision"].str.lower() == "include"
-        include_df = filtered_df[include_mask].copy()
-        review_df = filtered_df[~include_mask].copy()
-    else:
-        include_df = filtered_df.copy()
-        review_df = pd.DataFrame(columns=filtered_df.columns)
-
+    n_auto = len(auto_df)
+    n_ai = len(ai_needed_df)
+    n_include_ai = int((ai_needed_df.get("decision", pd.Series(dtype=str)).str.lower() == "include").sum())
+    n_review_ai = int((ai_needed_df.get("decision", pd.Series(dtype=str)).str.lower() == "review").sum())
     logger.info(
-        "Split: %d include-tier records → amount/Frascati validation; "
-        "%d review-tier records → binary include/exclude decision.",
-        len(include_df), len(review_df),
+        "Auto-classified %d known-agency include rows from English-language countries "
+        "(no API call needed — R&D status unambiguous, descriptions already in English). "
+        "Sending %d records to AI (include=%d needing translation/Frascati, review=%d).",
+        n_auto, n_ai, n_include_ai, n_review_ai,
     )
 
     # ── Cache setup ───────────────────────────────────────────────────────────
     cache = _load_cache(config.cache_file)
-    cache_hits_include = 0
-    cache_hits_review = 0
+    cache_hits_unified = 0
     cache_entries_to_append: List[dict] = []
 
     # ── Build AI client ───────────────────────────────────────────────────────
@@ -814,14 +915,14 @@ def run_ai_validation(config: AIValidationConfig) -> bool:
         logger.error("AI validation unavailable: %s", exc)
         return False
 
-    # ── Stage 1a: Include-tier records ────────────────────────────────────────
+    # ── Stage 1: Unified row-level validation ────────────────────────────────
     all_results_map: Dict[str, dict] = {}
 
     def _process_tier(
         tier_df: pd.DataFrame,
         mode: str,
     ) -> tuple[int, int]:
-        """Process one tier (include or review). Returns (cache_hits, api_calls).
+        """Process one validation tier. Returns (cache_hits, api_calls).
 
         When config.group_by_page=True, records from the same (source_file,
         page_number) are sent in a single batch so the AI can see all lines
@@ -928,31 +1029,51 @@ def run_ai_validation(config: AIValidationConfig) -> bool:
 
         return hits, api_calls
 
-    hits_inc, calls_inc = _process_tier(include_df, mode="include")
-    cache_hits_include += hits_inc
-    hits_rev, calls_rev = _process_tier(review_df, mode="review")
-    cache_hits_review += hits_rev
+    # Only send the rows that actually need AI judgment
+    hits_unified, calls_unified = _process_tier(ai_needed_df, mode="unified")
+    cache_hits_unified += hits_unified
 
     if cache_entries_to_append:
         _append_cache_entries(config.cache_file, cache_entries_to_append)
 
     logger.info(
-        "Stage 1 complete: include-tier cache_hits=%d api_calls=%d; "
-        "review-tier cache_hits=%d api_calls=%d.",
-        cache_hits_include, calls_inc, cache_hits_review, calls_rev,
+        "Stage 1 complete: unified row-validation cache_hits=%d api_calls=%d "
+        "(auto-classified=%d skipped AI).",
+        cache_hits_unified, calls_unified, n_auto,
     )
 
-    # ── Assemble ordered results ──────────────────────────────────────────────
+    # ── Assemble ordered results (AI results + auto-classified) ───────────────
     ordered_results: List[dict] = []
-    for rid in filtered_df["record_id"]:
+    for rid in ai_needed_df["record_id"]:
         if rid in all_results_map:
             ordered_results.append(all_results_map[rid])
 
-    if not ordered_results:
+    ai_raw_df = pd.DataFrame(ordered_results) if ordered_results else pd.DataFrame()
+
+    # Merge auto-classified rows into the result set
+    auto_result_cols = [
+        "record_id", "keep", "clean_program_code", "clean_program_description_en",
+        "validated_amount_local", "frascati_type", "ai_rd_category", "ai_pillar",
+        "ai_confidence", "ai_decision", "ai_rationale", "parse_issue",
+        "double_counting_risk", "_auto_classified",
+    ]
+    if not auto_classified_df.empty:
+        auto_result_rows = []
+        for _, row in auto_classified_df.iterrows():
+            entry = {"record_id": row["record_id"]}
+            for col in auto_result_cols[1:]:
+                entry[col] = row.get(col)
+            auto_result_rows.append(entry)
+        auto_raw_df = pd.DataFrame(auto_result_rows)
+    else:
+        auto_raw_df = pd.DataFrame()
+
+    raw_df = pd.concat([ai_raw_df, auto_raw_df], ignore_index=True) if not auto_raw_df.empty else ai_raw_df
+
+    if raw_df.empty:
         logger.warning("AI validation produced no results.")
         return False
 
-    raw_df = pd.DataFrame(ordered_results)
     raw_df.to_csv(config.raw_output_file, index=False, encoding="utf-8")
 
     clean_df = filtered_df.merge(raw_df, on="record_id", how="left", suffixes=("_baseline", ""))
@@ -1027,16 +1148,18 @@ def run_ai_validation(config: AIValidationConfig) -> bool:
         logger.info("Stage 3 (anomaly pass) skipped — run_anomaly_pass=False.")
 
     # ── Summary ───────────────────────────────────────────────────────────────
+    _baseline_countries = sorted(baseline_df["country"].dropna().astype(str).unique().tolist()) if "country" in baseline_df.columns else []
+    _baseline_years = sorted(baseline_df["year"].dropna().astype(int).unique().tolist()) if "year" in baseline_df.columns else []
     summary = {
         "input_file": str(config.input_file),
         "total_baseline_rows": len(baseline_df),
+        "_baseline_countries": _baseline_countries,  # used by stale-cache guard
+        "_baseline_year_range": [min(_baseline_years), max(_baseline_years)] if _baseline_years else [],
         "filtered_rows": len(filtered_df),
-        "include_tier_records": len(include_df),
-        "review_tier_records": len(review_df),
-        "include_tier_cache_hits": cache_hits_include,
-        "include_tier_api_calls": calls_inc,
-        "review_tier_cache_hits": cache_hits_review,
-        "review_tier_api_calls": calls_rev,
+        "include_tier_records": int((filtered_df.get("decision", pd.Series(dtype=str)).str.lower() == "include").sum()),
+        "review_tier_records": int((filtered_df.get("decision", pd.Series(dtype=str)).str.lower() == "review").sum()),
+        "unified_row_validation_cache_hits": cache_hits_unified,
+        "unified_row_validation_api_calls": calls_unified,
         "skipped_verified_rows": skipped_verified_count,
         "aggregation_pass_ran": config.run_aggregation_pass,
         "aggregation_country_years": len(agg_df) if not agg_df.empty else 0,

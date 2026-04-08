@@ -28,13 +28,17 @@ TEMPORAL_PRIOR_BOOST: float = 1.5
 FUZZY_MATCH_THRESHOLD: float = 0.85
 
 # Stage 2 tunable
-MIN_NEIGHBORS_TO_UPGRADE: int = 1       # ≥N include neighbors (T±1) → upgrade review
-MIN_GLOBAL_INCLUDE_TO_UPGRADE: int = 2  # ≥N include years in series → upgrade remaining reviews
+MIN_NEIGHBORS_TO_UPGRADE: int = 2       # ≥N include neighbors (T±1) → upgrade review
+                                        # Require BOTH T-1 and T+1 to be include before
+                                        # auto-upgrading a review row (was 1 — too aggressive)
+MIN_GLOBAL_INCLUDE_TO_UPGRADE: int = 3  # ≥N include years in series → upgrade remaining reviews
+                                        # Raised from 2: need at least 3 confirmed years before
+                                        # pulling sparse review rows up automatically
 MIN_REVIEW_TO_DOWNGRADE: int = 3        # 0 include + ≥N review years → downgrade to skip
 
 # Stage 2 Pass 3: spike / low-budget anomaly detection
-SPIKE_RATIO_THRESHOLD: float = 5.0      # flag if amount > N × median of neighbors
-DROP_RATIO_THRESHOLD: float = 0.10      # flag if amount < N × median of neighbors
+SPIKE_RATIO_THRESHOLD: float = 3.0      # flag if amount > N × median (was 5.0 — missed 3× spikes)
+DROP_RATIO_THRESHOLD: float = 0.20      # flag if amount < N × median (was 0.10 — missed 80% drops)
 
 
 # ── Data structures ───────────────────────────────────────────────────────────
@@ -242,8 +246,52 @@ def apply_temporal_smoother(
 
     df["_prog_key"] = _build_program_key(df)
 
+    # ── Pass 0: SPIKE / ANOMALY DETECTION (runs FIRST) ───────────────────────
+    # Detect anomalous amounts BEFORE the upgrade passes so that spike rows
+    # are never silently promoted to 'include' by a single-neighbor rule.
+    # For each program series with ≥3 'include' years, flag rows whose amount
+    # deviates more than SPIKE_RATIO_THRESHOLD above or DROP_RATIO_THRESHOLD
+    # below the series median.
+    if "amount_local" in df.columns:
+        df["_amount_num"] = pd.to_numeric(df["amount_local"], errors="coerce")
+        for prog_key, grp in df.groupby("_prog_key", sort=False):
+            key_body = str(prog_key).rsplit("|", 1)[-1]
+            if not key_body:
+                continue
+            inc_idx = grp.index[grp["decision"].str.lower() == "include"]
+            if len(inc_idx) < 3:
+                continue  # not enough data for reliable spike detection
+            amounts = df.loc[inc_idx, "_amount_num"].dropna()
+            if amounts.empty or amounts.median() == 0:
+                continue
+            series_median = amounts.median()
+            # Check all rows (include + review) so previously-flagged reviews
+            # that happen to be anomalous are also caught.
+            for idx in grp.index:
+                current_decision = df.at[idx, "decision"].lower()
+                if current_decision == "skip":
+                    continue
+                amt = df.at[idx, "_amount_num"]
+                if pd.isna(amt):
+                    continue
+                ratio = amt / series_median
+                if ratio > SPIKE_RATIO_THRESHOLD:
+                    df.at[idx, "decision"] = "review"
+                    _append_reason(
+                        df, idx,
+                        f"spike detected: amount={amt:.0f} is {ratio:.1f}× series median={series_median:.0f}; needs AI verification",
+                    )
+                elif ratio < DROP_RATIO_THRESHOLD:
+                    df.at[idx, "decision"] = "review"
+                    _append_reason(
+                        df, idx,
+                        f"low-budget anomaly: amount={amt:.0f} is {ratio:.3f}× series median={series_median:.0f}; needs AI verification",
+                    )
+        df = df.drop(columns=["_amount_num"], errors="ignore")
+
     # ── Pass 1: LOCAL ─────────────────────────────────────────────────────────
-    # Build (prog_key, year_int) → decision dict for O(1) neighbor lookup
+    # Build (prog_key, year_int) → decision dict for O(1) neighbor lookup.
+    # Only upgrade 'review' rows — never override a spike/anomaly 'review'.
     key_year_decision: dict[tuple, str] = {
         (k, y): d.lower()
         for k, y, d in zip(df["_prog_key"], df["year_int"], df["decision"])
@@ -253,6 +301,10 @@ def apply_temporal_smoother(
     for idx in review_rows:
         row = df.loc[idx]
         key, yr = row["_prog_key"], row["year_int"]
+        # Skip if this row was just flagged as an anomaly
+        if "spike detected" in str(row.get("temporal_smoothing_reason", "")) or \
+           "low-budget anomaly" in str(row.get("temporal_smoothing_reason", "")):
+            continue
         n_include_neighbors = sum(
             1 for delta in (-1, 1)
             if key_year_decision.get((key, yr + delta)) == "include"
@@ -285,9 +337,12 @@ def apply_temporal_smoother(
             continue  # nothing to change
 
         if n_include >= min_global_include_to_upgrade:
-            # Upgrade remaining reviews
+            # Upgrade remaining reviews — but not anomaly-flagged rows
             review_idx = grp.index[decisions == "review"]
             for idx in review_idx:
+                reason = str(df.at[idx, "temporal_smoothing_reason"])
+                if "spike detected" in reason or "low-budget anomaly" in reason:
+                    continue
                 df.at[idx, "decision"] = "include"
                 _append_reason(
                     df, idx,
@@ -302,43 +357,6 @@ def apply_temporal_smoother(
                     df, idx,
                     f"global downgrade: 0 include years, {n_review} review-only year(s) in series",
                 )
-
-    # ── Pass 3: SPIKE / ANOMALY DETECTION ────────────────────────────────────
-    # For each program series with ≥3 'include' years, flag rows whose amount
-    # deviates more than SPIKE_RATIO_THRESHOLD above or DROP_RATIO_THRESHOLD
-    # below the series median.  These are marked decision="review" (downgrade)
-    # with an explanatory note — they won't be silently included.
-    if "amount_local" in df.columns:
-        df["_amount_num"] = pd.to_numeric(df["amount_local"], errors="coerce")
-        for prog_key, grp in df.groupby("_prog_key", sort=False):
-            key_body = str(prog_key).rsplit("|", 1)[-1]
-            if not key_body:
-                continue
-            inc_idx = grp.index[grp["decision"].str.lower() == "include"]
-            if len(inc_idx) < 3:
-                continue  # not enough data for reliable spike detection
-            amounts = df.loc[inc_idx, "_amount_num"].dropna()
-            if amounts.empty or amounts.median() == 0:
-                continue
-            series_median = amounts.median()
-            for idx in inc_idx:
-                amt = df.at[idx, "_amount_num"]
-                if pd.isna(amt):
-                    continue
-                ratio = amt / series_median
-                if ratio > SPIKE_RATIO_THRESHOLD:
-                    df.at[idx, "decision"] = "review"
-                    _append_reason(
-                        df, idx,
-                        f"spike detected: amount={amt:.0f} is {ratio:.1f}× series median={series_median:.0f}; needs AI verification",
-                    )
-                elif ratio < DROP_RATIO_THRESHOLD:
-                    df.at[idx, "decision"] = "review"
-                    _append_reason(
-                        df, idx,
-                        f"low-budget anomaly: amount={amt:.0f} is {ratio:.3f}× series median={series_median:.0f}; needs AI verification",
-                    )
-        df = df.drop(columns=["_amount_num"], errors="ignore")
 
     return df.drop(
         columns=["year_int", "program_code_norm", "match_description", "_prog_key"],

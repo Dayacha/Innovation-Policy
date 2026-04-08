@@ -1,4 +1,4 @@
-"""File inventory stage for recursively listing PDF files."""
+"""File inventory stage for recursively listing budget source files."""
 
 from pathlib import Path
 
@@ -14,7 +14,7 @@ from budget.utils import (
 
 
 def build_file_inventory(pdf_root: Path) -> pd.DataFrame:
-    """Scan a PDF folder recursively and return inventory metadata."""
+    """Scan a budget-source folder recursively and return inventory metadata."""
     if not pdf_root.exists():
         logger.warning("PDF root does not exist: %s", pdf_root)
         return pd.DataFrame(
@@ -36,7 +36,7 @@ def build_file_inventory(pdf_root: Path) -> pd.DataFrame:
 
     for file_path in files:
         extension = file_path.suffix.lower()
-        if extension not in (".pdf", ".docx"):
+        if extension not in (".pdf", ".docx", ".doc"):
             continue
 
         country_guess, year_guess = infer_country_year(file_path)

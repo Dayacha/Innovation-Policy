@@ -1,6 +1,8 @@
-"""PDF and DOCX text extraction stage with OCR fallback when direct extraction is weak."""
+"""PDF, DOC, and DOCX text extraction stage with OCR fallback when direct extraction is weak."""
 
 from pathlib import Path
+import subprocess
+import tempfile
 from typing import Optional
 
 import fitz
@@ -59,6 +61,53 @@ def _extract_docx_pages(filepath: Path) -> list[dict]:
                 "extraction_method": "docx_table",
             })
 
+    return pages
+
+
+def _extract_doc_pages(filepath: Path) -> list[dict]:
+    """Extract text from a legacy .doc file using macOS textutil.
+
+    We convert to plain text and split on form-feed page breaks. This keeps the
+    original `.doc` sources in the pipeline instead of silently dropping them.
+    """
+    if filepath.suffix.lower() != ".doc":
+        return []
+
+    try:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            txt_path = Path(tmpdir) / f"{filepath.stem}.txt"
+            subprocess.run(
+                ["textutil", "-convert", "txt", "-output", str(txt_path), str(filepath)],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            raw_text = txt_path.read_text(encoding="utf-8", errors="ignore")
+    except FileNotFoundError:
+        logger.warning("textutil not available; skipping .doc extraction for %s", filepath.name)
+        return []
+    except subprocess.CalledProcessError as exc:
+        stderr = (exc.stderr or "").strip()
+        logger.error("Failed to convert .doc %s with textutil: %s", filepath, stderr or exc)
+        return []
+    except Exception as exc:
+        logger.error("Failed to process .doc %s: %s", filepath, exc)
+        return []
+
+    pages = []
+    chunks = [chunk.strip() for chunk in raw_text.replace("\r", "\n").split("\f")]
+    page_number = 1
+    for chunk in chunks:
+        if not chunk:
+            continue
+        pages.append(
+            {
+                "page_number": page_number,
+                "text": chunk,
+                "extraction_method": "doc_textutil",
+            }
+        )
+        page_number += 1
     return pages
 
 
@@ -153,13 +202,17 @@ def extract_text_for_inventory(
         error_pages = 0
         file_status = "ok"
 
-        # ── DOCX branch ──────────────────────────────────────────────────────
-        if filepath.suffix.lower() == ".docx":
+        # ── DOC / DOCX branch ────────────────────────────────────────────────
+        if filepath.suffix.lower() in {".doc", ".docx"}:
             try:
-                docx_pages = _extract_docx_pages(filepath)
-                file_total_pages = len(docx_pages)
+                office_pages = (
+                    _extract_docx_pages(filepath)
+                    if filepath.suffix.lower() == ".docx"
+                    else _extract_doc_pages(filepath)
+                )
+                file_total_pages = len(office_pages)
                 direct_pages = file_total_pages
-                for pg in docx_pages:
+                for pg in office_pages:
                     char_count = len(pg["text"])
                     page_records.append({
                         "file_id": file_id,
@@ -175,7 +228,7 @@ def extract_text_for_inventory(
                     })
             except Exception as exc:
                 file_status = f"error: {exc}"
-                logger.error("Failed to process docx %s: %s", filepath, exc)
+                logger.error("Failed to process office document %s: %s", filepath, exc)
                 error_pages += 1
             summary_records.append({
                 "file_id": file_id,
