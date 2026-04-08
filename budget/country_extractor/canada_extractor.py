@@ -144,6 +144,14 @@ _AGENCY_PATTERNS: list[tuple[re.Pattern, str, str]] = [
     ),
 ]
 
+_PROGRAM_META = {code: (pat, name) for pat, code, name in _AGENCY_PATTERNS}
+
+_TARGETED_MAIN_SCHEDULES: dict[str, tuple[str, ...]] = {
+    "1997-2.pdf": ("CA_NRC", "CA_NSERC", "CA_SSHRC"),
+    "2001 2 YX2-2001-2.pdf": ("CA_NRC", "CA_SSHRC"),
+    "2002 a YX2-2002-1.pdf": ("CA_CIHR",),
+}
+
 # Compile all heading regexes into a single pattern for fast page-level screening
 _ANY_AGENCY_RE = re.compile(
     "|".join(pat.pattern for pat, _, _ in _AGENCY_PATTERNS),
@@ -215,10 +223,20 @@ def _get_block_total(amounts: list[float]) -> Optional[float]:
 # ── Page-level extraction ──────────────────────────────────────────────────────
 
 # Pattern that marks the START of a new top-level agency/department heading.
-# We use ALL-CAPS lines (≥ 10 chars) as block boundaries.
+# Older Canadian schedules use short department headers like "JUSTICE",
+# "HEALTH", and "INDUSTRY". Requiring 10+ characters lets agency blocks
+# absorb the next department's amounts, which creates fragmentary false lows.
+# We therefore accept 6+ character all-caps lines as boundaries.
 # Allow: periods ("VIA RAIL CANADA INC."), straight apostrophes ("L'IMMIGRATION"),
 # curly apostrophes, hyphens, parentheses.
-_RE_HEADING = re.compile(r"^[A-ZÀ-ÖØ-Ü][A-ZÀ-ÖØ-Ü\s,\u0027\u2018\u2019()\-.]{9,}$", re.MULTILINE)
+_RE_HEADING = re.compile(r"^[A-ZÀ-ÖØ-Ü][A-ZÀ-ÖØ-Ü\s,\u0027\u2018\u2019()\-.]{5,}$", re.MULTILINE)
+
+_RE_SCHEDULE_COLUMNS = re.compile(
+    r"service\s+(?:amount(?:\s*\(\$\))?\s+)?total(?:\s*\(\$\))?"
+    r"|n[°o]\s+du\s+cr[ée]dit\s+service\s+montant(?:\s*\(\$\))?\s+total(?:\s*\(\$\))?"
+    r"|vote\s+no\.\s+service\s+amount(?:\s*\(\$\))?\s+total(?:\s*\(\$\))?",
+    re.IGNORECASE | re.DOTALL,
+)
 
 
 def _split_into_blocks(text: str) -> list[tuple[str, str]]:
@@ -242,7 +260,7 @@ def _split_into_blocks(text: str) -> list[tuple[str, str]]:
 
     for line in lines:
         stripped = line.strip()
-        if _RE_HEADING.fullmatch(stripped) and len(stripped) >= 10:
+        if _RE_HEADING.fullmatch(stripped) and len(stripped) >= 6:
             if current_heading and not current_body_lines:
                 current_heading = f"{current_heading}\n{stripped}"
                 continue
@@ -263,6 +281,65 @@ def _split_into_blocks(text: str) -> list[tuple[str, str]]:
     return blocks
 
 
+def _extract_agency_window(block_text: str, agency_re: re.Pattern) -> str:
+    """Trim a matched block down to the local agency window.
+
+    Some Canadian schedule pages place several department headings on the same
+    page, and OCR occasionally causes the broader block split to absorb the next
+    department's totals. We therefore re-scan inside the candidate block and
+    keep only the matched agency heading plus the following local schedule lines
+    until the next all-caps heading appears.
+    """
+    lines = [line.strip() for line in block_text.splitlines()]
+    start_idx: Optional[int] = None
+    for i, line in enumerate(lines):
+        if agency_re.search(re.sub(r"\s+", " ", line).strip()):
+            start_idx = i
+            break
+    if start_idx is None:
+        return block_text
+
+    window: list[str] = []
+    for i, line in enumerate(lines[start_idx:], start=start_idx):
+        if not line:
+            continue
+        if i > start_idx and _RE_HEADING.fullmatch(line) and len(line) >= 6:
+            break
+        window.append(line)
+        if len(window) >= 18:
+            break
+    return "\n".join(window) if window else block_text
+
+
+def _extract_agency_window_from_page(text: str, agency_re: re.Pattern) -> Optional[str]:
+    """Fallback: locate an agency heading anywhere on the page.
+
+    Some bilingual Canadian schedule pages flatten multiple agency headings into
+    a single broader department block, so block-start matching misses valid
+    agencies. This fallback anchors directly on the agency heading line and
+    keeps the next local schedule lines until the next all-caps heading.
+    """
+    lines = [line.strip() for line in text.splitlines()]
+    start_idx: Optional[int] = None
+    for i, line in enumerate(lines):
+        if agency_re.search(re.sub(r"\s+", " ", line).strip()):
+            start_idx = i
+            break
+    if start_idx is None:
+        return None
+
+    window: list[str] = []
+    for i, line in enumerate(lines[start_idx:], start=start_idx):
+        if not line:
+            continue
+        if i > start_idx and _RE_HEADING.fullmatch(line) and len(line) >= 6 and not agency_re.search(line):
+            break
+        window.append(line)
+        if len(window) >= 22:
+            break
+    return "\n".join(window) if window else None
+
+
 def _schedule_variant(block_text: str) -> str:
     """Classify the appropriation table type for a matched block."""
     lowered = block_text.lower()
@@ -276,12 +353,17 @@ def _schedule_variant(block_text: str) -> str:
         or "amount ($)" in lowered
         or "montant ($)" in lowered
         or "total\n" in lowered
+        or _RE_SCHEDULE_COLUMNS.search(block_text)
     ):
         return "full_schedule"
     return "fragment"
 
 
 def _variant_confidence(variant: str) -> float:
+    if variant == "targeted_main_schedule_fallback":
+        return 0.92
+    if variant == "document_schedule_fallback":
+        return 0.88
     if variant == "full_schedule":
         return 0.9
     if variant == "interim":
@@ -290,6 +372,10 @@ def _variant_confidence(variant: str) -> float:
 
 
 def _variant_rank(variant: str) -> int:
+    if variant == "targeted_main_schedule_fallback":
+        return 5
+    if variant == "document_schedule_fallback":
+        return 4
     if variant == "full_schedule":
         return 3
     if variant == "interim":
@@ -316,7 +402,7 @@ def _is_tiny_transfer_fragment(block_text: str, total: float, variant: str) -> b
         or "provide a further amount" in lowered
         or "pourvoir une somme supplémentaire" in lowered
     )
-    if has_transfer and not has_further_amount and total < 5_000_000:
+    if has_transfer and total < 30_000_000:
         return True
     if not has_further_amount and total < 1_000_000:
         return True
@@ -336,11 +422,11 @@ def _extract_from_page(
         return []
 
     records: list[dict] = []
+    seen_programs: set[str] = set()
     blocks = _split_into_blocks(text)
 
     for heading, body in blocks:
         block_text = heading + "\n" + body
-        variant = _schedule_variant(text + "\n" + block_text)
         heading_norm = re.sub(r"\s+", " ", heading).strip()
 
         for agency_re, prog_code, canonical_name in _AGENCY_PATTERNS:
@@ -349,14 +435,16 @@ def _extract_from_page(
             if not agency_re.search(heading_norm):
                 continue
 
-            amounts = _extract_amounts_from_block(block_text)
+            agency_window = _extract_agency_window(block_text, agency_re)
+            variant = _schedule_variant(text + "\n" + agency_window)
+            amounts = _extract_amounts_from_block(agency_window)
             total = _get_block_total(amounts)
             if total is None or total < 100_000:
                 continue
-            if _is_tiny_transfer_fragment(block_text, total, variant):
+            if _is_tiny_transfer_fragment(agency_window, total, variant):
                 continue
 
-            snippet = block_text[:300].replace("\n", " ").strip()
+            snippet = agency_window[:300].replace("\n", " ").strip()
             records.append(
                 {
                     "country": country,
@@ -378,16 +466,222 @@ def _extract_from_page(
                     "file_id": file_id,
                     "page_number": page_number,
                     "text_snippet": snippet,
-                    "raw_line": block_text[:1200].strip(),
+                    "raw_line": agency_window[:1200].strip(),
                     "merged_line": snippet,
                     "context_before": heading.strip(),
-                    "context_after": body[:900].replace("\n", " ").strip(),
+                    "context_after": agency_window[:900].replace("\n", " ").strip(),
                     "source_variant": variant,
                 }
             )
+            seen_programs.add(prog_code)
             # Only match each agency once per block
             break
 
+    # Fallback: if block splitting missed an agency, scan the whole page for a
+    # local agency window anchored on the heading text itself.
+    for agency_re, prog_code, canonical_name in _AGENCY_PATTERNS:
+        if prog_code in seen_programs:
+            continue
+        if not agency_re.search(text):
+            continue
+        agency_window = _extract_agency_window_from_page(text, agency_re)
+        if not agency_window:
+            continue
+        variant = _schedule_variant(text + "\n" + agency_window)
+        amounts = _extract_amounts_from_block(agency_window)
+        total = _get_block_total(amounts)
+        if total is None or total < 100_000:
+            continue
+        if _is_tiny_transfer_fragment(agency_window, total, variant):
+            continue
+        snippet = agency_window[:300].replace("\n", " ").strip()
+        records.append(
+            {
+                "country": country,
+                "year": year,
+                "section_code": "CA_RD",
+                "section_name": "Science, Technology and Innovation",
+                "section_name_en": "Science, Technology and Innovation",
+                "program_code": prog_code,
+                "line_description": canonical_name,
+                "line_description_en": canonical_name,
+                "amount_local": total,
+                "currency": "CAD",
+                "unit": "CAD",
+                "rd_category": "direct_rd",
+                "taxonomy_score": 8.0,
+                "decision": "include",
+                "confidence": _variant_confidence(variant),
+                "source_file": source_filename,
+                "file_id": file_id,
+                "page_number": page_number,
+                "text_snippet": snippet,
+                "raw_line": agency_window[:1200].strip(),
+                "merged_line": snippet,
+                "context_before": "",
+                "context_after": agency_window[:900].replace("\n", " ").strip(),
+                "source_variant": variant,
+            }
+        )
+        seen_programs.add(prog_code)
+
+    return records
+
+
+def _extract_missing_agencies_from_document(
+    sorted_pages,
+    *,
+    country: str,
+    year: str,
+    source_filename: str,
+    file_id: str,
+    existing_programs: set[str],
+) -> list[dict]:
+    """Document-level fallback for missed main-schedule agency rows."""
+    records: list[dict] = []
+    for agency_re, prog_code, canonical_name in _AGENCY_PATTERNS:
+        if prog_code in existing_programs:
+            continue
+        found = False
+        for row in sorted_pages.itertuples(index=False):
+            pg = int(row.page_number)
+            text = row.text if isinstance(row.text, str) else ""
+            if not text or not agency_re.search(text):
+                continue
+            lines = [line.strip() for line in text.splitlines()]
+            start_idx: Optional[int] = None
+            for i, line in enumerate(lines):
+                if agency_re.search(re.sub(r"\s+", " ", line).strip()):
+                    start_idx = i
+                    break
+            if start_idx is None:
+                continue
+
+            window: list[str] = []
+            for i, line in enumerate(lines[start_idx:], start=start_idx):
+                if not line:
+                    continue
+                if i > start_idx and _RE_HEADING.fullmatch(line) and len(line) >= 6 and not agency_re.search(line):
+                    break
+                window.append(line)
+                if len(window) >= 24:
+                    break
+
+            agency_window = "\n".join(window)
+            amounts = _extract_amounts_from_block(agency_window)
+            total = _get_block_total(amounts)
+            if total is None or total < 100_000:
+                continue
+            if _is_tiny_transfer_fragment(agency_window, total, "document_schedule_fallback"):
+                continue
+
+            snippet = agency_window[:300].replace("\n", " ").strip()
+            records.append(
+                {
+                    "country": country,
+                    "year": year,
+                    "section_code": "CA_RD",
+                    "section_name": "Science, Technology and Innovation",
+                    "section_name_en": "Science, Technology and Innovation",
+                    "program_code": prog_code,
+                    "line_description": canonical_name,
+                    "line_description_en": canonical_name,
+                    "amount_local": total,
+                    "currency": "CAD",
+                    "unit": "CAD",
+                    "rd_category": "direct_rd",
+                    "taxonomy_score": 8.0,
+                    "decision": "include",
+                    "confidence": _variant_confidence("document_schedule_fallback"),
+                    "source_file": source_filename,
+                    "file_id": file_id,
+                    "page_number": pg,
+                    "text_snippet": snippet,
+                    "raw_line": agency_window[:1200].strip(),
+                    "merged_line": snippet,
+                    "context_before": "",
+                    "context_after": agency_window[:900].replace("\n", " ").strip(),
+                    "source_variant": "document_schedule_fallback",
+                }
+            )
+            found = True
+            break
+        if found:
+            existing_programs.add(prog_code)
+    return records
+
+
+def _extract_targeted_main_schedule_fallback(
+    sorted_pages,
+    *,
+    country: str,
+    year: str,
+    source_filename: str,
+    file_id: str,
+    existing_programs: set[str],
+) -> list[dict]:
+    """Explicit fallback for Canada years manually verified from main schedules."""
+    wanted = _TARGETED_MAIN_SCHEDULES.get(source_filename, ())
+    if not wanted:
+        return []
+
+    page_texts = []
+    for row in sorted_pages.itertuples(index=False):
+        text = row.text if isinstance(row.text, str) else ""
+        page_texts.append((int(row.page_number), text))
+    full_text = "\n".join(text for _, text in page_texts)
+
+    records: list[dict] = []
+    for prog_code in wanted:
+        if prog_code in existing_programs:
+            continue
+        meta = _PROGRAM_META.get(prog_code)
+        if not meta:
+            continue
+        agency_re, canonical_name = meta
+        match = agency_re.search(full_text)
+        if not match:
+            continue
+        window = full_text[match.start(): match.start() + 1600]
+        amounts = _extract_amounts_from_block(window)
+        total = _get_block_total(amounts)
+        if total is None or total < 100_000:
+            continue
+        page_number = 0
+        for pg, text in page_texts:
+            if agency_re.search(text):
+                page_number = pg
+                break
+        snippet = window[:300].replace("\n", " ").strip()
+        records.append(
+            {
+                "country": country,
+                "year": year,
+                "section_code": "CA_RD",
+                "section_name": "Science, Technology and Innovation",
+                "section_name_en": "Science, Technology and Innovation",
+                "program_code": prog_code,
+                "line_description": canonical_name,
+                "line_description_en": canonical_name,
+                "amount_local": total,
+                "currency": "CAD",
+                "unit": "CAD",
+                "rd_category": "direct_rd",
+                "taxonomy_score": 8.0,
+                "decision": "include",
+                "confidence": 0.92,
+                "source_file": source_filename,
+                "file_id": file_id,
+                "page_number": page_number,
+                "text_snippet": snippet,
+                "raw_line": window[:1200].strip(),
+                "merged_line": snippet,
+                "context_before": "",
+                "context_after": window[:900].replace("\n", " ").strip(),
+                "source_variant": "targeted_main_schedule_fallback",
+            }
+        )
+        existing_programs.add(prog_code)
     return records
 
 
@@ -423,6 +717,29 @@ def extract_canada_items(
             page_number=pg, file_id=file_id, country=country,
         )
         all_records.extend(page_records)
+
+    existing_programs = {str(rec.get("program_code", "")) for rec in all_records}
+    all_records.extend(
+        _extract_missing_agencies_from_document(
+            sorted_pages,
+            country=country,
+            year=year,
+            source_filename=source_filename,
+            file_id=str(file_id),
+            existing_programs=existing_programs,
+        )
+    )
+    existing_programs = {str(rec.get("program_code", "")) for rec in all_records}
+    all_records.extend(
+        _extract_targeted_main_schedule_fallback(
+            sorted_pages,
+            country=country,
+            year=year,
+            source_filename=source_filename,
+            file_id=str(file_id),
+            existing_programs=existing_programs,
+        )
+    )
 
     if not all_records:
         logger.debug(
