@@ -186,9 +186,14 @@ def load_budget():
 
     # App display fields
     df["ministry_display"] = df["canonical_name"]
-    df["budget_line_display"] = df.get("line_description_en", df["canonical_name"]).fillna(df["canonical_name"])
+    df["budget_line_display"] = df["line_description_en"].fillna(df["canonical_name"]) if "line_description_en" in df.columns else df["canonical_name"]
     df["budget_category"] = df["rd_category"]
     df["budget_category_label"] = df["rd_category_label"]
+
+    # Columns the app references that may not exist in the new pipeline output
+    for col in ["confidence", "decision", "ai_decision", "ai_rationale"]:
+        if col not in df.columns:
+            df[col] = None
 
     return df
 
