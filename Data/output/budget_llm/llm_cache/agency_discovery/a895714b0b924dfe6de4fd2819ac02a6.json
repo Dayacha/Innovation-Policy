@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Library of Parliament",
+  "name_variants": [
+    "Bibliothèque du Parlement",
+    "Parliamentary Library"
+  ],
+  "category": "unclear",
+  "notes": "The Library of Parliament does not primarily conduct or fund R&D activities."
+}

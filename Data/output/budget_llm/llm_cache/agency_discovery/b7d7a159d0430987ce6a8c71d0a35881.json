@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Military Police Complaints Commission",
+  "name_variants": [
+    "MPCC",
+    "Commission d'examen des plaintes concernant la police militaire"
+  ],
+  "category": "unclear",
+  "notes": "This entity deals with complaints regarding military police, which is not related to R&D."
+}

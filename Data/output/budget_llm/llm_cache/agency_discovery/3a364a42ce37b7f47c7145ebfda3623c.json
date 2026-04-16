@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "VIA HFR - VIA TGF Inc.",
+  "name_variants": [
+    "VIA HFR",
+    "VIA TGF",
+    "VIA HFR - VIA TGF INC."
+  ],
+  "category": "unclear",
+  "notes": "This entity does not appear to be related to R&D spending."
+}

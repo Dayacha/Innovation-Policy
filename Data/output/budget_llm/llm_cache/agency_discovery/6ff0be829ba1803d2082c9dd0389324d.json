@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.6,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Environmental Assessment Agency",
+  "name_variants": [
+    "CEAA",
+    "Agence canadienne d'évaluation environnementale"
+  ],
+  "category": "unclear",
+  "notes": "The agency focuses on environmental assessments rather than direct R&D activities."
+}

@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Royal Canadian Mounted Police Public Complaints Commission",
+  "name_variants": [
+    "RCMP Public Complaints Commission",
+    "Commission des plaintes du public de la GRC"
+  ],
+  "category": "unclear",
+  "notes": "This entity is focused on public complaints and oversight, not R&D."
+}

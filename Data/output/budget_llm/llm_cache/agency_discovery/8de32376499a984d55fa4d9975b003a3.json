@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Veterans Review and Appeal Board",
+  "name_variants": [
+    "VRAB",
+    "Veterans Review Board"
+  ],
+  "category": "unclear",
+  "notes": "This entity is focused on veterans' appeals and reviews, not R&D."
+}

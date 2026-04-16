@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Truth and Reconciliation Commission on Indian Residential Schools",
+  "name_variants": [
+    "Commission de vérité et de réconciliation relative aux pensionnats indiens",
+    "TRC",
+    "Truth and Reconciliation Commission"
+  ],
+  "category": "unclear",
+  "notes": "This commission focuses on reconciliation and historical issues, not R&D."
+}

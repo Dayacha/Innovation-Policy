@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Transport Ministry",
+  "name_variants": [
+    "Transport",
+    "Ministère des Transports",
+    "Transport Canada"
+  ],
+  "category": "unclear",
+  "notes": "This entry represents a broad government department focused on transport, not specific R&D spending."
+}

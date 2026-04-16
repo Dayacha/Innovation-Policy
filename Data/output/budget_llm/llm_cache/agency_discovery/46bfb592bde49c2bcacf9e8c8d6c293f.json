@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Transport Office of Infrastructure of Canada",
+  "name_variants": [
+    "TOIC",
+    "Transport Canada Infrastructure Office"
+  ],
+  "category": "unclear",
+  "notes": "This entity is focused on infrastructure, which does not directly relate to R&D spending."
+}

@@ -776,14 +776,15 @@ with TAB_BUDGET:
     section_header("Budget line detail")
     _BUD_DISP_COLS = [c for c in [
         "country", "year", "ministry_display", "budget_line_display",
-        "amount_local", "currency", "budget_category", "confidence", "ai_decision", "ai_rationale", "source_file",
+        "amount_local", "unit", "currency", "budget_category", "item_type", "source_file", "series_notes",
     ] if c in db_f.columns]
     _BUD_COL_LABELS = {
         "country": "Country", "year": "Year", "ministry_display": "Ministry",
         "budget_line_display": "Description", "amount_local": f"Amount ({_ccy})",
-        "currency": "Currency", "budget_category": "R&D category", "confidence": "Confidence",
-        "ai_decision": "Decision", "ai_rationale": "Rationale",
+        "unit": "Unit", "currency": "Currency", "budget_category": "R&D category",
+        "item_type": "Item type",
         "source_file": "Source file",
+        "series_notes": "Series notes",
     }
     _bud_search = st.text_input(
         "Search table", key="bud_search", placeholder="Ministry, description, category…",
@@ -802,8 +803,8 @@ with TAB_BUDGET:
     render_table(
         _tbl[_BUD_DISP_COLS].sort_values("year"),
         col_labels=_BUD_COL_LABELS,
-        num_cols=["amount_local", "confidence"],
-        wide_cols=["budget_line_display", "ministry_display", "ai_rationale"],
+        num_cols=["amount_local"],
+        wide_cols=["budget_line_display", "ministry_display", "series_notes"],
     )
     st.download_button(
         "Download CSV",
@@ -1586,10 +1587,9 @@ with TAB_TABLE:
     _T5_BUD_LABELS = {
         "country": "Country", "year": "Year", "section_code": "Ministry code",
         "ministry_display": "Ministry", "budget_line_display": "Description",
-        "amount_local": "Amount (local currency)", "currency": "Currency",
-        "budget_category": "R&D category", "confidence": "Confidence",
-        "ai_decision": "Decision", "ai_rationale": "Rationale",
-        "source_file": "Source", "page_number": "Page",
+        "amount_local": "Amount (local currency)", "unit": "Unit", "currency": "Currency",
+        "budget_category": "R&D category", "item_type": "Item type",
+        "source_file": "Source", "page_number": "Page", "series_notes": "Series notes",
     }
     _T5_REF_LABELS = {
         "country_name": "Country", "survey_year": "Survey year",
@@ -1628,8 +1628,8 @@ with TAB_TABLE:
                 caption_note(f"{len(df5):,} rows  ·  multiple currencies (see Currency column)")
             render_table(_df5_disp.sort_values(["year","section_code"] if "section_code" in cols5 else ["year"]),
                          col_labels=_T5_BUD_LABELS,
-                         num_cols=["amount_local","confidence","page_number"],
-                         wide_cols=["budget_line_display","ministry_display","ai_rationale"])
+                         num_cols=["amount_local","page_number"],
+                         wide_cols=["budget_line_display","ministry_display","series_notes"])
             st.download_button("Download (CSV)", df5[cols5].to_csv(index=False).encode(),
                                "budget_lines.csv", "text/csv")
     else:
