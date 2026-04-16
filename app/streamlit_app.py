@@ -1615,7 +1615,7 @@ with TAB_TABLE:
             if cat_b != "All": m5 &= _db5["budget_category"] == cat_b
             if sel_bud_ctry and "country" in _db5.columns:
                 m5 &= _db5["country"].isin(sel_bud_ctry)
-            if "confidence" in _db5.columns:
+            if conf_b is not None and "confidence" in _db5.columns:
                 _conf5 = pd.to_numeric(_db5["confidence"], errors="coerce")
                 m5 &= _conf5.between(conf_b[0], conf_b[1], inclusive="both")
             df5 = _db5[m5]
