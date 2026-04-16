@@ -29,6 +29,22 @@ Reform pipeline (Stream 2):
         python main.py --reforms-build-panel-only
         python main.py --reforms-fetch-catalog
         python main.py --reforms-download
+
+Cross-verification (two-model merger):
+    Compare two independent extraction runs and produce a merged dataset.
+    Requires two completed extraction runs (primary and secondary model).
+
+    Step 1 — primary run (gpt-4o-mini, output_suffix: ""):
+        python main.py --reforms-only
+
+    Step 2 — secondary run (claude-sonnet-4, set output_suffix: "anthropic" in config):
+        python main.py --reforms-only
+
+    Step 3 — merge and adjudicate:
+        python main.py --reforms-cross-verify
+        python main.py --reforms-cross-verify --country DNK --year 2021
+        python main.py --reforms-cross-verify --consensus-only
+        python main.py --reforms-cross-verify --build-panel-only
 """
 
 import argparse
@@ -114,6 +130,10 @@ if __name__ == "__main__":
         "--reforms-only", action="store_true",
         help="Run only the OECD Economic Survey reform extraction pipeline",
     )
+    pipeline_group.add_argument(
+        "--reforms-cross-verify", action="store_true",
+        help="Merge two reform extraction runs (cross-verification, Strategy B)",
+    )
 
     # ── Budget pipeline flags ─────────────────────────────────────────────────
     parser.add_argument("--country", help="Country to compile (e.g. Australia, Canada)")
@@ -129,6 +149,16 @@ if __name__ == "__main__":
     from reforms.pipeline_reforms import add_arguments as _add_reform_args
     _add_reform_args(parser)
 
+    # ── Cross-verification flags ──────────────────────────────────────────────
+    parser.add_argument(
+        "--consensus-only", action="store_true",
+        help="Cross-verify: keep only reforms found by both models (no LLM adjudication)",
+    )
+    parser.add_argument(
+        "--build-panel-only", action="store_true",
+        help="Cross-verify: skip merging, re-build panel from existing merged JSONs",
+    )
+
     args = parser.parse_args()
 
     if args.budget or args.build_database:
@@ -137,6 +167,20 @@ if __name__ == "__main__":
     elif args.reforms_only:
         from reforms.pipeline_reforms import run_from_args as _run_reforms
         _run_reforms(args)
+
+    elif args.reforms_cross_verify:
+        from reforms.cross_verifier import main as _run_cross_verify
+        # Pass through relevant flags as argv so cross_verifier parses them
+        cv_argv = ["--config", args.config]
+        if getattr(args, "reforms_country", None):
+            cv_argv += ["--country", args.reforms_country]
+        if getattr(args, "reforms_year", None):
+            cv_argv += ["--year", str(args.reforms_year)]
+        if getattr(args, "consensus_only", False):
+            cv_argv.append("--consensus-only")
+        if getattr(args, "build_panel_only", False):
+            cv_argv.append("--build-panel-only")
+        _run_cross_verify(cv_argv)
 
     else:
         # Default: print help

@@ -423,6 +423,8 @@ with st.sidebar:
 
     # ── Stream 1 filters ──
     _sidebar_label("Stream 1 — R&D Budget")
+    dec_b = []
+    conf_b = None
     if budget_available():
         _db = load_budget()
         _yrs = sorted(_db["year"].unique())
@@ -619,7 +621,7 @@ with TAB_BUDGET:
         m &= db["budget_category"] == cat_b
     if sel_bud_ctry and "country" in db.columns:
         m &= db["country"].isin(sel_bud_ctry)
-    if "confidence" in db.columns:
+    if conf_b is not None and "confidence" in db.columns:
         _conf = pd.to_numeric(db["confidence"], errors="coerce")
         m &= _conf.between(conf_b[0], conf_b[1], inclusive="both")
     db_f = db[m].copy()
