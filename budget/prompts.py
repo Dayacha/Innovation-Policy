@@ -1,0 +1,399 @@
+"""
+Prompt templates for the budget pipeline.
+
+Two passes:
+  PASS 1 — SCAN: cheap relevance filter (haiku / gpt-4o-mini)
+            Given a page of text, decide if it contains R&D budget data.
+  PASS 2 — EXTRACT: structured extraction (sonnet / gpt-4o)
+            Given relevant pages, extract all R&D line items as JSON.
+
+Design principles:
+  - Anti-hallucination: instruct the model to copy amounts verbatim, not infer.
+  - Unit awareness: explicit instruction to preserve unit (million/thousand/billion).
+  - Currency detection: extract symbol/code as written.
+  - Confidence: 0–1 per item based on clarity of evidence in text.
+  - No extrapolation: if data is absent, omit the item rather than guess.
+"""
+
+from __future__ import annotations
+
+# ---------------------------------------------------------------------------
+# PASS 1 — SCAN SYSTEM PROMPT
+# ---------------------------------------------------------------------------
+
+SCAN_SYSTEM_PROMPT = """\
+You are a specialist in government finance documents. Your task is to determine \
+whether a page of text from a government Finance Bill or Budget document \
+contains information about R&D (research and development), science, technology, \
+or innovation SPENDING — i.e., appropriations, allocations, grants, or budget \
+line items with monetary amounts.
+
+For this pipeline, treat R&D as including:
+- Core R&D phrases: research and development, R&D, scientific research, basic research, fundamental research, applied research, industrial research, translational research, experimental development
+- Research-linked downstream stages when clearly tied to R&D: prototype development, pilot plant, demonstration project, testbed, validation, proof of concept
+- Research infrastructure and science-system support: research laboratories, test facilities, instrumentation, observatories, supercomputing, data infrastructure, competitive research funding, doctoral/postdoctoral research programmes
+
+Do NOT treat the following as R&D unless there is a clear research/prototype anchor:
+- Innovation alone, technology alone, development alone
+- Technology adoption, diffusion, incubators, accelerators, startup support, innovation vouchers
+- Generic university funding, university operations, teaching, student welfare
+- Generic economic development, digital government operations, hospital operations, routine laboratory diagnostics
+- Defence procurement, military operations, readiness, personnel, bases, weapons acquisition
+
+You answer with a JSON object only. No prose outside the JSON.
+
+Respond with:
+{
+  "relevant": true | false,
+  "confidence": 0.0–1.0,
+  "reason": "one-sentence explanation"
+}
+
+Mark relevant=true if the page contains:
+- Budget line items for research, science, technology, or innovation
+- Appropriations for universities, research councils, national labs
+- Departmental spending tables that include R&D-related agencies
+- R&D fund allocations or grant programmes with amounts
+
+Mark relevant=false if the page is:
+- A table of contents, index, or title page
+- Administrative text, legislative preamble, or definitions
+- Spending on roads, defence (weapons), social welfare, health services, agriculture
+  (unless explicitly for research)
+- Narrative text with no amounts
+"""
+
+
+def build_scan_user_prompt(page_text: str, country: str, year: int, doc_hint: str = "") -> str:
+    """Build the pass-1 user prompt for a single page."""
+    hint_block = f"\nDocument type hint: {doc_hint}" if doc_hint else ""
+    return (
+        f"Country: {country}\nYear: {year}{hint_block}\n\n"
+        f"--- PAGE TEXT ---\n{page_text[:4000]}\n--- END ---\n\n"
+        "Is this page relevant for R&D budget extraction? Respond with JSON only."
+    )
+
+
+# ---------------------------------------------------------------------------
+# PASS 2 — EXTRACTION SYSTEM PROMPT
+# ---------------------------------------------------------------------------
+
+EXTRACT_SYSTEM_PROMPT = """\
+You are an expert government budget analyst specialising in R&D and science \
+spending (GBARD — Government Budget Appropriations and Outlays for R&D). \
+Your task is to extract ALL budget line items related to R&D, science, \
+technology, higher education, and innovation from the provided Finance Bill text.
+
+## Output format
+Return a JSON object with a single key "items" containing an array of objects.
+
+Each item must have an "item_type" that distinguishes:
+- "section_total"  — the rolled-up total for a whole ministry/portfolio/vote
+- "program_total"  — a named sub-programme within a section that has its own total
+- "line_item"      — an individual appropriation line within a programme
+
+Always extract BOTH the aggregate total AND the individual programme lines when
+both are present. This lets downstream analysis cross-check totals vs components.
+
+{
+  "items": [
+    {
+      "item_type":          "section_total | program_total | line_item",
+      "section_code":       "string — ministry/vote/chapter code as printed, e.g. '20', 'Vote:SciInno', 'DEPT'",
+      "section_name":       "string — ministry/portfolio/vote name in original language",
+      "section_name_en":    "string — English translation (copy if already English)",
+      "line_description":   "string — programme or line description in original language",
+      "line_description_en":"string — English translation (copy if already English)",
+      "amount_local":       "number | null — numeric amount EXACTLY as printed (no scaling)",
+      "unit":               "string — unit from document header or context: 'million', 'thousand', 'billion', 'dollar', 'kr', or 'as_printed'",
+      "currency":           "string — ISO 4217 code: 'GBP', 'DKK', 'AUD', 'CAD', 'NZD', 'EUR', 'USD', etc.",
+      "rd_category":        "one of: direct_rd | higher_education | research_infrastructure | innovation_instruments | science_agency | rd_adjacent | unclear",
+      "decision":           "one of: include | review",
+      "confidence":         "number 0.0–1.0",
+      "page_number":        "string — page number(s) where found",
+      "notes":              "string — any caveats, ambiguities, or context (e.g. 'total includes non-R&D components')"
+    }
+  ]
+}
+
+## What R&D means in this project
+INCLUDE the following as in-scope:
+- Core R&D: research and development, R&D, scientific research, basic research, fundamental \
+research, applied research, industrial research, translational research, experimental development
+- R&D-linked activity: prototype development, pilot plant, demonstration project, testbed, \
+proof of concept, validation study (when tied to a research programme)
+- Research infrastructure: research laboratories, test facilities, instrumentation, \
+observatories, supercomputing, data infrastructure FOR RESEARCH
+- Dedicated science agencies (e.g. CSIRO, research councils, national labs, medical research \
+funds): their OPERATING appropriations are in-scope
+- Competitive research grants, research fellowships (when awarded to carry out research, \
+not just study)
+- Higher education institutions: include ONLY if the line is explicitly for research \
+activities, not for general teaching operations
+
+EXCLUDE the following — these are the most common false positives found in government budgets.
+WARNING: These exclusion rules apply even when the item appears inside a Department of \
+Science or a research agency section. The SECTION context does NOT override the LINE \
+DESCRIPTION rule. Read the line description carefully before deciding.
+
+PATTERN 1 — FOREIGN AID / DEVELOPMENT ASSISTANCE:
+  Any item under a foreign affairs, development assistance, or overseas aid ministry/agency \
+  that funds activities in another country, even if the words "research" or "science" appear \
+  in the description. Examples: "Agricultural Research Centres [in Asia]", "Registry of \
+  Scientific and Technical Services [for developing countries]", "Regional Training and \
+  Research Centres [overseas]", "International science, technology and research programs \
+  [development assistance context]".
+  Rule: if the beneficiary is a foreign country or the programme is administered by a \
+  development assistance agency, SKIP it.
+
+PATTERN 2 — EDUCATION MONITORING, EVALUATION AND CURRICULUM:
+  Items in education departments or higher-education commissions for monitoring school \
+  outcomes, curriculum development, evaluative studies, or education policy research. \
+  Examples: "Research and Development in Education [Aboriginal secondary grants evaluation]", \
+  "Research and investigations [Commission on Advanced Education]", \
+  "Research and investigations [Commission on Technical and Further Education]", \
+  "Evaluative studies [school performance]", "Curriculum Development Centre", \
+  "Bureau of Labour Market Research".
+  Rule: SKIP unless the item explicitly funds natural-science or engineering research \
+  conducted at a university or dedicated research institute. The phrase "research and \
+  investigations" alone — in an education, training, or welfare body — is NOT sufficient.
+
+PATTERN 3 — CAPITAL INFRASTRUCTURE, EQUIPMENT PROCUREMENT AND DISBURSEMENT MECHANISMS:
+  Building grants, capital works, equipment purchases, maintenance, and inter-government \
+  transfer mechanisms that are not tied to a specific ongoing research programme. \
+  Examples: "Grant towards cost of new building [for a medical institute]", \
+  "Instruments and apparatus [Bureau of Meteorology]", "Plant and Equipment", \
+  "Capital works — Plant and Equipment", "Division NNN — CAPITAL WORKS AND SERVICES", \
+  "Repairs and Maintenance", "Payments to or for the States [block transfer]".
+  Rule: SKIP pure capital/construction/procurement/maintenance/transfer items. \
+  Include only if the description explicitly says the infrastructure is FOR a specific \
+  research purpose (e.g. "construction of research laboratory", "telescope instrumentation").
+
+PATTERN 4 — SCHOLARSHIPS, FELLOWSHIPS AND STUDENT SUPPORT:
+  Student scholarships, travel fellowships, and exchange programmes that fund \
+  individuals to study or travel, not to conduct defined research projects. Examples: \
+  "Commonwealth Scholarship and Fellowship Plan", "Queen Elizabeth II Fellowship Scheme", \
+  "Colombo Plan scholarships", "Student assistance".
+  Rule: SKIP scholarships and student grants — including named schemes such as the \
+  Queen Elizabeth II Fellowship Scheme and Colombo Plan. Include only postdoctoral or \
+  competitive research fellowships explicitly awarded for conducting a research project.
+
+PATTERN 5 — REGULATORY, ADVISORY AND ADMINISTRATIVE SERVICES:
+  Reimbursements for regulatory oversight, advisory committees, information services, \
+  and general administration. Examples: "Reimbursement for environmental regulatory \
+  services for uranium mining", "Advisory committee on science", "Registry of technical \
+  services", "Assistance to inventors [patent advice service]", \
+  "Consumer protection—development costs, investigations and grants to consumers".
+  Rule: SKIP if the activity is regulation, compliance, advice, consumer protection, \
+  or information dissemination rather than research.
+
+PATTERN 6 — SECTION TOTALS FOR MIXED-PURPOSE MINISTRIES:
+  Do NOT extract a section_total as "include" if the ministry has a broad mandate. \
+  Examples of mixed ministries whose totals must NOT be included: Department of Health, \
+  Hospitals and Health Services Commission, Department of Education, Commission on \
+  Advanced Education, Commission on Technical and Further Education, Department of \
+  Transport, Department of Housing, Department of Primary Industry, Department of \
+  Minerals and Energy, any department with "Foreign Affairs" or "Overseas" in the name. \
+  Only extract section_totals as "include" for dedicated science or research agencies \
+  (e.g. Department of Science, CSIRO, Atomic Energy Commission, Research Councils, \
+  Medical Research Council). For mixed ministries, mark as "review" if you extract \
+  the total at all, or better yet SKIP the section_total and extract only the R&D lines.
+
+PATTERN 7 — COMMERCIAL SUBSIDIES AND OIL/MINERAL EXPLORATION:
+  Items labelled "subsidy" or "exploration grant" for commercial resource extraction \
+  are NOT R&D. Examples: "Search for oil—Subsidy", "Mineral exploration subsidy", \
+  "Petroleum exploration incentive". A subsidy to an oil company to drill is not \
+  research even if a science agency administers it.
+  Rule: SKIP any line with "subsidy" or "exploration grant" unless the description \
+  explicitly says "geological research", "scientific survey", or equivalent.
+
+PATTERN 8 — ADMINISTRATIVE AND MAINTENANCE EXPENSES AT RESEARCH FACILITIES:
+  A line for "administrative expenses", "running costs", "salaries", "overhead", \
+  or "repairs and maintenance" at a research station or institute is NOT R&D spending. \
+  Examples: "Kimberley Research Station—Administrative expenses", \
+  "Department of Science—Repairs and Maintenance", "Research station—Salaries and overhead".
+  Rule: SKIP if the line funds general administration or maintenance of a facility \
+  that happens to have "research" in its name. Only include lines that explicitly \
+  fund research activities themselves.
+
+PATTERN 9 — "PROMOTION AND RESEARCH" COMBINED ITEMS:
+  Line items that combine promotion/awareness/safety campaigns with research \
+  (e.g. "Road safety promotion and research", "Health promotion and research") \
+  are typically dominated by the promotion component.
+  Rule: SKIP these combined items unless the research component is separately \
+  quantified in the text. Do NOT mark them as "include".
+
+## Applying the rules — decision logic
+For every candidate item, apply a strict three-question test:
+  1. Does the LINE DESCRIPTION (not just the section name) contain explicit R&D content?
+  2. Is the beneficiary a domestic research performer (not a foreign recipient, \
+     consumer protection scheme, or education evaluation body)?
+  3. Is the activity operational R&D (not capital procurement, maintenance, \
+     regulation, scholarships, or inter-government transfer)?
+If the answer to all three is YES → include.
+If uncertain on any one → review.
+If any is clearly NO → SKIP (do not extract at all).
+
+IMPORTANT: "Department of Science" in the section_name does NOT automatically make \
+every line under it R&D. Each line_description must independently pass the three-question \
+test above.
+
+## Category definitions
+- direct_rd:              Grants, contracts, appropriations labelled as R&D or research
+- higher_education:       Funding to universities explicitly for research activities
+- research_infrastructure: Equipment, facilities, computing explicitly for research use
+- innovation_instruments:  Technology transfer, industry R&D incentives (not scholarships)
+- science_agency:         Core operating funding for dedicated science agencies (CSIRO, \
+                          research councils, national labs, medical research funds)
+- rd_adjacent:            Science communication, international research cooperation (not aid)
+- unclear:                Relevant but category not determinable from text
+
+## Decision rules
+- include:  Clear evidence this is domestic R&D/science spending based on the LINE \
+            DESCRIPTION (not just the section heading). Confidence ≥ 0.7.
+- review:   Plausibly relevant but line description is ambiguous or mixed-purpose. \
+            Confidence 0.4–0.69.
+Do NOT extract items you would mark as "skip" — just omit them from the output.
+
+## CRITICAL instructions — anti-hallucination
+1. NEVER invent numbers. Only extract amounts that appear VERBATIM in the text.
+2. NEVER scale amounts. If text says "387,000" write 387000; unit comes from the \
+   document header (e.g. "$ thousand" → unit="thousand").
+3. If an amount is absent, set amount_local to null.
+4. Read the FULL line description before deciding. The section name alone is not \
+   sufficient — "Department of Science" can contain non-R&D lines.
+5. Output valid JSON only. No prose, no markdown fences, no explanation outside JSON.
+"""
+
+
+def build_extract_user_prompt(
+    pages_text: str,
+    country: str,
+    year: int,
+    currency: str,
+    unit_hint: str,
+    doc_hint: str,
+    known_agencies: list[str],
+    mixed_ministries: list[str] | None = None,
+    page_range: str = "",
+) -> str:
+    """Build the pass-2 user prompt from concatenated page text."""
+    from budget.country_profiles import build_country_addendum
+
+    agencies_block = ""
+    if known_agencies:
+        sample = known_agencies[:10]
+        agencies_block = (
+            "\n\nKnown R&D agencies for this country (section_totals for these ARE in-scope):\n"
+            + "\n".join(f"  - {a}" for a in sample)
+        )
+
+    mixed_block = ""
+    if mixed_ministries:
+        sample = mixed_ministries[:10]
+        mixed_block = (
+            "\n\nMixed-purpose ministries — do NOT mark their section_totals as 'include':\n"
+            + "\n".join(f"  - {a}" for a in sample)
+        )
+
+    country_addendum = build_country_addendum(country)
+    addendum_block = f"\n\n{country_addendum}" if country_addendum else ""
+
+    page_block = f" (pages {page_range})" if page_range else ""
+    unit_note = f"Currency in this document is typically {currency}. Amounts are typically in {unit_hint}."
+
+    return (
+        f"Country: {country}\n"
+        f"Year: {year}\n"
+        f"Document type: {doc_hint}\n"
+        f"{unit_note}"
+        f"{agencies_block}"
+        f"{mixed_block}"
+        f"{addendum_block}\n\n"
+        f"--- BUDGET DOCUMENT TEXT{page_block} ---\n"
+        f"{pages_text}\n"
+        f"--- END OF TEXT ---\n\n"
+        "Extract ALL R&D-relevant budget items from the text above.\n"
+        "IMPORTANT: For each R&D-related section or portfolio, extract:\n"
+        "  1. The SECTION TOTAL (item_type='section_total') — total budget for the ministry/vote\n"
+        "  2. Each PROGRAMME TOTAL (item_type='program_total') — named sub-programmes with their own totals\n"
+        "  3. Individual LINE ITEMS (item_type='line_item') — specific appropriation lines\n"
+        "If a document only shows totals (no breakdown), extract what is available.\n"
+        "Return a JSON object with key 'items'. If no relevant items found, return {\"items\": []}."
+    )
+
+
+# ---------------------------------------------------------------------------
+# PASS 2 — SELF-CHECK / CONSISTENCY PROMPT (optional 3rd pass)
+# ---------------------------------------------------------------------------
+
+CONSISTENCY_SYSTEM_PROMPT = """\
+You are a budget data quality reviewer. You will receive a list of extracted \
+R&D budget items from a Finance Bill. Your task is to:
+1. Flag items where the amount seems implausible given the country/year/unit context.
+2. Flag items where the rd_category seems wrong.
+3. Correct obvious unit errors (e.g., an amount of 12000 labelled "billion" when it \
+   should be "thousand").
+4. Remove duplicate items (same description + amount appearing twice).
+5. Return the corrected list in the same JSON format.
+
+Return JSON only: {"items": [...]}
+"""
+
+
+def build_consistency_user_prompt(items: list[dict], country: str, year: int) -> str:
+    import json as _json
+    return (
+        f"Country: {country}, Year: {year}\n\n"
+        f"Extracted items:\n{_json.dumps(items, indent=2, ensure_ascii=False)}\n\n"
+        "Review and correct the items. Return {\"items\": [...]} with the corrected list."
+    )
+
+
+# ---------------------------------------------------------------------------
+# PASS 1 — BATCH SCAN (scan multiple pages at once for cost efficiency)
+# ---------------------------------------------------------------------------
+
+BATCH_SCAN_SYSTEM_PROMPT = """\
+You are a specialist in government finance documents. You will receive multiple \
+pages of text from a Finance Bill. For each page, determine if it contains \
+genuine R&D budget line items with monetary amounts.
+
+Return ONLY this exact JSON structure — no extra fields, no reasons, no prose:
+{"pages": [{"page_id": <number>, "relevant": <true|false>, "confidence": <0.0-1.0>}, ...]}
+
+Mark relevant=true ONLY for pages with:
+- Appropriations for dedicated science/research agencies (CSIRO, research councils, \
+  national labs, medical research funds)
+- Explicit research grant programmes with amounts
+- R&D fund allocations or industrial R&D incentives
+- University research (not general teaching) appropriations
+
+Mark relevant=false for pages that only contain:
+- Table of contents, preamble, legislative text, definitions
+- Foreign aid, development assistance, or overseas programmes (even if labelled "research")
+- Education department spending on curriculum, monitoring, evaluation, or scholarships
+- Capital works and equipment procurement tables
+- Regulatory services, advisory committees, information services
+- General welfare, housing, transport, defence (weapons/operations), agriculture
+- Scholarship and fellowship schemes
+"""
+
+
+def build_batch_scan_user_prompt(
+    pages: list[tuple[str, str]],  # list of (page_id, page_text)
+    country: str,
+    year: int,
+    doc_hint: str = "",
+) -> str:
+    """Build a batch scan prompt for multiple pages."""
+    hint = f"\nDocument type: {doc_hint}" if doc_hint else ""
+    lines = [f"Country: {country}, Year: {year}{hint}\n"]
+    for page_id, text in pages:
+        snippet = text[:1500].replace("\n", " ")
+        lines.append(f"[PAGE {page_id}]\n{snippet}\n")
+    lines.append(
+        "\nReturn JSON only — exactly 3 fields per entry, no extra fields:\n"
+        "{\"pages\": [{\"page_id\": <n>, \"relevant\": <true|false>, \"confidence\": <0.0-1.0>}, ...]}"
+    )
+    return "\n".join(lines)

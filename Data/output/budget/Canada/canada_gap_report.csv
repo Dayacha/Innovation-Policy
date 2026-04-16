@@ -1,0 +1,56 @@
+country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
+Canada,2020,NSERC,science_agency,ok,,,,,none,2669355.6330000004,,2730907.787
+Canada,2021,NSERC,science_agency,ok,,,,,none,2730907.787,2669355.6330000004,2668730.038
+Canada,2022,NSERC,science_agency,ok,,,,,none,2668730.038,2730907.787,1365070.4810000001
+Canada,2023,NSERC,science_agency,outlier,"Amount 1,365,070 outside expected range [2,482,197 – 2,917,441] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1365070.4810000001,2668730.038,2780080.946
+Canada,2024,NSERC,science_agency,ok,,,,,none,2780080.946,1365070.4810000001,
+Canada,2020,SSHRC,science_agency,ok,,,,,none,2037489.277,,1974937.5
+Canada,2021,SSHRC,science_agency,ok,,,,,none,1974937.5,2037489.277,2138727.178
+Canada,2022,SSHRC,science_agency,ok,,,,,none,2138727.178,1974937.5,2262674.8370000003
+Canada,2023,SSHRC,science_agency,ok,,,,,none,2262674.8370000003,2138727.178,2433652.602
+Canada,2024,SSHRC,science_agency,ok,,,,,none,2433652.602,2262674.8370000003,
+Canada,2020,CIHR,science_agency,ok,,,,,none,1397777.2349999999,,1381920.889
+Canada,2021,CIHR,science_agency,ok,,,,,none,1381920.889,1397777.2349999999,1345469.3739999998
+Canada,2022,CIHR,science_agency,ok,,,,,none,1345469.3739999998,1381920.889,1348569.077
+Canada,2023,CIHR,science_agency,ok,,,,,none,1348569.077,1345469.3739999998,1416108.8760000002
+Canada,2024,CIHR,science_agency,ok,,,,,none,1416108.8760000002,1348569.077,
+Canada,2020,National Research Council (NRC),science_agency,ok,,,,,none,1339432.682,,1364228.0480000002
+Canada,2021,National Research Council (NRC),science_agency,ok,,,,,none,1364228.0480000002,1339432.682,1300408.775
+Canada,2022,National Research Council (NRC),science_agency,ok,,,,,none,1300408.775,1364228.0480000002,1348312.492
+Canada,2023,National Research Council (NRC),science_agency,ok,,,,,none,1348312.492,1300408.775,1364848.396
+Canada,2024,National Research Council (NRC),science_agency,ok,,,,,none,1364848.396,1348312.492,
+Canada,2020,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,,0.0
+Canada,2021,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,
+Canada,2020,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,1253935.845,,1227899.417
+Canada,2021,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,1227899.417,1253935.845,1326123.883
+Canada,2022,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,1326123.883,1227899.417,1547315.307
+Canada,2023,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,1547315.307,1326123.883,1591309.916
+Canada,2024,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,1591309.916,1547315.307,
+Canada,2020,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,,0.0
+Canada,2021,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,
+Canada,2020,Canadian Space Agency,science_agency,ok,,,,,none,461486.261,,560981.556
+Canada,2021,Canadian Space Agency,science_agency,ok,,,,,none,560981.556,461486.261,738063.873
+Canada,2022,Canadian Space Agency,science_agency,ok,,,,,none,738063.873,560981.556,626884.706
+Canada,2023,Canadian Space Agency,science_agency,ok,,,,,none,626884.706,738063.873,481873.003
+Canada,2024,Canadian Space Agency,science_agency,ok,,,,,none,481873.003,626884.706,
+Canada,2020,International Development Research Centre,science_agency,ok,,,,,none,141848.784,,148611.325
+Canada,2021,International Development Research Centre,science_agency,ok,,,,,none,148611.325,141848.784,153701.325
+Canada,2022,International Development Research Centre,science_agency,ok,,,,,none,153701.325,148611.325,152798.272
+Canada,2023,International Development Research Centre,science_agency,ok,,,,,none,152798.272,153701.325,157520.169
+Canada,2024,International Development Research Centre,science_agency,ok,,,,,none,157520.169,152798.272,
+Canada,2020,Telefilm Canada,innovation_instruments,ok,,,,,none,151532.949,,274355.60099999997
+Canada,2021,Telefilm Canada,innovation_instruments,ok,,,,,none,274355.60099999997,151532.949,311108.479
+Canada,2022,Telefilm Canada,innovation_instruments,ok,,,,,none,311108.479,274355.60099999997,151908.479
+Canada,2023,Telefilm Canada,innovation_instruments,ok,,,,,none,151908.479,311108.479,158302.331
+Canada,2024,Telefilm Canada,innovation_instruments,ok,,,,,none,158302.331,151908.479,
+Canada,2020,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,29453.623,,29761.017
+Canada,2021,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,29761.017,29453.623,32886.748
+Canada,2022,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,32886.748,29761.017,35785.795
+Canada,2023,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,35785.795,32886.748,36506.666
+Canada,2024,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,36506.666,35785.795,

@@ -1,0 +1,1189 @@
+country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
+Australia,1975,CSIRO,science_agency,ok,,,,,none,112708.707,,163134.297
+Australia,1976,CSIRO,science_agency,ok,,,,,none,163134.297,112708.707,154178.472
+Australia,1977,CSIRO,science_agency,ok,,,,,none,154178.472,163134.297,174213.338
+Australia,1978,CSIRO,science_agency,ok,,,,,none,174213.338,154178.472,196726.579
+Australia,1979,CSIRO,science_agency,ok,,,,,none,196726.579,174213.338,143190.479
+Australia,1980,CSIRO,science_agency,ok,,,,,none,143190.479,196726.579,191607.738
+Australia,1981,CSIRO,science_agency,ok,,,,,none,191607.738,143190.479,264039.01399999997
+Australia,1982,CSIRO,science_agency,ok,,,,,none,264039.01399999997,191607.738,717732.512
+Australia,1983,CSIRO,science_agency,ok,,,,,none,717732.512,264039.01399999997,540098.9839999999
+Australia,1984,CSIRO,science_agency,ok,,,,,none,540098.9839999999,717732.512,571189.804
+Australia,1985,CSIRO,science_agency,ok,,,,,none,571189.804,540098.9839999999,495096.674
+Australia,1986,CSIRO,science_agency,ok,,,,,none,495096.674,571189.804,537917.042
+Australia,1987,CSIRO,science_agency,ok,,,,,none,537917.042,495096.674,367756.69999999995
+Australia,1988,CSIRO,science_agency,ok,,,,,none,367756.69999999995,537917.042,347783.806
+Australia,1989,CSIRO,science_agency,ok,,,,,none,347783.806,367756.69999999995,348084.6
+Australia,1990,CSIRO,science_agency,ok,,,,,none,348084.6,347783.806,387314.5
+Australia,1991,CSIRO,science_agency,ok,,,,,none,387314.5,348084.6,414359.9
+Australia,1992,CSIRO,science_agency,ok,,,,,none,414359.9,387314.5,446264.0
+Australia,1993,CSIRO,science_agency,ok,,,,,none,446264.0,414359.9,451414.0
+Australia,1994,CSIRO,science_agency,ok,,,,,none,451414.0,446264.0,448945.0
+Australia,1995,CSIRO,science_agency,ok,,,,,none,448945.0,451414.0,850780.0
+Australia,1996,CSIRO,science_agency,ok,,,,,none,850780.0,448945.0,417597.0
+Australia,1997,CSIRO,science_agency,ok,,,,,none,417597.0,850780.0,883935.0
+Australia,1998,CSIRO,science_agency,ok,,,,,none,883935.0,417597.0,466837.0
+Australia,1999,CSIRO,science_agency,ok,,,,,none,466837.0,883935.0,0.0
+Australia,2000,CSIRO,science_agency,ok,,,,,none,0.0,466837.0,0.0
+Australia,2001,CSIRO,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,CSIRO,science_agency,ok,,,,,none,0.0,0.0,639629.0
+Australia,2003,CSIRO,science_agency,ok,,,,,none,639629.0,0.0,568107.0
+Australia,2004,CSIRO,science_agency,ok,,,,,none,568107.0,639629.0,576528.0
+Australia,2005,CSIRO,science_agency,ok,,,,,none,576528.0,568107.0,593928.0
+Australia,2006,CSIRO,science_agency,ok,,,,,none,593928.0,576528.0,610060.0
+Australia,2007,CSIRO,science_agency,ok,,,,,none,610060.0,593928.0,664470.0
+Australia,2008,CSIRO,science_agency,ok,,,,,none,664470.0,610060.0,675790.0
+Australia,2009,CSIRO,science_agency,ok,,,,,none,675790.0,664470.0,721004.0
+Australia,2010,CSIRO,science_agency,ok,,,,,none,721004.0,675790.0,1435669.0
+Australia,2011,CSIRO,science_agency,ok,,,,,none,1435669.0,721004.0,734839.0
+Australia,2012,CSIRO,science_agency,ok,,,,,none,734839.0,1435669.0,736774.0
+Australia,2013,CSIRO,science_agency,ok,,,,,none,736774.0,734839.0,757077.0
+Australia,2014,CSIRO,science_agency,ok,,,,,none,757077.0,736774.0,757077.0
+Australia,2015,CSIRO,science_agency,ok,,,,,none,757077.0,757077.0,749681.0
+Australia,2016,CSIRO,science_agency,ok,,,,,none,749681.0,757077.0,756114.0
+Australia,2017,CSIRO,science_agency,ok,,,,,none,756114.0,749681.0,803549.0
+Australia,2018,CSIRO,science_agency,ok,,,,,none,803549.0,756114.0,900.0
+Australia,2019,CSIRO,science_agency,ok,,,,,none,900.0,803549.0,520308.0
+Australia,2020,CSIRO,science_agency,ok,,,,,none,520308.0,900.0,487896.0
+Australia,2021,CSIRO,science_agency,ok,,,,,none,487896.0,520308.0,950001.0
+Australia,2022,CSIRO,science_agency,ok,,,,,none,950001.0,487896.0,112724.0
+Australia,2023,CSIRO,science_agency,ok,,,,,none,112724.0,950001.0,1059439.0
+Australia,2024,CSIRO,science_agency,ok,,,,,none,1059439.0,112724.0,966559.0
+Australia,2025,CSIRO,science_agency,ok,,,,,none,966559.0,1059439.0,599296.0
+Australia,2026,CSIRO,science_agency,ok,,,,,none,599296.0,966559.0,
+Australia,1988,Australian Research Council (ARC),science_agency,ok,,,,,none,42665.446,,0.0
+Australia,1989,Australian Research Council (ARC),science_agency,ok,,,,,none,0.0,42665.446,0.0
+Australia,1990,Australian Research Council (ARC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1991,Australian Research Council (ARC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1992,Australian Research Council (ARC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1993,Australian Research Council (ARC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1994,Australian Research Council (ARC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1995,Australian Research Council (ARC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1996,Australian Research Council (ARC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1997,Australian Research Council (ARC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1998,Australian Research Council (ARC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1999,Australian Research Council (ARC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2000,Australian Research Council (ARC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2001,Australian Research Council (ARC),science_agency,ok,,,,,none,0.0,0.0,5342.0
+Australia,2002,Australian Research Council (ARC),science_agency,ok,,,,,none,5342.0,0.0,12544.0
+Australia,2003,Australian Research Council (ARC),science_agency,ok,,,,,none,12544.0,5342.0,12153.0
+Australia,2004,Australian Research Council (ARC),science_agency,ok,,,,,none,12153.0,12544.0,12910.0
+Australia,2005,Australian Research Council (ARC),science_agency,ok,,,,,none,12910.0,12153.0,14996.0
+Australia,2006,Australian Research Council (ARC),science_agency,ok,,,,,none,14996.0,12910.0,14922.0
+Australia,2007,Australian Research Council (ARC),science_agency,ok,,,,,none,14922.0,14996.0,15251.0
+Australia,2008,Australian Research Council (ARC),science_agency,ok,,,,,none,15251.0,14922.0,15896.0
+Australia,2009,Australian Research Council (ARC),science_agency,ok,,,,,none,15896.0,15251.0,25683.0
+Australia,2010,Australian Research Council (ARC),science_agency,ok,,,,,none,25683.0,15896.0,31171.0
+Australia,2011,Australian Research Council (ARC),science_agency,ok,,,,,none,31171.0,25683.0,48444.0
+Australia,2012,Australian Research Council (ARC),science_agency,ok,,,,,none,48444.0,31171.0,25953.0
+Australia,2013,Australian Research Council (ARC),science_agency,ok,,,,,none,25953.0,48444.0,25953.0
+Australia,2014,Australian Research Council (ARC),science_agency,ok,,,,,none,25953.0,25953.0,52833.0
+Australia,2015,Australian Research Council (ARC),science_agency,ok,,,,,none,52833.0,25953.0,26411.0
+Australia,2016,Australian Research Council (ARC),science_agency,ok,,,,,none,26411.0,52833.0,57982.0
+Australia,2017,Australian Research Council (ARC),science_agency,ok,,,,,none,57982.0,26411.0,30005.0
+Australia,2018,Australian Research Council (ARC),science_agency,ok,,,,,none,30005.0,57982.0,0.0
+Australia,2019,Australian Research Council (ARC),science_agency,ok,,,,,none,0.0,30005.0,19456.0
+Australia,2020,Australian Research Council (ARC),science_agency,ok,,,,,none,19456.0,0.0,12923.0
+Australia,2021,Australian Research Council (ARC),science_agency,ok,,,,,none,12923.0,19456.0,28457.0
+Australia,2022,Australian Research Council (ARC),science_agency,ok,,,,,none,28457.0,12923.0,2572.0
+Australia,2023,Australian Research Council (ARC),science_agency,ok,,,,,none,2572.0,28457.0,34537.0
+Australia,2024,Australian Research Council (ARC),science_agency,ok,,,,,none,34537.0,2572.0,1055621.0
+Australia,2025,Australian Research Council (ARC),science_agency,outlier,"Amount 1,055,621 outside expected range [-82,302 – 109,736] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1055621.0,34537.0,620763.0
+Australia,2026,Australian Research Council (ARC),science_agency,outlier,"Amount 620,763 outside expected range [-82,302 – 109,736] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,620763.0,1055621.0,
+Australia,1975,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,4779.509,,8030.0
+Australia,1976,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,8030.0,4779.509,5211.0
+Australia,1977,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,5211.0,8030.0,10295.5
+Australia,1978,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,10295.5,5211.0,11714.0
+Australia,1979,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,11714.0,10295.5,0.0
+Australia,1980,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,0.0,11714.0,14000.0
+Australia,1981,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,14000.0,0.0,37396.0
+Australia,1982,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,37396.0,14000.0,25648.0
+Australia,1983,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,25648.0,37396.0,29604.0
+Australia,1984,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,29604.0,25648.0,37979.0
+Australia,1985,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,37979.0,29604.0,44182.0
+Australia,1986,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,44182.0,37979.0,51236.0
+Australia,1987,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,51236.0,44182.0,58952.0
+Australia,1988,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,58952.0,51236.0,66722.841
+Australia,1989,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,66722.841,58952.0,73894.324
+Australia,1990,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,73894.324,66722.841,86200.205
+Australia,1991,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,86200.205,73894.324,97990.893
+Australia,1992,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,97990.893,86200.205,116541.684
+Australia,1993,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,116541.684,97990.893,257934.966
+Australia,1994,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,257934.966,116541.684,138020.0
+Australia,1995,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,138020.0,257934.966,144856.0
+Australia,1996,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,144856.0,138020.0,159251.09
+Australia,1997,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,159251.09,144856.0,168420.0
+Australia,1998,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,168420.0,159251.09,156387.0
+Australia,1999,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,156387.0,168420.0,0.0
+Australia,2000,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,0.0,156387.0,0.0
+Australia,2001,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2003,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2004,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2005,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2006,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,0.0,0.0,23985.0
+Australia,2007,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,23985.0,0.0,563031.0
+Australia,2008,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,563031.0,23985.0,657846.0
+Australia,2009,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,657846.0,563031.0,743908.0
+Australia,2010,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,743908.0,657846.0,755214.0
+Australia,2011,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,755214.0,743908.0,798521.0
+Australia,2012,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,798521.0,755214.0,811942.0
+Australia,2013,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,811942.0,798521.0,823913.0
+Australia,2014,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,823913.0,811942.0,947874.0
+Australia,2015,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,947874.0,823913.0,948396.0
+Australia,2016,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,948396.0,947874.0,1775104.0
+Australia,2017,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,1775104.0,948396.0,911108.0
+Australia,2018,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,911108.0,1775104.0,0.0
+Australia,2019,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,0.0,911108.0,520547.0
+Australia,2020,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,520547.0,0.0,378537.0
+Australia,2021,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,378537.0,520547.0,915514.0
+Australia,2022,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,915514.0,378537.0,0.0
+Australia,2023,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,0.0,915514.0,961379.0
+Australia,2024,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,961379.0,0.0,992310.0
+Australia,2025,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,992310.0,961379.0,596620.0
+Australia,2026,NHMRC / Medical Research Fund,science_agency,ok,,,,,none,596620.0,992310.0,
+Australia,1975,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,46422.888,,20703.296
+Australia,1976,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,20703.296,46422.888,56222.342
+Australia,1977,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,56222.342,20703.296,70849.364
+Australia,1978,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,70849.364,56222.342,69461.157
+Australia,1979,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,69461.157,70849.364,6875.0
+Australia,1980,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,6875.0,69461.157,67605.265
+Australia,1981,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,67605.265,6875.0,83257.282
+Australia,1982,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,83257.282,67605.265,132123.464
+Australia,1983,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,132123.464,83257.282,36377.0
+Australia,1984,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,36377.0,132123.464,73952.0
+Australia,1985,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,73952.0,36377.0,41909.0
+Australia,1986,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,41909.0,73952.0,45402.0
+Australia,1987,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,45402.0,41909.0,45156.0
+Australia,1988,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,45156.0,45402.0,93367.4
+Australia,1989,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,93367.4,45156.0,98792.59999999999
+Australia,1990,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,98792.59999999999,93367.4,68587.1
+Australia,1991,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,68587.1,98792.59999999999,62577.1
+Australia,1992,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,62577.1,68587.1,64262.0
+Australia,1993,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,64262.0,62577.1,68190.0
+Australia,1994,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,68190.0,64262.0,64217.0
+Australia,1995,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,64217.0,68190.0,115996.0
+Australia,1996,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,115996.0,64217.0,113033.0
+Australia,1997,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,113033.0,115996.0,117601.0
+Australia,1998,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,117601.0,113033.0,76731.0
+Australia,1999,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,76731.0,117601.0,0.0
+Australia,2000,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,0.0,76731.0,0.0
+Australia,2001,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,0.0,0.0,21740.0
+Australia,2002,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,21740.0,0.0,182025.0
+Australia,2003,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,182025.0,21740.0,120621.0
+Australia,2004,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,120621.0,182025.0,110522.0
+Australia,2005,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,110522.0,120621.0,117568.0
+Australia,2006,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,117568.0,110522.0,141578.0
+Australia,2007,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,141578.0,117568.0,151668.0
+Australia,2008,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,151668.0,141578.0,205515.0
+Australia,2009,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,205515.0,151668.0,155240.0
+Australia,2010,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,155240.0,205515.0,324906.0
+Australia,2011,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,324906.0,155240.0,169679.0
+Australia,2012,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,169679.0,324906.0,162722.0
+Australia,2013,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,162722.0,169679.0,230322.0
+Australia,2014,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,230322.0,162722.0,259190.0
+Australia,2015,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,259190.0,230322.0,253853.0
+Australia,2016,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,253853.0,259190.0,192616.0
+Australia,2017,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,192616.0,253853.0,226960.0
+Australia,2018,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,226960.0,192616.0,0.0
+Australia,2019,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,0.0,226960.0,225487.0
+Australia,2020,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,225487.0,0.0,93773.0
+Australia,2021,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,93773.0,225487.0,327640.0
+Australia,2022,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,327640.0,93773.0,3395.0
+Australia,2023,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,3395.0,327640.0,435538.0
+Australia,2024,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,435538.0,3395.0,395175.0
+Australia,2025,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,395175.0,435538.0,277684.0
+Australia,2026,ANSTO / Atomic Energy Commission,science_agency,ok,,,,,none,277684.0,395175.0,
+Australia,1975,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,480.0,,2662.0
+Australia,1976,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,2662.0,480.0,6966.86
+Australia,1977,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,6966.86,2662.0,7970.0
+Australia,1978,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,7970.0,6966.86,3699.0
+Australia,1979,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,3699.0,7970.0,2726.0
+Australia,1980,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,2726.0,3699.0,3516.0
+Australia,1981,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,3516.0,2726.0,5236.0
+Australia,1982,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,5236.0,3516.0,5722.0
+Australia,1983,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,5722.0,5236.0,6382.0
+Australia,1984,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,6382.0,5722.0,6900.0
+Australia,1985,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,6900.0,6382.0,7350.0
+Australia,1986,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,7350.0,6900.0,1254.7
+Australia,1987,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,1254.7,7350.0,8202.1
+Australia,1988,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,8202.1,1254.7,18137.699999999997
+Australia,1989,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,18137.699999999997,8202.1,11030.0
+Australia,1990,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,11030.0,18137.699999999997,13189.1
+Australia,1991,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,13189.1,11030.0,13639.3
+Australia,1992,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,13639.3,13189.1,14249.0
+Australia,1993,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,14249.0,13639.3,15263.0
+Australia,1994,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,15263.0,14249.0,16881.0
+Australia,1995,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,16881.0,15263.0,16523.0
+Australia,1996,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,16523.0,16881.0,16604.0
+Australia,1997,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,16604.0,16523.0,16445.0
+Australia,1998,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,16445.0,16604.0,18384.0
+Australia,1999,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,18384.0,16445.0,0.0
+Australia,2000,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,0.0,18384.0,0.0
+Australia,2001,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,0.0,0.0,26094.0
+Australia,2003,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,26094.0,0.0,22112.0
+Australia,2004,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,22112.0,26094.0,22483.0
+Australia,2005,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,22483.0,22112.0,23125.0
+Australia,2006,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,23125.0,22483.0,24470.0
+Australia,2007,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,24470.0,23125.0,26645.0
+Australia,2008,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,26645.0,24470.0,27701.0
+Australia,2009,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,27701.0,26645.0,30413.0
+Australia,2010,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,30413.0,27701.0,61296.0
+Australia,2011,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,61296.0,30413.0,31245.0
+Australia,2012,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,31245.0,61296.0,31562.0
+Australia,2013,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,31562.0,31245.0,33280.0
+Australia,2014,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,33280.0,31562.0,38796.0
+Australia,2015,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,38796.0,33280.0,40483.0
+Australia,2016,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,40483.0,38796.0,82035.0
+Australia,2017,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,82035.0,40483.0,43516.0
+Australia,2018,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,43516.0,82035.0,0.0
+Australia,2019,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,0.0,43516.0,26106.0
+Australia,2020,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,26106.0,0.0,18840.0
+Australia,2021,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,18840.0,26106.0,45548.0
+Australia,2022,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,45548.0,18840.0,34283.0
+Australia,2023,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,34283.0,45548.0,129098.0
+Australia,2024,Australian Institute of Marine Science (AIMS),science_agency,outlier,"Amount 129,098 outside expected range [-64,781 – 102,172] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,129098.0,34283.0,93285.0
+Australia,2025,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,93285.0,129098.0,54092.0
+Australia,2026,Australian Institute of Marine Science (AIMS),science_agency,ok,,,,,none,54092.0,93285.0,
+Australia,1975,Industrial R&D Grants,innovation_instruments,ok,,,,,none,15000.0,,17500.0
+Australia,1976,Industrial R&D Grants,innovation_instruments,ok,,,,,none,17500.0,15000.0,19300.0
+Australia,1977,Industrial R&D Grants,innovation_instruments,ok,,,,,none,19300.0,17500.0,15400.0
+Australia,1978,Industrial R&D Grants,innovation_instruments,ok,,,,,none,15400.0,19300.0,15898.779
+Australia,1979,Industrial R&D Grants,innovation_instruments,ok,,,,,none,15898.779,15400.0,0.0
+Australia,1980,Industrial R&D Grants,innovation_instruments,ok,,,,,none,0.0,15898.779,22950.0
+Australia,1981,Industrial R&D Grants,innovation_instruments,ok,,,,,none,22950.0,0.0,36056.484
+Australia,1982,Industrial R&D Grants,innovation_instruments,ok,,,,,none,36056.484,22950.0,24105.754
+Australia,1983,Industrial R&D Grants,innovation_instruments,ok,,,,,none,24105.754,36056.484,34797.106
+Australia,1984,Industrial R&D Grants,innovation_instruments,ok,,,,,none,34797.106,24105.754,43242.616
+Australia,1985,Industrial R&D Grants,innovation_instruments,ok,,,,,none,43242.616,34797.106,38124.099
+Australia,1986,Industrial R&D Grants,innovation_instruments,ok,,,,,none,38124.099,43242.616,50164.112
+Australia,1987,Industrial R&D Grants,innovation_instruments,ok,,,,,none,50164.112,38124.099,17946.885
+Australia,1988,Industrial R&D Grants,innovation_instruments,ok,,,,,none,17946.885,50164.112,25632.0
+Australia,1989,Industrial R&D Grants,innovation_instruments,ok,,,,,none,25632.0,17946.885,31822.845
+Australia,1990,Industrial R&D Grants,innovation_instruments,ok,,,,,none,31822.845,25632.0,32025.593
+Australia,1991,Industrial R&D Grants,innovation_instruments,ok,,,,,none,32025.593,31822.845,29721.504
+Australia,1992,Industrial R&D Grants,innovation_instruments,ok,,,,,none,29721.504,32025.593,39879.163
+Australia,1993,Industrial R&D Grants,innovation_instruments,ok,,,,,none,39879.163,29721.504,43489.186
+Australia,1994,Industrial R&D Grants,innovation_instruments,ok,,,,,none,43489.186,39879.163,39967.0
+Australia,1995,Industrial R&D Grants,innovation_instruments,ok,,,,,none,39967.0,43489.186,46100.0
+Australia,1996,Industrial R&D Grants,innovation_instruments,ok,,,,,none,46100.0,39967.0,50441.505
+Australia,1997,Industrial R&D Grants,innovation_instruments,ok,,,,,none,50441.505,46100.0,67323.0
+Australia,1998,Industrial R&D Grants,innovation_instruments,ok,,,,,none,67323.0,50441.505,91207.0
+Australia,1999,Industrial R&D Grants,innovation_instruments,ok,,,,,none,91207.0,67323.0,0.0
+Australia,2000,Industrial R&D Grants,innovation_instruments,ok,,,,,none,0.0,91207.0,0.0
+Australia,2001,Industrial R&D Grants,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,Industrial R&D Grants,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2003,Industrial R&D Grants,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2004,Industrial R&D Grants,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2005,Industrial R&D Grants,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2006,Industrial R&D Grants,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2007,Industrial R&D Grants,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2008,Industrial R&D Grants,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2009,Industrial R&D Grants,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2010,Industrial R&D Grants,innovation_instruments,ok,,,,,none,0.0,0.0,
+Australia,1975,Research Grants (Dept of Science),direct_rd,ok,,,,,none,0.0,,270.027
+Australia,1976,Research Grants (Dept of Science),direct_rd,outlier,Amount 270 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,270.027,0.0,180.0
+Australia,1977,Research Grants (Dept of Science),direct_rd,outlier,Amount 180 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,180.0,270.027,475.292
+Australia,1978,Research Grants (Dept of Science),direct_rd,outlier,Amount 475 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,475.292,180.0,278.881
+Australia,1979,Research Grants (Dept of Science),direct_rd,outlier,Amount 279 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,278.881,475.292,0.0
+Australia,1980,Research Grants (Dept of Science),direct_rd,ok,,,,,none,0.0,278.881,0.0
+Australia,1981,Research Grants (Dept of Science),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1982,Research Grants (Dept of Science),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1983,Research Grants (Dept of Science),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1984,Research Grants (Dept of Science),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1985,Research Grants (Dept of Science),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1986,Research Grants (Dept of Science),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1987,Research Grants (Dept of Science),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1988,Research Grants (Dept of Science),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1989,Research Grants (Dept of Science),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1990,Research Grants (Dept of Science),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1991,Research Grants (Dept of Science),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1992,Research Grants (Dept of Science),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1993,Research Grants (Dept of Science),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1994,Research Grants (Dept of Science),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1995,Research Grants (Dept of Science),direct_rd,ok,,,,,none,0.0,0.0,
+Australia,1975,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,655.96,,17171.134
+Australia,1976,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,17171.134,655.96,12248.697999999999
+Australia,1977,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,12248.697999999999,17171.134,533.09
+Australia,1978,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,533.09,12248.697999999999,465.761
+Australia,1979,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,465.761,533.09,0.0
+Australia,1980,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,0.0,465.761,529.206
+Australia,1981,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,529.206,0.0,15198.923999999999
+Australia,1982,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,15198.923999999999,529.206,18643.642
+Australia,1983,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,18643.642,15198.923999999999,21003.653
+Australia,1984,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,21003.653,18643.642,21724.771
+Australia,1985,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,21724.771,21003.653,29872.893
+Australia,1986,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,29872.893,21724.771,34737.599
+Australia,1987,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,34737.599,29872.893,3585.278
+Australia,1988,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,3585.278,34737.599,7325.828
+Australia,1989,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,7325.828,3585.278,2797.836
+Australia,1990,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,2797.836,7325.828,56777.009
+Australia,1991,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,56777.009,2797.836,1359.0
+Australia,1992,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,1359.0,56777.009,1969.97
+Australia,1993,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,1969.97,1359.0,0.0
+Australia,1994,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,0.0,1969.97,0.0
+Australia,1995,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1996,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1997,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1998,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1999,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2000,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2001,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,0.0,0.0,89036.0
+Australia,2003,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,89036.0,0.0,95787.0
+Australia,2004,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,95787.0,89036.0,101075.0
+Australia,2005,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,101075.0,95787.0,107460.0
+Australia,2006,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,107460.0,101075.0,125418.0
+Australia,2007,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,125418.0,107460.0,144616.0
+Australia,2008,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,144616.0,125418.0,141287.0
+Australia,2009,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,141287.0,144616.0,130078.0
+Australia,2010,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,130078.0,141287.0,2940.0
+Australia,2011,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,2940.0,130078.0,122778.0
+Australia,2012,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,122778.0,2940.0,117712.0
+Australia,2013,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,117712.0,122778.0,134748.0
+Australia,2014,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,134748.0,117712.0,134748.0
+Australia,2015,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,134748.0,134748.0,129598.0
+Australia,2016,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,129598.0,134748.0,270061.0
+Australia,2017,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,270061.0,129598.0,155790.0
+Australia,2018,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,155790.0,270061.0,0.0
+Australia,2019,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,0.0,155790.0,113909.0
+Australia,2020,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,113909.0,0.0,98714.0
+Australia,2021,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,98714.0,113909.0,264630.0
+Australia,2022,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,264630.0,98714.0,0.0
+Australia,2023,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,0.0,264630.0,328834.0
+Australia,2024,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,328834.0,0.0,345291.0
+Australia,2025,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,345291.0,328834.0,202899.0
+Australia,2026,Geoscience Australia / Bureau of Mineral Resources,science_agency,ok,,,,,none,202899.0,345291.0,
+Australia,1975,Bureau of Meteorology (Research),science_agency,ok,,,,,none,1021.598,,31190.893
+Australia,1976,Bureau of Meteorology (Research),science_agency,ok,,,,,none,31190.893,1021.598,33905.446
+Australia,1977,Bureau of Meteorology (Research),science_agency,ok,,,,,none,33905.446,31190.893,1136.083
+Australia,1978,Bureau of Meteorology (Research),science_agency,ok,,,,,none,1136.083,33905.446,1008.963
+Australia,1979,Bureau of Meteorology (Research),science_agency,ok,,,,,none,1008.963,1136.083,0.0
+Australia,1980,Bureau of Meteorology (Research),science_agency,ok,,,,,none,0.0,1008.963,1236.861
+Australia,1981,Bureau of Meteorology (Research),science_agency,ok,,,,,none,1236.861,0.0,1289.044
+Australia,1982,Bureau of Meteorology (Research),science_agency,ok,,,,,none,1289.044,1236.861,52829.9
+Australia,1983,Bureau of Meteorology (Research),science_agency,ok,,,,,none,52829.9,1289.044,63741.953
+Australia,1984,Bureau of Meteorology (Research),science_agency,ok,,,,,none,63741.953,52829.9,2499.55
+Australia,1985,Bureau of Meteorology (Research),science_agency,ok,,,,,none,2499.55,63741.953,71839.30900000001
+Australia,1986,Bureau of Meteorology (Research),science_agency,ok,,,,,none,71839.30900000001,2499.55,3862.974
+Australia,1987,Bureau of Meteorology (Research),science_agency,ok,,,,,none,3862.974,71839.30900000001,5564.969
+Australia,1988,Bureau of Meteorology (Research),science_agency,ok,,,,,none,5564.969,3862.974,8117.571
+Australia,1989,Bureau of Meteorology (Research),science_agency,ok,,,,,none,8117.571,5564.969,0.0
+Australia,1990,Bureau of Meteorology (Research),science_agency,ok,,,,,none,0.0,8117.571,8046.992
+Australia,1991,Bureau of Meteorology (Research),science_agency,ok,,,,,none,8046.992,0.0,11348.998
+Australia,1992,Bureau of Meteorology (Research),science_agency,ok,,,,,none,11348.998,8046.992,11120.998
+Australia,1993,Bureau of Meteorology (Research),science_agency,ok,,,,,none,11120.998,11348.998,11182.766
+Australia,1994,Bureau of Meteorology (Research),science_agency,ok,,,,,none,11182.766,11120.998,133867.0
+Australia,1995,Bureau of Meteorology (Research),science_agency,ok,,,,,none,133867.0,11182.766,11552.0
+Australia,1996,Bureau of Meteorology (Research),science_agency,ok,,,,,none,11552.0,133867.0,13072.002
+Australia,1997,Bureau of Meteorology (Research),science_agency,ok,,,,,none,13072.002,11552.0,11970.0
+Australia,1998,Bureau of Meteorology (Research),science_agency,ok,,,,,none,11970.0,13072.002,12080.0
+Australia,1999,Bureau of Meteorology (Research),science_agency,ok,,,,,none,12080.0,11970.0,0.0
+Australia,2000,Bureau of Meteorology (Research),science_agency,ok,,,,,none,0.0,12080.0,0.0
+Australia,2001,Bureau of Meteorology (Research),science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,Bureau of Meteorology (Research),science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2003,Bureau of Meteorology (Research),science_agency,ok,,,,,none,0.0,0.0,192430.0
+Australia,2004,Bureau of Meteorology (Research),science_agency,ok,,,,,none,192430.0,0.0,190447.0
+Australia,2005,Bureau of Meteorology (Research),science_agency,ok,,,,,none,190447.0,192430.0,206726.0
+Australia,2006,Bureau of Meteorology (Research),science_agency,ok,,,,,none,206726.0,190447.0,214412.0
+Australia,2007,Bureau of Meteorology (Research),science_agency,ok,,,,,none,214412.0,206726.0,235661.0
+Australia,2008,Bureau of Meteorology (Research),science_agency,ok,,,,,none,235661.0,214412.0,276594.0
+Australia,2009,Bureau of Meteorology (Research),science_agency,ok,,,,,none,276594.0,235661.0,271126.0
+Australia,2010,Bureau of Meteorology (Research),science_agency,ok,,,,,none,271126.0,276594.0,295642.0
+Australia,2011,Bureau of Meteorology (Research),science_agency,ok,,,,,none,295642.0,271126.0,277551.0
+Australia,2012,Bureau of Meteorology (Research),science_agency,ok,,,,,none,277551.0,295642.0,269895.0
+Australia,2013,Bureau of Meteorology (Research),science_agency,ok,,,,,none,269895.0,277551.0,509843.0
+Australia,2014,Bureau of Meteorology (Research),science_agency,ok,,,,,none,509843.0,269895.0,525382.0
+Australia,2015,Bureau of Meteorology (Research),science_agency,ok,,,,,none,525382.0,509843.0,262628.0
+Australia,2016,Bureau of Meteorology (Research),science_agency,ok,,,,,none,262628.0,525382.0,528002.0
+Australia,2017,Bureau of Meteorology (Research),science_agency,ok,,,,,none,528002.0,262628.0,277868.0
+Australia,2018,Bureau of Meteorology (Research),science_agency,ok,,,,,none,277868.0,528002.0,2362.0
+Australia,2019,Bureau of Meteorology (Research),science_agency,ok,,,,,none,2362.0,277868.0,157919.0
+Australia,2020,Bureau of Meteorology (Research),science_agency,ok,,,,,none,157919.0,2362.0,149201.0
+Australia,2021,Bureau of Meteorology (Research),science_agency,ok,,,,,none,149201.0,157919.0,356400.0
+Australia,2022,Bureau of Meteorology (Research),science_agency,ok,,,,,none,356400.0,149201.0,29531.0
+Australia,2023,Bureau of Meteorology (Research),science_agency,ok,,,,,none,29531.0,356400.0,442726.0
+Australia,2024,Bureau of Meteorology (Research),science_agency,ok,,,,,none,442726.0,29531.0,440088.0
+Australia,2025,Bureau of Meteorology (Research),science_agency,ok,,,,,none,440088.0,442726.0,254574.0
+Australia,2026,Bureau of Meteorology (Research),science_agency,ok,,,,,none,254574.0,440088.0,
+Australia,1975,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,,0.0
+Australia,1976,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1977,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1978,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1979,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1980,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1981,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1982,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1983,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1984,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1985,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1986,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1987,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1988,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1989,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1990,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1991,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1992,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1993,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1994,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1995,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1996,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1997,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1998,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,1999,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2000,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2001,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2003,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2004,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2005,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2006,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2007,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2008,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2009,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2010,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2011,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2012,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2013,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2014,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2015,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2016,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2017,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2018,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2019,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2020,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2021,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2022,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2023,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2024,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2025,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Australia,2026,Australian Centre for International Agricultural Research,direct_rd,ok,,,,,none,0.0,0.0,
+Australia,1975,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,1580.0,,855.5
+Australia,1976,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,855.5,1580.0,816.0
+Australia,1977,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,816.0,855.5,830.0
+Australia,1978,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,830.0,816.0,850.0
+Australia,1979,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,850.0,830.0,0.0
+Australia,1980,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,850.0,1100.0
+Australia,1981,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,1100.0,0.0,1530.0
+Australia,1982,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,1530.0,1100.0,1738.0
+Australia,1983,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,1738.0,1530.0,1884.0
+Australia,1984,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,1884.0,1738.0,1835.0
+Australia,1985,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,1835.0,1884.0,1795.0
+Australia,1986,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,1795.0,1835.0,1897.0
+Australia,1987,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,1897.0,1795.0,2001.0
+Australia,1988,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,2001.0,1897.0,2383.0
+Australia,1989,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,2383.0,2001.0,2523.0
+Australia,1990,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,2523.0,2383.0,2697.2
+Australia,1991,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,2697.2,2523.0,2885.0
+Australia,1992,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,2885.0,2697.2,3035.0
+Australia,1993,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,3035.0,2885.0,3055.0
+Australia,1994,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,3055.0,3035.0,3063.0
+Australia,1995,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,3063.0,3055.0,3043.0
+Australia,1996,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,3043.0,3063.0,3164.0
+Australia,1997,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,3164.0,3043.0,3281.0
+Australia,1998,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,3281.0,3164.0,3462.0
+Australia,1999,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,3462.0,3281.0,0.0
+Australia,2000,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,3462.0,0.0
+Australia,2001,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2003,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2004,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2005,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2006,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2007,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2008,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2009,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2010,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2011,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2012,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2013,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2014,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2015,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2016,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2017,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2018,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2019,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2020,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2021,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2022,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2023,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2024,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2025,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2026,Anglo-Australian Telescope Agreement,unclear,ok,,,,,none,0.0,0.0,
+Australia,1975,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,,0.0
+Australia,1976,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1977,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1978,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1979,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1980,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1981,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1982,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1983,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1984,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1985,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1986,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1987,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1988,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1989,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1990,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1991,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1992,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1993,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1994,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1995,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1996,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1997,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1998,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1999,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2000,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2001,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2003,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2004,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2005,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2006,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2007,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2008,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2009,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,0.0,743908.0
+Australia,2010,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,743908.0,0.0,754864.0
+Australia,2011,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,754864.0,743908.0,798521.0
+Australia,2012,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,798521.0,754864.0,811942.0
+Australia,2013,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,811942.0,798521.0,823913.0
+Australia,2014,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,823913.0,811942.0,947874.0
+Australia,2015,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,947874.0,823913.0,948396.0
+Australia,2016,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,948396.0,947874.0,885024.0
+Australia,2017,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,885024.0,948396.0,911108.0
+Australia,2018,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,911108.0,885024.0,0.0
+Australia,2019,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,911108.0,520547.0
+Australia,2020,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,520547.0,0.0,378537.0
+Australia,2021,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,378537.0,520547.0,915514.0
+Australia,2022,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,915514.0,378537.0,0.0
+Australia,2023,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,0.0,915514.0,961379.0
+Australia,2024,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,961379.0,0.0,992310.0
+Australia,2025,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,992310.0,961379.0,596620.0
+Australia,2026,Improved Health and Medical Knowledge Programme,unclear,ok,,,,,none,596620.0,992310.0,
+Australia,1975,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,,0.0
+Australia,1976,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1977,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1978,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1979,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1980,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1981,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1982,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1983,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1984,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1985,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1986,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1987,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1988,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1989,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1990,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1991,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1992,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1993,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1994,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1995,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1996,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1997,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1998,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1999,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2000,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2001,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2003,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2004,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2005,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2006,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2007,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2008,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2009,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2010,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2011,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2012,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2013,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2014,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2015,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2016,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2017,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2018,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2019,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2020,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2021,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2022,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2023,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2024,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2025,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2026,Australian Renewable Energy Agency,innovation_instruments,ok,,,,,none,0.0,0.0,
+Australia,1975,Cancer Australia,unclear,ok,,,,,none,0.0,,0.0
+Australia,1976,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1977,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1978,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1979,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1980,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1981,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1982,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1983,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1984,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1985,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1986,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1987,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1988,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1989,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1990,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1991,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1992,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1993,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1994,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1995,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1996,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1997,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1998,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1999,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2000,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2001,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2003,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2004,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2005,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2006,Cancer Australia,unclear,ok,,,,,none,0.0,0.0,23572.0
+Australia,2007,Cancer Australia,unclear,ok,,,,,none,23572.0,0.0,21155.0
+Australia,2008,Cancer Australia,unclear,ok,,,,,none,21155.0,23572.0,27218.0
+Australia,2009,Cancer Australia,unclear,ok,,,,,none,27218.0,21155.0,27486.0
+Australia,2010,Cancer Australia,unclear,ok,,,,,none,27486.0,27218.0,56608.0
+Australia,2011,Cancer Australia,unclear,ok,,,,,none,56608.0,27486.0,29122.0
+Australia,2012,Cancer Australia,unclear,ok,,,,,none,29122.0,56608.0,28701.0
+Australia,2013,Cancer Australia,unclear,ok,,,,,none,28701.0,29122.0,29835.0
+Australia,2014,Cancer Australia,unclear,ok,,,,,none,29835.0,28701.0,29835.0
+Australia,2015,Cancer Australia,unclear,ok,,,,,none,29835.0,29835.0,29029.0
+Australia,2016,Cancer Australia,unclear,ok,,,,,none,29029.0,29835.0,57527.0
+Australia,2017,Cancer Australia,unclear,ok,,,,,none,57527.0,29029.0,29870.0
+Australia,2018,Cancer Australia,unclear,ok,,,,,none,29870.0,57527.0,0.0
+Australia,2019,Cancer Australia,unclear,ok,,,,,none,0.0,29870.0,18148.0
+Australia,2020,Cancer Australia,unclear,ok,,,,,none,18148.0,0.0,12321.0
+Australia,2021,Cancer Australia,unclear,ok,,,,,none,12321.0,18148.0,32470.0
+Australia,2022,Cancer Australia,unclear,ok,,,,,none,32470.0,12321.0,0.0
+Australia,2023,Cancer Australia,unclear,ok,,,,,none,0.0,32470.0,38150.0
+Australia,2024,Cancer Australia,unclear,ok,,,,,none,38150.0,0.0,48556.0
+Australia,2025,Cancer Australia,unclear,ok,,,,,none,48556.0,38150.0,27066.0
+Australia,2026,Cancer Australia,unclear,ok,,,,,none,27066.0,48556.0,
+Australia,1975,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,,0.0
+Australia,1976,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1977,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1978,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1979,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1980,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1981,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1982,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1983,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1984,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1985,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1986,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1987,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1988,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1989,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1990,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1991,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1992,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1993,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1994,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1995,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1996,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1997,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1998,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1999,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2000,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2001,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,0.0,148.0
+Australia,2002,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,148.0,0.0,10657.0
+Australia,2003,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,10657.0,148.0,13912.0
+Australia,2004,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,13912.0,10657.0,13519.0
+Australia,2005,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,13519.0,13912.0,11461.0
+Australia,2006,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,11461.0,13519.0,13294.0
+Australia,2007,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,13294.0,11461.0,15867.0
+Australia,2008,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,15867.0,13294.0,19230.0
+Australia,2009,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,19230.0,15867.0,15548.0
+Australia,2010,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,15548.0,19230.0,30223.0
+Australia,2011,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,30223.0,15548.0,18483.0
+Australia,2012,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,18483.0,30223.0,18483.0
+Australia,2013,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,18483.0,18483.0,15434.0
+Australia,2014,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,15434.0,18483.0,15324.0
+Australia,2015,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,15324.0,15434.0,15256.0
+Australia,2016,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,15256.0,15324.0,30216.0
+Australia,2017,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,30216.0,15256.0,15173.0
+Australia,2018,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,15173.0,30216.0,0.0
+Australia,2019,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,15173.0,8571.0
+Australia,2020,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,8571.0,0.0,6626.0
+Australia,2021,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,6626.0,8571.0,15892.0
+Australia,2022,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,15892.0,6626.0,0.0
+Australia,2023,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,0.0,15892.0,28547.0
+Australia,2024,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,28547.0,0.0,26151.0
+Australia,2025,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,26151.0,28547.0,16823.0
+Australia,2026,Australian Radiation Protection and Nuclear Safety Agency,science_agency,ok,,,,,none,16823.0,26151.0,
+Australia,1975,Australian Institute of Health,unclear,ok,,,,,none,0.0,,0.0
+Australia,1976,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1977,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1978,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1979,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1980,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1981,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1982,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1983,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1984,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1985,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1986,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1987,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,9603.668
+Australia,1988,Australian Institute of Health,unclear,outlier,"Amount 9,604 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,9603.668,0.0,3406.526
+Australia,1989,Australian Institute of Health,unclear,outlier,"Amount 3,407 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,3406.526,9603.668,4173.0
+Australia,1990,Australian Institute of Health,unclear,outlier,"Amount 4,173 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,4173.0,3406.526,4439.0
+Australia,1991,Australian Institute of Health,unclear,outlier,"Amount 4,439 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,4439.0,4173.0,4217.0
+Australia,1992,Australian Institute of Health,unclear,outlier,"Amount 4,217 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,4217.0,4439.0,0.0
+Australia,1993,Australian Institute of Health,unclear,ok,,,,,none,0.0,4217.0,0.0
+Australia,1994,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1995,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1996,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1997,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1998,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1999,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2000,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2001,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2003,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2004,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2005,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2006,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2007,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2008,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2009,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2010,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2011,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2012,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2013,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2014,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2015,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2016,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2017,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2018,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2019,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2020,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2021,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2022,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2023,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2024,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2025,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2026,Australian Institute of Health,unclear,ok,,,,,none,0.0,0.0,
+Australia,1975,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,,0.0
+Australia,1976,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1977,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,160.0
+Australia,1978,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,outlier,Amount 160 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,160.0,0.0,85.603
+Australia,1979,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,outlier,Amount 86 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,85.603,160.0,0.0
+Australia,1980,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,85.603,1681.993
+Australia,1981,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,outlier,"Amount 1,682 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1681.993,0.0,117364.065
+Australia,1982,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,outlier,"Amount 117,364 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,117364.065,1681.993,140246.397
+Australia,1983,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,outlier,"Amount 140,246 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,140246.397,117364.065,3127.332
+Australia,1984,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,outlier,"Amount 3,127 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,3127.332,140246.397,159005.184
+Australia,1985,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,outlier,"Amount 159,005 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,159005.184,3127.332,163459.795
+Australia,1986,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,outlier,"Amount 163,460 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,163459.795,159005.184,187053.28
+Australia,1987,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,outlier,"Amount 187,053 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,187053.28,163459.795,4357.506
+Australia,1988,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,outlier,"Amount 4,358 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,4357.506,187053.28,0.0
+Australia,1989,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,4357.506,0.0
+Australia,1990,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,1185.412
+Australia,1991,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,outlier,"Amount 1,185 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1185.412,0.0,0.0
+Australia,1992,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,1185.412,0.0
+Australia,1993,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1994,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1995,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1996,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1997,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1998,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1999,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2000,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2001,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2003,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2004,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2005,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2006,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2007,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2008,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2009,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2010,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2011,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2012,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2013,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2014,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2015,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2016,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2017,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2018,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2019,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2020,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2021,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2022,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2023,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2024,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2025,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2026,The Supervising Scientist and the Alligator Rivers Region Research Institute,science_agency,ok,,,,,none,0.0,0.0,
+Australia,1975,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,,0.0
+Australia,1976,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1977,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1978,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1979,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1980,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1981,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1982,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1983,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1984,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1985,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1986,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1987,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1988,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1989,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1990,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1991,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1992,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1993,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1994,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1995,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1996,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1997,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1998,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1999,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2000,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2001,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2003,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2004,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2005,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2006,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2007,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2008,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2009,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2010,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2011,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2012,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2013,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2014,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2015,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2016,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2017,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2018,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2019,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2020,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2021,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2022,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2023,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2024,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2025,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2026,Climate Change and Energy Efficiency Programme,innovation_instruments,ok,,,,,none,0.0,0.0,
+Australia,1975,Hospitals and Health Services Commission,unclear,outlier,Amount 547 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,546.727,,947.0
+Australia,1976,Hospitals and Health Services Commission,unclear,outlier,Amount 947 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,947.0,546.727,863.0
+Australia,1977,Hospitals and Health Services Commission,unclear,outlier,Amount 863 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,863.0,947.0,9043.0
+Australia,1978,Hospitals and Health Services Commission,unclear,outlier,"Amount 9,043 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,9043.0,863.0,8779.985
+Australia,1979,Hospitals and Health Services Commission,unclear,outlier,"Amount 8,780 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,8779.985,9043.0,0.0
+Australia,1980,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,8779.985,6916.389
+Australia,1981,Hospitals and Health Services Commission,unclear,outlier,"Amount 6,916 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,6916.389,0.0,6250.0
+Australia,1982,Hospitals and Health Services Commission,unclear,outlier,"Amount 6,250 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,6250.0,6916.389,1650.0
+Australia,1983,Hospitals and Health Services Commission,unclear,outlier,"Amount 1,650 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1650.0,6250.0,100.0
+Australia,1984,Hospitals and Health Services Commission,unclear,outlier,Amount 100 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,100.0,1650.0,0.0
+Australia,1985,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,100.0,0.0
+Australia,1986,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1987,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1988,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1989,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1990,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1991,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1992,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1993,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1994,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1995,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1996,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1997,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1998,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1999,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2000,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2001,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2003,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2004,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2005,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2006,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2007,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2008,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2009,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2010,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2011,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2012,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2013,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2014,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2015,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2016,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2017,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2018,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2019,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2020,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2021,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2022,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2023,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2024,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2025,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2026,Hospitals and Health Services Commission,unclear,ok,,,,,none,0.0,0.0,
+Australia,1975,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,,0.0
+Australia,1976,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1977,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1978,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1979,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1980,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1981,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1982,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1983,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1984,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1985,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1986,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1987,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1988,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1989,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1990,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1991,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1992,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1993,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1994,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1995,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1996,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1997,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1998,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1999,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2000,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2001,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2003,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2004,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2005,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2006,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2007,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2008,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2009,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2010,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2011,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2012,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2013,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2014,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2015,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2016,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2017,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2018,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2019,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2020,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2021,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2022,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2023,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2024,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2025,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2026,Australian Science and Technology Council,unclear,ok,,,,,none,0.0,0.0,
+Australia,1975,National Estate Program,unclear,outlier,Amount 288 outside expected range [-184 – 246] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,288.0,,95.7
+Australia,1976,National Estate Program,unclear,ok,,,,,none,95.7,288.0,15.0
+Australia,1977,National Estate Program,unclear,ok,,,,,none,15.0,95.7,50.0
+Australia,1978,National Estate Program,unclear,ok,,,,,none,50.0,15.0,50.0
+Australia,1979,National Estate Program,unclear,ok,,,,,none,50.0,50.0,0.0
+Australia,1980,National Estate Program,unclear,ok,,,,,none,0.0,50.0,185.0
+Australia,1981,National Estate Program,unclear,ok,,,,,none,185.0,0.0,220.0
+Australia,1982,National Estate Program,unclear,ok,,,,,none,220.0,185.0,220.0
+Australia,1983,National Estate Program,unclear,ok,,,,,none,220.0,220.0,219.5
+Australia,1984,National Estate Program,unclear,ok,,,,,none,219.5,220.0,270.0
+Australia,1985,National Estate Program,unclear,outlier,Amount 270 outside expected range [-184 – 246] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,270.0,219.5,283.0
+Australia,1986,National Estate Program,unclear,outlier,Amount 283 outside expected range [-184 – 246] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,283.0,270.0,297.0
+Australia,1987,National Estate Program,unclear,outlier,Amount 297 outside expected range [-184 – 246] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,297.0,283.0,317.0
+Australia,1988,National Estate Program,unclear,outlier,Amount 317 outside expected range [-184 – 246] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,317.0,297.0,232.0
+Australia,1989,National Estate Program,unclear,ok,,,,,none,232.0,317.0,353.0
+Australia,1990,National Estate Program,unclear,outlier,Amount 353 outside expected range [-184 – 246] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,353.0,232.0,397.0
+Australia,1991,National Estate Program,unclear,outlier,Amount 397 outside expected range [-184 – 246] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,397.0,353.0,0.0
+Australia,1992,National Estate Program,unclear,ok,,,,,none,0.0,397.0,0.0
+Australia,1993,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1994,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1995,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1996,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1997,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1998,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1999,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2000,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2001,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2003,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2004,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2005,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2006,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2007,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2008,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2009,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2010,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2011,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2012,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2013,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2014,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2015,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2016,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2017,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2018,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2019,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2020,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2021,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2022,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2023,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2024,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2025,National Estate Program,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2026,National Estate Program,unclear,ok,,,,,none,0.0,0.0,
+Australia,1975,International Science School for High School Students,unclear,ok,,,,,none,0.0,,20.0
+Australia,1976,International Science School for High School Students,unclear,outlier,Amount 20 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,20.0,0.0,20.0
+Australia,1977,International Science School for High School Students,unclear,outlier,Amount 20 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,20.0,20.0,20.0
+Australia,1978,International Science School for High School Students,unclear,outlier,Amount 20 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,20.0,20.0,20.0
+Australia,1979,International Science School for High School Students,unclear,outlier,Amount 20 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,20.0,20.0,20.0
+Australia,1980,International Science School for High School Students,unclear,outlier,Amount 20 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,20.0,20.0,20.0
+Australia,1981,International Science School for High School Students,unclear,outlier,Amount 20 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,20.0,20.0,25.0
+Australia,1982,International Science School for High School Students,unclear,outlier,Amount 25 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,25.0,20.0,25.0
+Australia,1983,International Science School for High School Students,unclear,outlier,Amount 25 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,25.0,25.0,30.0
+Australia,1984,International Science School for High School Students,unclear,outlier,Amount 30 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,30.0,25.0,0.0
+Australia,1985,International Science School for High School Students,unclear,ok,,,,,none,0.0,30.0,0.0
+Australia,1986,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1987,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1988,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1989,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1990,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1991,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1992,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1993,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1994,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1995,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1996,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1997,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1998,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,1999,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2000,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2001,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2003,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2004,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2005,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2006,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2007,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2008,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2009,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2010,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2011,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2012,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2013,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2014,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2015,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2016,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2017,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2018,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2019,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2020,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2021,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2022,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2023,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2024,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2025,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,0.0
+Australia,2026,International Science School for High School Students,unclear,ok,,,,,none,0.0,0.0,
+Australia,1975,Australian Centre for,science_agency,ok,,,,,none,0.0,,0.0
+Australia,1976,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1977,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1978,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1979,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1980,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1981,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1982,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1983,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1984,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1985,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1986,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1987,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1988,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1989,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1990,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1991,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1992,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1993,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1994,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1995,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1996,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1997,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1998,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,1999,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2000,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2001,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2003,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2004,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2005,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2006,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2007,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2008,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2009,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2010,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2011,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2012,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2013,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2014,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2015,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2016,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2017,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2018,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2019,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2020,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2021,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2022,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2023,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2024,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2025,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,0.0
+Australia,2026,Australian Centre for,science_agency,ok,,,,,none,0.0,0.0,
+Australia,1975,Office of the Renewable Energy,innovation_instruments,outlier,"Amount 1,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1000.0,,0.0
+Australia,1976,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,1000.0,0.0
+Australia,1977,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1978,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1979,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1980,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1981,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1982,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1983,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1984,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1985,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1986,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1987,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1988,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1989,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1990,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1991,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1992,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1993,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1994,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1995,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1996,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1997,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1998,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,1999,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2000,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2001,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2002,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2003,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2004,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2005,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2006,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2007,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2008,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2009,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2010,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2011,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2012,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2013,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2014,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2015,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2016,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2017,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2018,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2019,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2020,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2021,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2022,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2023,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2024,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2025,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Australia,2026,Office of the Renewable Energy,innovation_instruments,ok,,,,,none,0.0,0.0,

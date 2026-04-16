@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-04-07T21:23:17.113939",
+  "generated_at": "2026-04-15T00:06:39.815296",
   "counts": {
-    "raw": 4260,
-    "pass1_keep": 2024,
-    "pass1_borderline": 1093,
-    "pass1_drop": 1143,
-    "pass2_rescued": 382,
-    "pass2_excluded": 711,
-    "final_clean": 2406,
-    "retention_pct": 56.5
+    "raw": 4321,
+    "pass1_keep": 2037,
+    "pass1_borderline": 1115,
+    "pass1_drop": 1169,
+    "pass2_rescued": 387,
+    "pass2_excluded": 728,
+    "final_clean": 2424,
+    "retention_pct": 56.1
   },
   "subtheme_breakdown": {
     "human_capital": {
-      "n": 240,
+      "n": 242,
       "pct": 10.0,
-      "n_positive": 240
+      "n_positive": 242
     },
     "innovation_instruments": {
-      "n": 771,
-      "pct": 32.0,
-      "n_positive": 759
+      "n": 782,
+      "pct": 32.3,
+      "n_positive": 770
     },
     "knowledge_transfer": {
       "n": 193,
@@ -32,13 +32,13 @@
       "n_positive": 14
     },
     "rd_funding": {
-      "n": 638,
+      "n": 642,
       "pct": 26.5,
-      "n_positive": 632
+      "n_positive": 636
     },
     "research_infrastructure": {
       "n": 76,
-      "pct": 3.2,
+      "pct": 3.1,
       "n_positive": 76
     },
     "sectoral_rd": {
@@ -47,33 +47,33 @@
       "n_positive": 133
     },
     "startup_ecosystem": {
-      "n": 335,
+      "n": 336,
       "pct": 13.9,
-      "n_positive": 333
+      "n_positive": 334
     }
   },
   "activity_lens": {
-    "K2": 550,
-    "None": 542,
-    "K4": 477,
-    "K5": 467,
+    "K2": 552,
+    "None": 547,
+    "K4": 479,
+    "K5": 474,
     "K6": 149,
-    "K8": 108,
+    "K8": 110,
     "K7": 65,
     "K1": 30,
     "K3": 18
   },
   "defence_scope": {
-    "None": 2406
+    "nan": 2424
   },
   "coverage": {
     "n_countries": 38,
-    "n_country_years": 578
+    "n_country_years": 594
   },
   "intensity_summary": {
-    "mean_weighted_score": 2.914,
+    "mean_weighted_score": 2.857,
     "max_weighted_score": 20.7,
-    "mean_net_reforms": 4.107
+    "mean_net_reforms": 4.027
   },
-  "elapsed_seconds": 4.2
+  "elapsed_seconds": 65.1
 }

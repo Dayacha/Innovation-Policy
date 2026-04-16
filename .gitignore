@@ -32,6 +32,7 @@ config.yaml
 # ── Local recordings / archives ───────────────────────────────────────────────
 create_llm_apikey.mov
 Screen Recording *.zip
+*.~lock.*
 
 # ── Test / coverage ───────────────────────────────────────────────────────────
 .pytest_cache/
@@ -42,41 +43,53 @@ htmlcov/
 # Data — what to track vs. ignore
 # =============================================================================
 #
-# TRACK (commit to git — others can see results without re-running):
-#   Data/input/taxonomy/                  taxonomy reference files
-#   Data/output/budget/results*           final budget extraction results
-#   Data/output/reforms/output/           final reform panel & events
+# TRACK (commit to git):
+#   Data/input/finance_bills/              source documents (DOCX)
+#   Data/input/taxonomy/                   taxonomy reference files
+#   Data/output/budget/rd_database.csv     combined app-ready database
+#   Data/output/budget/*/                  per-country series, audit, gap reports
+#   Data/output/budget/agency_registry.csv LLM-classified agency registry
+#   Data/output/budget/discovered_agencies.json auto-discovered agencies
+#   Data/output/reforms/output/            final reform panel & events
 #
-# IGNORE (large or regenerable — re-created by running the pipeline):
-#   *.pdf                                 all PDFs (Finance Bills + Econ Surveys)
-#   Data/input/surveys/kappa_catalog.json internal OECD API URLs
-#   Data/processed/                       old output location (replaced by Data/output/)
-#   Data/output/reforms/extracted_text/   raw PDF text (large, intermediate)
-#   Data/output/reforms/reforms_json/     per-survey LLM output (large, intermediate)
+# IGNORE (large, sensitive, or regenerable):
+#   *.pdf / *.docx in input                Finance Bills source files
+#   Data/output/budget/raw_rows.csv        large intermediate (all parsed rows)
+#   Data/output/budget/llm_cache/          LLM API response cache
+#   Data/output/budget/llm_usage.json      operational cost log
+#   Data/output/budget/run_log.jsonl       pipeline run log
+#   Data/output/reforms/extracted_text/    raw PDF text (large, intermediate)
+#   Data/output/reforms/reforms_json/      per-survey LLM output (intermediate)
 
-# ── All PDFs (too large for git) ──────────────────────────────────────────────
+# ── Source documents (too large for git) ──────────────────────────────────────
 *.pdf
-!Data/input/surveys/
+*.docx
+*.doc
 !Data/input/surveys/*.pdf
 
-# ── Survey catalog ─────────────────────────
-#Data/input/surveys/kappa_catalog.json
-
-# ── Old output location (replaced by Data/output/) ───────────────────────────
+# ── Old output location ───────────────────────────────────────────────────────
 Data/processed/
 
-# ── Intermediate pipeline outputs (large, regenerable) ───────────────────────
-Data/output/reforms/extracted_text/
-#Data/output/reforms/reforms_json*/
-
-# ── Final results are NOT ignored — commit them so others can see them ────────
-# Data/output/budget/results*    ← tracked
-# Data/output/reforms/output/    ← tracked
-
-Data/output/budget/ai_validation
-Data/output/budget/full_text
-Data/output/budget/intermediate
+# ── Budget pipeline — intermediate / operational files ────────────────────────
+Data/output/budget/raw_rows.csv
+Data/output/budget/llm_cache/
+Data/output/budget/llm_usage.json
+Data/output/budget/run_log.jsonl
+Data/output/budget/panel.csv
+Data/output/budget/results.csv
 Data/output/budget/results.xlsx
+Data/output/budget/results.json
+Data/output/budget/results_clean.csv
+Data/output/budget/results_ai_verified.csv
+Data/output/budget/results_review_status.csv
+Data/output/budget/summary_by_series.csv
+Data/output/budget/qa_report.csv
+Data/output/budget/ai_validation/
+Data/output/budget/audits/
+Data/output/budget/full_text/
+Data/output/budget/intermediate/
+Data/output/budget/runs/
 
-create_llm_apikey.mov
-Screen Recording *.zip
+# ── Reform pipeline — intermediate files ──────────────────────────────────────
+Data/output/reforms/extracted_text/
+Data/output/reforms/reforms_json/

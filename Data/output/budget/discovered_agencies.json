@@ -1,0 +1,441 @@
+{
+  "Australia": [
+    {
+      "canonical_name": "Australian Centre for International Agricultural Research",
+      "category": "direct_rd",
+      "name_variants": [
+        "ACIAR"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "ACIAR is a dedicated agency focused on agricultural research and development.",
+      "agency_type": "dedicated_rd",
+      "confidence": 0.9,
+      "source_entity": "Australian Centre for International Agricultural Research",
+      "n_years_seen": 5,
+      "avg_amount": 23980608.4
+    },
+    {
+      "canonical_name": "Anglo-Australian Telescope Agreement",
+      "category": "unclear",
+      "name_variants": [
+        "AAT Agreement",
+        "Anglo-Australian Telescope"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "This programme funds specific R&D activities related to the Anglo-Australian Telescope.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "1.— For expenditure under the Anglo-Australian Telescope Agreement Act 1970",
+      "n_years_seen": 5,
+      "avg_amount": 3202600.0
+    },
+    {
+      "canonical_name": "Improved Health and Medical Knowledge Programme",
+      "category": "unclear",
+      "name_variants": [
+        "Improved health and medical knowledge",
+        "Health and Medical Knowledge Programme"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "This entity appears to be a specific R&D scheme within a ministry focused on health.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Improved health and medical knowledge,",
+      "n_years_seen": 6,
+      "avg_amount": 624843.8571428572
+    },
+    {
+      "canonical_name": "Australian Renewable Energy Agency",
+      "category": "innovation_instruments",
+      "name_variants": [
+        "ARENA"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "ARENA is a specific R&D scheme focused on renewable energy initiatives.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Total: Australian Renewable Energy Agency",
+      "n_years_seen": 9,
+      "avg_amount": 76029.76923076923
+    },
+    {
+      "canonical_name": "Cancer Australia",
+      "category": "unclear",
+      "name_variants": [
+        "Cancer Australia",
+        "CA"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "Cancer Australia is involved in funding and supporting cancer research initiatives.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Total: Cancer Australia",
+      "n_years_seen": 13,
+      "avg_amount": 28527.0
+    },
+    {
+      "canonical_name": "Australian Radiation Protection and Nuclear Safety Agency",
+      "category": "science_agency",
+      "name_variants": [
+        "ARPANSA",
+        "Australian Radiation Protection and Nuclear Safety",
+        "ARPANSA Agency"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "ARPANSA is primarily focused on radiation protection and nuclear safety, which involves significant R&D activities.",
+      "agency_type": "dedicated_rd",
+      "confidence": 0.85,
+      "source_entity": "Australian Radiation Protection and Nuclear Safety",
+      "n_years_seen": 6,
+      "avg_amount": 13278.5
+    },
+    {
+      "canonical_name": "Australian Institute of Health",
+      "category": "unclear",
+      "name_variants": [
+        "AIH",
+        "Australian Institute of Health Act 1987"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "The entity is a specific R&D scheme related to health but not primarily dedicated to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "1.—For expenditure under the Australian Institute of Health Act 1987",
+      "n_years_seen": 4,
+      "avg_amount": 4142090.0
+    },
+    {
+      "canonical_name": "The Supervising Scientist and the Alligator Rivers Region Research Institute",
+      "category": "science_agency",
+      "name_variants": [
+        "Supervising Scientist",
+        "Alligator Rivers Region Research Institute"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "This entity is dedicated to environmental research and monitoring in the Alligator Rivers Region.",
+      "agency_type": "dedicated_rd",
+      "confidence": 0.85,
+      "source_entity": "The Supervising Scientist and the Alligator Rivers Region Research Institute",
+      "n_years_seen": 5,
+      "avg_amount": 3087485.0
+    },
+    {
+      "canonical_name": "Climate Change and Energy Efficiency Programme",
+      "category": "innovation_instruments",
+      "name_variants": [
+        "Climate Change Programme",
+        "Energy Efficiency Programme"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "This entity is a specific R&D scheme focused on climate change and energy efficiency initiatives.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Total: Climate Change and Energy Efficiency",
+      "n_years_seen": 3,
+      "avg_amount": 1051136.0
+    },
+    {
+      "canonical_name": "Hospitals and Health Services Commission",
+      "category": "unclear",
+      "name_variants": [
+        "Hospitals and Health Services Commission Act",
+        "Planning and Research"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "This entity is a specific R&D scheme related to health services planning and research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "2.—For expenditure under the Hospitals and Health Services Commission Act—Planning and Research",
+      "n_years_seen": 4,
+      "avg_amount": 839181.75
+    },
+    {
+      "canonical_name": "Australian Science and Technology Council",
+      "category": "unclear",
+      "name_variants": [
+        "ASTC"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "The entity is involved in R&D but functions more as a programme within a broader context.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Australian Science and Technology Council",
+      "n_years_seen": 4,
+      "avg_amount": 656304.75
+    },
+    {
+      "canonical_name": "National Estate Program",
+      "category": "unclear",
+      "name_variants": [
+        "National Estate Program",
+        "NEP"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "The program focuses on heritage conservation, which may involve R&D aspects but is not primarily an R&D agency.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "2.—National Estate Program—Expenditure in the Northern Territory",
+      "n_years_seen": 8,
+      "avg_amount": 187125.0
+    },
+    {
+      "canonical_name": "International Science School for High School Students",
+      "category": "unclear",
+      "name_variants": [
+        "Science Foundation for Physics",
+        "International Science School"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "This entity appears to be a specific R&D programme aimed at high school students, focusing on physics education.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "The Science Foundation for Physics—International Science School for High School Students",
+      "n_years_seen": 3,
+      "avg_amount": 23333.333333333332
+    },
+    {
+      "canonical_name": "Australian Centre for",
+      "category": "science_agency",
+      "name_variants": [
+        "ACF",
+        "Australian Centre for Research",
+        "Australian Centre for Innovation"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "The entity is likely a dedicated research agency focused on R&D activities.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.85,
+      "source_entity": "Total: Australian Centre for",
+      "n_years_seen": 5,
+      "avg_amount": 48074.6
+    },
+    {
+      "canonical_name": "Office of the Renewable Energy",
+      "category": "innovation_instruments",
+      "name_variants": [
+        "ORE",
+        "Office of Renewable Energy"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "The entity is involved in funding and promoting renewable energy research initiatives.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Total: Office of the Renewable Energy",
+      "n_years_seen": 4,
+      "avg_amount": 2034.75
+    }
+  ],
+  "Canada": [
+    {
+      "canonical_name": "Canadian Space Agency",
+      "category": "science_agency",
+      "name_variants": [
+        "CSA"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "The Canadian Space Agency primarily conducts and funds R&D related to space exploration and technology.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "CANADIAN SPACE AGENCY",
+      "n_years_seen": 2,
+      "avg_amount": 463527.499
+    },
+    {
+      "canonical_name": "International Development Research Centre",
+      "category": "science_agency",
+      "name_variants": [
+        "IDRC",
+        "Centre de recherches pour le développement international"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "The International Development Research Centre primarily conducts and funds research aimed at addressing global development challenges.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.85,
+      "source_entity": "INTERNATIONAL DEVELOPMENT RESEARCH CENTRE",
+      "n_years_seen": 2,
+      "avg_amount": 155159.2205
+    },
+    {
+      "canonical_name": "Telefilm Canada",
+      "category": "innovation_instruments",
+      "name_variants": [
+        "Telefilm Canada",
+        "Téléfilm Canada"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "Telefilm Canada supports the development and production of Canadian audiovisual works, which includes research and development in the film industry.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "TELEFILM CANADA",
+      "n_years_seen": 2,
+      "avg_amount": 127608.535
+    },
+    {
+      "canonical_name": "Canadian High Arctic Research Station",
+      "category": "direct_rd",
+      "name_variants": [
+        "CHARS",
+        "Canadian High Arctic Research Station"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "The entity is focused on research in the High Arctic, indicating a specific R&D programme.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "CANADIAN HIGH ARCTIC RESEARCH STATION",
+      "n_years_seen": 2,
+      "avg_amount": 31484.029499999997
+    }
+  ]
+}

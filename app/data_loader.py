@@ -8,6 +8,8 @@ import streamlit as st
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
+BUDGET_DATABASE          = PROJECT_ROOT / "Data/output/budget/rd_database.csv"
+# Legacy paths (old rule-based pipeline — kept for reference only)
 BUDGET_RESULTS_AI            = PROJECT_ROOT / "Data/output/budget/results_ai_verified.csv"
 BUDGET_RESULTS_REVIEW_STATUS = PROJECT_ROOT / "Data/output/budget/results_review_status.csv"
 BUDGET_RESULTS               = PROJECT_ROOT / "Data/output/budget/results.csv"
@@ -122,21 +124,29 @@ SUBTHEME_SHORT = {
     "other":                   "Other",
 }
 
-# Budget R&D categories (actual values from pipeline output)
+# Budget R&D categories (values from budget pipeline)
 RD_CATEGORY_COLORS = {
-    "direct_rd":           "#003189",   # navy
-    "possible_rd":         "#009FDA",   # sky blue
-    "innovation_system":   "#3D9349",   # green
-    "institution_funding": "#E86B33",   # orange
-    "other":               "#9B9B9B",   # grey
+    "science_agency":          "#003189",   # navy
+    "direct_rd":               "#003189",   # navy (legacy)
+    "research_infrastructure": "#009FDA",   # sky blue
+    "possible_rd":             "#009FDA",   # sky blue (legacy)
+    "innovation_instruments":  "#3D9349",   # green
+    "innovation_system":       "#3D9349",   # green (legacy)
+    "institution_funding":     "#E86B33",   # orange (legacy)
+    "unclear":                 "#9B9B9B",   # grey
+    "other":                   "#9B9B9B",   # grey
 }
 
 RD_CATEGORY_LABELS = {
-    "direct_rd":           "Direct R&D",
-    "possible_rd":         "Possible R&D",
-    "innovation_system":   "Innovation System",
-    "institution_funding": "Institutional Funding",
-    "other":               "Other",
+    "science_agency":          "Science Agency",
+    "direct_rd":               "Direct R&D",
+    "research_infrastructure": "Research Infrastructure",
+    "possible_rd":             "Possible R&D",
+    "innovation_instruments":  "Innovation Instruments",
+    "innovation_system":       "Innovation System",
+    "institution_funding":     "Institutional Funding",
+    "unclear":                 "Unclassified",
+    "other":                   "Other",
 }
 
 # Growth orientation — semantic colors, dark enough for chart labels
@@ -159,64 +169,27 @@ ORIENTATION_LABELS = {
 
 @st.cache_data
 def load_budget():
-    # Priority: AI-verified → review_status (most recent pipeline run) → raw results
-    if BUDGET_RESULTS_AI.exists():
-        budget_path = BUDGET_RESULTS_AI
-    elif BUDGET_RESULTS_REVIEW_STATUS.exists():
-        budget_path = BUDGET_RESULTS_REVIEW_STATUS
-    else:
-        budget_path = BUDGET_RESULTS
-    if not budget_path.exists():
+    """Load the R&D budget database from the budget pipeline."""
+    if not BUDGET_DATABASE.exists():
         return pd.DataFrame()
-    df = pd.read_csv(budget_path)
 
-    # Normalize AI-verified schema to the baseline budget schema expected by the app.
-    if "validated_amount_local" in df.columns:
-        df["amount_local"] = pd.to_numeric(df["validated_amount_local"], errors="coerce").fillna(
-            pd.to_numeric(df.get("amount_local"), errors="coerce")
-        )
-    if "ai_rd_category" in df.columns:
-        df["rd_category"] = df["ai_rd_category"].fillna(df.get("rd_category"))
-    if "ai_decision" in df.columns:
-        df["decision"] = df["ai_decision"].fillna(df.get("decision"))
-    if "ai_confidence" in df.columns:
-        df["confidence"] = df["ai_confidence"].fillna(df.get("confidence"))
-    if "ai_pillar" in df.columns:
-        df["pillar"] = df["ai_pillar"].fillna(df.get("pillar"))
-    if "currency" not in df.columns and "currency_baseline" in df.columns:
-        df["currency"] = df["currency_baseline"]
+    df = pd.read_csv(BUDGET_DATABASE)
+
     df["year"] = pd.to_numeric(df["year"], errors="coerce")
     df["amount_local"] = pd.to_numeric(df["amount_local"], errors="coerce")
     df = df.dropna(subset=["year", "amount_local"])
     df["year"] = df["year"].astype(int)
-    if "rd_category" in df.columns:
-        df["rd_category"] = df["rd_category"].str.lower().fillna("other")
-        df["rd_category_label"] = df["rd_category"].map(
-            lambda x: RD_CATEGORY_LABELS.get(x, x)
-        )
-    if "decision" in df.columns:
-        df = df[df["decision"].isin(["include", "review"])]
 
-    # Display-safe English fields for the app UI.
-    def _coalesce(cols):
-        existing = [c for c in cols if c in df.columns]
-        if not existing:
-            return pd.Series("", index=df.index, dtype="object")
-        out = df[existing[0]].copy()
-        for col in existing[1:]:
-            mask = out.isna() | (out.astype(str).str.strip() == "")
-            out = out.where(~mask, df[col])
-        return out
+    # Map category → rd_category for chart compatibility
+    df["rd_category"] = df.get("category", pd.Series("other", index=df.index)).fillna("other")
+    df["rd_category_label"] = df["rd_category"].map(lambda x: RD_CATEGORY_LABELS.get(x, x))
 
-    df["ministry_display"] = _coalesce(["section_name_en", "section_name"])
-    df["program_display"] = _coalesce(
-        ["clean_program_description_en", "program_description_en", "program_description"]
-    )
-    df["budget_line_display"] = _coalesce(
-        ["clean_program_description_en", "line_description_en", "line_description", "program_description_en", "program_description"]
-    )
-    df["budget_category"] = _coalesce(["ai_pillar", "pillar", "rd_category"])
-    df["budget_category_label"] = df["budget_category"]
+    # App display fields
+    df["ministry_display"] = df["canonical_name"]
+    df["budget_line_display"] = df.get("line_description_en", df["canonical_name"]).fillna(df["canonical_name"])
+    df["budget_category"] = df["rd_category"]
+    df["budget_category_label"] = df["rd_category_label"]
+
     return df
 
 
@@ -353,11 +326,7 @@ def load_reform_intensity():
 
 
 def budget_available():
-    return (
-        BUDGET_RESULTS_AI.exists()
-        or BUDGET_RESULTS_REVIEW_STATUS.exists()
-        or BUDGET_RESULTS.exists()
-    )
+    return BUDGET_DATABASE.exists()
 
 def reforms_available():
     return REFORMS_EVENTS.exists()

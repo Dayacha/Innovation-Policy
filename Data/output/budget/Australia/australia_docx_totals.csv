@@ -1,0 +1,1189 @@
+country,canonical_name,year,amount_total,amount_primary,n_acts,acts,additive_flag,currency,unit,category
+Australia,ANSTO / Atomic Energy Commission,1975,46422.888,44195.001,3,1975 No1 C2004A00152.docx | 1975 No2 C2004A00153.docx | 1975 No6 C2004A00254.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1976,20703.296,16997.725,3,1976 No1 C2004A01425.docx | 1976 No2 C2004A01426.docx | 1976 No3 C2004A01469.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1977,56222.342,45547.876,2,1977 No1 C2004A01546.docx | 1977 No2 C2004A01547.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1978,70849.364,50015.393,3,1978 No1 C2004A01777.docx | 1978 No2 C2004A01778.docx | 1978 No3 C2004A01841.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1979,69461.157,49461.157,2,1979 No1 C2004A01940.docx | 1979 No2 C2004A01941.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1980,6875.0,6875.0,1,1980 No3 C2004A02262.docx,single,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1981,67605.265,66177.265,2,1981 No1 C2004A02342.docx | 1981 No2 C2004A02343.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1982,83257.282,81656.842,2,1982 No1 C2004A02541.docx | 1982 No2 C2004A02542.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1983,132123.464,94300.714,3,1983 No1 C2004A02675.docx | 1983 No2 C2004A02676.docx | 1983 No5 C2004A02725.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1984,36377.0,33348.0,2,1984 No1 C2004A02815.docx | 1984 No2 C2004A02804.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1985,35151.0,35151.0,3,1985 No1 C2004A03034.docx | 1985 No2 C2004A03035.docx | 1985 No3 C2004A03075.docx,restatement,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1986,41909.0,37527.0,2,1986 No1 C2004A03177.docx | 1986 No2 C2004A03178.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1987,45402.0,40330.0,2,1987 No1 C2004A03358.docx | 1987 No2 C2004A03359.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1988,45156.0,41301.0,2,1988 No1 C2004A03521.docx | 1988 No2 C2004A03522.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1989,42592.7,42592.7,3,1989 No1 C2004A03695.docx | 1989 No2 C2004A03696.docx | 1989 No3 C2004A03791.docx,restatement,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1990,44510.7,44510.7,3,1990 No1 C2004A03903.docx | 1990 No2 C2004A03904.docx | 1990 No3 C2004A03960.docx,restatement,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1991,46414.9,46414.9,3,1991 No1 C2004A04029.docx | 1991 No2 C2004A04030.docx | 1991 No5 C2004A04140.docx,restatement,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1992,62577.1,43665.7,2,1992 No1 C2004A04239.docx | 1992 No2 C2004A04240.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1993,64262.0,47663.0,2,1993 No1 C2004A04432.docx | 1993 No2 C2004A04433.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1994,68190.0,53627.0,2,1994 No1 C2004A04627.docx | 1994 No2 C2004A04628.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1995,64217.0,46628.0,2,1995 No1 C1994A00088.docx | 1995 No2 C1994A00089.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1996,115996.0,50339.0,3,1996 No1 C1995A00060.docx | 1996 No2 C1995A00061.docx | 1996 No3 C1995A00157.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1997,113033.0,49777.0,3,1997 No1 C1996A00065.docx | 1997 No2 C1996A00066.docx | 1997 No3 C1997A00035.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1998,117601.0,47431.0,3,1998 No1 C1997A00089.docx | 1998 No2 C1997A00090.docx | 1998 No3 C1998A00005.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,1999,76731.0,60284.0,2,1999 No1 C1998A00070.docx | 1999 No2 C1998A00071.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2000,,,0,,gap,,,science_agency
+Australia,ANSTO / Atomic Energy Commission,2001,,,0,,gap,,,science_agency
+Australia,ANSTO / Atomic Energy Commission,2002,21740.0,21740.0,1,2002 No3-2 C2004A00939VOL02.docx,single,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2003,182025.0,182025.0,1,2003 No1 C2008C00466.docx,single,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2004,120621.0,120621.0,1,2004 No1 C2008C00465.docx,single,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2005,110522.0,110522.0,1,2005 No1 C2009C00499.docx,single,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2006,117568.0,117568.0,1,2006 No1 C2012C00814.docx,single,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2007,141578.0,129653.0,2,2007 No1 C2012C00879.docx | 2007 No3 C2013C00330.DOCX,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2008,151668.0,151668.0,1,2008 No1 C2012C00882.docx,single,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2009,205515.0,173115.0,2,2009 No1 C2013C00309.DOCX | 2009 No2 C2010C00629.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2010,155240.0,155240.0,1,2010 No1 C2012C00874.docx,single,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2011,324906.0,165579.0,3,2011 No1 C2012C00506.docx | 2011 No2 C2013C00511.DOCX | 2011 No3 C2012C00658.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2012,169679.0,165579.0,2,2012 No1 C2013C00531.DOCX | 2012 No2 C2013C00443.DOCX,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2013,162722.0,159222.0,2,2013 No1 C2014C00172.DOCX | 2013 No2 C2013C00435.DOCX,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2014,230322.0,162751.0,3,2014 No1 C2014C00349.DOCX | 2014 No2 C2014C00162.DOCX | 2014 No4 C2014A00020.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2015,259190.0,162751.0,3,2015 No1 C2014A00063.docx | 2015 No2 C2014A00064.docx | 2015 No4 C2015A00029.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2016,253853.0,157414.0,2,2016 No1 C2015A00076.docx | 2016 No2 C2015A00077.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2017,192616.0,156700.0,2,2017 No1 C2016A00069.docx | 2017 No2 C2016A00070.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2018,226960.0,198119.0,2,2018 No1 C2017A00060.docx | 2018 No2 C2017A00061.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2019,,,0,,gap,,,science_agency
+Australia,ANSTO / Atomic Energy Commission,2020,225487.0,146687.0,2,2020 No1 C2019A00100.docx | 2020 No2 C2019A00101.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2021,93773.0,76965.0,2,2021 No1 C2020A00109.docx | 2021 No2 C2020A00110.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2022,327640.0,277453.0,3,2022 No1 C2021A00067.docx | 2022 No2 C2021A00068.docx | 2022 No4 C2022A00020.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2023,3395.0,820.0,2,2023 No1 C2022A00067.docx | 2023 No2 C2022A00068.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2024,435538.0,318527.0,2,2024 No1 C2023A00031.docx | 2024 No2 C2023A00032.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2025,395175.0,324464.0,2,2025 No1 C2024A00047.docx | 2025 No2 C2024A00048.docx,additive,AUD,thousand,science_agency
+Australia,ANSTO / Atomic Energy Commission,2026,277684.0,225589.0,2,2026 No1 C2025A00047.docx | 2026 No2 C2025A00048.docx,additive,AUD,thousand,science_agency
+Australia,Anglo-Australian Telescope Agreement,1975,1580.0,1580.0,1,1975 No2 C2004A00153.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1976,855.5,364.5,2,1976 No1 C2004A01425.docx | 1976 No2 C2004A01426.docx,additive,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1977,816.0,816.0,1,1977 No1 C2004A01546.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1978,830.0,830.0,1,1978 No1 C2004A01777.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1979,850.0,850.0,1,1979 No1 C2004A01940.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1980,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,1981,1100.0,1100.0,1,1981 No1 C2004A02342.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1982,1530.0,1530.0,1,1982 No1 C2004A02541.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1983,1738.0,1738.0,1,1983 No1 C2004A02675.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1984,1884.0,1884.0,1,1984 No1 C2004A02815.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1985,1835.0,1835.0,1,1985 No1 C2004A03034.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1986,1795.0,1795.0,1,1986 No1 C2004A03177.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1987,1897.0,1897.0,1,1987 No1 C2004A03358.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1988,2001.0,2001.0,1,1988 No1 C2004A03521.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1989,2383.0,2383.0,1,1989 No1 C2004A03695.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1990,2523.0,2523.0,1,1990 No1 C2004A03903.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1991,2697.2,2697.2,1,1991 No1 C2004A04029.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1992,2885.0,2885.0,1,1992 No1 C2004A04239.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1993,3035.0,3035.0,1,1993 No1 C2004A04432.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1994,3055.0,3055.0,1,1994 No1 C2004A04627.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1995,3063.0,3063.0,1,1995 No1 C1994A00088.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1996,3043.0,3043.0,1,1996 No1 C1995A00060.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1997,3164.0,3164.0,1,1997 No1 C1996A00065.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1998,3281.0,3281.0,1,1998 No1 C1997A00089.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,1999,3462.0,3462.0,1,1999 No1 C1998A00070.docx,single,AUD,thousand,unclear
+Australia,Anglo-Australian Telescope Agreement,2000,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2001,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2002,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2003,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2004,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2005,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2006,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2007,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2008,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2009,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2010,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2011,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2012,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2013,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2014,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2015,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2016,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2017,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2018,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2019,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2020,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2021,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2022,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2023,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2024,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2025,,,0,,gap,,,unclear
+Australia,Anglo-Australian Telescope Agreement,2026,,,0,,gap,,,unclear
+Australia,Australian Centre for,1975,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1976,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1977,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1978,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1979,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1980,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1981,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1982,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1983,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1984,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1985,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1986,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1987,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1988,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1989,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1990,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1991,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1992,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1993,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1994,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1995,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1996,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1997,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1998,,,0,,gap,,,science_agency
+Australia,Australian Centre for,1999,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2000,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2001,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2002,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2003,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2004,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2005,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2006,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2007,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2008,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2009,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2010,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2011,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2012,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2013,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2014,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2015,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2016,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2017,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2018,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2019,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2020,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2021,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2022,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2023,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2024,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2025,,,0,,gap,,,science_agency
+Australia,Australian Centre for,2026,,,0,,gap,,,science_agency
+Australia,Australian Centre for International Agricultural Research,1975,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1976,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1977,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1978,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1979,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1980,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1981,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1982,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1983,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1984,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1985,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1986,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1987,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1988,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1989,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1990,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1991,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1992,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1993,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1994,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1995,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1996,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1997,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1998,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,1999,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2000,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2001,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2002,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2003,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2004,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2005,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2006,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2007,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2008,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2009,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2010,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2011,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2012,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2013,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2014,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2015,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2016,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2017,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2018,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2019,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2020,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2021,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2022,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2023,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2024,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2025,,,0,,gap,,,direct_rd
+Australia,Australian Centre for International Agricultural Research,2026,,,0,,gap,,,direct_rd
+Australia,Australian Institute of Health,1975,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,1976,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,1977,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,1978,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,1979,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,1980,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,1981,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,1982,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,1983,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,1984,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,1985,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,1986,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,1987,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,1988,4801.834,4801.834,2,1988 No1 C2004A03521.docx | 1988 No3 C2004A03634.docx,restatement,AUD,thousand,unclear
+Australia,Australian Institute of Health,1989,3406.526,3154.526,2,1989 No1 C2004A03695.docx | 1989 No2 C2004A03696.docx,additive,AUD,thousand,unclear
+Australia,Australian Institute of Health,1990,4173.0,4173.0,1,1990 No1 C2004A03903.docx,single,AUD,thousand,unclear
+Australia,Australian Institute of Health,1991,4439.0,4439.0,1,1991 No1 C2004A04029.docx,single,AUD,thousand,unclear
+Australia,Australian Institute of Health,1992,4217.0,4217.0,1,1992 No1 C2004A04239.docx,single,AUD,thousand,unclear
+Australia,Australian Institute of Health,1993,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,1994,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,1995,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,1996,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,1997,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,1998,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,1999,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2000,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2001,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2002,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2003,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2004,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2005,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2006,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2007,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2008,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2009,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2010,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2011,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2012,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2013,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2014,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2015,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2016,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2017,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2018,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2019,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2020,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2021,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2022,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2023,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2024,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2025,,,0,,gap,,,unclear
+Australia,Australian Institute of Health,2026,,,0,,gap,,,unclear
+Australia,Australian Institute of Marine Science (AIMS),1975,480.0,80.0,2,1975 No1 C2004A00152.docx | 1975 No2 C2004A00153.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1976,2662.0,527.0,2,1976 No1 C2004A01425.docx | 1976 No2 C2004A01426.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1977,6966.86,1237.36,2,1977 No1 C2004A01546.docx | 1977 No2 C2004A01547.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1978,7970.0,1450.0,2,1978 No1 C2004A01777.docx | 1978 No2 C2004A01778.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1979,3699.0,1950.0,2,1979 No1 C2004A01940.docx | 1979 No2 C2004A01941.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1980,2726.0,2069.0,2,1980 No3 C2004A02262.docx | 1980 No4 C2004A02263.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1981,3516.0,3062.0,2,1981 No1 C2004A02342.docx | 1981 No2 C2004A02343.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1982,5236.0,4662.0,2,1982 No1 C2004A02541.docx | 1982 No2 C2004A02542.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1983,5722.0,5220.0,2,1983 No1 C2004A02675.docx | 1983 No2 C2004A02676.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1984,6382.0,5852.0,2,1984 No1 C2004A02815.docx | 1984 No2 C2004A02804.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1985,6900.0,6300.0,2,1985 No1 C2004A03034.docx | 1985 No2 C2004A03035.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1986,7350.0,6500.0,2,1986 No1 C2004A03177.docx | 1986 No2 C2004A03178.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1987,1254.7,704.7,2,1987 No1 C2004A03358.docx | 1987 No2 C2004A03359.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1988,8202.1,7602.1,2,1988 No1 C2004A03521.docx | 1988 No2 C2004A03522.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1989,8588.4,8588.4,3,1989 No1 C2004A03695.docx | 1989 No2 C2004A03696.docx | 1989 No3 C2004A03791.docx,restatement,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1990,11030.0,10230.0,2,1990 No1 C2004A03903.docx | 1990 No2 C2004A03904.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1991,13189.1,11375.1,2,1991 No1 C2004A04029.docx | 1991 No2 C2004A04030.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1992,13639.3,11825.3,2,1992 No1 C2004A04239.docx | 1992 No2 C2004A04240.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1993,14249.0,13538.0,2,1993 No1 C2004A04432.docx | 1993 No2 C2004A04433.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1994,15263.0,14193.0,2,1994 No1 C2004A04627.docx | 1994 No2 C2004A04628.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1995,16881.0,15811.0,2,1995 No1 C1994A00088.docx | 1995 No2 C1994A00089.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1996,16523.0,16523.0,1,1996 No1 C1995A00060.docx,single,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1997,16604.0,16604.0,1,1997 No1 C1996A00065.docx,single,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1998,16445.0,16445.0,1,1998 No1 C1997A00089.docx,single,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),1999,18384.0,16388.0,2,1999 No1 C1998A00070.docx | 1999 No2 C1998A00071.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2000,,,0,,gap,,,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2001,,,0,,gap,,,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2002,,,0,,gap,,,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2003,26094.0,26094.0,1,2003 No1 C2008C00466.docx,single,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2004,22112.0,22112.0,1,2004 No1 C2008C00465.docx,single,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2005,22483.0,22483.0,1,2005 No1 C2009C00499.docx,single,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2006,23125.0,23125.0,1,2006 No1 C2012C00814.docx,single,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2007,24470.0,23631.0,2,2007 No1 C2012C00879.docx | 2007 No3 C2013C00330.DOCX,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2008,26645.0,26645.0,1,2008 No1 C2012C00882.docx,single,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2009,27701.0,27701.0,1,2009 No1 C2013C00309.DOCX,single,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2010,30413.0,27949.0,2,2010 No1 C2012C00874.docx | 2010 No3 C2010C00800.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2011,61296.0,30883.0,2,2011 No1 C2012C00506.docx | 2011 No3 C2012C00658.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2012,31245.0,31245.0,1,2012 No1 C2013C00531.DOCX,single,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2013,31562.0,31562.0,1,2013 No1 C2014C00172.DOCX,single,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2014,33280.0,33280.0,1,2014 No1 C2014C00349.DOCX,single,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2015,38796.0,38796.0,1,2015 No1 C2014A00063.docx,single,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2016,40483.0,40483.0,1,2016 No1 C2015A00076.docx,single,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2017,82035.0,40483.0,2,2017 No1 C2016A00069.docx | 2017 No3 C2017A00029.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2018,43516.0,41916.0,2,2018 No1 C2017A00060.docx | 2018 No2 C2017A00061.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2019,,,0,,gap,,,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2020,26106.0,26106.0,1,2020 No1 C2019A00100.docx,single,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2021,18840.0,18840.0,1,2021 No1 C2020A00109.docx,single,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2022,45548.0,45548.0,1,2022 No1 C2021A00067.docx,single,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2023,34283.0,16733.0,2,2023 No1 C2022A00067.docx | 2023 No2 C2022A00068.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2024,129098.0,99852.0,2,2024 No1 C2023A00031.docx | 2024 No2 C2023A00032.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2025,93285.0,81869.0,2,2025 No1 C2024A00047.docx | 2025 No2 C2024A00048.docx,additive,AUD,thousand,science_agency
+Australia,Australian Institute of Marine Science (AIMS),2026,54092.0,51803.0,2,2026 No1 C2025A00047.docx | 2026 No2 C2025A00048.docx,additive,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1975,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1976,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1977,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1978,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1979,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1980,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1981,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1982,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1983,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1984,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1985,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1986,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1987,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1988,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1989,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1990,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1991,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1992,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1993,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1994,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1995,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1996,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1997,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1998,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,1999,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2000,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2001,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2002,148.0,148.0,1,2002 No3-2 C2004A00939VOL02.docx,single,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2003,10657.0,10657.0,1,2003 No1 C2008C00466.docx,single,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2004,13912.0,13912.0,1,2004 No1 C2008C00465.docx,single,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2005,13519.0,13519.0,1,2005 No1 C2009C00499.docx,single,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2006,11461.0,11461.0,1,2006 No1 C2012C00814.docx,single,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2007,13294.0,13097.0,2,2007 No1 C2012C00879.docx | 2007 No3 C2013C00330.DOCX,additive,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2008,15867.0,15867.0,1,2008 No1 C2012C00882.docx,single,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2009,19230.0,15630.0,2,2009 No1 C2013C00309.DOCX | 2009 No2 C2010C00629.docx,additive,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2010,15548.0,15548.0,1,2010 No1 C2012C00874.docx,single,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2011,30223.0,15941.0,2,2011 No1 C2012C00506.docx | 2011 No3 C2012C00658.docx,additive,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2012,18483.0,18483.0,1,2012 No1 C2013C00531.DOCX,single,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2013,18483.0,18483.0,1,2013 No1 C2014C00172.DOCX,single,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2014,15434.0,15434.0,1,2014 No1 C2014C00349.DOCX,single,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2015,15324.0,15324.0,1,2015 No1 C2014A00063.docx,single,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2016,15256.0,15256.0,1,2016 No1 C2015A00076.docx,single,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2017,30216.0,15043.0,2,2017 No1 C2016A00069.docx | 2017 No3 C2017A00029.docx,additive,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2018,15173.0,15173.0,1,2018 No1 C2017A00060.docx,single,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2019,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2020,8571.0,8571.0,1,2020 No1 C2019A00100.docx,single,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2021,6626.0,6626.0,1,2021 No1 C2020A00109.docx,single,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2022,15892.0,15892.0,1,2022 No1 C2021A00067.docx,single,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2023,,,0,,gap,,,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2024,28547.0,28547.0,1,2024 No1 C2023A00031.docx,single,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2025,26151.0,26151.0,1,2025 No1 C2024A00047.docx,single,AUD,thousand,science_agency
+Australia,Australian Radiation Protection and Nuclear Safety Agency,2026,16823.0,16823.0,1,2026 No1 C2025A00047.docx,single,AUD,thousand,science_agency
+Australia,Australian Renewable Energy Agency,1975,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1976,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1977,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1978,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1979,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1980,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1981,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1982,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1983,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1984,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1985,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1986,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1987,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1988,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1989,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1990,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1991,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1992,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1993,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1994,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1995,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1996,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1997,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1998,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,1999,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2000,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2001,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2002,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2003,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2004,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2005,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2006,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2007,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2008,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2009,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2010,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2011,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2012,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2013,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2014,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2015,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2016,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2017,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2018,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2019,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2020,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2021,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2022,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2023,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2024,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2025,,,0,,gap,,,innovation_instruments
+Australia,Australian Renewable Energy Agency,2026,,,0,,gap,,,innovation_instruments
+Australia,Australian Research Council (ARC),1988,42665.446,39761.446,2,1988 No1 C2004A03521.docx | 1988 No2 C2004A03522.docx,additive,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),1989,,,0,,gap,,,science_agency
+Australia,Australian Research Council (ARC),1990,,,0,,gap,,,science_agency
+Australia,Australian Research Council (ARC),1991,,,0,,gap,,,science_agency
+Australia,Australian Research Council (ARC),1992,,,0,,gap,,,science_agency
+Australia,Australian Research Council (ARC),1993,,,0,,gap,,,science_agency
+Australia,Australian Research Council (ARC),1994,,,0,,gap,,,science_agency
+Australia,Australian Research Council (ARC),1995,,,0,,gap,,,science_agency
+Australia,Australian Research Council (ARC),1996,,,0,,gap,,,science_agency
+Australia,Australian Research Council (ARC),1997,,,0,,gap,,,science_agency
+Australia,Australian Research Council (ARC),1998,,,0,,gap,,,science_agency
+Australia,Australian Research Council (ARC),1999,,,0,,gap,,,science_agency
+Australia,Australian Research Council (ARC),2000,,,0,,gap,,,science_agency
+Australia,Australian Research Council (ARC),2001,,,0,,gap,,,science_agency
+Australia,Australian Research Council (ARC),2002,5342.0,5342.0,1,2002 No3-2 C2004A00939VOL02.docx,single,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2003,12544.0,12544.0,1,2003 No1 C2008C00466.docx,single,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2004,12153.0,12153.0,1,2004 No1 C2008C00465.docx,single,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2005,12910.0,12910.0,1,2005 No1 C2009C00499.docx,single,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2006,14996.0,14996.0,1,2006 No1 C2012C00814.docx,single,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2007,14922.0,14922.0,1,2007 No1 C2012C00879.docx,single,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2008,15251.0,15251.0,1,2008 No1 C2012C00882.docx,single,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2009,15896.0,15896.0,1,2009 No1 C2013C00309.DOCX,single,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2010,25683.0,25683.0,1,2010 No1 C2012C00874.docx,single,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2011,31171.0,26623.0,2,2011 No1 C2012C00506.docx | 2011 No2 C2013C00511.DOCX,additive,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2012,48444.0,25423.0,2,2012 No1 C2013C00531.DOCX | 2012 No5 C2013C00018.docx,additive,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2013,25953.0,25953.0,1,2013 No1 C2014C00172.DOCX,single,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2014,25953.0,25953.0,1,2014 No1 C2014C00349.DOCX,single,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2015,52833.0,26422.0,2,2015 No1 C2014A00063.docx | 2015 No5 C2015A00078.docx,additive,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2016,26411.0,26411.0,1,2016 No1 C2015A00076.docx,single,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2017,57982.0,27977.0,2,2017 No1 C2016A00069.docx | 2017 No3 C2017A00029.docx,additive,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2018,30005.0,30005.0,1,2018 No1 C2017A00060.docx,single,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2019,,,0,,gap,,,science_agency
+Australia,Australian Research Council (ARC),2020,19456.0,19456.0,1,2020 No1 C2019A00100.docx,single,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2021,12923.0,12923.0,1,2021 No1 C2020A00109.docx,single,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2022,28457.0,28457.0,1,2022 No1 C2021A00067.docx,single,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2023,2572.0,2572.0,1,2023 No1 C2022A00067.docx,single,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2024,34537.0,34537.0,1,2024 No1 C2023A00031.docx,single,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2025,1055621.0,1055621.0,1,2025 No1 C2024A00047.docx,single,AUD,thousand,science_agency
+Australia,Australian Research Council (ARC),2026,620763.0,620763.0,1,2026 No1 C2025A00047.docx,single,AUD,thousand,science_agency
+Australia,Australian Science and Technology Council,1975,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1976,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1977,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1978,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1979,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1980,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1981,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1982,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1983,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1984,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1985,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1986,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1987,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1988,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1989,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1990,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1991,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1992,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1993,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1994,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1995,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1996,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1997,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1998,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,1999,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2000,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2001,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2002,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2003,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2004,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2005,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2006,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2007,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2008,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2009,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2010,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2011,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2012,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2013,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2014,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2015,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2016,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2017,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2018,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2019,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2020,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2021,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2022,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2023,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2024,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2025,,,0,,gap,,,unclear
+Australia,Australian Science and Technology Council,2026,,,0,,gap,,,unclear
+Australia,Bureau of Meteorology (Research),1975,1021.598,1021.598,1,1975 No2 C2004A00153.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1976,31190.893,30291.646,2,1976 No1 C2004A01425.docx | 1976 No2 C2004A01426.docx,additive,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1977,33905.446,33053.908,2,1977 No1 C2004A01546.docx | 1977 No2 C2004A01547.docx,additive,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1978,1136.083,1136.083,1,1978 No2 C2004A01778.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1979,1008.963,1008.963,1,1979 No2 C2004A01941.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1980,,,0,,gap,,,science_agency
+Australia,Bureau of Meteorology (Research),1981,1236.861,192.0,2,1981 No1 C2004A02342.docx | 1981 No2 C2004A02343.docx,additive,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1982,1289.044,90.0,2,1982 No1 C2004A02541.docx | 1982 No2 C2004A02542.docx,additive,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1983,52829.9,51368.65,2,1983 No1 C2004A02675.docx | 1983 No2 C2004A02676.docx,additive,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1984,63741.953,58115.451,2,1984 No1 C2004A02815.docx | 1984 No2 C2004A02804.docx,additive,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1985,2499.55,2499.55,1,1985 No2 C2004A03035.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1986,71839.30900000001,68352.368,2,1986 No1 C2004A03177.docx | 1986 No2 C2004A03178.docx,additive,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1987,3862.974,265.0,2,1987 No1 C2004A03358.docx | 1987 No2 C2004A03359.docx,additive,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1988,5564.969,339.969,2,1988 No1 C2004A03521.docx | 1988 No2 C2004A03522.docx,additive,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1989,8117.571,611.375,2,1989 No1 C2004A03695.docx | 1989 No2 C2004A03696.docx,additive,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1990,,,0,,gap,,,science_agency
+Australia,Bureau of Meteorology (Research),1991,8046.992,8046.992,1,1991 No2 C2004A04030.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1992,11348.998,11348.998,1,1992 No2 C2004A04240.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1993,11120.998,11120.998,1,1993 No2 C2004A04433.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1994,11182.766,11182.766,1,1994 No2 C2004A04628.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1995,133867.0,122650.0,2,1995 No1 C1994A00088.docx | 1995 No2 C1994A00089.docx,additive,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1996,11552.0,11552.0,1,1996 No2 C1995A00061.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1997,13072.002,13072.002,1,1997 No2 C1996A00066.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1998,11970.0,11970.0,1,1998 No2 C1997A00090.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),1999,12080.0,12080.0,1,1999 No2 C1998A00071.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2000,,,0,,gap,,,science_agency
+Australia,Bureau of Meteorology (Research),2001,,,0,,gap,,,science_agency
+Australia,Bureau of Meteorology (Research),2002,,,0,,gap,,,science_agency
+Australia,Bureau of Meteorology (Research),2003,,,0,,gap,,,science_agency
+Australia,Bureau of Meteorology (Research),2004,192430.0,192430.0,1,2004 No1 C2008C00465.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2005,190447.0,190447.0,1,2005 No1 C2009C00499.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2006,206726.0,206726.0,1,2006 No1 C2012C00814.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2007,214412.0,214412.0,1,2007 No1 C2012C00879.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2008,235661.0,235661.0,1,2008 No1 C2012C00882.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2009,276594.0,244804.0,2,2009 No1 C2013C00309.DOCX | 2009 No2 C2010C00629.docx,additive,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2010,271126.0,271126.0,1,2010 No1 C2012C00874.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2011,295642.0,277551.0,2,2011 No1 C2012C00506.docx | 2011 No2 C2013C00511.DOCX,additive,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2012,277551.0,277551.0,1,2012 No1 C2013C00531.DOCX,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2013,269895.0,269895.0,1,2013 No1 C2014C00172.DOCX,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2014,509843.0,255119.0,2,2014 No1 C2014C00349.DOCX | 2014 No5 C2014A00056.docx,additive,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2015,525382.0,262754.0,2,2015 No1 C2014A00063.docx | 2015 No5 C2015A00078.docx,additive,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2016,262628.0,262628.0,1,2016 No1 C2015A00076.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2017,528002.0,258024.0,2,2017 No1 C2016A00069.docx | 2017 No3 C2017A00029.docx,additive,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2018,277868.0,277868.0,1,2018 No1 C2017A00060.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2019,2362.0,2362.0,1,2019 No3 C2019A00021.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2020,157919.0,157919.0,1,2020 No1 C2019A00100.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2021,149201.0,149201.0,1,2021 No1 C2020A00109.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2022,356400.0,356400.0,1,2022 No1 C2021A00067.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2023,29531.0,29531.0,1,2023 No1 C2022A00067.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2024,442726.0,442726.0,1,2024 No1 C2023A00031.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2025,440088.0,440088.0,1,2025 No1 C2024A00047.docx,single,AUD,thousand,science_agency
+Australia,Bureau of Meteorology (Research),2026,254574.0,254574.0,1,2026 No1 C2025A00047.docx,single,AUD,thousand,science_agency
+Australia,CSIRO,1975,112708.707,107158.707,2,1975 No1 C2004A00152.docx | 1975 No2 C2004A00153.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1976,134316.941,134316.941,4,1976 No1 C2004A01425.docx | 1976 No2 C2004A01426.docx | 1976 No3 C2004A01469.docx | 1976 No4 C2004A01470.docx,restatement,AUD,thousand,science_agency
+Australia,CSIRO,1977,154178.472,151910.472,2,1977 No1 C2004A01546.docx | 1977 No2 C2004A01547.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1978,174213.338,171713.338,2,1978 No1 C2004A01777.docx | 1978 No2 C2004A01778.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1979,196726.579,189952.579,3,1979 No1 C2004A01940.docx | 1979 No2 C2004A01941.docx | 1979 No3 C2004A02039.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1980,143190.479,142929.0,2,1980 No3 C2004A02262.docx | 1980 No4 C2004A02263.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1981,191607.73799999998,154000.0,3,1981 No1 C2004A02342.docx | 1981 No2 C2004A02343.docx | 1981 No3 C2004A02433.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1982,174594.0,174594.0,3,1982 No1 C2004A02541.docx | 1982 No2 C2004A02542.docx | 1982 No4 C2004A02595.docx,restatement,AUD,thousand,science_agency
+Australia,CSIRO,1983,717732.512,391908.315,4,1983 No1 C2004A02675.docx | 1983 No2 C2004A02676.docx | 1983 No5 C2004A02725.docx | 1983 No6 C2004A02726.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1984,540098.9839999999,475099.948,2,1984 No1 C2004A02815.docx | 1984 No2 C2004A02804.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1985,571189.804,530428.904,2,1985 No1 C2004A03034.docx | 1985 No2 C2004A03035.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1986,495096.674,461868.674,2,1986 No1 C2004A03177.docx | 1986 No2 C2004A03178.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1987,537917.042,506038.042,2,1987 No1 C2004A03358.docx | 1987 No2 C2004A03359.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1988,367756.69999999995,329630.1,2,1988 No1 C2004A03521.docx | 1988 No2 C2004A03522.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1989,347783.806,317856.5,2,1989 No1 C2004A03695.docx | 1989 No2 C2004A03696.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1990,348084.6,330078.5,2,1990 No1 C2004A03903.docx | 1990 No2 C2004A03904.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1991,363007.5,363007.5,3,1991 No1 C2004A04029.docx | 1991 No2 C2004A04030.docx | 1991 No5 C2004A04140.docx,restatement,AUD,thousand,science_agency
+Australia,CSIRO,1992,414359.9,398903.4,2,1992 No1 C2004A04239.docx | 1992 No2 C2004A04240.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1993,446264.0,417669.0,2,1993 No1 C2004A04432.docx | 1993 No2 C2004A04433.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1994,451414.0,414992.0,2,1994 No1 C2004A04627.docx | 1994 No2 C2004A04628.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1995,448945.0,424034.0,2,1995 No1 C1994A00088.docx | 1995 No2 C1994A00089.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1996,850780.0,423283.0,3,1996 No1 C1995A00060.docx | 1996 No2 C1995A00061.docx | 1996 No3 C1995A00157.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1997,417597.0,391997.0,2,1997 No1 C1996A00065.docx | 1997 No2 C1996A00066.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1998,883935.0,417102.0,3,1998 No1 C1997A00089.docx | 1998 No2 C1997A00090.docx | 1998 No3 C1998A00005.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,1999,466837.0,439433.0,2,1999 No1 C1998A00070.docx | 1999 No2 C1998A00071.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,2000,,,0,,gap,,,science_agency
+Australia,CSIRO,2001,,,0,,gap,,,science_agency
+Australia,CSIRO,2002,,,0,,gap,,,science_agency
+Australia,CSIRO,2003,639629.0,639629.0,1,2003 No1 C2008C00466.docx,single,AUD,thousand,science_agency
+Australia,CSIRO,2004,568107.0,568107.0,1,2004 No1 C2008C00465.docx,single,AUD,thousand,science_agency
+Australia,CSIRO,2005,576528.0,576528.0,1,2005 No1 C2009C00499.docx,single,AUD,thousand,science_agency
+Australia,CSIRO,2006,593928.0,593928.0,1,2006 No1 C2012C00814.docx,single,AUD,thousand,science_agency
+Australia,CSIRO,2007,610060.0,607167.0,2,2007 No1 C2012C00879.docx | 2007 No3 C2013C00330.DOCX,additive,AUD,thousand,science_agency
+Australia,CSIRO,2008,664470.0,664470.0,1,2008 No1 C2012C00882.docx,single,AUD,thousand,science_agency
+Australia,CSIRO,2009,675790.0,668120.0,2,2009 No1 C2013C00309.DOCX | 2009 No2 C2010C00629.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,2010,721004.0,711084.0,2,2010 No1 C2012C00874.docx | 2010 No2 C2011C00101.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,2011,1435669.0,720885.0,3,2011 No1 C2012C00506.docx | 2011 No2 C2013C00511.DOCX | 2011 No3 C2012C00658.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,2012,734839.0,724939.0,2,2012 No1 C2013C00531.DOCX | 2012 No2 C2013C00443.DOCX,additive,AUD,thousand,science_agency
+Australia,CSIRO,2013,736774.0,736774.0,1,2013 No1 C2014C00172.DOCX,single,AUD,thousand,science_agency
+Australia,CSIRO,2014,757077.0,757077.0,1,2014 No1 C2014C00349.DOCX,single,AUD,thousand,science_agency
+Australia,CSIRO,2015,757077.0,757077.0,1,2015 No1 C2014A00063.docx,single,AUD,thousand,science_agency
+Australia,CSIRO,2016,749681.0,749681.0,1,2016 No1 C2015A00076.docx,single,AUD,thousand,science_agency
+Australia,CSIRO,2017,756114.0,750281.0,2,2017 No1 C2016A00069.docx | 2017 No2 C2016A00070.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,2018,803549.0,793549.0,2,2018 No1 C2017A00060.docx | 2018 No2 C2017A00061.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,2019,900.0,900.0,1,2019 No3 C2019A00021.docx,single,AUD,thousand,science_agency
+Australia,CSIRO,2020,520308.0,488225.0,2,2020 No1 C2019A00100.docx | 2020 No2 C2019A00101.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,2021,487896.0,477300.0,3,2021 No1 C2020A00109.docx | 2021 No2 C2020A00110.docx | 2021 No4 C2021A00038.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,2022,950001.0,946001.0,2,2022 No1 C2021A00067.docx | 2022 No2 C2021A00068.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,2023,112724.0,31196.0,2,2023 No1 C2022A00067.docx | 2023 No2 C2022A00068.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,2024,1059439.0,1008739.0,2,2024 No1 C2023A00031.docx | 2024 No2 C2023A00032.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,2025,966559.0,916459.0,2,2025 No1 C2024A00047.docx | 2025 No2 C2024A00048.docx,additive,AUD,thousand,science_agency
+Australia,CSIRO,2026,599296.0,587072.0,2,2026 No1 C2025A00047.docx | 2026 No2 C2025A00048.docx,additive,AUD,thousand,science_agency
+Australia,Cancer Australia,1975,,,0,,gap,,,unclear
+Australia,Cancer Australia,1976,,,0,,gap,,,unclear
+Australia,Cancer Australia,1977,,,0,,gap,,,unclear
+Australia,Cancer Australia,1978,,,0,,gap,,,unclear
+Australia,Cancer Australia,1979,,,0,,gap,,,unclear
+Australia,Cancer Australia,1980,,,0,,gap,,,unclear
+Australia,Cancer Australia,1981,,,0,,gap,,,unclear
+Australia,Cancer Australia,1982,,,0,,gap,,,unclear
+Australia,Cancer Australia,1983,,,0,,gap,,,unclear
+Australia,Cancer Australia,1984,,,0,,gap,,,unclear
+Australia,Cancer Australia,1985,,,0,,gap,,,unclear
+Australia,Cancer Australia,1986,,,0,,gap,,,unclear
+Australia,Cancer Australia,1987,,,0,,gap,,,unclear
+Australia,Cancer Australia,1988,,,0,,gap,,,unclear
+Australia,Cancer Australia,1989,,,0,,gap,,,unclear
+Australia,Cancer Australia,1990,,,0,,gap,,,unclear
+Australia,Cancer Australia,1991,,,0,,gap,,,unclear
+Australia,Cancer Australia,1992,,,0,,gap,,,unclear
+Australia,Cancer Australia,1993,,,0,,gap,,,unclear
+Australia,Cancer Australia,1994,,,0,,gap,,,unclear
+Australia,Cancer Australia,1995,,,0,,gap,,,unclear
+Australia,Cancer Australia,1996,,,0,,gap,,,unclear
+Australia,Cancer Australia,1997,,,0,,gap,,,unclear
+Australia,Cancer Australia,1998,,,0,,gap,,,unclear
+Australia,Cancer Australia,1999,,,0,,gap,,,unclear
+Australia,Cancer Australia,2000,,,0,,gap,,,unclear
+Australia,Cancer Australia,2001,,,0,,gap,,,unclear
+Australia,Cancer Australia,2002,,,0,,gap,,,unclear
+Australia,Cancer Australia,2003,,,0,,gap,,,unclear
+Australia,Cancer Australia,2004,,,0,,gap,,,unclear
+Australia,Cancer Australia,2005,,,0,,gap,,,unclear
+Australia,Cancer Australia,2006,,,0,,gap,,,unclear
+Australia,Cancer Australia,2007,23572.0,22572.0,2,2007 No1 C2012C00879.docx | 2007 No5 C2008C00471.docx,additive,AUD,thousand,unclear
+Australia,Cancer Australia,2008,21155.0,21155.0,1,2008 No1 C2012C00882.docx,single,AUD,thousand,unclear
+Australia,Cancer Australia,2009,27218.0,27218.0,1,2009 No1 C2013C00309.DOCX,single,AUD,thousand,unclear
+Australia,Cancer Australia,2010,27486.0,27486.0,1,2010 No1 C2012C00874.docx,single,AUD,thousand,unclear
+Australia,Cancer Australia,2011,56608.0,29122.0,2,2011 No1 C2012C00506.docx | 2011 No3 C2012C00658.docx,additive,AUD,thousand,unclear
+Australia,Cancer Australia,2012,29122.0,29122.0,1,2012 No1 C2013C00531.DOCX,single,AUD,thousand,unclear
+Australia,Cancer Australia,2013,28701.0,28701.0,1,2013 No1 C2014C00172.DOCX,single,AUD,thousand,unclear
+Australia,Cancer Australia,2014,29835.0,29835.0,1,2014 No1 C2014C00349.DOCX,single,AUD,thousand,unclear
+Australia,Cancer Australia,2015,29835.0,29835.0,1,2015 No1 C2014A00063.docx,single,AUD,thousand,unclear
+Australia,Cancer Australia,2016,29029.0,29029.0,1,2016 No1 C2015A00076.docx,single,AUD,thousand,unclear
+Australia,Cancer Australia,2017,57527.0,29021.0,2,2017 No1 C2016A00069.docx | 2017 No3 C2017A00029.docx,additive,AUD,thousand,unclear
+Australia,Cancer Australia,2018,29870.0,29870.0,1,2018 No1 C2017A00060.docx,single,AUD,thousand,unclear
+Australia,Cancer Australia,2019,,,0,,gap,,,unclear
+Australia,Cancer Australia,2020,18148.0,18148.0,1,2020 No1 C2019A00100.docx,single,AUD,thousand,unclear
+Australia,Cancer Australia,2021,12321.0,12321.0,1,2021 No1 C2020A00109.docx,single,AUD,thousand,unclear
+Australia,Cancer Australia,2022,32470.0,32470.0,1,2022 No1 C2021A00067.docx,single,AUD,thousand,unclear
+Australia,Cancer Australia,2023,,,0,,gap,,,unclear
+Australia,Cancer Australia,2024,38150.0,38150.0,1,2024 No1 C2023A00031.docx,single,AUD,thousand,unclear
+Australia,Cancer Australia,2025,48556.0,48556.0,1,2025 No1 C2024A00047.docx,single,AUD,thousand,unclear
+Australia,Cancer Australia,2026,27066.0,27066.0,1,2026 No1 C2025A00047.docx,single,AUD,thousand,unclear
+Australia,Climate Change and Energy Efficiency Programme,1975,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1976,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1977,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1978,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1979,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1980,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1981,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1982,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1983,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1984,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1985,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1986,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1987,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1988,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1989,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1990,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1991,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1992,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1993,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1994,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1995,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1996,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1997,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1998,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,1999,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2000,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2001,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2002,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2003,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2004,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2005,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2006,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2007,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2008,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2009,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2010,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2011,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2012,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2013,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2014,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2015,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2016,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2017,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2018,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2019,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2020,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2021,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2022,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2023,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2024,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2025,,,0,,gap,,,innovation_instruments
+Australia,Climate Change and Energy Efficiency Programme,2026,,,0,,gap,,,innovation_instruments
+Australia,Geoscience Australia / Bureau of Mineral Resources,1975,655.96,655.96,1,1975 No2 C2004A00153.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1976,17171.134,16570.509,2,1976 No1 C2004A01425.docx | 1976 No2 C2004A01426.docx,additive,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1977,12248.697999999999,11672.041,2,1977 No1 C2004A01546.docx | 1977 No2 C2004A01547.docx,additive,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1978,533.09,533.09,1,1978 No2 C2004A01778.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1979,465.761,465.761,1,1979 No2 C2004A01941.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1980,,,0,,gap,,,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1981,529.206,529.206,1,1981 No2 C2004A02343.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1982,15198.923999999999,14590.658,2,1982 No1 C2004A02541.docx | 1982 No2 C2004A02542.docx,additive,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1983,18643.642,18018.756,2,1983 No1 C2004A02675.docx | 1983 No2 C2004A02676.docx,additive,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1984,21003.653,19547.528,2,1984 No1 C2004A02815.docx | 1984 No2 C2004A02804.docx,additive,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1985,21724.771,20743.999,2,1985 No1 C2004A03034.docx | 1985 No2 C2004A03035.docx,additive,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1986,29872.893,25648.566,2,1986 No1 C2004A03177.docx | 1986 No2 C2004A03178.docx,additive,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1987,34737.599,30590.51,2,1987 No1 C2004A03358.docx | 1987 No2 C2004A03359.docx,additive,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1988,3585.278,3585.278,1,1988 No2 C2004A03522.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1989,3662.914,3662.914,2,1989 No2 C2004A03696.docx | 1989 No4 C2004A03792.docx,restatement,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1990,2797.836,2797.836,1,1990 No2 C2004A03904.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1991,56777.009,53628.0,2,1991 No1 C2004A04029.docx | 1991 No2 C2004A04030.docx,additive,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1992,1359.0,1359.0,1,1992 No2 C2004A04240.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1993,1969.97,1969.97,1,1993 No2 C2004A04433.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1994,,,0,,gap,,,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1995,,,0,,gap,,,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1996,,,0,,gap,,,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1997,,,0,,gap,,,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1998,,,0,,gap,,,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,1999,,,0,,gap,,,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2000,,,0,,gap,,,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2001,,,0,,gap,,,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2002,,,0,,gap,,,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2003,89036.0,89036.0,1,2003 No1 C2008C00466.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2004,95787.0,95787.0,1,2004 No1 C2008C00465.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2005,101075.0,101075.0,1,2005 No1 C2009C00499.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2006,107460.0,107460.0,1,2006 No1 C2012C00814.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2007,125418.0,113015.0,2,2007 No1 C2012C00879.docx | 2007 No3 C2013C00330.DOCX,additive,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2008,144616.0,144616.0,1,2008 No1 C2012C00882.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2009,141287.0,138631.0,2,2009 No1 C2013C00309.DOCX | 2009 No2 C2010C00629.docx,additive,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2010,130078.0,130078.0,1,2010 No1 C2012C00874.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2011,2940.0,2940.0,1,2011 No2 C2013C00511.DOCX,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2012,122778.0,122778.0,1,2012 No1 C2013C00531.DOCX,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2013,117712.0,117712.0,1,2013 No1 C2014C00172.DOCX,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2014,134748.0,134748.0,1,2014 No1 C2014C00349.DOCX,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2015,134748.0,134748.0,1,2015 No1 C2014A00063.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2016,129598.0,129598.0,1,2016 No1 C2015A00076.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2017,270061.0,125834.0,2,2017 No1 C2016A00069.docx | 2017 No3 C2017A00029.docx,additive,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2018,155790.0,155790.0,1,2018 No1 C2017A00060.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2019,,,0,,gap,,,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2020,113909.0,113909.0,1,2020 No1 C2019A00100.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2021,98714.0,98714.0,1,2021 No1 C2020A00109.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2022,264630.0,264630.0,1,2022 No1 C2021A00067.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2023,,,0,,gap,,,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2024,328834.0,328834.0,1,2024 No1 C2023A00031.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2025,345291.0,345291.0,1,2025 No1 C2024A00047.docx,single,AUD,thousand,science_agency
+Australia,Geoscience Australia / Bureau of Mineral Resources,2026,202899.0,202899.0,1,2026 No1 C2025A00047.docx,single,AUD,thousand,science_agency
+Australia,Hospitals and Health Services Commission,1975,546.727,546.727,1,1975 No1 C2004A00152.docx,single,AUD,thousand,unclear
+Australia,Hospitals and Health Services Commission,1976,947.0,947.0,1,1976 No1 C2004A01425.docx,single,AUD,thousand,unclear
+Australia,Hospitals and Health Services Commission,1977,863.0,863.0,1,1977 No1 C2004A01546.docx,single,AUD,thousand,unclear
+Australia,Hospitals and Health Services Commission,1978,9043.0,1000.0,3,1978 No1 C2004A01777.docx | 1978 No2 C2004A01778.docx | 1978 No3 C2004A01841.docx,additive,AUD,thousand,unclear
+Australia,Hospitals and Health Services Commission,1979,8779.985,779.985,2,1979 No1 C2004A01940.docx | 1979 No2 C2004A01941.docx,additive,AUD,thousand,unclear
+Australia,Hospitals and Health Services Commission,1980,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,1981,6916.389,6916.389,1,1981 No2 C2004A02343.docx,single,AUD,thousand,unclear
+Australia,Hospitals and Health Services Commission,1982,6250.0,6250.0,1,1982 No2 C2004A02542.docx,single,AUD,thousand,unclear
+Australia,Hospitals and Health Services Commission,1983,1650.0,1650.0,1,1983 No2 C2004A02676.docx,single,AUD,thousand,unclear
+Australia,Hospitals and Health Services Commission,1984,100.0,100.0,1,1984 No2 C2004A02804.docx,single,AUD,thousand,unclear
+Australia,Hospitals and Health Services Commission,1985,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,1986,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,1987,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,1988,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,1989,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,1990,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,1991,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,1992,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,1993,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,1994,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,1995,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,1996,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,1997,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,1998,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,1999,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2000,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2001,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2002,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2003,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2004,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2005,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2006,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2007,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2008,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2009,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2010,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2011,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2012,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2013,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2014,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2015,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2016,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2017,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2018,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2019,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2020,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2021,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2022,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2023,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2024,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2025,,,0,,gap,,,unclear
+Australia,Hospitals and Health Services Commission,2026,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1975,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1976,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1977,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1978,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1979,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1980,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1981,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1982,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1983,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1984,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1985,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1986,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1987,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1988,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1989,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1990,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1991,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1992,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1993,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1994,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1995,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1996,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1997,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1998,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,1999,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,2000,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,2001,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,2002,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,2003,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,2004,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,2005,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,2006,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,2007,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,2008,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,2009,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,2010,743908.0,743908.0,1,2010 No1 C2012C00874.docx,single,AUD,thousand,unclear
+Australia,Improved Health and Medical Knowledge Programme,2011,754864.0,754864.0,1,2011 No3 C2012C00658.docx,single,AUD,thousand,unclear
+Australia,Improved Health and Medical Knowledge Programme,2012,798521.0,798521.0,1,2012 No1 C2013C00531.DOCX,single,AUD,thousand,unclear
+Australia,Improved Health and Medical Knowledge Programme,2013,811942.0,811942.0,1,2013 No1 C2014C00172.DOCX,single,AUD,thousand,unclear
+Australia,Improved Health and Medical Knowledge Programme,2014,823913.0,823913.0,1,2014 No1 C2014C00349.DOCX,single,AUD,thousand,unclear
+Australia,Improved Health and Medical Knowledge Programme,2015,947874.0,947874.0,1,2015 No1 C2014A00063.docx,single,AUD,thousand,unclear
+Australia,Improved Health and Medical Knowledge Programme,2016,948396.0,948396.0,1,2016 No1 C2015A00076.docx,single,AUD,thousand,unclear
+Australia,Improved Health and Medical Knowledge Programme,2017,885024.0,885024.0,1,2017 No1 C2016A00069.docx,single,AUD,thousand,unclear
+Australia,Improved Health and Medical Knowledge Programme,2018,911108.0,911108.0,1,2018 No1 C2017A00060.docx,single,AUD,thousand,unclear
+Australia,Improved Health and Medical Knowledge Programme,2019,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,2020,520547.0,520547.0,1,2020 No1 C2019A00100.docx,single,AUD,thousand,unclear
+Australia,Improved Health and Medical Knowledge Programme,2021,378537.0,378537.0,1,2021 No1 C2020A00109.docx,single,AUD,thousand,unclear
+Australia,Improved Health and Medical Knowledge Programme,2022,915514.0,915514.0,1,2022 No1 C2021A00067.docx,single,AUD,thousand,unclear
+Australia,Improved Health and Medical Knowledge Programme,2023,,,0,,gap,,,unclear
+Australia,Improved Health and Medical Knowledge Programme,2024,961379.0,961379.0,1,2024 No1 C2023A00031.docx,single,AUD,thousand,unclear
+Australia,Improved Health and Medical Knowledge Programme,2025,992310.0,992310.0,1,2025 No1 C2024A00047.docx,single,AUD,thousand,unclear
+Australia,Improved Health and Medical Knowledge Programme,2026,596620.0,596620.0,1,2026 No1 C2025A00047.docx,single,AUD,thousand,unclear
+Australia,Industrial R&D Grants,1975,15000.0,15000.0,1,1975 No1 C2004A00152.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1976,17500.0,17500.0,1,1976 No1 C2004A01425.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1977,19300.0,19300.0,1,1977 No1 C2004A01546.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1978,15400.0,15400.0,1,1978 No1 C2004A01777.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1979,15898.779,13648.779,2,1979 No1 C2004A01940.docx | 1979 No4 C2004A02040.docx,additive,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1980,,,0,,gap,,,innovation_instruments
+Australia,Industrial R&D Grants,1981,22950.0,22950.0,1,1981 No1 C2004A02342.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1982,36056.484,36056.484,1,1982 No1 C2004A02541.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1983,12052.877,12052.877,2,1983 No1 C2004A02675.docx | 1983 No5 C2004A02725.docx,restatement,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1984,34797.106,34797.106,1,1984 No1 C2004A02815.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1985,43242.616,43242.616,1,1985 No1 C2004A03034.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1986,38124.099,38124.099,1,1986 No1 C2004A03177.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1987,50164.112,37664.112,2,1987 No1 C2004A03358.docx | 1987 No2 C2004A03359.docx,additive,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1988,17946.885,17946.885,1,1988 No1 C2004A03521.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1989,25632.0,25632.0,1,1989 No1 C2004A03695.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1990,31822.845,31822.845,1,1990 No1 C2004A03903.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1991,32025.593,32025.593,1,1991 No1 C2004A04029.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1992,29721.504,29632.504,2,1992 No1 C2004A04239.docx | 1992 No3 C2004A04330.docx,additive,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1993,39879.163,39879.163,1,1993 No1 C2004A04432.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1994,43489.186,43489.186,1,1994 No1 C2004A04627.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1995,39967.0,39967.0,1,1995 No1 C1994A00088.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1996,46100.0,46100.0,1,1996 No1 C1995A00060.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1997,50441.505,50441.505,1,1997 No1 C1996A00065.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1998,67323.0,67323.0,1,1998 No1 C1997A00089.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,1999,91207.0,91207.0,1,1999 No1 C1998A00070.docx,single,AUD,thousand,innovation_instruments
+Australia,Industrial R&D Grants,2000,,,0,,gap,,,innovation_instruments
+Australia,Industrial R&D Grants,2001,,,0,,gap,,,innovation_instruments
+Australia,Industrial R&D Grants,2002,,,0,,gap,,,innovation_instruments
+Australia,Industrial R&D Grants,2003,,,0,,gap,,,innovation_instruments
+Australia,Industrial R&D Grants,2004,,,0,,gap,,,innovation_instruments
+Australia,Industrial R&D Grants,2005,,,0,,gap,,,innovation_instruments
+Australia,Industrial R&D Grants,2006,,,0,,gap,,,innovation_instruments
+Australia,Industrial R&D Grants,2007,,,0,,gap,,,innovation_instruments
+Australia,Industrial R&D Grants,2008,,,0,,gap,,,innovation_instruments
+Australia,Industrial R&D Grants,2009,,,0,,gap,,,innovation_instruments
+Australia,Industrial R&D Grants,2010,,,0,,gap,,,innovation_instruments
+Australia,International Science School for High School Students,1975,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,1976,20.0,20.0,1,1976 No2 C2004A01426.docx,single,AUD,thousand,unclear
+Australia,International Science School for High School Students,1977,20.0,20.0,1,1977 No1 C2004A01546.docx,single,AUD,thousand,unclear
+Australia,International Science School for High School Students,1978,20.0,20.0,1,1978 No1 C2004A01777.docx,single,AUD,thousand,unclear
+Australia,International Science School for High School Students,1979,20.0,20.0,1,1979 No1 C2004A01940.docx,single,AUD,thousand,unclear
+Australia,International Science School for High School Students,1980,20.0,20.0,1,1980 No3 C2004A02262.docx,single,AUD,thousand,unclear
+Australia,International Science School for High School Students,1981,20.0,20.0,1,1981 No1 C2004A02342.docx,single,AUD,thousand,unclear
+Australia,International Science School for High School Students,1982,25.0,25.0,1,1982 No1 C2004A02541.docx,single,AUD,thousand,unclear
+Australia,International Science School for High School Students,1983,25.0,25.0,1,1983 No1 C2004A02675.docx,single,AUD,thousand,unclear
+Australia,International Science School for High School Students,1984,30.0,30.0,1,1984 No1 C2004A02815.docx,single,AUD,thousand,unclear
+Australia,International Science School for High School Students,1985,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,1986,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,1987,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,1988,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,1989,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,1990,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,1991,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,1992,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,1993,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,1994,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,1995,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,1996,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,1997,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,1998,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,1999,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2000,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2001,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2002,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2003,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2004,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2005,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2006,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2007,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2008,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2009,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2010,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2011,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2012,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2013,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2014,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2015,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2016,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2017,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2018,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2019,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2020,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2021,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2022,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2023,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2024,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2025,,,0,,gap,,,unclear
+Australia,International Science School for High School Students,2026,,,0,,gap,,,unclear
+Australia,NHMRC / Medical Research Fund,1975,4779.509,4779.509,1,1975 No1 C2004A00152.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1976,8030.0,8030.0,1,1976 No1 C2004A01425.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1977,5211.0,5211.0,1,1977 No1 C2004A01546.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1978,10295.5,10295.5,1,1978 No1 C2004A01777.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1979,11714.0,11714.0,1,1979 No1 C2004A01940.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1980,,,0,,gap,,,science_agency
+Australia,NHMRC / Medical Research Fund,1981,14000.0,14000.0,1,1981 No1 C2004A02342.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1982,18698.0,18698.0,2,1982 No1 C2004A02541.docx | 1982 No3 C2004A02594.docx,restatement,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1983,25648.0,25648.0,1,1983 No1 C2004A02675.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1984,29604.0,29604.0,1,1984 No1 C2004A02815.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1985,37979.0,37979.0,1,1985 No1 C2004A03034.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1986,44182.0,44182.0,1,1986 No1 C2004A03177.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1987,51236.0,51236.0,1,1987 No1 C2004A03358.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1988,58952.0,58952.0,1,1988 No1 C2004A03521.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1989,66722.841,66722.841,1,1989 No1 C2004A03695.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1990,73894.324,73894.324,1,1990 No1 C2004A03903.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1991,86200.205,86200.205,1,1991 No1 C2004A04029.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1992,97990.893,97990.893,1,1992 No1 C2004A04239.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1993,116541.684,114841.684,2,1993 No1 C2004A04432.docx | 1993 No2 C2004A04433.docx,additive,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1994,128967.483,128967.483,2,1994 No1 C2004A04627.docx | 1994 No3 C2004A04727.docx,restatement,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1995,138020.0,138020.0,1,1995 No1 C1994A00088.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1996,144856.0,144856.0,1,1996 No1 C1995A00060.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1997,159251.09,159251.09,1,1997 No1 C1996A00065.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1998,168420.0,168420.0,1,1998 No1 C1997A00089.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,1999,156387.0,156387.0,1,1999 No1 C1998A00070.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,2000,,,0,,gap,,,science_agency
+Australia,NHMRC / Medical Research Fund,2001,,,0,,gap,,,science_agency
+Australia,NHMRC / Medical Research Fund,2002,,,0,,gap,,,science_agency
+Australia,NHMRC / Medical Research Fund,2003,,,0,,gap,,,science_agency
+Australia,NHMRC / Medical Research Fund,2004,,,0,,gap,,,science_agency
+Australia,NHMRC / Medical Research Fund,2005,,,0,,gap,,,science_agency
+Australia,NHMRC / Medical Research Fund,2006,,,0,,gap,,,science_agency
+Australia,NHMRC / Medical Research Fund,2007,23985.0,23985.0,1,2007 No3 C2013C00330.DOCX,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,2008,563031.0,563031.0,1,2008 No1 C2012C00882.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,2009,657846.0,657296.0,2,2009 No1 C2013C00309.DOCX | 2009 No2 C2010C00629.docx,additive,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,2010,743908.0,743908.0,1,2010 No1 C2012C00874.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,2011,755214.0,754864.0,2,2011 No1 C2012C00506.docx | 2011 No2 C2013C00511.DOCX,additive,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,2012,798521.0,798521.0,1,2012 No1 C2013C00531.DOCX,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,2013,811942.0,811942.0,1,2013 No1 C2014C00172.DOCX,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,2014,823913.0,823913.0,1,2014 No1 C2014C00349.DOCX,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,2015,947874.0,947874.0,1,2015 No1 C2014A00063.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,2016,948396.0,948396.0,1,2016 No1 C2015A00076.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,2017,1775104.0,885024.0,2,2017 No1 C2016A00069.docx | 2017 No3 C2017A00029.docx,additive,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,2018,911108.0,911108.0,1,2018 No1 C2017A00060.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,2019,,,0,,gap,,,science_agency
+Australia,NHMRC / Medical Research Fund,2020,520547.0,520547.0,1,2020 No1 C2019A00100.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,2021,378537.0,378537.0,1,2021 No1 C2020A00109.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,2022,915514.0,915514.0,1,2022 No1 C2021A00067.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,2023,,,0,,gap,,,science_agency
+Australia,NHMRC / Medical Research Fund,2024,961379.0,961379.0,1,2024 No1 C2023A00031.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,2025,992310.0,992310.0,1,2025 No1 C2024A00047.docx,single,AUD,thousand,science_agency
+Australia,NHMRC / Medical Research Fund,2026,596620.0,596620.0,1,2026 No1 C2025A00047.docx,single,AUD,thousand,science_agency
+Australia,National Estate Program,1975,288.0,288.0,1,1975 No2 C2004A00153.docx,single,AUD,thousand,unclear
+Australia,National Estate Program,1976,95.7,95.7,1,1976 No1 C2004A01425.docx,single,AUD,thousand,unclear
+Australia,National Estate Program,1977,15.0,15.0,1,1977 No1 C2004A01546.docx,single,AUD,thousand,unclear
+Australia,National Estate Program,1978,50.0,50.0,1,1978 No1 C2004A01777.docx,single,AUD,thousand,unclear
+Australia,National Estate Program,1979,50.0,50.0,1,1979 No1 C2004A01940.docx,single,AUD,thousand,unclear
+Australia,National Estate Program,1980,,,0,,gap,,,unclear
+Australia,National Estate Program,1981,185.0,45.0,2,1981 No1 C2004A02342.docx | 1981 No2 C2004A02343.docx,additive,AUD,thousand,unclear
+Australia,National Estate Program,1982,220.0,55.0,2,1982 No1 C2004A02541.docx | 1982 No2 C2004A02542.docx,additive,AUD,thousand,unclear
+Australia,National Estate Program,1983,220.0,55.0,2,1983 No1 C2004A02675.docx | 1983 No2 C2004A02676.docx,additive,AUD,thousand,unclear
+Australia,National Estate Program,1984,219.5,54.5,2,1984 No1 C2004A02815.docx | 1984 No2 C2004A02804.docx,additive,AUD,thousand,unclear
+Australia,National Estate Program,1985,270.0,70.0,2,1985 No1 C2004A03034.docx | 1985 No2 C2004A03035.docx,additive,AUD,thousand,unclear
+Australia,National Estate Program,1986,283.0,73.0,2,1986 No1 C2004A03177.docx | 1986 No2 C2004A03178.docx,additive,AUD,thousand,unclear
+Australia,National Estate Program,1987,297.0,77.0,2,1987 No1 C2004A03358.docx | 1987 No2 C2004A03359.docx,additive,AUD,thousand,unclear
+Australia,National Estate Program,1988,317.0,82.0,2,1988 No1 C2004A03521.docx | 1988 No2 C2004A03522.docx,additive,AUD,thousand,unclear
+Australia,National Estate Program,1989,232.0,232.0,1,1989 No2 C2004A03696.docx,single,AUD,thousand,unclear
+Australia,National Estate Program,1990,353.0,353.0,1,1990 No2 C2004A03904.docx,single,AUD,thousand,unclear
+Australia,National Estate Program,1991,397.0,397.0,1,1991 No2 C2004A04030.docx,single,AUD,thousand,unclear
+Australia,National Estate Program,1992,,,0,,gap,,,unclear
+Australia,National Estate Program,1993,,,0,,gap,,,unclear
+Australia,National Estate Program,1994,,,0,,gap,,,unclear
+Australia,National Estate Program,1995,,,0,,gap,,,unclear
+Australia,National Estate Program,1996,,,0,,gap,,,unclear
+Australia,National Estate Program,1997,,,0,,gap,,,unclear
+Australia,National Estate Program,1998,,,0,,gap,,,unclear
+Australia,National Estate Program,1999,,,0,,gap,,,unclear
+Australia,National Estate Program,2000,,,0,,gap,,,unclear
+Australia,National Estate Program,2001,,,0,,gap,,,unclear
+Australia,National Estate Program,2002,,,0,,gap,,,unclear
+Australia,National Estate Program,2003,,,0,,gap,,,unclear
+Australia,National Estate Program,2004,,,0,,gap,,,unclear
+Australia,National Estate Program,2005,,,0,,gap,,,unclear
+Australia,National Estate Program,2006,,,0,,gap,,,unclear
+Australia,National Estate Program,2007,,,0,,gap,,,unclear
+Australia,National Estate Program,2008,,,0,,gap,,,unclear
+Australia,National Estate Program,2009,,,0,,gap,,,unclear
+Australia,National Estate Program,2010,,,0,,gap,,,unclear
+Australia,National Estate Program,2011,,,0,,gap,,,unclear
+Australia,National Estate Program,2012,,,0,,gap,,,unclear
+Australia,National Estate Program,2013,,,0,,gap,,,unclear
+Australia,National Estate Program,2014,,,0,,gap,,,unclear
+Australia,National Estate Program,2015,,,0,,gap,,,unclear
+Australia,National Estate Program,2016,,,0,,gap,,,unclear
+Australia,National Estate Program,2017,,,0,,gap,,,unclear
+Australia,National Estate Program,2018,,,0,,gap,,,unclear
+Australia,National Estate Program,2019,,,0,,gap,,,unclear
+Australia,National Estate Program,2020,,,0,,gap,,,unclear
+Australia,National Estate Program,2021,,,0,,gap,,,unclear
+Australia,National Estate Program,2022,,,0,,gap,,,unclear
+Australia,National Estate Program,2023,,,0,,gap,,,unclear
+Australia,National Estate Program,2024,,,0,,gap,,,unclear
+Australia,National Estate Program,2025,,,0,,gap,,,unclear
+Australia,National Estate Program,2026,,,0,,gap,,,unclear
+Australia,Office of the Renewable Energy,1975,1000.0,1000.0,1,1975 No1 C2004A00152.docx,single,AUD,thousand,innovation_instruments
+Australia,Office of the Renewable Energy,1976,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1977,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1978,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1979,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1980,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1981,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1982,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1983,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1984,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1985,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1986,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1987,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1988,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1989,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1990,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1991,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1992,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1993,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1994,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1995,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1996,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1997,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1998,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,1999,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2000,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2001,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2002,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2003,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2004,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2005,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2006,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2007,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2008,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2009,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2010,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2011,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2012,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2013,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2014,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2015,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2016,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2017,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2018,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2019,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2020,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2021,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2022,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2023,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2024,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2025,,,0,,gap,,,innovation_instruments
+Australia,Office of the Renewable Energy,2026,,,0,,gap,,,innovation_instruments
+Australia,Research Grants (Dept of Science),1975,,,0,,gap,,,direct_rd
+Australia,Research Grants (Dept of Science),1976,270.027,270.027,1,1976 No1 C2004A01425.docx,single,AUD,thousand,direct_rd
+Australia,Research Grants (Dept of Science),1977,180.0,180.0,1,1977 No1 C2004A01546.docx,single,AUD,thousand,direct_rd
+Australia,Research Grants (Dept of Science),1978,475.292,475.292,1,1978 No1 C2004A01777.docx,single,AUD,thousand,direct_rd
+Australia,Research Grants (Dept of Science),1979,278.881,278.881,1,1979 No1 C2004A01940.docx,single,AUD,thousand,direct_rd
+Australia,Research Grants (Dept of Science),1980,,,0,,gap,,,direct_rd
+Australia,Research Grants (Dept of Science),1981,,,0,,gap,,,direct_rd
+Australia,Research Grants (Dept of Science),1982,,,0,,gap,,,direct_rd
+Australia,Research Grants (Dept of Science),1983,,,0,,gap,,,direct_rd
+Australia,Research Grants (Dept of Science),1984,,,0,,gap,,,direct_rd
+Australia,Research Grants (Dept of Science),1985,,,0,,gap,,,direct_rd
+Australia,Research Grants (Dept of Science),1986,,,0,,gap,,,direct_rd
+Australia,Research Grants (Dept of Science),1987,,,0,,gap,,,direct_rd
+Australia,Research Grants (Dept of Science),1988,,,0,,gap,,,direct_rd
+Australia,Research Grants (Dept of Science),1989,,,0,,gap,,,direct_rd
+Australia,Research Grants (Dept of Science),1990,,,0,,gap,,,direct_rd
+Australia,Research Grants (Dept of Science),1991,,,0,,gap,,,direct_rd
+Australia,Research Grants (Dept of Science),1992,,,0,,gap,,,direct_rd
+Australia,Research Grants (Dept of Science),1993,,,0,,gap,,,direct_rd
+Australia,Research Grants (Dept of Science),1994,,,0,,gap,,,direct_rd
+Australia,Research Grants (Dept of Science),1995,,,0,,gap,,,direct_rd
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1975,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1976,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1977,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1978,160.0,160.0,1,1978 No4 C2004A01842.docx,single,AUD,thousand,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1979,85.603,85.603,1,1979 No2 C2004A01941.docx,single,AUD,thousand,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1980,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1981,1681.993,1281.229,2,1981 No1 C2004A02342.docx | 1981 No2 C2004A02343.docx,additive,AUD,thousand,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1982,117364.065,117364.065,1,1982 No1 C2004A02541.docx,single,AUD,thousand,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1983,140246.397,140246.397,1,1983 No1 C2004A02675.docx,single,AUD,thousand,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1984,3127.332,3127.332,1,1984 No1 C2004A02815.docx,single,AUD,thousand,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1985,159005.184,159005.184,1,1985 No1 C2004A03034.docx,single,AUD,thousand,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1986,163459.795,163459.795,1,1986 No1 C2004A03177.docx,single,AUD,thousand,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1987,187053.28,187053.28,1,1987 No1 C2004A03358.docx,single,AUD,thousand,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1988,4357.506,4357.506,1,1988 No1 C2004A03521.docx,single,AUD,thousand,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1989,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1990,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1991,1185.412,1185.412,1,1991 No2 C2004A04030.docx,single,AUD,thousand,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1992,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1993,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1994,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1995,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1996,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1997,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1998,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,1999,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2000,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2001,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2002,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2003,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2004,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2005,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2006,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2007,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2008,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2009,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2010,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2011,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2012,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2013,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2014,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2015,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2016,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2017,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2018,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2019,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2020,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2021,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2022,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2023,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2024,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2025,,,0,,gap,,,science_agency
+Australia,The Supervising Scientist and the Alligator Rivers Region Research Institute,2026,,,0,,gap,,,science_agency
