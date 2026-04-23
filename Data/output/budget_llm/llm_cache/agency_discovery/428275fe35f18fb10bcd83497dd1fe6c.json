@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.6,
+  "entry_type": "not_rd",
+  "canonical_name": "Canada for the Regions of Quebec",
+  "name_variants": [
+    "Canada pour les Régions du Québec",
+    "CRQ"
+  ],
+  "category": "unclear",
+  "notes": "The entity appears to focus on regional development rather than specific R&D activities."
+}

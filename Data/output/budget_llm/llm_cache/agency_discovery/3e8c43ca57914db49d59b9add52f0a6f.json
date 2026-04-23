@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Public Service Commission",
+  "name_variants": [
+    "PSC",
+    "Commission de la fonction publique"
+  ],
+  "category": "unclear",
+  "notes": "The Public Service Commission is primarily focused on public service recruitment and management, not R&D."
+}

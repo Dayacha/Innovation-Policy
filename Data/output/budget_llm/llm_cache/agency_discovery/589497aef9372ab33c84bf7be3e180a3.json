@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Public Service Human Resources Management Agency of Canada",
+  "name_variants": [
+    "PSHRM Agency",
+    "Public Service HR Management Agency"
+  ],
+  "category": "unclear",
+  "notes": "This agency focuses on human resources management and does not conduct or fund R&D."
+}

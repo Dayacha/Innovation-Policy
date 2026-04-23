@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Energy Regulator",
+  "name_variants": [
+    "CER",
+    "Canadian Energy Regulator (CER)"
+  ],
+  "category": "unclear",
+  "notes": "The Canadian Energy Regulator primarily oversees energy regulation rather than conducting or funding R&D."
+}

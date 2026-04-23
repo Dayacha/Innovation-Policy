@@ -1,0 +1,259 @@
+{
+  "generated_at": "2026-04-20T20:12:02.856201",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "pricing_per_million": {
+    "input": 0.15,
+    "output": 0.6
+  },
+  "summary": {
+    "total_calls": 20,
+    "total_input_tokens": 25735,
+    "total_output_tokens": 3465,
+    "total_tokens": 29200,
+    "total_cost_usd": 0.0059
+  },
+  "by_operation": {
+    "cross_survey_dedup": {
+      "calls": 20,
+      "input_tokens": 25735,
+      "output_tokens": 3465,
+      "total_tokens": 29200,
+      "cost_usd": 0.0059,
+      "elapsed_seconds": 81.99
+    }
+  },
+  "by_survey": [
+    {
+      "country_code": null,
+      "survey_year": null,
+      "calls": 20,
+      "input_tokens": 25735,
+      "output_tokens": 3465,
+      "total_tokens": 29200,
+      "cost_usd": 0.0059
+    }
+  ],
+  "records": [
+    {
+      "timestamp": "2026-04-20T16:26:10.681827",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 696,
+      "output_tokens": 78,
+      "total_tokens": 774,
+      "elapsed_seconds": 2.233,
+      "cost_usd": 0.000151
+    },
+    {
+      "timestamp": "2026-04-20T16:26:18.565236",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 4150,
+      "output_tokens": 294,
+      "total_tokens": 4444,
+      "elapsed_seconds": 6.591,
+      "cost_usd": 0.000799
+    },
+    {
+      "timestamp": "2026-04-20T16:26:22.657276",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 459,
+      "output_tokens": 198,
+      "total_tokens": 657,
+      "elapsed_seconds": 3.084,
+      "cost_usd": 0.000188
+    },
+    {
+      "timestamp": "2026-04-20T16:26:25.117322",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 488,
+      "output_tokens": 42,
+      "total_tokens": 530,
+      "elapsed_seconds": 1.418,
+      "cost_usd": 9.8e-05
+    },
+    {
+      "timestamp": "2026-04-20T16:26:31.457182",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 2326,
+      "output_tokens": 301,
+      "total_tokens": 2627,
+      "elapsed_seconds": 5.191,
+      "cost_usd": 0.00053
+    },
+    {
+      "timestamp": "2026-04-20T16:26:34.029304",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 606,
+      "output_tokens": 56,
+      "total_tokens": 662,
+      "elapsed_seconds": 1.528,
+      "cost_usd": 0.000124
+    },
+    {
+      "timestamp": "2026-04-20T16:26:36.651489",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 493,
+      "output_tokens": 42,
+      "total_tokens": 535,
+      "elapsed_seconds": 1.607,
+      "cost_usd": 9.9e-05
+    },
+    {
+      "timestamp": "2026-04-20T16:26:40.174942",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 613,
+      "output_tokens": 64,
+      "total_tokens": 677,
+      "elapsed_seconds": 2.496,
+      "cost_usd": 0.00013
+    },
+    {
+      "timestamp": "2026-04-20T16:26:43.021253",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 511,
+      "output_tokens": 53,
+      "total_tokens": 564,
+      "elapsed_seconds": 1.823,
+      "cost_usd": 0.000108
+    },
+    {
+      "timestamp": "2026-04-20T16:26:46.215483",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 939,
+      "output_tokens": 95,
+      "total_tokens": 1034,
+      "elapsed_seconds": 2.158,
+      "cost_usd": 0.000198
+    },
+    {
+      "timestamp": "2026-04-20T19:48:18.015482",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 7146,
+      "output_tokens": 678,
+      "total_tokens": 7824,
+      "elapsed_seconds": 24.827,
+      "cost_usd": 0.001479
+    },
+    {
+      "timestamp": "2026-04-20T19:48:29.856721",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 843,
+      "output_tokens": 686,
+      "total_tokens": 1529,
+      "elapsed_seconds": 10.84,
+      "cost_usd": 0.000538
+    },
+    {
+      "timestamp": "2026-04-20T19:48:32.250525",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 676,
+      "output_tokens": 70,
+      "total_tokens": 746,
+      "elapsed_seconds": 1.335,
+      "cost_usd": 0.000143
+    },
+    {
+      "timestamp": "2026-04-20T20:11:40.139956",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 478,
+      "output_tokens": 42,
+      "total_tokens": 520,
+      "elapsed_seconds": 1.53,
+      "cost_usd": 9.7e-05
+    },
+    {
+      "timestamp": "2026-04-20T20:11:43.254087",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 688,
+      "output_tokens": 86,
+      "total_tokens": 774,
+      "elapsed_seconds": 2.094,
+      "cost_usd": 0.000155
+    },
+    {
+      "timestamp": "2026-04-20T20:11:45.813786",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 974,
+      "output_tokens": 87,
+      "total_tokens": 1061,
+      "elapsed_seconds": 1.516,
+      "cost_usd": 0.000198
+    },
+    {
+      "timestamp": "2026-04-20T20:11:49.397632",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 252,
+      "output_tokens": 96,
+      "total_tokens": 348,
+      "elapsed_seconds": 2.583,
+      "cost_usd": 9.5e-05
+    },
+    {
+      "timestamp": "2026-04-20T20:11:52.872888",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 1234,
+      "output_tokens": 134,
+      "total_tokens": 1368,
+      "elapsed_seconds": 2.441,
+      "cost_usd": 0.000266
+    },
+    {
+      "timestamp": "2026-04-20T20:11:56.261108",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 299,
+      "output_tokens": 145,
+      "total_tokens": 444,
+      "elapsed_seconds": 2.383,
+      "cost_usd": 0.000132
+    },
+    {
+      "timestamp": "2026-04-20T20:12:01.686267",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "operation": "cross_survey_dedup",
+      "input_tokens": 1864,
+      "output_tokens": 218,
+      "total_tokens": 2082,
+      "elapsed_seconds": 4.315,
+      "cost_usd": 0.00041
+    }
+  ]
+}

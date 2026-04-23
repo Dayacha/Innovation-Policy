@@ -27,7 +27,9 @@ PRICING = {
     "claude-sonnet-4-5-20250929": {"input": 3.00, "output": 15.00},
     "claude-opus-4-20250514": {"input": 15.00, "output": 75.00},
     "claude-3-5-sonnet-20241022": {"input": 3.00, "output": 15.00},
-    "claude-3-haiku-20240307": {"input": 0.25, "output": 1.25},
+    "claude-haiku-4-5-20251001": {"input": 0.80, "output": 4.00},
+    "claude-3-5-haiku-20241022": {"input": 0.80, "output": 4.00},
+    "claude-3-haiku-20240307":   {"input": 0.25, "output": 1.25},
     # OpenAI models
     "gpt-4o": {"input": 2.50, "output": 10.00},
     "gpt-4o-mini": {"input": 0.15, "output": 0.60},
@@ -60,13 +62,21 @@ class LLMClient:
         self.temperature = llm_config.get("temperature", 0)
         self.api_delay = config.get("processing", {}).get("api_delay", 1.0)
 
-        # Resolve API key from config or environment
-        self.api_key = llm_config.get("api_key", "")
-        if not self.api_key:
-            if self.provider == "anthropic":
-                self.api_key = os.environ.get("ANTHROPIC_API_KEY", "")
-            elif self.provider == "openai":
-                self.api_key = os.environ.get("OPENAI_API_KEY", "")
+        # Resolve API key — check provider-specific keys first, then generic api_key, then env vars
+        if self.provider == "anthropic":
+            self.api_key = (
+                llm_config.get("oecd_anthropic_key", "").strip()
+                or llm_config.get("api_key", "").strip()
+                or os.environ.get("ANTHROPIC_API_KEY", "")
+            )
+        elif self.provider == "openai":
+            self.api_key = (
+                llm_config.get("oecd_openai_key", "").strip()
+                or llm_config.get("api_key", "").strip()
+                or os.environ.get("OPENAI_API_KEY", "")
+            )
+        else:
+            self.api_key = llm_config.get("api_key", "").strip()
 
         if not self.api_key:
             raise ValueError(

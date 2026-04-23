@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Civil Aviation Tribunal",
+  "name_variants": [
+    "CAT",
+    "Tribunal de l'aviation civile"
+  ],
+  "category": "unclear",
+  "notes": "The Civil Aviation Tribunal is a judicial body and does not engage in R&D activities."
+}

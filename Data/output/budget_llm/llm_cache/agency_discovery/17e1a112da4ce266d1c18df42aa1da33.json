@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Global Affairs Canada",
+  "name_variants": [
+    "Global Affairs Canada",
+    "Affaires étrangères et commerce international"
+  ],
+  "category": "unclear",
+  "notes": "This entry pertains to foreign affairs and international trade, which does not represent identifiable R&D spending."
+}

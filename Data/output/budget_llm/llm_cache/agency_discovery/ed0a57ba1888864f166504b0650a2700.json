@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Office of the Parliamentary Budget Officer",
+  "name_variants": [
+    "PBO",
+    "Parliamentary Budget Officer"
+  ],
+  "category": "unclear",
+  "notes": "This office is responsible for providing independent analysis of the government's finances, not for R&D spending."
+}

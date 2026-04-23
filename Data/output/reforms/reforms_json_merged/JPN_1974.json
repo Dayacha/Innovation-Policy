@@ -1,0 +1,24 @@
+{
+  "country_code": "JPN",
+  "country_name": "Japan",
+  "survey_year": 1974,
+  "cross_verification": {
+    "model_a": "gpt-4o-mini",
+    "model_b": "claude-haiku-4-5-20251001",
+    "model_c": "gpt-4o-mini",
+    "three_model_mode": true,
+    "total_a": 0,
+    "total_b": 0,
+    "total_c": 0,
+    "all_three": 0,
+    "ab_only": 0,
+    "ac_only": 0,
+    "bc_only": 0,
+    "a_only": 0,
+    "b_only": 0,
+    "c_only": 0,
+    "threshold": 0.55
+  },
+  "reforms": [],
+  "all_reforms_including_excluded": []
+}

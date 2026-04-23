@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 1.0,
+  "entry_type": "not_rd",
+  "canonical_name": "Veterans Review and Appeal Board",
+  "name_variants": [
+    "Tribunal des anciens combattants",
+    "Veterans Review and Appeal Board"
+  ],
+  "category": "unclear",
+  "notes": "This entity is related to veterans' affairs and does not pertain to R&D spending."
+}

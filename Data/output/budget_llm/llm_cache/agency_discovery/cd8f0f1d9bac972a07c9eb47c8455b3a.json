@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Parole Board of Canada",
+  "name_variants": [
+    "Commission des libérations conditionnelles du Canada",
+    "PBC"
+  ],
+  "category": "unclear",
+  "notes": "This entity is focused on parole and conditional releases, not R&D."
+}

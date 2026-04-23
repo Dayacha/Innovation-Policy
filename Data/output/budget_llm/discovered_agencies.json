@@ -1,0 +1,211 @@
+{
+  "Canada": [
+    {
+      "canonical_name": "National Film Board of Canada",
+      "category": "innovation_instruments",
+      "name_variants": [
+        "NFB",
+        "Office national du film du Canada"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "The entity is involved in film production and research related to film and media.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "OFFICE NATIONAL DU FILM",
+      "n_years_seen": 3,
+      "avg_amount": 1585193.0216666665
+    },
+    {
+      "canonical_name": "Canadian Space Agency",
+      "category": "science_agency",
+      "name_variants": [
+        "CSA",
+        "Agence spatiale canadienne"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "The Canadian Space Agency is dedicated to conducting and funding space-related research and development.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "AGENCE SPATIALE CANADIENNE",
+      "n_years_seen": 1,
+      "avg_amount": 206780.91667
+    },
+    {
+      "canonical_name": "International Development Research Centre",
+      "category": "science_agency",
+      "name_variants": [
+        "IDRC",
+        "Centre de recherches pour le développement international"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "The IDRC is a dedicated agency that funds and conducts research aimed at improving lives in developing countries.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "INTERNATIONAL DEVELOPMENT RESEARCH CENTRE",
+      "n_years_seen": 22,
+      "avg_amount": 140599.47665384616
+    },
+    {
+      "canonical_name": "Telefilm Canada",
+      "category": "innovation_instruments",
+      "name_variants": [
+        "Telefilm Canada",
+        "Téléfilm Canada"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "Telefilm Canada supports the development and production of Canadian audiovisual works, which includes research and development in the film industry.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "TELEFILM CANADA",
+      "n_years_seen": 21,
+      "avg_amount": 86424.16438235294
+    },
+    {
+      "canonical_name": "Canadian Nuclear Safety Commission",
+      "category": "science_agency",
+      "name_variants": [
+        "CNSC",
+        "Commission canadienne de sûreté nucléaire"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "The Canadian Nuclear Safety Commission is primarily responsible for regulating nuclear safety and conducting research related to nuclear safety.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.85,
+      "source_entity": "CANADIAN NUCLEAR SAFETY COMMISSION",
+      "n_years_seen": 21,
+      "avg_amount": 36683.1322
+    },
+    {
+      "canonical_name": "Canada Council for the Arts",
+      "category": "innovation_instruments",
+      "name_variants": [
+        "Canada Council",
+        "Conseil des arts du Canada"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "The Canada Council for the Arts provides funding for research in the arts, which qualifies as R&D spending.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "CANADA COUNCIL",
+      "n_years_seen": 1,
+      "avg_amount": 34983.045
+    },
+    {
+      "canonical_name": "Canadian High Arctic Research Station",
+      "category": "direct_rd",
+      "name_variants": [
+        "CHARS",
+        "Canadian High Arctic Research Station"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "The entity is focused on research in the High Arctic, indicating a specific R&D programme.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "CANADIAN HIGH ARCTIC RESEARCH STATION",
+      "n_years_seen": 10,
+      "avg_amount": 16616.813823529414
+    },
+    {
+      "canonical_name": "Assisted Human Reproduction Agency of Canada",
+      "category": "science_agency",
+      "name_variants": [
+        "AHRC",
+        "Assisted Human Reproduction Agency"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "The agency is dedicated to overseeing and promoting research in assisted human reproduction.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.8,
+      "source_entity": "ASSISTED HUMAN REPRODUCTION AGENCY OF CANADA",
+      "n_years_seen": 7,
+      "avg_amount": 12353.92425
+    },
+    {
+      "canonical_name": "Canadian Polar Commission",
+      "category": "science_agency",
+      "name_variants": [
+        "CPC",
+        "Commission canadienne des pôles"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1900,
+        2099
+      ],
+      "notes": "The Canadian Polar Commission is dedicated to polar research and funding.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.85,
+      "source_entity": "CANADIAN POLAR COMMISSION",
+      "n_years_seen": 11,
+      "avg_amount": 11795.032071428572
+    }
+  ]
+}

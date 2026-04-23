@@ -1,0 +1,121 @@
+country,canonical_name,year,amount_total,amount_primary,n_acts,acts,additive_flag,currency,unit,category
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2015,61787122.0,61787122.0,1,2015 DL201511001.pdf,single,JPY,thousand,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2016,62847560.0,62847560.0,1,2016 DL201611001.pdf,single,JPY,thousand,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2017,,,0,,gap,,,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2018,61924777.0,61924777.0,1,2018 DL201811001.pdf,single,JPY,thousand,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2019,62342817.0,62342817.0,1,2019 DL201911001.pdf,single,JPY,thousand,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2020,,,0,,gap,,,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2021,61984113.0,61984113.0,1,2021 DL202111001.pdf,single,JPY,thousand,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2022,61484113.0,61484113.0,1,2022 DL202211001.pdf,single,JPY,thousand,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2023,61800000.0,61800000.0,1,2023 DL202311001.pdf,single,JPY,thousand,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2024,65000661.0,65000661.0,1,2024 DL202411001.pdf,single,JPY,thousand,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2025,66687223.0,66687223.0,1,2025 DL202511001.pdf,single,JPY,thousand,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2015,574000000.0,574000000.0,1,2015 DL201511001.pdf,single,JPY,thousand,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2016,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2017,34614821.0,34614821.0,1,2017 DL201711001.pdf,single,JPY,thousand,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2018,36991207.0,36991207.0,1,2018 DL201811001.pdf,single,JPY,thousand,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2019,36393856.0,36393856.0,1,2019 DL201911001.pdf,single,JPY,thousand,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2020,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2021,36379870.0,36379870.0,1,2021 DL202111001.pdf,single,JPY,thousand,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2022,380061000.0,380061000.0,1,2022 DL202211001.pdf,single,JPY,thousand,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2023,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2024,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2025,37466362.0,37466362.0,1,2025 DL202511001.pdf,single,JPY,thousand,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2015,33512223.0,33512223.0,1,2015 DL201511001.pdf,single,JPY,thousand,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2016,30618486.0,30618486.0,1,2016 DL201611001.pdf,single,JPY,thousand,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2017,30618486.0,30618486.0,1,2017 DL201711001.pdf,single,JPY,thousand,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2018,31260631.0,31260631.0,1,2018 DL201811001.pdf,single,JPY,thousand,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2019,32069528.0,32069528.0,1,2019 DL201911001.pdf,single,JPY,thousand,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2020,31843418.0,31843418.0,1,2020 DL202011001.pdf,single,JPY,thousand,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2021,29708549.0,29708549.0,1,2021 DL202111001.pdf,single,JPY,thousand,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2022,30292576.0,30292576.0,1,2022 DL202211001.pdf,single,JPY,thousand,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2023,30621991.0,30621991.0,1,2023 DL202311001.pdf,single,JPY,thousand,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2024,30366656.0,30366656.0,1,2024 DL202411001.pdf,single,JPY,thousand,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2025,30900656.0,30900656.0,1,2025 DL202511001.pdf,single,JPY,thousand,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2015,114471942.0,114471942.0,1,2015 DL201511001.pdf,single,JPY,thousand,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2016,105342777.0,105342777.0,1,2016 DL201611001.pdf,single,JPY,thousand,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2017,111286260.0,111286260.0,1,2017 DL201711001.pdf,single,JPY,thousand,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2018,113060958.0,113060958.0,1,2018 DL201811001.pdf,single,JPY,thousand,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2019,115922994.0,115922994.0,1,2019 DL201911001.pdf,single,JPY,thousand,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2020,118447193.0,118447193.0,1,2020 DL202011001.pdf,single,JPY,thousand,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2021,112295751.0,112295751.0,1,2021 DL202111001.pdf,single,JPY,thousand,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2022,123759200.0,123759200.0,1,2022 DL202211001.pdf,single,JPY,thousand,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2023,122689115.0,122689115.0,1,2023 DL202311001.pdf,single,JPY,thousand,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2024,,,0,,gap,,,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2025,133352566.0,133352566.0,1,2025 DL202511001.pdf,single,JPY,thousand,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2015,,,0,,gap,,,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2016,26708591.0,26708591.0,1,2016 DL201611001.pdf,single,JPY,thousand,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2017,,,0,,gap,,,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2018,26600504.0,26600504.0,1,2018 DL201811001.pdf,single,JPY,thousand,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2019,,,0,,gap,,,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2020,,,0,,gap,,,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2021,,,0,,gap,,,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2022,,,0,,gap,,,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2023,,,0,,gap,,,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2024,,,0,,gap,,,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2025,27498267.0,27498267.0,1,2025 DL202511001.pdf,single,JPY,thousand,science_agency
+Japan,JST (Japan Science and Technology Agency),2015,100553048.0,100553048.0,1,2015 DL201511001.pdf,single,JPY,thousand,science_agency
+Japan,JST (Japan Science and Technology Agency),2016,100888373.0,100888373.0,1,2016 DL201611001.pdf,single,JPY,thousand,science_agency
+Japan,JST (Japan Science and Technology Agency),2017,100888373.0,100888373.0,1,2017 DL201711001.pdf,single,JPY,thousand,science_agency
+Japan,JST (Japan Science and Technology Agency),2018,100812003.0,100812003.0,1,2018 DL201811001.pdf,single,JPY,thousand,science_agency
+Japan,JST (Japan Science and Technology Agency),2019,100511506.0,100511506.0,1,2019 DL201911001.pdf,single,JPY,thousand,science_agency
+Japan,JST (Japan Science and Technology Agency),2020,100271984.0,100271984.0,1,2020 DL202011001.pdf,single,JPY,thousand,science_agency
+Japan,JST (Japan Science and Technology Agency),2021,50000000.0,50000000.0,1,2021 DL202111001.pdf,single,JPY,thousand,science_agency
+Japan,JST (Japan Science and Technology Agency),2022,100337918.0,100337918.0,1,2022 DL202211001.pdf,single,JPY,thousand,science_agency
+Japan,JST (Japan Science and Technology Agency),2023,100543871.0,100543871.0,1,2023 DL202311001.pdf,single,JPY,thousand,science_agency
+Japan,JST (Japan Science and Technology Agency),2024,100970256.0,100970256.0,1,2024 DL202411001.pdf,single,JPY,thousand,science_agency
+Japan,JST (Japan Science and Technology Agency),2025,100771968.0,100771968.0,1,2025 DL202511001.pdf,single,JPY,thousand,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2015,25657000000.0,25657000000.0,1,2015 DL201511001.pdf,single,JPY,thousand,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2016,94643877943.0,94643877943.0,1,2016 DL201611001.pdf,single,JPY,thousand,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2017,5519899508.0,5519899508.0,1,2017 DL201711001.pdf,single,JPY,thousand,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2018,30948629162.0,30948629162.0,1,2018 DL201811001.pdf,single,JPY,thousand,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2019,31857133698.0,31857133698.0,1,2019 DL201911001.pdf,single,JPY,thousand,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2020,5415218203.0,5415218203.0,1,2020 DL202011001.pdf,single,JPY,thousand,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2021,30524764680.0,30524764680.0,1,2021 DL202111001.pdf,single,JPY,thousand,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2022,41301199625.0,41301199625.0,1,2022 DL202211001.pdf,single,JPY,thousand,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2023,5294138248.0,5294138248.0,1,2023 DL202311001.pdf,single,JPY,thousand,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2024,30300000000.0,30300000000.0,1,2024 DL202411001.pdf,single,JPY,thousand,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2025,6030862741.0,6030862741.0,1,2025 DL202511001.pdf,single,JPY,thousand,science_agency
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2015,7791536.0,7791536.0,1,2015 DL201511001.pdf,single,JPY,thousand,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2016,7893451.0,7893451.0,1,2016 DL201611001.pdf,single,JPY,thousand,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2017,,,0,,gap,,,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2018,13170675.0,13170675.0,1,2018 DL201811001.pdf,single,JPY,thousand,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2019,14166920.0,14166920.0,1,2019 DL201911001.pdf,single,JPY,thousand,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2020,54053016.0,54053016.0,1,2020 DL202011001.pdf,single,JPY,thousand,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2021,20000000.0,20000000.0,1,2021 DL202111001.pdf,single,JPY,thousand,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2022,5000000.0,5000000.0,1,2022 DL202211001.pdf,single,JPY,thousand,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2023,14447800.0,14447800.0,1,2023 DL202311001.pdf,single,JPY,thousand,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2024,12556204.0,12556204.0,1,2024 DL202411001.pdf,single,JPY,thousand,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2025,10000000.0,10000000.0,1,2025 DL202511001.pdf,single,JPY,thousand,innovation_instruments
+Japan,NIMS (National Institute for Materials Science),2015,11917948.0,11917948.0,1,2015 DL201511001.pdf,single,JPY,thousand,science_agency
+Japan,NIMS (National Institute for Materials Science),2016,12020623.0,12020623.0,1,2016 DL201611001.pdf,single,JPY,thousand,science_agency
+Japan,NIMS (National Institute for Materials Science),2017,,,0,,gap,,,science_agency
+Japan,NIMS (National Institute for Materials Science),2018,,,0,,gap,,,science_agency
+Japan,NIMS (National Institute for Materials Science),2019,13637272.0,13637272.0,1,2019 DL201911001.pdf,single,JPY,thousand,science_agency
+Japan,NIMS (National Institute for Materials Science),2020,,,0,,gap,,,science_agency
+Japan,NIMS (National Institute for Materials Science),2021,14239394.0,14239394.0,1,2021 DL202111001.pdf,single,JPY,thousand,science_agency
+Japan,NIMS (National Institute for Materials Science),2022,,,0,,gap,,,science_agency
+Japan,NIMS (National Institute for Materials Science),2023,14419471.0,14419471.0,1,2023 DL202311001.pdf,single,JPY,thousand,science_agency
+Japan,NIMS (National Institute for Materials Science),2024,,,0,,gap,,,science_agency
+Japan,NIMS (National Institute for Materials Science),2025,,,0,,gap,,,science_agency
+Japan,QST (National Institutes for Quantum Science and Technology),2016,21557994.0,21557994.0,1,2016 DL201611001.pdf,single,JPY,thousand,science_agency
+Japan,QST (National Institutes for Quantum Science and Technology),2017,,,0,,gap,,,science_agency
+Japan,QST (National Institutes for Quantum Science and Technology),2018,21610296.0,21610296.0,1,2018 DL201811001.pdf,single,JPY,thousand,science_agency
+Japan,QST (National Institutes for Quantum Science and Technology),2019,,,0,,gap,,,science_agency
+Japan,QST (National Institutes for Quantum Science and Technology),2020,,,0,,gap,,,science_agency
+Japan,QST (National Institutes for Quantum Science and Technology),2021,21582563.0,21582563.0,1,2021 DL202111001.pdf,single,JPY,thousand,science_agency
+Japan,QST (National Institutes for Quantum Science and Technology),2022,,,0,,gap,,,science_agency
+Japan,QST (National Institutes for Quantum Science and Technology),2023,21762364.0,21762364.0,1,2023 DL202311001.pdf,single,JPY,thousand,science_agency
+Japan,QST (National Institutes for Quantum Science and Technology),2024,,,0,,gap,,,science_agency
+Japan,QST (National Institutes for Quantum Science and Technology),2025,21819020.0,21819020.0,1,2025 DL202511001.pdf,single,JPY,thousand,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2015,53118591.0,53118591.0,1,2015 DL201511001.pdf,single,JPY,thousand,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2016,51591219.0,51591219.0,1,2016 DL201611001.pdf,single,JPY,thousand,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2017,52591219.0,52591219.0,1,2017 DL201711001.pdf,single,JPY,thousand,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2018,52868857.0,52868857.0,1,2018 DL201811001.pdf,single,JPY,thousand,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2019,53108857.0,53108857.0,1,2019 DL201911001.pdf,single,JPY,thousand,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2020,53549284.0,53549284.0,1,2020 DL202011001.pdf,single,JPY,thousand,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2021,54049102.0,54049102.0,1,2021 DL202111001.pdf,single,JPY,thousand,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2022,54164053.0,54164053.0,1,2022 DL202211001.pdf,single,JPY,thousand,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2023,54770381.0,54770381.0,1,2023 DL202311001.pdf,single,JPY,thousand,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2024,55348412.0,55348412.0,1,2024 DL202411001.pdf,single,JPY,thousand,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2025,57736328.0,57736328.0,1,2025 DL202511001.pdf,single,JPY,thousand,science_agency

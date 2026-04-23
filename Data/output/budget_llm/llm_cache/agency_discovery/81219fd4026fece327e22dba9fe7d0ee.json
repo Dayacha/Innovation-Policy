@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Office of the Superintendent of Financial Institutions",
+  "name_variants": [
+    "OSFI",
+    "Bureau du surintendant des institutions financières"
+  ],
+  "category": "unclear",
+  "notes": "This entity is focused on financial regulation and oversight, not R&D."
+}

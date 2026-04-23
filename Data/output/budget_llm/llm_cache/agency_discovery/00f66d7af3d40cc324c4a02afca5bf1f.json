@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "VIA Rail Canada Inc.",
+  "name_variants": [
+    "VIA Rail",
+    "Transports Via Rail Canada Inc."
+  ],
+  "category": "unclear",
+  "notes": "This entity is primarily focused on rail transport services, not research and development."
+}

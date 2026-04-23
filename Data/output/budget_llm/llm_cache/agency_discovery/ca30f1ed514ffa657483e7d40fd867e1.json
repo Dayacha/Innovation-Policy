@@ -1,0 +1,11 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Air Transport Security Authority",
+  "name_variants": [
+    "CATSA"
+  ],
+  "category": "unclear",
+  "notes": "This entity is focused on transportation security, not research and development."
+}

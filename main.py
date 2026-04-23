@@ -15,6 +15,17 @@ Budget pipeline (Stream 1):
         python main.py --budget --country Australia --fill-gaps
         python main.py --budget --build-database   # rebuild combined DB only
 
+    For narrative PDF countries (UK, France, Germany, Japan) that have no
+    structured DOCX tables — run LLM extraction first, then compile:
+        python main.py --budget --country UK --llm-pipeline
+        python main.py --budget --country France --llm-pipeline --years 2000-2024
+        python main.py --budget --country Germany --llm-pipeline
+        python main.py --budget --country Japan --llm-pipeline
+
+    After the first run, results are cached. Re-running without --llm-pipeline
+    just rebuilds the canonical series at no extra LLM cost:
+        python main.py --budget --country UK   # uses cached LLM output
+
 Reform pipeline (Stream 2):
     Extracts structural reform events from OECD Economic Survey PDFs using an LLM.
 
@@ -45,6 +56,17 @@ Cross-verification (two-model merger):
         python main.py --reforms-cross-verify --country DNK --year 2021
         python main.py --reforms-cross-verify --consensus-only
         python main.py --reforms-cross-verify --build-panel-only
+
+Full automated pipeline (all three stages in one command):
+    Checks Run A status, runs Run B (Anthropic), then cross-verifies.
+    No manual config.yaml changes needed — API keys resolved automatically.
+
+        python main.py --reforms-full-pipeline
+        python main.py --reforms-full-pipeline --country DNK
+        python main.py --reforms-full-pipeline --country DNK --year 2021
+        python main.py --reforms-full-pipeline --check-only        # status report only
+        python main.py --reforms-full-pipeline --skip-run-a-check  # skip Run A check
+        python main.py --reforms-full-pipeline --consensus-only    # no LLM adjudication
 """
 
 import argparse
@@ -92,7 +114,37 @@ def _run_budget(args) -> None:
     if args.years:
         parts = args.years.split("-")
         if len(parts) == 2:
-            year_range = (int(parts[0]), int(parts[1]))
+            y_start, y_end = int(parts[0]), int(parts[1])
+            if y_end < y_start:
+                print(f"Error: --years {args.years} is invalid (end year {y_end} < start year {y_start}). "
+                      f"Did you mean --years {y_start}-20{y_end:02d}?")
+                sys.exit(1)
+            if y_end < 1970 or y_start > 2100:
+                print(f"Error: --years {args.years} looks wrong (expected e.g. 2016-2020).")
+                sys.exit(1)
+            year_range = (y_start, y_end)
+        else:
+            print(f"Error: --years must be in format START-END (e.g. 2016-2020), got: {args.years}")
+            sys.exit(1)
+
+    # --llm-pipeline: run LLM extraction first (for narrative PDF countries such as
+    # UK, France, Germany, Japan that have no structured DOCX/text-cache tables).
+    # This calls budget/pipeline.py which does the expensive per-page extraction,
+    # caching results in results.csv.  compile_country() then reads that cache
+    # automatically — no double cost on subsequent runs.
+    if getattr(args, "llm_pipeline", False):
+        from budget.pipeline import run_pipeline, load_config as load_pipeline_config
+        pipeline_config = load_pipeline_config(cfg_path)
+        print(f"\nRunning LLM extraction pipeline for {args.country}...")
+        run_pipeline(
+            config=pipeline_config,
+            countries=[args.country],
+            year_range=year_range,
+            dry_run=args.dry_run,
+            build_panel=False,   # compile_country builds the series
+        )
+        if args.dry_run:
+            return
 
     series = compile_country(
         country=args.country,
@@ -134,9 +186,13 @@ if __name__ == "__main__":
         "--reforms-cross-verify", action="store_true",
         help="Merge two reform extraction runs (cross-verification, Strategy B)",
     )
+    pipeline_group.add_argument(
+        "--reforms-full-pipeline", action="store_true",
+        help="Run full pipeline: check Run A → Run B (Anthropic) → cross-verify",
+    )
 
     # ── Budget pipeline flags ─────────────────────────────────────────────────
-    parser.add_argument("--country", help="Country to compile (e.g. Australia, Canada)")
+    parser.add_argument("--country", help="Country to compile (e.g. Australia, Canada, UK, France, Germany, Japan)")
     parser.add_argument("--years", help="Year range e.g. 2020-2024")
     parser.add_argument("--no-entity-dedup", action="store_true", help="Skip LLM entity deduplication")
     parser.add_argument("--fill-gaps", action="store_true", help="Try to fill missing agency-years from source documents")
@@ -144,6 +200,15 @@ if __name__ == "__main__":
     parser.add_argument("--dry-run", action="store_true", help="Parse only, no LLM classification calls")
     parser.add_argument("--build-database", action="store_true", help="Rebuild combined rd_database.csv from all country series")
     parser.add_argument("--config", default="config.yaml", help="Path to config.yaml")
+    parser.add_argument(
+        "--llm-pipeline", action="store_true",
+        help=(
+            "Run LLM extraction first before compiling. Required for narrative PDF "
+            "countries (UK, France, Germany, Japan) where budget tables are not in "
+            "structured DOCX format. Results are cached — re-running without this flag "
+            "uses the existing cache at no extra LLM cost."
+        ),
+    )
 
     # ── Reform pipeline flags ─────────────────────────────────────────────────
     from reforms.pipeline_reforms import add_arguments as _add_reform_args
@@ -159,6 +224,28 @@ if __name__ == "__main__":
         help="Cross-verify: skip merging, re-build panel from existing merged JSONs",
     )
 
+    # ── Full pipeline flags ───────────────────────────────────────────────────
+    parser.add_argument(
+        "--check-only", action="store_true",
+        help="Full pipeline: report status of all stages without running anything",
+    )
+    parser.add_argument(
+        "--skip-run-a-check", action="store_true",
+        help="Full pipeline: skip Run A completeness check (assume it is done)",
+    )
+    parser.add_argument(
+        "--countries", nargs="+", metavar="CODE",
+        help="Full pipeline: run for multiple country codes, e.g. --countries CAN FRA DEU",
+    )
+    parser.add_argument(
+        "--g7", action="store_true",
+        help="Full pipeline: run all G7 countries (CAN FRA DEU ITA JPN GBR USA)",
+    )
+    parser.add_argument(
+        "--g20", action="store_true",
+        help="Full pipeline: run all G20 OECD members",
+    )
+
     args = parser.parse_args()
 
     if args.budget or args.build_database:
@@ -167,6 +254,54 @@ if __name__ == "__main__":
     elif args.reforms_only:
         from reforms.pipeline_reforms import run_from_args as _run_reforms
         _run_reforms(args)
+
+    elif args.reforms_full_pipeline:
+        from reforms.full_pipeline import run_full_pipeline
+        from reforms.pipeline_reforms import load_reforms_config
+
+        _G7  = ["CAN", "FRA", "DEU", "ITA", "JPN", "GBR", "USA"]
+        _G20_OECD = [
+            "AUS", "CAN", "FRA", "DEU", "ITA", "JPN", "KOR",
+            "MEX", "TUR", "GBR", "USA",
+        ]
+
+        config = load_reforms_config(args.config)
+        if config is None:
+            sys.exit(1)
+
+        # Resolve country list: --g7 / --g20 / --countries / single --country / all
+        if getattr(args, "g7", False):
+            fp_countries = _G7
+        elif getattr(args, "g20", False):
+            fp_countries = _G20_OECD
+        elif getattr(args, "countries", None):
+            fp_countries = [c.upper() for c in args.countries]
+        else:
+            single = (
+                getattr(args, "reforms_country", None)
+                or getattr(args, "country", None)
+            )
+            fp_countries = [single] if single else [None]  # None = all countries
+
+        fp_year        = getattr(args, "reforms_year", None)
+        check_only     = getattr(args, "check_only", False)
+        skip_a         = getattr(args, "skip_run_a_check", False)
+        consensus_only = getattr(args, "consensus_only", False)
+
+        total = len([c for c in fp_countries if c])
+        for i, fp_country in enumerate(fp_countries, 1):
+            if total > 1:
+                print(f"\n{'#'*60}")
+                print(f"# Country {i}/{total}: {fp_country}")
+                print(f"{'#'*60}")
+            run_full_pipeline(
+                config=config,
+                country=fp_country,
+                year=fp_year,
+                check_only=check_only,
+                skip_run_a_check=skip_a,
+                consensus_only=consensus_only,
+            )
 
     elif args.reforms_cross_verify:
         from reforms.cross_verifier import main as _run_cross_verify

@@ -1,0 +1,353 @@
+country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
+France,2010,ANR (Agence Nationale de la Recherche),science_agency,ok,,,,,none,0.0,,0.0
+France,2011,ANR (Agence Nationale de la Recherche),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2012,ANR (Agence Nationale de la Recherche),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2013,ANR (Agence Nationale de la Recherche),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2014,ANR (Agence Nationale de la Recherche),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2015,ANR (Agence Nationale de la Recherche),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2016,ANR (Agence Nationale de la Recherche),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2017,ANR (Agence Nationale de la Recherche),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2018,ANR (Agence Nationale de la Recherche),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2019,ANR (Agence Nationale de la Recherche),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2020,ANR (Agence Nationale de la Recherche),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2021,ANR (Agence Nationale de la Recherche),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2022,ANR (Agence Nationale de la Recherche),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2023,ANR (Agence Nationale de la Recherche),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2024,ANR (Agence Nationale de la Recherche),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2025,ANR (Agence Nationale de la Recherche),science_agency,ok,,,,,none,0.0,0.0,
+France,2010,CNRS (Centre National de la Recherche Scientifique),science_agency,ok,,,,,none,0.0,,0.0
+France,2011,CNRS (Centre National de la Recherche Scientifique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2012,CNRS (Centre National de la Recherche Scientifique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2013,CNRS (Centre National de la Recherche Scientifique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2014,CNRS (Centre National de la Recherche Scientifique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2015,CNRS (Centre National de la Recherche Scientifique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2016,CNRS (Centre National de la Recherche Scientifique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2017,CNRS (Centre National de la Recherche Scientifique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2018,CNRS (Centre National de la Recherche Scientifique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2019,CNRS (Centre National de la Recherche Scientifique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2020,CNRS (Centre National de la Recherche Scientifique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2021,CNRS (Centre National de la Recherche Scientifique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2022,CNRS (Centre National de la Recherche Scientifique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2023,CNRS (Centre National de la Recherche Scientifique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2024,CNRS (Centre National de la Recherche Scientifique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2025,CNRS (Centre National de la Recherche Scientifique),science_agency,ok,,,,,none,0.0,0.0,
+France,2010,CEA (Commissariat à l'Énergie Atomique),science_agency,ok,,,,,none,0.0,,0.0
+France,2011,CEA (Commissariat à l'Énergie Atomique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2012,CEA (Commissariat à l'Énergie Atomique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2013,CEA (Commissariat à l'Énergie Atomique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2014,CEA (Commissariat à l'Énergie Atomique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2015,CEA (Commissariat à l'Énergie Atomique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2016,CEA (Commissariat à l'Énergie Atomique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2017,CEA (Commissariat à l'Énergie Atomique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2018,CEA (Commissariat à l'Énergie Atomique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2019,CEA (Commissariat à l'Énergie Atomique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2020,CEA (Commissariat à l'Énergie Atomique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2021,CEA (Commissariat à l'Énergie Atomique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2022,CEA (Commissariat à l'Énergie Atomique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2023,CEA (Commissariat à l'Énergie Atomique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2024,CEA (Commissariat à l'Énergie Atomique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2025,CEA (Commissariat à l'Énergie Atomique),science_agency,ok,,,,,none,0.0,0.0,
+France,2010,INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,ok,,,,,none,0.0,,0.0
+France,2011,INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2012,INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2013,INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2014,INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2015,INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2016,INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2017,INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2018,INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2019,INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2020,INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2021,INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2022,INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2023,INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2024,INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2025,INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,ok,,,,,none,0.0,0.0,
+France,2010,INRAE (Institut National de Recherche pour l'Agriculture),science_agency,ok,,,,,none,0.0,,0.0
+France,2011,INRAE (Institut National de Recherche pour l'Agriculture),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2012,INRAE (Institut National de Recherche pour l'Agriculture),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2013,INRAE (Institut National de Recherche pour l'Agriculture),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2014,INRAE (Institut National de Recherche pour l'Agriculture),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2015,INRAE (Institut National de Recherche pour l'Agriculture),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2016,INRAE (Institut National de Recherche pour l'Agriculture),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2017,INRAE (Institut National de Recherche pour l'Agriculture),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2018,INRAE (Institut National de Recherche pour l'Agriculture),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2019,INRAE (Institut National de Recherche pour l'Agriculture),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2020,INRAE (Institut National de Recherche pour l'Agriculture),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2021,INRAE (Institut National de Recherche pour l'Agriculture),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2022,INRAE (Institut National de Recherche pour l'Agriculture),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2023,INRAE (Institut National de Recherche pour l'Agriculture),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2024,INRAE (Institut National de Recherche pour l'Agriculture),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2025,INRAE (Institut National de Recherche pour l'Agriculture),science_agency,ok,,,,,none,0.0,0.0,
+France,2010,INRIA (Institut National de Recherche en Informatique),science_agency,ok,,,,,none,0.0,,0.0
+France,2011,INRIA (Institut National de Recherche en Informatique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2012,INRIA (Institut National de Recherche en Informatique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2013,INRIA (Institut National de Recherche en Informatique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2014,INRIA (Institut National de Recherche en Informatique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2015,INRIA (Institut National de Recherche en Informatique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2016,INRIA (Institut National de Recherche en Informatique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2017,INRIA (Institut National de Recherche en Informatique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2018,INRIA (Institut National de Recherche en Informatique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2019,INRIA (Institut National de Recherche en Informatique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2020,INRIA (Institut National de Recherche en Informatique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2021,INRIA (Institut National de Recherche en Informatique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2022,INRIA (Institut National de Recherche en Informatique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2023,INRIA (Institut National de Recherche en Informatique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2024,INRIA (Institut National de Recherche en Informatique),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2025,INRIA (Institut National de Recherche en Informatique),science_agency,ok,,,,,none,0.0,0.0,
+France,2010,CNES (Centre National d'Études Spatiales),science_agency,ok,,,,,none,0.0,,0.0
+France,2011,CNES (Centre National d'Études Spatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2012,CNES (Centre National d'Études Spatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2013,CNES (Centre National d'Études Spatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2014,CNES (Centre National d'Études Spatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2015,CNES (Centre National d'Études Spatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2016,CNES (Centre National d'Études Spatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2017,CNES (Centre National d'Études Spatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2018,CNES (Centre National d'Études Spatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2019,CNES (Centre National d'Études Spatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2020,CNES (Centre National d'Études Spatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2021,CNES (Centre National d'Études Spatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2022,CNES (Centre National d'Études Spatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2023,CNES (Centre National d'Études Spatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2024,CNES (Centre National d'Études Spatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2025,CNES (Centre National d'Études Spatiales),science_agency,ok,,,,,none,0.0,0.0,
+France,2010,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,ok,,,,,none,0.0,,0.0
+France,2011,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2012,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2013,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2014,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2015,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2016,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2017,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2018,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2019,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2020,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2021,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2022,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2023,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2024,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2025,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,ok,,,,,none,0.0,0.0,
+France,2010,BRGM (Bureau de Recherches Géologiques et Minières),science_agency,ok,,,,,none,0.0,,0.0
+France,2011,BRGM (Bureau de Recherches Géologiques et Minières),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2012,BRGM (Bureau de Recherches Géologiques et Minières),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2013,BRGM (Bureau de Recherches Géologiques et Minières),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2014,BRGM (Bureau de Recherches Géologiques et Minières),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2015,BRGM (Bureau de Recherches Géologiques et Minières),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2016,BRGM (Bureau de Recherches Géologiques et Minières),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2017,BRGM (Bureau de Recherches Géologiques et Minières),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2018,BRGM (Bureau de Recherches Géologiques et Minières),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2019,BRGM (Bureau de Recherches Géologiques et Minières),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2020,BRGM (Bureau de Recherches Géologiques et Minières),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2021,BRGM (Bureau de Recherches Géologiques et Minières),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2022,BRGM (Bureau de Recherches Géologiques et Minières),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2023,BRGM (Bureau de Recherches Géologiques et Minières),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2024,BRGM (Bureau de Recherches Géologiques et Minières),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2025,BRGM (Bureau de Recherches Géologiques et Minières),science_agency,ok,,,,,none,0.0,0.0,
+France,2010,ONERA (Office National d'Études et de Recherches Aérospatiales),science_agency,ok,,,,,none,0.0,,0.0
+France,2011,ONERA (Office National d'Études et de Recherches Aérospatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2012,ONERA (Office National d'Études et de Recherches Aérospatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2013,ONERA (Office National d'Études et de Recherches Aérospatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2014,ONERA (Office National d'Études et de Recherches Aérospatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2015,ONERA (Office National d'Études et de Recherches Aérospatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2016,ONERA (Office National d'Études et de Recherches Aérospatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2017,ONERA (Office National d'Études et de Recherches Aérospatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2018,ONERA (Office National d'Études et de Recherches Aérospatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2019,ONERA (Office National d'Études et de Recherches Aérospatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2020,ONERA (Office National d'Études et de Recherches Aérospatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2021,ONERA (Office National d'Études et de Recherches Aérospatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2022,ONERA (Office National d'Études et de Recherches Aérospatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2023,ONERA (Office National d'Études et de Recherches Aérospatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2024,ONERA (Office National d'Études et de Recherches Aérospatiales),science_agency,ok,,,,,none,0.0,0.0,0.0
+France,2025,ONERA (Office National d'Études et de Recherches Aérospatiales),science_agency,ok,,,,,none,0.0,0.0,
+France,2010,Multidisciplinary Scientific and Technological Research,direct_rd,ok,,,,,none,48678000.0,,48774000.0
+France,2011,Multidisciplinary Scientific and Technological Research,direct_rd,ok,,,,,none,48774000.0,48678000.0,48833000.0
+France,2012,Multidisciplinary Scientific and Technological Research,direct_rd,ok,,,,,none,48833000.0,48774000.0,51587733000.0
+France,2013,Multidisciplinary Scientific and Technological Research,direct_rd,ok,,,,,none,51587733000.0,48833000.0,5053673242000.0
+France,2014,Multidisciplinary Scientific and Technological Research,direct_rd,ok,,,,,none,5053673242000.0,51587733000.0,6265125852000.0
+France,2015,Multidisciplinary Scientific and Technological Research,direct_rd,ok,,,,,none,6265125852000.0,5053673242000.0,6244300000000.0
+France,2016,Multidisciplinary Scientific and Technological Research,direct_rd,ok,,,,,none,6244300000000.0,6265125852000.0,6513909973000.0
+France,2017,Multidisciplinary Scientific and Technological Research,direct_rd,ok,,,,,none,6513909973000.0,6244300000000.0,70511000.0
+France,2018,Multidisciplinary Scientific and Technological Research,direct_rd,ok,,,,,none,70511000.0,6513909973000.0,6841167535000.0
+France,2019,Multidisciplinary Scientific and Technological Research,direct_rd,ok,,,,,none,6841167535000.0,70511000.0,6941119.469
+France,2020,Multidisciplinary Scientific and Technological Research,direct_rd,ok,,,,,none,6941119.469,6841167535000.0,7315288000.0
+France,2021,Multidisciplinary Scientific and Technological Research,direct_rd,ok,,,,,none,7315288000.0,6941119.469,77402472000.0
+France,2022,Multidisciplinary Scientific and Technological Research,direct_rd,ok,,,,,none,77402472000.0,7315288000.0,8070807000.0
+France,2023,Multidisciplinary Scientific and Technological Research,direct_rd,ok,,,,,none,8070807000.0,77402472000.0,62785000.0
+France,2024,Multidisciplinary Scientific and Technological Research,direct_rd,ok,,,,,none,62785000.0,8070807000.0,8609378571000.0
+France,2025,Multidisciplinary Scientific and Technological Research,direct_rd,ok,,,,,none,8609378571000.0,62785000.0,
+France,2010,Space Research,direct_rd,ok,,,,,none,2417000.0,,2417000.0
+France,2011,Space Research,direct_rd,ok,,,,,none,2417000.0,2417000.0,2417000.0
+France,2012,Space Research,direct_rd,ok,,,,,none,2417000.0,2417000.0,14130222000.0
+France,2013,Space Research,direct_rd,ok,,,,,none,14130222000.0,2417000.0,1429108560000.0
+France,2014,Space Research,direct_rd,ok,,,,,none,1429108560000.0,14130222000.0,1434501498000.0
+France,2015,Space Research,direct_rd,ok,,,,,none,1434501498000.0,1429108560000.0,1371719890000.0
+France,2016,Space Research,direct_rd,ok,,,,,none,1371719890000.0,1434501498000.0,1466584352000.0
+France,2017,Space Research,direct_rd,ok,,,,,none,1466584352000.0,1371719890000.0,2417000.0
+France,2018,Space Research,direct_rd,ok,,,,,none,2417000.0,1466584352000.0,1820012789000.0
+France,2019,Space Research,direct_rd,ok,,,,,none,1820012789000.0,2417000.0,2021625.716
+France,2020,Space Research,direct_rd,ok,,,,,none,2021625.716,1820012789000.0,1635886000.0
+France,2021,Space Research,direct_rd,ok,,,,,none,1635886000.0,2021625.716,16422861000.0
+France,2022,Space Research,direct_rd,ok,,,,,none,16422861000.0,1635886000.0,1865683000.0
+France,2023,Space Research,direct_rd,ok,,,,,none,1865683000.0,16422861000.0,2404000.0
+France,2024,Space Research,direct_rd,ok,,,,,none,2404000.0,1865683000.0,1809190845000.0
+France,2025,Space Research,direct_rd,ok,,,,,none,1809190845000.0,2404000.0,
+France,2010,"Research in the Fields of Energy, Development, and Sustainable Mobility",direct_rd,ok,,,,,none,0.0,,0.0
+France,2011,"Research in the Fields of Energy, Development, and Sustainable Mobility",direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2012,"Research in the Fields of Energy, Development, and Sustainable Mobility",direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2013,"Research in the Fields of Energy, Development, and Sustainable Mobility",direct_rd,ok,,,,,none,0.0,0.0,1380719166000.0
+France,2014,"Research in the Fields of Energy, Development, and Sustainable Mobility",direct_rd,ok,,,,,none,1380719166000.0,0.0,1377813162000.0
+France,2015,"Research in the Fields of Energy, Development, and Sustainable Mobility",direct_rd,ok,,,,,none,1377813162000.0,1380719166000.0,1718069888000.0
+France,2016,"Research in the Fields of Energy, Development, and Sustainable Mobility",direct_rd,ok,,,,,none,1718069888000.0,1377813162000.0,1706980867000.0
+France,2017,"Research in the Fields of Energy, Development, and Sustainable Mobility",direct_rd,ok,,,,,none,1706980867000.0,1718069888000.0,4403000.0
+France,2018,"Research in the Fields of Energy, Development, and Sustainable Mobility",direct_rd,ok,,,,,none,4403000.0,1706980867000.0,1763263758000.0
+France,2019,"Research in the Fields of Energy, Development, and Sustainable Mobility",direct_rd,ok,,,,,none,1763263758000.0,4403000.0,1761730.045
+France,2020,"Research in the Fields of Energy, Development, and Sustainable Mobility",direct_rd,ok,,,,,none,1761730.045,1763263758000.0,1914122000.0
+France,2021,"Research in the Fields of Energy, Development, and Sustainable Mobility",direct_rd,ok,,,,,none,1914122000.0,1761730.045,16141224000.0
+France,2022,"Research in the Fields of Energy, Development, and Sustainable Mobility",direct_rd,ok,,,,,none,16141224000.0,1914122000.0,1675829000.0
+France,2023,"Research in the Fields of Energy, Development, and Sustainable Mobility",direct_rd,ok,,,,,none,1675829000.0,16141224000.0,3359000.0
+France,2024,"Research in the Fields of Energy, Development, and Sustainable Mobility",direct_rd,ok,,,,,none,3359000.0,1675829000.0,1419281533000.0
+France,2025,"Research in the Fields of Energy, Development, and Sustainable Mobility",direct_rd,ok,,,,,none,1419281533000.0,3359000.0,
+France,2010,Payment credits for research and higher education in economic and industrial matters,direct_rd,ok,,,,,none,0.0,,0.0
+France,2011,Payment credits for research and higher education in economic and industrial matters,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2012,Payment credits for research and higher education in economic and industrial matters,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2013,Payment credits for research and higher education in economic and industrial matters,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2014,Payment credits for research and higher education in economic and industrial matters,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2015,Payment credits for research and higher education in economic and industrial matters,direct_rd,ok,,,,,none,0.0,0.0,1718069888000.0
+France,2016,Payment credits for research and higher education in economic and industrial matters,direct_rd,outlier,"Amount 1,718,069,888,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1718069888000.0,0.0,0.0
+France,2017,Payment credits for research and higher education in economic and industrial matters,direct_rd,ok,,,,,none,0.0,1718069888000.0,0.0
+France,2018,Payment credits for research and higher education in economic and industrial matters,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2019,Payment credits for research and higher education in economic and industrial matters,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2020,Payment credits for research and higher education in economic and industrial matters,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2021,Payment credits for research and higher education in economic and industrial matters,direct_rd,ok,,,,,none,0.0,0.0,167504.0
+France,2022,Payment credits for research and higher education in economic and industrial matters,direct_rd,outlier,"Amount 167,504 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,167504.0,0.0,0.0
+France,2023,Payment credits for research and higher education in economic and industrial matters,direct_rd,ok,,,,,none,0.0,167504.0,0.0
+France,2024,Payment credits for research and higher education in economic and industrial matters,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2025,Payment credits for research and higher education in economic and industrial matters,direct_rd,ok,,,,,none,0.0,0.0,
+France,2010,Payment credits for dual research,direct_rd,ok,,,,,none,0.0,,0.0
+France,2011,Payment credits for dual research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2012,Payment credits for dual research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2013,Payment credits for dual research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2014,Payment credits for dual research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2015,Payment credits for dual research,direct_rd,ok,,,,,none,0.0,0.0,180074745000.0
+France,2016,Payment credits for dual research,direct_rd,outlier,"Amount 180,074,745,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,180074745000.0,0.0,0.0
+France,2017,Payment credits for dual research,direct_rd,ok,,,,,none,0.0,180074745000.0,0.0
+France,2018,Payment credits for dual research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2019,Payment credits for dual research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2020,Payment credits for dual research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2021,Payment credits for dual research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2022,Payment credits for dual research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2023,Payment credits for dual research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2024,Payment credits for dual research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2025,Payment credits for dual research,direct_rd,ok,,,,,none,0.0,0.0,
+France,2010,Payment credits for higher education and university research,higher_education,ok,,,,,none,0.0,,0.0
+France,2011,Payment credits for higher education and university research,higher_education,ok,,,,,none,0.0,0.0,0.0
+France,2012,Payment credits for higher education and university research,higher_education,ok,,,,,none,0.0,0.0,0.0
+France,2013,Payment credits for higher education and university research,higher_education,ok,,,,,none,0.0,0.0,0.0
+France,2014,Payment credits for higher education and university research,higher_education,ok,,,,,none,0.0,0.0,0.0
+France,2015,Payment credits for higher education and university research,higher_education,ok,,,,,none,0.0,0.0,0.0
+France,2016,Payment credits for higher education and university research,higher_education,ok,,,,,none,0.0,0.0,0.0
+France,2017,Payment credits for higher education and university research,higher_education,ok,,,,,none,0.0,0.0,0.0
+France,2018,Payment credits for higher education and university research,higher_education,ok,,,,,none,0.0,0.0,0.0
+France,2019,Payment credits for higher education and university research,higher_education,ok,,,,,none,0.0,0.0,0.0
+France,2020,Payment credits for higher education and university research,higher_education,ok,,,,,none,0.0,0.0,0.0
+France,2021,Payment credits for higher education and university research,higher_education,ok,,,,,none,0.0,0.0,167504.0
+France,2022,Payment credits for higher education and university research,higher_education,outlier,"Amount 167,504 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,167504.0,0.0,0.0
+France,2023,Payment credits for higher education and university research,higher_education,ok,,,,,none,0.0,167504.0,0.0
+France,2024,Payment credits for higher education and university research,higher_education,ok,,,,,none,0.0,0.0,0.0
+France,2025,Payment credits for higher education and university research,higher_education,ok,,,,,none,0.0,0.0,
+France,2010,Dual Research Programme,direct_rd,ok,,,,,none,0.0,,0.0
+France,2011,Dual Research Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2012,Dual Research Programme,direct_rd,ok,,,,,none,0.0,0.0,19219874000.0
+France,2013,Dual Research Programme,direct_rd,outlier,"Amount 19,219,874,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,19219874000.0,0.0,0.0
+France,2014,Dual Research Programme,direct_rd,ok,,,,,none,0.0,19219874000.0,0.0
+France,2015,Dual Research Programme,direct_rd,ok,,,,,none,0.0,0.0,180074745000.0
+France,2016,Dual Research Programme,direct_rd,outlier,"Amount 180,074,745,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,180074745000.0,0.0,0.0
+France,2017,Dual Research Programme,direct_rd,ok,,,,,none,0.0,180074745000.0,0.0
+France,2018,Dual Research Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2019,Dual Research Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2020,Dual Research Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2021,Dual Research Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2022,Dual Research Programme,direct_rd,ok,,,,,none,0.0,0.0,150019000.0
+France,2023,Dual Research Programme,direct_rd,outlier,"Amount 150,019,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,150019000.0,0.0,0.0
+France,2024,Dual Research Programme,direct_rd,ok,,,,,none,0.0,150019000.0,0.0
+France,2025,Dual Research Programme,direct_rd,ok,,,,,none,0.0,0.0,
+France,2010,Payment credits for economic and industrial research and higher education,innovation_instruments,ok,,,,,none,0.0,,0.0
+France,2011,Payment credits for economic and industrial research and higher education,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+France,2012,Payment credits for economic and industrial research and higher education,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+France,2013,Payment credits for economic and industrial research and higher education,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+France,2014,Payment credits for economic and industrial research and higher education,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+France,2015,Payment credits for economic and industrial research and higher education,innovation_instruments,ok,,,,,none,0.0,0.0,331764596000.0
+France,2016,Payment credits for economic and industrial research and higher education,innovation_instruments,outlier,"Amount 331,764,596,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,331764596000.0,0.0,0.0
+France,2017,Payment credits for economic and industrial research and higher education,innovation_instruments,ok,,,,,none,0.0,331764596000.0,0.0
+France,2018,Payment credits for economic and industrial research and higher education,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+France,2019,Payment credits for economic and industrial research and higher education,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+France,2020,Payment credits for economic and industrial research and higher education,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+France,2021,Payment credits for economic and industrial research and higher education,innovation_instruments,ok,,,,,none,0.0,0.0,167504.0
+France,2022,Payment credits for economic and industrial research and higher education,innovation_instruments,outlier,"Amount 167,504 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,167504.0,0.0,0.0
+France,2023,Payment credits for economic and industrial research and higher education,innovation_instruments,ok,,,,,none,0.0,167504.0,0.0
+France,2024,Payment credits for economic and industrial research and higher education,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+France,2025,Payment credits for economic and industrial research and higher education,innovation_instruments,ok,,,,,none,0.0,0.0,
+France,2010,Research in the Field of Environmental and Resource Management,direct_rd,outlier,"Amount 17,212,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,17212000.0,,0.0
+France,2011,Research in the Field of Environmental and Resource Management,direct_rd,ok,,,,,none,0.0,17212000.0,0.0
+France,2012,Research in the Field of Environmental and Resource Management,direct_rd,ok,,,,,none,0.0,0.0,17200000.0
+France,2013,Research in the Field of Environmental and Resource Management,direct_rd,outlier,"Amount 17,200,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,17200000.0,0.0,1277577911000.0
+France,2014,Research in the Field of Environmental and Resource Management,direct_rd,outlier,"Amount 1,277,577,911,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1277577911000.0,17200000.0,0.0
+France,2015,Research in the Field of Environmental and Resource Management,direct_rd,ok,,,,,none,0.0,1277577911000.0,0.0
+France,2016,Research in the Field of Environmental and Resource Management,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2017,Research in the Field of Environmental and Resource Management,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2018,Research in the Field of Environmental and Resource Management,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2019,Research in the Field of Environmental and Resource Management,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2020,Research in the Field of Environmental and Resource Management,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2021,Research in the Field of Environmental and Resource Management,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2022,Research in the Field of Environmental and Resource Management,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2023,Research in the Field of Environmental and Resource Management,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2024,Research in the Field of Environmental and Resource Management,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2025,Research in the Field of Environmental and Resource Management,direct_rd,ok,,,,,none,0.0,0.0,
+France,2010,Research in the field of management of environments and resources,direct_rd,ok,,,,,none,0.0,,17205000.0
+France,2011,Research in the field of management of environments and resources,direct_rd,outlier,"Amount 17,205,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,17205000.0,0.0,17199000.0
+France,2012,Research in the field of management of environments and resources,direct_rd,outlier,"Amount 17,199,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,17199000.0,17205000.0,0.0
+France,2013,Research in the field of management of environments and resources,direct_rd,ok,,,,,none,0.0,17199000.0,0.0
+France,2014,Research in the field of management of environments and resources,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2015,Research in the field of management of environments and resources,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2016,Research in the field of management of environments and resources,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2017,Research in the field of management of environments and resources,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2018,Research in the field of management of environments and resources,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2019,Research in the field of management of environments and resources,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2020,Research in the field of management of environments and resources,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2021,Research in the field of management of environments and resources,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2022,Research in the field of management of environments and resources,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2023,Research in the field of management of environments and resources,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2024,Research in the field of management of environments and resources,direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2025,Research in the field of management of environments and resources,direct_rd,ok,,,,,none,0.0,0.0,
+France,2010,"Research in the fields of energy, development, and sustainable planning",direct_rd,ok,,,,,none,4861000.0,,4856000.0
+France,2011,"Research in the fields of energy, development, and sustainable planning",direct_rd,ok,,,,,none,4856000.0,4861000.0,4846000.0
+France,2012,"Research in the fields of energy, development, and sustainable planning",direct_rd,ok,,,,,none,4846000.0,4856000.0,14159981000.0
+France,2013,"Research in the fields of energy, development, and sustainable planning",direct_rd,outlier,"Amount 14,159,981,000 outside expected range [-14,571,750 – 19,429,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,14159981000.0,4846000.0,0.0
+France,2014,"Research in the fields of energy, development, and sustainable planning",direct_rd,ok,,,,,none,0.0,14159981000.0,1377813162000.0
+France,2015,"Research in the fields of energy, development, and sustainable planning",direct_rd,outlier,"Amount 1,377,813,162,000 outside expected range [-14,571,750 – 19,429,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1377813162000.0,0.0,0.0
+France,2016,"Research in the fields of energy, development, and sustainable planning",direct_rd,ok,,,,,none,0.0,1377813162000.0,0.0
+France,2017,"Research in the fields of energy, development, and sustainable planning",direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2018,"Research in the fields of energy, development, and sustainable planning",direct_rd,ok,,,,,none,0.0,0.0,0.0
+France,2019,"Research in the fields of energy, development, and sustainable planning",direct_rd,ok,,,,,none,0.0,0.0,1786.321
+France,2020,"Research in the fields of energy, development, and sustainable planning",direct_rd,ok,,,,,none,1786.321,0.0,0.0
+France,2021,"Research in the fields of energy, development, and sustainable planning",direct_rd,ok,,,,,none,0.0,1786.321,1614122000.0
+France,2022,"Research in the fields of energy, development, and sustainable planning",direct_rd,outlier,"Amount 1,614,122,000 outside expected range [-14,571,750 – 19,429,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1614122000.0,0.0,0.0
+France,2023,"Research in the fields of energy, development, and sustainable planning",direct_rd,ok,,,,,none,0.0,1614122000.0,3359.0
+France,2024,"Research in the fields of energy, development, and sustainable planning",direct_rd,ok,,,,,none,3359.0,0.0,0.0
+France,2025,"Research in the fields of energy, development, and sustainable planning",direct_rd,ok,,,,,none,0.0,3359.0,
+France,2010,Applied Research and Innovation in Agriculture,innovation_instruments,ok,,,,,none,0.0,,0.0
+France,2011,Applied Research and Innovation in Agriculture,innovation_instruments,ok,,,,,none,0.0,0.0,55546.75
+France,2012,Applied Research and Innovation in Agriculture,innovation_instruments,outlier,"Amount 55,547 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,55546.75,0.0,0.0
+France,2013,Applied Research and Innovation in Agriculture,innovation_instruments,ok,,,,,none,0.0,55546.75,0.0
+France,2014,Applied Research and Innovation in Agriculture,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+France,2015,Applied Research and Innovation in Agriculture,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+France,2016,Applied Research and Innovation in Agriculture,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+France,2017,Applied Research and Innovation in Agriculture,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+France,2018,Applied Research and Innovation in Agriculture,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+France,2019,Applied Research and Innovation in Agriculture,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+France,2020,Applied Research and Innovation in Agriculture,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+France,2021,Applied Research and Innovation in Agriculture,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+France,2022,Applied Research and Innovation in Agriculture,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+France,2023,Applied Research and Innovation in Agriculture,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+France,2024,Applied Research and Innovation in Agriculture,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+France,2025,Applied Research and Innovation in Agriculture,innovation_instruments,ok,,,,,none,0.0,0.0,

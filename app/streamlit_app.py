@@ -4,6 +4,7 @@ Run:  streamlit run app/streamlit_app.py
 """
 
 import sys
+import textwrap
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -16,11 +17,12 @@ import streamlit as st
 from app.data_loader import (
     ACTOR_LABELS, ORIENTATION_COLORS, ORIENTATION_LABELS,
     RD_CATEGORY_COLORS, RD_CATEGORY_LABELS,
-    REFORM_PANEL, STAGE_LABELS, STATUS_LABELS,
+    REFORM_PANEL, STAGE_LABELS, STAGE_PATHS, STATUS_LABELS,
     SUBTHEME_COLORS, SUBTHEME_LABELS, SUBTHEME_SHORT,
     budget_available, get_app_password, load_budget, load_reform_panel, load_reforms,
     load_reform_mentions, load_reform_panel_subtheme,
     reforms_available,
+    available_reform_stages, load_reforms_stage, load_reform_panel_stage,
 )
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -480,61 +482,106 @@ with st.sidebar:
 
     # ── Stream 2 filters ──
     _sidebar_label("Stream 2 — Reforms")
-    if reforms_available():
-        _dr = load_reforms()
-        _ctry = sorted(_dr["country_name"].dropna().unique())
-        sel_ctry = st.multiselect("Country", _ctry, default=_ctry, key="ctry")
+    _avail_stages = available_reform_stages()
 
-        _st_opts = sorted(_dr["sub_theme"].dropna().unique()) if "sub_theme" in _dr.columns else []
-        sel_st = st.multiselect(
-            "Innovation type", _st_opts, default=_st_opts, key="st_filt",
-            format_func=lambda x: SUBTHEME_LABELS.get(x, x),
+    if _avail_stages:
+        # Stage selector — only show stages that have data on disk
+        _stage_keys   = list(_avail_stages.keys())
+        _stage_labels = list(_avail_stages.values())
+        _default_stage = "merged" if "merged" in _avail_stages else _stage_keys[-1]
+        _sel_stage_label = st.radio(
+            "Extraction stage",
+            _stage_labels,
+            index=_stage_labels.index(_avail_stages[_default_stage]),
+            key="reform_stage",
         )
-        _stat_opts = sorted(_dr["status"].dropna().unique()) if "status" in _dr.columns else []
-        sel_stat = st.multiselect(
-            "Status", _stat_opts,
-            default=_stat_opts,
-            key="stat_filt",
-            format_func=lambda x: STATUS_LABELS.get(x, x),
-        )
-        _svy_opts = sorted(_dr["survey_year"].dropna().astype(int).unique()) if "survey_year" in _dr.columns else []
-        sel_svy = st.multiselect(
-            "Survey year", _svy_opts,
-            default=_svy_opts,
-            key="svy_filt",
-        )
-        only_major = st.checkbox("Major reforms only", key="maj_filt")
-        # Year range for charts: use display_year so pre-1990 survey-era reforms
-        # still appear when implementation_year is missing.
-        _ref_yrs = (
-            sorted(_dr["display_year"].dropna().astype(int).unique())
-            if "display_year" in _dr.columns else []
-        )
-        if len(_ref_yrs) > 1:
-            yr_r = st.select_slider(
-                "Year range", options=_ref_yrs,
-                value=(min(_ref_yrs), max(_ref_yrs)), key="yr_r",
-                label_visibility="collapsed",
-            )
+        sel_stage = _stage_keys[_stage_labels.index(_sel_stage_label)]
+
+        # For merged stage: option to show excluded reforms too
+        show_excluded = False
+        if sel_stage == "merged":
+            show_excluded = st.checkbox("Include LLM-excluded reforms", key="show_excl")
+
+        _dr = load_reforms_stage(sel_stage, included_only=not show_excluded)
+
+        if _dr.empty:
+            st.caption("No data for this stage yet.")
+            sel_ctry = []; sel_st = []; sel_stat = []; sel_svy = []
+            sel_verif = []
+            only_major = False; yr_r = (1995, 2025)
         else:
-            yr_r = (_ref_yrs[0], _ref_yrs[0]) if _ref_yrs else (1995, 2025)
+            _ctry = sorted(_dr["country_name"].dropna().unique()) if "country_name" in _dr.columns else []
+            sel_ctry = st.multiselect("Country", _ctry, default=_ctry, key="ctry")
 
-        # Show which countries have data vs. just panel placeholders
-        _panel_df_sb = load_reform_panel()
-        if not _panel_df_sb.empty and "reform_count" in _panel_df_sb.columns:
-            _countries_with_data = sorted(
-                _panel_df_sb[_panel_df_sb["reform_count"] > 0]["country_code"].unique()
+            _st_opts = sorted(_dr["sub_theme"].dropna().unique()) if "sub_theme" in _dr.columns else []
+            sel_st = st.multiselect(
+                "Innovation type", _st_opts, default=_st_opts, key="st_filt",
+                format_func=lambda x: SUBTHEME_LABELS.get(x, x),
             )
-            _total_panel = _panel_df_sb["country_code"].nunique()
-            st.markdown(
-                f'<div style="font-size:.67rem;color:#888;margin-top:.4rem;">'
-                f'<b style="color:#555;">{len(_countries_with_data)}</b> of {_total_panel} panel countries have reform data.<br>'
-                f'Add more: <code style="font-size:.65rem;">python main.py --reforms-country FRA</code></div>',
-                unsafe_allow_html=True,
+            _stat_opts = sorted(_dr["status"].dropna().unique()) if "status" in _dr.columns else []
+            sel_stat = st.multiselect(
+                "Status", _stat_opts, default=_stat_opts, key="stat_filt",
+                format_func=lambda x: STATUS_LABELS.get(x, x),
             )
+            _svy_opts = sorted(_dr["survey_year"].dropna().astype(int).unique()) if "survey_year" in _dr.columns else []
+            sel_svy = st.multiselect("Survey year", _svy_opts, default=_svy_opts, key="svy_filt")
+            if sel_stage == "merged" and "verification_bucket" in _dr.columns:
+                _verif_opts = [v for v in _dr["verification_bucket"].dropna().unique() if str(v).strip()]
+                _verif_order = [
+                    "All 3 models agreed",
+                    "2 of 3 models",
+                    "Both models agreed",
+                    "1 model only",
+                    "Excluded — all 3 models agreed",
+                    "Excluded — 2 of 3 models",
+                    "Excluded — both models agreed",
+                    "Excluded — 1 model only",
+                ]
+                _verif_opts = [v for v in _verif_order if v in _verif_opts]
+                sel_verif = st.multiselect(
+                    "Verification",
+                    _verif_opts,
+                    default=_verif_opts,
+                    key="verif_filt",
+                )
+            else:
+                sel_verif = []
+            only_major = st.checkbox("Major reforms only", key="maj_filt")
+
+            _ref_yrs = (
+                sorted(_dr["display_year"].dropna().astype(int).unique())
+                if "display_year" in _dr.columns else []
+            )
+            if len(_ref_yrs) > 1:
+                yr_r = st.select_slider(
+                    "Year range", options=_ref_yrs,
+                    value=(min(_ref_yrs), max(_ref_yrs)), key="yr_r",
+                    label_visibility="collapsed",
+                )
+            else:
+                yr_r = (_ref_yrs[0], _ref_yrs[0]) if _ref_yrs else (1995, 2025)
+
+            # Coverage note
+            _panel_df_sb = load_reform_panel_stage(sel_stage)
+            if not _panel_df_sb.empty and "reform_count" in _panel_df_sb.columns:
+                _countries_with_data = sorted(
+                    _panel_df_sb[_panel_df_sb["reform_count"] > 0]["country_code"].unique()
+                )
+                _total_panel = _panel_df_sb["country_code"].nunique()
+                st.markdown(
+                    f'<div style="font-size:.67rem;color:#888;margin-top:.4rem;">'
+                    f'<b style="color:#555;">{len(_countries_with_data)}</b> of {_total_panel} countries '
+                    f'have data in this stage.</div>',
+                    unsafe_allow_html=True,
+                )
     else:
+        _dr = pd.DataFrame()
+        sel_stage = "stage1"
+        show_excluded = False
+        sel_ctry = []; sel_st = []; sel_stat = []; sel_svy = []
+        sel_verif = []
+        only_major = False; yr_r = (1995, 2025)
         st.caption("No data — run `python main.py --reforms-only`")
-        yr_r = (1995, 2025)
 
     st.markdown("<hr style='margin:.7rem 0;'>", unsafe_allow_html=True)
     st.markdown(
@@ -555,8 +602,8 @@ if budget_available():
     _bud_yrs = sorted(_db_hdr["year"].dropna().unique())
     _bud_span = f"{min(_bud_yrs)}–{max(_bud_yrs)}" if _bud_yrs else ""
     _hdr_parts.append(f"Finance Bills: {', '.join(_bud_countries)} {_bud_span}")
-if reforms_available():
-    _dr_hdr = load_reforms()
+if not _dr.empty:
+    _dr_hdr = _dr
     _ref_countries = sorted(_dr_hdr["country_name"].dropna().unique()) if "country_name" in _dr_hdr.columns else []
     _ref_surv = sorted(_dr_hdr["survey_year"].dropna().astype(int).unique()) if "survey_year" in _dr_hdr.columns else []
     _ref_span = f"{min(_ref_surv)}–{max(_ref_surv)}" if _ref_surv else ""
@@ -575,14 +622,16 @@ st.markdown(
 )
 
 # ── Pre-compute filtered reforms dataframe (shared across all tabs) ──
-if reforms_available():
-    _dr_all = load_reforms()
+if not _dr.empty:
+    _dr_all = _dr
     dr_f = _dr_all.copy()
     if sel_ctry:  dr_f = dr_f[dr_f["country_name"].isin(sel_ctry)]
     if sel_st:    dr_f = dr_f[dr_f["sub_theme"].isin(sel_st)]
     if sel_stat:  dr_f = dr_f[dr_f["status"].isin(sel_stat)]
     if sel_svy and "survey_year" in dr_f.columns:
         dr_f = dr_f[dr_f["survey_year"].isin(sel_svy)]
+    if sel_verif and "verification_bucket" in dr_f.columns:
+        dr_f = dr_f[dr_f["verification_bucket"].isin(sel_verif)]
     if only_major and "is_major_reform" in dr_f.columns:
         dr_f = dr_f[dr_f["is_major_reform"] == True]  # noqa: E712
     if "display_year" in dr_f.columns:
@@ -818,12 +867,70 @@ with TAB_BUDGET:
 # ═════════════════════════════════════════════════════════════════════════════
 
 with TAB_REFORMS:
-    if not reforms_available():
-        st.info("Run `python main.py --reforms-only --reforms-country DNK` to generate reform data.")
+    if _dr.empty:
+        st.info("No reform data found. Run: python main.py --reforms-only --reforms-country DNK")
         st.stop()
 
+    # ── Stage indicator ──
+    _stage_labels_map = {
+        "stage1": "Stage 1 — GPT-4o-mini (primary extraction)",
+        "stage2": "Stage 2 — Claude Haiku (secondary extraction)",
+        "stage3": "Stage 3 — GPT-4o-mini (2nd run, tertiary extraction)",
+        "merged": "Stage 4 — Cross-verified (adjudicator-reviewed across all model runs)",
+    }
+    _stage_note = _stage_labels_map.get(sel_stage, sel_stage)
+    if show_excluded and sel_stage == "merged":
+        _stage_note += " · showing all reforms including excluded"
+    st.markdown(
+        f'<div style="font-size:.78rem;color:#555;background:#F7F8FA;'
+        f'border:1px solid #E2E6EA;border-radius:4px;padding:.4rem .8rem;margin-bottom:.8rem;">'
+        f'<b>Data source:</b> {_stage_note}</div>',
+        unsafe_allow_html=True,
+    )
+
+    # ── Cross-verification summary (merged stage only) ──
+    if sel_stage == "merged" and "verification_bucket" in _dr_all.columns:
+        _vb_counts = _dr_all["verification_bucket"].value_counts()
+        _n_3c  = int(_vb_counts.get("All 3 models agreed", 0))
+        _n_2i  = int(_vb_counts.get("2 of 3 models", 0))
+        _n_cc  = int(_vb_counts.get("Both models agreed", 0))
+        _n_1i  = int(_vb_counts.get("1 model only", 0))
+        _n_3r  = int(_vb_counts.get("Excluded — all 3 models agreed", 0))
+        _n_2e  = int(_vb_counts.get("Excluded — 2 of 3 models", 0))
+        _n_cr  = int(_vb_counts.get("Excluded — both models agreed", 0))
+        _n_1e  = int(_vb_counts.get("Excluded — 1 model only", 0))
+
+        _three_model = (_n_3c + _n_2i + _n_3r + _n_2e) > 0
+        _n_total = len(_dr_all)
+
+        if _three_model:
+            stat_row([
+                (_n_3c,       "All 3 models — confirmed"),
+                (_n_2i,       "2 of 3 models — included"),
+                (_n_1i,       "1 model only — included"),
+                (_n_3r + _n_2e + _n_1e, "Excluded (any tier)"),
+            ])
+            _n_in_dataset = _n_3c + _n_2i + _n_1i
+            _n_excluded   = _n_3r + _n_2e + _n_1e
+        else:
+            stat_row([
+                (_n_cc, "Both models agreed — confirmed"),
+                (_n_1i, "One model only — included"),
+                (_n_cr, "Both models agreed — rejected"),
+                (_n_1e, "One model only — excluded"),
+            ])
+            _n_in_dataset = _n_cc + _n_1i
+            _n_excluded   = _n_cr + _n_1e
+
+        caption_note(
+            f"Total reforms reviewed by LLM adjudicator: {_n_total} · "
+            f"In final dataset: {_n_in_dataset} · "
+            f"Excluded: {_n_excluded}"
+        )
+        st.markdown("<div style='margin-bottom:.6rem;'></div>", unsafe_allow_html=True)
+
     # ── KPI strip ──
-    _dr_all_tab2 = load_reforms()
+    _dr_all_tab2 = _dr_all
     n_gs   = int((dr_f["growth_orientation"] == "growth_supporting").sum()) \
              if "growth_orientation" in dr_f.columns else 0
     n_gh   = int((dr_f["growth_orientation"] == "growth_hindering").sum()) \
@@ -894,8 +1001,14 @@ with TAB_REFORMS:
 
         apply_style(fig_yr, height=320, xtitle="Year", ytitle="Reform events")
         st.plotly_chart(fig_yr, use_container_width=True)
+        _src_note = {
+            "stage1": "Extraction: GPT-4o-mini (OECD key).",
+            "stage2": "Extraction: Claude Haiku (OECD Anthropic key).",
+            "stage3": "Extraction: GPT-4o-mini (2nd run).",
+            "merged": "Extraction: GPT-4o-mini + Claude Haiku + GPT-4o-mini (2nd run), adjudicated by GPT-4o-mini.",
+        }.get(sel_stage, "")
         caption_note(
-            "Source: OECD Economic Surveys. Extraction: GPT-4o / Claude Sonnet. "
+            f"Source: OECD Economic Surveys. {_src_note} "
             "Year = implementation year (imputed to survey year when not stated)."
         )
 
@@ -1069,10 +1182,50 @@ with TAB_REFORMS:
         ctry_color = _cat_ctry_color.get(str(row.get("country_name") or ""), NAVY)
         desc_s   = _html2.escape(str(row.get("description") or ""))
         quote_s  = str(row.get("source_quote") or "")
-        imp_rat  = str(row.get("importance_rationale") or "")
-        go_rat   = str(row.get("growth_orientation_rationale") or "")
-        mentions = row.get("n_mentions")
+        source_page_start = row.get("source_page_start")
+        source_page_end = row.get("source_page_end")
+        survey_label = str(row.get("country_code") or "")
         mention_yrs = str(row.get("all_seen_survey_years") or row.get("mention_survey_years") or "")
+
+        # ── CV metadata (merged stage only) ──────────────────────────────────
+        cv_status   = str(row.get("cross_verification_status") or "")
+        cv_note     = str(row.get("cross_verification_note") or "")
+        found_by    = str(row.get("found_by_display") or row.get("found_by_models") or "")
+        verification_bucket = str(row.get("verification_bucket") or "")
+        cv_included = row.get("cv_included")
+        is_excluded = (
+            sel_stage == "merged" and
+            cv_status in {
+                "three_model_rejected", "two_model_excluded", "one_model_excluded",
+                "consensus_rejected", "disputed_excluded",
+            }
+        )
+
+        # CV agreement badge (merged stage only)
+        _cv_badge_map = {
+            "All 3 models agreed":             ("#1a7340", "#d4edda", "All 3 models agreed"),
+            "2 of 3 models":                   ("#1a4f7a", "#d0e4f7", "2 of 3 models"),
+            "Both models agreed":              ("#1a4f7a", "#d0e4f7", "Both models agreed"),
+            "1 model only":                    ("#7a5a00", "#fff3cd", "1 model only"),
+            "Excluded — all 3 models agreed":  ("#8b0000", "#fde8e8", "Excluded — all 3 agreed"),
+            "Excluded — 2 of 3 models":        ("#8b0000", "#fde8e8", "Excluded — 2 of 3"),
+            "Excluded — both models agreed":   ("#8b0000", "#fde8e8", "Excluded — both agreed"),
+            "Excluded — 1 model only":         ("#666",    "#f0f0f0", "Excluded — 1 model"),
+        }
+        if sel_stage == "merged" and verification_bucket in _cv_badge_map:
+            _cv_fc, _cv_bg, _cv_lbl = _cv_badge_map[verification_bucket]
+            cv_badge = (
+                f'<span style="display:inline-block;padding:1px 7px;border-radius:2px;'
+                f'background:{_cv_bg};color:{_cv_fc};border:1px solid {_cv_fc}30;'
+                f'font-weight:700;font-size:.64rem;letter-spacing:.03em;">'
+                f'{_cv_lbl}</span>'
+            )
+        else:
+            cv_badge = ""
+
+        # Card left-border: red for excluded, country-color for included
+        card_border_color = "#cc3333" if is_excluded else ctry_color
+        card_bg = "#fff8f8" if is_excluded else "#fff"
 
         major_badge = (
             f'<span style="display:inline-block;padding:1px 7px;border-radius:2px;'
@@ -1083,21 +1236,46 @@ with TAB_REFORMS:
             f'background:#F1F3F6;color:#666;border:1px solid #D7DCE3;'
             f'font-weight:700;font-size:.66rem;letter-spacing:.04em;">NOT MAJOR</span>'
         )
+        if pd.notna(source_page_start) and pd.notna(source_page_end):
+            if int(float(source_page_start)) == int(float(source_page_end)):
+                source_pages_s = f"p. {int(float(source_page_start))}"
+            else:
+                source_pages_s = f"pp. {int(float(source_page_start))}-{int(float(source_page_end))}"
+        elif pd.notna(source_page_start):
+            source_pages_s = f"p. {int(float(source_page_start))}"
+        else:
+            source_pages_s = ""
+        source_meta_parts = []
+        if survey_label and surv_s:
+            source_meta_parts.append(f"{survey_label} {surv_s.replace('Survey ', '')}")
+        elif surv_s:
+            source_meta_parts.append(surv_s)
+        if source_pages_s:
+            source_meta_parts.append(source_pages_s)
+        source_meta_s = " · ".join(source_meta_parts)
         quote_block = (
-            f'<div style="margin:.5rem 0 .3rem;padding:.35rem .75rem;'
-            f'border-left:3px solid {lbl_clr};color:#555;font-size:.79rem;font-style:italic;">'
-            f'&ldquo;{_html2.escape(quote_s[:300])}{"…" if len(quote_s) > 300 else ""}&rdquo;</div>'
+            f'<div style="margin:.55rem 0 .25rem;padding:.45rem .75rem;background:#FAFBFD;'
+            f'border-left:3px solid {lbl_clr};color:#555;border-radius:2px;">'
+            f'<div style="font-size:.67rem;color:#7a7a7a;font-weight:700;letter-spacing:.03em;'
+            f'text-transform:uppercase;margin-bottom:.2rem;">Source quote'
+            f'{(" · " + _html2.escape(source_meta_s)) if source_meta_s else ""}</div>'
+            f'<div style="font-size:.79rem;font-style:italic;">'
+            f'&ldquo;{_html2.escape(quote_s[:420])}{"…" if len(quote_s) > 420 else ""}&rdquo;'
+            f'</div></div>'
             if quote_s else ""
         )
-        imp_rat_block = (
-            f'<div style="font-size:.7rem;color:#888;margin-top:.25rem;">'
-            f'<b>Importance:</b> {_html2.escape(imp_rat)}</div>'
-            if imp_rat else ""
+        # Adjudicator rationale — always show for excluded, optionally for included
+        cv_note_block = (
+            f'<div style="font-size:.7rem;color:{"#aa2222" if is_excluded else "#777"};'
+            f'margin-top:.3rem;padding:.25rem .5rem;'
+            f'background:{"#fde8e8" if is_excluded else "#F7F8FA"};border-radius:3px;">'
+            f'<b>Adjudicator:</b> {_html2.escape(cv_note)}</div>'
+            if cv_note and sel_stage == "merged" else ""
         )
-        go_rat_block = (
-            f'<div style="font-size:.7rem;color:#888;margin-top:.15rem;">'
-            f'<b>Growth mechanism:</b> {_html2.escape(go_rat)}</div>'
-            if go_rat else ""
+        found_by_block = (
+            f'<div style="font-size:.69rem;color:#aaa;margin-top:.2rem;">'
+            f'Found by: {_html2.escape(found_by)}</div>'
+            if found_by and sel_stage == "merged" else ""
         )
         mentions_block = (
             f'<div style="font-size:.69rem;color:#aaa;margin-top:.4rem;">'
@@ -1109,53 +1287,36 @@ with TAB_REFORMS:
             if surv_s or mention_yrs or pd.notna(first_seen) or pd.notna(last_seen) else ""
         )
 
-        cards_html += f"""
-        <div style="border:1px solid {BORDER};border-left:4px solid {ctry_color};
-                    border-radius:0 5px 5px 0;padding:.75rem 1rem;
-                    margin-bottom:.55rem;background:#fff;">
-          <!-- header row -->
+        cards_html += textwrap.dedent(f"""
+        <div style="border:1px solid {BORDER};border-left:4px solid {card_border_color};border-radius:0 5px 5px 0;padding:.75rem 1rem;margin-bottom:.55rem;background:{card_bg};">
           <div style="display:flex;align-items:center;gap:.45rem;flex-wrap:wrap;margin-bottom:.4rem;">
-            <span style="font-size:.75rem;font-weight:700;color:{ctry_color};
-                         background:{ctry_color}12;padding:2px 8px;border-radius:3px;
-                         border:1px solid {ctry_color}40;">{country_s}</span>
-            <span style="font-size:.75rem;font-weight:700;color:{NAVY};
-                         background:#EEF3FB;padding:2px 8px;border-radius:3px;">{yr_s}</span>
-            <span style="display:inline-block;padding:2px 9px;border-radius:2px;
-                         background:{lbl_clr}15;color:{lbl_clr};border:1px solid {lbl_clr}40;
-                         font-weight:700;font-size:.68rem;">{_html2.escape(sub_s)}</span>
+            <span style="font-size:.75rem;font-weight:700;color:{ctry_color};background:{ctry_color}12;padding:2px 8px;border-radius:3px;border:1px solid {ctry_color}40;">{country_s}</span>
+            <span style="font-size:.75rem;font-weight:700;color:{NAVY};background:#EEF3FB;padding:2px 8px;border-radius:3px;">{yr_s}</span>
+            <span style="display:inline-block;padding:2px 9px;border-radius:2px;background:{lbl_clr}15;color:{lbl_clr};border:1px solid {lbl_clr}40;font-weight:700;font-size:.68rem;">{_html2.escape(sub_s)}</span>
             {major_badge}
-            <span style="margin-left:auto;font-size:.71rem;color:#888;font-weight:600;">
-              {_html2.escape(status_s)}</span>
+            {cv_badge}
+            <span style="margin-left:auto;font-size:.71rem;color:#888;font-weight:600;">{_html2.escape(status_s)}</span>
           </div>
-          <!-- body -->
           <div style="display:grid;grid-template-columns:1fr 155px;gap:.75rem;">
             <div>
-              <div style="font-size:.84rem;font-weight:700;color:{TEXT};line-height:1.45;">
-                {desc_s}
-              </div>
+              <div style="font-size:.84rem;font-weight:700;color:{TEXT};line-height:1.45;{'opacity:.6;' if is_excluded else ''}">{desc_s}</div>
               {quote_block}
-              {imp_rat_block}
-              {go_rat_block}
+              {cv_note_block}
+              {found_by_block}
               {mentions_block}
             </div>
-            <div style="font-size:.73rem;color:{TEXT};line-height:1.9;border-left:1px solid {BORDER};
-                        padding-left:.75rem;">
-              <span style="display:inline-block;padding:2px 8px;border-radius:2px;
-                           background:{tag_col}15;color:{tag_col};border:1px solid {tag_col}40;
-                           font-weight:700;font-size:.67rem;">{_html2.escape(tag_txt)}</span><br>
-              <span style="color:#888;font-size:.69rem;font-weight:700;text-transform:uppercase;
-                           letter-spacing:.04em;">Actor</span><br>
+            <div style="font-size:.73rem;color:{TEXT};line-height:1.9;border-left:1px solid {BORDER};padding-left:.75rem;">
+              <span style="display:inline-block;padding:2px 8px;border-radius:2px;background:{tag_col}15;color:{tag_col};border:1px solid {tag_col}40;font-weight:700;font-size:.67rem;">{_html2.escape(tag_txt)}</span><br>
+              <span style="color:#888;font-size:.69rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;">Actor</span><br>
               <span style="color:{TEXT};">{_html2.escape(actor_s)}</span><br>
-              <span style="color:#888;font-size:.69rem;font-weight:700;text-transform:uppercase;
-                           letter-spacing:.04em;">Stage</span><br>
+              <span style="color:#888;font-size:.69rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;">R&amp;D stage</span><br>
               <span style="color:{TEXT};">{_html2.escape(stage_s)}</span><br>
-              <span style="color:#888;font-size:.69rem;font-weight:700;text-transform:uppercase;
-                           letter-spacing:.04em;">Importance</span><br>
+              <span style="color:#888;font-size:.69rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;">Importance</span><br>
               <span style="color:{TEXT};">{_html2.escape(imp_s)}</span>
             </div>
           </div>
         </div>
-        """
+        """).strip()
 
     st.markdown(cards_html, unsafe_allow_html=True)
 
@@ -1173,15 +1334,25 @@ with TAB_REFORMS:
 
     # ── Data table ──
     section_header("Reform event detail")
-    _REF_DISP_COLS = [c for c in [
-        "country_name", "survey_year", "first_seen_survey_year", "last_seen_survey_year",
-        "all_seen_survey_years", "implementation_year", "sub_theme_label",
+    _base_ref_cols = [
+        "country_name", "survey_year", "implementation_year", "sub_theme_label",
         "orientation_label", "status_label", "is_major_reform",
         "importance_bucket", "rd_actor_label", "rd_stage_label",
         "package_name", "description",
-    ] if c in dr_f.columns]
+    ]
+    # Add CV columns for merged stage
+    if sel_stage == "merged":
+        _base_ref_cols = ["verification_bucket", "cross_verification_status", "found_by_display"] + _base_ref_cols
+        if show_excluded:
+            _base_ref_cols = ["cv_included"] + _base_ref_cols
+    _REF_DISP_COLS = [c for c in _base_ref_cols if c in dr_f.columns]
     _REF_COL_LABELS = {
-        "country_name": "Country", "survey_year": "Anchor survey",
+        "country_name": "Country", "survey_year": "Survey year",
+        "cv_included": "Included",
+        "verification_bucket": "Verification",
+        "cross_verification_status": "CV Status",
+        "found_by_display": "Found by",
+        "found_by_models": "Found by (raw)",
         "first_seen_survey_year": "First seen",
         "last_seen_survey_year": "Last seen",
         "all_seen_survey_years": "Seen in surveys",
@@ -1219,13 +1390,13 @@ with TAB_REFORMS:
     )
 
     # ── Survey coverage ──
-    section_header("Survey coverage — mentions per survey")
-    _mentions = load_reform_mentions()
+    section_header("Survey coverage — reforms per survey")
+    # Use the full (unfiltered) stage data so sidebar filters don't distort coverage
+    _mentions = load_reforms_stage(sel_stage, included_only=(sel_stage == "merged"))
     if not _mentions.empty and "survey_year" in _mentions.columns:
         _multi_surv = "country_code" in _mentions.columns and _mentions["country_code"].nunique() > 1
 
         if _multi_surv:
-            # Stacked bar: year × country
             _ctry_names_m = sorted(_mentions["country_code"].dropna().unique())
             _surv_pal = [NAVY, ORANGE, TEAL, GREEN, BLUE, GREY]
             _surv_color_map = {c: _surv_pal[i % len(_surv_pal)] for i, c in enumerate(_ctry_names_m)}
@@ -1238,10 +1409,10 @@ with TAB_REFORMS:
                 color="country_code",
                 color_discrete_map=_surv_color_map,
                 barmode="stack",
-                labels={"survey_year": "Survey year", "n": "Mentions extracted", "country_code": ""},
+                labels={"survey_year": "Survey year", "n": "Reforms", "country_code": ""},
             )
             fig_surv.update_traces(marker_line_width=0)
-            apply_style(fig_surv, height=240, xtitle="Survey year", ytitle="Mentions extracted")
+            apply_style(fig_surv, height=260, xtitle="Survey year", ytitle="Reforms")
             fig_surv.update_xaxes(showgrid=False)
         else:
             surv_cnt = (
@@ -1255,8 +1426,8 @@ with TAB_REFORMS:
                 text=surv_cnt["n"], textposition="outside",
                 textfont=dict(size=10, color=TEXT),
             ))
-            apply_style(fig_surv, height=240,
-                        xtitle="Survey year", ytitle="Mentions extracted",
+            apply_style(fig_surv, height=260,
+                        xtitle="Survey year", ytitle="Reforms",
                         legend_bottom=False)
             fig_surv.update_layout(showlegend=False, xaxis=dict(showgrid=False))
             fig_surv.update_yaxes(range=[0, surv_cnt["n"].max() * 1.2])
@@ -1265,10 +1436,48 @@ with TAB_REFORMS:
         _surv_n = _mentions["survey_year"].nunique()
         _ctry_n = _mentions["country_code"].nunique() if "country_code" in _mentions.columns else 1
         caption_note(
-            f"{len(_mentions):,} raw mentions across {_surv_n} surveys "
-            f"({_ctry_n} {'country' if _ctry_n == 1 else 'countries'}) "
-            f"→ {len(dr_f):,} deduplicated events after cross-survey deduplication."
+            f"{len(_mentions):,} reforms across {_surv_n} surveys "
+            f"({_ctry_n} {'country' if _ctry_n == 1 else 'countries'})."
         )
+
+    # ── Downloads ──
+    section_header("Download data")
+    _dl_cols = st.columns(2)
+    with _dl_cols[0]:
+        # Full database for this stage
+        _full_db_path = STAGE_PATHS.get(sel_stage, {}).get("database")
+        if _full_db_path and _full_db_path.exists():
+            _full_db_bytes = _full_db_path.read_bytes()
+            _dl_label = {
+                "stage1": "reforms_stage1_gpt4omini.csv",
+                "stage2": "reforms_stage2_claude_haiku.csv",
+                "stage3": "reforms_stage3_gpt4omini_2ndrun.csv",
+                "merged": "reforms_cross_verified.csv",
+            }.get(sel_stage, "reforms_database.csv")
+            st.download_button(
+                "Download full database (CSV)",
+                _full_db_bytes,
+                _dl_label,
+                "text/csv",
+                key="ref_dl_full",
+                use_container_width=True,
+            )
+            st.caption(
+                "All reforms in this stage" +
+                (" including excluded ones" if sel_stage == "merged" and _full_db_path.exists() else "")
+            )
+    with _dl_cols[1]:
+        # Filtered view (what is visible on screen)
+        _tbl_dl = _tbl_r[_REF_DISP_COLS] if "_tbl_r" in dir() and "_REF_DISP_COLS" in dir() else dr_f
+        st.download_button(
+            "Download filtered view (CSV)",
+            dr_f.to_csv(index=False).encode("utf-8"),
+            "reforms_filtered.csv",
+            "text/csv",
+            key="ref_dl_filtered",
+            use_container_width=True,
+        )
+        st.caption("Only reforms matching the current sidebar filters")
 
 
 
@@ -1278,11 +1487,7 @@ with TAB_REFORMS:
 
 with TAB_COMBINED:
     bk = budget_available()
-    rk = reforms_available()
-
-    if not bk and not rk:
-        st.info("Run both pipelines to see the combined view.")
-        st.stop()
+    rk = not _dr.empty
 
     # ── Stream comparison ──
     section_header("Stream comparison")
@@ -1295,7 +1500,7 @@ with TAB_COMBINED:
     else:
         _s1_range = "n/a"
     if rk:
-        _dr_cmp = load_reforms()
+        _dr_cmp = _dr
         _surv_yrs_cmp = sorted(_dr_cmp["survey_year"].dropna().astype(int).unique()) if "survey_year" in _dr_cmp.columns else []
         _ref_ctry_cmp = sorted(_dr_cmp["country_name"].dropna().unique()) if "country_name" in _dr_cmp.columns else []
         _s2_range = (
@@ -1478,8 +1683,8 @@ with TAB_COMBINED:
                 )
 
     # ── Reform intensity score ──
-    if REFORM_PANEL.exists():
-        panel_df = load_reform_panel()
+    if not _dr.empty:
+        panel_df = load_reform_panel_stage(sel_stage)
         if "reform_intensity_score" in panel_df.columns:
             section_header("Reform intensity score (composite 0–1 indicator)")
             caption_note(
@@ -1633,10 +1838,10 @@ with TAB_TABLE:
             st.download_button("Download (CSV)", df5[cols5].to_csv(index=False).encode(),
                                "budget_lines.csv", "text/csv")
     else:
-        if not reforms_available():
+        if _dr.empty:
             st.info("No reform data.")
         else:
-            _dr5 = _dr_all if reforms_available() else pd.DataFrame()
+            _dr5 = _dr_all
             cols5r = [c for c in _T5_REF_LABELS if c in _dr5.columns]
             caption_note(f"{len(_dr5):,} reform events")
             render_table(

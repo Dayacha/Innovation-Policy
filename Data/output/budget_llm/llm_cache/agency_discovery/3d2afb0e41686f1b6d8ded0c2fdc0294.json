@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Transportation Agency",
+  "name_variants": [
+    "CTA",
+    "Canadian Transp. Agency"
+  ],
+  "category": "unclear",
+  "notes": "The Canadian Transportation Agency is focused on transportation regulation, not R&D."
+}

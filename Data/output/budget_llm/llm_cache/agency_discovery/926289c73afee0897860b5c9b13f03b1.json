@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "National Battlefields Commission",
+  "name_variants": [
+    "CBCN",
+    "Commission des champs de bataille nationaux"
+  ],
+  "category": "unclear",
+  "notes": "This entity is focused on the preservation and promotion of historic battlefields, not R&D."
+}

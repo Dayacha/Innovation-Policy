@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.6,
+  "entry_type": "not_rd",
+  "canonical_name": "Economic Development Agency of Canada for the Regions of Quebec",
+  "name_variants": [
+    "EDAC",
+    "Agence de développement économique du Canada pour les régions du Québec"
+  ],
+  "category": "unclear",
+  "notes": "This agency focuses on economic development rather than dedicated R&D activities."
+}

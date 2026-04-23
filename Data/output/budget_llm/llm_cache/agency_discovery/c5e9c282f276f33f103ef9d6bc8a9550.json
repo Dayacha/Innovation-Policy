@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Department of Public Safety and Emergency Preparedness",
+  "name_variants": [
+    "Public Safety Canada",
+    "PS",
+    "Department of Public Safety"
+  ],
+  "category": "unclear",
+  "notes": "This department focuses on public safety and emergency preparedness, not R&D."
+}

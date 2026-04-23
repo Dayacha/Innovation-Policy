@@ -1,0 +1,11 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Accessibility Standards Development Organization",
+  "name_variants": [
+    "CASDO"
+  ],
+  "category": "unclear",
+  "notes": "This organization focuses on accessibility standards rather than research and development."
+}

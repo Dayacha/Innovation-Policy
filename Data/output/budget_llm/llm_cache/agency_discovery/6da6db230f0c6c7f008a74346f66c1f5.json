@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.6,
+  "entry_type": "not_rd",
+  "canonical_name": "National Round Table on the Environment and the Economy",
+  "name_variants": [
+    "NRTEE",
+    "National Round Table on Environment and Economy"
+  ],
+  "category": "unclear",
+  "notes": "This entity focuses on policy and advisory roles rather than direct R&D spending."
+}

@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Public Security and Civil Protection Department",
+  "name_variants": [
+    "SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE",
+    "Public Security Department",
+    "Civil Protection Department"
+  ],
+  "category": "unclear",
+  "notes": "This department is focused on public safety and civil protection, not R&D."
+}

@@ -120,6 +120,16 @@ def _already_processed(log_file: Path, source_file: str) -> bool:
     return False
 
 
+def _row_source_file(row) -> str:
+    """Return source_file for either dict-like rows or BudgetRow-like objects."""
+    if hasattr(row, "get"):
+        try:
+            return str(row.get("source_file", ""))
+        except Exception:
+            pass
+    return str(getattr(row, "source_file", ""))
+
+
 # ---------------------------------------------------------------------------
 # Config loading
 # ---------------------------------------------------------------------------
@@ -158,18 +168,26 @@ def load_config(config_path: Optional[Path] = None) -> dict:
     blm.setdefault("limit_files_per_year", None)  # None = no limit; int = cap per country-year
 
     # ── LLM model: budget.llm block takes precedence over global llm block ──
-    # This lets the budget pipeline use claude-sonnet while reforms uses gpt-4o-mini.
+    # This lets the budget pipeline use a different model than reforms.
     blm_llm = blm.get("llm", {})
     global_llm = raw.get("llm", {})
 
     # Build effective llm config: start from global, override with budget.llm
     effective_llm = {**global_llm, **blm_llm}
-    effective_llm.setdefault("provider", "anthropic")
+    effective_llm.setdefault("provider", cfg.DEFAULT_LLM_CONFIG["provider"])
     effective_llm.setdefault("model", cfg.EXTRACT_MODEL)
     effective_llm.setdefault("scan_model", cfg.SCAN_MODEL)
     effective_llm.setdefault("max_tokens", 4096)
     effective_llm.setdefault("temperature", 0)
     effective_llm.setdefault("api_delay", 0.5)
+
+    # ── Key resolution: if budget.llm.api_key is explicitly set, prefer it
+    # over any OECD institutional key from the global llm block.
+    # This ensures the budget pipeline uses the personal api_key rather than
+    # the OECD key even when both are present in config.yaml.
+    if blm_llm.get("api_key", "").strip():
+        effective_llm.pop("oecd_openai_key", None)
+        effective_llm.pop("oecd_anthropic_key", None)
 
     # Store back — extractor and client read from raw["llm"]
     raw["llm"] = effective_llm
@@ -383,7 +401,10 @@ def run_pipeline(
         f"scan_model={blm_cfg.get('_resolved_llm', {}).get('scan_model', 'same')}"
     )
 
-    # Load existing results (append mode)
+    # Load existing results.
+    # Old rows for each file are dropped exactly when that file is re-processed,
+    # so re-running any subset (whole country, single year, single file) always
+    # replaces only the rows it actually re-extracts — nothing more, nothing less.
     all_rows = load_csv(results_csv) if results_csv.exists() else []
     initial_count = len(all_rows)
 
@@ -418,6 +439,13 @@ def run_pipeline(
                 run_log=run_log,
             )
 
+            # Replace: drop any existing rows for this source file before adding new ones.
+            # This ensures re-running a file always produces a clean result regardless
+            # of whether it's a whole-country run, single-year run, or partial run.
+            before = len(all_rows)
+            all_rows = [r for r in all_rows if _row_source_file(r) != source_file]
+            if len(all_rows) < before:
+                logger.debug(f"Replaced {before - len(all_rows)} old rows for {source_file}")
             all_rows.extend(rows)
             processed += 1
             elapsed = round(time.time() - t0, 1)
@@ -453,6 +481,24 @@ def run_pipeline(
         if processed % 10 == 0:
             rows_to_csv(all_rows, results_csv)
             logger.info(f"Interim save: {len(all_rows)} total rows")
+
+    # Apply country-specific cleaners before final write
+    if all_rows and all_files:
+        try:
+            from budget.targeted_recovery import recover_missing_agency_rows
+
+            before = len(all_rows)
+            all_rows = recover_missing_agency_rows(
+                all_rows=all_rows,
+                file_specs=all_files,
+                config=config,
+                pdf_text_cache_dir=pdf_text_cache_dir,
+            )
+            added = len(all_rows) - before
+            if added:
+                logger.info(f"Targeted recovery complete. {added} additional rows found.")
+        except Exception as e:
+            logger.warning(f"Targeted recovery failed (non-fatal): {e}")
 
     # Apply country-specific cleaners before final write
     if all_rows:

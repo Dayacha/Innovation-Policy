@@ -1,5 +1,6 @@
 """Data loader and color/label constants for the Innovation Policy Dashboard."""
 
+import json
 import os
 from pathlib import Path
 
@@ -20,6 +21,32 @@ REFORM_PANEL_SUBTHEME  = PROJECT_ROOT / "Data/output/reforms/output/reform_panel
 REFORM_PANEL_CLEAN     = PROJECT_ROOT / "Data/output/reforms/output/reform_panel_clean.csv"
 REFORM_INTENSITY       = PROJECT_ROOT / "Data/output/reforms/output/reform_intensity_score.csv"
 
+# ── Multi-stage paths (new cross-verification pipeline) ───────────────────────
+STAGE_PATHS = {
+    "stage1": {
+        "label":    "Stage 1 — GPT-4o-mini",
+        "database": PROJECT_ROOT / "Data/output/reforms/output/reforms_events.csv",
+        "panel":    PROJECT_ROOT / "Data/output/reforms/output/reform_panel.csv",
+    },
+    "stage2": {
+        "label":    "Stage 2 — Claude Haiku",
+        "database": PROJECT_ROOT / "Data/output/reforms/output_anthropic/reforms_database.csv",
+        "panel":    PROJECT_ROOT / "Data/output/reforms/output_anthropic/reform_panel.csv",
+    },
+    "stage3": {
+        "label":    "Stage 3 — GPT-4o-mini (2nd run)",
+        "database": PROJECT_ROOT / "Data/output/reforms/output_gpt_personal/reforms_database.csv",
+        "panel":    PROJECT_ROOT / "Data/output/reforms/output_gpt_personal/reform_panel.csv",
+    },
+    "merged": {
+        "label":    "Stage 4 — Cross-verified (Merged)",
+        "database": PROJECT_ROOT / "Data/output/reforms/output_merged/reforms_database.csv",
+        "panel":    PROJECT_ROOT / "Data/output/reforms/output_merged/reform_panel.csv",
+    },
+}
+
+MERGED_REFORMS_JSON_DIR = PROJECT_ROOT / "Data/output/reforms/reforms_json_merged"
+
 
 def _parse_survey_year_list(value) -> list[int]:
     """Parse a comma-separated survey-year list into sorted unique ints."""
@@ -35,6 +62,97 @@ def _parse_survey_year_list(value) -> list[int]:
         except Exception:
             continue
     return sorted(set(years))
+
+
+def _count_found_models(value) -> int:
+    """Return the number of model runs that found a reform."""
+    if isinstance(value, list):
+        return len([v for v in value if str(v).strip()])
+    if pd.isna(value):
+        return 0
+    parts = [p.strip() for p in str(value).split("|") if p.strip()]
+    return len(parts)
+
+
+def _verification_bucket(status: str, found_by_models=None) -> str:
+    """Map raw CV metadata to a stable display/filter bucket."""
+    status = str(status or "").strip()
+    n_found = _count_found_models(found_by_models)
+
+    explicit = {
+        "three_model_confirmed": "All 3 models agreed",
+        "two_model_included": "2 of 3 models",
+        "one_model_included": "1 model only",
+        "three_model_rejected": "Excluded — all 3 models agreed",
+        "two_model_excluded": "Excluded — 2 of 3 models",
+        "one_model_excluded": "Excluded — 1 model only",
+        "consensus_confirmed": "Both models agreed",
+        "disputed_included": "1 model only",
+        "consensus_rejected": "Excluded — both models agreed",
+        "disputed_excluded": "Excluded — 1 model only",
+        "run_a_only": "1 model only",
+        "run_b_only": "1 model only",
+        "run_c_only": "1 model only",
+    }
+    if status in explicit:
+        return explicit[status]
+
+    # Backward compatibility for older merged outputs that only wrote "consensus".
+    if status == "consensus":
+        if n_found >= 3:
+            return "All 3 models agreed"
+        if n_found == 2:
+            return "Both models agreed"
+        if n_found == 1:
+            return "1 model only"
+
+    if n_found >= 3:
+        return "All 3 models agreed"
+    if n_found == 2:
+        return "Both models agreed"
+    if n_found == 1:
+        return "1 model only"
+    return ""
+
+
+def _load_merged_reforms_from_json() -> pd.DataFrame:
+    """Fallback loader for merged data when the CSV is stale or incomplete."""
+    if not MERGED_REFORMS_JSON_DIR.exists():
+        return pd.DataFrame()
+
+    rows: list[dict] = []
+    excluded_statuses = {
+        "three_model_rejected",
+        "two_model_excluded",
+        "one_model_excluded",
+        "consensus_rejected",
+        "disputed_excluded",
+    }
+
+    for json_file in sorted(MERGED_REFORMS_JSON_DIR.glob("*.json")):
+        try:
+            data = json.loads(json_file.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+
+        country_code = data.get("country_code", "")
+        country_name = data.get("country_name", "")
+        survey_year = data.get("survey_year")
+        reforms = data.get("all_reforms_including_excluded") or data.get("reforms") or []
+
+        for reform in reforms:
+            row = dict(reform)
+            row["country_code"] = country_code
+            row["country_name"] = country_name
+            row["survey_year"] = survey_year
+            status = str(row.get("cross_verification_status") or "")
+            row["cv_included"] = status not in excluded_statuses if status else True
+            found_by = row.get("found_by_models", [])
+            if isinstance(found_by, list):
+                row["found_by_models"] = " | ".join(str(v) for v in found_by if str(v).strip())
+            rows.append(row)
+
+    return pd.DataFrame(rows)
 
 
 def _apply_clean_filter(df: pd.DataFrame) -> pd.DataFrame:
@@ -334,7 +452,146 @@ def budget_available():
     return BUDGET_DATABASE.exists()
 
 def reforms_available():
-    return REFORMS_EVENTS.exists()
+    return REFORMS_EVENTS.exists() or any(
+        p["database"].exists() for p in STAGE_PATHS.values()
+    )
+
+def available_reform_stages() -> dict:
+    """Return {stage_key: label} for stages that have data on disk."""
+    return {
+        key: info["label"]
+        for key, info in STAGE_PATHS.items()
+        if info["database"].exists()
+    }
+
+
+def _enrich_reforms(df: pd.DataFrame) -> pd.DataFrame:
+    """Apply labels, type coercions, and display columns to a reforms dataframe."""
+    for col in ("implementation_year", "announcement_year", "legislation_year", "survey_year"):
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+    if "sub_theme" in df.columns:
+        df["sub_theme"]       = df["sub_theme"].fillna("other")
+        df["sub_theme_label"] = df["sub_theme"].map(lambda x: SUBTHEME_LABELS.get(x, x))
+        df["sub_theme_short"] = df["sub_theme"].map(lambda x: SUBTHEME_SHORT.get(x, x))
+    if "rd_actor" in df.columns:
+        df["rd_actor"]       = df["rd_actor"].fillna("unknown")
+        df["rd_actor_label"] = df["rd_actor"].map(lambda x: ACTOR_LABELS.get(x, x))
+    if "rd_stage" in df.columns:
+        df["rd_stage"]       = df["rd_stage"].fillna("unknown")
+        df["rd_stage_label"] = df["rd_stage"].map(lambda x: STAGE_LABELS.get(x, x))
+    if "growth_orientation" in df.columns:
+        df["growth_orientation"] = df["growth_orientation"].fillna("unclear_or_neutral")
+        df["orientation_label"]  = df["growth_orientation"].map(
+            lambda x: ORIENTATION_LABELS.get(x, x)
+        )
+    if "status" in df.columns:
+        df["status_label"] = df["status"].map(lambda x: STATUS_LABELS.get(x, x))
+    if "is_major_reform" in df.columns:
+        df["is_major_reform"] = df["is_major_reform"].astype(bool)
+
+    # Display year: prefer implementation → announcement → survey_year
+    display_year = pd.Series(pd.NA, index=df.index, dtype="Int64")
+    for col in ("implementation_year", "announcement_year", "survey_year"):
+        if col not in df.columns:
+            continue
+        candidate = pd.to_numeric(df[col], errors="coerce").astype("Int64")
+        display_year = display_year.fillna(candidate)
+    df["display_year"] = display_year
+
+    # Normalise found_by_models (stored as pipe-separated model IDs)
+    if "found_by_models" in df.columns:
+        df["found_by_models"] = df["found_by_models"].fillna("").astype(str)
+        # Build a short human-readable version: "GPT-4o-mini | Claude Haiku | GPT-4o-mini (2nd run)"
+        _model_short = {
+            "gpt-4o-mini":              "GPT-4o-mini",
+            "gpt-4o":                   "GPT-4o",
+            "claude-haiku-4-5-20251001":"Claude Haiku",
+            "claude-3-5-haiku-20241022":"Claude Haiku",
+            "claude-sonnet-4-20250514": "Claude Sonnet",
+            "claude-sonnet-4-6":        "Claude Sonnet",
+        }
+        def _fmt_found_by(s):
+            if not s:
+                return ""
+            parts = [p.strip() for p in s.split("|")]
+            # Deduplicate while preserving order — two GPT runs differ by key, same model name
+            seen, out = set(), []
+            for p in parts:
+                short = _model_short.get(p.lower(), p)
+                if short not in seen:
+                    seen.add(short)
+                    out.append(short)
+                else:
+                    # second occurrence of same model name = cross-verification rerun
+                    out.append(f"{short} (2nd run)")
+            return " + ".join(out)
+        df["found_by_display"] = df["found_by_models"].apply(_fmt_found_by)
+
+    if "cross_verification_status" in df.columns or "found_by_models" in df.columns:
+        statuses = df["cross_verification_status"] if "cross_verification_status" in df.columns else ""
+        found_by = df["found_by_models"] if "found_by_models" in df.columns else ""
+        if not isinstance(statuses, pd.Series):
+            statuses = pd.Series([""] * len(df), index=df.index)
+        if not isinstance(found_by, pd.Series):
+            found_by = pd.Series([""] * len(df), index=df.index)
+        df["verification_bucket"] = [
+            _verification_bucket(status, models)
+            for status, models in zip(statuses, found_by)
+        ]
+
+    # Normalise cv_included — safe bool coerce (CSV round-trip may yield string "True"/"False")
+    if "cv_included" in df.columns:
+        df["cv_included"] = df["cv_included"].astype(str).str.lower().map(
+            {"true": True, "false": False, "1": True, "0": False}
+        ).fillna(False)
+
+    return df
+
+
+@st.cache_data
+def load_reforms_stage(stage: str, included_only: bool = True) -> pd.DataFrame:
+    """Load reforms database for the given stage key.
+
+    stage        : "stage1" | "stage2" | "stage3" | "merged"
+    included_only: if True (default) and cv_included column exists, filter to
+                   only included reforms. Pass False to get all incl. excluded.
+    """
+    info = STAGE_PATHS.get(stage)
+    if info is None or not info["database"].exists():
+        return pd.DataFrame()
+
+    df = pd.read_csv(info["database"])
+
+    # Backward compatibility: older merged CSVs may omit CV metadata even though
+    # the underlying survey JSONs contain it. Rebuild from JSONs in that case.
+    if stage == "merged":
+        required_cv_cols = {"cross_verification_status", "found_by_models", "cv_included"}
+        if not required_cv_cols.issubset(df.columns):
+            fallback_df = _load_merged_reforms_from_json()
+            if not fallback_df.empty:
+                df = fallback_df
+
+    # For merged stage, optionally filter to included reforms only
+    # _enrich_reforms guarantees cv_included is bool dtype
+    df = _enrich_reforms(df)
+    if included_only and "cv_included" in df.columns:
+        df = df[df["cv_included"] == True].copy()  # noqa: E712
+
+    return df
+
+
+@st.cache_data
+def load_reform_panel_stage(stage: str) -> pd.DataFrame:
+    """Load reform panel for the given stage key."""
+    info = STAGE_PATHS.get(stage)
+    if info is None or not info["panel"].exists():
+        return pd.DataFrame()
+    df = pd.read_csv(info["panel"])
+    for col in ("year", "survey_year"):
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce").astype("Int64")
+    return df
 
 
 def get_app_password() -> str:

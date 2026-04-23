@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.6,
+  "entry_type": "mixed_ministry",
+  "canonical_name": "Western Economic Diversification",
+  "name_variants": [
+    "WED",
+    "Western Economic Diversification Canada"
+  ],
+  "category": "unclear",
+  "notes": "This entity focuses on economic development rather than dedicated R&D spending."
+}

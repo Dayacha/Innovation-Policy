@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Foreign Affairs and International Trade (fin) International Joint Commission",
+  "name_variants": [
+    "Affaires Étrangères et Commerce International",
+    "International Joint Commission"
+  ],
+  "category": "unclear",
+  "notes": "This entry pertains to foreign affairs and trade, which does not represent identifiable R&D spending."
+}

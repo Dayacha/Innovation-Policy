@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Broadcasting Corporation",
+  "name_variants": [
+    "CBC",
+    "Canadian Broadcasting Corp",
+    "Société Radio-Canada"
+  ],
+  "category": "unclear",
+  "notes": "The Canadian Broadcasting Corporation primarily focuses on media and broadcasting, not R&D."
+}

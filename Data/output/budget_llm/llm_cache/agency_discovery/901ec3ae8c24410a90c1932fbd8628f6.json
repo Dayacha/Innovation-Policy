@@ -1,0 +1,11 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Dairy Commission",
+  "name_variants": [
+    "CDC"
+  ],
+  "category": "unclear",
+  "notes": "The Canadian Dairy Commission is primarily focused on dairy industry regulation and support, not R&D."
+}

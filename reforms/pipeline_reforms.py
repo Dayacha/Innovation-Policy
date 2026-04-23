@@ -247,11 +247,13 @@ def load_reforms_config(config_path="config.yaml"):
     # Build the flat config structure that the reform modules expect
     config = {
         "llm": {
-            "provider":    llm_section.get("provider", "anthropic"),
-            "api_key":     llm_section.get("api_key", ""),
-            "model":       llm_section.get("model", "claude-sonnet-4-6"),
-            "temperature": llm_section.get("temperature", 0),
-            "max_tokens":  llm_section.get("max_tokens", 4096),
+            "provider":           llm_section.get("provider", "anthropic"),
+            "api_key":            llm_section.get("api_key", ""),
+            "oecd_openai_key":    llm_section.get("oecd_openai_key", ""),
+            "oecd_anthropic_key": llm_section.get("oecd_anthropic_key", ""),
+            "model":              llm_section.get("model", "claude-sonnet-4-6"),
+            "temperature":        0,   # always 0 — deterministic, replicable
+            "max_tokens":         llm_section.get("max_tokens", 4096),
         },
         "processing": {
             "chunk_size":       reforms_section.get("chunk_size", 12000),
@@ -265,10 +267,11 @@ def load_reforms_config(config_path="config.yaml"):
             "remaining_min_taxonomy_score": reforms_section.get("remaining_min_taxonomy_score", 2.0),
             "remaining_neighbor_pages": reforms_section.get("remaining_neighbor_pages", 0),
         },
-        "countries":   reforms_section.get("countries", []),
-        "year_range":  reforms_section.get("year_range", {"start": 1995, "end": 2025}),
-        "themes":      reforms_section.get("themes", []),
-        "panel":       reforms_section.get("panel", {}),
+        "countries":            reforms_section.get("countries", []),
+        "year_range":           reforms_section.get("year_range", {"start": 1995, "end": 2025}),
+        "themes":               reforms_section.get("themes", []),
+        "panel":                reforms_section.get("panel", {}),
+        "cross_verification":   reforms_section.get("cross_verification", {}),
     }
 
     # Resolve data paths (relative → absolute against project root)
@@ -305,9 +308,16 @@ def load_reforms_config(config_path="config.yaml"):
 
 def _step_catalog(config, country=None):
     catalog = SurveyCatalog(config)
-    pdf_dir = config["paths"]["raw_pdfs"]
+    pdf_dir  = config["paths"]["raw_pdfs"]
+    text_dir = config["paths"]["extracted_text"]
+
     n_local = catalog.build_catalog_from_local_pdfs(pdf_dir)
     logger.info("Reform catalog: %d local PDFs found", n_local)
+
+    # Also pick up surveys whose PDFs are gone but text already exists
+    n_text = catalog.build_catalog_from_extracted_text(text_dir)
+    if n_text:
+        logger.info("Reform catalog: +%d surveys found via extracted text (no PDF)", n_text)
 
     countries = [country] if country else None
     year_range = config.get("year_range", {})
@@ -477,24 +487,41 @@ def _step_download_pdfs(config, country=None, year=None) -> dict:
 
 
 def _step_extract_text(config, catalog):
+    """Extract text from PDFs. Also registers pre-existing .txt files so that
+    surveys whose PDFs are gone but text already exists are picked up by
+    _step_analyze_reforms.
+    """
     text_dir = Path(config["paths"]["extracted_text"])
     text_dir.mkdir(parents=True, exist_ok=True)
     skip_existing = config.get("processing", {}).get("skip_existing", True)
 
-    surveys = catalog.get_surveys_with_pdfs()
-    if not surveys:
-        logger.info("No PDFs available for text extraction")
-        return 0
-
     config_countries = config.get("countries", [])
-    if config_countries:
-        surveys = [s for s in surveys if s["country_code"] in config_countries]
-
     year_range = config.get("year_range", {})
-    surveys = [
-        s for s in surveys
-        if year_range.get("start", 1900) <= s["year"] <= year_range.get("end", 2100)
-    ]
+
+    def _in_scope(entry):
+        if config_countries and entry["country_code"] not in config_countries:
+            return False
+        y = entry["year"]
+        return year_range.get("start", 1900) <= y <= year_range.get("end", 2100)
+
+    # ── Pass 1: register any pre-existing .txt files (no PDF needed) ──────────
+    for txt_file in sorted(text_dir.glob("*.txt")):
+        parts = txt_file.stem.rsplit("_", 1)
+        if len(parts) != 2:
+            continue
+        code, year_str = parts[0].upper(), parts[1]
+        try:
+            year = int(year_str)
+        except ValueError:
+            continue
+        entry = catalog.catalog.get(f"{code}_{year}")
+        if entry and not entry.get("text_path"):
+            catalog.add_entry(code, year, text_path=str(txt_file), status="text_extracted")
+        elif not entry:
+            catalog.add_entry(code, year, text_path=str(txt_file), status="text_extracted")
+
+    # ── Pass 2: extract text from PDFs that don't have a .txt yet ────────────
+    surveys = [s for s in catalog.get_surveys_with_pdfs() if _in_scope(s)]
 
     extracted = skipped = errors = 0
     for entry in surveys:
@@ -517,7 +544,7 @@ def _step_extract_text(config, catalog):
 
     catalog.save_catalog()
     logger.info(
-        "Text extraction complete — new: %d  skipped: %d  errors: %d",
+        "Text extraction complete — new: %d  skipped (text exists): %d  errors: %d",
         extracted, skipped, errors,
     )
     return extracted
@@ -586,8 +613,10 @@ def _step_analyze_reforms(config, catalog, country=None, year=None):
 
 
 def _step_build_panel(config, country=None):
+    import pandas as pd
     builder = PanelBuilder(config)
     output_dir = Path(config["paths"]["output"])
+
 
     target_countries = [country] if country else _detect_changed_reform_countries(config)
     incremental = bool(target_countries)
@@ -613,26 +642,21 @@ def _step_build_panel(config, country=None):
             return datasets
 
         existing = {
-            "mentions": _read_csv_if_exists(output_dir / "reforms_mentions.csv"),
-            "events": _read_csv_if_exists(output_dir / "reforms_events.csv"),
-            "panel": _read_csv_if_exists(output_dir / "reform_panel.csv"),
-            "subtheme_panel": _read_csv_if_exists(output_dir / "reform_panel_subtheme.csv"),
+            "mentions": _read_csv_if_exists(output_dir / "reforms_database.csv"),
+            "panel":    _read_csv_if_exists(output_dir / "reform_panel.csv"),
         }
         merged = {}
-        for name in ("mentions", "events", "panel", "subtheme_panel"):
+        for name in ("mentions", "panel"):
             merged[name] = _sort_output_df(
                 name,
                 _merge_country_slice(existing.get(name), datasets.get(name), target_countries),
             )
+        merged["events"]        = datasets.get("events", pd.DataFrame())
+        merged["subtheme_panel"] = datasets.get("subtheme_panel", pd.DataFrame())
 
-        (output_dir / "reforms_mentions.csv").parent.mkdir(parents=True, exist_ok=True)
-        merged["mentions"].to_csv(output_dir / "reforms_mentions.csv", index=False, encoding="utf-8")
-        merged["events"].to_csv(output_dir / "reforms_events.csv", index=False, encoding="utf-8")
+        output_dir.mkdir(parents=True, exist_ok=True)
+        merged["mentions"].to_csv(output_dir / "reforms_database.csv", index=False, encoding="utf-8")
         merged["panel"].to_csv(output_dir / "reform_panel.csv", index=False, encoding="utf-8")
-        if merged["subtheme_panel"] is not None and not merged["subtheme_panel"].empty:
-            merged["subtheme_panel"].to_csv(
-                output_dir / "reform_panel_subtheme.csv", index=False, encoding="utf-8"
-            )
         try:
             merged["panel"].to_excel(output_dir / "reform_panel.xlsx", index=False)
         except Exception as exc:

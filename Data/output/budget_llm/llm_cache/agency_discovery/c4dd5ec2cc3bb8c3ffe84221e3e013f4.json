@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.6,
+  "entry_type": "not_rd",
+  "canonical_name": "Canada Millennium Bureau",
+  "name_variants": [
+    "Bureau du Canada pour le Millénaire",
+    "Canada Millennium Bureau"
+  ],
+  "category": "unclear",
+  "notes": "The entity name does not clearly indicate a focus on R&D spending."
+}

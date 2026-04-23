@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Fisheries and Oceans Canada",
+  "name_variants": [
+    "DFO",
+    "Department of Fisheries and Oceans",
+    "Pêches et Océans Canada"
+  ],
+  "category": "unclear",
+  "notes": "This entity primarily focuses on fisheries and ocean management, not specifically on R&D."
+}

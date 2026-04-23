@@ -72,6 +72,10 @@ class BudgetRow:
             warnings.append(f"unknown decision: {self.decision}")
         return warnings
 
+    def get(self, key: str, default=None):
+        """Dict-compatible .get() so BudgetRow can be used interchangeably with dict."""
+        return getattr(self, key, default)
+
     def to_dict(self) -> dict:
         d = asdict(self)
         # Ensure all OUTPUT_COLUMNS are present

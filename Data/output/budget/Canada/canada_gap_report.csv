@@ -1,56 +1,1216 @@
 country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
-Canada,2020,NSERC,science_agency,ok,,,,,none,2669355.6330000004,,2730907.787
+Canada,1987,NSERC,science_agency,ok,,,,,none,0.0,,448025.0
+Canada,1988,NSERC,science_agency,ok,,,,,none,448025.0,0.0,812402.0
+Canada,1989,NSERC,science_agency,ok,,,,,none,812402.0,448025.0,32464.701
+Canada,1990,NSERC,science_agency,ok,,,,,none,32464.701,812402.0,163477.2
+Canada,1991,NSERC,science_agency,ok,,,,,none,163477.2,32464.701,0.0
+Canada,1992,NSERC,science_agency,ok,,,,,none,0.0,163477.2,495057.0
+Canada,1993,NSERC,science_agency,ok,,,,,none,495057.0,0.0,49793.0
+Canada,1994,NSERC,science_agency,ok,,,,,none,49793.0,495057.0,90834.684
+Canada,1995,NSERC,science_agency,ok,,,,,none,90834.684,49793.0,448340.0
+Canada,1996,NSERC,science_agency,ok,,,,,none,448340.0,90834.684,434369.0
+Canada,1997,NSERC,science_agency,ok,,,,,none,434369.0,448340.0,155248.185
+Canada,1998,NSERC,science_agency,ok,,,,,none,155248.185,434369.0,41649.513
+Canada,1999,NSERC,science_agency,ok,,,,,none,41649.513,155248.185,782393.0
+Canada,2000,NSERC,science_agency,ok,,,,,none,782393.0,41649.513,610971.15
+Canada,2001,NSERC,science_agency,ok,,,,,none,610971.15,782393.0,42936.9
+Canada,2002,NSERC,science_agency,ok,,,,,none,42936.9,610971.15,753031.0
+Canada,2003,NSERC,science_agency,ok,,,,,none,753031.0,42936.9,2870981.3
+Canada,2006,NSERC,science_agency,ok,,,,,none,2870981.3,753031.0,951976.096
+Canada,2007,NSERC,science_agency,ok,,,,,none,951976.096,2870981.3,960761.75
+Canada,2008,NSERC,science_agency,ok,,,,,none,960761.75,951976.096,964298.819
+Canada,2009,NSERC,science_agency,ok,,,,,none,964298.819,960761.75,1015773.511
+Canada,2010,NSERC,science_agency,ok,,,,,none,1015773.511,964298.819,2189662.841
+Canada,2011,NSERC,science_agency,ok,,,,,none,2189662.841,1015773.511,2075096.694
+Canada,2012,NSERC,science_agency,ok,,,,,none,2075096.694,2189662.841,2063394.429
+Canada,2013,NSERC,science_agency,ok,,,,,none,2063394.429,2075096.694,2097284.2290000003
+Canada,2014,NSERC,science_agency,ok,,,,,none,2097284.2290000003,2063394.429,2152821.313
+Canada,2015,NSERC,science_agency,ok,,,,,none,2152821.313,2097284.2290000003,2266613.673
+Canada,2016,NSERC,science_agency,ok,,,,,none,2266613.673,2152821.313,2370360.6029999997
+Canada,2017,NSERC,science_agency,ok,,,,,none,2370360.6029999997,2266613.673,1661529.965
+Canada,2018,NSERC,science_agency,ok,,,,,none,1661529.965,2370360.6029999997,1821358.6719999998
+Canada,2019,NSERC,science_agency,ok,,,,,none,1821358.6719999998,1661529.965,2669355.6330000004
+Canada,2020,NSERC,science_agency,ok,,,,,none,2669355.6330000004,1821358.6719999998,2730907.787
 Canada,2021,NSERC,science_agency,ok,,,,,none,2730907.787,2669355.6330000004,2668730.038
 Canada,2022,NSERC,science_agency,ok,,,,,none,2668730.038,2730907.787,1365070.4810000001
-Canada,2023,NSERC,science_agency,outlier,"Amount 1,365,070 outside expected range [2,482,197 – 2,917,441] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1365070.4810000001,2668730.038,2780080.946
+Canada,2023,NSERC,science_agency,ok,,,,,none,1365070.4810000001,2668730.038,2780080.946
 Canada,2024,NSERC,science_agency,ok,,,,,none,2780080.946,1365070.4810000001,
-Canada,2020,SSHRC,science_agency,ok,,,,,none,2037489.277,,1974937.5
+Canada,1987,SSHRC,science_agency,ok,,,,,none,0.0,,256877.0
+Canada,1988,SSHRC,science_agency,ok,,,,,none,256877.0,0.0,1000199.0
+Canada,1989,SSHRC,science_agency,ok,,,,,none,1000199.0,256877.0,88466.0
+Canada,1990,SSHRC,science_agency,ok,,,,,none,88466.0,1000199.0,96853.0
+Canada,1991,SSHRC,science_agency,ok,,,,,none,96853.0,88466.0,101323.0
+Canada,1992,SSHRC,science_agency,ok,,,,,none,101323.0,96853.0,144414.0
+Canada,1993,SSHRC,science_agency,ok,,,,,none,144414.0,101323.0,0.0
+Canada,1994,SSHRC,science_agency,ok,,,,,none,0.0,144414.0,694796.5
+Canada,1995,SSHRC,science_agency,ok,,,,,none,694796.5,0.0,611780.0
+Canada,1996,SSHRC,science_agency,ok,,,,,none,611780.0,694796.5,94016.7
+Canada,1997,SSHRC,science_agency,ok,,,,,none,94016.7,611780.0,1154328.778
+Canada,1998,SSHRC,science_agency,ok,,,,,none,1154328.778,94016.7,237914.921
+Canada,1999,SSHRC,science_agency,ok,,,,,none,237914.921,1154328.778,992509.23333
+Canada,2000,SSHRC,science_agency,ok,,,,,none,992509.23333,237914.921,293061.926
+Canada,2001,SSHRC,science_agency,ok,,,,,none,293061.926,992509.23333,8710989.075
+Canada,2002,SSHRC,science_agency,outlier,"Amount 8,710,989 outside expected range [-4,627,571 – 6,832,798] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,8710989.075,293061.926,683850.0
+Canada,2003,SSHRC,science_agency,ok,,,,,none,683850.0,8710989.075,1912145.0
+Canada,2006,SSHRC,science_agency,ok,,,,,none,1912145.0,683850.0,646013.227
+Canada,2007,SSHRC,science_agency,ok,,,,,none,646013.227,1912145.0,643345.0
+Canada,2008,SSHRC,science_agency,ok,,,,,none,643345.0,646013.227,650218.294
+Canada,2009,SSHRC,science_agency,ok,,,,,none,650218.294,643345.0,745795.9550000001
+Canada,2010,SSHRC,science_agency,ok,,,,,none,745795.9550000001,650218.294,1403938.14
+Canada,2011,SSHRC,science_agency,ok,,,,,none,1403938.14,745795.9550000001,1355167.393
+Canada,2012,SSHRC,science_agency,ok,,,,,none,1355167.393,1403938.14,1351154.312
+Canada,2013,SSHRC,science_agency,ok,,,,,none,1351154.312,1355167.393,18295270.994000003
+Canada,2014,SSHRC,science_agency,outlier,"Amount 18,295,271 outside expected range [-4,627,571 – 6,832,798] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,18295270.994000003,1351154.312,1440578.6149999998
+Canada,2015,SSHRC,science_agency,ok,,,,,none,1440578.6149999998,18295270.994000003,1948410.169
+Canada,2016,SSHRC,science_agency,ok,,,,,none,1948410.169,1440578.6149999998,24553339.330000002
+Canada,2017,SSHRC,science_agency,outlier,"Amount 24,553,339 outside expected range [-4,627,571 – 6,832,798] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,24553339.330000002,1948410.169,1042812.886
+Canada,2018,SSHRC,science_agency,ok,,,,,none,1042812.886,24553339.330000002,1232714.639
+Canada,2019,SSHRC,science_agency,ok,,,,,none,1232714.639,1042812.886,2037489.277
+Canada,2020,SSHRC,science_agency,ok,,,,,none,2037489.277,1232714.639,1974937.5
 Canada,2021,SSHRC,science_agency,ok,,,,,none,1974937.5,2037489.277,2138727.178
 Canada,2022,SSHRC,science_agency,ok,,,,,none,2138727.178,1974937.5,2262674.8370000003
 Canada,2023,SSHRC,science_agency,ok,,,,,none,2262674.8370000003,2138727.178,2433652.602
 Canada,2024,SSHRC,science_agency,ok,,,,,none,2433652.602,2262674.8370000003,
-Canada,2020,CIHR,science_agency,ok,,,,,none,1397777.2349999999,,1381920.889
+Canada,2000,CIHR,science_agency,ok,,,,,none,0.0,,551681.033
+Canada,2001,CIHR,science_agency,ok,,,,,none,551681.033,0.0,184998.139
+Canada,2002,CIHR,science_agency,ok,,,,,none,184998.139,551681.033,722489.519
+Canada,2003,CIHR,science_agency,ok,,,,,none,722489.519,184998.139,2644819.933
+Canada,2006,CIHR,science_agency,outlier,"Amount 2,644,820 outside expected range [-352,922 – 2,621,975] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,2644819.933,722489.519,912102.286
+Canada,2007,CIHR,science_agency,ok,,,,,none,912102.286,2644819.933,924141.0
+Canada,2008,CIHR,science_agency,ok,,,,,none,924141.0,912102.286,919926.83
+Canada,2009,CIHR,science_agency,ok,,,,,none,919926.83,924141.0,975920.568
+Canada,2010,CIHR,science_agency,ok,,,,,none,975920.568,919926.83,2056105.064
+Canada,2011,CIHR,science_agency,ok,,,,,none,2056105.064,975920.568,986483.365
+Canada,2012,CIHR,science_agency,ok,,,,,none,986483.365,2056105.064,988495.905
+Canada,2013,CIHR,science_agency,ok,,,,,none,988495.905,986483.365,1006398.82
+Canada,2014,CIHR,science_agency,ok,,,,,none,1006398.82,988495.905,1019284.3049999999
+Canada,2015,CIHR,science_agency,ok,,,,,none,1019284.3049999999,1006398.82,1072985.5250000001
+Canada,2016,CIHR,science_agency,ok,,,,,none,1072985.5250000001,1019284.3049999999,1087187.194
+Canada,2017,CIHR,science_agency,ok,,,,,none,1087187.194,1072985.5250000001,1109993.368
+Canada,2018,CIHR,science_agency,ok,,,,,none,1109993.368,1087187.194,1193068.646
+Canada,2019,CIHR,science_agency,ok,,,,,none,1193068.646,1109993.368,1397777.2349999999
+Canada,2020,CIHR,science_agency,ok,,,,,none,1397777.2349999999,1193068.646,1381920.889
 Canada,2021,CIHR,science_agency,ok,,,,,none,1381920.889,1397777.2349999999,1345469.3739999998
 Canada,2022,CIHR,science_agency,ok,,,,,none,1345469.3739999998,1381920.889,1348569.077
 Canada,2023,CIHR,science_agency,ok,,,,,none,1348569.077,1345469.3739999998,1416108.8760000002
 Canada,2024,CIHR,science_agency,ok,,,,,none,1416108.8760000002,1348569.077,
-Canada,2020,National Research Council (NRC),science_agency,ok,,,,,none,1339432.682,,1364228.0480000002
+Canada,1987,National Research Council (NRC),science_agency,ok,,,,,none,70531.68,,104.0
+Canada,1988,National Research Council (NRC),science_agency,ok,,,,,none,104.0,70531.68,0.0
+Canada,1989,National Research Council (NRC),science_agency,ok,,,,,none,0.0,104.0,409676.0
+Canada,1990,National Research Council (NRC),science_agency,ok,,,,,none,409676.0,0.0,119700.0
+Canada,1991,National Research Council (NRC),science_agency,ok,,,,,none,119700.0,409676.0,46555.7
+Canada,1992,National Research Council (NRC),science_agency,ok,,,,,none,46555.7,119700.0,416891.0
+Canada,1993,National Research Council (NRC),science_agency,ok,,,,,none,416891.0,46555.7,15874.0
+Canada,1994,National Research Council (NRC),science_agency,ok,,,,,none,15874.0,416891.0,3471.354
+Canada,1995,National Research Council (NRC),science_agency,ok,,,,,none,3471.354,15874.0,531655.309
+Canada,1996,National Research Council (NRC),science_agency,ok,,,,,none,531655.309,3471.354,397046.0
+Canada,1997,National Research Council (NRC),science_agency,ok,,,,,none,397046.0,531655.309,869340.66667
+Canada,1998,National Research Council (NRC),science_agency,ok,,,,,none,869340.66667,397046.0,487925.811
+Canada,1999,National Research Council (NRC),science_agency,ok,,,,,none,487925.811,869340.66667,3387.637
+Canada,2000,National Research Council (NRC),science_agency,ok,,,,,none,3387.637,487925.811,435786.001
+Canada,2001,National Research Council (NRC),science_agency,ok,,,,,none,435786.001,3387.637,546450.377
+Canada,2002,National Research Council (NRC),science_agency,ok,,,,,none,546450.377,435786.001,552480.0
+Canada,2003,National Research Council (NRC),science_agency,ok,,,,,none,552480.0,546450.377,1827853.017
+Canada,2006,National Research Council (NRC),science_agency,ok,,,,,none,1827853.017,552480.0,594530.218
+Canada,2007,National Research Council (NRC),science_agency,ok,,,,,none,594530.218,1827853.017,570868.0
+Canada,2008,National Research Council (NRC),science_agency,ok,,,,,none,570868.0,594530.218,580403.485
+Canada,2009,National Research Council (NRC),science_agency,ok,,,,,none,580403.485,570868.0,710974.741
+Canada,2010,National Research Council (NRC),science_agency,ok,,,,,none,710974.741,580403.485,1617211.4670000002
+Canada,2011,National Research Council (NRC),science_agency,ok,,,,,none,1617211.4670000002,710974.741,679148.968
+Canada,2012,National Research Council (NRC),science_agency,ok,,,,,none,679148.968,1617211.4670000002,698583.5950000001
+Canada,2013,National Research Council (NRC),science_agency,ok,,,,,none,698583.5950000001,679148.968,679565.312
+Canada,2014,National Research Council (NRC),science_agency,ok,,,,,none,679565.312,698583.5950000001,766873.71
+Canada,2015,National Research Council (NRC),science_agency,ok,,,,,none,766873.71,679565.312,895257.653
+Canada,2016,National Research Council (NRC),science_agency,ok,,,,,none,895257.653,766873.71,859388.219
+Canada,2017,National Research Council (NRC),science_agency,ok,,,,,none,859388.219,895257.653,910609.0109999999
+Canada,2018,National Research Council (NRC),science_agency,ok,,,,,none,910609.0109999999,859388.219,1181424.827
+Canada,2019,National Research Council (NRC),science_agency,ok,,,,,none,1181424.827,910609.0109999999,1339432.682
+Canada,2020,National Research Council (NRC),science_agency,ok,,,,,none,1339432.682,1181424.827,1364228.0480000002
 Canada,2021,National Research Council (NRC),science_agency,ok,,,,,none,1364228.0480000002,1339432.682,1300408.775
 Canada,2022,National Research Council (NRC),science_agency,ok,,,,,none,1300408.775,1364228.0480000002,1348312.492
 Canada,2023,National Research Council (NRC),science_agency,ok,,,,,none,1348312.492,1300408.775,1364848.396
 Canada,2024,National Research Council (NRC),science_agency,ok,,,,,none,1364848.396,1348312.492,
-Canada,2020,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,,0.0
+Canada,1997,Canada Foundation for Innovation (CFI),research_infrastructure,outlier,Amount 3 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.,,,,verify,3.0,,0.0
+Canada,1998,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,3.0,0.0
+Canada,1999,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
 Canada,2021,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
 Canada,2022,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
 Canada,2023,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,0.0
 Canada,2024,Canada Foundation for Innovation (CFI),research_infrastructure,ok,,,,,none,0.0,0.0,
-Canada,2020,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,1253935.845,,1227899.417
+Canada,1987,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,0.0,,0.0
+Canada,1988,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,0.0,0.0,125713.0
+Canada,1989,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,125713.0,0.0,0.0
+Canada,1990,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,0.0,125713.0,104840.5
+Canada,1991,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,104840.5,0.0,11842.6
+Canada,1992,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,11842.6,104840.5,466410.0
+Canada,1993,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,466410.0,11842.6,0.0
+Canada,1994,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,0.0,466410.0,0.0
+Canada,1995,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1996,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1997,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,0.0,0.0,72371.313
+Canada,1998,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,72371.313,0.0,1277743.0
+Canada,1999,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,1277743.0,72371.313,44455.0
+Canada,2000,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,44455.0,1277743.0,0.0
+Canada,2001,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,0.0,44455.0,997349.324
+Canada,2002,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,997349.324,0.0,178772.0
+Canada,2003,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,178772.0,997349.324,254803.875
+Canada,2006,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,254803.875,178772.0,212456.0
+Canada,2007,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,212456.0,254803.875,604546.0
+Canada,2008,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,604546.0,212456.0,442964.0
+Canada,2009,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,442964.0,604546.0,504904.0
+Canada,2010,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,504904.0,442964.0,472654.917
+Canada,2011,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,472654.917,504904.0,447286.0
+Canada,2012,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,447286.0,472654.917,479586.0
+Canada,2013,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,479586.0,447286.0,347133.519
+Canada,2014,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,347133.519,479586.0,319136.692
+Canada,2015,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,319136.692,347133.519,968615.589
+Canada,2016,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,968615.589,319136.692,971055.162
+Canada,2017,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,971055.162,968615.589,1304424.55
+Canada,2018,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,1304424.55,971055.162,1496602.533
+Canada,2019,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,1496602.533,1304424.55,1253935.845
+Canada,2020,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,1253935.845,1496602.533,1227899.417
 Canada,2021,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,1227899.417,1253935.845,1326123.883
 Canada,2022,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,1326123.883,1227899.417,1547315.307
 Canada,2023,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,1547315.307,1326123.883,1591309.916
 Canada,2024,AECL / Canadian Nuclear Laboratories,science_agency,ok,,,,,none,1591309.916,1547315.307,
-Canada,2020,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,,0.0
+Canada,1987,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,,0.0
+Canada,1988,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1989,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1990,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1991,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1992,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1993,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1994,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1995,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1996,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1997,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
 Canada,2021,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
 Canada,2022,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
 Canada,2023,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,0.0
 Canada,2024,Defence Research and Development Canada (DRDC),science_agency,ok,,,,,none,0.0,0.0,
-Canada,2020,Canadian Space Agency,science_agency,ok,,,,,none,461486.261,,560981.556
+Canada,1987,Medical Research Council (MRC Canada),science_agency,ok,,,,,none,0.0,,0.0
+Canada,1988,Medical Research Council (MRC Canada),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1989,Medical Research Council (MRC Canada),science_agency,ok,,,,,none,0.0,0.0,9559.7
+Canada,1990,Medical Research Council (MRC Canada),science_agency,outlier,"Amount 9,560 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,9559.7,0.0,18058.0
+Canada,1991,Medical Research Council (MRC Canada),science_agency,outlier,"Amount 18,058 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,18058.0,9559.7,0.0
+Canada,1992,Medical Research Council (MRC Canada),science_agency,ok,,,,,none,0.0,18058.0,8170.2
+Canada,1993,Medical Research Council (MRC Canada),science_agency,outlier,"Amount 8,170 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,8170.2,0.0,0.0
+Canada,1994,Medical Research Council (MRC Canada),science_agency,ok,,,,,none,0.0,8170.2,0.0
+Canada,1995,Medical Research Council (MRC Canada),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1996,Medical Research Council (MRC Canada),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1997,Medical Research Council (MRC Canada),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,Medical Research Council (MRC Canada),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,Medical Research Council (MRC Canada),science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,Medical Research Council (MRC Canada),science_agency,ok,,,,,none,0.0,0.0,
+Canada,1987,Canadian Space Agency,science_agency,ok,,,,,none,0.0,,0.0
+Canada,1988,Canadian Space Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1989,Canadian Space Agency,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1990,Canadian Space Agency,science_agency,ok,,,,,none,0.0,0.0,68402.0
+Canada,1991,Canadian Space Agency,science_agency,ok,,,,,none,68402.0,0.0,531896.0
+Canada,1992,Canadian Space Agency,science_agency,ok,,,,,none,531896.0,68402.0,409061.0
+Canada,1993,Canadian Space Agency,science_agency,ok,,,,,none,409061.0,531896.0,312539.0
+Canada,1994,Canadian Space Agency,science_agency,ok,,,,,none,312539.0,409061.0,0.0
+Canada,1995,Canadian Space Agency,science_agency,ok,,,,,none,0.0,312539.0,27200.0
+Canada,1996,Canadian Space Agency,science_agency,ok,,,,,none,27200.0,0.0,180850.0
+Canada,1997,Canadian Space Agency,science_agency,ok,,,,,none,180850.0,27200.0,648188.704
+Canada,1998,Canadian Space Agency,science_agency,ok,,,,,none,648188.704,180850.0,46485.406
+Canada,1999,Canadian Space Agency,science_agency,ok,,,,,none,46485.406,648188.704,0.0
+Canada,2000,Canadian Space Agency,science_agency,ok,,,,,none,0.0,46485.406,184678.03
+Canada,2001,Canadian Space Agency,science_agency,ok,,,,,none,184678.03,0.0,168913.42500000002
+Canada,2002,Canadian Space Agency,science_agency,ok,,,,,none,168913.42500000002,184678.03,500684.0
+Canada,2003,Canadian Space Agency,science_agency,ok,,,,,none,500684.0,168913.42500000002,1084961.616
+Canada,2006,Canadian Space Agency,science_agency,ok,,,,,none,1084961.616,500684.0,410875.702
+Canada,2007,Canadian Space Agency,science_agency,ok,,,,,none,410875.702,1084961.616,404385.0
+Canada,2008,Canadian Space Agency,science_agency,ok,,,,,none,404385.0,410875.702,391614.769
+Canada,2009,Canadian Space Agency,science_agency,ok,,,,,none,391614.769,404385.0,426256.159
+Canada,2010,Canadian Space Agency,science_agency,ok,,,,,none,426256.159,391614.769,655825.25
+Canada,2011,Canadian Space Agency,science_agency,ok,,,,,none,655825.25,426256.159,388969.295
+Canada,2012,Canadian Space Agency,science_agency,ok,,,,,none,388969.295,655825.25,784251.629
+Canada,2013,Canadian Space Agency,science_agency,ok,,,,,none,784251.629,388969.295,714508.767
+Canada,2014,Canadian Space Agency,science_agency,ok,,,,,none,714508.767,784251.629,781946.085
+Canada,2015,Canadian Space Agency,science_agency,ok,,,,,none,781946.085,714508.767,624470.619
+Canada,2016,Canadian Space Agency,science_agency,ok,,,,,none,624470.619,781946.085,479887.20900000003
+Canada,2017,Canadian Space Agency,science_agency,ok,,,,,none,479887.20900000003,624470.619,469769.82500000007
+Canada,2018,Canadian Space Agency,science_agency,ok,,,,,none,469769.82500000007,479887.20900000003,486387.573
+Canada,2019,Canadian Space Agency,science_agency,ok,,,,,none,486387.573,469769.82500000007,461486.261
+Canada,2020,Canadian Space Agency,science_agency,ok,,,,,none,461486.261,486387.573,560981.556
 Canada,2021,Canadian Space Agency,science_agency,ok,,,,,none,560981.556,461486.261,738063.873
 Canada,2022,Canadian Space Agency,science_agency,ok,,,,,none,738063.873,560981.556,626884.706
 Canada,2023,Canadian Space Agency,science_agency,ok,,,,,none,626884.706,738063.873,481873.003
 Canada,2024,Canadian Space Agency,science_agency,ok,,,,,none,481873.003,626884.706,
-Canada,2020,International Development Research Centre,science_agency,ok,,,,,none,141848.784,,148611.325
+Canada,1987,International Development Research Centre,science_agency,ok,,,,,none,0.0,,3501.0
+Canada,1988,International Development Research Centre,science_agency,ok,,,,,none,3501.0,0.0,0.0
+Canada,1989,International Development Research Centre,science_agency,ok,,,,,none,0.0,3501.0,0.0
+Canada,1990,International Development Research Centre,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1991,International Development Research Centre,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1992,International Development Research Centre,science_agency,ok,,,,,none,0.0,0.0,72098.676
+Canada,1993,International Development Research Centre,science_agency,ok,,,,,none,72098.676,0.0,165888.717
+Canada,1994,International Development Research Centre,science_agency,ok,,,,,none,165888.717,72098.676,96100.0
+Canada,1995,International Development Research Centre,science_agency,ok,,,,,none,96100.0,165888.717,0.0
+Canada,1996,International Development Research Centre,science_agency,ok,,,,,none,0.0,96100.0,0.0
+Canada,1997,International Development Research Centre,science_agency,ok,,,,,none,0.0,0.0,70126.0
+Canada,1998,International Development Research Centre,science_agency,ok,,,,,none,70126.0,0.0,1828.844
+Canada,1999,International Development Research Centre,science_agency,ok,,,,,none,1828.844,70126.0,87951.0
+Canada,2000,International Development Research Centre,science_agency,ok,,,,,none,87951.0,1828.844,112177.0
+Canada,2001,International Development Research Centre,science_agency,ok,,,,,none,112177.0,87951.0,115542.006
+Canada,2002,International Development Research Centre,science_agency,ok,,,,,none,115542.006,112177.0,110096.0
+Canada,2003,International Development Research Centre,science_agency,ok,,,,,none,110096.0,115542.006,316094.0
+Canada,2006,International Development Research Centre,science_agency,ok,,,,,none,316094.0,110096.0,147941.0
+Canada,2007,International Development Research Centre,science_agency,ok,,,,,none,147941.0,316094.0,149995.0
+Canada,2008,International Development Research Centre,science_agency,ok,,,,,none,149995.0,147941.0,161749.534
+Canada,2009,International Development Research Centre,science_agency,ok,,,,,none,161749.534,149995.0,181303.761
+Canada,2010,International Development Research Centre,science_agency,ok,,,,,none,181303.761,161749.534,391259.62700000004
+Canada,2011,International Development Research Centre,science_agency,ok,,,,,none,391259.62700000004,181303.761,241432.539
+Canada,2012,International Development Research Centre,science_agency,ok,,,,,none,241432.539,391259.62700000004,225390.066
+Canada,2013,International Development Research Centre,science_agency,ok,,,,,none,225390.066,241432.539,193432.31
+Canada,2014,International Development Research Centre,science_agency,ok,,,,,none,193432.31,225390.066,183478.242
+Canada,2015,International Development Research Centre,science_agency,ok,,,,,none,183478.242,193432.31,149205.625
+Canada,2016,International Development Research Centre,science_agency,ok,,,,,none,149205.625,183478.242,138705.625
+Canada,2017,International Development Research Centre,science_agency,ok,,,,,none,138705.625,149205.625,174172.736
+Canada,2018,International Development Research Centre,science_agency,ok,,,,,none,174172.736,138705.625,142907.117
+Canada,2019,International Development Research Centre,science_agency,ok,,,,,none,142907.117,174172.736,141848.784
+Canada,2020,International Development Research Centre,science_agency,ok,,,,,none,141848.784,142907.117,148611.325
 Canada,2021,International Development Research Centre,science_agency,ok,,,,,none,148611.325,141848.784,153701.325
 Canada,2022,International Development Research Centre,science_agency,ok,,,,,none,153701.325,148611.325,152798.272
 Canada,2023,International Development Research Centre,science_agency,ok,,,,,none,152798.272,153701.325,157520.169
 Canada,2024,International Development Research Centre,science_agency,ok,,,,,none,157520.169,152798.272,
-Canada,2020,Telefilm Canada,innovation_instruments,ok,,,,,none,151532.949,,274355.60099999997
-Canada,2021,Telefilm Canada,innovation_instruments,ok,,,,,none,274355.60099999997,151532.949,311108.479
-Canada,2022,Telefilm Canada,innovation_instruments,ok,,,,,none,311108.479,274355.60099999997,151908.479
-Canada,2023,Telefilm Canada,innovation_instruments,ok,,,,,none,151908.479,311108.479,158302.331
-Canada,2024,Telefilm Canada,innovation_instruments,ok,,,,,none,158302.331,151908.479,
-Canada,2020,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,29453.623,,29761.017
-Canada,2021,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,29761.017,29453.623,32886.748
-Canada,2022,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,32886.748,29761.017,35785.795
-Canada,2023,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,35785.795,32886.748,36506.666
-Canada,2024,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,36506.666,35785.795,
+Canada,1987,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,,0.0
+Canada,1988,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1989,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1990,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1991,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1992,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1993,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1994,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1995,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1996,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1997,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,0.0,0.0,263.077
+Canada,2015,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,263.077,0.0,18853.197
+Canada,2016,Canadian High Arctic Research Station,direct_rd,ok,,,,,none,18853.197,263.077,21591.765
+Canada,2017,Canadian High Arctic Research Station,direct_rd,outlier,"Amount 21,592 outside expected range [-14,732 – 19,642] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,21591.765,18853.197,35111.881
+Canada,2018,Canadian High Arctic Research Station,direct_rd,outlier,"Amount 35,112 outside expected range [-14,732 – 19,642] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,35111.881,21591.765,42272.066
+Canada,2019,Canadian High Arctic Research Station,direct_rd,outlier,"Amount 42,272 outside expected range [-14,732 – 19,642] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,42272.066,35111.881,29453.623
+Canada,2020,Canadian High Arctic Research Station,direct_rd,outlier,"Amount 29,454 outside expected range [-14,732 – 19,642] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,29453.623,42272.066,29761.017
+Canada,2021,Canadian High Arctic Research Station,direct_rd,outlier,"Amount 29,761 outside expected range [-14,732 – 19,642] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,29761.017,29453.623,32886.748
+Canada,2022,Canadian High Arctic Research Station,direct_rd,outlier,"Amount 32,887 outside expected range [-14,732 – 19,642] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,32886.748,29761.017,35785.795
+Canada,2023,Canadian High Arctic Research Station,direct_rd,outlier,"Amount 35,786 outside expected range [-14,732 – 19,642] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,35785.795,32886.748,36506.666
+Canada,2024,Canadian High Arctic Research Station,direct_rd,outlier,"Amount 36,507 outside expected range [-14,732 – 19,642] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,36506.666,35785.795,
+Canada,1987,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,,0.0
+Canada,1988,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1989,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1990,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1991,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1992,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1993,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,0.0,10.35
+Canada,1994,Canadian Polar Commission,science_agency,ok,,,,,none,10.35,0.0,0.0
+Canada,1995,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,10.35,0.0
+Canada,1996,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,0.0,860.0
+Canada,1997,Canadian Polar Commission,science_agency,ok,,,,,none,860.0,0.0,73391.66667
+Canada,1998,Canadian Polar Commission,science_agency,outlier,"Amount 73,392 outside expected range [-2,752 – 3,670] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,73391.66667,860.0,42.0
+Canada,1999,Canadian Polar Commission,science_agency,ok,,,,,none,42.0,73391.66667,0.0
+Canada,2000,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,42.0,0.0
+Canada,2001,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,0.0,894.0
+Canada,2003,Canadian Polar Commission,science_agency,ok,,,,,none,894.0,0.0,2230.5
+Canada,2006,Canadian Polar Commission,science_agency,ok,,,,,none,2230.5,894.0,913.0
+Canada,2007,Canadian Polar Commission,science_agency,ok,,,,,none,913.0,2230.5,919.0
+Canada,2008,Canadian Polar Commission,science_agency,ok,,,,,none,919.0,913.0,917.0
+Canada,2009,Canadian Polar Commission,science_agency,ok,,,,,none,917.0,919.0,938.944
+Canada,2010,Canadian Polar Commission,science_agency,ok,,,,,none,938.944,917.0,1639.308
+Canada,2011,Canadian Polar Commission,science_agency,ok,,,,,none,1639.308,938.944,1177.747
+Canada,2012,Canadian Polar Commission,science_agency,ok,,,,,none,1177.747,1639.308,4867.452
+Canada,2013,Canadian Polar Commission,science_agency,outlier,"Amount 4,867 outside expected range [-2,752 – 3,670] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,4867.452,1177.747,150633.087
+Canada,2014,Canadian Polar Commission,science_agency,outlier,"Amount 150,633 outside expected range [-2,752 – 3,670] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,150633.087,4867.452,2434.137
+Canada,2015,Canadian Polar Commission,science_agency,ok,,,,,none,2434.137,150633.087,0.0
+Canada,2016,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,2434.137,0.0
+Canada,2017,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,Canadian Polar Commission,science_agency,ok,,,,,none,0.0,0.0,
+Canada,1987,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,,0.0
+Canada,1988,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1989,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1990,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1991,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1992,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1993,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1994,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1995,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1996,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1997,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,27066.0
+Canada,2006,Assisted Human Reproduction Agency of Canada,direct_rd,outlier,"Amount 27,066 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,27066.0,0.0,12834.0
+Canada,2007,Assisted Human Reproduction Agency of Canada,direct_rd,outlier,"Amount 12,834 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,12834.0,27066.0,11783.0
+Canada,2008,Assisted Human Reproduction Agency of Canada,direct_rd,outlier,"Amount 11,783 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,11783.0,12834.0,9922.84
+Canada,2009,Assisted Human Reproduction Agency of Canada,direct_rd,outlier,"Amount 9,923 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,9922.84,11783.0,9929.142
+Canada,2010,Assisted Human Reproduction Agency of Canada,direct_rd,outlier,"Amount 9,929 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,9929.142,9922.84,17370.444
+Canada,2011,Assisted Human Reproduction Agency of Canada,direct_rd,outlier,"Amount 17,370 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,17370.444,9929.142,9925.968
+Canada,2012,Assisted Human Reproduction Agency of Canada,direct_rd,outlier,"Amount 9,926 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,9925.968,17370.444,0.0
+Canada,2013,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,9925.968,0.0
+Canada,2014,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,Assisted Human Reproduction Agency of Canada,direct_rd,ok,,,,,none,0.0,0.0,
+Canada,1987,Medical Research Council,direct_rd,ok,,,,,none,0.0,,182222.0
+Canada,1988,Medical Research Council,direct_rd,ok,,,,,none,182222.0,0.0,938849.0
+Canada,1989,Medical Research Council,direct_rd,outlier,"Amount 938,849 outside expected range [-271,017 – 361,357] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,938849.0,182222.0,221198.0
+Canada,1990,Medical Research Council,direct_rd,ok,,,,,none,221198.0,938849.0,247077.0
+Canada,1991,Medical Research Council,direct_rd,ok,,,,,none,247077.0,221198.0,255434.0
+Canada,1992,Medical Research Council,direct_rd,ok,,,,,none,255434.0,247077.0,187.0
+Canada,1993,Medical Research Council,direct_rd,ok,,,,,none,187.0,255434.0,1610674.0
+Canada,1994,Medical Research Council,direct_rd,outlier,"Amount 1,610,674 outside expected range [-271,017 – 361,357] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1610674.0,187.0,250959.25
+Canada,1995,Medical Research Council,direct_rd,ok,,,,,none,250959.25,1610674.0,0.0
+Canada,1996,Medical Research Council,direct_rd,ok,,,,,none,0.0,250959.25,1721029.084
+Canada,1997,Medical Research Council,direct_rd,outlier,"Amount 1,721,029 outside expected range [-271,017 – 361,357] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1721029.084,0.0,59711.551
+Canada,1998,Medical Research Council,direct_rd,ok,,,,,none,59711.551,1721029.084,0.0
+Canada,1999,Medical Research Council,direct_rd,ok,,,,,none,0.0,59711.551,307434.0
+Canada,2000,Medical Research Council,direct_rd,ok,,,,,none,307434.0,0.0,0.0
+Canada,2001,Medical Research Council,direct_rd,ok,,,,,none,0.0,307434.0,0.0
+Canada,2002,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,Medical Research Council,direct_rd,ok,,,,,none,0.0,0.0,
+Canada,1987,Parks Program,direct_rd,outlier,"Amount 28,036 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,28036.0,,1177085.0
+Canada,1988,Parks Program,direct_rd,outlier,"Amount 1,177,085 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1177085.0,28036.0,810120.25
+Canada,1989,Parks Program,direct_rd,outlier,"Amount 810,120 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,810120.25,1177085.0,8196119.894
+Canada,1990,Parks Program,direct_rd,outlier,"Amount 8,196,120 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,8196119.894,810120.25,949929.0
+Canada,1991,Parks Program,direct_rd,outlier,"Amount 949,929 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,949929.0,8196119.894,18681.7
+Canada,1992,Parks Program,direct_rd,outlier,"Amount 18,682 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,18681.7,949929.0,1320421.2
+Canada,1993,Parks Program,direct_rd,outlier,"Amount 1,320,421 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1320421.2,18681.7,29063.585
+Canada,1994,Parks Program,direct_rd,outlier,"Amount 29,064 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,29063.585,1320421.2,0.0
+Canada,1995,Parks Program,direct_rd,ok,,,,,none,0.0,29063.585,0.0
+Canada,1996,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1997,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,Parks Program,direct_rd,ok,,,,,none,0.0,0.0,
+Canada,1987,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,0.0,,0.0
+Canada,1988,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1989,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1990,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1991,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1992,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1993,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,0.0,0.0,560395.9
+Canada,1994,Canadian Nuclear Safety Commission,science_agency,outlier,"Amount 560,396 outside expected range [-243,730 – 324,973] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,560395.9,0.0,0.0
+Canada,1995,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,0.0,560395.9,2149305.0
+Canada,1996,Canadian Nuclear Safety Commission,science_agency,outlier,"Amount 2,149,305 outside expected range [-243,730 – 324,973] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,2149305.0,0.0,644.0
+Canada,1997,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,644.0,2149305.0,0.0
+Canada,1998,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,0.0,644.0,0.0
+Canada,1999,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,0.0,0.0,84674.837
+Canada,2002,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,84674.837,0.0,59984.5
+Canada,2003,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,59984.5,84674.837,177683.33899999998
+Canada,2006,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,177683.33899999998,59984.5,84553.0
+Canada,2007,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,84553.0,177683.33899999998,80140.0
+Canada,2008,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,80140.0,84553.0,40670.328
+Canada,2009,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,40670.328,80140.0,566275.8539999999
+Canada,2010,Canadian Nuclear Safety Commission,science_agency,outlier,"Amount 566,276 outside expected range [-243,730 – 324,973] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,566275.8539999999,40670.328,41769.294
+Canada,2011,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,41769.294,566275.8539999999,1007136.388
+Canada,2012,Canadian Nuclear Safety Commission,science_agency,outlier,"Amount 1,007,136 outside expected range [-243,730 – 324,973] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1007136.388,41769.294,914428.199
+Canada,2013,Canadian Nuclear Safety Commission,science_agency,outlier,"Amount 914,428 outside expected range [-243,730 – 324,973] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,914428.199,1007136.388,36578.266
+Canada,2014,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,36578.266,914428.199,38921.08
+Canada,2015,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,38921.08,36578.266,38686.934
+Canada,2016,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,38686.934,38921.08,37939.524
+Canada,2017,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,37939.524,38686.934,60446.617
+Canada,2018,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,60446.617,37939.524,61965.725999999995
+Canada,2019,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,61965.725999999995,60446.617,40522.928
+Canada,2020,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,40522.928,61965.725999999995,41081.316
+Canada,2021,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,41081.316,40522.928,136967.209
+Canada,2022,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,136967.209,41081.316,51986.215
+Canada,2023,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,51986.215,136967.209,52421.455
+Canada,2024,Canadian Nuclear Safety Commission,science_agency,ok,,,,,none,52421.455,51986.215,
+Canada,1987,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,,0.0
+Canada,1988,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1989,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1990,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1991,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1992,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1993,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,1340868.835
+Canada,1994,Industry and Science Development Program,innovation_instruments,outlier,"Amount 1,340,869 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1340868.835,0.0,0.0
+Canada,1995,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,1340868.835,0.0
+Canada,1996,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1997,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,Industry and Science Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,
+Canada,1987,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,,1615876.2
+Canada,1988,Grains and Oilseeds Program,innovation_instruments,outlier,"Amount 1,615,876 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1615876.2,0.0,1654800.001
+Canada,1989,Grains and Oilseeds Program,innovation_instruments,outlier,"Amount 1,654,800 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1654800.001,1615876.2,0.0
+Canada,1990,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,1654800.001,1269571.0
+Canada,1991,Grains and Oilseeds Program,innovation_instruments,outlier,"Amount 1,269,571 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1269571.0,0.0,1889927.0
+Canada,1992,Grains and Oilseeds Program,innovation_instruments,outlier,"Amount 1,889,927 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1889927.0,1269571.0,681830.0
+Canada,1993,Grains and Oilseeds Program,innovation_instruments,outlier,"Amount 681,830 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,681830.0,1889927.0,53241.0
+Canada,1994,Grains and Oilseeds Program,innovation_instruments,outlier,"Amount 53,241 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,53241.0,681830.0,0.0
+Canada,1995,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,53241.0,0.0
+Canada,1996,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1997,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,Grains and Oilseeds Program,innovation_instruments,ok,,,,,none,0.0,0.0,
+Canada,1987,Forest Program,innovation_instruments,ok,,,,,none,0.0,,0.0
+Canada,1988,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1989,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1990,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1991,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1992,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1993,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,1080707.021
+Canada,1994,Forest Program,innovation_instruments,outlier,"Amount 1,080,707 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1080707.021,0.0,826485.1
+Canada,1995,Forest Program,innovation_instruments,outlier,"Amount 826,485 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,826485.1,1080707.021,0.0
+Canada,1996,Forest Program,innovation_instruments,ok,,,,,none,0.0,826485.1,0.0
+Canada,1997,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,Forest Program,innovation_instruments,ok,,,,,none,0.0,0.0,
+Canada,1987,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,,0.0
+Canada,1988,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1989,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1990,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1991,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1992,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1993,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,560395.9
+Canada,1994,Atomic Energy Control Board,science_agency,outlier,"Amount 560,396 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,560395.9,0.0,38726.0
+Canada,1995,Atomic Energy Control Board,science_agency,outlier,"Amount 38,726 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,38726.0,560395.9,0.0
+Canada,1996,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,38726.0,0.0
+Canada,1997,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,Atomic Energy Control Board,science_agency,ok,,,,,none,0.0,0.0,
+Canada,1987,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,0.0,,380657.5
+Canada,1988,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,380657.5,0.0,812402.0
+Canada,1989,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,812402.0,380657.5,25542.2
+Canada,1990,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,25542.2,812402.0,163477.2
+Canada,1991,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,163477.2,25542.2,0.0
+Canada,1992,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,0.0,163477.2,495057.0
+Canada,1993,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,495057.0,0.0,0.0
+Canada,1994,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,0.0,495057.0,0.0
+Canada,1995,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,0.0,0.0,448340.0
+Canada,1996,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,448340.0,0.0,434369.0
+Canada,1997,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,434369.0,448340.0,9950.0
+Canada,1998,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,9950.0,434369.0,524645.056
+Canada,1999,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,524645.056,9950.0,782393.0
+Canada,2000,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,782393.0,524645.056,610971.15
+Canada,2001,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,610971.15,782393.0,42936.9
+Canada,2002,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,42936.9,610971.15,753031.0
+Canada,2003,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,753031.0,42936.9,2870981.3
+Canada,2006,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,2870981.3,753031.0,951976.096
+Canada,2007,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,951976.096,2870981.3,960761.75
+Canada,2008,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,960761.75,951976.096,964298.819
+Canada,2009,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,964298.819,960761.75,1015773.511
+Canada,2010,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,1015773.511,964298.819,2189662.841
+Canada,2011,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,2189662.841,1015773.511,2075096.694
+Canada,2012,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,2075096.694,2189662.841,2063394.429
+Canada,2013,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,2063394.429,2075096.694,2097284.2290000003
+Canada,2014,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,2097284.2290000003,2063394.429,2152821.313
+Canada,2015,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,2152821.313,2097284.2290000003,2266613.673
+Canada,2016,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,2266613.673,2152821.313,2370360.6029999997
+Canada,2017,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,2370360.6029999997,2266613.673,1661529.965
+Canada,2018,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,1661529.965,2370360.6029999997,1821358.6719999998
+Canada,2019,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,1821358.6719999998,1661529.965,2669355.6330000004
+Canada,2020,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,2669355.6330000004,1821358.6719999998,2730907.787
+Canada,2021,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,2730907.787,2669355.6330000004,2668730.038
+Canada,2022,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,2668730.038,2730907.787,1365070.4810000001
+Canada,2023,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,1365070.4810000001,2668730.038,2780080.946
+Canada,2024,Natural Sciences and Engineering Research Council,science_agency,ok,,,,,none,2780080.946,1365070.4810000001,
+Canada,1987,Science Council of Canada,science_agency,ok,,,,,none,0.0,,689165.0
+Canada,1988,Science Council of Canada,science_agency,outlier,"Amount 689,165 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,689165.0,0.0,0.0
+Canada,1989,Science Council of Canada,science_agency,ok,,,,,none,0.0,689165.0,97195.0
+Canada,1990,Science Council of Canada,science_agency,outlier,"Amount 97,195 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,97195.0,0.0,0.0
+Canada,1991,Science Council of Canada,science_agency,ok,,,,,none,0.0,97195.0,0.0
+Canada,1992,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1993,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1994,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1995,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1996,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1997,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,Science Council of Canada,science_agency,ok,,,,,none,0.0,0.0,
+Canada,1987,Energy Program,innovation_instruments,ok,,,,,none,0.0,,405710.0
+Canada,1988,Energy Program,innovation_instruments,outlier,"Amount 405,710 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,405710.0,0.0,140269.0
+Canada,1989,Energy Program,innovation_instruments,outlier,"Amount 140,269 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,140269.0,405710.0,0.0
+Canada,1990,Energy Program,innovation_instruments,ok,,,,,none,0.0,140269.0,0.0
+Canada,1991,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1992,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1993,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1994,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,776406.66666
+Canada,1995,Energy Program,innovation_instruments,outlier,"Amount 776,407 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,776406.66666,0.0,0.0
+Canada,1996,Energy Program,innovation_instruments,ok,,,,,none,0.0,776406.66666,0.0
+Canada,1997,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,Energy Program,innovation_instruments,ok,,,,,none,0.0,0.0,
+Canada,1987,Minerals and Earth Sciences Program,direct_rd,outlier,"Amount 19,048 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,19048.0,,305922.0
+Canada,1988,Minerals and Earth Sciences Program,direct_rd,outlier,"Amount 305,922 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,305922.0,19048.0,453089.5
+Canada,1989,Minerals and Earth Sciences Program,direct_rd,outlier,"Amount 453,090 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,453089.5,305922.0,0.0
+Canada,1990,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,453089.5,0.0
+Canada,1991,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1992,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1993,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1994,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1995,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1996,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1997,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,Minerals and Earth Sciences Program,direct_rd,ok,,,,,none,0.0,0.0,
+Canada,1987,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,,0.0
+Canada,1988,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1989,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,113438.0
+Canada,1990,HEALTI-1 Program,direct_rd,outlier,"Amount 113,438 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,113438.0,0.0,0.0
+Canada,1991,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,113438.0,0.0
+Canada,1992,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1993,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1994,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1995,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1996,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1997,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,HEALTI-1 Program,direct_rd,ok,,,,,none,0.0,0.0,
+Canada,1987,Canada Council for the Arts,innovation_instruments,ok,,,,,none,0.0,,367472.0
+Canada,1988,Canada Council for the Arts,innovation_instruments,ok,,,,,none,367472.0,0.0,0.0
+Canada,1989,Canada Council for the Arts,innovation_instruments,ok,,,,,none,0.0,367472.0,0.0
+Canada,1990,Canada Council for the Arts,innovation_instruments,ok,,,,,none,0.0,0.0,293171.0
+Canada,1991,Canada Council for the Arts,innovation_instruments,ok,,,,,none,293171.0,0.0,0.0
+Canada,1992,Canada Council for the Arts,innovation_instruments,ok,,,,,none,0.0,293171.0,0.0
+Canada,1993,Canada Council for the Arts,innovation_instruments,ok,,,,,none,0.0,0.0,491791.09267000004
+Canada,1994,Canada Council for the Arts,innovation_instruments,ok,,,,,none,491791.09267000004,0.0,72676.0
+Canada,1995,Canada Council for the Arts,innovation_instruments,ok,,,,,none,72676.0,491791.09267000004,292.9
+Canada,1996,Canada Council for the Arts,innovation_instruments,ok,,,,,none,292.9,72676.0,25300.0
+Canada,1997,Canada Council for the Arts,innovation_instruments,ok,,,,,none,25300.0,292.9,593252.231
+Canada,1998,Canada Council for the Arts,innovation_instruments,ok,,,,,none,593252.231,25300.0,0.0
+Canada,1999,Canada Council for the Arts,innovation_instruments,ok,,,,,none,0.0,593252.231,0.0
+Canada,2000,Canada Council for the Arts,innovation_instruments,ok,,,,,none,0.0,0.0,223719.34499999997
+Canada,2001,Canada Council for the Arts,innovation_instruments,ok,,,,,none,223719.34499999997,0.0,3406.25
+Canada,2002,Canada Council for the Arts,innovation_instruments,ok,,,,,none,3406.25,223719.34499999997,302568.0
+Canada,2003,Canada Council for the Arts,innovation_instruments,ok,,,,,none,302568.0,3406.25,398501.8125
+Canada,2006,Canada Council for the Arts,innovation_instruments,ok,,,,,none,398501.8125,302568.0,543963.75
+Canada,2007,Canada Council for the Arts,innovation_instruments,ok,,,,,none,543963.75,398501.8125,180526.0
+Canada,2008,Canada Council for the Arts,innovation_instruments,ok,,,,,none,180526.0,543963.75,361312.21900000004
+Canada,2009,Canada Council for the Arts,innovation_instruments,ok,,,,,none,361312.21900000004,180526.0,363393.568
+Canada,2010,Canada Council for the Arts,innovation_instruments,ok,,,,,none,363393.568,361312.21900000004,276508.061
+Canada,2011,Canada Council for the Arts,innovation_instruments,ok,,,,,none,276508.061,363393.568,363521.632
+Canada,2012,Canada Council for the Arts,innovation_instruments,ok,,,,,none,363521.632,276508.061,360771.632
+Canada,2013,Canada Council for the Arts,innovation_instruments,ok,,,,,none,360771.632,363521.632,182092.916
+Canada,2014,Canada Council for the Arts,innovation_instruments,ok,,,,,none,182092.916,360771.632,182097.387
+Canada,2015,Canada Council for the Arts,innovation_instruments,ok,,,,,none,182097.387,182092.916,222347.387
+Canada,2016,Canada Council for the Arts,innovation_instruments,ok,,,,,none,222347.387,182097.387,257347.387
+Canada,2017,Canada Council for the Arts,innovation_instruments,ok,,,,,none,257347.387,222347.387,438948.506
+Canada,2018,Canada Council for the Arts,innovation_instruments,ok,,,,,none,438948.506,257347.387,464162.752
+Canada,2019,Canada Council for the Arts,innovation_instruments,ok,,,,,none,464162.752,438948.506,362644.295
+Canada,2020,Canada Council for the Arts,innovation_instruments,ok,,,,,none,362644.295,464162.752,480562.08
+Canada,2021,Canada Council for the Arts,innovation_instruments,ok,,,,,none,480562.08,362644.295,423389.08
+Canada,2022,Canada Council for the Arts,innovation_instruments,ok,,,,,none,423389.08,480562.08,364238.813
+Canada,2023,Canada Council for the Arts,innovation_instruments,ok,,,,,none,364238.813,423389.08,363758.16
+Canada,2024,Canada Council for the Arts,innovation_instruments,ok,,,,,none,363758.16,364238.813,
+Canada,1987,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,,0.0
+Canada,1988,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1989,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1990,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1991,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1992,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1993,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1994,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1995,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1996,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1997,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,44600.0
+Canada,1998,Millennium Bureau of Canada,innovation_instruments,outlier,"Amount 44,600 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,44600.0,0.0,77000.0
+Canada,1999,Millennium Bureau of Canada,innovation_instruments,outlier,"Amount 77,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,77000.0,44600.0,0.0
+Canada,2000,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,77000.0,0.0
+Canada,2001,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,Millennium Bureau of Canada,innovation_instruments,ok,,,,,none,0.0,0.0,
+Canada,1987,Canadian Forestry Service Program,direct_rd,outlier,"Amount 66,071 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,66070.703,,0.0
+Canada,1988,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,66070.703,0.0
+Canada,1989,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1990,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1991,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1992,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1993,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1994,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1995,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1996,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1997,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,Canadian Forestry Service Program,direct_rd,ok,,,,,none,0.0,0.0,
+Canada,1987,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,,0.0
+Canada,1988,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1989,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1990,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1991,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1992,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1993,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1994,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1995,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,19737.691
+Canada,1996,PARICS Canada Program,innovation_instruments,outlier,"Amount 19,738 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,19737.691,0.0,82447.528
+Canada,1997,PARICS Canada Program,innovation_instruments,outlier,"Amount 82,448 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,82447.528,19737.691,0.0
+Canada,1998,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,82447.528,0.0
+Canada,1999,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,PARICS Canada Program,innovation_instruments,ok,,,,,none,0.0,0.0,
+Canada,1987,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,,0.0
+Canada,1988,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1989,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1990,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,45132.0
+Canada,1991,"Industry, Science and Technology Development Program",innovation_instruments,outlier,"Amount 45,132 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,45132.0,0.0,0.0
+Canada,1992,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,45132.0,0.0
+Canada,1993,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1994,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1995,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1996,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1997,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,"Industry, Science and Technology Development Program",innovation_instruments,ok,,,,,none,0.0,0.0,
+Canada,1987,Canadian Northern Energy Commission,innovation_instruments,outlier,"Amount 13,040 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,13040.0,,0.0
+Canada,1988,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,13040.0,0.0
+Canada,1989,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1990,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1991,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1992,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1993,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1994,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1995,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1996,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1997,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,Canadian Northern Energy Commission,innovation_instruments,ok,,,,,none,0.0,0.0,
+Canada,1987,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,,0.0
+Canada,1988,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1989,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1990,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1991,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,10895.784
+Canada,1992,"Industry, Science and Technology Program",innovation_instruments,outlier,"Amount 10,896 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,10895.784,0.0,6772.712
+Canada,1993,"Industry, Science and Technology Program",innovation_instruments,outlier,"Amount 6,773 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,6772.712,10895.784,0.0
+Canada,1994,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,6772.712,0.0
+Canada,1995,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1996,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1997,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,"Industry, Science and Technology Program",innovation_instruments,ok,,,,,none,0.0,0.0,
+Canada,1987,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,,0.0
+Canada,1988,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,6584.0
+Canada,1989,Industry and Technology Development Program,innovation_instruments,outlier,"Amount 6,584 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,6584.0,0.0,12594.0
+Canada,1990,Industry and Technology Development Program,innovation_instruments,outlier,"Amount 12,594 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,12594.0,6584.0,0.0
+Canada,1991,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,12594.0,0.0
+Canada,1992,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1993,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1994,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1995,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1996,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1997,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,Industry and Technology Development Program,innovation_instruments,ok,,,,,none,0.0,0.0,
+Canada,1987,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,,0.0
+Canada,1988,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1989,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,5962.317
+Canada,1990,Industry and Technology Program,innovation_instruments,outlier,"Amount 5,962 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,5962.317,0.0,0.0
+Canada,1991,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,5962.317,0.0
+Canada,1992,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1993,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1994,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1995,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1996,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1997,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,Industry and Technology Program,innovation_instruments,ok,,,,,none,0.0,0.0,
+Canada,1987,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,,5791.0
+Canada,1988,Council of Canadian Academies,science_agency,outlier,"Amount 5,791 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,5791.0,0.0,0.0
+Canada,1989,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,5791.0,0.0
+Canada,1990,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1991,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1992,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1993,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1994,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1995,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1996,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1997,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1998,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,1999,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2000,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2001,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2002,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2003,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2006,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2007,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2008,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2009,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2010,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2011,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2012,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2013,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2014,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2015,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2016,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2017,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2018,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2019,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2020,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2021,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2022,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2023,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Canada,2024,Council of Canadian Academies,science_agency,ok,,,,,none,0.0,0.0,

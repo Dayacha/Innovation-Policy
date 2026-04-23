@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Office of Indian Residential Schools Resolution of Canada",
+  "name_variants": [
+    "OIRSR",
+    "Indian Residential Schools Resolution Office"
+  ],
+  "category": "unclear",
+  "notes": "This entity focuses on resolution and compensation related to Indian residential schools, not R&D."
+}

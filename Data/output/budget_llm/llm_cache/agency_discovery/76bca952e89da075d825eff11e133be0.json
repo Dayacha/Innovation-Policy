@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.0,
+  "entry_type": "not_rd",
+  "canonical_name": "Human Resources Development",
+  "name_variants": [
+    "HR Development",
+    "Développement des ressources humaines"
+  ],
+  "category": "unclear",
+  "notes": "This entry pertains to human resources development, which is not specifically R&D spending."
+}

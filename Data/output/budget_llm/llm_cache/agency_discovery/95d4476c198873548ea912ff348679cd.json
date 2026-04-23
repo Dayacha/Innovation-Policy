@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": true,
+  "confidence": 0.8,
+  "entry_type": "rd_programme",
+  "canonical_name": "National Film Board of Canada",
+  "name_variants": [
+    "NFB",
+    "Office national du film du Canada"
+  ],
+  "category": "innovation_instruments",
+  "notes": "The entity is involved in film production and research related to film and media."
+}

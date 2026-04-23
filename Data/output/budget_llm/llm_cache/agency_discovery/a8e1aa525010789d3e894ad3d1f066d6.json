@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Northern Pipeline Agency",
+  "name_variants": [
+    "NPA",
+    "Northern Pipeline Agency"
+  ],
+  "category": "unclear",
+  "notes": "The entity is focused on pipeline administration, not research and development."
+}

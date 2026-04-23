@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Human Resources and Skills Development Canada Mortgage and Housing Corporation",
+  "name_variants": [
+    "HRSDC",
+    "Canada Mortgage and Housing Corporation",
+    "CMHC"
+  ],
+  "category": "unclear",
+  "notes": "This entity is primarily focused on housing and human resources, not R&D."
+}

@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.6,
+  "entry_type": "not_rd",
+  "canonical_name": "Secretariat of Canadian Intergovernmental Conferences",
+  "name_variants": [
+    "SECRÉTARIAT DES CONFÉRENCES INTERGOUVERNEMENTALES CANADIENNES",
+    "Secretariat of Intergovernmental Conferences"
+  ],
+  "category": "unclear",
+  "notes": "This entity appears to be focused on intergovernmental coordination rather than R&D."
+}

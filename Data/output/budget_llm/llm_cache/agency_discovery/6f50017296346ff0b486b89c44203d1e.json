@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Royal Canadian Mounted Police",
+  "name_variants": [
+    "RCMP",
+    "SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE",
+    "Royal Canadian Mounted Police"
+  ],
+  "category": "unclear",
+  "notes": "This entity is primarily focused on law enforcement and public safety, not R&D."
+}

@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Office of the Co-ordinator, Status of Women",
+  "name_variants": [
+    "Status of Women Canada",
+    "Office of the Co-ordinator, Status of Women"
+  ],
+  "category": "unclear",
+  "notes": "This entity focuses on gender equality and women's issues, not R&D."
+}

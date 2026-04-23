@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Federal-Provincial Transfers Program",
+  "name_variants": [
+    "Federal-Provincial Transfers",
+    "Provincial Transfers Program"
+  ],
+  "category": "unclear",
+  "notes": "This entry represents transfers between government levels and does not indicate R&D spending."
+}

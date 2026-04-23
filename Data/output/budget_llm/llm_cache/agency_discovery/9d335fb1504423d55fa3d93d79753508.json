@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "mixed_ministry",
+  "canonical_name": "Public Works and Government Services Canada",
+  "name_variants": [
+    "PWGSC",
+    "Public Works",
+    "Services publics et approvisionnement Canada"
+  ],
+  "category": "unclear",
+  "notes": "This entity is a broad government department and does not specifically focus on R&D."
+}

@@ -35,18 +35,18 @@ RUN_LOG_FILE = OUTPUT_DIR / "run_log.jsonl"
 # Default LLM settings (overridden by config.yaml llm: block)
 # ---------------------------------------------------------------------------
 DEFAULT_LLM_CONFIG = {
-    "provider": "anthropic",
-    "model": "claude-sonnet-4-6",
+    "provider": "openai",
+    "model": "gpt-4o-mini",
     "max_tokens": 4096,
     "temperature": 0,
     "api_delay": 0.5,
 }
 
-# Model used for the cheap scan pass (pass 1). Use a fast/cheap model.
-SCAN_MODEL = "claude-haiku-4-5-20251001"
+# Model used for the cheap scan pass (pass 1).
+SCAN_MODEL = "gpt-4o-mini"
 
-# Model used for deep extraction (pass 2). Use the best available.
-EXTRACT_MODEL = "claude-sonnet-4-6"
+# Model used for deep extraction (pass 2).
+EXTRACT_MODEL = "gpt-4o-mini"
 
 # ---------------------------------------------------------------------------
 # Chunking settings
@@ -245,8 +245,12 @@ COUNTRY_CONTEXT: dict[str, dict] = {
             "Ministère de l'Agriculture", "Ministère de l'Intérieur",
             "Ministère des Transports", "Ministère du Travail",
         ],
-        "doc_type_hint": "Loi de finances / Budget de l'État. "
-                         "Look for Mission 'Recherche et enseignement supérieur'.",
+        "doc_type_hint": "Loi de finances / Budget de l'État (JORF). "
+                         "Look for Mission 'Recherche et enseignement supérieur'. "
+                         "UNIT RULE: The main JORF mission table uses MILLIONS d'euros. "
+                         "Always set unit='million' — '2 417' means 2417 million EUR = €2.4B. "
+                         "Exception: if a table is explicitly headed 'milliers d'euros' or 'en milliers €', "
+                         "use unit='thousand'.",
     },
     "Germany": {
         "currency": "EUR",
@@ -309,6 +313,38 @@ COUNTRY_CONTEXT: dict[str, dict] = {
             "Justitiedepartementet (Ministry of Justice)",
         ],
         "doc_type_hint": "Statsbudget / Budgetpropositionen. Look for research appropriations.",
+    },
+    "Japan": {
+        "currency": "JPY",
+        "currency_symbol": "¥",
+        "language": "japanese",
+        "unit_hint": "million",  # 予算書 amounts in 百万円 (millions of yen)
+        "known_agencies": [
+            "Japan Science and Technology Agency (JST / 科学技術振興機構)",
+            "Japan Society for the Promotion of Science (JSPS / 日本学術振興会)",
+            "RIKEN (理化学研究所)",
+            "National Institute for Materials Science (NIMS / 物質・材料研究機構)",
+            "Japan Agency for Marine-Earth Science and Technology (JAMSTEC / 海洋研究開発機構)",
+            "Japan Aerospace Exploration Agency (JAXA / 宇宙航空研究開発機構)",
+            "New Energy and Industrial Technology Development Organization (NEDO / 新エネルギー・産業技術総合開発機構)",
+            "Ministry of Education, Culture, Sports, Science and Technology (MEXT / 文部科学省)",
+            "Ministry of Economy, Trade and Industry (METI / 経済産業省)",
+            "National Institutes of Health Sciences (NIHS)",
+            "Japan Atomic Energy Agency (JAEA / 日本原子力研究開発機構)",
+        ],
+        "mixed_ministries": [
+            "Ministry of Defense (防衛省)",
+            "Ministry of Foreign Affairs (外務省)",
+            "Ministry of Health, Labour and Welfare (厚生労働省)",
+            "Ministry of Finance (財務省)",
+            "Ministry of Land, Infrastructure, Transport and Tourism (国土交通省)",
+            "Ministry of Internal Affairs and Communications (総務省)",
+            "Ministry of Justice (法務省)",
+        ],
+        "doc_type_hint": "Japanese national budget (予算書 / 予算案). "
+                         "Look for 文部科学省 (MEXT) and 経済産業省 (METI) R&D appropriations. "
+                         "Amounts typically in 百万円 (millions of yen). "
+                         "Key line items: 科学技術振興費 (S&T promotion), 研究開発 (R&D).",
     },
 }
 

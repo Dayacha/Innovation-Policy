@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.6,
+  "entry_type": "not_rd",
+  "canonical_name": "Cape Breton Development Corporation",
+  "name_variants": [
+    "Société de développement du Cap-Breton",
+    "CBDC",
+    "Cape Breton Development Corporation"
+  ],
+  "category": "unclear",
+  "notes": "The entity primarily focuses on economic development rather than dedicated R&D activities."
+}

@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Immigration and Refugee Board of Canada",
+  "name_variants": [
+    "IRB",
+    "Immigration and Refugee Board"
+  ],
+  "category": "unclear",
+  "notes": "This entity is focused on immigration and refugee matters, not research and development."
+}

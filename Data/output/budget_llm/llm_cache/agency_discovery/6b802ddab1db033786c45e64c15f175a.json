@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Department of Human Resources Development",
+  "name_variants": [
+    "HRSDC",
+    "Human Resources Development Canada",
+    "Développement des ressources humaines Canada"
+  ],
+  "category": "unclear",
+  "notes": "This department primarily focuses on human resources and social programs, not R&D."
+}

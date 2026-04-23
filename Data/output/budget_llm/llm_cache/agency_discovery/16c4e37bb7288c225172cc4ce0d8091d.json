@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "mixed_ministry",
+  "canonical_name": "Department of Fisheries and Oceans",
+  "name_variants": [
+    "DFO",
+    "Ministère des Pêches et des Océans"
+  ],
+  "category": "unclear",
+  "notes": "This department covers a broad range of activities, and R&D is likely only a small component."
+}

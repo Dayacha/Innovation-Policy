@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.6,
+  "entry_type": "mixed_ministry",
+  "canonical_name": "Federal Economic Development Agency for Southern Ontario",
+  "name_variants": [
+    "FedDev Ontario",
+    "FEDERAL ECONOMIC DEVELOPMENT AGENCY FOR SOUTHERN ONTARIO"
+  ],
+  "category": "unclear",
+  "notes": "This agency focuses on economic development, which may include R&D but is not primarily dedicated to it."
+}

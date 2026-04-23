@@ -67,11 +67,81 @@ Mark relevant=false if the page is:
 def build_scan_user_prompt(page_text: str, country: str, year: int, doc_hint: str = "") -> str:
     """Build the pass-1 user prompt for a single page."""
     hint_block = f"\nDocument type hint: {doc_hint}" if doc_hint else ""
+    country_hint = _COUNTRY_SCAN_HINTS.get(country, "")
+    country_block = f"\nCountry-specific signals: {country_hint}" if country_hint else ""
     return (
-        f"Country: {country}\nYear: {year}{hint_block}\n\n"
+        f"Country: {country}\nYear: {year}{hint_block}{country_block}\n\n"
         f"--- PAGE TEXT ---\n{page_text[:4000]}\n--- END ---\n\n"
         "Is this page relevant for R&D budget extraction? Respond with JSON only."
     )
+
+
+# Country-specific scan signals — injected into the scan prompt to help the
+# cheap model identify relevant pages more accurately per document type.
+_COUNTRY_SCAN_HINTS: dict[str, str] = {
+    "Germany": (
+        "Mark relevant=true for pages containing: "
+        "'Epl 30', 'Bundesministerium für Bildung und Forschung', 'BMBF', 'BMFT', "
+        "'Bundesminister für Forschung', 'Forschung und Technologie', "
+        "'Forschungsgemeinschaft', 'DFG', 'Fraunhofer', 'Max-Planck', "
+        "'Helmholtz', 'Leibniz', 'Forschung' with a numeric amount, "
+        "'Funktionenübersicht', 'Funktion 16', 'Funktion 164', 'Funktion 165', "
+        "'Wissenschaft, Forschung, Entwicklung', "
+        "or any Haushaltsübersicht (Ausgaben) table containing row '30' with a ministry name. "
+        "IMPORTANT: Pages headed 'Gesamtplan – Teil I: Haushaltsübersicht B. Ausgaben' list ALL "
+        "federal ministries and ALWAYS include Epl 30 (Bundesministerium für Bildung und Forschung). "
+        "Mark these pages relevant=true even if 'Forschung' is not visible in the excerpt shown — "
+        "the BMBF row may appear late in the page, after the excerpt cuts off. "
+        "Numbers use SPACE as thousands separator: '14 053 404' = 14 million."
+    ),
+    "UK": (
+        "Mark relevant=true for pages containing 'UKRI', 'research council', "
+        "'science budget', 'BEIS', 'DSIT', 'MRC', 'EPSRC', 'NERC', 'Innovate UK', "
+        "'science and innovation', or '£' amounts for science/research programmes. "
+        "Mark relevant=false for general fiscal metrics (OBR, GDP), tax tables, "
+        "debt management, and non-science department spending tables."
+    ),
+    "France": (
+        "Mark relevant=true for pages with: 'Recherche et enseignement supérieur', "
+        "'Programme 172', 'Programme 187', 'Programme 190', 'Programme 193', "
+        "'ANR', 'CNRS', 'CEA', 'INSERM', 'INRIA', 'CNES', 'crédits de paiement', "
+        "or any named R&D programme with a euro amount. "
+        "Mark relevant=false for: tax code amendments ('montant ... est remplacé'), "
+        "fiscal balance tables (solde structurel/conjoncturel), legislative preamble "
+        "(L'Assemblée nationale... a délibéré), property tax categories, "
+        "AND pages headed 'PLAFOND exprimé en équivalents temps plein travaillé' or "
+        "showing 'ETPT' staff headcount columns — these are staffing tables, NOT budget pages."
+    ),
+    "Japan": (
+        "Mark relevant=true for pages containing: 文部科学省 (MEXT), "
+        "科学技術振興機構 (JST), 日本学術振興会 (JSPS), 理化学研究所 (RIKEN), "
+        "宇宙航空研究開発機構 (JAXA), 海洋研究開発機構 (JAMSTEC), "
+        "新エネルギー・産業技術総合開発機構 (NEDO), 科学技術, 研究費, "
+        "研究振興費, or numeric amounts with 百万円 unit. "
+        "Mark relevant=false for: 防衛省 (Defense), 国債費 (debt service), "
+        "地方交付税 (local allocation tax), pages that are mostly OCR artifacts."
+    ),
+    "Australia": (
+        "Mark relevant=true for pages with CSIRO, ARC, NHMRC, ANSTO, AIMS, "
+        "Geoscience Australia, or research grant programmes. "
+        "Mark relevant=false for: education commission pages, scholarship schemes, "
+        "capital works tables, Defence department tables."
+    ),
+    "Canada": (
+        "Mark relevant=true for pages containing: "
+        "'NSERC' or 'Natural Sciences and Engineering Research Council', "
+        "'SSHRC' or 'Social Sciences and Humanities Research Council', "
+        "'CIHR' or 'Canadian Institutes of Health Research', "
+        "'NRC' or 'National Research Council', "
+        "'CFI' or 'Canada Foundation for Innovation', "
+        "'Canadian Space Agency', 'TRIUMF', 'Genome Canada', "
+        "'Canada Research Chairs', 'AECL' or 'Atomic Energy of Canada', "
+        "or any Vote labelled 'Grants and contributions' for a science agency. "
+        "Mark relevant=false for: National Defence operating pages, RCMP, "
+        "CRA tax administration, general infrastructure departments, "
+        "employee benefit plan schedules, and statutory payment tables."
+    ),
+}
 
 
 # ---------------------------------------------------------------------------
@@ -263,6 +333,15 @@ Do NOT extract items you would mark as "skip" — just omit them from the output
 4. Read the FULL line description before deciding. The section name alone is not \
    sufficient — "Department of Science" can contain non-R&D lines.
 5. Output valid JSON only. No prose, no markdown fences, no explanation outside JSON.
+
+## Number format guide by country
+Different countries use different thousands separators. Parse accordingly:
+- Germany: SPACE as thousands separator → "14 053 404" = 14053404 (fourteen million)
+  "356 400" = 356400 (three hundred fifty-six thousand)
+- France: SPACE as thousands separator → "1 234 567" = 1234567; also "1.234.567"
+- Japan: Commas or no separator → "357,048" = 357048 (millions of yen)
+- UK: Commas → "1,234" = 1234; prose uses "£1.6 billion"
+- Australia/Canada: Commas → "387,000" = 387000 (already in thousands)
 """
 
 
@@ -296,7 +375,7 @@ def build_extract_user_prompt(
             + "\n".join(f"  - {a}" for a in sample)
         )
 
-    country_addendum = build_country_addendum(country)
+    country_addendum = build_country_addendum(country, year=year)
     addendum_block = f"\n\n{country_addendum}" if country_addendum else ""
 
     page_block = f" (pages {page_range})" if page_range else ""
@@ -388,9 +467,11 @@ def build_batch_scan_user_prompt(
 ) -> str:
     """Build a batch scan prompt for multiple pages."""
     hint = f"\nDocument type: {doc_hint}" if doc_hint else ""
-    lines = [f"Country: {country}, Year: {year}{hint}\n"]
+    country_hint = _COUNTRY_SCAN_HINTS.get(country, "")
+    country_block = f"\nCountry-specific signals: {country_hint}" if country_hint else ""
+    lines = [f"Country: {country}, Year: {year}{hint}{country_block}\n"]
     for page_id, text in pages:
-        snippet = text[:1500].replace("\n", " ")
+        snippet = text[:3000].replace("\n", " ")
         lines.append(f"[PAGE {page_id}]\n{snippet}\n")
     lines.append(
         "\nReturn JSON only — exactly 3 fields per entry, no extra fields:\n"

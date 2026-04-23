@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Shared Services Canada",
+  "name_variants": [
+    "SSC",
+    "Services partagés Canada"
+  ],
+  "category": "unclear",
+  "notes": "Shared Services Canada is primarily focused on IT services and infrastructure, not R&D."
+}

@@ -1,0 +1,11 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Radio-television and Telecommunications Commission",
+  "name_variants": [
+    "CRTC"
+  ],
+  "category": "unclear",
+  "notes": "The CRTC is primarily a regulatory body for broadcasting and telecommunications, not focused on R&D."
+}

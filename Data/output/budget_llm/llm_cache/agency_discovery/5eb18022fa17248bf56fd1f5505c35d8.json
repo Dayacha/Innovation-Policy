@@ -1,0 +1,11 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Firearms Centre",
+  "name_variants": [
+    "CFC"
+  ],
+  "category": "unclear",
+  "notes": "The Canadian Firearms Centre is focused on firearms regulation and safety, not R&D."
+}

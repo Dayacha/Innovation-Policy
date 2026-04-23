@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Public Works and Government Services",
+  "name_variants": [
+    "PWGSC",
+    "Travaux publics et services gouvernementaux"
+  ],
+  "category": "unclear",
+  "notes": "This entity is primarily focused on public works and services, not R&D."
+}

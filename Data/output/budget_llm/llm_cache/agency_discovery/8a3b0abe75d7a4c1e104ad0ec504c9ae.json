@@ -1,0 +1,11 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Security Intelligence Review Committee",
+  "name_variants": [
+    "SIRC"
+  ],
+  "category": "unclear",
+  "notes": "The entity is focused on oversight of intelligence activities, not R&D."
+}

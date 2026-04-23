@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Public Safety and Emergency Preparedness",
+  "name_variants": [
+    "SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE",
+    "Public Safety"
+  ],
+  "category": "unclear",
+  "notes": "This entity focuses on public safety and emergency preparedness, which does not pertain to R&D."
+}

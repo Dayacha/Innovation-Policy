@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Department of Transport",
+  "name_variants": [
+    "Transport Canada",
+    "TC"
+  ],
+  "category": "unclear",
+  "notes": "This department primarily focuses on transportation and infrastructure, not R&D."
+}

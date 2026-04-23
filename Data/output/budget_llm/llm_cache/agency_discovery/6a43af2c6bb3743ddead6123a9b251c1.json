@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Governor General of Canada",
+  "name_variants": [
+    "GG",
+    "Governor General"
+  ],
+  "category": "unclear",
+  "notes": "The Governor General's budget is primarily for ceremonial and administrative functions, not R&D."
+}

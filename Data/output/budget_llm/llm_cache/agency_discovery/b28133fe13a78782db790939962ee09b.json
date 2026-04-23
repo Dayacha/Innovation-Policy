@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "mixed_ministry",
+  "canonical_name": "Agriculture and Agri-Food Canada",
+  "name_variants": [
+    "AAFC",
+    "Agriculture et Agroalimentaire Canada"
+  ],
+  "category": "unclear",
+  "notes": "This entry represents a broad ministry that encompasses various functions, not specifically identifiable R&D spending."
+}

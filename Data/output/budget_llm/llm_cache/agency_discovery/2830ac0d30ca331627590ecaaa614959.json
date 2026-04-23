@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.0,
+  "entry_type": "not_rd",
+  "canonical_name": "Foreign Affairs",
+  "name_variants": [
+    "ÉTRANGÈRES",
+    "Foreign Affairs Canada",
+    "Ministère des Affaires étrangères"
+  ],
+  "category": "unclear",
+  "notes": "The entity name suggests it relates to foreign affairs, which typically does not involve R&D spending."
+}

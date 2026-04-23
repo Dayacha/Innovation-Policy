@@ -1,0 +1,11 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Hazardous Materials Information Review Commission",
+  "name_variants": [
+    "HMIRC"
+  ],
+  "category": "unclear",
+  "notes": "This entity focuses on hazardous materials information rather than R&D."
+}

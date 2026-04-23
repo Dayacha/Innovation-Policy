@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Heritage",
+  "name_variants": [
+    "PATRIMOINE CANADIEN",
+    "Canadian Heritage"
+  ],
+  "category": "unclear",
+  "notes": "This entity primarily focuses on cultural heritage and does not specifically indicate R&D spending."
+}

@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian International Trade Tribunal",
+  "name_variants": [
+    "CITT",
+    "Tribunal canadien du commerce extérieur"
+  ],
+  "category": "unclear",
+  "notes": "The entity is focused on trade and commerce, not research and development."
+}

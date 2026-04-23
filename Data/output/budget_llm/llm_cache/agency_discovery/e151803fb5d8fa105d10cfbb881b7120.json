@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Privy Council",
+  "name_variants": [
+    "PCO",
+    "Privy Council Office"
+  ],
+  "category": "unclear",
+  "notes": "The Privy Council is primarily involved in governance and administration, not R&D."
+}

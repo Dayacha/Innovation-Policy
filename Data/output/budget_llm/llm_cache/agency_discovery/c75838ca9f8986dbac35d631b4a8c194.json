@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Director General of Elections",
+  "name_variants": [
+    "DGE",
+    "Directeur Général des Élections"
+  ],
+  "category": "unclear",
+  "notes": "This entity is related to electoral management, not research and development."
+}

@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Artists and Producers Professional Relations",
+  "name_variants": [
+    "CAPPR",
+    "Canadian Artists and Producers Professional Relations"
+  ],
+  "category": "unclear",
+  "notes": "This entity focuses on professional relations for artists and producers, not on R&D."
+}

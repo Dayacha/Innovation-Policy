@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Shared Services Canada",
+  "name_variants": [
+    "SSC",
+    "Services partagés Canada"
+  ],
+  "category": "unclear",
+  "notes": "This entity primarily provides IT and administrative services, not R&D."
+}

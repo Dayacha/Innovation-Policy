@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "mixed_ministry",
+  "canonical_name": "Department of Finance",
+  "name_variants": [
+    "Finance Canada",
+    "Ministère des Finances"
+  ],
+  "category": "unclear",
+  "notes": "The Department of Finance is a broad government department and does not specifically focus on R&D spending."
+}

@@ -1,0 +1,11 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Private Council",
+  "name_variants": [
+    "Conseil Privé"
+  ],
+  "category": "unclear",
+  "notes": "The entity name suggests it is related to advisory functions rather than R&D."
+}

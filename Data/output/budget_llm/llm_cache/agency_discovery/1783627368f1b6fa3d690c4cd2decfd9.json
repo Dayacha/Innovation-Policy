@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canada Post Corporation",
+  "name_variants": [
+    "CPC",
+    "Canada Post"
+  ],
+  "category": "unclear",
+  "notes": "Canada Post Corporation is primarily a postal service provider and does not focus on R&D."
+}

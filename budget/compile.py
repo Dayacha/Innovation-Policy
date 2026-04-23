@@ -55,6 +55,45 @@ RAW_ROWS_CSV = cfg.OUTPUT_DIR / "raw_rows.csv"
 # ---------------------------------------------------------------------------
 # Unit normalisation — convert all amounts to thousands
 # ---------------------------------------------------------------------------
+
+
+def _write_year_slice(
+    path: Path,
+    df: pd.DataFrame,
+    year_range: Optional[tuple[int, int]] = None,
+    sort_cols: Optional[list[str]] = None,
+) -> None:
+    """
+    Write a per-country output file, preserving rows outside the requested year
+    slice when year_range is provided.
+
+    This prevents partial reruns like --years 1987-1999 from clobbering a
+    country file that already contains 2000-2024.
+    """
+    out = df.copy()
+
+    if year_range and path.exists():
+        try:
+            existing = pd.read_csv(path)
+        except Exception:
+            existing = pd.DataFrame()
+
+        if not existing.empty and "year" in existing.columns and "year" in out.columns:
+            existing_year = pd.to_numeric(existing["year"], errors="coerce")
+            keep_existing = existing[
+                existing_year.isna()
+                | (existing_year < year_range[0])
+                | (existing_year > year_range[1])
+            ].copy()
+            out = pd.concat([keep_existing, out], ignore_index=True, sort=False)
+
+    if sort_cols:
+        valid_sort = [c for c in sort_cols if c in out.columns]
+        if valid_sort:
+            out = out.sort_values(valid_sort, kind="stable").reset_index(drop=True)
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    out.to_csv(path, index=False)
 #
 # Some countries change the denomination they use in budget documents over time.
 # To make amounts comparable across all years in the series, we normalise
@@ -91,8 +130,33 @@ _UNIT_RULES: dict[str, list[dict]] = {
             "note": "CA text cache: full dollar → thousand conversion",
         },
     ],
-    # Add other countries here when needed, e.g.:
-    # "Denmark": [{"years": (1970, 1984), "threshold": 1_000_000, "divisor": 1_000, ...}]
+    # -------------------------------------------------------------------------
+    # UK: Supply Estimates txt.gz amounts appear to be in thousands of GBP (£000).
+    # No conversion needed. Add a rule here if first-run amounts look wrong.
+    # "UK": [],
+
+    # -------------------------------------------------------------------------
+    # France: Loi de Finances amounts — verify unit after first run.
+    # Typically reported in millions of EUR (post-2002) / millions of FRF (pre-2002).
+    # If amounts in the series look like millions (e.g. CNRS ≈ 500) instead of
+    # thousands (≈ 500,000), enable this rule:
+    # "France": [
+    #     {"years": (1900, 2099), "threshold": 0, "divisor": 0.001,
+    #      "note": "FR budget: millions → thousands conversion"},
+    # ],
+
+    # -------------------------------------------------------------------------
+    # Germany: Bundeshaushalt amounts are in thousands of EUR (Tausend Euro).
+    # No conversion needed — already in thousands. Add rule if this proves wrong.
+    # "Germany": [],
+
+    # -------------------------------------------------------------------------
+    # Japan: Budget amounts are in millions of yen (百万円).
+    # After first run, enable this rule if series values look like millions:
+    # "Japan": [
+    #     {"years": (1900, 2099), "threshold": 0, "divisor": 0.001,
+    #      "note": "JP budget: millions yen → thousands conversion"},
+    # ],
 }
 
 
@@ -133,6 +197,53 @@ def _normalise_units(df: pd.DataFrame, country: str) -> pd.DataFrame:
         logger.info(
             f"[{country}] Unit normalisation: {total_fixed} amounts converted to thousands"
         )
+
+    return df
+
+
+def _filter_country_raw_noise(df: pd.DataFrame, country: str) -> pd.DataFrame:
+    """
+    Drop obviously non-entity legislative/table artefacts before entity dedup.
+
+    These rows come from OCR/text-cache parsing of acts and schedules and can
+    explode the per-year entity set, causing unnecessary LLM dedup work.
+    """
+    if df.empty or "entity_raw" not in df.columns:
+        return df
+
+    if country != "Canada":
+        return df
+
+    entity_upper = df["entity_raw"].fillna("").astype(str).str.upper().str.strip()
+    noise_patterns = [
+        r"^\s*ANNEXE\b",
+        r"^\s*SCHEDULE\b",
+        r"^\s*PARTIE\b",
+        r"^\s*PART\b",
+        r"^\s*DIVISION\b",
+        r"^\s*SECTION\b",
+        r"^\s*CHAPTER\b",
+        r"\bTABLE OF PROVISIONS\b",
+        r"\bCOMING INTO FORCE\b",
+        r"\bDISPOSITIONS G[ÉE]N[ÉE]RALES\b",
+        r"\bGENERAL PROVISIONS\b",
+        r"\bINTERPR[ÉE]TATION\b",
+        r"^\s*CUSTOMS TARIFF\b",
+        r"^\s*TARIF DES DOUANES\b",
+        r"\bINCOME TAX ACT\b",
+        r"\bLOI DE L['’]IMP[ÔO]T SUR LE REVENU\b",
+        r"^\s*DEPARTMENT\s*$",
+        r"^\s*MINIST[ÈE]RE\s*$",
+    ]
+
+    noise_mask = pd.Series(False, index=df.index)
+    for pattern in noise_patterns:
+        noise_mask = noise_mask | entity_upper.str.contains(pattern, regex=True, na=False)
+
+    removed = int(noise_mask.sum())
+    if removed:
+        logger.info(f"[{country}] Raw-row noise filter removed {removed} legislative/header rows")
+        return df.loc[~noise_mask].copy()
 
     return df
 
@@ -199,7 +310,11 @@ def parse_to_raw_rows(
         f"{len(data_rows)} with current-year amounts + entity name"
     )
 
+    if not data_rows:
+        return pd.DataFrame()
+
     df = pd.DataFrame([r.to_dict() for r in data_rows])
+    df = _filter_country_raw_noise(df, country=country)
 
     # ── Deduplication ────────────────────────────────────────────────────────
     # Modern DOCX budgets repeat each agency 3× per file:
@@ -544,6 +659,70 @@ def _build_full_audit(
 
 
 # ---------------------------------------------------------------------------
+# Pipeline output reader — for narrative PDF countries (UK, France, Germany, Japan)
+# ---------------------------------------------------------------------------
+
+def _load_pipeline_results(
+    results_csv: Path,
+    country: str,
+    year_range: Optional[tuple[int, int]] = None,
+) -> pd.DataFrame:
+    """
+    Read pipeline.py's results.csv and return rows for the given country/year range.
+
+    The pipeline output already has line_description_en, section_name_en,
+    amount_local, item_type, rd_category, decision, confidence — everything
+    build_canonical_series() needs. We just filter and return.
+    """
+    try:
+        df = pd.read_csv(results_csv)
+    except Exception as e:
+        logger.warning(f"Could not read pipeline results {results_csv}: {e}")
+        return pd.DataFrame()
+
+    if "country" not in df.columns:
+        return pd.DataFrame()
+
+    df = df[df["country"] == country].copy()
+    if df.empty:
+        return df
+
+    df["year"] = pd.to_numeric(df["year"], errors="coerce")
+    df = df.dropna(subset=["year"])
+    df["year"] = df["year"].astype(int)
+
+    if year_range:
+        df = df[(df["year"] >= year_range[0]) & (df["year"] <= year_range[1])]
+
+    # Ensure required columns are present (pipeline output may have extra or missing)
+    for col in ["line_description_en", "section_name_en", "line_description",
+                "amount_local", "unit", "currency", "item_type",
+                "decision", "confidence", "source_file", "page_number", "rd_category"]:
+        if col not in df.columns:
+            df[col] = ""
+
+    df["amount_local"] = pd.to_numeric(df["amount_local"], errors="coerce")
+
+    # Keep only include/review rows (skip rows were explicitly rejected)
+    df = df[df["decision"].isin(["include", "review"])].copy()
+
+    # Drop rows marked as redundant aggregates (ministry totals, section totals).
+    # These are kept in results.csv for audit purposes but should not feed the series.
+    if "aggregation_role" in df.columns:
+        n_before = len(df)
+        df = df[df["aggregation_role"].fillna("") != "redundant"].copy()
+        dropped = n_before - len(df)
+        if dropped:
+            logger.info(f"[{country}] Dropped {dropped} redundant aggregate rows from series input")
+
+    logger.info(
+        f"[{country}] Loaded {len(df)} rows from pipeline output "
+        f"({results_csv.name}), years: {sorted(df['year'].unique().tolist())}"
+    )
+    return df.reset_index(drop=True)
+
+
+# ---------------------------------------------------------------------------
 # Main compile entry point
 # ---------------------------------------------------------------------------
 
@@ -560,12 +739,17 @@ def compile_country(
     """
     Full compile pipeline for one country.
 
-    Steps:
+    For countries with structured DOCX / pre-extracted text (Australia, Canada):
       1. Parse all DOCX files → raw_rows (deterministic, no LLM)
       2. Deterministic dedup (same amount × same file)
       3. LLM entity dedup — collapse truncated/cased name variants (Haiku, cached)
       4. Agency classifier — classify unique canonical names (Haiku, cached)
       5. Build classified results (code only)
+
+    For narrative PDF countries (UK, France, Germany, Japan) where DOCX/text-cache
+    parsing yields nothing, auto-detects LLM pipeline output in results.csv and
+    uses that directly (skipping steps 1-5 — the pipeline already did that work).
+
       6. Build canonical series (code only)
       7. Gap detection — find missing (agency, year), outliers, reextract queue
 
@@ -591,7 +775,102 @@ def compile_country(
     )
 
     if raw_df.empty:
-        logger.warning(f"No raw rows for {country}")
+        # ── Fallback: LLM pipeline output for narrative PDF countries ─────────
+        # For UK, France, Germany, Japan the DOCX parser and text-cache parser
+        # return nothing (narrative prose, not structured tables). Check if
+        # pipeline.py has already run LLM extraction and left results.csv.
+        # If so, use that output directly — no double LLM cost.
+        pipeline_csv = output_dir / "results.csv"
+        pipeline_df = _load_pipeline_results(pipeline_csv, country, year_range)
+
+        if not pipeline_df.empty:
+            logger.info(
+                f"[{country}] Using LLM pipeline output instead of DOCX/text-cache"
+            )
+            results_df = pipeline_df
+            results_path = country_dir / f"{country.lower().replace(' ','_')}_docx_results.csv"
+            _write_year_slice(
+                results_path,
+                results_df,
+                year_range=year_range,
+                sort_cols=["country", "year", "source_file", "page_number", "line_description_en"],
+            )
+            logger.info(f"Results → {results_path} ({len(results_df)} rows)")
+
+            # ── Agency discovery on pipeline output ───────────────────────────
+            # Convert pipeline output columns → raw_rows format so discover_agencies()
+            # can identify agencies the LLM found that aren't in the canonical list.
+            # This ensures we don't miss R&D budget lines that aren't yet hardcoded.
+            if not dry_run:
+                pipeline_as_raw = pd.DataFrame({
+                    "country":       results_df["country"],
+                    "year":          results_df["year"],
+                    "source_file":   results_df.get("source_file", ""),
+                    "entity_raw":    results_df["line_description_en"].fillna(""),
+                    "amount_current": pd.to_numeric(results_df["amount_local"], errors="coerce"),
+                    "section_name":  results_df.get("section_name_en", ""),
+                    "is_total_row":  results_df.get("item_type", "").eq("section_total"),
+                    "is_header_row": False,
+                    "table_index":   0,
+                    "row_index":     range(len(results_df)),
+                    "amount_prior":  None,
+                    "has_italic_entity": False,
+                    "cells_raw":     "[]",
+                })
+                if country == "Japan":
+                    logger.info("Agency discovery: Japan skipped (hardcoded canonical list only)")
+                else:
+                    logger.info(f"Agency discovery: {country}")
+                    discover_agencies(pipeline_as_raw, country=country, config=config)
+
+            # ── Build canonical series ─────────────────────────────────────────
+            series_df = build_canonical_series(results_df, country=country)
+
+            if not series_df.empty:
+                cname = country.lower().replace(" ", "_")
+                series_path = country_dir / f"{cname}_docx_series.csv"
+                _write_year_slice(
+                    series_path,
+                    series_df,
+                    year_range=year_range,
+                    sort_cols=["country", "canonical_name", "year", "source_file"],
+                )
+                logger.info(f"Detail series → {series_path}")
+
+                totals_df = build_totals_series(series_df, country=country)
+                if not totals_df.empty:
+                    totals_path = country_dir / f"{cname}_docx_totals.csv"
+                    _write_year_slice(
+                        totals_path,
+                        totals_df,
+                        year_range=year_range,
+                        sort_cols=["country", "canonical_name", "year"],
+                    )
+                    logger.info(f"Totals series → {totals_path}")
+
+                gap_df, _ = build_gap_report(
+                    series_df=series_df,
+                    country=country,
+                    raw_rows_csv=raw_rows_csv,
+                    output_dir=country_dir,
+                )
+                if not gap_df.empty:
+                    problems = gap_df[gap_df["gap_type"] != "ok"]
+                    if not problems.empty:
+                        logger.info(
+                            f"\nGap summary for {country}:\n" +
+                            problems[["year","canonical_name","gap_type","action","diagnosis"]]
+                            .to_string(index=False)
+                        )
+
+            build_combined_database(output_dir=output_dir)
+            return series_df
+
+        logger.warning(
+            f"No raw rows for {country}. "
+            f"For narrative PDF countries (UK/France/Germany/Japan), run "
+            f"pipeline.py first: python main.py --budget --country {country} --llm-pipeline"
+        )
         return pd.DataFrame()
 
     # ── Step 2.5: unit normalisation ─────────────────────────────────────────
@@ -625,8 +904,11 @@ def compile_country(
 
     # ── Step 3.5: agency discovery ────────────────────────────────────────────
     if not dry_run:
-        logger.info(f"Agency discovery: {country}")
-        discover_agencies(raw_df, country=country, config=config)
+        if country == "Japan":
+            logger.info("Agency discovery: Japan skipped (hardcoded canonical list only)")
+        else:
+            logger.info(f"Agency discovery: {country}")
+            discover_agencies(raw_df, country=country, config=config)
 
     # ── Step 4: agency classifier ─────────────────────────────────────────────
     registry = classify_raw_rows(
@@ -640,7 +922,12 @@ def compile_country(
     results_df = build_classified_results(raw_df, registry, country)
 
     results_path = country_dir / f"{country.lower().replace(' ','_')}_docx_results.csv"
-    results_df.to_csv(results_path, index=False)
+    _write_year_slice(
+        results_path,
+        results_df,
+        year_range=year_range,
+        sort_cols=["country", "year", "source_file", "page_number", "line_description_en"],
+    )
     logger.info(f"Results → {results_path} ({len(results_df)} rows)")
 
     # ── Step 6: canonical series ──────────────────────────────────────────────
@@ -653,7 +940,12 @@ def compile_country(
         # One row per (agency, year, source_file).
         # Use this to trace any figure back to the exact document and page.
         series_path = country_dir / f"{cname}_docx_series.csv"
-        series_df.to_csv(series_path, index=False)
+        _write_year_slice(
+            series_path,
+            series_df,
+            year_range=year_range,
+            sort_cols=["country", "canonical_name", "year", "source_file"],
+        )
         logger.info(f"Detail series → {series_path}")
 
         # ── Totals series ─────────────────────────────────────────────────────
@@ -662,7 +954,12 @@ def compile_country(
         totals_df = build_totals_series(series_df, country=country)
         if not totals_df.empty:
             totals_path = country_dir / f"{cname}_docx_totals.csv"
-            totals_df.to_csv(totals_path, index=False)
+            _write_year_slice(
+                totals_path,
+                totals_df,
+                year_range=year_range,
+                sort_cols=["country", "canonical_name", "year"],
+            )
             logger.info(f"Totals series → {totals_path}")
 
         # ── Full audit database ───────────────────────────────────────────────
@@ -673,7 +970,12 @@ def compile_country(
         audit_df = _build_full_audit(raw_df, series_df, country)
         if not audit_df.empty:
             audit_path = country_dir / f"{cname}_docx_audit.csv"
-            audit_df.to_csv(audit_path, index=False)
+            _write_year_slice(
+                audit_path,
+                audit_df,
+                year_range=year_range,
+                sort_cols=["canonical_name", "year", "source_file"],
+            )
             logger.info(f"Full audit database → {audit_path} ({len(audit_df)} rows)")
 
     # ── Step 7: gap detection ─────────────────────────────────────────────────
@@ -722,13 +1024,28 @@ def compile_country(
 
             if not series_df.empty:
                 cname = country.lower().replace(" ", "_")
-                series_df.to_csv(country_dir / f"{cname}_docx_series.csv", index=False)
+                _write_year_slice(
+                    country_dir / f"{cname}_docx_series.csv",
+                    series_df,
+                    year_range=year_range,
+                    sort_cols=["country", "canonical_name", "year", "source_file"],
+                )
                 totals_df = build_totals_series(series_df, country=country)
                 if not totals_df.empty:
-                    totals_df.to_csv(country_dir / f"{cname}_docx_totals.csv", index=False)
+                    _write_year_slice(
+                        country_dir / f"{cname}_docx_totals.csv",
+                        totals_df,
+                        year_range=year_range,
+                        sort_cols=["country", "canonical_name", "year"],
+                    )
                 audit_df = _build_full_audit(new_rows_df if new_rows_df is not None else raw_df, series_df, country)
                 if not audit_df.empty:
-                    audit_df.to_csv(country_dir / f"{cname}_docx_audit.csv", index=False)
+                    _write_year_slice(
+                        country_dir / f"{cname}_docx_audit.csv",
+                        audit_df,
+                        year_range=year_range,
+                        sort_cols=["canonical_name", "year", "source_file"],
+                    )
 
                 # Re-run gap report to show what's still missing
                 gap_df, queue_df = build_gap_report(

@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.0,
+  "entry_type": "mixed_ministry",
+  "canonical_name": "Department of Agriculture and Agri-Food",
+  "name_variants": [
+    "AAFC",
+    "Agriculture and Agri-Food Canada"
+  ],
+  "category": "unclear",
+  "notes": "This is a broad government department where R&D is one small component, not a specific R&D line."
+}

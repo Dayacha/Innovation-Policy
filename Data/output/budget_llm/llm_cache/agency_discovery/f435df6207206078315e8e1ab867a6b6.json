@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.0,
+  "entry_type": "not_rd",
+  "canonical_name": "Department of Foreign Affairs and International Trade",
+  "name_variants": [
+    "Foreign Affairs and International Trade",
+    "DFAIT",
+    "Affaires étrangères et commerce international"
+  ],
+  "category": "unclear",
+  "notes": "This entity is focused on foreign affairs and trade, not specifically on R&D."
+}

@@ -126,6 +126,17 @@ _PROTECTED_CONTAINS: list[str] = [
     "wheat research",
 ]
 
+_GENERIC_LABEL_PATTERNS: list[tuple[re.Pattern, str]] = [
+    (re.compile(r"^australian centre for$", re.IGNORECASE), "truncated partial entity"),
+    (re.compile(r"^improved health and medical knowledge programme$", re.IGNORECASE), "broad programme label"),
+    (re.compile(r"^national estate program(me)?$", re.IGNORECASE), "heritage programme, not dedicated R&D agency"),
+    (re.compile(r"^office of the renewable energy$", re.IGNORECASE), "broad policy office label"),
+    (re.compile(r"^climate change and energy efficiency programme$", re.IGNORECASE), "broad programme bucket"),
+    (re.compile(r"^hospitals and health services commission$", re.IGNORECASE), "mixed health administration body"),
+    (re.compile(r"^australian science and technology council$", re.IGNORECASE), "advisory council, not budget series"),
+    (re.compile(r"^australian institute of health$", re.IGNORECASE), "broad health entity, not stable R&D series"),
+]
+
 
 def _is_protected(desc: str) -> bool:
     desc_lower = desc.lower()
@@ -171,6 +182,10 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
 
     # Fix unit denomination for old acts first
     df = _fix_units(df)
+    if "cleaning_notes" not in df.columns:
+        df["cleaning_notes"] = ""
+    if "aggregation_role" not in df.columns:
+        df["aggregation_role"] = ""
 
     # Sanity-check: flag impossibly large amounts for known agencies
     # (likely prior-year or total-fund amount picked up by mistake)
@@ -200,6 +215,15 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
         unit = str(row.get("unit", "")).lower().strip()
 
         if _is_protected(desc_lower):
+            continue
+
+        for pat, reason in _GENERIC_LABEL_PATTERNS:
+            if pat.search(desc_lower) or pat.search(section):
+                df.at[idx, "decision"] = "review"
+                df.at[idx, "aggregation_role"] = "redundant"
+                notes[idx] = f"AU cleaner: generic label — {reason}"
+                break
+        if idx in notes:
             continue
 
         # 0a. Drop rows from procurement/admin sections regardless of line content

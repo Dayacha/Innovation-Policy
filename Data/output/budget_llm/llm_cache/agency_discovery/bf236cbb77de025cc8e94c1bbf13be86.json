@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Office of the Correctional Investigator",
+  "name_variants": [
+    "OCI",
+    "Bureau de l'enquêteur correctionnel"
+  ],
+  "category": "unclear",
+  "notes": "This entity is focused on oversight and investigation within the correctional system, not on R&D."
+}

@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.6,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Industrial Relations Council",
+  "name_variants": [
+    "CCRI",
+    "Conseil canadien des relations industrielles"
+  ],
+  "category": "unclear",
+  "notes": "The entity appears to focus on industrial relations rather than research and development."
+}

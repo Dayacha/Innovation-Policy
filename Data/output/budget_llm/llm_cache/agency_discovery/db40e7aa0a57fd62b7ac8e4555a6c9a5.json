@@ -1,0 +1,11 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Security Intelligence Service",
+  "name_variants": [
+    "CSIS"
+  ],
+  "category": "unclear",
+  "notes": "The Canadian Security Intelligence Service is focused on national security and intelligence, not R&D."
+}

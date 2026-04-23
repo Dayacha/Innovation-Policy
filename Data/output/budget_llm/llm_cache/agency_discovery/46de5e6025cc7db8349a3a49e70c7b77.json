@@ -1,0 +1,11 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "National Security and Intelligence Review Agency Secretariat",
+  "name_variants": [
+    "NSIRA Secretariat"
+  ],
+  "category": "unclear",
+  "notes": "This entity focuses on national security and intelligence oversight, not R&D."
+}

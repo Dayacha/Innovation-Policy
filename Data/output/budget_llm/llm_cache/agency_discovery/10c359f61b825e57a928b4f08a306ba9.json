@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.6,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Museum of Nature",
+  "name_variants": [
+    "CMN",
+    "Musée canadien de la nature"
+  ],
+  "category": "unclear",
+  "notes": "The entity is a museum, which primarily focuses on education and exhibition rather than dedicated R&D."
+}

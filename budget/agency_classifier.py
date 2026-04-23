@@ -37,6 +37,7 @@ import pandas as pd
 logger = logging.getLogger(__name__)
 
 REGISTRY_FILE = Path("Data/output/budget/agency_registry.csv")
+BATCH_SIZE = 25
 
 REGISTRY_COLUMNS = [
     "country",
@@ -89,9 +90,44 @@ Definitions:
 Return ONLY the JSON object. No prose.
 """
 
+_BATCH_CLASSIFY_SYSTEM = """\
+You are classifying government budget agencies.
+
+You will receive a country and a list of agency names. Return ONLY JSON in this shape:
+{
+  "results": [
+    {
+      "input_name": "<exact input agency name>",
+      "agency_type": "dedicated_rd" | "mixed_ministry" | "rd_programme" | "unclear",
+      "rd_fraction": <integer 0-100>,
+      "canonical_name": "<standardised English name>",
+      "include_in_series": <true|false>,
+      "notes": "<brief reason>"
+    }
+  ]
+}
+
+Rules:
+  - input_name must exactly match one provided agency name.
+  - Return one result for every provided agency name.
+  - Return ONLY JSON, no prose.
+"""
+
 
 def _classify_prompt(agency_name: str, country: str) -> str:
     return f"Country: {country}\nAgency name: {agency_name}"
+
+
+def _batch_classify_prompt(batch: list[tuple[str, str]]) -> str:
+    country = batch[0][0] if batch else ""
+    lines = [f"Country: {country}", "Agency names:"]
+    for i, (_, agency_name) in enumerate(batch, start=1):
+        lines.append(f'{i}. "{agency_name}"')
+    return "\n".join(lines)
+
+
+def _iter_batches(items: list[tuple[str, str]], size: int) -> list[list[tuple[str, str]]]:
+    return [items[i:i + size] for i in range(0, len(items), size)]
 
 
 # ---------------------------------------------------------------------------
@@ -203,44 +239,73 @@ def classify_agencies(
             print(f"  ... and {len(new_agencies)-20} more")
         return registry
 
+    if new_agencies:
+        logger.info(
+            f"Agency classifier LLM batches: {len(new_agencies)} uncached labels in "
+            f"{(len(new_agencies) + BATCH_SIZE - 1) // BATCH_SIZE} batches"
+        )
+
     new_rows = []
-    for ctry, agency_name in new_agencies:
-        result = client.call_json(
-            system_prompt=_CLASSIFY_SYSTEM,
-            user_prompt=_classify_prompt(agency_name, ctry),
-            max_tokens=200,
+    for batch in _iter_batches(new_agencies, BATCH_SIZE):
+        batch_result = client.call_json(
+            system_prompt=_BATCH_CLASSIFY_SYSTEM,
+            user_prompt=_batch_classify_prompt(batch),
+            max_tokens=4000,
             operation=client.OP_OTHER,
         )
 
-        if "_parse_error" in result:
-            agency_type = "unclear"
-            rd_fraction = 0
-            canonical_name = agency_name
-            include = False
-            notes = f"parse error: {result['_parse_error'][:80]}"
-        else:
-            agency_type = result.get("agency_type", "unclear")
-            rd_fraction = result.get("rd_fraction", 0)
-            canonical_name = result.get("canonical_name", agency_name)
-            include = result.get("include_in_series", False)
-            notes = result.get("notes", "")
+        parsed_results: dict[str, dict] = {}
+        if "_parse_error" not in batch_result and isinstance(batch_result.get("results"), list):
+            for item in batch_result["results"]:
+                input_name = str(item.get("input_name", "")).strip()
+                if input_name:
+                    parsed_results[input_name] = item
 
-        new_rows.append({
-            "country": ctry,
-            "agency_name": agency_name,
-            "agency_type": agency_type,
-            "rd_fraction": rd_fraction,
-            "canonical_name": canonical_name,
-            "active_years": "",
-            "include_in_series": include,
-            "notes": notes,
-            "classified_by": "llm",
-        })
+        if len(parsed_results) != len(batch):
+            logger.warning(
+                f"Agency classifier batch fallback: parsed {len(parsed_results)}/{len(batch)} "
+                "results; retrying missing labels individually"
+            )
 
-        logger.debug(
-            f"[{ctry}] {agency_name[:50]} → {agency_type} "
-            f"(rd_fraction={rd_fraction}%, include={include})"
-        )
+        for ctry, agency_name in batch:
+            result = parsed_results.get(agency_name)
+            if result is None:
+                result = client.call_json(
+                    system_prompt=_CLASSIFY_SYSTEM,
+                    user_prompt=_classify_prompt(agency_name, ctry),
+                    max_tokens=200,
+                    operation=client.OP_OTHER,
+                )
+
+            if "_parse_error" in result:
+                agency_type = "unclear"
+                rd_fraction = 0
+                canonical_name = agency_name
+                include = False
+                notes = f"parse error: {result['_parse_error'][:80]}"
+            else:
+                agency_type = result.get("agency_type", "unclear")
+                rd_fraction = result.get("rd_fraction", 0)
+                canonical_name = result.get("canonical_name", agency_name)
+                include = result.get("include_in_series", False)
+                notes = result.get("notes", "")
+
+            new_rows.append({
+                "country": ctry,
+                "agency_name": agency_name,
+                "agency_type": agency_type,
+                "rd_fraction": rd_fraction,
+                "canonical_name": canonical_name,
+                "active_years": "",
+                "include_in_series": include,
+                "notes": notes,
+                "classified_by": "llm",
+            })
+
+            logger.debug(
+                f"[{ctry}] {agency_name[:50]} → {agency_type} "
+                f"(rd_fraction={rd_fraction}%, include={include})"
+            )
 
     if new_rows:
         registry = pd.concat(

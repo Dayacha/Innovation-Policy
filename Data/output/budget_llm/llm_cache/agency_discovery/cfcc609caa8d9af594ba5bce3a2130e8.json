@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Société Radio-Canada",
+  "name_variants": [
+    "SRC",
+    "Radio-Canada"
+  ],
+  "category": "unclear",
+  "notes": "Société Radio-Canada is a public broadcaster and does not primarily focus on R&D spending."
+}

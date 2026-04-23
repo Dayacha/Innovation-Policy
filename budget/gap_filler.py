@@ -35,6 +35,13 @@ from typing import Optional
 import pandas as pd
 
 from budget import config as cfg
+from budget.agency_text_utils import (
+    agency_variants,
+    extract_snippets_from_text,
+    load_gzip_text,
+    load_shared_agency_lookup_cache,
+    save_shared_agency_lookup_cache,
+)
 from budget.canonical_series import _get_agencies_for_country
 
 logger = logging.getLogger(__name__)
@@ -69,121 +76,54 @@ def _parse_amount(text: str) -> Optional[float]:
 
 
 def _variants_lower(agency: dict) -> list[str]:
-    canonical = agency["canonical_name"]
-    variants = agency.get("name_variants", [canonical])
-    return [v.lower() for v in variants]
+    return [v.lower() for v in agency_variants(agency)]
+
+
+def _load_gap_cache(country: str, year: int, canonical_name: str, source_name: str) -> Optional[dict]:
+    return load_shared_agency_lookup_cache(country, source_name, canonical_name)
+
+
+def _save_gap_cache(country: str, year: int, canonical_name: str, source_name: str, data: dict) -> None:
+    save_shared_agency_lookup_cache(country, source_name, canonical_name, data)
 
 
 # ---------------------------------------------------------------------------
-# Phase 1 — Targeted DOCX text search
+# Phase 1 — Targeted text-cache search
 # ---------------------------------------------------------------------------
 
-def _search_docx_tables(file_path: Path, agency: dict) -> list[dict]:
-    """
-    Re-parse ALL tables in a DOCX looking for the agency's name variants.
-    No italic filter, no header exclusion — we want everything mentioning
-    this specific agency.
+def _load_text_cache(path: Path) -> str:
+    text = load_gzip_text(path)
+    if not text:
+        logger.warning(f"Could not read text cache {path.name}")
+    return text
 
-    Returns list of dicts with entity_raw, amount_current, context.
+
+def _search_text_cache(path: Path, agency: dict, max_hits: int = 3) -> list[dict]:
     """
-    try:
-        import docx  # python-docx
-    except ImportError:
-        logger.error("python-docx not installed — cannot search DOCX tables")
+    Search extracted PDF text for agency name variants and nearby amounts.
+    Returns small deterministic hits before any LLM call.
+    """
+    text = _load_text_cache(path)
+    if not text:
         return []
 
     variants = _variants_lower(agency)
+    low = text.lower()
     results = []
-
-    try:
-        doc = docx.Document(str(file_path))
-    except Exception as e:
-        logger.warning(f"Cannot open {file_path.name}: {e}")
-        return []
-
-    for t_idx, table in enumerate(doc.tables):
-        for r_idx, row in enumerate(table.rows):
-            cells = [c.text.strip() for c in row.cells]
-            # Deduplicate merged cells (python-docx repeats them)
-            seen = set()
-            unique_cells = []
-            for c in cells:
-                if c not in seen:
-                    seen.add(c)
-                    unique_cells.append(c)
-
-            row_text = " ".join(unique_cells).lower()
-
-            if not any(v in row_text for v in variants):
-                continue
-
-            # Found a row mentioning the agency — extract amounts
-            entity_raw = unique_cells[0] if unique_cells else ""
-            amounts = []
-            for cell in unique_cells[1:]:  # skip entity column
-                amt = _parse_amount(cell)
-                if amt:
-                    amounts.append(amt)
-
-            if not amounts:
-                # Maybe amount is on next row — check it
-                continue
-
-            # Take the largest amount (most likely the total, not sub-items)
-            best_amount = max(amounts)
-            results.append({
-                "entity_raw": entity_raw,
-                "amount_current": best_amount,
-                "context": " | ".join(unique_cells),
-                "table_index": t_idx,
-                "row_index": r_idx,
-                "method": "gap_fill_table",
-            })
-
-    return results
-
-
-def _search_docx_paragraphs(file_path: Path, agency: dict) -> list[dict]:
-    """
-    Search paragraph text (non-table) for agency name variants + nearby amounts.
-    Useful when an agency's amount is in a narrative or summary section.
-    """
-    try:
-        import docx
-    except ImportError:
-        return []
-
-    variants = _variants_lower(agency)
-    results = []
-
-    try:
-        doc = docx.Document(str(file_path))
-    except Exception as e:
-        return []
-
-    paragraphs = [p.text.strip() for p in doc.paragraphs if p.text.strip()]
-
-    for i, para in enumerate(paragraphs):
-        para_lower = para.lower()
-        if not any(v in para_lower for v in variants):
+    snippets = extract_snippets_from_text(text, variants, max_snippets=max_hits, before=450, after=1200)
+    for snip in snippets:
+        amt = _parse_amount(snip["text"])
+        if amt is None:
             continue
-
-        # Found a paragraph mentioning the agency — look for amounts
-        # in this paragraph and the next 3
-        context_paras = paragraphs[i:min(i + 4, len(paragraphs))]
-        context = " ".join(context_paras)
-        amt = _parse_amount(context)
-        if amt:
-            results.append({
-                "entity_raw": para[:120],
-                "amount_current": amt,
-                "context": context[:300],
-                "table_index": -1,
-                "row_index": i,
-                "method": "gap_fill_paragraph",
-            })
-            break  # one match per paragraph block is enough
-
+        results.append({
+            "entity_raw": agency["canonical_name"],
+            "amount_current": amt,
+            "context": snip["text"][:500],
+            "table_index": -1,
+            "row_index": -1,
+            "page_number": snip.get("page_number", ""),
+            "method": "gap_fill_text_cache",
+        })
     return results
 
 
@@ -191,9 +131,9 @@ def _search_docx_paragraphs(file_path: Path, agency: dict) -> list[dict]:
 # Phase 2 — LLM targeted extraction
 # ---------------------------------------------------------------------------
 
-_LLM_SYSTEM = """You are a government budget analyst. You will be given a section
-of an Australian Finance Bill (Appropriations Act). Your task is to find the
-budget appropriation for a specific agency.
+_LLM_SYSTEM = """You are a government budget analyst. You will be given text
+snippets from one government budget document. Your task is to find the budget
+appropriation for a specific agency.
 
 Respond ONLY with valid JSON:
 {
@@ -204,28 +144,24 @@ Respond ONLY with valid JSON:
   "confidence": <0.0 to 1.0>
 }
 
-If the agency appears with multiple amounts, return the largest (it is likely
-the total appropriation rather than a sub-component).
+If the agency appears with multiple amounts, return the largest only when it
+clearly represents the total appropriation rather than a sub-component.
 """
 
 
-def _llm_extract_from_docx(
-    file_path: Path,
+def _llm_extract_from_text_cache(
+    country: str,
+    cache_path: Path,
     agency: dict,
     config: dict,
     year: int,
 ) -> Optional[dict]:
     """
-    Extract text sections from a DOCX that mention the agency,
+    Extract text snippets from a cached PDF text file that mention the agency,
     then ask the LLM to identify the budget amount.
 
     Returns dict with amount_current and confidence, or None.
     """
-    try:
-        import docx
-    except ImportError:
-        return None
-
     try:
         from budget.llm_client import BudgetLLMClient
     except ImportError:
@@ -235,42 +171,43 @@ def _llm_extract_from_docx(
     variants = _variants_lower(agency)
     canonical = agency["canonical_name"]
 
-    # Collect all text snippets mentioning the agency
-    try:
-        doc = docx.Document(str(file_path))
-    except Exception as e:
-        logger.warning(f"Cannot open {file_path.name}: {e}")
+    cached = _load_gap_cache(country, year, canonical, cache_path.name)
+    if cached is not None:
+        if not cached.get("found"):
+            return None
+        amount = cached.get("amount")
+        try:
+            amount = float(amount)
+        except (TypeError, ValueError):
+            return None
+        if not (_AMOUNT_MIN <= amount <= _AMOUNT_MAX):
+            return None
+        return {
+            "amount_current": amount,
+            "entity_raw": f"{canonical} (LLM extracted)",
+            "context": cached.get("raw_text", ""),
+            "confidence": float(cached.get("confidence", 0.7)),
+            "method": "gap_fill_llm",
+            "page_number": cached.get("page_number", ""),
+        }
+
+    text = _load_text_cache(cache_path)
+    if not text:
         return None
 
-    snippets = []
-
-    # From tables
-    for table in doc.tables:
-        for row in table.rows:
-            cells = [c.text.strip() for c in row.cells]
-            row_text = " ".join(cells).lower()
-            if any(v in row_text for v in variants):
-                snippets.append(" | ".join(c for c in cells if c))
-
-    # From paragraphs
-    paragraphs = [p.text.strip() for p in doc.paragraphs if p.text.strip()]
-    for i, para in enumerate(paragraphs):
-        if any(v in para.lower() for v in variants):
-            # Include surrounding context
-            ctx = " ".join(paragraphs[max(0, i-1):min(i+3, len(paragraphs))])
-            snippets.append(ctx)
+    snippets = [s["text"] for s in extract_snippets_from_text(text, variants, max_snippets=3, before=450, after=1200)]
 
     if not snippets:
-        logger.debug(f"No text found for {canonical} in {file_path.name}")
+        logger.debug(f"No text found for {canonical} in {cache_path.name}")
+        _save_gap_cache(country, year, canonical, cache_path.name, {"found": False})
         return None
 
-    # Limit context to first 5 snippets to keep prompt small
     context_text = "\n\n".join(snippets[:5])
     if len(context_text) > 4000:
         context_text = context_text[:4000]
 
     user_prompt = (
-        f"Document: {file_path.name} (year {year})\n"
+        f"Document: {cache_path.name} (year {year})\n"
         f"Find the budget appropriation for: {canonical}\n"
         f"Also known as: {', '.join(agency.get('name_variants', [])[:5])}\n\n"
         f"Relevant document sections:\n{context_text}"
@@ -285,12 +222,26 @@ def _llm_extract_from_docx(
             operation=client.OP_EXTRACT,
         )
     except Exception as e:
-        logger.warning(f"LLM call failed for {canonical} in {file_path.name}: {e}")
+        logger.warning(f"LLM call failed for {canonical} in {cache_path.name}: {e}")
         return None
 
     if "_parse_error" in result:
         logger.warning(f"LLM JSON parse error for {canonical}: {result['_parse_error']}")
         return None
+
+    _save_gap_cache(
+        country,
+        year,
+        canonical,
+        cache_path.name,
+        {
+            "found": bool(result.get("found")),
+            "amount": result.get("amount"),
+            "raw_text": result.get("raw_text", ""),
+            "confidence": float(result.get("confidence", 0.7)),
+            "page_number": result.get("page_number", ""),
+        },
+    )
 
     if not result.get("found"):
         return None
@@ -313,6 +264,7 @@ def _llm_extract_from_docx(
         "context": result.get("raw_text", ""),
         "confidence": float(result.get("confidence", 0.7)),
         "method": "gap_fill_llm",
+        "page_number": result.get("page_number", ""),
     }
 
 
@@ -346,8 +298,6 @@ def fill_gaps(
         return pd.DataFrame()
 
     agencies = {a["canonical_name"]: a for a in _get_agencies_for_country(country)}
-    country_dir = pdf_root / country
-
     new_rows = []
     filled = 0
     failed = 0
@@ -357,52 +307,53 @@ def fill_gaps(
         f"(Phase 1: text search, Phase 2: {'LLM' if use_llm else 'disabled'})"
     )
 
-    # Group by (year, source_file) so we open each file once per year
     for (year, canonical), group in reextract.groupby(["year", "canonical_name"]):
         agency = agencies.get(canonical)
         if not agency:
             logger.debug(f"Agency {canonical} not in registry — skipping gap fill")
             continue
 
-        # Find the source file for this year
-        source_file = _find_source_file(country_dir, year)
-        if not source_file:
+        # Find extracted text cache files for this year
+        source_files = _find_source_text_files(country, year)
+        if not source_files:
             logger.debug(f"No source file found for {country} {year}")
             failed += len(group)
             continue
 
-        # ── Phase 1: table + paragraph search ────────────────────────────────
-        table_hits = _search_docx_tables(source_file, agency)
-        para_hits = _search_docx_paragraphs(source_file, agency)
-        all_hits = table_hits + para_hits
-
         found_row = None
-        if all_hits:
-            # Pick the hit with the largest amount (most likely the agency total)
-            best = max(all_hits, key=lambda h: h["amount_current"])
-            found_row = best
-            logger.info(
-                f"[{country}] Phase 1 found {canonical} {year}: "
-                f"{best['amount_current']:,.0f} in {source_file.name} "
-                f"via {best['method']}"
-            )
-
-        # ── Phase 2: LLM extraction ───────────────────────────────────────────
-        if found_row is None and use_llm:
-            llm_result = _llm_extract_from_docx(source_file, agency, config, year)
-            if llm_result:
-                found_row = llm_result
+        found_source: Optional[Path] = None
+        for source_file in source_files:
+            # ── Phase 1: targeted text-cache search ─────────────────────────
+            text_hits = _search_text_cache(source_file, agency)
+            if text_hits:
+                best = max(text_hits, key=lambda h: h["amount_current"])
+                found_row = best
+                found_source = source_file
                 logger.info(
-                    f"[{country}] Phase 2 found {canonical} {year}: "
-                    f"{llm_result['amount_current']:,.0f} in {source_file.name} "
-                    f"(confidence={llm_result['confidence']:.2f})"
+                    f"[{country}] Phase 1 found {canonical} {year}: "
+                    f"{best['amount_current']:,.0f} in {source_file.name} "
+                    f"via {best['method']}"
                 )
+                break
+
+            # ── Phase 2: LLM extraction on text snippets ───────────────────
+            if use_llm:
+                llm_result = _llm_extract_from_text_cache(country, source_file, agency, config, year)
+                if llm_result:
+                    found_row = llm_result
+                    found_source = source_file
+                    logger.info(
+                        f"[{country}] Phase 2 found {canonical} {year}: "
+                        f"{llm_result['amount_current']:,.0f} in {source_file.name} "
+                        f"(confidence={llm_result['confidence']:.2f})"
+                    )
+                    break
 
         if found_row:
             new_rows.append({
                 "country": country,
                 "year": year,
-                "source_file": source_file.name,
+                "source_file": found_source.stem if found_source is not None else "",
                 "table_index": found_row.get("table_index", -1),
                 "row_index": found_row.get("row_index", -1),
                 "section_name": canonical,
@@ -415,6 +366,7 @@ def fill_gaps(
                 "cells_raw": found_row.get("context", ""),
                 "canonical_name": canonical,
                 "unit_note": f"gap_fill ({found_row['method']})",
+                "page_number": found_row.get("page_number", ""),
             })
             # Update gap_df
             gap_df.loc[group.index, "action"] = "filled"
@@ -434,32 +386,18 @@ def fill_gaps(
     return pd.DataFrame(new_rows) if new_rows else pd.DataFrame()
 
 
-def _find_source_file(country_dir: Path, year: int) -> Optional[Path]:
+def _find_source_text_files(country: str, year: int) -> list[Path]:
     """
-    Find the primary (lowest Act number) DOCX for a given country/year.
-    Prefers 'No1' files as the primary appropriation act.
+    Find extracted text cache files for a given country/year.
+    Returns all matching cache files so supplementary acts can also be searched.
     """
+    country_dir = Path(cfg.PDF_TEXT_CACHE_DIR) / country
     if not country_dir.exists():
-        return None
+        return []
 
-    _YEAR_PAT = re.compile(r"(?<![0-9])(" + str(year) + r")(?![0-9])")
-    _ACT_NO = re.compile(r"\bNo\.?\s*(\d+)\b", re.IGNORECASE)
-
-    candidates = []
-    for path in country_dir.iterdir():
-        if not path.suffix.lower() in (".docx",):
-            continue
-        if _YEAR_PAT.search(path.stem):
-            m = _ACT_NO.search(path.stem)
-            act_num = int(m.group(1)) if m else 999
-            candidates.append((act_num, path))
-
-    if not candidates:
-        return None
-
-    # Return the primary act (lowest number = annual appropriation, not supplementary)
-    candidates.sort(key=lambda x: x[0])
-    return candidates[0][1]
+    year_pat = re.compile(r"(?<![0-9])(" + str(year) + r")(?![0-9])")
+    candidates = [p for p in sorted(country_dir.glob("*.txt.gz")) if year_pat.search(p.name)]
+    return candidates
 
 
 # ---------------------------------------------------------------------------

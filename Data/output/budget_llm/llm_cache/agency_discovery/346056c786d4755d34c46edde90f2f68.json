@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Parks Canada Agency",
+  "name_variants": [
+    "Parks Canada",
+    "PCA"
+  ],
+  "category": "unclear",
+  "notes": "Parks Canada Agency primarily focuses on conservation and management of national parks, not R&D."
+}

@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": true,
+  "confidence": 0.85,
+  "entry_type": "dedicated_rd_agency",
+  "canonical_name": "Canadian Nuclear Safety Commission",
+  "name_variants": [
+    "CNSC",
+    "Commission canadienne de sûreté nucléaire"
+  ],
+  "category": "science_agency",
+  "notes": "The Canadian Nuclear Safety Commission is primarily responsible for regulating nuclear safety and conducting research related to nuclear safety."
+}

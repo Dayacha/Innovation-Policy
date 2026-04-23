@@ -44,6 +44,10 @@ _RE_AMOUNT = re.compile(r"^–?\s*([\d,]+)\s*$")
 # Regex for fiscal year in filename e.g. "2023-24" or "2023-2024"
 _RE_FISCAL_YEAR = re.compile(r"(\d{4})-(\d{2,4})")
 
+# Regex for older single-year act filenames like "1987-3" or "1995-2"
+# where the suffix is an act/document number, not the second fiscal-year part.
+_RE_SINGLE_YEAR_ACT = re.compile(r"(?<!\d)((?:19|20)\d{2})-(\d{1,2})(?!\d)")
+
 # Regex for vote numbers (1, 5, 1b, 5b, 10, etc.)
 _RE_VOTE = re.compile(r"^\d+[a-z]?$")
 
@@ -52,7 +56,24 @@ def _parse_fiscal_year(filename: str) -> Optional[int]:
     """Extract the first calendar year from a fiscal year string like '2023-24'."""
     m = _RE_FISCAL_YEAR.search(filename)
     if m:
-        return int(m.group(1))
+        year = int(m.group(1))
+        tail = m.group(2)
+        # Distinguish true fiscal-year strings like 2023-24 / 2023-2024 from
+        # older Canada cache filenames like 1987-3 where the suffix is just an
+        # act number. One- or two-digit tails that are far from year+1 should be
+        # treated as single-year act files, not fiscal years.
+        if len(tail) <= 2:
+            tail_num = int(tail)
+            next_two = (year + 1) % 100
+            if tail_num in {next_two, year % 100}:
+                return year
+        elif len(tail) == 4:
+            if int(tail) in {year, year + 1}:
+                return year
+
+    m_act = _RE_SINGLE_YEAR_ACT.search(filename)
+    if m_act:
+        return int(m_act.group(1))
     # Try plain 4-digit year
     m2 = re.search(r"\b(19|20)\d{2}\b", filename)
     if m2:

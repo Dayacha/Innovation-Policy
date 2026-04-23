@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Communication Canada",
+  "name_variants": [
+    "CommCan",
+    "Communications Canada"
+  ],
+  "category": "unclear",
+  "notes": "This entity is focused on communication services and does not represent identifiable R&D spending."
+}

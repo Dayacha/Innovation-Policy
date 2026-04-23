@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Artists and Producers Professional Relations Tribunal",
+  "name_variants": [
+    "Tribunal canadien des relations professionnelles artistes—producteurs",
+    "CAPPRT",
+    "Canadian Artists and Producers Tribunal"
+  ],
+  "category": "unclear",
+  "notes": "This entity deals with professional relations and does not focus on R&D activities."
+}

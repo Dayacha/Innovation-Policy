@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Public Security and Civil Protection",
+  "name_variants": [
+    "SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE",
+    "Public Security and Civil Protection (suite)"
+  ],
+  "category": "unclear",
+  "notes": "This entity is related to public security and civil protection, which does not pertain to R&D spending."
+}

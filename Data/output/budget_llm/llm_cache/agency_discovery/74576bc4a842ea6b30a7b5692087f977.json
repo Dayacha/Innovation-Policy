@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Public Security and Civil Protection (fin) Office of the Correctional Investigator",
+  "name_variants": [
+    "SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE",
+    "Office of the Correctional Investigator"
+  ],
+  "category": "unclear",
+  "notes": "This entity is related to public security and civil protection, not R&D."
+}

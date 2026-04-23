@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.6,
+  "entry_type": "not_rd",
+  "canonical_name": "Environment and Parks Canada Agency",
+  "name_variants": [
+    "Parks Canada",
+    "Environnement et Parcs Canada"
+  ],
+  "category": "unclear",
+  "notes": "The entity appears to focus on environmental management rather than dedicated R&D activities."
+}

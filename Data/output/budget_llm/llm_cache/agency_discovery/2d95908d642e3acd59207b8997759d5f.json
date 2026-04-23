@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Foreign Affairs and International Trade",
+  "name_variants": [
+    "Affaires Étrangères et Commerce International",
+    "Foreign Affairs"
+  ],
+  "category": "unclear",
+  "notes": "This entry pertains to foreign affairs, which is not related to R&D spending."
+}

@@ -354,9 +354,21 @@ The following are frequently confused with innovation reforms but are OUT OF SCO
   risk finance for green transition, not R&D funding. A fund that provides equity \
   or debt for green infrastructure is a finance instrument, not an innovation \
   instrument, even if it accelerates the green transition.
-· Physical energy and transport infrastructure — wind farms, energy islands, EV \
+· Environmental deployment projects — wind farms, solar farms, energy islands, EV \
   charging networks, electricity grids, and transport networks are deployment \
-  projects, not research programmes. Do not classify as research_infrastructure.
+  projects, not research programmes. Do not classify as research_infrastructure. \
+  Ask: does the money go to researchers and labs, or to project developers and \
+  investors? If the latter, do not extract.
+· Environmental regulation — carbon pricing, emissions trading schemes (ETS), \
+  environmental taxes, and pollution standards are regulatory instruments, not \
+  R&D instruments. Do not extract unless the reform explicitly funds a research \
+  programme (e.g., revenues earmarked for climate R&D).
+· Climate/green policy that funds deployment but not research — subsidies for \
+  renewable energy installation, building retrofits, EV purchase incentives, and \
+  green bonds are deployment finance. Only extract if the reform explicitly \
+  allocates budget to R&D, technology development, or knowledge transfer \
+  (e.g., a programme funding research into hydrogen technology is in scope; \
+  a subsidy for installing hydrogen fuelling stations is not).
 · National digitalisation or AI strategies — policies promoting digital adoption \
   or transformation among firms are NOT in scope unless they specifically fund or \
   govern R&D or technology transfer. A digitalisation strategy is out of scope; \
@@ -416,6 +428,16 @@ Classify the expected medium- to long-run effect on GDP per capita:
 - "implemented": the reform is in force
 - "legislated": passed into law but not yet implemented
 - "announced": officially announced but not yet legislated
+
+── TEMPORAL YEAR ASSIGNMENT ─────────────────────────────────────────────────────
+- When a year appears as a range or slash notation (e.g., "1991/1992", \
+"2019/20", "2021–2022", "between 2018 and 2019"), always use the FIRST \
+(earlier) year. Never average years and never use the later year. \
+Set the corresponding confidence to "medium".
+- When two different years are mentioned for the same event, use the \
+earlier one.
+- If a year cannot be reliably identified in the text, use null — do \
+not guess or impute the survey year unless no other information is available.
 
 ── IMPORTANCE ───────────────────────────────────────────────────────────────────
 - is_major_reform=true / importance_bucket=3: structural, system-wide change \
@@ -484,9 +506,22 @@ not extract it, even if the reform concerns green or digital technology.
 COMMON FALSE POSITIVES — DO NOT EXTRACT:
 · Green finance / investment funds — capital deployment for green \
 transition is a finance instrument, not an innovation instrument.
+· Environmental deployment projects — wind farms, solar farms, energy \
+islands, EV charging networks, grids, building retrofits, and green \
+bonds are deployment finance. Ask: does the money go to researchers \
+and labs, or to project developers and investors? If the latter, \
+do not extract.
+· Environmental regulation — carbon pricing, emissions trading schemes, \
+environmental taxes, and pollution standards are not R&D instruments. \
+Do not extract unless reform revenue is explicitly earmarked for \
+a research programme.
+· Climate/green policy that funds deployment but not research — only \
+extract if the reform explicitly allocates budget to R&D, technology \
+development, or knowledge transfer. A renewable energy deployment \
+subsidy is out of scope; a programme funding research into that \
+technology is in scope.
 · Physical energy, transport, or communications infrastructure — \
-wind farms, EV charging networks, grids, and cables are deployment \
-projects. Do NOT classify as research_infrastructure.
+Do NOT classify as research_infrastructure.
 · National digitalisation or AI strategies — in scope only if they \
 specifically fund or govern R&D or technology transfer. A general \
 digitalisation strategy is out of scope.
@@ -495,8 +530,6 @@ digitalisation strategy is out of scope.
 Do not extract unless the text also states the government has adopted \
 or is implementing the recommendation.
 · Macroeconomic / policy-analysis modelling tools — not R&D programmes.
-· Carbon pricing, emissions trading, environmental regulations — not \
-innovation instruments unless they explicitly fund R&D activity.
 
 For research_infrastructure: only classify as such if the infrastructure \
 directly enables scientific research (labs, supercomputers, HPC, science \
@@ -627,6 +660,12 @@ executive legal procedure.
 - "implementation_year": When the policy began to be implemented, applied, \
 enforced, rolled out and put into effect or force.
 - If any year cannot be reliably identified in the text, use null for that field.
+- YEAR RANGES AND AMBIGUOUS DATES: When the text expresses a year as a range \
+or slash notation (e.g., "1991/1992", "2019/20", "2021–2022", "between 2018 \
+and 2019"), always use the FIRST (earlier) year. Never average, never use the \
+later year. Set confidence to "medium" when a range was present.
+- When two different years are mentioned in the same sentence for the same \
+event, use the earlier one and note the ambiguity in the relevant rationale field.
 - CRITICAL: For each year field that is non-null, also provide a source and \
 a confidence level:
   - source — one of:
@@ -771,8 +810,11 @@ name for this specific component. Use null if standalone.
 "mixed", "unclear_or_neutral".
 12. "growth_orientation_rationale": 1-2 sentences on the economic mechanism.
 13. "growth_orientation_confidence": "high", "medium", or "low".
-14. "implementation_year": Year the reform took effect. Null if unclear.
-15. "announcement_year": Year publicly announced, if distinct. Null otherwise.
+14. "implementation_year": Year the reform took effect. Null if unclear. \
+If the text gives a range (e.g., "1991/1992", "2019–2020"), use the \
+FIRST (earlier) year and set implementation_year_confidence to "medium".
+15. "announcement_year": Year publicly announced, if distinct. Null otherwise. \
+Same rule for ranges: always use the first year.
 16. "announcement_year_source": "explicit", "inferred", or "imputed_survey_year". \
 Null if announcement_year is null.
 17. "announcement_year_confidence": "high", "medium", or "low". \

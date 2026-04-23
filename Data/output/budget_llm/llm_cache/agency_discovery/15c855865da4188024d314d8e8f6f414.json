@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Commissioner of the Federal Judiciary",
+  "name_variants": [
+    "COMMISSIONER OF THE FEDERAL JUDICIARY",
+    "COMMISSAIRE À LA MAGISTRATURE FÉDÉRALE"
+  ],
+  "category": "unclear",
+  "notes": "This entity is related to the judiciary and does not pertain to R&D spending."
+}

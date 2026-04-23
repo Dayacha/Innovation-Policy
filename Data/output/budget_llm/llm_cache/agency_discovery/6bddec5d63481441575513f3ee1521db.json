@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Office of the Ethics Commissioner",
+  "name_variants": [
+    "Ethics Commissioner",
+    "Commissioner of Ethics"
+  ],
+  "category": "unclear",
+  "notes": "This entity is focused on ethics oversight and does not pertain to R&D spending."
+}

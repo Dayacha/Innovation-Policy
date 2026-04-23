@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Forces Grievance Committee",
+  "name_variants": [
+    "CF Grievance Committee",
+    "Comité des griefs des Forces canadiennes"
+  ],
+  "category": "unclear",
+  "notes": "This entity deals with grievances and is not related to R&D spending."
+}

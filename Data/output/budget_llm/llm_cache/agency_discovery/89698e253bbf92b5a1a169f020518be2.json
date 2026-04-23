@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canada Mortgage and Housing Corporation",
+  "name_variants": [
+    "CMHC",
+    "Canada Mortgage and Housing Corp"
+  ],
+  "category": "unclear",
+  "notes": "This entity is focused on housing and mortgage services, not R&D."
+}

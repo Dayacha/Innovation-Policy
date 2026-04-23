@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.6,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Heritage Parks Canada Agency",
+  "name_variants": [
+    "Parks Canada",
+    "PATRIMOINE CANADIEN",
+    "Parks Canada Agency"
+  ],
+  "category": "unclear",
+  "notes": "This agency primarily focuses on heritage and park management, not specifically on R&D."
+}

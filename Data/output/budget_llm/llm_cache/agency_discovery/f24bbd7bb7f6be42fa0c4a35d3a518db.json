@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "mixed_ministry",
+  "canonical_name": "Department of Foreign Affairs and International Trade",
+  "name_variants": [
+    "DFAT",
+    "Affaires étrangères et commerce international",
+    "Foreign Affairs and International Trade Canada"
+  ],
+  "category": "unclear",
+  "notes": "This department primarily focuses on foreign affairs and trade, not specifically on R&D."
+}

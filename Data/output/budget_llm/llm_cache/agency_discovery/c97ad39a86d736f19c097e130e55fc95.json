@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Library of Parliament",
+  "name_variants": [
+    "Parliamentary Library",
+    "Bibliothèque du Parlement"
+  ],
+  "category": "unclear",
+  "notes": "The Library of Parliament primarily provides research and information services to Parliament, not R&D."
+}

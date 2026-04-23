@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "mixed_ministry",
+  "canonical_name": "Human Resources and Skills Development Department",
+  "name_variants": [
+    "HRSDC",
+    "Ressources humaines et développement des compétences",
+    "Human Resources and Skills Development"
+  ],
+  "category": "unclear",
+  "notes": "This department primarily focuses on human resources and skills development, not specifically on R&D."
+}

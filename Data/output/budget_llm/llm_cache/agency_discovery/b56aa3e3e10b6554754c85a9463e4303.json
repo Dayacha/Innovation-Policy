@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Heritage",
+  "name_variants": [
+    "Canadian Heritage",
+    "Patrimoine canadien"
+  ],
+  "category": "unclear",
+  "notes": "Canadian Heritage is primarily focused on culture and heritage, not R&D."
+}

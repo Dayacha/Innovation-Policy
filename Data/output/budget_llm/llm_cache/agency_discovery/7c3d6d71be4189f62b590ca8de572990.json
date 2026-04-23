@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Offices of the Information and Privacy Commissioners of Canada",
+  "name_variants": [
+    "Information Commissioner of Canada",
+    "Privacy Commissioner of Canada",
+    "OIPC Canada"
+  ],
+  "category": "unclear",
+  "notes": "This entity focuses on information and privacy oversight, not research and development."
+}

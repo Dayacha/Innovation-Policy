@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "National Film Board",
+  "name_variants": [
+    "NFB",
+    "Office national du film"
+  ],
+  "category": "unclear",
+  "notes": "The National Film Board primarily focuses on film production and distribution, not R&D."
+}

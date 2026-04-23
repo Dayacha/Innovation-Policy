@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Transportation Accident Investigation and Safety Board",
+  "name_variants": [
+    "CTAISB",
+    "Conseil privé Canadian Transportation Accident Investigation and Safety Board"
+  ],
+  "category": "unclear",
+  "notes": "This entity focuses on transportation safety investigations rather than R&D."
+}

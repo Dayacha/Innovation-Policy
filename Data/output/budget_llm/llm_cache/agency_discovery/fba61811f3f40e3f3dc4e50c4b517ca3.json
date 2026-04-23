@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Office of Infrastructure and Crown Corporations of Canada",
+  "name_variants": [
+    "OICC",
+    "Office of Infrastructure and Crown Corporations"
+  ],
+  "category": "unclear",
+  "notes": "This entity focuses on infrastructure and crown corporations, which are not primarily R&D related."
+}

@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "mixed_ministry",
+  "canonical_name": "Employment and Social Development Canada",
+  "name_variants": [
+    "ESDC",
+    "Employment and Social Development",
+    "Emploi et Développement social Canada"
+  ],
+  "category": "unclear",
+  "notes": "This entity is a broad government department where R&D is not a primary focus."
+}

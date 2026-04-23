@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Veterans Affairs Program",
+  "name_variants": [
+    "Veterans Affairs",
+    "Anciens Combattants",
+    "Veterans Affairs Canada"
+  ],
+  "category": "unclear",
+  "notes": "This program is focused on veterans' services and support, not R&D."
+}

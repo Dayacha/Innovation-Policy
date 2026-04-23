@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Treasury Board of Canada",
+  "name_variants": [
+    "TBC",
+    "Treasury Board",
+    "Conseil du Trésor"
+  ],
+  "category": "unclear",
+  "notes": "The Treasury Board is a broad government department and does not specifically focus on R&D spending."
+}

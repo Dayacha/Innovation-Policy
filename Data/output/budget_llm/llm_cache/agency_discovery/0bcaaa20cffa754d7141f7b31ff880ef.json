@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Royal Canadian Mounted Police Public Complaints Commission",
+  "name_variants": [
+    "RCMP Public Complaints Commission",
+    "SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE",
+    "RCMP PCC"
+  ],
+  "category": "unclear",
+  "notes": "This entity is related to public safety and law enforcement, not R&D."
+}

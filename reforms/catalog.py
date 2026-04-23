@@ -188,6 +188,63 @@ class SurveyCatalog:
         self.save_catalog()
         return count
 
+    def build_catalog_from_extracted_text(self, text_dir):
+        """Scan extracted_text/ for .txt files and add them to the catalog.
+
+        This lets the pipeline process surveys whose PDFs have been deleted
+        but whose text was already extracted. Entries added here get
+        status='text_extracted' so _step_analyze_reforms will pick them up.
+
+        Expected naming: {COUNTRY_CODE}_{YEAR}.txt
+        """
+        text_dir = Path(text_dir)
+        if not text_dir.exists():
+            return 0
+
+        count = 0
+        for txt_file in sorted(text_dir.glob("*.txt")):
+            name = txt_file.stem
+            parts = name.rsplit("_", 1)
+            if len(parts) != 2:
+                continue
+            country_part, year_part = parts
+            try:
+                year = int(year_part)
+            except ValueError:
+                continue
+
+            country_code = country_part.upper()
+            if country_code not in CODE_TO_NAME:
+                continue
+
+            key = f"{country_code}_{year}"
+            txt_path = str(txt_file.resolve())
+            if key not in self.catalog:
+                # Only add if not already in catalog (PDF entry takes priority)
+                self.add_entry(
+                    country_code,
+                    year,
+                    text_path=txt_path,
+                    status="text_extracted",
+                )
+                count += 1
+                logger.debug("Cataloged from text: %s %d", country_code, year)
+            else:
+                # Entry exists already. Refresh text_path when it is missing,
+                # stale (e.g. points to a different machine), or different.
+                existing_text_path = self.catalog[key].get("text_path")
+                existing_exists = (
+                    bool(existing_text_path) and Path(existing_text_path).exists()
+                )
+                if (not existing_text_path) or (not existing_exists) or (existing_text_path != txt_path):
+                    self.catalog[key]["text_path"] = txt_path
+                    if self.catalog[key].get("status") in {"pdf_available", "pending", "text_extracted"}:
+                        self.catalog[key]["status"] = "text_extracted"
+
+        self.save_catalog()
+        logger.info("Cataloged %d surveys from extracted text in %s", count, text_dir)
+        return count
+
     def build_expected_catalog(self, countries=None, start_year=1995,
                                end_year=2025):
         """Build a catalog of expected surveys based on known publication

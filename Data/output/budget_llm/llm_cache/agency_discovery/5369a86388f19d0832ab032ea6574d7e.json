@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.8,
+  "entry_type": "mixed_ministry",
+  "canonical_name": "Canadian Grain Commission",
+  "name_variants": [
+    "CGC",
+    "Commission canadienne des grains"
+  ],
+  "category": "unclear",
+  "notes": "The Canadian Grain Commission is part of the Ministry of Agriculture and Agri-Food, which encompasses broader activities beyond R&D."
+}

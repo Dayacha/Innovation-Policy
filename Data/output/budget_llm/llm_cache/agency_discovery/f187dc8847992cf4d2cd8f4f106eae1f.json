@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Centre for Occupational Health and Safety",
+  "name_variants": [
+    "CCOHS",
+    "Centre canadien d'hygiène et de sécurité au travail"
+  ],
+  "category": "unclear",
+  "notes": "The entity focuses on occupational health and safety, which does not directly represent R&D spending."
+}

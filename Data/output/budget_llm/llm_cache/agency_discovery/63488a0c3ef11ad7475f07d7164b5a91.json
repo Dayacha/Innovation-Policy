@@ -1,0 +1,11 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "National Parole Board",
+  "name_variants": [
+    "NPB"
+  ],
+  "category": "unclear",
+  "notes": "The National Parole Board is focused on parole decisions and public safety, not R&D."
+}

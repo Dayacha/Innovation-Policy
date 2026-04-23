@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "National Battlefields Commission",
+  "name_variants": [
+    "Canadian Heritage",
+    "Patrimoine Canadien",
+    "Commission des champs de bataille nationaux"
+  ],
+  "category": "unclear",
+  "notes": "The entity focuses on heritage and historical sites, not on R&D."
+}

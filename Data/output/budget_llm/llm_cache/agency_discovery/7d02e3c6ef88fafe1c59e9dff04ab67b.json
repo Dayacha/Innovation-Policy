@@ -1,0 +1,11 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "National Capital Commission",
+  "name_variants": [
+    "NCC"
+  ],
+  "category": "unclear",
+  "notes": "The National Capital Commission is primarily focused on urban planning and development, not R&D."
+}

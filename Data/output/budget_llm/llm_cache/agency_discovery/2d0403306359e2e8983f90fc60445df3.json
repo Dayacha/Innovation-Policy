@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.0,
+  "entry_type": "mixed_ministry",
+  "canonical_name": "Environment and Climate Change Canada",
+  "name_variants": [
+    "ECCC",
+    "Environment Canada"
+  ],
+  "category": "unclear",
+  "notes": "This entry likely represents a broad ministry budget, not specific R&D spending."
+}

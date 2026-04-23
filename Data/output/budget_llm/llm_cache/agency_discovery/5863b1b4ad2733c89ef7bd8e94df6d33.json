@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Museum of Civilization",
+  "name_variants": [
+    "Canadian Museum of History",
+    "CMH"
+  ],
+  "category": "unclear",
+  "notes": "The entity primarily focuses on cultural heritage and history, not R&D."
+}

@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Human Rights Tribunal",
+  "name_variants": [
+    "CHRT",
+    "Tribunal canadien des droits de la personne"
+  ],
+  "category": "unclear",
+  "notes": "This entity is focused on human rights issues, not research and development."
+}

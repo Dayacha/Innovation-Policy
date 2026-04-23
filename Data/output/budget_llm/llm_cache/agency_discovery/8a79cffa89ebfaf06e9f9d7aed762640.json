@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.6,
+  "entry_type": "mixed_ministry",
+  "canonical_name": "Natural Resources Canada",
+  "name_variants": [
+    "NRCan",
+    "Natural Resources R&D",
+    "Ressources naturelles Canada"
+  ],
+  "category": "unclear",
+  "notes": "This entry represents a broad government department where R&D is likely a small component, not a specific R&D line."
+}

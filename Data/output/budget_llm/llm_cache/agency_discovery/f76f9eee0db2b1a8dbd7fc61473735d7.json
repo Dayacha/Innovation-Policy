@@ -1,0 +1,11 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.6,
+  "entry_type": "not_rd",
+  "canonical_name": "First Nations Statistical Institute",
+  "name_variants": [
+    "FNSI"
+  ],
+  "category": "unclear",
+  "notes": "The entity focuses on statistical data rather than direct R&D activities."
+}

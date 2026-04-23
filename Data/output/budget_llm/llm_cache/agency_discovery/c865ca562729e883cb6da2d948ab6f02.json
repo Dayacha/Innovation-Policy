@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": true,
+  "confidence": 0.9,
+  "entry_type": "dedicated_rd_agency",
+  "canonical_name": "International Development Research Centre",
+  "name_variants": [
+    "IDRC",
+    "Centre de recherches pour le développement international"
+  ],
+  "category": "science_agency",
+  "notes": "The IDRC is a dedicated agency that funds and conducts research aimed at improving lives in developing countries."
+}

@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "mixed_ministry",
+  "canonical_name": "Foreign Affairs, Trade and Development",
+  "name_variants": [
+    "FAITD",
+    "Foreign Affairs and International Trade",
+    "Affaires étrangères, Commerce et Développement"
+  ],
+  "category": "unclear",
+  "notes": "This entity represents a broad government department where R&D is not the primary focus."
+}

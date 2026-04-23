@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 1.0,
+  "entry_type": "not_rd",
+  "canonical_name": "Department of Housing, Infrastructure and Communities",
+  "name_variants": [
+    "Housing Department",
+    "Infrastructure and Communities Department"
+  ],
+  "category": "not_rd",
+  "notes": "This department focuses on housing and infrastructure, which are not related to R&D."
+}

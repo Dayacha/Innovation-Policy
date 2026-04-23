@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Tourism Commission",
+  "name_variants": [
+    "CTC",
+    "Commission canadienne du tourisme"
+  ],
+  "category": "unclear",
+  "notes": "The Canadian Tourism Commission focuses on promoting tourism, which is not R&D spending."
+}

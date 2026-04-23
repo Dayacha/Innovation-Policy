@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Citizenship and Immigration Department",
+  "name_variants": [
+    "CIC",
+    "Citizenship and Immigration Canada"
+  ],
+  "category": "unclear",
+  "notes": "This department focuses on immigration and citizenship, not R&D."
+}

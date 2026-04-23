@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.95,
+  "entry_type": "not_rd",
+  "canonical_name": "Chief Electoral Officer",
+  "name_variants": [
+    "CEO",
+    "Directeur général des élections"
+  ],
+  "category": "unclear",
+  "notes": "The Chief Electoral Officer is responsible for administering elections, not for R&D spending."
+}

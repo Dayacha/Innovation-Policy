@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Office of the Public Sector Integrity Commissioner",
+  "name_variants": [
+    "Public Sector Integrity Commissioner",
+    "PSIC"
+  ],
+  "category": "unclear",
+  "notes": "This office is focused on public sector integrity and does not engage in R&D activities."
+}

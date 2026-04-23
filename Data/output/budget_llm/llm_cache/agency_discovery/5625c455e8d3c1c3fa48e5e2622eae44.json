@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.8,
+  "entry_type": "mixed_ministry",
+  "canonical_name": "Fisheries and Oceans Canada",
+  "name_variants": [
+    "DFO",
+    "Department of Fisheries and Oceans",
+    "Pêches et Océans Canada"
+  ],
+  "category": "unclear",
+  "notes": "This entity is a government department that encompasses various functions, including R&D, but is not solely dedicated to R&D."
+}

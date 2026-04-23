@@ -1,0 +1,1072 @@
+country,agency_name,agency_type,rd_fraction,canonical_name,active_years,include_in_series,notes,classified_by
+Canada,"TRÈS GRACIEUSE SOUVERAINE,",unclear,0,TRÈS GRACIEUSE SOUVERAINE,,False,Cannot determine from the name alone.,llm
+Canada,WINDSOR-DETROIT BRIDGE AUTHORITY,unclear,0,Windsor-Detroit Bridge Authority,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,VETERANS REVIEW AND APPEAL BOARD,unclear,0,Veterans Review and Appeal Board,,False,Cannot determine R&D focus from the name alone.,llm
+Canada,DEPARTMENT OF INDIGENOUS SERVICES,mixed_ministry,5,Department of Indigenous Services,,False,Broad government department where R&D is a small component.,llm
+Canada,DÉFENSE NATIONALE DEPARTMENT,mixed_ministry,5,Department of National Defence,,False,Broad government department where R&D is a small component.,llm
+Canada,SCHEDULE 1.7,unclear,0,SCHEDULE 1.7,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,CONSEILLER SÉNATORIAL EN ÉTHIQUE,unclear,0,Senatorial Advisor on Ethics,,False,The name does not indicate a focus on R&D.,llm
+Canada,SCHEDULE 1,unclear,0,SCHEDULE 1,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,VIA RAIL CANADA INC.,mixed_ministry,5,VIA Rail Canada Inc.,,False,Primarily a transportation service provider with minimal R&D focus.,llm
+Canada,SOCIAL SCIENCES AND HUMANITIES RESEARCH COUNCIL,dedicated_rd,90,Social Sciences and Humanities Research Council,,True,Agency primarily focused on funding and conducting R&D in social sciences and humanities.,llm
+Canada,DIVERSIFICATION DE L’ÉCONOMIE DE L’OUEST CANADIEN,unclear,0,Diversification of Western Economic Canada,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,PUBLIC HEALTH AGENCY OF CANADA,mixed_ministry,10,Public Health Agency of Canada,,False,Broad government department where R&D is a small component.,llm
+Canada,CHAMBRE DES COMMUNES,unclear,0,House of Commons,,False,Cannot determine R&D focus from the name alone.,llm
+Canada,SCHEDULE 1.6,unclear,0,SCHEDULE 1.6,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,THE JACQUES-CARTIER AND CHAMPLAIN BRIDGES INC.,unclear,0,The Jacques-Cartier and Champlain Bridges Inc.,,False,Agency name does not provide clear indication of R&D focus.,llm
+Canada,DEPARTMENT OF NATIONAL DEFENCE,mixed_ministry,10,Department of National Defence,,False,Broad government department where R&D is a small component.,llm
+Canada,SCHEDULE 1.1,unclear,0,SCHEDULE 1.1,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,VETERANS AFFAIRS,mixed_ministry,5,Veterans Affairs Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,DEPARTMENT OF CROWN-INDIGENOUS RELATIONS AND NORTHERN AFFAIRS,mixed_ministry,5,Department of Crown-Indigenous Relations and Northern Affairs,,False,Broad government department with R&D as a small component.,llm
+Canada,NATIONAL DEFENCE,mixed_ministry,5,Department of National Defence,,False,Broad government department where R&D is a small component.,llm
+Canada,ROYAL CANADIAN MOUNTED POLICE,mixed_ministry,5,Royal Canadian Mounted Police,,False,Primarily a law enforcement agency with minimal R&D activities.,llm
+Canada,BIBLIOTHÈQUE DU PARLEMENT,unclear,0,Library of Parliament,,False,The name does not indicate a focus on R&D.,llm
+Canada,CONSEIL DU TRÉSOR SECRETARIAT,unclear,0,Treasury Board Secretariat,,False,The name does not indicate a focus on R&D.,llm
+Canada,TREASURY BOARD SECRETARIAT,mixed_ministry,5,Treasury Board Secretariat,,False,Broad government department with R&D as a small component.,llm
+Canada,SCHEDULE 1.3,unclear,0,SCHEDULE 1.3,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,VETERANS AFFAIRS ANCIENS COMBATTANTS,mixed_ministry,5,Veterans Affairs Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE CANADA BORDER SERVICES AGENCY,mixed_ministry,5,Public Safety and Emergency Preparedness Canada Border Services Agency,,False,Broad government department with R&D as a small component.,llm
+Canada,COMMISSION DES PLAINTES DU PUBLIC CONTRE LA GENDARMERIE ROYALE DU CANADA,unclear,0,Commission des plaintes du public contre la Gendarmerie royale du Canada,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,DEPARTMENT OF INDIGENOUS SERVICES CANADA,mixed_ministry,5,Department of Indigenous Services Canada,,False,Broad government department where R&D is a small component.,llm
+Canada,CANADA REVENUE AGENCY,mixed_ministry,5,Canada Revenue Agency,,False,"Primarily focused on tax collection and administration, with minimal R&D component.",llm
+Canada,PPP CANADA INC.,unclear,0,PPP Canada Inc.,,False,Cannot determine from the name alone.,llm
+Canada,DEPARTMENT OF EMPLOYMENT AND SOCIAL DEVELOPMENT,mixed_ministry,5,Department of Employment and Social Development,,False,Broad government department where R&D is a small component.,llm
+Canada,INDIAN AFFAIRS AND NORTHERN DEVELOPMENT AFFAIRES INDIENNES ET DU NORD CANADIEN DEPARTMENT,mixed_ministry,5,Department of Indian Affairs and Northern Development,,False,Broad government department with R&D as a small component.,llm
+Canada,VIA HFR - VIA TGF INC. VIA HFR - VIA TGF Inc.,unclear,0,VIA HFR - VIA TGF Inc.,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,TRANSPORTS MARINE ATLANTIC INC.,mixed_ministry,5,Marine Atlantic Inc.,,False,"Primarily a transportation service provider, R&D is not a main focus.",llm
+Canada,CANADA REVENUE AGENCY AGENCE DU REVENU DU CANADA,mixed_ministry,5,Canada Revenue Agency,,False,Primarily a tax collection agency with minimal R&D activities.,llm
+Canada,"DEPARTMENT OF FOREIGN AFFAIRS, TRADE AND DEVELOPMENT",mixed_ministry,5,"Department of Foreign Affairs, Trade and Development",,False,Broad government department with R&D as a small component.,llm
+Canada,DÉFENSE NATIONALE,mixed_ministry,10,Department of National Defence,,False,Broad government department where R&D is a small component.,llm
+Canada,SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE ROYAL CANADIAN MOUNTED POLICE PUBLIC COMPLAINTS COMMISSION,mixed_ministry,5,Royal Canadian Mounted Police Public Complaints Commission,,False,Broad government department with R&D as a small component.,llm
+Canada,DEPARTMENT OF INDIAN AFFAIRS AND NORTHERN DEVELOPMENT,mixed_ministry,5,Department of Indian Affairs and Northern Development,,False,Broad government department with R&D as a small component.,llm
+Canada,OFFICE OF INFRASTRUCTURE OF CANADA,mixed_ministry,10,Office of Infrastructure of Canada,,False,"Broad government department focused on infrastructure, R&D is a small component.",llm
+Canada,ROYAL CANADIAN MOUNTED POLICE PUBLIC COMPLAINTS COMMISSION,unclear,0,Royal Canadian Mounted Police Public Complaints Commission,,False,The name does not indicate a focus on R&D.,llm
+Canada,CANADA POST CORPORATION,unclear,0,Canada Post Corporation,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,TRANSPORTS,mixed_ministry,5,Department of Transport,,False,Broad government department where R&D is a small component.,llm
+Canada,SCHEDULE 1.5,unclear,0,SCHEDULE 1.5,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,TRANSPORTATION APPEAL TRIBUNAL OF CANADA,unclear,0,Transportation Appeal Tribunal of Canada,,False,The name does not indicate a focus on R&D.,llm
+Canada,THE FEDERAL BRIDGE CORPORATION LIMITED,unclear,0,The Federal Bridge Corporation Limited,,False,Cannot determine from the name alone.,llm
+Canada,SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE (suite) CORRECTIONAL SERVICE OF CANADA,mixed_ministry,5,Public Safety and Emergency Preparedness (Correctional Service of Canada),,False,Broad government department where R&D is a small component.,llm
+Canada,CONSEIL DE RECHERCHES EN SCIENCES HUMAINES,dedicated_rd,90,Social Sciences and Humanities Research Council,,True,Agency primarily focused on funding and conducting R&D in social sciences and humanities.,llm
+Canada,DEPARTMENT OF HEALTH,mixed_ministry,10,Department of Health,,False,Broad government department where R&D is a small component.,llm
+Canada,COUR CANADIENNE DE L'IMPÔT,unclear,0,Canada Revenue Agency,,False,"The name suggests a tax agency, which typically does not focus on R&D.",llm
+Canada,PARLIAMENT,unclear,0,Parliament of Canada,,False,Cannot determine R&D focus from the name alone.,llm
+Canada,VETERANS AFFAIRS ANCIENS COMBATTANTS DEPARTMENT,mixed_ministry,5,Veterans Affairs Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,INDIAN AFFAIRS AND NORTHERN DEVELOPMENT,mixed_ministry,5,Indigenous Services Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,AGENCE CANADIENNE D’ÉVALUATION ENVIRONNEMENTALE,unclear,0,Canadian Environmental Assessment Agency,,False,Cannot determine the primary focus of the agency from the name alone.,llm
+Canada,AGENCE DE LA SANTÉ PUBLIQUE DU CANADA,mixed_ministry,10,Public Health Agency of Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,COMMISSION D'EXAMEN DES PLAINTES CONCERNANT LA POLICE MILITAIRE.,unclear,0,Military Police Complaints Commission,,False,"The agency's focus is on complaints regarding military police, not R&D.",llm
+Canada,SHARED SERVICES CANADA,unclear,0,Shared Services Canada,,False,The name does not indicate a focus on R&D.,llm
+Canada,PARKS CANADA AGENCY,mixed_ministry,5,Parks Canada Agency,,False,"Primarily focused on conservation and heritage, with R&D being a small component.",llm
+Canada,WESTERN ECONOMIC DIVERSIFICATION,mixed_ministry,10,Western Economic Diversification,,False,Broad government department with R&D as a small component.,llm
+Canada,DÉCLARATIONS FINANCIÈRES DU CANADA,unclear,0,Financial Declarations of Canada,,False,The name does not provide enough information to determine if it is an R&D agency or a ministry.,llm
+Canada,DEPARTMENT,unclear,0,Department,,False,Cannot determine the specific focus or R&D component from the name alone.,llm
+Canada,DEPARTMENT OF VETERANS AFFAIRS,mixed_ministry,5,Department of Veterans Affairs,,False,Broad government department where R&D is a small component.,llm
+Canada,AFFAIRES ÉTRANGÈRES ET COMMERCE INTERNATIONAL (suite),mixed_ministry,5,Department of Foreign Affairs and International Trade,,False,Broad government department where R&D is a small component.,llm
+Canada,DEPARTMENT OF INDUSTRY,mixed_ministry,10,Department of Industry,,False,Broad government department where R&D is a small component.,llm
+Canada,DEPARTMENT OF CROWN-INDIGENOUS RELATIONS AND NORTHERN,mixed_ministry,5,Department of Crown-Indigenous Relations and Northern Affairs,,False,Broad government department with R&D as a small component.,llm
+Canada,CONSEIL D’EXAMEN DU PRIX DES MÉDICAMENTS BREVETÉS,unclear,0,Patented Medicine Prices Review Board,,False,Cannot determine the primary focus of the agency from the name alone.,llm
+Canada,CANADA MORTGAGE AND HOUSING CORPORATION,mixed_ministry,5,Canada Mortgage and Housing Corporation,,False,"Primarily focused on housing and mortgage services, with limited R&D component.",llm
+Canada,AFFAIRES INDIENNES ET,unclear,0,Indian Affairs and Northern Development,,False,Cannot determine the specific focus on R&D from the name alone.,llm
+Canada,AFFAIRES ÉTRANGÈRES ET COMMERCE INTERNATIONAL (fin) CANADIAN INTERNATIONAL,mixed_ministry,5,Global Affairs Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,AFFAIRES ÉTRANGÈRES ET COMMERCE INTERNATIONAL (fin),mixed_ministry,5,Department of Foreign Affairs and International Trade,,False,Broad government department where R&D is a small component.,llm
+Canada,COMMISSION DE VÉRITÉ ET DE RÉCONCILIATION RELATIVE AUX PENSIONNATS INDIENS,unclear,0,Truth and Reconciliation Commission of Canada,,False,Cannot determine from the name alone.,llm
+Canada,DES COMPÉTENCES DEPARTMENT,mixed_ministry,10,Department of Skills,,False,Broad government department where R&D is a small component.,llm
+Canada,"FOREIGN AFFAIRS, TRADE AND DEVELOPMENT",mixed_ministry,5,"Foreign Affairs, Trade and Development",,False,Broad government department where R&D is a small component.,llm
+Canada,ROYAL CANADIAN MOUNTED POLICE EXTERNAL REVIEW COMMITTEE,unclear,0,Royal Canadian Mounted Police External Review Committee,,False,Cannot determine from the name alone.,llm
+Canada,CANADIAN INTERNATIONAL,unclear,0,Canadian International,,False,Cannot determine the specific focus of the agency from the name alone.,llm
+Canada,TRANSPORTS OFFICE OF INFRASTRUCTURE OF CANADA,mixed_ministry,5,Transport Office of Infrastructure of Canada,,False,Broad government department where R&D is a small component.,llm
+Canada,MUSÉE CANADIEN DE LA NATURE,unclear,0,Canadian Museum of Nature,,False,Cannot determine the primary focus of the agency from the name alone.,llm
+Canada,INDIAN AND INUIT AFFAIRS PROGRAM,unclear,0,Indian and Inuit Affairs Program,,False,Cannot determine from the name alone.,llm
+Canada,PUBLIC WORKS AND GOVERNMENT SERVICES TRAVAUX PUBLICS ET SERVICES GOUVERNEMENTAUX,mixed_ministry,5,Public Works and Government Services Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,SCHEDULE 1.2,unclear,0,SCHEDULE 1.2,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,TRANSPORTS DEPARTMENT,mixed_ministry,10,Department of Transport,,False,Broad government department where R&D is a small component.,llm
+Canada,DEPARTMENT OF PUBLIC WORKS AND GOVERNMENT SERVICES,mixed_ministry,5,Department of Public Works and Government Services,,False,Broad government department where R&D is a small component.,llm
+Canada,INDIAN AFFAIRS AND NORTHERN DEVELOPMENT AFFAIRES INDIENNES ET DU NORD CANADIEN DEPARTMENT INDIAN AND INUIT AFFAIRS PROGRAM,mixed_ministry,5,Indian Affairs and Northern Development,,False,Broad government department with R&D as a small component.,llm
+Canada,SOCIÉTÉ DE DÉVELOPPEMENT DU CAP-BRETON,unclear,0,Société de Développement du Cap-Breton,,False,Cannot determine from the name alone.,llm
+Canada,DEPARTMENT OF CITIZENSHIP AND IMMIGRATION,mixed_ministry,5,Department of Citizenship and Immigration,,False,Broad government department where R&D is a small component.,llm
+Canada,STATISTIQUE CANADA,mixed_ministry,5,Statistics Canada,,False,Primarily a statistical agency with limited R&D focus.,llm
+Canada,DEPARTMENT OF FISHERIES AND OCEANS,mixed_ministry,10,Department of Fisheries and Oceans,,False,Broad government department with R&D as a small component.,llm
+Canada,SÉCURITÉ PUBLIQUE,mixed_ministry,5,Public Security,,False,Broad government department where R&D is a small component.,llm
+Canada,OFFICE OF INFRASTRUCTURE,unclear,0,Office of Infrastructure,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,DEPARTMENT OF NATURAL RESOURCES,mixed_ministry,10,Department of Natural Resources,,False,Broad government department where R&D is a small component.,llm
+Canada,RESSOURCES HUMAINES ET DÉVELOPPEMENT DES COMPÉTENCES DEPARTMENT,mixed_ministry,10,Department of Human Resources and Skills Development,,False,Broad government department where R&D is a small component.,llm
+Canada,DEPARTMENT OF JUSTICE,mixed_ministry,5,Department of Justice,,False,Broad government department where R&D is a small component.,llm
+Canada,CITOYENNETÉ ET IMMIGRATION DEPARTMENT,mixed_ministry,5,Citizenship and Immigration Department,,False,Broad government department where R&D is a small component.,llm
+Canada,COMMISSION DE LA FONCTION PUBLIQUE,unclear,0,Commission de la Fonction Publique,,False,The name does not indicate a focus on R&D.,llm
+Canada,CANADIAN HERITAGE PATRIMOINE CANADIEN PARKS CANADA AGENCY,mixed_ministry,5,Canadian Heritage Parks Canada Agency,,False,Broad government department with R&D as a small component.,llm
+Canada,GOVERNOR GENERAL,unclear,0,Governor General of Canada,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,OFFICE NATIONAL DU FILM,unclear,0,National Film Board of Canada,,False,The agency's focus is not clearly defined as solely R&D or a broad ministry.,llm
+Canada,STATISTICS CANADA,mixed_ministry,10,Statistics Canada,,False,Primarily a statistical agency with R&D as a small component.,llm
+Canada,PROGRAMME DES AFFAIRES DU NORD,unclear,0,Northern Affairs Program,,False,Cannot determine the focus of the agency from the name alone.,llm
+Canada,EMPLOYMENT AND SOCIAL DEVELOPMENT,mixed_ministry,5,Employment and Social Development Canada,,False,Broad government department where R&D is a small component.,llm
+Canada,DEPARTMENT OF TRANSPORT,mixed_ministry,10,Department of Transport,,False,Broad government department where R&D is a small component.,llm
+Canada,DEPARTMENT OF FINANCE,mixed_ministry,5,Department of Finance,,False,Broad government department where R&D is a small component.,llm
+Canada,CANADA REVENUE AGENCY AGENCE DU REVENU DU CANADA DEPARTMENT,mixed_ministry,5,Canada Revenue Agency,,False,Primarily a tax collection agency with minimal R&D activities.,llm
+Canada,AFFAIRES ÉTRANGÈRES ET COMMERCE INTERNATIONAL (ﬁ n),mixed_ministry,5,Department of Foreign Affairs and International Trade,,False,Broad government department where R&D is a small component.,llm
+Canada,AFFAIRES ÉTRANGÈRES ET,mixed_ministry,5,Department of Foreign Affairs and International Trade,,False,Broad government department where R&D is a small component.,llm
+Canada,CANADA CUSTOMS AND REVENUE AGENCY AGENCE DES DOUANES ET DU REVENU DU CANADA,mixed_ministry,5,Canada Customs and Revenue Agency,,False,"Primarily focused on customs and revenue collection, with minimal R&D component.",llm
+Canada,CANADA REVENUE AGENCY AGENCE DU REVENU DU CANADA CANADA REVENUE AGENCY,mixed_ministry,5,Canada Revenue Agency,,False,Primarily a tax collection agency with minimal R&D activities.,llm
+Canada,CORRECTIONAL SERVICE OF CANADA,mixed_ministry,5,Correctional Service of Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,AFFAIRES ÉTRANGÈRES ET COMMERCE INTERNATIONAL (ﬁ n) CANADIAN INTERNATIONAL DEVELOPMENT AGENCY,mixed_ministry,5,Global Affairs Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,PÊCHES ET OCÉANS,mixed_ministry,10,Fisheries and Oceans Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,DEPARTMENT OF THE ENVIRONMENT,mixed_ministry,10,Department of the Environment,,False,Broad government department where R&D is a small component.,llm
+Canada,AFFAIRES ÉTRANGÈRES ET COMMERCE INTERNATIONAL (fin) CANADIAN INTERNATIONAL DEVELOPMENT AGENCY,mixed_ministry,5,Global Affairs Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,DÉVELOPPEMENT DES RESSOURCES HUMAINES HUMAN RESOURCES DEVELOPMENT,mixed_ministry,10,Human Resources Development,,False,Broad government department where R&D is a small component.,llm
+Canada,AFFAIRES ÉTRANGÈRES ET COMMERCE INTERNATIONAL (suite),mixed_ministry,5,Department of Foreign Affairs and International Trade,,False,Broad government department where R&D is a small component.,llm
+Canada,CANADIAN INTERNATIONAL DEVELOPMENT AGENCY,mixed_ministry,5,Canadian International Development Agency,,False,"Broad government department focused on international development, with R&D as a small component.",llm
+Canada,PUBLIC WORKS AND GOVERNMENT SERVICES,mixed_ministry,5,Public Works and Government Services Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,NATURAL RESOURCES RESSOURCES NATURELLES DEPARTMENT,mixed_ministry,10,Natural Resources Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,CITIZENSHIP AND IMMIGRATION,mixed_ministry,5,Citizenship and Immigration Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,SERVICES PARTAGÉS CANADA,unclear,0,Shared Services Canada,,False,The name does not provide enough information to determine if it is dedicated to R&D or a broader ministry.,llm
+Canada,DEPARTMENT OF PUBLIC SAFETY AND EMERGENCY PREPAREDNESS,mixed_ministry,5,Department of Public Safety and Emergency Preparedness,,False,Broad government department where R&D is a small component.,llm
+Canada,CANADA BORDER SERVICES AGENCY,mixed_ministry,5,Canada Border Services Agency,,False,"Primarily focused on border services, with minimal R&D component.",llm
+Canada,PUBLIC WORKS AND GOVERNMENT SERVICES TRAVAUX PUBLICS ET SERVICES GOUVERNEMENTAUX DEPARTMENT,mixed_ministry,5,Public Works and Government Services Department,,False,Broad government department where R&D is a small component.,llm
+Canada,DES COMPÉTENCES DEPARTMENT (HUMAN RESOURCES AND SKILLS DEVELOPMENT),mixed_ministry,10,Department of Human Resources and Skills Development,,False,Broad government department where R&D is a small component.,llm
+Canada,BUREAU D'INFORMATION DU CANADA,unclear,0,Bureau d'Information du Canada,,False,Cannot determine from the name alone.,llm
+Canada,SOCIÉTÉ RADIO-CANADA,unclear,0,Société Radio-Canada,,False,Cannot determine from the name alone.,llm
+Canada,FEDERAL-PROVINCIAL TRANSFERS PROGRAM,unclear,0,Federal-Provincial Transfers Program,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,RESSOURCES HUMAINES ET DÉVELOPPEMENT DES COMPÉTENCES CANADA MORTGAGE AND HOUSING CORPORATION,mixed_ministry,5,Human Resources and Skills Development Canada Mortgage and Housing Corporation,,False,Broad government department with R&D as a small component.,llm
+Canada,CORPORATION COMMERCIALE CANADIENNE,unclear,0,Canadian Commercial Corporation,,False,Cannot determine the focus of the agency from the name alone.,llm
+Canada,AGRICULTURE AND AGRI-FOOD AGRICULTURE ET AGROALIMENTAIRE DEPARTMENT,mixed_ministry,10,Department of Agriculture and Agri-Food,,False,Broad government department where R&D is a small component.,llm
+Canada,COMMISSION CANADIENNE DES GRAINS,unclear,0,Canadian Grain Commission,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,VETERANS AFFAIRS PROGRAM,mixed_ministry,5,Veterans Affairs Program,,False,"Part of a broader ministry focused on veterans' services, with R&D being a minor component.",llm
+Canada,CANADIAN BROADCASTING CORPORATION,mixed_ministry,5,Canadian Broadcasting Corporation,,False,Primarily a broadcasting organization with limited R&D activities.,llm
+Canada,PUBLIC WORKS AND GOVERNMENT SERVICES TRAVAUX PUBLICS ET SERVICES GOUVERNEMENTAUX DEPARTMENT GOVERNMENT SERVICES PROGRAM,mixed_ministry,5,Public Works and Government Services Canada,,False,Broad government department where R&D is a small component.,llm
+Canada,SERVICE CANADIEN DU RENSEIGNEMENT DE SÉCURITÉ,unclear,0,Canadian Security Intelligence Service,,False,"The agency's primary focus is on national security and intelligence, not R&D.",llm
+Canada,OFFICE NATIONAL DE L’ÉNERGIE,mixed_ministry,10,National Energy Board,,False,Broad government department with R&D as a small component.,llm
+Canada,CANADIAN HERITAGE PATRIMOINE CANADIEN DEPARTMENT,mixed_ministry,5,Canadian Heritage,,False,Broad government department where R&D is a small component.,llm
+Canada,NATURAL SCIENCES AND ENGINEERING RESEARCH COUNCIL,dedicated_rd,90,Natural Sciences and Engineering Research Council,,True,Agency primarily funds R&D in natural sciences and engineering.,llm
+Canada,CANADIAN INSTITUTES OF HEALTH RESEARCH,dedicated_rd,90,Canadian Institutes of Health Research,,True,Agency primarily focused on health research funding.,llm
+Canada,AFFAIRES ÉTRANGÈRES ET COMMERCE INTERNATIONAL DEPARTMENT,mixed_ministry,5,Department of Foreign Affairs and International Trade,,False,Broad government department where R&D is a small component.,llm
+Canada,LE RÉSEAU DU LEADERSHIP,unclear,0,LE RÉSEAU DU LEADERSHIP,,False,Cannot determine from the name alone.,llm
+Canada,CANADIAN CENTRE FOR OCCUPATIONAL HEALTH AND SAFETY,mixed_ministry,10,Canadian Centre for Occupational Health and Safety,,False,"Primarily focused on occupational health and safety, with R&D as a small component.",llm
+Canada,CANADIAN FOOD INSPECTION AGENCY,mixed_ministry,10,Canadian Food Inspection Agency,,False,"Primarily focused on food safety and inspection, with R&D as a small component.",llm
+Canada,CORRECTIONAL SERVICE,mixed_ministry,5,Correctional Service Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,ENVIRONMENT ENVIRONNEMENT PARKS CANADA AGENCY,mixed_ministry,10,Environment and Parks Canada Agency,,False,Broad government department where R&D is a small component.,llm
+Canada,SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE ROYAL CANADIAN MOUNTED POLICE,mixed_ministry,5,Public Safety and Emergency Preparedness Royal Canadian Mounted Police,,False,Broad government department with R&D as a small component.,llm
+Canada,SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE (suite) CORRECTIONAL SERVICE,mixed_ministry,5,Public Safety and Emergency Preparedness (Correctional Service),,False,Broad government department with R&D as a small component.,llm
+Canada,RESSOURCES NATURELLES NATURAL RESOURCES,mixed_ministry,10,Natural Resources Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,CROWN CORPORATIONS PROGRAM,unclear,0,Crown Corporations Program,,False,Cannot determine the specific focus on R&D from the name alone.,llm
+Canada,DEPARTMENT OF CANADIAN HERITAGE,mixed_ministry,5,Department of Canadian Heritage,,False,Broad government department where R&D is a small component.,llm
+Canada,COMMISSIONER FOR FEDERAL JUDICIAL AFFAIRS,unclear,0,Commissioner for Federal Judicial Affairs,,False,Cannot determine from the name alone.,llm
+Canada,DEPARTMENT FEDERAL-PROVINCIAL TRANSFERS PROGRAM,unclear,0,Department Federal-Provincial Transfers Program,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,AGRICULTURE ET AGROALIME1\iTAIRE,mixed_ministry,10,Agriculture and Agri-Food Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,AGRICULTURE ET AGROALIMENTAIRE AGRICULTURE AND AGRI,mixed_ministry,10,Agriculture and Agri-Food Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,SCHEDULE 2,unclear,0,SCHEDULE 2,,False,Cannot determine from the name alone.,llm
+Canada,DEPARTMENT FEDERAL:PROVINC' IAL illANSF'ERS i'ROdRAM,unclear,0,Federal-Provincial Transfers Program,,False,The name does not provide clear information about R&D focus.,llm
+Canada,ATOMIC ENERGY OF CANADA LIMITED,dedicated_rd,90,Atomic Energy of Canada Limited,,True,Primarily focused on nuclear R&D and related activities.,llm
+Canada,AGRICULTURE ET AGROALIMENTAIRE AGRICULTURE AND AGIU -FOOD,mixed_ministry,10,Agriculture and Agri-Food Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,COMMISSION DU DROIT D’AUTEUR,unclear,0,Copyright Commission,,False,The agency's focus on copyright law does not clearly indicate a primary role in R&D.,llm
+Canada,DEPARTMENT OF AGRICULTURE AND AGRI-FOOD,mixed_ministry,10,Department of Agriculture and Agri-Food,,False,Broad government department where R&D is a small component.,llm
+Canada,AFFAIRES ÉTRANGÈRES ET COMMERCE INTERNATIONAL (suite) CANADIAN INTERNATIONAL DEVELOPMENT AGENCY,mixed_ministry,5,Global Affairs Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,REVENDICATIONS PARTICULIÈRES,unclear,0,REVENDICATIONS PARTICULIÈRES,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,COPYRIGHT BOARD,unclear,0,Copyright Board,,False,"The agency's focus is on copyright matters, not R&D.",llm
+Canada,FISHERIES AND OCEANS,mixed_ministry,10,Department of Fisheries and Oceans Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,THE SENATE,unclear,0,The Senate,,False,Cannot determine from the name alone.,llm
+Canada,CANADIAN HERITAGE,mixed_ministry,5,Canadian Heritage,,False,Broad government department with R&D as a small component.,llm
+Canada,SECRÉTARIAT,unclear,0,SECRETARIAT,,False,Cannot determine the specific focus or function of the agency from the name alone.,llm
+Canada,NATIONAL RESEARCH COUNCIL OF CANADA,dedicated_rd,90,National Research Council of Canada,,True,Primarily focused on conducting and funding R&D.,llm
+Canada,DÉVELOPPEMENT DES RESSOURCES HUMAINES DEPARTMENT,mixed_ministry,10,Department of Human Resources Development,,False,Broad government department where R&D is a small component.,llm
+Canada,SOLLICITEUR GÉNÉRAL (fin) ROYAL CANADIAN MOUNTED POLICE,mixed_ministry,5,Royal Canadian Mounted Police,,False,Broad government department where R&D is a small component.,llm
+Canada,AFFAIRES ÉTRANGÈRES ET COMMERCE INTERNATIONAL DEPARTMENT(FOREIGN AFFAIRS),mixed_ministry,5,Department of Foreign Affairs and International Trade,,False,Broad government department where R&D is a small component.,llm
+Canada,OFFICE NATIONAL DE L'ÉNERGIE,mixed_ministry,10,National Energy Board,,False,Broad government department with R&D as a small component.,llm
+Canada,AFFAIRES ÉTRANGÈRES ET COMMERCE INTERNATIONAL DEPARTMENT (FOREIGN AFFAIRS),mixed_ministry,5,Department of Foreign Affairs and International Trade,,False,Broad government department where R&D is a small component.,llm
+Canada,CANADIAN TRANSPORTATION AGENCY,mixed_ministry,5,Canadian Transportation Agency,,False,Broad government department where R&D is a small component.,llm
+Canada,CANADIAN HERITAGE PATRIMOINE CANADIEN CANADIAN BROADCASTING CORPORATION,mixed_ministry,5,Canadian Broadcasting Corporation,,False,Broad government department with R&D as a small component.,llm
+Canada,CONSEIL D'EXAMEN DU PRIX DES MÉDICAMENTS BREVETÉS,unclear,0,Patented Medicine Prices Review Board,,False,"The agency's focus is on reviewing drug prices, not primarily on R&D.",llm
+Canada,CANADIAN AIR TRANSPORT SECURITY AUTHORITY,mixed_ministry,5,Canadian Air Transport Security Authority,,False,"Primarily focused on transportation security, R&D is a minor component.",llm
+Canada,SCHEDULE 1.8,unclear,0,SCHEDULE 1.8,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,ÉTRANGÈRES),unclear,0,ÉTRANGÈRES,,False,Cannot determine from the name alone.,llm
+Canada,PUBLIC SAFETY AND EMERGENCY PREPAREDNESS,mixed_ministry,5,Public Safety and Emergency Preparedness Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,BUREAU DE L'ENQUÊTEUR CORRECTIONNEL,unclear,0,Office of the Correctional Investigator,,False,Cannot determine from the name alone.,llm
+Canada,NATURAL RESOURCES,mixed_ministry,10,Natural Resources Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,CONSEIL CANADIEN DES NORMES,unclear,0,Canadian Standards Council,,False,The name does not clearly indicate a focus on R&D.,llm
+Canada,PUBLIC WORKS AND GOVERNMENT SERVICES' TRAVAUX PUBLICS ET SERVICES GOUVERNEMENTAUX DEPARTMENT GOVERNMENT SERVICES PROGRAM,mixed_ministry,5,Public Works and Government Services Canada,,False,Broad government department where R&D is a small component.,llm
+Canada,CONSEIL DU TRÉSOR (Iin),unclear,0,Treasury Board of Canada,,False,Cannot determine from the name alone.,llm
+Canada,ADMINISTRATION DU PIPE-LINE DU NORD,unclear,0,Administration du Pipe-Line du Nord,,False,Cannot determine from the name alone.,llm
+Canada,SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE DEPARTMENT,mixed_ministry,5,Public Safety and Emergency Preparedness Canada,,False,Broad government department where R&D is a small component.,llm
+Canada,ENVIRONMENT ENVIRONNEMENT DEPARTMENT,mixed_ministry,10,Environment and Climate Change Canada,,False,Broad government department where R&D is a small component.,llm
+Canada,PARTICULIÈRES DES INDIENS,unclear,0,PARTICULIÈRES DES INDIENS,,False,Cannot determine the agency's focus or budget allocation from the name alone.,llm
+Canada,COMMUNICATIONS SECURITY ESTABLISHMENT,mixed_ministry,10,Communications Security Establishment,,False,"Primarily focused on cybersecurity and information assurance, with R&D as a small component.",llm
+Canada,ADMINISTRATION DU PIPE-UNE DU NORD,unclear,0,Administration du Pipe-Une du Nord,,False,Cannot determine from the name alone.,llm
+Canada,BUREAU DU SURINTENDANT DES INSTITUTIONS FINANCIÈRES,mixed_ministry,5,Office of the Superintendent of Financial Institutions,,False,Broad government department with R&D as a small component.,llm
+Canada,NATURAL RESOURCES RESSOURCES NATURELLES CANADIAN NUCLEAR SAFETY COMMISSION,mixed_ministry,10,Natural Resources Canada - Canadian Nuclear Safety Commission,,False,Broad government department with R&D as a small component.,llm
+Canada,INDIAN RESIDENTIAL SCHOOLS TRUTH AND RECONCILIATION COMMISSION,unclear,0,Indian Residential Schools Truth and Reconciliation Commission,,False,The agency's focus is on truth and reconciliation rather than R&D.,llm
+Canada,AGRICULTURE AND AGRI-FOOD,mixed_ministry,10,Agriculture and Agri-Food Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,ÉNERGIE ATOMIQUE DU CANADA umÉrÉÉ,unclear,0,Atomic Energy of Canada Limited,,False,"The name suggests a focus on energy and atomic research, but further information is needed to classify.",llm
+Canada,POUR LES RÉGIONS DU QUÉBEC ECONOMIC DEVELOPMENT AGENCY OF CANADA FOR THE REGIONS OF QUEBEC,unclear,0,Economic Development Agency of Canada for the Regions of Quebec,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,ATLANTIC CANADA OPPORTUNITIES AGENCY,mixed_ministry,10,Atlantic Canada Opportunities Agency,,False,"Broad government agency focused on economic development, with R&D as a small component.",llm
+Canada,CANADIAN MUSEUM OF NATURE,mixed_ministry,10,Canadian Museum of Nature,,False,Primarily a museum with some R&D activities related to natural history.,llm
+Canada,PROGRAMME D'ADMINISTRATION,unclear,0,ADMINISTRATION PROGRAMME,,False,The name does not provide enough information to determine if it is dedicated to R&D or a broader ministry.,llm
+Canada,COMITÉ EXTERNE D’EXAMEN DE LA GENDARMERIE ROYALE DU CANADA,unclear,0,External Review Committee of the Royal Canadian Mounted Police,,False,Cannot determine the agency's focus or budget allocation from the name alone.,llm
+Canada,ENVIRONMENT,mixed_ministry,10,Department of the Environment,,False,Broad government department where R&D is a small component.,llm
+Canada,COUR SUPRÊME DU CANADA,mixed_ministry,0,Supreme Court of Canada,,False,"The agency is a judicial body, not focused on R&D.",llm
+Canada,OFFICE DES TRANSPORTS DU CANADA,mixed_ministry,5,Transport Canada,,False,Broad government department where R&D is a small component.,llm
+Canada,AGRICULTURE AND AGRI‑FOOD AGRICULTURE ET AGROALIMENTAIRE DEPARTMENT,mixed_ministry,10,Agriculture and Agri-Food Canada,,False,Broad government department where R&D is a small component.,llm
+Canada,TRANSPORTS CANADIAN AIR TRANSPORT SECURITY AUTHORITY,mixed_ministry,5,Canadian Air Transport Security Authority,,False,"Primarily focused on transportation security, R&D is a minor component.",llm
+Canada,CANADIAN SECURITY INTELLIGENCE SERVICE,unclear,0,Canadian Security Intelligence Service,,False,"The agency's primary focus is on national security and intelligence, not R&D.",llm
+Canada,IMMIGRATION AND REFUGEE BOARD OF CANADA,mixed_ministry,5,Immigration and Refugee Board of Canada,,False,"Primarily focused on immigration and refugee matters, with minimal R&D component.",llm
+Canada,AGENCE DE PROMOTION ÉCONOMIQUE DU CANADA ATLANTIQUE DEPARTMENT,mixed_ministry,10,Atlantic Canada Opportunities Agency,,False,Broad government department with R&D as a small component.,llm
+Canada,CANADA POUR LES RÉGIONS DU QUÉBEC,unclear,0,Canada for the Regions of Quebec,,False,Cannot determine from the name alone.,llm
+Canada,FEDERAL ECONOMIC DEVELOPMENT AGENCY FOR SOUTHERN ONTARIO,mixed_ministry,10,Federal Economic Development Agency for Southern Ontario,,False,Broad government agency focused on economic development with R&D as a small component.,llm
+Canada,TRIBUNAL DE LA CONCURRENCE,unclear,0,Competition Tribunal,,False,The name does not indicate a focus on R&D.,llm
+Canada,CANADIAN SPACE AGENCY,dedicated_rd,90,Canadian Space Agency,,True,Agency primarily focused on space-related R&D activities.,llm
+Canada,VETERANS AFFAIRS ANCIENS COMBATTANTS VETERANS AFFAIRS PROGRAM,mixed_ministry,5,Veterans Affairs Canada,,False,Broad government department where R&D is a small component.,llm
+Canada,NATURAL RESOURCES RESSOURCES NATURELLES,mixed_ministry,10,Natural Resources Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,TRANSPORTS VIA RAIL CANADA INC.,mixed_ministry,5,VIA Rail Canada Inc.,,False,Primarily a transportation service provider with minimal R&D focus.,llm
+Canada,CANADIAN ENVIRONMENTAL ASSESSMENT AGENCY,mixed_ministry,10,Canadian Environmental Assessment Agency,,False,"Agency primarily focused on environmental assessments, with R&D being a small component.",llm
+Canada,INTERNATIONAL JOINT COMMISSION (CANADIAN SECTION),unclear,0,International Joint Commission (Canadian Section),,False,Cannot determine from the name alone.,llm
+Canada,OFFICE OF INDIAN RESIDENTIAL SCHOOLS RESOLUTION OF CANADA,unclear,0,Office of Indian Residential Schools Resolution of Canada,,False,Cannot determine from the name alone.,llm
+Canada,ECONOMIC DEVELOPMENT AGENCY OF CANADA FOR THE REGIONS OF,mixed_ministry,10,Economic Development Agency of Canada for the Regions of,,False,Broad government department with R&D as a small component.,llm
+Canada,TRANSPORTS THE FEDERAL BRIDGE CORPORATION LIMITED,mixed_ministry,5,Federal Bridge Corporation Limited,,False,Primarily a transportation agency with limited R&D focus.,llm
+Canada,CONSEIL NATIONAL DE RECHERCHES DU CANADA,dedicated_rd,90,National Research Council of Canada,,True,Agency primarily conducts and funds R&D activities.,llm
+Canada,CONSEIL PRIVÉ,unclear,0,Privy Council,,False,The name does not provide enough information to determine if it is dedicated to R&D or a broad ministry.,llm
+Canada,ENVIRONNEMENT DEPARTMENT,mixed_ministry,10,Environment Department,,False,Broad government department where R&D is a small component.,llm
+Canada,HOUSE OF COMMONS,mixed_ministry,5,House of Commons,,False,Broad government department with minimal R&D focus.,llm
+Canada,COMMISSION DES LIBÉRATIONS CONDITIONNELLES DU CANADA,unclear,0,Parole Board of Canada,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,SCHEDULE 1 .2,unclear,0,SCHEDULE 1 .2,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,DE RENSEIGNEMENT DE SÉCURITÉ,unclear,0,Canadian Security Intelligence Service,,False,"The name suggests a focus on security intelligence, not R&D.",llm
+Canada,ECONOMIC DEVELOPMENT AGENCY OF CANADA FOR THE REGIONS OF QUEBEC,mixed_ministry,10,Economic Development Agency of Canada for the Regions of Quebec,,False,Broad government agency focused on economic development with R&D as a small component.,llm
+Canada,CONDITION FÉMININE — BUREAU DE LA COORDONNATRICE,unclear,0,Condition Féminine — Bureau de la Coordinatrice,,False,Cannot determine from the name alone.,llm
+Canada,SCHEDULE 1 .3,unclear,0,SCHEDULE 1 .3,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,TRIBUNAL CANADIEN DES RELATIONS PROFESSIONNELLES ARTISTES—PRODUCTEURS,unclear,0,Canadian Artists and Producers Professional Relations Tribunal,,False,The agency name does not provide clear indication of R&D focus.,llm
+Canada,SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE (suite),mixed_ministry,5,Public Safety and Emergency Preparedness,,False,Broad government department where R&D is a small component.,llm
+Canada,POUR LES RÉGIONS DU QUÉBEC,unclear,0,Pour les Régions du Québec,,False,Cannot determine the agency's focus or budget allocation from the name alone.,llm
+Canada,LIBRARY OF PARLIAMENT,unclear,0,Library of Parliament,,False,"The agency's primary function is to provide research and information services to Parliament, not primarily focused on R&D.",llm
+Canada,DEPARTMENT OF WESTERN ECONOMIC DIVERSIFICATION,mixed_ministry,10,Department of Western Economic Diversification,,False,Broad government department with R&D as a small component.,llm
+Canada,CANADA COUNCIL FOR THE ARTS,mixed_ministry,10,Canada Council for the Arts,,False,"Primarily focused on arts funding, with R&D being a minor component.",llm
+Canada,DEPARTMENT (INTERNATIONAL TRADE),mixed_ministry,5,Department of International Trade,,False,Broad government department where R&D is a small component.,llm
+Canada,CONSEIL PRIVÉ THE LEADERSHIP NETWORK,unclear,0,Conseil Privé The Leadership Network,,False,Cannot determine from the name alone.,llm
+Canada,SECRÉTARIAT DU CONSEIL DU TRÉSOR,mixed_ministry,5,Treasury Board Secretariat,,False,Broad government department with R&D as a small component.,llm
+Canada,TRAVAUX PUBLICS ET,unclear,0,Public Works and Government Services Canada,,False,The name does not specify if it is dedicated to R&D or a broader ministry.,llm
+Canada,NORTHERN AFFAIRS PROGRAM,unclear,0,Northern Affairs Program,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,INTERNATIONAL DEVELOPMENT RESEARCH CENTRE,dedicated_rd,90,International Development Research Centre,,True,Primarily focused on conducting and funding research for international development.,llm
+Canada,MARINE ATLANTIC INC.,unclear,0,Marine Atlantic Inc.,,False,Cannot determine from the name alone.,llm
+Canada,CANADIAN GRAIN COMMISSION,unclear,0,Canadian Grain Commission,,False,The agency's focus is not clearly defined as R&D or a broad ministry.,llm
+Canada,CANADIAN HUMAN RIGHTS COMMISSION,unclear,0,Canadian Human Rights Commission,,False,"The agency's focus is on human rights, not R&D.",llm
+Canada,LIBRARY AND ARCHIVES OF CANADA,mixed_ministry,5,Library and Archives of Canada,,False,"Primarily focused on archiving and library services, with limited R&D activities.",llm
+Canada,NATIONAL CAPITAL COMMISSION,unclear,0,National Capital Commission,,False,The agency's focus is not clearly defined as R&D or a broad ministry.,llm
+Canada,DIVERSIFICATION DE L'ÉCONOMIE DE L'OUEST CANADIEN,unclear,0,Western Economic Diversification Canada,,False,"The name suggests a focus on economic diversification, but it is unclear if R&D is a primary focus.",llm
+Canada,MEDICAL RESEARCH COUNCIL,dedicated_rd,90,Medical Research Council,,True,Agency primarily focused on funding and conducting medical research.,llm
+Canada,DEPARTMENT FOR WOMEN AND GENDER EQUALITY,mixed_ministry,5,Department for Women and Gender Equality,,False,Broad government department where R&D is a small component.,llm
+Canada,IMMIGRATION AND REFUGEE BOARD,mixed_ministry,5,Immigration and Refugee Board,,False,Broad government department with R&D as a small component.,llm
+Canada,PATRIMOINE CANADIEN CANADIAN HERITAGE COMMISSION DES CHAMPS DE BATAILLE NATIONAUX,unclear,0,Canadian Heritage Commission of National Battlefields,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,COMMUNICATION CANADA,unclear,0,Communication Canada,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,ARCHIVES NATIONALES DU CANADA,mixed_ministry,5,National Archives of Canada,,False,"Primarily focused on archiving and preserving national records, with minimal R&D component.",llm
+Canada,OFFICE OF THE DIRECTOR OF PUBLIC PROSECUTIONS,mixed_ministry,5,Office of the Director of Public Prosecutions,,False,"This agency is primarily focused on legal prosecution, with R&D being a minor component.",llm
+Canada,ECONOMIC DEVELOPMENT AGENCY OF CANADA FOR THE REGIONS,mixed_ministry,10,Economic Development Agency of Canada for the Regions,,False,Broad government department focused on economic development with R&D as a small component.,llm
+Canada,PACIFIC ECONOMIC DEVELOPMENT AGENCY OF CANADA,mixed_ministry,10,Pacific Economic Development Agency of Canada,,False,"Broad government department focused on economic development, R&D is a small component.",llm
+Canada,"INFRASTRUCTURE, COLLECTIVITÉS ET AFFAIRES INTERGOUVERNEMENTALES OFFICE OF INFRASTRUCTURE OF CANADA",mixed_ministry,10,Office of Infrastructure of Canada,,False,Broad government department where R&D is a small component.,llm
+Canada,PRIVY COUNCIL OFFICE,mixed_ministry,5,Privy Council Office,,False,Broad government department with limited R&D focus.,llm
+Canada,CONSEIL PRIVÉ DEPARTMENT,unclear,0,Privy Council Office,,False,The name does not provide enough information to determine if it is dedicated to R&D or a broad ministry.,llm
+Canada,COUR FÉDÉRALE DU CANADA,unclear,0,Federal Court of Canada,,False,"The name suggests a judicial body, not an R&D agency.",llm
+Canada,AGENCE SPATIALE CANADIENNE,mixed_ministry,20,Canadian Space Agency,,False,"Broad ministry with R&D as a component, but not solely dedicated to R&D.",llm
+Canada,"DEPARTMENT OF HOUSING, INFRASTRUCTURE AND COMMUNITIES",mixed_ministry,5,"Department of Housing, Infrastructure and Communities",,False,Broad government department where R&D is a small component.,llm
+Canada,"CENTRE CANADIEN D ;HYOIÈNE ET DE SÉCURITÉ AU, TRAVAIL",mixed_ministry,10,Canadian Centre for Occupational Health and Safety,,False,"Broad government department focused on health and safety, with R&D as a small component.",llm
+Canada,CONSEIL DES ARTS DU CANADA,mixed_ministry,10,Canada Council for the Arts,,False,"Primarily focused on arts funding, with R&D being a minor component.",llm
+Canada,TELEFILM CANADA,unclear,0,Telefilm Canada,,False,"The agency's focus is on supporting the Canadian film industry, which may include R&D but is not primarily an R&D agency.",llm
+Canada,SOCIÉTÉ DU 'CENTRE NATIONAL DES ARTS,unclear,0,National Arts Centre,,False,The agency name suggests a focus on arts rather than R&D.,llm
+Canada,AFFAIRES ÉTRANGÈRES ET COMMERCE INTERNATIONAL CANADIAN INTERNATIONAL DEVELOPMENT AGENCY,mixed_ministry,5,Global Affairs Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,CANADIAN HERITAGE PATRIMOINE CANADIEN CANADA COUNCIL FOR THE ARTS,mixed_ministry,5,Canadian Heritage,,False,Broad government department with R&D as a small component.,llm
+Canada,ENVIRONNEMENT,mixed_ministry,10,Environment and Climate Change Canada,,False,Broad government department where R&D is a small component.,llm
+Canada,CANADIAN TOURISM COMMISSION,mixed_ministry,5,Canadian Tourism Commission,,False,"Primarily focused on tourism promotion, with R&D being a minor component.",llm
+Canada,AFFAIRES ÉTRANGÈRES ET COMMERCE INTERNATIONAL (fin) INTERNATIONAL DEVELOPMENT RESEARCH CENTRE,dedicated_rd,90,International Development Research Centre,,True,Agency primarily focused on conducting and funding R&D for international development.,llm
+Canada,THE JACQUES CARTIER AND CHAMPLAIN BRIDGES INCORPORATED,unclear,0,The Jacques Cartier and Champlain Bridges Incorporated,,False,Agency name does not indicate a focus on R&D.,llm
+Canada,DÉFENSE NATIONALE NATIONAL DEFENCE,mixed_ministry,10,National Defence,,False,Broad government department where R&D is a small component.,llm
+Canada,NATIONAL GALLERY OF CANADA,unclear,0,National Gallery of Canada,,False,Cannot determine if the agency conducts or funds R&D based on the name alone.,llm
+Canada,COURTS ADMINISTRATION SERVICE,unclear,0,Courts Administration Service,,False,The name does not indicate a focus on R&D.,llm
+Canada,AGRICULTURE ET AGROALIMENTAIRE AGRICULTURE AND AGRI -FOOD AGENCE CANADIENNE D'INSPECTION DES ALIMENTS,mixed_ministry,10,Agriculture and Agri-Food Canada,,False,Broad government department where R&D is a small component.,llm
+Canada,BUREAU DU DIRECTEUR DES POURSUITES PÉNALES,unclear,0,Bureau du Directeur des Poursuites Pénales,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,NATURAL RESOURCES RESSOURCES NATURELLES ATOMIC ENERGY OF CANADA LIMITED,mixed_ministry,10,Natural Resources Canada Atomic Energy of Canada Limited,,False,Broad government department with R&D as a small component.,llm
+Canada,CANADIAN FIREARMS CENTRE,unclear,0,Canadian Firearms Centre,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,ÉCOLE DE LA FONCTION PUBLIQUE DU CANADA,unclear,0,École de la Fonction Publique du Canada,,False,Cannot determine from the name alone.,llm
+Canada,THE JACQUES CARTIER AND CHAMPLAIN BRIDGES INC.,unclear,0,The Jacques Cartier and Champlain Bridges Inc.,,False,Agency name does not indicate a focus on R&D.,llm
+Canada,PÊCHES ET OCÉANS FISHERIES AND OCEANS,mixed_ministry,10,Fisheries and Oceans Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,CANADIAN POLAR COMMISSION,unclear,0,Canadian Polar Commission,,False,Cannot determine the primary focus of the agency from the name alone.,llm
+Canada,NATIONAL MUSEUM OF SCIENCE AND TECHNOLOGY,unclear,0,National Museum of Science and Technology,,False,The agency's focus is not clearly defined as primarily R&D.,llm
+Canada,TABLE RONDE NATIONALE SUR L'ENVIRONNEMENT ET L'ÉCONOMIE,unclear,0,National Round Table on the Environment and the Economy,,False,The name does not clearly indicate a focus on R&D.,llm
+Canada,PUBLIC SERVICE COMMISSION,unclear,0,Public Service Commission,,False,Cannot determine from the name alone.,llm
+Canada,NATIONAL ARTS CENTRE CORPORATION,unclear,0,National Arts Centre Corporation,,False,The agency name does not clearly indicate a focus on R&D.,llm
+Canada,RESSOURCES NATURELLES,mixed_ministry,10,Natural Resources Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,AUDITOR GENERAL,unclear,0,Auditor General,,False,The name does not indicate a focus on R&D.,llm
+Canada,AGRICULTURE AND AGRI-FOOD AGRICULTURE ET AGROALJMENTAIRE DEPARTMENT,mixed_ministry,10,Department of Agriculture and Agri-Food,,False,Broad government department where R&D is a small component.,llm
+Canada,GOVERNMENT CONTINGENCIES AND CENTRALLY FINANCED PROGRAMS,unclear,0,Government Contingencies and Centrally Financed Programs,,False,Cannot determine from the name alone.,llm
+Canada,STANDARDS COUNCIL OF CANADA,unclear,0,Standards Council of Canada,,False,The agency's focus on standards does not clearly indicate a primary R&D function.,llm
+Canada,FEDERAL ECONOMIC DEVELOPMENT AGENCY FOR NORTHERN ONTARIO,mixed_ministry,10,Federal Economic Development Agency for Northern Ontario,,False,Broad government department with R&D as a small component.,llm
+Canada,PUBLIC SERVICE HUMAN RESOURCES MANAGEMENT AGENCY OF CANADA,mixed_ministry,5,Public Service Human Resources Management Agency of Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,FEDERAL BRIDGE CORPORATION LIMITED,unclear,0,Federal Bridge Corporation Limited,,False,The agency name does not provide clear indication of R&D focus.,llm
+Canada,NATIONAL FILM BOARD,mixed_ministry,10,National Film Board,,False,Primarily a cultural agency with some R&D in film and media.,llm
+Canada,CAPE BRETON DEVELOPMENT CORPORATION,unclear,0,Cape Breton Development Corporation,,False,Cannot determine from the name alone.,llm
+Canada,CENTRE DE RECHERCHES POUR LE DÉVELOPPEMENT INTERNATIONAL,unclear,0,Centre de Recherches pour le Développement International,,False,Cannot determine from the name alone.,llm
+Canada,OFFICE OF THE AUDITOR GENERAL,unclear,0,Office of the Auditor General,,False,"The agency's focus is on auditing and accountability, not R&D.",llm
+Canada,CANADIAN MUSEUM OF CIVILIZATION,unclear,0,Canadian Museum of Civilization,,False,The agency name does not clearly indicate a focus on R&D.,llm
+Canada,ENTERPRISE CAPE BRETON CORPORATION,unclear,0,Enterprise Cape Breton Corporation,,False,Cannot determine from the name alone.,llm
+Canada,PATRIMOINE CANADIEN CANADIAN HERITAGE,mixed_ministry,5,Canadian Heritage,,False,Broad government department with R&D as a small component.,llm
+Canada,AGENCE CANADIENNE DE DÉVELOPPEMENT INTERNATIONAL,mixed_ministry,5,Canadian International Development Agency,,False,"Broad government department focused on international development, with R&D as a small component.",llm
+Canada,SOLLICITEUR GÉNÉRAL DEPARTMENT,mixed_ministry,5,Department of Justice and Solicitor General,,False,Broad government department where R&D is a small component.,llm
+Canada,SECRÉTARIAT DES CONFÉRENCES INTERGOUVERNEMENTALES CANADIENNES,unclear,0,Secretariat of Canadian Intergovernmental Conferences,,False,Cannot determine the focus of this agency from the name alone.,llm
+Canada,AFFAIRES INDIENNES ET DU NORD CANADIEN (suite),mixed_ministry,5,Indigenous and Northern Affairs Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,CANADA SCHOOL OF PUBLIC SERVICE,mixed_ministry,5,Canada School of Public Service,,False,"Primarily focused on public service training and development, with limited R&D activities.",llm
+Canada,PRIVY COUNCIL,unclear,0,Privy Council,,False,Cannot determine from the name alone.,llm
+Canada,CANADIAN NORTHERN ECONOMIC DEVELOPMENT AGENCY,mixed_ministry,10,Canadian Northern Economic Development Agency,,False,"Agency focuses on economic development, R&D is a small component.",llm
+Canada,FINANCIAL TRANSACTIONS AND REPORTS ANALYSIS CENTRE OF CANADA,unclear,0,Financial Transactions and Reports Analysis Centre of Canada,,False,Cannot determine from the name alone.,llm
+Canada,COMMISSAIRE À LA MAGISTRATURE FÉDÉRALE,unclear,0,Commissioner of the Federal Judiciary,,False,Cannot determine from the name alone.,llm
+Canada,COMMISSAIRE AUX LANGUES OFFICIELLES,unclear,0,Commissioner of Official Languages,,False,The agency's focus is on language rights and not R&D.,llm
+Canada,ATOMIC ENERGY OF CANADA LIMITED*,dedicated_rd,90,Atomic Energy of Canada Limited,,True,Primarily focused on nuclear R&D and related activities.,llm
+Canada,CANADIAN ENERGY REGULATOR,mixed_ministry,10,Canadian Energy Regulator,,False,Primarily a regulatory body with limited R&D focus.,llm
+Canada,SECRETARIAT OF THE NATIONAL SECURITY AND INTELLIGENCE COMMITTEE OF PARLIAMENTARIANS,unclear,0,Secretariat of the National Security and Intelligence Committee of Parliamentarians,,False,Cannot determine from the name alone.,llm
+Canada,IMPACT ASSESSMENT AGENCY OF CANADA,unclear,0,Impact Assessment Agency of Canada,,False,The agency's focus is on impact assessments rather than dedicated R&D.,llm
+Canada,INDIAN AFFAIRS AND NORTHERN DEVELOPMENT AFFAIRES INDIENNES ET DU NORD CANADIEN DEPARTMENT ADMINISTRATION PROGRAM,mixed_ministry,5,Department of Indian Affairs and Northern Development,,False,Broad government department where R&D is a small component.,llm
+Canada,AGENCE DE PROMOTION ÉCONOMIQUE DU CANADA ATLANTIQUE,unclear,0,Atlantic Canada Opportunities Agency,,False,"The name suggests a focus on economic promotion, but R&D involvement is unclear.",llm
+Canada,PARLIAMENTARY PROTECTIVE SERVICE,unclear,0,Parliamentary Protective Service,,False,The agency's name does not indicate a focus on R&D.,llm
+Canada,NATIONAL ENERGY BOARD,mixed_ministry,10,National Energy Board,,False,Broad government department with R&D as a small component.,llm
+Canada,DÉVELOPPEMENT DES RESSOURCES HUMAINES CANADIAN CENTRE FOR OCCUPATIONAL HEALTH AND SAFETY,mixed_ministry,10,Canadian Centre for Occupational Health and Safety,,False,Broad government department with R&D as a small component.,llm
+Canada,DIRECTEUR GÉNÉRAL DES ÉLECTIONS,unclear,0,Director General of Elections,,False,Agency name does not indicate a focus on R&D.,llm
+Canada,CANADIAN NUCLEAR SAFETY COMMISSION,unclear,0,Canadian Nuclear Safety Commission,,False,Cannot determine from the name alone.,llm
+Canada,CANADA EMISSION REDUCTION INCENTIVES AGENCY,unclear,0,Canada Emission Reduction Incentives Agency,,False,Cannot determine the primary focus of the agency from the name alone.,llm
+Canada,CANADIAN MUSEUM OF HISTORY,mixed_ministry,5,Canadian Museum of History,,False,Primarily a cultural institution with limited R&D activities.,llm
+Canada,SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE PUBLIC SAFETY AND EMERGENCY PREPAREDNESS,mixed_ministry,5,Public Safety and Emergency Preparedness Canada,,False,Broad government department where R&D is a small component.,llm
+Canada,SECURITY INTELLIGENCE REVIEW COMMITTEE,unclear,0,Security Intelligence Review Committee,,False,"The agency's focus is on reviewing intelligence activities, not R&D.",llm
+Canada,OFFICES OF THE INFORMATION AND PRIVACY COMMISSIONERS OF CANADA,unclear,0,Offices of the Information and Privacy Commissioners of Canada,,False,The agency's focus on information and privacy does not clearly indicate a dedicated R&D function.,llm
+Canada,CANADIAN HERITAGE PATRIMOINE CANADIEN PUBLIC SERVICE COMMISSION,mixed_ministry,5,Canadian Heritage,,False,Broad government department where R&D is a small component.,llm
+Canada,CIVIL AVIATION TRIBUNAL,unclear,0,Civil Aviation Tribunal,,False,The name does not indicate a focus on R&D.,llm
+Canada,"DEPARTMENT ECONOMIC, SOCIAL AND FINANCIAL POLICIES PROGRAM",unclear,0,"Department Economic, Social and Financial Policies Program",,False,Cannot determine from the name alone.,llm
+Canada,GENDARMERIE ROYALE DU CANADA,mixed_ministry,5,Royal Canadian Mounted Police,,False,Broad government department with a small component of R&D.,llm
+Canada,CANADIAN COMMERCIAL CORPORATION,unclear,0,Canadian Commercial Corporation,,False,Cannot determine from the name alone.,llm
+Canada,"OFFICE OF THE CO-ORDINATOR, STATUS OF WOMEN",unclear,0,"Office of the Co-ordinator, Status of Women",,False,Cannot determine R&D focus from the name alone.,llm
+Canada,NATURAL RESOURCES RESSOURCES NATURELLES CAPE BRETON DEVELOPMENT CORPORATION,unclear,0,Natural Resources Cape Breton Development Corporation,,False,Cannot determine from the name alone.,llm
+Canada,ADMINISTRATIVE TRIBUNALS SUPPORT SERVICE OF CANADA,unclear,0,Administrative Tribunals Support Service of Canada,,False,The name does not indicate a focus on R&D.,llm
+Canada,PAROLE BOARD OF CANADA,unclear,0,Parole Board of Canada,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,BUREAU DU CANADA POUR LE MILLÉNAIRE,unclear,0,Bureau du Canada pour le Millénaire,,False,Cannot determine from the name alone.,llm
+Canada,COMMISSION DE L'IMMIGRATION ET DU STATUT DE RÉFUGIÉ DU CANADA,mixed_ministry,5,Immigration and Refugee Board of Canada,,False,"Primarily focused on immigration and refugee matters, with minimal R&D component.",llm
+Canada,COMMISSION DES RELATIONS DE TRAVAIL DANS LA FONCTION PUBLIQUE,unclear,0,Public Service Labour Relations Commission,,False,Cannot determine from the name alone.,llm
+Canada,SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE (fin) ROYAL CANADIAN MOUNTED POLICE,mixed_ministry,5,Public Safety and Emergency Preparedness (fin) Royal Canadian Mounted Police,,False,Broad government department where R&D is a small component.,llm
+Canada,TRANSPORTS THE JACQUES CARTIER AND CHAMPLAIN BRIDGES INCORPORATED,mixed_ministry,5,Transports the Jacques Cartier and Champlain Bridges Incorporated,,False,"Agency primarily focused on transportation infrastructure, with R&D being a minor component.",llm
+Canada,OFFICE OF THE CHIEF ELECTORAL OFFICER,unclear,0,Office of the Chief Electoral Officer,,False,"The agency's focus is on electoral processes, not R&D.",llm
+Canada,CANADIAN MUSEUM FOR HUMAN RIGHTS,unclear,0,Canadian Museum for Human Rights,,False,"The agency's focus is on human rights, and it is unclear if R&D is a significant component.",llm
+Canada,CENTRE DE LA SÉCURITÉ DES TÉLÉCOMMUNICATIONS,mixed_ministry,10,Communications Security Establishment,,False,"Primarily focused on cybersecurity and information assurance, with R&D as a small component.",llm
+Canada,PUBLIC SERVICE STAFF RELATIONS BOARD,unclear,0,Public Service Staff Relations Board,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,PUBLIC WORKS AND GOVERNMENT SERVICES TRAVAUX PUBLICS ET SERVICES GOUVERNEMENTAUX OFFICE OF INDIAN RESIDENTIAL SCHOOLS RESOLUTION OF CANADA,unclear,0,Public Works and Government Services Canada,,False,Cannot determine R&D focus from the name alone.,llm
+Canada,STATUS OF WOMEN – OFFICE OF THE CO-ORDINATOR,unclear,0,Status of Women – Office of the Co-ordinator,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,CHIEF ELECTORAL OFFICER,unclear,0,Chief Electoral Officer,,False,"The agency's focus is on electoral processes, not R&D.",llm
+Canada,SUPREME COURT OF CANADA,unclear,0,Supreme Court of Canada,,False,Cannot determine if there is any R&D focus from the name alone.,llm
+Canada,ÉNERGIE ATOMIQUE DU CANADA LIMITÉE,unclear,0,Atomic Energy of Canada Limited,,False,Cannot determine from the name alone.,llm
+Canada,COMMISSAIRE À. LA MAGISTRATURE FÉDÉRALE,unclear,0,Commissioner of the Federal Judiciary,,False,Cannot determine from the name alone.,llm
+Canada,OLD PORT OF MONTREAL CORPORATION INC.,unclear,0,Old Port of Montreal Corporation Inc.,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,CANADIAN HERITAGE PATRIMOINE CANADIEN NATIONAL ARTS CENTRE CORPORATION,mixed_ministry,5,Canadian Heritage National Arts Centre Corporation,,False,Broad government department with R&D as a small component.,llm
+Canada,PATRIMOINE CANADIEN PARKS CANADA AGENCY,mixed_ministry,5,Canadian Heritage Parks Canada Agency,,False,"Agency is part of a broader ministry focused on heritage and parks, with R&D being a small component.",llm
+Canada,RESSOURCES HUMAINES ET DÉVELOPPEMENT DES COMPÉTENCES DEPARTMENT (HUMAN RESOURCES AND SKILLS DEVELOPMENT),mixed_ministry,10,Human Resources and Skills Development Department,,False,Broad government department where R&D is a small component.,llm
+Canada,COMMISSION DES CHAMPS DE BATAILLE NATIONAUX,unclear,0,National Battlefields Commission,,False,The agency name does not provide clear indication of R&D focus.,llm
+Canada,NATIONAL PAROLE BOARD,unclear,0,National Parole Board,,False,"The agency's focus is on parole and rehabilitation, not R&D.",llm
+Canada,CANADIAN TRANSPORTATION ACCIDENT INVESTIGATION AND SAFETY BOARD,mixed_ministry,10,Canadian Transportation Accident Investigation and Safety Board,,False,"Broad government department focused on transportation safety, R&D is a small component.",llm
+Canada,NATIONAL SECURITY AND INTELLIGENCE REVIEW AGENCY SECRETARIAT,unclear,0,National Security and Intelligence Review Agency Secretariat,,False,Cannot determine from the name alone.,llm
+Canada,FINANCIAL TRANSACTIONS AND REPORTS ANALYSIS CENTRE,unclear,0,Financial Transactions and Reports Analysis Centre,,False,Cannot determine from the name alone.,llm
+Canada,VIA HFR - VIA TGF INC VIA HFR - VIA TGF Inc.,unclear,0,VIA HFR - VIA TGF Inc.,,False,Cannot determine from the name alone.,llm
+Canada,NATIONAL ARCHIVES OF CANADA,unclear,0,National Archives of Canada,,False,"The agency's primary function is archival, not R&D.",llm
+Canada,TRIBUNAL CANADIEN DU COMMERCE EXTÉRIEUR,unclear,0,Canadian International Trade Tribunal,,False,Cannot determine from the name alone.,llm
+Canada,PATRIMOINE CANADIEN (fin) NATIONAL GALLERY OF CANADA,unclear,0,Canadian Heritage (National Gallery of Canada),,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,CANADIAN INTERNATIONAL TRADE TRIBUNAL,mixed_ministry,5,Canadian International Trade Tribunal,,False,"Primarily a trade tribunal, R&D is not a main focus.",llm
+Canada,NATIONAL LIBRARY,unclear,0,National Library,,False,The name does not specify a focus on R&D.,llm
+Canada,INVEST IN CANADA HUB,unclear,0,Invest in Canada Hub,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,PROGRAMME DES SOCIÉTÉS D'ÉTAT,unclear,0,PROGRAMME DES SOCIÉTÉS D'ÉTAT,,False,Cannot determine from the name alone.,llm
+Canada,CANADA COUNCIL,unclear,0,Canada Council for the Arts,,False,The name does not specify if it is primarily focused on R&D.,llm
+Canada,LABOUR PROGRAM,mixed_ministry,5,Labour Program,,False,Broad government department where R&D is a small component.,llm
+Canada,OFFICES OF THE INFORMATION AND PRIVACY,unclear,0,Offices of the Information and Privacy,,False,Cannot determine from the name alone.,llm
+Canada,REGISTRAR OF THE SUPREME COURT OF CANADA,unclear,0,Registrar of the Supreme Court of Canada,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,FEDERAL COURT OF CANADA,unclear,0,Federal Court of Canada,,False,The name does not indicate a focus on R&D.,llm
+Canada,CANADIAN HIGH ARCTIC RESEARCH STATION,unclear,0,Canadian High Arctic Research Station,,False,Cannot determine the primary focus of the agency from the name alone.,llm
+Canada,CANADIAN CENTRE FOR MANAGEMENT DEVELOPMENT,unclear,0,Canadian Centre for Management Development,,False,The agency name does not clearly indicate a focus on R&D.,llm
+Canada,OFFICE OF THE COMMISSIONER OF OFFICIAL LANGUAGES,mixed_ministry,5,Office of the Commissioner of Official Languages,,False,"Primarily focused on language rights and promotion, with minimal R&D component.",llm
+Canada,CANADIAN TRANSPORTATION ACCIDENT INVESTIGATION AND SAFETY,mixed_ministry,10,Canadian Transportation Accident Investigation and Safety,,False,Broad government department with R&D as a small component.,llm
+Canada,OFFICES OF THE INFORMATION AND PRIVACY COMMISSIONERS,unclear,0,Offices of the Information and Privacy Commissioners,,False,Cannot determine R&D focus from the name alone.,llm
+Canada,ENVIRONMENT ENVIRONNEMENT CANADIAN ENVIRONMENTAL ASSESSMENT AGENCY,mixed_ministry,10,Canadian Environmental Assessment Agency,,False,"Agency is part of the broader environmental ministry, with R&D being a small component.",llm
+Canada,PATRIMOINE CANADIEN (fin) NATIONAL MUSEUM OF SCIENCE AND TECHNOLOGY,mixed_ministry,10,Canadian Heritage National Museum of Science and Technology,,False,Broad ministry with R&D as a small component.,llm
+Canada,AGRICULTURE AND AGRI-FOOD AGRICULTURE ET AGROALIMENTAIRE CANADIAN GRAIN COMMISSION,mixed_ministry,10,Canadian Grain Commission,,False,"Part of the broader Ministry of Agriculture and Agri-Food, with R&D being a small component.",llm
+Canada,OFFICES OF THE INFORMATION AND PRIVACY COMMISSIONERS OF,unclear,0,Offices of the Information and Privacy Commissioners of Canada,,False,The agency's focus on information and privacy does not clearly indicate a dedicated R&D function.,llm
+Canada,GOUVERNEUR GÉNÉRAL,unclear,0,Governor General,,False,Cannot determine from the name alone.,llm
+Canada,DEPARTMENT ADMINISTRATION PROGRAM,unclear,0,Department Administration Program,,False,Cannot determine the focus of this agency from the name alone.,llm
+Canada,ANCIENS COMBATTANTS,unclear,0,Veterans Affairs Canada,,False,"The name suggests a focus on veterans, but R&D focus is unclear.",llm
+Canada,"OFFICE OF THE CO‑ORDINATOR, STATUS OF WOMEN",mixed_ministry,5,"Office of the Co-ordinator, Status of Women",,False,Broad government department with R&D as a small component.,llm
+Canada,CONSEIL PRIVÉ CANADIAN TRANSPORTATION ACCIDENT INVESTIGATION AND SAFETY BOARD,mixed_ministry,5,Canadian Transportation Accident Investigation and Safety Board,,False,"Agency focuses on transportation safety, with R&D being a minor component.",llm
+Canada,CONSEIL PRIVÉ PRIVY COUNCIL,unclear,0,Privy Council Office,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,AGRICULTURE AND AGRI-FOOD AGRICULTURE ET AGROALIMENTAIRE CANADIAN FOOD INSPECTION AGENCY,mixed_ministry,10,Agriculture and Agri-Food Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,TRANSPORTS CANADIAN TRANSPORTATION AGENCY,mixed_ministry,5,Canadian Transportation Agency,,False,Broad government department where R&D is a small component.,llm
+Canada,CANADIAN RADIO-TELEVISION AND TELECOMMUNICATIONS COMMISSION,mixed_ministry,5,Canadian Radio-television and Telecommunications Commission,,False,Primarily a regulatory body with limited R&D focus.,llm
+Canada,OFFICE OF THE GOVERNOR GENERAL’S SECRETARY,unclear,0,Office of the Governor General's Secretary,,False,Cannot determine from the name alone.,llm
+Canada,PATRIMOINE CANADIEN (fin) PUBLIC SERVICE LABOUR RELATIONS BOARD,mixed_ministry,5,Canadian Heritage (fin) Public Service Labour Relations Board,,False,Broad government department with R&D as a small component.,llm
+Canada,THE NATIONAL BATTLEFIELDS COMMISSION,unclear,0,The National Battlefields Commission,,False,Cannot determine from the name alone.,llm
+Canada,PUBLIC SERVICE LABOUR RELATIONS BOARD,unclear,0,Public Service Labour Relations Board,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,COMMISSIONER OF OFFICIAL LANGUAGES,unclear,0,Commissioner of Official Languages,,False,Cannot determine from the name alone.,llm
+Canada,CANADIAN ACCESSIBILITY STANDARDS DEVELOPMENT ORGANIZATION,unclear,0,Canadian Accessibility Standards Development Organization,,False,Cannot determine from the name alone.,llm
+Canada,ÉTABLISSEMENT DE LA SOCIÉTÉ TÉLÉFILM,unclear,0,Établissement de la Société Téléfilm,,False,Cannot determine from the name alone.,llm
+Canada,RÈGLEMENTS DU CANADA,unclear,0,Regulations of Canada,,False,The name does not provide enough information to determine if it is an R&D agency or a ministry.,llm
+Canada,PRÉLIMINAIRES,unclear,0,PRÉLIMINAIRES,,False,Cannot determine from the name alone.,llm
+Canada,CANADA INDUSTRIAL RELATIONS BOARD,unclear,0,Canada Industrial Relations Board,,False,Cannot determine from the name alone.,llm
+Canada,PATRIMOINE CANADIEN (fin) STATUS OF WOMEN – OFFICE OF THE CO-ORDINATOR,unclear,0,Canadian Heritage (fin) Status of Women – Office of the Co-ordinator,,False,The agency name does not clearly indicate a focus on R&D.,llm
+Canada,PATENTED MEDICINE PRICES REVIEW BOARD,unclear,0,Patented Medicine Prices Review Board,,False,Cannot determine from the name alone.,llm
+Canada,CANADIAN MUSEUM OF IMMIGRATION AT PIER 21,unclear,0,Canadian Museum of Immigration at Pier 21,,False,"The agency's focus is on immigration history and culture, not primarily R&D.",llm
+Canada,INDIAN RESIDENTIAL SCHOOLS TRUTH AND RECONCILIATION COMMISSION SECRETARIAT,unclear,0,Indian Residential Schools Truth and Reconciliation Commission Secretariat,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,FINANCIAL TRANSACTIONS AND REPORTS ANALYSIS CENTRE OF,unclear,0,Financial Transactions and Reports Analysis Centre of Canada,,False,The agency's name does not indicate a focus on R&D.,llm
+Canada,ASSISTED HUMAN REPRODUCTION AGENCY OF CANADA,unclear,0,Assisted Human Reproduction Agency of Canada,,False,Cannot determine the primary focus of the agency from the name alone.,llm
+Canada,OFFICE OF THE COMMISSIONER FOR FEDERAL JUDICIAL AFFAIRS,unclear,0,Office of the Commissioner for Federal Judicial Affairs,,False,Cannot determine from the name alone.,llm
+Canada,COMMISSION DU DROIT D'AUTEUR,unclear,0,Copyright Commission,,False,The agency's focus on copyright law does not clearly indicate a primary role in R&D.,llm
+Canada,"MOST GRACIOUS SOVEREIGN,",unclear,0,Most Gracious Sovereign,,False,Cannot determine from the name alone.,llm
+Canada,CIVILIAN REVIEW AND COMPLAINTS COMMISSION FOR THE ROYAL CANADIAN MOUNTED POLICE,mixed_ministry,5,Civilian Review and Complaints Commission for the Royal Canadian Mounted Police,,False,Broad government department with R&D as a small component.,llm
+Canada,OFFICE OF THE PRIVACY COMMISSIONER OF CANADA PROGRAM,unclear,0,Office of the Privacy Commissioner of Canada Program,,False,Cannot determine if this program is focused on R&D from the name alone.,llm
+Canada,INTERNATIONAL JOINT COMMISSION,unclear,0,International Joint Commission,,False,Cannot determine from the name alone.,llm
+Canada,STATUT DE RÉFUGIÉ DU CANADA,unclear,0,Canada Refugee Status,,False,The name does not indicate a focus on R&D.,llm
+Canada,PATRIMOINE CANADIEN (ﬁ n) PUBLIC SERVICE LABOUR RELATIONS BOARD,unclear,0,Canadian Heritage (Public Service Labour Relations Board),,False,The name does not clearly indicate a focus on R&D.,llm
+Canada,NATIONAL BATTLEFIELDS COMMISSION,unclear,0,National Battlefields Commission,,False,The agency name does not provide clear indication of R&D focus.,llm
+Canada,TAX COURT OF CANADA,unclear,0,Tax Court of Canada,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,OFFICE OF THE PUBLIC SECTOR INTEGRITY COMMISSIONER,unclear,0,Office of the Public Sector Integrity Commissioner,,False,Cannot determine from the name alone.,llm
+Canada,CANADIAN INTERGOVERNMENTAL CONFERENCE SECRETARIAT,unclear,0,Canadian Intergovernmental Conference Secretariat,,False,Cannot determine from the name alone.,llm
+Canada,CANADIAN FORCES GRIEVANCE BOARD,unclear,0,Canadian Forces Grievance Board,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,OFFICE OF THE CONFLICT OF INTEREST AND ETHICS COMMISSIONER,unclear,0,Office of the Conflict of Interest and Ethics Commissioner,,False,Cannot determine from the name alone.,llm
+Canada,CANADIAN HERITAGE PATRIMOINE CANADIEN CANADIAN MUSEUM OF IMMIGRATION AT PIER 21,mixed_ministry,5,Canadian Museum of Immigration at Pier 21,,False,"Part of the broader Canadian Heritage ministry, with R&D being a small component.",llm
+Canada,IVIILLENNIUM BUREAU OF CANADA,unclear,0,Millennium Bureau of Canada,,False,Cannot determine the agency's focus or budget allocation from the name alone.,llm
+Canada,CANADIAN RACE RELATIONS FOUNDATION,unclear,0,Canadian Race Relations Foundation,,False,The agency's focus on race relations does not clearly indicate a primary R&D function.,llm
+Canada,FIRST NATIONS STATISTICAL INSTITUTE,unclear,0,First Nations Statistical Institute,,False,Cannot determine from the name alone.,llm
+Canada,OFFICE OF INFRASTRUCTURE AND CROWN CORPORATIONS OF CANADA,mixed_ministry,5,Office of Infrastructure and Crown Corporations of Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,PUBLIC SERVICE STAFFING TRIBUNAL,unclear,0,Public Service Staffing Tribunal,,False,The agency's name does not indicate a focus on R&D.,llm
+Canada,NATIONAL ROUND TABLE ON THE ENVIRONMENT AND THE ECONOMY,unclear,0,National Round Table on the Environment and the Economy,,False,Cannot determine from the name alone.,llm
+Canada,COMMISSION DE LA CAPITALE NATIONALE,unclear,0,National Capital Commission,,False,The agency's focus is not clearly defined as R&D or a broad ministry.,llm
+Canada,MILITARY GRIEVANCES EXTERNAL REVIEW COMMITTEE,unclear,0,Military Grievances External Review Committee,,False,Cannot determine from the name alone.,llm
+Canada,OFFICE OF THE COMMISSIONER OF LOBBYING,unclear,0,Office of the Commissioner of Lobbying,,False,"The agency's focus is on lobbying regulation, not R&D.",llm
+Canada,EXPORTATION ET DÉVELOPPEMENT CANADA,unclear,0,Exportation et Développement Canada,,False,Cannot determine from the name alone.,llm
+Canada,COMITÉ DES GRIEFS DES FORCES CANADIENNES,unclear,0,Canadian Forces Grievance Committee,,False,The name does not indicate a focus on R&D.,llm
+Canada,CANADIAN HUMAN RIGHTS TRIBUNAL,unclear,0,Canadian Human Rights Tribunal,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,OFFICE OF THE PARLIAMENTARY BUDGET OFFICER,unclear,0,Office of the Parliamentary Budget Officer,,False,Cannot determine from the name alone.,llm
+Canada,STATUS OF WOIVIEN — OFFICE OF THE CO-ORDINATOR,unclear,0,Status of Women - Office of the Co-ordinator,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,CANADIAN DAIRY COMMISSION,mixed_ministry,10,Canadian Dairy Commission,,False,Primarily a regulatory agency for the dairy industry with limited R&D focus.,llm
+Canada,HAZARDOUS MATERIALS INFORMATION REVIEW COMMISSION,unclear,0,Hazardous Materials Information Review Commission,,False,Cannot determine the primary focus of the agency from the name alone.,llm
+Canada,CANADIAN HERITAGE PATRIMOINE CANADIEN NATIONAL BATTLEFIELDS COMMISSION,mixed_ministry,5,Canadian Heritage National Battlefields Commission,,False,"Part of the Department of Canadian Heritage, primarily focused on cultural heritage rather than R&D.",llm
+Canada,OFFICE OF THE CORRECTIONAL INVESTIGATOR OF CANADA,unclear,0,Office of the Correctional Investigator of Canada,,False,Cannot determine from the name alone.,llm
+Canada,INDIAN SPECIFIC CLAIMS COMMISSION,unclear,0,Indian Specific Claims Commission,,False,The agency name does not provide clear information about its focus on R&D.,llm
+Canada,CONFERENCE SECRETARIAT,unclear,0,Conference Secretariat,,False,The name does not provide enough information to determine its focus on R&D.,llm
+Canada,AFFAIRES ÉTRANGÈRES ET COMMERCE INTERNATIONAL (fin) INTERNATIONAL JOINT COMMISSION,unclear,0,International Joint Commission,,False,Cannot determine from the name alone.,llm
+Canada,PATRIMOINE CANADIEN (fin) PUBLIC SERVICE STAFFING TRIBUNAL,unclear,0,Canadian Heritage (fin) Public Service Staffing Tribunal,,False,Cannot determine from the name alone.,llm
+Canada,RESSOURCES HUMAINES ET DÉVELOPPEMENT DES COMPÉTENCES HUMAN RESOURCES AND SKILLS DEVELOPMENT,mixed_ministry,10,Human Resources and Skills Development,,False,Broad government department where R&D is a small component.,llm
+Canada,MILITARY POLICE COMPLAINTS COMMISSION,unclear,0,Military Police Complaints Commission,,False,Cannot determine R&D focus from the name alone.,llm
+Canada,OFFICE OF THE ETHICS COMMISSIONER,unclear,0,Office of the Ethics Commissioner,,False,The agency's focus on ethics does not indicate a clear R&D function.,llm
+Canada,LEADERS’ DEBATES COMMISSION,unclear,0,Leaders' Debates Commission,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,AFFAIRES ÉTRANGÈRES ET COMMERCE INTERNATIONAL (fin) CANADIAN INTERNATIONAL DEVELOPMENT AGENCY,mixed_ministry,5,Global Affairs Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,AFFAIRES ÉTRANGÈRES ET COMMERCE INTERNATIONAL INTERNATIONAL JOINT COMMISSION,mixed_ministry,5,Foreign Affairs and International Trade International Joint Commission,,False,Broad government department with R&D as a small component.,llm
+Canada,SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE (fin) ROYAL CANADIAN MOUNTED POLICE PUBLIC COMPLAINTS COMMISSION,mixed_ministry,5,Public Safety and Emergency Preparedness (Royal Canadian Mounted Police Public Complaints Commission),,False,Broad government department where R&D is a small component.,llm
+Canada,SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE (ﬁ n) ROYAL CANADIAN MOUNTED POLICE PUBLIC COMPLAINTS COMMISSION,mixed_ministry,5,Public Safety and Emergency Preparedness (Royal Canadian Mounted Police Public Complaints Commission),,False,Broad government department where R&D is a small component.,llm
+Canada,CANADIAN RADIO-TELEVISION AND TELECOMMUNICATIONS COMMISSION*,mixed_ministry,5,Canadian Radio-television and Telecommunications Commission,,False,Primarily a regulatory body with limited R&D focus.,llm
+Canada,REGISTRY OF THE SPECIFIC CLAIMS TRIBUNAL,unclear,0,Registry of the Specific Claims Tribunal,,False,Cannot determine from the name alone.,llm
+Canada,CANADIAN RADIO‑TELEVISION AND TELECOMMUNICATIONS COMMISSION,mixed_ministry,5,Canadian Radio-television and Telecommunications Commission,,False,Primarily a regulatory agency with limited R&D focus.,llm
+Canada,OFFICES OF THE INFORMATION AND PRIVACY COMMISSIONERS OF CANADA OFFICE OF THE INFORMATION COMMISSIONER OF CANADA PROGRAM,unclear,0,Offices of the Information and Privacy Commissioners of Canada Office of the Information Commissioner of Canada Program,,False,Cannot determine from the name alone.,llm
+Canada,LAW COMMISSION OF CANADA,unclear,0,Law Commission of Canada,,False,Cannot determine from the name alone.,llm
+Canada,OFFICE OF THE CORRECTIONAL INVESTIGATOR,unclear,0,Office of the Correctional Investigator,,False,Cannot determine from the name alone.,llm
+Canada,OFFICE OF THE REGISTRAR OF LOBBYISTS,unclear,0,Office of the Registrar of Lobbyists,,False,The agency's name does not indicate a focus on R&D.,llm
+Canada,CANADIAN FILM DEVELOPMENT CORPORATION,unclear,0,Canadian Film Development Corporation,,False,The agency's focus on film development does not clearly indicate a primary R&D function.,llm
+Canada,RESSOURCES HUMAINES ET DÉVELOPPEMENT DES COMPÉTENCES CANADIAN CENTRE FOR OCCUPATIONAL HEALTH AND SAFETY,mixed_ministry,10,Canadian Centre for Occupational Health and Safety,,False,"Part of a broader ministry focused on human resources and skills development, with R&D as a small component.",llm
+Canada,CANADIAN CENTRE FOR OCCUPATIONAL HEALTH AND SAFETY*,mixed_ministry,10,Canadian Centre for Occupational Health and Safety,,False,"Primarily focused on occupational health and safety, with R&D as a small component.",llm
+Canada,REGISTRY OF THE COMPETITION TRIBUNAL,unclear,0,Registry of the Competition Tribunal,,False,Cannot determine from the name alone.,llm
+Canada,"NAFTA SECRETARIAT, CANADIAN SECTION",unclear,0,"NAFTA Secretariat, Canadian Section",,False,The agency name does not provide clear information about its focus on R&D.,llm
+Canada,OFFICE OF THE COMMUNICATIONS SECURITY ESTABLISHMENT COMMISSIONER,unclear,0,Office of the Communications Security Establishment Commissioner,,False,Cannot determine from the name alone.,llm
+Canada,SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE (fin) OFFICE OF THE CORRECTIONAL INVESTIGATOR,mixed_ministry,5,Public Safety and Emergency Preparedness Canada,,False,Broad government department where R&D is a small component.,llm
+Canada,VETERANS AFFAIRS ANCIENS COMBATTANTS VETERANS AFFAIRS,mixed_ministry,5,Veterans Affairs Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,TRIBUNAL DES ANCIENS COMBATTANTS (RÉVISION ET APPEL),unclear,0,Veterans Review and Appeal Board,,False,The name suggests a focus on veterans' appeals rather than R&D.,llm
+Canada,CANADIAN ARTISTS AND PRODUCERS PROFESSIONAL RELATIONS TRIBUNAL,unclear,0,Canadian Artists and Producers Professional Relations Tribunal,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,CONSEIL CANADIEN DES RELATIONS INDUSTRIELLES,unclear,0,Canadian Industrial Relations Council,,False,The name does not clearly indicate a focus on R&D.,llm
+Canada,NORTHERN PIPELINE AGENCY,unclear,0,Northern Pipeline Agency,,False,Cannot determine the primary focus of the agency from the name alone.,llm
+Canada,COMMISSION CANADIENNE DES AFFAIRES POLAIRES,unclear,0,Canadian Polar Commission,,False,The name does not provide enough information to determine if it is dedicated to R&D or a broader ministry.,llm
+Canada,REGISTRY OF THE PUBLIC SERVANTS DISCLOSURE PROTECTION TRIBUNAL,unclear,0,Registry of the Public Servants Disclosure Protection Tribunal,,False,Cannot determine from the name alone.,llm
+Canada,NAFTA SECRETARIAT – CANADIAN SECTION,unclear,0,NAFTA Secretariat – Canadian Section,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,TRIBUNAL CANADIEN DES DROITS DE LA PERSONNE,unclear,0,Canadian Human Rights Tribunal,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,CONSEIL DU TRÉSOR PUBLIC SERVICE HUMAN RESOURCES MANAGEMENT AGENCY OF CANADA,mixed_ministry,5,Treasury Board of Canada Secretariat,,False,Broad government department with R&D as a small component.,llm
+Canada,INDIAN AFFAIRS AND NORTHERN DEVELOPMENT AFFAIRES INDIENNES ET DU NORD CANADIEN CANADIAN POLAR COMMISSION,mixed_ministry,5,Canadian Polar Commission,,False,Part of a broader ministry focused on Indigenous affairs and northern development.,llm
+Canada,OFFICE OF THE INTELLIGENCE COMMISSIONER,unclear,0,Office of the Intelligence Commissioner,,False,The agency's focus is not clearly related to R&D.,llm
+Canada,SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE (suite) CANADIAN SECURITY INTELLIGENCE SERVICE,mixed_ministry,5,Public Safety and Emergency Preparedness Canada (Canadian Security Intelligence Service),,False,Broad government department with R&D as a small component.,llm
+Canada,CANADIAN HUMA,unclear,0,Canadian Human,,False,Cannot determine from the name alone.,llm
+Canada,THE LEADERSHIP NETWORK,unclear,0,The Leadership Network,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,COMPETITION TRIBUNAL,unclear,0,Competition Tribunal,,False,The agency's focus is on competition law and not primarily on R&D.,llm
+Canada,CANADIAN ARTISTS AND PRODUCERS PROFESSIONAL RELATIONS,unclear,0,Canadian Artists and Producers Professional Relations,,False,Cannot determine from the name alone.,llm
+Canada,PUBLIC APPOINTMENTS COMMISSION SECRETARIAT,unclear,0,Public Appointments Commission Secretariat,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,COMMISSION MIXTE INTERNATIONALE,unclear,0,Commission Mixte Internationale,,False,Cannot determine the agency's focus or budget allocation from the name alone.,llm
+Canada,PATRIMOINE CANADIEN (fin) REGISTRY OF THE PUBLIC SERVANTS DISCLOSURE PROTECTION TRIBUNAL,unclear,0,Canadian Heritage Registry of the Public Servants Disclosure Protection Tribunal,,False,Cannot determine from the name alone.,llm
+Canada,PATRIMOINE CANADIEN (fin) REGISTRY OF THE PUBLIC SERVANTS DISCLOSURE PROTECTION TRIBUNAL,unclear,0,Canadian Heritage (fin) Registry of the Public Servants Disclosure Protection Tribunal,,False,Cannot determine from the name alone.,llm
+Canada,OFFICE OF THE SUPERINTENDENT OF FINANCIAL INSTITUTIONS,unclear,0,Office of the Superintendent of Financial Institutions,,False,Cannot determine from the name alone.,llm
+Canada,ENVIRONNEMENT ENVIRONMENT,unclear,0,Environment Canada,,False,The name does not specify if it is a dedicated R&D agency or a broader ministry.,llm
+Canada,AGENCE CANADIENNE DE DÉVELOPPEMENT ÉCONOMIQUE DU NORD,mixed_ministry,10,Canadian Northern Economic Development Agency,,False,"Agency focuses on economic development, R&D is a small component.",llm
+Canada,OFFICE OF THE SENATE ETHICS OFFICER,unclear,0,Office of the Senate Ethics Officer,,False,The agency's name does not indicate a focus on R&D.,llm
+Canada,AGRICULTURE ET AGROALIMENTAIRE AGRICULTURE AND AGRI-FOOD,mixed_ministry,10,Agriculture and Agri-Food Canada,,False,Broad government department with R&D as a small component.,llm
+Canada,SENATE ETHICS OFFICER,unclear,0,Senate Ethics Officer,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,DISPOSITION TRANSITOIRE ET ENTRÉE EN VIGUEUR,unclear,0,DISPOSITION TRANSITOIRE ET ENTRÉE EN VIGUEUR,,False,Cannot determine from the name alone.,llm
+Canada,DIVISION 1 INTERPRETATION,unclear,0,Division 1 Interpretation,,False,Cannot determine the nature of this agency from the name alone.,llm
+Canada,DÉFINITIONS,unclear,0,DÉFINITIONS,,False,Cannot determine from the name alone.,llm
+Canada,CONSEIL PRIVÉ PUBLIC APPOINTMENTS COMMISSION SECRETARIAT,unclear,0,Public Appointments Commission Secretariat,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,"CONSEQUENTIAL AMENDMENTS, REPEAL AND COMING INTO FORCE",unclear,0,"Consequential Amendments, Repeal and Coming into Force",,False,The name does not provide enough information to classify the agency.,llm
+Canada,DIVISION 7,unclear,0,Division 7,,False,Cannot determine the nature of this agency from the name alone.,llm
+Canada,CODE CRIMINEL,unclear,0,CODE CRIMINEL,,False,Cannot determine from the name alone.,llm
+Canada,"VÉRIFICATEUR GÉNÉRAI,",unclear,0,Vérificateur Général,,False,Cannot determine from the name alone.,llm
+Canada,ORDONNANCES RELATIVES À L'ENTRÉE SUR LES TERRES INUIT,unclear,0,ORDONNANCES RELATIVES À L'ENTRÉE SUR LES TERRES INUIT,,False,Cannot determine from the name alone.,llm
+Canada,RAPPORT D'ÉLECTION,unclear,0,RAPPORT D'ÉLECTION,,False,Agency name does not provide clear indication of R&D focus.,llm
+Canada,ENTRÉE EN VIGUEUR,unclear,0,ENTRÉE EN VIGUEUR,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,DIVISION 1 ADMINISTRATION AND GENERAL PROCEDURES,unclear,0,Division 1 Administration and General Procedures,,False,The name does not provide enough information to determine its focus on R&D.,llm
+Canada,ADMINISTRATION ET FORMALITÉS PRÉLIMINAIRES,unclear,0,Administration et Formalités Préliminaires,,False,Cannot determine from the name alone.,llm
+Canada,ALTERNATIVE MEASURES,unclear,0,Alternative Measures,,False,Cannot determine from the name alone.,llm
+Canada,SÉCURITÉ PUBLIQUE ET PROTECTION CIVILE ROYAL CANADIAN MOUNTED POLICE EXTERNAL REVIEW COMMITTEE,unclear,0,Royal Canadian Mounted Police External Review Committee,,False,Cannot determine from the name alone.,llm
+Canada,VALIDATION OF RESULTS BY THE RETURNING OFFICER,unclear,0,Validation of Results by the Returning Officer,,False,The name does not provide enough information to determine if it is an R&D agency or a ministry.,llm
+Canada,VALIDATION DES RÉSULTATS PAR LE DIRECTEUR DU,unclear,0,Validation of Results by the Director,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,ADMINISTRATION DE LA SOCIÉTÉ DE PORTEFEUILLE BANCAIRE,unclear,0,Administration de la Société de Portefeuille Bancaire,,False,Cannot determine from the name alone.,llm
+Canada,ADVANCE POLLING,unclear,0,Advance Polling,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,VOTE PAR ANTICIPATION,unclear,0,VOTE PAR ANTICIPATION,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,RESTRICTION DU DROIT DE VOTE,unclear,0,RESTRICTION DU DROIT DE VOTE,,False,Agency name does not provide clear indication of R&D focus.,llm
+Canada,RELATED AND CONSEQUENTIAL AMENDMENTS,unclear,0,Related and Consequential Amendments,,False,The name does not provide enough information to classify the agency.,llm
+Canada,DÉFINITIONS ET INTERPRÉTATION,unclear,0,Definitions and Interpretation,,False,The name does not provide enough information to determine the agency's focus on R&D.,llm
+Canada,TRANSITIONAL,unclear,0,Transitional,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,DISPOSITIONS TRANSITOIRES,unclear,0,DISPOSITIONS TRANSITOIRES,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,"AFFAIRES ÉTRANGÈRES, COMMERCE ET DÉVELOPPEMENT (suite)",mixed_ministry,5,"Foreign Affairs, Trade and Development",,False,Broad government department where R&D is a small component.,llm
+Canada,PLACEMENTS,unclear,0,PLACEMENTS,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,MODIFICATIONS DIVERSES À D'AUTRES LOIS,unclear,0,Various Amendments to Other Laws,,False,The name does not provide enough information to classify the agency.,llm
+Canada,DIVISION 3,unclear,0,Division 3,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,"TRANSITIONAL PROVISIONS, CONSEQUENTIAL AND COORDINATING AMENDMENTS AND COMING INTO",unclear,0,"Transitional Provisions, Consequential and Coordinating Amendments and Coming Into",,False,The name does not provide enough information to classify the agency.,llm
+Canada,FINANCIAL ADMINISTRATION,unclear,0,Financial Administration,,False,Cannot determine from the name alone.,llm
+Canada,DISPOSITIONS DE COORDINATION,unclear,0,DISPOSITIONS DE COORDINATION,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,DÉCLARATION DES ESPÈCES ET EFFETS INSTRUMENTS,unclear,0,DÉCLARATION DES ESPÈCES ET EFFETS INSTRUMENTS,,False,Cannot determine from the name alone.,llm
+Canada,TRANSITIONAL PROVISIONS DISPOSITIONS TRANSITOIRES,unclear,0,Transitional Provisions,,False,Cannot determine the nature or purpose of the agency from the name alone.,llm
+Canada,RESPONSABILITÉ EN MATIÈRE DE POLLUTION,unclear,0,RESPONSABILITÉ EN MATIÈRE DE POLLUTION,,False,Cannot determine the specific focus or budget allocation for R&D from the name alone.,llm
+Canada,TRANSITIONAL PROVISIONS,unclear,0,Transitional Provisions,,False,The name does not provide enough information to classify the agency.,llm
+Canada,OFFENCES AND PUNISHMENT,unclear,0,Offences and Punishment,,False,The name does not indicate a focus on R&D.,llm
+Canada,INFRACTIONS ET PEINES,unclear,0,Infractions et Peines,,False,The name does not provide enough information to determine if it is an R&D agency or a ministry.,llm
+Canada,JUDICIAL RECOUNT,unclear,0,Judicial Recount,,False,The name does not provide enough information to classify the agency.,llm
+Canada,DÉPOUILLEMENT JUDICIAIRE,unclear,0,DÉPOUILLEMENT JUDICIAIRE,,False,Cannot determine from the name alone.,llm
+Canada,SGHEDULES 1 TO 3,unclear,0,SGHEDULES 1 TO 3,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,ORDONNANCES RELATIVES À L'ENTRÉE SUR LES TERRES NON INUIT,unclear,0,ORDONNANCES RELATIVES À L'ENTRÉE SUR LES TERRES NON INUIT,,False,Cannot determine from the name alone.,llm
+Canada,DIVISION 3' ENTRY ORDERS. FOR NON-INUIT-OWNED LAND,unclear,0,Division 3' Entry Orders for Non-Inuit-Owned Land,,False,The name does not provide enough information to classify the agency.,llm
+Canada,AMENDMENTS TO OTHER ACTS,unclear,0,Amendments to Other Acts,,False,The name does not provide enough information to determine the agency's focus or budget allocation.,llm
+Canada,MODIFICATION D'AUTRES LOIS,unclear,0,Modification d'autres lois,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,DIVISION 4 MINERAL RIGHTS AND CARVING STONE,unclear,0,Division 4 Mineral Rights and Carving Stone,,False,Cannot determine the focus on R&D from the name alone.,llm
+Canada,ABROGATION ET ENTRÉE EN VIGUEUR,unclear,0,ABROGATION ET ENTRÉE EN VIGUEUR,,False,Cannot determine from the name alone.,llm
+Canada,DIVISION 5 Loss OF STATUS AND REMOVAL PERTE DE STATUT ET RENVOI,unclear,0,DIVISION 5 Loss OF STATUS AND REMOVAL PERTE DE STATUT ET RENVOI,,False,Cannot determine the nature of this agency from the name alone.,llm
+Canada,"BIENS RÉELS, EAUX ET RESSOURCES PÉTROLIÈRES' ET GAZIÈRES",unclear,0,"BIENS RÉELS, EAUX ET RESSOURCES PÉTROLIÈRES ET GAZIÈRES",,False,Cannot determine the focus of the agency from the name alone.,llm
+Canada,PARTIE XVII,unclear,0,PARTIE XVII,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,D'ENTRÉE EN VIGUEUR,unclear,0,D'ENTRÉE EN VIGUEUR,,False,Cannot determine from the name alone.,llm
+Canada,ENFORCEMENT MÉASURES,unclear,0,Enforcement Measures,,False,Agency name does not provide enough information to determine its focus on R&D.,llm
+Canada,COMMISSIONER FOR FEDERALJUDICIAL AFFAIRS,unclear,0,Commissioner for Federal Judicial Affairs,,False,Cannot determine from the name alone.,llm
+Canada,RIGHT OF APPEAL DROIT D'APPEL,unclear,0,Right of Appeal Droit d'Appel,,False,Cannot determine from the name alone.,llm
+Canada,INTERDICTIONS GÉNÉRALES ET EXCEPTIONS,unclear,0,General Interdictions and Exceptions,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,MODIFICATIONS,unclear,0,MODIFICATIONS,,False,Agency type cannot be determined from the name alone.,llm
+Canada,REGULATIONS,unclear,0,Regulations,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,OFFENCES AND PUNISHMENT INFRACTIONS ET PEINES,unclear,0,Offences and Punishment Infractions et Peines,,False,The name does not indicate a focus on R&D.,llm
+Canada,CONTRÔLE D'APPLICATION,unclear,0,CONTRÔLE D'APPLICATION,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,"TRANSITIONAL PROVISION, CONSEQUENTIAL AND CONDITIONAL AMENDMENTS, REPEAL AND COMING INTO FORCE",unclear,0,"Transitional Provision, Consequential and Conditional Amendments, Repeal and Coming into Force",,False,The name does not indicate a specific agency or its focus on R&D.,llm
+Canada,APPLICATION DE LA LOI,unclear,0,APPLICATION DE LA LOI,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,VALIDITÉ DE CERTAINS RÈGLEMENTS,unclear,0,VALIDITY OF CERTAIN REGULATIONS,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,PARTIE XIX,unclear,0,PARTIE XIX,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,DÉTENTION ET MISE EN LIBERTÉ,unclear,0,Detention and Release,,False,Cannot determine from the name alone.,llm
+Canada,COMING INTO FORCE,unclear,0,COMING INTO FORCE,,False,Agency type cannot be determined from the name alone.,llm
+Canada,"TRANSITIONAL, CONSEQUENTIAL AMENDMENTS, CONDITIONAL AMENDMENT, REPEAL AND COMING INTO FORCE",unclear,0,"Transitional, Consequential Amendments, Conditional Amendment, Repeal and Coming into Force",,False,The name does not indicate a specific agency or its focus on R&D.,llm
+Canada,CUSTODY AND SUPERVISION,unclear,0,Custody and Supervision,,False,Cannot determine the nature of this agency from the name alone.,llm
+Canada,AMENDMENTS RELATED TO SHIPS' STORES,unclear,0,Amendments Related to Ships' Stores,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,COMMISSION DES RELATIONS DE TRAVAIL DANS LA FONCTION PUBLIQUE.,unclear,0,Public Service Labour Relations Commission,,False,Cannot determine from the name alone.,llm
+Canada,DROIT FÉDÉRAL ET DROIT CIVIL DE LA PROVINCE DE,unclear,0,Federal Law and Civil Law of the Province of,,False,Cannot determine from the name alone.,llm
+Canada,FINANCEMENT DES PARTIS ENREGISTRÉS,unclear,0,Registered Parties Financing,,False,The name does not indicate a focus on R&D.,llm
+Canada,DISPOSITIONS GÉNÉRALES,unclear,0,DISPOSITIONS GÉNÉRALES,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,MODIFICATIONS CONCERNANT LA TAXE D'ACCISE SUR LES PRODUITS,unclear,0,Excise Tax Modifications on Products,,False,The name does not provide clear information about R&D focus.,llm
+Canada,PROCESSUS D'INSCRIPTION DES ESPÈCES SAUVAGES,unclear,0,Wild Species Registration Process,,False,Cannot determine the primary function or focus of the agency from the name alone.,llm
+Canada,CANADIAN TOURISM COMMISSION COMMISSION CANADIENNE DU TOURISME,mixed_ministry,5,Canadian Tourism Commission,,False,"Primarily focused on tourism promotion, R&D is a minor component.",llm
+Canada,"NOTIONS D'ASILE, DE RÉFUGIÉ ET DE PERSONNE À PROTÉGER NEED OF PROTECTION",unclear,0,"NOTIONS D'ASILE, DE RÉFUGIÉ ET DE PERSONNE À PROTÉGER NEED OF PROTECTION",,False,Cannot determine from the name alone.,llm
+Canada,MODIFICATIONS À D'AUTRES LOIS,unclear,0,Modifications à d'autres lois,,False,The name does not provide enough information to determine the agency's focus or budget allocation.,llm
+Canada,PUBLIC REGISTRY,unclear,0,Public Registry,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,RÈGLES ÉLECTORALES SPÉCIALES,unclear,0,RÈGLES ÉLECTORALES SPÉCIALES,,False,Cannot determine from the name alone.,llm
+Canada,ÉLECTRONIQUE OU AUTRE,unclear,0,ÉLECTRONIQUE OU AUTRE,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,ELECTION OFFICERS,unclear,0,Election Officers,,False,The name does not provide enough information to determine if it is related to R&D.,llm
+Canada,REGISTRE DES ÉLECTEURS,unclear,0,ELECTORAL REGISTER,,False,"The name suggests it is related to electoral processes, not R&D.",llm
+Canada,DIVISION 3 PRE-REMOVAL RISK ASSESSMENT,unclear,0,Division 3 Pre-Removal Risk Assessment,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,CONVENTIONS ET PROTOCOLES INTERNATIONAUX - MINISTRE DES TRANSPORTS,mixed_ministry,5,International Conventions and Protocols - Minister of Transport,,False,Broad government department where R&D is a small component.,llm
+Canada,ABROGATIONS ET ENTRÉE EN VIGUEUR,unclear,0,ABROGATIONS ET ENTRÉE EN VIGUEUR,,False,Cannot determine from the name alone.,llm
+Canada,MODIFICATIONS À LA LOI CANADIENNE SUR LA PROTECTION DE L'ENVIRONNEMENT (1999),unclear,0,Modifications to the Canadian Environmental Protection Act (1999),,False,The name does not clearly indicate if it is an R&D agency or a legislative modification.,llm
+Canada,MODIFICATIONS CORRÉLATIVES,unclear,0,MODIFICATIONS CORRÉLATIVES,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,CONSEQUENTIAL AMENDMENTS,unclear,0,Consequential Amendments,,False,The name does not provide enough information to determine the agency's focus on R&D.,llm
+Canada,CRÉANCES MARITIMES,unclear,0,CRÉANCES MARITIMES,,False,Cannot determine from the name alone.,llm
+Canada,CIVIL LIABILITY FOR POLLUTION,unclear,0,Civil Liability for Pollution,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,RÈGLEMENTS,unclear,0,Règlements,,False,The name does not provide enough information to determine the agency's focus.,llm
+Canada,TRANSITIONAL PROVISION AND COMING INTO FORCE,unclear,0,Transitional Provision and Coming into Force,,False,The name does not provide enough information to classify the agency.,llm
+Canada,"REAL PROPERTY, WATER,'  O1LANDdAS",unclear,0,"Real Property, Water, and Land",,False,Cannot determine from the name alone.,llm
+Canada,CONTRÔLE JUDICIAIRE,unclear,0,CONTRÔLE JUDICIAIRE,,False,Cannot determine from the name alone.,llm
+Canada,NUNAVUT SURFACE RIGHTS TRIBUNAL TRIBUNAL DES DROITS DE SURFACE DU NUNAVUT,unclear,0,Nunavut Surface Rights Tribunal,,False,Cannot determine from the name alone.,llm
+Canada,SANTÉ ET SÉCURITÉ AU TRAVAIL,mixed_ministry,10,Occupational Health and Safety,,False,Broad government department where R&D is a small component.,llm
+Canada,DIVISION 9 PROHIBITIONS,unclear,0,Division 9 Prohibitions,,False,Cannot determine the nature of this agency from the name alone.,llm
+Canada,INTERDICTIONS,unclear,0,INTERDICTIONS,,False,Cannot determine the nature or focus of the agency from the name alone.,llm
+Canada,LOI SUR LES PENSIONS,unclear,0,LOI SUR LES PENSIONS,,False,The name does not provide clear information about R&D focus.,llm
+Canada,WILDLIFE COMPENSATION,unclear,0,Wildlife Compensation,,False,Cannot determine the primary focus of the agency from the name alone.,llm
+Canada,COMMUNICATION DES RÉSULTATS DU VOTE,unclear,0,Communication des résultats du vote,,False,The name does not provide clear information about R&D focus.,llm
+Canada,RESPONSABILITÉ EN MATIÈRE DE TRANSPORT DE PASSAGERS PAR EAU,unclear,0,Passenger Water Transport Responsibility,,False,The name does not provide enough information to determine if it is dedicated to R&D.,llm
+Canada,ASSESSMENT OF WILDLIFE SPECIES MENTIONED IN THE SCHEDULES,unclear,0,Assessment of Wildlife Species Mentioned in the Schedules,,False,The name does not provide enough information to classify the agency type.,llm
+Canada,JUDICIAL MEA SURES,unclear,0,Judicial Measures,,False,The name does not provide enough information to classify the agency.,llm
+Canada,"DORS/88-103, DORS/88-104, DORS/88-105, DORS/88-220, DORS/88-368, DORS/88-426, DORS/88-497, DORS/88-644, ch. 28",unclear,0,"DORS/88-103, DORS/88-104, DORS/88-105, DORS/88-220, DORS/88-368, DORS/88-426, DORS/88-497, DORS/88-644, ch. 28",,False,Cannot determine the nature or purpose of these designations from the name alone.,llm
+Canada,REPORTS AND REVIEW OF ACT,unclear,0,Reports and Review of Act,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,TRANSPORTATION APPEAL TRIBUNAL OF CANADA TRIBUNAL D'APPEL DES TRANSPORTS DU CANADA,mixed_ministry,5,Transportation Appeal Tribunal of Canada,,False,This agency is part of the broader transportation ministry and focuses on appeals rather than R&D.,llm
+Canada,INFRACTIONS PORTANT ATTEINTE À L'ADMINISTRATION DE LA JUSTICE,unclear,0,Infractions Portant Atteinte à l'Administration de la Justice,,False,Cannot determine from the name alone.,llm
+Canada,DIVISION 4,unclear,0,Division 4,,False,Cannot determine the nature of this agency from the name alone.,llm
+Canada,ENFORCEMENT,unclear,0,Enforcement,,False,Cannot determine the specific focus of this agency from the name alone.,llm
+Canada,TENUE D'UNE ÉLECTION,unclear,0,TENUE D'UNE ÉLECTION,,False,Agency name does not provide clear indication of R&D focus.,llm
+Canada,CONDUCT OF AN ELECTION,unclear,0,Conduct of an Election,,False,The name does not provide enough information to determine if it is related to R&D.,llm
+Canada,"R.S., 0.1-6",unclear,0,R.S.,,False,Cannot determine from the name alone.,llm
+Canada,SI/2000-42,unclear,0,SI/2000-42,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,SI/99-138;,unclear,0,SI/99-138,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,S1/99-138;,unclear,0,S1/99-138,,False,Cannot determine agency type from the name alone.,llm
+Canada,MODIFICATIONS CORRÉLATIVES ET CONNEXES ET DISPOSITIONS DE COORDINATION,unclear,0,MODIFICATIONS CORRÉLATIVES ET CONNEXES ET DISPOSITIONS DE COORDINATION,,False,Cannot determine from the name alone.,llm
+Canada,NATIONAL HISTORIC SITES OF CANADA,mixed_ministry,5,National Historic Sites of Canada,,False,"Primarily focused on heritage conservation and management, with minimal R&D component.",llm
+Canada,RÉPARTITION DE L'INDEMNITÉ,unclear,0,RÉPARTITION DE L'INDEMNITÉ,,False,Cannot determine from the name alone.,llm
+Canada,D'IMPÔTS SUR LE REVENU,unclear,0,Canada Revenue Agency,,False,"The name suggests a tax agency, not related to R&D.",llm
+Canada,PROCÉDURES JUDICIAIRES,unclear,0,Judicial Procedures,,False,The name does not indicate a focus on R&D.,llm
+Canada,DIVISION 3 ENTERING AND REMAINING IN CANADA,unclear,0,Division 3 Entering and Remaining in Canada,,False,Cannot determine from the name alone.,llm
+Canada,LOI CANADIENNE sun LES SOCIÉTÉS PAR,unclear,0,LOI CANADIENNE sur LES SOCIÉTÉS PAR,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,LOI SUR LA SÉCURITÉ DE LA VIEILLESSE,unclear,0,Law on the Security of the Elderly,,False,Cannot determine from the name alone.,llm
+Canada,REGISTRATION OF CHARITIES - SECURITY INFORMATION,unclear,0,Registration of Charities - Security Information,,False,The name does not provide enough information to classify the agency's focus on R&D.,llm
+Canada,TITRE ABRÉGÉ,unclear,0,TITRE ABRÉGÉ,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,SI/2001-71,unclear,0,SI/2001-71,,False,Cannot determine from the name alone.,llm
+Canada,INADMISSIBILITY,unclear,0,INADMISSIBILITY,,False,Cannot determine from the name alone.,llm
+Canada,INTERDICTIONS DE TERRITOIRE,unclear,0,INTERDICTIONS DE TERRITOIRE,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,ADMINISTRATIVE MONETARY PENALTIES,unclear,0,Administrative Monetary Penalties,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,ABROGATION ET ENTRÉE EN,unclear,0,ABROGATION ET ENTRÉE EN,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,COORDINATING AMENDMENTS,unclear,0,Coordinating Amendments,,False,Cannot determine the nature or purpose of the agency from the name alone.,llm
+Canada,COTISATIONS,unclear,0,COTISATIONS,,False,Cannot determine the nature of this agency from the name alone.,llm
+Canada,LOI CANADIENNE SUR LES COOPÉRATIVES,unclear,0,Canadian Cooperative Act,,False,Cannot determine the focus on R&D from the name alone.,llm
+Canada,ENTRÉE ET SÉJOUR AU CANADA,unclear,0,ENTRÉE ET SÉJOUR AU CANADA,,False,Cannot determine from the name alone.,llm
+Canada,ADMINISTRATION DE LA JUSTICE,unclear,0,Administration of Justice,,False,The name does not indicate a focus on R&D.,llm
+Canada,MODIFICATION DE LA LOI SUR LA COUR CANADIENNE DE L'IMPÔT,unclear,0,Modification de la Loi sur la Cour Canadienne de l'Impôt,,False,Cannot determine from the name alone.,llm
+Canada,AMENDMENTS,unclear,0,AMENDMENTS,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,"S.R.C. 1970,",unclear,0,S.R.C. 1970,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,DIVISION 6,unclear,0,Division 6,,False,Cannot determine the nature of this agency from the name alone.,llm
+Canada,TR/2001-71,unclear,0,TR/2001-71,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,"LICENCES, AGRÉMENTS ET AUTORISATIONS",unclear,0,"Licences, Agréments et Autorisations",,False,The name does not provide clear indication of R&D focus.,llm
+Canada,DIVISION 6 ADMINISTRATION,unclear,0,Division 6 Administration,,False,Cannot determine the nature of this agency from the name alone.,llm
+Canada,DROIT MINIER EiPIERRE À 'SCULPTER,unclear,0,DROIT MINIER EiPIERRE À 'SCULPTER,,False,Cannot determine from the name alone.,llm
+Canada,DISPOSITIONS APPLICABLES À CERTAINS PARCS,unclear,0,DISPOSITIONS APPLICABLES À CERTAINS PARCS,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,CANADA—LUXEMBOURG INCOME TAX CONVENTION,unclear,0,Canada-Luxembourg Income Tax Convention,,False,The name suggests a tax agreement rather than an R&D agency.,llm
+Canada,FORFEITURE CONFISCATION,unclear,0,Forfeiture Confiscation,,False,The name does not provide enough information to determine if it is an R&D agency or a ministry.,llm
+Canada,STRUCTURE OF THE AUTHORITY STRUCTURE ORGANISATIONNELLE DE L'ADMINISTRATION,unclear,0,Structure of the Authority,,False,Cannot determine the specific focus or function of the agency from the name alone.,llm
+Canada,MITIGATION OF ENVIRONMENTAL DAMAGE,unclear,0,Mitigation of Environmental Damage,,False,Cannot determine the specific focus or budget allocation for R&D from the name alone.,llm
+Canada,LOI SUR LES ALLOCATIONS AUX ANCIENS COMBATTANTS,unclear,0,Law on Allocations to Veterans,,False,The name suggests a focus on veteran benefits rather than R&D.,llm
+Canada,RELATED AMENDMENTS,unclear,0,RELATED AMENDMENTS,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,SCHEDULE 1 NATIONAL PARKS OF CANADA PART 1 —BRITISH COLUMBIA PART 2 — ALBERTA PART 3— SASKATCHEWAN PART 4— MANITOBA PART 5— ONTARIO PART 6— QUEBEC PART 7— NEW BRUNSWICK PART 8— NOVA SCOTIA PART 9— PRINCE EDWARD ISLAND PART 10— NEWFOUNDLAND PART 11 — YUKON TERRITORY PART 12— NORTHWEST TERRITORIES PART 13 — NUNAVUT SCHEDULE 2 NATIONAL PARK RESERVES OF CANADA SCHEDULE 3 PROTECTED SPECIES SCHEDULE 4 PARK COMMUNITIES MODIFICATIONS CONDITIONNELLES,unclear,0,National Parks of Canada,,False,The name does not provide enough information to determine if it is dedicated to R&D or a mixed ministry.,llm
+Canada,COMMERCIAL SKI AREAS STATIONS COMMERCIALES DE SKI CONDITIONAL AMENDMENTS •,unclear,0,Commercial Ski Areas Stations Commerciales de Ski Conditional Amendments,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,LOI DE L'IMPÔT SUR LE REVENU,unclear,0,Income Tax Act,,False,The name suggests a tax legislation rather than a dedicated R&D agency or program.,llm
+Canada,PRESIDENT AND EMPLOYEES,unclear,0,President and Employees,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,PRÉSIDENT ET EMPLOYÉS,unclear,0,President and Employees,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,IMPLEMENTATION OF AGREEMENT GENERALLY MISE EN OEUVRE DE L'ACCORD,unclear,0,Implementation of Agreement,,False,The name does not provide enough information to determine the agency's focus on R&D.,llm
+Canada,TR/2000-29,unclear,0,TR/2000-29,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,MÉDICOLÉGALES,unclear,0,MÉDICOLÉGALES,,False,Cannot determine the specific focus or function of the agency from the name alone.,llm
+Canada,PRÉSENTATION DE RENSEIGNEMENTS D'ORDRE FINANCIER,unclear,0,Presentation of Financial Information,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,LIABILITY FOR CARRIAGE OF GOODS BY WATER,unclear,0,Liability for Carriage of Goods by Water,,False,The name does not provide enough information to determine if it is an R&D agency or a ministry.,llm
+Canada,RESPONSABILITÉ EN MATIÈRE DE TRANSPORT DE MARCHANDISES PAR EAU,unclear,0,Responsibility for Marine Cargo Transportation,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,FEES AND CHARGES,unclear,0,FEES AND CHARGES,,False,The name does not provide enough information to determine if it is related to R&D.,llm
+Canada,CANADA-CZECH REPUBLIC INCOME TAX CONVENTION,unclear,0,Canada-Czech Republic Income Tax Convention,,False,The name suggests a tax agreement rather than an R&D agency.,llm
+Canada,MATIÈRE D'IMPÔTS SUR LE REVENU,unclear,0,MATIÈRE D'IMPÔTS SUR LE REVENU,,False,Cannot determine from the name alone.,llm
+Canada,"PUBLICATION, RECORDS AND:, INFORMATION",unclear,0,"Publication, Records and Information",,False,The name does not provide enough information to determine if it is an R&D agency or a mixed ministry.,llm
+Canada,EXAMEN DE RENSEIGNEMENTS A PROTÉGER,unclear,0,EXAMEN DE RENSEIGNEMENTS A PROTÉGER,,False,Cannot determine the agency's focus or budget allocation from the name alone.,llm
+Canada,CAUSÉ PAR DES PESTICIDES,unclear,0,CAUSÉ PAR DES PESTICIDES,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,ENREGISTREMENT DES ORGANISMES DE BIENFAISANCE,unclear,0,Registration of Charitable Organizations,,False,The name does not indicate a focus on R&D.,llm
+Canada,RÈGLEMENTS TRANSITIONAL PROVISIONS,unclear,0,Transitional Provisions Regulations,,False,The name does not provide enough information to classify the agency.,llm
+Canada,RECONSIDERATION OF DECISIONS,unclear,0,Reconsideration of Decisions,,False,The name does not provide enough information to classify the agency.,llm
+Canada,EXAMEN DES DÉCISIONS,unclear,0,EXAMEN DES DÉCISIONS,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,"LOI ABROGÉE le 31.12.72; LOI ABROGÉE L.C. 1988,",unclear,0,LOI ABROGÉE le 31.12.72; LOI ABROGÉE L.C. 1988,,False,Cannot determine agency type from the name alone.,llm
+Canada,ACQUISITIONS FORCÉES,unclear,0,ACQUISITIONS FORCÉES,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,CANADA FUND FOR AFRICA' FONDS CANADIEN POUR L'AFRIQUE,unclear,0,Canada Fund for Africa,,False,Cannot determine the primary focus of the agency from the name alone.,llm
+Canada,OPÉRATIONS,unclear,0,OPÉRATIONS,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,INTERPRETATIO INTERPRETATION,unclear,0,INTERPRETATIO INTERPRETATION,,False,Cannot determine the nature or focus of the agency from the name alone.,llm
+Canada,MODIFICATIONS APPORTÉES À LA PRÉSENTE LOI,unclear,0,Modifications Apportées À La Présente Loi,,False,The name does not provide enough information to determine the agency's focus or budget allocation.,llm
+Canada,REPEAL OF THE FISHERIES PRICES SUPPORT ACT,unclear,0,REPEAL OF THE FISHERIES PRICES SUPPORT ACT,,False,The name does not indicate a specific agency or R&D focus.,llm
+Canada,RESPONSIBILITIES OF GOVERNING COUNCIL ATTRIBUTIONS DU CONSEIL D'ADMINISTRATION,unclear,0,Governing Council Responsibilities,,False,The name does not provide enough information to determine if it is an R&D agency or a ministry.,llm
+Canada,D' IMPÔTS SUR LE REVENU,unclear,0,Canada Revenue Agency,,False,"The name suggests a tax agency, which does not clearly indicate R&D focus.",llm
+Canada,DIVISION 2,unclear,0,Division 2,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,EN MATIÈRE DE POLLUTION,unclear,0,EN MATIÈRE DE POLLUTION,,False,Cannot determine the specific focus or R&D component from the name alone.,llm
+Canada,ESTABLISHMENT AND ORGÀNIZATION OF TRIBUNAL,unclear,0,Establishment and Organization of Tribunal,,False,Cannot determine from the name alone.,llm
+Canada,"R.S., C. H-6",unclear,0,"R.S., C. H-6",,False,Cannot determine from the name alone.,llm
+Canada,INDEMNISATION EN MATIÈRE DE POLLUTION,unclear,0,Indemnisation en matière de pollution,,False,"The name suggests a focus on pollution indemnification, but it is unclear if it involves R&D.",llm
+Canada,FONDS POUR LES CRIMES CONTRE L'HUMANITÉ,unclear,0,Fonds pour les crimes contre l'humanité,,False,The name does not provide clear information about R&D focus.,llm
+Canada,FIVE-YEAR REVI'EW,unclear,0,Five-Year Review,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,"DORS/96-75, DORS/96-104; DORS/96-488; DORS/98-",unclear,0,"DORS/96-75, DORS/96-104; DORS/96-488; DORS/98-",,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,ARTICLE IV,unclear,0,ARTICLE IV,,False,Cannot determine from the name alone.,llm
+Canada,"R.S.C. 1970,",unclear,0,R.S.C. 1970,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,DISPOSITIONS GÉNÉRALES.,unclear,0,DISPOSITIONS GÉNÉRALES,,False,Cannot determine from the name alone.,llm
+Canada,CANADA–GERMANY INCOME TAX AGREEMENT,unclear,0,Canada-Germany Income Tax Agreement,,False,The name does not indicate a focus on R&D.,llm
+Canada,ABROGATION,unclear,0,ABROGATION,,False,Cannot determine from the name alone.,llm
+Canada,DIVISION 2 LICENCES ';•,unclear,0,Division 2 Licences,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,INSPECTIONS,unclear,0,INSPECTIONS,,False,Cannot determine the specific focus of this agency from the name alone.,llm
+Canada,ORGANISATION DU SYSTÈME DE JUSTICE PÉNALE POUR LES ADOLESCENTS,unclear,0,Youth Criminal Justice System Organization,,False,The name does not indicate a focus on R&D.,llm
+Canada,NUNAVUT WATERS EAUX DU NUNAVUT,unclear,0,Nunavut Waters and Nunavut Eaux,,False,Cannot determine the agency's focus or budget allocation from the name alone.,llm
+Canada,ACCESS TO INFORMATION,unclear,0,Access to Information,,False,The name does not indicate a focus on R&D.,llm
+Canada,PROCEEDS OF CRIME BIENS D'ORIGINE CRIMINELLE,unclear,0,Proceeds of Crime,,False,The name does not indicate a focus on R&D.,llm
+Canada,CANADA-SENEGAL INCOME TAX CONVENTION,unclear,0,Canada-Senegal Income Tax Convention,,False,The name suggests a tax convention rather than an R&D agency.,llm
+Canada,CHIEF ELECTORAL OFFICER AND STAFF,unclear,0,Chief Electoral Officer and Staff,,False,The agency's name suggests a focus on electoral processes rather than R&D.,llm
+Canada,BUREAU DU DIRECTEUR GÉNÉRAL DES ÉLECTIONS,unclear,0,Bureau du Directeur Général des Élections,,False,"Agency name suggests a focus on elections, not R&D.",llm
+Canada,DE LA RÉPUBLIQUE BOLIVARIENNE DU,unclear,0,DE LA RÉPUBLIQUE BOLIVARIENNE DU,,False,Cannot determine from the name alone.,llm
+Canada,MODIFICATIONS APPORTÉES À D'AUTRES LOIS,unclear,0,Modifications Apportées À D'Autres Lois,,False,The name does not provide enough information to determine the agency's focus on R&D.,llm
+Canada,CRIMINALITÉ,unclear,0,Criminalité,,False,Agency name does not provide clear indication of R&D focus.,llm
+Canada,RAPPORT AU PARLEMENT,unclear,0,RAPPORT AU PARLEMENT,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,REPORT TO PARLIAMENT,unclear,0,Report to Parliament,,False,The name does not specify if it is an R&D agency or a ministry.,llm
+Canada,ESTABLISHMENT OF FOUNDATION,unclear,0,Establishment of Foundation,,False,Cannot determine the specific focus or function of the agency from the name alone.,llm
+Canada,PARK RESERVES,unclear,0,PARK RESERVES,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,CANADA-SLOVAK REPUBLIC INCOME TAX AGREEMENT,unclear,0,Canada-Slovak Republic Income Tax Agreement,,False,The name does not indicate a focus on R&D.,llm
+Canada,MESURES CONSÉCUTIVES À LA SAISIE,unclear,0,MESURES CONSÉCUTIVES À LA SAISIE,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,AMPHIBIENS,unclear,0,AMPHIBIENS,,False,Cannot determine from the name alone.,llm
+Canada,IMMEUBLES ET BIENS RÉELS,unclear,0,IMMEUBLES ET BIENS RÉELS,,False,Cannot determine the agency's focus or R&D involvement from the name alone.,llm
+Canada,MODIFICATIONS CONDITIONNELLES,unclear,0,MODIFICATIONS CONDITIONNELLES,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,OFFENCES AGAINST THE ADMINISTRATION OF JUSTICE,unclear,0,Offences Against the Administration of Justice,,False,The name does not indicate a focus on R&D.,llm
+Canada,COMPÉTENCE GÉNÉRALE DU CONSEIL,unclear,0,General Competence Council,,False,Cannot determine the agency's focus or budget allocation from the name alone.,llm
+Canada,ROLE OF THE BOARD,unclear,0,Role of the Board,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,AGENCE CANADIENNE DE,unclear,0,AGENCE CANADIENNE DE,,False,Insufficient information to determine the agency type.,llm
+Canada,TÉLÉCOMMUNICATIONS CANADIENNES,unclear,0,Canadian Telecommunications,,False,Cannot determine the focus of the agency from the name alone.,llm
+Canada,MESURES DE PROTECTION DES ESPÈCES SAUVAGES INSCRITES,unclear,0,Wildlife Species Protection Measures,,False,Cannot determine the primary focus of the agency from the name alone.,llm
+Canada,CANADA-PERU INCOME TAX CONVENTION,unclear,0,Canada-Peru Income Tax Convention,,False,The name suggests a tax agreement rather than an R&D agency.,llm
+Canada,CONVENTION CANADA-PÉROU EN MATIÈRE D'IMPÔTS SUR LE REVENU,unclear,0,Convention Canada-Pérou en matière d'impôts sur le revenu,,False,"The name suggests a tax convention, not an R&D agency.",llm
+Canada,COMPENSATION FOR USE OF INFORMATION,unclear,0,Compensation for Use of Information,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,LIMITATION ON LIABILITY,unclear,0,Limitation on Liability,,False,The name does not provide enough information to classify the agency.,llm
+Canada,LIMITATION DE RESPONSABILITÉ,unclear,0,LIMITATION DE RESPONSABILITÉ,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,DOCUMENTS ÉLECTRONIQUES,unclear,0,DOCUMENTS ÉLECTRONIQUES,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,INSTITUTS DE RECHERCHE EN SANTÉ,unclear,0,Health Research Institutes,,False,"The name suggests a focus on health research, but it is unclear if it is a dedicated agency or part of a broader ministry.",llm
+Canada,SECTION 2.,unclear,0,SECTION 2,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,STRATÉGIQUE,unclear,0,STRATÉGIQUE,,False,Cannot determine the specific focus or function of the agency from the name alone.,llm
+Canada,LIVRAISON DE DOCUMENTS,unclear,0,LIVRAISON DE DOCUMENTS,,False,Cannot determine from the name alone.,llm
+Canada,ANNUAL REPORT RAPPORT ANNUEL,unclear,0,Annual Report Rapport Annuel,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,MODIFICATION DE LOIS RELATIVES AUX INSTITUTIONS FINANCIÈRES,unclear,0,Modification of Laws Relating to Financial Institutions,,False,The name does not provide clear information about R&D focus.,llm
+Canada,LOI SUR LE YUKON,unclear,0,Law on the Yukon,,False,The name does not provide enough information to classify the agency.,llm
+Canada,RÉVISION DU CERTIFICAT,unclear,0,RÉVISION DU CERTIFICAT,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,DÉTERMINATION DE LA PEINE,unclear,0,Determination of Sentence,,False,The name does not indicate a focus on R&D.,llm
+Canada,"CONTRACTS, AGREEMENTS AND ARRANGEMENTS",unclear,0,"Contracts, Agreements and Arrangements",,False,The name does not specify if it is dedicated to R&D or a broader function.,llm
+Canada,"CONTRATS, ENTENTES ET ACCORDS",unclear,0,"CONTRACTS, AGREEMENTS AND ACCORDS",,False,The name does not provide enough information to determine the agency's focus on R&D.,llm
+Canada,VETERANS INSURANCE ACT,unclear,0,Veterans Insurance Act,,False,Cannot determine from the name alone.,llm
+Canada,OPÉRATIONS DOUTEUSES,unclear,0,OPÉRATIONS DOUTEUSES,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,LEGISLATIVE AMENDMENT,unclear,0,Legislative Amendment,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,MODIFICATION LÉGISLATIVE,unclear,0,MODIFICATION LÉGISLATIVE,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,FORMALITÉS PRÉALABLES À L'ENTRÉE ET SÉLECTION,unclear,0,Formalités Préalables à l'Entrée et Sélection,,False,Cannot determine from the name alone.,llm
+Canada,EXERCISE OF FEDERAL POWERS,unclear,0,Exercise of Federal Powers,,False,Cannot determine the nature of this agency from the name alone.,llm
+Canada,EXERCICE DE POUVOIRS FÉDÉRAUX,unclear,0,Federal Powers Exercise,,False,Cannot determine the specific focus or function of the agency from the name alone.,llm
+Canada,APPLICATION,unclear,0,APPLICATION,,False,Cannot determine from the name alone.,llm
+Canada,REGISTRATION OF PEST CONTROL PRODUCTS,unclear,0,Registration of Pest Control Products,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,HOMOLOGATION DES PRODUITS ANTIPARASITAIRES,unclear,0,HOMOLOGATION DES PRODUITS ANTIPARASITAIRES,,False,Cannot determine from the name alone.,llm
+Canada,EFFECT OF NISGA'A FINAL AGREEMENT,unclear,0,Effect of Nisga'a Final Agreement,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,PERSONAL INJURIES AND FATALITIES,unclear,0,Personal Injuries and Fatalities,,False,Cannot determine from the name alone.,llm
+Canada,RAPPORTS DE LA SOCIÉTÉ DE GESTION,unclear,0,RAPPORTS DE LA SOCIÉTÉ DE GESTION,,False,Cannot determine from the name alone.,llm
+Canada,REPORTS BY WASTE MANAGEMENT ORGANIZATION,unclear,0,Reports by Waste Management Organization,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,"CONSEQUENTIAL AMENDMENTS, REPEAL AND COMING INTO",unclear,0,"Consequential Amendments, Repeal and Coming Into",,False,The name does not provide enough information to classify the agency.,llm
+Canada,"MODIFICATIONS CORRÉLATIVES, ABROGATION ET ENTRÉE EN",unclear,0,"MODIFICATIONS CORRÉLATIVES, ABROGATION ET ENTRÉE EN",,False,Cannot determine agency type from the name alone.,llm
+Canada,MODIFICATIONS CONNEXES,unclear,0,MODIFICATIONS CONNEXES,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,FINANCIAL MATTERS AND AUDIT,unclear,0,Financial Matters and Audit,,False,Cannot determine from the name alone.,llm
+Canada,CRÉATION DE RÉSERVES,unclear,0,Creation of Reserves,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,ORGANIZATION ORGANISATION,unclear,0,Organization Organisation,,False,Cannot determine from the name alone.,llm
+Canada,LICENCES AND REGISTRATIONS,unclear,0,Licences and Registrations,,False,The name does not provide enough information to determine if it is an R&D agency or a ministry.,llm
+Canada,ACCORD CANADA–ALLEMAGNE EN MATIÈRE D'IMPÔTS SUR LE REVENU,unclear,0,ACCORD CANADA–ALLEMAGNE EN MATIÈRE D'IMPÔTS SUR LE REVENU,,False,The name does not provide clear information about R&D focus.,llm
+Canada,INVESTIGATIONS,unclear,0,Investigations,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,TENUE DE LIVRES,unclear,0,TENUE DE LIVRES,,False,Cannot determine from the name alone.,llm
+Canada,LOI SUR LA PREUVE AU CANADA,unclear,0,Law on Evidence in Canada,,False,The name does not indicate a clear focus on R&D.,llm
+Canada,CANADA EVIDENCE ACT,unclear,0,Canada Evidence Act,,False,The name does not provide enough information to classify the agency's focus on R&D.,llm
+Canada,PROTECTION OF PERSONAL INFORMATION PROTECTION DES RENSEIGNEMENTS PERSONNELS,unclear,0,Protection of Personal Information Protection des Renseignements Personnels,,False,Cannot determine from the name alone.,llm
+Canada,CONFLITS D'INTÉRÊTS,unclear,0,CONFLITS D'INTÉRÊTS,,False,The name does not indicate a focus on R&D.,llm
+Canada,ADMINISTRATEURS,unclear,0,Administrateurs,,False,Cannot determine from the name alone.,llm
+Canada,AUTHORIZATION TO USE UNREGISTERED PRODUCT,unclear,0,Authorization to Use Unregistered Product,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,AUTORISATION D'UTILISATION D'UN PRODUIT ANTIPARASITAIRE NON,unclear,0,Authorization for the Use of a Non-Parasitic Product,,False,The name does not provide enough information to classify the agency.,llm
+Canada,LOI SUR LES ALLOCATIONS DE RETRAITE DES PARLEMENTAIRES,unclear,0,Law on Parliamentary Pension Allocations,,False,The name does not indicate a focus on R&D.,llm
+Canada,APPLICATION AND ADMINISTRATIVE MATTERS,unclear,0,Application and Administrative Matters,,False,The name does not provide enough information to determine if it is an R&D agency or a ministry.,llm
+Canada,A - B - C - D),unclear,0,A - B - C - D,,False,Cannot determine from the name alone.,llm
+Canada,GENERAL PROVISIONS CONCERNING CHARGES AND OTHER AMOUNTS PAYABLE,unclear,0,General Provisions Concerning Charges and Other Amounts Payable,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,VÉRIFICATIONS,unclear,0,Vérifications,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,ENTRAIDE JURIDIQUE,unclear,0,ENTRAIDE JURIDIQUE,,False,Cannot determine from the name alone.,llm
+Canada,OFFICIAL SECRETS ACT,unclear,0,Official Secrets Act,,False,The name does not indicate a specific agency focused on R&D.,llm
+Canada,LOI SUR LES SECRETS OFFICIELS,unclear,0,Official Secrets Act,,False,The name does not provide clear information about R&D focus.,llm
+Canada,STEWARDSHIP INTENDANCE,unclear,0,Stewardship Intendance,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,ADMINISTRATION OF ACT APPLICATION DE LA LOI,unclear,0,Administration of Act Application de la Loi,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,DROITS ÉLECTORAUX,unclear,0,DROITS ÉLECTORAUX,,False,Agency name does not provide clear indication of R&D focus.,llm
+Canada,JUDICIAL CONSIDERATION OF CERIIPICATE EXAMEN JUDICIAIRE DU CERTIFICAT,unclear,0,Judicial Consideration of Ceriipicate Examen Judiciaire du Certificat,,False,Cannot determine from the name alone.,llm
+Canada,ATTRIBUTIONS DU MINISTRE,unclear,0,Attributions du Ministre,,False,Cannot determine the specific focus or R&D component from the name alone.,llm
+Canada,DESIGNATION AND AMENDMENTS CONSEQUENTIAL ON IT,unclear,0,Designation and Amendments Consequential on It,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,APPLICATION OF OTHER ACTS,unclear,0,Application of Other Acts,,False,Cannot determine the nature or focus of this agency from the name alone.,llm
+Canada,COMMUNICATIONS,unclear,0,Communications,,False,Cannot determine the specific focus or R&D component from the name alone.,llm
+Canada,RAPPORT ANNUEL,unclear,0,Annual Report,,False,The name does not provide enough information to determine the agency's focus.,llm
+Canada,EXPORT CONTROLS,unclear,0,Export Controls,,False,The name does not provide enough information to determine if it is dedicated to R&D or a broader ministry.,llm
+Canada,PROCEDURE AND DEFENCES,unclear,0,Procedure and Defences,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,PROCÉDURE ET MOYENS DE DÉFENSE,mixed_ministry,5,Department of Defence,,False,Broad government department where R&D is a small component.,llm
+Canada,ABSENCE DE RESPONSABILITÉ,unclear,0,ABSENCE DE RESPONSABILITÉ,,False,Cannot determine from the name alone.,llm
+Canada,STAFF OF AGENCY PERSONNEL DE L'AGENCE,unclear,0,STAFF OF AGENCY PERSONNEL DE L'AGENCE,,False,Cannot determine from the name alone.,llm
+Canada,EXTRAJUDICIAL MEASURES,unclear,0,Extrajudicial Measures,,False,Cannot determine the nature of this agency from the name alone.,llm
+Canada,RENSEIGNEMENTS DE SÉCURITÉ,unclear,0,Canadian Security Intelligence Service,,False,"The name suggests a focus on security intelligence, not R&D.",llm
+Canada,RESPONSABILITÉ POUR FRAIS,unclear,0,RESPONSABILITÉ POUR FRAIS,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,LOIS DE LA COLOMBIE-BRITANNIQUE,unclear,0,British Columbia Laws,,False,The name does not provide enough information to determine if it is an R&D agency or a ministry.,llm
+Canada,PARTAGE DE LA RESPONSABILITÉ,unclear,0,PARTAGE DE LA RESPONSABILITÉ,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,APPORTIONMENT OF LIABILITY,unclear,0,Apportionment of Liability,,False,The name does not provide enough information to classify the agency.,llm
+Canada,SECURITY-RELATED INFORMATION,unclear,0,Security-Related Information,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,WINDING-UP LIQUIDATION,unclear,0,Winding-Up Liquidation,,False,The name does not provide enough information to classify the agency.,llm
+Canada,DIVISION 4 DIVISION 2 EXAMINATION,unclear,0,Division 4 Division 2 Examination,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,VÉRIFICATION,unclear,0,VERIFICATION,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,EXPORTING ROUGH DIAMONDS,unclear,0,Exporting Rough Diamonds,,False,The name does not provide enough information to classify the agency.,llm
+Canada,IMPORTING ROUGH DIAMONDS,unclear,0,Importing Rough Diamonds,,False,The name does not provide enough information to classify the agency.,llm
+Canada,EXPORTATION DE DIAMANTS BRUTS,unclear,0,EXPORTATION DE DIAMANTS BRUTS,,False,Agency name does not provide clear indication of R&D focus.,llm
+Canada,DIAMANTS BRUTS IMPORTÉS,unclear,0,DIAMANTS BRUTS IMPORTÉS,,False,Agency name does not provide clear indication of R&D focus.,llm
+Canada,JUGES EN CHEF CHIEF JUSTICES,unclear,0,Chief Justices,,False,The name does not indicate a focus on R&D.,llm
+Canada,ATTÉNUATION DES DOMMAGES À L'ENVIRONNEMENT,unclear,0,Environmental Damage Mitigation,,False,Cannot determine the primary focus of the agency from the name alone.,llm
+Canada,ANNUAL MEETING,unclear,0,Annual Meeting,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,"S.C., 1970-71-72)",unclear,0,"S.C., 1970-71-72",,False,Cannot determine agency type from the name alone.,llm
+Canada,ORGANIZATION OF YOUTH CRIMINAL JUSTICE SYSTEM,unclear,0,Organization of Youth Criminal Justice System,,False,Cannot determine from the name alone.,llm
+Canada,ANTIPARASITAIRES,unclear,0,ANTIPARASITAIRES,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,PARK LANDS,unclear,0,PARK LANDS,,False,Cannot determine from the name alone.,llm
+Canada,NORWAY HOUSE CREE NATION FLOODED LAND 	 SUBMERSION DE TERRES DE LA NATION CRIE DE NORWAY HOUSE,unclear,0,Norway House Cree Nation Flooded Land,,False,Cannot determine from the name alone.,llm
+Canada,PUBLIC GENERAL ACTS,unclear,0,Public General Acts,,False,The name does not provide enough information to determine the agency's focus on R&D.,llm
+Canada,INTERPRETATION,unclear,0,INTERPRETATION,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,CRÉATION ET MISSION DE L'ADMINISTRATION,unclear,0,Creation and Mission of the Administration,,False,Cannot determine from the name alone.,llm
+Canada,EXPOSÉ DES PROPOSITIONS DE LA SOCIÉTÉ DE GESTION,unclear,0,EXPOSÉ DES PROPOSITIONS DE LA SOCIÉTÉ DE GESTION,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,INSPECTION OF RECORDS AND BOOKS,unclear,0,Inspection of Records and Books,,False,The name does not provide enough information to determine if it is an R&D agency or a mixed ministry.,llm
+Canada,VÉRIFICATION ET INTERDICTIONS,unclear,0,Verification and Prohibitions,,False,Cannot determine the agency's focus or budget allocation from the name alone.,llm
+Canada,STUDY BY WASTE MANAGEMENT ORGANIZATION,unclear,0,Study by Waste Management Organization,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,CHARGE PAYABLE,unclear,0,CHARGE PAYABLE,,False,Cannot determine from the name alone.,llm
+Canada,DISPOSITIONS GÉNÉRALES CONCERNANT LE DROIT ET LES AUTRES SOMMES EXIGIBLES,unclear,0,General Dispositions Concerning Law and Other Amounts Payable,,False,The name does not provide clear information about R&D focus.,llm
+Canada,DROIT EXIGIBLE,unclear,0,DROIT EXIGIBLE,,False,Cannot determine from the name alone.,llm
+Canada,DOCUMENTS TO BE MADE PUBLIC,unclear,0,Documents to be Made Public,,False,Agency type cannot be determined from the name alone.,llm
+Canada,IMMIGRATION TO CANADA DIVISION 1 REQUIREMENTS BEFORE ENTERING CANADA AND SELECTION,unclear,0,Immigration to Canada Division 1 Requirements Before Entering Canada and Selection,,False,The name does not indicate a focus on R&D.,llm
+Canada,CRIMINAL CODE,unclear,0,Criminal Code,,False,The name does not indicate a specific agency focused on R&D.,llm
+Canada,"RECORDS, BOOKS AND FINANCIAL STATEMENTS",unclear,0,"RECORDS, BOOKS AND FINANCIAL STATEMENTS",,False,The name does not provide enough information to determine if it is an R&D agency or a ministry.,llm
+Canada,S . 207(2),unclear,0,S . 207(2),,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,REGULATIONS NO LIABILITY ANNUAL REPORT,unclear,0,Regulations No Liability Annual Report,,False,The name does not provide enough information to classify the agency.,llm
+Canada,TR/2000-38,unclear,0,TR/2000-38,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,WITHDRAWAL BY BENEFICIARY,unclear,0,Withdrawal by Beneficiary,,False,The name does not provide enough information to classify the agency.,llm
+Canada,REMISE DE FONDS AUX BÉNÉFICIAIRES,unclear,0,REMISE DE FONDS AUX BÉNÉFICIAIRES,,False,Cannot determine from the name alone.,llm
+Canada,STEWARDSHIP ACTION PLAN PLAN D'ACTION POUR L'INTENDANCE,unclear,0,Stewardship Action Plan,,False,Cannot determine from the name alone.,llm
+Canada,PROCÉDURES JUDICIAIRES OU ADMINISTRATIVES,unclear,0,Judicial or Administrative Procedures,,False,The name does not provide enough information to determine if it is an R&D agency or a ministry.,llm
+Canada,LEGAL PROCEEDINGS,unclear,0,Legal Proceedings,,False,The name does not provide enough information to determine if it is related to R&D.,llm
+Canada,PROPOSITIONS DE SUBSTITUTION,unclear,0,Propositions de Substitution,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,FINANCING •,unclear,0,Financing,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,COMPÉTENCE DE LA COUR FÉDÉRALE,unclear,0,Federal Court Competence,,False,Cannot determine from the name alone.,llm
+Canada,ACCORD DÉFINITIF NISGA'A,unclear,0,ACCORD DÉFINITIF NISGA'A,,False,Cannot determine from the name alone.,llm
+Canada,ASSESSMENTS,unclear,0,ASSESSMENTS,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,GOUVERNEMENT,unclear,0,Government of Canada,,False,Cannot determine the specific focus or R&D allocation from the name alone.,llm
+Canada,ADMINISTRATION AND OFFICERS,unclear,0,Administration and Officers,,False,Cannot determine the specific focus or function of this agency from the name alone.,llm
+Canada,PERSONNEL ASSURANT L'EXÉCUTION,unclear,0,Personnel Assurant L'Exécution,,False,Cannot determine from the name alone.,llm
+Canada,ADMINISTRATION,unclear,0,Administration,,False,Agency name is too vague to determine its focus.,llm
+Canada,GESTION FINANCIÈRE DES CANDIDATS,unclear,0,Financial Management of Candidates,,False,The name does not provide enough information to determine if it is an R&D agency or a ministry.,llm
+Canada,CARACTÈRE CONFIDENTIEL DES RENSEIGNEMENTS,unclear,0,Confidential Character of Information,,False,The name does not provide enough information to classify the agency.,llm
+Canada,IN-TRANSIT ROUGH DIAMONDS,unclear,0,In-Transit Rough Diamonds,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,DIAMANTS BRUTS EN TRANSIT,unclear,0,DIAMANTS BRUTS EN TRANSIT,,False,Agency name does not provide clear indication of R&D focus.,llm
+Canada,CONCERNANT LE RÈGLEMENT DE REVENDICATIONS (ALBERTA ET SASKATCHEWAN),unclear,0,CONCERNANT LE RÈGLEMENT DE REVENDICATIONS (ALBERTA ET SASKATCHEWAN),,False,Cannot determine from the name alone.,llm
+Canada,CONCERTATION INTERGOUVERNEMENTALE,unclear,0,Intergovernmental Coordination,,False,Cannot determine the specific focus or budget allocation for R&D.,llm
+Canada,AGREEMENTS,unclear,0,AGREEMENTS,,False,Cannot determine the nature of this agency from the name alone.,llm
+Canada,PÉRIODE D'INADMISSIBILITÉ À LA LIBÉRATION CONDITIONNELLE,unclear,0,PÉRIODE D'INADMISSIBILITÉ À LA LIBÉRATION CONDITIONNELLE,,False,Cannot determine from the name alone.,llm
+Canada,PAROLE ELIGIBILITY,unclear,0,Parole Eligibility,,False,The name does not provide enough information to determine if it is an R&D agency or a ministry.,llm
+Canada,TABLE ANALYTIQUE LOI SUR L'EXPORTATION ET L'IMPORTATION DES DIAMANTS BRUTS,unclear,0,Table Analytique Loi sur l'Exportation et l'Importation des Diamants Bruts,,False,Cannot determine the agency's focus or budget allocation from the name alone.,llm
+Canada,CONSTITUTION DE LA FONDATION,unclear,0,Constitution de la Fondation,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,INFRACTIONS COMMISES À L'ÉTRANGER,unclear,0,Infractions Comprises à l'Étranger,,False,The name does not provide enough information to determine the agency's focus on R&D.,llm
+Canada,OFFENCES OUTSIDE CANADA,unclear,0,Offences Outside Canada,,False,Agency name does not provide clear indication of R&D focus.,llm
+Canada,PERCEPTION DU DROIT,unclear,0,Perception of Law,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,COLLECTION OF CHARGE,unclear,0,Collection of Charge,,False,Cannot determine the nature of this agency from the name alone.,llm
+Canada,SOCIÉTÉ DE GESTION DES DÉCHETS NUCLÉAIRES,unclear,0,Société de gestion des déchets nucléaires,,False,Cannot determine from the name alone.,llm
+Canada,WASTE MANAGEMENT ORGANIZATION,unclear,0,Waste Management Organization,,False,The name does not provide enough information to determine if it is dedicated to R&D or a broader ministry.,llm
+Canada,ATTACHMENT 1,unclear,0,ATTACHMENT 1,,False,Cannot determine from the name alone.,llm
+Canada,S1/2002-17,unclear,0,S1/2002-17,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,APPROPRIATION,unclear,0,Appropriation,,False,The name does not provide enough information to determine the agency's focus.,llm
+Canada,ASSOCIATION CANADIENNE DES,unclear,0,Association Canadienne des,,False,Cannot determine the specific focus or function of the agency from the name alone.,llm
+Canada,CONVENTIONS FISCALES CANADA—NORVÈGE,unclear,0,Canada-Norway Tax Conventions,,False,The name does not provide enough information to determine if it is an R&D agency or a mixed ministry.,llm
+Canada,"RÉMUNÉRATION, INDEMNITÉS ET AVANTAGES",unclear,0,"Rémunération, Indemnités et Avantages",,False,Cannot determine from the name alone.,llm
+Canada,COMPENSATION AND BENEFITS,unclear,0,Compensation and Benefits,,False,The name does not indicate a focus on R&D.,llm
+Canada,DÉCLARATION DES ESPÈCES ET,unclear,0,DÉCLARATION DES ESPÈCES ET,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,CANADA—SENEGAL TAX CONVENTION,unclear,0,Canada-Senegal Tax Convention,,False,The name suggests a tax agreement rather than an R&D agency.,llm
+Canada,"CIF, 1997, 0.40",unclear,0,CIF,,False,Cannot determine from the name alone.,llm
+Canada,LOI SUR LA TAXE D'ACCISE,unclear,0,Excise Tax Act,,False,The name does not indicate a focus on R&D.,llm
+Canada,"POWERS, DUTIES AND FUNCTIONS OF THE COMMISSIONER ATTRIBUTIONS DU COMMISSAIRE",unclear,0,"POWERS, DUTIES AND FUNCTIONS OF THE COMMISSIONER ATTRIBUTIONS DU COMMISSAIRE",,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,CONTRACTING FOR SERVICES,unclear,0,Contracting for Services,,False,The name does not provide enough information to determine if it is an R&D agency or a ministry.,llm
+Canada,CHIEF ADMINISTRATOR ADMINISTRATEUR EN CHEF,unclear,0,Chief Administrator,,False,Cannot determine the specific focus or function of the agency from the name alone.,llm
+Canada,POUR LE GOUVERNEMENT,unclear,0,Pour le Gouvernement,,False,Cannot determine the specific focus or function of the agency from the name alone.,llm
+Canada,CANADA—PORTUGAL TAX CONVENTION,unclear,0,Canada-Portugal Tax Convention,,False,The name suggests a tax agreement rather than an R&D agency.,llm
+Canada,SA MAJESTÉ,unclear,0,Her Majesty,,False,The name does not provide enough information to determine the agency's focus.,llm
+Canada,DISPOSITIONS GÉNÉRALES CONCERNANT LES DROITS ET AUTRES SOMMES EXIGIBLES,unclear,0,General Dispositions Concerning Rights and Other Amounts Payable,,False,The name does not provide clear information about R&D focus.,llm
+Canada,TR/2002-105,unclear,0,TR/2002-105,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,ARTICLE 11,unclear,0,ARTICLE 11,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,STAFF OF THE SERVICE,unclear,0,Staff of the Service,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,SPÉCIALISTES À CONTRAT RAPPORT AU PARLEMENT,unclear,0,Contract Specialists Report to Parliament,,False,The name does not provide enough information to classify the agency.,llm
+Canada,MARINE CONSERVATION AREAS,unclear,0,Marine Conservation Areas,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,CANADA—VIETNAM TAX AGREEMENT,unclear,0,Canada-Vietnam Tax Agreement,,False,The name does not indicate a focus on R&D.,llm
+Canada,ARTICLE 12,unclear,0,ARTICLE 12,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,AFFAIRES INDIENNES ET DU NORD CANADIEN (suite) INDIAN AFFAIRS AND NORTHERN DEVELOPMENT,mixed_ministry,10,Indian Affairs and Northern Development,,False,Broad government department where R&D is a small component.,llm
+Canada,PROTECTION DES RÉFUGIÉS ENABLING AUTHORITY,unclear,0,Protection des Réfugiés Enabling Authority,,False,Cannot determine from the name alone.,llm
+Canada,MISE EN APPLICATION,unclear,0,MISE EN APPLICATION,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,NATIONAL PARKS OF CANADA,mixed_ministry,5,National Parks of Canada,,False,"Primarily focused on conservation and management of national parks, with R&D being a small component.",llm
+Canada,S1/2000-105,unclear,0,S1/2000-105,,False,Cannot determine from the name alone.,llm
+Canada,"EXERCISE OF POWERS, DUTIES AND FUNCTIONS EXERCICE DES ATTRIBUTIONS",unclear,0,"Exercise of Powers, Duties and Functions",,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,LEGAL POWERS OF THE AUTHORITY,unclear,0,Legal Powers of the Authority,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,FINANCEMENT,unclear,0,FINANCEMENT,,False,Cannot determine the specific focus of the agency from the name alone.,llm
+Canada,CANADA—ITALY TAX CONVENTION,unclear,0,Canada-Italy Tax Convention,,False,The name suggests a tax agreement rather than an R&D agency.,llm
+Canada,"R.S., 0.51",unclear,0,R.S.,,False,Cannot determine from the name alone.,llm
+Canada,GÉNÉTIQUES,unclear,0,GÉNÉTIQUES,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,GRANTS AND CONCESSIONS GRANTS AND CONCESSIONS .,unclear,0,Grants and Concessions,,False,Cannot determine the specific focus or nature of the agency from the name alone.,llm
+Canada,DEPU7fY COMMISSIONERS COMMISSAIRES ADJOINTS,unclear,0,Deputy Commissioners,,False,Cannot determine the specific focus or function of the agency from the name alone.,llm
+Canada,CANADA—BELGIUM TAX CONVENTION,unclear,0,Canada-Belgium Tax Convention,,False,The name suggests a tax agreement rather than an R&D agency.,llm
+Canada,CANADA—MOLDOVA TAX CONVENTION CONVENTION FISCALE CANADA—MOLDOVA,unclear,0,Canada-Moldova Tax Convention,,False,The name suggests a tax convention rather than an R&D agency.,llm
+Canada,"ACT REPEALED 1991, c. 46, S. 604",unclear,0,"ACT REPEALED 1991, c. 46, S. 604",,False,"The name indicates a repealed act, making it unclear what the agency's function was.",llm
+Canada,ENFORCEMENT - DEPARTMENT OF TRANSPORT 	 CONTRÔLE D'APPLICATION - MINISTÈRE DES TRANSPORTS,mixed_ministry,5,Department of Transport,,False,Broad government department where R&D is a small component.,llm
+Canada,"LOI SUR LES, ALLOCATIONS DE RETRAITE DES PARLEMENTAIRES",unclear,0,Law on the Retirement Allowances of Parliamentarians,,False,The name does not indicate a focus on R&D.,llm
+Canada,OPÉRATIONS PRÉPARATOIRES AU SCRUTIN,unclear,0,OPÉRATIONS PRÉPARATOIRES AU SCRUTIN,,False,The name does not provide clear information about R&D focus.,llm
+Canada,SHORT TITLE INTERPRETATION HER MAJESTY,unclear,0,Short Title Interpretation Her Majesty,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,ESTABLISHMENT CONSTITUTION,unclear,0,Establishment Constitution,,False,Cannot determine from the name alone.,llm
+Canada,COURTS ADMINISTRATION SERVICE SERVICE ADMINISTRATIF DES TRIBUNAUX JUDICIAIRES,mixed_ministry,0,Courts Administration Service,,False,"Agency primarily focused on court administration, not R&D.",llm
+Canada,"POWERS, DUTIES AND FUNCTIONS OF CHIEF ADMINISTRATOR POUVOIRS ET ATTRIBUTIONS DE L'ADMINISTRATEUR EN CHEF",unclear,0,Chief Administrator Powers and Duties,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,CONSEIL CANADIEN POUR LA CONSERVATION DES ESPÈCES EN PÉRIL,unclear,0,Canadian Endangered Species Conservation Council,,False,The name suggests a focus on conservation rather than R&D.,llm
+Canada,CONTESTED ELECTIONS,unclear,0,Contested Elections,,False,The name does not provide enough information to determine if it is an R&D agency or a ministry.,llm
+Canada,"REGISTRATION, LISTING AND RECORDING 	 IMMATRICULATION, ENREGISTREMENT ET INSCRIPTION",unclear,0,"Registration, Listing and Recording",,False,Cannot determine from the name alone.,llm
+Canada,EFFET DE LA RÉHABILITATION,unclear,0,EFFET DE LA RÉHABILITATION,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,TR/2001-29,unclear,0,TR/2001-29,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,DANS LE SECTEUR PRIVÉ,unclear,0,DANS LE SECTEUR PRIVÉ,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,DIVISION 1,unclear,0,Division 1,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,"EXERCISE OF POWERS, DUTIES AND FUNCTIONS",unclear,0,"Exercise of Powers, Duties and Functions",,False,The name does not provide enough information to determine the agency's focus on R&D.,llm
+Canada,THE COURTS,unclear,0,The Courts,,False,The name does not indicate a focus on R&D.,llm
+Canada,INTERPRETÀTION-,unclear,0,INTERPRETÀTION,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,PROHIBITIONS,unclear,0,Prohibitions,,False,Cannot determine the nature of this agency from the name alone.,llm
+Canada,TABLE OF PROVISIONS SPECIES AT RISK ACT SHORT TITLE INTERPRETATION,unclear,0,Species at Risk Act,,False,The name does not provide enough information to determine if it is an R&D agency or a ministry.,llm
+Canada,OBJET DE LA LOI,unclear,0,OBJET DE LA LOI,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,TR/2002-146,unclear,0,TR/2002-146,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,"R.S., C. 30",unclear,0,"R.S., C. 30",,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,CHAPITRE 26,unclear,0,CHAPITRE 26,,False,Cannot determine from the name alone.,llm
+Canada,THIRD PARTY ELECTION ADVERTISING,unclear,0,Third Party Election Advertising,,False,The name does not provide enough information to determine if it is related to R&D.,llm
+Canada,CANADIENNE DE L'IMPÔT,unclear,0,CANADIAN REVENUE AGENCY,,False,"Agency name suggests it is a tax agency, not focused on R&D.",llm
+Canada,AÉROPORTS DÉSIGNÉS,unclear,0,Designated Airports,,False,The name does not provide enough information to determine if it is an R&D agency or a ministry.,llm
+Canada,POWERS AND FUNCTIONS ATTRIBUTIONS,unclear,0,Powers and Functions Attributions,,False,Cannot determine the nature of this agency from the name alone.,llm
+Canada,DROIT POUR LA SÉCURITÉ DU TRANSPORT AÉRIEN,unclear,0,DROIT POUR LA SÉCURITÉ DU TRANSPORT AÉRIEN,,False,Cannot determine from the name alone.,llm
+Canada,DÉFINITIONS ET CHAMP D''APPLICATION,unclear,0,DÉFINITIONS ET CHAMP D'APPLICATION,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,COMITÉ CONSULTATIF,unclear,0,COMITÉ CONSULTATIF,,False,Cannot determine the specific focus or function of the agency from the name alone.,llm
+Canada,ADVISORY COUNCIL,unclear,0,Advisory Council,,False,The name does not provide enough information to determine the agency's focus on R&D.,llm
+Canada,ÉLECTEURS INCARCÉRÉS,unclear,0,ÉLECTEURS INCARCÉRÉS,,False,Cannot determine from the name alone.,llm
+Canada,CORRÉLATIVES ET CONNEXES ET DISPOSITIONS DE COORDINATION,unclear,0,CORRÉLATIVES ET CONNEXES ET DISPOSITIONS DE COORDINATION,,False,Cannot determine the agency's focus or budget allocation from the name alone.,llm
+Canada,CIVIL DU QUÉBEC,unclear,0,Civil of Quebec,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,LOI DE L'IMP.ÔT SUR LE REVENU,unclear,0,Income Tax Act,,False,"The name suggests a tax-related agency, but does not indicate R&D focus.",llm
+Canada,SOR/71-241,unclear,0,SOR/71-241,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,TR/2000-62;,unclear,0,TR/2000-62,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,OFFENCES WITHIN CANADA,unclear,0,Offences Within Canada,,False,The name does not provide enough information to classify the agency.,llm
+Canada,INFRACTIONS COMMISES AU CANADA,unclear,0,Infractions Comprises au Canada,,False,Cannot determine the agency's focus or budget allocation from the name alone.,llm
+Canada,CHAPTER 15 CHAPITRE 15,unclear,0,CHAPTER 15 CHAPITRE 15,,False,Cannot determine from the name alone.,llm
+Canada,LOI SUR L'ASSURANCE-EMPLOI,unclear,0,Employment Insurance Act,,False,"The name suggests a focus on employment insurance, not R&D.",llm
+Canada,COMMISSIONER OF AGENCY COMMISSAIRE DE L'AGENCE,unclear,0,Commissioner of Agency Commissaire de l'Agence,,False,Cannot determine from the name alone.,llm
+Canada,CHAPITRE 20,unclear,0,CHAPITRE 20,,False,Cannot determine from the name alone.,llm
+Canada,ROLE OF THE MINISTER ROLE DU MINISTRE,unclear,0,Role of the Minister,,False,Cannot determine the specific focus or function of this agency from the name alone.,llm
+Canada,CHAMP D'APPLICATION,unclear,0,CHAMP D'APPLICATION,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,APPLICATION OF ACT,unclear,0,APPLICATION OF ACT,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,LES ÉTATS PARTIES À LA PRÉSENTE CONVENTION SONT .CONVENUS DE CE QUI SUIT:,unclear,0,Unclear Agency,,False,The name does not provide sufficient information to classify the agency.,llm
+Canada,CONVENTION FISCALE CANADA—ÉMIRATS ARABES UNIS,unclear,0,Canada-UAE Tax Convention,,False,The name suggests a tax convention rather than an R&D agency.,llm
+Canada,CHAPTER 25 CHAPITRE 25,unclear,0,CHAPTER 25 CHAPITRE 25,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,"LOI ABROGÉE 1995,",unclear,0,LOI ABROGÉE 1995,,False,The name does not provide enough information to classify the agency.,llm
+Canada,"TRANSITIONAL PROVISIONS AND CONSEQUENTIAL, RELATED AND COORDINATING AMENDMENTS",unclear,0,"Transitional Provisions and Consequential, Related and Coordinating Amendments",,False,The name does not provide enough information to classify the agency.,llm
+Canada,SCHEDULES 1 TO 3,unclear,0,SCHEDULES 1 TO 3,,False,The name does not provide enough information to classify the agency.,llm
+Canada,"INCIDENTS, ACCIDENTS AND CASUALTIES INCIDENTS, ACCIDENTS ET SINISTRES",unclear,0,"Incidents, Accidents and Casualties",,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,EXAMEN DES RISQUES AVANT RENVOI,unclear,0,EXAMEN DES RISQUES AVANT RENVOI,,False,Cannot determine from the name alone.,llm
+Canada,"CORRÉLATIVES, ABROGATIONS ET ENTRÉE EN VIGUEUR",unclear,0,"CORRÉLATIVES, ABROGATIONS ET ENTRÉE EN VIGUEUR",,False,Cannot determine from the name alone.,llm
+Canada,"SECTION 1, MISE EN PLACE DU TRIBUNAL",unclear,0,"SECTION 1, MISE EN PLACE DU TRIBUNAL",,False,Cannot determine from the name alone.,llm
+Canada,ÉLECTEURS DES FORCES CANADIENNES,unclear,0,ELECTORS OF THE CANADIAN FORCES,,False,Agency name does not provide clear indication of R&D focus.,llm
+Canada,MODIFICATIONS CORRÉLATIVES ET DISPOSITIONS DE COORDINATION,unclear,0,MODIFICATIONS CORRÉLATIVES ET DISPOSITIONS DE COORDINATION,,False,Cannot determine from the name alone.,llm
+Canada,PLEASURE CRAFT EMBARCATIONS DE PLAISANCE,unclear,0,Pleasure Craft Embarkations de Plaisance,,False,Cannot determine from the name alone.,llm
+Canada,"AMENDMENTS TO THE CANADIAN ENVIRONMENTAL PROCTECTION ACT, 1999",unclear,0,"Amendments to the Canadian Environmental Protection Act, 1999",,False,Cannot determine the agency type from the name alone.,llm
+Canada,DISPOSITIONS DIVERSES,unclear,0,DISPOSITIONS DIVERSES,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,OBJECT OF ACT OBJET DE LA LOI,unclear,0,OBJECT OF ACT OBJET DE LA LOI,,False,Cannot determine the nature or purpose of the agency from the name alone.,llm
+Canada,HER MAJESTY,unclear,0,Her Majesty,,False,Cannot determine the specific function or focus of the agency from the name alone.,llm
+Canada,ESTABLISHMENT OF AGENCY MISE EN PLACE,unclear,0,Establishment of Agency Mise en Place,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,FÉDÉRAL AVEC LE DROIT CIVIL,unclear,0,Federal with Civil Law,,False,Cannot determine from the name alone.,llm
+Canada,LOI SUR LE SYSTÈME DE JUSTICE PÉNALE POUR LES ADOLESCENTS DECLARATION OF PRINCIPLE,unclear,0,Youth Criminal Justice System Declaration of Principle,,False,Cannot determine from the name alone.,llm
+Canada,DÉCLARATION DE PRINCIPES,unclear,0,DÉCLARATION DE PRINCIPES,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,PRECEDENCE,unclear,0,PRECEDENCE,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,INTERPRETATION TABLE OF PROVISIONS CANADA NATIONAL MARINE CONSERVATION AR.EAS ACT TABLE ANALYTIQUE LOI SUR LES AIRES MARINES NATIONALES DE CONSERVATION DU CANADA HER MAJESTY,unclear,0,Interpretation Table of Provisions Canada National Marine Conservation Areas Act,,False,Cannot determine the agency's focus or budget allocation from the name alone.,llm
+Canada,CANADA—MONGOLIA TAX CONVENTION CONVENTION FISCALE CANADA—MONGOLIE,unclear,0,Canada-Mongolia Tax Convention,,False,"The name suggests a tax convention, not an R&D agency.",llm
+Canada,TABLE OF PROVISIONS PEST CONTROL PRODUCTS ACT,unclear,0,Table of Provisions Pest Control Products Act,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,LOI SUR LA SOCIÉTÉ DU CRÉDIT AGRICOLE,unclear,0,Law on the Agricultural Credit Society,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,"TRANSITIONAL PROVISIONS, CONSEQUENTIAL AND RELATED AMENDMENTS, COORDINATING AMENDMENTS, REPEALS AND COMING INTO FORCE",unclear,0,"Transitional Provisions, Consequential and Related Amendments, Coordinating Amendments, Repeals and Coming into Force",,False,The name does not indicate a specific agency or its focus on R&D.,llm
+Canada,MODIFICATIONS CONCERNANT LES PROVISIONS DE,unclear,0,Modifications Concernant Les Provisions De,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,RETURN OF THE WRIT,unclear,0,Return of the Writ,,False,The name does not provide enough information to classify the agency.,llm
+Canada,ÉLECTEURS RÉSIDANT TEMPORAIREMENT À L'ÉTRANGER,unclear,0,Electors Residing Temporarily Abroad,,False,The name does not indicate a focus on R&D.,llm
+Canada,DISPOSITIONS FINANCIÈRES GÉNÉRALE,unclear,0,General Financial Dispositions,,False,The name does not provide clear indication of R&D focus.,llm
+Canada,SUBDIVISION BETWEEN / ENTRE CP GRAIN-DEPENDENT BRANCH LINES / EMBRANCHEMENTS DU CF TRIBUTAIRES DU TRANSPORT DU GRAIN,unclear,0,Subdivision Between / Entre CP Grain-Dependent Branch Lines / Embranchements du CF Tributaires du Transport du Grain,,False,The name does not provide clear information about R&D focus.,llm
+Canada,ANNEXES 1 À 3,unclear,0,ANNEXES 1 À 3,,False,The name does not provide enough information to classify the agency.,llm
+Canada,BETWEEN / ENTRE,unclear,0,BETWEEN / ENTRE,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,CANDIDATES,unclear,0,CANDIDATES,,False,Cannot determine from the name alone.,llm
+Canada,TMEU: S/0 TMÉU,unclear,0,TMEU: S/0 TMÉU,,False,Cannot determine from the name alone.,llm
+Canada,TMÉU: S/0 TMÉU: S/0,unclear,0,TMÉU: S/0 TMÉU: S/0,,False,Cannot determine from the name alone.,llm
+Canada,AJOUTS À LA LISTE DES DISPOSITIONS TARIFAIRES,unclear,0,AJOUTS À LA LISTE DES DISPOSITIONS TARIFAIRES,,False,Cannot determine from the name alone.,llm
+Canada,PARTIE II. 1 TERRORISME,unclear,0,PARTIE II. 1 TERRORISME,,False,Agency name does not provide clear indication of R&D focus.,llm
+Canada,INTERVENTION - MINISTÈRE DES PÊCHES ET DES,mixed_ministry,5,Ministry of Fisheries and Oceans,,False,Broad government department where R&D is a small component.,llm
+Canada,MODIFICATIONS CONCERNANT LA TAXE D'ACCISE SUR LES PRODUITS DU TABAC,unclear,0,Modifications Concerning the Excise Tax on Tobacco Products,,False,The name does not indicate a focus on R&D.,llm
+Canada,RÉGIME DE PENSION DES PILOTES DU BAS SAINT-LAURENT,unclear,0,Pension Plan of the Pilots of Lower Saint Lawrence,,False,"The name suggests a pension plan, not an R&D agency.",llm
+Canada,SORJ71-241,unclear,0,SORJ71-241,,False,Cannot determine from the name alone.,llm
+Canada,PROCEEDS OF CRIME (MONEY LAUNDERING) ACT,unclear,0,Proceeds of Crime (Money Laundering) Act,,False,The name does not indicate a focus on R&D.,llm
+Canada,II. DÉFINITIONS ARTICLE 3',unclear,0,II. DÉFINITIONS ARTICLE 3,,False,Cannot determine agency type from the name alone.,llm
+Canada,CHAPITRE 22,unclear,0,CHAPITRE 22,,False,Cannot determine from the name alone.,llm
+Canada,CANADA—CZECH REPUBLIC INCOME TAX CONVENTION,unclear,0,Canada-Czech Republic Income Tax Convention,,False,The name suggests a tax convention rather than an R&D agency.,llm
+Canada,CANADA—SLOVAK REPUBLIC INCOME TAX AGREEMENT,unclear,0,Canada-Slovak Republic Income Tax Agreement,,False,The name suggests a tax agreement rather than an R&D agency.,llm
+Canada,"CHAPTER 16 TOBACCO TAX AMENDMENTS ACT, 2001 CHAPITRE 16 LOI DE 2001 MODIFIANT LA TAXE SUR LE",unclear,0,"Chapter 16 Tobacco Tax Amendments Act, 2001",,False,The name does not indicate an R&D focus.,llm
+Canada,DÉFINITION,unclear,0,DÉFINITION,,False,Cannot determine from the name alone.,llm
+Canada,À DES PRESTATIONS SPÉCIALES,unclear,0,À DES PRESTATIONS SPÉCIALES,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,SOR/2001-74,unclear,0,SOR/2001-74,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,TABLE OF PROVISIONS MARINE LIABILITY 'ACT SHORT TITLE,unclear,0,Table of Provisions Marine Liability Act Short Title,,False,The name does not provide clear information about R&D focus.,llm
+Canada,LOI MODIFIANT LA LOI D'EXÉCUTION DU BUDGET DE 1997 ET LA LOI SUR LA GESTION DES FINANCES PUBLIQUES,unclear,0,LOI MODIFIANT LA LOI D'EXÉCUTION DU BUDGET DE 1997 ET LA LOI SUR LA GESTION DES FINANCES PUBLIQUES,,False,Cannot determine from the name alone.,llm
+Canada,SÉCURITÉ DU TRANSPORT AÉRIEN,mixed_ministry,5,Transport Canada - Aviation Security,,False,Broad government department where R&D is a small component.,llm
+Canada,PURPOSES OF ACT,unclear,0,PURPOSES OF ACT,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,PURPOSE AND PRINCIPLES OBJET ET PRINCIPES,unclear,0,Purpose and Principles,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,DESIGNATED ENTITIES,unclear,0,Designated Entities,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,LOI SUR LES JUGES,unclear,0,LOI SUR LES JUGES,,False,Cannot determine from the name alone.,llm
+Canada,TR/2001-102,unclear,0,TR/2001-102,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,TR/2000-95,unclear,0,TR/2000-95,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,TR/200I-71,unclear,0,TR/200I-71,,False,Cannot determine from the name alone.,llm
+Canada,"Sch. H, SOR/86-90, SOR/86-833; SOR/87-76, SOR/87-406, S0R187-485, S0R187-574, SOR/87-653; SOR/89-410;",unclear,0,"Sch. H, SOR/86-90, SOR/86-833; SOR/87-76, SOR/87-406, S0R187-485, S0R187-574, SOR/87-653; SOR/89-410;",,False,The name does not provide enough information to classify the agency.,llm
+Canada,"C-46; L.R.,",unclear,0,C-46; L.R.,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,TR/2000-76,unclear,0,TR/2000-76,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,LOI DE 1997 MODIFIANT L'IMPÔT SUR,unclear,0,LOI DE 1997 MODIFIANT L'IMPÔT SUR,,False,The name does not provide enough information to classify the agency.,llm
+Canada,"DORS/96-358, DORS/96-540; DORS/98-148,",unclear,0,"DORS/96-358, DORS/96-540; DORS/98-148",,False,Cannot determine the nature or purpose of the agency from the name alone.,llm
+Canada,TR/187-146,unclear,0,TR/187-146,,False,Cannot determine from the name alone.,llm
+Canada,LOI SUR LA FAILLITE ET L'INSOLVABILITÉ,unclear,0,Act Respecting Bankruptcy and Insolvency,,False,"The name suggests a focus on bankruptcy and insolvency, not R&D.",llm
+Canada,BANQUES ÉTRANGÈRES AUTORISÉES,unclear,0,Authorized Foreign Banks,,False,The name does not provide clear information about R&D focus.,llm
+Canada,L'APPLICATION DE L'IMPÔT SUR LE,unclear,0,L'APPLICATION DE L'IMPÔT SUR LE,,False,Cannot determine from the name alone.,llm
+Canada,TR/2002-97,unclear,0,TR/2002-97,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,TR/90- 100,unclear,0,TR/90-100,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,"DORS/93-84, DORS/93-298, DORS/93-359, TR 193-104, TR193-114, TR193-115, TR/93-118, TR/93-119, TR/93-120, TR193-205, TR193-207, TR193-208, DORS/93-536, DORS/93-537, DORS/93-538; DORS/94-272;",unclear,0,"DORS/93-84, DORS/93-298, DORS/93-359, TR 193-104, TR193-114, TR193-115, TR/93-118, TR/93-119, TR/93-120, TR193-205, TR193-207, TR193-208, DORS/93-536, DORS/93-537, DORS/93-538; DORS/94-272;",,False,Cannot determine agency type from the name alone.,llm
+Canada,T12/93-102,unclear,0,T12/93-102,,False,Cannot determine from the name alone.,llm
+Canada,"DORS/99-181, DORS/99-230, DORS/99-251,",unclear,0,"DORS/99-181, DORS/99-230, DORS/99-251",,False,Cannot determine the nature of these agencies from the names alone.,llm
+Canada,LOI SUR LES BREVETS,unclear,0,Law on Patents,,False,The name suggests a legal framework rather than a dedicated R&D agency or program.,llm
+Canada,TR/2002-122,unclear,0,TR/2002-122,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,THE INTERNATIONAL CONFERENCE ON,unclear,0,The International Conference On,,False,The name does not provide enough information to classify the agency.,llm
+Canada,"R.S., C. N-3",unclear,0,"R.S., C. N-3",,False,Cannot determine from the name alone.,llm
+Canada,INTERNATIONAL CONVENTIONS AND PROTOCOLS — MINISTER OF FISHERIES AND OCEANS,mixed_ministry,5,Minister of Fisheries and Oceans,,False,Broad government department where R&D is a small component.,llm
+Canada,LOIS EN CONSÉQUENCE,unclear,0,LOIS EN CONSÉQUENCE,,False,Cannot determine from the name alone.,llm
+Canada,TR/95- 108,unclear,0,TR/95- 108,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,"PROTOCOL SIGNED ON DECEMBER 29, 1998",unclear,0,"Protocol Signed on December 29, 1998",,False,The name does not provide enough information to classify the agency.,llm
+Canada,PART 12—NORTHWEST TERRITORIES,unclear,0,PART 12—NORTHWEST TERRITORIES,,False,Cannot determine from the name alone.,llm
+Canada,PARTIE 13—NUNAVUT,unclear,0,PARTIE 13—NUNAVUT,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,NAVIGATION SERVICES SERVICES DE NAVIGATION,unclear,0,Navigation Services,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,ABROGATIONS,unclear,0,ABROGATIONS,,False,Cannot determine from the name alone.,llm
+Canada,ADMINISTRATION DE LA SOCIÉTÉ DE PORTEFEUILLE D'ASSURANCES,unclear,0,Administration de la Société de Portefeuille d'Assurances,,False,Cannot determine from the name alone.,llm
+Canada,ATTRIBUTION DE PERMIS.,unclear,0,Attribution de Permis,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,INDEMNITÉS RELATD/Ei AU I2ESS'OÙ RèES FAUNIQUES,unclear,0,INDEMNITÉS RELATD/Ei AU I2ESS'OÙ RèES FAUNIQUES,,False,The agency name is unclear and does not provide sufficient information to classify.,llm
+Canada,AMENDMENTS RELATED TO EXCISE TAX ON TOBACCO,unclear,0,Amendments Related to Excise Tax on Tobacco,,False,The name does not indicate a focus on R&D.,llm
+Canada,PRÉVENTION DE LA POLLUTION — MINISTÈRE DES TRANSPORTS,mixed_ministry,10,Pollution Prevention - Ministry of Transport,,False,Broad government department where R&D is a small component.,llm
+Canada,STRUCTURE DU CAPITAL,unclear,0,STRUCTURE DU CAPITAL,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,DOSSIERS ET CONFIDENTIALITÉ DES RENSEIGNEMENTS,unclear,0,Dossiers et Confidentialité des Renseignements,,False,Cannot determine the agency's focus or budget allocation from the name alone.,llm
+Canada,COUNTING VOTES,unclear,0,Counting Votes,,False,The name does not provide enough information to determine the agency's focus on R&D.,llm
+Canada,DÉPOUILLEMENT DU SCRUTIN,unclear,0,Dépouillement du scrutin,,False,Agency name does not indicate a focus on R&D.,llm
+Canada,INSTITUTIONS FINANCIÈRES.,unclear,0,Financial Institutions,,False,The name does not provide enough information to determine if it is dedicated to R&D or a broader ministry.,llm
+Canada,COUNTING OF VOTES AT THE OFFICE OF THE CHIEF ELECTORAL 	DÉPOUILLEMENT DU SCRUTIN AU BUREAU DU DIRECTEUR GÉNÉRAL DES,unclear,0,Counting of Votes at the Office of the Chief Electoral Officer,,False,The agency name does not indicate a focus on R&D.,llm
+Canada,DIVISION 2 COMPENSATION FOR POLLUTION,unclear,0,Division 2 Compensation for Pollution,,False,Cannot determine the primary function or focus of the agency from the name alone.,llm
+Canada,"PUBLICATION, RECORDS AND INFORMATION",unclear,0,"Publication, Records and Information",,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,ASSOCIATIONS DE DÉTAIL: COMMISSAIRE,unclear,0,Associations de Détail: Commissaire,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,DÉFINITIONS ET CHAMP D'APPLICATION,unclear,0,DÉFINITIONS ET CHAMP D'APPLICATION,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,MISCELLANEOUS AMENDMENTS TO OTHER ACTS,unclear,0,Miscellaneous Amendments to Other Acts,,False,The name does not provide enough information to classify the agency.,llm
+Canada,PROJET DE LOI C-48,unclear,0,Bill C-48,,False,"The name indicates it is a legislative bill, not an agency.",llm
+Canada,TABLE OF PROVISIONS CANADA ELECTIONS ACT SHORT TITLE,unclear,0,Table of Provisions Canada Elections Act Short Title,,False,Cannot determine from the name alone.,llm
+Canada,TABLE OF PROVISIONS TABLE ANALYTIQUE,unclear,0,TABLE OF PROVISIONS TABLE ANALYTIQUE,,False,Cannot determine the nature or purpose of the agency from the name alone.,llm
+Canada,CHAPTER 10 CHAPITRE 10,unclear,0,CHAPTER 10 CHAPITRE 10,,False,Cannot determine from the name alone.,llm
+Canada,"TABLE OF PROVISIONS TABLE ANALYTIQUE EXCISE ACT, 2001 LOI DE 2001 SUR L'ACCISE SHORT TITLE...",unclear,0,"TABLE OF PROVISIONS TABLE ANALYTIQUE EXCISE ACT, 2001",,False,Cannot determine from the name alone.,llm
+Canada,TITRE:ABRÉGÉ,unclear,0,TITRE:ABRÉGÉ,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,ARTICLE 26,unclear,0,ARTICLE 26,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,ARTICLE 27,unclear,0,ARTICLE 27,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,TABLE OF PROVISIONS ANTI-TERRORISM ACT SHORT ITILE,unclear,0,Table of Provisions Anti-Terrorism Act Short Title,,False,The name does not provide enough information to classify the agency.,llm
+Canada,CHAPTER 22 CHAPITRE 22,unclear,0,CHAPTER 22 CHAPITRE 22,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,LOI SUR L'EXPORTATION ET L'IMPORTATION DES DIAMANTS BRUTS,unclear,0,Act on the Export and Import of Rough Diamonds,,False,Cannot determine the R&D focus from the name alone.,llm
+Canada,CHAPTER 28 CHAPITRE 28 PEST CONTROL PRODUCTS ACT LOI SUR LES PRODUITS ANTIPARASITAIRES,unclear,0,Pest Control Products Act,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,TABLE ANALYTIQUE LOI SUR LES PRODUITS ANTIPARASITAIRES,unclear,0,Table Analytique Loi sur les Produits Antiparasitaires,,False,Cannot determine from the name alone.,llm
+Canada,DÉVELOPPEMENT DURABLE SHORT TITLE,unclear,0,DÉVELOPPEMENT DURABLE,,False,Cannot determine the specific focus of the agency from the name alone.,llm
+Canada,CHAPITRE III.. DROITS DES ASSISTANTS,unclear,0,CHAPITRE III.. DROITS DES ASSISTANTS,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,OBJECTIVES AND APPLICATION,unclear,0,Objectives and Application,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,TABLE OF PROVISIONS TABLE ANALYTIQUE SHORT TITLE,unclear,0,TABLE OF PROVISIONS TABLE ANALYTIQUE SHORT TITLE,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,CHAPTER 31 CHAPITRE 31,unclear,0,CHAPTER 31 CHAPITRE 31,,False,Cannot determine from the name alone.,llm
+Canada,CONCERNANT LE RÈGLEMENT DE REVENDICATIONS AU MANITOBA,unclear,0,Concernant le Règlement de Revendications au Manitoba,,False,Cannot determine from the name alone.,llm
+Canada,PARTIE 5 — ONTARIO,unclear,0,PARTIE 5 — Ontario,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,TR/2000-42,unclear,0,TR/2000-42,,False,Cannot determine the nature of the agency from the name alone.,llm
+Canada,"DISPOSITIONS, ACQUISITIONS ET TRANSFERTS D'ATTRIBUTIONS ADMINISTRATIVES",unclear,0,"DISPOSITIONS, ACQUISITIONS ET TRANSFERTS D'ATTRIBUTIONS ADMINISTRATIVES",,False,Cannot determine the agency's focus or budget allocation from the name alone.,llm
+Canada,TR/2002-17,unclear,0,TR/2002-17,,False,Cannot determine the nature of the agency from the name alone.,llm

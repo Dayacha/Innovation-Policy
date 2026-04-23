@@ -201,6 +201,111 @@ class PanelBuilder:
         logger.info(f"Loaded {len(all_reforms)} reforms from JSON files")
         return all_reforms
 
+    def load_all_reforms_with_excluded(self, countries=None):
+        """Load ALL reforms including excluded ones (for cross-verification audit CSV).
+
+        Reads from `all_reforms_including_excluded` when present (merged JSONs),
+        otherwise falls back to `reforms`. Adds a boolean `cv_included` column.
+
+        Returns:
+            List of all reform dicts with country/year metadata.
+        """
+        all_reforms = []
+        countries = set(countries or [])
+
+        for json_file in sorted(self.reforms_dir.glob("*.json")):
+            try:
+                with open(json_file, encoding="utf-8") as f:
+                    data = json.load(f)
+
+                country_code = data.get("country_code", "")
+                if countries and country_code not in countries:
+                    continue
+                country_name = data.get("country_name", "")
+                survey_year = data.get("survey_year", 0)
+
+                # Use full audit list if available (cross-verified merged JSONs)
+                source = data.get("all_reforms_including_excluded") or data.get("reforms", [])
+
+                _excluded = {
+                    # Three-model statuses
+                    "three_model_rejected",
+                    "two_model_excluded",
+                    "one_model_excluded",
+                    # Two-model backward-compat statuses
+                    "disputed_excluded",
+                    "consensus_rejected",
+                }
+                for reform in source:
+                    r = dict(reform)
+                    r["country_code"] = country_code
+                    r["country_name"] = country_name
+                    r["survey_year"] = survey_year
+                    status = r.get("cross_verification_status", "")
+                    r["cv_included"] = status not in _excluded if status else True
+                    all_reforms.append(r)
+
+            except Exception as e:
+                logger.error(f"Error loading {json_file.name}: {e}")
+
+        logger.info(f"Loaded {len(all_reforms)} reforms (including excluded) from JSON files")
+        return all_reforms
+
+    def build_cv_audit_dataset(self, countries=None, save=True):
+        """Write reforms_cv_audit.csv with every reform and its LLM decision.
+
+        Columns (in order):
+          cv_included, cross_verification_status, found_by_models,
+          cross_verification_note, then all standard reform fields.
+        """
+        reforms = self.load_all_reforms_with_excluded(countries=countries)
+        if not reforms:
+            logger.warning("No reforms found for CV audit dataset")
+            return pd.DataFrame()
+
+        df = pd.DataFrame(reforms)
+
+        # Normalise found_by_models: list → pipe-separated string for CSV
+        if "found_by_models" in df.columns:
+            df["found_by_models"] = df["found_by_models"].apply(
+                lambda v: " | ".join(v) if isinstance(v, list) else (v or "")
+            )
+
+        cv_cols = [
+            "cv_included",
+            "cross_verification_status",
+            "found_by_models",
+            "cross_verification_note",
+        ]
+        core_cols = [
+            "reform_id", "country_code", "country_name", "survey_year",
+            "implementation_year", "theme", "sub_theme", "status",
+            "description", "source_quote", "source_page_start", "source_page_end",
+            "announcement_year", "legislation_year",
+            "rd_actor", "rd_stage", "growth_orientation",
+            "is_major_reform", "importance_bucket",
+        ]
+        ordered = cv_cols + core_cols
+        present = [c for c in ordered if c in df.columns]
+        rest = [c for c in df.columns if c not in present]
+        df = df[present + rest]
+
+        df = df.sort_values(
+            ["country_code", "survey_year", "cv_included"],
+            ascending=[True, True, False],
+        ).reset_index(drop=True)
+
+        if save:
+            self.output_dir.mkdir(parents=True, exist_ok=True)
+            out = self.output_dir / "reforms_database.csv"
+            df.to_csv(out, index=False, encoding="utf-8")
+            n_in  = int(df["cv_included"].sum()) if "cv_included" in df.columns else len(df)
+            n_out = len(df) - n_in
+            print(f"  Reforms database: {len(df)} rows "
+                  f"({n_in} included, {n_out} excluded) -> {out.name}")
+
+        return df
+
     # ──────────────────────────────────────────────────────────
     # Step 1: Mentions dataset (raw, one row per extraction)
     # ──────────────────────────────────────────────────────────
@@ -272,11 +377,11 @@ class PanelBuilder:
         ).reset_index(drop=True)
 
         if save:
-            output_path = self.output_dir / "reforms_mentions.csv"
+            output_path = self.output_dir / "reforms_database.csv"
             df.to_csv(output_path, index=False, encoding="utf-8")
-            print(f"  Mentions dataset: {len(df)} rows -> {output_path.name}")
+            print(f"  Reforms database: {len(df)} rows -> {output_path.name}")
         else:
-            print(f"  Mentions dataset: {len(df)} rows")
+            print(f"  Reforms database: {len(df)} rows")
 
         return df
 
@@ -596,13 +701,8 @@ class PanelBuilder:
             ["country_code", "implementation_year", "survey_year"]
         ).reset_index(drop=True)
 
-        if save:
-            events_path = self.output_dir / "reforms_events.csv"
-            events_df.to_csv(events_path, index=False, encoding="utf-8")
-            print(f"  Events dataset: {len(events_df)} rows -> "
-                  f"{events_path.name}")
-        else:
-            print(f"  Events dataset: {len(events_df)} rows")
+        # Events are internal — not written to disk as a separate user file
+        print(f"  Reform events (after cross-survey dedup): {len(events_df)} unique events")
 
         return events_df, mention_to_event
 
@@ -936,22 +1036,14 @@ class PanelBuilder:
             print(f"  Panel dataset (theme-level): "
                   f"{len(panel)} rows -> {panel_path.name}")
 
-            if not sub_theme_panel.empty:
-                sub_path = self.output_dir / "reform_panel_subtheme.csv"
-                sub_theme_panel.to_csv(sub_path, index=False, encoding="utf-8")
-                print(f"  Panel dataset (sub-theme-level): "
-                      f"{len(sub_theme_panel)} rows -> {sub_path.name}")
-
-            # Try to save Excel versions
+            # Try to save Excel version alongside CSV
             try:
                 xlsx_path = self.output_dir / "reform_panel.xlsx"
                 panel.to_excel(xlsx_path, index=False)
             except Exception as e:
                 logger.warning(f"Could not save Excel file: {e}")
         else:
-            print(f"  Panel dataset (theme-level): {len(panel)} rows")
-            if not sub_theme_panel.empty:
-                print(f"  Panel dataset (sub-theme-level): {len(sub_theme_panel)} rows")
+            print(f"  Reform panel: {len(panel)} rows")
 
         return panel, sub_theme_panel
 
@@ -1293,11 +1385,23 @@ class PanelBuilder:
         print(f"  Panel mode: {self.panel_mode}, "
               f"year_assignment: {self.year_assignment}")
 
-        # Step 1: Mentions
+        # Step 1: Reforms database
+        # In merged (cross-verified) mode, write all reforms including excluded ones.
+        # In single-run mode, write only extracted reforms (no cv_included column).
+        _is_merged = "merged" in str(self.reforms_dir)
+        if _is_merged and save:
+            self.build_cv_audit_dataset(countries=countries, save=True)
+
         mentions_df = self.build_mentions_dataset(
             reforms=self.load_all_reforms(countries=countries),
-            save=save,
+            save=False,   # reforms_database.csv already written above if merged
         )
+        if not _is_merged and save:
+            # Single-run mode: write the database from included reforms only
+            self.output_dir.mkdir(parents=True, exist_ok=True)
+            out = self.output_dir / "reforms_database.csv"
+            mentions_df.to_csv(out, index=False, encoding="utf-8")
+            print(f"  Reforms database: {len(mentions_df)} rows -> {out.name}")
         if mentions_df.empty:
             return {
                 "mentions": mentions_df,

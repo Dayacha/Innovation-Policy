@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Marine Atlantic Inc.",
+  "name_variants": [
+    "Transports Marine Atlantic Inc.",
+    "Marine Atlantic"
+  ],
+  "category": "unclear",
+  "notes": "This entity is focused on transportation services, not research and development."
+}

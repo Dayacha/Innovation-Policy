@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Department of Justice Canada",
+  "name_variants": [
+    "Solicitor General Department",
+    "Department of Justice",
+    "Ministère de la Justice"
+  ],
+  "category": "unclear",
+  "notes": "This department primarily handles legal matters and does not focus on R&D."
+}

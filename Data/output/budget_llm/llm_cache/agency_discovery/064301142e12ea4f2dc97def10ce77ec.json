@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Office of the Commissioner of Official Languages",
+  "name_variants": [
+    "OCOL",
+    "Bureau du commissaire aux langues officielles"
+  ],
+  "category": "unclear",
+  "notes": "This office focuses on language rights and promotion, not R&D."
+}

@@ -1,0 +1,11 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Military Grievances External Review Committee",
+  "name_variants": [
+    "MGERC"
+  ],
+  "category": "unclear",
+  "notes": "This entity is focused on reviewing military grievances and does not pertain to R&D spending."
+}

@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Statistics Canada",
+  "name_variants": [
+    "StatCan",
+    "Statistiques Canada"
+  ],
+  "category": "unclear",
+  "notes": "Statistics Canada primarily focuses on statistical data collection and analysis, not R&D."
+}

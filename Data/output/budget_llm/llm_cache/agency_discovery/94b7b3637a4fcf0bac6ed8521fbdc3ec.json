@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Telefilm Canada",
+  "name_variants": [
+    "Telefilm",
+    "Société Téléfilm",
+    "Téléfilm Canada"
+  ],
+  "category": "unclear",
+  "notes": "This entity primarily supports the Canadian film industry, which does not fall under R&D spending."
+}

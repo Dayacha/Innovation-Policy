@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.95,
+  "entry_type": "not_rd",
+  "canonical_name": "Office of the Chief Electoral Officer",
+  "name_variants": [
+    "Elections Canada",
+    "CEO Office"
+  ],
+  "category": "unclear",
+  "notes": "This entity is related to electoral processes, not research and development."
+}

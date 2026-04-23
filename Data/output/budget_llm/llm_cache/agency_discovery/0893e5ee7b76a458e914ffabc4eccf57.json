@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Heritage Public Service Commission",
+  "name_variants": [
+    "Canadian Heritage",
+    "Patrimoine Canadien",
+    "Public Service Commission"
+  ],
+  "category": "unclear",
+  "notes": "This entity is focused on heritage and public service, not specifically on R&D."
+}

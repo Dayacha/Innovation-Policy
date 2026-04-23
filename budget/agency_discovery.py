@@ -41,6 +41,7 @@ __all__ = ["discover_agencies", "load_discovered_agencies"]
 DISCOVERED_FILE = cfg.OUTPUT_DIR / "discovered_agencies.json"
 REVIEW_CSV = cfg.OUTPUT_DIR / "discovery_review.csv"
 DISCOVERY_CACHE_DIR = cfg.LLM_CACHE_DIR / "agency_discovery"
+BATCH_SIZE = 20
 
 # Thresholds
 MIN_YEARS = 1          # must appear in at least this many years
@@ -130,8 +131,81 @@ _NON_RD_SECTORS = re.compile(
     re.IGNORECASE,
 )
 
+_COUNTRY_NOISE_PATTERNS: dict[str, list[re.Pattern]] = {
+    "Australia": [
+        re.compile(r"^Australian Centre for$", re.IGNORECASE),
+        re.compile(r"^Improved Health and Medical Knowledge Programme$", re.IGNORECASE),
+        re.compile(r"^National Estate Program(me)?$", re.IGNORECASE),
+        re.compile(r"^Office of the Renewable Energy$", re.IGNORECASE),
+        re.compile(r"^Hospitals and Health Services Commission$", re.IGNORECASE),
+        re.compile(r"^Climate Change and Energy Efficiency Programme$", re.IGNORECASE),
+        re.compile(r"^Australian Science and Technology Council$", re.IGNORECASE),
+    ],
+    "Canada": [
+        re.compile(r"^Industry, Science and Technology Grants$", re.IGNORECASE),
+        re.compile(r"^Industry and Science Development Grants$", re.IGNORECASE),
+        re.compile(r"^Science and Technology Grants$", re.IGNORECASE),
+        re.compile(r"^Health Research Grants$", re.IGNORECASE),
+        re.compile(r"^Grants and Contributions for Research Activities$", re.IGNORECASE),
+        re.compile(r"^Grants for Research Projects$", re.IGNORECASE),
+        re.compile(r"^Research grants for natural sciences and engineering$", re.IGNORECASE),
+        re.compile(r"^Research grants for university projects$", re.IGNORECASE),
+        re.compile(r"^Medical Research Council - (Operating Expenses|Budgeted Grants)$", re.IGNORECASE),
+        re.compile(r"^Telefilm Canada$", re.IGNORECASE),
+        re.compile(r"^Canada Council for the Arts$", re.IGNORECASE),
+    ],
+    "France": [
+        re.compile(r"^Payment credits for\b", re.IGNORECASE),
+        re.compile(r"^Research in the fields? of\b", re.IGNORECASE),
+        re.compile(r"^Multidisciplinary Scientific and Technological Research$", re.IGNORECASE),
+        re.compile(r"^Space Research$", re.IGNORECASE),
+        re.compile(r"^Dual Research Programme$", re.IGNORECASE),
+        re.compile(r"^Applied Research and Innovation in Agriculture$", re.IGNORECASE),
+    ],
+    "Germany": [
+        re.compile(r"^Research (Funding|Infrastructure|Projects)$", re.IGNORECASE),
+        re.compile(r"^Research and Experimental Development$", re.IGNORECASE),
+        re.compile(r"^Allocations (and grants )?for research", re.IGNORECASE),
+        re.compile(r"^Allocations for Research and Development$", re.IGNORECASE),
+        re.compile(r"^Research and Development in (Applied|Basic) Research$", re.IGNORECASE),
+        re.compile(r"^Innovation Promotion$", re.IGNORECASE),
+        re.compile(r"^Basic Research Programme$", re.IGNORECASE),
+        re.compile(r"^Research, Technology, and Space$", re.IGNORECASE),
+        re.compile(r"^Joint research funding", re.IGNORECASE),
+        re.compile(r"^Institutional grants to non-university research institutions$", re.IGNORECASE),
+    ],
+    "Japan": [
+        re.compile(r"^Research Promotion( Expenses)?$", re.IGNORECASE),
+        re.compile(r"^Science and Technology Promotion( Expenses)?$", re.IGNORECASE),
+        re.compile(r"^Research and Development( Promotion| Expenses)?$", re.IGNORECASE),
+        re.compile(r"^Promotion of Science and Technology and Academic Policy$", re.IGNORECASE),
+        re.compile(r"^Expenses (necessary for )?promoting science and technology innovation$", re.IGNORECASE),
+        re.compile(r"^Research and Testing Expenses$", re.IGNORECASE),
+    ],
+    "UK": [
+        re.compile(r"^Science budget$", re.IGNORECASE),
+        re.compile(r"^Research and Development funding$", re.IGNORECASE),
+        re.compile(r"^Investment in research and development", re.IGNORECASE),
+        re.compile(r"^Funding for\b", re.IGNORECASE),
+        re.compile(r"^Investment in\b", re.IGNORECASE),
+        re.compile(r"^Additional spending in R&D$", re.IGNORECASE),
+        re.compile(r"^Long-term support for research and development$", re.IGNORECASE),
+        re.compile(r"^National Productivity Investment Fund", re.IGNORECASE),
+    ],
+    "United Kingdom": [
+        re.compile(r"^Science budget$", re.IGNORECASE),
+        re.compile(r"^Research and Development funding$", re.IGNORECASE),
+        re.compile(r"^Investment in research and development", re.IGNORECASE),
+        re.compile(r"^Funding for\b", re.IGNORECASE),
+        re.compile(r"^Investment in\b", re.IGNORECASE),
+        re.compile(r"^Additional spending in R&D$", re.IGNORECASE),
+        re.compile(r"^Long-term support for research and development$", re.IGNORECASE),
+        re.compile(r"^National Productivity Investment Fund", re.IGNORECASE),
+    ],
+}
 
-def _is_noise(entity: str) -> bool:
+
+def _is_noise(entity: str, country: str | None = None) -> bool:
     """Return True if entity is an outcome description, procurement line, or non-R&D sector."""
     e = entity.strip()
     # Too long → likely an outcome description
@@ -149,6 +223,10 @@ def _is_noise(entity: str) -> bool:
     alpha = sum(c.isalpha() for c in e)
     if alpha < 4:
         return True
+    if country:
+        for pat in _COUNTRY_NOISE_PATTERNS.get(country, []):
+            if pat.search(e):
+                return True
     return False
 
 
@@ -171,8 +249,8 @@ def _purge_noisy_discovered(country: str) -> int:
     existing = data.get(country, [])
     clean = [
         a for a in existing
-        if not _is_noise(a.get("canonical_name", ""))
-        and not _is_noise(a.get("source_entity", ""))
+        if not _is_noise(a.get("canonical_name", ""), country)
+        and not _is_noise(a.get("source_entity", ""), country)
     ]
     removed = len(existing) - len(clean)
 
@@ -294,6 +372,33 @@ name_variants should include:
 Return ONLY the JSON. No prose before or after.
 """
 
+_BATCH_CLASSIFY_SYSTEM = """\
+You are classifying government budget entities for R&D relevance across OECD countries.
+
+You will receive a country and a list of candidate entities. For each candidate, return a
+JSON object inside a top-level "results" array using this exact shape:
+{
+  "results": [
+    {
+      "input_name": "<exact input entity name>",
+      "is_rd_relevant": true | false,
+      "confidence": <float 0.0-1.0>,
+      "entry_type": "dedicated_rd_agency" | "rd_programme" | "rd_fund" | "mixed_ministry" | "not_rd",
+      "canonical_name": "<standard English name>",
+      "name_variants": ["<variant1>", "<variant2>"],
+      "category": "science_agency" | "direct_rd" | "innovation_instruments" | "higher_education" | "unclear",
+      "notes": "<one sentence reason>"
+    }
+  ]
+}
+
+Rules:
+  - input_name must exactly match one provided candidate.
+  - Return one result for every provided candidate.
+  - If uncertain, use entry_type="unclear" semantics via low confidence and is_rd_relevant=false.
+  - Return ONLY JSON, no prose.
+"""
+
 
 def _classify_prompt(clean_name: str, country: str, n_years: int,
                      min_amt: float, max_amt: float, currency: str) -> str:
@@ -303,6 +408,20 @@ def _classify_prompt(clean_name: str, country: str, n_years: int,
         f"Appears in {n_years} budget years\n"
         f"Amount range: {min_amt:,.0f} – {max_amt:,.0f} {currency} (thousands)"
     )
+
+
+def _batch_classify_prompt(rows: list[dict], country: str, currency: str) -> str:
+    lines = [f"Country: {country}", "Candidates:"]
+    for i, row in enumerate(rows, start=1):
+        lines.append(
+            f'{i}. name="{row["clean"]}" | years={int(row["n_years"])} | '
+            f'amount_range={float(row["min_amount"]):,.0f}–{float(row["max_amount"]):,.0f} {currency} (thousands)'
+        )
+    return "\n".join(lines)
+
+
+def _iter_batches(items: list[dict], size: int) -> list[list[dict]]:
+    return [items[i:i + size] for i in range(0, len(items), size)]
 
 
 def _cache_key(clean_name: str, country: str) -> str:
@@ -425,7 +544,7 @@ def discover_agencies(
     logger.info(f"[{country}] Discovery: {len(stats)} candidates after amount/year filter")
 
     # ── Step 2: filter noise deterministically ────────────────────────────────
-    stats["_noise"] = stats["entity_raw"].apply(_is_noise)
+    stats["_noise"] = stats["entity_raw"].apply(lambda e: _is_noise(e, country))
     stats["_clean"] = stats["entity_raw"].apply(_clean_name)
     stats = stats[~stats["_noise"]].copy()
 
@@ -464,33 +583,75 @@ def discover_agencies(
     # ── Step 4: classify via LLM (cached per clean name) ─────────────────────
     client = BudgetLLMClient.from_config(config)
 
-    confirmed = []    # confidence >= threshold, is_rd_agency=True
-    review = []       # confidence < threshold or agency_type unclear
+    confirmed = []
+    review = []
+
+    pending_rows: list[dict] = []
+    cached_results: dict[str, dict] = {}
+
+    for _, row in new_candidates.iterrows():
+        row_dict = row.to_dict()
+        clean = row_dict["_clean"]
+        key = _cache_key(clean, country)
+        result = _load_classification_cache(key)
+        if result is None:
+            pending_rows.append(row_dict)
+        else:
+            cached_results[clean] = result
+            logger.debug(f"Discovery cache hit: {clean[:50]}")
+
+    if pending_rows:
+        logger.info(
+            f"[{country}] Discovery LLM batches: {len(pending_rows)} uncached candidates in "
+            f"{(len(pending_rows) + BATCH_SIZE - 1) // BATCH_SIZE} batches"
+        )
+
+    for batch in _iter_batches(pending_rows, BATCH_SIZE):
+        prompt = _batch_classify_prompt(batch, country=country, currency=currency)
+        batch_result = client.call_json(
+            system_prompt=_BATCH_CLASSIFY_SYSTEM,
+            user_prompt=prompt,
+            max_tokens=4000,
+            operation=client.OP_OTHER,
+        )
+
+        parsed_results: dict[str, dict] = {}
+        if "_parse_error" not in batch_result and isinstance(batch_result.get("results"), list):
+            for item in batch_result["results"]:
+                input_name = str(item.get("input_name", "")).strip()
+                if input_name:
+                    parsed_results[input_name] = item
+
+        if len(parsed_results) != len(batch):
+            logger.warning(
+                f"[{country}] Discovery batch fallback: parsed {len(parsed_results)}/{len(batch)} "
+                "results; retrying missing candidates individually"
+            )
+
+        for row_dict in batch:
+            clean = row_dict["_clean"]
+            key = _cache_key(clean, country)
+            result = parsed_results.get(clean)
+            if result is None:
+                result = client.call_json(
+                    system_prompt=_CLASSIFY_SYSTEM,
+                    user_prompt=_classify_prompt(
+                        clean, country,
+                        int(row_dict["n_years"]),
+                        float(row_dict["min_amount"]),
+                        float(row_dict["max_amount"]),
+                        currency,
+                    ),
+                    max_tokens=512,
+                    operation=client.OP_OTHER,
+                )
+            if "_parse_error" not in result:
+                _save_classification_cache(key, result)
+            cached_results[clean] = result
 
     for _, row in new_candidates.iterrows():
         clean = row["_clean"]
-        key = _cache_key(clean, country)
-
-        result = _load_classification_cache(key)
-        if result is None:
-            prompt = _classify_prompt(
-                clean, country,
-                int(row["n_years"]),
-                float(row["min_amount"]),
-                float(row["max_amount"]),
-                currency,
-            )
-            result = client.call_json(
-                system_prompt=_CLASSIFY_SYSTEM,
-                user_prompt=prompt,
-                max_tokens=512,
-                operation=client.OP_OTHER,
-            )
-            if "_parse_error" not in result:
-                _save_classification_cache(key, result)
-        else:
-            logger.debug(f"Discovery cache hit: {clean[:50]}")
-
+        result = cached_results.get(clean, {})
         if "_parse_error" in result:
             logger.warning(f"Discovery parse error for '{clean[:50]}': {result['_parse_error'][:80]}")
             continue

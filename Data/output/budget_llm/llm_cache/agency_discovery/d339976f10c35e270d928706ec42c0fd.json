@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Office of the Communications Security Establishment Commissioner",
+  "name_variants": [
+    "CSEC Commissioner",
+    "Communications Security Establishment Commissioner"
+  ],
+  "category": "unclear",
+  "notes": "This entity is focused on oversight and security rather than research and development."
+}

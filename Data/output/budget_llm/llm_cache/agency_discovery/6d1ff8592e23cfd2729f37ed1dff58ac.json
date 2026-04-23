@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "mixed_ministry",
+  "canonical_name": "Indian Affairs and Northern Development",
+  "name_variants": [
+    "IAND",
+    "Indigenous Services Canada",
+    "Affaires indiennes et développement du Nord"
+  ],
+  "category": "unclear",
+  "notes": "This entity is a broad government department where R&D is not the primary focus."
+}

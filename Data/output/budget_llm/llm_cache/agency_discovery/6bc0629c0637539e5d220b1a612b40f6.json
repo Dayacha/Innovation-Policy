@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian International Development Agency",
+  "name_variants": [
+    "CIDA",
+    "Affaires Étrangères et Commerce International",
+    "Canadian International Development Agency (CIDA)"
+  ],
+  "category": "unclear",
+  "notes": "This entity focuses on international development and foreign affairs, not specifically on R&D."
+}

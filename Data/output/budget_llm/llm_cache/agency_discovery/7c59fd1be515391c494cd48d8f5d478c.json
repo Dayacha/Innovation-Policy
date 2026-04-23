@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.6,
+  "entry_type": "not_rd",
+  "canonical_name": "For the Regions of Quebec",
+  "name_variants": [
+    "POUR LES RÉGIONS DU QUÉBEC",
+    "For the Regions of Quebec"
+  ],
+  "category": "unclear",
+  "notes": "The entity name suggests a focus on regional development rather than specific R&D spending."
+}

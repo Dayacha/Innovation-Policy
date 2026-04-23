@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Patented Medicine Prices Review Board",
+  "name_variants": [
+    "PMPRB",
+    "Patented Medicine Prices Review Board"
+  ],
+  "category": "unclear",
+  "notes": "This entity primarily regulates drug prices rather than funding or conducting R&D."
+}

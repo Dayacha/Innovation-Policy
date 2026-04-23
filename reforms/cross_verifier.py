@@ -1,31 +1,36 @@
 """
-Cross-Verification — Strategy B: Two-Model Merger
-==================================================
+Cross-Verification — Three-Model Merger
+========================================
 
-Compares reform extractions from two independent model runs (e.g. gpt-4o-mini
-and claude-sonnet-4), matches reforms that both models found, adjudicates
-reforms found by only one model, and writes a merged output ready for the
-panel builder.
+Compares reform extractions from two or three independent model runs and
+merges them into a single high-quality dataset reviewed by an LLM adjudicator.
 
-Flow
-----
-Run A (primary)   reforms_json/           e.g. gpt-4o-mini
-Run B (secondary) reforms_json_anthropic/ e.g. claude-sonnet-4
-                         ↓
-              cross_verifier.py
-                         ↓
-  Per survey:
-    consensus   — both models found the reform → keep, merge fields
-    run_a_only  — only primary found it        → LLM adjudicates
-    run_b_only  — only secondary found it      → LLM adjudicates
-                         ↓
+Flow (three-model mode)
+-----------------------
+Run A (primary)    reforms_json/                e.g. gpt-4o-mini (OECD key)
+Run B (secondary)  reforms_json_anthropic/      e.g. claude-haiku-4-5
+Run C (tertiary)   reforms_json_gpt_personal/   e.g. gpt-4o-mini (personal key)
+                              ↓
+                   cross_verifier.py
+                              ↓
+  Per survey, reforms grouped by how many models found them:
+    all_three_models   — all 3 found it → very strong signal
+    two_of_three_models — 2 of 3 found it → moderate signal
+    one_of_three_models — only 1 found it → conservative, lean to exclude
+                              ↓
+  All reforms sent to LLM adjudicator in batches (with agreement field)
+                              ↓
               reforms_json_merged/   (merged JSONs, drop-in for panel builder)
               output_merged/         (final CSVs via panel builder)
 
-Each merged reform gets three extra fields:
-  cross_verification_status  "consensus" | "disputed_included" | "disputed_excluded"
-  found_by_models            list of model names that extracted the reform
-  cross_verification_note    LLM rationale for disputed decisions (empty for consensus)
+Cross-verification statuses in output:
+  three_model_confirmed  | three_model_rejected
+  two_model_included     | two_model_excluded
+  one_model_included     | one_model_excluded
+
+Falls back to two-model mode automatically if Run C directory is absent.
+Two-model statuses (backward compat): consensus_confirmed | consensus_rejected |
+                                      disputed_included   | disputed_excluded
 
 Usage
 -----
@@ -108,25 +113,38 @@ def _match_reforms(
     return consensus, a_only, b_only
 
 
+def _fill_nulls(base: dict, donor: dict) -> dict:
+    """Fill null fields in base from donor; use longer text for description/quote."""
+    for key, val in donor.items():
+        if key in ("description", "source_quote"):
+            if len(str(val or "")) > len(str(base.get(key) or "")):
+                base[key] = val
+        elif base.get(key) is None and val is not None:
+            base[key] = val
+    return base
+
+
 def _merge_pair(ra: dict, rb: dict, model_a: str, model_b: str) -> dict:
     """Merge two matched reforms, preferring non-null fields; prefer A for ties."""
-    merged = dict(ra)
-    # Fill nulls in A with values from B
-    for key, val in rb.items():
-        if key in ("description", "source_quote"):
-            # Keep A's description; use longer source_quote
-            if len(str(val or "")) > len(str(merged.get(key) or "")):
-                merged[key] = val
-        elif merged.get(key) is None and val is not None:
-            merged[key] = val
+    merged = _fill_nulls(dict(ra), rb)
     merged["cross_verification_status"] = "consensus"
     merged["found_by_models"] = [model_a, model_b]
     merged["cross_verification_note"] = ""
     return merged
 
 
+def _merge_triple(ra: dict, rb: dict, rc: dict,
+                  model_a: str, model_b: str, model_c: str) -> dict:
+    """Merge three matched reforms, filling nulls in priority order A→B→C."""
+    merged = _fill_nulls(_fill_nulls(dict(ra), rb), rc)
+    merged["cross_verification_status"] = "consensus"
+    merged["found_by_models"] = [model_a, model_b, model_c]
+    merged["cross_verification_note"] = ""
+    return merged
+
+
 def _tag_disputed(reform: dict, model_name: str, status: str, note: str) -> dict:
-    """Attach cross-verification metadata to a disputed reform."""
+    """Attach cross-verification metadata to a single-model reform."""
     r = dict(reform)
     r["cross_verification_status"] = status
     r["found_by_models"] = [model_name]
@@ -135,16 +153,109 @@ def _tag_disputed(reform: dict, model_name: str, status: str, note: str) -> dict
 
 
 # ---------------------------------------------------------------------------
+# Three-way matching
+# ---------------------------------------------------------------------------
+
+def _match_reforms_three(
+    reforms_a: list[dict],
+    reforms_b: list[dict],
+    reforms_c: list[dict],
+    threshold: float = 0.55,
+) -> tuple:
+    """Greedy three-way matching by description similarity.
+
+    Returns (all_three, ab_only, ac_only, bc_only, a_only, b_only, c_only)
+      all_three : list of (ra, rb, rc)  — found by A, B, and C
+      ab_only   : list of (ra, rb)      — found by A and B only
+      ac_only   : list of (ra, rc)      — found by A and C only
+      bc_only   : list of (rb, rc)      — found by B and C only
+      a_only    : list of ra            — found only by A
+      b_only    : list of rb            — found only by B
+      c_only    : list of rc            — found only by C
+    """
+    # Step 1: Match A vs B
+    ab_pairs, a_rem, b_rem = _match_reforms(reforms_a, reforms_b, threshold)
+
+    used_c: set[int] = set()
+
+    # Step 2: For each A-B pair, try to find a matching C
+    all_three: list[tuple] = []
+    ab_only:   list[tuple] = []
+
+    for (ra, rb) in ab_pairs:
+        desc_ab = str(ra.get("description", "") or "")
+        best_score, best_j = 0.0, -1
+        for j, rc in enumerate(reforms_c):
+            if j in used_c:
+                continue
+            score = _similarity(desc_ab, str(rc.get("description", "") or ""))
+            if score > best_score:
+                best_score, best_j = score, j
+        if best_score >= threshold and best_j >= 0:
+            all_three.append((ra, rb, reforms_c[best_j]))
+            used_c.add(best_j)
+        else:
+            ab_only.append((ra, rb))
+
+    # Step 3: For unmatched A, try to find a matching C
+    ac_only: list[tuple] = []
+    a_only:  list[dict]  = []
+
+    for ra in a_rem:
+        desc_a = str(ra.get("description", "") or "")
+        best_score, best_j = 0.0, -1
+        for j, rc in enumerate(reforms_c):
+            if j in used_c:
+                continue
+            score = _similarity(desc_a, str(rc.get("description", "") or ""))
+            if score > best_score:
+                best_score, best_j = score, j
+        if best_score >= threshold and best_j >= 0:
+            ac_only.append((ra, reforms_c[best_j]))
+            used_c.add(best_j)
+        else:
+            a_only.append(ra)
+
+    # Step 4: For unmatched B, try to find a matching C
+    bc_only: list[tuple] = []
+    b_only:  list[dict]  = []
+
+    for rb in b_rem:
+        desc_b = str(rb.get("description", "") or "")
+        best_score, best_j = 0.0, -1
+        for j, rc in enumerate(reforms_c):
+            if j in used_c:
+                continue
+            score = _similarity(desc_b, str(rc.get("description", "") or ""))
+            if score > best_score:
+                best_score, best_j = score, j
+        if best_score >= threshold and best_j >= 0:
+            bc_only.append((rb, reforms_c[best_j]))
+            used_c.add(best_j)
+        else:
+            b_only.append(rb)
+
+    # Step 5: C reforms not matched anywhere
+    c_only = [rc for j, rc in enumerate(reforms_c) if j not in used_c]
+
+    return all_three, ab_only, ac_only, bc_only, a_only, b_only, c_only
+
+
+# ---------------------------------------------------------------------------
 # LLM adjudication of disputed reforms
 # ---------------------------------------------------------------------------
 
-_ADJUDICATION_SYSTEM_PROMPT = """\
+_REVIEW_SYSTEM_PROMPT = """\
 You are a senior OECD science and technology policy analyst performing a
-cross-verification step. You are given reform descriptions that were extracted
-by one LLM model but NOT by a second model running on the same survey text.
+cross-verification quality review. You are given reform descriptions extracted
+from OECD Economic Survey PDFs. Each reform has an "agreement" field:
 
-Your task: decide whether each reform should be INCLUDED in or EXCLUDED from
-the final dataset.
+  "all_three_models"    — three independent LLM models all extracted this reform.
+                         Very strong signal. Include unless clearly wrong.
+  "two_of_three_models" — two of three models extracted this reform.
+                         Good signal. Include if it clearly qualifies.
+  "one_of_three_models" — only one of three models extracted this reform.
+                         Be conservative and lean toward exclusion when uncertain.
 
 INCLUDE when the reform's primary purpose is one of:
 • Direct public R&D funding (grants, research councils, competitive programmes)
@@ -163,8 +274,7 @@ EXCLUDE when:
 • The reform concerns general digitalisation, VET, SME finance, or physical
   infrastructure unrelated to research.
 • The description and source_quote are too vague to confirm R&D relevance.
-
-Be conservative: when genuinely uncertain, exclude.
+• For "one_model" reforms: when genuinely uncertain, exclude.
 
 Return a JSON array — one object per reform, in input order:
 [
@@ -179,20 +289,25 @@ Return valid JSON only — no markdown, no text outside the array.
 """
 
 
-def _build_adjudication_prompt(disputes: list[dict]) -> str:
+def _build_review_prompt(reforms: list[dict]) -> str:
     rows = [
         {
-            "reform_id":   r.get("_dispute_id", str(i)),
-            "found_by":    r.get("_found_by", "unknown"),
-            "sub_theme":   r.get("sub_theme", ""),
-            "description": str(r.get("description", "") or "")[:600],
+            "reform_id":    r.get("_review_id", str(i)),
+            "agreement":    r.get("_agreement", "one_model"),
+            "found_by":     r.get("_found_by", "unknown"),
+            "sub_theme":    r.get("sub_theme", ""),
+            "description":  str(r.get("description", "") or "")[:600],
             "source_quote": str(r.get("source_quote", "") or "")[:400],
         }
-        for i, r in enumerate(disputes)
+        for i, r in enumerate(reforms)
     ]
+    counts = {}
+    for r in reforms:
+        a = r.get("_agreement", "one_of_three_models")
+        counts[a] = counts.get(a, 0) + 1
+    count_parts = [f"{v} {k}" for k, v in counts.items()]
     return (
-        f"Adjudicate these {len(rows)} disputed reforms "
-        f"(found by one model only):\n\n"
+        f"Review these {len(rows)} reforms ({', '.join(count_parts)}):\n\n"
         + json.dumps(rows, ensure_ascii=False, indent=2)
     )
 
@@ -230,40 +345,57 @@ def _parse_adjudication_response(text: str, n: int) -> list[dict]:
     return results
 
 
-def _adjudicate_disputes(
-    disputes: list[dict],
+def _llm_review(
+    reforms: list[dict],
     client: LLMClient,
     batch_size: int = 15,
 ) -> list[dict]:
-    """Run LLM adjudication in batches. Returns list of reform dicts with
-    cross_verification_status set to 'disputed_included' or 'disputed_excluded'."""
-    if not disputes:
+    """Send ALL reforms (consensus + disputed) through LLM review in batches.
+
+    Each reform must have bookkeeping keys:
+      _review_id   unique id for this review batch
+      _agreement   "both_models" | "one_model"
+      _found_by    model name(s) that found it
+
+    Returns reformed dicts with cross_verification_status set.
+    """
+    if not reforms:
         return []
 
     results = []
-    for i in range(0, len(disputes), batch_size):
-        batch = disputes[i : i + batch_size]
-        prompt = _build_adjudication_prompt(batch)
+    for i in range(0, len(reforms), batch_size):
+        batch = reforms[i : i + batch_size]
+        prompt = _build_review_prompt(batch)
         try:
             response = client.call(
-                system_prompt=_ADJUDICATION_SYSTEM_PROMPT,
+                system_prompt=_REVIEW_SYSTEM_PROMPT,
                 user_prompt=prompt,
-                operation="cross_verification_adjudication",
+                operation="cross_verification_review",
             )
             decisions = _parse_adjudication_response(response, len(batch))
         except Exception as exc:
-            logger.warning("Adjudication batch failed: %s — defaulting to exclude", exc)
+            logger.warning("Review batch failed: %s — defaulting to exclude", exc)
             decisions = [{"decision": "exclude", "rationale": "api_error"} for _ in batch]
 
         for reform, dec in zip(batch, decisions):
             r = dict(reform)
-            # Remove internal bookkeeping keys
-            r.pop("_dispute_id", None)
+            agreement = r.pop("_agreement", "one_of_three_models")
+            r.pop("_review_id", None)
             r.pop("_found_by", None)
-            if dec["decision"] == "include":
-                r["cross_verification_status"] = "disputed_included"
-            else:
-                r["cross_verification_status"] = "disputed_excluded"
+
+            included = dec["decision"] == "include"
+            if agreement in ("all_three_models", "both_models"):
+                r["cross_verification_status"] = (
+                    "three_model_confirmed" if included else "three_model_rejected"
+                )
+            elif agreement == "two_of_three_models":
+                r["cross_verification_status"] = (
+                    "two_model_included" if included else "two_model_excluded"
+                )
+            else:  # one_of_three_models / one_model
+                r["cross_verification_status"] = (
+                    "one_model_included" if included else "one_model_excluded"
+                )
             r["cross_verification_note"] = dec["rationale"]
             results.append(r)
 
@@ -282,58 +414,176 @@ def _merge_survey(
     threshold: float,
     client: LLMClient | None,
     consensus_only: bool,
+    json_c: dict | None = None,
+    model_c: str | None = None,
 ) -> dict:
-    """Merge two survey JSONs into one. Returns a merged JSON dict."""
+    """Merge two or three survey JSONs. Returns a merged JSON dict.
+
+    If json_c / model_c are provided, runs three-way matching.
+    Otherwise falls back to two-model matching (backward compatible).
+    """
     reforms_a = json_a.get("reforms", []) or []
     reforms_b = json_b.get("reforms", []) or []
+    reforms_c = (json_c.get("reforms", []) or []) if json_c is not None else []
+    three_model = json_c is not None and model_c is not None
 
-    consensus_pairs, a_only, b_only = _match_reforms(reforms_a, reforms_b, threshold)
-
-    # Consensus reforms
-    merged_reforms = [_merge_pair(ra, rb, model_a, model_b) for ra, rb in consensus_pairs]
-
-    if not consensus_only and client is not None:
-        # Tag disputed reforms with internal bookkeeping keys
-        disputes = []
-        for i, r in enumerate(a_only):
-            r2 = dict(r)
-            r2["_dispute_id"] = f"a_{i}"
-            r2["_found_by"] = model_a
-            disputes.append(r2)
-        for i, r in enumerate(b_only):
-            r2 = dict(r)
-            r2["_dispute_id"] = f"b_{i}"
-            r2["_found_by"] = model_b
-            disputes.append(r2)
-
-        adjudicated = _adjudicate_disputes(disputes, client)
-        merged_reforms.extend(adjudicated)
+    if three_model:
+        (all_three, ab_only, ac_only, bc_only,
+         a_only, b_only, c_only) = _match_reforms_three(reforms_a, reforms_b, reforms_c, threshold)
     else:
-        # Consensus-only: tag unmatched as excluded without LLM
-        for r in a_only:
-            merged_reforms.append(_tag_disputed(r, model_a, "disputed_excluded",
-                                                "consensus_only_mode"))
-        for r in b_only:
-            merged_reforms.append(_tag_disputed(r, model_b, "disputed_excluded",
-                                                "consensus_only_mode"))
+        ab_pairs, a_only, b_only = _match_reforms(reforms_a, reforms_b, threshold)
+        all_three = []
+        ab_only   = ab_pairs
+        ac_only   = []
+        bc_only   = []
+        c_only    = []
 
-    # Build final JSON, preserving metadata from run A
+    review_queue: list[dict] = []
+
+    if three_model:
+        # --- Three-model groups ---
+        for i, (ra, rb, rc) in enumerate(all_three):
+            r = _merge_triple(ra, rb, rc, model_a, model_b, model_c)
+            r["_review_id"] = f"abc_{i}"
+            r["_agreement"] = "all_three_models"
+            r["_found_by"]  = f"{model_a} + {model_b} + {model_c}"
+            review_queue.append(r)
+
+        for i, (ra, rb) in enumerate(ab_only):
+            r = _merge_pair(ra, rb, model_a, model_b)
+            r["_review_id"] = f"ab_{i}"
+            r["_agreement"] = "two_of_three_models"
+            r["_found_by"]  = f"{model_a} + {model_b}"
+            review_queue.append(r)
+
+        for i, (ra, rc) in enumerate(ac_only):
+            r = _fill_nulls(dict(ra), rc)
+            r["found_by_models"] = [model_a, model_c]
+            r["_review_id"] = f"ac_{i}"
+            r["_agreement"] = "two_of_three_models"
+            r["_found_by"]  = f"{model_a} + {model_c}"
+            review_queue.append(r)
+
+        for i, (rb, rc) in enumerate(bc_only):
+            r = _fill_nulls(dict(rb), rc)
+            r["found_by_models"] = [model_b, model_c]
+            r["_review_id"] = f"bc_{i}"
+            r["_agreement"] = "two_of_three_models"
+            r["_found_by"]  = f"{model_b} + {model_c}"
+            review_queue.append(r)
+
+        for i, ra in enumerate(a_only):
+            r2 = dict(ra)
+            r2["found_by_models"] = [model_a]
+            r2["_review_id"] = f"a_{i}"
+            r2["_agreement"] = "one_of_three_models"
+            r2["_found_by"]  = model_a
+            review_queue.append(r2)
+
+        for i, rb in enumerate(b_only):
+            r2 = dict(rb)
+            r2["found_by_models"] = [model_b]
+            r2["_review_id"] = f"b_{i}"
+            r2["_agreement"] = "one_of_three_models"
+            r2["_found_by"]  = model_b
+            review_queue.append(r2)
+
+        for i, rc in enumerate(c_only):
+            r2 = dict(rc)
+            r2["found_by_models"] = [model_c]
+            r2["_review_id"] = f"c_{i}"
+            r2["_agreement"] = "one_of_three_models"
+            r2["_found_by"]  = model_c
+            review_queue.append(r2)
+
+    else:
+        # --- Two-model groups (backward compat) ---
+        for i, (ra, rb) in enumerate(ab_only):  # ab_only == ab_pairs in 2-model mode
+            r = _merge_pair(ra, rb, model_a, model_b)
+            r["_review_id"] = f"c_{i}"
+            r["_agreement"] = "both_models"
+            r["_found_by"]  = f"{model_a} + {model_b}"
+            review_queue.append(r)
+
+        for i, ra in enumerate(a_only):
+            r2 = dict(ra)
+            r2["found_by_models"] = [model_a]
+            r2["_review_id"] = f"a_{i}"
+            r2["_agreement"] = "one_model"
+            r2["_found_by"]  = model_a
+            review_queue.append(r2)
+
+        for i, rb in enumerate(b_only):
+            r2 = dict(rb)
+            r2["found_by_models"] = [model_b]
+            r2["_review_id"] = f"b_{i}"
+            r2["_agreement"] = "one_model"
+            r2["_found_by"]  = model_b
+            review_queue.append(r2)
+
+    # --- LLM review or consensus-only mode ---
+    if not consensus_only and client is not None:
+        merged_reforms = _llm_review(review_queue, client)
+    else:
+        # Consensus-only: confirmed groups stay, singles excluded, no LLM cost
+        merged_reforms = []
+        for r in review_queue:
+            agreement = r.pop("_agreement", "one_of_three_models")
+            r.pop("_review_id", None)
+            r.pop("_found_by",  None)
+            if agreement in ("all_three_models", "both_models"):
+                r["cross_verification_status"] = "three_model_confirmed"
+                r["cross_verification_note"]   = "consensus_only_mode"
+            elif agreement == "two_of_three_models":
+                r["cross_verification_status"] = "two_model_excluded"
+                r["cross_verification_note"]   = "consensus_only_mode"
+            else:
+                r["cross_verification_status"] = "one_model_excluded"
+                r["cross_verification_note"]   = "consensus_only_mode"
+            merged_reforms.append(r)
+
+    # Statuses that are excluded from the "reforms" (active) list
+    _excluded_statuses = {
+        "three_model_rejected",
+        "two_model_excluded",
+        "one_model_excluded",
+        # backward compat two-model statuses
+        "consensus_rejected",
+        "disputed_excluded",
+    }
+
+    # Tally counts for the cross_verification metadata block
+    n_all3  = len(all_three) if three_model else 0
+    n_ab    = len(ab_only)
+    n_ac    = len(ac_only) if three_model else 0
+    n_bc    = len(bc_only) if three_model else 0
+    n_a     = len(a_only)
+    n_b     = len(b_only)
+    n_c     = len(c_only) if three_model else 0
+
     result = {
         "country_code": json_a.get("country_code"),
         "country_name": json_a.get("country_name"),
         "survey_year":  json_a.get("survey_year"),
         "cross_verification": {
-            "model_a":     model_a,
-            "model_b":     model_b,
-            "total_a":     len(reforms_a),
-            "total_b":     len(reforms_b),
-            "consensus":   len(consensus_pairs),
-            "a_only":      len(a_only),
-            "b_only":      len(b_only),
-            "threshold":   threshold,
+            "model_a":          model_a,
+            "model_b":          model_b,
+            "model_c":          model_c,
+            "three_model_mode": three_model,
+            "total_a":          len(reforms_a),
+            "total_b":          len(reforms_b),
+            "total_c":          len(reforms_c),
+            "all_three":        n_all3,
+            "ab_only":          n_ab,
+            "ac_only":          n_ac,
+            "bc_only":          n_bc,
+            "a_only":           n_a,
+            "b_only":           n_b,
+            "c_only":           n_c,
+            "threshold":        threshold,
         },
         "reforms": [r for r in merged_reforms
-                    if r.get("cross_verification_status") != "disputed_excluded"],
+                    if r.get("cross_verification_status") not in _excluded_statuses],
         "all_reforms_including_excluded": merged_reforms,
     }
     return result
@@ -354,20 +604,31 @@ def run_cross_verification(
     consensus_only: bool,
     country: str | None = None,
     year: int | None = None,
+    dir_c: Path | None = None,
+    model_c: str | None = None,
 ) -> dict:
-    """Process all matching survey JSONs between two directories.
+    """Process all matching survey JSONs across two or three directories.
+
+    If dir_c and model_c are provided, runs three-model matching.
+    Surveys present in run A but missing from run B (and optionally C) are
+    passed through as-is with a 'run_a_only' status.
 
     Returns a summary dict with counts.
     """
+    three_model = dir_c is not None and dir_c.exists() and model_c is not None
     output_dir.mkdir(parents=True, exist_ok=True)
 
     files_a = {f.name: f for f in dir_a.glob("*.json")}
     files_b = {f.name: f for f in dir_b.glob("*.json")}
-    common = sorted(set(files_a) & set(files_b))
-    only_a = sorted(set(files_a) - set(files_b))
-    only_b = sorted(set(files_b) - set(files_a))
+    files_c = {f.name: f for f in dir_c.glob("*.json")} if three_model else {}
 
-    # Filter by country / year if requested
+    if three_model:
+        common = sorted(set(files_a) & set(files_b) & set(files_c))
+        only_a = sorted(set(files_a) - set(files_b) - set(files_c))
+    else:
+        common = sorted(set(files_a) & set(files_b))
+        only_a = sorted(set(files_a) - set(files_b))
+
     def _matches_filter(fname: str) -> bool:
         stem = fname.replace(".json", "")
         parts = stem.split("_")
@@ -375,8 +636,7 @@ def run_cross_verification(
             return False
         if year:
             try:
-                if int(parts[1]) != year:
-                    return False
+                return int(parts[1]) == year
             except (IndexError, ValueError):
                 return False
         return True
@@ -384,19 +644,25 @@ def run_cross_verification(
     common = [f for f in common if _matches_filter(f)]
 
     summary = {
-        "surveys_both": len(common),
-        "surveys_a_only": len(only_a),
-        "surveys_b_only": len(only_b),
-        "total_consensus": 0,
-        "total_a_only": 0,
-        "total_b_only": 0,
-        "total_disputed_included": 0,
-        "total_disputes": 0,
+        "three_model_mode":                  three_model,
+        "surveys_processed":                 len(common),
+        "surveys_a_only":                    len(only_a),
+        "total_three_model_confirmed":       0,
+        "total_three_model_rejected":        0,
+        "total_two_model_included":          0,
+        "total_two_model_excluded":          0,
+        "total_one_model_included":          0,
+        "total_one_model_excluded":          0,
+        # backward-compat two-model keys
+        "total_consensus_confirmed":         0,
+        "total_consensus_rejected":          0,
+        "total_disputed_included":           0,
     }
 
+    mode_label = "three-model" if three_model else "two-model"
     logger.info(
-        "Cross-verification: %d surveys in both runs, %d only in A, %d only in B",
-        len(common), len(only_a), len(only_b),
+        "Cross-verification (%s): %d surveys to process",
+        mode_label, len(common),
     )
 
     for fname in common:
@@ -405,34 +671,38 @@ def run_cross_verification(
                 json_a = json.load(f)
             with open(files_b[fname], encoding="utf-8") as f:
                 json_b = json.load(f)
+            json_c_data = None
+            if three_model:
+                with open(files_c[fname], encoding="utf-8") as f:
+                    json_c_data = json.load(f)
         except Exception as exc:
             logger.warning("Could not load %s: %s", fname, exc)
             continue
 
-        logger.info("Merging %s ...", fname)
+        logger.info("Merging %s (%s)...", fname, mode_label)
         merged = _merge_survey(
             json_a, json_b, model_a, model_b,
             threshold, client, consensus_only,
+            json_c=json_c_data, model_c=model_c if three_model else None,
         )
 
-        cv = merged.get("cross_verification", {})
-        summary["total_consensus"]  += cv.get("consensus", 0)
-        summary["total_a_only"]     += cv.get("a_only", 0)
-        summary["total_b_only"]     += cv.get("b_only", 0)
-        disputes = cv.get("a_only", 0) + cv.get("b_only", 0)
-        summary["total_disputes"]   += disputes
+        all_reforms = merged.get("all_reforms_including_excluded", [])
+        statuses = [r.get("cross_verification_status", "") for r in all_reforms]
 
-        included = sum(
-            1 for r in merged.get("all_reforms_including_excluded", [])
-            if r.get("cross_verification_status") == "disputed_included"
-        )
-        summary["total_disputed_included"] += included
+        for key in (
+            "three_model_confirmed", "three_model_rejected",
+            "two_model_included",    "two_model_excluded",
+            "one_model_included",    "one_model_excluded",
+            "consensus_confirmed",   "consensus_rejected",
+            "disputed_included",
+        ):
+            summary[f"total_{key}"] += statuses.count(key)
 
         out_path = output_dir / fname
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(merged, f, ensure_ascii=False, indent=2)
 
-    # Copy surveys only present in run A (no match in B) — pass through as-is
+    # Pass-through surveys only in run A
     for fname in only_a:
         if not _matches_filter(fname):
             continue
@@ -442,8 +712,8 @@ def run_cross_verification(
         except Exception:
             continue
         data["cross_verification"] = {
-            "model_a": model_a, "model_b": None,
-            "note": "only_in_run_a — no corresponding run B file",
+            "model_a": model_a, "model_b": None, "model_c": None,
+            "note": "only_in_run_a — no corresponding run B/C file",
         }
         for r in data.get("reforms", []):
             r.setdefault("cross_verification_status", "run_a_only")
@@ -460,19 +730,54 @@ def run_cross_verification(
 # ---------------------------------------------------------------------------
 
 def _print_summary(summary: dict) -> None:
+    three_model = summary.get("three_model_mode", False)
+
     print("\n" + "=" * 60)
     print("CROSS-VERIFICATION SUMMARY")
     print("=" * 60)
-    print(f"Surveys processed (both runs):  {summary['surveys_both']}")
+    print(f"Surveys processed:              {summary.get('surveys_processed', summary.get('surveys_both', 0))}")
     print(f"Surveys only in run A:          {summary['surveys_a_only']}")
-    print(f"Surveys only in run B:          {summary['surveys_b_only']}")
     print()
-    print(f"Reforms in consensus:           {summary['total_consensus']}")
-    print(f"Disputed (run A only):          {summary['total_a_only']}")
-    print(f"Disputed (run B only):          {summary['total_b_only']}")
-    print(f"  → adjudicated as included:   {summary['total_disputed_included']}")
-    print(f"  → adjudicated as excluded:   "
-          f"{summary['total_disputes'] - summary['total_disputed_included']}")
+
+    if three_model:
+        n3c  = summary["total_three_model_confirmed"]
+        n3r  = summary["total_three_model_rejected"]
+        n2i  = summary["total_two_model_included"]
+        n2e  = summary["total_two_model_excluded"]
+        n1i  = summary["total_one_model_included"]
+        n1e  = summary["total_one_model_excluded"]
+        n_final = n3c + n2i + n1i
+        print(f"All three models agreed ({n3c + n3r} reforms):")
+        print(f"  → LLM confirmed as valid:    {n3c}")
+        print(f"  → LLM rejected (false pos.): {n3r}")
+        print()
+        print(f"Two of three models agreed ({n2i + n2e} reforms):")
+        print(f"  → LLM included:              {n2i}")
+        print(f"  → LLM excluded:              {n2e}")
+        print()
+        print(f"Only one model found ({n1i + n1e} reforms):")
+        print(f"  → LLM included:              {n1i}")
+        print(f"  → LLM excluded:              {n1e}")
+    else:
+        n_confirmed = summary["total_consensus_confirmed"]
+        n_rejected  = summary["total_consensus_rejected"]
+        n_disp_incl = summary["total_disputed_included"]
+        n_disp_excl = (
+            summary.get("total_one_model_excluded", 0) +
+            summary.get("total_two_model_excluded", 0)
+        )
+        n_final = n_confirmed + n_disp_incl
+        print(f"Both models agreed ({n_confirmed + n_rejected} reforms):")
+        print(f"  → LLM confirmed as valid:    {n_confirmed}")
+        print(f"  → LLM rejected (false pos.): {n_rejected}")
+        print()
+        print(f"Only one model found reforms:")
+        print(f"  → LLM included:              {n_disp_incl}")
+        print(f"  → LLM excluded:              {n_disp_excl}")
+        n_final = n_confirmed + n_disp_incl
+
+    print()
+    print(f"Final reforms in dataset:       {n_final}")
     print("=" * 60 + "\n")
 
 

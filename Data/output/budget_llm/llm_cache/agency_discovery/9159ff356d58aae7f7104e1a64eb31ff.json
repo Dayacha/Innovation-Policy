@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "External Review Committee of the Royal Canadian Mounted Police",
+  "name_variants": [
+    "COMITÉ EXTERNE D’EXAMEN DE LA GRC",
+    "RCMP External Review Committee"
+  ],
+  "category": "unclear",
+  "notes": "This entity is related to oversight and review, not research and development."
+}

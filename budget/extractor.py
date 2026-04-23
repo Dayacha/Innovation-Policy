@@ -191,11 +191,17 @@ def extract_chunks(
 
     all_items: list[dict] = []
 
+    # Include a short hash of the country addendum in cache keys so that
+    # profile changes (unit instructions, skip rules, year-specific notes, etc.)
+    # invalidate old cache entries automatically.
+    from budget.country_profiles import build_country_addendum as _bca
+    _profile_sig = hashlib.md5(_bca(country, year=year).encode()).hexdigest()[:8]
+
     for chunk_pages_list, chunk_text in chunks:
         page_range = get_page_range(chunk_pages_list)
 
-        # Cache check
-        cache_key = _chunk_cache_key(source_file, chunk_text)
+        # Cache check (include profile signature so profile edits bust the cache)
+        cache_key = _chunk_cache_key(f"{source_file}|{_profile_sig}", chunk_text)
         cached = _load_chunk_cache(cache_dir, cache_key) if cache_dir else None
 
         if cached is not None and cfg.SKIP_CACHED:

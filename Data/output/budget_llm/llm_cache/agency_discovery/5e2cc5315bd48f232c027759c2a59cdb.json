@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.6,
+  "entry_type": "mixed_ministry",
+  "canonical_name": "Natural Resources Canada",
+  "name_variants": [
+    "NRCan",
+    "Natural Resources",
+    "Ressources Naturelles"
+  ],
+  "category": "unclear",
+  "notes": "This entry likely represents a broad ministry budget, not specifically identifiable R&D spending."
+}

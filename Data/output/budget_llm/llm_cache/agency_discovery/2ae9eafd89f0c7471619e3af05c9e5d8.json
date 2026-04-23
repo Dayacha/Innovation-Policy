@@ -1,0 +1,13 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Canadian Museum of Immigration at Pier 21",
+  "name_variants": [
+    "Canadian Heritage",
+    "Patrimoine Canadien",
+    "CMIP21"
+  ],
+  "category": "unclear",
+  "notes": "This entity is focused on heritage and immigration, not on R&D activities."
+}

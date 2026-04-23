@@ -1,0 +1,12 @@
+{
+  "is_rd_relevant": false,
+  "confidence": 0.9,
+  "entry_type": "not_rd",
+  "canonical_name": "Indigenous and Northern Affairs Canada",
+  "name_variants": [
+    "INAC",
+    "Affaires indiennes et du Nord canadien"
+  ],
+  "category": "unclear",
+  "notes": "This entity primarily deals with Indigenous affairs and northern development, not specifically R&D."
+}
