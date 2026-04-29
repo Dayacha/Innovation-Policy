@@ -69,6 +69,11 @@ Rules:
   - Use only the provided snippets.
   - If the agency is mentioned but no amount is actually shown, return found=false.
   - If both component lines and a total are shown, include all distinct lines.
+  - The same agency may appear more than once in the document (for example English and French schedules, or repeated references). Reconcile all snippets before answering.
+  - Treat the agency heading as the start of the relevant block. Do not extract any amount or line item that appears before the agency heading in a snippet.
+  - Prefer amounts that appear inside the target agency's own block, after the agency heading. Do not use a number that belongs to the previous block just because it appears immediately before the heading.
+  - If operating/capital/grants/contributions lines and a total are shown for the same agency block, prefer the total that matches the visible component lines.
+  - If two occurrences disagree, prefer the occurrence where the total is internally consistent with the visible component lines; otherwise return the disputed line with decision="review" and explain briefly in notes.
   - Keep item labels short and literal.
   - Amounts must be exactly as printed in the snippet, not converted.
 """
@@ -114,7 +119,7 @@ def _agency_candidates(country: str) -> list[dict]:
     return agencies
 
 
-def _snippet_for_agency(path: Path, agency: dict, cache_dir: Path, max_snippets: int = 3) -> list[dict]:
+def _snippet_for_agency(path: Path, agency: dict, cache_dir: Path, max_snippets: int = 6) -> list[dict]:
     variants = _variants(agency)
     pages = extract_pages(path, cache_dir=cache_dir, force_reextract=False)
     snippets: list[dict] = []
@@ -122,11 +127,41 @@ def _snippet_for_agency(path: Path, agency: dict, cache_dir: Path, max_snippets:
         text = pg.text or ""
         if not text_mentions(text, variants):
             continue
-        for snip in extract_snippets_from_text(text, variants, max_snippets=1, before=450, after=1150):
+        # Make snippets strongly forward-looking from the agency heading so we
+        # avoid capturing the previous block's totals or labels.
+        for snip in extract_snippets_from_text(text, variants, max_snippets=2, before=20, after=1500):
             snippets.append({"page_number": pg.page_num, "text": snip["text"]})
             if len(snippets) >= max_snippets:
                 return snippets
     return snippets
+
+
+def _filter_recovered_rows(rows: list[dict]) -> list[dict]:
+    """
+    Keep only the coherent agency block when recovery returns a mixed set.
+
+    In Canada appropriation tables, once a block has explicit components plus a
+    total, a stray 'Program expenditures' line is usually bleed from the
+    previous block and should be dropped.
+    """
+    if not rows:
+        return rows
+
+    labels = {
+        str(r.get("line_description", "") or "").strip().lower(): r
+        for r in rows
+    }
+    has_total = any("total" in label for label in labels)
+    has_operating = "operating expenditures" in labels
+    has_capital = "capital expenditures" in labels
+
+    if has_total and (has_operating or has_capital):
+        rows = [
+            r for r in rows
+            if str(r.get("line_description", "") or "").strip().lower() != "program expenditures"
+        ]
+
+    return rows
 
 
 def _recover_for_agency(
@@ -139,6 +174,7 @@ def _recover_for_agency(
     client: BudgetLLMClient,
     cache_dir: Path,
     currency: str,
+    use_cache: bool = True,
 ) -> list[dict]:
     variants = _variants(agency)
     if any(_row_mentions(r, variants) for r in file_rows):
@@ -148,7 +184,7 @@ def _recover_for_agency(
     if not snippets:
         return []
 
-    cached = _load_cache(country, source_file, agency["canonical_name"])
+    cached = _load_cache(country, source_file, agency["canonical_name"]) if use_cache else None
     if cached is None:
         context = "\n\n".join(
             f"[PAGE {s['page_number']}]\n{s['text']}" for s in snippets
@@ -160,6 +196,7 @@ def _recover_for_agency(
             f"Target agency: {agency['canonical_name']}\n"
             f"Known variants: {', '.join(variants[:8])}\n"
             f"Currency: {currency}\n\n"
+            f"The agency may appear more than once in this document. Reconcile all snippets and return the correct rows for the same agency block only.\n\n"
             f"Relevant snippets:\n{context}"
         )
         try:
@@ -212,6 +249,7 @@ def _recover_for_agency(
             "extraction_pass": "targeted_recovery",
             "notes": item.get("notes", f"Recovered for missing agency: {agency['canonical_name']}"),
         })
+    rows = _filter_recovered_rows(rows)
     if rows:
         logger.info(
             f"[{country}] Targeted recovery: {source_file} -> {agency['canonical_name']} "
@@ -225,6 +263,7 @@ def recover_missing_agency_rows(
     file_specs: list[tuple[str, int, Path]],
     config: dict,
     pdf_text_cache_dir: Path,
+    use_cache: bool = True,
 ) -> list[dict]:
     """
     Recover likely missed agency rows from cached document text.
@@ -265,6 +304,7 @@ def recover_missing_agency_rows(
                 client=client,
                 cache_dir=pdf_text_cache_dir,
                 currency=currency_by_country[country],
+                use_cache=use_cache,
             )
             if recovered:
                 additions.extend(recovered)

@@ -78,14 +78,36 @@ COUNTRY_CONTEXT: dict[str, dict] = {
         "currency": "GBP",
         "currency_symbol": "£",
         "language": "english",
-        "unit_hint": "billion",  # DEL tables use £ billion
+        # Unit varies by era and table type — see country_profiles.py year_notes for
+        # per-year instructions. Science chapter tables (2003-2009) use £ million;
+        # DEL/Spending Review tables (2010+) use £ billion.
+        # UNIT RULE: varies by era. Injected verbatim into the extraction prompt.
+        # DO NOT write "see year_notes" here — the LLM interprets that literally
+        # and defaults to 'thousand'. State the rule explicitly.
+        "unit_hint": (
+            "ERA-DEPENDENT UNITS — YOU MUST USE THE CORRECT UNIT: "
+            "(a) Science chapter tables 2003-2009: the table header says '£ million'. "
+            "A value like '5,397' means £5,397 MILLION. Set unit='million'. "
+            "(b) DEL / Spending Review tables 2010+: amounts stated as '£X billion' or "
+            "in billion-scale DEL tables. Set unit='billion'. "
+            "(c) Narrative policy announcements: use the unit as stated in the sentence "
+            "('£300 million' → unit='million'; '£1.6 billion' → unit='billion'). "
+            "NEVER default to unit='thousand' for UK budget documents."
+        ),
         "known_agencies": [
-            "Department for Business, Innovation and Skills (BIS)",
-            "Department for Business, Energy and Industrial Strategy (BEIS)",
-            "Department of Trade and Industry (DTI)",
-            "Department for Innovation, Universities and Skills (DIUS)",
+            # Pre-2000 era
             "Office of Science and Technology (OST)",
+            "Department of Trade and Industry (DTI)",
+            # 2000s era
+            "Department for Innovation, Universities and Skills (DIUS)",
             "Research Councils UK (RCUK)",
+            "Higher Education Funding Council for England (HEFCE)",
+            "Technology Strategy Board (TSB)",
+            # 2010s era — BIS
+            "Department for Business, Innovation and Skills (BIS)",
+            # 2016+ — BEIS
+            "Department for Business, Energy and Industrial Strategy (BEIS)",
+            # 2018+ — UKRI and research councils
             "UK Research and Innovation (UKRI)",
             "Medical Research Council (MRC)",
             "Engineering and Physical Sciences Research Council (EPSRC)",
@@ -95,7 +117,11 @@ COUNTRY_CONTEXT: dict[str, dict] = {
             "Economic and Social Research Council (ESRC)",
             "Arts and Humanities Research Council (AHRC)",
             "Innovate UK",
-            "Higher Education Funding Council for England (HEFCE)",
+            "Research England",
+            # 2021+ — ARIA
+            "Advanced Research and Invention Agency (ARIA)",
+            # 2023+ — DSIT
+            "Department for Science, Innovation and Technology (DSIT)",
         ],
         # Bodies whose section_totals should NOT be marked 'include' (too broad)
         "mixed_ministries": [
@@ -104,9 +130,16 @@ COUNTRY_CONTEXT: dict[str, dict] = {
             "HM Treasury", "Home Office", "Ministry of Justice",
             "Department for Transport", "Department for Communities",
             "Department for Environment", "Foreign and Commonwealth Office",
+            "Department for Business and Trade (DBT)",
         ],
-        "doc_type_hint": "Departmental Expenditure Limits (DEL) tables in the Spending Review / Budget. "
-                         "Look for Resource DEL and Capital DEL rows under science/research departments.",
+        "doc_type_hint": (
+            "UK HM Treasury budget document. Structure varies by era: "
+            "1975-1992: Financial Statement macro overview only — no R&D data; "
+            "2003-2009: Budget Report with Science chapter and science spending table (£ million); "
+            "2010+: Spending Review / Budget with DEL tables by department (£ billion). "
+            "Look for BEIS/DSIT/BIS Resource DEL and Capital DEL rows, "
+            "UKRI sub-lines, and named science programme amounts."
+        ),
     },
     "Australia": {
         "currency": "AUD",
@@ -199,18 +232,54 @@ COUNTRY_CONTEXT: dict[str, dict] = {
         "currency": "DKK",
         "currency_symbol": "kr",
         "language": "danish",
-        "unit_hint": "thousand",  # Finanslov amounts in 1000s DKK
+        "unit_hint": (
+            "ERA-DEPENDENT units: "
+            "(1) 1975–2000: amounts in THOUSANDS of DKK (1.000 kr.) — set unit='thousand'. "
+            "(2) 2001+: amounts in MILLIONS of DKK (mio. kr.) — set unit='million'. "
+            "IMPORTANT: The page header or table caption will usually state 'Mio. kr.' or '1.000 kr.' "
+            "— always check and use that label to decide the unit. "
+            "Danish number format: period '.' is the thousands separator, comma ',' is the decimal. "
+            "Example: '1.234,5' means 1234.5. "
+            "Do NOT use a fixed unit — read the document header for the actual unit used."
+        ),
         "known_agencies": [
-            "Undervisningsministeriet (Ministry of Education)",
-            "Forskningsministeriet (Ministry of Research)",
-            "Videnskabsministeriet (Ministry of Science)",
-            "Atomenergikommissionen (Atomic Energy Commission)",
+            # Ministry (name changed over the decades)
+            "Undervisningsministeriet (Ministry of Education, § 20, pre-2001)",
+            "Forskningsministeriet (Ministry of Research, § 32, 2001-2010 approx)",
+            "Videnskabsministeriet (Ministry of Science, Technology and Innovation, 2001-2011)",
+            "Uddannelses- og Forskningsministeriet (Ministry of Higher Education and Science, § 19, 2014+)",
+            # Research councils (pre-2014 names)
             "Statens teknisk-videnskabelige Forskningsfond (State Technical-Scientific Research Fund)",
-            "Statens naturvidenskabelige Forskningsrad (State Natural Science Research Council)",
-            "Statens samfundsvidenskabelige Forskningsrad",
-            "Statens humanistiske Forskningsrad",
-            "Statens laegervidenskabelige Forskningsrad",
-            "Danmarks tekniske Hojskole (DTH)",
+            "Statens naturvidenskabelige Forskningsrad (Danish Natural Science Research Council, SNF)",
+            "Statens samfundsvidenskabelige Forskningsrad (Social Science Research Council)",
+            "Statens humanistiske Forskningsrad (Humanities Research Council)",
+            "Statens laegervidenskabelige Forskningsrad (Medical Research Council)",
+            # Post-2014 consolidated councils
+            "Det Frie Forskningsraad / Danmarks Frie Forskningsfond (Independent Research Fund Denmark)",
+            "Det Strategiske Forskningsrad (Danish Strategic Research Council, pre-2014)",
+            # Innovation and applied research
+            "Danmarks Innovationsfond (Innovation Fund Denmark, 2014+)",
+            "Hoejteknologifonden (Danish Advanced Technology Foundation, pre-2014)",
+            "Teknologiradet (Danish Board of Technology)",
+            "Danmarks Grundforskningsfond (Danish National Research Foundation, DNRF)",
+            # Atomic energy / nuclear
+            "Atomenergikommissionen (Atomic Energy Commission, pre-1990s)",
+            "Ris\u00f8 Nationallaboratorium / Ris\u00f8 National Laboratory",
+            "Nukleare anlaeg / nuclear facilities",
+            # Universities (historically funded via Undervisningsministeriet/UFM)
+            "Kobenhavns Universitet (University of Copenhagen, KU)",
+            "Aarhus Universitet (University of Aarhus, AU)",
+            "Danmarks tekniske Hojskole / Danmarks Tekniske Universitet (DTU)",
+            "Aalborg Universitet (AAU)",
+            "Syddansk Universitet (SDU)",
+            "Roskilde Universitetscenter (RUC)",
+            "Handelshojskolen (Copenhagen Business School, CBS)",
+            "Universiteterne (universities collective line)",
+            # Sector research institutes
+            "Danmarks Meteorologiske Institut (DMI)",
+            "Danmarks og Gronlands Geologiske Undersogelse (GEUS)",
+            "Statens Serum Institut (SSI)",
+            "Det Nationale Forskningscenter for Arbejdsmiljo (NFA)",
         ],
         "mixed_ministries": [
             "Indenrigsministeriet (Ministry of the Interior)",
@@ -218,26 +287,61 @@ COUNTRY_CONTEXT: dict[str, dict] = {
             "Sundhedsministeriet (Ministry of Health)",
             "Udenrigsministeriet (Ministry of Foreign Affairs)",
             "Forsvarsministeriet (Ministry of Defence)",
-            "Trafikministeriet (Ministry of Transport)",
+            "Trafikministeriet / Transportministeriet (Ministry of Transport)",
             "Finansministeriet (Ministry of Finance)",
             "Justitsministeriet (Ministry of Justice)",
+            "Ministeriet for Foedevarer, Landbrug og Fiskeri (Ministry of Food and Agriculture)",
+            "Miljoeministeriet (Ministry of Environment)",
+            "Erhvervs- og Vaekstministeriet (Ministry of Business)",
+            "Beskaftigelsesministeriet (Ministry of Employment)",
+            "Skatteministeriet (Ministry of Taxation)",
         ],
-        "doc_type_hint": "Finanslov (Finance Bill). "
-                         "Look for § 20 Undervisningsministeriet, § 32 Forskningsministeriet, "
-                         "and research fund appropriations.",
+        "doc_type_hint": (
+            "Finanslov (Danish annual Finance Bill / Budget Act). "
+            "STRUCTURE: Organised by § (paragraph) number. Each § is a ministry or major agency. "
+            "KEY SECTIONS FOR R&D: "
+            "§ 20 Undervisningsministeriet (pre-2001): universities + research councils. "
+            "§ 19 Uddannelses- og Forskningsministeriet (UFM, 2014+): universities + research funds. "
+            "§ 32 Forskningsministeriet / Videnskabsministeriet (approx 2001-2013): research ministry. "
+            "UNIT ERA: Before 2001, amounts are in '1.000 kr.' (thousands DKK). "
+            "From 2001 onwards, amounts switch to 'Mio. kr.' (millions DKK). "
+            "Always read the column header to confirm the unit. "
+            "SECTION OVERVIEW ROWS: Each § starts with a one-line total (e.g. '§ 19. I alt 28.789,7 mio. kr.'). "
+            "These overview totals are useful as section-level aggregates; tag them accordingly. "
+            "Below the overview, individual account lines appear (e.g. '19.11.01 Kobenhavns Universitet'). "
+            "INCLUDE the individual university and research-fund lines — these are the key time-series. "
+            "SKIP: student grants/loans (SU-laan, Statens Uddannelsesstotte), "
+            "folkeskole (primary school) lines, daycare, infrastructure unless R&D-labelled, "
+            "and generic Driftsudgifter lines in mixed-purpose sections. "
+            "NUMBER FORMAT: '.' is thousands separator, ',' is decimal — '1.234,5' = 1234.5."
+        ),
     },
     "France": {
-        "currency": "EUR",
+        "currency": "EUR",           # EUR from 2002; FRF (French Franc) before 2002
         "currency_symbol": "€",
         "language": "french",
-        "unit_hint": "million",
+        "unit_hint": "million",      # LOLF era (2006+): full-euro amounts → divide by 1M
         "known_agencies": [
+            # Core research agencies (CNRS, CEA etc. appear in PAP annexes, not main JORF text)
             "Centre National de la Recherche Scientifique (CNRS)",
             "Agence Nationale de la Recherche (ANR)",
             "Institut National de la Santé et de la Recherche Médicale (INSERM)",
-            "Commissariat à l'Énergie Atomique (CEA)",
+            "Commissariat à l'Énergie Atomique et aux Énergies Alternatives (CEA)",
             "Institut National de Recherche en Informatique et en Automatique (INRIA)",
+            "Centre National d'Études Spatiales (CNES)",
+            "Institut Français de Recherche pour l'Exploitation de la Mer (IFREMER)",
+            "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement (INRAE)",
+            "Agence de l'Environnement et de la Maîtrise de l'Énergie (ADEME)",
+            "Institut de Radioprotection et de Sûreté Nucléaire (IRSN)",
             "Agence Nationale pour la Gestion des Déchets Radioactifs (ANDRA)",
+            # LOLF Programmes (2006+)
+            "Programme 150 — Formations supérieures et recherche universitaire",
+            "Programme 172 — Recherches scientifiques et technologiques pluridisciplinaires",
+            "Programme 187 — Recherche agricole et agroalimentaire",
+            "Programme 190 — Recherche dans les domaines de l'énergie",
+            "Programme 191 — Recherche dans les domaines du risque",
+            "Programme 192 — Recherche et enseignement supérieur économique",
+            "Programme 193 — Recherche spatiale",
         ],
         "mixed_ministries": [
             "Ministère de la Défense", "Ministère des Affaires étrangères",
@@ -245,65 +349,337 @@ COUNTRY_CONTEXT: dict[str, dict] = {
             "Ministère de l'Agriculture", "Ministère de l'Intérieur",
             "Ministère des Transports", "Ministère du Travail",
         ],
-        "doc_type_hint": "Loi de finances / Budget de l'État (JORF). "
-                         "Look for Mission 'Recherche et enseignement supérieur'. "
-                         "UNIT RULE: The main JORF mission table uses MILLIONS d'euros. "
-                         "Always set unit='million' — '2 417' means 2417 million EUR = €2.4B. "
-                         "Exception: if a table is explicitly headed 'milliers d'euros' or 'en milliers €', "
-                         "use unit='thousand'.",
+        "doc_type_hint": (
+            "JORF Loi de finances (French annual budget law). "
+            "ERA GUIDE: "
+            "(1) Pre-2002 (FRF era): État B/C tables by ministry chapter; currency='FRF'. "
+            "R&D under 'Recherche' (Premier Ministre section) and 'Universités'. "
+            "(2) 2002-2005 (EUR, pre-LOLF): same structure, currency='EUR'. "
+            "(3) 2006+ (LOLF era): Mission 'Recherche et enseignement supérieur' with numbered programmes. "
+            "CRITICAL FTE WARNING: The LOLF JORF contains two sequential tables — "
+            "an ETPT staffing table (headcounts like 203,561 FTEs) appears BEFORE the credit table. "
+            "ONLY extract from the credit table (État B, AE/CP columns). "
+            "UNIT RULE (LOLF era): The credit table shows FULL EUROS — divide by 1,000,000. "
+            "Set unit='million'. Example: 24,763,980,271 → amount_local=24764, unit='million'. "
+            "Number format: French uses SPACE as thousands separator; comma as decimal."
+        ),
     },
     "Germany": {
-        "currency": "EUR",
+        "currency": "EUR",  # EUR from 2002; DEM (Deutsche Mark) before 2002
         "currency_symbol": "€",
         "language": "german",
-        "unit_hint": "thousand",
+        "unit_hint": "thousand",  # All Bundeshaushalt amounts in 1 000 DM or 1 000 EUR
         "known_agencies": [
-            "Bundesministerium für Bildung und Forschung (BMBF)",
+            # Pre-1994: BMFT + BMBW as separate ministries
+            "Bundesministerium für Forschung und Technologie (BMFT, Epl 30, pre-1994)",
+            "Bundesministerium für Bildung und Wissenschaft (BMBW, Epl 31, pre-1994)",
+            # 1994+: Merged as BMBF
+            "Bundesministerium für Bildung und Forschung (BMBF, Epl 30)",
+            # 2025+: Renamed
+            "Bundesministerium für Forschung, Technologie und Raumfahrt (BMFTR, Epl 30)",
+            # Key research organisations funded by BMBF
             "Deutsche Forschungsgemeinschaft (DFG)",
+            "Max-Planck-Gesellschaft (MPG)",
             "Fraunhofer-Gesellschaft",
-            "Max-Planck-Gesellschaft",
-            "Helmholtz-Gemeinschaft",
-            "Leibniz-Gemeinschaft",
+            "Helmholtz-Gemeinschaft / Hermann von Helmholtz-Gemeinschaft (HGF)",
+            "Leibniz-Gemeinschaft / Wissenschaftsgemeinschaft Gottfried Wilhelm Leibniz (WGL)",
+            "Deutsches Zentrum für Luft- und Raumfahrt (DLR)",
+            "Alexander von Humboldt-Stiftung",
+            "Deutscher Akademischer Austauschdienst (DAAD)",
         ],
         "mixed_ministries": [
-            "Bundesministerium der Verteidigung (BMVg)",
+            "Bundesministerium der Verteidigung (BMVg, Epl 14)",
             "Bundesministerium für Gesundheit (BMG)",
-            "Bundesministerium des Innern (BMI)",
+            "Bundesministerium des Innern (BMI, Epl 06)",
             "Bundesministerium für Arbeit und Soziales (BMAS)",
             "Bundesministerium für Ernährung und Landwirtschaft (BMEL)",
-            "Auswärtiges Amt (Foreign Office)",
+            "Auswärtiges Amt (Epl 05)",
+            "Bundesministerium für Wirtschaft (Epl 09)",
+            "Bundesministerium für Verkehr (Epl 12)",
+            "Allgemeine Finanzverwaltung (Epl 60)",
         ],
-        "doc_type_hint": "Bundeshaushalt. "
-                         "Look for Einzelplan 30 (BMBF) and science appropriations.",
+        "doc_type_hint": (
+            "German federal budget (Bundeshaushalt). Two main document types: "
+            "(1) Gesamtplan overview (most files): shows one row per Einzelplan — "
+            "extract Epl 30 (BMBF/BMFT) 'Summe Ausgaben' as the ministry total. "
+            "(2) Full Einzelplan 30 chapter (large files ~1500KB): detailed BMBF "
+            "programme lines — extract Titelgruppe totals (DFG, MPG, Fraunhofer, "
+            "Helmholtz, Leibniz, DLR) ONLY, not individual Titel sub-lines. "
+            "Number format: SPACE is thousands separator ('14 053 404' = 14,053,404). "
+            "Currency: DEM (1000 DM) until 2001; EUR (1000 EUR) from 2002."
+        ),
     },
     "Norway": {
         "currency": "NOK",
         "currency_symbol": "kr",
         "language": "norwegian",
-        "unit_hint": "thousand",
+        "unit_hint": (
+            "DUAL-SCALE DOCUMENT — read the header carefully: "
+            "(1) Part I overview table (first pages): amounts in '1 000 kroner' (thousands NOK) — set unit='thousand'. "
+            "(2) Detailed Kap./Post line-item pages (most of the document): amounts in FULL NOK (single kroner) — set unit='unit'. "
+            "The overview table has a header row containing '1 000 kroner' or '(i 1 000 kr.)'. "
+            "The detail pages show e.g. 'Post 50 Norges forskningsrad 2 500 000 000'. "
+            "ALWAYS prefer the detail-page values (full NOK). Only fall back to overview if detail is absent. "
+            "Norwegian number format: space or period as thousands separator, comma as decimal. "
+            "Example: '2 500 000 000' = 2,500,000,000 NOK (full NOK, not thousands)."
+        ),
         "known_agencies": [
-            "Norges forskningsråd (Research Council of Norway)",
-            "SINTEF",
-            "Universiteter og høyskoler",
+            # Research Council of Norway — primary vehicle for public R&D
+            "Norges forskningsrad (Research Council of Norway, NFR)",
+            "Forskningsradet (Research Council, short form)",
+            # Universities (funded via Kunnskapsdepartementet, Kap 260-)
+            "Universitetet i Oslo (University of Oslo, UiO)",
+            "Norges teknisk-naturvitenskapelige universitet (NTNU, Trondheim)",
+            "Universitetet i Bergen (UiB)",
+            "Universitetet i Troms\u00f8 / UiT \u2013 Norges Arktiske Universitet",
+            "Universitetet i Stavanger (UiS)",
+            "Universitetet i Agder (UiA)",
+            "Norges milj\u00f8- og biovitenskapelige universitet (NMBU, Aas)",
+            "Norges Handelsh\u00f8yskole (NHH)",
+            "Universitetene (universities collective line)",
+            # Applied research institutes
+            "SINTEF (multi-disciplinary research institute)",
+            "Havforskningsinstituttet (Institute of Marine Research, IMR)",
+            "Folkehelseinstituttet (Norwegian Institute of Public Health, FHI)",
+            "Norsk institutt for naturforskning (NINA)",
+            "Norsk institutt for luftforskning (NILU)",
+            "Meteorologisk institutt (Norwegian Meteorological Institute)",
+            "Norsk Romsenter (Norwegian Space Agency / Centre)",
+            "Christian Michelsen Research (CMR)",
+            "Fafo (research foundation)",
+            # Energy / oil research
+            "Oljeforskningsprogrammet (oil research programme)",
+            "Petoro / SDOEE (state oil companies — exclude unless research grant)",
+            # Ministry totals
+            "Kunnskapsdepartementet (Ministry of Education and Research, KD)",
+            "Naerings- og fiskeridepartementet (Ministry of Trade / Industry, NFD)",
+            "Olje- og energidepartementet (Ministry of Petroleum and Energy, OED)",
         ],
         "mixed_ministries": [
             "Forsvarsdepartementet (Ministry of Defence)",
-            "Helse- og omsorgsdepartementet (Ministry of Health)",
+            "Helse- og omsorgsdepartementet (Ministry of Health and Care Services)",
             "Utenriksdepartementet (Ministry of Foreign Affairs)",
             "Justis- og beredskapsdepartementet (Ministry of Justice)",
             "Samferdselsdepartementet (Ministry of Transport)",
+            "Finansdepartementet (Ministry of Finance)",
+            "Klima- og milj\u00f8departementet (Ministry of Climate and Environment)",
+            "Kommunal- og moderniseringsdepartementet (Ministry of Local Government)",
+            "Arbeids- og sosialdepartementet (Ministry of Labour)",
         ],
-        "doc_type_hint": "Statsbudsjettet. Look for research and science appropriations.",
+        "doc_type_hint": (
+            "Statsbudsjettet Bl\u00e5bok (Norwegian State Budget, Blue Book). "
+            "DIGITAL QUALITY: 1975-1992 documents are FULLY SCANNED (no machine-readable text) "
+            "— these years should yield very few or no extractable rows. "
+            "1993-2009: partly scanned or low-quality text, limited extraction. "
+            "2010-2026: excellent digital text with clean Kap./Post structure — focus here. "
+            "STRUCTURE (2010+): organised by Departement (ministry) then Kap. (chapter) then Post. "
+            "Each Post line has a description and an amount in full NOK (kroner). "
+            "Overview tables in Part I use '1 000 kroner' (thousands) — identify by page header. "
+            "KEY R&D SECTIONS: "
+            "Kap. 285+ under Kunnskapsdepartementet: Norges forskningsrad (Research Council). "
+            "Kap. 260-270: Universities (NTNU, UiO, UiB, UiT etc.). "
+            "Kap. 920-930 under Naerings- og fiskeridepartementet: industry/applied R&D. "
+            "Post 50 = block grant to research institutions. "
+            "Post 52/55 = specific research programmes. "
+            "Post 70/71 = grants to external research institutes. "
+            "SKIP: student loans and grants (Laanekassen, Kap 2410), "
+            "plain infrastructure (Vegvesen, Bane NOR), "
+            "oil/gas production subsidies without 'forskning' in description, "
+            "defence procurement lines, pension funds. "
+            "INCLUDE: any line with 'forskning', 'forskningsrad', 'forskningsprogram', "
+            "'universitets-', or a named research institution."
+        ),
+    },
+    "Netherlands": {
+        "currency": "EUR",           # EUR from 2002; NLG (guilder) before 2002
+        "currency_symbol": "\u20ac",
+        "language": "dutch",
+        "unit_hint": (
+            "ERA-DEPENDENT units: "
+            "(1) 1975-2001 (NLG era, Miljoenennota): amounts in MILLIONS of guilders (miljoenen guldens) "
+            "— set currency='NLG', unit='million'. "
+            "(2) 2002+ (EUR era, per-ministry Begrotingsstaat): amounts in THOUSANDS of EUR "
+            "(bedragen x \u20ac 1.000) — set currency='EUR', unit='thousand'. "
+            "ALWAYS read the document header for the unit label. "
+            "Dutch number format: period '.' is the thousands separator, comma ',' is the decimal. "
+            "Example: '1.670.345' = 1,670,345 (thousands EUR = ~1.67 billion EUR)."
+        ),
+        "known_agencies": [
+            # Primary R&D funding bodies
+            "NWO (Nederlandse Organisatie voor Wetenschappelijk Onderzoek / Dutch Research Council)",
+            "STW / NWO-TTW (Technology Foundation / Applied and Engineering Sciences)",
+            "KNAW (Koninklijke Nederlandse Akademie van Wetenschappen / Royal Netherlands Academy)",
+            "TNO (Toegepast Natuurwetenschappelijk Onderzoek / Netherlands Organisation for Applied Scientific Research)",
+            "NWO-I (Institutes Organisation of NWO)",
+            # Universities (funded via OCW, Art. 07 Wetenschappelijk onderwijs)
+            "Universiteit van Amsterdam (UvA)",
+            "Vrije Universiteit Amsterdam (VU)",
+            "Leiden Universiteit",
+            "Delft University of Technology (TU Delft)",
+            "Eindhoven University of Technology (TU/e)",
+            "Universiteit Utrecht (UU)",
+            "Universiteit Groningen (RUG)",
+            "Erasmus Universiteit Rotterdam (EUR)",
+            "Radboud Universiteit Nijmegen",
+            "Universiteit Maastricht",
+            "Universiteit Twente",
+            "Tilburg University",
+            "Wageningen Universiteit (WUR)",
+            "Universiteiten (collective line for all universities)",
+            # Innovation and applied research
+            "Rijksdienst voor Ondernemend Nederland (RVO, enterprise agency)",
+            "Topconsortia voor Kennis en Innovatie (TKI, top sector knowledge consortia)",
+            "SURF (national research ICT infrastructure)",
+            "NIOZ (Koninklijk Nederlands Instituut voor Onderzoek der Zee, Royal NIOZ)",
+            "RIVM (Rijksinstituut voor Volksgezondheid en Milieu, National Institute for Public Health)",
+            "PBL (Planbureau voor de Leefomgeving, Netherlands Environmental Assessment Agency)",
+            "KNMI (Koninklijk Nederlands Meteorologisch Instituut, Royal Netherlands Meteorological Institute)",
+            "Deltares (water and subsurface research)",
+            "Rathenau Instituut (science and technology assessment)",
+        ],
+        "mixed_ministries": [
+            "Ministerie van Defensie (Ministry of Defence, X)",
+            "Ministerie van Binnenlandse Zaken (Ministry of Interior, VII)",
+            "Ministerie van Justitie en Veiligheid (Ministry of Justice, VI)",
+            "Ministerie van Buitenlandse Zaken (Ministry of Foreign Affairs, V)",
+            "Ministerie van Financi\u00ebn (Ministry of Finance, IX)",
+            "Ministerie van Sociale Zaken en Werkgelegenheid (Ministry of Social Affairs, XV)",
+            "Ministerie van Volksgezondheid, Welzijn en Sport (VWS, Ministry of Health, XVI)",
+            "Ministerie van Infrastructuur en Waterstaat (IenW, Ministry of Infrastructure, XII)",
+        ],
+        "doc_type_hint": (
+            "Dutch Rijksbegroting (State Budget). Two main document types: "
+            "(1) 1975-2001 (NLG era): SINGLE DOCUMENT — Miljoenennota (budget memorandum) "
+            "or Rijksbegroting overview covering all ministries. Unit: miljoenen guldens (millions NLG). "
+            "(2) 2002+ (EUR era): SEPARATE FILE PER MINISTRY — named <year>_ministry<N>.pdf. "
+            "Unit: duizenden euro's (thousands EUR) — stated as 'bedragen x \u20ac 1.000'. "
+            "KEY R&D MINISTRIES (modern era): "
+            "ministry8 = OCW (Onderwijs, Cultuur en Wetenschap, Ministry VIII): "
+            "  Art. 07 Wetenschappelijk onderwijs (university block grants), "
+            "  Art. 16 Onderzoek en wetenschapsbeleid (NWO, KNAW, research policy). "
+            "ministry13 = EZ (Economische Zaken, Ministry XIII): "
+            "  Art. 02 Bedrijvenbeleid: innovatie en ondernemerschap (innovation/enterprise), "
+            "  Art. 03 Toekomstfonds (Future Fund). "
+            "ministry14 = LNV (Landbouw, Visserij, Voedselzekerheid en Natuur, Ministry XIV): "
+            "  Art. 23 Kennis en innovatie (knowledge and innovation). "
+            "SKIP: ministry10 (Defensie / defence), ministry12 (IenW / infrastructure), "
+            "ministry16 (VWS / health, unless RIVM line present). "
+            "STRUCTURE: Each ministry file has 3 pages: title page, signature page, Begrotingsstaat table. "
+            "The table has Art. (article) rows with Verplichtingen / Uitgaven / Ontvangsten columns. "
+            "Extract the Uitgaven (expenditure) column for R&D-relevant articles. "
+            "NUMBER FORMAT: period '.' = thousands separator; comma ',' = decimal."
+        ),
+    },
+    "Switzerland": {
+        "currency": "CHF",
+        "currency_symbol": "Fr.",
+        "language": "german",
+        "unit_hint": (
+            "Amounts are in FULL SWISS FRANCS (Franken) — unit='unit'. "
+            "There is NO scaling by thousands or millions unless the text explicitly says 'Mio.' or 'Mrd.' "
+            "before the number. "
+            "Number format: SPACE is the thousands separator (e.g., '83 845 192 500' = 83,845,192,500 CHF). "
+            "Occasional use of 'Mio.' = millions CHF, 'Mrd.' = billions CHF in narrative text. "
+            "IMPORTANT: The pre-2021 Bundesblatt files contain only aggregate totals (full CHF). "
+            "The VA-Band3 files (2021+) contain section C Budgetpositionen with detailed line items (full CHF)."
+        ),
+        "known_agencies": [
+            # ETH Domain (Bereich ETH) — primary Swiss R&D vehicle
+            "ETH-Bereich / ETH Domain (umbrella for all ETH institutions)",
+            "ETH Z\u00fcrich (Eidgen\u00f6ssische Technische Hochschule Z\u00fcrich)",
+            "EPFL (Ecole polytechnique f\u00e9d\u00e9rale de Lausanne)",
+            "PSI (Paul Scherrer Institut)",
+            "Empa (Eidg. Materialpr\u00fcfungs- und Forschungsanstalt)",
+            "Eawag (Wasserforschungs-Institut des ETH-Bereichs)",
+            "WSL (Eidg. Forschungsanstalt f\u00fcr Wald, Schnee und Landschaft)",
+            # Research funding agencies
+            "SNF / SNSF (Schweizerischer Nationalfonds zur F\u00f6rderung der wissenschaftlichen Forschung / Swiss National Science Foundation)",
+            "Innosuisse (Schweizerische Agentur f\u00fcr Innovationsf\u00f6rderung / Swiss Innovation Agency)",
+            "KTI (Kommission f\u00fcr Technologie und Innovation, predecessor to Innosuisse, pre-2018)",
+            # Federal department
+            "SBFI / SERI (Staatssekretariat f\u00fcr Bildung, Forschung und Innovation / State Secretariat for Education, Research and Innovation)",
+            "WBF (Eidg. Departement f\u00fcr Wirtschaft, Bildung und Forschung / DEFR)",
+            # Space and other applied research
+            "ESA-Beitr\u00e4ge (Swiss contributions to European Space Agency)",
+            "CERN (European Organization for Nuclear Research, Swiss contribution)",
+            "Agroscope (federal agricultural research)",
+            "Swisstopo (federal topographic institute)",
+        ],
+        "mixed_ministries": [
+            "VBS / DDPS (Eidg. Departement f\u00fcr Verteidigung, Bev\u00f6lkerungsschutz und Sport / Defence)",
+            "EDA (Eidg. Departement f\u00fcr ausw\u00e4rtige Angelegenheiten / Foreign Affairs)",
+            "UVEK / DETEC (Departement f\u00fcr Umwelt, Verkehr, Energie und Kommunikation / Environment, Transport)",
+            "EJPD (Eidg. Justiz- und Polizeidepartement / Justice and Police)",
+            "EFD (Eidg. Finanzdepartement / Finance)",
+        ],
+        "doc_type_hint": (
+            "Swiss Federal Budget (Voranschlag der Schweizerischen Eidgenossenschaft). "
+            "TWO DISTINCT DOCUMENT TYPES in our dataset: "
+            "(1) 1975-2020: Bundesbeschluss published in the Bundesblatt (Federal Gazette). "
+            "These are SHORT legislative approval documents (3-10 pages). "
+            "They contain ONLY aggregate authorization totals (Erfolgsrechnung, Investitionsrechnung) "
+            "and special Verpflichtungskredite (commitment credits) for specific projects. "
+            "R&D extractable: ETH-Bereich Bauprogramm credit, SNF credit if listed, total R&D envelope. "
+            "YIELD IS LOW for these years — expect 1-5 R&D-relevant rows per document. "
+            "(2) 2021-2025: VA-Band3-d.pdf = Voranschlag Band 3 (German). "
+            "Contains section C 'Budgetpositionen' with detailed departmental line items in full CHF. "
+            "KEY R&D SECTION: WBF (Departement f\u00fcr Wirtschaft, Bildung und Forschung). "
+            "Look for: Beitrag an den ETH-Bereich (lump-sum to ETH Domain, ~3.7B CHF), "
+            "Beitrag an den SNF (grant to Swiss NSF, ~1.1B CHF), "
+            "Beitrag an Innosuisse (innovation agency, ~300M CHF), "
+            "CERN-Beitrag (Swiss contribution to CERN, ~150M CHF), "
+            "ESA-Beitr\u00e4ge (space agency contributions). "
+            "UNIT: All amounts in FULL CHF (Franken). Space = thousands separator. "
+            "Do NOT divide by any scaling factor. "
+            "Example: '3 714 600 000' = CHF 3.7 billion (ETH-Bereich block grant)."
+        ),
     },
     "Sweden": {
         "currency": "SEK",
         "currency_symbol": "kr",
         "language": "swedish",
-        "unit_hint": "thousand",
+        "unit_hint": (
+            "Amounts are in THOUSANDS of Swedish kronor (tusental kronor / tkr). "
+            "Set unit='thousand'. "
+            "Swedish number format: SPACE is the thousands separator, comma ',' is the decimal. "
+            "Example: '3 500 000' = 3,500,000 thousand SEK = 3.5 billion SEK. "
+            "Each anslag (appropriation) line has a code like '2:1 Vetenskapsrådet'. "
+            "DO NOT set unit='million' unless the page header explicitly says 'miljoner kronor'."
+        ),
         "known_agencies": [
-            "Vetenskapsrådet (Swedish Research Council)",
-            "VINNOVA (Swedish Innovation Agency)",
-            "Riksbankens Jubileumsfond",
+            # Research councils — post-2001 consolidated structure
+            "Vetenskapsrådet (Swedish Research Council, VR)",
+            "VINNOVA (Verket för innovationssystem / Swedish Innovation Agency)",
+            "Formas (Swedish Research Council for Environment, Agricultural Sciences and Spatial Planning)",
+            "Forte (Swedish Research Council for Health, Working Life and Welfare)",
+            # Pre-2001 research councils (merged into VR)
+            "Naturvetenskapliga forskningsrådet (NFR, Swedish Natural Science Research Council, pre-2001)",
+            "Teknikvetenskapliga forskningsrådet (TFR, pre-2001)",
+            "Humanistisk-samhällsvetenskapliga forskningsrådet (HSFR, pre-2001)",
+            "Medicinska forskningsrådet (MFR, Medical Research Council, pre-2001)",
+            "Skogs- och jordbrukets forskningsråd (SJFR, pre-2001)",
+            # Innovation / applied research
+            "NUTEK (Näringstekniska rådet / National Board for Industrial and Technical Development, pre-2001)",
+            "STU (Styrelsen för teknisk utveckling / Swedish Board for Technical Development, pre-1991)",
+            "RISE (Research Institutes of Sweden, from 2017)",
+            "SP / Swerea / Innventia (applied research predecessors to RISE)",
+            "SSF (Stiftelsen för Strategisk Forskning / Swedish Foundation for Strategic Research)",
+            "Riksbankens Jubileumsfond (humanities and social science)",
+            # Specific institutes
+            "SMHI (Sveriges meteorologiska och hydrologiska institut)",
+            "Rymdstyrelsen (Swedish National Space Agency)",
+            "FOI / FOA (Totalförsvarets forskningsinstitut / Swedish Defence Research Agency)",
+            # Universities (funded under UO 16)
+            "KTH (Kungliga Tekniska Högskolan / Royal Institute of Technology)",
+            "Lunds Universitet (Lund University, including LTH)",
+            "Uppsala Universitet (Uppsala University)",
+            "Stockholms Universitet (Stockholm University)",
+            "Göteborgs Universitet (University of Gothenburg)",
+            "Umeå Universitet (Umeå University)",
+            "Linköpings Universitet (Linköping University)",
+            "Chalmers tekniska högskola",
+            "Karolinska Institutet",
+            "Universiteterna (collective line for all Swedish universities)",
         ],
         "mixed_ministries": [
             "Försvarsdepartementet (Ministry of Defence)",
@@ -311,8 +687,260 @@ COUNTRY_CONTEXT: dict[str, dict] = {
             "Utrikesdepartementet (Ministry of Foreign Affairs)",
             "Finansdepartementet (Ministry of Finance)",
             "Justitiedepartementet (Ministry of Justice)",
+            "Trafikdepartementet / Infrastrukturdepartementet (Ministry of Infrastructure)",
+            "Kulturdepartementet (Ministry of Culture)",
+            "Arbetsmarknadsdepartementet (Ministry of Labour)",
         ],
-        "doc_type_hint": "Statsbudget / Budgetpropositionen. Look for research appropriations.",
+        "doc_type_hint": (
+            "Swedish Statsbudget / Budgetproposition (Prop. XXXX/XX:1). "
+            "STRUCTURE (post-1994 Utgiftsområde reform): "
+            "Budget is divided into 27 Utgiftsområden (UO = expenditure areas). "
+            "KEY R&D AREAS: "
+            "UO 16 Utbildning och universitetsforskning — universities, Vetenskapsrådet, Formas, Forte, VINNOVA. "
+            "UO 20 Allmän miljö- och naturvård — SMHI, environmental research. "
+            "UO 24 Näringsliv — VINNOVA (partly), industrial R&D, RISE. "
+            "Each anslag (appropriation) is identified by a code like '2:1' followed by the agency name. "
+            "STRUCTURE (pre-1994): budget by Departement chapter (§). "
+            "Key pre-1994 chapters: § 8 Utbildningsdepartementet (universities), "
+            "§ 16 Industridepartementet (STU/NUTEK). "
+            "UNIT: belopp i tusental kronor (amounts in thousands SEK). "
+            "Space = thousands separator. '3 500 000' = 3,500,000 tkr = 3.5 billion SEK. "
+            "SKIP: Studiemedel / CSN / studiebidrag (student loans and grants — not R&D), "
+            "Trafikverket / Vägverket / Banverket (transport infrastructure without forskning), "
+            "Försvarsmakten / FMV (defence procurement without forskning), "
+            "social insurance and transfer payments. "
+            "INCLUDE: any anslag line with 'forskning', 'FoU', 'vetenskap', 'innovation', "
+            "or a named research agency (Vetenskapsrådet, VINNOVA, Formas, Forte, SMHI, etc.)."
+        ),
+    },
+    "Austria": {
+        "currency": "EUR",           # EUR from 2002; ATS (Schilling) before 2002
+        "currency_symbol": "€",
+        "language": "german",
+        "unit_hint": (
+            "ERA-DEPENDENT UNITS — check the document header: "
+            "(1) 1975-2001 (ATS era): amounts in THOUSANDS of Austrian Schillings (in Tausend ATS). "
+            "Set currency='ATS', unit='thousand'. "
+            "(2) 2002+ (EUR era): amounts in THOUSANDS of euros (in Tausend EUR). "
+            "Set currency='EUR', unit='thousand'. "
+            "IMPORTANT: Austrian number format: period '.' is the thousands separator, "
+            "comma ',' is the decimal. Example: '280.000' = 280,000 thousand ATS/EUR. "
+            "NEVER assume unit='million' unless the text explicitly says 'Millionen'. "
+            "The 1 EUR = 13.7603 ATS conversion rate was fixed from 1999."
+        ),
+        "known_agencies": [
+            # Core R&D funding agencies
+            "FWF (Fonds zur Förderung der wissenschaftlichen Forschung / Austrian Science Fund)",
+            "FFG (Forschungsförderungsgesellschaft / Austrian Research Promotion Agency, from 2004)",
+            "FFF (Forschungsförderungsfonds für die gewerbliche Wirtschaft, pre-2004 predecessor to FFG)",
+            "AWS (Austria Wirtschaftsservice GmbH)",
+            "Christian Doppler Forschungsgesellschaft (CD-Labor)",
+            "ÖAW (Österreichische Akademie der Wissenschaften / Austrian Academy of Sciences)",
+            "Ludwig Boltzmann Gesellschaft",
+            "Joanneum Research (Graz, applied research)",
+            "AIT (Austrian Institute of Technology, from 2009, formerly Arsenal Research)",
+            "IST Austria / ISTA (Institute of Science and Technology Austria)",
+            # Ministry totals (R&D-focused)
+            "BMBWF / BMWFW / BMWF / BMWV / BMBWK (Bundesministerium für Wissenschaft und Forschung)",
+            "UG 31 Wissenschaft und Forschung (post-2013 Untergliederung for science & research)",
+            "UG 33 Wirtschaft (post-2013 Untergliederung, includes FFG/AWS innovation funding)",
+            "Einzelplan 13 Wissenschaft und Forschung (pre-2013 Kapitel for science)",
+            # Universities (funded via BMBWF/Globalbudget)
+            "Universität Wien",
+            "Technische Universität Wien (TU Wien)",
+            "Universität Graz (Karl-Franzens-Universität)",
+            "Technische Universität Graz (TU Graz)",
+            "Johannes Kepler Universität Linz (JKU)",
+            "Universität Innsbruck",
+            "Medizinische Universität Wien (MedUni Wien)",
+            "Universität Salzburg",
+            "Wirtschaftsuniversität Wien (WU Wien)",
+            "Universität für Bodenkultur Wien (BOKU)",
+            "Universität Klagenfurt",
+            "Universität Leoben (Montanuniversität)",
+            "Universitäten (collective Globalbudget line)",
+            # International contributions
+            "CERN-Beitrag (Austrian contribution to CERN)",
+            "ESA-Beitrag (Austrian contribution to ESA)",
+        ],
+        "mixed_ministries": [
+            "Bundesministerium für Landesverteidigung (BMLV / Heer — defence)",
+            "Bundesministerium für Soziales (BMAS — social affairs)",
+            "Bundesministerium für Inneres (BMI — interior)",
+            "Bundesministerium für Finanzen (BMF — finance)",
+            "Bundesministerium für Verkehr, Innovation und Technologie (BMVIT — mixed mandate)",
+            "Bundesministerium für Land- und Forstwirtschaft (BMLF — agriculture)",
+            "Bundesministerium für auswärtige Angelegenheiten (BMAA — foreign affairs)",
+        ],
+        "doc_type_hint": (
+            "Austrian Federal Budget: Bundesfinanzgesetz (BFG) / Bundesvoranschlag (BVA). "
+            "STRUCTURAL ERAS: "
+            "(1) Pre-2013 (Kapitel/Einzelplan system): "
+            "Budget structured by Einzelpläne. "
+            "KEY R&D CHAPTERS: Einzelplan 13 = Wissenschaft und Forschung (BMWF). "
+            "Einzelplan 07 = Verkehr, Innovation und Technologie (BMVIT — mixed). "
+            "(2) Post-2013 (Haushaltsrechtsreform — Untergliederung/UG system): "
+            "KEY R&D CHAPTERS: UG 31 = Wissenschaft und Forschung (FWF, ÖAW, universities). "
+            "UG 33 = Wirtschaft (FFG, AWS, AIT). "
+            "UG 34 = Verkehr, Innovation und Technologie (BMVIT — mixed). "
+            "Within each UG: Globalbudgets (GB) then Detailbudgets (DB) with individual line items. "
+            "UNITS: amounts in Tausend ATS (pre-2002) or Tausend EUR (2002+). "
+            "Austrian number format: '.' = thousands separator, ',' = decimal. "
+            "'280.000' = 280,000 thousand (= 280 million EUR). "
+            "UNIVERSITY FUNDING: Post-2002, universities receive a Globalbudget (block grant) "
+            "via Leistungsvereinbarungen (performance agreements). "
+            "The state budget shows only the total grant — not split into research vs teaching. "
+            "Tag these as higher_education. "
+            "SKIP: Bundesministerium für Landesverteidigung (defence) lines without 'Forschung', "
+            "Sozialversicherung / AMS / Pensionsversicherung (social transfers), "
+            "Straßenbau / Schieneninfrastruktur / ASFINAG without 'Forschung' (pure infrastructure), "
+            "EU-Kofinanzierung overhead lines (administrative matching funds). "
+            "INCLUDE: FWF, FFG/FFF, ÖAW, CD-Labor, CERN/ESA contributions, "
+            "university Globalbudgets under UG 31, any line with 'Forschung', 'Wissenschaft', "
+            "or a named research institution."
+        ),
+    },
+    "Spain": {
+        "currency": "EUR",           # EUR from 2002; ESP (pesetas) before 2002
+        "currency_symbol": "€",
+        "language": "spanish",
+        "unit_hint": (
+            "ERA-DEPENDENT units: "
+            "(1) Pre-2002 (ESP era): amounts in MILLIONS of pesetas (millones de pesetas). "
+            "Set currency='ESP', unit='million'. "
+            "(2) 2002+ (EUR era): amounts in THOUSANDS of euros ('Miles de euros' header). "
+            "Set currency='EUR', unit='thousand'. "
+            "ALWAYS read the document header to confirm. "
+            "Spanish number format: period '.' is thousands separator, comma ',' is decimal. "
+            "Example: '199.350,68' = 199,350,680 (thousands EUR = ~199 million EUR)."
+        ),
+        "known_agencies": [
+            # Core public research organisms (OPIs)
+            "CSIC (Consejo Superior de Investigaciones Científicas)",
+            "AEI (Agencia Estatal de Investigación, from 2017)",
+            "CDTI (Centro para el Desarrollo Tecnológico e Industrial / Centro para el Desarrollo Tecnológico y la Innovación)",
+            "ISCIII (Instituto de Salud Carlos III)",
+            "CIEMAT (Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas)",
+            "INIA / INIA-CSIC (Instituto Nacional de Investigación y Tecnología Agraria y Alimentaria)",
+            "IGME (Instituto Geológico y Minero de España)",
+            "IEO / IEO-CSIC (Instituto Español de Oceanografía)",
+            "FECYT (Fundación Española para la Ciencia y la Tecnología)",
+            # Pre-AEI research coordination
+            "CAICYT (Centro de Información y Documentación Científica, pre-1986 research coordinator)",
+            "CICYT (Comisión Interministerial de Ciencia y Tecnología, 1986-2000)",
+            "DGI / DGICYT (Dirección General de Investigación Científica y Técnica)",
+            # Ministry
+            "Ministerio de Ciencia e Innovación (MICINN, Sección 28)",
+            "Ministerio de Ciencia, Innovación y Universidades",
+            "Secretaría de Estado de I+D+i",
+            # Budget programmes (programme codes)
+            "Programa 541A — Investigación Científica",
+            "Programa 542A — Investigación Técnica",
+            "Programa 542E — Investigación y Desarrollo Tecnológico",
+            "Programa 463B — Fomento y coordinación de la investigación científica y técnica",
+            "Programa 465A — Investigación Sanitaria",
+            "Plan Nacional de I+D+i (national R&D plan)",
+        ],
+        "mixed_ministries": [
+            "Ministerio de Defensa",
+            "Ministerio de Interior",
+            "Ministerio de Trabajo",
+            "Ministerio de Sanidad (unless ISCIII explicitly named)",
+            "Ministerio de Educación (unless university research explicitly named)",
+            "Ministerio de Agricultura (unless INIA explicitly named)",
+            "Ministerio de Transportes",
+            "Ministerio de Hacienda",
+            "Seguridad Social",
+        ],
+        "doc_type_hint": (
+            "Spanish Presupuestos Generales del Estado (PGE), published in BOE (Boletín Oficial del Estado). "
+            "ERA GUIDE: "
+            "(1) Pre-1986: single-volume law text; R&D scattered across ministries. "
+            "Key section: Sección 18 Educación y Ciencia — look for Servicio 25 'Investigación'. "
+            "Programme codes: 541A (Investigación Científica), 542A (Técnica), 542E (I+D Tecnológico). "
+            "(2) 1986-2000 (post-Ley de Ciencia 13/1986): CICYT coordinates Plan Nacional. "
+            "CDTI appears under Industria; CSIC under Educación y Ciencia. "
+            "(3) 2000-2011: Ministerio de Ciencia e Innovación (MICINN) created ~2008, absorbs R&D. "
+            "Programme 463B 'Fomento y coordinación de la investigación' is the main R&D appropriation. "
+            "(4) 2017+: AEI (Agencia Estatal de Investigación) created as independent funding agency. "
+            "Organism code 28.303 in the budget. ISCIII is organism 28.106. CIEMAT is 28.103. "
+            "UNIT RULE: post-2002 amounts are in 'Miles de euros' (thousands EUR). "
+            "SKIP: university teaching (non-research), social security, defence procurement, "
+            "transport infrastructure, regional development unless explicitly R&D-labelled. "
+            "NUMBER FORMAT: period '.' = thousands separator, comma ',' = decimal."
+        ),
+    },
+    "Finland": {
+        "currency": "EUR",           # EUR from 2002; FIM (Finnish markka) before 2002
+        "currency_symbol": "€",
+        "language": "finnish",
+        "unit_hint": (
+            "Amounts are in FULL EUROS (or full FIM before 2002) — unit='unit'. "
+            "There is NO scaling; amounts are stated in full units. "
+            "Example: '169 941 000' = 169,941,000 EUR (Suomen Akatemia research grants 2009). "
+            "Finnish number format: SPACE is the thousands separator, comma ',' is the decimal. "
+            "Pre-2002 (FIM era): same full-unit convention in Finnish markka. "
+            "NEVER use unit='million' or 'thousand' unless the document header explicitly states a scale."
+        ),
+        "known_agencies": [
+            # Science funding
+            "Suomen Akatemia (Academy of Finland) — moments 29.60.01 (operating) and 29.60.50 (research grants)",
+            # Applied/innovation funding
+            "Tekes (Teknologian ja innovaatioiden kehittämiskeskus, pre-2018) — moment 32.20.06",
+            "Business Finland (Innovaatiorahoituskeskus Business Finland, from 2018) — moment 32.20.05",
+            # Research institutes
+            "VTT (Teknologian tutkimuskeskus VTT / Technical Research Centre of Finland) — moment 32.01.02/49",
+            "GTK (Geologian tutkimuskeskus / Geological Survey of Finland) — moment 32.01.04 / TEM chapter",
+            "VATT (Valtion taloudellinen tutkimuskeskus / Government Institute for Economic Research) — 28.30.02",
+            "Luke (Luonnonvarakeskus / Natural Resources Institute Finland, from 2015)",
+            "MTT (Maa- ja elintarviketalouden tutkimuskeskus, pre-2015 predecessor to Luke)",
+            "RKTL (Riista- ja kalatalouden tutkimuslaitos, pre-2015 predecessor to Luke)",
+            "Metla (Metsäntutkimuslaitos / Finnish Forest Research Institute, pre-2015 predecessor to Luke)",
+            "SYKE (Suomen ympäristökeskus / Finnish Environment Institute)",
+            "STUK (Säteilyturvakeskus / Radiation and Nuclear Safety Authority)",
+            "THL (Terveyden ja hyvinvoinnin laitos / National Institute for Health and Welfare)",
+            "IL (Ilmatieteen laitos / Finnish Meteorological Institute)",
+            # Universities (funded via OKM, chapter 29.40)
+            "Yliopistot (universities collective, chapter 29.40 Korkeakouluopetus ja tutkimus)",
+            "Helsingin yliopisto (University of Helsinki)",
+            "Aalto-yliopisto (Aalto University, from 2010; formerly TKK + HSE + TAIK)",
+            "Teknillinen korkeakoulu (TKK, predecessor to Aalto, pre-2010)",
+        ],
+        "mixed_ministries": [
+            "Puolustusministeriön hallinnonala (Ministry of Defence, chapter 27)",
+            "Sisäasiainministeriön hallinnonala (Ministry of Interior, chapter 26)",
+            "Sosiaali- ja terveysministeriön hallinnonala (Social and Health, chapter 33) — unless THL/research",
+            "Oikeusministeriön hallinnonala (Ministry of Justice, chapter 25)",
+            "Ulkoasiainministeriön hallinnonala (Foreign Affairs, chapter 24)",
+            "Liikenneministeriön hallinnonala / Traficom (Transport, chapter 31)",
+            "Valtiovarainministeriön hallinnonala (Finance, chapter 28) — except VATT",
+        ],
+        "doc_type_hint": (
+            "Finnish Valtion talousarvio (State Budget). "
+            "DOCUMENT QUALITY BY ERA: "
+            "(1) 1985-1991: Hallituksen esitys (budget proposal), scanned — OCR quality poor. "
+            "Expect limited extractable rows. Key sections: chapter 29 Opetusministeriö "
+            "(Suomen Akatemia, universities) and chapter 32 Kauppa- ja teollisuusministeriö (VTT, Tekes). "
+            "(2) 1992-2001 (FIM era): improving digital quality. Same chapter structure. "
+            "Currency FIM (Finnish markka), full FIM amounts. "
+            "(3) 2002+ (EUR era): fully digital, excellent quality. "
+            "KEY R&D CHAPTERS: "
+            "Chapter 29.40 — Korkeakouluopetus ja tutkimus (university education and research). "
+            "Chapter 29.60 — Tiede (Science): "
+            "  29.60.01 = Suomen Akatemian toimintamenot (Academy operating costs). "
+            "  29.60.50 = Suomen Akatemian tutkimusmäärärahat (Academy research grants — KEY). "
+            "Chapter 32.20 — Innovaatiopolitiikka (Innovation policy): "
+            "  32.20.06 = Tekes toimintamenot (pre-2018) / 32.20.05 Business Finland (from 2018). "
+            "  32.20.40 = Julkinen tutkimus- ja kehittämistoiminta (public R&D grants to companies). "
+            "Chapter 32.01 — Geologian tutkimuskeskus (GTK) and VTT. "
+            "UNIT RULE: ALL amounts are in FULL EUR (or full FIM pre-2002). "
+            "Space = thousands separator. '169 941 000' = 169,941,000 EUR. "
+            "SKIP: student grants (opintotuki, chapter 29.70), defence R&D unless civilian, "
+            "general university operating costs without research label, social insurance. "
+            "INCLUDE: Suomen Akatemia research grants (29.60.50), Tekes/Business Finland "
+            "innovation appropriations (32.20), VTT institutional grant, GTK, individual "
+            "research institute operating budgets."
+        ),
     },
     "Japan": {
         "currency": "JPY",

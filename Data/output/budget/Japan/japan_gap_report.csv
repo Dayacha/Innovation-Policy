@@ -1,121 +1,649 @@
 country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
-Japan,2015,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100553048.0,,100888373.0
-Japan,2016,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100888373.0,100553048.0,100888373.0
-Japan,2017,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100888373.0,100888373.0,100812003.0
-Japan,2018,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100812003.0,100888373.0,100511506.0
-Japan,2019,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100511506.0,100812003.0,100271984.0
-Japan,2020,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100271984.0,100511506.0,50000000.0
-Japan,2021,JST (Japan Science and Technology Agency),science_agency,outlier,"Amount 50,000,000 outside expected range [99,148,284 – 102,126,616] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,50000000.0,100271984.0,100337918.0
-Japan,2022,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100337918.0,50000000.0,100543871.0
-Japan,2023,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100543871.0,100337918.0,100970256.0
-Japan,2024,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100970256.0,100543871.0,100771968.0
-Japan,2025,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100771968.0,100970256.0,
-Japan,2015,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,0.0,,26708591.0
-Japan,2016,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,26708591.0,0.0,0.0
-Japan,2017,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,0.0,26708591.0,26600504.0
-Japan,2018,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,26600504.0,0.0,0.0
-Japan,2019,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,0.0,26600504.0,0.0
-Japan,2020,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,0.0,0.0,0.0
-Japan,2021,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,0.0,0.0,0.0
-Japan,2022,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,0.0,0.0,0.0
-Japan,2023,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,0.0,0.0,0.0
-Japan,2024,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,0.0,0.0,27498267.0
-Japan,2025,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,27498267.0,0.0,
-Japan,2015,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,53118591.0,,51591219.0
-Japan,2016,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,51591219.0,53118591.0,52591219.0
-Japan,2017,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,52591219.0,51591219.0,52868857.0
-Japan,2018,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,52868857.0,52591219.0,53108857.0
-Japan,2019,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,53108857.0,52868857.0,53549284.0
-Japan,2020,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,53549284.0,53108857.0,54049102.0
-Japan,2021,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,54049102.0,53549284.0,54164053.0
-Japan,2022,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,54164053.0,54049102.0,54770381.0
-Japan,2023,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,54770381.0,54164053.0,55348412.0
-Japan,2024,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,55348412.0,54770381.0,57736328.0
-Japan,2025,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,57736328.0,55348412.0,
-Japan,2015,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,11917948.0,,12020623.0
-Japan,2016,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,12020623.0,11917948.0,0.0
-Japan,2017,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,0.0,12020623.0,0.0
-Japan,2018,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,0.0,0.0,13637272.0
-Japan,2019,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,13637272.0,0.0,0.0
-Japan,2020,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,0.0,13637272.0,14239394.0
-Japan,2021,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,14239394.0,0.0,0.0
-Japan,2022,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,0.0,14239394.0,14419471.0
-Japan,2023,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,14419471.0,0.0,0.0
-Japan,2024,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,0.0,14419471.0,0.0
-Japan,2025,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,0.0,0.0,
-Japan,2015,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,33512223.0,,30618486.0
-Japan,2016,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,30618486.0,33512223.0,30618486.0
-Japan,2017,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,30618486.0,30618486.0,31260631.0
-Japan,2018,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,31260631.0,30618486.0,32069528.0
-Japan,2019,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,32069528.0,31260631.0,31843418.0
-Japan,2020,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,31843418.0,32069528.0,29708549.0
-Japan,2021,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,29708549.0,31843418.0,30292576.0
-Japan,2022,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,30292576.0,29708549.0,30621991.0
-Japan,2023,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,30621991.0,30292576.0,30366656.0
-Japan,2024,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,30366656.0,30621991.0,30900656.0
-Japan,2025,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,30900656.0,30366656.0,
-Japan,2015,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,114471942.0,,105342777.0
-Japan,2016,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,105342777.0,114471942.0,111286260.0
-Japan,2017,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,111286260.0,105342777.0,113060958.0
-Japan,2018,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,113060958.0,111286260.0,115922994.0
-Japan,2019,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,115922994.0,113060958.0,118447193.0
-Japan,2020,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,118447193.0,115922994.0,112295751.0
-Japan,2021,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,112295751.0,118447193.0,123759200.0
-Japan,2022,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,123759200.0,112295751.0,122689115.0
-Japan,2023,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,122689115.0,123759200.0,0.0
-Japan,2024,JAXA (Japan Aerospace Exploration Agency),science_agency,outlier,"Amount 0 outside expected range [85,459,560 – 146,899,600] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,0.0,122689115.0,133352566.0
-Japan,2025,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,133352566.0,0.0,
-Japan,2015,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,7791536.0,,7893451.0
-Japan,2016,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,7893451.0,7791536.0,0.0
-Japan,2017,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,0.0,7893451.0,13170675.0
-Japan,2018,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,13170675.0,0.0,14166920.0
-Japan,2019,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,14166920.0,13170675.0,54053016.0
-Japan,2020,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,outlier,"Amount 54,053,016 outside expected range [-11,552,106 – 33,701,960] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,54053016.0,14166920.0,20000000.0
-Japan,2021,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,20000000.0,54053016.0,5000000.0
-Japan,2022,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,5000000.0,20000000.0,14447800.0
-Japan,2023,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,14447800.0,5000000.0,12556204.0
-Japan,2024,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,12556204.0,14447800.0,10000000.0
-Japan,2025,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,10000000.0,12556204.0,
-Japan,2015,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,61787122.0,,62847560.0
-Japan,2016,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,62847560.0,61787122.0,0.0
-Japan,2017,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,outlier,"Amount 0 outside expected range [58,756,904 – 65,473,902] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,0.0,62847560.0,61924777.0
-Japan,2018,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,61924777.0,0.0,62342817.0
-Japan,2019,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,62342817.0,61924777.0,0.0
-Japan,2020,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,outlier,"Amount 0 outside expected range [58,756,904 – 65,473,902] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,0.0,62342817.0,61984113.0
-Japan,2021,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,61984113.0,0.0,61484113.0
-Japan,2022,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,61484113.0,61984113.0,61800000.0
-Japan,2023,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,61800000.0,61484113.0,65000661.0
-Japan,2024,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,65000661.0,61800000.0,66687223.0
-Japan,2025,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,outlier,"Amount 66,687,223 outside expected range [58,756,904 – 65,473,902] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,66687223.0,65000661.0,
-Japan,2015,JAEA (Japan Atomic Energy Agency),science_agency,outlier,"Amount 574,000,000 outside expected range [-111,686,354 – 148,915,138] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,574000000.0,,0.0
-Japan,2016,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,574000000.0,34614821.0
-Japan,2017,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,34614821.0,0.0,36991207.0
-Japan,2018,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,36991207.0,34614821.0,36393856.0
-Japan,2019,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,36393856.0,36991207.0,0.0
-Japan,2020,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,36393856.0,36379870.0
-Japan,2021,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,36379870.0,0.0,380061000.0
-Japan,2022,JAEA (Japan Atomic Energy Agency),science_agency,outlier,"Amount 380,061,000 outside expected range [-111,686,354 – 148,915,138] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,380061000.0,36379870.0,0.0
-Japan,2023,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,380061000.0,0.0
-Japan,2024,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,0.0,37466362.0
-Japan,2025,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,37466362.0,0.0,
-Japan,2016,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,21557994.0,,0.0
-Japan,2017,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,0.0,21557994.0,21610296.0
-Japan,2018,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,21610296.0,0.0,0.0
-Japan,2019,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,0.0,21610296.0,0.0
-Japan,2020,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,0.0,0.0,21582563.0
-Japan,2021,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,21582563.0,0.0,0.0
-Japan,2022,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,0.0,21582563.0,21762364.0
-Japan,2023,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,21762364.0,0.0,0.0
-Japan,2024,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,0.0,21762364.0,21819020.0
-Japan,2025,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,21819020.0,0.0,
-Japan,2015,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,25657000000.0,,94643877943.0
-Japan,2016,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,94643877943.0,25657000000.0,5519899508.0
-Japan,2017,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,5519899508.0,94643877943.0,30948629162.0
-Japan,2018,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,30948629162.0,5519899508.0,31857133698.0
-Japan,2019,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,31857133698.0,30948629162.0,5415218203.0
-Japan,2020,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,5415218203.0,31857133698.0,30524764680.0
-Japan,2021,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,30524764680.0,5415218203.0,41301199625.0
-Japan,2022,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,41301199625.0,30524764680.0,5294138248.0
-Japan,2023,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,5294138248.0,41301199625.0,30300000000.0
-Japan,2024,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,30300000000.0,5294138248.0,6030862741.0
-Japan,2025,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,6030862741.0,30300000000.0,
+Japan,1975,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,1579000000.0,,1748000000.0
+Japan,1976,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,1748000000.0,1579000000.0,2680400000.0
+Japan,1977,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,2680400000.0,1748000000.0,2179000000.0
+Japan,1978,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,2179000000.0,2680400000.0,5881000000.0
+Japan,1979,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,5881000000.0,2179000000.0,2616000000.0
+Japan,1980,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,2616000000.0,5881000000.0,6620000000.0
+Japan,1981,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,6620000000.0,2616000000.0,2890000000.0
+Japan,1982,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,2890000000.0,6620000000.0,8467000000.0
+Japan,1983,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,8467000000.0,2890000000.0,2886000000.0
+Japan,1984,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,2886000000.0,8467000000.0,2424000000.0
+Japan,1985,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,2424000000.0,2886000000.0,6251000000.0
+Japan,1986,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,6251000000.0,2424000000.0,2796000000.0
+Japan,1987,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,2796000000.0,6251000000.0,5561000000.0
+Japan,1988,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,5561000000.0,2796000000.0,8794000000.0
+Japan,1989,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,8794000000.0,5561000000.0,2686000000.0
+Japan,1990,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,2686000000.0,8794000000.0,1633000000.0
+Japan,1991,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,1633000000.0,2686000000.0,10000000000.0
+Japan,1992,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,10000000000.0,1633000000.0,3742000000.0
+Japan,1993,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,3742000000.0,10000000000.0,4596000000.0
+Japan,1994,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,4596000000.0,3742000000.0,21539050000.0
+Japan,1995,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,21539050000.0,4596000000.0,0.0
+Japan,1996,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,0.0,21539050000.0,0.0
+Japan,1997,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1998,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1999,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,0.0,0.0,81940072000.0
+Japan,2000,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,81940072000.0,0.0,0.0
+Japan,2001,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,0.0,81940072000.0,0.0
+Japan,2002,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,0.0,0.0,55573937000.0
+Japan,2003,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,55573937000.0,0.0,94715490000.0
+Japan,2004,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,94715490000.0,55573937000.0,99611126000.0
+Japan,2005,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,99611126000.0,94715490000.0,101436926000.0
+Japan,2006,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,101436926000.0,99611126000.0,48200000000.0
+Japan,2007,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,48200000000.0,101436926000.0,105057905000.0
+Japan,2008,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,105057905000.0,48200000000.0,106657062000.0
+Japan,2009,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,106657062000.0,105057905000.0,0.0
+Japan,2010,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,0.0,106657062000.0,104817724000.0
+Japan,2011,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,104817724000.0,0.0,100646191000.0
+Japan,2012,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100646191000.0,104817724000.0,122951565000.0
+Japan,2013,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,122951565000.0,100646191000.0,119895794000.0
+Japan,2014,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,119895794000.0,122951565000.0,100553048000.0
+Japan,2015,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100553048000.0,119895794000.0,100888373000.0
+Japan,2016,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100888373000.0,100553048000.0,101868706000.0
+Japan,2017,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,101868706000.0,100888373000.0,100812003000.0
+Japan,2018,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100812003000.0,101868706000.0,100511506000.0
+Japan,2019,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100511506000.0,100812003000.0,100511506000.0
+Japan,2020,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100511506000.0,100511506000.0,100248601000.0
+Japan,2021,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100248601000.0,100511506000.0,100337918000.0
+Japan,2022,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100337918000.0,100248601000.0,100543871000.0
+Japan,2023,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100543871000.0,100337918000.0,100970256000.0
+Japan,2024,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100970256000.0,100543871000.0,100771968000.0
+Japan,2025,JST (Japan Science and Technology Agency),science_agency,ok,,,,,none,100771968000.0,100970256000.0,
+Japan,1975,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,1543702000.0,,1720807000.0
+Japan,1976,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,1720807000.0,1543702000.0,1907355000.0
+Japan,1977,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,1907355000.0,1720807000.0,2300662000.0
+Japan,1978,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,2300662000.0,1907355000.0,2683928000.0
+Japan,1979,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,2683928000.0,2300662000.0,2800280000.0
+Japan,1980,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,2800280000.0,2683928000.0,2988081000.0
+Japan,1981,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,2988081000.0,2800280000.0,3120136000.0
+Japan,1982,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,3120136000.0,2988081000.0,3248662000.0
+Japan,1983,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,3248662000.0,3120136000.0,3355917000.0
+Japan,1984,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,3355917000.0,3248662000.0,3479717000.0
+Japan,1985,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,3479717000.0,3355917000.0,3479717000.0
+Japan,1986,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,3479717000.0,3479717000.0,4210985000.0
+Japan,1987,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,4210985000.0,3479717000.0,4768173000.0
+Japan,1988,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,4768173000.0,4210985000.0,5568315000.0
+Japan,1989,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,5568315000.0,4768173000.0,6147759000.0
+Japan,1990,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,6147759000.0,5568315000.0,6661399000.0
+Japan,1991,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,6661399000.0,6147759000.0,7657361000.0
+Japan,1992,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,7657361000.0,6661399000.0,8989395000.0
+Japan,1993,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,8989395000.0,7657361000.0,10666145000.0
+Japan,1994,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,10666145000.0,8989395000.0,12383823000.0
+Japan,1995,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,12383823000.0,10666145000.0,26308062000.0
+Japan,1996,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,26308062000.0,12383823000.0,18402441000.0
+Japan,1997,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,18402441000.0,26308062000.0,19143348000.0
+Japan,1998,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,19143348000.0,18402441000.0,21203074000.0
+Japan,1999,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,21203074000.0,19143348000.0,21514288000.0
+Japan,2000,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,21514288000.0,21203074000.0,0.0
+Japan,2001,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,0.0,21514288000.0,0.0
+Japan,2002,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,0.0,0.0,15153170000.0
+Japan,2003,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,15153170000.0,0.0,29841274000.0
+Japan,2004,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,29841274000.0,15153170000.0,29655107000.0
+Japan,2005,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,29655107000.0,29841274000.0,29364000000.0
+Japan,2006,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,29364000000.0,29655107000.0,29023540000.0
+Japan,2007,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,29023540000.0,29364000000.0,28859332000.0
+Japan,2008,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,28859332000.0,29023540000.0,28672449000.0
+Japan,2009,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,28672449000.0,28859332000.0,29167295000.0
+Japan,2010,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,29167295000.0,28672449000.0,29229937000.0
+Japan,2011,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,29229937000.0,29167295000.0,29229437000.0
+Japan,2012,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,29229437000.0,29229937000.0,29168967000.0
+Japan,2013,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,29168967000.0,29229437000.0,28005668000.0
+Japan,2014,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,28005668000.0,29168967000.0,27238826000.0
+Japan,2015,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,27238826000.0,28005668000.0,26708591000.0
+Japan,2016,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,26708591000.0,27238826000.0,708591000.0
+Japan,2017,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,708591000.0,26708591000.0,26600504000.0
+Japan,2018,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,26600504000.0,708591000.0,0.0
+Japan,2019,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,0.0,26600504000.0,26567080000.0
+Japan,2020,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,26567080000.0,0.0,10000000000.0
+Japan,2021,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,10000000000.0,26567080000.0,27175350000.0
+Japan,2022,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,27175350000.0,10000000000.0,0.0
+Japan,2023,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,0.0,27175350000.0,27498267000.0
+Japan,2024,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,27498267000.0,0.0,27498267000.0
+Japan,2025,JSPS (Japan Society for the Promotion of Science),science_agency,ok,,,,,none,27498267000.0,27498267000.0,
+Japan,1975,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,3190000000.0,,3924983000.0
+Japan,1976,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,3924983000.0,3190000000.0,4125158000.0
+Japan,1977,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,4125158000.0,3924983000.0,4270000000.0
+Japan,1978,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,4270000000.0,4125158000.0,7706000000.0
+Japan,1979,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,7706000000.0,4270000000.0,4596000000.0
+Japan,1980,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,4596000000.0,7706000000.0,8435000000.0
+Japan,1981,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,8435000000.0,4596000000.0,9232000000.0
+Japan,1982,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,9232000000.0,8435000000.0,9451000000.0
+Japan,1983,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,9451000000.0,9232000000.0,5887858000.0
+Japan,1984,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,5887858000.0,9451000000.0,5878827000.0
+Japan,1985,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,5878827000.0,5887858000.0,13793000000.0
+Japan,1986,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,13793000000.0,5878827000.0,8313654000.0
+Japan,1987,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,8313654000.0,13793000000.0,16434000000.0
+Japan,1988,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,16434000000.0,8313654000.0,16056000000.0
+Japan,1989,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,16056000000.0,16434000000.0,6892000000.0
+Japan,1990,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,6892000000.0,16056000000.0,17667000000.0
+Japan,1991,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,17667000000.0,6892000000.0,579855000.0
+Japan,1992,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,579855000.0,17667000000.0,17450764000.0
+Japan,1993,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,17450764000.0,579855000.0,10986200000.0
+Japan,1994,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,10986200000.0,17450764000.0,30882000000.0
+Japan,1995,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,30882000000.0,10986200000.0,0.0
+Japan,1996,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,0.0,30882000000.0,42341000000.0
+Japan,1997,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,42341000000.0,0.0,10417000000.0
+Japan,1998,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,10417000000.0,42341000000.0,55737000000.0
+Japan,1999,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,55737000000.0,10417000000.0,65490000000.0
+Japan,2000,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,65490000000.0,55737000000.0,0.0
+Japan,2001,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,0.0,65490000000.0,0.0
+Japan,2002,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,0.0,0.0,36968423000.0
+Japan,2003,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,36968423000.0,0.0,69192377000.0
+Japan,2004,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,69192377000.0,36968423000.0,71101637000.0
+Japan,2005,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,71101637000.0,69192377000.0,67920524000.0
+Japan,2006,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,67920524000.0,71101637000.0,67920524000.0
+Japan,2007,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,67920524000.0,67920524000.0,60138889000.0
+Japan,2008,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,60138889000.0,67920524000.0,59189500000.0
+Japan,2009,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,59189500000.0,60138889000.0,59189500000.0
+Japan,2010,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,59189500000.0,59189500000.0,58377907000.0
+Japan,2011,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,58377907000.0,59189500000.0,58076117000.0
+Japan,2012,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,58076117000.0,58377907000.0,0.0
+Japan,2013,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,0.0,58076117000.0,53118591000.0
+Japan,2014,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,53118591000.0,0.0,51481219000.0
+Japan,2015,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,51481219000.0,53118591000.0,51591219000.0
+Japan,2016,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,51591219000.0,51481219000.0,52591219000.0
+Japan,2017,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,52591219000.0,51591219000.0,52591219000.0
+Japan,2018,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,52591219000.0,52591219000.0,53108857000.0
+Japan,2019,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,53108857000.0,52591219000.0,53549284000.0
+Japan,2020,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,53549284000.0,53108857000.0,54049102000.0
+Japan,2021,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,54049102000.0,53549284000.0,54164053000.0
+Japan,2022,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,54164053000.0,54049102000.0,54770381000.0
+Japan,2023,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,54770381000.0,54164053000.0,55348412000.0
+Japan,2024,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,55348412000.0,54770381000.0,6715556000.0
+Japan,2025,RIKEN (Institute of Physical and Chemical Research),science_agency,ok,,,,,none,6715556000.0,55348412000.0,
+Japan,1976,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,outlier,"Amount 14,574,600,000 outside expected range [-3,296,115,000 – 4,394,820,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,14574600000.0,,0.0
+Japan,1977,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,ok,,,,,none,0.0,14574600000.0,0.0
+Japan,1978,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,ok,,,,,none,0.0,0.0,93102000000.0
+Japan,1979,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,outlier,"Amount 93,102,000,000 outside expected range [-3,296,115,000 – 4,394,820,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,93102000000.0,0.0,0.0
+Japan,1980,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,ok,,,,,none,0.0,93102000000.0,0.0
+Japan,1981,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1982,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1983,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,ok,,,,,none,0.0,0.0,1627630000.0
+Japan,1984,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,ok,,,,,none,1627630000.0,0.0,1378560000.0
+Japan,1985,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,ok,,,,,none,1378560000.0,1627630000.0,0.0
+Japan,1986,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,ok,,,,,none,0.0,1378560000.0,818850000.0
+Japan,1987,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,ok,,,,,none,818850000.0,0.0,0.0
+Japan,1988,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,ok,,,,,none,0.0,818850000.0,804070000.0
+Japan,1989,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,ok,,,,,none,804070000.0,0.0,0.0
+Japan,1990,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,ok,,,,,none,0.0,804070000.0,0.0
+Japan,1991,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1992,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1993,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,ok,,,,,none,0.0,0.0,9213884000.0
+Japan,1994,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,outlier,"Amount 9,213,884,000 outside expected range [-3,296,115,000 – 4,394,820,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,9213884000.0,0.0,650892000.0
+Japan,1995,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,ok,,,,,none,650892000.0,9213884000.0,50937000000.0
+Japan,1996,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,outlier,"Amount 50,937,000,000 outside expected range [-3,296,115,000 – 4,394,820,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,50937000000.0,650892000.0,0.0
+Japan,1997,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,ok,,,,,none,0.0,50937000000.0,0.0
+Japan,1998,Power Reactor and Nuclear Fuel Development Corporation,historical_science_agency,ok,,,,,none,0.0,0.0,
+Japan,2001,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,17160933000.0,,0.0
+Japan,2002,NIMS (National Institute for Materials Science),science_agency,outlier,"Amount 0 outside expected range [3,029,110,000 – 24,729,299,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,0.0,17160933000.0,16500381000.0
+Japan,2003,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,16500381000.0,0.0,16245928000.0
+Japan,2004,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,16245928000.0,16500381000.0,16125322000.0
+Japan,2005,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,16125322000.0,16245928000.0,15967998000.0
+Japan,2006,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,15967998000.0,16125322000.0,15803318000.0
+Japan,2007,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,15803318000.0,15967998000.0,15429218000.0
+Japan,2008,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,15429218000.0,15803318000.0,15048647000.0
+Japan,2009,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,15048647000.0,15429218000.0,14050726000.0
+Japan,2010,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,14050726000.0,15048647000.0,13623601000.0
+Japan,2011,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,13623601000.0,14050726000.0,13481876000.0
+Japan,2012,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,13481876000.0,13623601000.0,12850203000.0
+Japan,2013,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,12850203000.0,13481876000.0,12329191000.0
+Japan,2014,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,12329191000.0,12850203000.0,11917948000.0
+Japan,2015,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,11917948000.0,12329191000.0,12020623000.0
+Japan,2016,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,12020623000.0,11917948000.0,13459125000.0
+Japan,2017,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,13459125000.0,12020623000.0,13517272000.0
+Japan,2018,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,13517272000.0,13459125000.0,13637272000.0
+Japan,2019,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,13637272000.0,13517272000.0,13787272000.0
+Japan,2020,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,13787272000.0,13637272000.0,14239394000.0
+Japan,2021,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,14239394000.0,13787272000.0,177676000.0
+Japan,2022,NIMS (National Institute for Materials Science),science_agency,outlier,"Amount 177,676,000 outside expected range [3,029,110,000 – 24,729,299,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,177676000.0,14239394000.0,0.0
+Japan,2023,NIMS (National Institute for Materials Science),science_agency,outlier,"Amount 0 outside expected range [3,029,110,000 – 24,729,299,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,0.0,177676000.0,14423539000.0
+Japan,2024,NIMS (National Institute for Materials Science),science_agency,ok,,,,,none,14423539000.0,0.0,198044000.0
+Japan,2025,NIMS (National Institute for Materials Science),science_agency,outlier,"Amount 198,044,000 outside expected range [3,029,110,000 – 24,729,299,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,198044000.0,14423539000.0,
+Japan,1975,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,0.0,,0.0
+Japan,1976,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,0.0,0.0,1088000000.0
+Japan,1977,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,1088000000.0,0.0,665000000.0
+Japan,1978,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,665000000.0,1088000000.0,3824000000.0
+Japan,1979,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,3824000000.0,665000000.0,792000000.0
+Japan,1980,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,792000000.0,3824000000.0,4531000000.0
+Japan,1981,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,4531000000.0,792000000.0,4328000000.0
+Japan,1982,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,4328000000.0,4531000000.0,0.0
+Japan,1983,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,0.0,4328000000.0,4963000000.0
+Japan,1984,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,4963000000.0,0.0,6700000000.0
+Japan,1985,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,6700000000.0,4963000000.0,0.0
+Japan,1986,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,0.0,6700000000.0,7516000000.0
+Japan,1987,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,7516000000.0,0.0,1364000000.0
+Japan,1988,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,1364000000.0,7516000000.0,0.0
+Japan,1989,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,0.0,1364000000.0,9645000000.0
+Japan,1990,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,9645000000.0,0.0,0.0
+Japan,1991,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,0.0,9645000000.0,0.0
+Japan,1992,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1993,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,0.0,0.0,13121213000.0
+Japan,1994,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,13121213000.0,0.0,1261674000.0
+Japan,1995,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,1261674000.0,13121213000.0,2330000000.0
+Japan,1996,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,2330000000.0,1261674000.0,0.0
+Japan,1997,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,0.0,2330000000.0,21725000000.0
+Japan,1998,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,21725000000.0,0.0,2720000000.0
+Japan,1999,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,2720000000.0,21725000000.0,44618955000.0
+Japan,2000,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,44618955000.0,2720000000.0,0.0
+Japan,2001,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,0.0,44618955000.0,0.0
+Japan,2002,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2003,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,0.0,0.0,30713740000.0
+Japan,2004,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,30713740000.0,0.0,32692784000.0
+Japan,2005,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,32692784000.0,30713740000.0,35733937000.0
+Japan,2006,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,35733937000.0,32692784000.0,37190017000.0
+Japan,2007,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,37190017000.0,35733937000.0,38430626000.0
+Japan,2008,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,38430626000.0,37190017000.0,38560498000.0
+Japan,2009,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,38560498000.0,38430626000.0,36336563000.0
+Japan,2010,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,36336563000.0,38560498000.0,36028272000.0
+Japan,2011,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,36028272000.0,36336563000.0,35114135000.0
+Japan,2012,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,35114135000.0,36028272000.0,34448588000.0
+Japan,2013,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,34448588000.0,35114135000.0,33512223000.0
+Japan,2014,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,33512223000.0,34448588000.0,32604686000.0
+Japan,2015,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,32604686000.0,33512223000.0,30618486000.0
+Japan,2016,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,30618486000.0,32604686000.0,31718486000.0
+Japan,2017,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,31718486000.0,30618486000.0,31718486000.0
+Japan,2018,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,31718486000.0,31718486000.0,32069528000.0
+Japan,2019,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,32069528000.0,31718486000.0,31843418000.0
+Japan,2020,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,31843418000.0,32069528000.0,29708549000.0
+Japan,2021,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,29708549000.0,31843418000.0,30292576000.0
+Japan,2022,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,30292576000.0,29708549000.0,30621991000.0
+Japan,2023,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,30621991000.0,30292576000.0,30366656000.0
+Japan,2024,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,30366656000.0,30621991000.0,30379929000.0
+Japan,2025,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),science_agency,ok,,,,,none,30379929000.0,30366656000.0,
+Japan,1975,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,3547000000.0,,28641780000.0
+Japan,1976,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,28641780000.0,3547000000.0,53746700000.0
+Japan,1977,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,53746700000.0,28641780000.0,5592000000.0
+Japan,1978,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,5592000000.0,53746700000.0,81841000000.0
+Japan,1979,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,81841000000.0,5592000000.0,6502000000.0
+Japan,1980,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,6502000000.0,81841000000.0,83727000000.0
+Japan,1981,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,83727000000.0,6502000000.0,7351000000.0
+Japan,1982,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,7351000000.0,83727000000.0,86067000000.0
+Japan,1983,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,86067000000.0,7351000000.0,12149350000.0
+Japan,1984,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,12149350000.0,86067000000.0,13284931000.0
+Japan,1985,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,13284931000.0,12149350000.0,8444000000.0
+Japan,1986,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,8444000000.0,13284931000.0,17558655000.0
+Japan,1987,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,17558655000.0,8444000000.0,87900000000.0
+Japan,1988,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,87900000000.0,17558655000.0,106757000000.0
+Japan,1989,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,106757000000.0,87900000000.0,88842369000.0
+Japan,1990,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,88842369000.0,106757000000.0,0.0
+Japan,1991,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,0.0,88842369000.0,0.0
+Japan,1992,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,0.0,0.0,96198749000.0
+Japan,1993,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,96198749000.0,0.0,89823071000.0
+Japan,1994,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,89823071000.0,96198749000.0,172398000000.0
+Japan,1995,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,172398000000.0,89823071000.0,0.0
+Japan,1996,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,0.0,172398000000.0,175883000000.0
+Japan,1997,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,175883000000.0,0.0,14371000000.0
+Japan,1998,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,14371000000.0,175883000000.0,182895000000.0
+Japan,1999,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,182895000000.0,14371000000.0,167902000000.0
+Japan,2000,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,167902000000.0,182895000000.0,0.0
+Japan,2001,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,0.0,167902000000.0,0.0
+Japan,2002,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,0.0,0.0,73033810000.0
+Japan,2003,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,73033810000.0,0.0,137297574000.0
+Japan,2004,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,137297574000.0,73033810000.0,131411464000.0
+Japan,2005,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,131411464000.0,137297574000.0,138293436000.0
+Japan,2006,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,138293436000.0,131411464000.0,128826326000.0
+Japan,2007,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,128826326000.0,138293436000.0,130226969000.0
+Japan,2008,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,130226969000.0,128826326000.0,139703018000.0
+Japan,2009,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,139703018000.0,130226969000.0,130391959000.0
+Japan,2010,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,130391959000.0,139703018000.0,122426246000.0
+Japan,2011,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,122426246000.0,130391959000.0,119758445000.0
+Japan,2012,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,119758445000.0,122426246000.0,109768846000.0
+Japan,2013,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,109768846000.0,119758445000.0,112132984000.0
+Japan,2014,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,112132984000.0,109768846000.0,114471942000.0
+Japan,2015,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,114471942000.0,112132984000.0,105342777000.0
+Japan,2016,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,105342777000.0,114471942000.0,111286260000.0
+Japan,2017,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,111286260000.0,105342777000.0,111286260000.0
+Japan,2018,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,111286260000.0,111286260000.0,115922994000.0
+Japan,2019,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,115922994000.0,111286260000.0,118447193000.0
+Japan,2020,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,118447193000.0,115922994000.0,112295751000.0
+Japan,2021,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,112295751000.0,118447193000.0,123759200000.0
+Japan,2022,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,123759200000.0,112295751000.0,122689115000.0
+Japan,2023,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,122689115000.0,123759200000.0,122397995000.0
+Japan,2024,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,122397995000.0,122689115000.0,0.0
+Japan,2025,JAXA (Japan Aerospace Exploration Agency),science_agency,ok,,,,,none,0.0,122397995000.0,
+Japan,1980,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,0.0,,0.0
+Japan,1981,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Japan,1982,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Japan,1983,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Japan,1984,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Japan,1985,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Japan,1986,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Japan,1987,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,0.0,0.0,5561000000.0
+Japan,1988,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,5561000000.0,0.0,7674907000.0
+Japan,1989,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,7674907000.0,5561000000.0,8470887000.0
+Japan,1990,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,8470887000.0,7674907000.0,5595789000.0
+Japan,1991,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,5595789000.0,8470887000.0,10000000000.0
+Japan,1992,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,10000000000.0,5595789000.0,5114793000.0
+Japan,1993,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,5114793000.0,10000000000.0,0.0
+Japan,1994,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,0.0,5114793000.0,17309050000.0
+Japan,1995,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,17309050000.0,0.0,8015872000.0
+Japan,1996,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,8015872000.0,17309050000.0,9343401000.0
+Japan,1997,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,9343401000.0,8015872000.0,0.0
+Japan,1998,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,0.0,9343401000.0,659883000.0
+Japan,1999,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,659883000.0,0.0,3040992000.0
+Japan,2000,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,3040992000.0,659883000.0,0.0
+Japan,2001,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,0.0,3040992000.0,22842042000.0
+Japan,2002,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,22842042000.0,0.0,17143263000.0
+Japan,2003,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,17143263000.0,22842042000.0,0.0
+Japan,2004,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,0.0,17143263000.0,41670822000.0
+Japan,2005,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,41670822000.0,0.0,41670000000.0
+Japan,2006,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,41670000000.0,41670822000.0,68100000000.0
+Japan,2007,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,outlier,"Amount 68,100,000,000 outside expected range [-42,905,739,750 – 57,207,653,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,68100000000.0,41670000000.0,40834570000.0
+Japan,2008,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,40834570000.0,68100000000.0,0.0
+Japan,2009,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,0.0,40834570000.0,39608141000.0
+Japan,2010,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,39608141000.0,0.0,60439000000.0
+Japan,2011,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,outlier,"Amount 60,439,000,000 outside expected range [-42,905,739,750 – 57,207,653,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,60439000000.0,39608141000.0,0.0
+Japan,2012,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,0.0,60439000000.0,0.0
+Japan,2013,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Japan,2014,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,0.0,0.0,7791536000.0
+Japan,2015,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,7791536000.0,0.0,7893451000.0
+Japan,2016,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,7893451000.0,7791536000.0,11301101000.0
+Japan,2017,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,11301101000.0,7893451000.0,13170675000.0
+Japan,2018,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,13170675000.0,11301101000.0,14166920000.0
+Japan,2019,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,14166920000.0,13170675000.0,13943499000.0
+Japan,2020,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,13943499000.0,14166920000.0,14346911000.0
+Japan,2021,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,14346911000.0,13943499000.0,14537336000.0
+Japan,2022,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,14537336000.0,14346911000.0,14447800000.0
+Japan,2023,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,14447800000.0,14537336000.0,12556204000.0
+Japan,2024,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,12556204000.0,14447800000.0,0.0
+Japan,2025,NEDO (New Energy and Industrial Technology Development Organization),innovation_instruments,ok,,,,,none,0.0,12556204000.0,
+Japan,2001,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,69310487000.0,,68411330000.0
+Japan,2002,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,68411330000.0,69310487000.0,68411330000.0
+Japan,2003,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,68411330000.0,68411330000.0,68218340000.0
+Japan,2004,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,68218340000.0,68411330000.0,67431520000.0
+Japan,2005,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,67431520000.0,68218340000.0,0.0
+Japan,2006,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,outlier,"Amount 0 outside expected range [48,580,140,000 – 78,509,039,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,0.0,67431520000.0,65682368000.0
+Japan,2007,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,65682368000.0,0.0,64237356000.0
+Japan,2008,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,64237356000.0,65682368000.0,63305991000.0
+Japan,2009,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,63305991000.0,64237356000.0,61406811000.0
+Japan,2010,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,61406811000.0,63305991000.0,60390000000.0
+Japan,2011,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,60390000000.0,61406811000.0,0.0
+Japan,2012,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,outlier,"Amount 0 outside expected range [48,580,140,000 – 78,509,039,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,0.0,60390000000.0,60078300000.0
+Japan,2013,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,60078300000.0,0.0,60832599000.0
+Japan,2014,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,60832599000.0,60078300000.0,61787122000.0
+Japan,2015,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,61787122000.0,60832599000.0,62847560000.0
+Japan,2016,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,62847560000.0,61787122000.0,62440586000.0
+Japan,2017,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,62440586000.0,62847560000.0,61924777000.0
+Japan,2018,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,61924777000.0,62440586000.0,62342817000.0
+Japan,2019,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,62342817000.0,61924777000.0,742799000.0
+Japan,2020,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,outlier,"Amount 742,799,000 outside expected range [48,580,140,000 – 78,509,039,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,742799000.0,62342817000.0,61984113000.0
+Japan,2021,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,61984113000.0,742799000.0,61484113000.0
+Japan,2022,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,61484113000.0,61984113000.0,61800000000.0
+Japan,2023,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,61800000000.0,61484113000.0,65000661000.0
+Japan,2024,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,65000661000.0,61800000000.0,66687223000.0
+Japan,2025,AIST (National Institute of Advanced Industrial Science and Technology),science_agency,ok,,,,,none,66687223000.0,65000661000.0,
+Japan,1976,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,18605474000.0,,0.0
+Japan,1977,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,18605474000.0,0.0
+Japan,1978,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,0.0,59296000000.0
+Japan,1979,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,59296000000.0,0.0,0.0
+Japan,1980,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,59296000000.0,0.0
+Japan,1981,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1982,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1983,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,0.0,5059953000.0
+Japan,1984,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,5059953000.0,0.0,7699483000.0
+Japan,1985,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,7699483000.0,5059953000.0,0.0
+Japan,1986,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,7699483000.0,4716430000.0
+Japan,1987,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,4716430000.0,0.0,23877000000.0
+Japan,1988,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,23877000000.0,4716430000.0,7651998000.0
+Japan,1989,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,7651998000.0,23877000000.0,0.0
+Japan,1990,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,7651998000.0,0.0
+Japan,1991,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1992,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1993,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,0.0,10401684000.0
+Japan,1994,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,10401684000.0,0.0,1808664000.0
+Japan,1995,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,1808664000.0,10401684000.0,76753000000.0
+Japan,1996,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,76753000000.0,1808664000.0,0.0
+Japan,1997,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,76753000000.0,0.0
+Japan,1998,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1999,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,0.0,7313284000.0
+Japan,2000,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,7313284000.0,0.0,0.0
+Japan,2001,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,7313284000.0,0.0
+Japan,2002,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2003,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2004,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,0.0,31714109000.0
+Japan,2005,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,31714109000.0,0.0,61989280000.0
+Japan,2006,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,61989280000.0,31714109000.0,58768083000.0
+Japan,2007,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,58768083000.0,61989280000.0,63261350000.0
+Japan,2008,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,63261350000.0,58768083000.0,61258500000.0
+Japan,2009,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,61258500000.0,63261350000.0,63468679000.0
+Japan,2010,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,63468679000.0,61258500000.0,59170073000.0
+Japan,2011,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,59170073000.0,63468679000.0,50589375000.0
+Japan,2012,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,50589375000.0,59170073000.0,47685583000.0
+Japan,2013,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,47685583000.0,50589375000.0,46916707000.0
+Japan,2014,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,46916707000.0,47685583000.0,0.0
+Japan,2015,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,0.0,46916707000.0,34614821000.0
+Japan,2016,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,34614821000.0,0.0,37981917000.0
+Japan,2017,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,37981917000.0,34614821000.0,37981917000.0
+Japan,2018,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,37981917000.0,37981917000.0,36393856000.0
+Japan,2019,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,36393856000.0,37981917000.0,36393856000.0
+Japan,2020,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,36393856000.0,36393856000.0,36379870000.0
+Japan,2021,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,36379870000.0,36393856000.0,6379870000.0
+Japan,2022,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,6379870000.0,36379870000.0,377053000.0
+Japan,2023,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,377053000.0,6379870000.0,36478799000.0
+Japan,2024,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,36478799000.0,377053000.0,950126000.0
+Japan,2025,JAEA (Japan Atomic Energy Agency),science_agency,ok,,,,,none,950126000.0,36478799000.0,
+Japan,2016,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,21557994000.0,,21609247000.0
+Japan,2017,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,21609247000.0,21557994000.0,21609247000.0
+Japan,2018,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,21609247000.0,21609247000.0,21583061000.0
+Japan,2019,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,21583061000.0,21609247000.0,0.0
+Japan,2020,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,0.0,21583061000.0,21582563000.0
+Japan,2021,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,21582563000.0,0.0,0.0
+Japan,2022,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,0.0,21582563000.0,21762364000.0
+Japan,2023,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,21762364000.0,0.0,21788072000.0
+Japan,2024,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,21788072000.0,21762364000.0,378352000.0
+Japan,2025,QST (National Institutes for Quantum Science and Technology),science_agency,ok,,,,,none,378352000.0,21788072000.0,
+Japan,2001,National Institute of Radiological Sciences,historical_science_agency,outlier,"Amount 14,521,704,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,14521704000.0,,0.0
+Japan,2002,National Institute of Radiological Sciences,historical_science_agency,ok,,,,,none,0.0,14521704000.0,13699971000.0
+Japan,2003,National Institute of Radiological Sciences,historical_science_agency,outlier,"Amount 13,699,971,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,13699971000.0,0.0,0.0
+Japan,2004,National Institute of Radiological Sciences,historical_science_agency,ok,,,,,none,0.0,13699971000.0,0.0
+Japan,2005,National Institute of Radiological Sciences,historical_science_agency,ok,,,,,none,0.0,0.0,13139604000.0
+Japan,2006,National Institute of Radiological Sciences,historical_science_agency,outlier,"Amount 13,139,604,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,13139604000.0,0.0,0.0
+Japan,2007,National Institute of Radiological Sciences,historical_science_agency,ok,,,,,none,0.0,13139604000.0,0.0
+Japan,2008,National Institute of Radiological Sciences,historical_science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2009,National Institute of Radiological Sciences,historical_science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2010,National Institute of Radiological Sciences,historical_science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2011,National Institute of Radiological Sciences,historical_science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2012,National Institute of Radiological Sciences,historical_science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2013,National Institute of Radiological Sciences,historical_science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2014,National Institute of Radiological Sciences,historical_science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2015,National Institute of Radiological Sciences,historical_science_agency,ok,,,,,none,0.0,0.0,
+Japan,1975,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,,0.0
+Japan,1976,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1977,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1978,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1979,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1980,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1981,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1982,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1983,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1984,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1985,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1986,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1987,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1988,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1989,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1990,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1991,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1992,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1993,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,6777571000.0
+Japan,1994,National Institute for Environmental Studies,science_agency,ok,,,,,none,6777571000.0,0.0,0.0
+Japan,1995,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,6777571000.0,7747334000.0
+Japan,1996,National Institute for Environmental Studies,science_agency,ok,,,,,none,7747334000.0,0.0,0.0
+Japan,1997,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,7747334000.0,0.0
+Japan,1998,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,1999,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2000,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,0.0,9250114000.0
+Japan,2001,National Institute for Environmental Studies,science_agency,ok,,,,,none,9250114000.0,0.0,9515867000.0
+Japan,2002,National Institute for Environmental Studies,science_agency,ok,,,,,none,9515867000.0,9250114000.0,9401135000.0
+Japan,2003,National Institute for Environmental Studies,science_agency,ok,,,,,none,9401135000.0,9515867000.0,9254603000.0
+Japan,2004,National Institute for Environmental Studies,science_agency,ok,,,,,none,9254603000.0,9401135000.0,0.0
+Japan,2005,National Institute for Environmental Studies,science_agency,ok,,,,,none,0.0,9254603000.0,361081000.0
+Japan,2006,National Institute for Environmental Studies,science_agency,ok,,,,,none,361081000.0,0.0,9680365000.0
+Japan,2007,National Institute for Environmental Studies,science_agency,ok,,,,,none,9680365000.0,361081000.0,9675216000.0
+Japan,2008,National Institute for Environmental Studies,science_agency,ok,,,,,none,9675216000.0,9680365000.0,9292205000.0
+Japan,2009,National Institute for Environmental Studies,science_agency,ok,,,,,none,9292205000.0,9675216000.0,2835409000.0
+Japan,2010,National Institute for Environmental Studies,science_agency,ok,,,,,none,2835409000.0,9292205000.0,13522931000.0
+Japan,2011,National Institute for Environmental Studies,science_agency,ok,,,,,none,13522931000.0,2835409000.0,12111369000.0
+Japan,2012,National Institute for Environmental Studies,science_agency,ok,,,,,none,12111369000.0,13522931000.0,11454420000.0
+Japan,2013,National Institute for Environmental Studies,science_agency,ok,,,,,none,11454420000.0,12111369000.0,10828427000.0
+Japan,2014,National Institute for Environmental Studies,science_agency,ok,,,,,none,10828427000.0,11454420000.0,11098305000.0
+Japan,2015,National Institute for Environmental Studies,science_agency,ok,,,,,none,11098305000.0,10828427000.0,11695485000.0
+Japan,2016,National Institute for Environmental Studies,science_agency,ok,,,,,none,11695485000.0,11098305000.0,12216107000.0
+Japan,2017,National Institute for Environmental Studies,science_agency,ok,,,,,none,12216107000.0,11695485000.0,13370483000.0
+Japan,2018,National Institute for Environmental Studies,science_agency,ok,,,,,none,13370483000.0,12216107000.0,16658697000.0
+Japan,2019,National Institute for Environmental Studies,science_agency,ok,,,,,none,16658697000.0,13370483000.0,16306940000.0
+Japan,2020,National Institute for Environmental Studies,science_agency,ok,,,,,none,16306940000.0,16658697000.0,16514384000.0
+Japan,2021,National Institute for Environmental Studies,science_agency,ok,,,,,none,16514384000.0,16306940000.0,16387344000.0
+Japan,2022,National Institute for Environmental Studies,science_agency,ok,,,,,none,16387344000.0,16514384000.0,16574658000.0
+Japan,2023,National Institute for Environmental Studies,science_agency,ok,,,,,none,16574658000.0,16387344000.0,17158975000.0
+Japan,2024,National Institute for Environmental Studies,science_agency,ok,,,,,none,17158975000.0,16574658000.0,17177052000.0
+Japan,2025,National Institute for Environmental Studies,science_agency,ok,,,,,none,17177052000.0,17158975000.0,
+Japan,2005,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,0.0,,0.0
+Japan,2006,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2007,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2008,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2009,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2010,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2011,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2012,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2013,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2014,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2015,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,0.0,0.0,3674953000.0
+Japan,2016,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,3674953000.0,0.0,3674953000.0
+Japan,2017,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,3674953000.0,3674953000.0,3674953000.0
+Japan,2018,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,3674953000.0,3674953000.0,0.0
+Japan,2019,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,0.0,3674953000.0,3690934000.0
+Japan,2020,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,3690934000.0,0.0,0.0
+Japan,2021,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,0.0,3690934000.0,4024297000.0
+Japan,2022,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,4024297000.0,0.0,4295787000.0
+Japan,2023,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,4295787000.0,4024297000.0,6729156000.0
+Japan,2024,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,6729156000.0,4295787000.0,3799507000.0
+Japan,2025,"National Institute of Biomedical Innovation, Health and Nutrition",science_agency,ok,,,,,none,3799507000.0,6729156000.0,
+Japan,2001,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,,0.0
+Japan,2002,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2003,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2004,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2005,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2006,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2007,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2008,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2009,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2010,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2011,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2012,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2013,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2014,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2015,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2016,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2017,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2018,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2019,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2020,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2021,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2022,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2023,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2024,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Japan,2025,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",science_agency,ok,,,,,none,0.0,0.0,
+Japan,1975,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,,0.0
+Japan,1976,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1977,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1978,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1979,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1980,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1981,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1982,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1983,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1984,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1985,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1986,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1987,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1988,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1989,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1990,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1991,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1992,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1993,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1994,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1995,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1996,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1997,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1998,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,1999,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2000,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2001,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2002,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2003,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2004,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,883528000.0
+Japan,2005,Institute for Science and Technology Policy,unclear,outlier,"Amount 883,528,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,883528000.0,0.0,0.0
+Japan,2006,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,883528000.0,0.0
+Japan,2007,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2008,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2009,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2010,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2011,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2012,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2013,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2014,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2015,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2016,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,784409000.0
+Japan,2017,Institute for Science and Technology Policy,unclear,outlier,"Amount 784,409,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,784409000.0,0.0,0.0
+Japan,2018,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,784409000.0,0.0
+Japan,2019,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2020,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2021,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2022,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2023,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2024,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,0.0
+Japan,2025,Institute for Science and Technology Policy,unclear,ok,,,,,none,0.0,0.0,
+Japan,1975,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,,0.0
+Japan,1976,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1977,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1978,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1979,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1980,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1981,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1982,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1983,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1984,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1985,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1986,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1987,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1988,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1989,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1990,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1991,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1992,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1993,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1994,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1995,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1996,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1997,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1998,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,1999,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2000,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2001,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2002,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2003,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2004,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2005,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2006,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2007,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2008,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2009,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2010,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2011,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2012,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2013,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2014,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,1156559000.0
+Japan,2015,National Center for Geriatrics and Gerontology,direct_rd,outlier,"Amount 1,156,559,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1156559000.0,0.0,0.0
+Japan,2016,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,1156559000.0,0.0
+Japan,2017,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2018,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2019,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,2972260000.0
+Japan,2020,National Center for Geriatrics and Gerontology,direct_rd,outlier,"Amount 2,972,260,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,2972260000.0,0.0,0.0
+Japan,2021,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,2972260000.0,0.0
+Japan,2022,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2023,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2024,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Japan,2025,National Center for Geriatrics and Gerontology,direct_rd,ok,,,,,none,0.0,0.0,

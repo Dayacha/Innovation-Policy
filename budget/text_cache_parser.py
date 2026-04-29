@@ -210,6 +210,50 @@ def _extract_amounts_from_block(block_lines: list[str]) -> list[float]:
     return amounts
 
 
+def _extract_vote_amounts_from_block(block_lines: list[str]) -> list[float]:
+    """
+    Extract the first appropriation amount after each vote line.
+
+    Canada appropriation schedules often list one vote number followed by a
+    description and then multiple numeric columns. The first numeric value after
+    each vote is the clearest deterministic proxy for the current appropriation
+    amount; later values are often prior/granted/cumulative columns that can
+    create huge false totals if summed blindly.
+    """
+    vote_amounts: list[float] = []
+    i = 0
+    while i < len(block_lines):
+        stripped = block_lines[i].strip()
+        if not _RE_VOTE.match(stripped):
+            i += 1
+            continue
+
+        found = None
+        j = i + 1
+        while j < len(block_lines):
+            nxt = block_lines[j].strip()
+            if not nxt:
+                j += 1
+                continue
+            if nxt.startswith("==="):
+                break
+            if _RE_VOTE.match(nxt):
+                break
+            amt = _parse_amount(nxt)
+            if amt is not None and amt > 0:
+                found = amt
+                break
+            j += 1
+
+        if found is not None:
+            vote_amounts.append(found)
+            i = j + 1
+        else:
+            i += 1
+
+    return vote_amounts
+
+
 def parse_text_file(
     file_path: Path,
     country: str,
@@ -232,8 +276,12 @@ def parse_text_file(
 
     rows = []
     for agency_name, block_lines in blocks:
-        amounts = _extract_amounts_from_block(block_lines)
-        total = _extract_agency_total(amounts)
+        vote_amounts = _extract_vote_amounts_from_block(block_lines) if country == "Canada" else []
+        if vote_amounts:
+            total = sum(vote_amounts)
+        else:
+            amounts = _extract_amounts_from_block(block_lines)
+            total = _extract_agency_total(amounts)
 
         if total is None or total <= 0:
             continue

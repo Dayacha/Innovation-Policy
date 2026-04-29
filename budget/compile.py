@@ -29,6 +29,7 @@ Usage:
 from __future__ import annotations
 
 import csv
+import gzip
 import logging
 import re
 from pathlib import Path
@@ -51,6 +52,277 @@ from budget.text_cache_parser import parse_text_cache, TEXT_CACHE_DIR
 logger = logging.getLogger(__name__)
 
 RAW_ROWS_CSV = cfg.OUTPUT_DIR / "raw_rows.csv"
+
+_OUTPUT_UNIT_BY_CURRENCY = {
+    "AUD": "dollar",
+    "CAD": "dollar",
+    "NZD": "dollar",
+    "USD": "dollar",
+    "JPY": "yen",
+    "EUR": "euro",
+    "DEM": "mark",
+    "FRF": "franc",
+    "GBP": "pound",
+    "DKK": "krone",
+    "NOK": "krone",
+    "SEK": "krona",
+}
+
+_SCALE_TO_BASE_UNIT = {
+    "thousand": 1_000.0,
+    "thousands": 1_000.0,
+    "k": 1_000.0,
+    "million": 1_000_000.0,
+    "millions": 1_000_000.0,
+    "billion": 1_000_000_000.0,
+    "milliard": 1_000_000_000.0,
+}
+
+_FRANCE_FULL_TEXT_DIR = Path("Data/output/budget/full_text/France")
+_FRANCE_PROGRAMME_LABELS = [
+    "Recherches scientifiques et technologiques pluridisciplinaires",
+    "Recherche spatiale",
+    "Recherche dans les domaines de l’énergie, du développement et de la mobilité durables",
+    "Recherche et enseignement supérieur en matière économique et industrielle",
+    "Recherche culturelle et culture scientifique",
+    "Enseignement supérieur et recherche agricoles",
+    "Recherche appliquée et innovation en agriculture",
+]
+_FRANCE_MISSION_TOTAL_PATTERNS = [
+    re.compile(r"^total budget for (?:the )?research and higher education(?: mission)?$", re.IGNORECASE),
+    re.compile(r"^total pour la mission recherche et enseignement superieur$", re.IGNORECASE),
+]
+_FRANCE_PRE_LOLF_TOTAL_RE = re.compile(
+    r"^total(?: des)? cr[ée]dits? de paiement pour\b|^total pour\b|^total for\b",
+    re.IGNORECASE,
+)
+
+
+def _agency_discovery_kwargs(country: str) -> dict:
+    """Country-specific guardrails for automatic agency discovery."""
+    if country == "Japan":
+        # Japan extraction produces many broad MEXT/METI budget buckets. Require
+        # recurrence and a material amount before sending candidates to the LLM.
+        return {"min_years": 2, "min_avg_amount": 1_000_000}
+    if country == "Germany":
+        # Germany BMBF budgets produce ~400 R&D programme lines. Require 3+ years
+        # of recurrence to keep only stable institutions, not one-off grants.
+        return {"min_years": 3}
+    return {}
+
+
+def _france_full_text_path(source_file: str) -> Optional[Path]:
+    stem = Path(str(source_file or "")).stem
+    if not stem:
+        return None
+    matches = sorted(_FRANCE_FULL_TEXT_DIR.glob(f"*__{stem}.txt.gz"))
+    return matches[0] if matches else None
+
+
+def _france_extract_programmes_from_full_text(source_file: str, year: int) -> pd.DataFrame:
+    """
+    Recover LOLF-era programme CP rows directly from the cached JORF text.
+
+    This is a compile-only safety net for years where extraction retained only
+    the mission total (e.g. France 2014) or dropped the programme rows. We scan
+    the later AE/CP budget pages and take the *highest-page* occurrence of each
+    programme label, which reliably prefers the budget table over earlier ETPT
+    headcount pages.
+    """
+    if year < 2006:
+        return pd.DataFrame()
+
+    path = _france_full_text_path(source_file)
+    if path is None:
+        return pd.DataFrame()
+
+    try:
+        with gzip.open(path, "rt", encoding="utf-8", errors="ignore") as fh:
+            text = fh.read()
+    except OSError:
+        return pd.DataFrame()
+
+    page_matches = list(
+        re.finditer(r"=== Page (\d+)\.0 \|.*?(?=(?:=== Page \d+\.0 \|)|\Z)", text, flags=re.DOTALL)
+    )
+    if not page_matches:
+        return pd.DataFrame()
+
+    records: list[dict] = []
+    for label in _FRANCE_PROGRAMME_LABELS:
+        best: Optional[dict] = None
+        for m in page_matches:
+            page_no = int(m.group(1))
+            page_text = m.group(0)
+            if label not in page_text:
+                continue
+
+            lines = [line.strip() for line in page_text.splitlines() if line.strip()]
+            for i, line in enumerate(lines):
+                if label not in line:
+                    continue
+                values: list[int] = []
+                for follower in lines[i:i + 4]:
+                    for token in re.findall(r"\d[\d ]{2,}", follower):
+                        digits = re.sub(r"\s+", "", token)
+                        if len(digits) < 4:
+                            continue
+                        values.append(int(digits))
+                    if len(values) >= 2:
+                        break
+                if len(values) < 2:
+                    continue
+                cp_full_eur = values[1]
+                candidate = {
+                    "country": "France",
+                    "year": int(year),
+                    "source_file": str(source_file),
+                    "page_number": int(page_no),
+                    "section_name": "Recherche et enseignement supérieur",
+                    "section_name_en": "Research and Higher Education",
+                    "line_description": label,
+                    "line_description_en": label,
+                    "amount_local": float(cp_full_eur) / 1000.0,
+                    "unit": "thousand",
+                    "currency": "EUR",
+                    "item_type": "program_total",
+                    "decision": "review",
+                    "confidence": 0.95,
+                    "rd_category": "rd_programme",
+                    "aggregation_role": "",
+                }
+                if best is None or candidate["page_number"] > best["page_number"]:
+                    best = candidate
+                break
+        if best is not None:
+            records.append(best)
+
+    return pd.DataFrame.from_records(records)
+
+
+def _augment_france_pipeline_rows(df: pd.DataFrame) -> pd.DataFrame:
+    if df.empty:
+        return df
+
+    additions: list[pd.DataFrame] = []
+    for (year, source_file), chunk in df.groupby(["year", "source_file"]):
+        if int(year) < 2006 or "JORF_" not in str(source_file):
+            continue
+        existing_desc = {
+            str(v).strip().lower()
+            for v in chunk.get("line_description", pd.Series(index=chunk.index, dtype="object")).fillna("")
+        }
+        recovered = _france_extract_programmes_from_full_text(str(source_file), int(year))
+        if recovered.empty:
+            continue
+        recovered = recovered[
+            ~recovered["line_description"].astype(str).str.strip().str.lower().isin(existing_desc)
+        ].copy()
+        if not recovered.empty:
+            additions.append(recovered)
+
+    if not additions:
+        return df
+
+    out = pd.concat([df, *additions], ignore_index=True, sort=False)
+    out = out.drop_duplicates(
+        subset=["country", "year", "source_file", "page_number", "line_description", "amount_local"],
+        keep="first",
+    ).reset_index(drop=True)
+    logger.info(f"[France] Added {sum(len(x) for x in additions)} programme rows from full_text fallback")
+    return out
+
+
+def _trim_france_etpt_rows(df: pd.DataFrame) -> pd.DataFrame:
+    if df.empty:
+        return df
+
+    page_num = pd.to_numeric(df.get("page_number"), errors="coerce")
+    desc_norm = (
+        df.get("line_description", pd.Series("", index=df.index))
+        .astype(str)
+        .str.strip()
+    )
+    programme_exact = desc_norm.isin(_FRANCE_PROGRAMME_LABELS)
+    mission_total = desc_norm.apply(
+        lambda s: any(p.search(s) for p in _FRANCE_MISSION_TOTAL_PATTERNS)
+    )
+    early_jorf = (
+        df.get("source_file", pd.Series("", index=df.index)).astype(str).str.contains(r"JORF_", case=False, na=False)
+        & page_num.lt(80)
+    )
+
+    drop_mask = early_jorf & (programme_exact | mission_total)
+    if not drop_mask.any():
+        return df
+
+    kept = df.loc[~drop_mask].copy()
+    logger.info(f"[France] Dropped {int(drop_mask.sum())} early-page ETPT-like programme rows from series input")
+    return kept.reset_index(drop=True)
+
+
+def _normalise_france_pre_lolf_rows(df: pd.DataFrame) -> pd.DataFrame:
+    if df.empty:
+        return df
+
+    out = df.copy()
+    years = pd.to_numeric(out.get("year"), errors="coerce")
+    unit_norm = out.get("unit", pd.Series("", index=out.index)).astype(str).str.lower().str.strip()
+    amt = pd.to_numeric(out.get("amount_local"), errors="coerce")
+
+    # Pre-euro France rows are often extracted with full-franc amounts while
+    # still labelled as "thousand". Recover the intended value before compile
+    # expands to base currency. This is visible in original JORF rows such as
+    # "637 524 095" for CNES 1986/1987, which is a plausible number of francs
+    # but absurd as "thousand francs".
+    pre_euro_overscaled = (
+        years.le(2001)
+        & unit_norm.eq("thousand")
+        & amt.ge(1_000_000)
+    )
+    if pre_euro_overscaled.any():
+        out.loc[pre_euro_overscaled, "amount_local"] = amt.loc[pre_euro_overscaled] / 1000.0
+        logger.info(f"[France] Rescaled {int(pre_euro_overscaled.sum())} pre-euro rows by 1/1000")
+
+    # 2002–2005 Etat C rows are in "milliers d'euros". Some extraction runs
+    # already append three extra zeros while still labelling the row as
+    # thousand. Recover the intended value before compile expands to euros.
+    euro_overscaled = (
+        years.between(2002, 2005)
+        & unit_norm.eq("thousand")
+        & amt.ge(100_000_000)
+    )
+    if euro_overscaled.any():
+        out.loc[euro_overscaled, "amount_local"] = amt.loc[euro_overscaled] / 1000.0
+        logger.info(f"[France] Rescaled {int(euro_overscaled.sum())} 2002-2005 pre-LOLF rows by 1/1000")
+
+    # Pre-LOLF total-payment rows are useful for audit but should not become a
+    # separate canonical series next to the chapter itself.
+    desc = out.get("line_description", pd.Series("", index=out.index)).astype(str)
+    total_rows = years.between(1970, 2005) & desc.apply(lambda s: bool(_FRANCE_PRE_LOLF_TOTAL_RE.search(s.strip())))
+    if total_rows.any():
+        out = out.loc[~total_rows].copy()
+        logger.info(f"[France] Dropped {int(total_rows.sum())} pre-LOLF total rows from series input")
+
+    return out.reset_index(drop=True)
+
+
+def _output_unit_from_currency(currency: str, fallback_unit: str) -> str:
+    return _OUTPUT_UNIT_BY_CURRENCY.get(str(currency or "").upper(), fallback_unit)
+
+
+def _expand_output_amount(amount: object, unit: object, currency: object) -> tuple[object, object]:
+    try:
+        amt = float(amount)
+    except (TypeError, ValueError):
+        return amount, unit
+
+    unit_norm = str(unit or "").strip().lower()
+    factor = _SCALE_TO_BASE_UNIT.get(unit_norm)
+    if factor is None:
+        return amt, unit
+
+    return amt * factor, _output_unit_from_currency(str(currency or ""), str(unit or ""))
 
 # ---------------------------------------------------------------------------
 # Unit normalisation — convert all amounts to thousands
@@ -96,8 +368,8 @@ def _write_year_slice(
     out.to_csv(path, index=False)
 #
 # Some countries change the denomination they use in budget documents over time.
-# To make amounts comparable across all years in the series, we normalise
-# everything to the same unit (thousands of local currency).
+# Rules here only apply when we intentionally rewrite the parsed amount to a
+# different unit before building the series.
 #
 # Rules per country:
 #   Australia:
@@ -121,15 +393,8 @@ _UNIT_RULES: dict[str, list[dict]] = {
         },
     ],
     # Canada: Appropriation Act text files are in full CAD dollars for all years.
-    # Divide by 1,000 to get thousands (consistent with Australia 2012+ and series standard).
-    "Canada": [
-        {
-            "years": (1900, 2099),
-            "threshold": 1_000,
-            "divisor": 1_000,
-            "note": "CA text cache: full dollar → thousand conversion",
-        },
-    ],
+    # Keep the printed full-dollar amount in outputs, with unit='dollar'.
+    "Canada": [],
     # -------------------------------------------------------------------------
     # UK: Supply Estimates txt.gz amounts appear to be in thousands of GBP (£000).
     # No conversion needed. Add a rule here if first-run amounts look wrong.
@@ -199,6 +464,13 @@ def _normalise_units(df: pd.DataFrame, country: str) -> pd.DataFrame:
         )
 
     return df
+
+
+def _output_unit_for_country(country: str) -> str:
+    """Return the unit used for compile outputs after country-specific handling."""
+    if country == "Canada":
+        return "dollar"
+    return "thousand"
 
 
 def _filter_country_raw_noise(df: pd.DataFrame, country: str) -> pd.DataFrame:
@@ -535,25 +807,37 @@ def build_classified_results(
         is_total = str(row.get("is_total_row", "")).lower() in ("true", "1")
         item_type = "section_total" if is_total else "line_item"
 
+        currency = cfg.COUNTRY_CONTEXT.get(country, {}).get("currency", "LOCAL")
+        amount_local, unit = _expand_output_amount(
+            row["amount_current"],
+            _output_unit_for_country(country),
+            currency,
+        )
+        amount_prior, _ = _expand_output_amount(
+            row.get("amount_prior"),
+            _output_unit_for_country(country),
+            currency,
+        )
+
         records.append({
-            "country": row["country"],
-            "year": row["year"],
-            "source_file": row["source_file"],
-            "page_number": str(row.get("table_index", "")),
-            "item_type": item_type,
+                "country": row["country"],
+                "year": row["year"],
+                "source_file": row["source_file"],
+                "page_number": str(row.get("table_index", "")),
+                "item_type": item_type,
             "section_code": "",
-            "section_name": str(row.get("section_name", "")),
-            "section_name_en": canonical_name if not is_total else str(row.get("section_name", "")),
-            "line_code": "",
-            "line_description": entity_text,
-            "line_description_en": canonical_name if not is_total else entity_text,
-            "amount_local": row["amount_current"],
-            "amount_prior": row.get("amount_prior"),
-            "unit": "thousand",      # Australian acts: $'000
-            "currency": cfg.COUNTRY_CONTEXT.get(country, {}).get("currency", "LOCAL"),
-            "rd_category": rd_category,
-            "decision": decision,
-            "confidence": confidence,
+                "section_name": str(row.get("section_name", "")),
+                "section_name_en": canonical_name if not is_total else str(row.get("section_name", "")),
+                "line_code": "",
+                "line_description": entity_text,
+                "line_description_en": canonical_name if not is_total else entity_text,
+                "amount_local": amount_local,
+                "amount_prior": amount_prior,
+                "unit": unit,
+                "currency": currency,
+                "rd_category": rd_category,
+                "decision": decision,
+                "confidence": confidence,
             "llm_model": "docx_parser",
             "extraction_pass": "docx_table",
             "notes": f"Parsed from table {row.get('table_index')}, row {row.get('row_index')}",
@@ -593,7 +877,7 @@ def _build_full_audit(
       year             — budget year
       source_file      — filename of the source document
       entity_raw       — exact text as it appeared in the document
-      amount_current   — amount extracted (in thousands local currency)
+      amount_current   — amount extracted after country-specific unit handling
       section_name     — table/section heading in the document
       table_index      — table number within the file
       row_index        — row number within the table
@@ -706,20 +990,126 @@ def _load_pipeline_results(
     # Keep only include/review rows (skip rows were explicitly rejected)
     df = df[df["decision"].isin(["include", "review"])].copy()
 
+    if country == "France":
+        df = _augment_france_pipeline_rows(df)
+        df = _trim_france_etpt_rows(df)
+        df = _normalise_france_pre_lolf_rows(df)
+
     # Drop rows marked as redundant aggregates (ministry totals, section totals).
     # These are kept in results.csv for audit purposes but should not feed the series.
     if "aggregation_role" in df.columns:
-        n_before = len(df)
-        df = df[df["aggregation_role"].fillna("") != "redundant"].copy()
-        dropped = n_before - len(df)
-        if dropped:
-            logger.info(f"[{country}] Dropped {dropped} redundant aggregate rows from series input")
+        if country in {"France", "UK", "Germany"}:
+            # France's JORF programme totals and the UK's budget-package totals
+            # are often tagged as redundant during cleaning to suppress discovery
+            # noise, but compile/canonical still needs them to build the final
+            # programme/package series.
+            # Germany: Beschlussempfehlung / Haushaltsübersicht docs produce only
+            # section-level totals (Epl.30 = BMBF total); without these rows
+            # those years have zero canonical matches.
+            logger.info(f"[{country}] Keeping review/redundant programme rows for canonical series input")
+        else:
+            n_before = len(df)
+            df = df[df["aggregation_role"].fillna("") != "redundant"].copy()
+            dropped = n_before - len(df)
+            if dropped:
+                logger.info(f"[{country}] Dropped {dropped} redundant aggregate rows from series input")
 
     logger.info(
         f"[{country}] Loaded {len(df)} rows from pipeline output "
         f"({results_csv.name}), years: {sorted(df['year'].unique().tolist())}"
     )
     return df.reset_index(drop=True)
+
+
+def _load_compile_recovery_rows(
+    results_csv: Path,
+    country: str,
+    year_range: Optional[tuple[int, int]] = None,
+) -> pd.DataFrame:
+    """
+    Load document-level targeted recovery rows and convert them into compile-style
+    raw rows.
+
+    For Canada this lets a cheap `budget.pipeline --targeted-recovery-only` pass
+    feed the real compile/database path without rerunning full extraction.
+    Only total-like recovery rows are imported to avoid double-counting
+    component lines such as operating/capital.
+    """
+    try:
+        df = pd.read_csv(results_csv)
+    except Exception as e:
+        logger.warning(f"Could not read pipeline recovery rows {results_csv}: {e}")
+        return pd.DataFrame()
+
+    if "country" not in df.columns or "extraction_pass" not in df.columns:
+        return pd.DataFrame()
+
+    df = df[
+        (df["country"] == country)
+        & (df["extraction_pass"] == "targeted_recovery")
+    ].copy()
+    if df.empty:
+        return df
+
+    df["year"] = pd.to_numeric(df["year"], errors="coerce")
+    df["amount_local"] = pd.to_numeric(df["amount_local"], errors="coerce")
+    df = df.dropna(subset=["year", "amount_local", "section_name"])
+    df["year"] = df["year"].astype(int)
+
+    if year_range:
+        df = df[(df["year"] >= year_range[0]) & (df["year"] <= year_range[1])]
+
+    total_mask = (
+        df.get("line_description", pd.Series(index=df.index, dtype="object"))
+        .astype(str)
+        .str.contains(r"\btotal\b", case=False, na=False)
+    )
+    df = df[total_mask].copy()
+    if df.empty:
+        return df
+
+    # Canada compile keeps full CAD dollars. However, `budget.pipeline --postprocess-only`
+    # normalises results.csv amounts to thousands in-place. If recovery rows were
+    # postprocessed before compile, convert them back to full dollars here.
+    if country == "Canada" and "unit" in df.columns:
+        unit_lower = df["unit"].astype(str).str.lower().str.strip()
+        thousand_mask = unit_lower.eq("thousand")
+        if thousand_mask.any():
+            df.loc[thousand_mask, "amount_local"] = df.loc[thousand_mask, "amount_local"] * 1000.0
+
+    out = pd.DataFrame({
+        "source_file": df["source_file"].astype(str),
+        "country": df["country"].astype(str),
+        "year": df["year"].astype(int),
+        "page_number": pd.to_numeric(df.get("page_number", 0), errors="coerce").fillna(0).astype(int),
+        "table_index": pd.to_numeric(df.get("page_number", 0), errors="coerce").fillna(0).astype(int),
+        "row_index": range(len(df)),
+        "section_name": df["section_name"].astype(str),
+        "entity_raw": df["section_name"].astype(str),
+        "amount_current": df["amount_local"].astype(float),
+        "amount_prior": None,
+        "cells_raw": (
+            df["section_name"].astype(str)
+            + " | "
+            + df.get("line_description", "").astype(str)
+            + " | "
+            + df["amount_local"].astype(str)
+        ),
+        "is_header_row": False,
+        "is_total_row": True,
+        "has_italic_entity": False,
+    })
+
+    out = out.drop_duplicates(
+        subset=["country", "year", "entity_raw", "amount_current", "source_file"],
+        keep="first",
+    ).reset_index(drop=True)
+
+    logger.info(
+        f"[{country}] Loaded {len(out)} targeted recovery total rows from "
+        f"{results_csv.name}"
+    )
+    return out
 
 
 # ---------------------------------------------------------------------------
@@ -774,8 +1164,54 @@ def compile_country(
         output_csv=raw_rows_csv,
     )
 
-    if raw_df.empty:
-        # ── Fallback: LLM pipeline output for narrative PDF countries ─────────
+    # Canada-specific integration: allow cheap document-level targeted recovery
+    # rows from pipeline results.csv to feed the real compile/database path.
+    if country == "Canada":
+        pipeline_csv = output_dir / "results.csv"
+        recovery_df = _load_compile_recovery_rows(pipeline_csv, country, year_range)
+        if not recovery_df.empty:
+            if not raw_df.empty:
+                existing_keys = set(
+                    zip(
+                        raw_df["country"].astype(str),
+                        raw_df["year"].astype(int),
+                        raw_df["entity_raw"].astype(str).str.upper(),
+                        pd.to_numeric(raw_df["amount_current"], errors="coerce").astype(float),
+                    )
+                )
+                recovery_df = recovery_df[
+                    ~recovery_df.apply(
+                        lambda r: (
+                            str(r["country"]),
+                            int(r["year"]),
+                            str(r["entity_raw"]).upper(),
+                            float(r["amount_current"]),
+                        ) in existing_keys,
+                        axis=1,
+                    )
+                ].reset_index(drop=True)
+            if not recovery_df.empty:
+                raw_df = pd.concat([raw_df, recovery_df], ignore_index=True)
+                logger.info(
+                    f"[{country}] Appended {len(recovery_df)} targeted recovery totals into compile input"
+                )
+
+    # Countries where LLM pipeline output (results.csv) always takes precedence
+    # over DOCX/text-cache, even when the text-cache has partial data.
+    # These countries were processed through pipeline.py (LLM extraction) which
+    # produces far richer, higher-quality results than the legacy text-cache parser.
+    # Norway/Denmark: have partial text-cache (12-15 years, ~22 rows) that would
+    # otherwise block the 2000+ row LLM pipeline output from being used.
+    _PIPELINE_FIRST_COUNTRIES = {
+        "UK", "France", "Germany", "Japan",           # original narrative-PDF set
+        "Norway", "Denmark",                           # text-cache exists but LLM wins
+        "Sweden", "Netherlands", "Switzerland",        # future: no text-cache expected
+    }
+
+    _use_pipeline = raw_df.empty or country in _PIPELINE_FIRST_COUNTRIES
+
+    if _use_pipeline:
+        # ── LLM pipeline output for narrative PDF countries ────────────────────
         # For UK, France, Germany, Japan the DOCX parser and text-cache parser
         # return nothing (narrative prose, not structured tables). Check if
         # pipeline.py has already run LLM extraction and left results.csv.
@@ -817,11 +1253,13 @@ def compile_country(
                     "has_italic_entity": False,
                     "cells_raw":     "[]",
                 })
-                if country == "Japan":
-                    logger.info("Agency discovery: Japan skipped (hardcoded canonical list only)")
-                else:
-                    logger.info(f"Agency discovery: {country}")
-                    discover_agencies(pipeline_as_raw, country=country, config=config)
+                logger.info(f"Agency discovery: {country}")
+                discover_agencies(
+                    pipeline_as_raw,
+                    country=country,
+                    config=config,
+                    **_agency_discovery_kwargs(country),
+                )
 
             # ── Build canonical series ─────────────────────────────────────────
             series_df = build_canonical_series(results_df, country=country)
@@ -873,10 +1311,9 @@ def compile_country(
         )
         return pd.DataFrame()
 
-    # ── Step 2.5: unit normalisation ─────────────────────────────────────────
-    # Some countries change their denomination across eras.
-    # Australia: pre-2000 acts use full AUD dollars; post-2012 use AUD thousands.
-    # We normalise everything to thousands so amounts are comparable across years.
+    # ── Step 2.5: unit handling ──────────────────────────────────────────────
+    # Some countries change their denomination across eras. Apply only the
+    # explicit rules above; Canada intentionally remains full CAD dollars.
     raw_df = _normalise_units(raw_df, country)
 
     # ── Step 3: LLM entity dedup ─────────────────────────────────────────────
@@ -904,11 +1341,13 @@ def compile_country(
 
     # ── Step 3.5: agency discovery ────────────────────────────────────────────
     if not dry_run:
-        if country == "Japan":
-            logger.info("Agency discovery: Japan skipped (hardcoded canonical list only)")
-        else:
-            logger.info(f"Agency discovery: {country}")
-            discover_agencies(raw_df, country=country, config=config)
+        logger.info(f"Agency discovery: {country}")
+        discover_agencies(
+            raw_df,
+            country=country,
+            config=config,
+            **_agency_discovery_kwargs(country),
+        )
 
     # ── Step 4: agency classifier ─────────────────────────────────────────────
     registry = classify_raw_rows(

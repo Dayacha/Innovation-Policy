@@ -1,0 +1,427 @@
+22:46:04 INFO budget.pipeline — Discovered 53 source files
+22:46:05 INFO reforms.llm_client — Loaded 23636 existing usage records
+22:46:05 INFO budget.pipeline — LLM: provider=openai, extract_model=gpt-4o-mini, scan_model=gpt-4o-mini
+22:46:05 INFO reforms.llm_client — Loaded 23636 existing usage records
+22:46:05 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:05 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:05 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:05 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:05 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:05 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:05 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:05 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:05 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:05 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:05 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:05 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:05 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:05 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:05 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:05 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:05 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:05 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:05 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:06 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:06 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:06 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:06 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:06 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:06 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:06 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:06 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:06 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:08 INFO httpx — HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+22:46:09 INFO budget.targeted_recovery — [UK] Targeted recovery: 2003_UK.pdf -> Economic and Social Research Council (ESRC) (1 rows)
+22:46:09 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:10 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:18 INFO httpx — HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+22:46:19 INFO budget.targeted_recovery — [UK] Targeted recovery: 2005_UK.pdf -> Research Councils (pre-UKRI) (4 rows)
+22:46:20 INFO httpx — HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+22:46:21 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:22 INFO httpx — HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+22:46:23 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:24 INFO httpx — HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+22:46:25 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:25 INFO httpx — HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+22:46:27 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:27 INFO httpx — HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+22:46:28 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:29 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:29 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:29 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:29 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:29 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:29 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:32 INFO httpx — HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+22:46:33 INFO budget.targeted_recovery — [UK] Targeted recovery: 2015_03_UK.pdf -> Research Councils (pre-UKRI) (1 rows)
+22:46:35 INFO httpx — HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+22:46:36 INFO budget.targeted_recovery — [UK] Targeted recovery: 2015_03_UK.pdf -> Engineering and Physical Sciences Research Council (EPSRC) (1 rows)
+22:46:36 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:37 INFO httpx — HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+22:46:38 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:38 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:38 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:38 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:38 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:38 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:38 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:39 INFO httpx — HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+22:46:40 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:40 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:40 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:41 INFO httpx — HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+22:46:42 INFO httpx — HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+22:46:44 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 111 discovered agencies
+22:46:44 INFO httpx — HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+22:46:46 INFO budget.targeted_recovery — Targeted recovery added 7 rows
+22:46:46 INFO reforms.llm_client — Usage data saved to /Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/budget/llm_usage.json
+22:46:46 INFO budget.pipeline — Targeted recovery complete. 7 additional rows found.
+22:46:46 WARNING budget.pipeline — Country cleaner failed (non-fatal): asdict() should be called on dataclass instances
+22:46:46 WARNING budget.pipeline — Dedup failed (non-fatal): asdict() should be called on dataclass instances
+22:46:48 INFO reforms.llm_client — Usage data saved to /Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/budget/llm_usage.json
+22:46:48 INFO budget.pipeline — Pipeline complete: 0 files processed, 53 skipped, 0 errors. 7 new rows. Total: 12926 rows.
+22:46:48 INFO budget.pipeline — Results: /Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/budget/results.csv
+22:46:48 INFO budget.pipeline — LLM cost summary: 23636 calls, $20.8919 total, $0.00088 avg/call
+22:46:48 INFO budget.postprocess — Post-processing: 12926 rows from results.csv
+22:46:48 INFO budget.postprocess —   After decision filter: 12926 rows (kept {'include', 'review'})
+22:46:48 INFO budget.postprocess —   Duplicates: 1348 exact removed, 421 near-dups flagged
+22:46:50 INFO budget.postprocess —   Cross-year outliers: 6322 flagged
+22:46:50 INFO budget.postprocess —   Missing year gaps: 0 flagged
+22:46:50 INFO budget.postprocess —   Unit inconsistencies: 3 series flagged
+22:46:50 INFO budget.postprocess —   Currency inconsistencies: 1 flagged
+22:46:50 INFO budget.postprocess —   Double-count risks: 129 flagged
+22:46:50 INFO budget.postprocess — Clean results: /Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/budget/results_clean.csv (11578 rows)
+22:46:50 INFO budget.postprocess — QA report: /Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/budget/qa_report.csv (8359 issues)
+22:46:50 INFO budget.postprocess — 
+22:46:50 INFO budget.postprocess — ============================================================
+22:46:50 INFO budget.postprocess —   BUDGET LLM — POST-PROCESSING QA SUMMARY
+22:46:50 INFO budget.postprocess — ============================================================
+22:46:50 INFO budget.postprocess —   Input rows:        12926
+22:46:50 INFO budget.postprocess —   Clean rows:        11578  (1348 removed as duplicates)
+22:46:50 INFO budget.postprocess —   Countries:         Australia, Canada, France, Germany, Japan, UK
+22:46:50 INFO budget.postprocess —   Year range:        1955 – 2026
+22:46:50 INFO budget.postprocess — 
+22:46:50 INFO budget.postprocess —   Issues found:
+22:46:50 INFO budget.postprocess —     6322  cross_year_outlier            Cross-year spike: value > 5x compared to adjacent 
+22:46:50 INFO budget.postprocess —     1348  exact_duplicate               Exact duplicate row (same country/year/description
+22:46:50 INFO budget.postprocess —      421  near_duplicate                Near-duplicate: same description & year, amount di
+22:46:50 INFO budget.postprocess —      135  zero_or_negative              amount_local is zero or negative
+22:46:50 INFO budget.postprocess —      129  double_count                  section_total ≈ sum of program_total children (dou
+22:46:50 INFO budget.postprocess —        3  unit_inconsistency            Unit changes mid-series (e.g. million vs thousand)
+22:46:50 INFO budget.postprocess —        1  currency_inconsistency        Currency changes unexpectedly within country-serie
+22:46:50 INFO budget.postprocess — 
+22:46:50 INFO budget.postprocess —   Severity:  high=7799  medium=560
+22:46:50 INFO budget.postprocess — 
+22:46:50 INFO budget.postprocess —   → Review qa_report.csv in Excel to adjudicate flagged cases.
+22:46:50 INFO budget.postprocess —   → results_clean.csv has a 'qa_flags' column for filtering.
+22:46:50 INFO budget.postprocess — ============================================================
+22:46:50 INFO budget.postprocess — 
+22:46:50 INFO budget.pipeline — Clean results: /Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/budget/results_clean.csv
+22:46:50 INFO budget.pipeline — QA report: /Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/budget/qa_report.csv
+22:46:50 INFO budget.compile — === COMPILE: UK ===
+22:46:50 INFO budget.docx_table_parser — [UK] Parsed 0 DOCX files → 0 total rows, 0 with current-year amounts
+22:46:50 INFO budget.text_cache_parser — [UK] Text cache: 0 files, 0 agency rows parsed
+22:46:50 INFO budget.compile — [UK] 0 total rows parsed, 0 with current-year amounts + entity name
+22:46:50 INFO budget.compile — [UK] Loaded 470 rows from pipeline output (results.csv), years: [1982, 1987, 1989, 1993, 1994, 1996, 1998, 1999, 2000, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2023, 2024, 2025]
+22:46:50 INFO budget.compile — [UK] Using LLM pipeline output instead of DOCX/text-cache
+22:46:50 INFO budget.compile — Results → /Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/budget/UK/uk_docx_results.csv (470 rows)
+22:46:50 INFO budget.compile — Agency discovery: UK
+22:46:50 INFO budget.agency_discovery — [UK] Purged 43 noisy entries from discovered_agencies.json
+22:46:50 INFO budget.agency_discovery — [UK] Discovery: 314 candidates after amount/year filter
+22:46:50 INFO budget.agency_discovery — [UK] After noise filter: 216 candidates
+22:46:51 INFO budget.agency_discovery — [UK] 69 genuinely new candidates (not in existing canonical list or prior discovery runs)
+22:46:51 INFO reforms.llm_client — Loaded 23636 existing usage records
+22:46:51 INFO budget.agency_discovery — [UK] Discovery LLM batches: 12 uncached candidates in 1 batches
+22:47:07 INFO httpx — HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: Sustainability of University Research and Infrastructure (rd_programme, conf=0.90, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: Health of Key Disciplines (rd_programme, conf=0.80, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: Additional Funding for Clinical Research (rd_fund, conf=0.95, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: Research Budget (rd_programme, conf=0.85, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: Exascale supercomputer and Artificial Intelligence Research  (rd_programme, conf=0.80, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: Autumn Statement 2023 R&D Package (rd_programme, conf=0.80, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: Life Sciences Manufacturing Funding (rd_programme, conf=0.75, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Review needed: Research and Development Funding 2017-18 (conf=0.70)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: UK-wide R&D Funding for Low and Zero Emission Transport Tech (rd_fund, conf=0.95, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: Combined Government and Industry Investment into R&D Project (rd_programme, conf=0.80, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: Dedicated investment programme for life sciences (rd_programme, conf=0.80, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: National Productivity Investment Fund (rd_programme, conf=0.75, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: Basic Science Infrastructure Fund (rd_programme, conf=0.75, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: NHS Funding for R&D (rd_programme, conf=0.90, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: National Productivity Investment Fund (NPIF) funding for fel (rd_programme, conf=0.80, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: Funding for medical charities' research (rd_fund, conf=0.80, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: Low-Carbon Aircraft Engines Research Fund (rd_fund, conf=0.80, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: 21st Century Nuclear Manufacturing Programme (rd_programme, conf=0.85, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: Vaccine Studies Expansion Fund (rd_programme, conf=0.80, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: Public R&D Investment (rd_programme, conf=0.80, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: Total Public R&D Investment (rd_programme, conf=0.80, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: R&D Funding for Aerospace Firms in East Midlands (rd_fund, conf=0.90, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: Midlands R&D Fund for Vehicle Emissions (rd_fund, conf=0.80, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: Quantum Technology Research and Development (rd_programme, conf=0.80, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: Hydrogen Hub Development Support (rd_programme, conf=0.75, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: National Productivity Investment Fund (rd_programme, conf=0.80, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: UK Government Research Funding (rd_fund, conf=0.75, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: National Productivity Investment Fund (NPIF) (rd_programme, conf=0.80, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: Core Funding for Universities and Research Institutions (rd_programme, conf=0.75, years=1)
+22:47:08 INFO budget.agency_discovery — [UK] Discovered: University Research and Infrastructure Sustainability Invest (rd_programme, conf=0.75, years=1)
+22:47:08 INFO budget.agency_discovery — Saved 15 new discovered agencies for UK → /Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/budget/discovered_agencies.json
+22:47:08 INFO budget.agency_discovery — Review candidates → /Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/budget/uk_discovery_review.csv (1 entries)
+22:47:09 INFO reforms.llm_client — Usage data saved to /Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/budget/llm_usage.json
+22:47:09 INFO budget.agency_discovery — [UK] Discovery complete: 29 auto-added, 1 need review
+22:47:09 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 95 discovered agencies
+22:47:09 INFO budget.canonical_series — Canonical series [UK]: 106 agencies, 29 years, 145 data points, 2876 gaps.
+22:47:09 INFO budget.compile — Detail series → /Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/budget/UK/uk_docx_series.csv
+22:47:10 INFO budget.canonical_series — Totals series [UK]: 5 additive, 0 restatement, 135 single-act rows
+22:47:10 INFO budget.compile — Totals series → /Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/budget/UK/uk_docx_totals.csv
+22:47:10 INFO budget.gap_detector — Gap detection: UK
+22:47:10 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 95 discovered agencies
+22:47:10 INFO budget.canonical_series — [UK] Merged 11 hardcoded + 95 discovered agencies
+22:47:10 INFO budget.gap_detector — [UK] Gap report: 2884 ok, 0 missing (0 can reclassify, 0 need reextract), 132 outliers
+22:47:10 INFO budget.gap_detector — Gap report → /Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/budget/UK/uk_gap_report.csv
+22:47:10 INFO budget.compile — 
+Gap summary for UK:
+ year                                                              canonical_name gap_type action                                                                                                                              diagnosis
+ 2025                                           UKRI (UK Research and Innovation)  outlier verify Amount 750,000,000 outside expected range [-57,000,000 – 76,000,000] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 1993                                                Research Councils (pre-UKRI)  outlier verify     Amount 2,300,000 outside expected range [-1,267,500 – 1,690,000] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2005                                                Research Councils (pre-UKRI)  outlier verify Amount 1,000,000,000 outside expected range [-1,267,500 – 1,690,000] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2007                                                Research Councils (pre-UKRI)  outlier verify    Amount 25,000,000 outside expected range [-1,267,500 – 1,690,000] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2015                                                Research Councils (pre-UKRI)  outlier verify    Amount 30,000,000 outside expected range [-1,267,500 – 1,690,000] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2016                                                Research Councils (pre-UKRI)  outlier verify     Amount 4,500,000 outside expected range [-1,267,500 – 1,690,000] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2004                                              Medical Research Council (MRC)  outlier verify                      Amount 1,200,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2005                                              Medical Research Council (MRC)  outlier verify                     Amount 25,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2015                                              Medical Research Council (MRC)  outlier verify                     Amount 30,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2017                                              Medical Research Council (MRC)  outlier verify                      Amount 4,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2020                                              Medical Research Council (MRC)  outlier verify                    Amount 500,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2015                  Engineering and Physical Sciences Research Council (EPSRC)  outlier verify                    Amount 138,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2003                                 Economic and Social Research Council (ESRC)  outlier verify                     Amount 17,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2007                                                                 Innovate UK  outlier verify                    Amount 100,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2009                                                                 Innovate UK  outlier verify                     Amount 10,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2021                                                                 Innovate UK  outlier verify                    Amount 700,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2025                                                                 Innovate UK  outlier verify                    Amount 130,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2003                                                       Research England (RE)  outlier verify                    Amount 187,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2020                                               Step Change in R&D Investment  outlier verify                     Amount 22,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2020                                      National Institute for Health Research  outlier verify                     Amount 12,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2004                                          Industrial Strategy Challenge Fund  outlier verify   Amount 400,000,000 outside expected range [-3,000,000 – 4,000,000] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2013                                          Industrial Strategy Challenge Fund  outlier verify   Amount 300,000,000 outside expected range [-3,000,000 – 4,000,000] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2017                                          Industrial Strategy Challenge Fund  outlier verify   Amount 460,000,000 outside expected range [-3,000,000 – 4,000,000] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2021                                          Industrial Strategy Challenge Fund  outlier verify   Amount 200,000,000 outside expected range [-3,000,000 – 4,000,000] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2025                                          Industrial Strategy Challenge Fund  outlier verify   Amount 300,000,000 outside expected range [-3,000,000 – 4,000,000] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2016                                                     Strength in Places Fund  outlier verify                    Amount 500,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2018                                                     Strength in Places Fund  outlier verify                    Amount 120,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2020                                                     Strength in Places Fund  outlier verify                    Amount 500,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2021                                                     Strength in Places Fund  outlier verify                    Amount 100,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2025                                                     Strength in Places Fund  outlier verify                    Amount 500,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2020                                                        Mathematics Research  outlier verify                    Amount 300,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2020                                          Life Sciences Investment Programme  outlier verify                    Amount 200,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2020                                                      Natural History Museum  outlier verify                    Amount 180,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2020                                            Defence Research and Development  outlier verify                    Amount 100,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2020                                              Materials Processing Institute  outlier verify                     Amount 22,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2018                 Quantum Technologies Development and Commercialisation Fund  outlier verify                    Amount 235,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2018                                                            Digital Catapult  outlier verify                    Amount 115,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2018                                             International Fellowship Scheme  outlier verify                    Amount 100,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2017                                Investment to attract global research talent  outlier verify                    Amount 100,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2018                                                        Stephenson Challenge  outlier verify                     Amount 78,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2018                                                       Turing AI Fellowships  outlier verify                     Amount 50,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2017                                            International Fellowship Funding  outlier verify                     Amount 50,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2017                                      Challenge Fund for Full-Fibre Networks  outlier verify                    Amount 190,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2017                                            5G Testbeds and Trials Programme  outlier verify                    Amount 160,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2016                                             Compound Semiconductor Catapult  outlier verify                     Amount 50,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2016                                                           Quadram Institute  outlier verify                     Amount 50,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2016                                                       Aerospace R&D funding  outlier verify                     Amount 16,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2016                                                       Birmingham STEAMhouse  outlier verify                     Amount 14,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2018                                    Innovation Fund for the Fishing Industry  outlier verify                     Amount 10,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2023                                   Quantum Research and Innovation Programme  outlier verify                      Amount 2,500,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2024                                           Autumn Statement 2023 R&D Package  outlier verify                    Amount 750,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2024                                                             R&D Tax Reliefs  outlier verify                    Amount 280,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2017             Innovation to Transform Productivity in the Construction Sector  outlier verify                    Amount 170,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2024                                  Satellite Communications Support Programme  outlier verify                    Amount 100,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2015                                                 Energy Research Accelerator  outlier verify                     Amount 60,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2024                                                       Proof-of-Concept Fund  outlier verify                     Amount 60,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2016                                     Midlands R&D Fund for Vehicle Emissions  outlier verify                     Amount 15,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2021                                        Total Capital DEL expenditure on R&D  outlier verify                     Amount 14,800,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2017                                              5G Security Testing Facilities  outlier verify                     Amount 10,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2024                                                   Support for Core Research  outlier verify                      Amount 6,100,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2017                                        5G Applications and Deployment Trial  outlier verify                      Amount 5,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2015                                              UK Government Research Funding  outlier verify                      Amount 4,600,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2017                                                  Jodrell Bank Research Fund  outlier verify                      Amount 4,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2024                      Association to EU Research Programmes and Partnerships  outlier verify                      Amount 2,700,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2024                           R&D and Capital funding for the automotive sector  outlier verify                      Amount 2,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2024                                                   Quantum Computing Mission  outlier verify                      Amount 1,600,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2015                      Commitment to capital investment in science facilities  outlier verify                      Amount 1,100,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2021                     Core Funding for Universities and Research Institutions  outlier verify                      Amount 1,100,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2021                                               Net Zero Innovation Portfolio  outlier verify                      Amount 1,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2023        Exascale supercomputer and Artificial Intelligence Research Resource  outlier verify                    Amount 900,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2021                                      Advanced Research and Invention Agency  outlier verify                    Amount 800,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2024                                         Life Sciences Manufacturing Funding  outlier verify                    Amount 520,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2015                                        Research Partnership Investment Fund  outlier verify                    Amount 401,400,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2021                                                       Advanced Nuclear Fund  outlier verify                    Amount 385,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2024               Combined Government and Industry Investment into R&D Projects  outlier verify                    Amount 270,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2017                                 Investment for High-Skilled Research Talent  outlier verify                    Amount 250,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2021                                                      Net Zero Hydrogen Fund  outlier verify                    Amount 240,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2018                                         Investment for Quantum Technologies  outlier verify                    Amount 235,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2021                          UK Sustainable Aviation Fuel Development Programme  outlier verify                    Amount 180,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2015                  UK Collaboration for Research in Infrastructure and Cities  outlier verify                    Amount 266,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2021                                                Future Nuclear Enabling Fund  outlier verify                    Amount 120,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2024                                 Life Sciences Innovative Manufacturing Fund  outlier verify                     Amount 70,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2024 Research and innovation in support of climate resilience and net zero goals  outlier verify                     Amount 58,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2021                                       COVID-19 Antiviral Treatments Funding  outlier verify                     Amount 33,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2024                                           Multi-Year R&D Missions Programme  outlier verify                     Amount 25,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2015                                                     Digital Economy Centres  outlier verify                     Amount 23,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2021                                              Vaccine Studies Expansion Fund  outlier verify                     Amount 22,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2018                                               Support for UK Nuclear Fusion  outlier verify                     Amount 20,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2024                        Public Sector Research and Innovation Infrastructure  outlier verify                     Amount 14,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2015                                          Advanced Wellbeing Research Centre  outlier verify                     Amount 14,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2015              Centre for Agricultural Informatics and Sustainability Metrics  outlier verify                     Amount 11,800,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2004                                                      R&D Expenditure Credit  outlier verify                     Amount 35,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2005                                                      R&D Expenditure Credit  outlier verify                    Amount 450,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2006                                                      R&D Expenditure Credit  outlier verify                    Amount 480,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2007                                                      R&D Expenditure Credit  outlier verify                    Amount 450,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2013                                                      R&D Expenditure Credit  outlier verify                     Amount 45,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2014                                                      R&D Expenditure Credit  outlier verify                     Amount -5,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2017                                                      R&D Expenditure Credit  outlier verify                      Amount 5,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2018                                 Quantum Technology Research and Development  outlier verify                      Amount 5,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2021                                               Centre for Process Innovation  outlier verify                      Amount 5,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2021                                            Hydrogen Hub Development Support  outlier verify                      Amount 4,800,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2015                                      Knowledge Transfer in Chemicals Sector  outlier verify                      Amount 1,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2025                              South Wales Semiconductor Technologies Cluster  outlier verify                     Amount 10,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2005                                            Research Infrastructure Projects  outlier verify                    Amount 500,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2014                                            Research Infrastructure Projects  outlier verify                      Amount 1,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2015                                            Research Infrastructure Projects  outlier verify                      Amount 1,400,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2025                                               R&D funding from 2030 to 2035  outlier verify                    Amount 500,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2012                                         University Research Facilities Fund  outlier verify                    Amount 100,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2010                                   Low-Carbon Aircraft Engines Research Fund  outlier verify                     Amount 45,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2010                                            Institute of Web Science Funding  outlier verify                     Amount 30,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2010                                          Offshore Wind R&D Facility Support  outlier verify                     Amount 30,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2010                                        Offshore Wind Test Sites Development  outlier verify                     Amount 18,500,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2007    DfES funding for research and knowledge transfer in English Universities  outlier verify                      Amount 1,655,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2005            University Research and Infrastructure Sustainability Investment  outlier verify                      Amount 1,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2006                                                 Single Health Research Fund  outlier verify                      Amount 1,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 1998                                                 University Challenge scheme  outlier verify                     Amount 50,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 1999                                                 University Challenge scheme  outlier verify                     Amount 50,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 1999                                           Venture Capital Challenge funding  outlier verify                     Amount 20,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2008                                                             Project Enthuse  outlier verify                     Amount 10,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2005                                                   Health of Key Disciplines  outlier verify                     Amount 60,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2005                                    Additional Funding for Clinical Research  outlier verify                     Amount 25,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2003                                                             Research Budget  outlier verify                     Amount 17,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2021        UK-wide R&D Funding for Low and Zero Emission Transport Technologies  outlier verify                    Amount 416,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2017                                       National Productivity Investment Fund  outlier verify                  Amount 1,165,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2018                                       National Productivity Investment Fund  outlier verify                    Amount 820,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 1999                                           Basic Science Infrastructure Fund  outlier verify                    Amount 100,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2004                                                         NHS Funding for R&D  outlier verify                    Amount 100,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2024                                     Funding for medical charities' research  outlier verify                     Amount 45,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2016                                21st Century Nuclear Manufacturing Programme  outlier verify                     Amount 30,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2020                                                       Public R&D Investment  outlier verify                     Amount 22,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2021                                                       Public R&D Investment  outlier verify                     Amount 20,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+ 2016                            R&D Funding for Aerospace Firms in East Midlands  outlier verify                     Amount 16,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.
+22:47:10 INFO budget.compile — Combined database → /Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/budget/rd_database.csv (2639 rows, 6 countries, 53 years)
+
+Running LLM extraction pipeline for UK...
+
+Series summary for UK:
+                                                                             years  min_year  max_year
+canonical_name                                                                                        
+21st Century Nuclear Manufacturing Programme                                    29      1982      2025
+5G Applications and Deployment Trial                                            29      1982      2025
+5G Security Testing Facilities                                                  29      1982      2025
+5G Testbeds and Trials Programme                                                29      1982      2025
+Additional Funding for Clinical Research                                        29      1982      2025
+Advanced Nuclear Fund                                                           29      1982      2025
+Advanced Research and Invention Agency                                          29      1982      2025
+Advanced Wellbeing Research Centre                                              29      1982      2025
+Aerospace R&D funding                                                           29      1982      2025
+Arts and Humanities Research Council (AHRC)                                     23      1998      2025
+Association to EU Research Programmes and Partnerships                          29      1982      2025
+Autumn Statement 2023 R&D Package                                               29      1982      2025
+Basic Science Infrastructure Fund                                               29      1982      2025
+Biotechnology and Biological Sciences Research Council (BBSRC)                  25      1994      2025
+Birmingham STEAMhouse                                                           29      1982      2025
+COVID-19 Antiviral Treatments Funding                                           29      1982      2025
+Centre for Agricultural Informatics and Sustainability Metrics                  29      1982      2025
+Centre for Process Innovation                                                   29      1982      2025
+Challenge Fund for Full-Fibre Networks                                          29      1982      2025
+Combined Government and Industry Investment into R&D Projects                   29      1982      2025
+Commitment to capital investment in science facilities                          29      1982      2025
+Compound Semiconductor Catapult                                                 29      1982      2025
+Core Funding for Universities and Research Institutions                         29      1982      2025
+Defence Research and Development                                                29      1982      2025
+DfES funding for research and knowledge transfer in English Universities        29      1982      2025
+Digital Catapult                                                                29      1982      2025
+Digital Economy Centres                                                         29      1982      2025
+Economic and Social Research Council (ESRC)                                     29      1982      2025
+Energy Research Accelerator                                                     29      1982      2025
+Engineering and Physical Sciences Research Council (EPSRC)                      25      1994      2025
+Exascale supercomputer and Artificial Intelligence Research Resource            29      1982      2025
+Funding for medical charities' research                                         29      1982      2025
+Future Nuclear Enabling Fund                                                    29      1982      2025
+Health of Key Disciplines                                                       29      1982      2025
+Hydrogen Hub Development Support                                                29      1982      2025
+Industrial Strategy Challenge Fund                                              30      1982      2025
+Innovate UK                                                                     20      2004      2025
+Innovation Fund for the Fishing Industry                                        29      1982      2025
+Innovation to Transform Productivity in the Construction Sector                 29      1982      2025
+Institute of Web Science Funding                                                29      1982      2025
+International Fellowship Funding                                                29      1982      2025
+International Fellowship Scheme                                                 29      1982      2025
+Investment for High-Skilled Research Talent                                     29      1982      2025
+Investment for Quantum Technologies                                             29      1982      2025
+Investment to attract global research talent                                    29      1982      2025
+Jodrell Bank Research Fund                                                      29      1982      2025
+Knowledge Transfer in Chemicals Sector                                          29      1982      2025
+Life Sciences Innovative Manufacturing Fund                                     29      1982      2025
+Life Sciences Investment Programme                                              29      1982      2025
+Life Sciences Manufacturing Funding                                             29      1982      2025
+Low-Carbon Aircraft Engines Research Fund                                       29      1982      2025
+Materials Processing Institute                                                  29      1982      2025
+Mathematics Research                                                            29      1982      2025
+Medical Research Council (MRC)                                                  29      1982      2025
+Midlands R&D Fund for Vehicle Emissions                                         29      1982      2025
+Multi-Year R&D Missions Programme                                               29      1982      2025
+NHS Funding for R&D                                                             29      1982      2025
+National Institute for Health Research                                          29      1982      2025
+National Productivity Investment Fund                                           30      1982      2025
+Natural Environment Research Council (NERC)                                     29      1982      2025
+Natural History Museum                                                          29      1982      2025
+Net Zero Hydrogen Fund                                                          29      1982      2025
+Net Zero Innovation Portfolio                                                   29      1982      2025
+Offshore Wind R&D Facility Support                                              29      1982      2025
+Offshore Wind Test Sites Development                                            29      1982      2025
+Project Enthuse                                                                 29      1982      2025
+Proof-of-Concept Fund                                                           30      1982      2025
+Public R&D Investment                                                           29      1982      2025
+Public Sector Research and Innovation Infrastructure                            29      1982      2025
+Quadram Institute                                                               29      1982      2025
+Quantum Computing Mission                                                       29      1982      2025
+Quantum Research and Innovation Programme                                       29      1982      2025
+Quantum Technologies Development and Commercialisation Fund                     29      1982      2025
+Quantum Technology Research and Development                                     29      1982      2025
+R&D Expenditure Credit                                                          29      1982      2025
+R&D Funding for Aerospace Firms in East Midlands                                29      1982      2025
+R&D Tax Reliefs                                                                 29      1982      2025
+R&D and Capital funding for the automotive sector                               29      1982      2025
+R&D funding from 2030 to 2035                                                   29      1982      2025
+Research Budget                                                                 29      1982      2025
+Research Councils (pre-UKRI)                                                    24      1982      2018
+Research England (RE)                                                           26      1993      2025
+Research Infrastructure Projects                                                29      1982      2025
+Research Partnership Investment Fund                                            30      1982      2025
+Research and innovation in support of climate resilience and net zero goals     29      1982      2025
+Satellite Communications Support Programme                                      29      1982      2025
+Science and Technology Facilities Council (STFC)                                25      1994      2025
+Single Health Research Fund                                                     29      1982      2025
+South Wales Semiconductor Technologies Cluster                                  29      1982      2025
+Step Change in R&D Investment                                                   29      1982      2025
+Stephenson Challenge                                                            29      1982      2025
+Strength in Places Fund                                                         29      1982      2025
+Support for Core Research                                                       29      1982      2025
+Support for UK Nuclear Fusion                                                   29      1982      2025
+Total Capital DEL expenditure on R&D                                            29      1982      2025
+Turing AI Fellowships                                                           29      1982      2025
+UK Collaboration for Research in Infrastructure and Cities                      30      1982      2025
+UK Government Research Funding                                                  29      1982      2025
+UK Sustainable Aviation Fuel Development Programme                              29      1982      2025
+UK-wide R&D Funding for Low and Zero Emission Transport Technologies            29      1982      2025
+UKRI (UK Research and Innovation)                                                6      2018      2025
+University Challenge scheme                                                     29      1982      2025
+University Research Facilities Fund                                             29      1982      2025
+University Research and Infrastructure Sustainability Investment                29      1982      2025
+Vaccine Studies Expansion Fund                                                  29      1982      2025
+Venture Capital Challenge funding                                               29      1982      2025

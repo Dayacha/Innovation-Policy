@@ -582,6 +582,93 @@ def _print_cost_summary(client) -> None:
         pass
 
 
+def run_targeted_recovery_only(
+    config: Optional[dict] = None,
+    config_path: Optional[Path] = None,
+    countries: Optional[list[str]] = None,
+    year_range: Optional[tuple[int, int]] = None,
+    source_file_filter: Optional[str] = None,
+    use_cache: bool = True,
+) -> list:
+    """
+    Re-run only the document-level targeted recovery pass on existing results.csv.
+
+    This skips the expensive extraction pass and only re-reads cached document text
+    for the selected files, looking for missed rows for known agencies.
+    """
+    from budget import config as cfg
+    from budget.output_schema import rows_to_csv, rows_to_excel, load_csv
+    from budget.targeted_recovery import recover_missing_agency_rows
+
+    if config is None:
+        config = load_config(config_path)
+
+    blm_cfg = config.get("budget", {})
+    pdf_root = Path(blm_cfg.get("pdf_root", str(cfg.PDF_ROOT)))
+    output_dir = Path(blm_cfg.get("output_dir", str(cfg.OUTPUT_DIR)))
+    pdf_text_cache_dir = Path(blm_cfg.get("pdf_text_cache_dir", str(cfg.PDF_TEXT_CACHE_DIR)))
+    results_csv = output_dir / "results.csv"
+    results_excel = output_dir / "results.xlsx"
+
+    if not results_csv.exists():
+        logger.error("No results.csv found — run extraction first.")
+        return []
+
+    file_specs = _discover_files(pdf_root, countries=countries, year_range=year_range)
+    if source_file_filter:
+        needle = source_file_filter.lower()
+        file_specs = [spec for spec in file_specs if needle in spec[2].name.lower()]
+
+    if not file_specs:
+        logger.warning("No source files matched the targeted recovery filters.")
+        return load_csv(results_csv)
+
+    all_rows = load_csv(results_csv)
+    before = len(all_rows)
+
+    logger.info(
+        f"Targeted recovery only: {len(file_specs)} files"
+        + (f" (filter={source_file_filter})" if source_file_filter else "")
+    )
+    for country, year, path in file_specs[:20]:
+        logger.info(f"  {country} {year}: {path.name}")
+    if len(file_specs) > 20:
+        logger.info(f"  … and {len(file_specs) - 20} more")
+
+    # Replace prior targeted_recovery rows for the selected files so a rerun
+    # updates recovery output cleanly instead of stacking retries.
+    selected_files = {path.name for _, _, path in file_specs}
+    all_rows = [
+        r for r in all_rows
+        if not (
+            str(r.get("source_file", "")) in selected_files
+            and str(r.get("extraction_pass", "")) == "targeted_recovery"
+        )
+    ]
+
+    all_rows = recover_missing_agency_rows(
+        all_rows=all_rows,
+        file_specs=file_specs,
+        config=config,
+        pdf_text_cache_dir=pdf_text_cache_dir,
+        use_cache=use_cache,
+    )
+    added = len(all_rows) - len([r for r in load_csv(results_csv) if not (
+        str(r.get("source_file", "")) in selected_files
+        and str(r.get("extraction_pass", "")) == "targeted_recovery"
+    )])
+
+    rows_to_csv(all_rows, results_csv)
+    try:
+        rows_to_excel(all_rows, results_excel)
+    except ImportError:
+        logger.warning("openpyxl not available — skipping Excel export")
+
+    logger.info(f"Targeted recovery only complete. Added {added} rows.")
+    logger.info(f"Results: {results_csv}")
+    return all_rows
+
+
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
@@ -650,6 +737,16 @@ def _cli() -> None:
         help="Skip extraction and only run QA post-processing on existing results.csv",
     )
     parser.add_argument(
+        "--targeted-recovery-only",
+        action="store_true",
+        help="Skip extraction and only run the document-level targeted recovery pass on existing results.csv",
+    )
+    parser.add_argument(
+        "--source-file",
+        default=None,
+        help="Optional source filename filter for --targeted-recovery-only (substring match)",
+    )
+    parser.add_argument(
         "--verify",
         action="store_true",
         help="Run amount verification pass on existing results.csv (re-reads source docs, uses LLM)",
@@ -685,6 +782,16 @@ def _cli() -> None:
             year_range = (int(parts[0]), int(parts[1]))
         elif len(parts) == 1:
             year_range = (int(parts[0]), int(parts[0]))
+
+    if args.targeted_recovery_only:
+        run_targeted_recovery_only(
+            config=config,
+            countries=args.countries,
+            year_range=year_range,
+            source_file_filter=args.source_file,
+            use_cache=not args.fresh,
+        )
+        return
 
     # --verify: re-read source docs and fix amounts for known confusion patterns
     if args.verify:

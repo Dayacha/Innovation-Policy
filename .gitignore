@@ -2,6 +2,10 @@
 # Innovation Policy Pipeline — .gitignore
 # =============================================================================
 
+# ── Temporary chat context dumps ─────────────────────────────────────────────
+CONTEXT_FOR_CHAT.md
+AUDIT_INSTRUCTIONS.md
+
 # ── Python ────────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]

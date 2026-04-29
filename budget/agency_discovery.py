@@ -156,6 +156,13 @@ _COUNTRY_NOISE_PATTERNS: dict[str, list[re.Pattern]] = {
     ],
     "France": [
         re.compile(r"^Payment credits for\b", re.IGNORECASE),
+        re.compile(r"^Total budget for\b", re.IGNORECASE),
+        re.compile(r"^Total(?: des)? cr[ée]dits? de paiement pour\b", re.IGNORECASE),
+        re.compile(r"^Total for\b", re.IGNORECASE),
+        re.compile(r"^E\s*T\s*A\s*T\s*[A-E]\b", re.IGNORECASE),
+        re.compile(r"^Etat\s*[A-E]\b", re.IGNORECASE),
+        re.compile(r"^Titre\s*[IVX]+\b", re.IGNORECASE),
+        re.compile(r"^Mesures nouvelles\b", re.IGNORECASE),
         re.compile(r"^Research in the fields? of\b", re.IGNORECASE),
         re.compile(r"^Multidisciplinary Scientific and Technological Research$", re.IGNORECASE),
         re.compile(r"^Space Research$", re.IGNORECASE),
@@ -163,16 +170,58 @@ _COUNTRY_NOISE_PATTERNS: dict[str, list[re.Pattern]] = {
         re.compile(r"^Applied Research and Innovation in Agriculture$", re.IGNORECASE),
     ],
     "Germany": [
-        re.compile(r"^Research (Funding|Infrastructure|Projects)$", re.IGNORECASE),
-        re.compile(r"^Research and Experimental Development$", re.IGNORECASE),
-        re.compile(r"^Allocations (and grants )?for research", re.IGNORECASE),
-        re.compile(r"^Allocations for Research and Development$", re.IGNORECASE),
-        re.compile(r"^Research and Development in (Applied|Basic) Research$", re.IGNORECASE),
+        # ── Budget code patterns (Titelgruppe / Titel codes) ──────────────────
+        re.compile(r"^(Group|Tgr\.)\s+\d+\b", re.IGNORECASE),          # "Group 50 Leibniz" / "Tgr. 50 Leibniz"
+        re.compile(r"^\d{3}\s+\d{2}\s*[-–]", re.IGNORECASE),          # "685 12 - Future Education"
+        re.compile(r"^Group\s+Title\s+\d+\b", re.IGNORECASE),          # "Group Title 31 Innovation..."
+        # ── Programme / Program (Germany tracks named institutions, not programme buckets) ──
+        re.compile(r"\bProgram(?:me)?\b", re.IGNORECASE),
+        # ── Generic starts: funding / grants / support / promotion ────────────
+        re.compile(r"^(Funding|Grants?)\s+(for|of|to)\b", re.IGNORECASE),
+        re.compile(r"^(Support|Promotion|Accompanying)\s+(for|of|to|measures?|projects?|activities?)\b", re.IGNORECASE),
+        re.compile(r"^(Allocations?|Payments?|Expenditures?)\s+((and\s+grants?\s+)?for|to)\b", re.IGNORECASE),
+        re.compile(r"^(Institutional|Targeted|Purpose-bound)\s+(grants?|allocations?)\s+to\b", re.IGNORECASE),
+        # ── Grants TO named institutions (those are covered by canonical entries) ──
+        re.compile(r"^Grants?\s+to\s+(the\s+)?(Helmholtz|Leibniz|Max|Fraunhofer|DFG|universities|institutes?|research)", re.IGNORECASE),
+        # ── Discovered entries that duplicate hardcoded canonicals ─────────────
+        re.compile(r"^Leibniz\s+Association\s*$", re.IGNORECASE),   # → Leibniz-Gemeinschaft (WGL)
+        # ── Generic "Research for/on/in" descriptions ────────────────────────
+        re.compile(r"^Research\s+(for|on|in|to)\b", re.IGNORECASE),
+        re.compile(r"^(Scientific|Medical|Healthcare?|Health)\s+Research\s*$", re.IGNORECASE),
+        re.compile(r"^Research\s+and\s+(Science|Technology|Development|Innovation)\s*$", re.IGNORECASE),
+        re.compile(r"^Research\s+and\s+Science\s+Institutions?\s*$", re.IGNORECASE),
+        re.compile(r"^Research\s+(and\s+)?Development\s+(Projects|Funding|and\s+Innovation)\s*$", re.IGNORECASE),
+        re.compile(r"^(Science|Sciences)\s+and\s+(Research|Technology)\s*$", re.IGNORECASE),
+        # ── Generic innovation / development descriptions ─────────────────────
+        re.compile(r"^R&D\s+(projects|funding|in|for)\b", re.IGNORECASE),
+        re.compile(r"^Project\s+Funding\b", re.IGNORECASE),
+        re.compile(r"^(Innovation|Innovative)\s+(Funding|Grants?|Projects?|Supporting|Stimulation|Competitions?|Promotion)\b", re.IGNORECASE),
+        re.compile(r"^Innovation\s+and\s+Technology\s+Analyses?\b", re.IGNORECASE),
+        re.compile(r"^(Structural\s+)?Innovations?\s+(in|through|for)\b", re.IGNORECASE),
+        # ── Originally hardcoded patterns (retained) ─────────────────────────
+        re.compile(r"^Allocations?,?\s*(grants?,?\s+and\s+)?(reimbursements?|contributions?)?\s*for\b", re.IGNORECASE),
         re.compile(r"^Innovation Promotion$", re.IGNORECASE),
-        re.compile(r"^Basic Research Programme$", re.IGNORECASE),
-        re.compile(r"^Research, Technology, and Space$", re.IGNORECASE),
         re.compile(r"^Joint research funding", re.IGNORECASE),
-        re.compile(r"^Institutional grants to non-university research institutions$", re.IGNORECASE),
+        re.compile(r"^Pact\s+for\s+Research\b", re.IGNORECASE),          # redundant — covered by 5 big orgs
+        re.compile(r"^Indirect\s+Support\b", re.IGNORECASE),
+        re.compile(r"^Instruments?\s+(for|to|in)\b", re.IGNORECASE),
+        re.compile(r"^(Measures?|Projects?)\s+(to|for|in)\b", re.IGNORECASE),
+        re.compile(r"^(Enhancement|Strengthening|Developing|Expanding|Creating|Establishing)\b", re.IGNORECASE),
+        re.compile(r"^(Implementation|Participation|Cooperation)\s+(of|with|in)\b", re.IGNORECASE),
+        # ── "Research and [Experimental] Development for/in/of/Funding..." ───
+        re.compile(r"^Research\s+and\s+(Experimental\s+)?Development\s+(for|in|of|Funding|and)\b", re.IGNORECASE),
+        # ── [Field] Research (generic topic descriptions, not named institutions) ─
+        re.compile(r"^(Geosciences?|Biotechnology|Genome|Genomic|Materials?|Marine\s+Biotechnology|Nanoelectronics|Nanobiotechnology|Display\s+Technology|System\s+Technology|Intelligent\s+Systems?|Structural\s+Further\s+Development|New\s+Technology\s+Fields?|Cross[-\s]Sectional|Reactor\s+Safety|Safety|Scenario-Oriented\s+Security|Offshore\s+Wind\s+Energy|Geothermal|High-Temperature\s+Solar|Organ\s+Function|Tissue\s+Engineering|Molecular\s+Nutrition|Doping\s+Analytics)\s+Research\b", re.IGNORECASE),
+        # ── Digitalization / AI programme lines (generic policy descriptions) ─
+        re.compile(r"^Digitalization\s+(in|of)\b", re.IGNORECASE),
+        re.compile(r"^Artificial\s+Intelligence\s+(in|for)\b", re.IGNORECASE),
+        re.compile(r"^Innovative\s+(Applications?|Component|Development|Transport|Work|IT|Startup)\b", re.IGNORECASE),
+        re.compile(r"^(Model|Future)\s+(Projects?|Education|Measures?|Investments?)\b", re.IGNORECASE),
+        re.compile(r"^Federal\s+(Grant|Program)\b", re.IGNORECASE),
+        re.compile(r"^(Basic|Fundamental)\s+(Scientific\s+)?Research\s+(in|for|of|Fund)\b", re.IGNORECASE),
+        re.compile(r"^(Individual|Collaborative)\s+(Projects?\s+|Research\s+)?(Including|on|of|for)\b", re.IGNORECASE),
+        re.compile(r"^(HIV|STI|Sports?\s+Science|Doping|Human\s+Genome)\s+(and\s+\w+\s+)?Research\s+Projects?\b", re.IGNORECASE),
+        re.compile(r"^IT\s+Security\s+(Development\s+Projects?|for\s+IT)\b", re.IGNORECASE),
     ],
     "Japan": [
         re.compile(r"^Research Promotion( Expenses)?$", re.IGNORECASE),
@@ -249,8 +298,10 @@ def _purge_noisy_discovered(country: str) -> int:
     existing = data.get(country, [])
     clean = [
         a for a in existing
+        # Only test canonical_name — source_entity may have raw budget-code prefixes
+        # (e.g. "687 46 - Alexander von Humboldt Foundation") that would false-positive
+        # on the Titel-code noise pattern even for legitimate institutions.
         if not _is_noise(a.get("canonical_name", ""), country)
-        and not _is_noise(a.get("source_entity", ""), country)
     ]
     removed = len(existing) - len(clean)
 
@@ -413,8 +464,9 @@ def _classify_prompt(clean_name: str, country: str, n_years: int,
 def _batch_classify_prompt(rows: list[dict], country: str, currency: str) -> str:
     lines = [f"Country: {country}", "Candidates:"]
     for i, row in enumerate(rows, start=1):
+        clean_name = row.get("clean") or row.get("_clean") or row.get("entity_raw") or ""
         lines.append(
-            f'{i}. name="{row["clean"]}" | years={int(row["n_years"])} | '
+            f'{i}. name="{clean_name}" | years={int(row["n_years"])} | '
             f'amount_range={float(row["min_amount"]):,.0f}–{float(row["max_amount"]):,.0f} {currency} (thousands)'
         )
     return "\n".join(lines)

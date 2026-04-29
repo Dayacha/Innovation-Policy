@@ -101,14 +101,25 @@ COUNTRY_PROFILES: dict[str, dict] = {
 
     # -----------------------------------------------------------------------
     # UNITED KINGDOM
-    # Document type: Autumn Budget / Spending Review reports (HM Treasury)
-    # Units: GBP billion in prose; GBP thousand in Supply Estimates tables
-    # Structure: Narrative prose with embedded DEL tables by department.
-    #   - R&D amounts appear as "£X billion" in narrative policy chapters
-    #   - DEL tables show Resource DEL / Capital DEL by department
-    #   - BEIS (Dept for Business, Energy & Industrial Strategy) / DSIT is the
-    #     main science department — look for its DEL table rows
-    #   - UKRI row appears within BEIS/DSIT DEL as a sub-line or footnote
+    # Document type: varies by era — see year_notes for per-year instructions.
+    #
+    # ERA GUIDE (critical — document structure changes completely by period):
+    #   1975-1992: Financial Statement and Budget Report (FSBR). Macro overview
+    #              only — no agency-level R&D data. Do NOT try to extract.
+    #   1993-2002: Budget Report / Pre-Budget Report. Narrative prose with some
+    #              £ billion policy commitments. Limited structured data.
+    #   2003-2009: Budget Report with dedicated Science chapter (Ch.3 / Ch.4).
+    #              Science spending table in £ MILLION — key extraction target.
+    #   2010-2016: Spending Review / Budget with BIS DEL tables. £ billion.
+    #   2017:      Industrial Strategy Challenge Fund created. BIS → BEIS.
+    #   2018-2020: UKRI created April 2018. BEIS leads science. £ billion DEL.
+    #   2021+:     SR21 Table 2.2 and successors — structured R&D DEL by agency.
+    #              ARIA created 2021. DSIT created Feb 2023 (BEIS split).
+    #
+    # Units:
+    #   - Science chapter tables (2003-2009): £ MILLION
+    #   - DEL/Spending Review prose and tables (2010+): £ BILLION
+    #   - Supply Estimates detailed tables: £ THOUSAND (do not use these)
     # -----------------------------------------------------------------------
     "UK": {
         "skip_if": [
@@ -133,6 +144,41 @@ COUNTRY_PROFILES: dict[str, dict] = {
             # Loan and equity injection instruments
             "Lines labelled 'Equity injection', 'Loan', or 'Financial instrument' "
             "— these are investment vehicles, not direct R&D appropriations.",
+
+            # Multi-year Spending Review commitments in prose
+            "Spending announcements expressed as 'over X years' or 'by 2025' in "
+            "narrative text — these are multi-year commitments, not annual appropriations. "
+            "SKIP unless the annual breakdown is given explicitly in a table.",
+
+            # R&D tax credit fiscal costs — these are revenue foregone, not spending
+            "R&D tax credit entries with negative amounts or labelled 'fiscal cost', "
+            "'revenue cost', 'cost to Exchequer', or 'tax relief' — these are tax "
+            "expenditures, not budget appropriations. SKIP them.",
+
+            # Non-R&D green / climate / infrastructure items commonly hallucinated
+            # as R&D because they appear near science budget text in Budget documents.
+            "Items primarily about: electric vehicle grants (Plug-in Car Grant, charging "
+            "network rollout), Climate Change Levy, nature recovery funds (Nature for "
+            "Climate Fund, Darwin Plus, Natural Environment Impact Fund), flood management, "
+            "fly-tipping enforcement, brownfield land remediation, house-building — "
+            "these are environmental/infrastructure programmes with no R&D component. SKIP. "
+            "Also skip: 'Green Heat Networks', 'Carbon Capture and Storage Infrastructure "
+            "Fund' (unless explicitly described as a research/pilot programme), "
+            "'Plug-in Car Grant', 'fast-charging network rollout'. "
+            "Rule: if the item is operational infrastructure or a consumer subsidy rather "
+            "than a defined research or innovation programme, SKIP it.",
+
+            # Anachronism guard — hard block for agencies that did not yet exist
+            # These bodies are commonly hallucinated by the LLM in pre-creation years.
+            "ANACHRONISM RULE — DO NOT extract ANY item mentioning: "
+            "'Industrial Strategy Challenge Fund' or 'ISCF' if document year < 2017 "
+            "(ISCF created November 2017); "
+            "'UK Research and Innovation' or 'UKRI' if document year < 2018 "
+            "(UKRI created April 2018); "
+            "'Advanced Research and Invention Agency' or 'ARIA' if document year < 2021; "
+            "'Department for Science, Innovation and Technology' or 'DSIT' if document year < 2023; "
+            "'Department for Business, Energy and Industrial Strategy' or 'BEIS' if document year < 2016. "
+            "If you see these names in a pre-creation document, the LLM has hallucinated them. SKIP.",
         ],
         "include_note": [
             # BEIS/DSIT is the primary science department
@@ -143,83 +189,296 @@ COUNTRY_PROFILES: dict[str, dict] = {
             "research councils) as section_total with decision=include.",
 
             # Each Research Council is a dedicated science agency
-            "UKRI (UK Research and Innovation) and each constituent research council "
-            "(MRC, EPSRC, NERC, BBSRC, ESRC, AHRC, STFC, Innovate UK, Research England) "
-            "are dedicated science agencies — their full operating appropriations are include.",
+            "UKRI (UK Research and Innovation, created April 2018) and each constituent "
+            "research council (MRC, EPSRC, NERC, BBSRC, ESRC, AHRC, STFC, Innovate UK, "
+            "Research England) are dedicated science agencies — their full operating "
+            "appropriations are include. NOTE: UKRI did NOT exist before 2018.",
 
             # Science Budget and Industrial Strategy Challenge Fund
-            "The 'science budget', 'Industrial Strategy Challenge Fund', and "
-            "'Strength in Places Fund' are R&D-specific allocations — include them.",
+            "The 'science budget', 'ring-fenced science budget', and "
+            "'Industrial Strategy Challenge Fund (ISCF, created 2017)' are R&D-specific "
+            "allocations — include them. NOTE: ISCF did NOT exist before 2017.",
 
             # Unit handling — CRITICAL
-            "UK Budget documents use TWO different unit conventions: "
-            "(a) Narrative prose and Spending Review / DEL tables: amounts in £ BILLION "
-            "    → set unit='billion', e.g. '£1.6 billion' → amount_local=1.6, unit='billion'. "
-            "    DO NOT convert billions to thousands yourself — return the raw number with unit='billion'. "
-            "(b) Detailed Supply Estimates tables: amounts in £ THOUSAND "
-            "    → set unit='thousand'. "
-            "(c) NPIF / policy decision tables: amounts in £ MILLION "
-            "    → set unit='million', e.g. '£500 million' → amount_local=500, unit='million'. "
+            "UK Budget documents use different unit conventions by era: "
+            "(a) Science chapter tables (2003-2009): amounts in £ MILLION "
+            "    → set unit='million', e.g. '5,397' → amount_local=5397, unit='million'. "
+            "    DO NOT interpret these as thousands. "
+            "(b) DEL Spending Review tables (2010+): amounts in £ BILLION "
+            "    → set unit='billion', e.g. '£14.6 billion' → amount_local=14.6, unit='billion'. "
+            "    DO NOT convert billions to thousands. "
+            "(c) Policy announcements in prose: use the unit stated (million or billion). "
             "When the text says '£1.6 billion', return amount_local=1.6 and unit='billion'. "
             "When the text says '£500 million', return amount_local=500 and unit='million'. "
             "NEVER multiply billions by 1000 and call the result thousands.",
         ],
         "year_notes": {
-            # 2003–2009: Budget documents contain a dedicated 'Science and Innovation'
-            # chapter (typically Chapter 3) with a science spending summary table.
-            # That table shows amounts in £ MILLION (not thousand, not billion).
-            # The key rows to extract are:
-            #   - "DTI Science Budget" / "Ring-fenced science budget" → unit='million'
-            #   - "DfES / DIUS funding for research in universities" → unit='million'
-            #   - "Total UK science spending" / "Total public investment in science" → unit='million'
-            # UNIT CRITICAL: these table values like "3,383" or "5,397" are in £ MILLION.
-            #   Return amount_local=3383, unit='million'  (NOT unit='thousand').
-            # Also extract any named programme with a specific £amount in this chapter.
-            # Do NOT extract percentages ("rising 2.5% in real terms") — only £ amounts.
+            # ---------------------------------------------------------------
+            # 1975-1992: Financial Statement and Budget Report (FSBR)
+            # These documents are macroeconomic overviews — public spending
+            # totals by function, PSBR projections, monetary policy. They do
+            # NOT contain agency-level R&D appropriations. Return empty.
+            # ---------------------------------------------------------------
+            **{y: (
+                "SKIP. This is a Financial Statement and Budget Report (FSBR) "
+                "macro overview document. It contains only aggregate public "
+                "expenditure projections, PSBR figures, and fiscal tables — "
+                "NO agency-level R&D appropriations. Return {\"items\": []}."
+            ) for y in range(1975, 1993)},
+
+            # ---------------------------------------------------------------
+            # 1993-2002: Budget Report / Pre-Budget Report
+            # Narrative documents with some £ billion policy mentions.
+            # Rarely contain structured R&D tables. Extract only if an explicit
+            # £ amount is tied to a named R&D programme in the text.
+            # ANACHRONISM GUARD: UKRI, ISCF, ARIA, DSIT, BEIS did NOT exist.
+            # Known bodies: OST, DTI, Research Councils (individually named),
+            # HEFCE, Technology Foresight Programme, Foresight programme.
+            # ---------------------------------------------------------------
+            **{y: (
+                "Budget Report / Pre-Budget Report — narrative document. "
+                "Extract ONLY if an explicit £ figure is directly tied to a "
+                "named R&D programme or research council in the text. "
+                "DO NOT extract: vague 'science investment' statements, "
+                "percentages, or multi-year totals. "
+                "ANACHRONISM GUARD: UKRI (created 2018), ISCF (created 2017), "
+                "ARIA (created 2021), BEIS (created 2016), DSIT (created 2023) "
+                "did NOT exist in this year — do NOT hallucinate these."
+            ) for y in range(1993, 2003)},
+
+            # ---------------------------------------------------------------
+            # 2003-2009: Budget with Science Chapter
+            # Contains a dedicated 'Science and Innovation Investment Framework'
+            # chapter (typically Chapter 3 or 4). A science spending summary
+            # table shows amounts in £ MILLION. Key rows:
+            #   - "DTI Science Budget" / "Ring-fenced science budget"
+            #   - "DfES / DIUS funding for research in universities"
+            #   - "Total UK science spending" / "Total public investment in science"
+            # UNIT CRITICAL: table values like '3,383' or '5,397' are £ MILLION.
+            #   Return amount_local=3383, unit='million' (NOT thousand).
+            # ANACHRONISM GUARD: UKRI (2018), ISCF (2017), BEIS (2016) did NOT exist.
+            # ---------------------------------------------------------------
             2003: (
-                "Science chapter: look for science spending table in Chapter 3. "
-                "Extract ring-fenced science budget total if a £ figure is stated. "
-                "Table amounts are in £ MILLION → unit='million'."
+                "Science and Innovation chapter: look for science spending table. "
+                "Extract: ring-fenced DTI Science Budget total, DfES university research "
+                "funding, and 'Total UK science spending' if £ figures stated. "
+                "Table amounts are in £ MILLION → unit='million'. "
+                "ANACHRONISM GUARD: UKRI, ISCF, BEIS, DSIT did NOT exist in 2003 — "
+                "do NOT extract them."
             ),
             2004: (
-                "Science chapter: look for science spending table in Chapter 3. "
-                "Extract ring-fenced science budget total if a £ figure is stated. "
+                "Science and Innovation chapter: look for science spending table. "
+                "Extract ring-fenced science budget total and DfES university research "
+                "funding if £ figures are stated. "
                 "Table amounts are in £ MILLION → unit='million'. "
-                "NOTE: 'Industrial Strategy Challenge Fund' did NOT exist in 2004 — "
-                "do NOT extract it. Any 'Challenge Fund' reference is a different programme."
+                "ANACHRONISM GUARD: UKRI, ISCF (created 2017), BEIS, DSIT did NOT "
+                "exist in 2004 — do NOT extract them."
             ),
             2005: (
-                "Science chapter: extract ring-fenced science budget total from Chapter 3 table. "
-                "Table amounts are in £ MILLION → unit='million'."
+                "Science and Innovation Investment Framework chapter: look for science "
+                "spending table. Extract ring-fenced science budget total and university "
+                "research funding. Table amounts in £ MILLION → unit='million'. "
+                "ANACHRONISM GUARD: UKRI, ISCF, BEIS, DSIT did NOT exist in 2005."
             ),
             2006: (
-                "Science chapter: extract ring-fenced science budget total from Chapter 3 table. "
-                "Table amounts are in £ MILLION → unit='million'."
+                "Science and Innovation Investment Framework chapter: look for science "
+                "spending table. Extract ring-fenced science budget total. "
+                "Table amounts in £ MILLION → unit='million'. "
+                "ANACHRONISM GUARD: UKRI, ISCF, BEIS, DSIT did NOT exist in 2006."
             ),
             2007: (
-                "Budget 2007 contains a specific science spending table (look for "
+                "Budget 2007: science spending table in science chapter. Look for "
                 "'DTI Science Budget Departmental Expenditure Limits' and "
-                "'Total UK science spending'). "
-                "UNIT CRITICAL: values in this table like '3,383' and '5,397' are in "
-                "£ MILLION → return amount_local=3383, unit='million' and "
-                "amount_local=5397, unit='million'. "
-                "Also extract: DfES research funding, Energy Technologies Institute £100M."
+                "'Total UK science spending'. "
+                "UNIT CRITICAL: values like '3,383' and '5,397' are in £ MILLION "
+                "→ amount_local=3383, unit='million' and amount_local=5397, unit='million'. "
+                "Also extract: DfES research funding, Energy Technologies Institute. "
+                "ANACHRONISM GUARD: UKRI, ISCF, BEIS, DSIT did NOT exist in 2007."
             ),
             2008: (
-                "Science chapter: extract ring-fenced science budget total from Chapter 3 table. "
-                "Table amounts are in £ MILLION → unit='million'. "
-                "Also extract any named R&D programme announcements with specific £ amounts."
+                "Science chapter: extract ring-fenced science budget total from summary "
+                "table. "
+                "UNIT RULE — MANDATORY: The science spending table header says '£ million'. "
+                "A value like '6,435' in that table means £6,435 MILLION = £6.4 BILLION. "
+                "Set amount_local=6435, unit='million'. DO NOT set unit='thousand'. "
+                "If the table shows 'Total public investment in science and research' with "
+                "a number around 6,000–7,000: that is in £ million → unit='million'. "
+                "For prose announcements like '£300 million for X': amount_local=300, unit='million'. "
+                "ANACHRONISM GUARD: UKRI, ISCF, BEIS, DSIT did NOT exist in 2008 — DO NOT extract."
             ),
             2009: (
-                "Science chapter: extract ring-fenced science budget total from Chapter 3 table. "
-                "Table amounts are in £ MILLION → unit='million'. "
-                "Also extract Technology Strategy Board funding and any named R&D programmes."
+                "Science chapter: extract ring-fenced science budget total from summary "
+                "table. "
+                "UNIT RULE — MANDATORY: The science spending table header says '£ million'. "
+                "A value like '6,912' in that table means £6,912 MILLION = £6.9 BILLION. "
+                "Set amount_local=6912, unit='million'. DO NOT set unit='thousand'. "
+                "If the table shows 'Total public investment in science and research' with "
+                "a number around 6,000–7,500: that is in £ million → unit='million'. "
+                "Also extract Technology Strategy Board funding and named R&D programmes. "
+                "ANACHRONISM GUARD: UKRI, ISCF, BEIS, DSIT did NOT exist in 2009 — DO NOT extract."
+            ),
+
+            # ---------------------------------------------------------------
+            # 2010-2015: Spending Review / Budget with BIS DEL tables
+            # Comprehensive Spending Review 2010 (CSR10) restructured departments.
+            # BIS (Dept for Business, Innovation and Skills) is now the main
+            # science dept, inheriting DTI/DIUS R&D. DEL tables in £ billion.
+            # Key items: BIS Capital DEL science ring-fence, research council totals.
+            # ANACHRONISM GUARD: UKRI (2018), ISCF (2017) did NOT exist.
+            # ---------------------------------------------------------------
+            2010: (
+                "Spending Review 2010: look for BIS (Business, Innovation and Skills) "
+                "DEL table. Extract: BIS total Capital DEL, ring-fenced science budget "
+                "within BIS (kept flat in real terms per SR10). "
+                "Amounts in £ BILLION → unit='billion'. "
+                "Also extract any named research council totals if stated with £ figures. "
+                "ANACHRONISM GUARD: UKRI (created 2018), ISCF (created 2017) did NOT "
+                "exist — do NOT extract them."
+            ),
+            2011: (
+                "Budget 2011: extract BIS science-related DEL if a £ figure is stated "
+                "for the ring-fenced science budget or a named research council. "
+                "Amounts in £ BILLION → unit='billion'. "
+                "ANACHRONISM GUARD: UKRI (created 2018), ISCF (created 2017) did NOT exist."
+            ),
+            2012: (
+                "Budget 2012: extract BIS science DEL and any named R&D programme "
+                "announcements with explicit £ amounts. "
+                "Amounts in £ BILLION → unit='billion'. "
+                "ANACHRONISM GUARD: UKRI (created 2018), ISCF (created 2017) did NOT exist."
             ),
             2013: (
-                "NOTE: 'Industrial Strategy Challenge Fund' did NOT exist in 2013 — "
-                "do NOT extract it. It was created in 2017. "
-                "Do NOT extract 'Science budget allocation' as a line item — it is too generic. "
-                "Do extract: named specific programmes with £ amounts (SBRI, ATI, specific research funds)."
+                "Spending Round 2013: extract BIS science ring-fence total and any "
+                "named R&D programmes with explicit £ amounts (e.g. Catapult centres, "
+                "SBRI, ATI). "
+                "Amounts in £ BILLION → unit='billion' (unless clearly stated as million). "
+                "ANACHRONISM GUARD: UKRI (created 2018), ISCF (created 2017) did NOT "
+                "exist in 2013 — do NOT extract them."
+            ),
+            2014: (
+                "Budget 2014: extract BIS science DEL and named R&D programme "
+                "announcements with explicit £ amounts. "
+                "Amounts in £ BILLION → unit='billion'. "
+                "ANACHRONISM GUARD: UKRI (created 2018), ISCF (created 2017) did NOT exist."
+            ),
+            2015: (
+                "Spending Review 2015 / Budget 2015: extract BIS ring-fenced science "
+                "budget total and named R&D programmes. "
+                "Amounts in £ BILLION → unit='billion'. "
+                "ANACHRONISM GUARD: UKRI (created 2018), ISCF (created 2017) did NOT exist."
+            ),
+
+            # ---------------------------------------------------------------
+            # 2016: BIS still leads; last year before BEIS created (July 2016)
+            # ---------------------------------------------------------------
+            2016: (
+                "Budget/Autumn Statement 2016: BIS → BEIS transition year (BEIS created "
+                "July 2016). Extract BIS or BEIS science DEL and any named R&D programme "
+                "announcements. Amounts in £ BILLION → unit='billion'. "
+                "ANACHRONISM GUARD: UKRI (created April 2018) did NOT exist yet."
+            ),
+
+            # ---------------------------------------------------------------
+            # 2017: Industrial Strategy White Paper; ISCF created; BIS→BEIS
+            # ---------------------------------------------------------------
+            2017: (
+                "Autumn Budget 2017 / Industrial Strategy: ISCF (Industrial Strategy "
+                "Challenge Fund) was created this year — extract it if a £ figure stated. "
+                "Extract BEIS DEL science ring-fence. "
+                "Amounts in £ BILLION → unit='billion'. "
+                "ANACHRONISM GUARD: UKRI (created April 2018) did NOT exist in 2017 — "
+                "do NOT extract UKRI."
+            ),
+
+            # ---------------------------------------------------------------
+            # 2018: UKRI created April 2018; BEIS science budget
+            # ---------------------------------------------------------------
+            2018: (
+                "Spring Statement / Budget 2018: UKRI was created in April 2018. "
+                "Extract BEIS Capital DEL R&D ring-fence and UKRI total if stated. "
+                "Also extract ISCF named challenges with £ amounts. "
+                "Amounts in £ BILLION → unit='billion'. "
+                "ANACHRONISM GUARD: ARIA (created 2021), DSIT (created 2023) did NOT exist."
+            ),
+
+            # ---------------------------------------------------------------
+            # 2019-2020: BEIS / UKRI / ISCF era
+            # ---------------------------------------------------------------
+            2019: (
+                "Spending Round 2019: extract BEIS total R&D DEL, UKRI budget, and ISCF "
+                "named challenge totals if £ figures stated. "
+                "Amounts in £ BILLION → unit='billion'. "
+                "ANACHRONISM GUARD: ARIA (created 2021), DSIT (created 2023) did NOT exist."
+            ),
+            2020: (
+                "Budget March 2020 / Spending Review Nov 2020: extract BEIS R&D DEL, "
+                "UKRI budget, and ISCF challenge totals. "
+                "R&D investment target '£22 billion per year by 2024-25' is a multi-year "
+                "commitment — extract only the annual figure for this year if stated. "
+                "Amounts in £ BILLION → unit='billion'. "
+                "ANACHRONISM GUARD: ARIA (created 2021), DSIT (created 2023) did NOT exist."
+            ),
+
+            # ---------------------------------------------------------------
+            # 2021: SR21 — most structured R&D DEL data available
+            # Table 2.2 (or equivalent) shows R&D Capital DEL by department:
+            #   - Total Capital DEL on R&D: £14.8B (2021-22) → £20.0B (2024-25)
+            #   - BEIS: £11.3B → £14.2B
+            #   - Core Research (UKRI): £4.8B → £5.9B
+            #   - Innovate UK: £0.7B → £1.1B
+            # ARIA (Advanced Research and Invention Agency) announced: £800M
+            # Extract each year column as a separate row if the table is present.
+            # ---------------------------------------------------------------
+            2021: (
+                "Spending Review 2021 (SR21): look for R&D DEL table (Table 2.2 or "
+                "equivalent titled 'R&D spending by department'). "
+                "Extract each named row for 2021-22 through 2024-25: "
+                "BEIS total R&D DEL, UKRI Core Research budget, Innovate UK budget, "
+                "ARIA (£800M total announced), and any other named agency with £ figure. "
+                "Amounts in £ BILLION → unit='billion'. "
+                "Also extract: government R&D investment target (£20B by 2024-25). "
+                "ANACHRONISM GUARD: DSIT (created Feb 2023) did NOT exist in 2021."
+            ),
+
+            # ---------------------------------------------------------------
+            # 2022: Autumn Statement 2022 / Spring Statement
+            # ---------------------------------------------------------------
+            2022: (
+                "Autumn Statement 2022 / Spring Statement: extract BEIS R&D DEL, "
+                "UKRI budget, and any named R&D programme amounts. "
+                "Amounts in £ BILLION → unit='billion'. "
+                "ANACHRONISM GUARD: DSIT (created Feb 2023) did NOT exist in 2022."
+            ),
+
+            # ---------------------------------------------------------------
+            # 2023: DSIT created Feb 2023 (BEIS split into DSIT + DBT)
+            # DSIT is now the main science department.
+            # ---------------------------------------------------------------
+            2023: (
+                "Spring Budget / Autumn Statement 2023: DSIT (Dept for Science, "
+                "Innovation and Technology) was created February 2023 when BEIS split. "
+                "Extract DSIT total R&D DEL, UKRI budget, and named programme totals. "
+                "Amounts in £ BILLION → unit='billion'. "
+                "Also extract: Horizon Europe association deal if £ figure stated, "
+                "Advanced Research and Invention Agency (ARIA) budget."
+            ),
+
+            # ---------------------------------------------------------------
+            # 2024-2025: DSIT era; multi-year SR planned
+            # ---------------------------------------------------------------
+            2024: (
+                "Spring Budget / Autumn Budget 2024: extract DSIT R&D DEL, UKRI total, "
+                "and named programme totals with explicit £ figures. "
+                "Amounts in £ BILLION → unit='billion'. "
+                "Also extract: ARIA budget, Horizon Europe association costs, "
+                "any named Innovate UK or research council totals."
+            ),
+            2025: (
+                "Spring Statement / Spending Review 2025: extract DSIT R&D DEL, "
+                "UKRI budget, and named programme totals. "
+                "Amounts in £ BILLION → unit='billion'. "
+                "Also extract: any new multi-year science spending commitments "
+                "IF the annual breakdown is explicitly stated in a table."
             ),
         },
     },
@@ -332,28 +591,100 @@ COUNTRY_PROFILES: dict[str, dict] = {
 
     # -----------------------------------------------------------------------
     # DENMARK
-    # Partially audited via the rule-based pipeline (1975-1984 Finanslov).
-    # Key document type: Finanslov — Danish, § structure, DKK thousand
+    # Well-structured Finanslov (Finance Bill). Digital text 1975-2026.
+    # KEY ERA SPLIT (units): 1975-2000 = 1.000 kr. (thousands); 2001+ = Mio. kr. (millions).
+    # KEY SECTION SPLIT (ministry name):
+    #   §20 Undervisningsministeriet (pre-2001 approx)
+    #   §32 Forsknings-/Videnskabsministeriet (2001-2013 approx)
+    #   §19 Uddannelses- og Forskningsministeriet (UFM, 2014+)
     # -----------------------------------------------------------------------
     "Denmark": {
         "skip_if": [
-            # Generic 'bevilling' (appropriation) lines without research content
-            "'Driftsudgifter' (operating expenditure) lines in mixed-purpose ministries "
-            "— only include if the line description also contains a research term.",
+            # Student grants and loans — Statens Uddannelsesstotte (SU) is NOT R&D
+            "Lines mentioning 'SU', 'uddannelsesstotte', 'laanekassen', 'studielan', "
+            "'statens uddannelsesstotte' — these are student financial support, not R&D.",
 
-            "Lines under Socialministeriet (Social Affairs) or Indenrigsministeriet "
-            "(Interior) that use the word 'forskning' in a policy-evaluation context.",
+            # Primary/secondary education
+            "Lines under folkeskole, gymnasier, erhvervsuddannelse, or basic teacher training "
+            "— only include if the line description also contains a research-specific term "
+            "('forskning', 'forskningsprojekt', etc.).",
+
+            # Generic operating lines in mixed ministries
+            "'Driftsudgifter' (operating expenditure) lines in ministries with no R&D mandate "
+            "(Socialministeriet, Justitsministeriet, Finansministeriet, Skatteministeriet, "
+            "Trafikministeriet, Forsvarsministeriet) unless the line name explicitly contains "
+            "a research term.",
+
+            # Policy-evaluation 'forskning' — not budget R&D
+            "Lines under Socialministeriet or Indenrigsministeriet containing 'forskning' only "
+            "as a minor budget note (e.g. 'forskningsmidler' ≤ 5 Mio. kr.) — skip unless "
+            "it is a dedicated research programme line.",
+
+            # Pension and payroll overhead lines
+            "Lines named 'Tjenestemandspension', 'pension', 'loensum', 'overhead' that are "
+            "pure payroll/pension lines without an explicit R&D designation.",
+
+            # Dakcare and school buildings
+            "Lines for 'daginstitutioner', 'folkeskolebyggeri', 'skoler', 'dagtilbud'.",
+
+            # Infrastructure/construction unless tagged R&D
+            "Anlaegsudgifter (capital expenditure) lines that are clearly building/infrastructure "
+            "projects, not research facility construction.",
         ],
         "include_note": [
-            "§ 20 Undervisningsministeriet contains university funding — include lines "
-            "for 'universiteter', 'forskning', and named research councils.",
+            # Whole research ministry sections
+            "The ENTIRE section § 19 Uddannelses- og Forskningsministeriet (UFM, 2014+) "
+            "is R&D-relevant: include ministry-total overview line AND all sub-lines for "
+            "universities, research councils, and innovation funds. Tag the § overview line "
+            "as section_total / aggregation_role=section.",
 
-            "Statens teknisk-videnskabelige Forskningsfond, Statens naturvidenskabelige "
-            "Forskningsrad, and equivalent councils are dedicated R&D — include their "
-            "full operating appropriations.",
+            "§ 20 Undervisningsministeriet (pre-2001) and § 32 Forskningsministeriet / "
+            "Videnskabsministeriet (2001-2013 approx) — same rule: include all sub-lines "
+            "explicitly for universities, research councils, and research funds.",
 
-            "Atomenergikommissionen (Atomic Energy Commission) is in-scope.",
+            # Research councils — all in scope regardless of section
+            "ALL named research councils are 100% R&D: "
+            "Statens teknisk-videnskabelige Forskningsfond (STvF), "
+            "Statens naturvidenskabelige Forskningsrad (SNF), "
+            "Statens samfundsvidenskabelige Forskningsrad, "
+            "Statens humanistiske Forskningsrad, "
+            "Statens laegervidenskabelige Forskningsrad, "
+            "Det Frie Forskningsraad / Danmarks Frie Forskningsfond, "
+            "Det Strategiske Forskningsrad. "
+            "Include their full annual appropriation.",
+
+            # Innovation and applied research funds
+            "Danmarks Innovationsfond (Innovation Fund Denmark) and its predecessor "
+            "Hoejteknologifonden are fully in scope.",
+            "Danmarks Grundforskningsfond (DNRF) is fully in scope.",
+
+            # Universities
+            "Individual university lines (Kobenhavns Universitet, Aarhus Universitet, DTU, "
+            "AAU, SDU, RUC, CBS) appearing under the research/education ministry: "
+            "include the full annual grant line (basisbevilling / tilskud).",
+
+            # Atomic energy and Risoe
+            "Atomenergikommissionen and Ris\u00f8 National Laboratory are fully in scope "
+            "— include the full operating appropriation.",
+
+            # Sector research institutes
+            "Danmarks Meteorologiske Institut, GEUS (geological survey), Statens Serum Institut "
+            "when they appear under the research ministry or as standalone budget lines.",
         ],
+        "year_notes": {
+            # Unit transition
+            "1975": "Unit: 1.000 kr. (thousands DKK). § structure. Section § 20 = Undervisningsministeriet.",
+            "1980": "Unit: 1.000 kr. (thousands DKK). Watch for multi-year comparison columns.",
+            "1990": "Unit: 1.000 kr. (thousands DKK). § 20 still = Undervisningsministeriet.",
+            "2000": "Unit: 1.000 kr. (thousands DKK). Last few years before switch to Mio. kr.",
+            "2001": "UNIT SWITCH: From this year amounts are in Mio. kr. (millions DKK). "
+                    "Also watch for ministry renaming around this period.",
+            "2005": "Unit: Mio. kr. § 19 or § 32 = research ministry. New research council structure.",
+            "2014": "§ 19 = Uddannelses- og Forskningsministeriet (UFM). "
+                    "Danmarks Innovationsfond created (replaces Hoejteknologifonden + Strategisk Forskning).",
+            "2015": "UFM § 19. Innovationsfond now operational. Det Frie Forskningsraad consolidated.",
+            "2020": "Unit: Mio. kr. Structure stable. COVID supplements may appear as separate bills.",
+        },
     },
 
     # -----------------------------------------------------------------------
@@ -441,96 +772,389 @@ COUNTRY_PROFILES: dict[str, dict] = {
             "A real programme budget (CP) is at least 100 million EUR (≥100 in the millions column). "
             "Do not extract headcounts as budget amounts.",
         ],
+        "year_notes": {
+            # ---------------------------------------------------------------
+            # 1970–2001: Franc (FRF) era — État B/C tables by ministry chapter
+            # Documents: JORF Loi de finances, 'État B' = dépenses ordinaires,
+            # 'État C' = dépenses en capital. Amounts shown in FRANCS (not millions).
+            # R&D appropriations appear under:
+            #   - 'Services du Premier Ministre — V. Recherche' (pre-1984)
+            #   - 'Ministère de la Recherche' or 'Industrie et Recherche' (1980s-1990s)
+            #   - 'Universités' or 'Enseignement supérieur' as a separate section
+            # ---------------------------------------------------------------
+            **{
+                y: (
+                    f"JORF Loi de finances {y}. "
+                    "Pre-LOLF era: État B/C tables by ministry chapter. "
+                    "Currency: FRF (francs). UNIT: amounts shown in raw FRANCS — "
+                    "set currency='FRF', unit='unit' (or unit='thousand' if table is headed 'milliers de francs'). "
+                    "Key sections to extract: "
+                    "'Recherche' under 'Services du Premier Ministre' or 'Ministère de la Recherche', "
+                    "'Universités' or 'Enseignement supérieur', "
+                    "'CNRS', 'CEA', 'INSERM', 'INRIA' if listed as separate appropriation lines. "
+                    "SKIP: tax code amendments, fiscal balance tables, État B column headers. "
+                    "No ETPT/FTE tables exist in this era. "
+                    "Amounts in the billions of francs are plausible (1 billion FRF ≈ €150M in 2002 terms)."
+                )
+                for y in range(1970, 2002)
+            },
+            # ---------------------------------------------------------------
+            # 2002–2005: Euro (EUR) era, pre-LOLF — État B/C structure continues
+            # Same ministry-chapter structure but in euros. LOLF enacted 2001,
+            # takes effect 2006. Documents are often short (Legifrance HTML extract).
+            # ---------------------------------------------------------------
+            **{
+                y: (
+                    f"JORF Loi de finances {y}. "
+                    "Pre-LOLF era, post-euro conversion. État B/C tables. "
+                    "Currency: EUR. Unit rule: use unit='unit' when the table is headed '(En euros)' "
+                    "and unit='thousand' only when the table is explicitly headed '(En milliers d'euros)'. "
+                    "Look for explicit État B/C ministry-chapter rows such as "
+                    "'Ministère de la Recherche', 'Industrie et Recherche', "
+                    "'Ministère de l'Éducation nationale et de la Recherche', "
+                    "'Universités' or 'Enseignement supérieur'. "
+                    "Also extract named operators only if they are explicitly listed "
+                    "('CNRS', 'ANR' in 2005+, 'CEA', 'INSERM', 'INRIA', 'CNES'). "
+                    "Do NOT extract Article totals, Titre V/VI grand totals, or the generic "
+                    "'Ces crédits sont répartis par ministère conformément à l'état B/C annexé...' language. "
+                    "NOTE: Many Legifrance extracts of this era reference tables as "
+                    "'Vous pouvez consulter le tableau dans le JO' — if the actual table data "
+                    "is absent and only references appear, return {\"items\": []}. "
+                    "If the page only shows legislative prose plus a JO reference, it contains no usable budget rows. "
+                    "No ETPT/FTE tables in this era."
+                )
+                for y in range(2002, 2006)
+            },
+            # ---------------------------------------------------------------
+            # 2006–2025: LOLF era — Mission/Programme structure
+            # CRITICAL: Documents contain TWO sequential table types:
+            #   (A) ETPT/FTE staffing ceiling table (appears FIRST, pages ~55-75):
+            #       Headed 'PLAFOND DES AUTORISATIONS D'EMPLOIS' or
+            #       'Plafond exprimé en équivalents temps plein travaillé'.
+            #       Shows headcount integers: 'Recherche et enseignement supérieur: 203 561'
+            #       = 203,561 full-time employees. NOT euros. SKIP ENTIRELY.
+            #   (B) Credit table — État B (appears LATER, pages ~100-200):
+            #       Headed 'AUTORISATIONS D'ENGAGEMENT ET CRÉDITS DE PAIEMENT'.
+            #       Shows euro amounts: 'Recherche et enseignement supérieur: 25 357 616 221 | 24 763 980 271'
+            #       = €24.8 billion in full euros.
+            # EXTRACTION RULE: Extract ONLY from the credit table (B). Convert to millions:
+            #   divide full-euro amount by 1,000,000, set unit='million', currency='EUR'.
+            #   Example: 24,763,980,271 → amount_local=24764, unit='million'.
+            # ---------------------------------------------------------------
+            **{
+                y: (
+                    f"JORF Loi de finances {y}. "
+                    "LOLF era: Mission 'Recherche et enseignement supérieur'. "
+                    "CRITICAL — two sequential tables in the document: "
+                    "(A) ETPT staffing table (early pages ~55-75): "
+                    "headed 'PLAFOND DES AUTORISATIONS D'EMPLOIS' or 'équivalents temps plein travaillé'. "
+                    "Values like '203 561' = 203,561 FTE employees. "
+                    "COMPLETELY SKIP TABLE A — do NOT extract any number from it. "
+                    "(B) Credit table — État B (later pages ~100+): "
+                    "Shows AE and CP columns in full euros. "
+                    "ONLY extract from table B. "
+                    "Convert full-euro amounts to millions: divide by 1,000,000, set unit='million'. "
+                    "Prefer CP (Crédits de paiement) column over AE (Autorisations d'engagement). "
+                    "Key programmes: 150 Formations supérieures (~12B EUR), "
+                    "172 Recherches scientifiques (~5B EUR), 193 Recherche spatiale (~1.3B EUR). "
+                    "Mission total 'Recherche et enseignement supérieur' ≈ 24,000–28,000 million EUR. "
+                    "If extracted amount is < 5,000 million for the mission total, you likely "
+                    "extracted from the ETPT table by mistake — discard and return no items."
+                )
+                for y in range(2006, 2026)
+            },
+        },
     },
 
     # -----------------------------------------------------------------------
     # GERMANY
-    # Document types vary by year — all produce Gesamtplan-level data:
+    # Document type: Bundeshaushalt — varies significantly by era and file type.
     #
-    #   Drucksachen (parliamentary budget committee reports, ~16-30 pages):
-    #     These are the Beschlussempfehlung des Haushaltsausschusses.
-    #     They contain the Gesamtplan (Haushaltsübersicht) which shows:
-    #     - Part I: Revenue and expenditure totals BY EINZELPLAN (one row per ministry)
-    #     - Unit: 1 000 DM (pre-2002) or 1 000 EUR (2002+)
-    #     There is NO breakdown within each Einzelplan (no Titel 685 data here).
-    #     Extract: Epl 30 total as a section_total for BMBF/BMFT/BMBW.
+    # ERA GUIDE:
+    #   1955-2002: Bundesgesetzblatt or Drucksache — Gesamtplan overview ONLY.
+    #     One row per Einzelplan (ministry). No sub-programme breakdown.
+    #     Currency: DM (1000 DM) until end 2001, EUR (1000 EUR) from 2002.
     #
-    #   Bundesgesetzblatt (bgbl) files: The enacted Haushaltsgesetz — legislative text
-    #     only. Epl totals appear as article references. No tables. Extract totals if
-    #     the text explicitly states 'Einzelplan 30 ... X Millionen/Milliarden EUR'.
+    #   2003-2009: Two types per year:
+    #     (a) Large Drucksache PDFs (1500150.pdf etc., ~1500KB each) — the FULL
+    #         Bundeshaushaltsplan Einzelplan 30 chapter begins near the end
+    #         (page ~2500 of ~2800). Contains detailed Titelgruppe breakdowns:
+    #         DFG, MPG, Fraunhofer, Helmholtz, Leibniz, DLR, etc.
+    #         Extract Titelgruppe TOTALS only (the Tgr. XX header line).
+    #     (b) Small bgbl files (~15-25KB) — Gesamtplan overview only.
     #
-    #   Gesamtplan_und_Uebersichten.pdf (2025, possibly other years):
-    #     The full Gesamtplan with a Funktionenübersicht (Part II) that classifies
-    #     spending by function. This IS the best source — extract from it:
-    #     - Funktion 137 = Deutsche Forschungsgemeinschaft (DFG) — extract as science_agency
-    #     - Funktion 164 = Gemeinsame Forschungsförderung (joint R&D funding of Bund+Länder,
-    #       includes Helmholtz, MPG, Fraunhofer, Leibniz combined) — extract as section_total
-    #     - Funktion 165 = Forschung und experimentelle Entwicklung (R&D programmes) — section_total
-    #     - Funktion 16 total = Wissenschaft, Forschung, Entwicklung außerhalb Hochschulen
+    #   2010-2025: Similar two-type structure:
+    #     (a) Numbered Drucksache files (1700624, 1703524 etc., ~8KB) — Gesamtplan.
+    #     (b) Bundesgesetzblatt bgbl files (~40-150KB) — Gesamtplan + Verpflichtungs-
+    #         ermächtigungen + Flexibilisierte Ausgaben tables.
+    #     For 2021+: Large numbered files (1922600, 2001627 etc., ~1700KB) contain
+    #         the full Einzelplan 30 — extract Titelgruppe totals only.
     #
-    # Units: 1 000 DM for years before 2002, 1 000 EUR from 2002 onwards.
-    #   Set currency='DEM' for pre-2002 files, 'EUR' for 2002+ files.
-    # Number format: SPACE as thousands separator: 14 053 404 = 14,053,404
+    # Number format: SPACE as thousands separator: '14 053 404' = 14,053,404
+    # Units: always 1 000 DM (pre-2002) or 1 000 EUR (2002+)
     # -----------------------------------------------------------------------
     "Germany": {
         "skip_if": [
-            # Non-R&D Einzelpläne in the Haushaltsübersicht — skip their rows
-            "Rows for Epl 01 (Bundespräsident), Epl 02 (Bundestag), Epl 06 (Inneres), "
-            "Epl 14 (Verteidigung / Defence) — even if labelled 'Forschung'. SKIP.",
+            # Non-R&D Einzelpläne — skip all ministries except Epl 30 (BMBF/BMFT) and
+            # Epl 31 (BMBW - Bildung und Wissenschaft, existed until 1994)
+            "Rows for ALL Einzelpläne except Epl 30 and Epl 31: e.g. Epl 01 (Bundespräsident), "
+            "Epl 02 (Bundestag), Epl 06 (Inneres), Epl 09 (Wirtschaft), Epl 10 (Landwirtschaft), "
+            "Epl 14 (Verteidigung / Defence), Epl 60 (Allgemeine Finanzverwaltung) — "
+            "even if they mention 'Forschung'. SKIP.",
 
-            # Kreditermächtigung (borrowing authorisation) — not spending
-            "Kreditermächtigung and Kreditfinanzierungsplan entries — borrowing limits, "
-            "not R&D appropriations. SKIP.",
+            # Kreditermächtigung and Finanzierungsplan — not spending
+            "Kreditermächtigung, Kreditfinanzierungsplan, and Finanzierungsübersicht entries "
+            "— these are borrowing authorizations and fiscal balance tables. SKIP.",
 
-            # Non-R&D Funktionen in the Funktionenübersicht
+            # Verpflichtungsermächtigungen — future-year commitments, not current budget
+            "Verpflichtungsermächtigungen tables ('von dem Gesamtbetrag dürfen fällig werden') "
+            "— these show multi-year commitment authorizations, NOT the current year's "
+            "appropriation. Do NOT extract from these tables.",
+
+            # Individual Titel sub-lines within a Titelgruppe — too granular
+            "Individual Titel lines (Tit. 685 30, Tit. 685 40, Tit. 894 30 etc.) within a "
+            "Titelgruppe — these are sub-components. SKIP them. Extract only the Titelgruppe "
+            "TOTAL line (the 'Tgr. XX Bezeichnung (amount)' header line).",
+
+            # Mehrjährige Maßnahmen — multi-year investment projects within Einzelplan
+            "Mehrjährige Maßnahmen tables within Einzelplan 30 — these list individual "
+            "multi-year capital projects. SKIP the project-level rows.",
+
+            # Haushaltsvermerk and Erläuterungen — administrative notes
+            "Haushaltsvermerk and Erläuterungen text blocks — these are administrative "
+            "instructions and explanatory notes. SKIP, do not extract amounts from them.",
+
+            # Stellenplan — personnel headcounts
+            "Stellenplan tables (Planstellen, Stellen, A1-A16 grade tables) — "
+            "these are staff headcount plans, not budget amounts. SKIP.",
+
+            # Non-R&D Funktionen in Funktionenübersicht
             "Function codes for Allgemeine Dienste (0x), Auswärtige Angelegenheiten (02), "
-            "Soziale Sicherung (04), Gesundheitswesen (05) — skip these even if they have "
-            "some 'Forschung' sub-entries, unless the specific row is DFG (Funktion 137) "
-            "or another explicitly named R&D organisation.",
+            "Soziale Sicherung (04), Gesundheitswesen (05), Wohnungswesen (06) — "
+            "skip even if they mention 'Forschung' as a sub-entry.",
 
-            # Verpflichtungsermächtigungen (commitment authorisations) — future commitments
-            "Verpflichtungsermächtigungen tables — these show future-year commitments, "
-            "not the current-year budget. Do NOT extract from these tables.",
+            # Total federal budget grand-total rows — NOT BMBF
+            # The Haushaltsübersicht table ends with a 'Summe Haushalt YYYY' row that
+            # aggregates ALL Einzelpläne (typically €200–500B). This is the ENTIRE
+            # federal budget, not Epl 30. SKIP. Also skip 'Gesamtbetrag' rows whose
+            # amount exceeds 15,000,000 thousand (= €15B) — BMBF never exceeds ~€23B.
+            "'Summe Haushalt YYYY' rows — these are total-federal-budget aggregates. SKIP. "
+            "'Gesamtbetrag' rows with amounts above 15,000,000 (thousand) — these are "
+            "supra-BMBF aggregates (Haushalt or Funktionenübersicht totals). SKIP. "
+            "'Summe der Einzelpläne', 'Summe aller Einzelpläne', 'Gesamthaushalt' — SKIP.",
         ],
         "include_note": [
-            # CRITICAL: document format for most files — Gesamtplan only
-            "CRITICAL: Most Germany files are the Gesamtplan (budget summary), not the "
-            "detailed Einzelplan 30. There is NO Titel 685 agency-grant breakdown in these "
-            "files. Instead, extract: "
-            "(a) The Epl 30 total from the Haushaltsübersicht Teil I (Ausgaben table) — "
-            "this is the BMBF/BMFT/BMBWFT total. Label it as item_type='section_total', "
-            "decision='review'. "
-            "(b) If the file has a Funktionenübersicht (Teil II): extract Funktion 137 "
-            "(Deutsche Forschungsgemeinschaft), Funktion 164 (Gemeinsame Forschungsförderung "
-            "von Bund und Ländern without DFG), and Funktion 165 (Forschung und "
-            "experimentelle Entwicklung) as separate line_items with decision='include'.",
+            # TWO document types — extract differently
+            "CRITICAL — two document types require different extraction strategies: "
+            "\n"
+            "TYPE A — Gesamtplan overview (most files, especially pre-2003 and small bgbl): "
+            "Contains one row per Einzelplan. Extract ONLY: "
+            "(a) Epl 30 'Summe Ausgaben' = BMBF/BMFT total budget → decision='review'. "
+            "(b) Epl 31 'Summe Ausgaben' = BMBW (Bildungsministerium, pre-1994) → decision='review'. "
+            "These rows appear in the Haushaltsübersicht Teil I Ausgaben table. "
+            "Do NOT invent sub-lines — there is no programme breakdown here. "
+            "CRITICAL TRAP: the Haushaltsübersicht table ends with a grand-total row "
+            "labelled 'Summe Haushalt YYYY' or 'Summe der Einzelpläne' — this is the "
+            "ENTIRE federal budget (€200–500B), NOT BMBF. DO NOT extract this row. "
+            "The Epl 30 row you want has the Einzelplan number '30' in the first column "
+            "and an amount around €3B–€23B (thousand) depending on year. "
+            "\n"
+            "TYPE B — Full Einzelplan 30 chapter (large files: 1500150, 1503660, 1922600 etc.): "
+            "Contains detailed BMBF programme lines. Extract TITELGRUPPE TOTALS ONLY: "
+            "The header line 'Tgr. XX [Agency name] (amount)' for each Titelgruppe. "
+            "Key Titelgruppen: DFG (Tgr 30), MPG (Tgr 40), Fraunhofer (Tgr 50/60), "
+            "Helmholtz/HGF (Tgr 60/70), Leibniz/WGL (Tgr 50), DLR (Tgr 10/20). "
+            "Do NOT extract individual Tit. 685/894 sub-lines within a Titelgruppe. "
+            "CRITICAL — SINGLE-MINISTRY RULE: Large Bundeshaushaltsplan files contain "
+            "ALL federal Einzelpläne (01 through 60) — Auswärtiges Amt (Epl 05), "
+            "Inneres (Epl 06), Wirtschaft (Epl 09), Verteidigung (Epl 14), and many others. "
+            "These other ministries also contain 'Forschung' lines (foreign cultural research, "
+            "cybersecurity R&D, energy R&D etc.) but they are NOT in scope. "
+            "SKIP every page that does not show the Einzelplan 30 header explicitly. "
+            "Look for pages marked 'Einzelplan 30' or 'Epl. 30' at the top before extracting.",
 
-            # CRITICAL: number format
+            # Number format — critical
             "CRITICAL: German budget tables use SPACES as thousands separators. "
             "'14 053 404' = 14,053,404 (14 million). '356 400' = 356,400. "
-            "Parse space-separated numbers as single integers.",
+            "A number like '1 930 303' means 1,930,303 (about 1.93 billion EUR). "
+            "Parse space-separated digit groups as a single integer.",
 
             # Unit and currency
-            "Amounts are in thousands (1 000 DM or 1 000 EUR). "
+            "Amounts are always in 1 000 units (thousands): "
             "Pre-2002: currency='DEM', unit='thousand'. "
             "2002 onwards: currency='EUR', unit='thousand'. "
             "Example: '17 900 000' in the table = 17,900,000 thousand EUR = €17.9 billion.",
 
-            # Epl 30 name changes over time
+            # Epl 30 name changes
             "The R&D ministry (Epl 30) has been renamed several times: "
             "BMFT (Bundesministerium für Forschung und Technologie, 1969-1994), "
-            "BMBF (Bundesministerium für Bildung und Forschung, 1994-2021), "
-            "BMBF kept same name (2021-2025), "
+            "BMBF (Bundesministerium für Bildung und Forschung, 1994-2025), "
             "BMFTR (Bundesministerium für Forschung, Technologie und Raumfahrt, 2025+). "
-            "All these are Epl 30 — always extract as 'BMBF (Federal Research Ministry)'.",
+            "All are Epl 30. Use 'BMBF' as the section_name in all cases.",
 
-            # Funktionenübersicht — available in 2025 Gesamtplan file
-            "If the file includes a 'Funktionenübersicht' section: "
-            "Funktion 137 = Deutsche Forschungsgemeinschaft (DFG) — extract as science_agency. "
-            "Funktion 164 = Gemeinsame Forschungsförderung (joint science funding, "
-            "Helmholtz+MPG+Fraunhofer+Leibniz combined) — extract as section_total. "
-            "Funktion 165 = applied R&D programmes — extract as section_total.",
+            # Funktionenübersicht — available in some Gesamtplan files
+            "If the file has a Funktionenübersicht section: "
+            "Funktion 137 = DFG → science_agency, decision=include. "
+            "Funktion 164 = Gemeinsame Forschungsförderung (Helmholtz+MPG+Fraunhofer+Leibniz "
+            "combined Bund+Länder joint funding) → section_total, decision=review. "
+            "Funktion 165 = Forschung und experimentelle Entwicklung (applied R&D) → "
+            "section_total, decision=review.",
         ],
+        "year_notes": {
+            # ---------------------------------------------------------------
+            # 1955-1974: Only 1955 file available. Law text only — no tables.
+            # ---------------------------------------------------------------
+            1955: (
+                "Single Bundesgesetzblatt file from 1955. "
+                "Extract the Epl 30 total from the Haushaltsübersicht if present. "
+                "Currency: DEM, unit='thousand'. "
+                "Ministry was 'Bundesminister für Atomfragen' or 'für Kernenergie' — "
+                "include if explicitly listed as Epl 30."
+            ),
+
+            # ---------------------------------------------------------------
+            # 1975-1993: Gesamtplan overview only (Drucksache + bgbl files).
+            # Two file types:
+            #   (a) Numbered Drucksache (~13-40KB): legal text + Gesamtplan tables.
+            #   (b) bgbl files (~15-20KB): Bundesgesetzblatt volume.
+            # BOTH contain the Haushaltsübersicht Ausgaben table with Epl. 30 row.
+            # Ministry name: Epl 30 = BMFT (Bundesminister für Forschung und Technologie)
+            #                Epl 31 = BMBW (Bundesminister für Bildung und Wissenschaft)
+            # Currency: DEM, unit='thousand'.
+            # ---------------------------------------------------------------
+            **{y: (
+                "Gesamtplan overview document only — no Einzelplan 30 programme detail. "
+                "Extract ONLY the single Epl 30 row from the Haushaltsübersicht Ausgaben "
+                "table: 'Bundesminister für Forschung und Technologie (BMFT)' → "
+                "section_name='BMFT (Epl 30)', decision='review', unit='thousand', "
+                "currency='DEM'. "
+                "Also extract Epl 31 (BMBW — Bundesminister für Bildung und Wissenschaft) "
+                "if present: decision='review'. "
+                "Do NOT invent sub-agency lines (DFG, MPG etc.) — these are NOT in this file. "
+                "SANITY CHECK: BMFT budget in DM thousands was approximately: "
+                "1975 ≈ 2,400,000; 1980 ≈ 3,600,000; 1985 ≈ 4,800,000; 1990 ≈ 6,800,000; 1993 ≈ 8,000,000. "
+                "If your extracted amount is above 12,000,000 thousand DM, you have read the "
+                "wrong row (likely Summe Haushalt or another Einzelplan). Re-check Epl 30 row."
+            ) for y in range(1975, 1994)},
+
+            # ---------------------------------------------------------------
+            # 1994-2001: Same as above but BMBF replaces BMFT (merged in 1994).
+            # From 1994: Epl 30 = BMBF (Bildung und Forschung, Epl 31 absorbed).
+            # Currency still DEM through 2001.
+            # ---------------------------------------------------------------
+            **{y: (
+                "Gesamtplan overview document only — no Einzelplan 30 programme detail. "
+                "Extract ONLY the single Epl 30 row: "
+                "'Bundesministerium für Bildung und Forschung (BMBF)' → "
+                "section_name='BMBF (Epl 30)', decision='review', unit='thousand', "
+                "currency='DEM'. "
+                "Do NOT invent sub-agency lines. No Einzelplan 30 detail available. "
+                "SANITY CHECK: BMBF budget in DM thousands was approximately: "
+                "1994 ≈ 8,500,000; 1997 ≈ 7,800,000; 2001 ≈ 8,700,000 (some years had cuts). "
+                "If your extracted amount is above 15,000,000 thousand DM, you have read the "
+                "wrong row (likely the Haushaltsübersicht grand total). Re-check Epl 30 row."
+            ) for y in range(1994, 2002)},
+
+            # ---------------------------------------------------------------
+            # 2002: Transition year — DM → EUR. Same Gesamtplan-only structure.
+            # ---------------------------------------------------------------
+            2002: (
+                "Gesamtplan overview only. Extract Epl 30 (BMBF) total. "
+                "Currency TRANSITION: 2002 was the first full EUR year. "
+                "Use currency='EUR', unit='thousand'. "
+                "If amounts appear in DM (file dated early 2002), use currency='DEM'."
+            ),
+
+            # ---------------------------------------------------------------
+            # 2003-2009: TWO file types per year.
+            # (a) Large numbered files (e.g. 1500150.pdf for 2003, ~1500KB):
+            #     Full Bundeshaushaltsplan containing ALL Einzelpläne. Einzelplan 30
+            #     starts near page 2500. Extract TITELGRUPPE TOTALS from Epl 30:
+            #     Tgr 30 DFG, Tgr 40 MPG, Tgr 50 Fraunhofer, Tgr 60 Helmholtz,
+            #     Tgr 50 Leibniz/WGL — whichever appear. currency='EUR', unit='thousand'.
+            # (b) Small bgbl files (~15KB): Gesamtplan only.
+            #     Extract single Epl 30 total row.
+            # For TYPE A large files: DO NOT extract individual Tit. 685 sub-entries.
+            # ---------------------------------------------------------------
+            **{y: (
+                f"Two file types for {y}: "
+                "(a) LARGE DRUCKSACHE FILE (e.g. 1500150.pdf / 1503660.pdf): "
+                "Contains the FULL Bundeshaushaltsplan with ALL Einzelpläne (01 through 60). "
+                "SINGLE-MINISTRY RULE: This file contains Auswärtiges Amt (Epl 05), "
+                "Inneres (Epl 06), Wirtschaft (Epl 09), Verteidigung (Epl 14), and many "
+                "others — ALL of which contain 'Forschung' lines. SKIP EVERY PAGE that does "
+                "not explicitly show 'Einzelplan 30' or 'Epl. 30' in the header. "
+                "Navigate to Einzelplan 30 (starting near page 2500) and extract "
+                "TITELGRUPPE TOTALS ONLY from Kapitel 3003/3004/3007: "
+                "Tgr 30 DFG, Tgr 40 MPG, Tgr 50 Fraunhofer-Gesellschaft, "
+                "Tgr 60 Helmholtz-Gemeinschaft (HGF), Tgr 50 Leibniz (WGL), "
+                "Tgr 10 DLR, and any other named Titelgruppe. "
+                "The Titelgruppe total is the BRACKETED amount on the Tgr header line "
+                "(e.g. 'Tgr. 30 Deutsche Forschungsgemeinschaft (1 930 303)'). "
+                "currency='EUR', unit='thousand'. decision='include' for DFG/MPG/Fraunhofer/HGF. "
+                "DO NOT extract individual Tit. 685/894 sub-entries. "
+                "DO NOT extract Mehrjährige Maßnahmen tables. "
+                "(b) SMALL BGBl FILE: Extract only Epl 30 total from Haushaltsübersicht. "
+                "section_name='BMBF (Epl 30)', decision='review'. "
+                "SANITY CHECK: BMBF totals in EUR thousands were approx: "
+                "2003 ≈ 8,700,000; 2005 ≈ 9,200,000; 2007 ≈ 11,300,000; 2009 ≈ 11,600,000. "
+                "If your extracted BMBF total exceeds 25,000,000 thousand EUR, you have "
+                "read the wrong row — likely a Haushalt total or double-counted."
+            ) for y in range(2003, 2010)},
+
+            # ---------------------------------------------------------------
+            # 2010-2020: Numbered Drucksache + bgbl files (no full Einzelplan 30).
+            # These give Gesamtplan overview + Verpflichtungsermächtigungen table.
+            # Verpflichtungsermächtigungen = SKIP (future commitments, not spending).
+            # Extract: Epl 30 Summe Ausgaben from Haushaltsübersicht.
+            # If Funktionenübersicht available: extract Funktion 137/164/165.
+            # currency='EUR', unit='thousand'.
+            # ---------------------------------------------------------------
+            **{y: (
+                "Gesamtplan files (Drucksache + bgbl). "
+                "Extract: Epl 30 (BMBF) 'Summe Ausgaben' from Haushaltsübersicht Teil I → "
+                "section_name='BMBF (Epl 30)', decision='review', unit='thousand'. "
+                "SKIP Verpflichtungsermächtigungen table entirely (future commitments). "
+                "If Funktionenübersicht present: also extract Funktion 137 (DFG), "
+                "Funktion 164 (Gemeinsame Forschungsförderung), Funktion 165 (F&E). "
+                "currency='EUR', unit='thousand'."
+            ) for y in range(2010, 2021)},
+
+            # ---------------------------------------------------------------
+            # 2021: Large numbered file (1922600.pdf, 3238 pages) has full Epl 30.
+            # Einzelplan 30 starts at page ~2921 with 317 pages of detail.
+            # EXTRACT TITELGRUPPE TOTALS ONLY — ~20-30 rows expected.
+            # bgbl files give Gesamtplan overview (7-10 rows expected).
+            # ---------------------------------------------------------------
+            2021: (
+                "TWO file types for 2021: "
+                "(a) LARGE FILE (1922600.pdf): Full Einzelplan 30 starting at page ~2921. "
+                "Extract TITELGRUPPE TOTALS ONLY — expect ~20-30 rows total: "
+                "Tgr 30 DFG (~€1.93B), Tgr 40 MPG (~€1.17B), Tgr 50 Fraunhofer, "
+                "Tgr 60 Helmholtz, Tgr 50 Leibniz (WGL), Tgr 10 DLR, and named Kapitel "
+                "totals (3002 Bildungswesen, 3003 Wissenschaftssystem, 3004 Hightech, etc.). "
+                "STRICTLY DO NOT extract: individual Tit. 685/894 sub-lines, Mehrjährige "
+                "Maßnahmen tables, Haushaltsvermerk text, Erläuterungen, Stellenplan. "
+                "The Titelgruppe total is the bracketed amount on the Tgr. header line. "
+                "currency='EUR', unit='thousand'. "
+                "(b) bgbl FILES (bgbl1_2020_66, bgbl120s3208): Gesamtplan overview. "
+                "Extract Epl 30 Summe Ausgaben only."
+            ),
+
+            # ---------------------------------------------------------------
+            # 2022-2025: Mix of large detailed files + bgbl Gesamtplan files.
+            # For large files: same Titelgruppe-total-only approach as 2021.
+            # ---------------------------------------------------------------
+            **{y: (
+                "Mix of Drucksache, bgbl, and potentially large Einzelplan files. "
+                "For ALL files: extract Epl 30 BMBF totals and/or Titelgruppe totals. "
+                "TITELGRUPPE RULE: if Einzelplan 30 detail is visible, extract only "
+                "Tgr-level totals (DFG, MPG, Fraunhofer, Helmholtz, Leibniz, DLR). "
+                "SKIP Verpflichtungsermächtigungen, individual Tit. lines, Mehrjährige "
+                "Maßnahmen, Haushaltsvermerk, Erläuterungen, and Stellenplan. "
+                "currency='EUR', unit='thousand'."
+            ) for y in range(2022, 2026)},
+        },
     },
 
     # -----------------------------------------------------------------------
@@ -616,34 +1240,625 @@ COUNTRY_PROFILES: dict[str, dict] = {
 
     # -----------------------------------------------------------------------
     # NORWAY
-    # Not yet audited.
-    # Key document type: Statsbudsjettet (NOK thousand)
+    # Statsbudsjettet Blåbok (Blue Book). 1975-1992: fully scanned (near-zero yield).
+    # 1993-2009: partially scanned, limited quality. 2010-2026: excellent digital.
+    # KEY MINISTRIES: Kunnskapsdepartementet (KD, Kap 260-290), Naerings- og
+    #   fiskeridepartementet (NFD, Kap 920-930), Olje- og energidepartementet (OED).
+    # UNIT: Full NOK in detail pages; 1000 NOK in Part I overview table.
     # -----------------------------------------------------------------------
     "Norway": {
         "skip_if": [
-            # Placeholder
+            # Scanned pre-1993 years — flag but don't hard-fail
+            "Documents from 1975-1992 are fully scanned (no machine-readable text). "
+            "If the extraction yields only a few short lines from these years, "
+            "treat as low-confidence and mark accordingly.",
+
+            # Student loans/grants — not R&D
+            "Lines mentioning 'Statens laanekasse', 'laanekassen for utdanning', "
+            "'studiestipend', 'utdanningsstipend', 'bostipend' — student financial aid, not R&D. "
+            "Kap. 2410 (Statens laanekasse) is always skip.",
+
+            # Plain infrastructure — roads, rail, buildings without R&D label
+            "Lines under Statens vegvesen (road authority), Bane NOR, Avinor (airports), "
+            "Kystverket (coast guard) unless the line name contains 'forskning' or 'FoU'.",
+
+            # Oil/gas production subsidies — not R&D unless 'forskning' present
+            "Lines for oil/gas field development, petroleum licensing fees, Petoro, SDOEE "
+            "unless the line description explicitly contains 'forskning', 'FoU', "
+            "'forskningsprogram', or similar.",
+
+            # Defence procurement
+            "Lines under Forsvarsdepartementet for weapons, materiel, personnel, or operations "
+            "unless the line explicitly says 'forskning' or 'FoU'.",
+
+            # Pension and overhead
+            "Lines named 'pensjonspremie', 'arbeidsgiveravgift', 'fellesutgifter' that are "
+            "pure payroll/pension overhead without an R&D designation.",
+
+            # Healthcare operations without research label
+            "Lines under Helse- og omsorgsdepartementet for hospital operations, "
+            "patient treatment, drug reimbursement — only include if 'forskning' or "
+            "'Folkehelseinstituttet' or 'Kreftregisteret' appears in the line name.",
+
+            # Overview/summary totals — prefer detail lines
+            "Part I overview table rows (identified by '1 000 kroner' column header): "
+            "extract ONLY if no detail-page equivalent is found. "
+            "Tag these as aggregation_role=section when included.",
         ],
         "include_note": [
-            "Norges forskningsråd (Research Council of Norway) appropriations are core R&D.",
-            "Oil-related research (Oljeforskningsprogrammet) is legitimate applied R&D "
-            "— include if the description says 'forskning' (research), but SKIP plain "
-            "oil exploration subsidies.",
+            # Research Council — primary R&D vehicle
+            "Norges forskningsrad (Research Council of Norway, NFR): "
+            "ALL grant posts under KD and sector ministries are in scope. "
+            "Typically Kap. 285 (under KD) with several posts: "
+            "Post 50 = institution grant, Post 52/55 = programme grants, Post 70 = external grants. "
+            "Also appears as Post 50 'Norges forskningsrad' under Kap. 920 (NFD) and Kap. 1830 (OED). "
+            "Include every 'Norges forskningsrad' post found in the document.",
+
+            # Universities — block grants
+            "University block grants (basisbevilling) under Kunnskapsdepartementet "
+            "(Kap. 260-275): NTNU, UiO, UiB, UiT, UiS, UiA, NMBU, NHH. "
+            "Post 50 = block grant to the university. These are the main university time series. "
+            "Include the Post 50 line for each university.",
+
+            # Applied institutes
+            "SINTEF (applied research) lines wherever they appear. "
+            "Havforskningsinstituttet (Institute of Marine Research, IMR) under "
+            "Naerings- og fiskeridepartementet: include. "
+            "Folkehelseinstituttet (FHI) under Helse- og omsorgsdepartementet: include "
+            "(it has a significant research mandate). "
+            "Meteorologisk institutt (met.no): include. "
+            "Norsk Romsenter (Norwegian Space Centre): include.",
+
+            # Energy/oil research
+            "Oljeforskningsprogrammet (oil research programme) and any line explicitly "
+            "naming 'forskning' under OED (oil ministry) or NFD (industry ministry) — include. "
+            "Petro-fund research lines under OED: include if the word 'forskning' is present.",
+
+            # Section totals
+            "Ministry-level totals for Kunnskapsdepartementet that explicitly cover R&D "
+            "may be included as section-total rows. Tag aggregation_role=section.",
+
+            # FoU labelling
+            "Any line containing 'FoU' (Forskning og utvikling / R&D) in its description "
+            "should be included regardless of the ministry.",
         ],
+        "year_notes": {
+            "1975": "SCANNED document — near-zero text extraction expected. Year likely unusable.",
+            "1980": "SCANNED document — near-zero text extraction expected. Year likely unusable.",
+            "1985": "SCANNED document — near-zero text extraction expected. Year likely unusable.",
+            "1990": "SCANNED or low-quality OCR. Treat with low confidence.",
+            "1993": "Transition period — partial digital text possible but quality variable.",
+            "2000": "Quality variable. Some digital, some scanned. Check extraction yield.",
+            "2010": "FULLY DIGITAL from this year. Kap./Post structure clear. Use detail pages.",
+            "2015": "Excellent digital quality. Kunnskapsdepartementet Kap. 285 = NFR main chapter.",
+            "2020": "Excellent digital quality. COVID supplements may appear as separate bills — "
+                    "focus on main Blaabok.",
+            "2024": "Latest available. NFR Kap. 285 Post 50 and sectoral posts visible. "
+                    "Full NOK amounts on detail pages (e.g. 'Norges forskningsrad 6 500 000 000').",
+        },
+    },
+
+    # -----------------------------------------------------------------------
+    # NETHERLANDS
+    # Document type: Rijksbegroting (State Budget).
+    # ERA SPLIT (critical):
+    #   1975-2001: SINGLE FILE — Miljoenennota or Rijksbegroting overview.
+    #              Amounts in MILLIONS of guilders (miljoenen guldens, NLG).
+    #   2002+:     SEPARATE FILE PER MINISTRY — <year>_ministry<N>.pdf.
+    #              Amounts in THOUSANDS of euros (bedragen x € 1.000, EUR).
+    # KEY R&D MINISTRIES (2002+ file numbering):
+    #   ministry8  = OCW (Onderwijs, Cultuur en Wetenschap, Ministry VIII)
+    #                Art. 07 = Wetenschappelijk onderwijs (university block grants)
+    #                Art. 16 = Onderzoek en wetenschapsbeleid (NWO, KNAW)
+    #   ministry13 = EZ (Economische Zaken, Ministry XIII)
+    #                Art. 02 = Bedrijvenbeleid / innovatie (innovation/enterprise, TNO)
+    #                Art. 03 = Toekomstfonds (Future Fund)
+    #   ministry14 = LNV (Landbouw, Visserij, Voedselzekerheid en Natuur, Ministry XIV)
+    #                Art. 23 = Kennis en innovatie (knowledge and innovation)
+    # SKIP: ministry10 (Defensie), ministry12 (IenW / infrastructure),
+    #        ministry16 (VWS / health unless RIVM line)
+    # -----------------------------------------------------------------------
+    "Netherlands": {
+        "skip_if": [
+            # Non-R&D ministry totals — skip even if they mention 'onderzoek'
+            "Ministry-level totals for Ministerie van Defensie (ministry10), "
+            "Ministerie van Infrastructuur en Waterstaat (IenW, ministry12), "
+            "Ministerie van Sociale Zaken (XV) — skip their line items unless the "
+            "description explicitly names a research institution.",
+
+            # Student grants — studiefinanciering is NOT R&D
+            "Lines mentioning 'studiefinanciering', 'studietoelage', 'studiebeurs', "
+            "'studentenreisproduct', 'DUO' (Dienst Uitvoering Onderwijs student loans) "
+            "— these are student financial support, not R&D.",
+
+            # Infrastructure construction — not R&D unless 'onderzoek' present
+            "Lines for 'aanleg', 'onderhoud', 'rijksinfrastructuur', 'Rijkswaterstaat' "
+            "(road/waterway authority), 'ProRail', 'spoorwegen', 'luchtvaart' unless "
+            "the description explicitly contains 'onderzoek', 'R&D', or 'kennis'.",
+
+            # Defence procurement/operations — not R&D
+            "Lines under Defensie for equipment procurement ('materieel'), personnel "
+            "('personeel'), operations ('gereedstelling') unless explicitly tagged "
+            "'onderzoek' or 'MIVD wetenschappelijk onderzoek'.",
+
+            # Social insurance overhead (ABP pension, ZW, WW) — not R&D
+            "Lines for 'ABP-premies', 'pensioenpremies', 'werkloosheidswet', "
+            "'zorgverzekering' — these are social insurance and pension overhead.",
+
+            # Generic 'overige' lines in non-R&D ministries
+            "'Overige' (miscellaneous) lines in ministries that are NOT OCW, EZ, or LNV "
+            "— only include if the section heading contains an explicit R&D institution name.",
+
+            # Cultural subsidies without research component
+            "Lines for museums, performing arts, heritage ('erfgoed', 'podiumkunsten', "
+            "'musea') under OCW unless the line is explicitly for scientific collections "
+            "or research infrastructure.",
+        ],
+        "include_note": [
+            # NWO — primary public research funder
+            "NWO (Nederlandse Organisatie voor Wetenschappelijk Onderzoek, Dutch Research "
+            "Council) and its predecessor ZWO (Organisatie voor Zuiver-Wetenschappelijk "
+            "Onderzoek, pre-1988) are the main public research funders — include all grant "
+            "budget lines. Also include NWO-TTW / STW (Technology Foundation, merged into "
+            "NWO in 2017) and NWO-I (Institutes Organisation of NWO).",
+
+            # KNAW — Academy of Sciences
+            "KNAW (Koninklijke Nederlandse Akademie van Wetenschappen, Royal Netherlands "
+            "Academy of Arts and Sciences) is a dedicated science institution — include "
+            "its full annual appropriation.",
+
+            # TNO — applied research
+            "TNO (Toegepast Natuurwetenschappelijk Onderzoek, Netherlands Organisation for "
+            "Applied Scientific Research) is a dedicated R&D institution — include its "
+            "institutional grant under EZ Art. 02.",
+
+            # University block grants under OCW Art. 07
+            "University block grants under OCW Art. 07 (Wetenschappelijk onderwijs) are "
+            "the primary funding lines for Dutch universities — include the per-university "
+            "lines and the collective 'Wetenschappelijk onderwijs' article total. "
+            "Named universities: UvA, VU, UU, RUG, Leiden, TU Delft, TU/e, EUR, Radboud, "
+            "Maastricht, Twente, Tilburg, WUR (Wageningen).",
+
+            # OCW Art. 16 — research and science policy
+            "OCW Art. 16 (Onderzoek en wetenschapsbeleid / Research and science policy) "
+            "contains NWO, KNAW, and SURF appropriations — include this article total "
+            "and any named sub-lines within it.",
+
+            # EZ innovation instruments
+            "EZ Art. 02 (Bedrijvenbeleid: innovatie en ondernemerschap) and Art. 03 "
+            "(Toekomstfonds) contain TNO grants and innovation instruments (WBSO fiscal "
+            "R&D credit, TKI top sector consortia) — include named research funding lines. "
+            "RVO (Rijksdienst voor Ondernemend Nederland) administers the WBSO/TKI grants.",
+
+            # LNV agri-food research
+            "LNV Art. 23 (Kennis en innovatie) funds Wageningen Research and agricultural "
+            "knowledge institutes — include this article and named sub-lines.",
+
+            # Unit rule — critical
+            "UNIT RULE (MANDATORY): "
+            "1975-2001 documents: amounts in MILLIONS of guilders → unit='million', currency='NLG'. "
+            "2002+ per-ministry files: amounts in THOUSANDS of euros → unit='thousand', currency='EUR'. "
+            "Dutch number format: '.' = thousands separator, ',' = decimal. "
+            "Example: '1.670.345' = 1,670,345 (thousands EUR = ~€1.67 billion).",
+        ],
+        "year_notes": {
+            **{y: (
+                f"Rijksbegroting {y} — NLG era (single-file or overview). "
+                "Unit: miljoenen guldens (millions NLG). currency='NLG', unit='million'. "
+                "Key sections: OCW (Onderwijs/Wetenschappen), EZ (Economische Zaken), "
+                "NWO/ZWO block grant, KNAW, TNO, university lines. "
+                "Number format: '.' = thousands sep., ',' = decimal."
+            ) for y in range(1975, 2002)},
+
+            2002: (
+                "TRANSITION YEAR — first per-ministry EUR file. "
+                "Files: ministry8 (OCW), ministry13 (EZ), ministry14 (LNV). "
+                "Unit: bedragen x € 1.000 (thousands EUR). currency='EUR', unit='thousand'. "
+                "NWO, KNAW, university block grants appear under ministry8 Art. 07/16."
+            ),
+
+            **{y: (
+                f"Rijksbegroting {y} — EUR era, per-ministry files. "
+                "Files of interest: ministry8 (OCW Art.07 universities + Art.16 NWO/KNAW), "
+                "ministry13 (EZ Art.02 TNO/innovation), ministry14 (LNV Art.23 WUR/agri-research). "
+                "Unit: bedragen x € 1.000. currency='EUR', unit='thousand'. "
+                "SKIP ministry10 (Defensie), ministry12 (IenW), ministry16 (VWS, unless RIVM)."
+            ) for y in range(2003, 2026)},
+        },
+    },
+
+    # -----------------------------------------------------------------------
+    # SWITZERLAND
+    # Document type: Voranschlag der Schweizerischen Eidgenossenschaft.
+    # ERA SPLIT (critical):
+    #   1975-2020: Bundesblatt Bundesbeschluss — SHORT (3-10 pages), aggregate only.
+    #              Contains: Erfolgsrechnung total, Investitionsrechnung total, and any
+    #              special Verpflichtungskredite (e.g. ETH-Bereich Bauprogramm, SNF).
+    #              YIELD IS LOW — expect 1-5 R&D-relevant rows per document.
+    #   2021+:    VA-Band3-d.pdf = Voranschlag Band 3 (German).
+    #              Section C 'Budgetpositionen' contains detailed departmental lines.
+    #              KEY SECTION: WBF (Wirtschaft, Bildung, Forschung) with ETH-Bereich,
+    #              SNF, Innosuisse, CERN, ESA contributions.
+    # UNIT: always FULL CHF (Franken) — space as thousands separator.
+    # -----------------------------------------------------------------------
+    "Switzerland": {
+        "skip_if": [
+            # Defence R&D (VBS/DDPS) — mixed military/civilian, skip by default
+            "Lines under VBS / DDPS (Eidg. Departement für Verteidigung / "
+            "Bundesamt für Rüstung armasuisse) unless the line explicitly names "
+            "a civilian research programme ('Forschung', 'RUAG Forschung').",
+
+            # Infrastructure without research label
+            "Lines for 'Strasseninfrastruktur', 'Eisenbahninfrastruktur', 'Bauten', "
+            "'Nationalstrassen' under UVEK/DETEC unless the description explicitly "
+            "contains 'Forschung' or 'Wissenschaft'.",
+
+            # Social insurance transfers — not R&D
+            "Lines for AHV (old-age insurance), IV (disability insurance), EO "
+            "(income compensation), EL (supplementary benefits) — these are social "
+            "security transfers, not R&D appropriations.",
+
+            # Generic overhead lines
+            "Lines labelled 'Personalaufwand' (personnel costs), 'Verwaltungsaufwand' "
+            "(admin costs), 'Raumaufwand' (premises) without an explicit R&D designation.",
+
+            # Foreign aid / development cooperation
+            "Lines under EDA (Aussenpolitik, DEZA, humanitäre Hilfe) — development "
+            "cooperation and foreign affairs, not domestic R&D.",
+
+            # Pre-2021 docs: aggregate only — do not invent sub-lines
+            "For 1975-2020 (Bundesblatt files): do NOT invent sub-institution lines. "
+            "These documents contain only aggregate totals — extract only items that are "
+            "explicitly listed in the text (e.g. 'Beitrag ETH-Bereich Fr. X').",
+        ],
+        "include_note": [
+            # ETH-Bereich — primary R&D vehicle
+            "ETH-Bereich (Bereich der Eidgenössischen Technischen Hochschulen) is the "
+            "primary Swiss R&D funding mechanism. The annual 'Bundesbeitrag an den "
+            "ETH-Bereich' (~CHF 3.7 billion in recent years) is the single largest R&D "
+            "line in the Swiss federal budget. "
+            "Sub-institutions (ETH Zürich, EPFL, PSI, Empa, Eawag, WSL) receive their "
+            "share from this block grant — include both the block total and any named "
+            "sub-institution lines if separately listed.",
+
+            # SNF — main competitive research funder
+            "SNF / SNSF (Schweizerischer Nationalfonds zur Förderung der "
+            "wissenschaftlichen Forschung, Swiss National Science Foundation): "
+            "the annual 'Bundesbeitrag an den SNF' (~CHF 1.1 billion in recent years) "
+            "is a core R&D appropriation — include it.",
+
+            # Innosuisse / KTI — innovation agency
+            "Innosuisse (Schweizerische Agentur für Innovationsförderung, Swiss "
+            "Innovation Agency, created 2018) and its predecessor KTI (Kommission für "
+            "Technologie und Innovation, pre-2018) fund applied/industry-linked R&D "
+            "— include their annual appropriation.",
+
+            # CERN and ESA
+            "CERN contributions (Swiss membership) and ESA-Beiträge (contributions to "
+            "European Space Agency) are legitimate R&D international obligations — "
+            "include both.",
+
+            # Agroscope and Swisstopo
+            "Agroscope (federal agricultural research, under WBF/BLW) and Swisstopo "
+            "(federal topographic and geoscience institute) perform R&D — include if "
+            "listed as a separate budget line.",
+
+            # SBFI/SERI coordination
+            "SBFI / SERI (Staatssekretariat für Bildung, Forschung und Innovation, "
+            "State Secretariat for Education, Research and Innovation) is the main R&D "
+            "coordinating body under WBF — include any programme lines under SBFI that "
+            "are explicitly for research grants or international science cooperation.",
+
+            # Unit rule — critical
+            "UNIT RULE (MANDATORY): All amounts in FULL SWISS FRANCS (unit='unit', "
+            "currency='CHF'). Space is the thousands separator. "
+            "Example: '3 714 600 000' = CHF 3,714,600,000 (3.7 billion). "
+            "Only use unit='million' if the text explicitly says 'Mio. Fr.' before the number.",
+        ],
+        "year_notes": {
+            **{y: (
+                f"Bundesblatt Bundesbeschluss {y} — AGGREGATE ONLY. "
+                "This is a SHORT legislative document (3-10 pages) with only aggregate "
+                "budget authorizations. "
+                "Extract ONLY items explicitly listed: ETH-Bereich block grant total, "
+                "SNF grant if listed, KTI if listed, CERN/ESA contributions if listed. "
+                "DO NOT invent sub-institution breakdowns — they are not in this document. "
+                "currency='CHF', unit='unit'. Space = thousands separator. "
+                "YIELD: expect 1-5 R&D rows maximum."
+            ) for y in range(1975, 2021)},
+
+            **{y: (
+                f"VA-Band3-d.pdf {y} — FULL DETAIL DOCUMENT. "
+                "Section C 'Budgetpositionen' contains detailed departmental lines. "
+                "KEY R&D SECTION: WBF (Wirtschaft, Bildung, Forschung): "
+                "'Beitrag an den ETH-Bereich' (~3.7B CHF), "
+                "'Beitrag an den SNF' (~1.1B CHF), "
+                "'Beitrag an Innosuisse' (~300M CHF), "
+                "'CERN-Beitrag' (~150M CHF), "
+                "'ESA-Beiträge'. "
+                "currency='CHF', unit='unit'. Space = thousands separator. "
+                "Example: '3 714 600 000' = CHF 3.7 billion. DO NOT divide by any scale."
+            ) for y in range(2021, 2026)},
+        },
     },
 
     # -----------------------------------------------------------------------
     # SWEDEN
-    # Not yet audited.
-    # Key document type: Statsbudget (SEK thousand)
+    # Document type: Statsbudget / Budgetproposition (prop. XXXX/XX:1), Swedish.
+    # Unit: tusental kronor (thousands SEK). Space = thousands separator.
+    # Utgiftsområde (UO) system from 1994. UO 16 is the primary R&D area.
     # -----------------------------------------------------------------------
     "Sweden": {
         "skip_if": [
-            # Placeholder
+            # Student financial aid — CSN and studiebidrag are the largest items
+            # in UO 15 (studiestöd) and look like R&D at a glance.
+            "'Studiemedel', 'studiebidrag', 'studiestöd', 'CSN', 'Centrala studiestödsnämnden', "
+            "'studielån', 'kunskapslyftet' (adult education programme) — these are student "
+            "financial aid and adult education grants, NOT research appropriations. SKIP always.",
+
+            # Defence and procurement without explicit research label
+            "Lines for Försvarsmakten, FMV (Försvarets materielverk), totalförsvar, "
+            "or any 'materielanskaffning' / 'flygsystem' / 'marksystem' / 'sjösystem' line "
+            "— these are defence operational/procurement lines. SKIP unless the description "
+            "explicitly contains 'forskning' or 'FoU'.",
+
+            # Transport infrastructure without research label
+            "'Trafikverket', 'Vägverket', 'Banverket', 'Sjöfartsverket', 'Luftfartsverket', "
+            "'Luftfartsverket', 'Sjöfartsverket', 'väghållning', 'järnvägsunderhåll' "
+            "— pure transport infrastructure. SKIP unless 'forskning' is in the description.",
+
+            # Cultural subsidies
+            "Cultural funding lines: 'teater', 'opera', 'film', 'konsert', 'museer' "
+            "(unless paired with 'forskning') — cultural subsidies, not R&D.",
+
+            # Social insurance and pensions
+            "'Försäkringskassan', 'Pensionsmyndigheten', 'Arbetsförmedlingen', "
+            "'sjukpenning', 'barnbidrag', 'A-kassa', 'bostadsbidrag', 'äldreomsorgen' "
+            "— social transfer payments. SKIP always.",
         ],
         "include_note": [
-            "Vetenskapsrådet and VINNOVA appropriations are core R&D.",
-            "Riksbankens Jubileumsfond (humanities/social science) is in-scope.",
+            # Core research councils — all should be included
+            "Vetenskapsrådet (VR) and its predecessor research councils NFR, TFR, MFR, "
+            "HSFR, SJFR (pre-2001 merger) are core R&D appropriations. Include their "
+            "annual anslag lines under UO 16.",
+
+            # Innovation agencies
+            "VINNOVA (created 2001) and its predecessor NUTEK (partly) and STU (pre-1991) "
+            "are the main innovation R&D agencies. Include under UO 24 (Näringsliv) "
+            "or UO 16 where applicable.",
+
+            # Research foundations listed in budget
+            "Formas, Forte (created 2001), and SSF (Stiftelsen för Strategisk Forskning) "
+            "appear as anslag lines — include them. "
+            "Riksbankens Jubileumsfond covers humanities and social sciences — include.",
+
+            # Applied research institutes
+            "RISE (Research Institutes of Sweden, created 2017 from SP/Swerea/Innventia) "
+            "and its predecessor institutes receive state grants — include. "
+            "SMHI (meteorological/hydrological institute) — include its anslag. "
+            "Rymdstyrelsen (space agency) and FOI/FOA (defence research) — include.",
+
+            # University appropriations
+            "University anslag under UO 16 (KTH, Chalmers, Uppsala, Lund, Stockholm, "
+            "Göteborg, Umeå, Linköping, Karolinska) — include. These are block grants "
+            "for education AND research; tag as higher_education.",
         ],
+        "year_notes": {
+            **{y: (
+                "Pre-1994 Budgetproposition: budget structured by Departement chapters (§), "
+                "NOT Utgiftsområden. "
+                "Key R&D chapters: § 8 Utbildningsdepartementet (universities, NFR, TFR, HSFR), "
+                "§ 16 Industridepartementet (STU then NUTEK for applied/industrial R&D). "
+                "Unit: tusental kronor (thousands SEK) throughout this era. "
+                "Extract anslag lines for named research councils and universities. "
+                "Amounts around 100,000–2,000,000 thousand SEK are plausible for major agencies."
+            ) for y in range(1975, 1994)},
+
+            **{y: (
+                "Post-1994 Budgetproposition using Utgiftsområde (UO) system. "
+                "KEY R&D UOs: UO 16 (Utbildning och universitetsforskning) — "
+                "universities, Vetenskapsrådet (from 2001), Formas, Forte, and predecessors. "
+                "UO 24 (Näringsliv) — VINNOVA (from 2001), NUTEK, industrial R&D. "
+                "UO 20 (Allmän miljö- och naturvård) — SMHI, environmental research. "
+                "Each anslag has a code like '2:1 Vetenskapsrådet' or '25:1 VINNOVA'. "
+                "Unit: tusental kronor (thousands SEK). "
+                "Pre-2001: extract NFR, TFR, MFR, HSFR, SJFR, NUTEK lines. "
+                "Post-2001: extract Vetenskapsrådet, VINNOVA, Formas, Forte."
+            ) for y in range(1994, 2026)},
+        },
+    },
+
+    # -----------------------------------------------------------------------
+    # AUSTRIA
+    # Document type: Bundesfinanzgesetz (BFG) / Bundesvoranschlag (BVA), German.
+    # Unit: Tausend ATS (pre-2002) or Tausend EUR (2002+). Period = thousands sep.
+    # Pre-2013: Kapitel/Einzelplan structure. Post-2013: UG/Untergliederung structure.
+    # -----------------------------------------------------------------------
+    "Austria": {
+        "skip_if": [
+            # Defence without research label
+            "Lines for Bundesministerium für Landesverteidigung (BMLV), Heer, Miliz, "
+            "Militär, or defence procurement — SKIP unless 'Forschung' or 'Rüstungsforschung' "
+            "is explicitly in the description.",
+
+            # Social transfers — very large amounts, clearly not R&D
+            "'Pensionsversicherung', 'Krankenversicherung', 'Arbeitslosengeld', "
+            "'AMS' (Arbeitsmarktservice), 'Familienbeihilfe', 'Pflegegeld', "
+            "'Sozialhilfe', 'Notstandshilfe', 'Wochengeld', 'Kinderbetreuungsgeld' "
+            "— social insurance and transfer payments. SKIP always.",
+
+            # Pure infrastructure without research label
+            "'Straßenbau', 'Schieneninfrastruktur', 'Hochbau' (construction), "
+            "'ASFINAG' (motorway company), 'ÖBB-Infrastruktur' (railway infrastructure), "
+            "'Bundesstraßen', 'Autobahnen' — pure infrastructure. "
+            "SKIP unless 'Forschung' or 'Wissenschaft' is in the description.",
+
+            # EU co-financing overhead (administrative matching funds, not R&D)
+            "Lines labelled 'EU-Kofinanzierung' or 'EU-Kofinanzierungsanteil' that are "
+            "administrative matching-fund transfers rather than named R&D programmes — "
+            "SKIP unless the accompanying description names a specific R&D project.",
+
+            # Budget chapter totals for non-R&D ministries
+            "Section totals (Gesamtsumme, Summe, Gesamt) for ministries other than "
+            "UG 31 (Wissenschaft und Forschung), UG 33 (Wirtschaft), and Einzelplan 13 "
+            "— do not extract broad ministry totals for BMLV, BMI, BMF, BMAS, BMAA.",
+        ],
+        "include_note": [
+            # Primary R&D agencies
+            "FWF (Fonds zur Förderung der wissenschaftlichen Forschung) — annual "
+            "state appropriation to the Austrian Science Fund; core basic research funder. "
+            "FFG (Forschungsförderungsgesellschaft, from 2004; predecessor FFF pre-2004) "
+            "— applied and industrial R&D promotion. Both are priority includes.",
+
+            # Academy and advanced institutes
+            "ÖAW (Österreichische Akademie der Wissenschaften) — state grant to the "
+            "Austrian Academy of Sciences; include. "
+            "IST Austria / ISTA (from 2006) — annual state grant; include. "
+            "AIT (Austrian Institute of Technology, from 2009; formerly Arsenal Research) "
+            "— state participation/grant; include.",
+
+            # University Globalbudgets
+            "Austrian university Globalbudgets (post-2002 Universitätsgesetz): "
+            "each university's block grant appears as a single line in UG 31. "
+            "These cover teaching AND research — tag as higher_education. "
+            "Include: Universität Wien, TU Wien, TU Graz, Universität Graz, JKU Linz, "
+            "Universität Innsbruck, MedUni Wien, BOKU, WU Wien, etc.",
+
+            # International memberships
+            "CERN-Beitrag (Austrian contribution to CERN) and ESA-Beitrag (Austrian "
+            "contribution to ESA/European Space Agency) — include as rd_adjacent or direct_rd. "
+            "CD-Labor (Christian Doppler Forschungsgesellschaft) — cooperative research labs "
+            "co-funded by industry; include.",
+        ],
+        "year_notes": {
+            **{y: (
+                "Pre-2002 Bundesvoranschlag (ATS era): currency='ATS', unit='thousand'. "
+                "Budget structured by Einzelpläne (Kapitel). "
+                "KEY R&D CHAPTER: Einzelplan 13 = Wissenschaft und Forschung (BMWF/BMBWK). "
+                "Contains: FWF, FFF (pre-FFG), ÖAW, Ludwig Boltzmann Gesellschaft, "
+                "university block grants, CERN/ESA contributions. "
+                "Also check Einzelplan 07 (BMVIT) for applied R&D lines. "
+                "Austrian number format: '.' = thousands sep, ',' = decimal. "
+                "'280.000' = 280,000 (thousand ATS)."
+            ) for y in range(1975, 2002)},
+
+            2002: (
+                "TRANSITION YEAR: 2002 Bundesvoranschlag is the first EUR budget. "
+                "Currency='EUR', unit='thousand'. "
+                "Structure still uses Einzelpläne (pre-2013 reform). "
+                "KEY R&D CHAPTER: Einzelplan 13. "
+                "Fixed EUR/ATS rate: 1 EUR = 13.7603 ATS."
+            ),
+
+            **{y: (
+                "EUR era Bundesvoranschlag: currency='EUR', unit='thousand'. "
+                "Structure still uses Einzelpläne (Kapitel) pre-2013 Haushaltsrechtsreform. "
+                "KEY R&D CHAPTER: Einzelplan 13 (Wissenschaft und Forschung). "
+                "Contains: FWF, FFG (from 2004; FFF before), ÖAW, university block grants, "
+                "CERN/ESA, CD-Labor, AIT (from 2009). "
+                "Also check Einzelplan 07 (BMVIT) for BMVIT R&D programmes."
+            ) for y in range(2003, 2013)},
+
+            **{y: (
+                "Post-2013 Haushaltsrechtsreform: Untergliederung (UG) system. "
+                "Currency='EUR', unit='thousand'. "
+                "KEY R&D UGs: UG 31 (Wissenschaft und Forschung) — FWF, ÖAW, universities, "
+                "IST Austria, CERN/ESA. UG 33 (Wirtschaft) — FFG, AWS, AIT, CD-Labor. "
+                "Structure within each UG: Globalbudgets (GB) then Detailbudgets (DB). "
+                "University Globalbudgets appear as single lines — tag higher_education. "
+                "Austrian number format: '.' = thousands sep, ',' = decimal."
+            ) for y in range(2013, 2026)},
+        },
+    },
+
+    # -----------------------------------------------------------------------
+    # SPAIN
+    # Documents: Presupuestos Generales del Estado (PGE), BOE, 1979–2023
+    # Key agencies: CSIC, AEI (from 2017), CDTI, ISCIII, CIEMAT
+    # Unit: millones de pesetas pre-2002; miles de euros 2002+
+    # -----------------------------------------------------------------------
+    "Spain": {
+        "skip_if": [
+            "Defence ministry (Ministerio de Defensa) lines — skip unless 'investigación' explicitly named.",
+            "Social Security (Seguridad Social) transfers — not R&D.",
+            "Student grants and scholarships (becas de estudios) that are not research fellowships.",
+            "Transport infrastructure (carreteras, ferrocarril, puertos) without 'investigación'.",
+            "Regional development (FEDER, fondos estructurales) overhead lines.",
+            "EU co-financing administrative lines without explicit R&D programme name.",
+            "Fondo de Garantía de Servicios Públicos and similar inter-government transfers.",
+        ],
+        "include_note": [
+            "CSIC (Consejo Superior de Investigaciones Científicas) is the main public research body — always include.",
+            "AEI (Agencia Estatal de Investigación, organism 28.303) — research grants agency from 2017.",
+            "CDTI (organism under Industria/Ciencia) — industrial R&D loans and grants.",
+            "ISCIII (Instituto de Salud Carlos III, organism 28.106) — health research.",
+            "CIEMAT (Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas, organism 28.103).",
+            "Programme 463B 'Fomento y coordinación de la investigación científica y técnica' — key R&D programme.",
+            "Programme codes 541A, 542A, 542E, 465A are always R&D.",
+            "Plan Nacional de I+D+i appropriations are always R&D.",
+        ],
+        "year_notes": {
+            **{y: (
+                f"Spain {y} — ESP (peseta) era. "
+                "Amounts in millones de pesetas. Set currency='ESP', unit='million'. "
+                "Main R&D section: Sección 18 Educación y Ciencia, Servicio 25 Investigación. "
+                "Programme codes: 541A Investigación Científica, 542A Investigación Técnica. "
+                "CSIC is under Educación y Ciencia as Organismo Autónomo."
+            ) for y in range(1979, 2002)},
+            **{y: (
+                f"Spain {y} — EUR era. Amounts in 'Miles de euros' (thousands). "
+                "currency='EUR', unit='thousand'. "
+                "Key organisms: CSIC, CDTI, ISCIII, CIEMAT under Ministerio de Ciencia. "
+                "From 2017: AEI (Agencia Estatal de Investigación, 28.303) is the main grant agency."
+            ) for y in range(2002, 2026)},
+        },
+    },
+
+    # -----------------------------------------------------------------------
+    # FINLAND
+    # Documents: Valtion talousarvio (State Budget), 1985–2025
+    # Key agencies: Suomen Akatemia (29.60.50), Tekes/Business Finland (32.20), VTT, GTK
+    # Unit: full FIM pre-2002; full EUR 2002+
+    # -----------------------------------------------------------------------
+    "Finland": {
+        "skip_if": [
+            "Student grants/loans (opintotuki, opintolaina, Kela education benefits) — not R&D.",
+            "Defence ministry lines (chapter 27 Puolustusministeriö) — skip unless civilian research named.",
+            "Social and health transfers (chapter 33) — skip unless THL research line explicitly named.",
+            "Transport infrastructure (Traficom, Väylävirasto) without tutkimus/kehittäminen.",
+            "General university operating costs (chapter 29.40) unless the line explicitly labels research.",
+            "Veikkaus lottery transfer lines (29.60.53) — earmarked for sports/culture, not R&D.",
+        ],
+        "include_note": [
+            "Suomen Akatemia tutkimusmäärärahat (29.60.50) is the single most important R&D line — always include.",
+            "Tekes (pre-2018) and Business Finland (from 2018) innovation appropriations (32.20) — always include.",
+            "VTT institutional grant (chapter 32, 'erityisavustus' or 'valtionavustus VTT') — always include.",
+            "GTK (Geologian tutkimuskeskus) toimintamenot — include.",
+            "VATT (Valtion taloudellinen tutkimuskeskus) toimintamenot — include.",
+            "Luke / MTT / RKTL / Metla — natural resources research institutes — include.",
+            "Amounts are in FULL EUR (or full FIM pre-2002). Never divide by any scale.",
+        ],
+        "year_notes": {
+            **{y: (
+                f"Finland {y} — FIM (Finnish markka) era, scanned proposal. "
+                "OCR quality may be poor. Amounts in full FIM. currency='FIM', unit='unit'. "
+                "Chapter 29 Opetusministeriö: universities + Suomen Akatemia. "
+                "Chapter 32 Kauppa- ja teollisuusministeriö: VTT + research institutes. "
+                "Low extraction yield expected for early scanned years."
+            ) for y in range(1985, 1993)},
+            **{y: (
+                f"Finland {y} — FIM era, improving quality. "
+                "currency='FIM', unit='unit'. Full markka amounts. "
+                "Suomen Akatemia at chapter 29.60. Tekes at chapter 32. VTT under KTM."
+            ) for y in range(1993, 2002)},
+            **{y: (
+                f"Finland {y} — EUR era, fully digital. "
+                "currency='EUR', unit='unit'. Full euro amounts. "
+                "Space = thousands separator. '169 941 000' = 169,941,000 EUR. "
+                "Suomen Akatemia research grants at 29.60.50 (~170-500M EUR depending on year). "
+                "Business Finland (from 2018) / Tekes (pre-2018) at chapter 32.20."
+            ) for y in range(2002, 2026)},
+        },
     },
 }
 

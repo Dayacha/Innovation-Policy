@@ -1,0 +1,399 @@
+country,canonical_name,year,amount_total,amount_primary,n_acts,acts,additive_flag,currency,unit,category
+Spain,AEI (Agencia Estatal de Investigación),2017,,,0,,gap,,,science_agency
+Spain,AEI (Agencia Estatal de Investigación),2018,,,0,,gap,,,science_agency
+Spain,AEI (Agencia Estatal de Investigación),2020,,,0,,gap,,,science_agency
+Spain,AEI (Agencia Estatal de Investigación),2021,,,0,,gap,,,science_agency
+Spain,AEI (Agencia Estatal de Investigación),2022,30016012.7,30016012.7,1,pdf_b3b136e3553c__2023_BOE-A-2022-22128.txt,single,EUR,euro,science_agency
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),1979,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),1980,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),1981,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),1983,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),1984,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),1985,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),1986,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),1987,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),1988,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),1990,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),1991,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),1992,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),1993,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),1994,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),1996,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),1997,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),1998,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),1999,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2000,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2001,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2002,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2003,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2004,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2005,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2006,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2007,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2008,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2009,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2010,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2012,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2013,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2014,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2015,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2017,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2018,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2020,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2021,,,0,,gap,,,innovation_instruments
+Spain,CDTI (Centro para el Desarrollo Tecnológico e Industrial),2022,,,0,,gap,,,innovation_instruments
+Spain,CIEMAT,1986,,,0,,gap,,,science_agency
+Spain,CIEMAT,1987,,,0,,gap,,,science_agency
+Spain,CIEMAT,1988,,,0,,gap,,,science_agency
+Spain,CIEMAT,1990,,,0,,gap,,,science_agency
+Spain,CIEMAT,1991,,,0,,gap,,,science_agency
+Spain,CIEMAT,1992,,,0,,gap,,,science_agency
+Spain,CIEMAT,1993,,,0,,gap,,,science_agency
+Spain,CIEMAT,1994,,,0,,gap,,,science_agency
+Spain,CIEMAT,1996,,,0,,gap,,,science_agency
+Spain,CIEMAT,1997,,,0,,gap,,,science_agency
+Spain,CIEMAT,1998,,,0,,gap,,,science_agency
+Spain,CIEMAT,1999,,,0,,gap,,,science_agency
+Spain,CIEMAT,2000,,,0,,gap,,,science_agency
+Spain,CIEMAT,2001,,,0,,gap,,,science_agency
+Spain,CIEMAT,2002,,,0,,gap,,,science_agency
+Spain,CIEMAT,2003,,,0,,gap,,,science_agency
+Spain,CIEMAT,2004,,,0,,gap,,,science_agency
+Spain,CIEMAT,2005,,,0,,gap,,,science_agency
+Spain,CIEMAT,2006,,,0,,gap,,,science_agency
+Spain,CIEMAT,2007,,,0,,gap,,,science_agency
+Spain,CIEMAT,2008,,,0,,gap,,,science_agency
+Spain,CIEMAT,2009,,,0,,gap,,,science_agency
+Spain,CIEMAT,2010,,,0,,gap,,,science_agency
+Spain,CIEMAT,2012,,,0,,gap,,,science_agency
+Spain,CIEMAT,2013,,,0,,gap,,,science_agency
+Spain,CIEMAT,2014,,,0,,gap,,,science_agency
+Spain,CIEMAT,2015,,,0,,gap,,,science_agency
+Spain,CIEMAT,2017,,,0,,gap,,,science_agency
+Spain,CIEMAT,2018,,,0,,gap,,,science_agency
+Spain,CIEMAT,2020,,,0,,gap,,,science_agency
+Spain,CIEMAT,2021,,,0,,gap,,,science_agency
+Spain,CIEMAT,2022,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),1979,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),1980,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),1981,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),1983,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),1984,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),1985,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),1986,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),1987,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),1988,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),1990,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),1991,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),1992,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),1993,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),1994,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),1996,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),1997,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),1998,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),1999,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2000,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2001,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2002,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2003,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2004,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2005,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2006,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2007,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2008,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2009,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2010,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2012,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2013,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2014,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2015,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2017,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2018,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2020,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2021,,,0,,gap,,,science_agency
+Spain,CSIC (Consejo Superior de Investigaciones Científicas),2022,32855303.0,32855303.0,1,pdf_b3b136e3553c__2023_BOE-A-2022-22128.txt,single,EUR,euro,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",1979,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",1980,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",1981,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",1983,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",1984,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",1985,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",1986,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",1987,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",1988,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",1990,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",1991,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",1992,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",1993,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",1994,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",1996,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",1997,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",1998,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",1999,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2000,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2001,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2002,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2003,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2004,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2005,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2006,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2007,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2008,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2009,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2010,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2012,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2013,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2014,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2015,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2017,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2018,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2020,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2021,,,0,,gap,,,science_agency
+Spain,"Center for Energy, Environmental and Technological Research",2022,55422225.65,55422225.65,1,pdf_b3b136e3553c__2023_BOE-A-2022-22128.txt,single,EUR,euro,science_agency
+Spain,Centre for Sociological Research,1979,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,1980,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,1981,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,1983,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,1984,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,1985,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,1986,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,1987,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,1988,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,1990,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,1991,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,1992,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,1993,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,1994,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,1996,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,1997,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,1998,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,1999,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2000,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2001,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2002,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2003,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2004,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2005,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2006,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2007,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2008,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2009,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2010,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2012,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2013,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2014,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2015,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2017,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2018,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2020,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2021,,,0,,gap,,,direct_rd
+Spain,Centre for Sociological Research,2022,25825103.0,25825103.0,1,pdf_b3b136e3553c__2023_BOE-A-2022-22128.txt,single,EUR,euro,direct_rd
+Spain,Esteban Terradas National Institute of Aerospace Technology,1979,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,1980,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,1981,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,1983,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,1984,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,1985,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,1986,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,1987,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,1988,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,1990,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,1991,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,1992,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,1993,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,1994,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,1996,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,1997,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,1998,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,1999,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2000,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2001,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2002,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2003,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2004,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2005,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2006,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2007,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2008,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2009,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2010,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2012,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2013,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2014,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2015,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2017,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2018,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2020,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2021,,,0,,gap,,,science_agency
+Spain,Esteban Terradas National Institute of Aerospace Technology,2022,31078288.349999998,31078288.349999998,1,pdf_b3b136e3553c__2023_BOE-A-2022-22128.txt,single,EUR,euro,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),1986,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),1987,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),1988,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),1990,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),1991,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),1992,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),1993,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),1994,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),1996,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),1997,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),1998,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),1999,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2000,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2001,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2002,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2003,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2004,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2005,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2006,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2007,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2008,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2009,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2010,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2012,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2013,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2014,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2015,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2017,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2018,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2020,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2021,,,0,,gap,,,science_agency
+Spain,ISCIII (Instituto de Salud Carlos III),2022,22600000.0,22600000.0,1,pdf_b3b136e3553c__2023_BOE-A-2022-22128.txt,single,EUR,euro,science_agency
+Spain,National Transplant Organization,1979,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,1980,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,1981,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,1983,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,1984,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,1985,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,1986,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,1987,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,1988,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,1990,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,1991,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,1992,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,1993,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,1994,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,1996,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,1997,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,1998,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,1999,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2000,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2001,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2002,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2003,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2004,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2005,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2006,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2007,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2008,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2009,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2010,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2012,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2013,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2014,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2015,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2017,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2018,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2020,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2021,,,0,,gap,,,direct_rd
+Spain,National Transplant Organization,2022,24755000.0,24755000.0,1,pdf_b3b136e3553c__2023_BOE-A-2022-22128.txt,single,EUR,euro,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),1988,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),1990,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),1991,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),1992,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),1993,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),1994,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),1996,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),1997,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),1998,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),1999,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),2000,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),2001,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),2002,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),2003,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),2004,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),2005,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),2006,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),2007,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),2008,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),2009,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),2010,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),2012,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),2013,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),2014,,,0,,gap,,,direct_rd
+Spain,Plan Nacional I+D (total R&D appropriation),2015,,,0,,gap,,,direct_rd
+Spain,Recovery and Resilience Mechanism,1979,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,1980,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,1981,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,1983,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,1984,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,1985,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,1986,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,1987,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,1988,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,1990,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,1991,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,1992,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,1993,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,1994,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,1996,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,1997,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,1998,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,1999,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2000,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2001,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2002,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2003,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2004,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2005,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2006,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2007,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2008,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2009,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2010,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2012,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2013,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2014,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2015,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2017,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2018,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2020,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2021,,,0,,gap,,,innovation_instruments
+Spain,Recovery and Resilience Mechanism,2022,50000000.0,50000000.0,1,pdf_b3b136e3553c__2023_BOE-A-2022-22128.txt,single,EUR,euro,innovation_instruments
+Spain,Spanish Metrology Center,1979,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,1980,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,1981,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,1983,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,1984,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,1985,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,1986,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,1987,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,1988,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,1990,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,1991,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,1992,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,1993,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,1994,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,1996,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,1997,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,1998,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,1999,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2000,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2001,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2002,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2003,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2004,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2005,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2006,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2007,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2008,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2009,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2010,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2012,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2013,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2014,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2015,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2017,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2018,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2020,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2021,,,0,,gap,,,direct_rd
+Spain,Spanish Metrology Center,2022,25282104.0,25282104.0,1,pdf_b3b136e3553c__2023_BOE-A-2022-22128.txt,single,EUR,euro,direct_rd

@@ -1,0 +1,399 @@
+country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
+Spain,1979,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,,0.0
+Spain,1980,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1981,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1983,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1984,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1985,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1986,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1987,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1988,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1990,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1991,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1992,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1993,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1994,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1996,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1997,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1998,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1999,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2000,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2001,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2002,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2003,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2004,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2005,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2006,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2007,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2008,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2009,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2010,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2012,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2013,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2014,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2015,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2017,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2018,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2020,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2021,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,0.0,0.0,32855303.0
+Spain,2022,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,outlier,"Amount 32,855,303 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,32855303.0,0.0,
+Spain,2017,AEI (Agencia Estatal de Investigación),science_agency,ok,,,,,none,0.0,,0.0
+Spain,2018,AEI (Agencia Estatal de Investigación),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2020,AEI (Agencia Estatal de Investigación),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2021,AEI (Agencia Estatal de Investigación),science_agency,ok,,,,,none,0.0,0.0,30016012.7
+Spain,2022,AEI (Agencia Estatal de Investigación),science_agency,outlier,"Amount 30,016,013 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,30016012.7,0.0,
+Spain,1979,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,,0.0
+Spain,1980,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1981,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1983,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1984,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1985,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1986,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1987,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1988,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1990,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1991,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1992,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1993,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1994,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1996,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1997,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1998,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1999,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2000,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2001,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2002,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2003,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2004,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2005,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2006,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2007,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2008,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2009,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2010,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2012,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2013,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2014,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2015,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2017,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2018,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2020,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2021,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2022,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,0.0,0.0,
+Spain,1986,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,,0.0
+Spain,1987,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1988,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1990,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1991,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1992,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1993,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1994,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1996,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1997,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1998,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1999,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2000,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2001,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2002,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2003,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2004,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2005,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2006,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2007,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2008,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2009,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2010,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2012,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2013,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2014,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2015,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2017,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2018,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2020,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2021,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,0.0,0.0,22600000.0
+Spain,2022,ISCIII (Instituto de Salud Carlos III),science_agency,outlier,"Amount 22,600,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,22600000.0,0.0,
+Spain,1986,CIEMAT,science_agency,ok,,,,,none,0.0,,0.0
+Spain,1987,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1988,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1990,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1991,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1992,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1993,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1994,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1996,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1997,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1998,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1999,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2000,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2001,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2002,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2003,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2004,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2005,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2006,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2007,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2008,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2009,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2010,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2012,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2013,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2014,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2015,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2017,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2018,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2020,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2021,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2022,CIEMAT,science_agency,ok,,,,,none,0.0,0.0,
+Spain,1988,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,,0.0
+Spain,1990,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1991,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1992,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1993,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1994,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1996,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1997,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1998,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1999,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2000,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2001,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2002,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2003,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2004,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2005,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2006,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2007,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2008,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2009,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2010,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2012,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2013,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2014,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2015,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,0.0,0.0,
+Spain,1979,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,,0.0
+Spain,1980,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1981,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1983,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1984,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1985,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1986,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1987,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1988,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1990,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1991,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1992,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1993,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1994,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1996,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1997,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1998,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1999,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2000,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2001,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2002,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2003,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2004,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2005,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2006,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2007,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2008,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2009,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2010,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2012,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2013,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2014,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2015,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2017,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2018,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2020,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2021,"Center for Energy, Environmental and Technological Research",science_agency,ok,,,,,none,0.0,0.0,55422225.65
+Spain,2022,"Center for Energy, Environmental and Technological Research",science_agency,outlier,"Amount 55,422,226 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,55422225.65,0.0,
+Spain,1979,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,,0.0
+Spain,1980,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1981,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1983,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1984,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1985,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1986,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1987,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1988,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1990,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1991,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1992,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1993,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1994,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1996,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1997,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1998,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,1999,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2000,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2001,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2002,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2003,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2004,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2005,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2006,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2007,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2008,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2009,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2010,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2012,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2013,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2014,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2015,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2017,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2018,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2020,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Spain,2021,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,0.0,0.0,50000000.0
+Spain,2022,Recovery and Resilience Mechanism,innovation_instruments,outlier,"Amount 50,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,50000000.0,0.0,
+Spain,1979,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,,0.0
+Spain,1980,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1981,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1983,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1984,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1985,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1986,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1987,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1988,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1990,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1991,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1992,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1993,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1994,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1996,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1997,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1998,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,1999,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2000,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2001,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2002,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2003,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2004,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2005,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2006,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2007,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2008,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2009,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2010,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2012,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2013,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2014,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2015,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2017,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2018,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2020,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,0.0
+Spain,2021,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,0.0,0.0,31078288.349999998
+Spain,2022,Esteban Terradas National Institute of Aerospace Technology,science_agency,outlier,"Amount 31,078,288 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,31078288.349999998,0.0,
+Spain,1979,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,,0.0
+Spain,1980,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1981,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1983,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1984,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1985,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1986,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1987,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1988,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1990,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1991,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1992,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1993,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1994,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1996,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1997,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1998,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1999,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2000,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2001,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2002,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2003,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2004,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2005,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2006,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2007,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2008,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2009,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2010,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2012,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2013,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2014,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2015,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2017,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2018,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2020,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2021,Centre for Sociological Research,direct_rd,ok,,,,,none,0.0,0.0,25825103.0
+Spain,2022,Centre for Sociological Research,direct_rd,outlier,"Amount 25,825,103 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,25825103.0,0.0,
+Spain,1979,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,,0.0
+Spain,1980,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1981,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1983,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1984,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1985,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1986,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1987,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1988,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1990,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1991,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1992,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1993,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1994,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1996,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1997,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1998,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1999,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2000,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2001,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2002,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2003,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2004,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2005,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2006,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2007,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2008,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2009,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2010,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2012,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2013,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2014,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2015,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2017,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2018,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2020,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2021,Spanish Metrology Center,direct_rd,ok,,,,,none,0.0,0.0,25282104.0
+Spain,2022,Spanish Metrology Center,direct_rd,outlier,"Amount 25,282,104 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,25282104.0,0.0,
+Spain,1979,National Transplant Organization,direct_rd,ok,,,,,none,0.0,,0.0
+Spain,1980,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1981,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1983,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1984,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1985,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1986,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1987,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1988,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1990,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1991,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1992,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1993,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1994,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1996,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1997,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1998,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,1999,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2000,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2001,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2002,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2003,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2004,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2005,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2006,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2007,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2008,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2009,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2010,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2012,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2013,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2014,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2015,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2017,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2018,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2020,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Spain,2021,National Transplant Organization,direct_rd,ok,,,,,none,0.0,0.0,24755000.0
+Spain,2022,National Transplant Organization,direct_rd,outlier,"Amount 24,755,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,24755000.0,0.0,

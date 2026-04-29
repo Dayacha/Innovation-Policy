@@ -1,40 +1,40 @@
 country,canonical_name,year,amount_total,amount_primary,n_acts,acts,additive_flag,currency,unit,category
 Canada,AECL / Canadian Nuclear Laboratories,1987,,,0,,gap,,,science_agency
 Canada,AECL / Canadian Nuclear Laboratories,1988,,,0,,gap,,,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,1989,125713.0,125713.0,1,pdf_cc4accfe073d__1989-1.txt,single,CAD,thousand,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,1989,125713000.0,125713000.0,1,pdf_cc4accfe073d__1989-1.txt,single,CAD,dollar,science_agency
 Canada,AECL / Canadian Nuclear Laboratories,1990,,,0,,gap,,,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,1991,104840.5,104840.5,1,pdf_df6419e6eefa__1991-1.txt,single,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,1992,11842.6,11842.6,1,pdf_f8b3524f77eb__1992-2.txt,single,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,1993,466410.0,466410.0,1,pdf_f8ec88f20e98__1993-2.txt,single,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,1994,,,0,,gap,,,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,1991,38320500.0,38320500.0,1,pdf_df6419e6eefa__1991-1.txt,single,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,1992,6100000.0,6100000.0,1,pdf_f8b3524f77eb__1992-2.txt,single,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,1993,466410000.0,466410000.0,1,pdf_f8ec88f20e98__1993-2.txt,single,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,1994,79628862.0,79628862.0,1,1994-4.pdf,single,CAD,dollar,science_agency
 Canada,AECL / Canadian Nuclear Laboratories,1995,,,0,,gap,,,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,1996,,,0,,gap,,,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,1996,40233000.0,40233000.0,1,pdf_794e5cdc9ba6__1996-2.txt,single,CAD,dollar,science_agency
 Canada,AECL / Canadian Nuclear Laboratories,1997,,,0,,gap,,,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,1998,72371.313,72371.313,1,pdf_3f43627833fd__1998-1.txt,single,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,1999,1277743.0,1277743.0,1,pdf_c352f666d27c__1999-1.txt,single,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2000,44455.0,44455.0,1,pdf_063218f608ee__2000_1_YX2-2000-1.txt,single,CAD,thousand,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,1998,38397000.0,38397000.0,1,pdf_3f43627833fd__1998-1.txt,single,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,1999,135449000.0,135449000.0,1,pdf_c352f666d27c__1999-1.txt,single,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2000,44455000.0,44455000.0,1,pdf_063218f608ee__2000_1_YX2-2000-1.txt,single,CAD,dollar,science_agency
 Canada,AECL / Canadian Nuclear Laboratories,2001,,,0,,gap,,,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2002,997349.324,949829.0,3,pdf_4d23754e5ddd__2002_a_YX2-2002-1.txt | pdf_94f5808a2fc9__2002_b_YX2-2002-2.txt | pdf_e56dd369fa24__Appropriation_Act_2002-03_C21_Project.txt,additive,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2003,178772.0,46000.0,2,pdf_4e638b794f3f__Appropriation_Act_2003-04_C55_Project.txt | pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt,additive,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2006,254803.875,116717.625,3,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_94f303554d94__Appropriation_Act_2006-07_C39_Project.txt | pdf_f82125049255__Appropriation_Act_2006-07_C38.txt,additive,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2007,212456.0,103749.0,2,pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt | pdf_826ff054c987__Appropriation_Act_2007-08_C35_Project.txt,additive,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2008,300000.0,300000.0,3,pdf_5832acb42e3a__Appropriation_Act_2008-09_C59_Project.txt | pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt | pdf_d964d507d809__Appropriation_Act_2008-09_C49_Project.txt,restatement,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2009,442964.0,108691.0,3,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt | pdf_3be4682b7458__Appropriation_Act_2009-10_C49.txt | pdf_b0df86a09a5c__Appropriation_Act_2009-10_C6.txt,additive,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2010,300000.0,300000.0,3,pdf_51fd9e07b551__Appropriation_Act_2010-11_C45.txt | pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt | pdf_7bf0aeb667de__Appropriation_Act_2010-11_C7.txt,restatement,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2011,472654.917,275511.917,3,pdf_12804f46d98a__Appropriation_Act_2011-12_C29.txt | pdf_91ef49b8f05c__Appropriation_Act_2011-12_C34.txt | pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,additive,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2012,102143.0,102143.0,4,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt | pdf_17cd3e81dc75__Appropriation_Act_2012-13_C35.txt | pdf_6e8afe4c03d2__Appropriation_Act_2012-13_C41.txt | pdf_e9d28d56c3bd__Appropriation_Act_2012-13_C50.txt,restatement,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2013,102143.0,102143.0,4,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt | pdf_80c4bab60042__Appropriation_Act_2013-14_C59.txt | pdf_b23eebbefa0c__Appropriation_Act_2013-14_C64.txt | pdf_e3de5326883e__Appropriation_Act_2013-14_C19.txt,restatement,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2014,347133.519,102143.0,3,pdf_2099b532c496__Appropriation_Act_2014-15_C29.txt | pdf_ab522ba1986a__Appropriation_Act_2014-15_C39.txt | pdf_e1f3978ed5bb__Appropriation_Act_2014-15_C45.txt,additive,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2015,319136.692,102143.0,3,pdf_42c08c0cabdc__Appropriation_Act_2015-16_C55.txt | pdf_9d320e713a62__Appropriation_Act_2015-16_C67.txt | pdf_bd3fcee037af__Appropriation_Act_2015-16_C8.txt,additive,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2016,968615.589,968615.589,1,pdf_e53c6bee56bb__Appropriation_Act_2016-17_C19.txt,single,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2017,971055.162,971055.162,1,pdf_84bfa4a5d495__Appropriation_Act_2017-18_C53.txt,single,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2018,1304424.55,1043539.64,2,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2019,1496602.533,1197282.026,2,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt | pdf_b10d5794609b__Appropriation_Act_2019-20_C96.txt,additive,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2020,1253935.845,1253935.845,1,pdf_6f6e72970cf7__Appropriation_Act_2020-21_C16.txt,single,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2021,1227899.417,1188799.417,2,pdf_200ebf737d10__Appropriation_Act_2021-22_C33.txt | pdf_8b52b51ff5b9__Appropriation_Act_2021-22_C15.txt,additive,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2022,1326123.883,1174652.615,2,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt | pdf_902b8f5bb10a__Appropriation_Act_2022-23_C36.txt,additive,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2023,1547315.307,1541555.307,2,pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt | pdf_ec0377ac309a__Appropriation_Act_2023-24_C67.txt,additive,CAD,thousand,science_agency
-Canada,AECL / Canadian Nuclear Laboratories,2024,1591309.916,1591309.916,1,pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt,single,CAD,thousand,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2002,997349324.0,949829000.0,3,pdf_4d23754e5ddd__2002_a_YX2-2002-1.txt | pdf_94f5808a2fc9__2002_b_YX2-2002-2.txt | pdf_e56dd369fa24__Appropriation_Act_2002-03_C21_Project.txt,additive,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2003,178772000.0,46000000.0,2,pdf_4e638b794f3f__Appropriation_Act_2003-04_C55_Project.txt | pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt,additive,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2006,112149000.0,103749000.0,2,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_94f303554d94__Appropriation_Act_2006-07_C39_Project.txt,additive,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2007,212456000.0,103749000.0,2,pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt | pdf_826ff054c987__Appropriation_Act_2007-08_C35_Project.txt,additive,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2008,300000000.0,300000000.0,4,Appropriation Act 2008-09 C59 Project.pdf | pdf_5832acb42e3a__Appropriation_Act_2008-09_C59_Project.txt | pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt | pdf_d964d507d809__Appropriation_Act_2008-09_C49_Project.txt,restatement,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2009,4306411000.0,3863447000.0,4,Appropriation Act 2009-10 C22.pdf | pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt | pdf_3be4682b7458__Appropriation_Act_2009-10_C49.txt | pdf_b0df86a09a5c__Appropriation_Act_2009-10_C6.txt,additive,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2010,300000000.0,300000000.0,3,pdf_51fd9e07b551__Appropriation_Act_2010-11_C45.txt | pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt | pdf_7bf0aeb667de__Appropriation_Act_2010-11_C7.txt,restatement,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2011,472654917.0,275511917.0,3,pdf_12804f46d98a__Appropriation_Act_2011-12_C29.txt | pdf_91ef49b8f05c__Appropriation_Act_2011-12_C34.txt | pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,additive,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2012,102143000.0,102143000.0,4,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt | pdf_17cd3e81dc75__Appropriation_Act_2012-13_C35.txt | pdf_6e8afe4c03d2__Appropriation_Act_2012-13_C41.txt | pdf_e9d28d56c3bd__Appropriation_Act_2012-13_C50.txt,restatement,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2013,102143000.0,102143000.0,4,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt | pdf_80c4bab60042__Appropriation_Act_2013-14_C59.txt | pdf_b23eebbefa0c__Appropriation_Act_2013-14_C64.txt | pdf_e3de5326883e__Appropriation_Act_2013-14_C19.txt,restatement,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2014,347133519.0,102143000.0,3,pdf_2099b532c496__Appropriation_Act_2014-15_C29.txt | pdf_ab522ba1986a__Appropriation_Act_2014-15_C39.txt | pdf_e1f3978ed5bb__Appropriation_Act_2014-15_C45.txt,additive,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2015,319136692.0,102143000.0,3,pdf_42c08c0cabdc__Appropriation_Act_2015-16_C55.txt | pdf_9d320e713a62__Appropriation_Act_2015-16_C67.txt | pdf_bd3fcee037af__Appropriation_Act_2015-16_C8.txt,additive,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2016,968615589.0,968615589.0,1,pdf_e53c6bee56bb__Appropriation_Act_2016-17_C19.txt,single,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2017,971055162.0,971055162.0,1,pdf_84bfa4a5d495__Appropriation_Act_2017-18_C53.txt,single,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2018,1304424550.0,1043539640.0,2,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2019,1496602533.0,1197282026.0,2,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt | pdf_b10d5794609b__Appropriation_Act_2019-20_C96.txt,additive,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2020,1253935845.0,1253935845.0,1,pdf_6f6e72970cf7__Appropriation_Act_2020-21_C16.txt,single,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2021,1227899417.0,1188799417.0,2,pdf_200ebf737d10__Appropriation_Act_2021-22_C33.txt | pdf_8b52b51ff5b9__Appropriation_Act_2021-22_C15.txt,additive,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2022,1326123883.0,1174652615.0,2,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt | pdf_902b8f5bb10a__Appropriation_Act_2022-23_C36.txt,additive,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2023,1547315307.0,1541555307.0,2,pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt | pdf_ec0377ac309a__Appropriation_Act_2023-24_C67.txt,additive,CAD,dollar,science_agency
+Canada,AECL / Canadian Nuclear Laboratories,2024,1591309916.0,1591309916.0,1,pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt,single,CAD,dollar,science_agency
 Canada,Assisted Human Reproduction Agency of Canada,1987,,,0,,gap,,,direct_rd
 Canada,Assisted Human Reproduction Agency of Canada,1988,,,0,,gap,,,direct_rd
 Canada,Assisted Human Reproduction Agency of Canada,1989,,,0,,gap,,,direct_rd
@@ -52,13 +52,13 @@ Canada,Assisted Human Reproduction Agency of Canada,2000,,,0,,gap,,,direct_rd
 Canada,Assisted Human Reproduction Agency of Canada,2001,,,0,,gap,,,direct_rd
 Canada,Assisted Human Reproduction Agency of Canada,2002,,,0,,gap,,,direct_rd
 Canada,Assisted Human Reproduction Agency of Canada,2003,,,0,,gap,,,direct_rd
-Canada,Assisted Human Reproduction Agency of Canada,2006,27066.0,15788.5,2,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_f82125049255__Appropriation_Act_2006-07_C38.txt,additive,CAD,thousand,direct_rd
-Canada,Assisted Human Reproduction Agency of Canada,2007,12834.0,12834.0,1,pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt,single,CAD,thousand,direct_rd
-Canada,Assisted Human Reproduction Agency of Canada,2008,11783.0,11783.0,1,pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt,single,CAD,thousand,direct_rd
-Canada,Assisted Human Reproduction Agency of Canada,2009,9922.84,9922.84,1,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt,single,CAD,thousand,direct_rd
-Canada,Assisted Human Reproduction Agency of Canada,2010,9929.142,9929.142,1,pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt,single,CAD,thousand,direct_rd
-Canada,Assisted Human Reproduction Agency of Canada,2011,17370.444,17370.444,1,pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,single,CAD,thousand,direct_rd
-Canada,Assisted Human Reproduction Agency of Canada,2012,9925.968,9925.968,1,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt,single,CAD,thousand,direct_rd
+Canada,Assisted Human Reproduction Agency of Canada,2006,9022000.0,9022000.0,1,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt,single,CAD,dollar,direct_rd
+Canada,Assisted Human Reproduction Agency of Canada,2007,12834000.0,12834000.0,1,pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt,single,CAD,dollar,direct_rd
+Canada,Assisted Human Reproduction Agency of Canada,2008,11783000.0,11783000.0,1,pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt,single,CAD,dollar,direct_rd
+Canada,Assisted Human Reproduction Agency of Canada,2009,9922840.0,9922840.0,1,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt,single,CAD,dollar,direct_rd
+Canada,Assisted Human Reproduction Agency of Canada,2010,9929142.0,9929142.0,1,pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt,single,CAD,dollar,direct_rd
+Canada,Assisted Human Reproduction Agency of Canada,2011,9925968.0,9925968.0,1,pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,single,CAD,dollar,direct_rd
+Canada,Assisted Human Reproduction Agency of Canada,2012,9925968.0,9925968.0,1,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt,single,CAD,dollar,direct_rd
 Canada,Assisted Human Reproduction Agency of Canada,2013,,,0,,gap,,,direct_rd
 Canada,Assisted Human Reproduction Agency of Canada,2014,,,0,,gap,,,direct_rd
 Canada,Assisted Human Reproduction Agency of Canada,2015,,,0,,gap,,,direct_rd
@@ -71,102 +71,66 @@ Canada,Assisted Human Reproduction Agency of Canada,2021,,,0,,gap,,,direct_rd
 Canada,Assisted Human Reproduction Agency of Canada,2022,,,0,,gap,,,direct_rd
 Canada,Assisted Human Reproduction Agency of Canada,2023,,,0,,gap,,,direct_rd
 Canada,Assisted Human Reproduction Agency of Canada,2024,,,0,,gap,,,direct_rd
-Canada,Atomic Energy Control Board,1987,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,1988,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,1989,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,1990,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,1991,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,1992,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,1993,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,1994,560395.9,560395.9,1,pdf_2d0b078b24fb__1994-2.txt,single,CAD,thousand,science_agency
-Canada,Atomic Energy Control Board,1995,38726.0,38726.0,1,pdf_f8a0500cfd84__1995-1.txt,single,CAD,thousand,science_agency
-Canada,Atomic Energy Control Board,1996,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,1997,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,1998,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,1999,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2000,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2001,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2002,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2003,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2006,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2007,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2008,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2009,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2010,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2011,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2012,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2013,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2014,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2015,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2016,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2017,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2018,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2019,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2020,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2021,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2022,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2023,,,0,,gap,,,science_agency
-Canada,Atomic Energy Control Board,2024,,,0,,gap,,,science_agency
 Canada,CIHR,2000,,,0,,gap,,,science_agency
-Canada,CIHR,2001,551681.033,123048.033,2,pdf_5d233800258f__2001_3_YX2-2001-3.txt | pdf_96c6876dd7d6__2001_2_YX2-2001-2.txt,additive,CAD,thousand,science_agency
-Canada,CIHR,2002,184998.139,184698.139,2,pdf_94f5808a2fc9__2002_b_YX2-2002-2.txt | pdf_99701fee0eb0__Appropriation_Act_2002-03_C29_Project.txt,additive,CAD,thousand,science_agency
-Canada,CIHR,2003,722489.519,56487.519,2,pdf_4e638b794f3f__Appropriation_Act_2003-04_C55_Project.txt | pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt,additive,CAD,thousand,science_agency
-Canada,CIHR,2006,2644819.933,864731.038,4,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_94f303554d94__Appropriation_Act_2006-07_C39_Project.txt | pdf_acbb37d5b36f__Appropriation_Act_2006-07_C48_Project.txt | pdf_f82125049255__Appropriation_Act_2006-07_C38.txt,additive,CAD,thousand,science_agency
-Canada,CIHR,2007,912102.286,864915.0,2,pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt | pdf_826ff054c987__Appropriation_Act_2007-08_C35_Project.txt,additive,CAD,thousand,science_agency
-Canada,CIHR,2008,924141.0,924141.0,1,pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt,single,CAD,thousand,science_agency
-Canada,CIHR,2009,919926.83,919926.83,1,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt,single,CAD,thousand,science_agency
-Canada,CIHR,2010,975920.568,975920.568,1,pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt,single,CAD,thousand,science_agency
-Canada,CIHR,2011,2056105.064,24949.25,2,pdf_12804f46d98a__Appropriation_Act_2011-12_C29.txt | pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,additive,CAD,thousand,science_agency
-Canada,CIHR,2012,986483.365,971325.765,3,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt | pdf_337f5cf2048a__Appropriation_Act_2012-13_C58.txt | pdf_e9d28d56c3bd__Appropriation_Act_2012-13_C50.txt,additive,CAD,thousand,science_agency
-Canada,CIHR,2013,988495.905,961718.23,4,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt | pdf_b23eebbefa0c__Appropriation_Act_2013-14_C64.txt | pdf_d3de44366ef3__Appropriation_Act_2013-14_C28.txt | pdf_e3de5326883e__Appropriation_Act_2013-14_C19.txt,additive,CAD,thousand,science_agency
-Canada,CIHR,2014,1006398.82,979255.82,3,pdf_3551f35c9a0e__Appropriation_Act_2014-15_C38.txt | pdf_962d9379b0c8__Appropriation_Act_2014-15_C54.txt | pdf_e1f3978ed5bb__Appropriation_Act_2014-15_C45.txt,additive,CAD,thousand,science_agency
-Canada,CIHR,2015,1019284.3049999999,16533.614,2,pdf_bd3fcee037af__Appropriation_Act_2015-16_C8.txt | pdf_d64fe7703590__Appropriation_Act_2015-16_C66.txt,additive,CAD,thousand,science_agency
-Canada,CIHR,2016,1072985.5250000001,38591.203,3,pdf_9c999da4a13a__Appropriation_Act_2016-17_C35.txt | pdf_b93bee4a7023__Appropriation_Act_2016-17_C20.txt | pdf_e53c6bee56bb__Appropriation_Act_2016-17_C19.txt,additive,CAD,thousand,science_agency
-Canada,CIHR,2017,1087187.194,3467.219,3,pdf_2ba828140e67__Appropriation_Act_2017-18_C72.txt | pdf_84bfa4a5d495__Appropriation_Act_2017-18_C53.txt | pdf_c45fa8ce41ed__Appropriation_Act_2017-18_C67.txt,additive,CAD,thousand,science_agency
-Canada,CIHR,2018,1109993.368,1096766.172,2,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,thousand,science_agency
-Canada,CIHR,2019,1193068.646,1171816.551,4,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt | pdf_873762b2ca63__Appropriation_Act_2019-20_C2.txt | pdf_b10d5794609b__Appropriation_Act_2019-20_C96.txt | pdf_e8fdad00f8d2__Appropriation_Act_2019-20_C10.txt,additive,CAD,thousand,science_agency
-Canada,CIHR,2020,1397777.235,126700.0,4,pdf_06c5749bea35__Appropriation_Act_2020-21_C26.txt | pdf_6d66da39f53d__Appropriation_Act_2020-21_C19.txt | pdf_6f6e72970cf7__Appropriation_Act_2020-21_C16.txt | pdf_72a8d2e842dd__Appropriation_Act_2020-21_C17.txt,additive,CAD,thousand,science_agency
-Canada,CIHR,2021,1381920.889,1246700.153,4,pdf_200ebf737d10__Appropriation_Act_2021-22_C33.txt | pdf_790f18540313__Appropriation_Act_2021-22_C34.txt | pdf_8b52b51ff5b9__Appropriation_Act_2021-22_C15.txt | pdf_9432e706d201__Appropriation_Act_2021-22_C6.txt,additive,CAD,thousand,science_agency
-Canada,CIHR,2022,1345469.374,1234751.136,3,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt | pdf_902b8f5bb10a__Appropriation_Act_2022-23_C36.txt | pdf_d9b5656a645f__Appropriation_Act_2022-23_C43.txt,additive,CAD,thousand,science_agency
-Canada,CIHR,2023,1348569.077,5794.0,2,pdf_55f813618fa1__Appropriation_Act_2023-24_C55.txt | pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt,additive,CAD,thousand,science_agency
-Canada,CIHR,2024,1416108.8760000002,55357.745,2,pdf_0adeb1980e12__Appropriation_Act_2024-25_C79.txt | pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt,additive,CAD,thousand,science_agency
+Canada,CIHR,2001,123048033.0,123048033.0,3,2001 3 YX2-2001-3.pdf | pdf_5d233800258f__2001_3_YX2-2001-3.txt | pdf_96c6876dd7d6__2001_2_YX2-2001-2.txt,restatement,CAD,dollar,science_agency
+Canada,CIHR,2002,13439260.0,13139260.0,2,pdf_94f5808a2fc9__2002_b_YX2-2002-2.txt | pdf_99701fee0eb0__Appropriation_Act_2002-03_C29_Project.txt,additive,CAD,dollar,science_agency
+Canada,CIHR,2003,722489519.0,56487519.0,2,pdf_4e638b794f3f__Appropriation_Act_2003-04_C55_Project.txt | pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt,additive,CAD,dollar,science_agency
+Canada,CIHR,2006,931445895.0,828017000.0,3,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_94f303554d94__Appropriation_Act_2006-07_C39_Project.txt | pdf_acbb37d5b36f__Appropriation_Act_2006-07_C48_Project.txt,additive,CAD,dollar,science_agency
+Canada,CIHR,2007,47187286.0,47187286.0,3,Appropriation Act 2007-08 C35 Project.pdf | pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt | pdf_826ff054c987__Appropriation_Act_2007-08_C35_Project.txt,restatement,CAD,dollar,science_agency
+Canada,CIHR,2008,924141000.0,924141000.0,1,pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt,single,CAD,dollar,science_agency
+Canada,CIHR,2009,919926830.0,919926830.0,1,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt,single,CAD,dollar,science_agency
+Canada,CIHR,2010,975920568.0,975920568.0,1,pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt,single,CAD,dollar,science_agency
+Canada,CIHR,2011,1003021581.0,24949250.0,2,pdf_12804f46d98a__Appropriation_Act_2011-12_C29.txt | pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,additive,CAD,dollar,science_agency
+Canada,CIHR,2012,986483365.0,971325765.0,3,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt | pdf_337f5cf2048a__Appropriation_Act_2012-13_C58.txt | pdf_e9d28d56c3bd__Appropriation_Act_2012-13_C50.txt,additive,CAD,dollar,science_agency
+Canada,CIHR,2013,988495905.0,961718230.0,4,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt | pdf_b23eebbefa0c__Appropriation_Act_2013-14_C64.txt | pdf_d3de44366ef3__Appropriation_Act_2013-14_C28.txt | pdf_e3de5326883e__Appropriation_Act_2013-14_C19.txt,additive,CAD,dollar,science_agency
+Canada,CIHR,2014,1006398820.0,979255820.0,3,pdf_3551f35c9a0e__Appropriation_Act_2014-15_C38.txt | pdf_962d9379b0c8__Appropriation_Act_2014-15_C54.txt | pdf_e1f3978ed5bb__Appropriation_Act_2014-15_C45.txt,additive,CAD,dollar,science_agency
+Canada,CIHR,2015,1019284305.0,16533614.0,2,pdf_bd3fcee037af__Appropriation_Act_2015-16_C8.txt | pdf_d64fe7703590__Appropriation_Act_2015-16_C66.txt,additive,CAD,dollar,science_agency
+Canada,CIHR,2016,1072985525.0,38591203.0,3,pdf_9c999da4a13a__Appropriation_Act_2016-17_C35.txt | pdf_b93bee4a7023__Appropriation_Act_2016-17_C20.txt | pdf_e53c6bee56bb__Appropriation_Act_2016-17_C19.txt,additive,CAD,dollar,science_agency
+Canada,CIHR,2017,1087187194.0,3467219.0,3,pdf_2ba828140e67__Appropriation_Act_2017-18_C72.txt | pdf_84bfa4a5d495__Appropriation_Act_2017-18_C53.txt | pdf_c45fa8ce41ed__Appropriation_Act_2017-18_C67.txt,additive,CAD,dollar,science_agency
+Canada,CIHR,2018,1370957716.0,1096766172.0,2,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,dollar,science_agency
+Canada,CIHR,2019,1193068646.0,1171816551.0,4,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt | pdf_873762b2ca63__Appropriation_Act_2019-20_C2.txt | pdf_b10d5794609b__Appropriation_Act_2019-20_C96.txt | pdf_e8fdad00f8d2__Appropriation_Act_2019-20_C10.txt,additive,CAD,dollar,science_agency
+Canada,CIHR,2020,1397777235.0,126700000.0,4,pdf_06c5749bea35__Appropriation_Act_2020-21_C26.txt | pdf_6d66da39f53d__Appropriation_Act_2020-21_C19.txt | pdf_6f6e72970cf7__Appropriation_Act_2020-21_C16.txt | pdf_72a8d2e842dd__Appropriation_Act_2020-21_C17.txt,additive,CAD,dollar,science_agency
+Canada,CIHR,2021,1381920889.0,1246700153.0,4,pdf_200ebf737d10__Appropriation_Act_2021-22_C33.txt | pdf_790f18540313__Appropriation_Act_2021-22_C34.txt | pdf_8b52b51ff5b9__Appropriation_Act_2021-22_C15.txt | pdf_9432e706d201__Appropriation_Act_2021-22_C6.txt,additive,CAD,dollar,science_agency
+Canada,CIHR,2022,1345469374.0,1234751136.0,3,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt | pdf_902b8f5bb10a__Appropriation_Act_2022-23_C36.txt | pdf_d9b5656a645f__Appropriation_Act_2022-23_C43.txt,additive,CAD,dollar,science_agency
+Canada,CIHR,2023,1348569077.0,5794000.0,2,pdf_55f813618fa1__Appropriation_Act_2023-24_C55.txt | pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt,additive,CAD,dollar,science_agency
+Canada,CIHR,2024,1416108876.0,55357745.0,2,pdf_0adeb1980e12__Appropriation_Act_2024-25_C79.txt | pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt,additive,CAD,dollar,science_agency
 Canada,Canada Council for the Arts,1987,,,0,,gap,,,innovation_instruments
-Canada,Canada Council for the Arts,1988,367472.0,367472.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,thousand,innovation_instruments
+Canada,Canada Council for the Arts,1988,169122000.0,169122000.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,dollar,innovation_instruments
 Canada,Canada Council for the Arts,1989,,,0,,gap,,,innovation_instruments
 Canada,Canada Council for the Arts,1990,,,0,,gap,,,innovation_instruments
-Canada,Canada Council for the Arts,1991,293171.0,720.0,2,pdf_ca124dfbeb66__1991-3.txt | pdf_df6419e6eefa__1991-1.txt,additive,CAD,thousand,innovation_instruments
+Canada,Canada Council for the Arts,1991,293171000.0,720000.0,2,pdf_ca124dfbeb66__1991-3.txt | pdf_df6419e6eefa__1991-1.txt,additive,CAD,dollar,innovation_instruments
 Canada,Canada Council for the Arts,1992,,,0,,gap,,,innovation_instruments
 Canada,Canada Council for the Arts,1993,,,0,,gap,,,innovation_instruments
-Canada,Canada Council for the Arts,1994,491791.09267000004,194565.21,2,pdf_2d0b078b24fb__1994-2.txt | pdf_c1ca179cbf4a__1994-1.txt,additive,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,1995,72676.0,72676.0,1,pdf_f8a0500cfd84__1995-1.txt,single,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,1996,292.9,292.9,1,pdf_794e5cdc9ba6__1996-2.txt,single,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,1997,25300.0,25300.0,1,pdf_7c0b389ce1a9__1997-2.txt,single,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,1998,593252.231,585485.998,2,pdf_3f43627833fd__1998-1.txt | pdf_7a4a1dd7c37d__1998-2.txt,additive,CAD,thousand,innovation_instruments
+Canada,Canada Council for the Arts,1994,491791092.67,194565210.0,2,pdf_2d0b078b24fb__1994-2.txt | pdf_c1ca179cbf4a__1994-1.txt,additive,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,1995,72676000.0,72676000.0,1,pdf_f8a0500cfd84__1995-1.txt,single,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,1996,292900.0,292900.0,1,pdf_794e5cdc9ba6__1996-2.txt,single,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,1997,25300000.0,25300000.0,1,pdf_7c0b389ce1a9__1997-2.txt,single,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,1998,177845231.0,170078998.0,2,pdf_3f43627833fd__1998-1.txt | pdf_7a4a1dd7c37d__1998-2.txt,additive,CAD,dollar,innovation_instruments
 Canada,Canada Council for the Arts,1999,,,0,,gap,,,innovation_instruments
 Canada,Canada Council for the Arts,2000,,,0,,gap,,,innovation_instruments
-Canada,Canada Council for the Arts,2001,223719.34499999997,34983.045,2,pdf_42b97a8dfe36__2001_1_YX2-2001-1.txt | pdf_96c6876dd7d6__2001_2_YX2-2001-2.txt,additive,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2002,3406.25,1100.0,2,pdf_99701fee0eb0__Appropriation_Act_2002-03_C29_Project.txt | pdf_e56dd369fa24__Appropriation_Act_2002-03_C21_Project.txt,additive,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2003,151284.0,151284.0,2,pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt | pdf_edd68c90988f__Appropriation_Act_2003-04_C30_Project.txt,restatement,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2006,398501.8125,190445.25,3,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_94f303554d94__Appropriation_Act_2006-07_C39_Project.txt | pdf_f82125049255__Appropriation_Act_2006-07_C38.txt,additive,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2007,543963.75,362642.5,2,pdf_4e072fdd2dfe__Appropriation_Act_2007-08_C50_Project.txt | pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt,additive,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2008,180526.0,180526.0,1,pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt,single,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2009,361312.21900000004,180786.219,2,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt | pdf_3be4682b7458__Appropriation_Act_2009-10_C49.txt,additive,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2010,181696.784,181696.784,2,pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt | pdf_7bf0aeb667de__Appropriation_Act_2010-11_C7.txt,restatement,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2011,276508.061,276508.061,1,pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,single,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2012,181760.816,181760.816,2,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt | pdf_17cd3e81dc75__Appropriation_Act_2012-13_C35.txt,restatement,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2013,180260.816,180260.816,3,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt | pdf_80c4bab60042__Appropriation_Act_2013-14_C59.txt | pdf_d3de44366ef3__Appropriation_Act_2013-14_C28.txt,restatement,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2014,182092.916,182092.916,1,pdf_2099b532c496__Appropriation_Act_2014-15_C29.txt,single,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2015,182097.387,182097.387,1,pdf_42c08c0cabdc__Appropriation_Act_2015-16_C55.txt,single,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2016,222347.387,182347.387,2,pdf_1c535913f398__Appropriation_Act_2016-17_C9.txt | pdf_b93bee4a7023__Appropriation_Act_2016-17_C20.txt,additive,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2017,257347.387,257347.387,1,pdf_50c6b6fecd94__Appropriation_Act_2017-18_C41.txt,single,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2018,438948.506,292632.337,2,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2019,464162.752,327644.295,2,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt | pdf_b10d5794609b__Appropriation_Act_2019-20_C96.txt,additive,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2020,362644.295,362644.295,1,pdf_0a59a59f62a2__Appropriation_Act_2020-21_C11.txt,single,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2021,480562.08,364062.08,2,pdf_1516e9eb34bd__Appropriation_Act_2021-22_C27.txt | pdf_790f18540313__Appropriation_Act_2021-22_C34.txt,additive,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2022,423389.08,414189.08,2,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt | pdf_902b8f5bb10a__Appropriation_Act_2022-23_C36.txt,additive,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2023,364238.813,364238.813,1,pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt,single,CAD,thousand,innovation_instruments
-Canada,Canada Council for the Arts,2024,363758.16,363758.16,1,pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt,single,CAD,thousand,innovation_instruments
-Canada,Canada Foundation for Innovation (CFI),1997,3.0,3.0,1,pdf_7c0b389ce1a9__1997-2.txt,single,CAD,thousand,research_infrastructure
+Canada,Canada Council for the Arts,2001,189328800.0,592500.0,2,pdf_42b97a8dfe36__2001_1_YX2-2001-1.txt | pdf_96c6876dd7d6__2001_2_YX2-2001-2.txt,additive,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2002,3406250.0,1100000.0,2,pdf_99701fee0eb0__Appropriation_Act_2002-03_C29_Project.txt | pdf_e56dd369fa24__Appropriation_Act_2002-03_C21_Project.txt,additive,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2003,151284000.0,151284000.0,2,pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt | pdf_edd68c90988f__Appropriation_Act_2003-04_C30_Project.txt,restatement,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2006,170445250.0,150445250.0,2,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_94f303554d94__Appropriation_Act_2006-07_C39_Project.txt,additive,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2007,181321250.0,181321250.0,2,pdf_4e072fdd2dfe__Appropriation_Act_2007-08_C50_Project.txt | pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt,restatement,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2008,180526000.0,180526000.0,1,pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt,single,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2009,361312219.0,180786219.0,2,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt | pdf_3be4682b7458__Appropriation_Act_2009-10_C49.txt,additive,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2010,181696784.0,181696784.0,2,pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt | pdf_7bf0aeb667de__Appropriation_Act_2010-11_C7.txt,restatement,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2011,181760816.0,181760816.0,1,pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,single,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2012,181760816.0,181760816.0,1,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt,single,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2013,180260816.0,180260816.0,3,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt | pdf_80c4bab60042__Appropriation_Act_2013-14_C59.txt | pdf_d3de44366ef3__Appropriation_Act_2013-14_C28.txt,restatement,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2014,182092916.0,182092916.0,1,pdf_2099b532c496__Appropriation_Act_2014-15_C29.txt,single,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2015,182097387.0,182097387.0,1,pdf_42c08c0cabdc__Appropriation_Act_2015-16_C55.txt,single,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2016,222347387.0,182347387.0,2,pdf_1c535913f398__Appropriation_Act_2016-17_C9.txt | pdf_b93bee4a7023__Appropriation_Act_2016-17_C20.txt,additive,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2017,257347387.0,257347387.0,1,pdf_50c6b6fecd94__Appropriation_Act_2017-18_C41.txt,single,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2018,438948506.0,292632337.0,2,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2019,464162752.0,327644295.0,2,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt | pdf_b10d5794609b__Appropriation_Act_2019-20_C96.txt,additive,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2020,362644295.0,362644295.0,1,pdf_0a59a59f62a2__Appropriation_Act_2020-21_C11.txt,single,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2021,480562080.0,364062080.0,2,pdf_1516e9eb34bd__Appropriation_Act_2021-22_C27.txt | pdf_790f18540313__Appropriation_Act_2021-22_C34.txt,additive,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2022,423389080.0,414189080.0,2,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt | pdf_902b8f5bb10a__Appropriation_Act_2022-23_C36.txt,additive,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2023,364238813.0,364238813.0,1,pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt,single,CAD,dollar,innovation_instruments
+Canada,Canada Council for the Arts,2024,363758160.0,363758160.0,1,pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt,single,CAD,dollar,innovation_instruments
+Canada,Canada Foundation for Innovation (CFI),1997,3.0,3.0,1,pdf_7c0b389ce1a9__1997-2.txt,single,CAD,dollar,research_infrastructure
 Canada,Canada Foundation for Innovation (CFI),1998,,,0,,gap,,,research_infrastructure
 Canada,Canada Foundation for Innovation (CFI),1999,,,0,,gap,,,research_infrastructure
 Canada,Canada Foundation for Innovation (CFI),2000,,,0,,gap,,,research_infrastructure
@@ -192,7 +156,7 @@ Canada,Canada Foundation for Innovation (CFI),2021,,,0,,gap,,,research_infrastru
 Canada,Canada Foundation for Innovation (CFI),2022,,,0,,gap,,,research_infrastructure
 Canada,Canada Foundation for Innovation (CFI),2023,,,0,,gap,,,research_infrastructure
 Canada,Canada Foundation for Innovation (CFI),2024,,,0,,gap,,,research_infrastructure
-Canada,Canadian Forestry Service Program,1987,66070.703,66070.703,1,pdf_166108b13afc__1987-3.txt,single,CAD,thousand,direct_rd
+Canada,Canadian Forestry Service Program,1987,66070703.0,66070703.0,1,pdf_166108b13afc__1987-3.txt,single,CAD,dollar,direct_rd
 Canada,Canadian Forestry Service Program,1988,,,0,,gap,,,direct_rd
 Canada,Canadian Forestry Service Program,1989,,,0,,gap,,,direct_rd
 Canada,Canadian Forestry Service Program,1990,,,0,,gap,,,direct_rd
@@ -254,17 +218,17 @@ Canada,Canadian High Arctic Research Station,2011,,,0,,gap,,,direct_rd
 Canada,Canadian High Arctic Research Station,2012,,,0,,gap,,,direct_rd
 Canada,Canadian High Arctic Research Station,2013,,,0,,gap,,,direct_rd
 Canada,Canadian High Arctic Research Station,2014,,,0,,gap,,,direct_rd
-Canada,Canadian High Arctic Research Station,2015,263.077,263.077,1,pdf_bd3fcee037af__Appropriation_Act_2015-16_C8.txt,single,CAD,thousand,direct_rd
-Canada,Canadian High Arctic Research Station,2016,18853.197,18853.197,1,pdf_e53c6bee56bb__Appropriation_Act_2016-17_C19.txt,single,CAD,thousand,direct_rd
-Canada,Canadian High Arctic Research Station,2017,21591.765,20963.206,2,pdf_50c6b6fecd94__Appropriation_Act_2017-18_C41.txt | pdf_c45fa8ce41ed__Appropriation_Act_2017-18_C67.txt,additive,CAD,thousand,direct_rd
-Canada,Canadian High Arctic Research Station,2018,35111.881,28089.505,2,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,thousand,direct_rd
-Canada,Canadian High Arctic Research Station,2019,42272.066,31704.049,2,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt | pdf_b10d5794609b__Appropriation_Act_2019-20_C96.txt,additive,CAD,thousand,direct_rd
-Canada,Canadian High Arctic Research Station,2020,29453.623,29453.623,1,pdf_0a59a59f62a2__Appropriation_Act_2020-21_C11.txt,single,CAD,thousand,direct_rd
-Canada,Canadian High Arctic Research Station,2021,29761.017,29761.017,1,pdf_1516e9eb34bd__Appropriation_Act_2021-22_C27.txt,single,CAD,thousand,direct_rd
-Canada,Canadian High Arctic Research Station,2022,32886.748,29886.748,2,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt | pdf_902b8f5bb10a__Appropriation_Act_2022-23_C36.txt,additive,CAD,thousand,direct_rd
-Canada,Canadian High Arctic Research Station,2023,35785.795000000006,4877.403,3,pdf_55f813618fa1__Appropriation_Act_2023-24_C55.txt | pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt | pdf_a26eeec4a59b__Appropriation_Act_2023-24_C60.txt,additive,CAD,thousand,direct_rd
-Canada,Canadian High Arctic Research Station,2024,36506.666,3500.0,2,pdf_0adeb1980e12__Appropriation_Act_2024-25_C79.txt | pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt,additive,CAD,thousand,direct_rd
-Canada,Canadian Northern Energy Commission,1987,13040.0,13040.0,1,pdf_166108b13afc__1987-3.txt,single,CAD,thousand,innovation_instruments
+Canada,Canadian High Arctic Research Station,2015,263077.0,263077.0,1,pdf_bd3fcee037af__Appropriation_Act_2015-16_C8.txt,single,CAD,dollar,direct_rd
+Canada,Canadian High Arctic Research Station,2016,18853197.0,18853197.0,1,pdf_e53c6bee56bb__Appropriation_Act_2016-17_C19.txt,single,CAD,dollar,direct_rd
+Canada,Canadian High Arctic Research Station,2017,21591765.0,20963206.0,2,pdf_50c6b6fecd94__Appropriation_Act_2017-18_C41.txt | pdf_c45fa8ce41ed__Appropriation_Act_2017-18_C67.txt,additive,CAD,dollar,direct_rd
+Canada,Canadian High Arctic Research Station,2018,35111881.0,28089505.0,2,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,dollar,direct_rd
+Canada,Canadian High Arctic Research Station,2019,42272066.0,31704049.0,2,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt | pdf_b10d5794609b__Appropriation_Act_2019-20_C96.txt,additive,CAD,dollar,direct_rd
+Canada,Canadian High Arctic Research Station,2020,29453623.0,29453623.0,1,pdf_0a59a59f62a2__Appropriation_Act_2020-21_C11.txt,single,CAD,dollar,direct_rd
+Canada,Canadian High Arctic Research Station,2021,29761017.0,29761017.0,1,pdf_1516e9eb34bd__Appropriation_Act_2021-22_C27.txt,single,CAD,dollar,direct_rd
+Canada,Canadian High Arctic Research Station,2022,32886748.0,29886748.0,2,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt | pdf_902b8f5bb10a__Appropriation_Act_2022-23_C36.txt,additive,CAD,dollar,direct_rd
+Canada,Canadian High Arctic Research Station,2023,35785795.0,4877403.0,3,pdf_55f813618fa1__Appropriation_Act_2023-24_C55.txt | pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt | pdf_a26eeec4a59b__Appropriation_Act_2023-24_C60.txt,additive,CAD,dollar,direct_rd
+Canada,Canadian High Arctic Research Station,2024,36506666.0,3500000.0,2,pdf_0adeb1980e12__Appropriation_Act_2024-25_C79.txt | pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt,additive,CAD,dollar,direct_rd
+Canada,Canadian Northern Energy Commission,1987,13038000.0,13038000.0,1,pdf_166108b13afc__1987-3.txt,single,CAD,dollar,innovation_instruments
 Canada,Canadian Northern Energy Commission,1988,,,0,,gap,,,innovation_instruments
 Canada,Canadian Northern Energy Commission,1989,,,0,,gap,,,innovation_instruments
 Canada,Canadian Northern Energy Commission,1990,,,0,,gap,,,innovation_instruments
@@ -302,40 +266,40 @@ Canada,Canadian Northern Energy Commission,2023,,,0,,gap,,,innovation_instrument
 Canada,Canadian Northern Energy Commission,2024,,,0,,gap,,,innovation_instruments
 Canada,Canadian Nuclear Safety Commission,1987,,,0,,gap,,,science_agency
 Canada,Canadian Nuclear Safety Commission,1988,,,0,,gap,,,science_agency
-Canada,Canadian Nuclear Safety Commission,1989,,,0,,gap,,,science_agency
+Canada,Canadian Nuclear Safety Commission,1989,21832000.0,21832000.0,1,pdf_cc4accfe073d__1989-1.txt,single,CAD,dollar,science_agency
 Canada,Canadian Nuclear Safety Commission,1990,,,0,,gap,,,science_agency
 Canada,Canadian Nuclear Safety Commission,1991,,,0,,gap,,,science_agency
 Canada,Canadian Nuclear Safety Commission,1992,,,0,,gap,,,science_agency
 Canada,Canadian Nuclear Safety Commission,1993,,,0,,gap,,,science_agency
-Canada,Canadian Nuclear Safety Commission,1994,560395.9,560395.9,1,pdf_2d0b078b24fb__1994-2.txt,single,CAD,thousand,science_agency
+Canada,Canadian Nuclear Safety Commission,1994,598926900.0,38531000.0,2,1994-2.pdf | pdf_2d0b078b24fb__1994-2.txt,additive,CAD,dollar,science_agency
 Canada,Canadian Nuclear Safety Commission,1995,,,0,,gap,,,science_agency
-Canada,Canadian Nuclear Safety Commission,1996,2149305.0,2149305.0,1,pdf_794e5cdc9ba6__1996-2.txt,single,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,1997,644.0,644.0,1,pdf_7f5669593c7c__1997-1.txt,single,CAD,thousand,science_agency
+Canada,Canadian Nuclear Safety Commission,1996,2149305000.0,2149305000.0,1,pdf_794e5cdc9ba6__1996-2.txt,single,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,1997,644.0,644.0,1,pdf_7f5669593c7c__1997-1.txt,single,CAD,dollar,science_agency
 Canada,Canadian Nuclear Safety Commission,1998,,,0,,gap,,,science_agency
 Canada,Canadian Nuclear Safety Commission,1999,,,0,,gap,,,science_agency
 Canada,Canadian Nuclear Safety Commission,2000,,,0,,gap,,,science_agency
 Canada,Canadian Nuclear Safety Commission,2001,,,0,,gap,,,science_agency
-Canada,Canadian Nuclear Safety Commission,2002,84674.837,79697.0,2,pdf_4d23754e5ddd__2002_a_YX2-2002-1.txt | pdf_e56dd369fa24__Appropriation_Act_2002-03_C21_Project.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2003,59984.5,6743.5,2,pdf_4e638b794f3f__Appropriation_Act_2003-04_C55_Project.txt | pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2006,177683.33899999998,78170.761,4,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_94f303554d94__Appropriation_Act_2006-07_C39_Project.txt | pdf_acbb37d5b36f__Appropriation_Act_2006-07_C48_Project.txt | pdf_f82125049255__Appropriation_Act_2006-07_C38.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2007,84553.0,84553.0,1,pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt,single,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2008,80140.0,80140.0,1,pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt,single,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2009,40670.328,40670.328,1,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt,single,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2010,566275.8539999999,40630.409,2,pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt | pdf_7bf0aeb667de__Appropriation_Act_2010-11_C7.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2011,41769.294,13107.396,2,pdf_12804f46d98a__Appropriation_Act_2011-12_C29.txt | pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2012,1007136.3880000002,29302.138,4,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt | pdf_17cd3e81dc75__Appropriation_Act_2012-13_C35.txt | pdf_337f5cf2048a__Appropriation_Act_2012-13_C58.txt | pdf_e9d28d56c3bd__Appropriation_Act_2012-13_C50.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2013,914428.199,34976.638,3,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt | pdf_80c4bab60042__Appropriation_Act_2013-14_C59.txt | pdf_e3de5326883e__Appropriation_Act_2013-14_C19.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2014,36578.266,36578.266,1,pdf_2099b532c496__Appropriation_Act_2014-15_C29.txt,single,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2015,38921.08,38921.08,1,pdf_42c08c0cabdc__Appropriation_Act_2015-16_C55.txt,single,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2016,38686.934,38686.934,1,pdf_1c535913f398__Appropriation_Act_2016-17_C9.txt,single,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2017,37939.524,37939.524,1,pdf_50c6b6fecd94__Appropriation_Act_2017-18_C41.txt,single,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2018,60446.617,38176.811,2,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2019,61965.725999999995,39136.248,2,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt | pdf_b10d5794609b__Appropriation_Act_2019-20_C96.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2020,40522.928,40522.928,1,pdf_0a59a59f62a2__Appropriation_Act_2020-21_C11.txt,single,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2021,41081.316,41081.316,1,pdf_1516e9eb34bd__Appropriation_Act_2021-22_C27.txt,single,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2022,136967.20899999997,40818.583,4,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt | pdf_902b8f5bb10a__Appropriation_Act_2022-23_C36.txt | pdf_bc0e80b8cb6f__Appropriation_Act_2022-23_C16.txt | pdf_d9b5656a645f__Appropriation_Act_2022-23_C43.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2023,51986.215,51986.215,1,pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt,single,CAD,thousand,science_agency
-Canada,Canadian Nuclear Safety Commission,2024,52421.455,52421.455,1,pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt,single,CAD,thousand,science_agency
+Canada,Canadian Nuclear Safety Commission,2002,84674837.0,79697000.0,2,pdf_4d23754e5ddd__2002_a_YX2-2002-1.txt | pdf_e56dd369fa24__Appropriation_Act_2002-03_C21_Project.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2003,59984500.0,6743500.0,2,pdf_4e638b794f3f__Appropriation_Act_2003-04_C55_Project.txt | pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2006,81932328.0,70321000.0,3,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_94f303554d94__Appropriation_Act_2006-07_C39_Project.txt | pdf_acbb37d5b36f__Appropriation_Act_2006-07_C48_Project.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2007,84553000.0,84553000.0,1,pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt,single,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2008,80140000.0,80140000.0,1,pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt,single,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2009,40670328.0,40670328.0,1,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt,single,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2010,40630409.0,40630409.0,2,pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt | pdf_7bf0aeb667de__Appropriation_Act_2010-11_C7.txt,restatement,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2011,39564532.0,13107396.0,2,pdf_12804f46d98a__Appropriation_Act_2011-12_C29.txt | pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2012,939481451.0,939481451.0,5,Appropriation Act 2012-13 C35.pdf | pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt | pdf_17cd3e81dc75__Appropriation_Act_2012-13_C35.txt | pdf_337f5cf2048a__Appropriation_Act_2012-13_C58.txt | pdf_e9d28d56c3bd__Appropriation_Act_2012-13_C50.txt,restatement,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2013,841517710.0,841517710.0,4,Appropriation Act 2013-14 C59.pdf | pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt | pdf_80c4bab60042__Appropriation_Act_2013-14_C59.txt | pdf_e3de5326883e__Appropriation_Act_2013-14_C19.txt,restatement,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2014,36578266.0,36578266.0,1,pdf_2099b532c496__Appropriation_Act_2014-15_C29.txt,single,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2015,38921080.0,38921080.0,1,pdf_42c08c0cabdc__Appropriation_Act_2015-16_C55.txt,single,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2016,38686934.0,38686934.0,1,pdf_1c535913f398__Appropriation_Act_2016-17_C9.txt,single,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2017,37939524.0,37939524.0,1,pdf_50c6b6fecd94__Appropriation_Act_2017-18_C41.txt,single,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2018,60446617.0,38176811.0,2,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2019,61965726.0,39136248.0,2,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt | pdf_b10d5794609b__Appropriation_Act_2019-20_C96.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2020,45337415.0,4814487.0,2,Appropriation Act 2020-21 C18.pdf | pdf_0a59a59f62a2__Appropriation_Act_2020-21_C11.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2021,41081316.0,41081316.0,1,pdf_1516e9eb34bd__Appropriation_Act_2021-22_C27.txt,single,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2022,96148626.0,46052796.0,4,Appropriation Act 2022-23 C16.pdf | pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt | pdf_902b8f5bb10a__Appropriation_Act_2022-23_C36.txt | pdf_d9b5656a645f__Appropriation_Act_2022-23_C43.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2023,51986215.0,51986215.0,1,pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt,single,CAD,dollar,science_agency
+Canada,Canadian Nuclear Safety Commission,2024,52421455.0,52421455.0,1,pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt,single,CAD,dollar,science_agency
 Canada,Canadian Polar Commission,1987,,,0,,gap,,,science_agency
 Canada,Canadian Polar Commission,1988,,,0,,gap,,,science_agency
 Canada,Canadian Polar Commission,1989,,,0,,gap,,,science_agency
@@ -343,26 +307,26 @@ Canada,Canadian Polar Commission,1990,,,0,,gap,,,science_agency
 Canada,Canadian Polar Commission,1991,,,0,,gap,,,science_agency
 Canada,Canadian Polar Commission,1992,,,0,,gap,,,science_agency
 Canada,Canadian Polar Commission,1993,,,0,,gap,,,science_agency
-Canada,Canadian Polar Commission,1994,10.35,10.35,1,pdf_2d0b078b24fb__1994-2.txt,single,CAD,thousand,science_agency
+Canada,Canadian Polar Commission,1994,10350.0,10350.0,1,pdf_2d0b078b24fb__1994-2.txt,single,CAD,dollar,science_agency
 Canada,Canadian Polar Commission,1995,,,0,,gap,,,science_agency
 Canada,Canadian Polar Commission,1996,,,0,,gap,,,science_agency
-Canada,Canadian Polar Commission,1997,860.0,860.0,1,pdf_7c0b389ce1a9__1997-2.txt,single,CAD,thousand,science_agency
-Canada,Canadian Polar Commission,1998,73391.66667,73391.66667,1,pdf_3f43627833fd__1998-1.txt,single,CAD,thousand,science_agency
-Canada,Canadian Polar Commission,1999,42.0,42.0,1,pdf_81d9f9d6557c__1999-2.txt,single,CAD,thousand,science_agency
+Canada,Canadian Polar Commission,1997,,,0,,gap,,,science_agency
+Canada,Canadian Polar Commission,1998,73391666.67,73391666.67,1,pdf_3f43627833fd__1998-1.txt,single,CAD,dollar,science_agency
+Canada,Canadian Polar Commission,1999,42000.0,42000.0,1,pdf_81d9f9d6557c__1999-2.txt,single,CAD,dollar,science_agency
 Canada,Canadian Polar Commission,2000,,,0,,gap,,,science_agency
 Canada,Canadian Polar Commission,2001,,,0,,gap,,,science_agency
 Canada,Canadian Polar Commission,2002,,,0,,gap,,,science_agency
-Canada,Canadian Polar Commission,2003,894.0,894.0,1,pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt,single,CAD,thousand,science_agency
-Canada,Canadian Polar Commission,2006,2230.5,1055.0,3,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_94f303554d94__Appropriation_Act_2006-07_C39_Project.txt | pdf_f82125049255__Appropriation_Act_2006-07_C38.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Polar Commission,2007,913.0,913.0,1,pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt,single,CAD,thousand,science_agency
-Canada,Canadian Polar Commission,2008,919.0,919.0,1,pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt,single,CAD,thousand,science_agency
-Canada,Canadian Polar Commission,2009,917.0,917.0,1,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt,single,CAD,thousand,science_agency
-Canada,Canadian Polar Commission,2010,938.944,938.944,1,pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt,single,CAD,thousand,science_agency
-Canada,Canadian Polar Commission,2011,1639.308,1639.308,1,pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,single,CAD,thousand,science_agency
-Canada,Canadian Polar Commission,2012,1177.747,1177.747,1,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt,single,CAD,thousand,science_agency
-Canada,Canadian Polar Commission,2013,2433.726,2433.726,2,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt | pdf_80c4bab60042__Appropriation_Act_2013-14_C59.txt,restatement,CAD,thousand,science_agency
-Canada,Canadian Polar Commission,2014,150633.087,148193.28,2,pdf_2099b532c496__Appropriation_Act_2014-15_C29.txt | pdf_3551f35c9a0e__Appropriation_Act_2014-15_C38.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Polar Commission,2015,2434.137,2434.137,1,pdf_42c08c0cabdc__Appropriation_Act_2015-16_C55.txt,single,CAD,thousand,science_agency
+Canada,Canadian Polar Commission,2003,894000.0,894000.0,1,pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt,single,CAD,dollar,science_agency
+Canada,Canadian Polar Commission,2006,949250.0,905000.0,2,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_94f303554d94__Appropriation_Act_2006-07_C39_Project.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Polar Commission,2007,913000.0,913000.0,1,pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt,single,CAD,dollar,science_agency
+Canada,Canadian Polar Commission,2008,919000.0,919000.0,1,pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt,single,CAD,dollar,science_agency
+Canada,Canadian Polar Commission,2009,917000.0,917000.0,1,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt,single,CAD,dollar,science_agency
+Canada,Canadian Polar Commission,2010,938944.0,938944.0,1,pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt,single,CAD,dollar,science_agency
+Canada,Canadian Polar Commission,2011,936747.0,936747.0,1,pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,single,CAD,dollar,science_agency
+Canada,Canadian Polar Commission,2012,471974417.0,470796670.0,2,Appropriation Act 2012-13 C50.pdf | pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Polar Commission,2013,2433726.0,2433726.0,1,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt,single,CAD,dollar,science_agency
+Canada,Canadian Polar Commission,2014,150633087.0,148193280.0,2,pdf_2099b532c496__Appropriation_Act_2014-15_C29.txt | pdf_3551f35c9a0e__Appropriation_Act_2014-15_C38.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Polar Commission,2015,2434137.0,2434137.0,1,pdf_42c08c0cabdc__Appropriation_Act_2015-16_C55.txt,single,CAD,dollar,science_agency
 Canada,Canadian Polar Commission,2016,,,0,,gap,,,science_agency
 Canada,Canadian Polar Commission,2017,,,0,,gap,,,science_agency
 Canada,Canadian Polar Commission,2018,,,0,,gap,,,science_agency
@@ -376,74 +340,38 @@ Canada,Canadian Space Agency,1987,,,0,,gap,,,science_agency
 Canada,Canadian Space Agency,1988,,,0,,gap,,,science_agency
 Canada,Canadian Space Agency,1989,,,0,,gap,,,science_agency
 Canada,Canadian Space Agency,1990,,,0,,gap,,,science_agency
-Canada,Canadian Space Agency,1991,68402.0,68402.0,1,pdf_df6419e6eefa__1991-1.txt,single,CAD,thousand,science_agency
-Canada,Canadian Space Agency,1992,531896.0,531896.0,1,pdf_5a9c5f586c49__1992-1.txt,single,CAD,thousand,science_agency
-Canada,Canadian Space Agency,1993,409061.0,409061.0,1,pdf_f8ec88f20e98__1993-2.txt,single,CAD,thousand,science_agency
-Canada,Canadian Space Agency,1994,312539.0,312539.0,1,pdf_2d0b078b24fb__1994-2.txt,single,CAD,thousand,science_agency
+Canada,Canadian Space Agency,1991,68402000.0,68402000.0,1,pdf_df6419e6eefa__1991-1.txt,single,CAD,dollar,science_agency
+Canada,Canadian Space Agency,1992,531896000.0,531896000.0,1,pdf_5a9c5f586c49__1992-1.txt,single,CAD,dollar,science_agency
+Canada,Canadian Space Agency,1993,44368000.0,44368000.0,1,pdf_f8ec88f20e98__1993-2.txt,single,CAD,dollar,science_agency
+Canada,Canadian Space Agency,1994,312539000.0,312539000.0,1,pdf_2d0b078b24fb__1994-2.txt,single,CAD,dollar,science_agency
 Canada,Canadian Space Agency,1995,,,0,,gap,,,science_agency
-Canada,Canadian Space Agency,1996,27200.0,27200.0,1,pdf_794e5cdc9ba6__1996-2.txt,single,CAD,thousand,science_agency
-Canada,Canadian Space Agency,1997,180850.0,180850.0,1,pdf_7c0b389ce1a9__1997-2.txt,single,CAD,thousand,science_agency
-Canada,Canadian Space Agency,1998,648188.704,569468.0,2,pdf_3f43627833fd__1998-1.txt | pdf_7a4a1dd7c37d__1998-2.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,1999,46485.406,46485.406,1,pdf_81d9f9d6557c__1999-2.txt,single,CAD,thousand,science_agency
+Canada,Canadian Space Agency,1996,63465618.0,36265618.0,2,1996-2.pdf | pdf_794e5cdc9ba6__1996-2.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,1997,180850000.0,180850000.0,1,pdf_7c0b389ce1a9__1997-2.txt,single,CAD,dollar,science_agency
+Canada,Canadian Space Agency,1998,1121200704.0,473012000.0,3,1998-1.pdf | pdf_3f43627833fd__1998-1.txt | pdf_7a4a1dd7c37d__1998-2.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,1999,46485406.0,46485406.0,1,pdf_81d9f9d6557c__1999-2.txt,single,CAD,dollar,science_agency
 Canada,Canadian Space Agency,2000,,,0,,gap,,,science_agency
-Canada,Canadian Space Agency,2001,184678.03,184678.03,1,pdf_96c6876dd7d6__2001_2_YX2-2001-2.txt,single,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2002,168913.42500000002,163865.07,2,pdf_4d23754e5ddd__2002_a_YX2-2002-1.txt | pdf_e56dd369fa24__Appropriation_Act_2002-03_C21_Project.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2003,500684.0,309500.0,2,pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt | pdf_edd68c90988f__Appropriation_Act_2003-04_C30_Project.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2006,1084961.616,406669.06,3,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_94f303554d94__Appropriation_Act_2006-07_C39_Project.txt | pdf_f82125049255__Appropriation_Act_2006-07_C38.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2007,410875.702,52590.0,3,pdf_4e072fdd2dfe__Appropriation_Act_2007-08_C50_Project.txt | pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt | pdf_826ff054c987__Appropriation_Act_2007-08_C35_Project.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2008,404385.0,300.0,3,pdf_5832acb42e3a__Appropriation_Act_2008-09_C59_Project.txt | pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt | pdf_d964d507d809__Appropriation_Act_2008-09_C49_Project.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2009,391614.769,345183.769,2,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt | pdf_3be4682b7458__Appropriation_Act_2009-10_C49.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2010,426256.159,379964.159,2,pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt | pdf_7bf0aeb667de__Appropriation_Act_2010-11_C7.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2011,655825.25,391.363,3,pdf_12804f46d98a__Appropriation_Act_2011-12_C29.txt | pdf_91ef49b8f05c__Appropriation_Act_2011-12_C34.txt | pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2012,388969.295,352211.88,3,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt | pdf_17cd3e81dc75__Appropriation_Act_2012-13_C35.txt | pdf_6e8afe4c03d2__Appropriation_Act_2012-13_C41.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2013,784251.629,477933.217,2,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt | pdf_80c4bab60042__Appropriation_Act_2013-14_C59.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2014,714508.767,257955.633,3,pdf_2099b532c496__Appropriation_Act_2014-15_C29.txt | pdf_3551f35c9a0e__Appropriation_Act_2014-15_C38.txt | pdf_e1f3978ed5bb__Appropriation_Act_2014-15_C45.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2015,781946.085,304321.026,3,pdf_42c08c0cabdc__Appropriation_Act_2015-16_C55.txt | pdf_9d320e713a62__Appropriation_Act_2015-16_C67.txt | pdf_d64fe7703590__Appropriation_Act_2015-16_C66.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2016,624470.619,192112.456,3,pdf_1c535913f398__Appropriation_Act_2016-17_C9.txt | pdf_9c999da4a13a__Appropriation_Act_2016-17_C35.txt | pdf_e53c6bee56bb__Appropriation_Act_2016-17_C19.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2017,479887.20900000003,122419.635,3,pdf_50c6b6fecd94__Appropriation_Act_2017-18_C41.txt | pdf_84bfa4a5d495__Appropriation_Act_2017-18_C53.txt | pdf_c45fa8ce41ed__Appropriation_Act_2017-18_C67.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2018,469769.825,339409.731,3,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_b1fb13a8e543__Appropriation_Act_2018-19_C90.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2019,486387.573,318636.941,3,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt | pdf_b10d5794609b__Appropriation_Act_2019-20_C96.txt | pdf_e8fdad00f8d2__Appropriation_Act_2019-20_C10.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2020,461486.261,67965.0,3,pdf_0a59a59f62a2__Appropriation_Act_2020-21_C11.txt | pdf_6f6e72970cf7__Appropriation_Act_2020-21_C16.txt | pdf_72a8d2e842dd__Appropriation_Act_2020-21_C17.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2021,560981.556,94630.0,3,pdf_1516e9eb34bd__Appropriation_Act_2021-22_C27.txt | pdf_200ebf737d10__Appropriation_Act_2021-22_C33.txt | pdf_8b52b51ff5b9__Appropriation_Act_2021-22_C15.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2022,738063.873,377001.647,4,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt | pdf_766e6910f1be__Appropriation_Act_2022-23_C25.txt | pdf_902b8f5bb10a__Appropriation_Act_2022-23_C36.txt | pdf_bc0e80b8cb6f__Appropriation_Act_2022-23_C16.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2023,626884.7059999999,525241.777,4,pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt | pdf_a26eeec4a59b__Appropriation_Act_2023-24_C60.txt | pdf_c2e0d1498945__Appropriation_Act_2023-24_C44.txt | pdf_ec0377ac309a__Appropriation_Act_2023-24_C67.txt,additive,CAD,thousand,science_agency
-Canada,Canadian Space Agency,2024,481873.003,401813.221,2,pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt | pdf_fba0b30b51f9__Appropriation_Act_2024-25_C68.txt,additive,CAD,thousand,science_agency
-Canada,Council of Canadian Academies,1987,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,1988,5791.0,5791.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,thousand,science_agency
-Canada,Council of Canadian Academies,1989,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,1990,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,1991,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,1992,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,1993,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,1994,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,1995,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,1996,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,1997,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,1998,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,1999,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2000,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2001,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2002,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2003,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2006,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2007,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2008,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2009,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2010,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2011,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2012,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2013,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2014,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2015,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2016,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2017,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2018,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2019,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2020,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2021,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2022,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2023,,,0,,gap,,,science_agency
-Canada,Council of Canadian Academies,2024,,,0,,gap,,,science_agency
+Canada,Canadian Space Agency,2001,111687000.0,111687000.0,1,pdf_96c6876dd7d6__2001_2_YX2-2001-2.txt,single,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2002,107550204.0,102501779.0,3,2002 b YX2-2002-2.pdf | pdf_4d23754e5ddd__2002_a_YX2-2002-1.txt | pdf_e56dd369fa24__Appropriation_Act_2002-03_C21_Project.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2003,500684000.0,309500000.0,2,pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt | pdf_edd68c90988f__Appropriation_Act_2003-04_C30_Project.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2006,389758667.0,8772556.0,3,Appropriation Act 2006-07 C39 Project.pdf | pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_94f303554d94__Appropriation_Act_2006-07_C39_Project.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2007,410875702.0,52590000.0,3,pdf_4e072fdd2dfe__Appropriation_Act_2007-08_C50_Project.txt | pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt | pdf_826ff054c987__Appropriation_Act_2007-08_C35_Project.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2008,404385000.0,300000.0,3,pdf_5832acb42e3a__Appropriation_Act_2008-09_C59_Project.txt | pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt | pdf_d964d507d809__Appropriation_Act_2008-09_C49_Project.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2009,391614769.0,345183769.0,2,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt | pdf_3be4682b7458__Appropriation_Act_2009-10_C49.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2010,426256159.0,379964159.0,2,pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt | pdf_7bf0aeb667de__Appropriation_Act_2010-11_C7.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2011,414339368.0,782725.0,3,pdf_12804f46d98a__Appropriation_Act_2011-12_C29.txt | pdf_91ef49b8f05c__Appropriation_Act_2011-12_C34.txt | pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2012,388969295.0,352211880.0,3,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt | pdf_17cd3e81dc75__Appropriation_Act_2012-13_C35.txt | pdf_6e8afe4c03d2__Appropriation_Act_2012-13_C41.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2013,784251629.0,477933217.0,2,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt | pdf_80c4bab60042__Appropriation_Act_2013-14_C59.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2014,718533410.0,257955633.0,3,pdf_2099b532c496__Appropriation_Act_2014-15_C29.txt | pdf_3551f35c9a0e__Appropriation_Act_2014-15_C38.txt | pdf_e1f3978ed5bb__Appropriation_Act_2014-15_C45.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2015,781946085.0,304321026.0,3,pdf_42c08c0cabdc__Appropriation_Act_2015-16_C55.txt | pdf_9d320e713a62__Appropriation_Act_2015-16_C67.txt | pdf_d64fe7703590__Appropriation_Act_2015-16_C66.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2016,624470619.0,192112456.0,3,pdf_1c535913f398__Appropriation_Act_2016-17_C9.txt | pdf_9c999da4a13a__Appropriation_Act_2016-17_C35.txt | pdf_e53c6bee56bb__Appropriation_Act_2016-17_C19.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2017,479887209.0,122419635.0,3,pdf_50c6b6fecd94__Appropriation_Act_2017-18_C41.txt | pdf_84bfa4a5d495__Appropriation_Act_2017-18_C53.txt | pdf_c45fa8ce41ed__Appropriation_Act_2017-18_C67.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2018,469769825.0,339409731.0,3,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_b1fb13a8e543__Appropriation_Act_2018-19_C90.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2019,486387573.0,318636941.0,3,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt | pdf_b10d5794609b__Appropriation_Act_2019-20_C96.txt | pdf_e8fdad00f8d2__Appropriation_Act_2019-20_C10.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2020,461486261.0,67965000.0,3,pdf_0a59a59f62a2__Appropriation_Act_2020-21_C11.txt | pdf_6f6e72970cf7__Appropriation_Act_2020-21_C16.txt | pdf_72a8d2e842dd__Appropriation_Act_2020-21_C17.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2021,560981556.0,94630000.0,3,pdf_1516e9eb34bd__Appropriation_Act_2021-22_C27.txt | pdf_200ebf737d10__Appropriation_Act_2021-22_C33.txt | pdf_8b52b51ff5b9__Appropriation_Act_2021-22_C15.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2022,738063873.0,377001647.0,4,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt | pdf_766e6910f1be__Appropriation_Act_2022-23_C25.txt | pdf_902b8f5bb10a__Appropriation_Act_2022-23_C36.txt | pdf_bc0e80b8cb6f__Appropriation_Act_2022-23_C16.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2023,626884706.0,525241777.0,4,pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt | pdf_a26eeec4a59b__Appropriation_Act_2023-24_C60.txt | pdf_c2e0d1498945__Appropriation_Act_2023-24_C44.txt | pdf_ec0377ac309a__Appropriation_Act_2023-24_C67.txt,additive,CAD,dollar,science_agency
+Canada,Canadian Space Agency,2024,740581063.0,258708060.0,3,Appropriation Act 2024-25 C79.pdf | pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt | pdf_fba0b30b51f9__Appropriation_Act_2024-25_C68.txt,additive,CAD,dollar,science_agency
 Canada,Defence Research and Development Canada (DRDC),1987,,,0,,gap,,,science_agency
 Canada,Defence Research and Development Canada (DRDC),1988,,,0,,gap,,,science_agency
 Canada,Defence Research and Development Canada (DRDC),1989,,,0,,gap,,,science_agency
@@ -481,14 +409,14 @@ Canada,Defence Research and Development Canada (DRDC),2022,,,0,,gap,,,science_ag
 Canada,Defence Research and Development Canada (DRDC),2023,,,0,,gap,,,science_agency
 Canada,Defence Research and Development Canada (DRDC),2024,,,0,,gap,,,science_agency
 Canada,Energy Program,1987,,,0,,gap,,,innovation_instruments
-Canada,Energy Program,1988,405710.0,405710.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,thousand,innovation_instruments
-Canada,Energy Program,1989,140269.0,140269.0,1,pdf_cc4accfe073d__1989-1.txt,single,CAD,thousand,innovation_instruments
+Canada,Energy Program,1988,361721000.0,361721000.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,dollar,innovation_instruments
+Canada,Energy Program,1989,140269000.0,140269000.0,1,pdf_cc4accfe073d__1989-1.txt,single,CAD,dollar,innovation_instruments
 Canada,Energy Program,1990,,,0,,gap,,,innovation_instruments
 Canada,Energy Program,1991,,,0,,gap,,,innovation_instruments
 Canada,Energy Program,1992,,,0,,gap,,,innovation_instruments
 Canada,Energy Program,1993,,,0,,gap,,,innovation_instruments
 Canada,Energy Program,1994,,,0,,gap,,,innovation_instruments
-Canada,Energy Program,1995,776406.66666,776406.66666,1,pdf_f8a0500cfd84__1995-1.txt,single,CAD,thousand,innovation_instruments
+Canada,Energy Program,1995,776406666.66,776406666.66,1,pdf_f8a0500cfd84__1995-1.txt,single,CAD,dollar,innovation_instruments
 Canada,Energy Program,1996,,,0,,gap,,,innovation_instruments
 Canada,Energy Program,1997,,,0,,gap,,,innovation_instruments
 Canada,Energy Program,1998,,,0,,gap,,,innovation_instruments
@@ -523,8 +451,8 @@ Canada,Forest Program,1990,,,0,,gap,,,innovation_instruments
 Canada,Forest Program,1991,,,0,,gap,,,innovation_instruments
 Canada,Forest Program,1992,,,0,,gap,,,innovation_instruments
 Canada,Forest Program,1993,,,0,,gap,,,innovation_instruments
-Canada,Forest Program,1994,1080707.021,959364.0,2,pdf_2d0b078b24fb__1994-2.txt | pdf_a910b001b108__1994-4.txt,additive,CAD,thousand,innovation_instruments
-Canada,Forest Program,1995,826485.1,826485.1,1,pdf_f8a0500cfd84__1995-1.txt,single,CAD,thousand,innovation_instruments
+Canada,Forest Program,1994,1080707021.0,959364000.0,2,pdf_2d0b078b24fb__1994-2.txt | pdf_a910b001b108__1994-4.txt,additive,CAD,dollar,innovation_instruments
+Canada,Forest Program,1995,826485100.0,826485100.0,1,pdf_f8a0500cfd84__1995-1.txt,single,CAD,dollar,innovation_instruments
 Canada,Forest Program,1996,,,0,,gap,,,innovation_instruments
 Canada,Forest Program,1997,,,0,,gap,,,innovation_instruments
 Canada,Forest Program,1998,,,0,,gap,,,innovation_instruments
@@ -553,13 +481,13 @@ Canada,Forest Program,2022,,,0,,gap,,,innovation_instruments
 Canada,Forest Program,2023,,,0,,gap,,,innovation_instruments
 Canada,Forest Program,2024,,,0,,gap,,,innovation_instruments
 Canada,Grains and Oilseeds Program,1987,,,0,,gap,,,innovation_instruments
-Canada,Grains and Oilseeds Program,1988,1615876.2,1615876.2,1,pdf_80ffd1071265__1988-1.txt,single,CAD,thousand,innovation_instruments
-Canada,Grains and Oilseeds Program,1989,1654800.001,1654800.001,1,pdf_cc4accfe073d__1989-1.txt,single,CAD,thousand,innovation_instruments
+Canada,Grains and Oilseeds Program,1988,1615876200.0,1615876200.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,dollar,innovation_instruments
+Canada,Grains and Oilseeds Program,1989,508180000.0,508180000.0,1,pdf_cc4accfe073d__1989-1.txt,single,CAD,dollar,innovation_instruments
 Canada,Grains and Oilseeds Program,1990,,,0,,gap,,,innovation_instruments
-Canada,Grains and Oilseeds Program,1991,1269571.0,1269571.0,1,pdf_df6419e6eefa__1991-1.txt,single,CAD,thousand,innovation_instruments
-Canada,Grains and Oilseeds Program,1992,1889927.0,1799388.0,2,pdf_5a9c5f586c49__1992-1.txt | pdf_f8b3524f77eb__1992-2.txt,additive,CAD,thousand,innovation_instruments
-Canada,Grains and Oilseeds Program,1993,681830.0,681830.0,1,pdf_f8ec88f20e98__1993-2.txt,single,CAD,thousand,innovation_instruments
-Canada,Grains and Oilseeds Program,1994,53241.0,53241.0,1,pdf_c1ca179cbf4a__1994-1.txt,single,CAD,thousand,innovation_instruments
+Canada,Grains and Oilseeds Program,1991,1269571000.0,1269571000.0,1,pdf_df6419e6eefa__1991-1.txt,single,CAD,dollar,innovation_instruments
+Canada,Grains and Oilseeds Program,1992,1889927000.0,1799388000.0,2,pdf_5a9c5f586c49__1992-1.txt | pdf_f8b3524f77eb__1992-2.txt,additive,CAD,dollar,innovation_instruments
+Canada,Grains and Oilseeds Program,1993,681830000.0,681830000.0,1,pdf_f8ec88f20e98__1993-2.txt,single,CAD,dollar,innovation_instruments
+Canada,Grains and Oilseeds Program,1994,53241000.0,53241000.0,1,pdf_c1ca179cbf4a__1994-1.txt,single,CAD,dollar,innovation_instruments
 Canada,Grains and Oilseeds Program,1995,,,0,,gap,,,innovation_instruments
 Canada,Grains and Oilseeds Program,1996,,,0,,gap,,,innovation_instruments
 Canada,Grains and Oilseeds Program,1997,,,0,,gap,,,innovation_instruments
@@ -591,7 +519,7 @@ Canada,Grains and Oilseeds Program,2024,,,0,,gap,,,innovation_instruments
 Canada,HEALTI-1 Program,1987,,,0,,gap,,,direct_rd
 Canada,HEALTI-1 Program,1988,,,0,,gap,,,direct_rd
 Canada,HEALTI-1 Program,1989,,,0,,gap,,,direct_rd
-Canada,HEALTI-1 Program,1990,113438.0,113438.0,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,thousand,direct_rd
+Canada,HEALTI-1 Program,1990,67402000.0,67402000.0,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,dollar,direct_rd
 Canada,HEALTI-1 Program,1991,,,0,,gap,,,direct_rd
 Canada,HEALTI-1 Program,1992,,,0,,gap,,,direct_rd
 Canada,HEALTI-1 Program,1993,,,0,,gap,,,direct_rd
@@ -631,7 +559,7 @@ Canada,Industry and Science Development Program,1990,,,0,,gap,,,innovation_instr
 Canada,Industry and Science Development Program,1991,,,0,,gap,,,innovation_instruments
 Canada,Industry and Science Development Program,1992,,,0,,gap,,,innovation_instruments
 Canada,Industry and Science Development Program,1993,,,0,,gap,,,innovation_instruments
-Canada,Industry and Science Development Program,1994,1340868.835,1264444.0,2,pdf_2d0b078b24fb__1994-2.txt | pdf_a910b001b108__1994-4.txt,additive,CAD,thousand,innovation_instruments
+Canada,Industry and Science Development Program,1994,1340868835.0,1264444000.0,2,pdf_2d0b078b24fb__1994-2.txt | pdf_a910b001b108__1994-4.txt,additive,CAD,dollar,innovation_instruments
 Canada,Industry and Science Development Program,1995,,,0,,gap,,,innovation_instruments
 Canada,Industry and Science Development Program,1996,,,0,,gap,,,innovation_instruments
 Canada,Industry and Science Development Program,1997,,,0,,gap,,,innovation_instruments
@@ -662,8 +590,8 @@ Canada,Industry and Science Development Program,2023,,,0,,gap,,,innovation_instr
 Canada,Industry and Science Development Program,2024,,,0,,gap,,,innovation_instruments
 Canada,Industry and Technology Development Program,1987,,,0,,gap,,,innovation_instruments
 Canada,Industry and Technology Development Program,1988,,,0,,gap,,,innovation_instruments
-Canada,Industry and Technology Development Program,1989,6584.0,6584.0,1,pdf_cc4accfe073d__1989-1.txt,single,CAD,thousand,innovation_instruments
-Canada,Industry and Technology Development Program,1990,12594.0,12594.0,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,thousand,innovation_instruments
+Canada,Industry and Technology Development Program,1989,6584000.0,6584000.0,1,pdf_cc4accfe073d__1989-1.txt,single,CAD,dollar,innovation_instruments
+Canada,Industry and Technology Development Program,1990,3610000.0,3610000.0,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,dollar,innovation_instruments
 Canada,Industry and Technology Development Program,1991,,,0,,gap,,,innovation_instruments
 Canada,Industry and Technology Development Program,1992,,,0,,gap,,,innovation_instruments
 Canada,Industry and Technology Development Program,1993,,,0,,gap,,,innovation_instruments
@@ -699,7 +627,7 @@ Canada,Industry and Technology Development Program,2024,,,0,,gap,,,innovation_in
 Canada,Industry and Technology Program,1987,,,0,,gap,,,innovation_instruments
 Canada,Industry and Technology Program,1988,,,0,,gap,,,innovation_instruments
 Canada,Industry and Technology Program,1989,,,0,,gap,,,innovation_instruments
-Canada,Industry and Technology Program,1990,5962.317,5962.317,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,thousand,innovation_instruments
+Canada,Industry and Technology Program,1990,5849952.0,5849952.0,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,dollar,innovation_instruments
 Canada,Industry and Technology Program,1991,,,0,,gap,,,innovation_instruments
 Canada,Industry and Technology Program,1992,,,0,,gap,,,innovation_instruments
 Canada,Industry and Technology Program,1993,,,0,,gap,,,innovation_instruments
@@ -732,49 +660,13 @@ Canada,Industry and Technology Program,2021,,,0,,gap,,,innovation_instruments
 Canada,Industry and Technology Program,2022,,,0,,gap,,,innovation_instruments
 Canada,Industry and Technology Program,2023,,,0,,gap,,,innovation_instruments
 Canada,Industry and Technology Program,2024,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",1987,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",1988,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",1989,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",1990,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",1991,45132.0,45132.0,1,pdf_df6419e6eefa__1991-1.txt,single,CAD,thousand,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",1992,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",1993,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",1994,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",1995,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",1996,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",1997,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",1998,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",1999,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2000,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2001,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2002,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2003,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2006,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2007,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2008,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2009,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2010,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2011,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2012,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2013,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2014,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2015,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2016,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2017,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2018,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2019,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2020,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2021,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2022,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2023,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Development Program",2024,,,0,,gap,,,innovation_instruments
 Canada,"Industry, Science and Technology Program",1987,,,0,,gap,,,innovation_instruments
 Canada,"Industry, Science and Technology Program",1988,,,0,,gap,,,innovation_instruments
 Canada,"Industry, Science and Technology Program",1989,,,0,,gap,,,innovation_instruments
 Canada,"Industry, Science and Technology Program",1990,,,0,,gap,,,innovation_instruments
 Canada,"Industry, Science and Technology Program",1991,,,0,,gap,,,innovation_instruments
-Canada,"Industry, Science and Technology Program",1992,10895.784,10895.784,1,pdf_5a9c5f586c49__1992-1.txt,single,CAD,thousand,innovation_instruments
-Canada,"Industry, Science and Technology Program",1993,6772.712,6772.712,1,pdf_7e9961b9ea80__1993-1.txt,single,CAD,thousand,innovation_instruments
+Canada,"Industry, Science and Technology Program",1992,10895784.1992,10895784.1992,1,pdf_5a9c5f586c49__1992-1.txt,single,CAD,dollar,innovation_instruments
+Canada,"Industry, Science and Technology Program",1993,6772712.0,6772712.0,1,pdf_7e9961b9ea80__1993-1.txt,single,CAD,dollar,innovation_instruments
 Canada,"Industry, Science and Technology Program",1994,,,0,,gap,,,innovation_instruments
 Canada,"Industry, Science and Technology Program",1995,,,0,,gap,,,innovation_instruments
 Canada,"Industry, Science and Technology Program",1996,,,0,,gap,,,innovation_instruments
@@ -805,91 +697,55 @@ Canada,"Industry, Science and Technology Program",2022,,,0,,gap,,,innovation_ins
 Canada,"Industry, Science and Technology Program",2023,,,0,,gap,,,innovation_instruments
 Canada,"Industry, Science and Technology Program",2024,,,0,,gap,,,innovation_instruments
 Canada,International Development Research Centre,1987,,,0,,gap,,,science_agency
-Canada,International Development Research Centre,1988,3501.0,3501.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,thousand,science_agency
+Canada,International Development Research Centre,1988,89739000.0,89739000.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,dollar,science_agency
 Canada,International Development Research Centre,1989,,,0,,gap,,,science_agency
 Canada,International Development Research Centre,1990,,,0,,gap,,,science_agency
 Canada,International Development Research Centre,1991,,,0,,gap,,,science_agency
 Canada,International Development Research Centre,1992,,,0,,gap,,,science_agency
-Canada,International Development Research Centre,1993,72098.676,72098.676,1,pdf_7e9961b9ea80__1993-1.txt,single,CAD,thousand,science_agency
-Canada,International Development Research Centre,1994,165888.717,140478.0,2,pdf_2d0b078b24fb__1994-2.txt | pdf_c1ca179cbf4a__1994-1.txt,additive,CAD,thousand,science_agency
-Canada,International Development Research Centre,1995,96100.0,96100.0,1,pdf_f8a0500cfd84__1995-1.txt,single,CAD,thousand,science_agency
+Canada,International Development Research Centre,1993,72098676.0,72098676.0,1,pdf_7e9961b9ea80__1993-1.txt,single,CAD,dollar,science_agency
+Canada,International Development Research Centre,1994,130441153.0,122342000.0,2,pdf_2d0b078b24fb__1994-2.txt | pdf_c1ca179cbf4a__1994-1.txt,additive,CAD,dollar,science_agency
+Canada,International Development Research Centre,1995,96100000.0,96100000.0,1,pdf_f8a0500cfd84__1995-1.txt,single,CAD,dollar,science_agency
 Canada,International Development Research Centre,1996,,,0,,gap,,,science_agency
 Canada,International Development Research Centre,1997,,,0,,gap,,,science_agency
-Canada,International Development Research Centre,1998,70126.0,70126.0,1,pdf_3f43627833fd__1998-1.txt,single,CAD,thousand,science_agency
-Canada,International Development Research Centre,1999,1828.844,1828.844,1,pdf_c352f666d27c__1999-1.txt,single,CAD,thousand,science_agency
-Canada,International Development Research Centre,2000,87951.0,87951.0,1,pdf_063218f608ee__2000_1_YX2-2000-1.txt,single,CAD,thousand,science_agency
-Canada,International Development Research Centre,2001,112177.0,112177.0,1,pdf_96c6876dd7d6__2001_2_YX2-2001-2.txt,single,CAD,thousand,science_agency
-Canada,International Development Research Centre,2002,115542.006,115542.006,1,pdf_4d23754e5ddd__2002_a_YX2-2002-1.txt,single,CAD,thousand,science_agency
-Canada,International Development Research Centre,2003,110096.0,9155.0,2,pdf_4e638b794f3f__Appropriation_Act_2003-04_C55_Project.txt | pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt,additive,CAD,thousand,science_agency
-Canada,International Development Research Centre,2006,316094.0,149729.0,2,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_f82125049255__Appropriation_Act_2006-07_C38.txt,additive,CAD,thousand,science_agency
-Canada,International Development Research Centre,2007,147941.0,137441.0,2,pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt | pdf_826ff054c987__Appropriation_Act_2007-08_C35_Project.txt,additive,CAD,thousand,science_agency
-Canada,International Development Research Centre,2008,149995.0,149995.0,1,pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt,single,CAD,thousand,science_agency
-Canada,International Development Research Centre,2009,161749.534,161749.534,1,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt,single,CAD,thousand,science_agency
-Canada,International Development Research Centre,2010,181303.761,181303.761,1,pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt,single,CAD,thousand,science_agency
-Canada,International Development Research Centre,2011,391259.62700000004,861.7,3,pdf_12804f46d98a__Appropriation_Act_2011-12_C29.txt | pdf_91ef49b8f05c__Appropriation_Act_2011-12_C34.txt | pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,additive,CAD,thousand,science_agency
-Canada,International Development Research Centre,2012,241432.539,241432.539,1,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt,single,CAD,thousand,science_agency
-Canada,International Development Research Centre,2013,225390.066,225390.066,1,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt,single,CAD,thousand,science_agency
-Canada,International Development Research Centre,2014,193432.31,188019.646,2,pdf_3551f35c9a0e__Appropriation_Act_2014-15_C38.txt | pdf_962d9379b0c8__Appropriation_Act_2014-15_C54.txt,additive,CAD,thousand,science_agency
-Canada,International Development Research Centre,2015,183478.242,183478.242,1,pdf_d64fe7703590__Appropriation_Act_2015-16_C66.txt,single,CAD,thousand,science_agency
-Canada,International Development Research Centre,2016,149205.625,149205.625,1,pdf_e53c6bee56bb__Appropriation_Act_2016-17_C19.txt,single,CAD,thousand,science_agency
-Canada,International Development Research Centre,2017,138705.625,138705.625,1,pdf_84bfa4a5d495__Appropriation_Act_2017-18_C53.txt,single,CAD,thousand,science_agency
-Canada,International Development Research Centre,2018,174172.736,139338.189,2,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,thousand,science_agency
-Canada,International Development Research Centre,2019,142907.117,142907.117,1,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt,single,CAD,thousand,science_agency
-Canada,International Development Research Centre,2020,141848.784,141848.784,1,pdf_6f6e72970cf7__Appropriation_Act_2020-21_C16.txt,single,CAD,thousand,science_agency
-Canada,International Development Research Centre,2021,148611.325,148611.325,1,pdf_200ebf737d10__Appropriation_Act_2021-22_C33.txt,single,CAD,thousand,science_agency
-Canada,International Development Research Centre,2022,153701.325,153701.325,1,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt,single,CAD,thousand,science_agency
-Canada,International Development Research Centre,2023,152798.272,152798.272,1,pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt,single,CAD,thousand,science_agency
-Canada,International Development Research Centre,2024,157520.169,157520.169,1,pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt,single,CAD,thousand,science_agency
-Canada,Medical Research Council,1987,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,1988,182222.0,182222.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,thousand,direct_rd
-Canada,Medical Research Council,1989,938849.0,938849.0,1,pdf_cc4accfe073d__1989-1.txt,single,CAD,thousand,direct_rd
-Canada,Medical Research Council,1990,221198.0,221198.0,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,thousand,direct_rd
-Canada,Medical Research Council,1991,247077.0,247077.0,1,pdf_df6419e6eefa__1991-1.txt,single,CAD,thousand,direct_rd
-Canada,Medical Research Council,1992,255434.0,255434.0,1,pdf_5a9c5f586c49__1992-1.txt,single,CAD,thousand,direct_rd
-Canada,Medical Research Council,1993,187.0,187.0,1,pdf_7e9961b9ea80__1993-1.txt,single,CAD,thousand,direct_rd
-Canada,Medical Research Council,1994,1610674.0,1610674.0,1,pdf_2d0b078b24fb__1994-2.txt,single,CAD,thousand,direct_rd
-Canada,Medical Research Council,1995,250959.25,1410.25,2,pdf_1122fd093ee2__1995-2.txt | pdf_f8a0500cfd84__1995-1.txt,additive,CAD,thousand,direct_rd
-Canada,Medical Research Council,1996,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,1997,1721029.084,1704376.0,2,pdf_7c0b389ce1a9__1997-2.txt | pdf_7f5669593c7c__1997-1.txt,additive,CAD,thousand,direct_rd
-Canada,Medical Research Council,1998,59711.551,59660.051,2,pdf_3f43627833fd__1998-1.txt | pdf_7a4a1dd7c37d__1998-2.txt,additive,CAD,thousand,direct_rd
-Canada,Medical Research Council,1999,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2000,307434.0,307434.0,1,pdf_063218f608ee__2000_1_YX2-2000-1.txt,single,CAD,thousand,direct_rd
-Canada,Medical Research Council,2001,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2002,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2003,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2006,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2007,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2008,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2009,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2010,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2011,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2012,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2013,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2014,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2015,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2016,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2017,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2018,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2019,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2020,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2021,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2022,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2023,,,0,,gap,,,direct_rd
-Canada,Medical Research Council,2024,,,0,,gap,,,direct_rd
+Canada,International Development Research Centre,1998,70126000.0,70126000.0,1,pdf_3f43627833fd__1998-1.txt,single,CAD,dollar,science_agency
+Canada,International Development Research Centre,1999,237000.0,237000.0,1,pdf_c352f666d27c__1999-1.txt,single,CAD,dollar,science_agency
+Canada,International Development Research Centre,2000,87951000.0,87951000.0,1,pdf_063218f608ee__2000_1_YX2-2000-1.txt,single,CAD,dollar,science_agency
+Canada,International Development Research Centre,2001,3537000.0,3537000.0,1,pdf_96c6876dd7d6__2001_2_YX2-2001-2.txt,single,CAD,dollar,science_agency
+Canada,International Development Research Centre,2002,115542006.0,115542006.0,1,pdf_4d23754e5ddd__2002_a_YX2-2002-1.txt,single,CAD,dollar,science_agency
+Canada,International Development Research Centre,2003,110096000.0,9155000.0,2,pdf_4e638b794f3f__Appropriation_Act_2003-04_C55_Project.txt | pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt,additive,CAD,dollar,science_agency
+Canada,International Development Research Centre,2006,133092000.0,133092000.0,1,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt,single,CAD,dollar,science_agency
+Canada,International Development Research Centre,2007,10500000.0,10500000.0,3,Appropriation Act 2007-08 C35 Project.pdf | pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt | pdf_826ff054c987__Appropriation_Act_2007-08_C35_Project.txt,restatement,CAD,dollar,science_agency
+Canada,International Development Research Centre,2008,149995000.0,149995000.0,1,pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt,single,CAD,dollar,science_agency
+Canada,International Development Research Centre,2009,161749534.0,161749534.0,1,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt,single,CAD,dollar,science_agency
+Canada,International Development Research Centre,2010,251303761.0,70000000.0,2,Appropriation Act 2010-11 C45.pdf | pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt,additive,CAD,dollar,science_agency
+Canada,International Development Research Centre,2011,235731944.0,861700.0,3,pdf_12804f46d98a__Appropriation_Act_2011-12_C29.txt | pdf_91ef49b8f05c__Appropriation_Act_2011-12_C34.txt | pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,additive,CAD,dollar,science_agency
+Canada,International Development Research Centre,2012,241432539.0,241432539.0,1,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt,single,CAD,dollar,science_agency
+Canada,International Development Research Centre,2013,225390066.0,225390066.0,1,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt,single,CAD,dollar,science_agency
+Canada,International Development Research Centre,2014,205334300.0,188019646.0,2,pdf_3551f35c9a0e__Appropriation_Act_2014-15_C38.txt | pdf_962d9379b0c8__Appropriation_Act_2014-15_C54.txt,additive,CAD,dollar,science_agency
+Canada,International Development Research Centre,2015,183478242.0,183478242.0,1,pdf_d64fe7703590__Appropriation_Act_2015-16_C66.txt,single,CAD,dollar,science_agency
+Canada,International Development Research Centre,2016,149205625.0,149205625.0,1,pdf_e53c6bee56bb__Appropriation_Act_2016-17_C19.txt,single,CAD,dollar,science_agency
+Canada,International Development Research Centre,2017,138705625.0,138705625.0,1,pdf_84bfa4a5d495__Appropriation_Act_2017-18_C53.txt,single,CAD,dollar,science_agency
+Canada,International Development Research Centre,2018,174172736.0,139338189.0,2,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,dollar,science_agency
+Canada,International Development Research Centre,2019,142907117.0,142907117.0,1,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt,single,CAD,dollar,science_agency
+Canada,International Development Research Centre,2020,141848784.0,141848784.0,1,pdf_6f6e72970cf7__Appropriation_Act_2020-21_C16.txt,single,CAD,dollar,science_agency
+Canada,International Development Research Centre,2021,148611325.0,148611325.0,1,pdf_200ebf737d10__Appropriation_Act_2021-22_C33.txt,single,CAD,dollar,science_agency
+Canada,International Development Research Centre,2022,153701325.0,153701325.0,1,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt,single,CAD,dollar,science_agency
+Canada,International Development Research Centre,2023,152798272.0,152798272.0,1,pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt,single,CAD,dollar,science_agency
+Canada,International Development Research Centre,2024,157520169.0,157520169.0,1,pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt,single,CAD,dollar,science_agency
 Canada,Medical Research Council (MRC Canada),1987,,,0,,gap,,,science_agency
-Canada,Medical Research Council (MRC Canada),1988,,,0,,gap,,,science_agency
-Canada,Medical Research Council (MRC Canada),1989,,,0,,gap,,,science_agency
-Canada,Medical Research Council (MRC Canada),1990,9559.7,9559.7,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,thousand,science_agency
-Canada,Medical Research Council (MRC Canada),1991,18058.0,18058.0,1,pdf_df6419e6eefa__1991-1.txt,single,CAD,thousand,science_agency
-Canada,Medical Research Council (MRC Canada),1992,,,0,,gap,,,science_agency
-Canada,Medical Research Council (MRC Canada),1993,8170.2,7494.2,2,pdf_7e9961b9ea80__1993-1.txt | pdf_f8ec88f20e98__1993-2.txt,additive,CAD,thousand,science_agency
-Canada,Medical Research Council (MRC Canada),1994,,,0,,gap,,,science_agency
-Canada,Medical Research Council (MRC Canada),1995,,,0,,gap,,,science_agency
-Canada,Medical Research Council (MRC Canada),1996,,,0,,gap,,,science_agency
-Canada,Medical Research Council (MRC Canada),1997,,,0,,gap,,,science_agency
-Canada,Medical Research Council (MRC Canada),1998,,,0,,gap,,,science_agency
+Canada,Medical Research Council (MRC Canada),1988,182222000.0,182222000.0,2,1988-1.pdf | pdf_80ffd1071265__1988-1.txt,restatement,CAD,dollar,science_agency
+Canada,Medical Research Council (MRC Canada),1989,265341500.0,201615000.0,2,1989-1.pdf | pdf_cc4accfe073d__1989-1.txt,additive,CAD,dollar,science_agency
+Canada,Medical Research Council (MRC Canada),1990,221198000.0,221198000.0,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,dollar,science_agency
+Canada,Medical Research Council (MRC Canada),1991,247077000.0,247077000.0,1,pdf_df6419e6eefa__1991-1.txt,single,CAD,dollar,science_agency
+Canada,Medical Research Council (MRC Canada),1992,255434000.0,255434000.0,2,1992-1.pdf | pdf_5a9c5f586c49__1992-1.txt,restatement,CAD,dollar,science_agency
+Canada,Medical Research Council (MRC Canada),1993,252192000.0,251329000.0,3,1993-2.pdf | pdf_7e9961b9ea80__1993-1.txt | pdf_f8ec88f20e98__1993-2.txt,additive,CAD,dollar,science_agency
+Canada,Medical Research Council (MRC Canada),1994,1610674000.0,1610674000.0,1,pdf_2d0b078b24fb__1994-2.txt,single,CAD,dollar,science_agency
+Canada,Medical Research Council (MRC Canada),1995,250959250.0,1410250.0,2,pdf_1122fd093ee2__1995-2.txt | pdf_f8a0500cfd84__1995-1.txt,additive,CAD,dollar,science_agency
+Canada,Medical Research Council (MRC Canada),1996,241786000.0,241786000.0,1,1996-2.pdf,single,CAD,dollar,science_agency
+Canada,Medical Research Council (MRC Canada),1997,1721029084.0,1704376000.0,2,pdf_7c0b389ce1a9__1997-2.txt | pdf_7f5669593c7c__1997-1.txt,additive,CAD,dollar,science_agency
+Canada,Medical Research Council (MRC Canada),1998,10051500.0,10000000.0,2,pdf_3f43627833fd__1998-1.txt | pdf_7a4a1dd7c37d__1998-2.txt,additive,CAD,dollar,science_agency
 Canada,Medical Research Council (MRC Canada),1999,,,0,,gap,,,science_agency
-Canada,Medical Research Council (MRC Canada),2000,,,0,,gap,,,science_agency
+Canada,Medical Research Council (MRC Canada),2000,307434000.0,307434000.0,1,pdf_063218f608ee__2000_1_YX2-2000-1.txt,single,CAD,dollar,science_agency
 Canada,Millennium Bureau of Canada,1987,,,0,,gap,,,innovation_instruments
 Canada,Millennium Bureau of Canada,1988,,,0,,gap,,,innovation_instruments
 Canada,Millennium Bureau of Canada,1989,,,0,,gap,,,innovation_instruments
@@ -901,10 +757,10 @@ Canada,Millennium Bureau of Canada,1994,,,0,,gap,,,innovation_instruments
 Canada,Millennium Bureau of Canada,1995,,,0,,gap,,,innovation_instruments
 Canada,Millennium Bureau of Canada,1996,,,0,,gap,,,innovation_instruments
 Canada,Millennium Bureau of Canada,1997,,,0,,gap,,,innovation_instruments
-Canada,Millennium Bureau of Canada,1998,44600.0,44600.0,1,pdf_3f43627833fd__1998-1.txt,single,CAD,thousand,innovation_instruments
-Canada,Millennium Bureau of Canada,1999,77000.0,77000.0,1,pdf_c352f666d27c__1999-1.txt,single,CAD,thousand,innovation_instruments
+Canada,Millennium Bureau of Canada,1998,44600000.0,44600000.0,1,pdf_3f43627833fd__1998-1.txt,single,CAD,dollar,innovation_instruments
+Canada,Millennium Bureau of Canada,1999,77000000.0,77000000.0,1,pdf_c352f666d27c__1999-1.txt,single,CAD,dollar,innovation_instruments
 Canada,Millennium Bureau of Canada,2000,,,0,,gap,,,innovation_instruments
-Canada,Millennium Bureau of Canada,2001,,,0,,gap,,,innovation_instruments
+Canada,Millennium Bureau of Canada,2001,29711500.0,29711500.0,1,pdf_42b97a8dfe36__2001_1_YX2-2001-1.txt,single,CAD,dollar,innovation_instruments
 Canada,Millennium Bureau of Canada,2002,,,0,,gap,,,innovation_instruments
 Canada,Millennium Bureau of Canada,2003,,,0,,gap,,,innovation_instruments
 Canada,Millennium Bureau of Canada,2006,,,0,,gap,,,innovation_instruments
@@ -926,9 +782,9 @@ Canada,Millennium Bureau of Canada,2021,,,0,,gap,,,innovation_instruments
 Canada,Millennium Bureau of Canada,2022,,,0,,gap,,,innovation_instruments
 Canada,Millennium Bureau of Canada,2023,,,0,,gap,,,innovation_instruments
 Canada,Millennium Bureau of Canada,2024,,,0,,gap,,,innovation_instruments
-Canada,Minerals and Earth Sciences Program,1987,19048.0,19048.0,1,pdf_166108b13afc__1987-3.txt,single,CAD,thousand,direct_rd
-Canada,Minerals and Earth Sciences Program,1988,305922.0,305922.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,thousand,direct_rd
-Canada,Minerals and Earth Sciences Program,1989,453089.5,453089.5,1,pdf_cc4accfe073d__1989-1.txt,single,CAD,thousand,direct_rd
+Canada,Minerals and Earth Sciences Program,1987,19048000.0,19048000.0,1,pdf_166108b13afc__1987-3.txt,single,CAD,dollar,direct_rd
+Canada,Minerals and Earth Sciences Program,1988,305922000.0,305922000.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,dollar,direct_rd
+Canada,Minerals and Earth Sciences Program,1989,,,0,,gap,,,direct_rd
 Canada,Minerals and Earth Sciences Program,1990,,,0,,gap,,,direct_rd
 Canada,Minerals and Earth Sciences Program,1991,,,0,,gap,,,direct_rd
 Canada,Minerals and Earth Sciences Program,1992,,,0,,gap,,,direct_rd
@@ -963,113 +819,77 @@ Canada,Minerals and Earth Sciences Program,2022,,,0,,gap,,,direct_rd
 Canada,Minerals and Earth Sciences Program,2023,,,0,,gap,,,direct_rd
 Canada,Minerals and Earth Sciences Program,2024,,,0,,gap,,,direct_rd
 Canada,NSERC,1987,,,0,,gap,,,science_agency
-Canada,NSERC,1988,448025.0,448025.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,thousand,science_agency
-Canada,NSERC,1989,812402.0,812402.0,1,pdf_cc4accfe073d__1989-1.txt,single,CAD,thousand,science_agency
-Canada,NSERC,1990,32464.701,32464.701,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,thousand,science_agency
-Canada,NSERC,1991,163477.2,163477.2,1,pdf_df6419e6eefa__1991-1.txt,single,CAD,thousand,science_agency
+Canada,NSERC,1988,448025000.0,448025000.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,dollar,science_agency
+Canada,NSERC,1989,388810000.0,388810000.0,1,pdf_cc4accfe073d__1989-1.txt,single,CAD,dollar,science_agency
+Canada,NSERC,1990,32464701.0,32464701.0,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,dollar,science_agency
+Canada,NSERC,1991,40246000.0,40246000.0,1,pdf_df6419e6eefa__1991-1.txt,single,CAD,dollar,science_agency
 Canada,NSERC,1992,,,0,,gap,,,science_agency
-Canada,NSERC,1993,495057.0,495057.0,1,pdf_f8ec88f20e98__1993-2.txt,single,CAD,thousand,science_agency
-Canada,NSERC,1994,49793.0,49793.0,1,pdf_2d0b078b24fb__1994-2.txt,single,CAD,thousand,science_agency
-Canada,NSERC,1995,90834.684,90834.684,1,pdf_1122fd093ee2__1995-2.txt,single,CAD,thousand,science_agency
-Canada,NSERC,1996,448340.0,448340.0,1,pdf_794e5cdc9ba6__1996-2.txt,single,CAD,thousand,science_agency
-Canada,NSERC,1997,434369.0,432369.0,2,pdf_7c0b389ce1a9__1997-2.txt | pdf_7f5669593c7c__1997-1.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,1998,155248.185,155248.185,1,pdf_3f43627833fd__1998-1.txt,single,CAD,thousand,science_agency
-Canada,NSERC,1999,41649.513,39865.056,2,pdf_81d9f9d6557c__1999-2.txt | pdf_c352f666d27c__1999-1.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,2000,782393.0,782393.0,1,pdf_063218f608ee__2000_1_YX2-2000-1.txt,single,CAD,thousand,science_agency
-Canada,NSERC,2001,610971.15,6685.15,2,pdf_5d233800258f__2001_3_YX2-2001-3.txt | pdf_96c6876dd7d6__2001_2_YX2-2001-2.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,2002,42936.9,42936.9,1,pdf_94f5808a2fc9__2002_b_YX2-2002-2.txt,single,CAD,thousand,science_agency
-Canada,NSERC,2003,753031.0,48304.0,2,pdf_4e638b794f3f__Appropriation_Act_2003-04_C55_Project.txt | pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,2006,2870981.3,1014567.0,4,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_94f303554d94__Appropriation_Act_2006-07_C39_Project.txt | pdf_acbb37d5b36f__Appropriation_Act_2006-07_C48_Project.txt | pdf_f82125049255__Appropriation_Act_2006-07_C38.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,2007,951976.096,895452.0,2,pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt | pdf_826ff054c987__Appropriation_Act_2007-08_C35_Project.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,2008,960761.75,6685.75,2,pdf_5832acb42e3a__Appropriation_Act_2008-09_C59_Project.txt | pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,2009,964298.819,964298.819,1,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt,single,CAD,thousand,science_agency
-Canada,NSERC,2010,1015773.511,1015773.511,1,pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt,single,CAD,thousand,science_agency
-Canada,NSERC,2011,2189662.841,35925.203,2,pdf_12804f46d98a__Appropriation_Act_2011-12_C29.txt | pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,2012,2075096.694,1041275.16,5,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt | pdf_17cd3e81dc75__Appropriation_Act_2012-13_C35.txt | pdf_337f5cf2048a__Appropriation_Act_2012-13_C58.txt | pdf_6e8afe4c03d2__Appropriation_Act_2012-13_C41.txt | pdf_e9d28d56c3bd__Appropriation_Act_2012-13_C50.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,2013,2063394.429,1039938.385,5,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt | pdf_80c4bab60042__Appropriation_Act_2013-14_C59.txt | pdf_b23eebbefa0c__Appropriation_Act_2013-14_C64.txt | pdf_d3de44366ef3__Appropriation_Act_2013-14_C28.txt | pdf_e3de5326883e__Appropriation_Act_2013-14_C19.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,2014,2097284.2290000003,1015471.014,3,pdf_2099b532c496__Appropriation_Act_2014-15_C29.txt | pdf_3551f35c9a0e__Appropriation_Act_2014-15_C38.txt | pdf_e1f3978ed5bb__Appropriation_Act_2014-15_C45.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,2015,2152821.313,1037790.619,3,pdf_42c08c0cabdc__Appropriation_Act_2015-16_C55.txt | pdf_bd3fcee037af__Appropriation_Act_2015-16_C8.txt | pdf_d64fe7703590__Appropriation_Act_2015-16_C66.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,2016,2266613.673,1071265.06,4,pdf_1c535913f398__Appropriation_Act_2016-17_C9.txt | pdf_9c999da4a13a__Appropriation_Act_2016-17_C35.txt | pdf_b93bee4a7023__Appropriation_Act_2016-17_C20.txt | pdf_e53c6bee56bb__Appropriation_Act_2016-17_C19.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,2017,2370360.6029999997,8251.018,4,pdf_2ba828140e67__Appropriation_Act_2017-18_C72.txt | pdf_50c6b6fecd94__Appropriation_Act_2017-18_C41.txt | pdf_84bfa4a5d495__Appropriation_Act_2017-18_C53.txt | pdf_c45fa8ce41ed__Appropriation_Act_2017-18_C67.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,2018,1661529.965,1249030.128,2,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,2019,1821358.6719999998,1356834.988,3,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt | pdf_873762b2ca63__Appropriation_Act_2019-20_C2.txt | pdf_b10d5794609b__Appropriation_Act_2019-20_C96.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,2020,2669355.6330000004,1304972.077,3,pdf_0a59a59f62a2__Appropriation_Act_2020-21_C11.txt | pdf_6f6e72970cf7__Appropriation_Act_2020-21_C16.txt | pdf_72a8d2e842dd__Appropriation_Act_2020-21_C17.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,2021,2730907.7869999995,1321627.413,4,pdf_1516e9eb34bd__Appropriation_Act_2021-22_C27.txt | pdf_200ebf737d10__Appropriation_Act_2021-22_C33.txt | pdf_8b52b51ff5b9__Appropriation_Act_2021-22_C15.txt | pdf_9432e706d201__Appropriation_Act_2021-22_C6.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,2022,2668730.038,1349719.941,4,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt | pdf_902b8f5bb10a__Appropriation_Act_2022-23_C36.txt | pdf_bc0e80b8cb6f__Appropriation_Act_2022-23_C16.txt | pdf_d9b5656a645f__Appropriation_Act_2022-23_C43.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,2023,1365070.481,12435.901,4,pdf_55f813618fa1__Appropriation_Act_2023-24_C55.txt | pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt | pdf_a26eeec4a59b__Appropriation_Act_2023-24_C60.txt | pdf_ec0377ac309a__Appropriation_Act_2023-24_C67.txt,additive,CAD,thousand,science_agency
-Canada,NSERC,2024,2780080.946,76040.517,4,pdf_0adeb1980e12__Appropriation_Act_2024-25_C79.txt | pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt | pdf_f414996f0adb__Appropriation_Act_2024-25_C75.txt | pdf_fba0b30b51f9__Appropriation_Act_2024-25_C68.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),1987,70531.68,70531.68,1,pdf_166108b13afc__1987-3.txt,single,CAD,thousand,science_agency
-Canada,National Research Council (NRC),1988,104.0,104.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,thousand,science_agency
+Canada,NSERC,1993,495057000.0,495057000.0,1,pdf_f8ec88f20e98__1993-2.txt,single,CAD,dollar,science_agency
+Canada,NSERC,1994,4156000.0,4156000.0,1,pdf_2d0b078b24fb__1994-2.txt,single,CAD,dollar,science_agency
+Canada,NSERC,1995,4645303.0,4645303.0,1,pdf_1122fd093ee2__1995-2.txt,single,CAD,dollar,science_agency
+Canada,NSERC,1996,448340000.0,448340000.0,1,pdf_794e5cdc9ba6__1996-2.txt,single,CAD,dollar,science_agency
+Canada,NSERC,1997,434369000.0,432369000.0,2,pdf_7c0b389ce1a9__1997-2.txt | pdf_7f5669593c7c__1997-1.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,1998,115248185.0,115248185.0,1,pdf_3f43627833fd__1998-1.txt,single,CAD,dollar,science_agency
+Canada,NSERC,1999,48749886.0,39865056.0,2,pdf_81d9f9d6557c__1999-2.txt | pdf_c352f666d27c__1999-1.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,2000,782393000.0,782393000.0,1,pdf_063218f608ee__2000_1_YX2-2000-1.txt,single,CAD,dollar,science_agency
+Canada,NSERC,2001,610971150.0,6685150.0,2,pdf_5d233800258f__2001_3_YX2-2001-3.txt | pdf_96c6876dd7d6__2001_2_YX2-2001-2.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,2002,42936900.0,42936900.0,1,pdf_94f5808a2fc9__2002_b_YX2-2002-2.txt,single,CAD,dollar,science_agency
+Canada,NSERC,2003,753031000.0,48304000.0,2,pdf_4e638b794f3f__Appropriation_Act_2003-04_C55_Project.txt | pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,2006,957246300.0,881167000.0,3,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_94f303554d94__Appropriation_Act_2006-07_C39_Project.txt | pdf_acbb37d5b36f__Appropriation_Act_2006-07_C48_Project.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,2007,951976096.0,895452000.0,2,pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt | pdf_826ff054c987__Appropriation_Act_2007-08_C35_Project.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,2008,960761750.0,6685750.0,2,pdf_5832acb42e3a__Appropriation_Act_2008-09_C59_Project.txt | pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,2009,964298819.0,964298819.0,1,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt,single,CAD,dollar,science_agency
+Canada,NSERC,2010,1015773511.0,1015773511.0,1,pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt,single,CAD,dollar,science_agency
+Canada,NSERC,2011,1080735511.0,35925203.0,2,pdf_12804f46d98a__Appropriation_Act_2011-12_C29.txt | pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,2012,2075096694.0,1041275160.0,5,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt | pdf_17cd3e81dc75__Appropriation_Act_2012-13_C35.txt | pdf_337f5cf2048a__Appropriation_Act_2012-13_C58.txt | pdf_6e8afe4c03d2__Appropriation_Act_2012-13_C41.txt | pdf_e9d28d56c3bd__Appropriation_Act_2012-13_C50.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,2013,2063394429.0,1039938385.0,5,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt | pdf_80c4bab60042__Appropriation_Act_2013-14_C59.txt | pdf_b23eebbefa0c__Appropriation_Act_2013-14_C64.txt | pdf_d3de44366ef3__Appropriation_Act_2013-14_C28.txt | pdf_e3de5326883e__Appropriation_Act_2013-14_C19.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,2014,2097284229.0,1015471014.0,3,pdf_2099b532c496__Appropriation_Act_2014-15_C29.txt | pdf_3551f35c9a0e__Appropriation_Act_2014-15_C38.txt | pdf_e1f3978ed5bb__Appropriation_Act_2014-15_C45.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,2015,2152821313.0,1037790619.0,3,pdf_42c08c0cabdc__Appropriation_Act_2015-16_C55.txt | pdf_bd3fcee037af__Appropriation_Act_2015-16_C8.txt | pdf_d64fe7703590__Appropriation_Act_2015-16_C66.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,2016,2266613673.0,1071265060.0,4,pdf_1c535913f398__Appropriation_Act_2016-17_C9.txt | pdf_9c999da4a13a__Appropriation_Act_2016-17_C35.txt | pdf_b93bee4a7023__Appropriation_Act_2016-17_C20.txt | pdf_e53c6bee56bb__Appropriation_Act_2016-17_C19.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,2017,2370360603.0,8251018.0,4,pdf_2ba828140e67__Appropriation_Act_2017-18_C72.txt | pdf_50c6b6fecd94__Appropriation_Act_2017-18_C41.txt | pdf_84bfa4a5d495__Appropriation_Act_2017-18_C53.txt | pdf_c45fa8ce41ed__Appropriation_Act_2017-18_C67.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,2018,1661529965.0,1249030128.0,2,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,2019,1821358672.0,1356834988.0,3,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt | pdf_873762b2ca63__Appropriation_Act_2019-20_C2.txt | pdf_b10d5794609b__Appropriation_Act_2019-20_C96.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,2020,2669355633.0,1304972077.0,3,pdf_0a59a59f62a2__Appropriation_Act_2020-21_C11.txt | pdf_6f6e72970cf7__Appropriation_Act_2020-21_C16.txt | pdf_72a8d2e842dd__Appropriation_Act_2020-21_C17.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,2021,2730907787.0,1321627413.0,4,pdf_1516e9eb34bd__Appropriation_Act_2021-22_C27.txt | pdf_200ebf737d10__Appropriation_Act_2021-22_C33.txt | pdf_8b52b51ff5b9__Appropriation_Act_2021-22_C15.txt | pdf_9432e706d201__Appropriation_Act_2021-22_C6.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,2022,2668730038.0,1349719941.0,4,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt | pdf_902b8f5bb10a__Appropriation_Act_2022-23_C36.txt | pdf_bc0e80b8cb6f__Appropriation_Act_2022-23_C16.txt | pdf_d9b5656a645f__Appropriation_Act_2022-23_C43.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,2023,1365070481.0,12435901.0,4,pdf_55f813618fa1__Appropriation_Act_2023-24_C55.txt | pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt | pdf_a26eeec4a59b__Appropriation_Act_2023-24_C60.txt | pdf_ec0377ac309a__Appropriation_Act_2023-24_C67.txt,additive,CAD,dollar,science_agency
+Canada,NSERC,2024,2780080946.0,76040517.0,4,pdf_0adeb1980e12__Appropriation_Act_2024-25_C79.txt | pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt | pdf_f414996f0adb__Appropriation_Act_2024-25_C75.txt | pdf_fba0b30b51f9__Appropriation_Act_2024-25_C68.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),1987,750000.0,750000.0,1,pdf_166108b13afc__1987-3.txt,single,CAD,dollar,science_agency
+Canada,National Research Council (NRC),1988,104.0,104.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,dollar,science_agency
 Canada,National Research Council (NRC),1989,,,0,,gap,,,science_agency
-Canada,National Research Council (NRC),1990,409676.0,409676.0,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,thousand,science_agency
-Canada,National Research Council (NRC),1991,119700.0,119700.0,1,pdf_df6419e6eefa__1991-1.txt,single,CAD,thousand,science_agency
-Canada,National Research Council (NRC),1992,46555.7,38271.0,2,pdf_5a9c5f586c49__1992-1.txt | pdf_f8b3524f77eb__1992-2.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),1993,416891.0,472.0,2,pdf_7e9961b9ea80__1993-1.txt | pdf_f8ec88f20e98__1993-2.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),1994,15874.0,15874.0,1,pdf_a910b001b108__1994-4.txt,single,CAD,thousand,science_agency
-Canada,National Research Council (NRC),1995,3471.354,3471.354,1,pdf_1122fd093ee2__1995-2.txt,single,CAD,thousand,science_agency
-Canada,National Research Council (NRC),1996,531655.309,519161.0,2,pdf_794e5cdc9ba6__1996-2.txt | pdf_daae31bf1d77__1996-1.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),1997,397046.0,397046.0,1,pdf_7c0b389ce1a9__1997-2.txt,single,CAD,thousand,science_agency
-Canada,National Research Council (NRC),1998,869340.66667,869340.66667,1,pdf_3f43627833fd__1998-1.txt,single,CAD,thousand,science_agency
-Canada,National Research Council (NRC),1999,487925.811,13926.811,2,pdf_81d9f9d6557c__1999-2.txt | pdf_c352f666d27c__1999-1.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2000,3387.637,3387.637,1,pdf_063218f608ee__2000_1_YX2-2000-1.txt,single,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2001,435786.001,15000.0,2,pdf_5d233800258f__2001_3_YX2-2001-3.txt | pdf_96c6876dd7d6__2001_2_YX2-2001-2.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2002,546450.377,469791.0,3,pdf_4d23754e5ddd__2002_a_YX2-2002-1.txt | pdf_94f5808a2fc9__2002_b_YX2-2002-2.txt | pdf_99701fee0eb0__Appropriation_Act_2002-03_C29_Project.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2003,552480.0,20667.0,2,pdf_4e638b794f3f__Appropriation_Act_2003-04_C55_Project.txt | pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2006,1827853.017,655335.825,4,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_94f303554d94__Appropriation_Act_2006-07_C39_Project.txt | pdf_df872f9462c9__Appropriation_Act_2006-07_C49_Project.txt | pdf_f82125049255__Appropriation_Act_2006-07_C38.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2007,594530.218,550954.0,2,pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt | pdf_826ff054c987__Appropriation_Act_2007-08_C35_Project.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2008,570868.0,2065.0,2,pdf_5832acb42e3a__Appropriation_Act_2008-09_C59_Project.txt | pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2009,580403.485,580403.485,1,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt,single,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2010,710974.741,88507.24,2,pdf_51fd9e07b551__Appropriation_Act_2010-11_C45.txt | pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2011,1617211.4670000002,544472.417,2,pdf_12804f46d98a__Appropriation_Act_2011-12_C29.txt | pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2012,679148.968,527997.794,2,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt | pdf_e9d28d56c3bd__Appropriation_Act_2012-13_C50.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2013,698583.5950000001,637771.197,2,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt | pdf_e3de5326883e__Appropriation_Act_2013-14_C19.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2014,679565.312,655232.368,3,pdf_3551f35c9a0e__Appropriation_Act_2014-15_C38.txt | pdf_ab522ba1986a__Appropriation_Act_2014-15_C39.txt | pdf_e1f3978ed5bb__Appropriation_Act_2014-15_C45.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2015,766873.71,124894.639,3,pdf_9d320e713a62__Appropriation_Act_2015-16_C67.txt | pdf_bd3fcee037af__Appropriation_Act_2015-16_C8.txt | pdf_d64fe7703590__Appropriation_Act_2015-16_C66.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2016,895257.653,11618.017,3,pdf_9c999da4a13a__Appropriation_Act_2016-17_C35.txt | pdf_b93bee4a7023__Appropriation_Act_2016-17_C20.txt | pdf_e53c6bee56bb__Appropriation_Act_2016-17_C19.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2017,859388.219,64626.555,3,pdf_15a73dac2637__Appropriation_Act_2017-18_C54.txt | pdf_2ba828140e67__Appropriation_Act_2017-18_C72.txt | pdf_84bfa4a5d495__Appropriation_Act_2017-18_C53.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2018,910609.0109999999,806761.134,3,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_b1fb13a8e543__Appropriation_Act_2018-19_C90.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2019,1181424.8269999998,943637.993,3,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt | pdf_b10d5794609b__Appropriation_Act_2019-20_C96.txt | pdf_e8fdad00f8d2__Appropriation_Act_2019-20_C10.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2020,1339432.682,181098.141,4,pdf_06c5749bea35__Appropriation_Act_2020-21_C26.txt | pdf_6d66da39f53d__Appropriation_Act_2020-21_C19.txt | pdf_6f6e72970cf7__Appropriation_Act_2020-21_C16.txt | pdf_72a8d2e842dd__Appropriation_Act_2020-21_C17.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2021,1364228.0480000002,1084788.87,4,pdf_200ebf737d10__Appropriation_Act_2021-22_C33.txt | pdf_790f18540313__Appropriation_Act_2021-22_C34.txt | pdf_8b52b51ff5b9__Appropriation_Act_2021-22_C15.txt | pdf_9432e706d201__Appropriation_Act_2021-22_C6.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2022,1300408.775,1186672.629,3,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt | pdf_902b8f5bb10a__Appropriation_Act_2022-23_C36.txt | pdf_d9b5656a645f__Appropriation_Act_2022-23_C43.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2023,1348312.492,1294851.014,2,pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt | pdf_a26eeec4a59b__Appropriation_Act_2023-24_C60.txt,additive,CAD,thousand,science_agency
-Canada,National Research Council (NRC),2024,1364848.396,19704.308,2,pdf_0adeb1980e12__Appropriation_Act_2024-25_C79.txt | pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,1987,,,0,,gap,,,science_agency
-Canada,Natural Sciences and Engineering Research Council,1988,380657.5,380657.5,1,pdf_80ffd1071265__1988-1.txt,single,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,1989,812402.0,812402.0,1,pdf_cc4accfe073d__1989-1.txt,single,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,1990,25542.2,25542.2,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,1991,163477.2,163477.2,1,pdf_df6419e6eefa__1991-1.txt,single,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,1992,,,0,,gap,,,science_agency
-Canada,Natural Sciences and Engineering Research Council,1993,495057.0,495057.0,1,pdf_f8ec88f20e98__1993-2.txt,single,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,1994,,,0,,gap,,,science_agency
-Canada,Natural Sciences and Engineering Research Council,1995,,,0,,gap,,,science_agency
-Canada,Natural Sciences and Engineering Research Council,1996,448340.0,448340.0,1,pdf_794e5cdc9ba6__1996-2.txt,single,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,1997,434369.0,432369.0,2,pdf_7c0b389ce1a9__1997-2.txt | pdf_7f5669593c7c__1997-1.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,1998,9950.0,9950.0,1,pdf_3f43627833fd__1998-1.txt,single,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,1999,524645.056,39865.056,2,pdf_81d9f9d6557c__1999-2.txt | pdf_c352f666d27c__1999-1.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2000,782393.0,782393.0,1,pdf_063218f608ee__2000_1_YX2-2000-1.txt,single,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2001,610971.15,6685.15,2,pdf_5d233800258f__2001_3_YX2-2001-3.txt | pdf_96c6876dd7d6__2001_2_YX2-2001-2.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2002,42936.9,42936.9,1,pdf_94f5808a2fc9__2002_b_YX2-2002-2.txt,single,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2003,753031.0,48304.0,2,pdf_4e638b794f3f__Appropriation_Act_2003-04_C55_Project.txt | pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2006,2870981.3,1014567.0,4,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_94f303554d94__Appropriation_Act_2006-07_C39_Project.txt | pdf_acbb37d5b36f__Appropriation_Act_2006-07_C48_Project.txt | pdf_f82125049255__Appropriation_Act_2006-07_C38.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2007,951976.096,895452.0,2,pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt | pdf_826ff054c987__Appropriation_Act_2007-08_C35_Project.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2008,960761.75,6685.75,2,pdf_5832acb42e3a__Appropriation_Act_2008-09_C59_Project.txt | pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2009,964298.819,964298.819,1,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt,single,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2010,1015773.511,1015773.511,1,pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt,single,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2011,2189662.841,35925.203,2,pdf_12804f46d98a__Appropriation_Act_2011-12_C29.txt | pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2012,2075096.694,1041275.16,5,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt | pdf_17cd3e81dc75__Appropriation_Act_2012-13_C35.txt | pdf_337f5cf2048a__Appropriation_Act_2012-13_C58.txt | pdf_6e8afe4c03d2__Appropriation_Act_2012-13_C41.txt | pdf_e9d28d56c3bd__Appropriation_Act_2012-13_C50.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2013,2063394.429,1039938.385,5,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt | pdf_80c4bab60042__Appropriation_Act_2013-14_C59.txt | pdf_b23eebbefa0c__Appropriation_Act_2013-14_C64.txt | pdf_d3de44366ef3__Appropriation_Act_2013-14_C28.txt | pdf_e3de5326883e__Appropriation_Act_2013-14_C19.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2014,2097284.2290000003,1015471.014,3,pdf_2099b532c496__Appropriation_Act_2014-15_C29.txt | pdf_3551f35c9a0e__Appropriation_Act_2014-15_C38.txt | pdf_e1f3978ed5bb__Appropriation_Act_2014-15_C45.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2015,2152821.313,1037790.619,3,pdf_42c08c0cabdc__Appropriation_Act_2015-16_C55.txt | pdf_bd3fcee037af__Appropriation_Act_2015-16_C8.txt | pdf_d64fe7703590__Appropriation_Act_2015-16_C66.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2016,2266613.673,1071265.06,4,pdf_1c535913f398__Appropriation_Act_2016-17_C9.txt | pdf_9c999da4a13a__Appropriation_Act_2016-17_C35.txt | pdf_b93bee4a7023__Appropriation_Act_2016-17_C20.txt | pdf_e53c6bee56bb__Appropriation_Act_2016-17_C19.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2017,2370360.6029999997,8251.018,4,pdf_2ba828140e67__Appropriation_Act_2017-18_C72.txt | pdf_50c6b6fecd94__Appropriation_Act_2017-18_C41.txt | pdf_84bfa4a5d495__Appropriation_Act_2017-18_C53.txt | pdf_c45fa8ce41ed__Appropriation_Act_2017-18_C67.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2018,1661529.965,1249030.128,2,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2019,1821358.6719999998,1356834.988,3,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt | pdf_873762b2ca63__Appropriation_Act_2019-20_C2.txt | pdf_b10d5794609b__Appropriation_Act_2019-20_C96.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2020,2669355.6330000004,1304972.077,3,pdf_0a59a59f62a2__Appropriation_Act_2020-21_C11.txt | pdf_6f6e72970cf7__Appropriation_Act_2020-21_C16.txt | pdf_72a8d2e842dd__Appropriation_Act_2020-21_C17.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2021,2730907.7869999995,1321627.413,4,pdf_1516e9eb34bd__Appropriation_Act_2021-22_C27.txt | pdf_200ebf737d10__Appropriation_Act_2021-22_C33.txt | pdf_8b52b51ff5b9__Appropriation_Act_2021-22_C15.txt | pdf_9432e706d201__Appropriation_Act_2021-22_C6.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2022,2668730.038,1349719.941,4,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt | pdf_902b8f5bb10a__Appropriation_Act_2022-23_C36.txt | pdf_bc0e80b8cb6f__Appropriation_Act_2022-23_C16.txt | pdf_d9b5656a645f__Appropriation_Act_2022-23_C43.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2023,1365070.481,12435.901,4,pdf_55f813618fa1__Appropriation_Act_2023-24_C55.txt | pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt | pdf_a26eeec4a59b__Appropriation_Act_2023-24_C60.txt | pdf_ec0377ac309a__Appropriation_Act_2023-24_C67.txt,additive,CAD,thousand,science_agency
-Canada,Natural Sciences and Engineering Research Council,2024,2780080.946,76040.517,4,pdf_0adeb1980e12__Appropriation_Act_2024-25_C79.txt | pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt | pdf_f414996f0adb__Appropriation_Act_2024-25_C75.txt | pdf_fba0b30b51f9__Appropriation_Act_2024-25_C68.txt,additive,CAD,thousand,science_agency
+Canada,National Research Council (NRC),1990,409676000.0,409676000.0,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,dollar,science_agency
+Canada,National Research Council (NRC),1991,119700000.0,119700000.0,1,pdf_df6419e6eefa__1991-1.txt,single,CAD,dollar,science_agency
+Canada,National Research Council (NRC),1992,25734000.0,24689000.0,2,pdf_5a9c5f586c49__1992-1.txt | pdf_f8b3524f77eb__1992-2.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),1993,416891000.0,472000.0,2,pdf_7e9961b9ea80__1993-1.txt | pdf_f8ec88f20e98__1993-2.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),1994,15874000.0,15874000.0,1,pdf_a910b001b108__1994-4.txt,single,CAD,dollar,science_agency
+Canada,National Research Council (NRC),1995,3471354.0,3471354.0,1,pdf_1122fd093ee2__1995-2.txt,single,CAD,dollar,science_agency
+Canada,National Research Council (NRC),1996,531655309.0,519161000.0,2,pdf_794e5cdc9ba6__1996-2.txt | pdf_daae31bf1d77__1996-1.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),1997,397046000.0,397046000.0,1,pdf_7c0b389ce1a9__1997-2.txt,single,CAD,dollar,science_agency
+Canada,National Research Council (NRC),1998,426162000.0,426162000.0,1,pdf_3f43627833fd__1998-1.txt,single,CAD,dollar,science_agency
+Canada,National Research Council (NRC),1999,487925811.0,13926811.0,2,pdf_81d9f9d6557c__1999-2.txt | pdf_c352f666d27c__1999-1.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2000,3387637.0,3387637.0,1,pdf_063218f608ee__2000_1_YX2-2000-1.txt,single,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2001,435786001.0,15000000.0,2,pdf_5d233800258f__2001_3_YX2-2001-3.txt | pdf_96c6876dd7d6__2001_2_YX2-2001-2.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2002,577198694.0,469791000.0,4,pdf_4d23754e5ddd__2002_a_YX2-2002-1.txt | pdf_94f5808a2fc9__2002_b_YX2-2002-2.txt | pdf_99701fee0eb0__Appropriation_Act_2002-03_C29_Project.txt | pdf_e56dd369fa24__Appropriation_Act_2002-03_C21_Project.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2003,552480000.0,20667000.0,2,pdf_4e638b794f3f__Appropriation_Act_2003-04_C55_Project.txt | pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2006,673507550.0,570794000.0,3,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_94f303554d94__Appropriation_Act_2006-07_C39_Project.txt | pdf_df872f9462c9__Appropriation_Act_2006-07_C49_Project.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2007,594530218.0,550954000.0,2,pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt | pdf_826ff054c987__Appropriation_Act_2007-08_C35_Project.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2008,2065000.0,2065000.0,3,Appropriation Act 2008-09 C59 Project.pdf | pdf_5832acb42e3a__Appropriation_Act_2008-09_C59_Project.txt | pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt,restatement,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2009,580403485.0,580403485.0,1,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt,single,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2010,710974741.0,88507240.0,2,pdf_51fd9e07b551__Appropriation_Act_2010-11_C45.txt | pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2011,818904011.0,254021905.0,2,pdf_12804f46d98a__Appropriation_Act_2011-12_C29.txt | pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2012,679148967.0,527997794.0,2,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt | pdf_e9d28d56c3bd__Appropriation_Act_2012-13_C50.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2013,698583594.0,637771197.0,2,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt | pdf_e3de5326883e__Appropriation_Act_2013-14_C19.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2014,679565311.0,655232368.0,3,pdf_3551f35c9a0e__Appropriation_Act_2014-15_C38.txt | pdf_ab522ba1986a__Appropriation_Act_2014-15_C39.txt | pdf_e1f3978ed5bb__Appropriation_Act_2014-15_C45.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2015,766873709.0,124894639.0,3,pdf_9d320e713a62__Appropriation_Act_2015-16_C67.txt | pdf_bd3fcee037af__Appropriation_Act_2015-16_C8.txt | pdf_d64fe7703590__Appropriation_Act_2015-16_C66.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2016,895257653.0,11618017.0,3,pdf_9c999da4a13a__Appropriation_Act_2016-17_C35.txt | pdf_b93bee4a7023__Appropriation_Act_2016-17_C20.txt | pdf_e53c6bee56bb__Appropriation_Act_2016-17_C19.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2017,859388219.0,64626555.0,3,pdf_15a73dac2637__Appropriation_Act_2017-18_C54.txt | pdf_2ba828140e67__Appropriation_Act_2017-18_C72.txt | pdf_84bfa4a5d495__Appropriation_Act_2017-18_C53.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2018,1013379340.0,806761134.0,3,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_b1fb13a8e543__Appropriation_Act_2018-19_C90.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2019,1181424827.0,943637993.0,3,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt | pdf_b10d5794609b__Appropriation_Act_2019-20_C96.txt | pdf_e8fdad00f8d2__Appropriation_Act_2019-20_C10.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2020,1339432682.0,181098141.0,4,pdf_06c5749bea35__Appropriation_Act_2020-21_C26.txt | pdf_6d66da39f53d__Appropriation_Act_2020-21_C19.txt | pdf_6f6e72970cf7__Appropriation_Act_2020-21_C16.txt | pdf_72a8d2e842dd__Appropriation_Act_2020-21_C17.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2021,1364228048.0,1084788870.0,4,pdf_200ebf737d10__Appropriation_Act_2021-22_C33.txt | pdf_790f18540313__Appropriation_Act_2021-22_C34.txt | pdf_8b52b51ff5b9__Appropriation_Act_2021-22_C15.txt | pdf_9432e706d201__Appropriation_Act_2021-22_C6.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2022,1359951681.0,1186672629.0,3,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt | pdf_902b8f5bb10a__Appropriation_Act_2022-23_C36.txt | pdf_d9b5656a645f__Appropriation_Act_2022-23_C43.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2023,1348312492.0,1294851014.0,2,pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt | pdf_a26eeec4a59b__Appropriation_Act_2023-24_C60.txt,additive,CAD,dollar,science_agency
+Canada,National Research Council (NRC),2024,1364848396.0,19704308.0,2,pdf_0adeb1980e12__Appropriation_Act_2024-25_C79.txt | pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt,additive,CAD,dollar,science_agency
 Canada,PARICS Canada Program,1987,,,0,,gap,,,innovation_instruments
 Canada,PARICS Canada Program,1988,,,0,,gap,,,innovation_instruments
 Canada,PARICS Canada Program,1989,,,0,,gap,,,innovation_instruments
@@ -1079,8 +899,8 @@ Canada,PARICS Canada Program,1992,,,0,,gap,,,innovation_instruments
 Canada,PARICS Canada Program,1993,,,0,,gap,,,innovation_instruments
 Canada,PARICS Canada Program,1994,,,0,,gap,,,innovation_instruments
 Canada,PARICS Canada Program,1995,,,0,,gap,,,innovation_instruments
-Canada,PARICS Canada Program,1996,19737.691,19737.691,1,pdf_daae31bf1d77__1996-1.txt,single,CAD,thousand,innovation_instruments
-Canada,PARICS Canada Program,1997,82447.528,63974.326,2,pdf_7c0b389ce1a9__1997-2.txt | pdf_7f5669593c7c__1997-1.txt,additive,CAD,thousand,innovation_instruments
+Canada,PARICS Canada Program,1996,19737691.0,19737691.0,1,pdf_daae31bf1d77__1996-1.txt,single,CAD,dollar,innovation_instruments
+Canada,PARICS Canada Program,1997,82447528.0,63974326.0,2,pdf_7c0b389ce1a9__1997-2.txt | pdf_7f5669593c7c__1997-1.txt,additive,CAD,dollar,innovation_instruments
 Canada,PARICS Canada Program,1998,,,0,,gap,,,innovation_instruments
 Canada,PARICS Canada Program,1999,,,0,,gap,,,innovation_instruments
 Canada,PARICS Canada Program,2000,,,0,,gap,,,innovation_instruments
@@ -1106,14 +926,14 @@ Canada,PARICS Canada Program,2021,,,0,,gap,,,innovation_instruments
 Canada,PARICS Canada Program,2022,,,0,,gap,,,innovation_instruments
 Canada,PARICS Canada Program,2023,,,0,,gap,,,innovation_instruments
 Canada,PARICS Canada Program,2024,,,0,,gap,,,innovation_instruments
-Canada,Parks Program,1987,28036.0,28036.0,1,pdf_166108b13afc__1987-3.txt,single,CAD,thousand,direct_rd
-Canada,Parks Program,1988,1177085.0,1177085.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,thousand,direct_rd
-Canada,Parks Program,1989,810120.25,810120.25,1,pdf_cc4accfe073d__1989-1.txt,single,CAD,thousand,direct_rd
-Canada,Parks Program,1990,8196119.894,8196119.894,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,thousand,direct_rd
-Canada,Parks Program,1991,949929.0,949929.0,1,pdf_df6419e6eefa__1991-1.txt,single,CAD,thousand,direct_rd
-Canada,Parks Program,1992,18681.7,18681.7,1,pdf_f8b3524f77eb__1992-2.txt,single,CAD,thousand,direct_rd
-Canada,Parks Program,1993,1320421.2,1320421.2,1,pdf_f8ec88f20e98__1993-2.txt,single,CAD,thousand,direct_rd
-Canada,Parks Program,1994,29063.585,29063.585,1,pdf_c1ca179cbf4a__1994-1.txt,single,CAD,thousand,direct_rd
+Canada,Parks Program,1987,37244361.0,37244361.0,1,pdf_166108b13afc__1987-3.txt,single,CAD,dollar,direct_rd
+Canada,Parks Program,1988,1177085000.0,1177085000.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,dollar,direct_rd
+Canada,Parks Program,1989,810120250.0,810120250.0,1,pdf_cc4accfe073d__1989-1.txt,single,CAD,dollar,direct_rd
+Canada,Parks Program,1990,8196119894.0,8196119894.0,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,dollar,direct_rd
+Canada,Parks Program,1991,949929000.0,949929000.0,1,pdf_df6419e6eefa__1991-1.txt,single,CAD,dollar,direct_rd
+Canada,Parks Program,1992,18681700.0,18681700.0,1,pdf_f8b3524f77eb__1992-2.txt,single,CAD,dollar,direct_rd
+Canada,Parks Program,1993,1320421200.0,1320421200.0,1,pdf_f8ec88f20e98__1993-2.txt,single,CAD,dollar,direct_rd
+Canada,Parks Program,1994,29063585.0,29063585.0,1,pdf_c1ca179cbf4a__1994-1.txt,single,CAD,dollar,direct_rd
 Canada,Parks Program,1995,,,0,,gap,,,direct_rd
 Canada,Parks Program,1996,,,0,,gap,,,direct_rd
 Canada,Parks Program,1997,,,0,,gap,,,direct_rd
@@ -1143,45 +963,45 @@ Canada,Parks Program,2022,,,0,,gap,,,direct_rd
 Canada,Parks Program,2023,,,0,,gap,,,direct_rd
 Canada,Parks Program,2024,,,0,,gap,,,direct_rd
 Canada,SSHRC,1987,,,0,,gap,,,science_agency
-Canada,SSHRC,1988,256877.0,256877.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,thousand,science_agency
-Canada,SSHRC,1989,1000199.0,1000199.0,1,pdf_cc4accfe073d__1989-1.txt,single,CAD,thousand,science_agency
-Canada,SSHRC,1990,88466.0,88466.0,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,thousand,science_agency
-Canada,SSHRC,1991,96853.0,96853.0,1,pdf_df6419e6eefa__1991-1.txt,single,CAD,thousand,science_agency
-Canada,SSHRC,1992,101323.0,101323.0,1,pdf_5a9c5f586c49__1992-1.txt,single,CAD,thousand,science_agency
-Canada,SSHRC,1993,144414.0,144414.0,1,pdf_f8ec88f20e98__1993-2.txt,single,CAD,thousand,science_agency
+Canada,SSHRC,1988,256877000.0,256877000.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,dollar,science_agency
+Canada,SSHRC,1989,1000199000.0,1000199000.0,1,pdf_cc4accfe073d__1989-1.txt,single,CAD,dollar,science_agency
+Canada,SSHRC,1990,88466000.0,88466000.0,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,dollar,science_agency
+Canada,SSHRC,1991,96853000.0,96853000.0,1,pdf_df6419e6eefa__1991-1.txt,single,CAD,dollar,science_agency
+Canada,SSHRC,1992,101323000.0,101323000.0,1,pdf_5a9c5f586c49__1992-1.txt,single,CAD,dollar,science_agency
+Canada,SSHRC,1993,144414000.0,144414000.0,1,pdf_f8ec88f20e98__1993-2.txt,single,CAD,dollar,science_agency
 Canada,SSHRC,1994,,,0,,gap,,,science_agency
-Canada,SSHRC,1995,694796.5,2678.5,2,pdf_1122fd093ee2__1995-2.txt | pdf_f8a0500cfd84__1995-1.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,1996,611780.0,611780.0,1,pdf_daae31bf1d77__1996-1.txt,single,CAD,thousand,science_agency
-Canada,SSHRC,1997,94016.7,93664.0,2,pdf_7c0b389ce1a9__1997-2.txt | pdf_7f5669593c7c__1997-1.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,1998,1154328.778,1154328.778,1,pdf_3f43627833fd__1998-1.txt,single,CAD,thousand,science_agency
-Canada,SSHRC,1999,237914.921,16610.921,2,pdf_81d9f9d6557c__1999-2.txt | pdf_c352f666d27c__1999-1.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2000,992509.23333,992509.23333,1,pdf_063218f608ee__2000_1_YX2-2000-1.txt,single,CAD,thousand,science_agency
-Canada,SSHRC,2001,293061.926,10435.926,2,pdf_42b97a8dfe36__2001_1_YX2-2001-1.txt | pdf_96c6876dd7d6__2001_2_YX2-2001-2.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2002,8710989.075000001,8697640.203,4,pdf_4d23754e5ddd__2002_a_YX2-2002-1.txt | pdf_94f5808a2fc9__2002_b_YX2-2002-2.txt | pdf_99701fee0eb0__Appropriation_Act_2002-03_C29_Project.txt | pdf_e56dd369fa24__Appropriation_Act_2002-03_C21_Project.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2003,683850.0,248501.0,3,pdf_4e638b794f3f__Appropriation_Act_2003-04_C55_Project.txt | pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt | pdf_edd68c90988f__Appropriation_Act_2003-04_C30_Project.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2006,1912145.0,665161.0,4,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_94f303554d94__Appropriation_Act_2006-07_C39_Project.txt | pdf_acbb37d5b36f__Appropriation_Act_2006-07_C48_Project.txt | pdf_f82125049255__Appropriation_Act_2006-07_C38.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2007,646013.227,616977.0,2,pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt | pdf_826ff054c987__Appropriation_Act_2007-08_C35_Project.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2008,643345.0,643345.0,1,pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt,single,CAD,thousand,science_agency
-Canada,SSHRC,2009,650218.294,650218.294,1,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt,single,CAD,thousand,science_agency
-Canada,SSHRC,2010,745795.9550000001,73379.342,2,pdf_51fd9e07b551__Appropriation_Act_2010-11_C45.txt | pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2011,1403938.14,20298.544,2,pdf_12804f46d98a__Appropriation_Act_2011-12_C29.txt | pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2012,1355167.393,685352.746,4,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt | pdf_17cd3e81dc75__Appropriation_Act_2012-13_C35.txt | pdf_337f5cf2048a__Appropriation_Act_2012-13_C58.txt | pdf_e9d28d56c3bd__Appropriation_Act_2012-13_C50.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2013,1351154.3120000002,680139.85,5,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt | pdf_80c4bab60042__Appropriation_Act_2013-14_C59.txt | pdf_b23eebbefa0c__Appropriation_Act_2013-14_C64.txt | pdf_d3de44366ef3__Appropriation_Act_2013-14_C28.txt | pdf_e3de5326883e__Appropriation_Act_2013-14_C19.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2014,18295270.994,17582387.464,3,pdf_2099b532c496__Appropriation_Act_2014-15_C29.txt | pdf_3551f35c9a0e__Appropriation_Act_2014-15_C38.txt | pdf_e1f3978ed5bb__Appropriation_Act_2014-15_C45.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2015,1440578.6149999998,690998.526,3,pdf_42c08c0cabdc__Appropriation_Act_2015-16_C55.txt | pdf_bd3fcee037af__Appropriation_Act_2015-16_C8.txt | pdf_d64fe7703590__Appropriation_Act_2015-16_C66.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2016,1948410.169,1174238.347,4,pdf_1c535913f398__Appropriation_Act_2016-17_C9.txt | pdf_9c999da4a13a__Appropriation_Act_2016-17_C35.txt | pdf_b93bee4a7023__Appropriation_Act_2016-17_C20.txt | pdf_e53c6bee56bb__Appropriation_Act_2016-17_C19.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2017,24553339.330000006,885.326,4,pdf_2ba828140e67__Appropriation_Act_2017-18_C72.txt | pdf_50c6b6fecd94__Appropriation_Act_2017-18_C41.txt | pdf_84bfa4a5d495__Appropriation_Act_2017-18_C53.txt | pdf_c45fa8ce41ed__Appropriation_Act_2017-18_C67.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2018,1042812.8859999999,783119.224,3,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_d32f2adb40de__Appropriation_Act_2018-19_C95.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2019,1232714.639,926674.064,3,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt | pdf_873762b2ca63__Appropriation_Act_2019-20_C2.txt | pdf_b10d5794609b__Appropriation_Act_2019-20_C96.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2020,2037489.277,938395.419,4,pdf_0a59a59f62a2__Appropriation_Act_2020-21_C11.txt | pdf_6d66da39f53d__Appropriation_Act_2020-21_C19.txt | pdf_6f6e72970cf7__Appropriation_Act_2020-21_C16.txt | pdf_72a8d2e842dd__Appropriation_Act_2020-21_C17.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2021,1974937.4999999998,967688.573,3,pdf_1516e9eb34bd__Appropriation_Act_2021-22_C27.txt | pdf_200ebf737d10__Appropriation_Act_2021-22_C33.txt | pdf_9432e706d201__Appropriation_Act_2021-22_C6.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2022,2138727.1779999994,1069175.755,4,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt | pdf_902b8f5bb10a__Appropriation_Act_2022-23_C36.txt | pdf_bc0e80b8cb6f__Appropriation_Act_2022-23_C16.txt | pdf_d9b5656a645f__Appropriation_Act_2022-23_C43.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2023,2262674.8370000003,5325.764,3,pdf_55f813618fa1__Appropriation_Act_2023-24_C55.txt | pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt | pdf_c2e0d1498945__Appropriation_Act_2023-24_C44.txt,additive,CAD,thousand,science_agency
-Canada,SSHRC,2024,2433652.602,91646.412,3,pdf_0adeb1980e12__Appropriation_Act_2024-25_C79.txt | pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt | pdf_fba0b30b51f9__Appropriation_Act_2024-25_C68.txt,additive,CAD,thousand,science_agency
+Canada,SSHRC,1995,18854037.0,2678500.0,2,pdf_1122fd093ee2__1995-2.txt | pdf_f8a0500cfd84__1995-1.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,1996,11200000.0,11200000.0,1,pdf_daae31bf1d77__1996-1.txt,single,CAD,dollar,science_agency
+Canada,SSHRC,1997,94016700.0,93664000.0,2,pdf_7c0b389ce1a9__1997-2.txt | pdf_7f5669593c7c__1997-1.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,1998,1154328778.0,1154328778.0,1,pdf_3f43627833fd__1998-1.txt,single,CAD,dollar,science_agency
+Canada,SSHRC,1999,24375921.0,16610921.0,2,pdf_81d9f9d6557c__1999-2.txt | pdf_c352f666d27c__1999-1.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2000,80832000.0,80832000.0,1,pdf_063218f608ee__2000_1_YX2-2000-1.txt,single,CAD,dollar,science_agency
+Canada,SSHRC,2001,161492579.0,2132579.0,2,pdf_42b97a8dfe36__2001_1_YX2-2001-1.txt | pdf_96c6876dd7d6__2001_2_YX2-2001-2.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2002,213948872.0,200600000.0,4,pdf_4d23754e5ddd__2002_a_YX2-2002-1.txt | pdf_94f5808a2fc9__2002_b_YX2-2002-2.txt | pdf_99701fee0eb0__Appropriation_Act_2002-03_C29_Project.txt | pdf_e56dd369fa24__Appropriation_Act_2002-03_C21_Project.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2003,683850000.0,248501000.0,3,pdf_4e638b794f3f__Appropriation_Act_2003-04_C55_Project.txt | pdf_712c7ac4b80f__Appropriation_Act_2003-04_C47_Project.txt | pdf_edd68c90988f__Appropriation_Act_2003-04_C30_Project.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2006,658115000.0,579061000.0,3,pdf_4baa6ef1a096__Appropriation_Act_2006-07_C8_Project.txt | pdf_94f303554d94__Appropriation_Act_2006-07_C39_Project.txt | pdf_acbb37d5b36f__Appropriation_Act_2006-07_C48_Project.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2007,646013227.0,616977000.0,2,pdf_5d3dfda9cc61__Appropriation_Act_2007-08_C60_Project.txt | pdf_826ff054c987__Appropriation_Act_2007-08_C35_Project.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2008,643345000.0,643345000.0,1,pdf_988539146a47__Appropriation_Act_2008-09_C58_Project.txt,single,CAD,dollar,science_agency
+Canada,SSHRC,2009,650218294.0,650218294.0,1,pdf_00ef054de738__Appropriation_Act_2009-10_C48.txt,single,CAD,dollar,science_agency
+Canada,SSHRC,2010,713039977.0,40623364.0,2,pdf_51fd9e07b551__Appropriation_Act_2010-11_C45.txt | pdf_63856ad3408f__Appropriation_Act_2010-11_C44.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2011,694917571.0,20298544.0,2,pdf_12804f46d98a__Appropriation_Act_2011-12_C29.txt | pdf_9f4e336605de__Appropriation_Act_2011-12_C8.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2012,1355167393.0,685352746.0,4,pdf_06bd2785e5aa__Appropriation_Act_2012-13_C40.txt | pdf_17cd3e81dc75__Appropriation_Act_2012-13_C35.txt | pdf_337f5cf2048a__Appropriation_Act_2012-13_C58.txt | pdf_e9d28d56c3bd__Appropriation_Act_2012-13_C50.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2013,1351154312.0,680139850.0,5,pdf_77330f9bc214__Appropriation_Act_2013-14_C63.txt | pdf_80c4bab60042__Appropriation_Act_2013-14_C59.txt | pdf_b23eebbefa0c__Appropriation_Act_2013-14_C64.txt | pdf_d3de44366ef3__Appropriation_Act_2013-14_C28.txt | pdf_e3de5326883e__Appropriation_Act_2013-14_C19.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2014,1379547627.0,666664097.0,3,pdf_2099b532c496__Appropriation_Act_2014-15_C29.txt | pdf_3551f35c9a0e__Appropriation_Act_2014-15_C38.txt | pdf_e1f3978ed5bb__Appropriation_Act_2014-15_C45.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2015,1435266455.0,690998526.0,3,pdf_42c08c0cabdc__Appropriation_Act_2015-16_C55.txt | pdf_bd3fcee037af__Appropriation_Act_2015-16_C8.txt | pdf_d64fe7703590__Appropriation_Act_2015-16_C66.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2016,1948410169.0,1174238347.0,4,pdf_1c535913f398__Appropriation_Act_2016-17_C9.txt | pdf_9c999da4a13a__Appropriation_Act_2016-17_C35.txt | pdf_b93bee4a7023__Appropriation_Act_2016-17_C20.txt | pdf_e53c6bee56bb__Appropriation_Act_2016-17_C19.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2017,1530382630.0,885326.0,4,pdf_2ba828140e67__Appropriation_Act_2017-18_C72.txt | pdf_50c6b6fecd94__Appropriation_Act_2017-18_C41.txt | pdf_84bfa4a5d495__Appropriation_Act_2017-18_C53.txt | pdf_c45fa8ce41ed__Appropriation_Act_2017-18_C67.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2018,1042812886.0,783119224.0,3,pdf_47260a61b97a__Appropriation_Act_2018-19_C80.txt | pdf_d32f2adb40de__Appropriation_Act_2018-19_C95.txt | pdf_dbf0c9ba1bfb__Appropriation_Act_2018-19_C73.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2019,1232714639.0,926674064.0,3,pdf_52a36b6af057__Appropriation_Act_2019-20_C102.txt | pdf_873762b2ca63__Appropriation_Act_2019-20_C2.txt | pdf_b10d5794609b__Appropriation_Act_2019-20_C96.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2020,2037489277.0,938395419.0,4,pdf_0a59a59f62a2__Appropriation_Act_2020-21_C11.txt | pdf_6d66da39f53d__Appropriation_Act_2020-21_C19.txt | pdf_6f6e72970cf7__Appropriation_Act_2020-21_C16.txt | pdf_72a8d2e842dd__Appropriation_Act_2020-21_C17.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2021,1974937500.0,967688573.0,3,pdf_1516e9eb34bd__Appropriation_Act_2021-22_C27.txt | pdf_200ebf737d10__Appropriation_Act_2021-22_C33.txt | pdf_9432e706d201__Appropriation_Act_2021-22_C6.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2022,2138727178.0,1069175755.0,4,pdf_6c07e0d062ce__Appropriation_Act_2022-23_C24.txt | pdf_902b8f5bb10a__Appropriation_Act_2022-23_C36.txt | pdf_bc0e80b8cb6f__Appropriation_Act_2022-23_C16.txt | pdf_d9b5656a645f__Appropriation_Act_2022-23_C43.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2023,2262674837.0,5325764.0,3,pdf_55f813618fa1__Appropriation_Act_2023-24_C55.txt | pdf_88472a327f94__Appropriation_Act_2023-24_C54.txt | pdf_c2e0d1498945__Appropriation_Act_2023-24_C44.txt,additive,CAD,dollar,science_agency
+Canada,SSHRC,2024,2433652602.0,91646412.0,3,pdf_0adeb1980e12__Appropriation_Act_2024-25_C79.txt | pdf_679e61a9ba43__Appropriation_Act_2024-25_C74.txt | pdf_fba0b30b51f9__Appropriation_Act_2024-25_C68.txt,additive,CAD,dollar,science_agency
 Canada,Science Council of Canada,1987,,,0,,gap,,,science_agency
-Canada,Science Council of Canada,1988,689165.0,689165.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,thousand,science_agency
+Canada,Science Council of Canada,1988,53682000.0,53682000.0,1,pdf_80ffd1071265__1988-1.txt,single,CAD,dollar,science_agency
 Canada,Science Council of Canada,1989,,,0,,gap,,,science_agency
-Canada,Science Council of Canada,1990,97195.0,97195.0,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,thousand,science_agency
+Canada,Science Council of Canada,1990,97195000.0,97195000.0,1,pdf_1c13f3879be4__1990-1.txt,single,CAD,dollar,science_agency
 Canada,Science Council of Canada,1991,,,0,,gap,,,science_agency
 Canada,Science Council of Canada,1992,,,0,,gap,,,science_agency
 Canada,Science Council of Canada,1993,,,0,,gap,,,science_agency

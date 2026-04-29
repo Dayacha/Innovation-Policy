@@ -259,6 +259,7 @@ RD_CATEGORY_LABELS = {
     "science_agency":          "Science Agency",
     "direct_rd":               "Direct R&D",
     "research_infrastructure": "Research Infrastructure",
+    "higher_education":        "Higher Education",
     "possible_rd":             "Possible R&D",
     "innovation_instruments":  "Innovation Instruments",
     "innovation_system":       "Innovation System",

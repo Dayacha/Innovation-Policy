@@ -246,10 +246,13 @@ BORDER = "#DDE1E7"
 TEXT   = "#1a1a1a"
 
 BUDGET_CATEGORY_COLORS = {
-    "Direct R&D": NAVY,
-    "Innovation": GREEN,
-    "Ambiguous": ORANGE,
-    "Exclude": GREY,
+    "science_agency":          NAVY,
+    "direct_rd":               NAVY,
+    "research_infrastructure": BLUE,
+    "innovation_instruments":  GREEN,
+    "higher_education":        TEAL,
+    "unclear":                 GREY,
+    "other":                   GREY,
 }
 
 PLOTLY_BASE = dict(
@@ -443,12 +446,16 @@ with st.sidebar:
                 value=(min(_yrs), max(_yrs)), key="yr_b",
                 label_visibility="collapsed",
             )
-            # Country selector (currently Denmark only; ready for multi-country)
+            # Country selector — max 3 (amounts are in local currency; summing across currencies is misleading)
             _bud_ctry_opts = sorted(_db["country"].dropna().unique()) \
                 if "country" in _db.columns else ["Denmark"]
+            _bud_ctry_default = _bud_ctry_opts[:3] if len(_bud_ctry_opts) > 3 else _bud_ctry_opts
             sel_bud_ctry = st.multiselect(
-                "Country", _bud_ctry_opts, default=_bud_ctry_opts, key="bud_ctry",
+                "Country (max 3)", _bud_ctry_opts, default=_bud_ctry_default, key="bud_ctry",
+                max_selections=3,
             )
+            if not sel_bud_ctry:
+                st.caption("Select at least one country.")
             _cats = ["All"] + sorted(_db["budget_category"].dropna().astype(str).unique())
             cat_b = st.selectbox(
                 "R&D category", _cats, key="cat_b",
@@ -662,6 +669,174 @@ with TAB_BUDGET:
 
     st.caption("R&D budget module: work in progress. Coverage and classifications may still change as extractors are refined.")
 
+    # ── Budget data quality notes (shown before charts) ──
+    _BUD_DOC_QUALITY = {
+        "Australia": {
+            "years": "1975–2026",
+            "source": "Commonwealth Budget Papers and federal portfolio budget documents",
+            "gaps": (
+                "Long-run coverage exists in the panel, but quality is uneven across eras. Older scanned "
+                "documents are OCR-sensitive, and portfolio restructurings can break continuity between "
+                "department-level and agency-level series. Smaller sub-lines should be treated cautiously."
+            ),
+            "fit": "Moderate — useful for broad trends, strongest where named science agencies are explicit.",
+            "rating": "moderate",
+        },
+        "Canada": {
+            "years": "1987–2024",
+            "source": "Appropriation Acts, Main Estimates, and federal budget tables",
+            "gaps": (
+                "This is one of the strongest country panels, but older years still require care. "
+                "Pre-2000 and some mid-2000s documents can contain OCR/column-bleed errors, bilingual "
+                "duplicates, and generic programme rows. Major anomalies were manually reviewed and many "
+                "were corrected, but a few historical programme-style series remain less secure than the "
+                "core agencies."
+            ),
+            "fit": "Good — strongest for named federal science agencies and the 2000s onward.",
+            "rating": "good",
+        },
+        "France": {
+            "years": "1970–2025",
+            "source": "Loi de Finances / JORF budget tables; LOLF MIRES programmes after 2006",
+            "gaps": (
+                "France is now much broader historically, but pre-2006 remains a hybrid panel. Early years "
+                "mix ministry chapters and explicit organisms, and older JORF tables required manual unit "
+                "corrections from inflated pre-euro rows. Pre-2002 values are in French francs (FRF), while "
+                "2002 onward is in euros (EUR), so long-run charts must not be read as a single-currency series. "
+                "Post-2006 MIRES programme data is much cleaner than the historical section."
+            ),
+            "fit": "Moderate — strong for 2006+ programme data; historical pre-2006 data is usable but more heterogeneous.",
+            "rating": "moderate",
+        },
+        "Germany": {
+            "years": "1955–2025 (sparse pre-2003, stronger 2003–2009 and 2021+)",
+            "source": "Bundeshaushalt — BMBF (Epl. 30); institutional grants to DFG, Helmholtz, Fraunhofer, MPG, Leibniz, DLR",
+            "gaps": (
+                "Coverage is episodic before 2003 and in the 2010–2020 window: source documents for those years "
+                "contained ministry-level aggregates rather than per-institution grant tables, so most agencies "
+                "cannot be matched. The 2003–2009 and 2021+ panels are substantially stronger, with individual "
+                "institutional grant rows for the Big 5 science organisations (DFG, Helmholtz, Fraunhofer, MPG, "
+                "Leibniz) plus DLR, DESY, and Jülich. Any long-run trend analysis must treat the series as "
+                "discontinuous across the gap windows."
+            ),
+            "fit": "Limited to moderate — strong for 2003–2009 and 2021+; thin or absent for 2010–2020 and most pre-2003 years.",
+            "rating": "limited",
+        },
+        "Japan": {
+            "years": "1975–2025",
+            "source": "Budget of Japan science and technology tables, operating grants, and historical predecessor rows",
+            "gaps": (
+                "Modern years were manually audited and are much stronger. The early historical span "
+                "(especially 1975–2000) relies partly on predecessor-institution rollups rather than "
+                "perfectly comparable modern agency lines. That bridge is documented, but it is not the "
+                "same evidentiary quality as post-2000 operating-grant rows."
+            ),
+            "fit": "Moderate to good — strongest from the 2000s onward; historical coverage is broad but partly bridged.",
+            "rating": "moderate",
+        },
+        "UK": {
+            "years": "1993–2025 (episodic — not a continuous series)",
+            "source": "HM Treasury Budget / Spending Review documents and DSIT/BEIS R&D funding announcements",
+            "gaps": (
+                "The UK panel is not a continuous institutional budget series. Source documents are mainly "
+                "policy Budgets and Spending Reviews, which announce named funds and headline R&D commitments "
+                "rather than reporting per-agency appropriations line by line. The result is coverage in years "
+                "when major announcements were made, with gaps in quieter years. UKRI (post-2018) is tracked "
+                "as a block grant. Pre-2018 individual research councils (MRC, EPSRC, BBSRC, NERC, ESRC) are "
+                "included where explicitly stated. For a complete science-budget ledger, Main Supply Estimates "
+                "would be required as an additional source."
+            ),
+            "fit": "Limited to moderate — informative for named R&D funds and UKRI block grants, but not a complete agency appropriations series.",
+            "rating": "limited",
+        },
+        "Denmark": {
+            "years": "1975–2025",
+            "source": "Finanslov (Finance Bill) — scanned PDFs (1975–1999) and digital PDFs (2000–2025), Danish",
+            "gaps": (
+                "Full coverage 1975–2025 for all 7 universities and the main research councils, with three methodological eras: "
+                "(1) 1975–1993: gross Driftsudgifter (operating appropriations) — amounts are systematically larger than "
+                "post-reform values and not directly comparable. "
+                "(2) 1994–2025: Selvejebevilling basistilskud (block grants to autonomous institutions) — the consistent "
+                "institutional series. University amounts roughly halved at the 1994 reform as grants shifted to net framework. "
+                "(3) 1996–1998 structural gap: universities became Nettostyrede virksomheder (net-managed enterprises) — "
+                "no individual line items appear in the Finance Bill for those years, only a collective enterprise total (~5.4B DKK). "
+                "Several years required verified manual overrides due to LLM extraction issues: "
+                "unit bugs (2005, 2015), garbled font encoding (2018 recovered via OCR), "
+                "missing extraction (2020–2022), and changed PDF column layout (2025). "
+                "All overrides are document-verified from original Finanslov pages. "
+                "Smaller programme lines (research councils, innovation funds) should be treated with more caution than universities."
+            ),
+            "fit": "Good for university series 1975–2025 (with noted methodology break at 1994 and 1996–1998 gap); moderate for smaller programmes.",
+            "rating": "moderate",
+        },
+        "Norway": {
+            "years": "1975–2026",
+            "source": "Statsbudsjettet (State Budget) — annual budget proposition documents",
+            "gaps": (
+                "Norway has the strongest long-run panel in this dataset with no missing years 1975–2026. "
+                "The Research Council of Norway (RCN), SINTEF, and university operating grants are tracked "
+                "continuously. Some pre-1990 series rely on predecessor institution names and ministry "
+                "chapter aggregates, but the series is broadly comparable across the full span."
+            ),
+            "fit": "Good — one of the most complete and consistent country panels.",
+            "rating": "good",
+        },
+        "Netherlands": {
+            "years": "1975–2025",
+            "source": "Rijksbegroting (State Budget) — OCW, EZ, and other ministry chapters",
+            "gaps": (
+                "Complete coverage 1975–2025 with no missing years. Key caution: the unit system changed "
+                "in 2002 from millions of guilders (NLG) to thousands of euros (EUR), so pre- and post-2002 "
+                "values are in different currencies and cannot be directly compared without conversion. "
+                "NWO, KNAW, TNO, and university block grants are the most stable series."
+            ),
+            "fit": "Moderate to good — complete timeline but the 2002 currency switch means long-run comparisons require care.",
+            "rating": "moderate",
+        },
+        "Switzerland": {
+            "years": "1978–2025 (some gaps in 1979–1993 window)",
+            "source": "Voranschlag der Schweizerischen Eidgenossenschaft — Bundesblatt (1975–2020) and VA-Band3-d (2021+)",
+            "gaps": (
+                "Two-era document structure: pre-2021 Bundesblatt editions are short aggregate documents (3–10 pages) "
+                "that do not break out individual ETH institutions or SNF separately, so those years show only "
+                "top-level totals where available. The 2021+ VA-Band3-d documents provide full departmental detail "
+                "including ETH Zürich, EPFL, SNF, Innosuisse, CERN, and ESA lines. All Swiss federal budget amounts "
+                "are in full Swiss francs (not thousands or millions), which required unit correction in the pipeline."
+            ),
+            "fit": "Moderate — strong from 2021+; historical pre-2021 coverage is partial and agency-level only for aggregate ETH-Bereich.",
+            "rating": "moderate",
+        },
+    }
+    _BUD_RATING_COLORS = {
+        "good":     ("#1a7340", "#d4edda", "#1a734020"),
+        "moderate": ("#7a5a00", "#fff3cd", "#7a5a0020"),
+        "limited":  ("#8b0000", "#fde8e8", "#8b000020"),
+    }
+
+    _active_countries = sel_bud_ctry if sel_bud_ctry else []
+    _dq_notes = [(_c, _BUD_DOC_QUALITY[_c]) for _c in _active_countries if _c in _BUD_DOC_QUALITY]
+    if _dq_notes:
+        _dq_cols = st.columns(len(_dq_notes))
+        for _dq_col, (_dq_ctry, _dq) in zip(_dq_cols, _dq_notes):
+            _fc, _bg, _border_bg = _BUD_RATING_COLORS.get(_dq["rating"], ("#555", "#f0f0f0", "#55555520"))
+            _dq_col.markdown(
+                f'<div style="border:1px solid {_bg};border-top:3px solid {_fc};'
+                f'background:{_bg};border-radius:0 0 4px 4px;padding:.65rem .85rem;'
+                f'margin-bottom:.8rem;">'
+                f'<div style="font-size:.78rem;font-weight:800;color:{_fc};margin-bottom:.3rem;">'
+                f'{_dq_ctry}'
+                f'<span style="font-weight:400;color:#666;font-size:.7rem;margin-left:.5rem;">'
+                f'{_dq["years"]}</span></div>'
+                f'<div style="font-size:.7rem;color:#555;margin-bottom:.25rem;">'
+                f'<b>Source:</b> {_dq["source"]}</div>'
+                f'<div style="font-size:.7rem;color:#555;margin-bottom:.25rem;">'
+                f'<b>Gaps:</b> {_dq["gaps"]}</div>'
+                f'<div style="font-size:.7rem;color:{_fc};font-weight:600;">'
+                f'{_dq["fit"]}</div>'
+                f'</div>',
+                unsafe_allow_html=True,
+            )
+
     db = load_budget()
     m = (db["year"] >= yr_b[0]) & (db["year"] <= yr_b[1])
     if dec_b and "decision" in db.columns:
@@ -689,137 +864,178 @@ with TAB_BUDGET:
         return series / 1e6
 
     # ── KPI strip ──
-    n_inc = int((db_f["decision"] == "include").sum()) if "decision" in db_f.columns else 0
     _n_countries = db_f["country"].nunique() if "country" in db_f.columns else 1
+    _n_agencies  = db_f["canonical_name"].nunique() if "canonical_name" in db_f.columns else "—"
+    _yr_range    = f"{int(db_f['year'].min())}–{int(db_f['year'].max())}" if not db_f.empty else "—"
     if _multi_currency:
-        _spend_kpi = f"{_n_countries} countries (multi-currency)"
+        _spend_kpi = f"{_n_countries} countries"
     else:
-        _spend_kpi = f"{_ccy} {db_f['amount_local'].sum()/1e6:,.1f} M"
+        _spend_kpi = f"{_ccy} {db_f['amount_local'].sum()/1e6:,.0f} M"
     stat_row([
-        (f"{len(db_f):,}",                                   "Budget lines"),
-        (_spend_kpi,                                          "Total R&D spend identified"),
-        (f"{n_inc:,}",                                        "High-confidence (include)"),
-        (f"{db_f['section_code'].nunique() if 'section_code' in db_f.columns else '—'}",
-                                                              "Ministries / programmes"),
+        (f"{len(db_f):,}",      "Budget lines"),
+        (_spend_kpi,             "Total spend (local currency)"),
+        (_yr_range,              "Years covered"),
+        (f"{_n_agencies}",       "Agencies tracked"),
     ])
 
     # ── Chart 1: Stacked bar by year ──
+    _ctry_pal = [NAVY, ORANGE, TEAL, GREEN, BLUE, "#9B59B6", "#E74C3C", GREY]
     if _multi_currency:
-        # Multi-currency: group by country (summing different currencies is meaningless)
-        section_header("R&D-related budget by year and country (local currency)")
+        # Multi-currency: group by country — bars are GROUPED, never stacked (stacking sums different currencies)
+        section_header("R&D-related budget by year and country (local currency — bars grouped, not summed)")
         gcol1 = "country"
         yr_ct = db_f.groupby(["year", gcol1, "currency"])["amount_local"].sum().reset_index()
         yr_ct[_amt_col] = _to_millions(yr_ct["amount_local"])
-        yr_ct["label"] = yr_ct[gcol1]
+        if db_f["country"].nunique() == 1:
+            yr_ct["label"] = yr_ct["currency"].fillna("Unknown currency")
+        else:
+            yr_ct["label"] = yr_ct[gcol1] + " (" + yr_ct["currency"].fillna("Unknown") + ")"
         _ytitle1 = "Amount (millions, local currency)"
-        _cap1 = ("Each bar shows amounts in local currency — figures are not directly comparable across countries. "
-                 "Filter to a single country for absolute comparison.")
+        if db_f["country"].nunique() == 1:
+            _cap1 = ("Bars are grouped by currency. This selection mixes multiple currencies "
+                     "(for example FRF and EUR), so levels are not directly comparable across the full span.")
+            _currency_palette = {
+                "FRF": NAVY,
+                "EUR": ORANGE,
+                "DEM": TEAL,
+                "GBP": GREEN,
+                "JPY": BLUE,
+            }
+            _sorted_ccy = sorted(yr_ct["currency"].dropna().unique())
+            _color_map1 = {
+                c: _currency_palette.get(c, _ctry_pal[i % len(_ctry_pal)])
+                for i, c in enumerate(_sorted_ccy)
+            }
+        else:
+            _cap1 = ("Bars are grouped by country-currency pair — each bar shows spending in its own local currency. "
+                     "Figures are NOT comparable across countries or currencies. Select a single country for absolute trends.")
+            _sorted_pairs = sorted(yr_ct["label"].dropna().unique())
+            _color_map1 = {c: _ctry_pal[i % len(_ctry_pal)] for i, c in enumerate(_sorted_pairs)}
     else:
         section_header(f"R&D-related budget by year and category ({_ccy} millions)")
         gcol1 = "budget_category"
         yr_ct = db_f.groupby(["year", gcol1])["amount_local"].sum().reset_index()
         yr_ct[_amt_col] = _to_millions(yr_ct["amount_local"])
-        yr_ct["label"] = yr_ct[gcol1]
+        # Use human-readable labels for legend
+        yr_ct["label"] = yr_ct[gcol1].map(
+            lambda x: RD_CATEGORY_LABELS.get(x, x.replace("_", " ").title())
+        )
         _ytitle1 = _fmt_amt(None)
         _countries_in_data = sorted(db_f["country"].dropna().unique()) if "country" in db_f.columns else []
         _cap1 = (f"Source: Finance Bills — {', '.join(_countries_in_data)}. "
-                 f"Taxonomy: J-Rule scoring. Numbers in {_ccy} millions.")
+                 f"Numbers in {_ccy} millions.")
+        # Build color map keyed on human-readable labels
+        _color_map1 = {
+            RD_CATEGORY_LABELS.get(k, k.replace("_", " ").title()): BUDGET_CATEGORY_COLORS.get(k, GREY)
+            for k in db_f[gcol1].dropna().unique()
+        }
 
+    # Compute year totals for annotations
+    _yr_totals = yr_ct.groupby("year")[_amt_col].sum().reset_index()
+
+    # Single country → stack bars by R&D category to show composition
+    # Multiple countries → group bars side-by-side (never sum different currencies)
+    _barmode = "group" if _multi_currency else "stack"
     fig1 = px.bar(
         yr_ct, x="year", y=_amt_col, color="label",
-        color_discrete_map={k: BUDGET_CATEGORY_COLORS.get(k, GREY)
-                            for k in yr_ct["label"].dropna().unique()} if not _multi_currency else {},
-        barmode="stack",
+        color_discrete_map=_color_map1,
+        barmode=_barmode,
         labels={"year": "Year", _amt_col: _ytitle1, "label": ""},
-        text_auto=".0f",
+        custom_data=["label"],
     )
     fig1.update_traces(
         marker_line_width=0,
-        textposition="inside",
-        textfont=dict(size=9.5, color="white"),
+        hovertemplate="<b>%{customdata[0]}</b><br>Year: %{x}<br>Amount: %{y:,.0f} M<extra></extra>",
     )
-    apply_style(fig1, height=340, xtitle="Year", ytitle=_ytitle1)
+    apply_style(fig1, height=360, xtitle="Year", ytitle=_ytitle1)
+    fig1.update_yaxes(range=[0, _yr_totals[_amt_col].max() * 1.15])
     st.plotly_chart(fig1, use_container_width=True)
     caption_note(_cap1)
 
-    # ── Chart 2 & 3 side by side ──
-    col_a, col_b_ = st.columns(2)
+    if _multi_currency:
+        st.info("Some selected years mix currencies. Ministry totals, category shares, and year-over-year change are hidden because they would aggregate non-comparable currencies.")
+    else:
+        # ── Chart 2 & 3 side by side ──
+        col_a, col_b_ = st.columns(2)
 
-    with col_a:
-        _min_title = "Cumulative R&D spend by ministry (top 10)" + ("" if not _multi_currency else " — local currency")
-        section_header(_min_title)
-        if "ministry_display" in db_f.columns:
-            top_min = (
-                db_f.groupby("ministry_display")["amount_local"]
-                .sum().sort_values(ascending=True).tail(10).reset_index()
-            )
-            top_min["Amt M"] = _to_millions(top_min["amount_local"])
-            top_min["pct"]   = 100 * top_min["Amt M"] / top_min["Amt M"].sum()
+        with col_a:
+            _min_title = "Cumulative R&D spend by ministry (top 10)"
+            section_header(_min_title)
+            if "ministry_display" in db_f.columns:
+                top_min = (
+                    db_f.groupby("ministry_display")["amount_local"]
+                    .sum().sort_values(ascending=True).tail(10).reset_index()
+                )
+                top_min["Amt M"] = _to_millions(top_min["amount_local"])
+                top_min["pct"]   = 100 * top_min["Amt M"] / top_min["Amt M"].sum()
 
-            fig2 = go.Figure(go.Bar(
-                x=top_min["Amt M"],
-                y=top_min["ministry_display"],
-                orientation="h",
-                marker_color=NAVY,
-                marker_line_width=0,
-                text=top_min["Amt M"].map(lambda x: f"{x:,.0f}"),
+                fig2 = go.Figure(go.Bar(
+                    x=top_min["Amt M"],
+                    y=top_min["ministry_display"],
+                    orientation="h",
+                    marker_color=NAVY,
+                    marker_line_width=0,
+                    text=top_min["Amt M"].map(lambda x: f"{x:,.0f}"),
+                    textposition="outside",
+                    textfont=dict(size=9.5, color=TEXT),
+                ))
+                apply_style(fig2, height=380, xtitle=_fmt_amt(None), legend_bottom=False)
+                fig2.update_layout(showlegend=False,
+                                   xaxis=dict(showgrid=True, gridcolor="#EBEBEB"))
+                st.plotly_chart(fig2, use_container_width=True)
+
+        with col_b_:
+            section_header("R&D category breakdown (% of total)")
+            if "budget_category" in db_f.columns:
+                cat_tot = (
+                    db_f.groupby("budget_category")["amount_local"]
+                    .sum().sort_values(ascending=False).reset_index()
+                )
+                cat_tot["Amt M"] = _to_millions(cat_tot["amount_local"])
+                cat_tot["label"] = cat_tot["budget_category"].map(
+                    lambda x: RD_CATEGORY_LABELS.get(x, x.replace("_", " ").title())
+                )
+                cat_tot["pct"]   = 100 * cat_tot["Amt M"] / cat_tot["Amt M"].sum()
+
+                fig3 = go.Figure(go.Bar(
+                    x=cat_tot["label"],
+                    y=cat_tot["Amt M"],
+                    marker_color=[BUDGET_CATEGORY_COLORS.get(c, GREY) for c in cat_tot["budget_category"]],
+                    marker_line_width=0,
+                    text=cat_tot["pct"].map(lambda x: f"{x:.1f}%"),
+                    textposition="outside",
+                    textfont=dict(size=10.5, color=TEXT),
+                    hovertemplate="<b>%{x}</b><br>Amount: %{y:,.0f} M<extra></extra>",
+                ))
+                apply_style(fig3, height=380, ytitle=_fmt_amt(None), legend_bottom=False)
+                fig3.update_layout(showlegend=False, xaxis=dict(showgrid=False))
+                fig3.update_yaxes(range=[0, cat_tot["Amt M"].max() * 1.22])
+                st.plotly_chart(fig3, use_container_width=True)
+
+        # ── Chart 4: YoY growth ──
+        section_header("Year-over-year change in identified R&D budget (%)")
+        yr_tot = db_f.groupby("year")["amount_local"].sum().reset_index()
+        yr_tot["chg"] = yr_tot["amount_local"].pct_change() * 100
+        yr_tot_yoy = yr_tot.dropna(subset=["chg"])
+        if not yr_tot_yoy.empty:
+            colors_yoy = [GREEN if v >= 0 else "#C1272D" for v in yr_tot_yoy["chg"]]
+            fig_yoy = go.Figure(go.Bar(
+                x=yr_tot_yoy["year"], y=yr_tot_yoy["chg"],
+                marker_color=colors_yoy, marker_line_width=0,
+                text=yr_tot_yoy["chg"].map(lambda x: f"{x:+.1f}%"),
                 textposition="outside",
-                textfont=dict(size=9.5, color=TEXT),
+                textfont=dict(size=10, color=TEXT),
             ))
-            apply_style(fig2, height=380, xtitle=_fmt_amt(None), legend_bottom=False)
-            fig2.update_layout(showlegend=False,
-                               xaxis=dict(showgrid=True, gridcolor="#EBEBEB"))
-            st.plotly_chart(fig2, use_container_width=True)
-
-    with col_b_:
-        section_header("R&D category breakdown (% of total)")
-        if "budget_category" in db_f.columns:
-            cat_tot = (
-                db_f.groupby("budget_category")["amount_local"]
-                .sum().sort_values(ascending=False).reset_index()
-            )
-            cat_tot["Amt M"] = _to_millions(cat_tot["amount_local"])
-            cat_tot["label"] = cat_tot["budget_category"]
-            cat_tot["pct"]   = 100 * cat_tot["Amt M"] / cat_tot["Amt M"].sum()
-
-            fig3 = go.Figure(go.Bar(
-                x=cat_tot["label"],
-                y=cat_tot["Amt M"],
-                marker_color=[BUDGET_CATEGORY_COLORS.get(c, GREY) for c in cat_tot["budget_category"]],
-                marker_line_width=0,
-                text=cat_tot["pct"].map(lambda x: f"{x:.1f}%"),
-                textposition="outside",
-                textfont=dict(size=10.5, color=TEXT),
-            ))
-            apply_style(fig3, height=380, ytitle=_fmt_amt(None), legend_bottom=False)
-            fig3.update_layout(showlegend=False, xaxis=dict(showgrid=False))
-            fig3.update_yaxes(range=[0, cat_tot["Amt M"].max() * 1.18])
-            st.plotly_chart(fig3, use_container_width=True)
-
-    # ── Chart 4: YoY growth ──
-    section_header("Year-over-year change in identified R&D budget (%)")
-    yr_tot = db_f.groupby("year")["amount_local"].sum().reset_index()
-    yr_tot["chg"] = yr_tot["amount_local"].pct_change() * 100
-    yr_tot_yoy = yr_tot.dropna(subset=["chg"])
-    if not yr_tot_yoy.empty:
-        colors_yoy = [GREEN if v >= 0 else "#C1272D" for v in yr_tot_yoy["chg"]]
-        fig_yoy = go.Figure(go.Bar(
-            x=yr_tot_yoy["year"], y=yr_tot_yoy["chg"],
-            marker_color=colors_yoy, marker_line_width=0,
-            text=yr_tot_yoy["chg"].map(lambda x: f"{x:+.1f}%"),
-            textposition="outside",
-            textfont=dict(size=10, color=TEXT),
-        ))
-        apply_style(fig_yoy, height=230, xtitle="Year", ytitle="% change",
-                    legend_bottom=False)
-        fig_yoy.add_hline(y=0, line_color=BORDER, line_width=1.5)
-        fig_yoy.update_yaxes(range=[
-            yr_tot_yoy["chg"].min() * 1.3,
-            yr_tot_yoy["chg"].max() * 1.3,
-        ])
-        fig_yoy.update_layout(showlegend=False)
-        st.plotly_chart(fig_yoy, use_container_width=True)
-        caption_note("Year-over-year change in total identified R&D-related spending.")
+            apply_style(fig_yoy, height=230, xtitle="Year", ytitle="% change",
+                        legend_bottom=False)
+            fig_yoy.add_hline(y=0, line_color=BORDER, line_width=1.5)
+            fig_yoy.update_yaxes(range=[
+                yr_tot_yoy["chg"].min() * 1.3,
+                yr_tot_yoy["chg"].max() * 1.3,
+            ])
+            fig_yoy.update_layout(showlegend=False)
+            st.plotly_chart(fig_yoy, use_container_width=True)
+            caption_note("Year-over-year change in total identified R&D-related spending.")
 
     # ── Data table ──
     section_header("Budget line detail")

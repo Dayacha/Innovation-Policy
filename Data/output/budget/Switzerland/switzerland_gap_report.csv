@@ -1,0 +1,1867 @@
+country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
+Switzerland,1977,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,,0.0
+Switzerland,1978,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,0.0,0.0,3714600000.0
+Switzerland,2003,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,3714600000.0,0.0,7429200000.0
+Switzerland,2004,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,7429200000.0,3714600000.0,3714600000.0
+Switzerland,2005,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,3714600000.0,7429200000.0,7494600000.0
+Switzerland,2006,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,7494600000.0,3714600000.0,3714600000.0
+Switzerland,2007,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,3714600000.0,7494600000.0,3714600000.0
+Switzerland,2008,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,3714600000.0,3714600000.0,3714600000.0
+Switzerland,2009,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,3714600000.0,3714600000.0,3700000000.0
+Switzerland,2010,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,3700000000.0,3714600000.0,3714600000.0
+Switzerland,2011,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,3714600000.0,3700000000.0,1984483331.0
+Switzerland,2012,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,1984483331.0,3714600000.0,3714600000.0
+Switzerland,2013,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,3714600000.0,1984483331.0,3714600000.0
+Switzerland,2014,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,3714600000.0,3714600000.0,3714600000.0
+Switzerland,2015,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,3714600000.0,3714600000.0,2529109000.0
+Switzerland,2016,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,2529109000.0,3714600000.0,2353300000.0
+Switzerland,2017,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,2353300000.0,2529109000.0,3714600000.0
+Switzerland,2018,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,3714600000.0,2353300000.0,3714600000.0
+Switzerland,2019,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,3714600000.0,3714600000.0,3714600000.0
+Switzerland,2020,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,3714600000.0,3714600000.0,3714600000.0
+Switzerland,2021,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,3714600000.0,3714600000.0,3714600000.0
+Switzerland,2022,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,3714600000.0,3714600000.0,3714600000.0
+Switzerland,2023,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,3714600000.0,3714600000.0,3714600000.0
+Switzerland,2024,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,3714600000.0,3714600000.0,3714600000.0
+Switzerland,2025,ETH-Bereich (ETH Domain block grant),science_agency,ok,,,,,none,3714600000.0,3714600000.0,
+Switzerland,1977,ETH Zürich,higher_education,ok,,,,,none,0.0,,0.0
+Switzerland,1978,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,ETH Zürich,higher_education,ok,,,,,none,0.0,0.0,
+Switzerland,1977,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,,0.0
+Switzerland,1978,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,EPFL (Lausanne),higher_education,ok,,,,,none,0.0,0.0,
+Switzerland,1988,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,,0.0
+Switzerland,1989,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,PSI (Paul Scherrer Institut),science_agency,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Empa (Federal Materials Testing Institute),science_agency,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Eawag (Water Research Institute),science_agency,ok,,,,,none,0.0,0.0,
+Switzerland,1977,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,,0.0
+Switzerland,1978,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,"WSL (Forest, Snow and Landscape Research)",science_agency,ok,,,,,none,0.0,0.0,
+Switzerland,1977,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,,0.0
+Switzerland,1978,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,0.0,0.0,1100000000.0
+Switzerland,2003,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1100000000.0,0.0,2200000000.0
+Switzerland,2004,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,2200000000.0,1100000000.0,344836800.0
+Switzerland,2005,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,344836800.0,2200000000.0,2200000000.0
+Switzerland,2006,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,2200000000.0,344836800.0,1100000000.0
+Switzerland,2007,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1100000000.0,2200000000.0,1100000000.0
+Switzerland,2008,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1100000000.0,1100000000.0,1100000000.0
+Switzerland,2009,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1100000000.0,1100000000.0,1100000000.0
+Switzerland,2010,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1100000000.0,1100000000.0,1100000000.0
+Switzerland,2011,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1100000000.0,1100000000.0,1100000000.0
+Switzerland,2012,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1100000000.0,1100000000.0,1100000000.0
+Switzerland,2013,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1100000000.0,1100000000.0,1100000000.0
+Switzerland,2014,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1100000000.0,1100000000.0,1100000000.0
+Switzerland,2015,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1100000000.0,1100000000.0,1112831300.0
+Switzerland,2016,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1112831300.0,1100000000.0,1100000000.0
+Switzerland,2017,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1100000000.0,1112831300.0,1100000000.0
+Switzerland,2018,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1100000000.0,1100000000.0,1100000000.0
+Switzerland,2019,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1100000000.0,1100000000.0,1100000000.0
+Switzerland,2020,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1100000000.0,1100000000.0,1100000000.0
+Switzerland,2021,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1100000000.0,1100000000.0,1100000000.0
+Switzerland,2022,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1100000000.0,1100000000.0,1100000000.0
+Switzerland,2023,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1100000000.0,1100000000.0,1100000000.0
+Switzerland,2024,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1100000000.0,1100000000.0,1100000000.0
+Switzerland,2025,SNF / SNSF (Swiss National Science Foundation),science_agency,ok,,,,,none,1100000000.0,1100000000.0,
+Switzerland,1977,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,0.0,8500000.0
+Switzerland,2001,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,8500000.0,0.0,0.0
+Switzerland,2002,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,0.0,8500000.0,300000000.0
+Switzerland,2003,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,0.0,600000000.0
+Switzerland,2004,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,600000000.0,300000000.0,300000000.0
+Switzerland,2005,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,600000000.0,600000000.0
+Switzerland,2006,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,600000000.0,300000000.0,300000000.0
+Switzerland,2007,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,600000000.0,300000000.0
+Switzerland,2008,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,300000000.0,300000000.0
+Switzerland,2009,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,300000000.0,300000000.0
+Switzerland,2010,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,300000000.0,300000000.0
+Switzerland,2011,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,300000000.0,131520500.0
+Switzerland,2012,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,131520500.0,300000000.0,300000000.0
+Switzerland,2013,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,131520500.0,300000000.0
+Switzerland,2014,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,300000000.0,300000000.0
+Switzerland,2015,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,300000000.0,300000000.0
+Switzerland,2016,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,300000000.0,300000000.0
+Switzerland,2017,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,300000000.0,300000000.0
+Switzerland,2018,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,300000000.0,300000000.0
+Switzerland,2019,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,300000000.0,300000000.0
+Switzerland,2020,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,300000000.0,300000000.0
+Switzerland,2021,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,300000000.0,300000000.0
+Switzerland,2022,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,300000000.0,300000000.0
+Switzerland,2023,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,300000000.0,300000000.0
+Switzerland,2024,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,300000000.0,300000000.0
+Switzerland,2025,Innosuisse / KTI (Swiss Innovation Agency),innovation_instruments,ok,,,,,none,300000000.0,300000000.0,
+Switzerland,1977,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,,0.0
+Switzerland,1978,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,CERN contribution (Swiss),science_agency,ok,,,,,none,0.0,0.0,150000000.0
+Switzerland,2003,CERN contribution (Swiss),science_agency,ok,,,,,none,150000000.0,0.0,300000000.0
+Switzerland,2004,CERN contribution (Swiss),science_agency,ok,,,,,none,300000000.0,150000000.0,66559600.0
+Switzerland,2005,CERN contribution (Swiss),science_agency,ok,,,,,none,66559600.0,300000000.0,300000000.0
+Switzerland,2006,CERN contribution (Swiss),science_agency,ok,,,,,none,300000000.0,66559600.0,150000000.0
+Switzerland,2007,CERN contribution (Swiss),science_agency,ok,,,,,none,150000000.0,300000000.0,150000000.0
+Switzerland,2008,CERN contribution (Swiss),science_agency,ok,,,,,none,150000000.0,150000000.0,150000000.0
+Switzerland,2009,CERN contribution (Swiss),science_agency,ok,,,,,none,150000000.0,150000000.0,150000000.0
+Switzerland,2010,CERN contribution (Swiss),science_agency,ok,,,,,none,150000000.0,150000000.0,150000000.0
+Switzerland,2011,CERN contribution (Swiss),science_agency,ok,,,,,none,150000000.0,150000000.0,150000000.0
+Switzerland,2012,CERN contribution (Swiss),science_agency,ok,,,,,none,150000000.0,150000000.0,150000000.0
+Switzerland,2013,CERN contribution (Swiss),science_agency,ok,,,,,none,150000000.0,150000000.0,150000000.0
+Switzerland,2014,CERN contribution (Swiss),science_agency,ok,,,,,none,150000000.0,150000000.0,150000000.0
+Switzerland,2015,CERN contribution (Swiss),science_agency,ok,,,,,none,150000000.0,150000000.0,44646200.0
+Switzerland,2016,CERN contribution (Swiss),science_agency,ok,,,,,none,44646200.0,150000000.0,43860000.0
+Switzerland,2017,CERN contribution (Swiss),science_agency,ok,,,,,none,43860000.0,44646200.0,150000000.0
+Switzerland,2018,CERN contribution (Swiss),science_agency,ok,,,,,none,150000000.0,43860000.0,150000000.0
+Switzerland,2019,CERN contribution (Swiss),science_agency,ok,,,,,none,150000000.0,150000000.0,150000000.0
+Switzerland,2020,CERN contribution (Swiss),science_agency,ok,,,,,none,150000000.0,150000000.0,150000000.0
+Switzerland,2021,CERN contribution (Swiss),science_agency,ok,,,,,none,150000000.0,150000000.0,150000000.0
+Switzerland,2022,CERN contribution (Swiss),science_agency,ok,,,,,none,150000000.0,150000000.0,150000000.0
+Switzerland,2023,CERN contribution (Swiss),science_agency,ok,,,,,none,150000000.0,150000000.0,150000000.0
+Switzerland,2024,CERN contribution (Swiss),science_agency,ok,,,,,none,150000000.0,150000000.0,150000000.0
+Switzerland,2025,CERN contribution (Swiss),science_agency,ok,,,,,none,150000000.0,150000000.0,
+Switzerland,1977,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,,0.0
+Switzerland,1978,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,44000000.0
+Switzerland,2004,ESA contributions (Swiss),science_agency,ok,,,,,none,44000000.0,0.0,121230000.0
+Switzerland,2005,ESA contributions (Swiss),science_agency,outlier,"Amount 121,230,000 outside expected range [-33,000,000 – 44,000,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,121230000.0,44000000.0,198722000.0
+Switzerland,2006,ESA contributions (Swiss),science_agency,outlier,"Amount 198,722,000 outside expected range [-33,000,000 – 44,000,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,198722000.0,121230000.0,0.0
+Switzerland,2007,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,198722000.0,155990400.0
+Switzerland,2008,ESA contributions (Swiss),science_agency,outlier,"Amount 155,990,400 outside expected range [-33,000,000 – 44,000,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,155990400.0,0.0,0.0
+Switzerland,2009,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,155990400.0,145354900.0
+Switzerland,2010,ESA contributions (Swiss),science_agency,outlier,"Amount 145,354,900 outside expected range [-33,000,000 – 44,000,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,145354900.0,0.0,150409700.0
+Switzerland,2011,ESA contributions (Swiss),science_agency,outlier,"Amount 150,409,700 outside expected range [-33,000,000 – 44,000,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,150409700.0,145354900.0,145354900.0
+Switzerland,2012,ESA contributions (Swiss),science_agency,outlier,"Amount 145,354,900 outside expected range [-33,000,000 – 44,000,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,145354900.0,150409700.0,153080820.0
+Switzerland,2013,ESA contributions (Swiss),science_agency,outlier,"Amount 153,080,820 outside expected range [-33,000,000 – 44,000,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,153080820.0,145354900.0,0.0
+Switzerland,2014,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,153080820.0,0.0
+Switzerland,2015,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,165653500.0
+Switzerland,2016,ESA contributions (Swiss),science_agency,outlier,"Amount 165,653,500 outside expected range [-33,000,000 – 44,000,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,165653500.0,0.0,0.0
+Switzerland,2017,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,165653500.0,0.0
+Switzerland,2018,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,182879000.0
+Switzerland,2020,ESA contributions (Swiss),science_agency,outlier,"Amount 182,879,000 outside expected range [-33,000,000 – 44,000,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,182879000.0,0.0,185133000.0
+Switzerland,2021,ESA contributions (Swiss),science_agency,outlier,"Amount 185,133,000 outside expected range [-33,000,000 – 44,000,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,185133000.0,182879000.0,0.0
+Switzerland,2022,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,185133000.0,0.0
+Switzerland,2023,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,ESA contributions (Swiss),science_agency,ok,,,,,none,0.0,0.0,
+Switzerland,2013,Agroscope (federal agricultural research),science_agency,ok,,,,,none,0.0,,0.0
+Switzerland,2014,Agroscope (federal agricultural research),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Agroscope (federal agricultural research),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Agroscope (federal agricultural research),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Agroscope (federal agricultural research),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Agroscope (federal agricultural research),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Agroscope (federal agricultural research),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Agroscope (federal agricultural research),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Agroscope (federal agricultural research),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Agroscope (federal agricultural research),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Agroscope (federal agricultural research),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Agroscope (federal agricultural research),science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Agroscope (federal agricultural research),science_agency,ok,,,,,none,0.0,0.0,
+Switzerland,2013,"SBFI / SERI (State Secretariat for Education, Research and Innovation)",science_agency,ok,,,,,none,0.0,,0.0
+Switzerland,2014,"SBFI / SERI (State Secretariat for Education, Research and Innovation)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,"SBFI / SERI (State Secretariat for Education, Research and Innovation)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,"SBFI / SERI (State Secretariat for Education, Research and Innovation)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,"SBFI / SERI (State Secretariat for Education, Research and Innovation)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,"SBFI / SERI (State Secretariat for Education, Research and Innovation)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,"SBFI / SERI (State Secretariat for Education, Research and Innovation)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,"SBFI / SERI (State Secretariat for Education, Research and Innovation)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,"SBFI / SERI (State Secretariat for Education, Research and Innovation)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,"SBFI / SERI (State Secretariat for Education, Research and Innovation)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,"SBFI / SERI (State Secretariat for Education, Research and Innovation)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,"SBFI / SERI (State Secretariat for Education, Research and Innovation)",science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,"SBFI / SERI (State Secretariat for Education, Research and Innovation)",science_agency,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,3868000000.0
+Switzerland,2003,Total budget for education and fundamental research,higher_education,outlier,"Amount 3,868,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,3868000000.0,0.0,0.0
+Switzerland,2004,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,3868000000.0,0.0
+Switzerland,2005,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,4062000000.0
+Switzerland,2006,Total budget for education and fundamental research,higher_education,outlier,"Amount 4,062,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,4062000000.0,0.0,0.0
+Switzerland,2007,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,4062000000.0,0.0
+Switzerland,2008,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Total budget for education and fundamental research,higher_education,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,1874422000.0
+Switzerland,2009,Federal funding contribution,innovation_instruments,outlier,"Amount 1,874,422,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1874422000.0,0.0,0.0
+Switzerland,2010,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,1874422000.0,0.0
+Switzerland,2011,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Federal funding contribution,innovation_instruments,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,7416100.0
+Switzerland,2007,Federal financing contribution,innovation_instruments,outlier,"Amount 7,416,100 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,7416100.0,0.0,1793204000.0
+Switzerland,2008,Federal financing contribution,innovation_instruments,outlier,"Amount 1,793,204,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1793204000.0,7416100.0,0.0
+Switzerland,2009,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,1793204000.0,0.0
+Switzerland,2010,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Federal financing contribution,innovation_instruments,ok,,,,,none,0.0,0.0,
+Switzerland,1977,National Research and Innovation,science_agency,ok,,,,,none,0.0,,0.0
+Switzerland,1978,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,15000000.0
+Switzerland,2012,National Research and Innovation,science_agency,outlier,"Amount 15,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,15000000.0,0.0,0.0
+Switzerland,2013,National Research and Innovation,science_agency,ok,,,,,none,0.0,15000000.0,1019242416.0
+Switzerland,2014,National Research and Innovation,science_agency,outlier,"Amount 1,019,242,416 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1019242416.0,0.0,1064582200.0
+Switzerland,2015,National Research and Innovation,science_agency,outlier,"Amount 1,064,582,200 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1064582200.0,1019242416.0,0.0
+Switzerland,2016,National Research and Innovation,science_agency,ok,,,,,none,0.0,1064582200.0,0.0
+Switzerland,2017,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,National Research and Innovation,science_agency,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,984000000.0
+Switzerland,2006,Expenditures for fundamental research,direct_rd,outlier,"Amount 984,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,984000000.0,0.0,0.0
+Switzerland,2007,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,984000000.0,0.0
+Switzerland,2008,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Expenditures for fundamental research,direct_rd,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,723000000.0
+Switzerland,2006,Expenditures for applied research,direct_rd,outlier,"Amount 723,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,723000000.0,0.0,0.0
+Switzerland,2007,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,723000000.0,0.0
+Switzerland,2008,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Expenditures for applied research,direct_rd,ok,,,,,none,0.0,0.0,
+Switzerland,1977,International Research,direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,International Research,direct_rd,ok,,,,,none,0.0,0.0,600844800.0
+Switzerland,2010,International Research,direct_rd,outlier,"Amount 600,844,800 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,600844800.0,0.0,0.0
+Switzerland,2011,International Research,direct_rd,ok,,,,,none,0.0,600844800.0,713977500.0
+Switzerland,2012,International Research,direct_rd,outlier,"Amount 713,977,500 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,713977500.0,0.0,772883800.0
+Switzerland,2013,International Research,direct_rd,outlier,"Amount 772,883,800 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,772883800.0,713977500.0,0.0
+Switzerland,2014,International Research,direct_rd,ok,,,,,none,0.0,772883800.0,0.0
+Switzerland,2015,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,International Research,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,International Research,direct_rd,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Basic contributions to universities,higher_education,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,684431100.0
+Switzerland,2017,Basic contributions to universities,higher_education,outlier,"Amount 684,431,100 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,684431100.0,0.0,684449000.0
+Switzerland,2018,Basic contributions to universities,higher_education,outlier,"Amount 684,449,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,684449000.0,684431100.0,0.0
+Switzerland,2019,Basic contributions to universities,higher_education,ok,,,,,none,0.0,684449000.0,0.0
+Switzerland,2020,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Basic contributions to universities,higher_education,ok,,,,,none,0.0,0.0,
+Switzerland,1977,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,,0.0
+Switzerland,1978,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,444272400.0
+Switzerland,2005,"University funding, basic contributions",higher_education,outlier,"Amount 444,272,400 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,444272400.0,0.0,0.0
+Switzerland,2006,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,444272400.0,0.0
+Switzerland,2007,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,"University funding, basic contributions",higher_education,ok,,,,,none,0.0,0.0,
+Switzerland,1977,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,,192000000.0
+Switzerland,1978,"For research, development, and testing programs",direct_rd,ok,,,,,none,192000000.0,0.0,0.0
+Switzerland,1982,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,192000000.0,0.0
+Switzerland,1983,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,339000000.0
+Switzerland,1984,"For research, development, and testing programs",direct_rd,ok,,,,,none,339000000.0,0.0,92500000.0
+Switzerland,1985,"For research, development, and testing programs",direct_rd,ok,,,,,none,92500000.0,339000000.0,287650000.0
+Switzerland,1986,"For research, development, and testing programs",direct_rd,ok,,,,,none,287650000.0,92500000.0,237150000.0
+Switzerland,1987,"For research, development, and testing programs",direct_rd,ok,,,,,none,237150000.0,287650000.0,263000000.0
+Switzerland,1988,"For research, development, and testing programs",direct_rd,ok,,,,,none,263000000.0,237150000.0,165000000.0
+Switzerland,1989,"For research, development, and testing programs",direct_rd,ok,,,,,none,165000000.0,263000000.0,0.0
+Switzerland,1990,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,165000000.0,168400000.0
+Switzerland,1991,"For research, development, and testing programs",direct_rd,ok,,,,,none,168400000.0,0.0,62300000.0
+Switzerland,1994,"For research, development, and testing programs",direct_rd,ok,,,,,none,62300000.0,168400000.0,111200000.0
+Switzerland,1995,"For research, development, and testing programs",direct_rd,ok,,,,,none,111200000.0,62300000.0,224650000.0
+Switzerland,1996,"For research, development, and testing programs",direct_rd,ok,,,,,none,224650000.0,111200000.0,85300000.0
+Switzerland,1997,"For research, development, and testing programs",direct_rd,ok,,,,,none,85300000.0,224650000.0,139900000.0
+Switzerland,1998,"For research, development, and testing programs",direct_rd,ok,,,,,none,139900000.0,85300000.0,117400000.0
+Switzerland,1999,"For research, development, and testing programs",direct_rd,ok,,,,,none,117400000.0,139900000.0,265900000.0
+Switzerland,2000,"For research, development, and testing programs",direct_rd,ok,,,,,none,265900000.0,117400000.0,203000000.0
+Switzerland,2001,"For research, development, and testing programs",direct_rd,ok,,,,,none,203000000.0,265900000.0,0.0
+Switzerland,2002,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,203000000.0,0.0
+Switzerland,2003,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,"For research, development, and testing programs",direct_rd,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,329000000.0
+Switzerland,2006,Commitment Credits for Research and Development,direct_rd,outlier,"Amount 329,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,329000000.0,0.0,0.0
+Switzerland,2007,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,329000000.0,0.0
+Switzerland,2008,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Commitment Credits for Research and Development,direct_rd,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,263000000.0
+Switzerland,2003,Federal Contributions to EU Research Programs,direct_rd,outlier,"Amount 263,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,263000000.0,0.0,0.0
+Switzerland,2004,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,263000000.0,0.0
+Switzerland,2005,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Federal Contributions to EU Research Programs,direct_rd,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,184000000.0
+Switzerland,2003,Total R&D Appropriations,direct_rd,outlier,"Amount 184,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,184000000.0,0.0,0.0
+Switzerland,2004,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,184000000.0,0.0
+Switzerland,2005,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Total R&D Appropriations,direct_rd,ok,,,,,none,0.0,0.0,
+Switzerland,1977,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,177350000.0
+Switzerland,1983,"Education, Research, Development, and Testing Programs",direct_rd,outlier,"Amount 177,350,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,177350000.0,0.0,0.0
+Switzerland,1984,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,177350000.0,0.0
+Switzerland,1985,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,"Education, Research, Development, and Testing Programs",direct_rd,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Contribution to ESA,direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,41000000.0
+Switzerland,2003,Contribution to ESA,direct_rd,outlier,"Amount 41,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,41000000.0,0.0,0.0
+Switzerland,2004,Contribution to ESA,direct_rd,ok,,,,,none,0.0,41000000.0,0.0
+Switzerland,2005,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,182713000.0
+Switzerland,2019,Contribution to ESA,direct_rd,outlier,"Amount 182,713,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,182713000.0,0.0,0.0
+Switzerland,2020,Contribution to ESA,direct_rd,ok,,,,,none,0.0,182713000.0,0.0
+Switzerland,2021,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,190543000.0
+Switzerland,2022,Contribution to ESA,direct_rd,outlier,"Amount 190,543,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,190543000.0,0.0,0.0
+Switzerland,2023,Contribution to ESA,direct_rd,ok,,,,,none,0.0,190543000.0,0.0
+Switzerland,2024,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Contribution to ESA,direct_rd,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,65000000.0
+Switzerland,2006,Contribution to the National Research Programmes (NFP),direct_rd,outlier,"Amount 65,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,65000000.0,0.0,0.0
+Switzerland,2007,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,65000000.0,0.0
+Switzerland,2008,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Contribution to the National Research Programmes (NFP),direct_rd,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,45000000.0
+Switzerland,2005,Research and Development (Supplementary Credit),direct_rd,outlier,"Amount 45,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,45000000.0,0.0,0.0
+Switzerland,2006,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,45000000.0,0.0
+Switzerland,2007,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Research and Development (Supplementary Credit),direct_rd,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,19000000.0
+Switzerland,2004,Contribution to EU Research Programs,innovation_instruments,outlier,"Amount 19,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,19000000.0,0.0,0.0
+Switzerland,2005,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,19000000.0,0.0
+Switzerland,2006,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Contribution to EU Research Programs,innovation_instruments,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,13490000.0
+Switzerland,2004,Cancer Research Infrastructure Contribution,direct_rd,outlier,"Amount 13,490,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,13490000.0,0.0,0.0
+Switzerland,2005,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,13490000.0,0.0
+Switzerland,2006,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Cancer Research Infrastructure Contribution,direct_rd,ok,,,,,none,0.0,0.0,
+Switzerland,1977,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,2100000.0
+Switzerland,2010,"Research, Development and Demonstration",direct_rd,outlier,"Amount 2,100,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,2100000.0,0.0,24103374.0
+Switzerland,2011,"Research, Development and Demonstration",direct_rd,outlier,"Amount 24,103,374 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,24103374.0,2100000.0,20853224.0
+Switzerland,2012,"Research, Development and Demonstration",direct_rd,outlier,"Amount 20,853,224 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,20853224.0,24103374.0,18917990.0
+Switzerland,2013,"Research, Development and Demonstration",direct_rd,outlier,"Amount 18,917,990 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,18917990.0,20853224.0,0.0
+Switzerland,2014,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,18917990.0,0.0
+Switzerland,2015,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,"Research, Development and Demonstration",direct_rd,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,10162681.0
+Switzerland,2013,Environmental Research and Education,direct_rd,outlier,"Amount 10,162,681 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,10162681.0,0.0,0.0
+Switzerland,2014,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,10162681.0,0.0
+Switzerland,2015,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Environmental Research and Education,direct_rd,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Research Contributions,direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,494000000.0
+Switzerland,2010,Research Contributions,direct_rd,outlier,"Amount 494,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,494000000.0,0.0,6873297.0
+Switzerland,2011,Research Contributions,direct_rd,outlier,"Amount 6,873,297 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,6873297.0,494000000.0,6257702.0
+Switzerland,2012,Research Contributions,direct_rd,outlier,"Amount 6,257,702 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,6257702.0,6873297.0,0.0
+Switzerland,2013,Research Contributions,direct_rd,ok,,,,,none,0.0,6257702.0,0.0
+Switzerland,2014,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Research Contributions,direct_rd,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Contribution to ESO,direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,6000000.0
+Switzerland,2006,Contribution to ESO,direct_rd,outlier,"Amount 6,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,6000000.0,0.0,0.0
+Switzerland,2007,Contribution to ESO,direct_rd,ok,,,,,none,0.0,6000000.0,0.0
+Switzerland,2008,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Contribution to ESO,direct_rd,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,5500000.0
+Switzerland,2008,Global Bilateral Scientific Cooperation,innovation_instruments,outlier,"Amount 5,500,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,5500000.0,0.0,0.0
+Switzerland,2009,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,5500000.0,0.0
+Switzerland,2010,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Global Bilateral Scientific Cooperation,innovation_instruments,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Research Contracts,direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Research Contracts,direct_rd,ok,,,,,none,0.0,0.0,3750000.0
+Switzerland,2025,Research Contracts,direct_rd,outlier,"Amount 3,750,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,3750000.0,0.0,
+Switzerland,1977,Contributions to ESA,direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,15000000.0
+Switzerland,2011,Contributions to ESA,direct_rd,outlier,"Amount 15,000,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,15000000.0,0.0,0.0
+Switzerland,2012,Contributions to ESA,direct_rd,ok,,,,,none,0.0,15000000.0,0.0
+Switzerland,2013,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,185133000.0
+Switzerland,2021,Contributions to ESA,direct_rd,outlier,"Amount 185,133,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,185133000.0,0.0,0.0
+Switzerland,2022,Contributions to ESA,direct_rd,ok,,,,,none,0.0,185133000.0,0.0
+Switzerland,2023,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Contributions to ESA,direct_rd,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,2362000.0
+Switzerland,2012,Swiss Science and Technology Council,science_agency,outlier,"Amount 2,362,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,2362000.0,0.0,0.0
+Switzerland,2013,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,2362000.0,0.0
+Switzerland,2014,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Swiss Science and Technology Council,science_agency,ok,,,,,none,0.0,0.0,
+Switzerland,1977,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,2150000.0
+Switzerland,2008,X-FEL Free Electron Laser,direct_rd,outlier,"Amount 2,150,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,2150000.0,0.0,0.0
+Switzerland,2009,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,2150000.0,0.0
+Switzerland,2010,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,X-FEL Free Electron Laser,direct_rd,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Research Projects,direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,1419747.0
+Switzerland,2010,Research Projects,direct_rd,outlier,"Amount 1,419,747 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,1419747.0,0.0,0.0
+Switzerland,2011,Research Projects,direct_rd,ok,,,,,none,0.0,1419747.0,0.0
+Switzerland,2012,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2013,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2014,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2015,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Research Projects,direct_rd,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,8314000.0
+Switzerland,2010,Budget for Education and Research,innovation_instruments,outlier,"Amount 8,314,000 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,8314000.0,0.0,0.0
+Switzerland,2011,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,8314000.0,0.0
+Switzerland,2012,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,9631200.0
+Switzerland,2013,Budget for Education and Research,innovation_instruments,outlier,"Amount 9,631,200 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,9631200.0,0.0,21760900.0
+Switzerland,2014,Budget for Education and Research,innovation_instruments,outlier,"Amount 21,760,900 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,21760900.0,9631200.0,0.0
+Switzerland,2015,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,21760900.0,0.0
+Switzerland,2016,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Budget for Education and Research,innovation_instruments,ok,,,,,none,0.0,0.0,
+Switzerland,1977,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,,0.0
+Switzerland,1978,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1982,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1983,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1984,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1985,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1986,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1987,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1988,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1989,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1990,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1991,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1994,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1995,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1996,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1997,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1998,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,1999,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2000,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2001,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2002,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2003,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2004,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2005,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2006,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2007,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2008,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2009,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2010,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2011,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2012,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,2456400.0
+Switzerland,2013,Full participation in the 7th Framework Programme,direct_rd,outlier,"Amount 2,456,400 outside expected range [0 – 0] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,2456400.0,0.0,0.0
+Switzerland,2014,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,2456400.0,0.0
+Switzerland,2015,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2016,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2017,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2018,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2019,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2020,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2021,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2022,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2023,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2024,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,0.0
+Switzerland,2025,Full participation in the 7th Framework Programme,direct_rd,ok,,,,,none,0.0,0.0,

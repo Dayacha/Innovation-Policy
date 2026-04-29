@@ -1,0 +1,2 @@
+canonical_name,category,name_variants,preferred_item_type,active_years,notes,agency_type,confidence,source_entity,n_years_seen,avg_amount,reason,country
+Research and Development Funding 2017-18,unclear,[],"['section_total', 'program_total', 'line_item']","(1900, 2099)",This funding is relevant to R&D but is specific to a past fiscal year.,rd_fund,0.7,Research and Development funding 2017-18,1,425000.0,confidence below threshold,UK

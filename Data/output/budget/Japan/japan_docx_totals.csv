@@ -1,121 +1,649 @@
 country,canonical_name,year,amount_total,amount_primary,n_acts,acts,additive_flag,currency,unit,category
-Japan,AIST (National Institute of Advanced Industrial Science and Technology),2015,61787122.0,61787122.0,1,2015 DL201511001.pdf,single,JPY,thousand,science_agency
-Japan,AIST (National Institute of Advanced Industrial Science and Technology),2016,62847560.0,62847560.0,1,2016 DL201611001.pdf,single,JPY,thousand,science_agency
-Japan,AIST (National Institute of Advanced Industrial Science and Technology),2017,,,0,,gap,,,science_agency
-Japan,AIST (National Institute of Advanced Industrial Science and Technology),2018,61924777.0,61924777.0,1,2018 DL201811001.pdf,single,JPY,thousand,science_agency
-Japan,AIST (National Institute of Advanced Industrial Science and Technology),2019,62342817.0,62342817.0,1,2019 DL201911001.pdf,single,JPY,thousand,science_agency
-Japan,AIST (National Institute of Advanced Industrial Science and Technology),2020,,,0,,gap,,,science_agency
-Japan,AIST (National Institute of Advanced Industrial Science and Technology),2021,61984113.0,61984113.0,1,2021 DL202111001.pdf,single,JPY,thousand,science_agency
-Japan,AIST (National Institute of Advanced Industrial Science and Technology),2022,61484113.0,61484113.0,1,2022 DL202211001.pdf,single,JPY,thousand,science_agency
-Japan,AIST (National Institute of Advanced Industrial Science and Technology),2023,61800000.0,61800000.0,1,2023 DL202311001.pdf,single,JPY,thousand,science_agency
-Japan,AIST (National Institute of Advanced Industrial Science and Technology),2024,65000661.0,65000661.0,1,2024 DL202411001.pdf,single,JPY,thousand,science_agency
-Japan,AIST (National Institute of Advanced Industrial Science and Technology),2025,66687223.0,66687223.0,1,2025 DL202511001.pdf,single,JPY,thousand,science_agency
-Japan,JAEA (Japan Atomic Energy Agency),2015,574000000.0,574000000.0,1,2015 DL201511001.pdf,single,JPY,thousand,science_agency
-Japan,JAEA (Japan Atomic Energy Agency),2016,,,0,,gap,,,science_agency
-Japan,JAEA (Japan Atomic Energy Agency),2017,34614821.0,34614821.0,1,2017 DL201711001.pdf,single,JPY,thousand,science_agency
-Japan,JAEA (Japan Atomic Energy Agency),2018,36991207.0,36991207.0,1,2018 DL201811001.pdf,single,JPY,thousand,science_agency
-Japan,JAEA (Japan Atomic Energy Agency),2019,36393856.0,36393856.0,1,2019 DL201911001.pdf,single,JPY,thousand,science_agency
-Japan,JAEA (Japan Atomic Energy Agency),2020,,,0,,gap,,,science_agency
-Japan,JAEA (Japan Atomic Energy Agency),2021,36379870.0,36379870.0,1,2021 DL202111001.pdf,single,JPY,thousand,science_agency
-Japan,JAEA (Japan Atomic Energy Agency),2022,380061000.0,380061000.0,1,2022 DL202211001.pdf,single,JPY,thousand,science_agency
-Japan,JAEA (Japan Atomic Energy Agency),2023,,,0,,gap,,,science_agency
-Japan,JAEA (Japan Atomic Energy Agency),2024,,,0,,gap,,,science_agency
-Japan,JAEA (Japan Atomic Energy Agency),2025,37466362.0,37466362.0,1,2025 DL202511001.pdf,single,JPY,thousand,science_agency
-Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2015,33512223.0,33512223.0,1,2015 DL201511001.pdf,single,JPY,thousand,science_agency
-Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2016,30618486.0,30618486.0,1,2016 DL201611001.pdf,single,JPY,thousand,science_agency
-Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2017,30618486.0,30618486.0,1,2017 DL201711001.pdf,single,JPY,thousand,science_agency
-Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2018,31260631.0,31260631.0,1,2018 DL201811001.pdf,single,JPY,thousand,science_agency
-Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2019,32069528.0,32069528.0,1,2019 DL201911001.pdf,single,JPY,thousand,science_agency
-Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2020,31843418.0,31843418.0,1,2020 DL202011001.pdf,single,JPY,thousand,science_agency
-Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2021,29708549.0,29708549.0,1,2021 DL202111001.pdf,single,JPY,thousand,science_agency
-Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2022,30292576.0,30292576.0,1,2022 DL202211001.pdf,single,JPY,thousand,science_agency
-Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2023,30621991.0,30621991.0,1,2023 DL202311001.pdf,single,JPY,thousand,science_agency
-Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2024,30366656.0,30366656.0,1,2024 DL202411001.pdf,single,JPY,thousand,science_agency
-Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2025,30900656.0,30900656.0,1,2025 DL202511001.pdf,single,JPY,thousand,science_agency
-Japan,JAXA (Japan Aerospace Exploration Agency),2015,114471942.0,114471942.0,1,2015 DL201511001.pdf,single,JPY,thousand,science_agency
-Japan,JAXA (Japan Aerospace Exploration Agency),2016,105342777.0,105342777.0,1,2016 DL201611001.pdf,single,JPY,thousand,science_agency
-Japan,JAXA (Japan Aerospace Exploration Agency),2017,111286260.0,111286260.0,1,2017 DL201711001.pdf,single,JPY,thousand,science_agency
-Japan,JAXA (Japan Aerospace Exploration Agency),2018,113060958.0,113060958.0,1,2018 DL201811001.pdf,single,JPY,thousand,science_agency
-Japan,JAXA (Japan Aerospace Exploration Agency),2019,115922994.0,115922994.0,1,2019 DL201911001.pdf,single,JPY,thousand,science_agency
-Japan,JAXA (Japan Aerospace Exploration Agency),2020,118447193.0,118447193.0,1,2020 DL202011001.pdf,single,JPY,thousand,science_agency
-Japan,JAXA (Japan Aerospace Exploration Agency),2021,112295751.0,112295751.0,1,2021 DL202111001.pdf,single,JPY,thousand,science_agency
-Japan,JAXA (Japan Aerospace Exploration Agency),2022,123759200.0,123759200.0,1,2022 DL202211001.pdf,single,JPY,thousand,science_agency
-Japan,JAXA (Japan Aerospace Exploration Agency),2023,122689115.0,122689115.0,1,2023 DL202311001.pdf,single,JPY,thousand,science_agency
-Japan,JAXA (Japan Aerospace Exploration Agency),2024,,,0,,gap,,,science_agency
-Japan,JAXA (Japan Aerospace Exploration Agency),2025,133352566.0,133352566.0,1,2025 DL202511001.pdf,single,JPY,thousand,science_agency
-Japan,JSPS (Japan Society for the Promotion of Science),2015,,,0,,gap,,,science_agency
-Japan,JSPS (Japan Society for the Promotion of Science),2016,26708591.0,26708591.0,1,2016 DL201611001.pdf,single,JPY,thousand,science_agency
-Japan,JSPS (Japan Society for the Promotion of Science),2017,,,0,,gap,,,science_agency
-Japan,JSPS (Japan Society for the Promotion of Science),2018,26600504.0,26600504.0,1,2018 DL201811001.pdf,single,JPY,thousand,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2001,69310487000.0,69310487000.0,1,2001 DL200111001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2002,68411330000.0,68411330000.0,1,2002 DL200211001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2003,68411330000.0,68411330000.0,1,2003 DL200311001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2004,68218340000.0,68218340000.0,1,2004 DL200411001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2005,67431520000.0,67431520000.0,1,2005 DL200511001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2006,,,0,,gap,,,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2007,65682368000.0,65682368000.0,1,2007 DL200711001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2008,64237356000.0,64237356000.0,1,2008 DL200811001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2009,63305991000.0,63305991000.0,1,2009 DL200911001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2010,61406811000.0,61406811000.0,1,2010 DL201011001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2011,60390000000.0,60390000000.0,1,2011 DL201111001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2012,,,0,,gap,,,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2013,60078300000.0,60078300000.0,1,2013 DL201311001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2014,60832599000.0,60832599000.0,1,2014 DL201411001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2015,61787122000.0,61787122000.0,1,2015 DL201511001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2016,62847560000.0,62847560000.0,1,2016 DL201611001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2017,62440586000.0,62440586000.0,1,2017 DL201711001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2018,61924777000.0,61924777000.0,1,2018 DL201811001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2019,62342817000.0,62342817000.0,1,2019 DL201911001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2020,742799000.0,742799000.0,1,2020 DL202011001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2021,61984113000.0,61984113000.0,1,2021 DL202111001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2022,61484113000.0,61484113000.0,1,2022 DL202211001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2023,61800000000.0,61800000000.0,1,2023 DL202311001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2024,65000661000.0,65000661000.0,1,2024 DL202411001.pdf,single,JPY,yen,science_agency
+Japan,AIST (National Institute of Advanced Industrial Science and Technology),2025,66687223000.0,66687223000.0,1,2025 DL202511001.pdf,single,JPY,yen,science_agency
+Japan,Institute for Science and Technology Policy,1975,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1976,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1977,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1978,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1979,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1980,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1981,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1982,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1983,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1984,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1985,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1986,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1987,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1988,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1989,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1990,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1991,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1992,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1993,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1994,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1995,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1996,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1997,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1998,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,1999,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2000,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2001,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2002,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2003,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2004,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2005,883528000.0,883528000.0,1,2005 DL200511001.pdf,single,JPY,yen,unclear
+Japan,Institute for Science and Technology Policy,2006,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2007,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2008,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2009,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2010,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2011,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2012,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2013,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2014,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2015,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2016,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2017,784409000.0,784409000.0,1,2017 DL201711001.pdf,single,JPY,yen,unclear
+Japan,Institute for Science and Technology Policy,2018,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2019,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2020,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2021,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2022,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2023,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2024,,,0,,gap,,,unclear
+Japan,Institute for Science and Technology Policy,2025,,,0,,gap,,,unclear
+Japan,JAEA (Japan Atomic Energy Agency),1976,18605474000.0,18605474000.0,1,1976 DL197611001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1977,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1978,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1979,59296000000.0,59296000000.0,1,1979 DL197911001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1980,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1981,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1982,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1983,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1984,5059953000.0,5059953000.0,1,1984 DL198411001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1985,7699483000.0,7699483000.0,1,1985 DL198511001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1986,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1987,4716430000.0,4716430000.0,1,1987 DL198711001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1988,23877000000.0,23877000000.0,1,1988 DL198811001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1989,7651998000.0,7651998000.0,1,1989 DL198911001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1990,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1991,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1992,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1993,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1994,10401684000.0,10401684000.0,1,1994 DL199411001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1995,1808664000.0,1808664000.0,1,1995 DL199511001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1996,76753000000.0,76753000000.0,1,1996 DL199611001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1997,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1998,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),1999,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2000,7313284000.0,7313284000.0,1,2000 DL200011001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2001,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2002,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2003,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2004,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2005,31714109000.0,31714109000.0,1,2005 DL200511001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2006,61989280000.0,61989280000.0,1,2006 DL200611001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2007,58768083000.0,58768083000.0,1,2007 DL200711001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2008,63261350000.0,63261350000.0,1,2008 DL200811001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2009,61258500000.0,61258500000.0,1,2009 DL200911001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2010,63468679000.0,63468679000.0,1,2010 DL201011001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2011,59170073000.0,59170073000.0,1,2011 DL201111001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2012,50589375000.0,50589375000.0,1,2012 DL201211001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2013,47685583000.0,47685583000.0,1,2013 DL201311001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2014,46916707000.0,46916707000.0,1,2014 DL201411001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2015,,,0,,gap,,,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2016,34614821000.0,34614821000.0,1,2016 DL201611001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2017,37981917000.0,37981917000.0,1,2017 DL201711001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2018,37981917000.0,37981917000.0,1,2018 DL201811001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2019,36393856000.0,36393856000.0,1,2019 DL201911001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2020,36393856000.0,36393856000.0,1,2020 DL202011001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2021,36379870000.0,36379870000.0,1,2021 DL202111001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2022,6379870000.0,6379870000.0,1,2022 DL202211001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2023,377053000.0,377053000.0,1,2023 DL202311001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2024,36478799000.0,36478799000.0,1,2024 DL202411001.pdf,single,JPY,yen,science_agency
+Japan,JAEA (Japan Atomic Energy Agency),2025,950126000.0,950126000.0,1,2025 DL202511001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1975,,,0,,gap,,,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1976,,,0,,gap,,,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1977,1088000000.0,1088000000.0,1,1977 DL197711001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1978,665000000.0,665000000.0,1,1978 DL197811001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1979,3824000000.0,3824000000.0,1,1979 DL197911001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1980,792000000.0,792000000.0,1,1980 DL198011001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1981,4531000000.0,4531000000.0,1,1981 DL198111001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1982,4328000000.0,4328000000.0,1,1982 DL198211001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1983,,,0,,gap,,,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1984,4963000000.0,4963000000.0,1,1984 DL198411001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1985,6700000000.0,6700000000.0,1,1985 DL198511001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1986,,,0,,gap,,,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1987,7516000000.0,7516000000.0,1,1987 DL198711001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1988,1364000000.0,1364000000.0,1,1988 DL198811001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1989,,,0,,gap,,,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1990,9645000000.0,9645000000.0,1,1990 DL199011001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1991,,,0,,gap,,,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1992,,,0,,gap,,,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1993,,,0,,gap,,,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1994,13121213000.0,13121213000.0,1,1994 DL199411001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1995,1261674000.0,1261674000.0,1,1995 DL199511001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1996,2330000000.0,2330000000.0,1,1996 DL199611001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1997,,,0,,gap,,,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1998,21725000000.0,21725000000.0,1,1998 DL199811001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),1999,2720000000.0,2720000000.0,1,1999 DL199911001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2000,44618955000.0,44618955000.0,1,2000 DL200011001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2001,,,0,,gap,,,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2002,,,0,,gap,,,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2003,,,0,,gap,,,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2004,30713740000.0,30713740000.0,1,2004 DL200411001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2005,32692784000.0,32692784000.0,1,2005 DL200511001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2006,35733937000.0,35733937000.0,1,2006 DL200611001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2007,37190017000.0,37190017000.0,1,2007 DL200711001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2008,38430626000.0,38430626000.0,1,2008 DL200811001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2009,38560498000.0,38560498000.0,1,2009 DL200911001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2010,36336563000.0,36336563000.0,1,2010 DL201011001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2011,36028272000.0,36028272000.0,1,2011 DL201111001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2012,35114135000.0,35114135000.0,1,2012 DL201211001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2013,34448588000.0,34448588000.0,1,2013 DL201311001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2014,33512223000.0,33512223000.0,1,2014 DL201411001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2015,32604686000.0,32604686000.0,1,2015 DL201511001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2016,30618486000.0,30618486000.0,1,2016 DL201611001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2017,31718486000.0,31718486000.0,1,2017 DL201711001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2018,31718486000.0,31718486000.0,1,2018 DL201811001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2019,32069528000.0,32069528000.0,1,2019 DL201911001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2020,31843418000.0,31843418000.0,1,2020 DL202011001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2021,29708549000.0,29708549000.0,1,2021 DL202111001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2022,30292576000.0,30292576000.0,1,2022 DL202211001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2023,30621991000.0,30621991000.0,1,2023 DL202311001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2024,30366656000.0,30366656000.0,1,2024 DL202411001.pdf,single,JPY,yen,science_agency
+Japan,JAMSTEC (Japan Agency for Marine-Earth Science and Technology),2025,30379929000.0,30379929000.0,1,2025 DL202511001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1975,3547000000.0,3547000000.0,1,1975 DL197511001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1976,28641780000.0,28641780000.0,1,1976 DL197611001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1977,53746700000.0,53746700000.0,1,1977 DL197711001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1978,5592000000.0,5592000000.0,1,1978 DL197811001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1979,81841000000.0,81841000000.0,1,1979 DL197911001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1980,6502000000.0,6502000000.0,1,1980 DL198011001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1981,83727000000.0,83727000000.0,1,1981 DL198111001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1982,7351000000.0,7351000000.0,1,1982 DL198211001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1983,86067000000.0,86067000000.0,1,1983 DL198311001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1984,12149350000.0,12149350000.0,1,1984 DL198411001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1985,13284931000.0,13284931000.0,1,1985 DL198511001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1986,8444000000.0,8444000000.0,1,1986 DL198611001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1987,17558655000.0,17558655000.0,1,1987 DL198711001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1988,87900000000.0,87900000000.0,1,1988 DL198811001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1989,106757000000.0,106757000000.0,1,1989 DL198911001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1990,88842369000.0,88842369000.0,1,1990 DL199011001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1991,,,0,,gap,,,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1992,,,0,,gap,,,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1993,96198749000.0,96198749000.0,1,1993 DL199311001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1994,89823071000.0,89823071000.0,1,1994 DL199411001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1995,172398000000.0,172398000000.0,1,1995 DL199511001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1996,,,0,,gap,,,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1997,175883000000.0,175883000000.0,1,1997 DL199711001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1998,14371000000.0,14371000000.0,1,1998 DL199811001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),1999,182895000000.0,182895000000.0,1,1999 DL199911001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2000,167902000000.0,167902000000.0,1,2000 DL200011001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2001,,,0,,gap,,,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2002,,,0,,gap,,,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2003,73033810000.0,73033810000.0,1,2003 DL200311001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2004,137297574000.0,137297574000.0,1,2004 DL200411001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2005,131411464000.0,131411464000.0,1,2005 DL200511001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2006,138293436000.0,138293436000.0,1,2006 DL200611001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2007,128826326000.0,128826326000.0,1,2007 DL200711001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2008,130226969000.0,130226969000.0,1,2008 DL200811001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2009,139703018000.0,139703018000.0,1,2009 DL200911001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2010,130391959000.0,130391959000.0,1,2010 DL201011001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2011,122426246000.0,122426246000.0,1,2011 DL201111001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2012,119758445000.0,119758445000.0,1,2012 DL201211001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2013,109768846000.0,109768846000.0,1,2013 DL201311001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2014,112132984000.0,112132984000.0,1,2014 DL201411001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2015,114471942000.0,114471942000.0,1,2015 DL201511001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2016,105342777000.0,105342777000.0,1,2016 DL201611001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2017,111286260000.0,111286260000.0,1,2017 DL201711001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2018,111286260000.0,111286260000.0,1,2018 DL201811001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2019,115922994000.0,115922994000.0,1,2019 DL201911001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2020,118447193000.0,118447193000.0,1,2020 DL202011001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2021,112295751000.0,112295751000.0,1,2021 DL202111001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2022,123759200000.0,123759200000.0,1,2022 DL202211001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2023,122689115000.0,122689115000.0,1,2023 DL202311001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2024,122397995000.0,122397995000.0,1,2024 DL202411001.pdf,single,JPY,yen,science_agency
+Japan,JAXA (Japan Aerospace Exploration Agency),2025,,,0,,gap,,,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1975,1543702000.0,1543702000.0,1,1975 DL197511001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1976,1720807000.0,1720807000.0,1,1976 DL197611001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1977,1907355000.0,1907355000.0,1,1977 DL197711001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1978,2300662000.0,2300662000.0,1,1978 DL197811001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1979,2683928000.0,2683928000.0,1,1979 DL197911001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1980,2800280000.0,2800280000.0,1,1980 DL198011001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1981,2988081000.0,2988081000.0,1,1981 DL198111001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1982,3120136000.0,3120136000.0,1,1982 DL198211001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1983,3248662000.0,3248662000.0,1,1983 DL198311001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1984,3355917000.0,3355917000.0,1,1984 DL198411001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1985,3479717000.0,3479717000.0,1,1985 DL198511001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1986,3479717000.0,3479717000.0,1,1986 DL198611001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1987,4210985000.0,4210985000.0,1,1987 DL198711001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1988,4768173000.0,4768173000.0,1,1988 DL198811001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1989,5568315000.0,5568315000.0,1,1989 DL198911001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1990,6147759000.0,6147759000.0,1,1990 DL199011001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1991,6661399000.0,6661399000.0,1,1991 DL199111001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1992,7657361000.0,7657361000.0,1,1992 DL199211001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1993,8989395000.0,8989395000.0,1,1993 DL199311001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1994,10666145000.0,10666145000.0,1,1994 DL199411001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1995,12383823000.0,12383823000.0,1,1995 DL199511001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1996,26308062000.0,26308062000.0,1,1996 DL199611001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1997,18402441000.0,18402441000.0,1,1997 DL199711001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1998,19143348000.0,19143348000.0,1,1998 DL199811001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),1999,21203074000.0,21203074000.0,1,1999 DL199911001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2000,21514288000.0,21514288000.0,1,2000 DL200011001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2001,,,0,,gap,,,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2002,,,0,,gap,,,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2003,15153170000.0,15153170000.0,1,2003 DL200311001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2004,29841274000.0,29841274000.0,1,2004 DL200411001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2005,29655107000.0,29655107000.0,1,2005 DL200511001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2006,29364000000.0,29364000000.0,1,2006 DL200611001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2007,29023540000.0,29023540000.0,1,2007 DL200711001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2008,28859332000.0,28859332000.0,1,2008 DL200811001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2009,28672449000.0,28672449000.0,1,2009 DL200911001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2010,29167295000.0,29167295000.0,1,2010 DL201011001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2011,29229937000.0,29229937000.0,1,2011 DL201111001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2012,29229437000.0,29229437000.0,1,2012 DL201211001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2013,29168967000.0,29168967000.0,1,2013 DL201311001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2014,28005668000.0,28005668000.0,1,2014 DL201411001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2015,27238826000.0,27238826000.0,1,2015 DL201511001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2016,26708591000.0,26708591000.0,1,2016 DL201611001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2017,708591000.0,708591000.0,1,2017 DL201711001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2018,26600504000.0,26600504000.0,1,2018 DL201811001.pdf,single,JPY,yen,science_agency
 Japan,JSPS (Japan Society for the Promotion of Science),2019,,,0,,gap,,,science_agency
-Japan,JSPS (Japan Society for the Promotion of Science),2020,,,0,,gap,,,science_agency
-Japan,JSPS (Japan Society for the Promotion of Science),2021,,,0,,gap,,,science_agency
-Japan,JSPS (Japan Society for the Promotion of Science),2022,,,0,,gap,,,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2020,26567080000.0,26567080000.0,1,2020 DL202011001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2021,10000000000.0,10000000000.0,1,2021 DL202111001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2022,27175350000.0,27175350000.0,1,2022 DL202211001.pdf,single,JPY,yen,science_agency
 Japan,JSPS (Japan Society for the Promotion of Science),2023,,,0,,gap,,,science_agency
-Japan,JSPS (Japan Society for the Promotion of Science),2024,,,0,,gap,,,science_agency
-Japan,JSPS (Japan Society for the Promotion of Science),2025,27498267.0,27498267.0,1,2025 DL202511001.pdf,single,JPY,thousand,science_agency
-Japan,JST (Japan Science and Technology Agency),2015,100553048.0,100553048.0,1,2015 DL201511001.pdf,single,JPY,thousand,science_agency
-Japan,JST (Japan Science and Technology Agency),2016,100888373.0,100888373.0,1,2016 DL201611001.pdf,single,JPY,thousand,science_agency
-Japan,JST (Japan Science and Technology Agency),2017,100888373.0,100888373.0,1,2017 DL201711001.pdf,single,JPY,thousand,science_agency
-Japan,JST (Japan Science and Technology Agency),2018,100812003.0,100812003.0,1,2018 DL201811001.pdf,single,JPY,thousand,science_agency
-Japan,JST (Japan Science and Technology Agency),2019,100511506.0,100511506.0,1,2019 DL201911001.pdf,single,JPY,thousand,science_agency
-Japan,JST (Japan Science and Technology Agency),2020,100271984.0,100271984.0,1,2020 DL202011001.pdf,single,JPY,thousand,science_agency
-Japan,JST (Japan Science and Technology Agency),2021,50000000.0,50000000.0,1,2021 DL202111001.pdf,single,JPY,thousand,science_agency
-Japan,JST (Japan Science and Technology Agency),2022,100337918.0,100337918.0,1,2022 DL202211001.pdf,single,JPY,thousand,science_agency
-Japan,JST (Japan Science and Technology Agency),2023,100543871.0,100543871.0,1,2023 DL202311001.pdf,single,JPY,thousand,science_agency
-Japan,JST (Japan Science and Technology Agency),2024,100970256.0,100970256.0,1,2024 DL202411001.pdf,single,JPY,thousand,science_agency
-Japan,JST (Japan Science and Technology Agency),2025,100771968.0,100771968.0,1,2025 DL202511001.pdf,single,JPY,thousand,science_agency
-Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2015,25657000000.0,25657000000.0,1,2015 DL201511001.pdf,single,JPY,thousand,science_agency
-Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2016,94643877943.0,94643877943.0,1,2016 DL201611001.pdf,single,JPY,thousand,science_agency
-Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2017,5519899508.0,5519899508.0,1,2017 DL201711001.pdf,single,JPY,thousand,science_agency
-Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2018,30948629162.0,30948629162.0,1,2018 DL201811001.pdf,single,JPY,thousand,science_agency
-Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2019,31857133698.0,31857133698.0,1,2019 DL201911001.pdf,single,JPY,thousand,science_agency
-Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2020,5415218203.0,5415218203.0,1,2020 DL202011001.pdf,single,JPY,thousand,science_agency
-Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2021,30524764680.0,30524764680.0,1,2021 DL202111001.pdf,single,JPY,thousand,science_agency
-Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2022,41301199625.0,41301199625.0,1,2022 DL202211001.pdf,single,JPY,thousand,science_agency
-Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2023,5294138248.0,5294138248.0,1,2023 DL202311001.pdf,single,JPY,thousand,science_agency
-Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2024,30300000000.0,30300000000.0,1,2024 DL202411001.pdf,single,JPY,thousand,science_agency
-Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2025,6030862741.0,6030862741.0,1,2025 DL202511001.pdf,single,JPY,thousand,science_agency
-Japan,NEDO (New Energy and Industrial Technology Development Organization),2015,7791536.0,7791536.0,1,2015 DL201511001.pdf,single,JPY,thousand,innovation_instruments
-Japan,NEDO (New Energy and Industrial Technology Development Organization),2016,7893451.0,7893451.0,1,2016 DL201611001.pdf,single,JPY,thousand,innovation_instruments
-Japan,NEDO (New Energy and Industrial Technology Development Organization),2017,,,0,,gap,,,innovation_instruments
-Japan,NEDO (New Energy and Industrial Technology Development Organization),2018,13170675.0,13170675.0,1,2018 DL201811001.pdf,single,JPY,thousand,innovation_instruments
-Japan,NEDO (New Energy and Industrial Technology Development Organization),2019,14166920.0,14166920.0,1,2019 DL201911001.pdf,single,JPY,thousand,innovation_instruments
-Japan,NEDO (New Energy and Industrial Technology Development Organization),2020,54053016.0,54053016.0,1,2020 DL202011001.pdf,single,JPY,thousand,innovation_instruments
-Japan,NEDO (New Energy and Industrial Technology Development Organization),2021,20000000.0,20000000.0,1,2021 DL202111001.pdf,single,JPY,thousand,innovation_instruments
-Japan,NEDO (New Energy and Industrial Technology Development Organization),2022,5000000.0,5000000.0,1,2022 DL202211001.pdf,single,JPY,thousand,innovation_instruments
-Japan,NEDO (New Energy and Industrial Technology Development Organization),2023,14447800.0,14447800.0,1,2023 DL202311001.pdf,single,JPY,thousand,innovation_instruments
-Japan,NEDO (New Energy and Industrial Technology Development Organization),2024,12556204.0,12556204.0,1,2024 DL202411001.pdf,single,JPY,thousand,innovation_instruments
-Japan,NEDO (New Energy and Industrial Technology Development Organization),2025,10000000.0,10000000.0,1,2025 DL202511001.pdf,single,JPY,thousand,innovation_instruments
-Japan,NIMS (National Institute for Materials Science),2015,11917948.0,11917948.0,1,2015 DL201511001.pdf,single,JPY,thousand,science_agency
-Japan,NIMS (National Institute for Materials Science),2016,12020623.0,12020623.0,1,2016 DL201611001.pdf,single,JPY,thousand,science_agency
-Japan,NIMS (National Institute for Materials Science),2017,,,0,,gap,,,science_agency
-Japan,NIMS (National Institute for Materials Science),2018,,,0,,gap,,,science_agency
-Japan,NIMS (National Institute for Materials Science),2019,13637272.0,13637272.0,1,2019 DL201911001.pdf,single,JPY,thousand,science_agency
-Japan,NIMS (National Institute for Materials Science),2020,,,0,,gap,,,science_agency
-Japan,NIMS (National Institute for Materials Science),2021,14239394.0,14239394.0,1,2021 DL202111001.pdf,single,JPY,thousand,science_agency
-Japan,NIMS (National Institute for Materials Science),2022,,,0,,gap,,,science_agency
-Japan,NIMS (National Institute for Materials Science),2023,14419471.0,14419471.0,1,2023 DL202311001.pdf,single,JPY,thousand,science_agency
-Japan,NIMS (National Institute for Materials Science),2024,,,0,,gap,,,science_agency
-Japan,NIMS (National Institute for Materials Science),2025,,,0,,gap,,,science_agency
-Japan,QST (National Institutes for Quantum Science and Technology),2016,21557994.0,21557994.0,1,2016 DL201611001.pdf,single,JPY,thousand,science_agency
-Japan,QST (National Institutes for Quantum Science and Technology),2017,,,0,,gap,,,science_agency
-Japan,QST (National Institutes for Quantum Science and Technology),2018,21610296.0,21610296.0,1,2018 DL201811001.pdf,single,JPY,thousand,science_agency
-Japan,QST (National Institutes for Quantum Science and Technology),2019,,,0,,gap,,,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2024,27498267000.0,27498267000.0,1,2024 DL202411001.pdf,single,JPY,yen,science_agency
+Japan,JSPS (Japan Society for the Promotion of Science),2025,27498267000.0,27498267000.0,1,2025 DL202511001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1975,1579000000.0,1579000000.0,1,1975 DL197511001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1976,1748000000.0,1748000000.0,1,1976 DL197611001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1977,2680400000.0,2680400000.0,1,1977 DL197711001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1978,2179000000.0,2179000000.0,1,1978 DL197811001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1979,5881000000.0,5881000000.0,1,1979 DL197911001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1980,2616000000.0,2616000000.0,1,1980 DL198011001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1981,6620000000.0,6620000000.0,1,1981 DL198111001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1982,2890000000.0,2890000000.0,1,1982 DL198211001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1983,8467000000.0,8467000000.0,1,1983 DL198311001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1984,2886000000.0,2886000000.0,1,1984 DL198411001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1985,2424000000.0,2424000000.0,1,1985 DL198511001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1986,6251000000.0,6251000000.0,1,1986 DL198611001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1987,2796000000.0,2796000000.0,1,1987 DL198711001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1988,5561000000.0,5561000000.0,1,1988 DL198811001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1989,8794000000.0,8794000000.0,1,1989 DL198911001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1990,2686000000.0,2686000000.0,1,1990 DL199011001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1991,1633000000.0,1633000000.0,1,1991 DL199111001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1992,10000000000.0,10000000000.0,1,1992 DL199211001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1993,3742000000.0,3742000000.0,1,1993 DL199311001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1994,4596000000.0,4596000000.0,1,1994 DL199411001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1995,21539050000.0,21539050000.0,1,1995 DL199511001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),1996,,,0,,gap,,,science_agency
+Japan,JST (Japan Science and Technology Agency),1997,,,0,,gap,,,science_agency
+Japan,JST (Japan Science and Technology Agency),1998,,,0,,gap,,,science_agency
+Japan,JST (Japan Science and Technology Agency),1999,,,0,,gap,,,science_agency
+Japan,JST (Japan Science and Technology Agency),2000,81940072000.0,81940072000.0,1,2000 DL200011001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2001,,,0,,gap,,,science_agency
+Japan,JST (Japan Science and Technology Agency),2002,,,0,,gap,,,science_agency
+Japan,JST (Japan Science and Technology Agency),2003,55573937000.0,55573937000.0,1,2003 DL200311001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2004,94715490000.0,94715490000.0,1,2004 DL200411001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2005,99611126000.0,99611126000.0,1,2005 DL200511001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2006,101436926000.0,101436926000.0,1,2006 DL200611001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2007,48200000000.0,48200000000.0,1,2007 DL200711001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2008,105057905000.0,105057905000.0,1,2008 DL200811001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2009,106657062000.0,106657062000.0,1,2009 DL200911001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2010,,,0,,gap,,,science_agency
+Japan,JST (Japan Science and Technology Agency),2011,104817724000.0,104817724000.0,1,2011 DL201111001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2012,100646191000.0,100646191000.0,1,2012 DL201211001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2013,122951565000.0,122951565000.0,1,2013 DL201311001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2014,119895794000.0,119895794000.0,1,2014 DL201411001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2015,100553048000.0,100553048000.0,1,2015 DL201511001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2016,100888373000.0,100888373000.0,1,2016 DL201611001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2017,101868706000.0,101868706000.0,1,2017 DL201711001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2018,100812003000.0,100812003000.0,1,2018 DL201811001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2019,100511506000.0,100511506000.0,1,2019 DL201911001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2020,100511506000.0,100511506000.0,1,2020 DL202011001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2021,100248601000.0,100248601000.0,1,2021 DL202111001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2022,100337918000.0,100337918000.0,1,2022 DL202211001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2023,100543871000.0,100543871000.0,1,2023 DL202311001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2024,100970256000.0,100970256000.0,1,2024 DL202411001.pdf,single,JPY,yen,science_agency
+Japan,JST (Japan Science and Technology Agency),2025,100771968000.0,100771968000.0,1,2025 DL202511001.pdf,single,JPY,yen,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2001,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2002,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2003,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2004,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2005,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2006,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2007,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2008,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2009,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2010,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2011,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2012,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2013,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2014,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2015,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2016,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2017,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2018,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2019,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2020,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2021,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2022,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2023,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2024,,,0,,gap,,,science_agency
+Japan,"MEXT (Ministry of Education, Culture, Sports, Science and Technology)",2025,,,0,,gap,,,science_agency
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1980,,,0,,gap,,,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1981,,,0,,gap,,,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1982,,,0,,gap,,,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1983,,,0,,gap,,,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1984,,,0,,gap,,,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1985,,,0,,gap,,,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1986,,,0,,gap,,,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1987,,,0,,gap,,,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1988,5561000000.0,5561000000.0,1,1988 DL198811001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1989,7674907000.0,7674907000.0,1,1989 DL198911001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1990,8470887000.0,8470887000.0,1,1990 DL199011001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1991,5595789000.0,5595789000.0,1,1991 DL199111001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1992,10000000000.0,10000000000.0,1,1992 DL199211001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1993,5114793000.0,5114793000.0,1,1993 DL199311001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1994,,,0,,gap,,,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1995,17309050000.0,17309050000.0,1,1995 DL199511001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1996,8015872000.0,8015872000.0,1,1996 DL199611001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1997,9343401000.0,9343401000.0,1,1997 DL199711001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1998,,,0,,gap,,,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),1999,659883000.0,659883000.0,1,1999 DL199911001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2000,3040992000.0,3040992000.0,1,2000 DL200011001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2001,,,0,,gap,,,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2002,22842042000.0,22842042000.0,1,2002 DL200211001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2003,17143263000.0,17143263000.0,1,2003 DL200311001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2004,,,0,,gap,,,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2005,41670822000.0,41670822000.0,1,2005 DL200511001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2006,41670000000.0,41670000000.0,1,2006 DL200611001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2007,68100000000.0,68100000000.0,1,2007 DL200711001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2008,40834570000.0,40834570000.0,1,2008 DL200811001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2009,,,0,,gap,,,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2010,39608141000.0,39608141000.0,1,2010 DL201011001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2011,60439000000.0,60439000000.0,1,2011 DL201111001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2012,,,0,,gap,,,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2013,,,0,,gap,,,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2014,,,0,,gap,,,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2015,7791536000.0,7791536000.0,1,2015 DL201511001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2016,7893451000.0,7893451000.0,1,2016 DL201611001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2017,11301101000.0,11301101000.0,1,2017 DL201711001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2018,13170675000.0,13170675000.0,1,2018 DL201811001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2019,14166920000.0,14166920000.0,1,2019 DL201911001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2020,13943499000.0,13943499000.0,1,2020 DL202011001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2021,14346911000.0,14346911000.0,1,2021 DL202111001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2022,14537336000.0,14537336000.0,1,2022 DL202211001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2023,14447800000.0,14447800000.0,1,2023 DL202311001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2024,12556204000.0,12556204000.0,1,2024 DL202411001.pdf,single,JPY,yen,innovation_instruments
+Japan,NEDO (New Energy and Industrial Technology Development Organization),2025,,,0,,gap,,,innovation_instruments
+Japan,NIMS (National Institute for Materials Science),2001,17160933000.0,17160933000.0,1,2001 DL200111001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2002,,,0,,gap,,,science_agency
+Japan,NIMS (National Institute for Materials Science),2003,16500381000.0,16500381000.0,1,2003 DL200311001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2004,16245928000.0,16245928000.0,1,2004 DL200411001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2005,16125322000.0,16125322000.0,1,2005 DL200511001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2006,15967998000.0,15967998000.0,1,2006 DL200611001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2007,15803318000.0,15803318000.0,1,2007 DL200711001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2008,15429218000.0,15429218000.0,1,2008 DL200811001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2009,15048647000.0,15048647000.0,1,2009 DL200911001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2010,14050726000.0,14050726000.0,1,2010 DL201011001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2011,13623601000.0,13623601000.0,1,2011 DL201111001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2012,13481876000.0,13481876000.0,1,2012 DL201211001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2013,12850203000.0,12850203000.0,1,2013 DL201311001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2014,12329191000.0,12329191000.0,1,2014 DL201411001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2015,11917948000.0,11917948000.0,1,2015 DL201511001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2016,12020623000.0,12020623000.0,1,2016 DL201611001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2017,13459125000.0,13459125000.0,1,2017 DL201711001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2018,13517272000.0,13517272000.0,1,2018 DL201811001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2019,13637272000.0,13637272000.0,1,2019 DL201911001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2020,13787272000.0,13787272000.0,1,2020 DL202011001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2021,14239394000.0,14239394000.0,1,2021 DL202111001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2022,177676000.0,177676000.0,1,2022 DL202211001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2023,,,0,,gap,,,science_agency
+Japan,NIMS (National Institute for Materials Science),2024,14423539000.0,14423539000.0,1,2024 DL202411001.pdf,single,JPY,yen,science_agency
+Japan,NIMS (National Institute for Materials Science),2025,198044000.0,198044000.0,1,2025 DL202511001.pdf,single,JPY,yen,science_agency
+Japan,National Center for Geriatrics and Gerontology,1975,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1976,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1977,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1978,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1979,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1980,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1981,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1982,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1983,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1984,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1985,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1986,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1987,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1988,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1989,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1990,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1991,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1992,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1993,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1994,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1995,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1996,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1997,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1998,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,1999,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2000,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2001,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2002,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2003,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2004,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2005,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2006,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2007,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2008,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2009,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2010,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2011,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2012,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2013,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2014,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2015,1156559000.0,1156559000.0,1,2015 DL201511001.pdf,single,JPY,yen,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2016,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2017,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2018,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2019,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2020,2972260000.0,2972260000.0,1,2020 DL202011001.pdf,single,JPY,yen,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2021,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2022,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2023,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2024,,,0,,gap,,,direct_rd
+Japan,National Center for Geriatrics and Gerontology,2025,,,0,,gap,,,direct_rd
+Japan,National Institute for Environmental Studies,1975,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1976,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1977,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1978,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1979,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1980,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1981,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1982,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1983,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1984,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1985,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1986,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1987,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1988,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1989,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1990,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1991,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1992,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1993,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1994,6777571000.0,6777571000.0,1,1994 DL199411001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,1995,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1996,7747334000.0,7747334000.0,1,1996 DL199611001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,1997,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1998,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,1999,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,2000,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,2001,9250114000.0,9250114000.0,1,2001 DL200111001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2002,9515867000.0,9515867000.0,1,2002 DL200211001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2003,9401135000.0,9401135000.0,1,2003 DL200311001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2004,9254603000.0,9254603000.0,1,2004 DL200411001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2005,,,0,,gap,,,science_agency
+Japan,National Institute for Environmental Studies,2006,361081000.0,361081000.0,1,2006 DL200611001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2007,9680365000.0,9680365000.0,1,2007 DL200711001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2008,9675216000.0,9675216000.0,1,2008 DL200811001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2009,9292205000.0,9292205000.0,1,2009 DL200911001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2010,2835409000.0,2835409000.0,1,2010 DL201011001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2011,13522931000.0,13522931000.0,1,2011 DL201111001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2012,12111369000.0,12111369000.0,1,2012 DL201211001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2013,11454420000.0,11454420000.0,1,2013 DL201311001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2014,10828427000.0,10828427000.0,1,2014 DL201411001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2015,11098305000.0,11098305000.0,1,2015 DL201511001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2016,11695485000.0,11695485000.0,1,2016 DL201611001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2017,12216107000.0,12216107000.0,1,2017 DL201711001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2018,13370483000.0,13370483000.0,1,2018 DL201811001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2019,16658697000.0,16658697000.0,1,2019 DL201911001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2020,16306940000.0,16306940000.0,1,2020 DL202011001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2021,16514384000.0,16514384000.0,1,2021 DL202111001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2022,16387344000.0,16387344000.0,1,2022 DL202211001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2023,16574658000.0,16574658000.0,1,2023 DL202311001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2024,17158975000.0,17158975000.0,1,2024 DL202411001.pdf,single,JPY,yen,science_agency
+Japan,National Institute for Environmental Studies,2025,17177052000.0,17177052000.0,1,2025 DL202511001.pdf,single,JPY,yen,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2005,,,0,,gap,,,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2006,,,0,,gap,,,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2007,,,0,,gap,,,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2008,,,0,,gap,,,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2009,,,0,,gap,,,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2010,,,0,,gap,,,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2011,,,0,,gap,,,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2012,,,0,,gap,,,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2013,,,0,,gap,,,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2014,,,0,,gap,,,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2015,,,0,,gap,,,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2016,3674953000.0,3674953000.0,1,2016 DL201611001.pdf,single,JPY,yen,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2017,3674953000.0,3674953000.0,1,2017 DL201711001.pdf,single,JPY,yen,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2018,3674953000.0,3674953000.0,1,2018 DL201811001.pdf,single,JPY,yen,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2019,,,0,,gap,,,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2020,3690934000.0,3690934000.0,1,2020 DL202011001.pdf,single,JPY,yen,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2021,,,0,,gap,,,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2022,4024297000.0,4024297000.0,1,2022 DL202211001.pdf,single,JPY,yen,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2023,4295787000.0,4295787000.0,1,2023 DL202311001.pdf,single,JPY,yen,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2024,6729156000.0,6729156000.0,1,2024 DL202411001.pdf,single,JPY,yen,science_agency
+Japan,"National Institute of Biomedical Innovation, Health and Nutrition",2025,3799507000.0,3799507000.0,1,2025 DL202511001.pdf,single,JPY,yen,science_agency
+Japan,National Institute of Radiological Sciences,2001,14521704000.0,14521704000.0,1,2001 DL200111001.pdf,single,JPY,yen,historical_science_agency
+Japan,National Institute of Radiological Sciences,2002,,,0,,gap,,,historical_science_agency
+Japan,National Institute of Radiological Sciences,2003,13699971000.0,13699971000.0,1,2003 DL200311001.pdf,single,JPY,yen,historical_science_agency
+Japan,National Institute of Radiological Sciences,2004,,,0,,gap,,,historical_science_agency
+Japan,National Institute of Radiological Sciences,2005,,,0,,gap,,,historical_science_agency
+Japan,National Institute of Radiological Sciences,2006,13139604000.0,13139604000.0,1,2006 DL200611001.pdf,single,JPY,yen,historical_science_agency
+Japan,National Institute of Radiological Sciences,2007,,,0,,gap,,,historical_science_agency
+Japan,National Institute of Radiological Sciences,2008,,,0,,gap,,,historical_science_agency
+Japan,National Institute of Radiological Sciences,2009,,,0,,gap,,,historical_science_agency
+Japan,National Institute of Radiological Sciences,2010,,,0,,gap,,,historical_science_agency
+Japan,National Institute of Radiological Sciences,2011,,,0,,gap,,,historical_science_agency
+Japan,National Institute of Radiological Sciences,2012,,,0,,gap,,,historical_science_agency
+Japan,National Institute of Radiological Sciences,2013,,,0,,gap,,,historical_science_agency
+Japan,National Institute of Radiological Sciences,2014,,,0,,gap,,,historical_science_agency
+Japan,National Institute of Radiological Sciences,2015,,,0,,gap,,,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1976,14574600000.0,14574600000.0,1,1976 DL197611001.pdf,single,JPY,yen,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1977,,,0,,gap,,,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1978,,,0,,gap,,,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1979,93102000000.0,93102000000.0,1,1979 DL197911001.pdf,single,JPY,yen,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1980,,,0,,gap,,,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1981,,,0,,gap,,,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1982,,,0,,gap,,,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1983,,,0,,gap,,,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1984,1627630000.0,1627630000.0,1,1984 DL198411001.pdf,single,JPY,yen,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1985,1378560000.0,1378560000.0,1,1985 DL198511001.pdf,single,JPY,yen,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1986,,,0,,gap,,,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1987,818850000.0,818850000.0,1,1987 DL198711001.pdf,single,JPY,yen,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1988,,,0,,gap,,,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1989,804070000.0,804070000.0,1,1989 DL198911001.pdf,single,JPY,yen,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1990,,,0,,gap,,,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1991,,,0,,gap,,,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1992,,,0,,gap,,,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1993,,,0,,gap,,,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1994,9213884000.0,9213884000.0,1,1994 DL199411001.pdf,single,JPY,yen,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1995,650892000.0,650892000.0,1,1995 DL199511001.pdf,single,JPY,yen,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1996,50937000000.0,50937000000.0,1,1996 DL199611001.pdf,single,JPY,yen,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1997,,,0,,gap,,,historical_science_agency
+Japan,Power Reactor and Nuclear Fuel Development Corporation,1998,,,0,,gap,,,historical_science_agency
+Japan,QST (National Institutes for Quantum Science and Technology),2016,21557994000.0,21557994000.0,1,2016 DL201611001.pdf,single,JPY,yen,science_agency
+Japan,QST (National Institutes for Quantum Science and Technology),2017,21609247000.0,21609247000.0,1,2017 DL201711001.pdf,single,JPY,yen,science_agency
+Japan,QST (National Institutes for Quantum Science and Technology),2018,21609247000.0,21609247000.0,1,2018 DL201811001.pdf,single,JPY,yen,science_agency
+Japan,QST (National Institutes for Quantum Science and Technology),2019,21583061000.0,21583061000.0,1,2019 DL201911001.pdf,single,JPY,yen,science_agency
 Japan,QST (National Institutes for Quantum Science and Technology),2020,,,0,,gap,,,science_agency
-Japan,QST (National Institutes for Quantum Science and Technology),2021,21582563.0,21582563.0,1,2021 DL202111001.pdf,single,JPY,thousand,science_agency
+Japan,QST (National Institutes for Quantum Science and Technology),2021,21582563000.0,21582563000.0,1,2021 DL202111001.pdf,single,JPY,yen,science_agency
 Japan,QST (National Institutes for Quantum Science and Technology),2022,,,0,,gap,,,science_agency
-Japan,QST (National Institutes for Quantum Science and Technology),2023,21762364.0,21762364.0,1,2023 DL202311001.pdf,single,JPY,thousand,science_agency
-Japan,QST (National Institutes for Quantum Science and Technology),2024,,,0,,gap,,,science_agency
-Japan,QST (National Institutes for Quantum Science and Technology),2025,21819020.0,21819020.0,1,2025 DL202511001.pdf,single,JPY,thousand,science_agency
-Japan,RIKEN (Institute of Physical and Chemical Research),2015,53118591.0,53118591.0,1,2015 DL201511001.pdf,single,JPY,thousand,science_agency
-Japan,RIKEN (Institute of Physical and Chemical Research),2016,51591219.0,51591219.0,1,2016 DL201611001.pdf,single,JPY,thousand,science_agency
-Japan,RIKEN (Institute of Physical and Chemical Research),2017,52591219.0,52591219.0,1,2017 DL201711001.pdf,single,JPY,thousand,science_agency
-Japan,RIKEN (Institute of Physical and Chemical Research),2018,52868857.0,52868857.0,1,2018 DL201811001.pdf,single,JPY,thousand,science_agency
-Japan,RIKEN (Institute of Physical and Chemical Research),2019,53108857.0,53108857.0,1,2019 DL201911001.pdf,single,JPY,thousand,science_agency
-Japan,RIKEN (Institute of Physical and Chemical Research),2020,53549284.0,53549284.0,1,2020 DL202011001.pdf,single,JPY,thousand,science_agency
-Japan,RIKEN (Institute of Physical and Chemical Research),2021,54049102.0,54049102.0,1,2021 DL202111001.pdf,single,JPY,thousand,science_agency
-Japan,RIKEN (Institute of Physical and Chemical Research),2022,54164053.0,54164053.0,1,2022 DL202211001.pdf,single,JPY,thousand,science_agency
-Japan,RIKEN (Institute of Physical and Chemical Research),2023,54770381.0,54770381.0,1,2023 DL202311001.pdf,single,JPY,thousand,science_agency
-Japan,RIKEN (Institute of Physical and Chemical Research),2024,55348412.0,55348412.0,1,2024 DL202411001.pdf,single,JPY,thousand,science_agency
-Japan,RIKEN (Institute of Physical and Chemical Research),2025,57736328.0,57736328.0,1,2025 DL202511001.pdf,single,JPY,thousand,science_agency
+Japan,QST (National Institutes for Quantum Science and Technology),2023,21762364000.0,21762364000.0,1,2023 DL202311001.pdf,single,JPY,yen,science_agency
+Japan,QST (National Institutes for Quantum Science and Technology),2024,21788072000.0,21788072000.0,1,2024 DL202411001.pdf,single,JPY,yen,science_agency
+Japan,QST (National Institutes for Quantum Science and Technology),2025,378352000.0,378352000.0,1,2025 DL202511001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1975,3190000000.0,3190000000.0,1,1975 DL197511001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1976,3924983000.0,3924983000.0,1,1976 DL197611001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1977,4125158000.0,4125158000.0,1,1977 DL197711001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1978,4270000000.0,4270000000.0,1,1978 DL197811001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1979,7706000000.0,7706000000.0,1,1979 DL197911001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1980,4596000000.0,4596000000.0,1,1980 DL198011001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1981,8435000000.0,8435000000.0,1,1981 DL198111001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1982,9232000000.0,9232000000.0,1,1982 DL198211001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1983,9451000000.0,9451000000.0,1,1983 DL198311001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1984,5887858000.0,5887858000.0,1,1984 DL198411001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1985,5878827000.0,5878827000.0,1,1985 DL198511001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1986,13793000000.0,13793000000.0,1,1986 DL198611001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1987,8313654000.0,8313654000.0,1,1987 DL198711001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1988,16434000000.0,16434000000.0,1,1988 DL198811001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1989,16056000000.0,16056000000.0,1,1989 DL198911001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1990,6892000000.0,6892000000.0,1,1990 DL199011001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1991,17667000000.0,17667000000.0,1,1991 DL199111001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1992,579855000.0,579855000.0,1,1992 DL199211001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1993,17450764000.0,17450764000.0,1,1993 DL199311001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1994,10986200000.0,10986200000.0,1,1994 DL199411001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1995,30882000000.0,30882000000.0,1,1995 DL199511001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1996,,,0,,gap,,,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1997,42341000000.0,42341000000.0,1,1997 DL199711001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1998,10417000000.0,10417000000.0,1,1998 DL199811001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),1999,55737000000.0,55737000000.0,1,1999 DL199911001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2000,65490000000.0,65490000000.0,1,2000 DL200011001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2001,,,0,,gap,,,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2002,,,0,,gap,,,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2003,36968423000.0,36968423000.0,1,2003 DL200311001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2004,69192377000.0,69192377000.0,1,2004 DL200411001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2005,71101637000.0,71101637000.0,1,2005 DL200511001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2006,67920524000.0,67920524000.0,1,2006 DL200611001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2007,67920524000.0,67920524000.0,1,2007 DL200711001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2008,60138889000.0,60138889000.0,1,2008 DL200811001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2009,59189500000.0,59189500000.0,1,2009 DL200911001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2010,59189500000.0,59189500000.0,1,2010 DL201011001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2011,58377907000.0,58377907000.0,1,2011 DL201111001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2012,58076117000.0,58076117000.0,1,2012 DL201211001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2013,,,0,,gap,,,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2014,53118591000.0,53118591000.0,1,2014 DL201411001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2015,51481219000.0,51481219000.0,1,2015 DL201511001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2016,51591219000.0,51591219000.0,1,2016 DL201611001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2017,52591219000.0,52591219000.0,1,2017 DL201711001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2018,52591219000.0,52591219000.0,1,2018 DL201811001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2019,53108857000.0,53108857000.0,1,2019 DL201911001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2020,53549284000.0,53549284000.0,1,2020 DL202011001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2021,54049102000.0,54049102000.0,1,2021 DL202111001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2022,54164053000.0,54164053000.0,1,2022 DL202211001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2023,54770381000.0,54770381000.0,1,2023 DL202311001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2024,55348412000.0,55348412000.0,1,2024 DL202411001.pdf,single,JPY,yen,science_agency
+Japan,RIKEN (Institute of Physical and Chemical Research),2025,6715556000.0,6715556000.0,1,2025 DL202511001.pdf,single,JPY,yen,science_agency

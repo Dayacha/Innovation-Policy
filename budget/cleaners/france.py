@@ -1,18 +1,19 @@
 """
 France-specific post-extraction cleaner.
 
-Audit findings (JORF Loi de Finances 2010–2025, April 2026):
+Audit findings (JORF Loi de Finances 1970–2025, April 2026):
 
 DOCUMENT TYPE: JORF (Loi de Finances) is the budget law text.
-  - Amounts are mission/programme-level crédits de paiement (CP),
+  - 2006+ (LOLF): Amounts are mission/programme-level crédits de paiement (CP),
     not individual agency grants (CNRS, ANR, CEA etc. come from PAP annexes).
+  - Pre-2006: État B/C tables by ministry chapter.
 
-UNIT: JORF tables show amounts in MILLIONS d'euros.  The LLM frequently
-  returns unit='thousand' with the PDF number as-is. This means:
-    - amount_local=929_000 with unit='thousand' → €929M ✓ (amount already in thousands)
-    - amount_local=2_417 with unit='thousand' → €2.4M ✗ (should be €2.4B; off by 1000x)
-  We cannot reliably auto-correct the off-by-1000x cases without ground-truth
-  ranges per programme. Flag and review.
+UNIT: LOLF era (2006+) credit table amounts are in FULL EUROS.
+  The LLM should extract and convert to millions (divide by 1,000,000, unit='million').
+  If it instead extracts from the ETPT headcount table, amounts will be:
+    - Very large (e.g. 203,561 FTEs × 1000 → 203,561,000 with unit='thousand') — wrong
+    - Or in the 1,000–300,000 range with unit='million' → also wrong (FTEs read as millions)
+  Detection heuristics (steps 7 & 8 below) flag these.
 
 KNOWN ISSUES:
   1. "Crédits de paiement" as bare line description = column header extracted
@@ -26,6 +27,11 @@ KNOWN ISSUES:
      Higher Education") are mission-level sums — redundant if sub-programmes
      are also present.
   5. Exact duplicates: same (year, description, amount) across pages. Keep first.
+  6. FTE headcount rows: LLM extracts from ETPT staffing table instead of credit
+     table. Detected by implausible amount×unit combinations (steps 7 & 8).
+  7. Pre-2006 Legifrance placeholders: some euro-era pre-LOLF pages say
+     "Vous pouvez consulter le tableau dans le JO..." instead of showing the
+     actual Etat B/C table. These references are not extractable budget rows.
 """
 
 from __future__ import annotations
@@ -61,6 +67,19 @@ _ENGLISH_TOTAL_PATTERNS: list[re.Pattern] = [
     re.compile(r"^Total of\b", re.IGNORECASE),
 ]
 
+_PRE_2006_REFERENCE_PATTERNS: list[re.Pattern] = [
+    re.compile(r"vous pouvez consulter le tableau dans le jo", re.IGNORECASE),
+    re.compile(r"tableau.*journal officiel", re.IGNORECASE),
+]
+
+_PRE_2006_STRUCTURAL_PATTERNS: list[re.Pattern] = [
+    re.compile(r"^e\s*t\s*a\s*t\s*[abcde]\b", re.IGNORECASE),
+    re.compile(r"^etat\s*[abcde]\b", re.IGNORECASE),
+    re.compile(r"^titre\s*[ivx]+\b", re.IGNORECASE),
+    re.compile(r"^mesures nouvelles\b", re.IGNORECASE),
+    re.compile(r"^r[ée]partition,\s*par titre et par minist[èe]re", re.IGNORECASE),
+]
+
 _GENERIC_PROGRAMME_PATTERNS: list[tuple[re.Pattern, str]] = [
     (re.compile(r"^Payment credits for\b", re.IGNORECASE), "generic payment-credit programme bucket"),
     (re.compile(r"^Research in the fields? of\b", re.IGNORECASE), "broad thematic programme label"),
@@ -87,6 +106,20 @@ def _is_english_total(desc: str) -> bool:
         if pat.search(desc.strip()):
             return True
     return False
+
+
+def _is_pre2006_reference(desc: str) -> bool:
+    if not isinstance(desc, str):
+        return False
+    text = desc.strip()
+    return any(pat.search(text) for pat in _PRE_2006_REFERENCE_PATTERNS)
+
+
+def _is_pre2006_structural(desc: str) -> bool:
+    if not isinstance(desc, str):
+        return False
+    text = desc.strip()
+    return any(pat.search(text) for pat in _PRE_2006_STRUCTURAL_PATTERNS)
 
 
 def clean(df: pd.DataFrame) -> pd.DataFrame:
@@ -168,5 +201,70 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
             df.loc[dup_mask, "aggregation_role"] = "redundant"
             df.loc[dup_mask, "decision"] = "review"
             df.loc[dup_mask, "cleaning_notes"] += "[duplicate: same year/description/amount]"
+
+    # ------------------------------------------------------------------
+    # 6b. Pre-2006 Legifrance extracts sometimes contain only a reference to
+    #     the official table, not the table itself. Drop those placeholders.
+    # ------------------------------------------------------------------
+    if "year" in df.columns:
+        ref_mask = (
+            (pd.to_numeric(df["year"], errors="coerce") <= 2005)
+            & df["line_description"].apply(_is_pre2006_reference)
+        )
+        if ref_mask.any():
+            df = df[~ref_mask].copy()
+
+        structural_mask = (
+            (pd.to_numeric(df["year"], errors="coerce") <= 2005)
+            & df["line_description"].apply(_is_pre2006_structural)
+        )
+        if structural_mask.any():
+            df = df[~structural_mask].copy()
+
+    # ------------------------------------------------------------------
+    # 7. LOLF era (year >= 2006): Flag all wrong-unit and FTE extractions.
+    #
+    #    The extraction profile instructs the LLM to set unit='million' for
+    #    all LOLF-era JORF documents (credit table amounts are in FULL EUROS,
+    #    convert by dividing by 1,000,000). Therefore:
+    #
+    #    (A) unit='thousand' for year >= 2006 is ALWAYS wrong — either:
+    #        • LLM extracted from the ETPT headcount table (not the credit table)
+    #        • LLM extracted the credit table amount but applied the wrong unit
+    #        Either way: flag as suspicious.
+    #
+    #    (B) unit='million' with amount_local > 50,000 for year >= 2006:
+    #        The largest plausible programme budget is ~€30B = 30,000 million.
+    #        If amount_local > 50,000, the LLM read a headcount (e.g. 203,561
+    #        FTEs) as a million-EUR figure (= €203 trillion — impossible).
+    # ------------------------------------------------------------------
+    if "year" in df.columns and "unit" in df.columns:
+        lolf_mask = df["year"] >= 2006
+
+        # Signature A: any unit='thousand' in LOLF era — wrong by construction
+        fte_sig_a = lolf_mask & (df["unit"] == "thousand")
+        if fte_sig_a.any():
+            df.loc[fte_sig_a, "aggregation_role"] = "redundant"
+            df.loc[fte_sig_a, "decision"] = "review"
+            df.loc[fte_sig_a, "cleaning_notes"] += (
+                "[wrong_unit_lolf: unit=thousand in LOLF era (2006+) — "
+                "JORF credit table is in full EUR; profile requires unit=million. "
+                "Likely ETPT headcount or unit-conversion error. Re-extract.]"
+            )
+
+        # Signature B: unit='million' with implausibly large amount
+        # (> 50,000 million = > €50 trillion — impossible for any programme)
+        fte_sig_b = (
+            lolf_mask
+            & (df["unit"] == "million")
+            & (df["amount_local"] > 50_000)
+        )
+        if fte_sig_b.any():
+            df.loc[fte_sig_b, "aggregation_role"] = "redundant"
+            df.loc[fte_sig_b, "decision"] = "review"
+            df.loc[fte_sig_b, "cleaning_notes"] += (
+                "[fte_headcount_suspected: unit=million with amount>50000 "
+                "— likely ETPT headcount misread as million EUR (e.g. 203,561 FTEs → €203T)]"
+            )
 
     return df.reset_index(drop=True)
