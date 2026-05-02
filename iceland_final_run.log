@@ -1,0 +1,22 @@
+11:07:08 INFO budget.compile — Combined database → /Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/output/budget/rd_database.csv (5104 rows, 17 countries, 56 years)
+
+Combined database: 5104 rows
+             agencies  years  min_year  max_year
+country                                         
+Australia          47     50      1975      2026
+Belgium            14     10      1994      2004
+Canada             29     36      1987      2024
+Chile              42     27      1999      2025
+Colombia           17      6      2002      2018
+Denmark            19     50      1975      2025
+Estonia             9     22      1991      2025
+Finland             8     37      1985      2025
+France             22     35      1970      2025
+Germany            20      7      2003      2025
+Iceland            10     49      1975      2025
+Japan              16     51      1975      2025
+Netherlands        13     50      1975      2025
+Norway            334     52      1975      2026
+Spain              11     19      2002      2023
+Switzerland        36     40      1978      2025
+UK                 15     16      1998      2025

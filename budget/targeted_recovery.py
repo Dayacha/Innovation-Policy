@@ -110,10 +110,22 @@ def _row_mentions(row: dict, variants: list[str]) -> bool:
     return _text_mentions(blob, variants)
 
 
-def _agency_candidates(country: str) -> list[dict]:
+def _recovery_currency(country: str, year: int) -> str:
+    # Belgium switched from BEF to EUR in 2002. Using the modern country
+    # default during targeted recovery made the LLM hallucinate EUR rows for
+    # pre-2002 snippets, which then could not enter the canonical series.
+    if country == "Belgium" and year < 2002:
+        return "BEF"
+    return cfg.COUNTRY_CONTEXT.get(country, cfg.DEFAULT_COUNTRY_CONTEXT).get("currency", "LOCAL")
+
+
+def _agency_candidates(country: str, year: int) -> list[dict]:
     agencies = []
     for agency in _get_agencies_for_country(country):
         if agency.get("category") not in _ELIGIBLE_CATEGORIES:
+            continue
+        active_start, active_end = agency.get("active_years", (1800, 2099))
+        if year < int(active_start) or year > int(active_end):
             continue
         agencies.append(agency)
     return agencies
@@ -280,11 +292,6 @@ def recover_missing_agency_rows(
         key = (str(row.get("country", "")), str(row.get("source_file", "")))
         rows_by_file.setdefault(key, []).append(row)
 
-    currency_by_country = {
-        c: cfg.COUNTRY_CONTEXT.get(c, cfg.DEFAULT_COUNTRY_CONTEXT).get("currency", "LOCAL")
-        for c, _, _ in file_specs
-    }
-
     client = BudgetLLMClient.from_config(config)
     additions: list[dict] = []
     additions_by_file: dict[tuple[str, str], list[dict]] = {}
@@ -292,7 +299,7 @@ def recover_missing_agency_rows(
     for country, year, path in file_specs:
         key = (country, path.name)
         file_rows = rows_by_file.get(key, [])
-        agencies = _agency_candidates(country)
+        agencies = _agency_candidates(country, year)
         for agency in agencies:
             recovered = _recover_for_agency(
                 country=country,
@@ -303,7 +310,7 @@ def recover_missing_agency_rows(
                 file_rows=file_rows + additions_by_file.get(key, []),
                 client=client,
                 cache_dir=pdf_text_cache_dir,
-                currency=currency_by_country[country],
+                currency=_recovery_currency(country, year),
                 use_cache=use_cache,
             )
             if recovered:

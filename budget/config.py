@@ -942,6 +942,298 @@ COUNTRY_CONTEXT: dict[str, dict] = {
             "research institute operating budgets."
         ),
     },
+    "Belgium": {
+        "currency": "EUR",
+        "currency_symbol": "€",
+        "language": "french/dutch",
+        "unit_hint": (
+            "ERA-DEPENDENT UNITS — always read the budget header. "
+            "(1) Pre-2002 Belgium may use BEF (Belgian francs), often in THOUSANDS or MILLIONS. "
+            "If the header says 'en milliers de francs' / 'in duizend frank', set currency='BEF', unit='thousand'. "
+            "If it says 'en millions', set unit='million'. "
+            "(2) 2002+ usually uses EUR, often in THOUSANDS of euros. "
+            "If the header says 'en milliers d'euros' / 'in duizend euro', set currency='EUR', unit='thousand'. "
+            "Do not guess the scale from the number alone; use the table header."
+        ),
+        "known_agencies": [
+            "BELSPO (Belgian Science Policy Office)",
+            "SSTC / OSTC (Services fédéraux des affaires scientifiques, techniques et culturelles / Office for Scientific Technical and Cultural Affairs)",
+            "FWO (Research Foundation - Flanders)",
+            "FNRS (Fonds de la Recherche Scientifique)",
+            "SCK CEN (Belgian Nuclear Research Centre)",
+            "Royal Observatory of Belgium",
+            "Royal Meteorological Institute of Belgium",
+            "Royal Belgian Institute of Natural Sciences",
+            "Belgian Institute for Space Aeronomy",
+        ],
+        "mixed_ministries": [
+            "Ministry of Defence",
+            "Ministry of Social Affairs",
+            "Ministry of Transport",
+            "Ministry of Finance",
+            "Social security",
+        ],
+        "doc_type_hint": (
+            "Belgian federal budget / finance law. Belgium mixes federal, community, and regional structures. "
+            "Prefer explicit science-policy, research-council, and named institute lines over broad ministry totals. "
+            "Look for BELSPO / SSTC / OSTC, FNRS, FWO, nuclear, space, meteorology, and observatory institutes."
+        ),
+    },
+    "Chile": {
+        "currency": "CLP",
+        "currency_symbol": "$",
+        "language": "spanish",
+        "unit_hint": (
+            "Most Chilean budget law tables appear with a header like 'En miles de pesos'. "
+            "If the header says 'miles de pesos', set currency='CLP', unit='thousand'. "
+            "If it states plain pesos, set unit='unit'. "
+            "Spanish number format: period '.' thousands separator, comma ',' decimal separator."
+        ),
+        "known_agencies": [
+            "CONICYT (Comisión Nacional de Investigación Científica y Tecnológica)",
+            "ANID (Agencia Nacional de Investigación y Desarrollo)",
+            "CORFO innovation / technological development lines",
+            "INIA (Instituto de Investigaciones Agropecuarias)",
+            "IFOP (Instituto de Fomento Pesquero)",
+        ],
+        "mixed_ministries": [
+            "Ministry of Defence",
+            "Ministry of Social Development",
+            "Ministry of Public Works",
+            "Ministry of Transport",
+            "broad education totals",
+        ],
+        "doc_type_hint": (
+            "Chilean budget law / decreto ley. Prefer explicit science and innovation agencies, agricultural and fisheries research institutes, "
+            "and named R&D support funds. Broad ministry totals, social programmes, public works, and defence procurement should be treated conservatively."
+        ),
+    },
+    "Estonia": {
+        "currency": "EUR",
+        "currency_symbol": "€",
+        "language": "estonian",
+        "unit_hint": (
+            "ERA-DEPENDENT CURRENCY — read the header. "
+            "1991 may use roubles / RUB (sample law says 'rublades'). "
+            "1992-2010 generally use EEK (Estonian kroon); euro-era years use EUR. "
+            "The scale may be full units or thousands depending on the budget table. "
+            "If the header says 'tuhat' / 'thousand', set unit='thousand'; otherwise use unit='unit'."
+        ),
+        "known_agencies": [
+            "Haridus- ja Teadusministeerium (Ministry of Education and Research)",
+            "Eesti Teadusagentuur (Estonian Research Council)",
+            "Eesti Teadusfond (Estonian Science Foundation)",
+            "SA Archimedes",
+            "Tartu Ülikool (University of Tartu)",
+            "Tallinna Tehnikaülikool (TalTech / Tallinn University of Technology)",
+        ],
+        "mixed_ministries": [
+            "social insurance",
+            "municipal transfers",
+            "transport and infrastructure ministries",
+            "broad education spending without research signal",
+        ],
+        "doc_type_hint": (
+            "Estonian state budget law. Research may appear under the education/research ministry, research council/foundation lines, "
+            "and university or institute appropriations. Keep ministry totals conservative unless they are clearly research-specific."
+        ),
+    },
+    "Iceland": {
+        "currency": "ISK",
+        "currency_symbol": "kr",
+        "language": "icelandic",
+        "unit_hint": (
+            "ERA-DEPENDENT scale — always read the document header first. "
+            "(1) Pre-1993 (e.g. 1975–1992): amounts in THOUSANDS of króna. "
+            "Header says 'Þús. kr.' or 'ÞÚ. kr.' — set unit='thousand'. "
+            "(2) 1993 onward: amounts in MILLIONS of króna. "
+            "Header says 'M.kr.', 'm.kr.', or 'mkr.' — set unit='million'. "
+            "Do NOT infer scale from the size of the numbers alone; always confirm from the header."
+        ),
+        "known_agencies": [
+            # Pre-2003 research governance bodies
+            "Rannsóknaráð ríkisins (National Research Council of Iceland, code 02-232 / 232)",
+            "Vísindaráð (Science Council, code 02-234 / 234)",
+            "Vísindasjóður (Science Fund, code 02-235 / 975)",
+            "Rannsóknasjóður (Research Fund, code 02-233 / 233)",
+            "Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research, code 02-276 / 276)",
+            # Post-2003 consolidated research centre
+            "Rannís (Icelandic Centre for Research) — created 2003, consolidated pre-existing research councils",
+            # Universities
+            "Háskóli Íslands (University of Iceland, code 02-201 / 201)",
+            "Háskólinn á Akureyri (University of Akureyri, code 02-210)",
+            "Landbúnaðarháskóli Íslands (Agricultural University of Iceland)",
+            "Raunvísindastofnun Háskólans (Science Institute of the University of Iceland, code 02-203)",
+            # Research institutes — marine, energy, environment
+            "Hafrannsóknastofnun (Marine and Freshwater Research Institute, code 05-202)",
+            "Orkustofnun (National Energy Authority — includes geothermal research, code 11-301)",
+            "ÍSOR (Iceland GeoSurvey — geothermal and geological research, spun off from Orkustofnun ~2003)",
+            "Veðurstofa Íslands (Icelandic Meteorological Office — atmospheric research)",
+            "Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History)",
+            # Functional budget categories (2023 structure)
+            "07.10 Vísindi og samkeppnissjóðir í rannsóknum (Science and competition funds in research)",
+            "21.10 Háskólar og rannsóknastarfsemi (Universities and research activities)",
+            "12.20 Rannsóknir, þróun og nýsköpun í landbúnaðarmálum (Agricultural R&D)",
+            "13.20 Rannsóknir, þróun og nýsköpun í sjávarútvegi (Fisheries R&D)",
+            "17.20 Rannsóknir og vöktun á náttúru Íslands (Nature research and monitoring)",
+        ],
+        "mixed_ministries": [
+            "Sjávarútvegur — fisheries OPERATIONAL support lines without 'rannsókn/rannsóknir'",
+            "Samgönguráðuneytið — public works, roads, transport without research signal",
+            "Tryggingamálastofnun — social insurance without research signal",
+            "Broad ministry chapter totals (samtals/alls lines)",
+        ],
+        "doc_type_hint": (
+            "Icelandic Fjárlög (Finance Law / Annual Budget). "
+            "CHAPTER CODE FORMATS BY ERA: "
+            "(1) 1975–1985: simple 3-digit codes — e.g. '201 Háskóli Íslands', '232 Rannsóknaráð', '301 Orkustofnun'. "
+            "(2) 1986–2002: two-tier XX-YYY codes — ministry prefix (02=Education, 05=Fisheries, 11=Industry) + 3-digit agency code. "
+            "E.g. '02-232 Rannsóknaráð ríkisins', '05-202 Hafrannsóknastofnun', '11-301 Orkustofnun'. "
+            "(3) 2003+: Rannís created by merging Rannsóknaráð + Vísindaráð + Vísindasjóður + Rannsóknasjóður. "
+            "Functional decimal codes: '07.10 Vísindi og samkeppnissjóðir í rannsóknum', '21.10 Háskólar og rannsóknastarfsemi'. "
+            "KEY R&D TERMS: rannsókn/rannsóknir (research), vísindi (science), nýsköpun (innovation), þróun (development), "
+            "háskóli (university), tilraunastöð (experimental station). "
+            "UNIT RULE: pre-1993 = Þús. kr. (thousands), 1993+ = M.kr. (millions). "
+            "SKIP: fisheries operational vessels/quota lines without 'rannsókn', "
+            "road/port construction, broad 'samtals' totals, social insurance transfers."
+        ),
+    },
+    "Hungary": {
+        "currency": "HUF",
+        "currency_symbol": "Ft",
+        "language": "hungarian",
+        "ocr_langs": "hun+eng",
+        "ocr_zoom": 2.5,
+        "unit_hint": (
+            "Hungarian annual budget laws usually state amounts in MILLIONS of forint "
+            "('millió forint'). Set currency='HUF', unit='million' unless the table header "
+            "explicitly states a different scale. Do NOT infer 'thousand' from number size alone."
+        ),
+        "known_agencies": [
+            "Magyar Tudományos Akadémia (MTA / Hungarian Academy of Sciences)",
+            "MTA Könyvtár és Információs Központ (MTA Library and Information Centre)",
+            "Nemzeti Kutatási, Fejlesztési és Innovációs Alap (National Research, Development and Innovation Fund)",
+            "Nemzeti Kutatási, Fejlesztési és Innovációs Hivatal (NRDI Office)",
+            "Nemzeti Agrárkutatási és Innovációs Központ",
+            "Hazai innováció támogatása (domestic innovation support)",
+            "A nemzetközi együttműködésben megvalósuló innováció támogatása",
+            "kutatóközpont", "kutatóintézet", "kutatási infrastruktúra",
+        ],
+        "mixed_ministries": [
+            "Broad 'fejezet összesen', 'cím összesen', 'alcím összesen', 'mindösszesen' totals",
+            "Road, rail, and general infrastructure development lines without kutatás/innováció signal",
+            "Defence, police, and security lines without explicit kutatás/fejlesztés signal",
+            "General education, welfare, and healthcare operating lines without research signal",
+        ],
+        "doc_type_hint": (
+            "Hungarian annual budget law / Magyar Közlöny budget text. "
+            "The source family is usable for extraction, but earlier years often behave more like "
+            "legal wrappers while modern years contain richer named budget rows. Look for named research bodies and "
+            "programme rows containing kutatás (research), fejlesztés (development), innováció "
+            "(innovation), kutatóközpont / kutatóintézet, MTA, and Nemzeti Kutatási. "
+            "Strong targets include the NRDI Fund, MTA bodies, agricultural research bodies, "
+            "and explicit innovation support lines. Keep broad chapter totals conservative."
+        ),
+    },
+    "Latvia": {
+        "currency": "EUR",
+        "currency_symbol": "€",
+        "language": "latvian",
+        "ocr_langs": "lav+eng",
+        "ocr_zoom": 2.5,
+        "unit_hint": (
+            "ERA-DEPENDENT currency, but amounts appear to be in FULL currency units, not thousands. "
+            "(1) Pre-2014 budgets: Latvian lats (LVL / latu). Set currency='LVL', unit='unit'. "
+            "(2) 2014 onward: euro. Set currency='EUR', unit='unit'. "
+            "If a document header explicitly states another scale, follow the header; otherwise do NOT invent thousands or millions."
+        ),
+        "known_agencies": [
+            "Izglītības un zinātnes ministrija (Ministry of Education and Science)",
+            "Latvijas Zinātnes padome (Latvian Science Council)",
+            "Latvijas Zinātņu akadēmija (Latvian Academy of Sciences / LZA)",
+            "Zinātnes bāzes finansējums (science base funding)",
+            "Fundamentālie zinātniskie pētījumi (fundamental scientific research)",
+            "Valsts pārvaldes institūciju pasūtītie zinātniskie pētījumi",
+            "Zinātniskās darbības attīstība universitātēs",
+            "Zinātniskās infrastruktūras nodrošināšana un attīstība augstskolās",
+            "Zinātnes konkurētspējas veicināšana",
+        ],
+        "mixed_ministries": [
+            "Broad ministry totals for Izglītības un zinātnes ministrija — section is too broad and includes sports, loans, and non-R&D education items",
+            "Police and defence academies without explicit scientific research wording",
+            "University hospitals and general healthcare service bodies",
+            "Sports, student-credit, and cultural infrastructure lines without research wording",
+        ],
+        "doc_type_hint": (
+            "Latvian annual budget law. The source family is mixed: early 1990s and some modern years behave like short legal wrappers, "
+            "while mid-1990s to 2000s annex-style files contain richer programme tables. Strong targets are explicit science programmes and "
+            "named science bodies: Latvijas Zinātnes padome, Latvijas Zinātņu akadēmija, science base funding, fundamental research, "
+            "state-commissioned scientific research, and university science development/infrastructure lines. Keep broad ministry totals conservative."
+        ),
+    },
+    "Israel": {
+        "currency": "ILS",
+        "currency_symbol": "₪",
+        "language": "hebrew",
+        "unit_hint": (
+            "ERA-DEPENDENT currency and scale — read the opening 'סכום של...' declaration first. "
+            "(1) 1975–1979: Israeli Pound / Lira (לירות / ל״י). Full lira units. Set currency='ILP', unit='unit'. "
+            "(2) 1980–1985: Old Shekel (שקל / שקלים). Amounts in MILLIONS of shekels (מיליוני שקלים). Set currency='ILS_OLD', unit='million'. "
+            "(3) 1986–~2019: New Israeli Shekel (שקל חדש / ₪). Amounts stated as 'אלפי שקלים חדשים' = THOUSANDS of NIS. Set currency='ILS', unit='thousand'. "
+            "(4) 2020+: Full NIS, no scaling (שקלים חדשים only, no 'אלפי'). Set currency='ILS', unit='unit'. "
+            "Always confirm from the document header — do not infer from number size alone."
+        ),
+        "known_agencies": [
+            # Core science ministry (from 1992)
+            "משרד המדע והטכנולוגיה / משרד המדע (Ministry of Science and Technology, budget code 19, from 1992)",
+            "סעיף 19 — internal sub-codes: 02=R&D Council, 03=Research programmes, 05=Science infrastructure, 07=Space Agency",
+            # Pre-1992 R&D governance
+            "המועצה הלאומית למחקר ולפיתוח (National Council for Research and Development, code 74, pre-1992)",
+            # Innovation / industrial R&D
+            "רשות החדשנות הישראלית (Israel Innovation Authority, from 2016 — replaced the Office of the Chief Scientist)",
+            "מדען ראשי (Office of the Chief Scientist / Chief Scientist) — appears as sub-line in Ministry of Economy/Industry, pre-2016",
+            "קרן קמ\"ח (KAMEA competitive research fund — appears under code 31 05 in industry ministry)",
+            # Basic research funding
+            "קרן מדע ישראל (Israel Science Foundation / ISF — funds basic research at universities)",
+            "האקדמיה הלאומית למדעים (Israel National Academy of Sciences and Humanities)",
+            # Space
+            "סוכנות החלל הישראלית (Israeli Space Agency, under Ministry of Science, sub-code 07)",
+            # Universities — include when a named research or infrastructure line appears
+            "האוניברסיטה העברית בירושלים (Hebrew University of Jerusalem)",
+            "הטכניון — מכון טכנולוגי לישראל (Technion — Israel Institute of Technology)",
+            "מכון ויצמן למדע (Weizmann Institute of Science)",
+            "אוניברסיטת תל אביב (Tel Aviv University)",
+            "אוניברסיטת בר-אילן (Bar-Ilan University)",
+            "אוניברסיטת בן-גוריון (Ben-Gurion University of the Negev)",
+            "אוניברסיטת חיפה (University of Haifa)",
+            # Health / agriculture research
+            "מרכז לבקרת מחלות (Center for Disease Control — health research)",
+            "מרכז וולקני (Volcani Center — agricultural research, under Ministry of Agriculture)",
+        ],
+        "mixed_ministries": [
+            "משרד הביטחון (Ministry of Defence) — skip unless 'מחקר/פיתוח' explicitly in the line description",
+            "משרד החינוך (Ministry of Education) — skip broad totals; include only named science/research programmes",
+            "ביטוח לאומי (National Insurance Institute / Bituah Leumi) — social insurance, not R&D",
+            "משרד הבינוי והשיכון (Housing and Construction) — infrastructure, not R&D",
+            "משרד התחבורה (Transport) — skip unless road-safety/tech research explicitly named",
+            "Broad ministry section totals (two-digit code only, no sub-code) — these are aggregates",
+        ],
+        "doc_type_hint": (
+            "Israeli חוק התקציב (Budget Law / Finance Act). "
+            "DOCUMENT STRUCTURE: opening 'סכום של...' declares total and unit. "
+            "Budget hierarchy: 2-digit ministry code (סעיף) → sub-code (תחום פעולה) → programme line (תכנית). "
+            "E.g. '19 02 03' = Ministry of Science (19) / R&D Council (02) / Research programmes (03). "
+            "MINISTRY CODE GUIDE: 19=Science, 20=Education, 15=Defence, 26=Environment. "
+            "PRE-1992 R&D: no Ministry of Science; look for code 74 (National Council for R&D) and "
+            "'מדען ראשי' sub-lines in the industry/economy ministry. "
+            "POST-1992: Ministry of Science (code 19) is the primary R&D vehicle. "
+            "POST-2016: Israel Innovation Authority (רשות החדשנות) replaces Chief Scientist at Ministry of Economy. "
+            "KEY HEBREW R&D TERMS: מחקר (research), פיתוח (development), מו\"פ (R&D), מדע (science), "
+            "טכנולוגיה (technology), חדשנות (innovation), מדען ראשי (chief scientist), קרן (fund). "
+            "SKIP: defence procurement, social insurance (ביטוח לאומי), housing, roads, "
+            "broad 2-digit ministry totals without sub-code detail."
+        ),
+    },
     "Japan": {
         "currency": "JPY",
         "currency_symbol": "¥",
@@ -973,6 +1265,152 @@ COUNTRY_CONTEXT: dict[str, dict] = {
                          "Look for 文部科学省 (MEXT) and 経済産業省 (METI) R&D appropriations. "
                          "Amounts typically in 百万円 (millions of yen). "
                          "Key line items: 科学技術振興費 (S&T promotion), 研究開発 (R&D).",
+    },
+    "Korea": {
+        "currency": "KRW",
+        "currency_symbol": "₩",
+        "language": "korean",
+        "ocr_langs": "kor+eng",
+        "ocr_zoom": 3.0,
+        "unit_hint": (
+            "Korean budget-summary documents are document-dependent. Use the unit stated in the "
+            "text exactly: 조원=billion-scale won summary amount, 억원=100 million won, 원=full won. "
+            "Do NOT convert between units unless the document explicitly does so."
+        ),
+        "known_agencies": [
+            "과학기술정보통신부 (Ministry of Science and ICT)",
+            "국가연구개발 / 국가 R&D / 연구개발 / R&D",
+            "AI", "반도체", "우주", "바이오", "양자",
+            "과학기술", "혁신성장", "미래산업 전략 R&D",
+        ],
+        "mixed_ministries": [
+            "Broad macro fiscal totals like 총지출, 총수입, 재정수지, 국가채무",
+            "Welfare, housing, labour, and regional-support lines without R&D signal",
+            "Loan, fund, and credit-support announcements without explicit R&D appropriation language",
+            "PR / slogan / infographic captions without a concrete amount-programme pair",
+        ],
+        "doc_type_hint": (
+            "Korean source files in this folder are mostly budget proposal summaries / briefs, "
+            "not classic line-item appropriations laws. Extract only when an explicit won amount "
+            "is tied to a named R&D programme, theme, or science ministry line. Prefer programme-"
+            "level extraction over institutional hallucination. Several PDFs are image/graphic-heavy and "
+            "may yield near-zero machine text; if a page is only macro narrative or no readable text, skip it."
+        ),
+    },
+    "Colombia": {
+        "currency": "COP",
+        "currency_symbol": "$",
+        "language": "spanish",
+        "unit_hint": (
+            "Amounts are in FULL Colombian pesos (pesos moneda legal) — set unit='unit', currency='COP'. "
+            "There is NO 'miles de' or 'millones de' scaling in the detailed appropriations tables. "
+            "Number format: period '.' is thousands separator (e.g. '92.568.145.000' = 92,568,145,000 COP). "
+            "Comma ',' is the decimal separator. "
+            "Do NOT divide amounts; extract them verbatim as full pesos."
+        ),
+        "known_agencies": [
+            # Science & innovation ministry — primary R&D vehicle
+            "COLCIENCIAS — Departamento Administrativo de Ciencia, Tecnología e Innovación (pre-2019, SECCIÓN ~1114)",
+            "MinCiencias — Ministerio de Ciencia, Tecnología e Innovación (from 2019, replaces COLCIENCIAS)",
+            "Fondo Francisco José de Caldas (managed by COLCIENCIAS/MinCiencias — competitive research grants)",
+            # Industrial & applied R&D
+            "SENA — Servicio Nacional de Aprendizaje (SECCIÓN 3602) — vocational training BUT also has significant R&D/innovation investment budget",
+            "SENA sub-programmes: 'Fomento de la investigación, desarrollo tecnológico e innovación'",
+            "iNNpulsa Colombia (agency for entrepreneurship and innovation, under MinCIT)",
+            # Agricultural research
+            "AGROSAVIA — Corporación Colombiana de Investigación Agropecuaria (from 2018, formerly CORPOICA)",
+            "CORPOICA — Corporación Colombiana de Investigación Agropecuaria (pre-2018)",
+            "ICA — Instituto Colombiano Agropecuario (plant/animal health + agri research)",
+            # Environmental & technical research institutes
+            "IDEAM — Instituto de Hidrología, Meteorología y Estudios Ambientales",
+            "IGAC — Instituto Geográfico Agustín Codazzi",
+            "INM — Instituto Nacional de Metrología (SECCIÓN 3505)",
+            "ICONTEC / ONAC (metrology and standards, R&D-adjacent)",
+            # Health research
+            "Instituto Nacional de Salud (INS) — public health research",
+            "Instituto Nacional de Cancerología",
+            # Universities (include only explicit research/innovation programme lines)
+            "Universidad Nacional de Colombia (UNAL) — research and innovation investment lines",
+            "Universidades públicas with explicit 'investigación' or 'innovación' investment projects",
+            # CTel royalties fund (off-budget but important context)
+            "Sistema General de Regalías — Fondo de Ciencia, Tecnología e Innovación (CTel) — note: off-budget, may not appear in PGN",
+        ],
+        "mixed_ministries": [
+            "Ministerio de Defensa (SECCIÓN 1501+) — skip unless 'investigación' or 'desarrollo tecnológico' explicit",
+            "Ministerio de Educación (SECCIÓN 2201) — skip broad education totals; include only named research programmes",
+            "Ministerio de Salud — skip general health transfers; include named research institute lines (INS, Cancerología)",
+            "ICBF — social protection, not R&D",
+            "Ministerio de Hacienda administrative lines",
+            "Broad INTERSUBSECTORIAL lines (cross-ministry pooled appropriations) without research signal",
+        ],
+        "doc_type_hint": (
+            "Colombian Ley del Presupuesto General de la Nación (PGN). "
+            "DOCUMENT TYPES: Some years are plain legal text (legal wrapper only, no detailed annex tables); "
+            "other years have detailed SECCIÓN-by-SECCIÓN tables. If the document is narrative law text only, "
+            "yield will be sparse — that is expected, not an error. "
+            "BUDGET STRUCTURE: SECCIÓN (4-digit entity code) → FUNCIONAMIENTO (A) or INVERSIÓN (C) → programme items. "
+            "Key SECCIÓN codes: 1114=COLCIENCIAS/MinCiencias, 3602=SENA, 3505=INM, 1301=AGROSAVIA/CORPOICA. "
+            "INVESTMENT PROGRAMMES (PRESUPUESTO DE INVERSION) are the most important for R&D — "
+            "look for programme names containing 'investigación', 'ciencia', 'tecnología', 'innovación', 'I+D'. "
+            "UNIT: full COP pesos, period=thousands separator. "
+            "SKIP: defence (1501+), social protection (ICBF), housing, roads, broad 'TOTAL SECCIÓN' lines."
+        ),
+    },
+    "Costa Rica": {
+        "currency": "CRC",
+        "currency_symbol": "₡",
+        "language": "spanish",
+        "unit_hint": (
+            "Amounts are in FULL Costa Rican colones (colones corrientes) — set unit='unit', currency='CRC'. "
+            "Modern documents (2010+) state 'en colones corrientes' in the header. "
+            "Number format: period '.' is thousands separator (e.g. '9.500.000' = 9,500,000 CRC). "
+            "1989 document may use narrative 'millones de colones' — read the context carefully. "
+            "Do NOT scale amounts; extract verbatim."
+        ),
+        "known_agencies": [
+            # Science ministry and main research funder
+            "MICITT — Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones",
+            "CONICIT — Consejo Nacional para Investigaciones Científicas y Tecnológicas (main research funding body)",
+            "Promotora Costarricense de Innovación e Investigación (PCII, budget code 001 in 2023+)",
+            # Universities (FEES = Fondo Especial de Educación Superior is the bulk transfer; include research-labelled sub-lines)
+            "UCR — Universidad de Costa Rica (large FEES transfer; include explicit research/Vínculo Externo lines)",
+            "ITCR / TEC — Instituto Tecnológico de Costa Rica",
+            "UNA — Universidad Nacional de Costa Rica",
+            "UNED — Universidad Estatal a Distancia",
+            "FEES — Fondo Especial de Educación Superior (bulk university transfer — mark as 'higher_education')",
+            # Agricultural & environmental research
+            "INTA — Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria",
+            "CATIE — Centro Agronómico Tropical de Investigación y Enseñanza",
+            "SENASA (animal health research lines)",
+            "SINAC research lines",
+            # Health research
+            "INCIENSA — Instituto Costarricense de Investigación y Enseñanza en Nutrición y Salud",
+            "CCSS research lines (Caja Costarricense de Seguro Social — only explicit research sub-lines)",
+            # Technical/standards
+            "LANAMME-UCR — Laboratorio Nacional de Materiales y Modelos Estructurales",
+            "INTECO / MEIC research lines",
+        ],
+        "mixed_ministries": [
+            "Ministerio de Educación Pública — broad education; include only named research/science programmes",
+            "Ministerio de Salud — include only INCIENSA or named research institute lines",
+            "Ministerio de Obras Públicas y Transportes (MOPT) — infrastructure, not R&D",
+            "CCSS general health services — only explicit research sub-lines",
+            "Broad 'Transferencias' totals to autonomous institutions without research signal",
+        ],
+        "doc_type_hint": (
+            "Costa Rican Ley de Presupuesto de la República. "
+            "MULTI-VOLUME STRUCTURE: Several years (2013, 2014, 2017) are split into multiple Tomos (volumes). "
+            "Each tomo covers different ministries/sectors. R&D agencies may appear in ANY tomo. "
+            "Do not conclude a year is R&D-absent if only one tomo was reviewed. "
+            "BUDGET CODE FORMAT (2010+): highly structured multi-column format — "
+            "'C.SC.G. SG. P. SP. R. SR. FF' (Cuenta.Subcuenta.Grupo... Fuente de Financiamiento). "
+            "R&D agencies appear as named line items (CONCEPTO) alongside these codes. "
+            "KEY R&D TERMS (Spanish): investigación (research), desarrollo (development), innovación (innovation), "
+            "ciencia (science), tecnología (technology), transferencia tecnológica, Vínculo externo UCR. "
+            "UNIT: full colones, period=thousands separator. "
+            "SKIP: MOPT roads/infrastructure, broad education transfers without research label, "
+            "CCSS general health services, pension funds, public debt service."
+        ),
     },
 }
 

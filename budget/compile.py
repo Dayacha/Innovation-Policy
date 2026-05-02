@@ -66,6 +66,7 @@ _OUTPUT_UNIT_BY_CURRENCY = {
     "DKK": "krone",
     "NOK": "krone",
     "SEK": "krona",
+    "ISK": "krona",
 }
 
 _SCALE_TO_BASE_UNIT = {
@@ -79,6 +80,7 @@ _SCALE_TO_BASE_UNIT = {
 }
 
 _FRANCE_FULL_TEXT_DIR = Path("Data/output/budget/full_text/France")
+_COLOMBIA_FULL_TEXT_DIR = Path("Data/output/budget/full_text/Colombia")
 _FRANCE_PROGRAMME_LABELS = [
     "Recherches scientifiques et technologiques pluridisciplinaires",
     "Recherche spatiale",
@@ -96,6 +98,72 @@ _FRANCE_PRE_LOLF_TOTAL_RE = re.compile(
     r"^total(?: des)? cr[ée]dits? de paiement pour\b|^total pour\b|^total for\b",
     re.IGNORECASE,
 )
+_COLOMBIA_PAGE_RE = re.compile(r"=== Page (\d+)\.0")
+_COLOMBIA_AMOUNT_RE = re.compile(r"\d[\d\.,]{4,}")
+_COLOMBIA_TARGETED_AGENCIES = [
+    {
+        "entity_raw": "MINISTERIO DE CIENCIA, TECNOLOGIA E INNOVACION",
+        "section_name": "3901 MINISTERIO DE CIENCIA, TECNOLOGIA E INNOVACION",
+        "patterns": [
+            re.compile(r"MINISTERIO DE CIENCIA.{0,300}TOTAL PRESUPUESTO", re.IGNORECASE | re.DOTALL),
+            re.compile(r"M[IL]N[IL]STERIO DE CIENCIA.{0,300}TOTAL PRESUPUESTO", re.IGNORECASE | re.DOTALL),
+            re.compile(r"\b3901\b.{0,120}MINISTERIO DE CIENCIA", re.IGNORECASE | re.DOTALL),
+            re.compile(r"\b3901\b.{0,160}M[IL]N[IL]STERIO DE CIENCIA", re.IGNORECASE | re.DOTALL),
+            re.compile(r"\b3901\b.{0,160}DEPARTAMENTO ADMINISTRATIVO DE LA CIENCIA", re.IGNORECASE | re.DOTALL),
+        ],
+    },
+    {
+        "entity_raw": "INSTITUTO NACIONAL DE METROLOGIA - INM",
+        "section_name": "3505 INSTITUTO NACIONAL DE METROLOGIA - INM",
+        "patterns": [
+            re.compile(r"INSTITUTO NACIONAL DE METROLOG[IÍ]A.{0,300}TOTAL PRESUPUESTO", re.IGNORECASE | re.DOTALL),
+        ],
+    },
+    {
+        "entity_raw": "INSTITUTO NACIONAL DE SALUD (INS)",
+        "section_name": "1903 INSTITUTO NACIONAL DE SALUD (INS)",
+        "patterns": [
+            re.compile(r"INSTITUTO NACIONAL DE SALUD.{0,300}TOTAL PRESUPUESTO", re.IGNORECASE | re.DOTALL),
+        ],
+    },
+]
+_COLOMBIA_COMPONENT_AGENCIES = [
+    {
+        "entity_raw": "SERVICIO NACIONAL DE APRENDIZAJE (SENA)",
+        "section_name": "3602 SERVICIO NACIONAL DE APRENDIZAJE (SENA)",
+        "pattern": re.compile(r"SERVICIO NACIONAL DE APRENDIZAJE\s*\(SENA\).{0,260}", re.IGNORECASE | re.DOTALL),
+        "components": 3,
+        "max_amount": 3_000_000_000_000,
+    },
+    {
+        "entity_raw": "INSTITUTO COLOMBIANO AGROPECUARIO (ICA)",
+        "section_name": "1702 INSTITUTO COLOMBIANO AGROPECUARIO (ICA)",
+        "pattern": re.compile(r"INSTITUTO COLOMBIANO AGROPECUARIO\s*\(ICA\).{0,220}", re.IGNORECASE | re.DOTALL),
+        "components": 2,
+        "max_amount": 100_000_000_000,
+    },
+    {
+        "entity_raw": "INSTITUTO NACIONAL DE SALUD (INS)",
+        "section_name": "1903 INSTITUTO NACIONAL DE SALUD (INS)",
+        "pattern": re.compile(r"INSTITUTO NACIONAL DE SALUD\s*\(INS\).{0,220}", re.IGNORECASE | re.DOTALL),
+        "components": 2,
+        "max_amount": 20_000_000_000,
+    },
+    {
+        "entity_raw": "INSTITUTO NACIONAL DE METROLOGIA - INM",
+        "section_name": "3505 INSTITUTO NACIONAL DE METROLOGIA - INM",
+        "pattern": re.compile(r"INSTITUTO NACIONAL DE METROLOG[IÍ]A(?:\s*[-–]\s*INM|\s*\(INM\))?.{0,180}", re.IGNORECASE | re.DOTALL),
+        "components": 2,
+        "max_amount": 10_000_000_000,
+    },
+    {
+        "entity_raw": "IDEAM",
+        "section_name": "3201/3204 IDEAM",
+        "pattern": re.compile(r"IDEAM\)?.{0,220}", re.IGNORECASE | re.DOTALL),
+        "components": 2,
+        "max_amount": 20_000_000_000,
+    },
+]
 
 
 def _agency_discovery_kwargs(country: str) -> dict:
@@ -108,6 +176,23 @@ def _agency_discovery_kwargs(country: str) -> dict:
         # Germany BMBF budgets produce ~400 R&D programme lines. Require 3+ years
         # of recurrence to keep only stable institutions, not one-off grants.
         return {"min_years": 3}
+    if country == "Netherlands":
+        # Netherlands results contain many generic budget-memorandum programme labels
+        # (e.g. "Research and Development Work", "Practical Research") that span only
+        # 1-2 years. Require 3+ years of recurrence AND a meaningful average amount
+        # before adding to the discovered list; this keeps only durable institutions.
+        return {"min_years": 3, "min_avg_amount": 50_000_000}
+    if country == "Chile":
+        # Chile full_text recovery surfaces many regional programme labels and
+        # one-off transfer lines. Keep automatic discovery focused on durable,
+        # material institutions instead of project descriptions.
+        return {"min_years": 3, "min_avg_amount": 500_000}
+    if country == "Belgium":
+        # Belgium pipeline output contains many bilingual programme buckets
+        # (e.g. "Wetenschapsbeleid", "R&D op nationaal vlak") alongside the
+        # named institutes we actually want discovery to learn. Require at
+        # least 2 years of recurrence so discovery focuses on stable entities.
+        return {"min_years": 2, "min_avg_amount": 1_000}
     return {}
 
 
@@ -197,6 +282,189 @@ def _france_extract_programmes_from_full_text(source_file: str, year: int) -> pd
         if best is not None:
             records.append(best)
 
+    return pd.DataFrame.from_records(records)
+
+
+def _colombia_full_text_candidates(year: int) -> list[Path]:
+    candidates = sorted(_COLOMBIA_FULL_TEXT_DIR.rglob(f"*__{year}_*.txt.gz"))
+    if not candidates:
+        return []
+    decree_candidates = [path for path in candidates if "Decreto" in path.parts or "Decreto" in path.name]
+    if decree_candidates:
+        annexes = [path for path in decree_candidates if "Anexo" in path.name]
+        regular = [path for path in decree_candidates if "Anexo" not in path.name]
+        return annexes + regular
+    return candidates
+
+
+def _colombia_page_number(text: str, pos: int) -> int:
+    page = 0
+    for match in _COLOMBIA_PAGE_RE.finditer(text):
+        if match.start() > pos:
+            break
+        page = int(match.group(1))
+    return page
+
+
+def _colombia_extract_amount(snippet: str) -> Optional[float]:
+    amounts: list[float] = []
+    for raw in _COLOMBIA_AMOUNT_RE.findall(snippet):
+        digits = re.sub(r"[^\d]", "", raw)
+        if len(digits) < 6:
+            continue
+        try:
+            value = float(digits)
+        except ValueError:
+            continue
+        if 1_000_000 <= value <= 10_000_000_000_000:
+            amounts.append(value)
+    return max(amounts) if amounts else None
+
+
+def _colombia_extract_component_sum(snippet: str, components: int) -> Optional[float]:
+    values: list[float] = []
+    for raw in _COLOMBIA_AMOUNT_RE.findall(snippet):
+        digits = re.sub(r"[^\d]", "", raw)
+        if len(digits) < 6:
+            continue
+        try:
+            value = float(digits)
+        except ValueError:
+            continue
+        if 1_000_000 <= value <= 10_000_000_000_000:
+            if values and value > values[0] * 20:
+                break
+            values.append(value)
+        if len(values) >= components:
+            break
+    if not values:
+        return None
+    return sum(values)
+
+
+def _colombia_component_candidates(year: int) -> list[Path]:
+    if year == 2014:
+        return sorted(_COLOMBIA_FULL_TEXT_DIR.rglob("*__2014_*.txt.gz"))
+    if year == 2016:
+        preferred = sorted(_COLOMBIA_FULL_TEXT_DIR.rglob("*__2016_Decreto_2550*.txt.gz"))
+        return preferred or sorted(_COLOMBIA_FULL_TEXT_DIR.rglob("*__2016_*.txt.gz"))
+    if year == 2017:
+        preferred = sorted(_COLOMBIA_FULL_TEXT_DIR.rglob("*__2017_LEY_1815*.txt.gz"))
+        fallback = sorted(_COLOMBIA_FULL_TEXT_DIR.rglob("*__2017_Decreto_2170*.txt.gz"))
+        if preferred or fallback:
+            return preferred + [path for path in fallback if path not in preferred]
+        return sorted(_COLOMBIA_FULL_TEXT_DIR.rglob("*__2017_*.txt.gz"))
+    return []
+
+
+def _extract_colombia_targeted_raw_rows(year_range: Optional[tuple[int, int]]) -> pd.DataFrame:
+    years = range(2019, 2026)
+    if year_range is not None:
+        start, end = year_range
+        years = range(max(2019, start), min(2025, end) + 1)
+
+    records: list[dict] = []
+    for year in years:
+        best_by_entity: dict[str, dict] = {}
+        for path in _colombia_full_text_candidates(year):
+            try:
+                with gzip.open(path, "rt", encoding="utf-8", errors="ignore") as fh:
+                    text = fh.read()
+            except OSError:
+                continue
+
+            for agency in _COLOMBIA_TARGETED_AGENCIES:
+                best_match: Optional[dict] = None
+                for pattern in agency["patterns"]:
+                    best_for_pattern: Optional[dict] = None
+                    for match in pattern.finditer(text):
+                        snippet = text[match.start(): match.start() + 800]
+                        amount = _colombia_extract_amount(snippet)
+                        if amount is None:
+                            continue
+                        candidate = {
+                            "country": "Colombia",
+                            "year": year,
+                            "source_file": path.stem,
+                            "table_index": -1,
+                            "row_index": -1,
+                            "section_name": agency["section_name"],
+                            "entity_raw": agency["entity_raw"],
+                            "amount_current": amount,
+                            "amount_prior": None,
+                            "is_header_row": False,
+                            "is_total_row": True,
+                            "has_italic_entity": False,
+                            "cells_raw": "[]",
+                            "page_number": _colombia_page_number(text, match.start()),
+                        }
+                        if best_for_pattern is None or candidate["amount_current"] > best_for_pattern["amount_current"]:
+                            best_for_pattern = candidate
+                    if best_for_pattern is not None:
+                        best_match = best_for_pattern
+                        break
+                if best_match is None:
+                    continue
+                current_best = best_by_entity.get(agency["entity_raw"])
+                if current_best is None or best_match["amount_current"] > current_best["amount_current"]:
+                    best_by_entity[agency["entity_raw"]] = best_match
+        records.extend(best_by_entity.values())
+
+    if not records:
+        return pd.DataFrame(columns=RAW_ROW_COLUMNS + ["page_number"])
+    return pd.DataFrame.from_records(records)
+
+
+def _extract_colombia_component_raw_rows(year_range: Optional[tuple[int, int]]) -> pd.DataFrame:
+    years = [2014, 2016, 2017]
+    if year_range is not None:
+        start, end = year_range
+        years = [year for year in years if start <= year <= end]
+
+    records: list[dict] = []
+    for year in years:
+        best_by_entity: dict[str, dict] = {}
+        for path in _colombia_component_candidates(year):
+            try:
+                with gzip.open(path, "rt", encoding="utf-8", errors="ignore") as fh:
+                    text = fh.read()
+            except OSError:
+                continue
+
+            for agency in _COLOMBIA_COMPONENT_AGENCIES:
+                match = agency["pattern"].search(text)
+                if not match:
+                    continue
+                snippet = match.group(0)
+                amount = _colombia_extract_component_sum(snippet, agency["components"])
+                if amount is None:
+                    continue
+                max_amount = agency.get("max_amount")
+                if isinstance(max_amount, (int, float)) and amount > float(max_amount):
+                    continue
+                candidate = {
+                    "country": "Colombia",
+                    "year": year,
+                    "source_file": path.stem,
+                    "table_index": -1,
+                    "row_index": -1,
+                    "section_name": agency["section_name"],
+                    "entity_raw": agency["entity_raw"],
+                    "amount_current": amount,
+                    "amount_prior": None,
+                    "is_header_row": False,
+                    "is_total_row": True,
+                    "has_italic_entity": False,
+                    "cells_raw": "[]",
+                    "page_number": _colombia_page_number(text, match.start()),
+                }
+                current_best = best_by_entity.get(agency["entity_raw"])
+                if current_best is None or candidate["amount_current"] > current_best["amount_current"]:
+                    best_by_entity[agency["entity_raw"]] = candidate
+        records.extend(best_by_entity.values())
+
+    if not records:
+        return pd.DataFrame(columns=RAW_ROW_COLUMNS + ["page_number"])
     return pd.DataFrame.from_records(records)
 
 
@@ -470,6 +738,8 @@ def _output_unit_for_country(country: str) -> str:
     """Return the unit used for compile outputs after country-specific handling."""
     if country == "Canada":
         return "dollar"
+    if country == "Colombia":
+        return "unit"
     return "thousand"
 
 
@@ -482,6 +752,34 @@ def _filter_country_raw_noise(df: pd.DataFrame, country: str) -> pd.DataFrame:
     """
     if df.empty or "entity_raw" not in df.columns:
         return df
+
+    if country == "Chile":
+        entity_upper = df["entity_raw"].fillna("").astype(str).str.upper().str.strip()
+        noise_patterns = [
+            r"^\s*[-–—]+\s*SUBSECRETAR[IÍ]A\b",
+            r"^\s*SUBSECRETAR[IÍ]A\b",
+            r"^\s*DIRECCI[OÓ]N DE SANIDAD\b",
+            r"^\s*OFICINA DE ESTUDIOS Y POL[IÍ]TICAS AGRARIAS\b",
+            r"\bINGRESOS\b",
+            r"\bPATENTES\b",
+            r"\bGOBIERNO REGIONAL\b",
+            r"\bBONIFICACI[OÓ]N\b",
+            r"\bRECONVERSI[OÓ]N\b",
+            r"\bPOLIC[IÍ]A FORESTAL\b",
+            r"\bPROGRAMA\s+0\d+\b",
+            r"\bSUBSECRETAR[IÍ]A DE BIENES NACIONALES\b",
+            r"\bSUBSECRETAR[IÍ]A DE VIVIENDA Y URBANISMO\b",
+            r"\bSUBSECRETAR[IÍ]A DE PLANIFICACI[OÓ]N Y COOPERACI[OÓ]N\b",
+            r"\bCOMISI[OÓ]N NACIONAL DEL MEDIO AMBIENTE\b",
+        ]
+        mask = pd.Series(False, index=df.index)
+        for pattern in noise_patterns:
+            mask = mask | entity_upper.str.contains(pattern, regex=True, na=False)
+        filtered = df.loc[~mask].copy()
+        dropped = int(mask.sum())
+        if dropped:
+            logger.info(f"[{country}] Dropped {dropped} Chile raw noise rows before dedup/classification")
+        return filtered
 
     if country != "Canada":
         return df
@@ -674,13 +972,16 @@ def classify_raw_rows(
     """
     # Build a minimal results_df shaped like what agency_classifier expects
     # It needs: country, section_name_en, line_description_en, item_type
+    has_total_rows = raw_df["is_total_row"].fillna(False).astype(bool).any()
+    item_type = raw_df["is_total_row"].map({True: "section_total", False: "line_item"})
+    if not has_total_rows:
+        item_type = pd.Series("program_total", index=raw_df.index)
+
     results_like = pd.DataFrame({
         "country": raw_df["country"],
         "section_name_en": raw_df["section_name"],
         "line_description_en": raw_df["entity_raw"],
-        "item_type": raw_df["is_total_row"].map(
-            {True: "section_total", False: "line_item"}
-        ),
+        "item_type": item_type,
         "decision": "include",  # dummy — classifier ignores this
     })
 
@@ -808,16 +1109,21 @@ def build_classified_results(
         item_type = "section_total" if is_total else "line_item"
 
         currency = cfg.COUNTRY_CONTEXT.get(country, {}).get("currency", "LOCAL")
-        amount_local, unit = _expand_output_amount(
-            row["amount_current"],
-            _output_unit_for_country(country),
-            currency,
-        )
-        amount_prior, _ = _expand_output_amount(
-            row.get("amount_prior"),
-            _output_unit_for_country(country),
-            currency,
-        )
+        if country == "Chile":
+            amount_local = pd.to_numeric(row.get("amount_current"), errors="coerce")
+            amount_prior = pd.to_numeric(row.get("amount_prior"), errors="coerce")
+            unit = "thousand"
+        else:
+            amount_local, unit = _expand_output_amount(
+                row["amount_current"],
+                _output_unit_for_country(country),
+                currency,
+            )
+            amount_prior, _ = _expand_output_amount(
+                row.get("amount_prior"),
+                _output_unit_for_country(country),
+                currency,
+            )
 
         records.append({
                 "country": row["country"],
@@ -901,6 +1207,21 @@ def _build_full_audit(
     else:
         in_series_keys = set()
 
+    def _audit_entity_matches(entity_text: str, variants: list[str]) -> bool:
+        entity_lower = str(entity_text or "").lower().strip()
+        if not entity_lower:
+            return False
+        for variant in variants:
+            v = str(variant or "").lower().strip()
+            if not v:
+                continue
+            if len(v) <= 4:
+                if re.search(r"(?<![a-z])" + re.escape(v) + r"(?![a-z])", entity_lower):
+                    return True
+            elif v in entity_lower:
+                return True
+        return False
+
     records = []
     for agency in agencies:
         canonical_name = agency["canonical_name"]
@@ -908,10 +1229,7 @@ def _build_full_audit(
         variants = [v.lower() for v in agency.get("name_variants", [canonical_name])]
 
         for _, row in country_raw.iterrows():
-            entity_lower = str(row["entity_raw"]).lower()
-            # Check if any variant matches this row's entity text
-            matched = any(v in entity_lower or entity_lower in v for v in variants)
-            if not matched:
+            if not _audit_entity_matches(row["entity_raw"], variants):
                 continue
 
             records.append({
@@ -994,6 +1312,25 @@ def _load_pipeline_results(
         df = _augment_france_pipeline_rows(df)
         df = _trim_france_etpt_rows(df)
         df = _normalise_france_pre_lolf_rows(df)
+
+    if country == "Finland":
+        # Finland 2002: two source files are duplicates of the same budget document
+        # ("2002 Finland budget download.jsp.pdf" and "2002 download.jsp.pdf").
+        # Keep only the more descriptive filename to avoid double-counting in totals.
+        dup_source = "2002 download.jsp.pdf"
+        full_source = "2002 Finland budget download.jsp.pdf"
+        has_full = df["source_file"].astype(str).str.contains(
+            re.escape(full_source), regex=True, na=False
+        ).any()
+        if has_full:
+            n_before = len(df)
+            df = df[~(df["source_file"].astype(str) == dup_source)].copy()
+            dropped = n_before - len(df)
+            if dropped:
+                logger.info(
+                    f"[Finland] Dropped {dropped} rows from duplicate 2002 source "
+                    f"'{dup_source}' (same content as '{full_source}')"
+                )
 
     # Drop rows marked as redundant aggregates (ministry totals, section totals).
     # These are kept in results.csv for audit purposes but should not feed the series.
@@ -1112,6 +1449,100 @@ def _load_compile_recovery_rows(
     return out
 
 
+def _load_pipeline_supplement_rows(
+    results_csv: Path,
+    country: str,
+    year_range: Optional[tuple[int, int]] = None,
+    target_years: Optional[set[int]] = None,
+) -> pd.DataFrame:
+    """
+    Convert existing pipeline results.csv rows into compile-style raw rows.
+
+    Used as a cheap fallback when deterministic text-cache parsing is materially
+    weaker than already-available pipeline output for specific country-years.
+    """
+    try:
+        df = pd.read_csv(results_csv)
+    except Exception as e:
+        logger.warning(f"Could not read pipeline supplement rows {results_csv}: {e}")
+        return pd.DataFrame()
+
+    if "country" not in df.columns:
+        return pd.DataFrame()
+
+    df = df[df["country"] == country].copy()
+    if df.empty:
+        return df
+
+    df["year"] = pd.to_numeric(df["year"], errors="coerce")
+    df["amount_local"] = pd.to_numeric(df["amount_local"], errors="coerce")
+    df = df.dropna(subset=["year", "amount_local"])
+    df["year"] = df["year"].astype(int)
+
+    if year_range:
+        df = df[(df["year"] >= year_range[0]) & (df["year"] <= year_range[1])]
+    if target_years:
+        df = df[df["year"].isin(target_years)]
+
+    if df.empty:
+        return df
+
+    for col in ["decision", "line_description", "line_description_en", "section_name", "section_name_en", "source_file"]:
+        if col not in df.columns:
+            df[col] = ""
+
+    df = df[df["decision"].isin(["include", "review"])].copy()
+    if df.empty:
+        return df
+
+    entity_text = df["line_description"].fillna("").astype(str).str.strip()
+    section_text = df["section_name"].fillna("").astype(str).str.strip()
+    entity_en = df["line_description_en"].fillna("").astype(str).str.strip()
+    section_en = df["section_name_en"].fillna("").astype(str).str.strip()
+
+    # For section totals, the entity should be the institution/section heading.
+    is_section_total = df.get("item_type", pd.Series("", index=df.index)).astype(str).eq("section_total")
+    entity_raw = entity_text.where(~is_section_total, section_text)
+    entity_raw = entity_raw.where(entity_raw.str.len() > 0, entity_en)
+    entity_raw = entity_raw.where(entity_raw.str.len() > 0, section_en)
+    entity_raw = entity_raw.where(entity_raw.str.len() > 0, section_text)
+
+    out = pd.DataFrame({
+        "source_file": df["source_file"].astype(str),
+        "country": df["country"].astype(str),
+        "year": df["year"].astype(int),
+        "page_number": pd.to_numeric(df.get("page_number", 0), errors="coerce").fillna(0).astype(int),
+        "table_index": pd.to_numeric(df.get("page_number", 0), errors="coerce").fillna(0).astype(int),
+        "row_index": range(len(df)),
+        "section_name": section_text.where(section_text.str.len() > 0, section_en),
+        "entity_raw": entity_raw,
+        "amount_current": df["amount_local"].astype(float),
+        "amount_prior": None,
+        "cells_raw": (
+            section_text.where(section_text.str.len() > 0, section_en)
+            + " | "
+            + entity_text.where(entity_text.str.len() > 0, entity_en)
+            + " | "
+            + df["amount_local"].astype(str)
+        ),
+        "is_header_row": False,
+        "is_total_row": is_section_total.fillna(False),
+        "has_italic_entity": False,
+    })
+
+    out = out[out["entity_raw"].fillna("").astype(str).str.strip() != ""].copy()
+    out = out.drop_duplicates(
+        subset=["country", "year", "entity_raw", "amount_current", "source_file"],
+        keep="first",
+    ).reset_index(drop=True)
+
+    logger.info(
+        f"[{country}] Loaded {len(out)} pipeline supplement rows from "
+        f"{results_csv.name}"
+    )
+    return out
+
+
 # ---------------------------------------------------------------------------
 # Main compile entry point
 # ---------------------------------------------------------------------------
@@ -1164,37 +1595,83 @@ def compile_country(
         output_csv=raw_rows_csv,
     )
 
+    pipeline_csv = output_dir / "results.csv"
+
+    def _append_compile_rows(base_df: pd.DataFrame, extra_df: pd.DataFrame, label: str) -> pd.DataFrame:
+        if extra_df.empty:
+            return base_df
+        if not base_df.empty:
+            existing_keys = set(
+                zip(
+                    base_df["country"].astype(str),
+                    base_df["year"].astype(int),
+                    base_df["entity_raw"].astype(str).str.upper(),
+                    pd.to_numeric(base_df["amount_current"], errors="coerce").astype(float),
+                )
+            )
+            extra_df = extra_df[
+                ~extra_df.apply(
+                    lambda r: (
+                        str(r["country"]),
+                        int(r["year"]),
+                        str(r["entity_raw"]).upper(),
+                        float(r["amount_current"]),
+                    ) in existing_keys,
+                    axis=1,
+                )
+            ].reset_index(drop=True)
+        if extra_df.empty:
+            return base_df
+        merged_df = pd.concat([base_df, extra_df], ignore_index=True)
+        logger.info(f"[{country}] Appended {len(extra_df)} {label} into compile input")
+        return merged_df
+
     # Canada-specific integration: allow cheap document-level targeted recovery
     # rows from pipeline results.csv to feed the real compile/database path.
     if country == "Canada":
-        pipeline_csv = output_dir / "results.csv"
         recovery_df = _load_compile_recovery_rows(pipeline_csv, country, year_range)
-        if not recovery_df.empty:
-            if not raw_df.empty:
-                existing_keys = set(
-                    zip(
-                        raw_df["country"].astype(str),
-                        raw_df["year"].astype(int),
-                        raw_df["entity_raw"].astype(str).str.upper(),
-                        pd.to_numeric(raw_df["amount_current"], errors="coerce").astype(float),
-                    )
-                )
-                recovery_df = recovery_df[
-                    ~recovery_df.apply(
-                        lambda r: (
-                            str(r["country"]),
-                            int(r["year"]),
-                            str(r["entity_raw"]).upper(),
-                            float(r["amount_current"]),
-                        ) in existing_keys,
-                        axis=1,
-                    )
-                ].reset_index(drop=True)
-            if not recovery_df.empty:
-                raw_df = pd.concat([raw_df, recovery_df], ignore_index=True)
-                logger.info(
-                    f"[{country}] Appended {len(recovery_df)} targeted recovery totals into compile input"
-                )
+        raw_df = _append_compile_rows(raw_df, recovery_df, "targeted recovery totals")
+
+    if country == "Colombia":
+        targeted_full_text_df = _extract_colombia_targeted_raw_rows(year_range)
+        raw_df = _append_compile_rows(raw_df, targeted_full_text_df, "targeted decree/anexo totals")
+        component_full_text_df = _extract_colombia_component_raw_rows(year_range)
+        raw_df = _append_compile_rows(raw_df, component_full_text_df, "targeted institutional component rows")
+        if not targeted_full_text_df.empty:
+            existing = pd.read_csv(raw_rows_csv) if raw_rows_csv.exists() else pd.DataFrame()
+            if not existing.empty and "country" in existing.columns:
+                existing = existing[existing["country"] != country]
+            combined_raw = pd.concat([existing, raw_df], ignore_index=True)
+            combined_raw.to_csv(raw_rows_csv, index=False)
+            logger.info(f"[{country}] Persisted targeted decree/anexo totals → {raw_rows_csv}")
+
+    # Colombia-specific integration: the deterministic text-cache parser is
+    # materially weaker in modern budget years like 2020, while results.csv
+    # already contains clean extracted rows from the same source. Supplement
+    # only years where raw parsing produced almost nothing.
+    colombia_weak_years: set[int] = set()
+    if country == "Colombia":
+        year_counts = (
+            raw_df.groupby("year").size().to_dict()
+            if not raw_df.empty and "year" in raw_df.columns
+            else {}
+        )
+        colombia_weak_years = {int(y) for y, n in year_counts.items() if int(y) >= 2019 and int(n) < 5}
+        if colombia_weak_years:
+            supplement_df = _load_pipeline_supplement_rows(
+                pipeline_csv,
+                country,
+                year_range=year_range,
+                target_years=colombia_weak_years,
+            )
+            raw_df = _append_compile_rows(raw_df, supplement_df, "pipeline supplement rows")
+            if not supplement_df.empty:
+                existing = pd.read_csv(raw_rows_csv) if raw_rows_csv.exists() else pd.DataFrame()
+                if not existing.empty and "country" in existing.columns:
+                    existing = existing[existing["country"] != country]
+                combined_raw = pd.concat([existing, raw_df], ignore_index=True)
+                combined_raw.to_csv(raw_rows_csv, index=False)
+                logger.info(f"[{country}] Persisted supplemented raw rows → {raw_rows_csv}")
 
     # Countries where LLM pipeline output (results.csv) always takes precedence
     # over DOCX/text-cache, even when the text-cache has partial data.
@@ -1205,6 +1682,10 @@ def compile_country(
     _PIPELINE_FIRST_COUNTRIES = {
         "UK", "France", "Germany", "Japan",           # original narrative-PDF set
         "Norway", "Denmark",                           # text-cache exists but LLM wins
+        "Estonia",                                     # text-cache parse is materially weaker than pipeline output
+        "Belgium",                                     # text-cache/docx path is materially weaker than pipeline output
+        "Iceland",                                     # text-cache parse is noisy; pipeline output preserves institution lines
+        "Spain",                                       # pipeline output is materially richer than legacy text-cache parsing
         "Sweden", "Netherlands", "Switzerland",        # future: no text-cache expected
     }
 
@@ -1254,12 +1735,18 @@ def compile_country(
                     "cells_raw":     "[]",
                 })
                 logger.info(f"Agency discovery: {country}")
-                discover_agencies(
-                    pipeline_as_raw,
-                    country=country,
-                    config=config,
-                    **_agency_discovery_kwargs(country),
-                )
+                try:
+                    discover_agencies(
+                        pipeline_as_raw,
+                        country=country,
+                        config=config,
+                        **_agency_discovery_kwargs(country),
+                    )
+                except Exception as exc:
+                    logger.warning(
+                        f"[{country}] Agency discovery failed in pipeline-first compile; "
+                        f"continuing with existing canonical/discovered agencies. Error: {exc}"
+                    )
 
             # ── Build canonical series ─────────────────────────────────────────
             series_df = build_canonical_series(results_df, country=country)
@@ -1359,6 +1846,25 @@ def compile_country(
 
     # ── Step 5: build classified results ─────────────────────────────────────
     results_df = build_classified_results(raw_df, registry, country)
+
+    if country == "Colombia" and colombia_weak_years:
+        supplement_results_df = _load_pipeline_results(pipeline_csv, country, year_range)
+        if not supplement_results_df.empty:
+            supplement_results_df = supplement_results_df[
+                supplement_results_df["year"].isin(colombia_weak_years)
+            ].copy()
+            if not supplement_results_df.empty:
+                results_df = pd.concat([results_df, supplement_results_df], ignore_index=True)
+                dedup_cols = [
+                    "country", "year", "source_file", "section_name_en",
+                    "line_description_en", "amount_local"
+                ]
+                available_cols = [c for c in dedup_cols if c in results_df.columns]
+                results_df = results_df.drop_duplicates(subset=available_cols, keep="first").reset_index(drop=True)
+                logger.info(
+                    f"[{country}] Appended {len(supplement_results_df)} pipeline result rows "
+                    f"for weak years {sorted(colombia_weak_years)}"
+                )
 
     results_path = country_dir / f"{country.lower().replace(' ','_')}_docx_results.csv"
     _write_year_slice(

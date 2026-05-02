@@ -1,0 +1,673 @@
+country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
+Iceland,2003,Rannís (Icelandic Centre for Research),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,118900000.0
+Iceland,2004,Rannís (Icelandic Centre for Research),science_agency,ok,,,,,none,118900000.0,,121900000.0
+Iceland,2005,Rannís (Icelandic Centre for Research),science_agency,ok,,,,,none,121900000.0,118900000.0,148900000.0
+Iceland,2006,Rannís (Icelandic Centre for Research),science_agency,ok,,,,,none,148900000.0,121900000.0,157800000.0
+Iceland,2007,Rannís (Icelandic Centre for Research),science_agency,ok,,,,,none,157800000.0,148900000.0,228500000.0
+Iceland,2008,Rannís (Icelandic Centre for Research),science_agency,ok,,,,,none,228500000.0,157800000.0,232300000.0
+Iceland,2009,Rannís (Icelandic Centre for Research),science_agency,ok,,,,,none,232300000.0,228500000.0,231800000.0
+Iceland,2010,Rannís (Icelandic Centre for Research),science_agency,ok,,,,,none,231800000.0,232300000.0,284600000.0
+Iceland,2011,Rannís (Icelandic Centre for Research),science_agency,ok,,,,,none,284600000.0,231800000.0,299700000.0
+Iceland,2012,Rannís (Icelandic Centre for Research),science_agency,ok,,,,,none,299700000.0,284600000.0,502800000.0
+Iceland,2013,Rannís (Icelandic Centre for Research),science_agency,ok,,,,,none,502800000.0,299700000.0,766300000.0
+Iceland,2014,Rannís (Icelandic Centre for Research),science_agency,ok,,,,,none,766300000.0,502800000.0,732100000.0
+Iceland,2015,Rannís (Icelandic Centre for Research),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,766300000.0,732100000.0
+Iceland,2016,Rannís (Icelandic Centre for Research),science_agency,ok,,,,,none,732100000.0,766300000.0,725900000.0
+Iceland,2017,Rannís (Icelandic Centre for Research),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,732100000.0,725900000.0
+Iceland,2018,Rannís (Icelandic Centre for Research),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,732100000.0,725900000.0
+Iceland,2019,Rannís (Icelandic Centre for Research),science_agency,ok,,,,,none,725900000.0,732100000.0,872300000.0
+Iceland,2020,Rannís (Icelandic Centre for Research),science_agency,ok,,,,,none,872300000.0,725900000.0,85300000.0
+Iceland,2021,Rannís (Icelandic Centre for Research),science_agency,ok,,,,,none,85300000.0,872300000.0,1070500000.0
+Iceland,2022,Rannís (Icelandic Centre for Research),science_agency,ok,,,,,none,1070500000.0,85300000.0,93500000.0
+Iceland,2023,Rannís (Icelandic Centre for Research),science_agency,ok,,,,,none,93500000.0,1070500000.0,1120900000.0
+Iceland,2024,Rannís (Icelandic Centre for Research),science_agency,ok,,,,,none,1120900000.0,93500000.0,1341200000.0
+Iceland,2025,Rannís (Icelandic Centre for Research),science_agency,ok,,,,,none,1341200000.0,1120900000.0,
+Iceland,1975,Rannsóknaráð ríkisins (National Research Council),science_agency,missing,Year has 2 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,691265000.0
+Iceland,1976,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,691265000.0,,119105000.0
+Iceland,1977,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,119105000.0,691265000.0,179389000.0
+Iceland,1978,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,179389000.0,119105000.0,82392000.0
+Iceland,1979,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,82392000.0,179389000.0,276000.0
+Iceland,1980,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,276000.0,82392000.0,13638320.0
+Iceland,1981,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,13638320.0,276000.0,2340700.0
+Iceland,1982,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,2340700.0,13638320.0,3635000.0
+Iceland,1983,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,3635000.0,2340700.0,5824000.0
+Iceland,1984,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,5824000.0,3635000.0,17731000.0
+Iceland,1985,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,17731000.0,5824000.0,12330000.0
+Iceland,1986,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,12330000.0,17731000.0,10000000.0
+Iceland,1987,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,10000000.0,12330000.0,321381000.0
+Iceland,1988,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,321381000.0,10000000.0,3650000.0
+Iceland,1989,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,3650000.0,321381000.0,93865000.0
+Iceland,1990,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,93865000.0,3650000.0,21570000.0
+Iceland,1991,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,21570000.0,93865000.0,110000000.0
+Iceland,1992,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,110000000.0,21570000.0,4300000.0
+Iceland,1993,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,4300000.0,110000000.0,20300000.0
+Iceland,1994,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,20300000.0,4300000.0,43100000.0
+Iceland,1995,Rannsóknaráð ríkisins (National Research Council),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,20300000.0,43100000.0
+Iceland,1996,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,43100000.0,20300000.0,100000000.0
+Iceland,1997,Rannsóknaráð ríkisins (National Research Council),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,43100000.0,100000000.0
+Iceland,1998,Rannsóknaráð ríkisins (National Research Council),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,43100000.0,100000000.0
+Iceland,1999,Rannsóknaráð ríkisins (National Research Council),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,43100000.0,100000000.0
+Iceland,2000,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,100000000.0,43100000.0,340400000.0
+Iceland,2001,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,340400000.0,100000000.0,80000000.0
+Iceland,2002,Rannsóknaráð ríkisins (National Research Council),science_agency,ok,,,,,none,80000000.0,340400000.0,
+Iceland,2003,Rannsóknaráð ríkisins (National Research Council),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,80000000.0,
+Iceland,1975,Vísindasjóður (Science Fund),science_agency,missing,Year has 2 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,250990000.0
+Iceland,1976,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,250990000.0,,375996000.0
+Iceland,1977,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,375996000.0,250990000.0,166564000.0
+Iceland,1978,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,166564000.0,375996000.0,60500000.0
+Iceland,1979,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,60500000.0,166564000.0,80000000.0
+Iceland,1980,Vísindasjóður (Science Fund),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,60500000.0,80000000.0
+Iceland,1981,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,80000000.0,60500000.0,80000000.0
+Iceland,1982,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,80000000.0,80000000.0,6930000.0
+Iceland,1983,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,6930000.0,80000000.0,6700000.0
+Iceland,1984,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,6700000.0,6930000.0,45443000.0
+Iceland,1985,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,45443000.0,6700000.0,65448000.0
+Iceland,1986,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,65448000.0,45443000.0,22500000.0
+Iceland,1987,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,22500000.0,65448000.0,60770000.0
+Iceland,1988,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,60770000.0,22500000.0,79840000.0
+Iceland,1989,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,79840000.0,60770000.0,97000000.0
+Iceland,1990,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,97000000.0,79840000.0,134000000.0
+Iceland,1991,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,134000000.0,97000000.0,125000000.0
+Iceland,1992,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,125000000.0,134000000.0,25000000.0
+Iceland,1993,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,25000000.0,125000000.0,25000000.0
+Iceland,1994,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,25000000.0,25000000.0,25000000.0
+Iceland,1995,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,25000000.0,25000000.0,200000000.0
+Iceland,1996,Vísindasjóður (Science Fund),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,25000000.0,200000000.0
+Iceland,1997,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,200000000.0,25000000.0,140000000.0
+Iceland,1998,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,140000000.0,200000000.0,161500000.0
+Iceland,1999,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,161500000.0,140000000.0,85000000.0
+Iceland,2000,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,85000000.0,161500000.0,145000000.0
+Iceland,2001,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,145000000.0,85000000.0,95000000.0
+Iceland,2002,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,95000000.0,145000000.0,210100000.0
+Iceland,2003,Vísindasjóður (Science Fund),science_agency,ok,,,,,none,210100000.0,95000000.0,
+Iceland,1975,Vísindaráð (Science Council),science_agency,missing,Year has 2 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,45000000.0
+Iceland,1976,Vísindaráð (Science Council),science_agency,ok,,,,,none,45000000.0,,11800000.0
+Iceland,1977,Vísindaráð (Science Council),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,45000000.0,11800000.0
+Iceland,1978,Vísindaráð (Science Council),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,45000000.0,11800000.0
+Iceland,1979,Vísindaráð (Science Council),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,45000000.0,11800000.0
+Iceland,1980,Vísindaráð (Science Council),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,45000000.0,11800000.0
+Iceland,1981,Vísindaráð (Science Council),science_agency,ok,,,,,none,11800000.0,45000000.0,10700000.0
+Iceland,1982,Vísindaráð (Science Council),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,11800000.0,10700000.0
+Iceland,1983,Vísindaráð (Science Council),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,11800000.0,10700000.0
+Iceland,1984,Vísindaráð (Science Council),science_agency,ok,,,,,none,10700000.0,11800000.0,2000000.0
+Iceland,1985,Vísindaráð (Science Council),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,10700000.0,2000000.0
+Iceland,1986,Vísindaráð (Science Council),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,10700000.0,2000000.0
+Iceland,1987,Vísindaráð (Science Council),science_agency,ok,,,,,none,2000000.0,10700000.0,2770000.0
+Iceland,1988,Vísindaráð (Science Council),science_agency,ok,,,,,none,2770000.0,2000000.0,15950000.0
+Iceland,1989,Vísindaráð (Science Council),science_agency,ok,,,,,none,15950000.0,2770000.0,104229000.0
+Iceland,1990,Vísindaráð (Science Council),science_agency,ok,,,,,none,104229000.0,15950000.0,11880000.0
+Iceland,1991,Vísindaráð (Science Council),science_agency,ok,,,,,none,11880000.0,104229000.0,11100000.0
+Iceland,1992,Vísindaráð (Science Council),science_agency,ok,,,,,none,11100000.0,11880000.0,11300000.0
+Iceland,1993,Vísindaráð (Science Council),science_agency,ok,,,,,none,11300000.0,11100000.0,11400000.0
+Iceland,1994,Vísindaráð (Science Council),science_agency,ok,,,,,none,11400000.0,11300000.0,25000000.0
+Iceland,1995,Vísindaráð (Science Council),science_agency,ok,,,,,none,25000000.0,11400000.0,20000000.0
+Iceland,1996,Vísindaráð (Science Council),science_agency,ok,,,,,none,20000000.0,25000000.0,25000000.0
+Iceland,1997,Vísindaráð (Science Council),science_agency,ok,,,,,none,25000000.0,20000000.0,165000000.0
+Iceland,1998,Vísindaráð (Science Council),science_agency,ok,,,,,none,165000000.0,25000000.0,46800000.0
+Iceland,1999,Vísindaráð (Science Council),science_agency,ok,,,,,none,46800000.0,165000000.0,75600000.0
+Iceland,2000,Vísindaráð (Science Council),science_agency,ok,,,,,none,75600000.0,46800000.0,201500000.0
+Iceland,2001,Vísindaráð (Science Council),science_agency,ok,,,,,none,201500000.0,75600000.0,
+Iceland,2002,Vísindaráð (Science Council),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,201500000.0,
+Iceland,2003,Vísindaráð (Science Council),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,201500000.0,
+Iceland,1975,Rannsóknasjóður (Research Fund),science_agency,missing,Year has 2 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,2100000.0
+Iceland,1976,Rannsóknasjóður (Research Fund),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,2100000.0
+Iceland,1977,Rannsóknasjóður (Research Fund),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,2100000.0
+Iceland,1978,Rannsóknasjóður (Research Fund),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,2100000.0
+Iceland,1979,Rannsóknasjóður (Research Fund),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,2100000.0
+Iceland,1980,Rannsóknasjóður (Research Fund),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,2100000.0
+Iceland,1981,Rannsóknasjóður (Research Fund),science_agency,ok,,,,,none,2100000.0,,50000000.0
+Iceland,1982,Rannsóknasjóður (Research Fund),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,2100000.0,50000000.0
+Iceland,1983,Rannsóknasjóður (Research Fund),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,2100000.0,50000000.0
+Iceland,1984,Rannsóknasjóður (Research Fund),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,2100000.0,50000000.0
+Iceland,1985,Rannsóknasjóður (Research Fund),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,2100000.0,50000000.0
+Iceland,1986,Rannsóknasjóður (Research Fund),science_agency,ok,,,,,none,50000000.0,2100000.0,60000000.0
+Iceland,1987,Rannsóknasjóður (Research Fund),science_agency,ok,,,,,none,60000000.0,50000000.0,4910000.0
+Iceland,1988,Rannsóknasjóður (Research Fund),science_agency,ok,,,,,none,4910000.0,60000000.0,80000000.0
+Iceland,1989,Rannsóknasjóður (Research Fund),science_agency,ok,,,,,none,80000000.0,4910000.0,95000000.0
+Iceland,1990,Rannsóknasjóður (Research Fund),science_agency,ok,,,,,none,95000000.0,80000000.0,110000000.0
+Iceland,1991,Rannsóknasjóður (Research Fund),science_agency,ok,,,,,none,110000000.0,95000000.0,110000.0
+Iceland,1992,Rannsóknasjóður (Research Fund),science_agency,ok,,,,,none,110000.0,110000000.0,115000000.0
+Iceland,1993,Rannsóknasjóður (Research Fund),science_agency,ok,,,,,none,115000000.0,110000.0,115000000.0
+Iceland,1994,Rannsóknasjóður (Research Fund),science_agency,ok,,,,,none,115000000.0,115000000.0,31600000.0
+Iceland,1995,Rannsóknasjóður (Research Fund),science_agency,ok,,,,,none,31600000.0,115000000.0,200000000.0
+Iceland,1996,Rannsóknasjóður (Research Fund),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,31600000.0,200000000.0
+Iceland,1997,Rannsóknasjóður (Research Fund),science_agency,ok,,,,,none,200000000.0,31600000.0,140000000.0
+Iceland,1998,Rannsóknasjóður (Research Fund),science_agency,ok,,,,,none,140000000.0,200000000.0,100000000.0
+Iceland,1999,Rannsóknasjóður (Research Fund),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,140000000.0,100000000.0
+Iceland,2000,Rannsóknasjóður (Research Fund),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,140000000.0,100000000.0
+Iceland,2001,Rannsóknasjóður (Research Fund),science_agency,ok,,,,,none,100000000.0,140000000.0,80000000.0
+Iceland,2002,Rannsóknasjóður (Research Fund),science_agency,ok,,,,,none,80000000.0,100000000.0,109400000.0
+Iceland,2003,Rannsóknasjóður (Research Fund),science_agency,ok,,,,,none,109400000.0,80000000.0,
+Iceland,1975,Háskóli Íslands (University of Iceland),higher_education,missing,Year has 2 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,617000000.0
+Iceland,1976,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,617000000.0,,1261593000.0
+Iceland,1977,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,1261593000.0,617000000.0,388000000.0
+Iceland,1978,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,388000000.0,1261593000.0,336166000.0
+Iceland,1979,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,336166000.0,388000000.0,367222000.0
+Iceland,1980,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,367222000.0,336166000.0,48263900.0
+Iceland,1981,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,48263900.0,367222000.0,72500800.0
+Iceland,1982,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,72500800.0,48263900.0,36098000.0
+Iceland,1983,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,36098000.0,72500800.0,302437000.0
+Iceland,1984,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,302437000.0,36098000.0,278236000.0
+Iceland,1985,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,278236000.0,302437000.0,630482000.0
+Iceland,1986,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,630482000.0,278236000.0,46044000.0
+Iceland,1987,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,46044000.0,630482000.0,10000000.0
+Iceland,1988,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,10000000.0,46044000.0,913150000.0
+Iceland,1989,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,913150000.0,10000000.0,886440000.0
+Iceland,1990,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,886440000.0,913150000.0,18390000.0
+Iceland,1991,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,18390000.0,886440000.0,2001800000.0
+Iceland,1992,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,2001800000.0,18390000.0,2781000000.0
+Iceland,1993,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,2781000000.0,2001800000.0,1909200000.0
+Iceland,1994,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,1909200000.0,2781000000.0,2001500000.0
+Iceland,1995,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,2001500000.0,1909200000.0,20000000.0
+Iceland,1996,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,20000000.0,2001500000.0,178100000.0
+Iceland,1997,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,178100000.0,20000000.0,1480400000.0
+Iceland,1998,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,1480400000.0,178100000.0,1570500000.0
+Iceland,1999,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,1570500000.0,1480400000.0,1064700000.0
+Iceland,2000,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,1064700000.0,1570500000.0,1989700000.0
+Iceland,2001,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,1989700000.0,1064700000.0,2153300000.0
+Iceland,2002,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,2153300000.0,1989700000.0,1074000000.0
+Iceland,2003,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,1074000000.0,2153300000.0,2549200000.0
+Iceland,2004,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,2549200000.0,1074000000.0,2639200000.0
+Iceland,2005,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,2639200000.0,2549200000.0,6470100000.0
+Iceland,2006,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,6470100000.0,2639200000.0,500000000.0
+Iceland,2007,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,500000000.0,6470100000.0,258500000.0
+Iceland,2008,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,258500000.0,500000000.0,859600000.0
+Iceland,2009,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,859600000.0,258500000.0,567400000.0
+Iceland,2010,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,567400000.0,859600000.0,12740100000.0
+Iceland,2011,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,12740100000.0,567400000.0,745000000.0
+Iceland,2012,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,745000000.0,12740100000.0,24200000.0
+Iceland,2013,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,24200000.0,745000000.0,145800000.0
+Iceland,2014,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,145800000.0,24200000.0,7438400000.0
+Iceland,2015,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,7438400000.0,145800000.0,18129500000.0
+Iceland,2016,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,18129500000.0,7438400000.0,26129600000.0
+Iceland,2017,Háskóli Íslands (University of Iceland),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,18129500000.0,26129600000.0
+Iceland,2018,Háskóli Íslands (University of Iceland),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,18129500000.0,26129600000.0
+Iceland,2019,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,26129600000.0,18129500000.0,22020800000.0
+Iceland,2020,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,22020800000.0,26129600000.0,26224000000.0
+Iceland,2021,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,26224000000.0,22020800000.0,29842725100.0
+Iceland,2022,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,29842725100.0,26224000000.0,32229700000.0
+Iceland,2023,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,32229700000.0,29842725100.0,32407300000.0
+Iceland,2024,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,32407300000.0,32229700000.0,39340200000.0
+Iceland,2025,Háskóli Íslands (University of Iceland),higher_education,ok,,,,,none,39340200000.0,32407300000.0,
+Iceland,1987,Háskólinn á Akureyri (University of Akureyri),higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,383500000.0
+Iceland,1988,Háskólinn á Akureyri (University of Akureyri),higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,383500000.0
+Iceland,1989,Háskólinn á Akureyri (University of Akureyri),higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,383500000.0
+Iceland,1990,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,383500000.0,,191700000.0
+Iceland,1991,Háskólinn á Akureyri (University of Akureyri),higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,383500000.0,191700000.0
+Iceland,1992,Háskólinn á Akureyri (University of Akureyri),higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,383500000.0,191700000.0
+Iceland,1993,Háskólinn á Akureyri (University of Akureyri),higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,383500000.0,191700000.0
+Iceland,1994,Háskólinn á Akureyri (University of Akureyri),higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,383500000.0,191700000.0
+Iceland,1995,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,191700000.0,383500000.0,210300000.0
+Iceland,1996,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,210300000.0,191700000.0,13800000.0
+Iceland,1997,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,13800000.0,210300000.0,18000000.0
+Iceland,1998,Háskólinn á Akureyri (University of Akureyri),higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,13800000.0,18000000.0
+Iceland,1999,Háskólinn á Akureyri (University of Akureyri),higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,13800000.0,18000000.0
+Iceland,2000,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,18000000.0,13800000.0,30600000.0
+Iceland,2001,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,30600000.0,18000000.0,107300000.0
+Iceland,2002,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,107300000.0,30600000.0,25800000.0
+Iceland,2003,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,25800000.0,107300000.0,218800000.0
+Iceland,2004,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,218800000.0,25800000.0,281100000.0
+Iceland,2005,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,281100000.0,218800000.0,59700000.0
+Iceland,2006,Háskólinn á Akureyri (University of Akureyri),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,281100000.0,59700000.0
+Iceland,2007,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,59700000.0,281100000.0,1710500000.0
+Iceland,2008,Háskólinn á Akureyri (University of Akureyri),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,59700000.0,1710500000.0
+Iceland,2009,Háskólinn á Akureyri (University of Akureyri),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,59700000.0,1710500000.0
+Iceland,2010,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,1710500000.0,59700000.0,63400000.0
+Iceland,2011,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,63400000.0,1710500000.0,85900000.0
+Iceland,2012,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,85900000.0,63400000.0,87400000.0
+Iceland,2013,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,87400000.0,85900000.0,3020200000.0
+Iceland,2014,Háskólinn á Akureyri (University of Akureyri),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,87400000.0,3020200000.0
+Iceland,2015,Háskólinn á Akureyri (University of Akureyri),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,87400000.0,3020200000.0
+Iceland,2016,Háskólinn á Akureyri (University of Akureyri),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,87400000.0,3020200000.0
+Iceland,2017,Háskólinn á Akureyri (University of Akureyri),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,87400000.0,3020200000.0
+Iceland,2018,Háskólinn á Akureyri (University of Akureyri),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,87400000.0,3020200000.0
+Iceland,2019,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,3020200000.0,87400000.0,3183500000.0
+Iceland,2020,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,3183500000.0,3020200000.0,3724300000.0
+Iceland,2021,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,3724300000.0,3183500000.0,4091900000.0
+Iceland,2022,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,4091900000.0,3724300000.0,50000000.0
+Iceland,2023,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,50000000.0,4091900000.0,4301500000.0
+Iceland,2024,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,4301500000.0,50000000.0,5673900000.0
+Iceland,2025,Háskólinn á Akureyri (University of Akureyri),higher_education,ok,,,,,none,5673900000.0,4301500000.0,
+Iceland,1980,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,461134000.0,,4816700.0
+Iceland,1981,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,4816700.0,461134000.0,10288700.0
+Iceland,1982,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,10288700.0,4816700.0,673000.0
+Iceland,1983,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,673000.0,10288700.0,15005000.0
+Iceland,1984,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,15005000.0,673000.0,31670000.0
+Iceland,1985,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,31670000.0,15005000.0,630482000.0
+Iceland,1986,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,630482000.0,31670000.0,128290000.0
+Iceland,1987,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,630482000.0,128290000.0
+Iceland,1988,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,630482000.0,128290000.0
+Iceland,1989,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,630482000.0,128290000.0
+Iceland,1990,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,128290000.0,630482000.0,132400000.0
+Iceland,1991,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,128290000.0,132400000.0
+Iceland,1992,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,132400000.0,128290000.0,152500000.0
+Iceland,1993,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,132400000.0,152500000.0
+Iceland,1994,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,132400000.0,152500000.0
+Iceland,1995,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,152500000.0,132400000.0,178100000.0
+Iceland,1996,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,152500000.0,178100000.0
+Iceland,1997,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,178100000.0,152500000.0,219100000.0
+Iceland,1998,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,219100000.0,178100000.0,223200000.0
+Iceland,1999,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,223200000.0,219100000.0,229800000.0
+Iceland,2000,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,229800000.0,223200000.0,237100000.0
+Iceland,2001,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,237100000.0,229800000.0,262300000.0
+Iceland,2002,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,262300000.0,237100000.0,269200000.0
+Iceland,2003,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,269200000.0,262300000.0,328000000.0
+Iceland,2004,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,328000000.0,269200000.0,337000000.0
+Iceland,2005,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,337000000.0,328000000.0,498000000.0
+Iceland,2006,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,498000000.0,337000000.0,1185600.0
+Iceland,2007,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,1185600.0,498000000.0,19000000.0
+Iceland,2008,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,19000000.0,1185600.0,859600000.0
+Iceland,2009,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,859600000.0,19000000.0,864100000.0
+Iceland,2010,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,864100000.0,859600000.0,944400000.0
+Iceland,2011,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,944400000.0,864100000.0,1006000.0
+Iceland,2012,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,1006000.0,944400000.0,1275000.0
+Iceland,2013,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,1275000.0,1006000.0,1319300.0
+Iceland,2014,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,1319300.0,1275000.0,12000000.0
+Iceland,2015,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,12000000.0,1319300.0,1354800000.0
+Iceland,2016,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,1354800000.0,12000000.0,1678100000.0
+Iceland,2017,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,1354800000.0,1678100000.0
+Iceland,2018,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,1354800000.0,1678100000.0
+Iceland,2019,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,1678100000.0,1354800000.0,1549400000.0
+Iceland,2020,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,1549400000.0,1678100000.0,1577500000.0
+Iceland,2021,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,1577500000.0,1549400000.0,1696200000.0
+Iceland,2022,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,1696200000.0,1577500000.0,1748100.0
+Iceland,2023,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,1748100.0,1696200000.0,2442000000.0
+Iceland,2024,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,ok,,,,,none,2442000000.0,1748100.0,
+Iceland,1990,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,90446000.0,,4720000.0
+Iceland,1991,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,4720000.0,90446000.0,21200000.0
+Iceland,1992,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,21200000.0,4720000.0,90900000.0
+Iceland,1993,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,90900000.0,21200000.0,109900000.0
+Iceland,1994,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,109900000.0,90900000.0,127200000.0
+Iceland,1995,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,127200000.0,109900000.0,113200000.0
+Iceland,1996,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,113200000.0,127200000.0,123100000.0
+Iceland,1997,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,123100000.0,113200000.0,161100000.0
+Iceland,1998,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,161100000.0,123100000.0,20200000.0
+Iceland,1999,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,20200000.0,161100000.0,305000000.0
+Iceland,2000,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,305000000.0,20200000.0,20400000.0
+Iceland,2001,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,20400000.0,305000000.0,22300000.0
+Iceland,2002,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,22300000.0,20400000.0,204400000.0
+Iceland,2003,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,204400000.0,22300000.0,241400000.0
+Iceland,2004,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,241400000.0,204400000.0,247800000.0
+Iceland,2005,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,247800000.0,241400000.0,275300000.0
+Iceland,2006,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,275300000.0,247800000.0,291600000.0
+Iceland,2007,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,291600000.0,275300000.0,329000.0
+Iceland,2008,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,329000.0,291600000.0,366900000.0
+Iceland,2009,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,366900000.0,329000.0,372800000.0
+Iceland,2010,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,372800000.0,366900000.0,360400000.0
+Iceland,2011,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,360400000.0,372800000.0,382800.0
+Iceland,2012,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,382800.0,360400000.0,409200000.0
+Iceland,2013,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,409200000.0,382800.0,411300000.0
+Iceland,2014,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,411300000.0,409200000.0,5000000.0
+Iceland,2015,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,5000000.0,411300000.0,459900000.0
+Iceland,2016,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,459900000.0,5000000.0,567600000.0
+Iceland,2017,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,459900000.0,567600000.0
+Iceland,2018,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,459900000.0,567600000.0
+Iceland,2019,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,567600000.0,459900000.0,557400.0
+Iceland,2020,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,557400.0,567600000.0,637900000.0
+Iceland,2021,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,637900000.0,557400.0,691700000.0
+Iceland,2022,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,691700000.0,637900000.0,721000000.0
+Iceland,2023,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,721000000.0,691700000.0,774800000.0
+Iceland,2024,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,774800000.0,721000000.0,783700000.0
+Iceland,2025,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,ok,,,,,none,783700000.0,774800000.0,
+Iceland,2013,Landbúnaðarháskóli Íslands (Agricultural University of Iceland),higher_education,ok,,,,,none,24200000.0,,1396500000.0
+Iceland,2014,Landbúnaðarháskóli Íslands (Agricultural University of Iceland),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,24200000.0,1396500000.0
+Iceland,2015,Landbúnaðarháskóli Íslands (Agricultural University of Iceland),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,24200000.0,1396500000.0
+Iceland,2016,Landbúnaðarháskóli Íslands (Agricultural University of Iceland),higher_education,ok,,,,,none,1396500000.0,24200000.0,1637700000.0
+Iceland,2017,Landbúnaðarháskóli Íslands (Agricultural University of Iceland),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,1396500000.0,1637700000.0
+Iceland,2018,Landbúnaðarháskóli Íslands (Agricultural University of Iceland),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,1396500000.0,1637700000.0
+Iceland,2019,Landbúnaðarháskóli Íslands (Agricultural University of Iceland),higher_education,ok,,,,,none,1637700000.0,1396500000.0,1588200000.0
+Iceland,2020,Landbúnaðarháskóli Íslands (Agricultural University of Iceland),higher_education,ok,,,,,none,1588200000.0,1637700000.0,2283400000.0
+Iceland,2021,Landbúnaðarháskóli Íslands (Agricultural University of Iceland),higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,1588200000.0,2283400000.0
+Iceland,2022,Landbúnaðarháskóli Íslands (Agricultural University of Iceland),higher_education,ok,,,,,none,2283400000.0,1588200000.0,2065900000.0
+Iceland,2023,Landbúnaðarháskóli Íslands (Agricultural University of Iceland),higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,2283400000.0,2065900000.0
+Iceland,2024,Landbúnaðarháskóli Íslands (Agricultural University of Iceland),higher_education,ok,,,,,none,2065900000.0,2283400000.0,
+Iceland,2025,Landbúnaðarháskóli Íslands (Agricultural University of Iceland),higher_education,missing,Year has 2 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,2065900000.0,
+Iceland,1975,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,301288000.0,,49395000.0
+Iceland,1976,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,49395000.0,301288000.0,321780000.0
+Iceland,1977,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,321780000.0,49395000.0,3695900.0
+Iceland,1978,Hafrannsóknastofnun (Marine Research Institute),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,321780000.0,3695900.0
+Iceland,1979,Hafrannsóknastofnun (Marine Research Institute),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,321780000.0,3695900.0
+Iceland,1980,Hafrannsóknastofnun (Marine Research Institute),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,321780000.0,3695900.0
+Iceland,1981,Hafrannsóknastofnun (Marine Research Institute),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,321780000.0,3695900.0
+Iceland,1982,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,3695900.0,321780000.0,61686.0
+Iceland,1983,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,61686.0,3695900.0,93182000.0
+Iceland,1984,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,93182000.0,61686.0,115440000.0
+Iceland,1985,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,115440000.0,93182000.0,22467000.0
+Iceland,1986,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,22467000.0,115440000.0,330600000.0
+Iceland,1987,Hafrannsóknastofnun (Marine Research Institute),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,22467000.0,330600000.0
+Iceland,1988,Hafrannsóknastofnun (Marine Research Institute),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,22467000.0,330600000.0
+Iceland,1989,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,330600000.0,22467000.0,1610000000.0
+Iceland,1990,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,1610000000.0,330600000.0,444500000.0
+Iceland,1991,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,444500000.0,1610000000.0,634500000.0
+Iceland,1992,Hafrannsóknastofnun (Marine Research Institute),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,444500000.0,634500000.0
+Iceland,1993,Hafrannsóknastofnun (Marine Research Institute),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,444500000.0,634500000.0
+Iceland,1994,Hafrannsóknastofnun (Marine Research Institute),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,444500000.0,634500000.0
+Iceland,1995,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,634500000.0,444500000.0,2000000000.0
+Iceland,1996,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,2000000000.0,634500000.0,409800000.0
+Iceland,1997,Hafrannsóknastofnun (Marine Research Institute),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,2000000000.0,409800000.0
+Iceland,1998,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,409800000.0,2000000000.0,908200000.0
+Iceland,1999,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,908200000.0,409800000.0,978200000.0
+Iceland,2000,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,978200000.0,908200000.0,346700000.0
+Iceland,2001,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,346700000.0,978200000.0,376800000.0
+Iceland,2002,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,376800000.0,346700000.0,1203800000.0
+Iceland,2003,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,1203800000.0,376800000.0,387600000.0
+Iceland,2004,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,387600000.0,1203800000.0,491800000.0
+Iceland,2005,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,491800000.0,387600000.0,1592800000.0
+Iceland,2006,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,1592800000.0,491800000.0,1711000000.0
+Iceland,2007,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,1711000000.0,1592800000.0,1930200000.0
+Iceland,2008,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,1930200000.0,1711000000.0,2111900000.0
+Iceland,2009,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,2111900000.0,1930200000.0,1989900000.0
+Iceland,2010,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,1989900000.0,2111900000.0,2112100000.0
+Iceland,2011,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,2112100000.0,1989900000.0,2253600000.0
+Iceland,2012,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,2253600000.0,2112100000.0,2640000000.0
+Iceland,2013,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,2640000000.0,2253600000.0,2709600000.0
+Iceland,2014,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,2709600000.0,2640000000.0,3087100000.0
+Iceland,2015,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,3087100000.0,2709600000.0,3418600000.0
+Iceland,2016,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,3418600000.0,3087100000.0,4116100000.0
+Iceland,2017,Hafrannsóknastofnun (Marine Research Institute),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,3418600000.0,4116100000.0
+Iceland,2018,Hafrannsóknastofnun (Marine Research Institute),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,3418600000.0,4116100000.0
+Iceland,2019,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,4116100000.0,3418600000.0,4151600000.0
+Iceland,2020,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,4151600000.0,4116100000.0,4379600000.0
+Iceland,2021,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,4379600000.0,4151600000.0,4482700000.0
+Iceland,2022,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,4482700000.0,4379600000.0,4216300000.0
+Iceland,2023,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,4216300000.0,4482700000.0,5123900000.0
+Iceland,2024,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,5123900000.0,4216300000.0,5417500000.0
+Iceland,2025,Hafrannsóknastofnun (Marine Research Institute),science_agency,ok,,,,,none,5417500000.0,5123900000.0,
+Iceland,1990,Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries),science_agency,ok,,,,,none,65415000.0,,83690000.0
+Iceland,1991,Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries),science_agency,ok,,,,,none,83690000.0,65415000.0,194700000.0
+Iceland,1992,Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,83690000.0,194700000.0
+Iceland,1993,Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,83690000.0,194700000.0
+Iceland,1994,Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,83690000.0,194700000.0
+Iceland,1995,Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries),science_agency,ok,,,,,none,194700000.0,83690000.0,238500000.0
+Iceland,1996,Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,194700000.0,238500000.0
+Iceland,1997,Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,194700000.0,238500000.0
+Iceland,1998,Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries),science_agency,ok,,,,,none,238500000.0,194700000.0,252500000.0
+Iceland,1999,Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,238500000.0,252500000.0
+Iceland,2000,Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries),science_agency,ok,,,,,none,252500000.0,238500000.0,10000000.0
+Iceland,2001,Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries),science_agency,ok,,,,,none,10000000.0,252500000.0,298900000.0
+Iceland,2002,Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,10000000.0,298900000.0
+Iceland,2003,Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries),science_agency,ok,,,,,none,298900000.0,10000000.0,339900000.0
+Iceland,2004,Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries),science_agency,ok,,,,,none,339900000.0,298900000.0,372500000.0
+Iceland,2005,Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries),science_agency,ok,,,,,none,372500000.0,339900000.0,427700000.0
+Iceland,2006,Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries),science_agency,ok,,,,,none,427700000.0,372500000.0,
+Iceland,1985,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,24585000.0,,205137000.0
+Iceland,1986,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,205137000.0,24585000.0,57333000.0
+Iceland,1987,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,57333000.0,205137000.0,57260000.0
+Iceland,1988,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,57260000.0,57333000.0,36140000.0
+Iceland,1989,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,36140000.0,57260000.0,101926000.0
+Iceland,1990,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,101926000.0,36140000.0,103800000.0
+Iceland,1991,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,103800000.0,101926000.0,114800000.0
+Iceland,1992,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,114800000.0,103800000.0,130700000.0
+Iceland,1993,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,130700000.0,114800000.0,132200000.0
+Iceland,1994,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,130700000.0,132200000.0
+Iceland,1995,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,132200000.0,130700000.0,158000000.0
+Iceland,1996,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,158000000.0,132200000.0,159000000.0
+Iceland,1997,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,159000000.0,158000000.0,171000.0
+Iceland,1998,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,171000.0,159000000.0,176300000.0
+Iceland,1999,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,176300000.0,171000.0,181600000.0
+Iceland,2000,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,181600000.0,176300000.0,182800000.0
+Iceland,2001,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,182800000.0,181600000.0,217700000.0
+Iceland,2002,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,217700000.0,182800000.0,224500000.0
+Iceland,2003,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,224500000.0,217700000.0,267200000.0
+Iceland,2004,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,267200000.0,224500000.0,274600000.0
+Iceland,2005,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,274600000.0,267200000.0,296800000.0
+Iceland,2006,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,296800000.0,274600000.0,312000000.0
+Iceland,2007,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,ok,,,,,none,312000000.0,296800000.0,
+Iceland,1975,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year has 2 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,164500000.0
+Iceland,1976,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,164500000.0
+Iceland,1977,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,164500000.0,,872519000.0
+Iceland,1978,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,872519000.0,164500000.0,1292524000.0
+Iceland,1979,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,1292524000.0,872519000.0,955667000.0
+Iceland,1980,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,955667000.0,1292524000.0,125651000.0
+Iceland,1981,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,955667000.0,125651000.0
+Iceland,1982,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,955667000.0,125651000.0
+Iceland,1983,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,955667000.0,125651000.0
+Iceland,1984,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,955667000.0,125651000.0
+Iceland,1985,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,125651000.0,955667000.0,264885000.0
+Iceland,1986,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,125651000.0,264885000.0
+Iceland,1987,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,125651000.0,264885000.0
+Iceland,1988,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,125651000.0,264885000.0
+Iceland,1989,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,264885000.0,125651000.0,612000000.0
+Iceland,1990,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,612000000.0,264885000.0,338240000.0
+Iceland,1991,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,338240000.0,612000000.0,18900000.0
+Iceland,1992,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,18900000.0,338240000.0,351500000.0
+Iceland,1993,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,18900000.0,351500000.0
+Iceland,1994,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,18900000.0,351500000.0
+Iceland,1995,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,351500000.0,18900000.0,180700000.0
+Iceland,1996,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,351500000.0,180700000.0
+Iceland,1997,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,351500000.0,180700000.0
+Iceland,1998,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,351500000.0,180700000.0
+Iceland,1999,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,180700000.0,351500000.0,6000000.0
+Iceland,2000,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,6000000.0,180700000.0,113500000.0
+Iceland,2001,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,113500000.0,6000000.0,119800000.0
+Iceland,2002,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,119800000.0,113500000.0,212300000.0
+Iceland,2003,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,212300000.0,119800000.0,296400000.0
+Iceland,2004,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,296400000.0,212300000.0,660600000.0
+Iceland,2005,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,296400000.0,660600000.0
+Iceland,2006,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,660600000.0,296400000.0,1132900000.0
+Iceland,2007,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,660600000.0,1132900000.0
+Iceland,2008,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,660600000.0,1132900000.0
+Iceland,2009,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,1132900000.0,660600000.0,416600000.0
+Iceland,2010,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,1132900000.0,416600000.0
+Iceland,2011,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,416600000.0,1132900000.0,479100000.0
+Iceland,2012,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,479100000.0,416600000.0,511100000.0
+Iceland,2013,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,511100000.0,479100000.0,521600000.0
+Iceland,2014,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,521600000.0,511100000.0,597200000.0
+Iceland,2015,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,597200000.0,521600000.0,627200000.0
+Iceland,2016,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,627200000.0,597200000.0,695400000.0
+Iceland,2017,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,627200000.0,695400000.0
+Iceland,2018,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,627200000.0,695400000.0
+Iceland,2019,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,695400000.0,627200000.0,733300000.0
+Iceland,2020,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,733300000.0,695400000.0,722700000.0
+Iceland,2021,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,722700000.0,733300000.0,834000000.0
+Iceland,2022,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,834000000.0,722700000.0,805800000.0
+Iceland,2023,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,805800000.0,834000000.0,822600000.0
+Iceland,2024,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,822600000.0,805800000.0,1987000.0
+Iceland,2025,Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,ok,,,,,none,1987000.0,822600000.0,
+Iceland,1975,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,missing,Year has 2 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,1002115000.0
+Iceland,1976,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1002115000.0
+Iceland,1977,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,1002115000.0
+Iceland,1978,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,1002115000.0
+Iceland,1979,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,1002115000.0
+Iceland,1980,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,1002115000.0,,34692000.0
+Iceland,1981,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,1002115000.0,34692000.0
+Iceland,1982,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,1002115000.0,34692000.0
+Iceland,1983,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,34692000.0,1002115000.0,65149000.0
+Iceland,1984,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,65149000.0,34692000.0,124334000.0
+Iceland,1985,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,65149000.0,124334000.0
+Iceland,1986,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,65149000.0,124334000.0
+Iceland,1987,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,124334000.0,65149000.0,176560000.0
+Iceland,1988,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,176560000.0,124334000.0,236771.0
+Iceland,1989,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,176560000.0,236771.0
+Iceland,1990,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,236771.0,176560000.0,261400000.0
+Iceland,1991,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,236771.0,261400000.0
+Iceland,1992,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,261400000.0,236771.0,273600000.0
+Iceland,1993,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,273600000.0,261400000.0,205200000.0
+Iceland,1994,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,205200000.0,273600000.0,366300000.0
+Iceland,1995,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,205200000.0,366300000.0
+Iceland,1996,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,366300000.0,205200000.0,428300000.0
+Iceland,1997,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,366300000.0,428300000.0
+Iceland,1998,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,428300000.0,366300000.0,449300000.0
+Iceland,1999,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,449300000.0,428300000.0,508000000.0
+Iceland,2000,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,449300000.0,508000000.0
+Iceland,2001,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,508000000.0,449300000.0,588800000.0
+Iceland,2002,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,508000000.0,588800000.0
+Iceland,2003,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,588800000.0,508000000.0,603400000.0
+Iceland,2004,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,603400000.0,588800000.0,718200000.0
+Iceland,2005,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,718200000.0,603400000.0,746800000.0
+Iceland,2006,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,746800000.0,718200000.0,811000000.0
+Iceland,2007,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,811000000.0,746800000.0,757100000.0
+Iceland,2008,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,757100000.0,811000000.0,1328100000.0
+Iceland,2009,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,1328100000.0,757100000.0,1576900000.0
+Iceland,2010,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,1576900000.0,1328100000.0,1518100000.0
+Iceland,2011,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,1518100000.0,1576900000.0,1606700000.0
+Iceland,2012,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,1606700000.0,1518100000.0,1713300000.0
+Iceland,2013,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,1713300000.0,1606700000.0,1715600000.0
+Iceland,2014,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,1715600000.0,1713300000.0,1700700000.0
+Iceland,2015,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,1700700000.0,1715600000.0,2301200000.0
+Iceland,2016,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,2301200000.0,1700700000.0,1838200000.0
+Iceland,2017,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,2301200000.0,1838200000.0
+Iceland,2018,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,2301200000.0,1838200000.0
+Iceland,2019,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,1838200000.0,2301200000.0,2520300000.0
+Iceland,2020,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,2520300000.0,1838200000.0,1983900000.0
+Iceland,2021,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,1983900000.0,2520300000.0,4868600000.0
+Iceland,2022,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,4868600000.0,1983900000.0,3073700000.0
+Iceland,2023,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,3073700000.0,4868600000.0,3702800000.0
+Iceland,2024,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,ok,,,,,none,3702800000.0,3073700000.0,
+Iceland,2025,Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,missing,Year has 2 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,3702800000.0,
+Iceland,2019,Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),science_agency,ok,,,,,none,699400000.0,,717900000.0
+Iceland,2020,Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),science_agency,ok,,,,,none,717900000.0,699400000.0,790700000.0
+Iceland,2021,Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),science_agency,ok,,,,,none,790700000.0,717900000.0,864100000.0
+Iceland,2022,Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),science_agency,ok,,,,,none,864100000.0,790700000.0,904500000.0
+Iceland,2023,Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),science_agency,ok,,,,,none,904500000.0,864100000.0,940900000.0
+Iceland,2024,Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),science_agency,ok,,,,,none,940900000.0,904500000.0,
+Iceland,2004,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,ok,,,,,none,200000000.0,,340000000.0
+Iceland,2005,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,ok,,,,,none,340000000.0,200000000.0,500000000.0
+Iceland,2006,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,340000000.0,500000000.0
+Iceland,2007,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,ok,,,,,none,500000000.0,340000000.0,720000000.0
+Iceland,2008,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,500000000.0,720000000.0
+Iceland,2009,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,500000000.0,720000000.0
+Iceland,2010,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,ok,,,,,none,720000000.0,500000000.0,720000000.0
+Iceland,2011,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,ok,,,,,none,720000000.0,720000000.0,725000000.0
+Iceland,2012,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,ok,,,,,none,725000000.0,720000000.0,1270000000.0
+Iceland,2013,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,ok,,,,,none,1270000000.0,725000000.0,987500000.0
+Iceland,2014,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,ok,,,,,none,987500000.0,1270000000.0,1377500000.0
+Iceland,2015,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,ok,,,,,none,1377500000.0,987500000.0,2352500000.0
+Iceland,2016,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,ok,,,,,none,2352500000.0,1377500000.0,2332000000.0
+Iceland,2017,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,2352500000.0,2332000000.0
+Iceland,2018,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,2352500000.0,2332000000.0
+Iceland,2019,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,ok,,,,,none,2332000000.0,2352500000.0,2287600000.0
+Iceland,2020,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,ok,,,,,none,2287600000.0,2332000000.0,3526100000.0
+Iceland,2021,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,ok,,,,,none,3526100000.0,2287600000.0,3580400000.0
+Iceland,2022,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,ok,,,,,none,3580400000.0,3526100000.0,3513100000.0
+Iceland,2023,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,ok,,,,,none,3513100000.0,3580400000.0,3198900000.0
+Iceland,2024,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,3513100000.0,3198900000.0
+Iceland,2025,Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,ok,,,,,none,3198900000.0,3513100000.0,
+Iceland,2003,Rannsóknarnámssjóður (Research Scholarship Fund),innovation_instruments,ok,,,,,none,40000000.0,,50000000.0
+Iceland,2004,Rannsóknarnámssjóður (Research Scholarship Fund),innovation_instruments,ok,,,,,none,50000000.0,40000000.0,60000000.0
+Iceland,2005,Rannsóknarnámssjóður (Research Scholarship Fund),innovation_instruments,ok,,,,,none,60000000.0,50000000.0,60000000.0
+Iceland,2006,Rannsóknarnámssjóður (Research Scholarship Fund),innovation_instruments,ok,,,,,none,60000000.0,60000000.0,80000000.0
+Iceland,2007,Rannsóknarnámssjóður (Research Scholarship Fund),innovation_instruments,ok,,,,,none,80000000.0,60000000.0,90000.0
+Iceland,2008,Rannsóknarnámssjóður (Research Scholarship Fund),innovation_instruments,ok,,,,,none,90000.0,80000000.0,100000000.0
+Iceland,2009,Rannsóknarnámssjóður (Research Scholarship Fund),innovation_instruments,ok,,,,,none,100000000.0,90000.0,100000000.0
+Iceland,2010,Rannsóknarnámssjóður (Research Scholarship Fund),innovation_instruments,ok,,,,,none,100000000.0,100000000.0,96000000.0
+Iceland,2011,Rannsóknarnámssjóður (Research Scholarship Fund),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,100000000.0,96000000.0
+Iceland,2012,Rannsóknarnámssjóður (Research Scholarship Fund),innovation_instruments,ok,,,,,none,96000000.0,100000000.0,
+Iceland,2006,Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,ok,,,,,none,210000000.0,,235000000.0
+Iceland,2007,Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,ok,,,,,none,235000000.0,210000000.0,335000000.0
+Iceland,2008,Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,ok,,,,,none,335000000.0,235000000.0,335000000.0
+Iceland,2009,Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,ok,,,,,none,335000000.0,335000000.0,265800000.0
+Iceland,2010,Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,335000000.0,265800000.0
+Iceland,2011,Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,ok,,,,,none,265800000.0,335000000.0,221700000.0
+Iceland,2012,Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,265800000.0,221700000.0
+Iceland,2013,Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,265800000.0,221700000.0
+Iceland,2014,Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,265800000.0,221700000.0
+Iceland,2015,Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,ok,,,,,none,221700000.0,265800000.0,570000000.0
+Iceland,2016,Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,ok,,,,,none,570000000.0,221700000.0,264000000.0
+Iceland,2017,Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,570000000.0,264000000.0
+Iceland,2018,Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,570000000.0,264000000.0
+Iceland,2019,Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,570000000.0,264000000.0
+Iceland,2020,Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,ok,,,,,none,264000000.0,570000000.0,400000000.0
+Iceland,2021,Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,264000000.0,400000000.0
+Iceland,2022,Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,264000000.0,400000000.0
+Iceland,2023,Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,264000000.0,400000000.0
+Iceland,2024,Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,ok,,,,,none,400000000.0,264000000.0,
+Iceland,2005,Sjóður til síldarrannsókna (Fund for Herring Research),innovation_instruments,ok,,,,,none,7000000.0,,15000000.0
+Iceland,2006,Sjóður til síldarrannsókna (Fund for Herring Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,7000000.0,15000000.0
+Iceland,2007,Sjóður til síldarrannsókna (Fund for Herring Research),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,7000000.0,15000000.0
+Iceland,2008,Sjóður til síldarrannsókna (Fund for Herring Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,7000000.0,15000000.0
+Iceland,2009,Sjóður til síldarrannsókna (Fund for Herring Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,7000000.0,15000000.0
+Iceland,2010,Sjóður til síldarrannsókna (Fund for Herring Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,7000000.0,15000000.0
+Iceland,2011,Sjóður til síldarrannsókna (Fund for Herring Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,7000000.0,15000000.0
+Iceland,2012,Sjóður til síldarrannsókna (Fund for Herring Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,7000000.0,15000000.0
+Iceland,2013,Sjóður til síldarrannsókna (Fund for Herring Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,7000000.0,15000000.0
+Iceland,2014,Sjóður til síldarrannsókna (Fund for Herring Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,7000000.0,15000000.0
+Iceland,2015,Sjóður til síldarrannsókna (Fund for Herring Research),innovation_instruments,ok,,,,,none,15000000.0,7000000.0,8000000.0
+Iceland,2016,Sjóður til síldarrannsókna (Fund for Herring Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,15000000.0,8000000.0
+Iceland,2017,Sjóður til síldarrannsókna (Fund for Herring Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,15000000.0,8000000.0
+Iceland,2018,Sjóður til síldarrannsókna (Fund for Herring Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,15000000.0,8000000.0
+Iceland,2019,Sjóður til síldarrannsókna (Fund for Herring Research),innovation_instruments,ok,,,,,none,8000000.0,15000000.0,7000000.0
+Iceland,2020,Sjóður til síldarrannsókna (Fund for Herring Research),innovation_instruments,ok,,,,,none,7000000.0,8000000.0,6000000.0
+Iceland,2021,Sjóður til síldarrannsókna (Fund for Herring Research),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,7000000.0,6000000.0
+Iceland,2022,Sjóður til síldarrannsókna (Fund for Herring Research),innovation_instruments,ok,,,,,none,6000000.0,7000000.0,
+Iceland,1977,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,ok,,,,,none,268000000.0,,466700000.0
+Iceland,1978,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,268000000.0,466700000.0
+Iceland,1979,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,268000000.0,466700000.0
+Iceland,1980,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,268000000.0,466700000.0
+Iceland,1981,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,ok,,,,,none,466700000.0,268000000.0,3176200.0
+Iceland,1982,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,ok,,,,,none,3176200.0,466700000.0,4705000.0
+Iceland,1983,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,ok,,,,,none,4705000.0,3176200.0,13630000.0
+Iceland,1984,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,4705000.0,13630000.0
+Iceland,1985,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,ok,,,,,none,13630000.0,4705000.0,1000000.0
+Iceland,1986,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,13630000.0,1000000.0
+Iceland,1987,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,ok,,,,,none,1000000.0,13630000.0,70000000.0
+Iceland,1988,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,ok,,,,,none,70000000.0,1000000.0,62300000.0
+Iceland,1989,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,ok,,,,,none,62300000.0,70000000.0,43800000.0
+Iceland,1990,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,ok,,,,,none,43800000.0,62300000.0,67600000.0
+Iceland,1991,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,ok,,,,,none,67600000.0,43800000.0,74000000.0
+Iceland,1992,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,ok,,,,,none,74000000.0,67600000.0,60000000.0
+Iceland,1993,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,ok,,,,,none,60000000.0,74000000.0,40000000.0
+Iceland,1994,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,ok,,,,,none,40000000.0,60000000.0,660600000.0
+Iceland,1995,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,40000000.0,660600000.0
+Iceland,1996,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,40000000.0,660600000.0
+Iceland,1997,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,40000000.0,660600000.0
+Iceland,1998,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,40000000.0,660600000.0
+Iceland,1999,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,40000000.0,660600000.0
+Iceland,2000,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,40000000.0,660600000.0
+Iceland,2001,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,40000000.0,660600000.0
+Iceland,2002,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,40000000.0,660600000.0
+Iceland,2003,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,40000000.0,660600000.0
+Iceland,2004,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,40000000.0,660600000.0
+Iceland,2005,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,40000000.0,660600000.0
+Iceland,2006,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,ok,,,,,none,660600000.0,40000000.0,15900000.0
+Iceland,2007,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,660600000.0,15900000.0
+Iceland,2008,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,660600000.0,15900000.0
+Iceland,2009,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,ok,,,,,none,15900000.0,660600000.0,134600000.0
+Iceland,2010,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,15900000.0,134600000.0
+Iceland,2011,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,15900000.0,134600000.0
+Iceland,2012,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,15900000.0,134600000.0
+Iceland,2013,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,15900000.0,134600000.0
+Iceland,2014,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,15900000.0,134600000.0
+Iceland,2015,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,15900000.0,134600000.0
+Iceland,2016,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,15900000.0,134600000.0
+Iceland,2017,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,15900000.0,134600000.0
+Iceland,2018,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,15900000.0,134600000.0
+Iceland,2019,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,ok,,,,,none,134600000.0,15900000.0,83900000.0
+Iceland,2020,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,134600000.0,83900000.0
+Iceland,2021,Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,ok,,,,,none,83900000.0,134600000.0,
+Iceland,2011,Nýsköpunarmiðstöð Íslands (Innovation Centre of Iceland),science_agency,ok,,,,,none,1135600000.0,,1194000000.0
+Iceland,2012,Nýsköpunarmiðstöð Íslands (Innovation Centre of Iceland),science_agency,ok,,,,,none,1194000000.0,1135600000.0,1256200000.0
+Iceland,2013,Nýsköpunarmiðstöð Íslands (Innovation Centre of Iceland),science_agency,ok,,,,,none,1256200000.0,1194000000.0,1283400000.0
+Iceland,2014,Nýsköpunarmiðstöð Íslands (Innovation Centre of Iceland),science_agency,ok,,,,,none,1283400000.0,1256200000.0,1338300000.0
+Iceland,2015,Nýsköpunarmiðstöð Íslands (Innovation Centre of Iceland),science_agency,ok,,,,,none,1338300000.0,1283400000.0,1462300000.0
+Iceland,2016,Nýsköpunarmiðstöð Íslands (Innovation Centre of Iceland),science_agency,ok,,,,,none,1462300000.0,1338300000.0,1377500000.0
+Iceland,2017,Nýsköpunarmiðstöð Íslands (Innovation Centre of Iceland),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,1462300000.0,1377500000.0
+Iceland,2018,Nýsköpunarmiðstöð Íslands (Innovation Centre of Iceland),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,1462300000.0,1377500000.0
+Iceland,2019,Nýsköpunarmiðstöð Íslands (Innovation Centre of Iceland),science_agency,ok,,,,,none,1377500000.0,1462300000.0,1420600000.0
+Iceland,2020,Nýsköpunarmiðstöð Íslands (Innovation Centre of Iceland),science_agency,ok,,,,,none,1420600000.0,1377500000.0,
+Iceland,2021,Háskólinn á Bifröst (University of Bifröst),higher_education,ok,,,,,none,504000000.0,,684500000.0
+Iceland,2022,Háskólinn á Bifröst (University of Bifröst),higher_education,ok,,,,,none,684500000.0,504000000.0,685000000.0
+Iceland,2023,Háskólinn á Bifröst (University of Bifröst),higher_education,ok,,,,,none,685000000.0,684500000.0,750000000.0
+Iceland,2024,Háskólinn á Bifröst (University of Bifröst),higher_education,ok,,,,,none,750000000.0,685000000.0,750000000.0
+Iceland,2025,Háskólinn á Bifröst (University of Bifröst),higher_education,ok,,,,,none,750000000.0,750000000.0,
+Iceland,2004,Háskólinn í Reykjavík (Reykjavik University),higher_education,ok,,,,,none,550800000.0,,52200000.0
+Iceland,2005,Háskólinn í Reykjavík (Reykjavik University),higher_education,ok,,,,,none,52200000.0,550800000.0,3659900000.0
+Iceland,2006,Háskólinn í Reykjavík (Reykjavik University),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,52200000.0,3659900000.0
+Iceland,2007,Háskólinn í Reykjavík (Reykjavik University),higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,52200000.0,3659900000.0
+Iceland,2008,Háskólinn í Reykjavík (Reykjavik University),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,52200000.0,3659900000.0
+Iceland,2009,Háskólinn í Reykjavík (Reykjavik University),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,52200000.0,3659900000.0
+Iceland,2010,Háskólinn í Reykjavík (Reykjavik University),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,52200000.0,3659900000.0
+Iceland,2011,Háskólinn í Reykjavík (Reykjavik University),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,52200000.0,3659900000.0
+Iceland,2012,Háskólinn í Reykjavík (Reykjavik University),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,52200000.0,3659900000.0
+Iceland,2013,Háskólinn í Reykjavík (Reykjavik University),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,52200000.0,3659900000.0
+Iceland,2014,Háskólinn í Reykjavík (Reykjavik University),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,52200000.0,3659900000.0
+Iceland,2015,Háskólinn í Reykjavík (Reykjavik University),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,52200000.0,3659900000.0
+Iceland,2016,Háskólinn í Reykjavík (Reykjavik University),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,52200000.0,3659900000.0
+Iceland,2017,Háskólinn í Reykjavík (Reykjavik University),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,52200000.0,3659900000.0
+Iceland,2018,Háskólinn í Reykjavík (Reykjavik University),higher_education,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,52200000.0,3659900000.0
+Iceland,2019,Háskólinn í Reykjavík (Reykjavik University),higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,52200000.0,3659900000.0
+Iceland,2020,Háskólinn í Reykjavík (Reykjavik University),higher_education,ok,,,,,none,3659900000.0,52200000.0,3666000000.0
+Iceland,2021,Háskólinn í Reykjavík (Reykjavik University),higher_education,ok,,,,,none,3666000000.0,3659900000.0,4507200000.0
+Iceland,2022,Háskólinn í Reykjavík (Reykjavik University),higher_education,ok,,,,,none,4507200000.0,3666000000.0,4507000000.0
+Iceland,2023,Háskólinn í Reykjavík (Reykjavik University),higher_education,ok,,,,,none,4507000000.0,4507200000.0,5101800.0
+Iceland,2024,Háskólinn í Reykjavík (Reykjavik University),higher_education,ok,,,,,none,5101800.0,4507000000.0,

@@ -22,6 +22,7 @@ Usage:
 
 from __future__ import annotations
 
+import gzip
 import logging
 import re
 from pathlib import Path
@@ -31,7 +32,7 @@ import numpy as np
 import pandas as pd
 
 from budget import config as cfg
-from budget.canonical_series import CANONICAL_AGENCIES, _get_agencies_for_country
+from budget.canonical_series import _BELGIUM_VERIFIED_DROPS, CANONICAL_AGENCIES, _get_agencies_for_country
 
 logger = logging.getLogger(__name__)
 
@@ -39,6 +40,62 @@ __all__ = ["detect_gaps", "flag_temporal_outliers", "build_gap_report"]
 
 GAP_REPORT_CSV = cfg.OUTPUT_DIR / "gap_report.csv"
 REEXTRACT_QUEUE_CSV = cfg.OUTPUT_DIR / "reextract_queue.csv"
+_COLOMBIA_FULL_TEXT_DIR = cfg.OUTPUT_DIR / "full_text" / "Colombia"
+
+_VERIFIED_TEMPORAL_OUTLIERS = {
+    ("Estonia", "Archimedes Foundation", 2009),
+    ("Chile", "Fisheries Research Fund", 2014),
+    ("Chile", "Fisheries Research Fund", 2016),
+    ("Chile", "Technological Consortiums - CORFO", 2021),
+    # Verified directly in the original Iceland budget files:
+    # 1976 pdf_06a77b1e920d__1976_0292.txt.gz -> 232 Rannsóknaráð ríkisins,
+    # "Gjöld samtals" = 691.265 thousand ISK.
+    ("Iceland", "Rannsóknaráð ríkisins (National Research Council)", 1976),
+    # 1977 pdf_fb1513389f08__1977_0282.txt.gz -> explicit "Total for
+    # Rannsóknasjóður" = 556.226 thousand ISK.
+    ("Iceland", "Rannsóknasjóður (Research Fund)", 1977),
+    # Verified directly in the original Iceland budget files:
+    # 1998 pdf_b7ffe7ae530e__1998_0706.txt.gz -> Vísindaráð includes explicit
+    # research lines for basic natural-science and humanities research.
+    ("Iceland", "Vísindaráð (Science Council)", 1998),
+    # 2001 pdf_6078fab6c4c8__2001_0489.txt.gz -> Vísindaráð includes explicit
+    # "Frumrannsóknir í raunvísindum" research line at 201.5 m.kr.
+    ("Iceland", "Vísindaráð (Science Council)", 2001),
+    # 2015 pdf_3eddd998eb96__2015_0801.txt.gz -> "04-415 Sjóður til
+    # síldarrannsókna" lists 15,0 m.kr. directly in the original budget file.
+    ("Iceland", "Sjóður til síldarrannsókna (Fund for Herring Research)", 2015),
+    # Verified directly in the original Iceland budget files:
+    # 1981 pdf_7e3e5aebe8ca__1981_0382.txt.gz -> "276 Byggingarsjóður
+    # rannsókna í þágu atvinnuveganna" with "Gjöld samtals" = 466.700.
+    ("Iceland", "Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research)", 1981),
+    # 2006 pdf_b638da4bdd5e__2006_0540.txt.gz -> 1.01 Orkustofnun = 660,6
+    # within the Byggingarsjóður block in the original budget file.
+    ("Iceland", "Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research)", 2006),
+    # Verified directly in the original Iceland budget files:
+    # 2011 pdf_849f7b589fe1__2011_0556.txt.gz -> 02-201 Háskóli Íslands 12.740,1
+    # 2016 pdf_9921de542109__2016_0703.txt.gz -> 02-201 Háskóli Íslands 18.129,5
+    # 2019 pdf_b983142dcb94__2019_s0632-f_I.txt.gz -> University of Iceland 22.445,3
+    # 2020 pdf_9f939d0d30b5__2020_s0561-f_I.txt.gz -> 02-201 Háskóli Íslands 22.020,8
+    # 2021 pdf_23be52953bcc__2021_s0726-f_I.txt.gz -> University of Iceland 26.224,0
+    # 2022 pdf_181fe6f2e332__2022_s0286-f_I.txt.gz -> University of Iceland 29.792,0
+    # 2023 pdf_6a299423e689__2023_s0881-f_I.txt.gz -> 17-201 Háskóli Íslands 32.529,0
+    # 2024 pdf_12a028d2507b__2024_s0854-f_I.txt.gz -> 17-201 Háskóli Íslands 32.407,3
+    # 2025 pdf_ae7f5d8bbf89__2025_s0411-f_I.txt.gz -> 17-201 Háskóli Íslands 39.340,2
+    ("Iceland", "Háskóli Íslands (University of Iceland)", 2011),
+    ("Iceland", "Háskóli Íslands (University of Iceland)", 2016),
+    ("Iceland", "Háskóli Íslands (University of Iceland)", 2019),
+    ("Iceland", "Háskóli Íslands (University of Iceland)", 2020),
+    ("Iceland", "Háskóli Íslands (University of Iceland)", 2021),
+    ("Iceland", "Háskóli Íslands (University of Iceland)", 2022),
+    ("Iceland", "Háskóli Íslands (University of Iceland)", 2023),
+    ("Iceland", "Háskóli Íslands (University of Iceland)", 2024),
+    ("Iceland", "Háskóli Íslands (University of Iceland)", 2025),
+}
+_SKIP_EXPECTED_YEARS = {
+    "Belgium": {(canonical_name, year) for canonical_name, year in _BELGIUM_VERIFIED_DROPS},
+}
+
+_BELGIUM_LATE_BELSPO_YEARS = {2008, 2022, 2023, 2024}
 
 GAP_REPORT_COLUMNS = [
     "country", "year", "canonical_name", "category",
@@ -52,6 +109,214 @@ GAP_REPORT_COLUMNS = [
     "prev_amount",      # previous year value (for context)
     "next_amount",      # next year value (for context)
 ]
+
+
+def _belgium_gap_diagnosis_from_results(
+    country: str,
+    year: int,
+    canonical: str,
+) -> tuple[Optional[str], Optional[str], Optional[str]]:
+    """
+    Provide a more specific Belgium diagnosis than raw_rows coverage can offer.
+
+    Belgium's raw_rows currently come from the older text-cache path and do not
+    cover the later pipeline-only years consistently. For the remaining BELSPO
+    gaps we can still inspect the per-country results file and distinguish
+    between:
+      - no extracted science-policy rows at all
+      - science-policy rows present but all `no_amount` / narrative
+      - likely wrong page or source-file selection
+    """
+    if country != "Belgium":
+        return None, None, None
+    if canonical != "BELSPO / Belgian Federal Science Policy":
+        return None, None, None
+    if year not in _BELGIUM_LATE_BELSPO_YEARS:
+        return None, None, None
+
+    results_path = cfg.OUTPUT_DIR / country / f"{country.lower()}_docx_results.csv"
+    if not results_path.exists():
+        return None, None, None
+
+    try:
+        results_df = pd.read_csv(results_path)
+    except Exception:
+        return None, None, None
+
+    year_df = results_df[pd.to_numeric(results_df.get("year"), errors="coerce").eq(year)].copy()
+    if year_df.empty:
+        return (
+            "No Belgium pipeline rows for this year; likely missing extraction output for the target science-policy file.",
+            "reextract",
+            None,
+        )
+
+    source_file = None
+    files = year_df.get("source_file")
+    if files is not None:
+        file_values = [str(v).strip() for v in files.dropna().tolist() if str(v).strip()]
+        if file_values:
+            source_file = file_values[0]
+
+    science_mask = (
+        year_df.get("section_name_en", pd.Series("", index=year_df.index)).fillna("").astype(str).str.contains(
+            r"science policy|federal scientific policy|federal science policy",
+            case=False,
+            regex=True,
+        )
+        | year_df.get("section_name", pd.Series("", index=year_df.index)).fillna("").astype(str).str.contains(
+            r"wetenschapsbeleid|politique scientifique",
+            case=False,
+            regex=True,
+        )
+        | year_df.get("line_description_en", pd.Series("", index=year_df.index)).fillna("").astype(str).str.contains(
+            r"european space agency|research and development at the international level|science policy",
+            case=False,
+            regex=True,
+        )
+        | year_df.get("line_description", pd.Series("", index=year_df.index)).fillna("").astype(str).str.contains(
+            r"europees ruimtevaart|agence spatiale européenne|onderzoek en ontwikkeling op internationaal|recherche et d[ée]veloppement dans le cadre international",
+            case=False,
+            regex=True,
+        )
+    )
+    science_df = year_df[science_mask].copy()
+
+    if science_df.empty:
+        return (
+            "Belgium pipeline output exists for this year, but no usable BELSPO / science-policy rows were extracted. This points to wrong page/source selection or to a legal-text-only source file rather than a numeric budget annex.",
+            "reextract",
+            source_file,
+        )
+
+    amount_series = pd.to_numeric(science_df.get("amount_local"), errors="coerce")
+    if amount_series.notna().any():
+        return (
+            "Science-policy rows exist with numeric amounts in pipeline output; likely reclassification / matching issue rather than extraction failure.",
+            "reclassify",
+            source_file,
+        )
+
+    notes = science_df.get("notes", pd.Series("", index=science_df.index)).fillna("").astype(str)
+    if notes.str.contains(r"no_amount", case=False, regex=True).all():
+        return (
+            "Science-policy section is present in pipeline output, but the extracted BELSPO rows are all narrative / `no_amount`. The current source behaves like legal text without a recoverable annual amount table.",
+            "reextract",
+            source_file,
+        )
+
+    return (
+        "Belgium science-policy rows were parsed for this year, but none produced a usable annual amount. Re-extract from a better annex or page selection.",
+        "reextract",
+        source_file,
+    )
+
+
+def _colombia_gap_diagnosis_from_results(
+    country: str,
+    year: int,
+    canonical: str,
+) -> tuple[Optional[str], Optional[str], Optional[str]]:
+    """
+    Detect Colombia years where the available source is only a legal wrapper
+    (articles/capitulos) rather than a numeric annex with institutional tables.
+    """
+    if country != "Colombia":
+        return None, None, None
+    if year in {2007, 2009, 2010, 2015}:
+        candidates = sorted(_COLOMBIA_FULL_TEXT_DIR.glob(f"*__{year}_*.txt.gz"))
+        if candidates:
+            path = candidates[0]
+            try:
+                with gzip.open(path, "rt", encoding="utf-8", errors="ignore") as fh:
+                    text = fh.read()
+            except OSError:
+                text = ""
+
+            if year == 2015 and len(text) < 2_000:
+                return (
+                    "Available Colombia source for 2015 is truncated/incomplete in the text cache and does not preserve budget tables. Re-extraction from the same cached text is unlikely to recover traceable institutional amounts.",
+                    "none",
+                    path.stem,
+                )
+
+            transfer_only = bool(
+                re.search(
+                    r"servicio nacional de aprendizaje.*transferir[áa].{0,250}colciencias|"
+                    r"sena.*transferir[áa].{0,250}colciencias",
+                    text,
+                    re.IGNORECASE | re.DOTALL,
+                )
+            )
+            has_nearby_amount = bool(
+                re.search(
+                    r"colciencias.{0,120}\b\d[\d\.,]{5,}\b|\b\d[\d\.,]{5,}\b.{0,120}colciencias",
+                    text,
+                    re.IGNORECASE | re.DOTALL,
+                )
+            )
+            if year in {2007, 2009, 2010} and transfer_only and not has_nearby_amount:
+                return (
+                    "Available Colombia source for this year contains a transfer provision from SENA to COLCIENCIAS, but no traceable institutional appropriation amount near the science entity in the cached original text. Treat as legal/programmatic mention, not a recoverable budget total from the current source.",
+                    "none",
+                    path.stem,
+                )
+    if year not in {2019, 2024, 2025}:
+        return None, None, None
+
+    results_path = cfg.OUTPUT_DIR / country / f"{country.lower()}_docx_results.csv"
+    if not results_path.exists():
+        return None, None, None
+
+    try:
+        results_df = pd.read_csv(results_path)
+    except Exception:
+        return None, None, None
+
+    year_df = results_df[pd.to_numeric(results_df.get("year"), errors="coerce").eq(year)].copy()
+    if year_df.empty:
+        return None, None, None
+
+    source_file = None
+    files = year_df.get("source_file")
+    if files is not None:
+        file_values = [str(v).strip() for v in files.dropna().tolist() if str(v).strip()]
+        if file_values:
+            source_file = file_values[0]
+
+    text = (
+        year_df.get("section_name_en", pd.Series("", index=year_df.index)).fillna("").astype(str)
+        + " "
+        + year_df.get("section_name", pd.Series("", index=year_df.index)).fillna("").astype(str)
+        + " "
+        + year_df.get("line_description_en", pd.Series("", index=year_df.index)).fillna("").astype(str)
+        + " "
+        + year_df.get("line_description", pd.Series("", index=year_df.index)).fillna("").astype(str)
+    ).str.lower()
+
+    has_science_table = text.str.contains(
+        r"3901|3902|3505|1903|3602|minist(?:erio|ry) de ciencia|"
+        r"research with quality and impact|investigaci[óo]n con calidad e impacto|"
+        r"instituto nacional de metrolog|instituto nacional de salud|"
+        r"servicio nacional de aprendizaje",
+        regex=True,
+        na=False,
+    ).any()
+    legal_wrapper_only = text.str.contains(
+        r"art[íi]culo|capitulo|disposiciones varias|fondo de estabilizaci[óo]n|"
+        r"defensa de los derechos e intereses colectivos",
+        regex=True,
+        na=False,
+    ).all()
+
+    if not has_science_table and legal_wrapper_only:
+        return (
+            "Available Colombia source for this year behaves like a legal wrapper only (articles/capitulo text) rather than a numeric science-budget annex. Re-extraction from the same file is unlikely to recover institutional series.",
+            "none",
+            source_file,
+        )
+
+    return None, None, source_file
 
 
 # ---------------------------------------------------------------------------
@@ -68,20 +333,30 @@ def detect_gaps(
 
     Returns DataFrame with one row per (agency, year) in the expected range.
     """
-    agencies = _get_agencies_for_country(country)
-    if not agencies:
-        logger.warning(f"No canonical agencies defined for {country}")
-        return pd.DataFrame()
-
-    # Get all years present in the series for this country
     country_series = series_df[series_df["country"] == country].copy()
     if country_series.empty:
         logger.warning(f"No series data for {country}")
         return pd.DataFrame()
 
+    agencies = _get_agencies_for_country(country)
+    if not agencies:
+        logger.warning(f"No canonical agencies defined for {country}")
+        return pd.DataFrame()
+
+    # Respect the canonicals that survived series construction. Some country-
+    # specific compile rules intentionally drop low-signal hardcoded agencies or
+    # clip them to observed years to avoid manufacturing decades of fake gaps.
+    present_canonicals = set(country_series["canonical_name"].dropna().astype(str))
+    agencies = [a for a in agencies if a["canonical_name"] in present_canonicals]
+    if not agencies:
+        logger.warning(f"No active canonical agencies present in series for {country}")
+        return pd.DataFrame()
+
+    # Get all years present in the series for this country
     all_years = sorted(country_series["year"].unique())
 
     records = []
+    skip_expected = _SKIP_EXPECTED_YEARS.get(country, set())
     for agency in agencies:
         canonical_name = agency["canonical_name"]
         active_start, active_end = agency.get("active_years", (1800, 2099))
@@ -91,7 +366,7 @@ def detect_gaps(
         agency_by_year = (
             country_series[country_series["canonical_name"] == canonical_name]
             .groupby("year")["amount_local"]
-            .sum()
+            .sum(min_count=1)
         )
 
         def _get_year_amount(y):
@@ -100,9 +375,15 @@ def detect_gaps(
                 return None
             return float(val)
 
-        active_years = [y for y in all_years if active_start <= y <= active_end]
+        explicit_years = agency.get("expected_years")
+        if explicit_years:
+            active_years = [int(y) for y in explicit_years if int(y) in all_years]
+        else:
+            active_years = [y for y in all_years if active_start <= y <= active_end]
 
         for year in active_years:
+            if (canonical_name, year) in skip_expected:
+                continue
             amount = _get_year_amount(year)
             has_value = amount is not None
 
@@ -176,6 +457,15 @@ def search_raw_rows_for_gaps(
     agencies = {a["canonical_name"]: a for a in _get_agencies_for_country(country)}
     gap_df = gap_df.copy()
 
+    def _raw_row_matches_variant(entity_text: str, section_text: str, variant: str) -> bool:
+        v = str(variant or "").strip().lower()
+        if not v:
+            return False
+        combined = f"{str(entity_text or '').lower()} {str(section_text or '').lower()}"
+        if len(v) <= 4:
+            return bool(re.search(r"(?<![a-z])" + re.escape(v) + r"(?![a-z])", combined))
+        return v in combined
+
     for idx, gap_row in gap_df[gap_df["gap_type"] == "missing"].iterrows():
         year = gap_row["year"]
         canonical = gap_row["canonical_name"]
@@ -188,17 +478,38 @@ def search_raw_rows_for_gaps(
         ].dropna(subset=["amount_current"])
 
         if year_raw.empty:
+            specific_diag, specific_action, specific_file = _belgium_gap_diagnosis_from_results(
+                country=country,
+                year=int(year),
+                canonical=canonical,
+            )
+            if not specific_diag:
+                specific_diag, specific_action, specific_file = _colombia_gap_diagnosis_from_results(
+                    country=country,
+                    year=int(year),
+                    canonical=canonical,
+                )
             gap_df.at[idx, "raw_row_match"] = "no"
-            gap_df.at[idx, "diagnosis"] = "Year not in raw_rows — documents may not be parsed yet"
-            gap_df.at[idx, "action"] = "reextract"
+            gap_df.at[idx, "diagnosis"] = (
+                specific_diag or "Year not in raw_rows — documents may not be parsed yet"
+            )
+            gap_df.at[idx, "action"] = specific_action or "reextract"
+            if specific_file:
+                gap_df.at[idx, "raw_row_file"] = specific_file
             continue
 
         # Try matching name variants
         matched = None
         for variant in agency["name_variants"]:
-            v = variant.lower()
             matches = year_raw[
-                year_raw["entity_raw"].str.lower().str.contains(v, na=False, regex=False)
+                year_raw.apply(
+                    lambda r: _raw_row_matches_variant(
+                        r.get("entity_raw", ""),
+                        r.get("section_name", ""),
+                        variant,
+                    ),
+                    axis=1,
+                )
             ]
             if not matches.empty:
                 # Take the row with the largest amount
@@ -217,6 +528,18 @@ def search_raw_rows_for_gaps(
         else:
             # Check if the year's documents exist at all
             year_files = year_raw["source_file"].unique()
+            specific_diag, specific_action, specific_file = _colombia_gap_diagnosis_from_results(
+                country=country,
+                year=int(year),
+                canonical=canonical,
+            )
+            if specific_diag:
+                gap_df.at[idx, "raw_row_match"] = "no"
+                gap_df.at[idx, "diagnosis"] = specific_diag
+                gap_df.at[idx, "action"] = specific_action or "none"
+                if specific_file:
+                    gap_df.at[idx, "raw_row_file"] = specific_file
+                continue
             if len(year_files) > 0:
                 gap_df.at[idx, "raw_row_match"] = "no"
                 gap_df.at[idx, "diagnosis"] = (
@@ -263,6 +586,8 @@ def flag_temporal_outliers(
         for idx, row in agency_df.iterrows():
             amt = row["series_amount"]
             if amt is None or pd.isna(amt):
+                continue
+            if (row.get("country"), canonical, int(row.get("year"))) in _VERIFIED_TEMPORAL_OUTLIERS:
                 continue
             if amt < lo or amt > hi:
                 gap_df.at[idx, "gap_type"] = "outlier"

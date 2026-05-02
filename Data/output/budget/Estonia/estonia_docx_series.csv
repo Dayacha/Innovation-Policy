@@ -1,0 +1,81 @@
+country,year,canonical_name,category,amount_local,unit,currency,item_type,line_description_en,source_file,page_number,series_notes
+Estonia,2003,Archimedes Foundation,science_agency,13596000.0,kroon,EEK,line_item,Archimedes Foundation,2003 608767.pdf,11,
+Estonia,2004,Archimedes Foundation,science_agency,40701400.0,kroon,EEK,line_item,Archimedes Foundation,2004 822726.pdf,15,
+Estonia,2005,Archimedes Foundation,science_agency,44671400.0,kroon,EEK,line_item,Sihtasutus Archimedes,2005 960922.pdf,13,
+Estonia,2006,Archimedes Foundation,science_agency,46221403.0,kroon,EEK,line_item,Archimedes Foundation,2006 969308.pdf,13,
+Estonia,2007,Archimedes Foundation,science_agency,52273840.0,kroon,EEK,line_item,Sihtasutus Archimedes,2007 12768664.pdf,16,
+Estonia,2008,Archimedes Foundation,science_agency,34027056.0,kroon,EEK,line_item,Archimedes Foundation,2008 12901846.pdf,22,
+Estonia,2009,Archimedes Foundation,science_agency,1425053475.0,kroon,EEK,program_total,Archimedes Foundation,2009 13111066.pdf,16,
+Estonia,2010,Archimedes Foundation,science_agency,277232235.0,kroon,EEK,line_item,Sihtasutus Archimedes,2010 13252314.pdf,16,
+Estonia,2011,Archimedes Foundation,science_agency,122463679.0,euro,EUR,line_item,Archimedes Foundation,2011_Estonia.pdf,7,
+Estonia,2022,Estonia R&D / Innovation Programmes (post-2011),rd_programme,218717000.0,euro,EUR,verified_override,Verified against original Estonia budget file,2022 125052022002.pdf,4.0,manual override from original Estonia budget file
+Estonia,2025,Estonia R&D / Innovation Programmes (post-2011),rd_programme,247281000.0,euro,EUR,verified_override,Verified against original Estonia budget file,2025 123122024014.pdf,4.0,"Programmatic continuation after the institutional series. Use as a post-2011 hybrid bridge only, not as a directly comparable agency line.; manual override from original Estonia budget file"
+Estonia,1991,Estonian Academy of Sciences,science_agency,690000.0,ruble,RUB,line_item,Academy of Sciences,1991 13111571.pdf,3,
+Estonia,1992,Estonian Academy of Sciences,science_agency,,,,,,,,gap: no matching rows in this year
+Estonia,1994,Estonian Academy of Sciences,science_agency,,,,,,,,gap: no matching rows in this year
+Estonia,1995,Estonian Academy of Sciences,science_agency,1200000.0,kroon,EEK,line_item,Eesti Teaduste Akadeemia hoone,1995 28719.pdf,20,
+Estonia,1996,Estonian Academy of Sciences,science_agency,6522000.0,kroon,EEK,line_item,Allocations to the Estonian Academy of Sciences,1996 28475.pdf,10,
+Estonia,1997,Estonian Academy of Sciences,science_agency,11435000.0,kroon,EEK,program_total,Estonian Academy of Sciences,1997 28613.pdf,10,
+Estonia,1998,Estonian Academy of Sciences,science_agency,12260000.0,kroon,EEK,line_item,Toetus,1998 74471.pdf,15,
+Estonia,1999,Estonian Academy of Sciences,science_agency,13310000.0,kroon,EEK,section_total,Estonian Academy of Sciences,1999.pdf,13,
+Estonia,2000,Estonian Academy of Sciences,science_agency,12610000.0,kroon,EEK,program_total,Total for Estonian Academy of Sciences,2000 71664.pdf,11,
+Estonia,2001,Estonian Academy of Sciences,science_agency,,,,,,,,gap: no matching rows in this year
+Estonia,2002,Estonian Academy of Sciences,science_agency,16510000.0,kroon,EEK,line_item,To the Academy of Sciences,2002 173848.pdf,8,
+Estonia,2003,Estonian Academy of Sciences,science_agency,,,,,,,,gap: no matching rows in this year
+Estonia,2004,Estonian Academy of Sciences,science_agency,,,,,,,,gap: no matching rows in this year
+Estonia,2005,Estonian Academy of Sciences,science_agency,,,,,,,,gap: no matching rows in this year
+Estonia,2006,Estonian Academy of Sciences,science_agency,,,,,,,,gap: no matching rows in this year
+Estonia,2007,Estonian Academy of Sciences,science_agency,,,,,,,,gap: no matching rows in this year
+Estonia,2008,Estonian Academy of Sciences,science_agency,,,,,,,,gap: no matching rows in this year
+Estonia,2009,Estonian Academy of Sciences,science_agency,,,,,,,,gap: no matching rows in this year
+Estonia,2010,Estonian Academy of Sciences,science_agency,,,,,,,,gap: no matching rows in this year
+Estonia,2011,Estonian Academy of Sciences,science_agency,1208953.0,euro,EUR,line_item,Estonian Academy of Sciences,2011_Estonia.pdf,7,
+Estonia,2008,Estonian Genome Center,science_agency,8010000.0,kroon,EEK,line_item,Estonian Genome Center,2008 12901846.pdf,78,"This center focuses on genomic research, which is highly relevant to R&D."
+Estonia,1991,Estonian Research Council / Science Foundation,science_agency,28241200.0,ruble,RUB,program_total,Science Foundation,1991 13111571.pdf,1,
+Estonia,1992,Estonian Research Council / Science Foundation,science_agency,36734000.0,kroon,EEK,program_total,Total expenses,1992 13105790.pdf,4,
+Estonia,1994,Estonian Research Council / Science Foundation,science_agency,117162000.0,kroon,EEK,program_total,Estonian Science Foundation,1994 28618.pdf,10,
+Estonia,1995,Estonian Research Council / Science Foundation,science_agency,166870000.0,kroon,EEK,line_item,Estonian Science Foundation,1995 28719.pdf,18,
+Estonia,1996,Estonian Research Council / Science Foundation,science_agency,153890000.0,kroon,EEK,program_total,Allocations to the Estonian Science Foundation,1996 28475.pdf,10,
+Estonia,1997,Estonian Research Council / Science Foundation,science_agency,185825000.0,kroon,EEK,program_total,Science Fund,1997 28613.pdf,10,
+Estonia,1998,Estonian Research Council / Science Foundation,science_agency,74315700.0,kroon,EEK,program_total,Science Fund,1998 74471.pdf,15,
+Estonia,1999,Estonian Research Council / Science Foundation,science_agency,78500000.0,kroon,EEK,section_total,Estonian Science Foundation,1999.pdf,13,
+Estonia,2000,Estonian Research Council / Science Foundation,science_agency,72600000.0,kroon,EEK,line_item,Allocated for the Estonian Science Foundation,2000 71664.pdf,11,
+Estonia,2001,Estonian Research Council / Science Foundation,science_agency,72600000.0,kroon,EEK,line_item,to the Estonian Science Foundation,2001 72597.pdf,7,
+Estonia,2002,Estonian Research Council / Science Foundation,science_agency,79600000.0,kroon,EEK,line_item,To the Estonian Science Foundation,2002 173848.pdf,7,
+Estonia,2003,Estonian Research Council / Science Foundation,science_agency,80000000.0,kroon,EEK,line_item,Estonian Science Foundation,2003 608767.pdf,11,
+Estonia,2004,Estonian Research Council / Science Foundation,science_agency,91000000.0,kroon,EEK,line_item,Estonian Science Foundation,2004 822726.pdf,15,
+Estonia,2005,Estonian Research Council / Science Foundation,science_agency,94775000.0,kroon,EEK,line_item,Estonian Science Foundation,2005 960922.pdf,12,
+Estonia,2006,Estonian Research Council / Science Foundation,science_agency,354677000.0,kroon,EEK,line_item,Research funding for various projects,2006 969308.pdf,40,
+Estonia,2007,Estonian Research Council / Science Foundation,science_agency,124156000.0,kroon,EEK,verified_override,Verified against original Estonia budget file,2007 12768664.pdf,16.0,manual override from original Estonia budget file
+Estonia,2008,Estonian Research Council / Science Foundation,science_agency,160193000.0,kroon,EEK,verified_override,Verified against original Estonia budget file,2008 12901846.pdf,16.0,manual override from original Estonia budget file
+Estonia,2009,Estonian Research Council / Science Foundation,science_agency,392000000.0,kroon,EEK,program_total,Estonian Science Foundation,2009 13111066.pdf,16,
+Estonia,2010,Estonian Research Council / Science Foundation,science_agency,6000000.0,kroon,EEK,program_total,Funding for research projects,2010 13252314.pdf,39,
+Estonia,2011,Estonian Research Council / Science Foundation,science_agency,8785390.0,euro,EUR,line_item,Estonian Science Foundation,2011_Estonia.pdf,7,
+Estonia,1991,Innovation Fund,innovation_instruments,5000000.0,ruble,RUB,line_item,Innovation Fund,1991 13111571.pdf,3,This fund is dedicated to fostering innovation and R&D activities.
+Estonia,2007,Projects of the Estonian Biocenter,direct_rd,11525328.0,kroon,EEK,program_total,Projects of the Estonian Biocenter,2007 12768664.pdf,25,These projects are directly related to research activities.
+Estonia,1994,Tallinn University of Technology,higher_education,55478000.0,kroon,EEK,line_item,Tallinn University of Technology,1994 28618.pdf,9,
+Estonia,1995,Tallinn University of Technology,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,1996,Tallinn University of Technology,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,1997,Tallinn University of Technology,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,1998,Tallinn University of Technology,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,1999,Tallinn University of Technology,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,2000,Tallinn University of Technology,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,2001,Tallinn University of Technology,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,2002,Tallinn University of Technology,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,2003,Tallinn University of Technology,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,2004,Tallinn University of Technology,higher_education,,,,,,,,
+Estonia,2005,Tallinn University of Technology,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,2006,Tallinn University of Technology,higher_education,145000000.0,kroon,EEK,line_item,Research funding for Tallinn University of Technology,2006 969308.pdf,62,
+Estonia,1994,University of Tartu,higher_education,78312000.0,kroon,EEK,line_item,University of Tartu,1994 28618.pdf,9,
+Estonia,1995,University of Tartu,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,1996,University of Tartu,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,1997,University of Tartu,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,1998,University of Tartu,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,1999,University of Tartu,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,2000,University of Tartu,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,2001,University of Tartu,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,2002,University of Tartu,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,2003,University of Tartu,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,2004,University of Tartu,higher_education,,,,,,,,
+Estonia,2005,University of Tartu,higher_education,,,,,,,,gap: no matching rows in this year
+Estonia,2006,University of Tartu,higher_education,196408000.0,kroon,EEK,line_item,Research funding for the University of Tartu,2006 969308.pdf,62,

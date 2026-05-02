@@ -1,0 +1,81 @@
+country,canonical_name,year,amount_total,amount_primary,n_acts,acts,additive_flag,currency,unit,category
+Estonia,Archimedes Foundation,2003,13596000.0,13596000.0,1,2003 608767.pdf,single,EEK,kroon,science_agency
+Estonia,Archimedes Foundation,2004,40701400.0,40701400.0,1,2004 822726.pdf,single,EEK,kroon,science_agency
+Estonia,Archimedes Foundation,2005,44671400.0,44671400.0,1,2005 960922.pdf,single,EEK,kroon,science_agency
+Estonia,Archimedes Foundation,2006,46221403.0,46221403.0,1,2006 969308.pdf,single,EEK,kroon,science_agency
+Estonia,Archimedes Foundation,2007,52273840.0,52273840.0,1,2007 12768664.pdf,single,EEK,kroon,science_agency
+Estonia,Archimedes Foundation,2008,34027056.0,34027056.0,1,2008 12901846.pdf,single,EEK,kroon,science_agency
+Estonia,Archimedes Foundation,2009,1425053475.0,1425053475.0,1,2009 13111066.pdf,single,EEK,kroon,science_agency
+Estonia,Archimedes Foundation,2010,277232235.0,277232235.0,1,2010 13252314.pdf,single,EEK,kroon,science_agency
+Estonia,Archimedes Foundation,2011,122463679.0,122463679.0,1,2011_Estonia.pdf,single,EUR,euro,science_agency
+Estonia,Estonia R&D / Innovation Programmes (post-2011),2022,218717000.0,218717000.0,1,2022 125052022002.pdf,single,EUR,euro,rd_programme
+Estonia,Estonia R&D / Innovation Programmes (post-2011),2025,247281000.0,247281000.0,1,2025 123122024014.pdf,single,EUR,euro,rd_programme
+Estonia,Estonian Academy of Sciences,1991,690000.0,690000.0,1,1991 13111571.pdf,single,RUB,ruble,science_agency
+Estonia,Estonian Academy of Sciences,1992,,,0,,gap,,,science_agency
+Estonia,Estonian Academy of Sciences,1994,,,0,,gap,,,science_agency
+Estonia,Estonian Academy of Sciences,1995,1200000.0,1200000.0,1,1995 28719.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Academy of Sciences,1996,6522000.0,6522000.0,1,1996 28475.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Academy of Sciences,1997,11435000.0,11435000.0,1,1997 28613.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Academy of Sciences,1998,12260000.0,12260000.0,1,1998 74471.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Academy of Sciences,1999,13310000.0,13310000.0,1,1999.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Academy of Sciences,2000,12610000.0,12610000.0,1,2000 71664.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Academy of Sciences,2001,,,0,,gap,,,science_agency
+Estonia,Estonian Academy of Sciences,2002,16510000.0,16510000.0,1,2002 173848.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Academy of Sciences,2003,,,0,,gap,,,science_agency
+Estonia,Estonian Academy of Sciences,2004,,,0,,gap,,,science_agency
+Estonia,Estonian Academy of Sciences,2005,,,0,,gap,,,science_agency
+Estonia,Estonian Academy of Sciences,2006,,,0,,gap,,,science_agency
+Estonia,Estonian Academy of Sciences,2007,,,0,,gap,,,science_agency
+Estonia,Estonian Academy of Sciences,2008,,,0,,gap,,,science_agency
+Estonia,Estonian Academy of Sciences,2009,,,0,,gap,,,science_agency
+Estonia,Estonian Academy of Sciences,2010,,,0,,gap,,,science_agency
+Estonia,Estonian Academy of Sciences,2011,1208953.0,1208953.0,1,2011_Estonia.pdf,single,EUR,euro,science_agency
+Estonia,Estonian Genome Center,2008,8010000.0,8010000.0,1,2008 12901846.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Research Council / Science Foundation,1991,28241200.0,28241200.0,1,1991 13111571.pdf,single,RUB,ruble,science_agency
+Estonia,Estonian Research Council / Science Foundation,1992,36734000.0,36734000.0,1,1992 13105790.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Research Council / Science Foundation,1994,117162000.0,117162000.0,1,1994 28618.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Research Council / Science Foundation,1995,166870000.0,166870000.0,1,1995 28719.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Research Council / Science Foundation,1996,153890000.0,153890000.0,1,1996 28475.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Research Council / Science Foundation,1997,185825000.0,185825000.0,1,1997 28613.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Research Council / Science Foundation,1998,74315700.0,74315700.0,1,1998 74471.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Research Council / Science Foundation,1999,78500000.0,78500000.0,1,1999.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Research Council / Science Foundation,2000,72600000.0,72600000.0,1,2000 71664.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Research Council / Science Foundation,2001,72600000.0,72600000.0,1,2001 72597.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Research Council / Science Foundation,2002,79600000.0,79600000.0,1,2002 173848.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Research Council / Science Foundation,2003,80000000.0,80000000.0,1,2003 608767.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Research Council / Science Foundation,2004,91000000.0,91000000.0,1,2004 822726.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Research Council / Science Foundation,2005,94775000.0,94775000.0,1,2005 960922.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Research Council / Science Foundation,2006,354677000.0,354677000.0,1,2006 969308.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Research Council / Science Foundation,2007,124156000.0,124156000.0,1,2007 12768664.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Research Council / Science Foundation,2008,160193000.0,160193000.0,1,2008 12901846.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Research Council / Science Foundation,2009,392000000.0,392000000.0,1,2009 13111066.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Research Council / Science Foundation,2010,6000000.0,6000000.0,1,2010 13252314.pdf,single,EEK,kroon,science_agency
+Estonia,Estonian Research Council / Science Foundation,2011,8785390.0,8785390.0,1,2011_Estonia.pdf,single,EUR,euro,science_agency
+Estonia,Innovation Fund,1991,5000000.0,5000000.0,1,1991 13111571.pdf,single,RUB,ruble,innovation_instruments
+Estonia,Projects of the Estonian Biocenter,2007,11525328.0,11525328.0,1,2007 12768664.pdf,single,EEK,kroon,direct_rd
+Estonia,Tallinn University of Technology,1994,55478000.0,55478000.0,1,1994 28618.pdf,single,EEK,kroon,higher_education
+Estonia,Tallinn University of Technology,1995,,,0,,gap,,,higher_education
+Estonia,Tallinn University of Technology,1996,,,0,,gap,,,higher_education
+Estonia,Tallinn University of Technology,1997,,,0,,gap,,,higher_education
+Estonia,Tallinn University of Technology,1998,,,0,,gap,,,higher_education
+Estonia,Tallinn University of Technology,1999,,,0,,gap,,,higher_education
+Estonia,Tallinn University of Technology,2000,,,0,,gap,,,higher_education
+Estonia,Tallinn University of Technology,2001,,,0,,gap,,,higher_education
+Estonia,Tallinn University of Technology,2002,,,0,,gap,,,higher_education
+Estonia,Tallinn University of Technology,2003,,,0,,gap,,,higher_education
+Estonia,Tallinn University of Technology,2004,,,0,,gap,,,higher_education
+Estonia,Tallinn University of Technology,2005,,,0,,gap,,,higher_education
+Estonia,Tallinn University of Technology,2006,145000000.0,145000000.0,1,2006 969308.pdf,single,EEK,kroon,higher_education
+Estonia,University of Tartu,1994,78312000.0,78312000.0,1,1994 28618.pdf,single,EEK,kroon,higher_education
+Estonia,University of Tartu,1995,,,0,,gap,,,higher_education
+Estonia,University of Tartu,1996,,,0,,gap,,,higher_education
+Estonia,University of Tartu,1997,,,0,,gap,,,higher_education
+Estonia,University of Tartu,1998,,,0,,gap,,,higher_education
+Estonia,University of Tartu,1999,,,0,,gap,,,higher_education
+Estonia,University of Tartu,2000,,,0,,gap,,,higher_education
+Estonia,University of Tartu,2001,,,0,,gap,,,higher_education
+Estonia,University of Tartu,2002,,,0,,gap,,,higher_education
+Estonia,University of Tartu,2003,,,0,,gap,,,higher_education
+Estonia,University of Tartu,2004,,,0,,gap,,,higher_education
+Estonia,University of Tartu,2005,,,0,,gap,,,higher_education
+Estonia,University of Tartu,2006,196408000.0,196408000.0,1,2006 969308.pdf,single,EEK,kroon,higher_education

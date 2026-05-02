@@ -34,6 +34,7 @@ from budget.docx_table_parser import RawRow
 logger = logging.getLogger(__name__)
 
 TEXT_CACHE_DIR = Path("Data/output/budget/full_text")
+CHILE_SOURCE_PDF_DIR = Path("Data/input/finance_bills/Chile")
 
 # Regex for ALL-CAPS agency name lines (≥3 caps words, may span multiple lines)
 _RE_CAPS_LINE = re.compile(r"^[A-Z][A-Z\s\(\)\-'\.&/,]{10,}$")
@@ -50,10 +51,87 @@ _RE_SINGLE_YEAR_ACT = re.compile(r"(?<!\d)((?:19|20)\d{2})-(\d{1,2})(?!\d)")
 
 # Regex for vote numbers (1, 5, 1b, 5b, 10, etc.)
 _RE_VOTE = re.compile(r"^\d+[a-z]?$")
+_RE_YEAR_AFTER_HASH = re.compile(r"__([12]\d{3})(?=[_\-])")
+_RE_CHILE_PAGE = re.compile(r"^=== Page (\d+)\.0")
+_RE_CHILE_AMOUNT = re.compile(r"^(?:M\$\s*)?([0-9][0-9\.\,\s\u00a0]*)$")
+_RE_CHILE_INLINE_AMOUNT = re.compile(r"^(?P<entity>.+?)\s+(?P<amount>[0-9][0-9\.\,]{3,})$")
+_RE_CHILE_MINISTRY = re.compile(r"^(MINISTERIO DE|MINISTERIO DEL|MINISTERIO DE LA|MINISTERIO DE LAS)\b", re.IGNORECASE)
+_RE_CHILE_ENTITY_SIGNAL = re.compile(
+    r"anid|conicyt|investig|ciencia|tecnolog|innov|fomento pesquero|agropecuari|"
+    r"forestal|informaci[oó]n de recursos naturales|fundaci[oó]n para la innovaci[oó]n agraria|"
+    r"ant[aá]rt|nuclear|millenium|milenium|acuicultura",
+    re.IGNORECASE,
+)
+_RE_CHILE_INSTITUTION_WORD = re.compile(
+    r"\b(agencia|comisi[oó]n|comit[eé]|instituto|fundaci[oó]n|centro|oficina|subsecretar[ií]a)\b",
+    re.IGNORECASE,
+)
+_RE_CHILE_EXCLUDE_TEXT = re.compile(
+    r"^(ingresos|gastos|transferencias|adquisici[oó]n|iniciativas de inversi[oó]n|"
+    r"saldo|servicio de la deuda|moneda nacional|sub-|t[ií]tulo|item|asig\.?|"
+    r"denominaciones|glosa|partida|cap[ií]tulo|programa|fisco|tesoro p[úu]blico|"
+    r"al gobierno central|al sector privado|a otras entidades p[úu]blicas|"
+    r"transferencias corrientes|transferencias de capital|gastos en personal|"
+    r"bienes y servicios de consumo|pr[eé]stamos|endeudamiento|ley de presupuestos)",
+    re.IGNORECASE,
+)
+_RE_CHILE_NON_RD_ENTITY = re.compile(
+    r"polic[ií]a de investigaciones|servicio local de educaci[oó]n|junta nacional de|"
+    r"superintendencia de educaci[oó]n|agencia de calidad de la educaci[oó]n|"
+    r"subsecretar[ií]a de educaci[oó]n(?: superior| parvularia)?$|"
+    r"fondo nacional de salud|subsecretar[ií]a de redes asistenciales|"
+    r"ministerio p[úu]blico|instituto nacional de derechos humanos|"
+    r"direcci[oó]n de sanidad|subsecretar[ií]a de salud|subsecretar[ií]a de agricultura|"
+    r"oficina de estudios y pol[ií]ticas agrarias|comisi[oó]n nacional del medio ambiente|"
+    r"subsecretar[ií]a de bienes nacionales|subsecretar[ií]a de vivienda y urbanismo",
+    re.IGNORECASE,
+)
+_RE_CHILE_LEADING_NUMERIC = re.compile(r"^(?:[0-9]{1,3}(?:[.,][0-9]{3})+|[0-9]{1,3}(?:\s+[0-9]{1,3}){1,3})\s+")
+_RE_CHILE_LEADING_BULLET = re.compile(r"^(?:[-–—]+\s*)+")
+_RE_CHILE_PROGRAM_SUFFIX = re.compile(r"\bprograma\s+\d+\b$", re.IGNORECASE)
+_RE_CHILE_KNOWN_RD_ENTITY = re.compile(
+    r"agencia nacional de investigaci[oó]n y desarrollo|"
+    r"comisi[oó]n nacional de investigaci[oó]n cient[ií]fica y tecnol[oó]gica|"
+    r"comisi[oó]n chilena de energ[ií]a nuclear|"
+    r"instituto ant[aá]rtico chileno|"
+    r"instituto de investigaciones agropecuarias|"
+    r"fundaci[oó]n para la innovaci[oó]n agraria|"
+    r"instituto de fomento pesquero|"
+    r"centro de informaci[oó]n de recursos naturales|"
+    r"instituto forestal|"
+    r"instituto de salud p[úu]blica de chile|"
+    r"comit[eé] innova chile|"
+    r"fondo de fomento ciencia y tecnolog[ií]a|"
+    r"fondo de investigaci[oó]n pesquera|"
+    r"iniciativa cient[ií]fica mille?nnium|"
+    r"centro ant[aá]rtico internacional|"
+    r"acceso a la informaci[oó]n electr[oó]nica para ciencia y tecnolog[ií]a|"
+    r"apoyo innovaci[oó]n educaci[oó]n superior|"
+    r"centros tecnol[oó]gicos|centros de excelencia|"
+    r"consorcios tecnol[oó]gicos|fomento de la ciencia y la tecnolog[ií]a|"
+    r"internacionalizaci[oó]n del esfuerzo innovador|"
+    r"fie-innovaci[oó]n e i&d empresarial|"
+    r"convocatoria proyectos de innovaci[oó]n agraria",
+    re.IGNORECASE,
+)
+_CHILE_TARGET_MINISTRIES = {
+    "ministerio de educacion",
+    "ministerio de ciencia tecnologia conocimiento e innovacion",
+    "ministerio de economia fomento y turismo",
+    "ministerio de economia fomento y reconstruccion",
+    "ministerio de agricultura",
+    "ministerio de relaciones exteriores",
+    "ministerio de energia",
+    "ministerio de salud",
+}
 
 
 def _parse_fiscal_year(filename: str) -> Optional[int]:
     """Extract the first calendar year from a fiscal year string like '2023-24'."""
+    m_hash = _RE_YEAR_AFTER_HASH.search(filename)
+    if m_hash:
+        return int(m_hash.group(1))
+
     m = _RE_FISCAL_YEAR.search(filename)
     if m:
         year = int(m.group(1))
@@ -254,6 +332,322 @@ def _extract_vote_amounts_from_block(block_lines: list[str]) -> list[float]:
     return vote_amounts
 
 
+def _clean_chile_line(line: str) -> str:
+    line = str(line or "").replace("\t", " ").replace("\xa0", " ")
+    line = re.sub(r"\s+", " ", line)
+    return line.strip(" .")
+
+
+def _chile_source_pdf_path(year: int) -> Optional[Path]:
+    patterns = [
+        f"{year}_Ley de presupuestos.pdf",
+        f"{year}_Ley de presupuestos.PDF",
+    ]
+    for pattern in patterns:
+        path = CHILE_SOURCE_PDF_DIR / pattern
+        if path.exists():
+            return path
+    return None
+
+
+def _chile_text_cache_is_effectively_empty(lines: list[str]) -> bool:
+    substantive = 0
+    for line in lines:
+        cleaned = _clean_chile_line(line)
+        if not cleaned:
+            continue
+        if cleaned.startswith("=== Page"):
+            continue
+        substantive += 1
+        if substantive >= 5:
+            return False
+    return True
+
+
+def _render_pages_to_chile_cache_text(pages: list[object]) -> str:
+    rendered: list[str] = []
+    for pg in pages:
+        method = getattr(pg, "method", "unknown")
+        page_num = getattr(pg, "page_num", 0)
+        rendered.append(f"=== Page {page_num}.0 | method: {method} ===")
+        text = str(getattr(pg, "text", "") or "").rstrip()
+        if text:
+            rendered.append(text)
+    return "\n".join(rendered) + "\n"
+
+
+def _normalise_ministry_name(name: str) -> str:
+    cleaned = _clean_chile_line(name).lower()
+    cleaned = (
+        cleaned.replace("á", "a")
+        .replace("é", "e")
+        .replace("í", "i")
+        .replace("ó", "o")
+        .replace("ú", "u")
+        .replace("ñ", "n")
+    )
+    return re.sub(r"[^a-z0-9 ]+", " ", cleaned).strip()
+
+
+def _parse_chile_amount(text: str) -> Optional[float]:
+    cleaned = _clean_chile_line(text)
+    if re.fullmatch(r"[0-9]{1,3}(?:,\s*[0-9]{1,3})+", cleaned):
+        return None
+    m = _RE_CHILE_AMOUNT.match(cleaned)
+    if not m:
+        return None
+    digits = re.sub(r"[^0-9\.,]", "", m.group(1))
+    if not digits:
+        return None
+    if "." not in digits and "," not in digits:
+        if len(digits) < 4:
+            return None
+        return float(digits)
+    digits = digits.replace(".", "").replace(",", ".")
+    try:
+        value = float(digits)
+    except ValueError:
+        return None
+    if value < 10:
+        return None
+    return value
+
+
+def _extract_chile_inline_entity_amount(text: str) -> tuple[Optional[str], Optional[float]]:
+    cleaned = _clean_chile_line(text)
+    match = _RE_CHILE_INLINE_AMOUNT.match(cleaned)
+    if not match:
+        return None, None
+    amount = _parse_chile_amount(match.group("amount"))
+    if amount is None:
+        return None, None
+    entity = _strip_chile_leading_numeric(match.group("entity"))
+    entity = re.sub(r"\s*\|\s*", " ", entity).strip(" -|")
+    if not entity:
+        return None, None
+    return entity, amount
+
+
+def _strip_chile_leading_numeric(text: str) -> str:
+    cleaned = _clean_chile_line(text)
+    prev = None
+    while cleaned and cleaned != prev:
+        prev = cleaned
+        cleaned = _RE_CHILE_LEADING_BULLET.sub("", cleaned).strip()
+        cleaned = _RE_CHILE_LEADING_NUMERIC.sub("", cleaned).strip()
+    cleaned = _RE_CHILE_PROGRAM_SUFFIX.sub("", cleaned).strip()
+    return cleaned
+
+
+def _looks_like_chile_metadata(line: str) -> bool:
+    stripped = _clean_chile_line(line)
+    if not stripped:
+        return True
+    if stripped.startswith("==="):
+        return True
+    if re.fullmatch(r"[0-9]{1,3}", stripped):
+        return True
+    if re.fullmatch(r"[0-9]{1,3}(?:,\s*[0-9]{1,3})+", stripped):
+        return True
+    if re.fullmatch(r"[0-9]{1,3}(?:,\s*[0-9]{1,3})*\s*(?:[A-Z]{1,3})?", stripped):
+        return True
+    if stripped in {"Sub-", "Título", "Item", "Ítem", "Asig.", "Denominaciones", "Glosa", "Nº"}:
+        return True
+    return False
+
+
+def _is_chile_candidate_text(text: str, current_ministry: str) -> bool:
+    cleaned = _strip_chile_leading_numeric(text)
+    if not cleaned or len(cleaned) < 8:
+        return False
+    if _RE_CHILE_EXCLUDE_TEXT.search(cleaned):
+        return False
+    if _RE_CHILE_NON_RD_ENTITY.search(cleaned):
+        return False
+    if _RE_CHILE_MINISTRY.match(cleaned):
+        return False
+    if _RE_CHILE_KNOWN_RD_ENTITY.search(cleaned):
+        return True
+    if _RE_CHILE_ENTITY_SIGNAL.search(cleaned):
+        if _RE_CHILE_INSTITUTION_WORD.search(cleaned):
+            return True
+        return _normalise_ministry_name(current_ministry) in _CHILE_TARGET_MINISTRIES
+    return False
+
+
+def _parse_chile_lines(lines: list[str], source_file: str, country: str, year: int) -> list[RawRow]:
+    rows: list[RawRow] = []
+    seen: set[tuple[int, str, float]] = set()
+    page_number = 0
+    current_ministry = ""
+    i = 0
+
+    while i < len(lines):
+        raw = lines[i]
+        page_match = _RE_CHILE_PAGE.match(raw.strip())
+        if page_match:
+            page_number = int(page_match.group(1))
+            i += 1
+            continue
+
+        line = _clean_chile_line(raw)
+        if not line:
+            i += 1
+            continue
+
+        if _RE_CHILE_MINISTRY.match(line) and (line.isupper() or _normalise_ministry_name(line) in _CHILE_TARGET_MINISTRIES):
+            ministry_parts = [line]
+            j = i + 1
+            while j < len(lines):
+                nxt = _clean_chile_line(lines[j])
+                if not nxt or nxt.startswith("==="):
+                    break
+                if _looks_like_chile_metadata(nxt):
+                    break
+                if _parse_chile_amount(nxt) is not None:
+                    break
+                if nxt.isupper() or nxt[:1].isupper():
+                    ministry_parts.append(nxt)
+                    j += 1
+                    continue
+                break
+            current_ministry = " ".join(ministry_parts)
+            i = j
+            continue
+
+        if _parse_chile_amount(line) is not None:
+            i += 1
+            continue
+
+        if _looks_like_chile_metadata(line):
+            i += 1
+            continue
+
+        inline_entity, inline_amount = _extract_chile_inline_entity_amount(line)
+        if inline_amount is not None:
+            entity = inline_entity or ""
+            if entity and _is_chile_candidate_text(entity, current_ministry):
+                key = (page_number, entity.lower(), float(inline_amount))
+                if key not in seen:
+                    seen.add(key)
+                    rows.append(
+                        RawRow(
+                            country=country,
+                            year=year,
+                            source_file=source_file,
+                            page_number=page_number,
+                            section_name=current_ministry or entity,
+                            entity_raw=entity,
+                            amount_current=inline_amount,
+                            amount_prior=None,
+                            is_header_row=False,
+                            is_total_row=False,
+                            cells_raw=[],
+                        )
+                    )
+            i += 1
+            continue
+
+        entity_parts = [line]
+        amount = None
+        j = i + 1
+        while j < len(lines):
+            nxt = _clean_chile_line(lines[j])
+            if not nxt:
+                j += 1
+                continue
+            if nxt.startswith("==="):
+                break
+            if _RE_CHILE_MINISTRY.match(nxt):
+                break
+            maybe_amount = _parse_chile_amount(nxt)
+            if maybe_amount is not None:
+                amount = maybe_amount
+                break
+            if _looks_like_chile_metadata(nxt):
+                j += 1
+                continue
+            entity_parts.append(nxt)
+            if len(entity_parts) >= 3:
+                break
+            j += 1
+
+        entity = _strip_chile_leading_numeric(" ".join(entity_parts))
+        if amount is not None and _is_chile_candidate_text(entity, current_ministry):
+            key = (page_number, entity.lower(), float(amount))
+            if key not in seen:
+                seen.add(key)
+                rows.append(
+                    RawRow(
+                        country=country,
+                        year=year,
+                        source_file=source_file,
+                        page_number=page_number,
+                        section_name=current_ministry or entity,
+                        entity_raw=entity,
+                        amount_current=amount,
+                        amount_prior=None,
+                        is_header_row=False,
+                        is_total_row=False,
+                        cells_raw=[],
+                    )
+                )
+        i += 1
+
+    return rows
+
+
+def _parse_chile_text_file(file_path: Path, country: str, year: int) -> list[RawRow]:
+    try:
+        with gzip.open(file_path, "rt", encoding="utf-8", errors="replace") as f:
+            lines = f.read().splitlines()
+    except Exception as e:
+        logger.warning(f"Could not read {file_path}: {e}")
+        return []
+
+    source_file = file_path.stem
+    rows = _parse_chile_lines(lines, source_file, country, year)
+    if rows:
+        logger.info(f"[{country} {year}] {file_path.name}: {len(rows)} Chile rows parsed")
+        return rows
+
+    if not (2002 <= year <= 2008):
+        logger.info(f"[{country} {year}] {file_path.name}: 0 Chile rows parsed")
+        return rows
+
+    if not _chile_text_cache_is_effectively_empty(lines):
+        logger.info(f"[{country} {year}] {file_path.name}: 0 Chile rows parsed")
+        return rows
+
+    pdf_path = _chile_source_pdf_path(year)
+    if pdf_path is None:
+        logger.info(f"[{country} {year}] {file_path.name}: 0 Chile rows parsed (no source PDF for OCR fallback)")
+        return rows
+
+    try:
+        from budget.pdf_reader import extract_pages
+
+        logger.info(f"[{country} {year}] {file_path.name}: empty text cache detected; retrying from PDF OCR fallback")
+        pages = extract_pages(
+            pdf_path,
+            cache_dir=TEXT_CACHE_DIR,
+            force_reextract=True,
+            ocr_zoom=2.0,
+            ocr_langs="eng+spa",
+        )
+        rendered = _render_pages_to_chile_cache_text(pages)
+        with gzip.open(file_path, "wt", encoding="utf-8") as f:
+            f.write(rendered)
+        ocr_lines = rendered.splitlines()
+        rows = _parse_chile_lines(ocr_lines, source_file, country, year)
+    except Exception as e:
+        logger.warning(f"[{country} {year}] OCR fallback failed for {pdf_path.name}: {e}")
+        rows = []
+
+    logger.info(f"[{country} {year}] {file_path.name}: {len(rows)} Chile rows parsed")
+    return rows
+
+
 def parse_text_file(
     file_path: Path,
     country: str,
@@ -262,6 +656,9 @@ def parse_text_file(
     """
     Parse a single .txt.gz file and return RawRow records (one per agency).
     """
+    if country == "Chile":
+        return _parse_chile_text_file(file_path, country, year)
+
     try:
         with gzip.open(file_path, "rt", encoding="utf-8", errors="replace") as f:
             text = f.read()

@@ -58,6 +58,14 @@ _OUTPUT_UNIT_BY_CURRENCY = {
     "DKK": "krone",
     "NOK": "krone",
     "SEK": "krona",
+    "ISK": "krona",
+    "FIM": "markka",   # Finnish markka (pre-2002)
+    "NLG": "guilder",  # Netherlands guilder (pre-2002)
+    "CHF": "franc",
+    "BEF": "franc",
+    "ATS": "schilling",
+    "EEK": "kroon",
+    "RUB": "ruble",
 }
 
 _SCALE_TO_BASE_UNIT = {
@@ -95,6 +103,137 @@ _UK_ALLOWED_DISCOVERED_CANONICALS = {
     "research infrastructure projects",
     "research partnership investment fund",
     "strength in places fund",
+}
+_ESTONIA_GENERIC_DISCOVERED_PATTERNS = [
+    re.compile(r"\ballocated\b", re.IGNORECASE),
+    re.compile(r"\ballocation(?:s)?\b", re.IGNORECASE),
+    re.compile(r"\bfinancing\b", re.IGNORECASE),
+    re.compile(r"\bfunding\b", re.IGNORECASE),
+    re.compile(r"\bgrant(?:s)?\b", re.IGNORECASE),
+    re.compile(r"\binfrastructure\b", re.IGNORECASE),
+    re.compile(r"\bprogram(?:me)?\b", re.IGNORECASE),
+    re.compile(r"\bresearch support\b", re.IGNORECASE),
+    re.compile(r"\bresearch topics?\b", re.IGNORECASE),
+    re.compile(r"\btarget(?:ed)? financing\b", re.IGNORECASE),
+]
+_ESTONIA_ORGANISATION_HINTS = re.compile(
+    r"\b(?:"
+    r"academy|agency|centre|center|council|foundation|fund|institute|institution|"
+    r"laborator|museum|observator|university|ulikool|teadusagentuur|teadusfond|"
+    r"teaduste akadeemia|archimedes|biocenter|genome center"
+    r")\b",
+    re.IGNORECASE,
+)
+_COLOMBIA_ORGANISATION_HINTS = re.compile(
+    r"\b(?:"
+    r"agencia|corporaci[oó]n|fondo|instituto|ministerio|servicio|unidad|"
+    r"colciencias|minciencias|agrosavia|corpoica|ideam|metrolog[ií]a|salud"
+    r")\b",
+    re.IGNORECASE,
+)
+_ESTONIA_VERIFIED_DROPS = (
+    ("University of Tartu", 2004),
+    ("Tallinn University of Technology", 2004),
+    ("University of Tartu", 2010),
+    ("Tallinn University of Technology", 2010),
+)
+_BELGIUM_VERIFIED_DROPS = (
+    # 2012-2013 science-policy tables in the current Belgium corpus are
+    # January-March provisional appropriations ("janvier-mars" /
+    # "januari-maart"), not comparable full-year annual budgets.
+    ("BELSPO / Belgian Federal Science Policy", 2012),
+    ("BELSPO / Belgian Federal Science Policy", 2013),
+    ("SCK CEN", 1998),
+    ("SCK CEN", 1999),
+    ("SCK CEN", 2000),
+    ("Institute of Radioelements (IRE)", 1998),
+    ("Institute of Radioelements (IRE)", 1999),
+    ("Institute of Radioelements (IRE)", 2000),
+    ("Institute of Radioelements (IRE)", 2001),
+)
+_BELGIUM_VERIFIED_OVERRIDES: dict[int, dict[str, tuple[float, int, str, str]]] = {
+    1994: {
+        "BELSPO / Belgian Federal Science Policy": (
+            6_121_300_000.0,
+            87,
+            "BEF",
+            "1995 16_1.pdf",
+        ),
+    },
+    1995: {
+        "Scientific Institute of Public Health / Louis Pasteur": (
+            333_600_000.0,
+            168,
+            "BEF",
+            "1995 16_1.pdf",
+        ),
+    },
+    1998: {
+        "BELSPO / Belgian Federal Science Policy": (
+            5_793_800_000.0,
+            72,
+            "BEF",
+            "1999 03_2.pdf",
+        ),
+    },
+    1999: {
+        "BELSPO / Belgian Federal Science Policy": (
+            6_803_200_000.0,
+            72,
+            "BEF",
+            "1999 03_2.pdf",
+        ),
+    },
+    2000: {
+        "BELSPO / Belgian Federal Science Policy": (
+            6_106_700_000.0,
+            190,
+            "BEF",
+            "2001 Belgium 50K0905007.pdf",
+        ),
+    },
+    2001: {
+        "BELSPO / Belgian Federal Science Policy": (
+            7_110_000_000.0,
+            191,
+            "BEF",
+            "2001 Belgium 50K0905007.pdf",
+        ),
+    },
+}
+_ESTONIA_VERIFIED_OVERRIDES: dict[int, dict[str, tuple[float, int, str, str]]] = {
+    2007: {
+        "Estonian Research Council / Science Foundation": (
+            124_156_000.0,
+            16,
+            "EEK",
+            "2007 12768664.pdf",
+        ),
+    },
+    2008: {
+        "Estonian Research Council / Science Foundation": (
+            160_193_000.0,
+            16,
+            "EEK",
+            "2008 12901846.pdf",
+        ),
+    },
+    2022: {
+        "Estonia R&D / Innovation Programmes (post-2011)": (
+            218_717_000.0,
+            4,
+            "EUR",
+            "2022 125052022002.pdf",
+        ),
+    },
+    2025: {
+        "Estonia R&D / Innovation Programmes (post-2011)": (
+            247_281_000.0,
+            4,
+            "EUR",
+            "2025 123122024014.pdf",
+        ),
+    },
 }
 _UK_GENERIC_DISCOVERED_PATTERNS = [
     re.compile(r"\bfund(?:ing)?\b", re.IGNORECASE),
@@ -1091,6 +1230,82 @@ _DENMARK_VERIFIED_SOURCE_FILES = {
     2025: "AE3209.pdf",
 }
 
+_SPAIN_VERIFIED_OVERRIDES: dict[int, dict[str, tuple[float, int, str, str]]] = {
+    # Verified against the original Spain budget tables in the 2023 BOE file
+    # (2022 extraction year in this pipeline). Amounts are full EUR units.
+    2004: {
+        "Plan Nacional I+D (total R&D appropriation)":
+            (563_045_980.0, 149, "EUR", "BOE-A-2004-21688-consolidado para 2005.pdf"),
+    },
+    2005: {
+        "Plan Nacional I+D (total R&D appropriation)":
+            (1_008_543_870.0, 151, "EUR", "BOE-A-2005-21525-consolidado para 2006.pdf"),
+    },
+    2007: {
+        "Plan Nacional I+D (total R&D appropriation)":
+            (1_905_919_950.0, 177, "EUR", "BOE-A-2007-22295-consolidado para 2008.pdf"),
+    },
+    2010: {
+        "Plan Nacional I+D (total R&D appropriation)":
+            (2_139_768_610.0, 202, "EUR", "BOE-A-2010-19703-consolidado para 2011.pdf"),
+    },
+    2011: {
+        "Plan Nacional I+D (total R&D appropriation)":
+            (2_139_768_610.0, 202, "EUR", "2011 BOE-A-2010-19703-consolidado.pdf"),
+    },
+    2022: {
+        "CIEMAT":
+            (144_707_990.0, 640, "EUR", "2023 BOE-A-2022-22128.pdf"),
+        "ISCIII (Instituto de Salud Carlos III)":
+            (487_532_150.0, 640, "EUR", "2023 BOE-A-2022-22128.pdf"),
+        "Esteban Terradas National Institute of Aerospace Technology":
+            (196_019_400.0, 637, "EUR", "2023 BOE-A-2022-22128.pdf"),
+        "Centre for Sociological Research":
+            (12_659_110.0, 640, "EUR", "2023 BOE-A-2022-22128.pdf"),
+        "Spanish Metrology Center":
+            (17_482_090.0, 637, "EUR", "2023 BOE-A-2022-22128.pdf"),
+        "National Transplant Organization":
+            (6_706_760.0, 640, "EUR", "2023 BOE-A-2022-22128.pdf"),
+    },
+}
+
+_FINLAND_VERIFIED_OVERRIDES: dict[int, dict[str, tuple[float, int, str, str]]] = {
+    # Verified against original Finnish budget proposal texts.
+    # Structure: {year: {canonical_name: (amount_local, page, currency, source_file)}}
+    # Academy = moment 29.88.50 + 29.88.53 (lottery funds for science) combined.
+    # All FIM amounts are full markka units.
+    1992: {
+        "Suomen Akatemia — tutkimusmäärärahat (research grants)":
+            (146_310_000, 288, "FIM", "1992 proposal fi19910057.pdf"),
+    },
+    1993: {
+        "Suomen Akatemia — tutkimusmäärärahat (research grants)":
+            (385_150_000, 234, "FIM", "1993 proposal fi19920122.pdf"),  # 131.15M(50)+254M(53)
+        "GTK (Geological Survey of Finland)":
+            (183_830_000, 248, "FIM", "1993 proposal fi19920122.pdf"),
+    },
+    1996: {
+        "Suomen Akatemia — tutkimusmäärärahat (research grants)":
+            (430_211_000, 234, "FIM", "1996 proposal fi19950072.pdf"),  # 50.31M(50)+379.9M(53)
+    },
+    1999: {
+        "Suomen Akatemia — tutkimusmäärärahat (research grants)":
+            (713_380_000, 266, "FIM", "1999 proposal fi19980105.pdf"),  # 314.68M(50)+398.7M(53)
+        "GTK (Geological Survey of Finland)":
+            (210_877_000, 406, "FIM", "1999 proposal fi19980105.pdf"),
+        "VTT (Technical Research Centre of Finland)":
+            (358_570_000, 407, "FIM", "1999 proposal fi19980105.pdf"),
+    },
+    2001: {
+        "Suomen Akatemia — tutkimusmäärärahat (research grants)":
+            (749_360_000, 282, "FIM", "2001 proposal budget bill draft.pdf"),  # 296.36M(50)+453M(53)
+        "GTK (Geological Survey of Finland)":
+            (215_747_000, 380, "FIM", "2001 proposal budget bill draft.pdf"),
+        "Business Finland / Tekes (innovation agency)":
+            (138_000_000, 389, "FIM", "2001 proposal budget bill draft.pdf"),
+    },
+}
+
 _FRANCE_PRE_LOLF_KEEP_CANONICALS = {
     "Research (Pre-LOLF Ministry Chapter)",
     "Universities and Higher Education (Pre-LOLF Chapter)",
@@ -1103,6 +1318,137 @@ _FRANCE_PRE_LOLF_KEEP_CANONICALS = {
     "INRAE (Institut National de Recherche pour l'Agriculture)",
     "INRIA (Institut National de Recherche en Informatique)",
     "INSERM (Institut National de la Santé et de la Recherche Médicale)",
+}
+
+_NETHERLANDS_CLIP_TO_OBSERVED = {
+    "Erasmus Universiteit Rotterdam (EUR)",
+    "NIOZ (Royal Netherlands Institute for Sea Research)",
+    "NWO-TTW / STW (Technology Foundation)",
+    "Radboud Universiteit Nijmegen",
+    "Rijksuniversiteit Groningen (RUG)",
+    "TU Delft (Delft University of Technology)",
+    "TU Eindhoven (TU/e)",
+    "Universiteit Leiden",
+    "Universiteit Utrecht (UU)",
+    "Universiteit van Amsterdam (UvA)",
+    "Vrije Universiteit Amsterdam (VU)",
+    "Deltares (water and subsurface research)",
+    "NLR (National Aerospace Laboratory)",
+    "RVO / Senter / SenterNovem (innovation instruments)",
+    "Wageningen Universiteit (WUR)",
+}
+
+_CHILE_VERIFIED_OVERRIDES: dict[int, dict[str, tuple[float, int, str, str]]] = {
+    # Verified against original Chile budget text extracts / source tables.
+    # Structure: {year: {canonical_name: (amount_local, page, currency, source_file)}}
+    2016: {
+        "Excellence Centers - CORFO":
+            (3_321_600_000.0, 0, "CLP", "pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt"),
+        "Technological Consortiums - CORFO":
+            (3_193_420_000.0, 0, "CLP", "pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt"),
+        "FIE - Strategic Public Goods Project (Innova Committee)":
+            (2_559_403_000.0, 0, "CLP", "pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt"),
+    },
+    2017: {
+        "Public Innovation Committee":
+            (3_164_654_000.0, 0, "CLP", "pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt"),
+        "FIE-Innovation and R&D for Enterprises (Innova Committee)":
+            (1_369_900_000.0, 0, "CLP", "pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt"),
+    },
+    2021: {
+        "Technological Consortiums - CORFO":
+            (9_939_882_000.0, 0, "CLP", "pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt"),
+    },
+    2022: {
+        "CONICYT / ANID":
+            (300_858_107_000.0, 0, "CLP", "pdf_59f02122fee1__2022_Ley_de_presupuestos.txt"),
+        "Technological Consortiums - CORFO":
+            (8_969_143_000.0, 0, "CLP", "pdf_59f02122fee1__2022_Ley_de_presupuestos.txt"),
+    },
+    2023: {
+        "Technological Consortiums - CORFO":
+            (9_014_891_000.0, 0, "CLP", "pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt"),
+    },
+    2024: {
+        "CONICYT / ANID":
+            (322_532_595_000.0, 0, "CLP", "pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt"),
+        "Technological Consortiums - CORFO":
+            (12_305_582_000.0, 0, "CLP", "pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt"),
+    },
+    2025: {
+        "CONICYT / ANID":
+            (340_604_113_000.0, 0, "CLP", "pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt"),
+        "Technological Consortiums - CORFO":
+            (12_114_163_000.0, 0, "CLP", "pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt"),
+    },
+}
+
+_ICELAND_VERIFIED_OVERRIDES: dict[int, dict[str, tuple[float, int, str, str]]] = {
+    1988: {
+        # Verified against the original 1988 Iceland budget text:
+        # 22-233 Rannsóknasjóður shows transfer/government-contribution lines
+        # around 4.910M ISK, while the repeated 321.381M "Total" appears under
+        # multiple unrelated sections and is a page-summary artefact.
+        "Rannsóknasjóður (Research Fund)":
+            (4_910_000.0, 15862, "ISK", "1988 0434.pdf"),
+    },
+    1996: {
+        # Verified against the original 1996 Iceland budget text:
+        # Vísindaráð carries a 20.000M ISK treasury contribution / total line;
+        # the 1.300M "General operations" row is only a subcomponent.
+        "Vísindaráð (Science Council)":
+            (20_000_000.0, 611, "ISK", "1996 0500.pdf"),
+        # Verified against the original 1996 Iceland budget text:
+        # Háskóli Íslands has an explicit "Samtals" / total line at 20.000M ISK.
+        # The 13.300M "Rannsóknastarfsemi" row is a sub-line, not the
+        # institution's full appropriation.
+        "Háskóli Íslands (University of Iceland)":
+            (20_000_000.0, 7037, "ISK", "1996 0500.pdf"),
+    },
+    2016: {
+        # Verified against the original 2016 Iceland budget text (2016 0703.pdf),
+        # which reports these institutional rows in m.kr. The pipeline often
+        # captured the figures but left them as 'thousand' or selected
+        # peripheral sub-lines instead of the main institutional row.
+        "Háskóli Íslands (University of Iceland)":
+            (18_129_500_000.0, 1681, "ISK", "2016 0703.pdf"),
+        "Raunvísindastofnun Háskólans (Science Institute of the University of Iceland)":
+            (1_354_800_000.0, 1733, "ISK", "2016 0703.pdf"),
+        "Veðurstofa Íslands (Icelandic Meteorological Office)":
+            (2_301_200_000.0, 8277, "ISK", "2016 0703.pdf"),
+        "Tækniþróunarsjóður (Technology Development Fund)":
+            (2_352_500_000.0, 4197, "ISK", "2016 0703.pdf"),
+        "Landbúnaðarháskóli Íslands (Agricultural University of Iceland)":
+            (1_396_500_000.0, 1787, "ISK", "2016 0703.pdf"),
+        "Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries)":
+            (570_000_000.0, 4079, "ISK", "2016 0703.pdf"),
+        "Hafrannsóknastofnun (Marine Research Institute)":
+            (3_418_600_000.0, 4037, "ISK", "2016 0703.pdf"),
+    },
+    2011: {
+        # Verified against the original 2011 Iceland budget text:
+        # 11-205 Nýsköpunarmiðstöð Íslands -> "1.01 Nýsköpunarmiðstöð Íslands"
+        # = 1.135,6 m.kr., i.e. 1,135,600,000 ISK. The raw pipeline row keeps
+        # the figure but leaves the unit as 'thousand', so normalize it here.
+        "Nýsköpunarmiðstöð Íslands (Innovation Centre of Iceland)":
+            (1_135_600_000.0, 9152, "ISK", "2011 0556.pdf"),
+    },
+    2020: {
+        # Verified against the original 2020 Iceland budget text
+        # (2020 s0561-f_I.pdf). These rows are explicit institutional lines in
+        # the original budget, while the current pipeline sometimes chooses a
+        # sibling programme/grant row or misses the institution entirely.
+        "Háskóli Íslands (University of Iceland)":
+            (22_020_800_000.0, 8276, "ISK", "2020 s0561-f_I.pdf"),
+        "Veðurstofa Íslands (Icelandic Meteorological Office)":
+            (2_520_300_000.0, 5958, "ISK", "2020 s0561-f_I.pdf"),
+        "Landbúnaðarháskóli Íslands (Agricultural University of Iceland)":
+            (1_588_200_000.0, 8423, "ISK", "2020 s0561-f_I.pdf"),
+        "Háskólinn í Reykjavík (Reykjavik University)":
+            (3_659_900_000.0, 8487, "ISK", "2020 s0561-f_I.pdf"),
+        "Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries)":
+            (264_000_000.0, 5165, "ISK", "2020 s0561-f_I.pdf"),
+    },
 }
 
 _FRANCE_PRE_LOLF_MINISTRY_BAD_LINE_PATTERNS = [
@@ -1170,6 +1516,14 @@ def _strip_accents(text: str) -> str:
 def _normalise_fr_text(text: str) -> str:
     cleaned = _strip_accents(str(text or "")).lower()
     cleaned = cleaned.replace("’", "'")
+    cleaned = re.sub(r"\s+", " ", cleaned)
+    return cleaned.strip()
+
+
+def _normalise_match_text(text: str) -> str:
+    cleaned = _strip_accents(str(text or "")).lower()
+    cleaned = cleaned.replace("’", "'")
+    cleaned = re.sub(r"[^a-z0-9]+", " ", cleaned)
     cleaned = re.sub(r"\s+", " ", cleaned)
     return cleaned.strip()
 
@@ -1882,6 +2236,8 @@ def _france_pre_lolf_match_groups(*terms: str) -> list[list[str]]:
 
 def _base_output_unit(currency: object, fallback_unit: object) -> object:
     cur = str(currency or "").strip().upper()
+    if cur == "CLP":
+        return "peso"
     if cur in _OUTPUT_UNIT_BY_CURRENCY:
         return _OUTPUT_UNIT_BY_CURRENCY[cur]
     return fallback_unit
@@ -2110,7 +2466,12 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "au",
             ],
             "preferred_item_type": ["line_item", "program_total"],
-            "active_years": (1928, 2099),
+            # In the Belgium federal-budget corpus currently ingested, FNRS only
+            # appears as an explicit federal appropriation / debt-service line in
+            # the late-1990s to 2001 window. Keeping it open-ended only creates
+            # fake gaps in years where the corpus does not expose a named FNRS
+            # line at all.
+            "active_years": (1996, 2001),
             "max_amount_local": 5_000_000_000,
         },
         {
@@ -2621,6 +2982,13 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 # ZWO = predecessor to NWO (1950-1988)
                 "zwo",
                 "organisatie voor zuiver-wetenschappelijk onderzoek",
+                "zuiver-wetenschappelijk onderzoek",
+                "dutch organization for pure scientific research",
+                "pure scientific research",
+                "subsidy from zwo",
+                "subsidie zwo",
+                "contribution to nwo",
+                "bijdrage nwo",
             ],
             "preferred_item_type": ["section_total", "program_total", "line_item"],
             "active_years": (1950, 2099),
@@ -2634,6 +3002,10 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "knaw",
                 "koninklijke nederlandse akademie van wetenschappen",
                 "royal netherlands academy",
+                "royal netherlands academy of arts and sciences",
+                "contribution to knaw",
+                "bijdrage knaw",
+                "subsidies knaw",
             ],
             "preferred_item_type": ["section_total", "program_total", "line_item"],
             "active_years": (1808, 2099),
@@ -2646,6 +3018,12 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "tno",
                 "toegepast natuurwetenschappelijk onderzoek",
                 "netherlands organisation for applied scientific research",
+                "subsidie tno",
+                "subsidy for tno",
+                "subsidy tno",
+                "tno research",
+                "tno subsidies",
+                "contribution to tno",
             ],
             "preferred_item_type": ["section_total", "program_total", "line_item"],
             "active_years": (1932, 2099),
@@ -2678,6 +3056,13 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "article 7",
                 "hoger onderwijs en onderzoek",
                 "universiteiten",
+                # Budget memorandum variants (1975-2001 narrative documents)
+                "scientific education",
+                "total scientific education",
+                "investments in scientific education",
+                "expenditures for scientific education",
+                "universities and colleges",
+                "hoger onderwijs",
             ],
             "preferred_item_type": ["section_total", "program_total"],
             "active_years": (1975, 2099),
@@ -2693,11 +3078,17 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "art. 16",
                 "artikel 16",
                 "research and science policy",
+                # 2002-2010 variants used before article-number reporting became standard
+                "research and sciences",
+                "onderzoek en wetenschapsbeleid",
+                "research policy",
+                "onderzoekbeleid",
+                "fundamental scientific research",
             ],
             "preferred_item_type": ["section_total", "program_total"],
-            "active_years": (2002, 2099),
+            "active_years": (1975, 2099),
             "max_amount_local": 5_000_000_000,   # 5B EUR
-            "notes": "Contains NWO, KNAW, SURF appropriations as a combined article total.",
+            "notes": "OCW research-policy aggregate. Pre-2002 budget memoranda use narrative labels; 2002+ this corresponds to Art. 16 containing NWO, KNAW, SURF appropriations.",
         },
 
         # --- Individual universities ---
@@ -2797,6 +3188,9 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "wageningen university",
                 "wur",
                 "landbouwuniversiteit wageningen",
+                "wageningen research",
+                "contribution to wageningen research",
+                "landbouwhogeschool wageningen",
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1918, 2099),
@@ -2860,6 +3254,9 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "deltares",
                 "waterloopkundig laboratorium",
                 "delft hydraulics",
+                "foundation for hydraulic engineering laboratory",
+                "stichting waterbouwkundig laboratorium",
+                "swl",
             ],
             "preferred_item_type": ["line_item", "section_total"],
             "active_years": (1927, 2099),
@@ -2878,6 +3275,43 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             "max_amount_local": 300_000_000,   # 300M NLG or EUR
         },
 
+        # --- NLR (National Aerospace Laboratory) ---
+        {
+            "canonical_name": "NLR (National Aerospace Laboratory)",
+            "category": "science_agency",
+            "name_variants": [
+                "nlr",
+                "nationaal lucht- en ruimtevaartlaboratorium",
+                "national aerospace laboratory",
+                "luchtvaartlaboratorium",
+            ],
+            "preferred_item_type": ["line_item", "section_total"],
+            "active_years": (1937, 2099),
+            "max_amount_local": 300_000_000,   # 300M NLG or EUR
+        },
+
+        # --- ECN (Energy Research Centre Netherlands) ---
+        {
+            "canonical_name": "ECN (Energy Research Centre Netherlands)",
+            "category": "science_agency",
+            "name_variants": [
+                "ecn",
+                "energy research centre of the netherlands",
+                "energy research center netherlands",
+                "energy research centre netherlands",
+                "energieonderzoek centrum nederland",
+                "energy center netherlands",
+                "energy centre netherlands",
+                "reactor center netherlands",
+                "reactor centre netherlands",
+                "reactor centrum nederland",
+            ],
+            "preferred_item_type": ["line_item", "section_total"],
+            "active_years": (1975, 2019),  # ECN merged into TNO in 2019
+            "max_amount_local": 500_000_000,   # 500M NLG or EUR
+            "notes": "ECN founded 1976; merged into TNO as TNO Energy & Materials Transition in 2019.",
+        },
+
         # --- EZ innovation instruments ---
         {
             "canonical_name": "EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO)",
@@ -2890,11 +3324,22 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "topsectoren",
                 "topconsortia voor kennis en innovatie",
                 "tki",
+                # Historical EZ R&D programme labels (1979-2001)
+                "knowledge and innovation",
+                "kennis en innovatie",
+                "knowledge stimulation",
+                "kennisstimulering",
+                "knowledge development and innovation",
+                "innovation and entrepreneurship",
+                "innovation-oriented research",
+                "specific business-oriented technology",
+                "instir",
+                "innovation stimulation scheme",
             ],
-            "preferred_item_type": ["section_total", "program_total"],
-            "active_years": (2002, 2099),
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (1975, 2099),
             "max_amount_local": 5_000_000_000,   # 5B EUR
-            "notes": "EZ article for enterprise/innovation policy, contains TNO grants and TKI.",
+            "notes": "EZ article for enterprise/innovation policy; historically used for EZ R&D programmes 1979-2001.",
         },
         {
             "canonical_name": "RVO / Senter / SenterNovem (innovation instruments)",
@@ -2906,6 +3351,9 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "senter",
                 "novem",
                 "wbso",
+                "r&d wage tax",
+                "fiscal r&d wage",
+                "structural r&d facility",
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1994, 2099),
@@ -3141,7 +3589,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "crsh",
             ],
             "preferred_item_type": ["section_total", "program_total", "line_item"],
-            "active_years": (1977, 2099),
+            "active_years": (2020, 2099),
             "notes": "Created 1977.",
         },
         {
@@ -3565,7 +4013,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 r"\bnpif\b",
             ]],
             "enforce_preferred_match_groups": True,
-            "active_years": (2017, 2099),
+            "active_years": (2018, 2099),
         },
         {
             "canonical_name": "Quantum Technologies Development and Commercialisation Fund",
@@ -3862,7 +4310,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "cnrs",
             ],
             "preferred_item_type": ["section_total", "program_total"],
-            "active_years": (1939, 2099),
+            "active_years": (2018, 2099),
         },
         {
             "canonical_name": "CEA (Commissariat à l'Énergie Atomique)",
@@ -4048,7 +4496,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "wgl",
             ],
             "preferred_item_type": ["section_total", "program_total"],
-            "active_years": (1977, 2099),
+            "active_years": (2020, 2099),
             "notes": "Formerly 'Blaue Liste' (Blue List) research institutes.",
         },
         {
@@ -5287,7 +5735,8 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "csic",
             ],
             "preferred_item_type": ["section_total", "program_total", "line_item"],
-            "active_years": (1939, 2099),
+            "max_amount_local": 2_000_000_000,
+            "active_years": (2018, 2099),
             "notes": "Core Spanish public research organism. Always present in budget.",
         },
         {
@@ -5300,7 +5749,8 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "28.303",
             ],
             "preferred_item_type": ["section_total", "program_total"],
-            "active_years": (2017, 2099),
+            "max_amount_local": 2_000_000_000,
+            "active_years": (2018, 2099),
             "notes": "Created 2017, replaced DGI/DGICYT as main research grant body.",
         },
         {
@@ -5313,8 +5763,9 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "cdti",
             ],
             "preferred_item_type": ["section_total", "program_total"],
-            "active_years": (1977, 2099),
-            "notes": "Industrial R&D loans and grants. Under Industria/Ciencia ministry.",
+            "max_amount_local": 3_000_000_000,
+            "active_years": (2020, 2020),
+            "notes": "Industrial R&D loans and grants. Keep only for explicitly observed recent Spain year until additional years are verified.",
         },
         {
             "canonical_name": "ISCIII (Instituto de Salud Carlos III)",
@@ -5325,8 +5776,9 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "28.106",
             ],
             "preferred_item_type": ["section_total", "program_total"],
-            "active_years": (1986, 2099),
-            "notes": "Health research. Programme 465A. Key agency for biomedical R&D.",
+            "max_amount_local": 1_000_000_000,
+            "active_years": (2020, 2099),
+            "notes": "Health research. Programme 465A. Keep only in recent explicit-organism years for Spain series.",
         },
         {
             "canonical_name": "CIEMAT",
@@ -5338,8 +5790,9 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "28.103",
             ],
             "preferred_item_type": ["section_total", "program_total"],
-            "active_years": (1986, 2099),
-            "notes": "Energy and environment research. Formerly JEN (Junta de Energía Nuclear) pre-1986.",
+            "max_amount_local": 250_000_000,
+            "active_years": (2020, 2023),
+            "notes": "Energy and environment research. Keep only in recent explicit-organism years for Spain series; omit the isolated 2009 fragment from the final panel.",
         },
         {
             "canonical_name": "Plan Nacional I+D (total R&D appropriation)",
@@ -5347,13 +5800,80 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             "name_variants": [
                 "plan nacional de i+d",
                 "fomento y coordinación de la investigación",
+                "fomento y coordinacion de la investigacion",
+                "promotion and coordination of scientific and technical research",
+                "promotion and coordination of scientific research",
                 "463b",
                 "investigación científica y técnica",
+                "investigacion cientifica y tecnica",
             ],
             "preferred_item_type": ["section_total"],
-            "active_years": (1988, 2016),
+            "max_amount_local": 5_000_000_000,
+            "active_years": (2002, 2016),
             "notes": "National R&D plan aggregate. Use as fallback when agency-level not available.",
             "aggregation_role_override": "section",
+        },
+        {
+            "canonical_name": "Esteban Terradas National Institute of Aerospace Technology",
+            "category": "science_agency",
+            "name_variants": [
+                "instituto nacional de tecnica aeroespacial esteban terradas",
+                "instituto nacional de técnica aeroespacial esteban terradas",
+                "inta esteban terradas",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "max_amount_local": 500_000_000,
+            "active_years": (2022, 2022),
+            "notes": "Explicit organism-level line observed in recent Spain budget tables; do not backcast historically.",
+        },
+        {
+            "canonical_name": "Centre for Sociological Research",
+            "category": "direct_rd",
+            "name_variants": [
+                "centro de investigaciones sociologicas",
+                "centro de investigaciones sociológicas",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "max_amount_local": 250_000_000,
+            "active_years": (2022, 2022),
+            "notes": "Explicit institution line observed in recent Spain budget tables; keep only for observed recent year.",
+        },
+        {
+            "canonical_name": "Spanish Metrology Center",
+            "category": "direct_rd",
+            "name_variants": [
+                "centro espanol de metrologia",
+                "centro español de metrología",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "max_amount_local": 250_000_000,
+            "active_years": (2022, 2022),
+            "notes": "Explicit institution line observed in recent Spain budget tables; keep only for observed recent year.",
+        },
+        {
+            "canonical_name": "National Transplant Organization",
+            "category": "direct_rd",
+            "name_variants": [
+                "organizacion nacional de trasplantes",
+                "organización nacional de trasplantes",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "max_amount_local": 250_000_000,
+            "active_years": (2022, 2022),
+            "notes": "Explicit institution line observed in recent Spain budget tables; keep only for observed recent year.",
+        },
+        {
+            "canonical_name": "Recovery and Resilience Mechanism",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "mecanismo de recuperacion y resiliencia",
+                "mecanismo de recuperación y resiliencia",
+                "recovery and resilience mechanism",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "max_amount_local": 3_000_000_000,
+            "active_years": (2020, 2020),
+            "notes": "Temporary recovery instrument; observed as a recent policy funding line, not a historical institution series.",
         },
     ],
     # -----------------------------------------------------------------------
@@ -5364,26 +5884,46 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             "canonical_name": "Suomen Akatemia — tutkimusmäärärahat (research grants)",
             "category": "science_agency",
             "name_variants": [
+                # Finnish canonical moment names
                 "suomen akatemian tutkimusmäärärahat",
                 "suomen akatemian tutkimusmaarararahat",
+                "29.88.50",
                 "29.60.50",
+                # English translations used by LLM in line_description_en
                 "academy of finland research grants",
+                "academy research grants",
+                "research grants of the academy of finland",
+                "research grants from the academy of finland",
+                "proposed research grants for the academy of finland",
+                "research grants (transfer appropriation)",
+                "scientific research (transfer appropriation)",
+                "tutkimusmäärärahat",   # generic Finnish suffix catches section hits
             ],
             "preferred_item_type": ["line_item", "program_total"],
+            # Caps: FIM era ≤ 900M (real peak ~835M in 2001); EUR era ≤ 600M
+            "max_amount_local_fim": 900_000_000,
+            "max_amount_local_eur": 600_000_000,
             "active_years": (1970, 2099),
-            "notes": "Core basic research grants. Moment 29.60.50. This is the KEY Finnish R&D series.",
+            "notes": "Core basic research grants (moments 29.88.50+53). KEY Finnish R&D series.",
         },
         {
             "canonical_name": "Suomen Akatemia — toimintamenot (operating)",
             "category": "science_agency",
             "name_variants": [
                 "suomen akatemian toimintamenot",
-                "29.60.01",
                 "suomen akatemia toimintamenot",
+                "29.88.21",
+                "29.60.01",
+                "academy operating costs",
+                "operating costs of the academy of finland",
+                "academy of finland operating costs",
+                "suomen akatemian toiminta",
             ],
             "preferred_item_type": ["line_item"],
+            "max_amount_local_fim": 200_000_000,
+            "max_amount_local_eur": 45_000_000,
             "active_years": (1970, 2099),
-            "notes": "Academy operating budget. Separate from research grants (29.60.50).",
+            "notes": "Academy of Finland operating budget. Separate from research grants.",
         },
         {
             "canonical_name": "Business Finland / Tekes (innovation agency)",
@@ -5393,10 +5933,21 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "business finland",
                 "tekes",
                 "teknologian ja innovaatioiden kehittämiskeskus",
+                "teknologian kehittämiskeskus",
+                "teknologian kehittämiskeskuksen toimintamenot",
                 "32.20.05",
                 "32.20.06",
+                "tekes operating costs",
+                "operating costs of tekes",
+                "business finland operating costs",
+                "innovaatiorahoituskeskuksen toimintamenot",
+                "technology development center",
+                "technology development centre",
             ],
             "preferred_item_type": ["line_item", "program_total"],
+            # Tekes admin/operating only; FIM real range ~60-138M; EUR ~24-90M
+            "max_amount_local_fim": 200_000_000,
+            "max_amount_local_eur": 100_000_000,
             "active_years": (1983, 2099),
             "notes": "Tekes renamed Business Finland in 2018. Moment 32.20.06 (Tekes) → 32.20.05 (BF).",
         },
@@ -5406,11 +5957,24 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             "name_variants": [
                 "julkinen tutkimus- ja kehittämistoiminta",
                 "avustukset tutkimukseen kehitykseen ja innovaatiotoimintaan",
+                "avustukset teknologiseen tutkimukseen ja kehitykseen",
                 "tutkimus- kehittämis- ja innovaatiotoiminnan tukeminen",
+                "tutkimus- ja kehitystoiminta",
                 "32.20.40",
                 "32.20.83",
+                "public r&d grants to companies",
+                "public r&d activities",
+                "grants for technological research and development",
+                "research and development activities",
+                "grants for research, development and innovation",
+                "grants for research development and innovation",
+                "support for research development and innovation",
+                "support for research, development, and innovation",
             ],
             "preferred_item_type": ["line_item"],
+            # R&D grants reached ~1B FIM (2001) and ~540M EUR (2025)
+            "max_amount_local_fim": 1_100_000_000,
+            "max_amount_local_eur": 600_000_000,
             "active_years": (1983, 2099),
             "notes": "Public R&D grants from Tekes/BF to companies and institutes. Moment 32.20.40.",
         },
@@ -5425,8 +5989,18 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "32.01.02",
                 "erityisavustus teknologian tutkimuskeskus",
                 "valtionavustus teknologian tutkimuskeskus",
+                "operating costs of vtt",
+                "vtt operating costs",
+                "state grant for vtt",
+                "operating expenses of the technical research centre of finland",
+                "operating costs of the technical research centre of finland",
+                "state technical research centre paid research services",
+                "paid research services of the technical research centre",
             ],
             "preferred_item_type": ["line_item", "program_total"],
+            # VTT state grant: FIM era ~89-570M (net budget incl commercial); EUR ~63-130M
+            "max_amount_local_fim": 600_000_000,
+            "max_amount_local_eur": 135_000_000,
             "active_years": (1942, 2099),
             "notes": "State-owned applied research company. Became VTT Oy in 2015.",
         },
@@ -5437,10 +6011,18 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "geologian tutkimuskeskus",
                 "gtk",
                 "32.01.04",
+                "geologian tutkimuskeskuksen toimintamenot",
+                "gtk operating costs",
+                "operating costs of the geological survey",
+                "geological survey of finland",
+                "geologian tutkimuskeskuksen tulot",
             ],
             "preferred_item_type": ["line_item"],
+            # GTK: FIM era ~15-225M; EUR era ~30-55M
+            "max_amount_local_fim": 250_000_000,
+            "max_amount_local_eur": 60_000_000,
             "active_years": (1885, 2099),
-            "notes": "Geological survey. Under TEM (Ministry of Economic Affairs).",
+            "notes": "Geological Survey of Finland. Under TEM (Ministry of Economic Affairs).",
         },
         {
             "canonical_name": "Luke / MTT / Metla / RKTL (natural resources research)",
@@ -5454,10 +6036,17 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "metla",
                 "riista- ja kalatalouden tutkimuslaitos",
                 "rktl",
+                "natural resources institute finland",
+                "natural resources institute",
+                "finnish food and natural resources agency",
+                "forest research institute",
+                "game and fisheries research",
             ],
             "preferred_item_type": ["line_item"],
+            "max_amount_local_fim": 300_000_000,
+            "max_amount_local_eur": 70_000_000,
             "active_years": (1900, 2099),
-            "notes": "MTT + Metla + RKTL merged into Luke (Natural Resources Institute) in 2015.",
+            "notes": "MTT + Metla + RKTL merged into Luke (Natural Resources Institute Finland) in 2015.",
         },
         {
             "canonical_name": "VATT (Government Institute for Economic Research)",
@@ -5466,9 +6055,1531 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "valtion taloudellinen tutkimuskeskus",
                 "vatt",
                 "28.30.02",
+                "valtion taloudellisen tutkimuskeskuksen toimintamenot",
+                "vatt operating costs",
+                "total for vatt",
+                "government institute for economic research",
             ],
             "preferred_item_type": ["line_item"],
+            # VATT FIM ~19-125M (small econ research institute); EUR ~3-22M
+            "max_amount_local_fim": 135_000_000,
+            "max_amount_local_eur": 25_000_000,
             "active_years": (1990, 2099),
+            "notes": "Government Institute for Economic Research (VATT). Founded 1990.",
+        },
+    ],
+    "Belgium": [
+        {
+            "canonical_name": "BELSPO / Belgian Federal Science Policy",
+            "category": "rd_ministry",
+            "name_variants": [
+                "belspo",
+                "belgian science policy office",
+                "wetenschapsbeleid",
+                "politique scientifique",
+                "space activities",
+                "european space agency",
+                "research and development at the international level",
+                "r&d in the international framework",
+                "r&d programs and actions - government initiatives",
+                "pod wetenschapsbeleid",
+                "spp politique scientifique",
+                "diensten voor programmatie van het wetenschapsbeleid",
+                "services de programmation de la politique scientifique",
+                "programmatorische federale overheidsdienst wetenschapsbeleid",
+                "politique scientifique fédérale",
+                "federale diensten voor wetenschappelijke, technische en culturele aangelegenheden",
+                "federal services for scientific, technical and cultural affairs",
+                "services fédéraux des affaires scientifiques techniques et culturelles",
+                "ostc",
+                "sstc",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "strict_preferred_item_types": True,
+            "preferred_match_groups": [[
+                r"actions? (?:de|to) promot(?:ion|e).*(?:science|scientific) polic",
+                r"research and development within the international framework",
+                r"r&d at the international level",
+                r"space activities",
+                r"belgian participation in the activities of the european space agency",
+                r"expenses related to contracts, agreements, and mandates concerning r&d programs and actions at the international level",
+                r"expenses related to contracts, agreements, and mandates concerning r&d programs and actions at the national level",
+                r"various international collaborations",
+                r"operating expenses related to the belgian high representation for space policy",
+                r"federal council of science policy",
+            ]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (1975, 2099),
+        },
+        {
+            "canonical_name": "FNRS",
+            "category": "science_agency",
+            "name_variants": [
+                "fnrs",
+                "fonds de la recherche scientifique",
+                "national foundation for scientific research",
+                "nationale stichting voor de financiering van het wetenschappelijk onderzoek",
+                "national foundation for the financing of scientific research",
+            ],
+            "preferred_item_type": ["line_item", "program_total", "section_total"],
+            # In the current federal-budget corpus, FNRS only appears as a
+            # named federal appropriation / debt-service line in the
+            # late-1990s to 2001 window. Keeping it open-ended manufactures
+            # fake gaps in years where the corpus does not expose FNRS as a
+            # distinct federal budget line.
+            "active_years": (1996, 2001),
+            "expected_years": [1996, 1997, 1999, 2001],
+        },
+        {
+            "canonical_name": "SCK CEN",
+            "category": "science_agency",
+            "name_variants": [
+                "sck cen",
+                "belgian nuclear research centre",
+                "studiecentrum voor kernenergie",
+                "centre d'etude de l'energie nucleaire",
+                "centre d'étude de l'énergie nucléaire",
+                "centre detude de lenergie nucleaire",
+            ],
+            "preferred_item_type": ["line_item", "program_total", "section_total"],
+            "preferred_match_groups": [[
+                r"grant to",
+                r"allocation to",
+                r"subsid(?:y|ies) to",
+                r"from the state budget",
+                r"dotation",
+            ]],
+            "enforce_preferred_match_groups": True,
+            # Belgium's federal budget starts surfacing SCK CEN as a distinct
+            # named line in the extracted series from 1996 onward. Earlier
+            # years mostly expose broader science-policy aggregates, so
+            # expecting an institution-specific row manufactures fake gaps.
+            "active_years": (1996, 2002),
+        },
+        {
+            "canonical_name": "Royal Observatory of Belgium",
+            "category": "science_agency",
+            "name_variants": [
+                "royal observatory of belgium",
+                "observatoire royal de belgique",
+                "koninklijke sterrenwacht van belgië",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[
+                r"grant to",
+                r"allocation to",
+                r"from the state budget",
+                r"dotation",
+            ]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2001, 2004),
+        },
+        {
+            "canonical_name": "Royal Meteorological Institute of Belgium",
+            "category": "science_agency",
+            "name_variants": [
+                "royal meteorological institute of belgium",
+                "institut royal météorologique de belgique",
+                "institut royal meteorologique de belgique",
+                "koninklijk meteorologisch instituut van belgië",
+                "koninklijk meteorologisch instituut van belgie",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[
+                r"grant to",
+                r"allocation to",
+                r"from the state budget",
+                r"dotation",
+            ]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2001, 2004),
+        },
+        {
+            "canonical_name": "Belgian Institute for Space Aeronomy",
+            "category": "science_agency",
+            "name_variants": [
+                "belgian institute for space aeronomy",
+                "institut d'aéronomie spatiale de belgique",
+                "institut d aeronomie spatiale de belgique",
+                "institut daeronomie spatiale de belgique",
+                "belgisch instituut voor ruimte-aeronomie",
+                "belgisch instituut voor ruimte aeronomie",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[
+                r"grant to",
+                r"allocation to",
+                r"from the state budget",
+                r"dotation",
+            ]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2001, 2004),
+        },
+        {
+            "canonical_name": "Royal Belgian Institute of Natural Sciences",
+            "category": "science_agency",
+            "name_variants": [
+                "royal belgian institute of natural sciences",
+                "institut royal des sciences naturelles de belgique",
+                "koninklijk belgisch instituut voor natuurwetenschappen",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[
+                r"grant to",
+                r"allocation to",
+                r"from the state budget",
+                r"dotation",
+            ]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2001, 2004),
+        },
+        {
+            "canonical_name": "Institute of Radioelements (IRE)",
+            "category": "science_agency",
+            "name_variants": [
+                "institut de radioéléments",
+                "institut de radioelements",
+                "instituut voor radio-elementen",
+                "institute of radioelements",
+                "i.r.e.",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[
+                r"grant to",
+                r"allocation to",
+                r"subsid(?:y|ies) to",
+                r"from the state budget",
+                r"dotation",
+            ]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (1996, 2002),
+        },
+        {
+            "canonical_name": "Scientific Institute of Public Health / Louis Pasteur",
+            "category": "science_agency",
+            "name_variants": [
+                "scientific institute of public health",
+                "scientific institute of public health / louis pasteur",
+                "institut scientifique de la santé publique - louis pasteur",
+                "institut scientifique de la sante publique - louis pasteur",
+                "institut scientifique de la santé publique",
+                "institut scientifique de la sante publique",
+                "wetenschappelijke instelling volksgezondheid - louis pasteur",
+                "wetenschappelijk instituut volksgezondheid",
+                "public health scientific institute - louis pasteur",
+                "louis pasteur",
+                "pasteur institute",
+                "institut pasteur",
+                "instituut pasteur",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "preferred_match_groups": [[
+                r"totals? for (?:the )?program",
+                r"total for public health scientific institute",
+                r"pasteur institute$",
+                r"operating expenses - pasteur institute",
+                r"public health studies",
+            ]],
+            "enforce_preferred_match_groups": True,
+            # The current federal corpus exposes a clean annual-scale row in
+            # 1995 and again in the 2001 budget file. Later WIV/ISP lines in
+            # 2012-2013 come from provisional January-March appropriations and
+            # are intentionally excluded from the annual canonical panel.
+            "active_years": (1995, 2001),
+            "expected_years": [1995, 2001],
+        },
+        {
+            "canonical_name": "Human Genetics Centers",
+            "category": "science_agency",
+            "name_variants": [
+                "human genetics centers",
+                "human genetics centre",
+                "centres de génétique humaine",
+                "centres de genetique humaine",
+                "centra voor menselijke erfelijkheid",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"human genetics centers?"]],
+            "enforce_preferred_match_groups": True,
+            # Clean federal hits are limited to the late-BEF years; the 2002
+            # EUR row in the current corpus is too thin to treat as a stable
+            # annual series point.
+            "active_years": (1997, 2001),
+            "expected_years": [1997, 2001],
+        },
+        {
+            "canonical_name": "Von Karman Institute",
+            "category": "science_agency",
+            "name_variants": [
+                "von karman institute",
+                "allocation to the von karman institute",
+                "grant to the von karman institute",
+                "institut von karman de dynamique des fluides",
+                "von karman instituut voor stromingsdynamica",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[
+                r"allocation to the von karman institute",
+                r"grant to the von karman institute",
+                r"von karman institute",
+            ]],
+            "enforce_preferred_match_groups": True,
+            # The federal panel only exposes clean named appropriations in
+            # 2002 and 2004. The 2001 transport-ministry lines are related but
+            # not clearly comparable one-for-one with the later federal grant.
+            "active_years": (2002, 2004),
+            "expected_years": [2002, 2004],
+        },
+    ],
+    "Chile": [
+        {
+            "canonical_name": "CONICYT / ANID",
+            "category": "science_agency",
+            "name_variants": [
+                "conicyt",
+                "comisión nacional de investigación científica y tecnológica",
+                "comision nacional de investigacion cientifica y tecnologica",
+                "anid",
+                "agencia nacional de investigación y desarrollo",
+                "agencia nacional de investigacion y desarrollo",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (1967, 2099),
+        },
+        {
+            "canonical_name": "CORFO innovation and technology funding",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "comité innova chile",
+                "comite innova chile",
+                "innova chile",
+                "corfo innova chile",
+                "innovación empresarial - comité innova chile",
+                "innovacion empresarial - comite innova chile",
+                "fomento de la ciencia y la tecnología - comité innova chile",
+                "fomento de la ciencia y la tecnologia - comite innova chile",
+                "fomento de la ciencia y la tecnología - corfo",
+                "fomento de la ciencia y la tecnologia - corfo",
+                "fondo de innovación para la competitividad - emprendimiento",
+                "fondo de innovacion para la competitividad - emprendimiento",
+                "fondo de innovación, ciencia y tecnología",
+                "fondo de innovacion, ciencia y tecnologia",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (1975, 2099),
+        },
+        {
+            "canonical_name": "Fund for the Promotion of Science and Technology",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "fondo de fomento ciencia y tecnología",
+                "fondo de fomento ciencia y tecnologia",
+                "fondo de fomento ciencia y tecnología (fondef)",
+                "fondo de fomento ciencia y tecnologia (fondef)",
+                "fund for the promotion of science and technology",
+                "fund for the promotion of science and technology (fondef)",
+                "fondef",
+                "fomento de la ciencia y la tecnología - conicyt",
+                "fomento de la ciencia y la tecnologia - conicyt",
+                "promotion of science and technology - conicyt",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (1981, 2099),
+        },
+        {
+            "canonical_name": "INIA (Chile)",
+            "category": "science_agency",
+            "name_variants": ["inia", "instituto de investigaciones agropecuarias"],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (1964, 2099),
+        },
+        {
+            "canonical_name": "IFOP",
+            "category": "science_agency",
+            "name_variants": ["ifop", "instituto de fomento pesquero"],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (1964, 2099),
+        },
+        {
+            "canonical_name": "FIA (Chile)",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "fia",
+                "fundación para la innovación agraria",
+                "fundacion para la innovacion agraria",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (1981, 2099),
+        },
+        {
+            "canonical_name": "INACH (Instituto Antártico Chileno)",
+            "category": "science_agency",
+            "name_variants": [
+                "instituto antártico chileno",
+                "instituto antartico chileno",
+                "inach",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (1963, 2099),
+        },
+        {
+            "canonical_name": "Chilean Institute of Public Health",
+            "category": "science_agency",
+            "name_variants": [
+                "instituto de salud pública de chile",
+                "instituto de salud publica de chile",
+                "institute of public health of chile",
+                "public health institute of chile",
+                "chilean institute of public health",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (1975, 2099),
+        },
+        {
+            "canonical_name": "Chilean Nuclear Energy Commission",
+            "category": "science_agency",
+            "name_variants": [
+                "comisión chilena de energía nuclear",
+                "comision chilena de energia nuclear",
+                "chilean nuclear energy commission",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (1975, 2099),
+        },
+        {
+            "canonical_name": "Fisheries Research Fund",
+            "category": "direct_rd",
+            "name_variants": [
+                "fondo de investigación pesquera",
+                "fondo de investigacion pesquera",
+                "fisheries research fund",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (1975, 2099),
+        },
+        {
+            "canonical_name": "Public Innovation Committee",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "comité innovación publica",
+                "comite innovacion publica",
+                "public innovation committee",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (2010, 2099),
+        },
+        {
+            "canonical_name": "Excellence Centers - CORFO",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "centros de excelencia - corfo",
+                "centers of excellence - corfo",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (2010, 2099),
+        },
+        {
+            "canonical_name": "Technological Consortiums - CORFO",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "consorcios tecnológicos - corfo",
+                "consorcios tecnologicos - corfo",
+                "programas y consorcios tecnológicos - corfo",
+                "programas y consorcios tecnologicos - corfo",
+                "technological consortiums - corfo",
+                "technological programs and consortiums - corfo",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (2010, 2099),
+        },
+        {
+            "canonical_name": "FIE-Innovation and R&D for Enterprises (Innova Committee)",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "fie-innovación e i&d empresarial (comité innova)",
+                "fie-innovacion e i&d empresarial (comite innova)",
+                "fie - business innovation and r&d (innova committee)",
+                "fie-innovation and r&d for enterprises (innova committee)",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (2010, 2099),
+        },
+        {
+            "canonical_name": "Internationalization of the Innovative Effort",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "internacionalización del esfuerzo innovador",
+                "internacionalizacion del esfuerzo innovador",
+                "internacionalización del esfuerzo innovador - comité innova chile",
+                "internacionalizacion del esfuerzo innovador - comite innova chile",
+                "internacionalización del esfuerzo innovador - comité innova",
+                "internacionalizacion del esfuerzo innovador - comite innova",
+                "internationalization of the innovative effort",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (2010, 2099),
+        },
+        {
+            "canonical_name": "Call for Agricultural Innovation Projects",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "fundacion para la innovación agraria - transferencia convocatoria proyectos de innovación agraria",
+                "fundacion para la innovacion agraria - transferencia convocatoria proyectos de innovacion agraria",
+                "fundación para la innovación agraria - transferencia convocatoria proyectos de innovación agraria",
+                "call for agricultural innovation projects",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (2010, 2099),
+        },
+    ],
+    "Estonia": [
+        {
+            "canonical_name": "Ministry of Education and Research (Estonia)",
+            "category": "rd_ministry",
+            "name_variants": ["haridus- ja teadusministeerium", "ministry of education and research"],
+            "preferred_item_type": ["section_total", "program_total"],
+            "active_years": (1991, 2099),
+        },
+        {
+            "canonical_name": "Estonian Research Council / Science Foundation",
+            "category": "science_agency",
+            "name_variants": [
+                "eesti teadusagentuur",
+                "estonian research council",
+                "eesti teadusfond",
+                "estonian science foundation",
+                "teadusfond",
+                "science foundation",
+                "science fund",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (1991, 2011),
+            "exclude_match_groups": [
+                [
+                    r"hospital network",
+                    r"acquisition and renovation of fixed assets",
+                ],
+            ],
+        },
+        {
+            "canonical_name": "University of Tartu",
+            "category": "higher_education",
+            "name_variants": ["tartu ülikool", "tartu ulikool", "university of tartu"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1994, 2006),
+            "expected_years": [1994, 2006],
+            "strict_exclude_match_groups": True,
+            "exclude_match_groups": [
+                [
+                    r"resident",
+                    r"genome center",
+                    r"geenivaramu",
+                    r"gene bank",
+                    r"european college",
+                    r"ajaloo ja arheoloogia",
+                ],
+            ],
+        },
+        {
+            "canonical_name": "Tallinn University of Technology",
+            "category": "higher_education",
+            "name_variants": [
+                "tallinna tehnikaülikool",
+                "tallinna tehnikaulikool",
+                "taltech",
+                "tallinn university of technology",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1994, 2006),
+            "expected_years": [1994, 2006],
+            "strict_exclude_match_groups": True,
+            "exclude_match_groups": [
+                [
+                    r"it crime",
+                    r"kuritegude uurimise koolituskeskus",
+                    r"technolog(y|ical) school",
+                    r"tehnoloogiakool",
+                ],
+            ],
+        },
+        {
+            "canonical_name": "Estonian Academy of Sciences",
+            "category": "science_agency",
+            "name_variants": [
+                "eesti teaduste akadeemia",
+                "estonian academy of sciences",
+                "academy of sciences",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (1991, 2011),
+        },
+        {
+            "canonical_name": "Archimedes Foundation",
+            "category": "science_agency",
+            "name_variants": [
+                "sihtasutus archimedes",
+                "archimedes foundation",
+                "archimedes",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (2003, 2011),
+        },
+        {
+            "canonical_name": "Estonia R&D / Innovation Programmes (post-2011)",
+            "category": "rd_programme",
+            "name_variants": [
+                "teadus- ja arendustegevuse ning innovatsiooni programm",
+                "research and development and innovation program",
+                "teadussiisteemi programm",
+                "teadussusteemi programm",
+                "support for the development of research institutions and the scientific community",
+                "development support for research institutions and researchers",
+                "teadusasutuste ja teadlaskonna arengu toetamine",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (2022, 2025),
+            "expected_years": [2022, 2025],
+            "notes": "Programmatic continuation after the institutional series. Use as a post-2011 hybrid bridge only, not as a directly comparable agency line.",
+        },
+    ],
+    "Iceland": [
+        # ── Post-2003: Rannís ─────────────────────────────────────────────────
+        {
+            "canonical_name": "Rannís (Icelandic Centre for Research)",
+            "category": "science_agency",
+            "name_variants": [
+                "rannís", "rannis", "icelandic centre for research",
+                "rannsóknamiðstöð íslands",
+                "research center of iceland",
+                "research centre of iceland",
+                "icelandic research centre",
+                "icelandic research center",
+            ],
+            "preferred_item_type": ["program_total", "section_total", "line_item"],
+            "preferred_match_groups": [
+                [
+                    r"\brann[ií]s\b",
+                    r"ranns[oó]knami[ðd]st[oö]?[ðd]\s+[ií]slands",
+                    r"research cent(?:er|re) of iceland",
+                    r"icelandic research cent(?:er|re)",
+                ],
+            ],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2003, 2099),
+            "max_amount_local": 2_000_000_000,
+            "notes": "Created 2003 merging Rannsóknaráð + Vísindaráð + Vísindasjóður + Rannsóknasjóður.",
+        },
+        # ── Pre-2003 research governance ──────────────────────────────────────
+        {
+            "canonical_name": "Rannsóknaráð ríkisins (National Research Council)",
+            "category": "science_agency",
+            "name_variants": [
+                "rannsóknaráð ríkisins", "rannsoknarad rikisins",
+                "rannseknarad rikisins", "rannséknaråd rikisins",
+                "national research council of iceland",
+                "national research council",
+                "02-232",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (1960, 2003),
+            "max_amount_local": 2_000_000_000,
+            "notes": "National Research Council. 3-digit code 232 (early), two-tier 02-232 (later). Merged into Rannís 2003.",
+        },
+        {
+            "canonical_name": "Vísindasjóður (Science Fund)",
+            "category": "science_agency",
+            "name_variants": [
+                "vísindasjóður", "visindasjodur", "vísindasj", "visindasj",
+                "science fund",
+                "02-235",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (1960, 2003),
+            "max_amount_local": 2_000_000_000,
+            "notes": "Science Fund. Code 975 in early budgets, later 02-235. Merged into Rannís 2003.",
+        },
+        {
+            "canonical_name": "Vísindaráð (Science Council)",
+            "category": "science_agency",
+            "name_variants": [
+                "vísindaráð", "visindarad", "visindarad",
+                "science council",
+                "02-234",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (1975, 2003),
+            "max_amount_local": 2_000_000_000,
+            "notes": "Science Council. Merged into Rannís 2003.",
+        },
+        {
+            "canonical_name": "Rannsóknasjóður (Research Fund)",
+            "category": "science_agency",
+            "name_variants": [
+                "rannsóknasjóður", "rannsoknasjodur", "rannséknasj",
+                "research fund",
+                "02-233",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (1975, 2003),
+            "max_amount_local": 4_000_000_000,
+            "notes": "Research Fund. Distinct from Vísindasjóður. Merged into Rannís 2003.",
+        },
+        # ── Universities ──────────────────────────────────────────────────────
+        {
+            "canonical_name": "Háskóli Íslands (University of Iceland)",
+            "category": "higher_education",
+            "name_variants": [
+                "háskóli íslands", "haskoli islands", "university of iceland",
+                "háskôli islands", "háskóli íslands",
+                "02-201",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "exclude_match_groups": [[
+                r"performance-based funding",
+                r"social role",
+                r"funding for the increase in university students",
+                r"northern volcano station",
+            ]],
+            "active_years": (1911, 2099),
+            "max_amount_local": 40_000_000_000,
+        },
+        {
+            "canonical_name": "Háskólinn á Akureyri (University of Akureyri)",
+            "category": "higher_education",
+            "name_variants": [
+                "háskólinn á akureyri", "haskólinn a akureyri",
+                "university of akureyri",
+                "02-210",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1987, 2099),
+            "max_amount_local": 10_000_000_000,
+        },
+        {
+            "canonical_name": "Raunvísindastofnun Háskólans (Science Institute of the University of Iceland)",
+            "category": "science_agency",
+            "name_variants": [
+                "raunvísindastofnun háskólans",
+                "raunvisindastofnun háskólans",
+                "raunvisindastofnun haskolans",
+                "science institute of the university of iceland",
+                "science institute of university of iceland",
+                "17-203",
+            ],
+            "preferred_item_type": ["line_item", "program_total", "section_total"],
+            "active_years": (1980, 2024),
+            "max_amount_local": 3_000_000_000,
+            "notes": "Validated against original Iceland budget files. Distinct science institute within the University of Iceland system.",
+        },
+        {
+            "canonical_name": "Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur)",
+            "category": "science_agency",
+            "name_variants": [
+                "tilraunastöð háskólans að keldum",
+                "tilraunastöð háskólans á keldum",
+                "tilraunastod háskolans að keldum",
+                "tilraunastod haskolans a keldum",
+                "experimental station of the university of iceland at keldur",
+                "experimental station of the university of iceland at keldum",
+                "university experimental station at keldur",
+                "university experimental station at keldum",
+                "02-202",
+                "17-202",
+            ],
+            "preferred_item_type": ["line_item", "program_total", "section_total"],
+            "active_years": (1990, 2025),
+            "max_amount_local": 1_500_000_000,
+            "notes": "Validated against original Iceland budget files; recurring standalone experimental station under the University of Iceland.",
+        },
+        {
+            "canonical_name": "Landbúnaðarháskóli Íslands (Agricultural University of Iceland)",
+            "category": "higher_education",
+            "name_variants": [
+                "landbúnaðarháskóli íslands",
+                "landbunadarhaskoli islands",
+                "agricultural university of iceland",
+                "17-216",
+                "02-216",
+            ],
+            "preferred_item_type": ["line_item", "program_total", "section_total"],
+            "active_years": (2013, 2025),
+            "max_amount_local": 3_000_000_000,
+            "notes": "Validated against original Iceland budget files.",
+        },
+        # ── Research institutes ───────────────────────────────────────────────
+        {
+            "canonical_name": "Hafrannsóknastofnun (Marine Research Institute)",
+            "category": "science_agency",
+            "name_variants": [
+                "hafrannsóknastofnun", "hafrannsoknarstofnun",
+                "hafrannséknastofnun",
+                "haf- og vatnarannsóknir",
+                "haf og vatnarannsoknir",
+                "marine research institute", "marine and freshwater research institute",
+                "marine and freshwater research",
+                "hafrannsóknastofnunin",
+                "05-202",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (1975, 2099),
+            "max_amount_local": 12_000_000_000,
+            "notes": "Under fisheries ministry (code 05-). Include research vessel and monitoring lines.",
+        },
+        {
+            "canonical_name": "Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries)",
+            "category": "science_agency",
+            "name_variants": [
+                "fiskirannsóknastofnun",
+                "fiskirannsoknastofnun",
+                "rannsóknastofnun fiskiðnaðarins",
+                "rannsoknastofnun fiskidnadarins",
+                "research institute of fisheries",
+                "research institute of the fishing industry",
+            ],
+            "preferred_item_type": ["line_item", "program_total", "section_total"],
+            "active_years": (1990, 2006),
+            "max_amount_local": 600_000_000,
+            "notes": "Validated against original Iceland budget files; separate fisheries research institute before later restructuring.",
+        },
+        {
+            "canonical_name": "Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry)",
+            "category": "science_agency",
+            "name_variants": [
+                "rannsóknastofnun byggingariðnaðarins",
+                "rannsoknastofnun byggingariðnaðarins",
+                "rannsoknastofnun byggingaridnadarins",
+                "research institute of the construction industry",
+                "11-203",
+            ],
+            "preferred_item_type": ["line_item", "program_total", "section_total"],
+            "active_years": (1985, 2007),
+            "max_amount_local": 500_000_000,
+            "notes": "Validated against original Iceland budget files.",
+        },
+        {
+            "canonical_name": "Orkustofnun / ÍSOR (Energy and Geothermal Research)",
+            "category": "science_agency",
+            "name_variants": [
+                "orkustofnun", "national energy authority",
+                "ísor", "isor", "iceland geosurvey",
+                "energy agency",
+                "11-301",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (1975, 2099),
+            "max_amount_local": 2_000_000_000,
+            "notes": "Orkustofnun (code 11-301) under industry ministry. ÍSOR (Iceland GeoSurvey) spun off ~2003 for geothermal/geological research.",
+        },
+        {
+            "canonical_name": "Veðurstofa Íslands (Icelandic Meteorological Office)",
+            "category": "science_agency",
+            "name_variants": [
+                "veðurstofa íslands", "vedurstofa islands",
+                "icelandic meteorological office",
+                "veðurstofa íslands",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (1975, 2099),
+            "max_amount_local": 5_000_000_000,
+        },
+        {
+            "canonical_name": "Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History)",
+            "category": "science_agency",
+            "name_variants": [
+                "náttúrufræðistofnun íslands",
+                "natturufraedistofnun islands",
+                "icelandic institute of natural history",
+                "natural history institute of iceland",
+                "14-401",
+            ],
+            "preferred_item_type": ["line_item", "program_total", "section_total"],
+            "active_years": (2019, 2024),
+            "max_amount_local": 1_500_000_000,
+            "notes": "Validated against original Iceland budget files.",
+        },
+        # ── Innovation and research funds ────────────────────────────────────
+        {
+            "canonical_name": "Tækniþróunarsjóður (Technology Development Fund)",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "tækniþróunarsjóður",
+                "taeknithrounarsjodur",
+                "technology development fund",
+                "11-242",
+                "04-511",
+                "17-511",
+            ],
+            "preferred_item_type": ["line_item", "program_total", "section_total"],
+            "active_years": (2004, 2025),
+            "max_amount_local": 4_000_000_000,
+            "notes": "Validated against original Iceland budget files.",
+        },
+        {
+            "canonical_name": "Rannsóknarnámssjóður (Research Scholarship Fund)",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "rannsóknarnámssjóður",
+                "rannsoknarnamssjodur",
+                "research scholarship fund",
+            ],
+            "preferred_item_type": ["line_item", "program_total", "section_total"],
+            "active_years": (2003, 2012),
+            "max_amount_local": 150_000_000,
+            "notes": "Validated against original Iceland budget files.",
+        },
+        {
+            "canonical_name": "Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries)",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "verkefnasjóður sjávarútvegsins",
+                "verkefnasjodur sjavarutvegsins",
+                "project fund for fisheries",
+                "research fund to increase the value of marine products",
+                "rannsóknasjóður til að auka verðmæti sjávarfangs",
+                "rannsoknasjodur til ad auka verdmaeti sjavarfangs",
+                "04-413",
+            ],
+            "preferred_item_type": ["line_item", "program_total", "section_total"],
+            "active_years": (2006, 2024),
+            "max_amount_local": 500_000_000,
+            "notes": "Validated against original Iceland budget files; later documents use Verkefnasjóður sjávarútvegsins for the same fisheries project-fund line.",
+        },
+        {
+            "canonical_name": "Sjóður til síldarrannsókna (Fund for Herring Research)",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "sjóður til síldarrannsókna",
+                "sjodur til sildarrannsokna",
+                "fund for herring research",
+            ],
+            "preferred_item_type": ["line_item", "program_total", "section_total"],
+            "active_years": (2005, 2022),
+            "max_amount_local": 50_000_000,
+            "notes": "Validated against original Iceland budget files.",
+        },
+        {
+            "canonical_name": "Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research)",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "byggingarsjóður rannsókna í þágu atvinnuveganna",
+                "byggingarsjodur rannsokna i thagu atvinnuveganna",
+                "byggingasjóður rannsókna í þágu atvinnuveganna",
+                "building fund for industry research",
+            ],
+            "preferred_item_type": ["line_item", "program_total", "section_total"],
+            "active_years": (1977, 2021),
+            "max_amount_local": 4_000_000_000,
+            "notes": "Validated against original Iceland budget files; long-lived fund supporting sectoral research infrastructure and projects.",
+        },
+        {
+            "canonical_name": "Nýsköpunarmiðstöð Íslands (Innovation Centre of Iceland)",
+            "category": "science_agency",
+            "name_variants": [
+                "nýsköpunarmiðstöð íslands",
+                "nyskopunarmidstod islands",
+                "innovation centre of iceland",
+                "innovation center of iceland",
+                "04-501",
+            ],
+            "preferred_item_type": ["line_item", "program_total", "section_total"],
+            "active_years": (2011, 2020),
+            "max_amount_local": 2_000_000_000,
+            "notes": "Validated against original Iceland budget files.",
+        },
+        # ── Additional higher-education institutions ────────────────────────
+        {
+            "canonical_name": "Háskólinn á Bifröst (University of Bifröst)",
+            "category": "higher_education",
+            "name_variants": [
+                "háskólinn á bifröst",
+                "haskolinn a bifrost",
+                "university of bifröst",
+                "university of bifrost",
+                "17-225",
+                "02-225",
+            ],
+            "preferred_item_type": ["line_item", "program_total", "section_total"],
+            "active_years": (2021, 2025),
+            "max_amount_local": 1_000_000_000,
+            "notes": "Validated against original Iceland budget files.",
+        },
+        {
+            "canonical_name": "Háskólinn í Reykjavík (Reykjavik University)",
+            "category": "higher_education",
+            "name_variants": [
+                "háskólinn í reykjavík",
+                "haskolinn i reykjavik",
+                "reykjavik university",
+                "university of reykjavik",
+                "17-227",
+                "02-227",
+            ],
+            "preferred_item_type": ["line_item", "program_total", "section_total"],
+            "active_years": (2004, 2024),
+            "max_amount_local": 6_000_000_000,
+            "notes": "Validated against original Iceland budget files.",
+        },
+    ],
+    "Hungary": [
+        {
+            "canonical_name": "Hungarian Academy of Sciences (MTA)",
+            "category": "science_agency",
+            "name_variants": [
+                "magyar tudományos akadémia",
+                "magyar tudomanyos akademia",
+                "mta",
+                "mta kutatóközpontok",
+                "mta kutatóintézetek",
+                "mta támogatott kutatóhelyek",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (1991, 2099),
+            "max_amount_local": 200_000_000,
+        },
+        {
+            "canonical_name": "MTA Library and Information Centre",
+            "category": "science_agency",
+            "name_variants": [
+                "mta könyvtár és információs központ",
+                "mta konyvtar es informacios kozpont",
+                "library and information centre",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (2013, 2099),
+            "max_amount_local": 20_000_000,
+        },
+        {
+            "canonical_name": "National Research, Development and Innovation Fund (Hungary)",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "nemzeti kutatási, fejlesztési és innovációs alap",
+                "nemzeti kutatasi, fejlesztesi es innovacios alap",
+                "nkfi alap",
+                "hazai innováció támogatása",
+                "hazai innovacio tamogatasa",
+                "a nemzetközi együttműködésben megvalósuló innováció támogatása",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (2015, 2099),
+            "max_amount_local": 200_000_000,
+        },
+        {
+            "canonical_name": "National Agricultural Research and Innovation Centre (Hungary)",
+            "category": "science_agency",
+            "name_variants": [
+                "nemzeti agrárkutatási és innovációs központ",
+                "nemzeti agrarkutatasi es innovacios kozpont",
+                "agrárkutatás támogatása",
+                "agrarkutatas tamogatasa",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (2013, 2099),
+            "max_amount_local": 50_000_000,
+        },
+    ],
+    "Latvia": [
+        {
+            "canonical_name": "Science Programme (Latvia)",
+            "category": "rd_ministry",
+            "name_variants": [
+                "zinātne",
+                "zinatne",
+                "kopā zinātnes finansēšanai",
+                "kopa zinatnes finansesanai",
+                "science programme",
+            ],
+            "preferred_item_type": ["program_total", "section_total"],
+            "active_years": (1991, 2099),
+            "max_amount_local": 100_000_000,
+            "notes": "Hybrid programme-level canonical for Latvian science budget lines across eras.",
+        },
+        {
+            "canonical_name": "Fundamental Scientific Research (Latvia)",
+            "category": "science_agency",
+            "name_variants": [
+                "fundamentālie zinātniskie pētījumi",
+                "fundamentalie zinatniskie petijumi",
+                "fundamentālie zinatniskie pētījumi",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1991, 2099),
+            "max_amount_local": 50_000_000,
+        },
+        {
+            "canonical_name": "Latvian Science Council",
+            "category": "science_agency",
+            "name_variants": [
+                "latvijas zinātnes padome",
+                "latvijas zinatnes padome",
+                "science council of latvia",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1991, 2099),
+            "max_amount_local": 20_000_000,
+        },
+        {
+            "canonical_name": "Latvian Academy of Sciences",
+            "category": "science_agency",
+            "name_variants": [
+                "latvijas zinātņu akadēmija",
+                "latvijas zinatnu akademija",
+                "lza",
+                "latvian academy of sciences",
+                "latvijas akadēmiskā bibliotēka",
+                "latvijas akademiska biblioteka",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1991, 2099),
+            "max_amount_local": 30_000_000,
+        },
+        {
+            "canonical_name": "University Science Development (Latvia)",
+            "category": "higher_education",
+            "name_variants": [
+                "zinātniskās darbības attīstība universitātēs",
+                "zinatniskas darbibas attistiba universitatem",
+                "zinātniskās infrastruktūras nodrošināšana un attīstība augstskolās",
+                "zinatniskas infrastrukturas nodrosinasana un attistiba augstskolas",
+                "investīcijas zinātnei",
+                "investicijas zinatnei",
+                "zinātnes bāzes finansējums",
+                "zinatnes bazes finansējums",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1996, 2099),
+            "max_amount_local": 50_000_000,
+        },
+    ],
+    "Israel": [
+        # ── Core science ministry (from 1992) ─────────────────────────────────
+        {
+            "canonical_name": "Ministry of Science and Technology (Israel)",
+            "category": "rd_ministry",
+            "name_variants": [
+                "משרד המדע והטכנולוגיה",
+                "משרד המדע",
+                "ministry of science and technology",
+                "ministry of science",
+                "science ministry",
+                "19",          # 2-digit budget code
+            ],
+            "preferred_item_type": ["section_total", "program_total"],
+            "active_years": (1992, 2099),
+            "notes": "Budget code 19. Created 1992. Sub-codes: 02=R&D Council, 03=Research, 05=Infrastructure, 07=Space Agency.",
+        },
+        # ── Pre-1992 science governance ───────────────────────────────────────
+        {
+            "canonical_name": "National Council for R&D (Israel, pre-1992)",
+            "category": "science_agency",
+            "name_variants": [
+                "המועצה הלאומית למחקר ולפיתוח",
+                "המועצה הלאומית למחקר",
+                "national council for research and development",
+                "national council for research",
+                "74",          # budget code in 1985-era documents
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1960, 1992),
+            "notes": "Budget code 74 in 1985-era files. Precursor to Ministry of Science.",
+        },
+        # ── Innovation / industrial R&D ───────────────────────────────────────
+        {
+            "canonical_name": "Israel Innovation Authority (from 2016)",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "רשות החדשנות הישראלית",
+                "רשות החדשנות",
+                "israel innovation authority",
+                "innovation authority",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (2016, 2099),
+            "notes": "Replaced the Office of the Chief Scientist at Ministry of Economy in 2016.",
+        },
+        {
+            "canonical_name": "Office of the Chief Scientist (Israel, pre-2016)",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "מדען ראשי",
+                "משרד המדען הראשי",
+                "office of the chief scientist",
+                "chief scientist",
+                "ocs",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1975, 2016),
+            "notes": "Appeared as sub-lines in Ministry of Industry/Economy. Replaced by Innovation Authority 2016.",
+        },
+        # ── Basic research funding ─────────────────────────────────────────────
+        {
+            "canonical_name": "Israel Science Foundation (ISF / קרן מדע ישראל)",
+            "category": "science_agency",
+            "name_variants": [
+                "קרן מדע ישראל",
+                "israel science foundation",
+                "isf",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (1975, 2099),
+            "notes": "Funds basic research at Israeli universities. Previously linked to the National Academy.",
+        },
+        {
+            "canonical_name": "KAMEA Fund (קרן קמ\"ח)",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "קרן קמ\"ח",
+                "קמ\"ח",
+                "kamea",
+            ],
+            "preferred_item_type": ["line_item"],
+            "active_years": (1975, 2099),
+            "notes": "Competitive applied research fund. Appears as sub-line in industry ministry (code 31 05).",
+        },
+        # ── Space ──────────────────────────────────────────────────────────────
+        {
+            "canonical_name": "Israeli Space Agency (סוכנות החלל הישראלית)",
+            "category": "science_agency",
+            "name_variants": [
+                "סוכנות החלל הישראלית",
+                "israeli space agency",
+                "space agency",
+                "19 07",       # sub-code within Ministry of Science
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1983, 2099),
+        },
+        # ── Universities / research institutes ────────────────────────────────
+        {
+            "canonical_name": "Weizmann Institute of Science",
+            "category": "higher_education",
+            "name_variants": [
+                "מכון ויצמן למדע",
+                "מרכז ויצמן",
+                "weizmann institute",
+                "weizmann institute of science",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1975, 2099),
+        },
+        {
+            "canonical_name": "Technion — Israel Institute of Technology",
+            "category": "higher_education",
+            "name_variants": [
+                "הטכניון",
+                "טכניון",
+                "technion",
+                "israel institute of technology",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1975, 2099),
+        },
+        {
+            "canonical_name": "Hebrew University of Jerusalem",
+            "category": "higher_education",
+            "name_variants": [
+                "האוניברסיטה העברית",
+                "אוניברסיטה עברית",
+                "hebrew university",
+                "hebrew university of jerusalem",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1975, 2099),
+        },
+        {
+            "canonical_name": "Volcani Center (Agricultural Research)",
+            "category": "science_agency",
+            "name_variants": [
+                "מרכז וולקני",
+                "volcani center",
+                "volcani centre",
+                "agricultural research organization",
+                "aro",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1975, 2099),
+            "notes": "State agricultural research institute under Ministry of Agriculture.",
+        },
+    ],
+    "Korea": [
+        {
+            "canonical_name": "Ministry of Science and ICT (Korea)",
+            "category": "rd_ministry",
+            "name_variants": [
+                "과학기술정보통신부",
+                "ministry of science and ict",
+                "science and ict",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (2017, 2099),
+            "max_amount_local": 200_000_000_000_000,
+        },
+        {
+            "canonical_name": "National R&D Programmes (Korea)",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "국가연구개발",
+                "연구개발",
+                "r&d",
+                "과학기술",
+                "혁신성장",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (2018, 2099),
+            "max_amount_local": 300_000_000_000_000,
+            "notes": "Programmatic canonical for summary-style budget sources; not an institutional series.",
+        },
+        {
+            "canonical_name": "Strategic Technology R&D Programmes (Korea)",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "ai",
+                "인공지능",
+                "반도체",
+                "우주",
+                "바이오",
+                "양자",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (2018, 2099),
+            "max_amount_local": 300_000_000_000_000,
+            "notes": "Theme-level canonical for strategic R&D programmes in Korean budget briefs.",
+        },
+    ],
+    "Colombia": [
+        # ── Science ministry / main R&D funder ───────────────────────────────
+        {
+            "canonical_name": "COLCIENCIAS (Departamento Administrativo de Ciencia, Tecnología e Innovación)",
+            "category": "science_agency",
+            "name_variants": [
+                "colciencias",
+                "departamento administrativo de ciencia, tecnología e innovación",
+                "departamento administrativo de ciencia tecnologia e innovacion",
+                "0320",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (1991, 2018),
+            "notes": "Main Colombian science agency. Budget SECCIÓN ~1114. Replaced by MinCiencias in 2019.",
+        },
+        {
+            "canonical_name": "MinCiencias (Ministerio de Ciencia, Tecnología e Innovación)",
+            "category": "science_agency",
+            "name_variants": [
+                "minciencias",
+                "ministerio de ciencia, tecnología e innovación",
+                "ministerio de ciencia tecnologia e innovacion",
+                "ministerio de ciencias",
+                "3901",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (2019, 2099),
+            "notes": "Replaced COLCIENCIAS from 2019. Created by Ley 1951 de 2019.",
+        },
+        {
+            "canonical_name": "Fondo Francisco José de Caldas",
+            "category": "science_agency",
+            "name_variants": [
+                "fondo francisco josé de caldas",
+                "fondo francisco jose de caldas",
+                "fondo caldas",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1991, 2099),
+            "notes": "Competitive research grants fund managed by COLCIENCIAS/MinCiencias.",
+        },
+        # ── Applied / industrial R&D ──────────────────────────────────────────
+        {
+            "canonical_name": "SENA — R&D and Innovation (Servicio Nacional de Aprendizaje)",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "sena",
+                "servicio nacional de aprendizaje",
+                "3602",
+                "fomento de la investigación, desarrollo tecnológico e innovación",
+                "fomento de la investigacion, desarrollo tecnologico e innovacion",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (1957, 2099),
+            "max_amount_local": 1_000_000_000_000_000_000,
+            "notes": "SECCIÓN 3602. Include only R&D/innovation investment sub-programmes, not pure vocational training.",
+        },
+        {
+            "canonical_name": "iNNpulsa Colombia",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "innpulsa",
+                "innpulsa colombia",
+                "unidad de desarrollo e innovación",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (2012, 2099),
+        },
+        # ── Agricultural research ─────────────────────────────────────────────
+        {
+            "canonical_name": "AGROSAVIA / CORPOICA (agricultural research)",
+            "category": "science_agency",
+            "name_variants": [
+                "agrosavia",
+                "corporación colombiana de investigación agropecuaria",
+                "corporacion colombiana de investigacion agropecuaria",
+                "corpoica",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1962, 2099),
+            "notes": "CORPOICA renamed AGROSAVIA in 2018. Agricultural R&D corporation.",
+        },
+        {
+            "canonical_name": "ICA (Instituto Colombiano Agropecuario)",
+            "category": "science_agency",
+            "name_variants": [
+                "ica",
+                "instituto colombiano agropecuario",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1962, 2099),
+        },
+        # ── Technical / environmental research ───────────────────────────────
+        {
+            "canonical_name": "IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",
+            "category": "science_agency",
+            "name_variants": [
+                "ideam",
+                "instituto de hidrología, meteorología y estudios ambientales",
+                "instituto de hidrologia, meteorologia y estudios ambientales",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1993, 2099),
+        },
+        {
+            "canonical_name": "INM (Instituto Nacional de Metrología)",
+            "category": "science_agency",
+            "name_variants": [
+                "inm",
+                "instituto nacional de metrología",
+                "instituto nacional de metrologia",
+                "3505",
+            ],
+            "preferred_item_type": ["line_item"],
+            "active_years": (2011, 2099),
+        },
+        {
+            "canonical_name": "Instituto Nacional de Salud (Colombia)",
+            "category": "science_agency",
+            "name_variants": [
+                "instituto nacional de salud",
+                "ins colombia",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1975, 2099),
+        },
+    ],
+    "Costa Rica": [
+        # ── Science ministry and main funders ─────────────────────────────────
+        {
+            "canonical_name": "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",
+            "category": "rd_ministry",
+            "name_variants": [
+                "micitt",
+                "ministerio de ciencia, innovación, tecnología y telecomunicaciones",
+                "ministerio de ciencia, tecnologia y telecomunicaciones",
+                "micit",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (1990, 2099),
+        },
+        {
+            "canonical_name": "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)",
+            "category": "science_agency",
+            "name_variants": [
+                "conicit",
+                "consejo nacional para investigaciones científicas y tecnológicas",
+                "consejo nacional para investigaciones cientificas y tecnologicas",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1972, 2099),
+            "notes": "Main competitive research funding body in Costa Rica.",
+        },
+        {
+            "canonical_name": "Promotora Costarricense de Innovación e Investigación (PCII)",
+            "category": "science_agency",
+            "name_variants": [
+                "promotora costarricense de innovación e investigación",
+                "promotora costarricense de innovacion e investigacion",
+                "pcii",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (2015, 2099),
+        },
+        # ── Universities ──────────────────────────────────────────────────────
+        {
+            "canonical_name": "UCR (Universidad de Costa Rica)",
+            "category": "higher_education",
+            "name_variants": [
+                "universidad de costa rica",
+                "ucr",
+                "vínculo externo ucr",
+                "vinculo externo ucr",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1940, 2099),
+            "notes": "Receives bulk FEES transfer; include only explicit research/Vínculo Externo sub-lines.",
+        },
+        {
+            "canonical_name": "ITCR / TEC (Instituto Tecnológico de Costa Rica)",
+            "category": "higher_education",
+            "name_variants": [
+                "instituto tecnológico de costa rica",
+                "instituto tecnologico de costa rica",
+                "itcr",
+                "tec",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1971, 2099),
+        },
+        {
+            "canonical_name": "FEES (Fondo Especial de Educación Superior)",
+            "category": "higher_education",
+            "name_variants": [
+                "fondo especial de educación superior",
+                "fondo especial de educacion superior",
+                "fees",
+            ],
+            "preferred_item_type": ["section_total"],
+            "active_years": (1975, 2099),
+            "notes": "Bulk transfer to state universities. Mark aggregation_role='section'. Individual research lines are separate.",
+        },
+        # ── Agricultural & environmental research ─────────────────────────────
+        {
+            "canonical_name": "INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria)",
+            "category": "science_agency",
+            "name_variants": [
+                "inta",
+                "instituto nacional de innovación y transferencia en tecnología agropecuaria",
+                "instituto nacional de innovacion y transferencia en tecnologia agropecuaria",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (2000, 2099),
+        },
+        {
+            "canonical_name": "INCIENSA (health and nutrition research)",
+            "category": "science_agency",
+            "name_variants": [
+                "inciensa",
+                "instituto costarricense de investigación y enseñanza en nutrición y salud",
+                "instituto costarricense de investigacion y ensenanza en nutricion y salud",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1975, 2099),
+        },
+        {
+            "canonical_name": "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)",
+            "category": "science_agency",
+            "name_variants": [
+                "catie",
+                "centro agronómico tropical de investigación y enseñanza",
+                "centro agronomico tropical de investigacion y ensenanza",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1942, 2099),
         },
     ],
 }
@@ -5489,9 +7600,11 @@ def _match_agency(desc: str, section: str, agency: dict, desc_raw: str = "", sec
     matching to prevent false matches like 'ORE' inside 'fOREign'.
     Longer variants use plain substring matching.
     """
-    combined = f"{desc} {section} {desc_raw} {section_raw}".lower()
+    combined = _normalise_match_text(f"{desc} {section} {desc_raw} {section_raw}")
     for variant in agency["name_variants"]:
-        v = variant.lower()
+        v = _normalise_match_text(variant)
+        if not v:
+            continue
         if len(v) <= 4:
             if re.search(r"(?<![a-z])" + re.escape(v) + r"(?![a-z])", combined):
                 return True
@@ -5511,14 +7624,18 @@ def _section_match_score(desc: str, section: str, agency: dict, desc_raw: str = 
     Used to prefer the agency's own appropriation line over cross-references
     from other departments (e.g. furniture purchases coded under dept X for CSIRO).
     """
-    sec_lower = f"{section} {section_raw}".lower()
-    desc_lower = f"{desc} {desc_raw}".lower()
+    sec_lower = _normalise_match_text(f"{section} {section_raw}")
+    desc_lower = _normalise_match_text(f"{desc} {desc_raw}")
     for variant in agency["name_variants"]:
-        v = variant.lower()
+        v = _normalise_match_text(variant)
+        if not v:
+            continue
         if v in sec_lower:
             return 2
     for variant in agency["name_variants"]:
-        v = variant.lower()
+        v = _normalise_match_text(variant)
+        if not v:
+            continue
         if v in desc_lower:
             return 1
     return 0
@@ -5776,6 +7893,193 @@ def _best_amount_for_agency(
             else:
                 return None  # all exceed cap → emit gap
 
+    # Spain-specific quality controls:
+    # When using pipeline results, a few rows survive with clearly inflated
+    # totals (usually a page summary or a unit-expansion artefact). Apply
+    # conservative per-agency caps only where the canonical definition sets one.
+    if agency.get("_country") == "Spain":
+        max_amt_es = agency.get("max_amount_local")
+        if max_amt_es is not None:
+            def _es_expanded_amt(row: pd.Series) -> float:
+                raw = float(row.get("amount_local") or 0)
+                unit_r = str(row.get("unit") or "").strip().lower()
+                factor = _SCALE_TO_BASE_UNIT.get(unit_r, 1.0)
+                return raw * factor
+
+            expanded_es = matches.apply(_es_expanded_amt, axis=1)
+            filtered = matches[(expanded_es > 0) & (expanded_es <= max_amt_es)].copy()
+            if not filtered.empty:
+                matches = filtered
+            else:
+                return None
+
+    if agency.get("_country") == "Colombia":
+        max_amt_co = agency.get("max_amount_local")
+        if max_amt_co is not None:
+            expanded_co = matches.apply(
+                lambda r: float(r.get("amount_local") or 0)
+                * _SCALE_TO_BASE_UNIT.get(str(r.get("unit") or "").strip().lower(), 1.0),
+                axis=1,
+            )
+            filtered = matches[(expanded_co > 0) & (expanded_co <= max_amt_co)].copy()
+            if not filtered.empty:
+                matches = filtered
+            else:
+                return None
+
+    # Iceland-specific quality controls:
+    # Pipeline output is the right source for Iceland, but some OCR-heavy rows
+    # still inflate a thousands-valued figure into a full-ISK amount before the
+    # later unit expansion. Use conservative agency-specific caps so obviously
+    # bad 100B+ rows drop out and the selector can fall back to a smaller
+    # institution-level row from the same year/file.
+    if agency.get("_country") == "Iceland":
+        canonical_name_is = str(agency.get("canonical_name", "") or "")
+        desc_en_is = matches.get("line_description_en", pd.Series("", index=matches.index)).fillna("").astype(str)
+        sec_en_is = matches.get("section_name_en", pd.Series("", index=matches.index)).fillna("").astype(str)
+        desc_raw_is = matches.get("line_description", pd.Series("", index=matches.index)).fillna("").astype(str)
+        sec_raw_is = matches.get("section_name", pd.Series("", index=matches.index)).fillna("").astype(str)
+        unit_is = matches.get("unit", pd.Series("", index=matches.index)).fillna("").astype(str).str.strip().str.lower()
+        amt_is = pd.to_numeric(matches.get("amount_local", pd.Series(dtype=float)), errors="coerce")
+        year_is = pd.to_numeric(matches.get("year", pd.Series(dtype=float)), errors="coerce")
+
+        if canonical_name_is == "Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research)":
+            false_program_mask = (
+                desc_raw_is.str.contains(r"ranns[oó]knir og v[öo]ktun [aá] n[áa]tt[uú]ru [ií]slands", case=False, na=False)
+                | desc_en_is.str.contains(r"research and monitoring of iceland'?s nature", case=False, na=False)
+                | desc_en_is.str.contains(r"operating budget,\s*million\s+kr", case=False, na=False)
+                | desc_raw_is.str.contains(r"ranns[oó]knar?-?\s*og þróunarstarfsemi", case=False, na=False)
+                | desc_en_is.str.contains(r"research and development activities", case=False, na=False)
+                | desc_raw_is.str.contains(r"ranns[oó]knir,\s*þr[óo]un og n[ýy]sk[öo]pun [ií] landb[úu]na[ðd]arm[áa]lum", case=False, na=False)
+                | desc_en_is.str.contains(r"research,\s*development and innovation in agricultural matters", case=False, na=False)
+                | sec_raw_is.str.contains(r"17\.20", case=False, na=False)
+                | sec_en_is.str.contains(r"research and monitoring of iceland'?s nature", case=False, na=False)
+            )
+            if false_program_mask.any():
+                filtered = matches.loc[~false_program_mask].copy()
+                if filtered.empty:
+                    return None
+                matches = filtered
+                desc_en_is = matches.get("line_description_en", pd.Series("", index=matches.index)).fillna("").astype(str)
+                sec_en_is = matches.get("section_name_en", pd.Series("", index=matches.index)).fillna("").astype(str)
+                desc_raw_is = matches.get("line_description", pd.Series("", index=matches.index)).fillna("").astype(str)
+                sec_raw_is = matches.get("section_name", pd.Series("", index=matches.index)).fillna("").astype(str)
+                unit_is = matches.get("unit", pd.Series("", index=matches.index)).fillna("").astype(str).str.strip().str.lower()
+                amt_is = pd.to_numeric(matches.get("amount_local", pd.Series(dtype=float)), errors="coerce")
+                year_is = pd.to_numeric(matches.get("year", pd.Series(dtype=float)), errors="coerce")
+
+        early_full_isk_mask = (
+            unit_is.eq("thousand")
+            & year_is.between(1981, 1984, inclusive="both")
+            & amt_is.ge(1_000_000)
+        )
+        if early_full_isk_mask.any():
+            matches = matches.copy()
+            matches.loc[early_full_isk_mask, "unit"] = "unit"
+            unit_is = matches.get("unit", pd.Series("", index=matches.index)).fillna("").astype(str).str.strip().str.lower()
+
+        million_text_mask = (
+            desc_en_is.str.contains(r"million\s+kr", case=False, na=False)
+            | sec_en_is.str.contains(r"million\s+kr", case=False, na=False)
+        )
+        million_kr_mask = (
+            unit_is.eq("thousand")
+            & amt_is.between(1, 100_000, inclusive="both")
+            & million_text_mask
+        )
+        if million_kr_mask.any():
+            matches = matches.copy()
+            matches.loc[million_kr_mask, "unit"] = "million"
+
+            # Some Icelandic English annex tables express the section summary as
+            # "Operating budget, million kr." and sibling rows (e.g. "Operating
+            # appropriations") inherit the same unit but are mislabeled as
+            # 'thousand'. Propagate the corrected unit within the same
+            # source-file/section block when the raw values are also decimal-scale.
+            sibling_keys = pd.DataFrame({
+                "source_file": matches.get("source_file", pd.Series("", index=matches.index)).fillna("").astype(str),
+                "section_name_en": sec_en_is,
+                "section_name": sec_raw_is,
+            })
+            corrected_keys = {
+                tuple(row)
+                for row in sibling_keys.loc[million_kr_mask, ["source_file", "section_name_en", "section_name"]]
+                .drop_duplicates()
+                .itertuples(index=False, name=None)
+            }
+            sibling_mask = sibling_keys.apply(
+                lambda row: (row["source_file"], row["section_name_en"], row["section_name"]) in corrected_keys,
+                axis=1,
+            )
+            propagate_mask = (
+                unit_is.eq("thousand")
+                & amt_is.between(1, 100_000, inclusive="both")
+                & sibling_mask
+                & ~desc_raw_is.str.contains(r"t[æa]ki|búnaður", case=False, na=False)
+                & ~desc_en_is.str.contains(r"equipment|apparatus", case=False, na=False)
+            )
+            if propagate_mask.any():
+                matches.loc[propagate_mask, "unit"] = "million"
+
+        max_amt_is = agency.get("max_amount_local")
+        if max_amt_is is not None:
+            expanded_is = matches.apply(
+                lambda r: float(r.get("amount_local") or 0)
+                * _SCALE_TO_BASE_UNIT.get(str(r.get("unit") or "").strip().lower(), 1.0),
+                axis=1,
+            )
+            filtered = matches[(expanded_is > 0) & (expanded_is <= max_amt_is)].copy()
+            if not filtered.empty:
+                matches = filtered
+            else:
+                return None
+
+    # Finland-specific quality controls:
+    # (a) Exclude revenue lines (tulot) and multi-year commitment authority rows —
+    #     the Finnish budget documents contain early summary pages where "granting
+    #     authority" totals (myöntämisvaltuus) dwarf the actual annual appropriation.
+    # (b) Apply per-agency FIM-era (pre-2002) and EUR-era plausibility caps using
+    #     max_amount_local_fim / max_amount_local_eur fields on the canonical def.
+    #     Amounts in Finland results are already in full currency units (unit='unit')
+    #     after the Finland unit normalization in build_canonical_series, so no
+    #     expansion factor is needed here.
+    if agency.get("_country") == "Finland":
+        desc_en = (
+            matches.get("line_description_en", pd.Series("", index=matches.index))
+            .fillna("").str.lower()
+        )
+        excl = desc_en.str.contains(
+            r"\brevenue\b|grants and loans awarded|granting authority|"
+            r"total amount proposed for tekes",
+            regex=True,
+        )
+        if excl.any():
+            trimmed = matches[~excl].copy()
+            if not trimmed.empty:
+                matches = trimmed
+
+        max_fim = agency.get("max_amount_local_fim")
+        max_eur = agency.get("max_amount_local_eur")
+        if max_fim is not None or max_eur is not None:
+            yr_fi = pd.to_numeric(
+                matches.get("year", pd.Series(dtype=float)), errors="coerce"
+            )
+            cur_fi = (
+                matches.get("currency", pd.Series("", index=matches.index))
+                .fillna("").str.upper()
+            )
+            amt_fi = pd.to_numeric(matches["amount_local"], errors="coerce")
+            keep = pd.Series(True, index=matches.index)
+            if max_fim is not None:
+                fim_mask = (yr_fi < 2002) | cur_fi.eq("FIM")
+                keep &= ~fim_mask | (amt_fi <= max_fim)
+            if max_eur is not None:
+                eur_mask = (yr_fi >= 2002) & ~cur_fi.eq("FIM")
+                keep &= ~eur_mask | (amt_fi <= max_eur)
+            trimmed = matches[keep].copy()
+            if not trimmed.empty:
+                matches = trimmed
+
     # Some countries need extra narrowing before we rank amounts. Japan is the
     # main case: a ministry page often lists both the agency's operating grant
     # and much broader programme buckets that contain the agency name. Let the
@@ -5942,12 +8246,20 @@ def _get_agencies_for_country(country: str) -> list[dict]:
     hardcoded = CANONICAL_AGENCIES.get(country, [])
     existing_names = {a["canonical_name"].lower() for a in hardcoded}
     existing_aliases = set()
+    existing_aliases_norm = set()
     for agency in hardcoded:
-        existing_aliases.add(str(agency.get("canonical_name", "")).strip().lower())
-        existing_aliases.add(str(agency.get("source_entity", "")).strip().lower())
+        canonical = str(agency.get("canonical_name", "")).strip().lower()
+        source_entity = str(agency.get("source_entity", "")).strip().lower()
+        existing_aliases.add(canonical)
+        existing_aliases.add(source_entity)
+        existing_aliases_norm.add(_normalise_match_text(canonical))
+        existing_aliases_norm.add(_normalise_match_text(source_entity))
         for variant in agency.get("name_variants", []) or []:
-            existing_aliases.add(str(variant).strip().lower())
+            variant_text = str(variant).strip().lower()
+            existing_aliases.add(variant_text)
+            existing_aliases_norm.add(_normalise_match_text(variant_text))
     existing_aliases.discard("")
+    existing_aliases_norm.discard("")
 
     try:
         from budget.agency_discovery import load_discovered_agencies
@@ -5956,11 +8268,15 @@ def _get_agencies_for_country(country: str) -> list[dict]:
         discovered = []
 
     def _aliases_conflict(discovered_aliases: set[str]) -> bool:
+        discovered_aliases_norm = {_normalise_match_text(alias) for alias in discovered_aliases if alias}
         if existing_aliases.intersection(discovered_aliases):
+            return True
+        if existing_aliases_norm.intersection(discovered_aliases_norm):
             return True
         for alias in discovered_aliases:
             if not alias:
                 continue
+            alias_norm = _normalise_match_text(alias)
             for existing in existing_aliases:
                 if not existing:
                     continue
@@ -5969,6 +8285,13 @@ def _get_agencies_for_country(country: str) -> list[dict]:
                 if len(alias) >= 12 and existing in alias:
                     return True
                 if len(existing) >= 12 and alias in existing:
+                    return True
+            for existing_norm in existing_aliases_norm:
+                if not existing_norm or not alias_norm:
+                    continue
+                if len(alias_norm) >= 12 and existing_norm in alias_norm:
+                    return True
+                if len(existing_norm) >= 12 and alias_norm in existing_norm:
                     return True
         return False
 
@@ -5993,6 +8316,47 @@ def _get_agencies_for_country(country: str) -> list[dict]:
             if any(pat.search(field) for field in fields for pat in _UK_GENERIC_DISCOVERED_PATTERNS):
                 return True
             return True
+
+        if country == "Finland":
+            # Finland's 8 hardcoded canonicals (Academy, Tekes/BF, VTT, GTK,
+            # Luke/MTT/Metla/RKTL, VATT) cover all institutional R&D series.
+            # Agency discovery adds ~135 generic programme/fund names (energy
+            # research funds, one-off grants, ministry-total labels) that
+            # fragment the series and cause duplicate rows for the same agency.
+            # Block all discovered agencies; rely solely on hardcoded ones.
+            return True
+
+        if country == "Iceland":
+            # Keep Iceland discovery outputs available for review, but do not
+            # merge them into the canonical panel. The current discovered set is
+            # dominated by programme labels and one-off research lines that
+            # fragment the audited institutional series.
+            return True
+
+        if country == "Estonia":
+            name = str(agency.get("canonical_name", "")).strip()
+            source = str(agency.get("source_entity", "")).strip()
+            fields = [x for x in [name, source] if x]
+            text = " ".join(fields)
+            if not text:
+                return True
+            if any(pat.search(field) for field in fields for pat in _ESTONIA_GENERIC_DISCOVERED_PATTERNS):
+                return True
+            return not bool(_ESTONIA_ORGANISATION_HINTS.search(text))
+
+        if country == "Colombia":
+            agency_type = str(agency.get("agency_type", "")).strip().lower()
+            name = str(agency.get("canonical_name", "")).strip()
+            source = str(agency.get("source_entity", "")).strip()
+            text = " ".join(x for x in [name, source] if x)
+            if not text:
+                return True
+            # Colombia discovery currently yields many one-year programme labels
+            # from the 2018 annex. Keep those visible in review outputs, but do
+            # not merge them into the canonical institutional panel.
+            if agency_type == "rd_programme":
+                return True
+            return not bool(_COLOMBIA_ORGANISATION_HINTS.search(text))
 
         if country != "Japan":
             return False
@@ -6042,9 +8406,12 @@ def _get_agencies_for_country(country: str) -> list[dict]:
             merged.append(agency)
             existing_names.add(canonical_lc)
             existing_aliases.update(x.strip().lower() for x in variants if isinstance(x, str) and x.strip())
+            existing_aliases_norm.update(_normalise_match_text(x) for x in variants if isinstance(x, str) and x.strip())
             existing_aliases.add(canonical_lc)
+            existing_aliases_norm.add(_normalise_match_text(canonical_lc))
             if agency.get("source_entity"):
                 existing_aliases.add(str(agency["source_entity"]).strip().lower())
+                existing_aliases_norm.add(_normalise_match_text(str(agency["source_entity"]).strip().lower()))
             added += 1
 
     if added:
@@ -6187,6 +8554,70 @@ def build_canonical_series(
                 subset.loc[idx, "amount_local"] = repaired.loc[good_mask].astype(float)
                 subset.loc[idx, "unit"] = "thousand"
 
+    input_years = (
+        sorted(
+            {
+                int(y)
+                for y in pd.to_numeric(
+                    subset.get("year", pd.Series(dtype=float)),
+                    errors="coerce",
+                ).dropna().tolist()
+            }
+        )
+        if not subset.empty
+        else []
+    )
+
+    if country == "Finland" and not subset.empty:
+        # -----------------------------------------------------------------------
+        # Finland unit normalization:
+        #
+        # The LLM extracts amounts from narrative budget text where full EUR/FIM
+        # values are written out (e.g. "Momentille myönnetään 146 310 000 mk"),
+        # but systematically labels them unit='thousand' because the surrounding
+        # summary tables use "1000 EUR / mk" column headers.
+        #
+        # Result: every stored amount is already in full currency units but
+        # mislabeled as 'thousand', causing a spurious ×1000 scaling.
+        # Fix: override ALL unit='thousand' → 'unit' for Finland.
+        #
+        # Pre-2002 currency fix:
+        # Some FIM-era rows (1985-2001) were labeled currency='EUR' by the LLM
+        # when it saw "euro" unit labels. Correct to 'FIM'.
+        # -----------------------------------------------------------------------
+        unit_fi = subset.get("unit", pd.Series("", index=subset.index)).fillna("").str.lower()
+        amt_fi = pd.to_numeric(subset.get("amount_local"), errors="coerce")
+        year_fi = pd.to_numeric(subset.get("year", pd.Series(dtype=float)), errors="coerce")
+
+        # All 'thousand' labels in Finland are mislabeled full values
+        fin_thousand_mask = unit_fi.eq("thousand") & amt_fi.notna()
+        if fin_thousand_mask.any():
+            subset.loc[fin_thousand_mask, "unit"] = "unit"
+            logger.debug(
+                f"[Finland] Normalized {fin_thousand_mask.sum()} rows: "
+                f"unit='thousand' → 'unit' (full EUR/FIM amounts from narrative text)"
+            )
+
+        # Fix 'euro'/'dollar'/'markka'/'unknown' unit labels → 'unit'
+        fin_bad_unit_mask = unit_fi.isin(["euro", "dollar", "markka", "unknown"]) & amt_fi.notna()
+        if fin_bad_unit_mask.any():
+            subset.loc[fin_bad_unit_mask, "unit"] = "unit"
+            logger.debug(
+                f"[Finland] Normalized {fin_bad_unit_mask.sum()} rows: "
+                f"unit in (euro/dollar/markka/unknown) → 'unit'"
+            )
+
+        # Fix pre-2002 currency: FIM not EUR
+        pre2002_eur_mask = (year_fi < 2002) & (
+            subset.get("currency", pd.Series("", index=subset.index))
+            .fillna("").eq("EUR")
+        )
+        if pre2002_eur_mask.any():
+            subset.loc[pre2002_eur_mask, "currency"] = "FIM"
+            logger.debug(
+                f"[Finland] Fixed {pre2002_eur_mask.sum()} pre-2002 rows: currency='EUR' → 'FIM'"
+            )
+
     if country == "Norway" and not subset.empty:
         # -----------------------------------------------------------------------
         # Norway unit normalization — two-era heuristic:
@@ -6229,6 +8660,230 @@ def build_canonical_series(
                 f"pre-1993: {pre93_mask.sum()} rows (≥1M)."
             )
 
+    if country == "Estonia" and not subset.empty:
+        # Estonia often exposes full-unit amounts in budget text/tables while the
+        # extractor labels them as "thousand". Correct only the clearly inflated
+        # survivors and repair pre-euro currency labels.
+        unit_ee = subset.get("unit", pd.Series("", index=subset.index)).fillna("").str.lower()
+        amt_ee = pd.to_numeric(subset.get("amount_local"), errors="coerce")
+        year_ee = pd.to_numeric(subset.get("year", pd.Series(dtype=float)), errors="coerce")
+        curr_ee = subset.get("currency", pd.Series("", index=subset.index)).fillna("").str.upper()
+
+        full_unit_mask = unit_ee.eq("thousand") & amt_ee.ge(1_000_000)
+        if full_unit_mask.any():
+            subset.loc[full_unit_mask, "unit"] = "unit"
+            logger.debug(
+                f"[Estonia] Normalized {full_unit_mask.sum()} rows: "
+                f"unit='thousand' → 'unit' for large full-value budget rows"
+            )
+
+        pre_euro_mask = year_ee.between(1992, 2010, inclusive="both") & curr_ee.eq("EUR")
+        if pre_euro_mask.any():
+            subset.loc[pre_euro_mask, "currency"] = "EEK"
+            logger.debug(
+                f"[Estonia] Fixed {pre_euro_mask.sum()} rows: currency='EUR' → 'EEK' in pre-2011 budgets"
+            )
+
+        rub_mask = year_ee.eq(1991) & curr_ee.eq("RUB") & unit_ee.eq("thousand")
+        if rub_mask.any():
+            subset.loc[rub_mask, "unit"] = "unit"
+            logger.debug(
+                f"[Estonia] Fixed {rub_mask.sum()} 1991 RUB rows: unit='thousand' → 'unit' (original law is in roubles, not thousand roubles)"
+            )
+
+    if country == "Belgium" and not subset.empty:
+        year_be = pd.to_numeric(subset.get("year", pd.Series(dtype=float)), errors="coerce")
+        curr_be = subset.get("currency", pd.Series("", index=subset.index)).fillna("").str.upper()
+        unit_be = subset.get("unit", pd.Series("", index=subset.index)).fillna("").str.lower()
+        amt_be = pd.to_numeric(subset.get("amount_local"), errors="coerce")
+        source_be = subset.get("source_file", pd.Series("", index=subset.index)).fillna("").astype(str)
+        text_be = (
+            subset.get("section_name", pd.Series("", index=subset.index)).fillna("").astype(str)
+            + " "
+            + subset.get("section_name_en", pd.Series("", index=subset.index)).fillna("").astype(str)
+            + " "
+            + subset.get("line_description", pd.Series("", index=subset.index)).fillna("").astype(str)
+            + " "
+                + subset.get("line_description_en", pd.Series("", index=subset.index)).fillna("").astype(str)
+            )
+
+        # Belgium's 2001 science-policy PDF is laid out in "Mio BEF". A few
+        # OCR-derived decimal values like "274,6" or "13,4" were parsed as
+        # 274600000 / 13400000 before the later "thousand" scaling, which
+        # inflates them by an extra factor of 1000. Repair only that file here.
+        bad_2001_mio_bef = (
+            year_be.eq(2001)
+            & source_be.str.contains(r"50K0905007", case=False, regex=True, na=False)
+            & curr_be.eq("BEF")
+            & unit_be.eq("thousand")
+            & amt_be.between(10_000_000, 999_999_999, inclusive="both")
+        )
+        if bad_2001_mio_bef.any():
+            subset = subset.copy()
+            subset.loc[bad_2001_mio_bef, "amount_local"] = (
+                pd.to_numeric(subset.loc[bad_2001_mio_bef, "amount_local"], errors="coerce") / 1000.0
+            )
+            amt_be = pd.to_numeric(subset.get("amount_local"), errors="coerce")
+
+        # Pre-2002 EUR rows in Belgium are almost always OCR/registry mistakes.
+        # Keep them out of the canonical layer rather than silently re-labelling.
+        bad_pre_euro = year_be.lt(2002) & curr_be.eq("EUR") & amt_be.notna()
+        if bad_pre_euro.any():
+            subset = subset.loc[~bad_pre_euro].copy()
+            year_be = pd.to_numeric(subset.get("year", pd.Series(dtype=float)), errors="coerce")
+            curr_be = subset.get("currency", pd.Series("", index=subset.index)).fillna("").str.upper()
+            unit_be = subset.get("unit", pd.Series("", index=subset.index)).fillna("").str.lower()
+            amt_be = pd.to_numeric(subset.get("amount_local"), errors="coerce")
+            source_be = subset.get("source_file", pd.Series("", index=subset.index)).fillna("").astype(str)
+            text_be = (
+                subset.get("section_name", pd.Series("", index=subset.index)).fillna("").astype(str)
+                + " "
+                + subset.get("section_name_en", pd.Series("", index=subset.index)).fillna("").astype(str)
+                + " "
+                + subset.get("line_description", pd.Series("", index=subset.index)).fillna("").astype(str)
+                + " "
+                + subset.get("line_description_en", pd.Series("", index=subset.index)).fillna("").astype(str)
+            )
+
+        # Federal scientific institutes in 2002+ sometimes appear in annex-style
+        # statements with full-EUR values mislabeled as "thousand". A 1,028,000
+        # row for the Royal Observatory is plausible in EUR, not in thousand EUR.
+        institute_like = text_be.str.contains(
+            r"observatoire|sterrenwacht|meteorolog|a[eé]ronom|sciences naturelles|natuurwetenschappen|radio-?element|institut royal|koninklijk",
+            case=False,
+            regex=True,
+            na=False,
+        )
+        clean_grant_like = text_be.str.contains(
+            r"grant to|allocation to|subsid(?:y|ies) to|from the state budget|dotation",
+            case=False,
+            regex=True,
+            na=False,
+        )
+        full_eur_institute = (
+            year_be.ge(2002)
+            & curr_be.eq("EUR")
+            & unit_be.eq("thousand")
+            & amt_be.ge(500_000)
+            & institute_like
+        )
+        if full_eur_institute.any():
+            subset = subset.copy()
+            subset.loc[full_eur_institute, "unit"] = "unit"
+
+        # Clean institute grants/allocations are often genuine "thousand EUR"
+        # rows. Convert them to actual EUR here so the row ranking compares
+        # apples to apples against neighbouring OCR rows we already repaired to
+        # plain EUR above.
+        grant_thousand_eur = (
+            year_be.ge(2002)
+            & curr_be.eq("EUR")
+            & unit_be.eq("thousand")
+            & institute_like
+            & clean_grant_like
+            & amt_be.between(100, 100_000, inclusive="both")
+        )
+        if grant_thousand_eur.any():
+            subset = subset.copy()
+            subset.loc[grant_thousand_eur, "amount_local"] = (
+                pd.to_numeric(subset.loc[grant_thousand_eur, "amount_local"], errors="coerce") * 1000.0
+            )
+            subset.loc[grant_thousand_eur, "unit"] = "unit"
+
+    if country == "Netherlands" and not subset.empty:
+        # -----------------------------------------------------------------------
+        # Netherlands pre-processing (runs before the canonical matching loop):
+        #
+        # 1. Unit fix for 2000-2001 per-ministry NLG files.
+        #    Files named YYYY_ministryN.pdf express amounts in FULL guilders (e.g.
+        #    65,469,000 NLG for ECN) but the LLM labels them unit='thousand'.
+        #    After the standard ×1000 expansion this becomes 65.5 billion NLG —
+        #    clearly wrong.  Divide by 1000 so the correct scale is restored:
+        #    65,469,000 → 65,469 (thousands) → ×1000 → 65.5M NLG ✓.
+        #
+        # 2. Drop zero-amount NLG rows.
+        #    Budget memoranda (narrative text) frequently produced amount=0 when
+        #    the LLM located a known institution but failed to read its amount.
+        #    These are extraction failures, not real zero appropriations.
+        #
+        # 3. Drop pre-1999 EUR-labelled rows.
+        #    The Netherlands adopted EUR for government accounting on 1 Jan 2002.
+        #    Any row with currency='EUR' before 1999 is a LLM mislabelling of NLG.
+        #    (1999–2001 EUR rows from baten-lastendienst agencies are kept but
+        #     subject to max_amount_local cap filtering downstream.)
+        # -----------------------------------------------------------------------
+        amt_nl = pd.to_numeric(subset.get("amount_local"), errors="coerce")
+        unit_nl = subset.get("unit", pd.Series("", index=subset.index)).fillna("").str.lower()
+        curr_nl = subset.get("currency", pd.Series("", index=subset.index)).fillna("").str.upper()
+        year_nl = pd.to_numeric(subset.get("year"), errors="coerce")
+        src_nl = subset.get("source_file", pd.Series("", index=subset.index)).fillna("").astype(str)
+
+        # 1. Divide 2000-2001 per-ministry NLG amounts by 1000
+        ministry_nlg_mask = (
+            year_nl.between(2000, 2001)
+            & src_nl.str.contains(r"\d{4}_ministry\d+", regex=True, na=False)
+            & curr_nl.eq("NLG")
+            & unit_nl.isin(["thousand", "thousands"])
+            & amt_nl.notna()
+            & amt_nl.gt(0)
+        )
+        if ministry_nlg_mask.any():
+            subset = subset.copy()
+            subset.loc[ministry_nlg_mask, "amount_local"] = amt_nl.loc[ministry_nlg_mask] / 1000.0
+            amt_nl = pd.to_numeric(subset.get("amount_local"), errors="coerce")
+            logger.debug(
+                f"[Netherlands] Unit fix: divided {ministry_nlg_mask.sum()} "
+                f"2000-2001 per-ministry NLG rows by 1000 "
+                f"(full-NLG amounts mislabelled as thousands)"
+            )
+
+        # 2. Divide pre-2000 budget-memorandum NLG non-section rows by 1000
+        #    when the OCR/LLM captured the full-guilder amount but still labeled
+        #    the row as 'thousand'. This pattern shows up in late-1990s agency
+        #    contribution lines such as "Bijdrage NWO 100 miljoen" extracted as
+        #    100,000,000 with unit='thousand' instead of 100,000.
+        item_type_nl = subset.get("item_type", pd.Series("", index=subset.index)).fillna("").astype(str)
+        pre2000_budget_full_nlg_mask = (
+            year_nl.lt(2000)
+            & src_nl.str.contains(r"budget memorandum", case=False, na=False)
+            & curr_nl.eq("NLG")
+            & unit_nl.isin(["thousand", "thousands"])
+            & amt_nl.notna()
+            & amt_nl.ge(10_000_000)
+            & item_type_nl.ne("section_total")
+        )
+        if pre2000_budget_full_nlg_mask.any():
+            subset = subset.copy()
+            subset.loc[pre2000_budget_full_nlg_mask, "amount_local"] = (
+                amt_nl.loc[pre2000_budget_full_nlg_mask] / 1000.0
+            )
+            amt_nl = pd.to_numeric(subset.get("amount_local"), errors="coerce")
+            logger.debug(
+                f"[Netherlands] Unit fix: divided {pre2000_budget_full_nlg_mask.sum()} "
+                f"pre-2000 budget-memorandum NLG non-section rows by 1000 "
+                f"(full-NLG amounts mislabelled as thousands)"
+            )
+
+        # 3. Drop zero-amount NLG rows (extraction failures)
+        zero_nlg_mask = curr_nl.isin(["NLG"]) & amt_nl.notna() & amt_nl.eq(0)
+        if zero_nlg_mask.any():
+            subset = subset[~zero_nlg_mask].copy()
+            logger.debug(
+                f"[Netherlands] Dropped {zero_nlg_mask.sum()} zero-amount NLG rows "
+                f"(LLM extraction failures — no real zero appropriations)"
+            )
+            curr_nl = subset.get("currency", pd.Series("", index=subset.index)).fillna("").str.upper()
+            year_nl = pd.to_numeric(subset.get("year"), errors="coerce")
+
+        # 4. Drop pre-1999 EUR rows (wrong currency era)
+        pre1999_eur_mask = year_nl.lt(1999) & curr_nl.eq("EUR") & pd.to_numeric(subset.get("amount_local"), errors="coerce").notna()
+        if pre1999_eur_mask.any():
+            subset = subset[~pre1999_eur_mask].copy()
+            logger.debug(
+                f"[Netherlands] Dropped {pre1999_eur_mask.sum()} pre-1999 EUR rows "
+                f"(currency mislabel — EUR did not exist in NL government accounts before 1999)"
+            )
+
     records = []
 
     for agency in agencies:
@@ -6237,11 +8892,83 @@ def build_canonical_series(
         canonical_name = agency["canonical_name"]
         active_start, active_end = agency.get("active_years", (1800, 2099))
 
+        # Older discovered_agencies.json entries often use a placeholder
+        # 1900-2099 range even when the entity is only observed in one recent
+        # budget year. Constrain those agencies to the years actually seen in
+        # the current input so they do not manufacture decades of fake gaps.
+        source_entity = str(agency.get("source_entity", "") or "").strip()
+        n_years_seen = int(agency.get("n_years_seen", 0) or 0)
+        observed_years = None
+        if (
+            (source_entity and n_years_seen > 0 and (active_start, active_end) == (1900, 2099))
+            or (
+                country == "Netherlands"
+                and canonical_name in _NETHERLANDS_CLIP_TO_OBSERVED
+            )
+        ):
+            source_entity_norm = _normalise_match_text(source_entity)
+            observed_years = sorted(
+                {
+                    int(y)
+                    for y in subset.loc[
+                        subset.apply(
+                            lambda r: source_entity_norm in _normalise_match_text(
+                                " ".join(
+                                    [
+                                        str(r.get("line_description_en", "")),
+                                        str(r.get("section_name_en", "")),
+                                        str(r.get("line_description", "")),
+                                        str(r.get("section_name", "")),
+                                    ]
+                                )
+                            ),
+                            axis=1,
+                        )
+                        if source_entity_norm
+                        else subset.apply(
+                            lambda r: _match_agency(
+                                str(r.get("line_description_en", "")),
+                                str(r.get("section_name_en", "")),
+                                agency,
+                                str(r.get("line_description", "")),
+                                str(r.get("section_name", "")),
+                            ),
+                            axis=1,
+                        ),
+                        "year",
+                    ].dropna().tolist()
+                }
+            )
+
+        if source_entity and n_years_seen > 0 and (active_start, active_end) == (1900, 2099):
+            if observed_years:
+                active_start, active_end = observed_years[0], observed_years[-1]
+            else:
+                continue
+
+        if country == "Netherlands" and canonical_name in _NETHERLANDS_CLIP_TO_OBSERVED:
+            if observed_years:
+                active_start, active_end = observed_years[0], observed_years[-1]
+            else:
+                continue
+
+        year_groups = {}
         for year, year_df in subset.groupby("year"):
             try:
-                yr_int = int(str(year))
+                year_groups[int(str(year))] = year_df
             except ValueError:
                 continue
+
+        explicit_years = agency.get("expected_years")
+        if explicit_years:
+            iter_years = [int(y) for y in explicit_years if int(y) in input_years]
+        else:
+            iter_years = input_years
+
+        for yr_int in iter_years:
+            year_df = year_groups.get(yr_int)
+            if year_df is None:
+                year_df = subset.iloc[0:0]
 
             if not (active_start <= yr_int <= active_end):
                 continue
@@ -6700,6 +9427,191 @@ def build_canonical_series(
             out.loc[residual_inflate, "unit"] = "franc"
             amounts = pd.to_numeric(out["amount_local"], errors="coerce")
 
+    if country == "Spain":
+        for year, overrides in _SPAIN_VERIFIED_OVERRIDES.items():
+            for canonical_name, (amount_local, page_number, currency, source_file) in overrides.items():
+                mask = (out["year"] == year) & (out["canonical_name"] == canonical_name)
+                if not mask.any():
+                    ref_row = out[out["canonical_name"] == canonical_name]
+                    if ref_row.empty:
+                        continue
+                    new_row = ref_row.iloc[0].copy()
+                    new_row["year"] = year
+                    new_row["amount_local"] = float(amount_local)
+                    new_row["unit"] = "euro"
+                    new_row["currency"] = currency
+                    new_row["item_type"] = "verified_override"
+                    new_row["line_description_en"] = "Verified against original Spain budget file"
+                    new_row["source_file"] = source_file
+                    new_row["page_number"] = float(page_number)
+                    new_row["series_notes"] = "manual override from original Spain budget file"
+                    out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
+                    continue
+                target_idx = out.index[mask][0]
+                out.loc[mask, "amount_local"] = None
+                out.loc[mask, "unit"] = None
+                out.loc[mask, "currency"] = None
+                out.loc[mask, "item_type"] = None
+                out.loc[mask, "line_description_en"] = None
+                out.loc[mask, "page_number"] = None
+                out.at[target_idx, "amount_local"] = float(amount_local)
+                out.at[target_idx, "unit"] = "euro"
+                out.at[target_idx, "currency"] = currency
+                out.at[target_idx, "item_type"] = "verified_override"
+                out.at[target_idx, "line_description_en"] = "Verified against original Spain budget file"
+                out.at[target_idx, "source_file"] = source_file
+                out.at[target_idx, "page_number"] = float(page_number)
+                notes = str(out.at[target_idx, "series_notes"] or "").strip()
+                out.at[target_idx, "series_notes"] = f"{notes}; manual override from original Spain budget file".strip("; ").strip()
+
+    if country == "Finland":
+        for year, overrides in _FINLAND_VERIFIED_OVERRIDES.items():
+            for canonical_name, (amount_local, page_number, currency, source_file) in overrides.items():
+                mask = (out["year"] == year) & (out["canonical_name"] == canonical_name)
+                if not mask.any():
+                    ref_row = out[out["canonical_name"] == canonical_name]
+                    if ref_row.empty:
+                        continue
+                    new_row = ref_row.iloc[0].copy()
+                    new_row["year"] = year
+                    new_row["amount_local"] = float(amount_local)
+                    new_row["unit"] = "unit"
+                    new_row["currency"] = currency
+                    new_row["item_type"] = "verified_override"
+                    new_row["line_description_en"] = "Verified against original Finland budget file"
+                    new_row["source_file"] = source_file
+                    new_row["page_number"] = float(page_number)
+                    new_row["series_notes"] = "manual override from original Finland budget file"
+                    out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
+                    continue
+                target_idx = out.index[mask][0]
+                out.loc[mask, "amount_local"] = None
+                out.loc[mask, "unit"] = None
+                out.loc[mask, "currency"] = None
+                out.loc[mask, "item_type"] = None
+                out.loc[mask, "line_description_en"] = None
+                out.loc[mask, "page_number"] = None
+                out.at[target_idx, "amount_local"] = float(amount_local)
+                out.at[target_idx, "unit"] = "unit"
+                out.at[target_idx, "currency"] = currency
+                out.at[target_idx, "item_type"] = "verified_override"
+                out.at[target_idx, "line_description_en"] = "Verified against original Finland budget file"
+                out.at[target_idx, "source_file"] = source_file
+                out.at[target_idx, "page_number"] = float(page_number)
+                notes = str(out.at[target_idx, "series_notes"] or "").strip()
+                out.at[target_idx, "series_notes"] = f"{notes}; manual override from original Finland budget file".strip("; ").strip()
+
+    if country == "Estonia":
+        for year, overrides in _ESTONIA_VERIFIED_OVERRIDES.items():
+            for canonical_name, (amount_local, page_number, currency, source_file) in overrides.items():
+                mask = (out["year"] == year) & (out["canonical_name"] == canonical_name)
+                if not mask.any():
+                    ref_row = out[out["canonical_name"] == canonical_name]
+                    if ref_row.empty:
+                        continue
+                    new_row = ref_row.iloc[0].copy()
+                    new_row["year"] = year
+                    new_row["amount_local"] = float(amount_local)
+                    new_row["unit"] = "unit"
+                    new_row["currency"] = currency
+                    new_row["item_type"] = "verified_override"
+                    new_row["line_description_en"] = "Verified against original Estonia budget file"
+                    new_row["source_file"] = source_file
+                    new_row["page_number"] = float(page_number)
+                    new_row["series_notes"] = "manual override from original Estonia budget file"
+                    out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
+                    continue
+                target_idx = out.index[mask][0]
+                out.loc[mask, "amount_local"] = None
+                out.loc[mask, "unit"] = None
+                out.loc[mask, "currency"] = None
+                out.loc[mask, "item_type"] = None
+                out.loc[mask, "line_description_en"] = None
+                out.loc[mask, "page_number"] = None
+                out.at[target_idx, "amount_local"] = float(amount_local)
+                out.at[target_idx, "unit"] = "unit"
+                out.at[target_idx, "currency"] = currency
+                out.at[target_idx, "item_type"] = "verified_override"
+                out.at[target_idx, "line_description_en"] = "Verified against original Estonia budget file"
+                out.at[target_idx, "source_file"] = source_file
+                out.at[target_idx, "page_number"] = float(page_number)
+                notes = str(out.at[target_idx, "series_notes"] or "").strip()
+                out.at[target_idx, "series_notes"] = f"{notes}; manual override from original Estonia budget file".strip("; ").strip()
+
+    if country == "Chile":
+        for year, overrides in _CHILE_VERIFIED_OVERRIDES.items():
+            for canonical_name, (amount_local, page_number, currency, source_file) in overrides.items():
+                mask = (out["year"] == year) & (out["canonical_name"] == canonical_name)
+                if not mask.any():
+                    ref_row = out[out["canonical_name"] == canonical_name]
+                    if ref_row.empty:
+                        continue
+                    new_row = ref_row.iloc[0].copy()
+                    new_row["year"] = year
+                    new_row["amount_local"] = float(amount_local)
+                    new_row["unit"] = "peso"
+                    new_row["currency"] = currency
+                    new_row["item_type"] = "verified_override"
+                    new_row["line_description_en"] = "Verified against original Chile budget file"
+                    new_row["source_file"] = source_file
+                    new_row["page_number"] = float(page_number)
+                    new_row["series_notes"] = "manual override from original Chile budget file"
+                    out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
+                    continue
+                target_idx = out.index[mask][0]
+                out.loc[mask, "amount_local"] = None
+                out.loc[mask, "unit"] = None
+                out.loc[mask, "currency"] = None
+                out.loc[mask, "item_type"] = None
+                out.loc[mask, "line_description_en"] = None
+                out.loc[mask, "page_number"] = None
+                out.at[target_idx, "amount_local"] = float(amount_local)
+                out.at[target_idx, "unit"] = "peso"
+                out.at[target_idx, "currency"] = currency
+                out.at[target_idx, "item_type"] = "verified_override"
+                out.at[target_idx, "line_description_en"] = "Verified against original Chile budget file"
+                out.at[target_idx, "source_file"] = source_file
+                out.at[target_idx, "page_number"] = float(page_number)
+                notes = str(out.at[target_idx, "series_notes"] or "").strip()
+                out.at[target_idx, "series_notes"] = f"{notes}; manual override from original Chile budget file".strip("; ").strip()
+
+    if country == "Iceland":
+        for year, overrides in _ICELAND_VERIFIED_OVERRIDES.items():
+            for canonical_name, (amount_local, page_number, currency, source_file) in overrides.items():
+                mask = (out["year"] == year) & (out["canonical_name"] == canonical_name)
+                if not mask.any():
+                    ref_row = out[out["canonical_name"] == canonical_name]
+                    if ref_row.empty:
+                        continue
+                    new_row = ref_row.iloc[0].copy()
+                    new_row["year"] = year
+                    new_row["amount_local"] = float(amount_local)
+                    new_row["unit"] = "krona"
+                    new_row["currency"] = currency
+                    new_row["item_type"] = "verified_override"
+                    new_row["line_description_en"] = "Verified against original Iceland budget file"
+                    new_row["source_file"] = source_file
+                    new_row["page_number"] = float(page_number)
+                    new_row["series_notes"] = "manual override from original Iceland budget file"
+                    out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
+                    continue
+                target_idx = out.index[mask][0]
+                out.loc[mask, "amount_local"] = None
+                out.loc[mask, "unit"] = None
+                out.loc[mask, "currency"] = None
+                out.loc[mask, "item_type"] = None
+                out.loc[mask, "line_description_en"] = None
+                out.loc[mask, "page_number"] = None
+                out.at[target_idx, "amount_local"] = float(amount_local)
+                out.at[target_idx, "unit"] = "krona"
+                out.at[target_idx, "currency"] = currency
+                out.at[target_idx, "item_type"] = "verified_override"
+                out.at[target_idx, "line_description_en"] = "Verified against original Iceland budget file"
+                out.at[target_idx, "source_file"] = source_file
+                out.at[target_idx, "page_number"] = float(page_number)
+                notes = str(out.at[target_idx, "series_notes"] or "").strip()
+                out.at[target_idx, "series_notes"] = f"{notes}; manual override from original Iceland budget file".strip("; ").strip()
+
     if country == "Australia":
         amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
         unit_norm = out["unit"].fillna("").astype(str).str.lower().str.strip()
@@ -6739,6 +9651,30 @@ def build_canonical_series(
                 out.loc[remap_improved, "series_notes"] = notes.apply(
                     lambda s: f"{s}; mapped from Improved Health and Medical Knowledge Programme".strip("; ").strip()
                 )
+
+    if country == "Colombia":
+        canonical = out["canonical_name"].fillna("").astype(str)
+        year_num = pd.to_numeric(out["year"], errors="coerce")
+
+        # Audit against the original Colombia source files shows these rows are
+        # traceable to real documents, but not defensible as final R&D
+        # observations:
+        #   - pre-2018 SENA rows are institution-wide budget totals rather than
+        #     explicit R&D/innovation appropriations;
+        #   - 2005 National Environmental Fund is a broad investment-fund total.
+        weak_mask = (
+            (canonical.eq("SENA — R&D and Innovation (Servicio Nacional de Aprendizaje)") & year_num.ne(2018))
+            | canonical.eq("National Environmental Fund")
+        )
+        if weak_mask.any():
+            out.loc[
+                weak_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[weak_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[weak_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after source audit: traceable but not a defensible final R&D appropriation".strip("; ").strip()
+            )
 
     if country == "UK":
         line_desc = out["line_description_en"].fillna("").astype(str)
@@ -6976,6 +9912,185 @@ def build_canonical_series(
                     frag_idxs,
                     ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
                 ] = [None, None, None, None, None, None, None]
+
+    if country == "Estonia":
+        amounts = pd.to_numeric(out["amount_local"], errors="coerce")
+        canonical = out["canonical_name"].fillna("").astype(str)
+
+        ministry_mask = canonical.eq("Ministry of Education and Research (Estonia)")
+        if ministry_mask.any():
+            out.loc[
+                ministry_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+
+        generic_discovered = pd.Series(False, index=out.index)
+        for pat in _ESTONIA_GENERIC_DISCOVERED_PATTERNS:
+            generic_discovered = generic_discovered | canonical.str.contains(pat, na=False)
+
+        institution_like = canonical.str.contains(_ESTONIA_ORGANISATION_HINTS, na=False)
+        hardcoded_names = {agency["canonical_name"] for agency in CANONICAL_AGENCIES.get("Estonia", [])}
+        hardcoded_mask = canonical.isin(hardcoded_names)
+        drop_generic = generic_discovered & ~institution_like & ~hardcoded_mask
+        if drop_generic.any():
+            out.loc[
+                drop_generic,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+
+        pre_euro_eur_mask = (
+            pd.to_numeric(out["year"], errors="coerce").between(1992, 2010, inclusive="both")
+            & out["currency"].fillna("").astype(str).str.upper().eq("EUR")
+            & amounts.notna()
+        )
+        if pre_euro_eur_mask.any():
+            out.loc[pre_euro_eur_mask, "currency"] = "EEK"
+            out.loc[pre_euro_eur_mask, "unit"] = out.loc[pre_euro_eur_mask, "unit"].replace({"euro": "krone"})
+
+        normalized_unit_mask = amounts.notna() & out["unit"].fillna("").astype(str).str.lower().isin(["", "unit"])
+        if normalized_unit_mask.any():
+            out.loc[normalized_unit_mask, "unit"] = out.loc[normalized_unit_mask].apply(
+                lambda r: _base_output_unit(r.get("currency"), r.get("unit")),
+                axis=1,
+            )
+
+        negative_mask = amounts.lt(0)
+        if negative_mask.any():
+            out.loc[
+                negative_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+
+        for canonical_name, year in _ESTONIA_VERIFIED_DROPS:
+            mask = out["canonical_name"].eq(canonical_name) & pd.to_numeric(out["year"], errors="coerce").eq(year)
+            if not mask.any():
+                continue
+            out.loc[
+                mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+
+        # Exclude the ministry aggregate entirely from Estonia's final panel:
+        # it mixes portfolio totals with institution lines and only adds fake gaps.
+        out = out[~out["canonical_name"].eq("Ministry of Education and Research (Estonia)")].copy()
+
+    if country == "Belgium":
+        canonical = out["canonical_name"].fillna("").astype(str)
+        hardcoded_names = {agency["canonical_name"] for agency in CANONICAL_AGENCIES.get("Belgium", [])}
+
+        institution_like = canonical.str.contains(
+            r"belspo|fnrs|fwo|observatory|meteorological|aeronomy|natural sciences|radioelements|sck|pasteur|niras|von karman",
+            case=False,
+            regex=True,
+            na=False,
+        )
+        generic_programmatic = canonical.str.contains(
+            r"actions?|allocations?|contribution|contracts?|costs?|envelope|expenses?|expenditures?|funding|government|grants?|initiatives?|medical scientific research|national|participation|programs?|reimbursements?|research and development|research in the field|scientific research|space activities|studies|subsid(?:y|ies)|voluntary",
+            case=False,
+            regex=True,
+            na=False,
+        )
+        drop_generic = ~canonical.isin(hardcoded_names) & generic_programmatic & ~institution_like
+        if drop_generic.any():
+            out = out.loc[~drop_generic].copy()
+
+        belgium_year = pd.to_numeric(out.get("year"), errors="coerce")
+        for year, overrides in _BELGIUM_VERIFIED_OVERRIDES.items():
+            for canonical_name, (amount_local, page_number, currency, source_file) in overrides.items():
+                mask = out["canonical_name"].eq(canonical_name) & belgium_year.eq(year)
+                if not mask.any():
+                    continue
+                target_idx = out.index[mask][0]
+                out.loc[
+                    mask,
+                    ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+                ] = [None, None, None, None, None, None, None]
+                out.at[target_idx, "amount_local"] = float(amount_local)
+                out.at[target_idx, "unit"] = "franc"
+                out.at[target_idx, "currency"] = currency
+                out.at[target_idx, "item_type"] = "verified_override"
+                if year == 1994:
+                    desc = "Verified 1994 voted amount for international R&D in Federal Science Policy from the 1995 budget table"
+                    note = "manual override from original Belgium budget file (1995 table, 1994 voted column)"
+                elif year == 1999:
+                    desc = "Verified 1999 total for Belgium's international R&D / ESA programme from the original budget table"
+                    note = "manual override from original Belgium budget file (1999 table, program 11.60.2 total)"
+                elif year == 1998:
+                    desc = "Verified 1998 adjusted amount for Belgium's ESA / international R&D programme from the 1999 budget table"
+                    note = "manual override from original Belgium budget file (1999 table, 1998 adjusted column)"
+                elif year == 2000:
+                    desc = "Verified 2000 adjusted amount for Belgium's ESA / international R&D programme from the 2001 budget table"
+                    note = "manual override from original Belgium budget file (2001 table, 2000 adjusted column)"
+                elif year == 2001:
+                    desc = "Verified 2001 total for Belgium's international R&D / ESA programme from the original budget table"
+                    note = "manual override from original Belgium budget file (2001 table, program 11.60.2 total)"
+                else:
+                    desc = "Verified Belgium science-policy amount from the original budget table"
+                    note = "manual override from original Belgium budget file"
+                out.at[target_idx, "line_description_en"] = desc
+                out.at[target_idx, "source_file"] = source_file
+                out.at[target_idx, "page_number"] = page_number
+                notes = str(out.at[target_idx, "series_notes"] or "").strip()
+                out.at[target_idx, "series_notes"] = f"{notes}; {note}".strip("; ").strip()
+
+        for canonical_name, year in _BELGIUM_VERIFIED_DROPS:
+            drop_mask = out["canonical_name"].eq(canonical_name) & belgium_year.eq(year)
+            if not drop_mask.any():
+                continue
+            out = out.loc[~drop_mask].copy()
+            belgium_year = pd.to_numeric(out.get("year"), errors="coerce")
+
+        belgium_verified_overrides = {
+            ("Royal Observatory of Belgium", 2004): r"Grant to the Royal Observatory of Belgium",
+            ("Royal Belgian Institute of Natural Sciences", 2004): r"Grant to the Royal Belgian Institute of Natural Sciences",
+        }
+        if belgium_verified_overrides:
+            raw_country = df[df["country"] == country].copy()
+            raw_country["_year_num"] = pd.to_numeric(raw_country.get("year"), errors="coerce")
+            raw_country["_amt_num"] = pd.to_numeric(raw_country.get("amount_local"), errors="coerce")
+            raw_text = (
+                raw_country.get("line_description_en", pd.Series("", index=raw_country.index)).fillna("").astype(str)
+                + " "
+                + raw_country.get("line_description", pd.Series("", index=raw_country.index)).fillna("").astype(str)
+            )
+            out_year = pd.to_numeric(out.get("year"), errors="coerce")
+
+            for (canonical_name, year), line_pattern in belgium_verified_overrides.items():
+                out_mask = out["canonical_name"].eq(canonical_name) & out_year.eq(year)
+                if not out_mask.any():
+                    continue
+                candidate_mask = raw_country["_year_num"].eq(year) & raw_text.str.contains(
+                    line_pattern, case=False, regex=True, na=False
+                )
+                candidates = raw_country.loc[candidate_mask].copy()
+                if candidates.empty:
+                    continue
+                candidates = candidates[candidates["_amt_num"].notna()]
+                if candidates.empty:
+                    continue
+                chosen = candidates.loc[candidates["_amt_num"].idxmax()]
+                amount = float(chosen["_amt_num"])
+                unit = str(chosen.get("unit", "") or "").strip().lower()
+                currency = str(chosen.get("currency", "") or "").strip().upper()
+                if unit == "thousand":
+                    amount *= 1000.0
+                    unit = "euro" if currency == "EUR" else "franc"
+                elif currency == "EUR":
+                    unit = "euro"
+                elif currency == "BEF":
+                    unit = "franc"
+
+                out.loc[out_mask, "amount_local"] = amount
+                out.loc[out_mask, "unit"] = unit
+                out.loc[out_mask, "currency"] = currency
+                out.loc[out_mask, "item_type"] = chosen.get("item_type")
+                out.loc[out_mask, "line_description_en"] = chosen.get("line_description_en")
+                if "line_description" in out.columns:
+                    out.loc[out_mask, "line_description"] = chosen.get("line_description")
+                if "source_file" in out.columns:
+                    out.loc[out_mask, "source_file"] = chosen.get("source_file")
+                if "page_number" in out.columns:
+                    out.loc[out_mask, "page_number"] = chosen.get("page_number")
 
     out = out.sort_values(["canonical_name", "year"]).reset_index(drop=True)
 

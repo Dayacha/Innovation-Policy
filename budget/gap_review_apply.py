@@ -42,6 +42,8 @@ def _amount_matches_existing(existing: pd.DataFrame, amount: float, tol: float =
     if existing.empty:
         return False, "no_existing_rows"
     values = pd.to_numeric(existing.get("amount_local"), errors="coerce").dropna().tolist()
+    if not values:
+        return True, "matched_missing_placeholder"
     if any(abs(float(v) - amount) <= tol for v in values):
         return True, "matched_single_row"
     if abs(sum(float(v) for v in values) - amount) <= tol:

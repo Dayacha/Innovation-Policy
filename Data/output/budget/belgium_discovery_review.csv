@@ -1,0 +1,2 @@
+canonical_name,category,name_variants,preferred_item_type,active_years,notes,agency_type,confidence,source_entity,n_years_seen,avg_amount,reason,country
+Subsidy to Collective Centers,innovation_instruments,[],"['section_total', 'program_total', 'line_item']","(2001, 2002)",This subsidy likely supports collaborative research initiatives.,rd_fund,0.7,Subsidy to the Collective Centers,2,140908.5,confidence below threshold,Belgium

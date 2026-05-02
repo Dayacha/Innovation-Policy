@@ -177,6 +177,38 @@ def _extract_docx(path: Path) -> list[PageText]:
     return pages
 
 
+def _extract_doc(path: Path) -> list[PageText]:
+    """Extract text from a legacy .doc file using platform tools."""
+    import subprocess
+
+    text = ""
+    last_error: Exception | None = None
+
+    # macOS textutil handles legacy .doc reasonably well and is available in this environment.
+    try:
+        proc = subprocess.run(
+            ["textutil", "-convert", "txt", "-stdout", str(path)],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+        text = proc.stdout
+    except Exception as e:
+        last_error = e
+
+    if not text.strip():
+        if last_error:
+            raise RuntimeError(f"Could not extract legacy .doc file {path.name}: {last_error}")
+        raise RuntimeError(f"Could not extract legacy .doc file {path.name}")
+
+    chunk_size = 3000
+    chunks = [text[i : i + chunk_size] for i in range(0, len(text), chunk_size)]
+    pages: list[PageText] = []
+    for i, chunk in enumerate(chunks):
+        pages.append(PageText(page_num=i + 1, text=chunk.strip(), method="docx"))
+    return pages
+
+
 # ---------------------------------------------------------------------------
 # Public interface
 # ---------------------------------------------------------------------------
@@ -211,12 +243,18 @@ def extract_pages(
             logger.debug(f"Cache hit: {path.name}")
             return _deserialize_pages(cached)
 
+    if path.stat().st_size == 0:
+        logger.warning(f"Skipping empty file (0 bytes): {path.name}")
+        return []
+
     logger.info(f"Extracting text from: {path.name}")
 
     if suffix == ".pdf":
         pages = _extract_pdf(path, ocr_zoom=ocr_zoom, ocr_langs=ocr_langs)
-    elif suffix in (".docx", ".doc"):
+    elif suffix == ".docx":
         pages = _extract_docx(path)
+    elif suffix == ".doc":
+        pages = _extract_doc(path)
     else:
         raise ValueError(f"Unsupported file format: {suffix}")
 

@@ -227,8 +227,8 @@ def _process_file(
         path=path,
         cache_dir=pdf_text_cache_dir,
         force_reextract=False,
-        ocr_zoom=float(blm_cfg.get("ocr_zoom", 2.0)),
-        ocr_langs=blm_cfg.get("ocr_langs", "eng"),
+        ocr_zoom=float(country_ctx.get("ocr_zoom", blm_cfg.get("ocr_zoom", 2.0))),
+        ocr_langs=str(country_ctx.get("ocr_langs", blm_cfg.get("ocr_langs", "eng"))),
     )
 
     if not pages:

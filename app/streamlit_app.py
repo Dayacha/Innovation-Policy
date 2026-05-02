@@ -682,6 +682,20 @@ with TAB_BUDGET:
             "fit": "Moderate — useful for broad trends, strongest where named science agencies are explicit.",
             "rating": "moderate",
         },
+        "Belgium": {
+            "years": "1994–2025",
+            "source": "Federal finance laws and science-policy budget annexes in French and Dutch",
+            "gaps": (
+                "The current Belgian panel is usable but still narrow. It captures a small federal science-policy "
+                "core and a few named institutions, while many years in the broader corpus still sit outside the "
+                "final canonical panel. Several late-year BELSPO files in the current source set behave like legal "
+                "text or narrative programme pages rather than clean numeric annexes, so 2008 and 2022–2024 remain "
+                "genuine source/extraction gaps. The panel should be treated as federal-only and not as a complete "
+                "view of Belgian public R&D across regional and community systems."
+            ),
+            "fit": "Limited to moderate — strongest for audited federal science-policy lines and a small set of named federal institutions.",
+            "rating": "limited",
+        },
         "Canada": {
             "years": "1987–2024",
             "source": "Appropriation Acts, Main Estimates, and federal budget tables",
@@ -694,6 +708,40 @@ with TAB_BUDGET:
             ),
             "fit": "Good — strongest for named federal science agencies and the 2000s onward.",
             "rating": "good",
+        },
+        "Colombia": {
+            "years": "2002–2025 (usable years are discontinuous)",
+            "source": (
+                "Budget laws (Ley), plus decree/annex budget tables for modern years; "
+                "amounts stored in full Colombian pesos (COP)"
+            ),
+            "gaps": (
+                "The current Colombia panel is usable as a traced institutional series, but not as a continuous "
+                "annual budget history. Several early files are legal-wrapper texts rather than full budget tables, "
+                "and some historical years only mention SENA-to-COLCIENCIAS transfers without a recoverable "
+                "institutional appropriation amount. Modern coverage improves substantially when decree/annex files "
+                "are used: 2019–2025 depends heavily on those sources rather than on the Ley text alone. The main "
+                "documented non-recoverable years in the current file inventory are 2007, 2009, 2010, and 2015; "
+                "1996, 1997, 1998, and 2003 also behave like weak wrapper-only sources."
+            ),
+            "fit": (
+                "Moderate — strongest for COLCIENCIAS/MinCiencias and named science institutions; "
+                "long-run trends should be read as a documented but discontinuous institutional panel."
+            ),
+            "rating": "moderate",
+        },
+        "Chile": {
+            "years": "1999–2025",
+            "source": "National budget law tables (Ley de Presupuestos), usually reported in thousands of Chilean pesos",
+            "gaps": (
+                "This series is usable for the main public science and innovation institutions, but some gaps remain "
+                "for smaller programme-style lines and some values still rely on fragile budget formatting. For years "
+                "before 1999, the currently held source files are often not the full detailed budget volume: many are "
+                "short LeyChile/BCN legal texts or laws that point readers to the Diario Oficial instead of reproducing "
+                "the budget tables. That means some older gaps reflect source limitations, not just missing extraction."
+            ),
+            "fit": "Moderate — strongest for major science and innovation agencies; smaller programme-level series should be treated cautiously.",
+            "rating": "moderate",
         },
         "France": {
             "years": "1970–2025",
@@ -721,6 +769,19 @@ with TAB_BUDGET:
             ),
             "fit": "Limited to moderate — strong for 2003–2009 and 2021+; thin or absent for 2010–2020 and most pre-2003 years.",
             "rating": "limited",
+        },
+        "Iceland": {
+            "years": "1975–2025",
+            "source": "Icelandic budget bills and annex tables, often reported in m.kr. with OCR-sensitive historical scans",
+            "gaps": (
+                "Coverage is now much broader for named science agencies, universities, and sectoral research funds, "
+                "and many fragile rows were manually rechecked against the original budget text. The main remaining "
+                "weakness is 2017–2018: the currently held source files for those years mostly expose aggregate "
+                "programme headings rather than detailed institution-level appropriations, so those years still have "
+                "structural gaps that are unlikely to disappear without alternative source documents."
+            ),
+            "fit": "Moderate — useful for institutional analysis in most years, but incomplete in the aggregate-only 2017–2018 window.",
+            "rating": "moderate",
         },
         "Japan": {
             "years": "1975–2025",
@@ -769,6 +830,20 @@ with TAB_BUDGET:
             "fit": "Good for university series 1975–2025 (with noted methodology break at 1994 and 1996–1998 gap); moderate for smaller programmes.",
             "rating": "moderate",
         },
+        "Estonia": {
+            "years": "1991–2011 institutional series, with a sparse programme-based continuation in later budgets",
+            "source": "Annual Estonian state budget laws and budget tables",
+            "gaps": (
+                "The Estonia panel is strongest from 1991 to 2011, where the budget more often names specific science bodies such as "
+                "the science foundation, Archimedes, and selected universities. After 2011, the budget documents still contain research "
+                "and innovation spending, but they are more often organised under broad programmes rather than the same named institutions. "
+                "The app therefore treats the post-2011 continuation as a separate programme-based bridge where clear totals can be read from "
+                "the budget. Later gaps do not necessarily mean Estonia stopped funding R&D; they often mean the published budget no longer "
+                "reports the money in a directly comparable institution-by-institution format."
+            ),
+            "fit": "Moderate — useful for the 1991–2011 institutional series, with a cautious post-2011 hybrid continuation.",
+            "rating": "moderate",
+        },
         "Norway": {
             "years": "1975–2026",
             "source": "Statsbudsjettet (State Budget) — annual budget proposition documents",
@@ -793,6 +868,24 @@ with TAB_BUDGET:
             "fit": "Moderate to good — complete timeline but the 2002 currency switch means long-run comparisons require care.",
             "rating": "moderate",
         },
+        "Finland": {
+            "years": "1985–2025",
+            "source": "Valtion talousarvio (State Budget) — annual budget proposals, digital PDFs",
+            "gaps": (
+                "Coverage is 1985–2025 for 8 agencies with no missing years. Two currency eras: "
+                "pre-2002 amounts are in Finnish markka (FIM, full units — not thousands or millions), "
+                "while 2002 onward is in euros (EUR). The series cannot be read as a single-currency "
+                "trend without FIM→EUR conversion (rate: 5.94573 FIM/EUR). "
+                "Key agencies tracked: Suomen Akatemia research grants (moment 29.88.50 + 29.88.53 combined), "
+                "Academy operating costs, Business Finland / Tekes operating and public R&D grants, "
+                "VTT, GTK, Luke/MTT/Metla/RKTL, and VATT. "
+                "Five FIM-era years (1992, 1993, 1996, 1999, 2001) were manually verified against original "
+                "budget proposal texts and overridden where LLM extraction picked commitment authorities "
+                "(myöntämisvaltuus) instead of annual appropriations. All overrides are document-traceable."
+            ),
+            "fit": "Good — complete 1985–2025 for all 8 agencies; FIM-era values require currency conversion for cross-era comparison.",
+            "rating": "good",
+        },
         "Switzerland": {
             "years": "1978–2025 (some gaps in 1979–1993 window)",
             "source": "Voranschlag der Schweizerischen Eidgenossenschaft — Bundesblatt (1975–2020) and VA-Band3-d (2021+)",
@@ -804,6 +897,19 @@ with TAB_BUDGET:
                 "are in full Swiss francs (not thousands or millions), which required unit correction in the pipeline."
             ),
             "fit": "Moderate — strong from 2021+; historical pre-2021 coverage is partial and agency-level only for aggregate ETH-Bereich.",
+            "rating": "moderate",
+        },
+        "Spain": {
+            "years": "2002–2023 (hybrid panel; strongest from 2018 onward)",
+            "source": "Presupuestos Generales del Estado / BOE budget tables, with manual verification from original Spain budget pages where extraction missed named rows",
+            "gaps": (
+                "Spain now has no missing years or outliers in the final panel used by the app, but the series is deliberately hybrid. "
+                "The historical span is anchored on programme 463B ('Plan Nacional I+D' / promotion and coordination of scientific and technical research), "
+                "while the modern span tracks explicit institutions such as AEI, CSIC, CIEMAT, ISCIII, CDTI, and selected one-year bodies. "
+                "This means the long run is not a single homogeneous institutional ledger: pre-2017 values are mostly programme-level appropriations, "
+                "whereas 2018+ is much more institutional. Several 2022 rows and five missing 463B years were manually verified against original BOE tables."
+            ),
+            "fit": "Moderate to good — usable for long-run trend context, strongest for 2018+ institutional analysis and for the verified 463B programme series.",
             "rating": "moderate",
         },
     }
@@ -895,11 +1001,19 @@ with TAB_BUDGET:
             _cap1 = ("Bars are grouped by currency. This selection mixes multiple currencies "
                      "(for example FRF and EUR), so levels are not directly comparable across the full span.")
             _currency_palette = {
-                "FRF": NAVY,
                 "EUR": ORANGE,
-                "DEM": TEAL,
-                "GBP": GREEN,
-                "JPY": BLUE,
+                "FIM": NAVY,    # Finnish markka (pre-2002)
+                "FRF": TEAL,    # French franc (pre-2002)
+                "DEM": "#9B59B6",  # Deutsche Mark (pre-2002)
+                "NLG": GREEN,   # Dutch guilder (pre-2002)
+                "DKK": BLUE,    # Danish krone
+                "NOK": "#E74C3C",  # Norwegian krone
+                "CHF": "#F39C12",  # Swiss franc
+                "SEK": "#27AE60",  # Swedish krona
+                "GBP": "#1ABC9C",  # British pound
+                "JPY": "#8E44AD",  # Japanese yen
+                "CAD": "#E67E22",  # Canadian dollar
+                "AUD": "#16A085",  # Australian dollar
             }
             _sorted_ccy = sorted(yr_ct["currency"].dropna().unique())
             _color_map1 = {

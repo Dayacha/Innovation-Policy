@@ -1,0 +1,46 @@
+country,year,canonical_name,category,amount_local,unit,currency,item_type,line_description_en,source_file,page_number,series_notes
+Belgium,2001,Allocation to NIRAS for radioactive waste studies,direct_rd,49800000.0,franc,BEF,line_item,Allocation to NIRAS for studies related to the final storage of radioactive waste in deep geological structures,2001 Belgium 50K0905007.pdf,620,Supports R&D in radioactive waste management.
+Belgium,1994,BELSPO / Belgian Federal Science Policy,rd_ministry,6121300000.0,franc,BEF,verified_override,Verified 1994 voted amount for international R&D in Federal Science Policy from the 1995 budget table,1995 16_1.pdf,87,"gap: no matching rows in this year; manual override from original Belgium budget file (1995 table, 1994 voted column)"
+Belgium,1995,BELSPO / Belgian Federal Science Policy,rd_ministry,6288000000.0,franc,BEF,program_total,Research and development within the international framework,1995 16_1.pdf,87,
+Belgium,1996,BELSPO / Belgian Federal Science Policy,rd_ministry,1670000000.0,franc,BEF,line_item,Actions to promote scientific policy and technological innovation.,1996 30_4.pdf,96,
+Belgium,1997,BELSPO / Belgian Federal Science Policy,rd_ministry,5835500000.0,franc,BEF,line_item,Expenses of all kinds related to Belgium's participation in the European Space Agency.,1997 12_2.pdf,72,
+Belgium,1998,BELSPO / Belgian Federal Science Policy,rd_ministry,5793800000.0,franc,BEF,verified_override,Verified 1998 adjusted amount for Belgium's ESA / international R&D programme from the 1999 budget table,1999 03_2.pdf,72,"gap: no matching rows in this year; manual override from original Belgium budget file (1999 table, 1998 adjusted column)"
+Belgium,1999,BELSPO / Belgian Federal Science Policy,rd_ministry,6803200000.0,franc,BEF,verified_override,Verified 1999 total for Belgium's international R&D / ESA programme from the original budget table,1999 03_2.pdf,72,"manual override from original Belgium budget file (1999 table, program 11.60.2 total)"
+Belgium,2000,BELSPO / Belgian Federal Science Policy,rd_ministry,6106700000.0,franc,BEF,verified_override,Verified 2000 adjusted amount for Belgium's ESA / international R&D programme from the 2001 budget table,2001 Belgium 50K0905007.pdf,190,"gap: no matching rows in this year; manual override from original Belgium budget file (2001 table, 2000 adjusted column)"
+Belgium,2001,BELSPO / Belgian Federal Science Policy,rd_ministry,7110000000.0,franc,BEF,verified_override,Verified 2001 total for Belgium's international R&D / ESA programme from the original budget table,2001 Belgium 50K0905007.pdf,191,"manual override from original Belgium budget file (2001 table, program 11.60.2 total)"
+Belgium,2002,BELSPO / Belgian Federal Science Policy,rd_ministry,156236000.0,euro,EUR,line_item,Belgian participation in the activities of the European Space Agency (ESA).,2002 17_1.pdf,106,
+Belgium,2004,BELSPO / Belgian Federal Science Policy,rd_ministry,168972000.0,euro,EUR,line_item,Belgian participation in the activities of the European Space Agency (ESA),Loi de finances 2004.pdf,27,
+Belgium,2008,BELSPO / Belgian Federal Science Policy,rd_ministry,,,,,,,,gap: no matching rows in this year
+Belgium,2022,BELSPO / Belgian Federal Science Policy,rd_ministry,,,,,,,,gap: no matching rows in this year
+Belgium,2023,BELSPO / Belgian Federal Science Policy,rd_ministry,,,,,,,,gap: no matching rows in this year
+Belgium,2024,BELSPO / Belgian Federal Science Policy,rd_ministry,,,,,,,,gap: no matching rows in this year
+Belgium,2001,Belgian Institute for Space Aeronomy,science_agency,41000000.0,franc,BEF,line_item,Allocation to the Belgian Institute for Space Aeronomy.,2001 Belgium 50K0905007.pdf,192,
+Belgium,2002,Belgian Institute for Space Aeronomy,science_agency,1036000.0,unit,EUR,line_item,From the state budget,2002 17_1.pdf,544,
+Belgium,2004,Belgian Institute for Space Aeronomy,science_agency,1059000.0,unit,EUR,line_item,Grant to the Belgian Institute for Space Aeronomy.,Loi de finances 2004.pdf,28,
+Belgium,1997,Deep Geological Structure Research,direct_rd,35000000.0,franc,BEF,line_item,Research on deep geological structure problems (geological drilling),1997 12_2.pdf,450,"This research addresses geological issues, which are relevant to R&D."
+Belgium,1996,FNRS,science_agency,2862000000.0,franc,BEF,line_item,Subsidy to the National Foundation for the Financing of Scientific Research for the repayment of the capital and interest of the issued loans.,1996 30_4.pdf,96,
+Belgium,1997,FNRS,science_agency,275800000.0,franc,BEF,line_item,Subsidy to the National Foundation for Scientific Research to cover the repayment of capital and interest on issued loans.,1997 12_2.pdf,66,
+Belgium,1999,FNRS,science_agency,274600000.0,franc,BEF,program_total,Subsidy to the National Foundation for Scientific Research to cover the repayment of capital and interest on issued loans,1999 03_2.pdf,67,
+Belgium,2001,FNRS,science_agency,274600000.0,franc,BEF,program_total,Subsidy to the National Foundation for the financing of scientific research for the repayment of the capital and interest of the issued loans.,2001 Belgium 50K0905007.pdf,185,
+Belgium,1997,Human Genetics Centers,science_agency,39000000.0,franc,BEF,line_item,Human genetics centers,1997 12_2.pdf,388,
+Belgium,2001,Human Genetics Centers,science_agency,3900000.0,franc,BEF,line_item,Human Genetics Centers,2001 Belgium 50K0905007.pdf,567,
+Belgium,1996,Institute of Radioelements (IRE),science_agency,25300000.0,franc,BEF,line_item,Subsidy to the Institute of Radioelements (I.R.E.),1996 30_4.pdf,506,
+Belgium,1997,Institute of Radioelements (IRE),science_agency,25500000.0,franc,BEF,line_item,Subsidy to the Institute of Radioelements (I.R.E.),1997 12_2.pdf,450,
+Belgium,2002,Institute of Radioelements (IRE),science_agency,645000.0,unit,EUR,line_item,Subsidy to the Institute for Radioelements (IRE),2002 17_1.pdf,480,
+Belgium,2001,Royal Belgian Institute of Natural Sciences,science_agency,222600000.0,franc,BEF,program_total,Allocation to the Royal Belgian Institute of Natural Sciences.,2001 Belgium 50K0905007.pdf,192,
+Belgium,2002,Royal Belgian Institute of Natural Sciences,science_agency,6083000.0,unit,EUR,line_item,Allocation to the Royal Belgian Institute of Natural Sciences.,2002 17_1.pdf,108,
+Belgium,2004,Royal Belgian Institute of Natural Sciences,science_agency,6269000.0,euro,EUR,line_item,Grant to the Royal Belgian Institute of Natural Sciences.,Loi de finances 2004.pdf,28,
+Belgium,2001,Royal Meteorological Institute of Belgium,science_agency,107700000.0,franc,BEF,program_total,Allocation to the Royal Meteorological Institute of Belgium.,2001 Belgium 50K0905007.pdf,192,
+Belgium,2002,Royal Meteorological Institute of Belgium,science_agency,4076000.0,unit,EUR,line_item,From the state budget,2002 17_1.pdf,544,
+Belgium,2004,Royal Meteorological Institute of Belgium,science_agency,2815000.0,unit,EUR,line_item,Grant to the Royal Meteorological Institute of Belgium.,Loi de finances 2004.pdf,28,
+Belgium,2001,Royal Observatory of Belgium,science_agency,37200000.0,franc,BEF,line_item,Allocation to the Royal Observatory of Belgium.,2001 Belgium 50K0905007.pdf,192,
+Belgium,2002,Royal Observatory of Belgium,science_agency,1028000.0,unit,EUR,line_item,From the state budget,2002 17_1.pdf,544,
+Belgium,2004,Royal Observatory of Belgium,science_agency,1051000.0,euro,EUR,line_item,Grant to the Royal Observatory of Belgium.,Loi de finances 2004.pdf,28,
+Belgium,1996,SCK CEN,science_agency,1446900000.0,franc,BEF,line_item,Subsidy to the Nuclear Energy Study Centre (C.E.N.),1996 30_4.pdf,506,
+Belgium,1997,SCK CEN,science_agency,1464000000.0,franc,BEF,program_total,Subsidy to the Nuclear Energy Study Centre (C.E.N.),1997 12_2.pdf,450,
+Belgium,2001,SCK CEN,science_agency,1482400000.0,franc,BEF,line_item,Subsidy to the Study Center for Nuclear Energy (SCK),2001 Belgium 50K0905007.pdf,642,
+Belgium,2002,SCK CEN,science_agency,36241000.0,euro,EUR,line_item,Subsidy to the Study Center for Nuclear Energy (SCK),2002 17_1.pdf,480,
+Belgium,1995,Scientific Institute of Public Health / Louis Pasteur,science_agency,333600000.0,franc,BEF,verified_override,Verified Belgium science-policy amount from the original budget table,1995 16_1.pdf,168,gap: no matching rows in this year; manual override from original Belgium budget file
+Belgium,2001,Scientific Institute of Public Health / Louis Pasteur,science_agency,506300000.0,franc,BEF,program_total,Totals for the program 26.60.3,2001 Belgium 50K0905007.pdf,570,
+Belgium,2002,Von Karman Institute,science_agency,8724000.0,euro,EUR,line_item,Allocation to the Von Karman Institute.,2002 17_1.pdf,106,
+Belgium,2004,Von Karman Institute,science_agency,2411000.0,euro,EUR,line_item,Grant to the von Karman Institute.,Loi de finances 2004.pdf,27,

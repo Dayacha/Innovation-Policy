@@ -1,0 +1,59 @@
+country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
+Estonia,1991,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,28241200.0,,36734000.0
+Estonia,1992,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,36734000.0,28241200.0,117162000.0
+Estonia,1994,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,117162000.0,36734000.0,166870000.0
+Estonia,1995,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,166870000.0,117162000.0,153890000.0
+Estonia,1996,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,153890000.0,166870000.0,185825000.0
+Estonia,1997,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,185825000.0,153890000.0,74315700.0
+Estonia,1998,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,74315700.0,185825000.0,78500000.0
+Estonia,1999,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,78500000.0,74315700.0,72600000.0
+Estonia,2000,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,72600000.0,78500000.0,72600000.0
+Estonia,2001,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,72600000.0,72600000.0,79600000.0
+Estonia,2002,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,79600000.0,72600000.0,80000000.0
+Estonia,2003,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,80000000.0,79600000.0,91000000.0
+Estonia,2004,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,91000000.0,80000000.0,94775000.0
+Estonia,2005,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,94775000.0,91000000.0,354677000.0
+Estonia,2006,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,354677000.0,94775000.0,124156000.0
+Estonia,2007,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,124156000.0,354677000.0,160193000.0
+Estonia,2008,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,160193000.0,124156000.0,392000000.0
+Estonia,2009,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,392000000.0,160193000.0,6000000.0
+Estonia,2010,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,6000000.0,392000000.0,8785390.0
+Estonia,2011,Estonian Research Council / Science Foundation,science_agency,ok,,,,,none,8785390.0,6000000.0,
+Estonia,1994,University of Tartu,higher_education,ok,,,,,none,78312000.0,,196408000.0
+Estonia,2006,University of Tartu,higher_education,ok,,,,,none,196408000.0,78312000.0,
+Estonia,1994,Tallinn University of Technology,higher_education,ok,,,,,none,55478000.0,,145000000.0
+Estonia,2006,Tallinn University of Technology,higher_education,ok,,,,,none,145000000.0,55478000.0,
+Estonia,1991,Estonian Academy of Sciences,science_agency,ok,,,,,none,690000.0,,1200000.0
+Estonia,1992,Estonian Academy of Sciences,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,690000.0,1200000.0
+Estonia,1994,Estonian Academy of Sciences,science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,690000.0,1200000.0
+Estonia,1995,Estonian Academy of Sciences,science_agency,ok,,,,,none,1200000.0,690000.0,6522000.0
+Estonia,1996,Estonian Academy of Sciences,science_agency,ok,,,,,none,6522000.0,1200000.0,11435000.0
+Estonia,1997,Estonian Academy of Sciences,science_agency,ok,,,,,none,11435000.0,6522000.0,12260000.0
+Estonia,1998,Estonian Academy of Sciences,science_agency,ok,,,,,none,12260000.0,11435000.0,13310000.0
+Estonia,1999,Estonian Academy of Sciences,science_agency,ok,,,,,none,13310000.0,12260000.0,12610000.0
+Estonia,2000,Estonian Academy of Sciences,science_agency,ok,,,,,none,12610000.0,13310000.0,16510000.0
+Estonia,2001,Estonian Academy of Sciences,science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,12610000.0,16510000.0
+Estonia,2002,Estonian Academy of Sciences,science_agency,ok,,,,,none,16510000.0,12610000.0,1208953.0
+Estonia,2003,Estonian Academy of Sciences,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,16510000.0,1208953.0
+Estonia,2004,Estonian Academy of Sciences,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,16510000.0,1208953.0
+Estonia,2005,Estonian Academy of Sciences,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,16510000.0,1208953.0
+Estonia,2006,Estonian Academy of Sciences,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,16510000.0,1208953.0
+Estonia,2007,Estonian Academy of Sciences,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,16510000.0,1208953.0
+Estonia,2008,Estonian Academy of Sciences,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,16510000.0,1208953.0
+Estonia,2009,Estonian Academy of Sciences,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,16510000.0,1208953.0
+Estonia,2010,Estonian Academy of Sciences,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,16510000.0,1208953.0
+Estonia,2011,Estonian Academy of Sciences,science_agency,ok,,,,,none,1208953.0,16510000.0,
+Estonia,2003,Archimedes Foundation,science_agency,ok,,,,,none,13596000.0,,40701400.0
+Estonia,2004,Archimedes Foundation,science_agency,ok,,,,,none,40701400.0,13596000.0,44671400.0
+Estonia,2005,Archimedes Foundation,science_agency,ok,,,,,none,44671400.0,40701400.0,46221403.0
+Estonia,2006,Archimedes Foundation,science_agency,ok,,,,,none,46221403.0,44671400.0,52273840.0
+Estonia,2007,Archimedes Foundation,science_agency,ok,,,,,none,52273840.0,46221403.0,34027056.0
+Estonia,2008,Archimedes Foundation,science_agency,ok,,,,,none,34027056.0,52273840.0,1425053475.0
+Estonia,2009,Archimedes Foundation,science_agency,ok,,,,,none,1425053475.0,34027056.0,277232235.0
+Estonia,2010,Archimedes Foundation,science_agency,ok,,,,,none,277232235.0,1425053475.0,122463679.0
+Estonia,2011,Archimedes Foundation,science_agency,ok,,,,,none,122463679.0,277232235.0,
+Estonia,2022,Estonia R&D / Innovation Programmes (post-2011),rd_programme,ok,,,,,none,218717000.0,,247281000.0
+Estonia,2025,Estonia R&D / Innovation Programmes (post-2011),rd_programme,ok,,,,,none,247281000.0,218717000.0,
+Estonia,2007,Projects of the Estonian Biocenter,direct_rd,ok,,,,,none,11525328.0,,
+Estonia,2008,Estonian Genome Center,science_agency,ok,,,,,none,8010000.0,,
+Estonia,1991,Innovation Fund,innovation_instruments,ok,,,,,none,5000000.0,,
