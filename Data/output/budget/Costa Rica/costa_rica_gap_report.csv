@@ -1,0 +1,21 @@
+country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
+Costa Rica,2017,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,ok,,,,,none,6753000922.0,,5205572746.0
+Costa Rica,2021,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,ok,,,,,none,5205572746.0,6753000922.0,8789530987.0
+Costa Rica,2024,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,ok,,,,,none,8789530987.0,5205572746.0,7890373607.0
+Costa Rica,2025,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,ok,,,,,none,7890373607.0,8789530987.0,
+Costa Rica,2010,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas),science_agency,ok,,,,,none,751503500.0,,1839934582.0
+Costa Rica,2021,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas),science_agency,ok,,,,,none,1839934582.0,751503500.0,
+Costa Rica,2024,Promotora Costarricense de Innovación e Investigación (PCII),science_agency,ok,,,,,none,1571508437.0,,1571508437.0
+Costa Rica,2025,Promotora Costarricense de Innovación e Investigación (PCII),science_agency,ok,,,,,none,1571508437.0,1571508437.0,
+Costa Rica,2011,INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria),science_agency,ok,,,,,none,12387747000.0,,4043611000.0
+Costa Rica,2013,INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria),science_agency,ok,,,,,none,4043611000.0,12387747000.0,4629768709.0
+Costa Rica,2021,INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria),science_agency,ok,,,,,none,4629768709.0,4043611000.0,
+Costa Rica,2024,INCIENSA (health and nutrition research),science_agency,ok,,,,,none,7405300000.0,,6440000000.0
+Costa Rica,2025,INCIENSA (health and nutrition research),science_agency,ok,,,,,none,6440000000.0,7405300000.0,
+Costa Rica,2011,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,ok,,,,,none,11805900.0,,26000000.0
+Costa Rica,2013,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,ok,,,,,none,26000000.0,11805900.0,27510000.0
+Costa Rica,2017,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,ok,,,,,none,27510000.0,26000000.0,30550000.0
+Costa Rica,2020,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,ok,,,,,none,30550000.0,27510000.0,30600000.0
+Costa Rica,2021,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,ok,,,,,none,30600000.0,30550000.0,27090000.0
+Costa Rica,2024,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,ok,,,,,none,27090000.0,30600000.0,30100000.0
+Costa Rica,2025,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,ok,,,,,none,30100000.0,27090000.0,

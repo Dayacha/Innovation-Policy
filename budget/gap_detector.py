@@ -32,7 +32,12 @@ import numpy as np
 import pandas as pd
 
 from budget import config as cfg
-from budget.canonical_series import _BELGIUM_VERIFIED_DROPS, CANONICAL_AGENCIES, _get_agencies_for_country
+from budget.canonical_series import (
+    _BELGIUM_VERIFIED_DROPS,
+    _COSTA_RICA_VERIFIED_DROPS,
+    CANONICAL_AGENCIES,
+    _get_agencies_for_country,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -41,12 +46,21 @@ __all__ = ["detect_gaps", "flag_temporal_outliers", "build_gap_report"]
 GAP_REPORT_CSV = cfg.OUTPUT_DIR / "gap_report.csv"
 REEXTRACT_QUEUE_CSV = cfg.OUTPUT_DIR / "reextract_queue.csv"
 _COLOMBIA_FULL_TEXT_DIR = cfg.OUTPUT_DIR / "full_text" / "Colombia"
+_HUNGARY_FULL_TEXT_DIR = cfg.OUTPUT_DIR / "full_text" / "Hungary"
 
 _VERIFIED_TEMPORAL_OUTLIERS = {
+    ("Costa Rica", "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)", 2011),
+    ("Costa Rica", "UCR (Universidad de Costa Rica)", 2014),
     ("Estonia", "Archimedes Foundation", 2009),
     ("Chile", "Fisheries Research Fund", 2014),
     ("Chile", "Fisheries Research Fund", 2016),
     ("Chile", "Technological Consortiums - CORFO", 2021),
+    ("Costa Rica", "UCR (Universidad de Costa Rica)", 2025),
+    # Latvia audited directly in the original budget files:
+    # 2006 likumi_lv_121006_09.11.2006__lv.pdf page 313 explicitly lists
+    # "Total Science Base Funding" = 1,000,000 LVL. This is a real programme
+    # discontinuity / redesign, not a unit error.
+    ("Latvia", "Science Base Funding (Latvia)", 2006),
     # Verified directly in the original Iceland budget files:
     # 1976 pdf_06a77b1e920d__1976_0292.txt.gz -> 232 Rannsóknaráð ríkisins,
     # "Gjöld samtals" = 691.265 thousand ISK.
@@ -90,9 +104,33 @@ _VERIFIED_TEMPORAL_OUTLIERS = {
     ("Iceland", "Háskóli Íslands (University of Iceland)", 2023),
     ("Iceland", "Háskóli Íslands (University of Iceland)", 2024),
     ("Iceland", "Háskóli Íslands (University of Iceland)", 2025),
+    # Israel audited directly in the original budget files:
+    # 1975 page 16 shows National Council total in ILP-era budget units.
+    # 1985 page 167 explicitly reports the National Council total in millions of
+    # old shekels. Both are real values, but they sit in different currency
+    # regimes from the later ILS series and should not be flagged as compile bugs.
+    ("Israel", "National Council for R&D (Israel, pre-1992)", 1975),
+    ("Israel", "National Council for R&D (Israel, pre-1992)", 1980),
+    ("Israel", "National Council for R&D (Israel, pre-1992)", 1981),
+    ("Israel", "National Council for R&D (Israel, pre-1992)", 1982),
+    ("Israel", "National Council for R&D (Israel, pre-1992)", 1983),
+    ("Israel", "National Council for R&D (Israel, pre-1992)", 1984),
+    ("Israel", "National Council for R&D (Israel, pre-1992)", 1985),
 }
 _SKIP_EXPECTED_YEARS = {
     "Belgium": {(canonical_name, year) for canonical_name, year in _BELGIUM_VERIFIED_DROPS},
+    "Costa Rica": {(canonical_name, year) for year, canonical_name in _COSTA_RICA_VERIFIED_DROPS},
+}
+
+_COSTA_RICA_IGNORE_RAW_RECLASSIFY = {
+    (2021, "INCIENSA (health and nutrition research)"),
+    (2022, "INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria)"),
+    (2010, "ITCR / TEC (Instituto Tecnológico de Costa Rica)"),
+    (2013, "ITCR / TEC (Instituto Tecnológico de Costa Rica)"),
+    (2010, "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)"),
+    (2020, "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)"),
+    (2023, "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)"),
+    (2021, "Promotora Costarricense de Innovación e Investigación (PCII)"),
 }
 
 _BELGIUM_LATE_BELSPO_YEARS = {2008, 2022, 2023, 2024}
@@ -319,6 +357,60 @@ def _colombia_gap_diagnosis_from_results(
     return None, None, source_file
 
 
+def _hungary_gap_diagnosis_from_full_text(
+    country: str,
+    year: int,
+    canonical: str,
+) -> tuple[Optional[str], Optional[str], Optional[str]]:
+    """
+    Diagnose Hungary MTA gaps by checking whether the original cached text
+    contains the chapter heading at all, versus containing it but failing to
+    expose a recoverable annual total to the parser.
+    """
+    if country != "Hungary":
+        return None, None, None
+    if canonical != "Hungarian Academy of Sciences (MTA)":
+        return None, None, None
+
+    candidates = sorted(_HUNGARY_FULL_TEXT_DIR.glob(f"*__{year}_*.txt.gz"))
+    if not candidates:
+        return (
+            "No Hungary full-text cache file found for this year, so the loss happens before parser-level canonical matching.",
+            "reextract",
+            None,
+        )
+
+    path = candidates[0]
+    try:
+        with gzip.open(path, "rt", encoding="utf-8", errors="ignore") as fh:
+            text = fh.read()
+    except OSError:
+        return (
+            "Hungary full-text cache exists but could not be read; re-extract before any parser-level recovery.",
+            "reextract",
+            path.stem,
+        )
+
+    has_mta_heading = bool(
+        re.search(r"magyar tudom[aá]nyos akad", text, re.IGNORECASE)
+        or re.search(r"\bMTA\b", text)
+    )
+    has_chapter_heading = bool(re.search(r"XXXIII\.\s+MAGYAR\s+TUDOM", text, re.IGNORECASE))
+
+    if not has_mta_heading and not has_chapter_heading:
+        return (
+            "Original Hungary cached text for this year does not contain a detectable MTA / 'Magyar Tudományos Akadémia' chapter heading. The gap originates in the source text layer or pre-parser extraction, not in canonical matching.",
+            "reextract",
+            path.stem,
+        )
+
+    return (
+        "Original Hungary cached text contains the MTA chapter heading, but no MTA row reaches raw_rows. The loss occurs inside text-cache parsing: the multi-column chapter total is fragmented/truncated in the PDF text layer, so the parser cannot recover a defendable numeric annual total.",
+        "reextract",
+        path.stem,
+    )
+
+
 # ---------------------------------------------------------------------------
 # Step 1 — Detect gaps in canonical series
 # ---------------------------------------------------------------------------
@@ -489,6 +581,12 @@ def search_raw_rows_for_gaps(
                     year=int(year),
                     canonical=canonical,
                 )
+            if not specific_diag:
+                specific_diag, specific_action, specific_file = _hungary_gap_diagnosis_from_full_text(
+                    country=country,
+                    year=int(year),
+                    canonical=canonical,
+                )
             gap_df.at[idx, "raw_row_match"] = "no"
             gap_df.at[idx, "diagnosis"] = (
                 specific_diag or "Year not in raw_rows — documents may not be parsed yet"
@@ -517,6 +615,13 @@ def search_raw_rows_for_gaps(
                 break
 
         if matched is not None:
+            if country == "Costa Rica" and (int(year), canonical) in _COSTA_RICA_IGNORE_RAW_RECLASSIFY:
+                gap_df.at[idx, "raw_row_match"] = "no"
+                gap_df.at[idx, "diagnosis"] = (
+                    "Raw rows contain only noisy salary / generic classification / non-institutional transfer hits for this agency-year; no defendable institutional amount found in the original source."
+                )
+                gap_df.at[idx, "action"] = "reextract"
+                continue
             gap_df.at[idx, "raw_row_match"] = "yes"
             gap_df.at[idx, "raw_row_amount"] = float(matched["amount_current"])
             gap_df.at[idx, "raw_row_file"] = str(matched.get("source_file", ""))
@@ -533,6 +638,12 @@ def search_raw_rows_for_gaps(
                 year=int(year),
                 canonical=canonical,
             )
+            if not specific_diag:
+                specific_diag, specific_action, specific_file = _hungary_gap_diagnosis_from_full_text(
+                    country=country,
+                    year=int(year),
+                    canonical=canonical,
+                )
             if specific_diag:
                 gap_df.at[idx, "raw_row_match"] = "no"
                 gap_df.at[idx, "diagnosis"] = specific_diag

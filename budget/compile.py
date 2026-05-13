@@ -168,6 +168,11 @@ _COLOMBIA_COMPONENT_AGENCIES = [
 
 def _agency_discovery_kwargs(country: str) -> dict:
     """Country-specific guardrails for automatic agency discovery."""
+    if country == "Latvia":
+        # Latvia's source family mixes durable science programmes with many
+        # one-off legal earmarks. Require recurrence so discovery surfaces
+        # stable institutions/programmes without blocking future additions.
+        return {"min_years": 2}
     if country == "Japan":
         # Japan extraction produces many broad MEXT/METI budget buckets. Require
         # recurrence and a material amount before sending candidates to the LLM.
@@ -193,6 +198,11 @@ def _agency_discovery_kwargs(country: str) -> dict:
         # named institutes we actually want discovery to learn. Require at
         # least 2 years of recurrence so discovery focuses on stable entities.
         return {"min_years": 2, "min_avg_amount": 1_000}
+    if country == "Korea":
+        # Korea budget briefs surface many one-off programme captions. Keep
+        # discovery focused on recurring candidates so compile iterations do
+        # not spend tokens on ephemeral summary labels.
+        return {"min_years": 2}
     return {}
 
 
@@ -575,6 +585,374 @@ def _normalise_france_pre_lolf_rows(df: pd.DataFrame) -> pd.DataFrame:
     return out.reset_index(drop=True)
 
 
+def _apply_korea_audited_pipeline_repairs(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Patch a tiny set of Korea pipeline rows that were confirmed against the
+    original budget briefs during audit.
+
+    This is intentionally narrow. Korea summary PDFs mix several extraction
+    scale failures on the same pages, so broad heuristics are riskier than
+    audited row-level fixes.
+    """
+    if df.empty:
+        return df
+
+    out = df.copy()
+    source = out.get("source_file", pd.Series("", index=out.index)).fillna("").astype(str)
+    page = out.get("page_number", pd.Series("", index=out.index)).fillna("").astype(str)
+    desc = out.get("line_description_en", pd.Series("", index=out.index)).fillna("").astype(str)
+
+    audited_rows = [
+        {
+            "year": 2022,
+            "source_file": "3. 2022년 예산안.pdf",
+            "page_number": "101",
+            "section_name_en": "Ministry of Science and ICT",
+            "line_description_en": "Science and Technology, Communication Sector",
+            "amount_local": 9_626_200_000.0,
+        },
+        {
+            "year": 2023,
+            "source_file": "2. 2023년 예산안 홍보자료★.pdf",
+            "page_number": "60",
+            "section_name_en": "Ministry of Science and ICT",
+            "line_description_en": "Science and Technology, Communication Sector",
+            "amount_local": 9_977_500_000.0,
+        },
+        {
+            "year": 2024,
+            "source_file": "2. 2024년  예산안 홍보자료.pdf",
+            "page_number": "55",
+            "section_name_en": "Ministry of Science and ICT",
+            "line_description_en": "Science and Technology, Communication Sector",
+            "amount_local": 9_076_800_000.0,
+        },
+    ]
+
+    repaired = 0
+    appended = 0
+    for spec in audited_rows:
+        mask = (
+            pd.to_numeric(out.get("year"), errors="coerce").eq(spec["year"])
+            & source.eq(spec["source_file"])
+            & page.eq(spec["page_number"])
+            & desc.eq(spec["line_description_en"])
+        )
+        note = (
+            "compile audited Korea row from original budget brief table "
+            "(억원 subtotal converted to thousand KRW)"
+        )
+        if mask.any():
+            out.loc[mask, "amount_local"] = float(spec["amount_local"])
+            out.loc[mask, "unit"] = "thousand"
+            out.loc[mask, "currency"] = "KRW"
+            notes = out.loc[mask, "notes"].fillna("").astype(str).str.strip()
+            out.loc[mask, "notes"] = notes.apply(
+                lambda s: f"{s}; {note}".strip("; ").strip()
+            )
+            repaired += int(mask.sum())
+            continue
+
+        new_row = {col: None for col in out.columns}
+        new_row.update(
+            {
+                "country": "Korea",
+                "year": spec["year"],
+                "item_type": "section_total",
+                "section_name_en": spec["section_name_en"],
+                "line_description_en": spec["line_description_en"],
+                "amount_local": float(spec["amount_local"]),
+                "unit": "thousand",
+                "currency": "KRW",
+                "rd_category": "rd_ministry",
+                "decision": "include",
+                "confidence": "high",
+                "source_file": spec["source_file"],
+                "page_number": spec["page_number"],
+                "notes": note,
+            }
+        )
+        out = pd.concat([out, pd.DataFrame([new_row])], ignore_index=True)
+        source = out.get("source_file", pd.Series("", index=out.index)).fillna("").astype(str)
+        page = out.get("page_number", pd.Series("", index=out.index)).fillna("").astype(str)
+        desc = out.get("line_description_en", pd.Series("", index=out.index)).fillna("").astype(str)
+        appended += 1
+
+    if repaired or appended:
+        logger.info(
+            f"[Korea] Applied {repaired} audited pipeline row repairs and appended {appended} audited rows"
+        )
+
+    return out.reset_index(drop=True)
+
+
+_KOREA_AUDITED_THEME_ROWS = [
+    {
+        "country": "Korea",
+        "year": 2019,
+        "theme_bucket": "AI / Data Economy",
+        "theme_label": "Data / AI economy",
+        "source_amount_display": "10,493억원",
+        "amount_local": 1_049_300_000.0,
+        "currency": "KRW",
+        "unit": "thousand",
+        "source_unit": "억원",
+        "source_file": "2019년도 예산안 개요.pdf",
+        "page_number": 27,
+        "comparability_note": "Broad thematic subtotal from a budget-summary table; useful for theme tracking, not a ministry appropriation.",
+    },
+    {
+        "country": "Korea",
+        "year": 2022,
+        "theme_bucket": "Strategic Technology",
+        "theme_label": "Future industry strategic R&D investment",
+        "source_amount_display": "6.2조원",
+        "amount_local": 6_200_000_000.0,
+        "currency": "KRW",
+        "unit": "thousand",
+        "source_unit": "조원",
+        "source_file": "3. 2022년 예산안.pdf",
+        "page_number": 49,
+        "comparability_note": "Broad strategic-technology subtotal from the 2022 R&D summary pages.",
+    },
+    {
+        "country": "Korea",
+        "year": 2022,
+        "theme_bucket": "Semiconductor",
+        "theme_label": "BIG3+ semiconductor-related R&D",
+        "source_amount_display": "0.4조원",
+        "amount_local": 400_000_000.0,
+        "currency": "KRW",
+        "unit": "thousand",
+        "source_unit": "조원",
+        "source_file": "3. 2022년 예산안.pdf",
+        "page_number": 100,
+        "comparability_note": "Broad semiconductor theme from the 2022 R&D field summary; not directly comparable to narrower project lines.",
+    },
+    {
+        "country": "Korea",
+        "year": 2022,
+        "theme_bucket": "Space",
+        "theme_label": "Space-related R&D",
+        "source_amount_display": "0.64조원",
+        "amount_local": 640_000_000.0,
+        "currency": "KRW",
+        "unit": "thousand",
+        "source_unit": "조원",
+        "source_file": "3. 2022년 예산안.pdf",
+        "page_number": 101,
+        "comparability_note": "Broad space subtotal from the 2022 frontier-strategy section.",
+    },
+    {
+        "country": "Korea",
+        "year": 2022,
+        "theme_bucket": "Quantum / 6G",
+        "theme_label": "Quantum / 6G-related R&D",
+        "source_amount_display": "927억원",
+        "amount_local": 92_700_000.0,
+        "currency": "KRW",
+        "unit": "thousand",
+        "source_unit": "억원",
+        "source_file": "3. 2022년 예산안.pdf",
+        "page_number": 101,
+        "comparability_note": "Combined next-generation communications and quantum subtotal from the 2022 frontier-strategy section.",
+    },
+    {
+        "country": "Korea",
+        "year": 2023,
+        "theme_bucket": "Strategic Technology",
+        "theme_label": "Core strategic technologies",
+        "source_amount_display": "45,123억원",
+        "amount_local": 4_512_300_000.0,
+        "currency": "KRW",
+        "unit": "thousand",
+        "source_unit": "억원",
+        "source_file": "2. 2023년 예산안 홍보자료★.pdf",
+        "page_number": 33,
+        "comparability_note": "Broad strategic-technology subtotal from an audited table in the 2023 budget brief.",
+    },
+    {
+        "country": "Korea",
+        "year": 2023,
+        "theme_bucket": "Semiconductor",
+        "theme_label": "Semiconductor",
+        "source_amount_display": "6,098억원",
+        "amount_local": 609_800_000.0,
+        "currency": "KRW",
+        "unit": "thousand",
+        "source_unit": "억원",
+        "source_file": "2. 2023년 예산안 홍보자료★.pdf",
+        "page_number": 33,
+        "comparability_note": "Explicit semiconductor subtotal from the 2023 strategic-technology table.",
+    },
+    {
+        "country": "Korea",
+        "year": 2023,
+        "theme_bucket": "Future Mobility",
+        "theme_label": "Future mobility",
+        "source_amount_display": "7,846억원",
+        "amount_local": 784_600_000.0,
+        "currency": "KRW",
+        "unit": "thousand",
+        "source_unit": "억원",
+        "source_file": "2. 2023년 예산안 홍보자료★.pdf",
+        "page_number": 33,
+        "comparability_note": "Explicit future-mobility subtotal from the 2023 strategic-technology table.",
+    },
+    {
+        "country": "Korea",
+        "year": 2023,
+        "theme_bucket": "Quantum / 5G / 6G",
+        "theme_label": "5G / 6G / quantum",
+        "source_amount_display": "2,952억원",
+        "amount_local": 295_200_000.0,
+        "currency": "KRW",
+        "unit": "thousand",
+        "source_unit": "억원",
+        "source_file": "2. 2023년 예산안 홍보자료★.pdf",
+        "page_number": 33,
+        "comparability_note": "Combined communications-and-quantum subtotal from the 2023 strategic-technology table.",
+    },
+    {
+        "country": "Korea",
+        "year": 2024,
+        "theme_bucket": "AI",
+        "theme_label": "AI-related projects",
+        "source_amount_display": "12,028억원",
+        "amount_local": 1_202_800_000.0,
+        "currency": "KRW",
+        "unit": "thousand",
+        "source_unit": "억원",
+        "source_file": "2. 2024년  예산안 홍보자료.pdf",
+        "page_number": 29,
+        "comparability_note": "Explicit theme subtotal from the 2024 advanced-services table.",
+    },
+    {
+        "country": "Korea",
+        "year": 2024,
+        "theme_bucket": "Bio",
+        "theme_label": "Bio-related projects",
+        "source_amount_display": "19,442억원",
+        "amount_local": 1_944_200_000.0,
+        "currency": "KRW",
+        "unit": "thousand",
+        "source_unit": "억원",
+        "source_file": "2. 2024년  예산안 홍보자료.pdf",
+        "page_number": 29,
+        "comparability_note": "Explicit theme subtotal from the 2024 advanced-services table.",
+    },
+    {
+        "country": "Korea",
+        "year": 2024,
+        "theme_bucket": "Cyber Security",
+        "theme_label": "Cyber security projects",
+        "source_amount_display": "3,656억원",
+        "amount_local": 365_600_000.0,
+        "currency": "KRW",
+        "unit": "thousand",
+        "source_unit": "억원",
+        "source_file": "2. 2024년  예산안 홍보자료.pdf",
+        "page_number": 29,
+        "comparability_note": "Explicit theme subtotal from the 2024 advanced-services table.",
+    },
+    {
+        "country": "Korea",
+        "year": 2024,
+        "theme_bucket": "Digital Platform Government",
+        "theme_label": "Digital platform government projects",
+        "source_amount_display": "9,262억원",
+        "amount_local": 926_200_000.0,
+        "currency": "KRW",
+        "unit": "thousand",
+        "source_unit": "억원",
+        "source_file": "2. 2024년  예산안 홍보자료.pdf",
+        "page_number": 29,
+        "comparability_note": "Explicit theme subtotal from the 2024 advanced-services table.",
+    },
+    {
+        "country": "Korea",
+        "year": 2025,
+        "theme_bucket": "Strategic Technology",
+        "theme_label": "National strategic technologies / future challenge",
+        "source_amount_display": "7.1조원",
+        "amount_local": 7_100_000_000.0,
+        "currency": "KRW",
+        "unit": "thousand",
+        "source_unit": "조원",
+        "source_file": "2. 2025 예산안 홍보자료.pdf",
+        "page_number": 50,
+        "comparability_note": "Broad strategic-technology subtotal from the 2025 R&D field summary.",
+    },
+    {
+        "country": "Korea",
+        "year": 2025,
+        "theme_bucket": "3 Game Changers",
+        "theme_label": "Three game changers",
+        "source_amount_display": "35,446억원",
+        "amount_local": 3_544_600_000.0,
+        "currency": "KRW",
+        "unit": "thousand",
+        "source_unit": "억원",
+        "source_file": "2. 2025 예산안 홍보자료.pdf",
+        "page_number": 20,
+        "comparability_note": "Explicit game-changer subtotal from the 2025 R&D reform table.",
+    },
+    {
+        "country": "Korea",
+        "year": 2025,
+        "theme_bucket": "AI",
+        "theme_label": "AI-related R&D",
+        "source_amount_display": "1.2조원",
+        "amount_local": 1_200_000_000.0,
+        "currency": "KRW",
+        "unit": "thousand",
+        "source_unit": "조원",
+        "source_file": "2. 2025 예산안 홍보자료.pdf",
+        "page_number": 50,
+        "comparability_note": "Broad AI subtotal from the 2025 3-game-changer summary.",
+    },
+    {
+        "country": "Korea",
+        "year": 2025,
+        "theme_bucket": "Bio",
+        "theme_label": "Bio-related R&D",
+        "source_amount_display": "2.1조원",
+        "amount_local": 2_100_000_000.0,
+        "currency": "KRW",
+        "unit": "thousand",
+        "source_unit": "조원",
+        "source_file": "2. 2025 예산안 홍보자료.pdf",
+        "page_number": 50,
+        "comparability_note": "Broad bio subtotal from the 2025 3-game-changer summary.",
+    },
+    {
+        "country": "Korea",
+        "year": 2025,
+        "theme_bucket": "Quantum",
+        "theme_label": "Quantum-related R&D",
+        "source_amount_display": "0.20조원",
+        "amount_local": 200_000_000.0,
+        "currency": "KRW",
+        "unit": "thousand",
+        "source_unit": "조원",
+        "source_file": "2. 2025 예산안 홍보자료.pdf",
+        "page_number": 50,
+        "comparability_note": "Broad quantum subtotal from the 2025 3-game-changer summary.",
+    },
+]
+
+
+def _build_korea_theme_panel(year_range: Optional[tuple[int, int]] = None) -> pd.DataFrame:
+    out = pd.DataFrame(_KOREA_AUDITED_THEME_ROWS)
+    if out.empty:
+        return out
+    if year_range:
+        start, end = int(year_range[0]), int(year_range[1])
+        out = out[(out["year"] >= start) & (out["year"] <= end)].copy()
+    out["amount_local"] = pd.to_numeric(out["amount_local"], errors="coerce")
+    return out.sort_values(["year", "theme_bucket", "source_file", "page_number"], kind="stable").reset_index(drop=True)
+
+
 def _output_unit_from_currency(currency: str, fallback_unit: str) -> str:
     return _OUTPUT_UNIT_BY_CURRENCY.get(str(currency or "").upper(), fallback_unit)
 
@@ -634,6 +1012,115 @@ def _write_year_slice(
 
     path.parent.mkdir(parents=True, exist_ok=True)
     out.to_csv(path, index=False)
+
+
+def _build_verified_override_audit(series_df: pd.DataFrame) -> pd.DataFrame:
+    """Return a traceability table for rows manually verified against originals."""
+    if series_df.empty or "item_type" not in series_df.columns:
+        return pd.DataFrame()
+
+    mask = series_df["item_type"].fillna("").eq("verified_override")
+    if not mask.any():
+        return pd.DataFrame()
+
+    out = series_df.loc[mask].copy()
+    out["source_kind"] = out["source_file"].fillna("").map(
+        lambda value: "original_pdf" if str(value).lower().endswith(".pdf") else "parsed_budget_text"
+    )
+    out["traceability_status"] = "verified_against_original_file"
+
+    preferred_cols = [
+        "country",
+        "year",
+        "canonical_name",
+        "category",
+        "amount_local",
+        "currency",
+        "unit",
+        "item_type",
+        "source_kind",
+        "source_file",
+        "page_number",
+        "line_description_en",
+        "series_notes",
+        "traceability_status",
+    ]
+    cols = [col for col in preferred_cols if col in out.columns]
+    return out.loc[:, cols].reset_index(drop=True)
+
+
+def _find_full_text_cache(country: str, source_file: str) -> str:
+    stem = Path(str(source_file)).stem
+    cache_dir = Path("Data/output/budget/full_text") / country
+    if not cache_dir.exists():
+        return ""
+    matches = sorted(cache_dir.glob(f"*__{stem}.txt.gz"))
+    return str(matches[0]) if matches else ""
+
+
+def _build_series_traceability(series_df: pd.DataFrame, country: str) -> pd.DataFrame:
+    if series_df.empty:
+        return pd.DataFrame()
+
+    cname = country.lower().replace(" ", "_")
+    pdf_root = Path("Data/input/finance_bills") / country
+    out = series_df.copy()
+    out["pdf_path"] = out["source_file"].fillna("").map(lambda s: str(pdf_root / str(s)) if str(s).lower().endswith(".pdf") else "")
+    out["full_text_cache"] = out["source_file"].fillna("").map(lambda s: _find_full_text_cache(country, s))
+    out["traceability_status"] = out["item_type"].fillna("").map(
+        lambda s: "verified_against_original_file" if str(s) == "verified_override" else "covered_by_final_series"
+    )
+    out["trace_excerpt"] = pd.NA
+
+    preferred_cols = [
+        "year",
+        "canonical_name",
+        "category",
+        "amount_local",
+        "unit",
+        "currency",
+        "item_type",
+        "source_file",
+        "page_number",
+        "pdf_path",
+        "full_text_cache",
+        "line_description_en",
+        "traceability_status",
+        "trace_excerpt",
+        "series_notes",
+    ]
+    cols = [col for col in preferred_cols if col in out.columns]
+    return out.loc[:, cols].sort_values(["year", "canonical_name", "source_file"], kind="stable").reset_index(drop=True)
+
+
+def _build_source_traceability(series_df: pd.DataFrame, country: str) -> pd.DataFrame:
+    cname = country.lower().replace(" ", "_")
+    pdf_root = Path("Data/input/finance_bills") / country
+    pdfs = sorted(p.name for p in pdf_root.glob(f"*_{country}.pdf"))
+    if not pdfs and series_df.empty:
+        return pd.DataFrame()
+
+    rows = []
+    for source_file in pdfs:
+        subset = series_df[series_df["source_file"].astype(str) == source_file].copy() if not series_df.empty else pd.DataFrame()
+        rows.append(
+            {
+                "source_file": source_file,
+                "pdf_path": str(pdf_root / source_file),
+                "full_text_cache": _find_full_text_cache(country, source_file),
+                "selected_rows": int(len(subset)),
+                "selected_canonicals": " | ".join(subset["canonical_name"].astype(str).tolist()) if not subset.empty else "",
+                "selected_pages": " | ".join(subset["page_number"].astype(str).tolist()) if not subset.empty else "",
+                "selected_line_descriptions": " | ".join(subset["line_description_en"].fillna("").astype(str).tolist()) if not subset.empty else "",
+                "selected_amounts": " | ".join(subset["amount_local"].astype(str).tolist()) if not subset.empty else "",
+                "traceability_status": "covered_by_final_series" if not subset.empty else "not_used_in_final_series",
+            }
+        )
+
+    out = pd.DataFrame(rows)
+    if out.empty:
+        return out
+    return out.sort_values(["source_file"], kind="stable").reset_index(drop=True)
 #
 # Some countries change the denomination they use in budget documents over time.
 # Rules here only apply when we intentionally rewrite the parsed amount to a
@@ -1113,6 +1600,14 @@ def build_classified_results(
             amount_local = pd.to_numeric(row.get("amount_current"), errors="coerce")
             amount_prior = pd.to_numeric(row.get("amount_prior"), errors="coerce")
             unit = "thousand"
+        elif country == "Costa Rica":
+            # Costa Rica text-cache parsing already yields amounts in the final
+            # reporting unit used elsewhere in the pipeline: thousand CRC.
+            # Expanding here to full CRC and then still carrying unit='thousand'
+            # inflates the entire docx_* branch by 1,000x.
+            amount_local = pd.to_numeric(row.get("amount_current"), errors="coerce")
+            amount_prior = pd.to_numeric(row.get("amount_prior"), errors="coerce")
+            unit = "thousand"
         else:
             amount_local, unit = _expand_output_amount(
                 row["amount_current"],
@@ -1304,6 +1799,16 @@ def _load_pipeline_results(
             df[col] = ""
 
     df["amount_local"] = pd.to_numeric(df["amount_local"], errors="coerce")
+
+    if country == "Israel" and not df.empty:
+        year_num = pd.to_numeric(df["year"], errors="coerce")
+        # Israel requires only one compile-side unit correction here:
+        # 1975-1979 are statutory lira amounts in full units, not thousands.
+        # Later Israeli budget tables should keep the printed scale from the
+        # source page. In particular, do not rewrite 2021-2024 away from
+        # `thousand`: the original budget family continues to use
+        # "באלפי שקלים חדשים" / "thousands of new shekels".
+        df.loc[year_num.between(1975, 1979, inclusive="both"), "unit"] = "unit"
 
     # Keep only include/review rows (skip rows were explicitly rejected)
     df = df[df["decision"].isin(["include", "review"])].copy()
@@ -1673,6 +2178,35 @@ def compile_country(
                 combined_raw.to_csv(raw_rows_csv, index=False)
                 logger.info(f"[{country}] Persisted supplemented raw rows → {raw_rows_csv}")
 
+    # Costa Rica-specific integration: the deterministic text-cache parser finds
+    # many rows, but it often misses the cleaner institutional transfers that
+    # already exist in pipeline results.csv. Supplement the compile input with
+    # those pre-existing rows so canonical selection can choose between both
+    # sources while keeping the conservative, hardcoded institutional panel.
+    if country == "Costa Rica":
+        costa_rica_target_years: set[int] = set()
+        if year_range:
+            costa_rica_target_years = set(range(int(year_range[0]), int(year_range[1]) + 1))
+        elif not raw_df.empty and "year" in raw_df.columns:
+            costa_rica_target_years = {
+                int(y)
+                for y in pd.to_numeric(raw_df["year"], errors="coerce").dropna().astype(int).tolist()
+            }
+        supplement_df = _load_pipeline_supplement_rows(
+            pipeline_csv,
+            country,
+            year_range=year_range,
+            target_years=costa_rica_target_years or None,
+        )
+        raw_df = _append_compile_rows(raw_df, supplement_df, "pipeline supplement rows")
+        if not supplement_df.empty:
+            existing = pd.read_csv(raw_rows_csv) if raw_rows_csv.exists() else pd.DataFrame()
+            if not existing.empty and "country" in existing.columns:
+                existing = existing[existing["country"] != country]
+            combined_raw = pd.concat([existing, raw_df], ignore_index=True)
+            combined_raw.to_csv(raw_rows_csv, index=False)
+            logger.info(f"[{country}] Persisted supplemented raw rows → {raw_rows_csv}")
+
     # Countries where LLM pipeline output (results.csv) always takes precedence
     # over DOCX/text-cache, even when the text-cache has partial data.
     # These countries were processed through pipeline.py (LLM extraction) which
@@ -1684,7 +2218,10 @@ def compile_country(
         "Norway", "Denmark",                           # text-cache exists but LLM wins
         "Estonia",                                     # text-cache parse is materially weaker than pipeline output
         "Belgium",                                     # text-cache/docx path is materially weaker than pipeline output
+        "Latvia",                                      # local parser collapses to sparse DOCX rows; pipeline output preserves the richer science programme tables
         "Iceland",                                     # text-cache parse is noisy; pipeline output preserves institution lines
+        "Korea",                                       # budget-summary PDFs are materially richer in pipeline output than text-cache parser
+        "Israel",                                      # text-cache/docx path latches onto OCR-heavy table summaries; pipeline rows are materially cleaner
         "Spain",                                       # pipeline output is materially richer than legacy text-cache parsing
         "Sweden", "Netherlands", "Switzerland",        # future: no text-cache expected
     }
@@ -1705,6 +2242,8 @@ def compile_country(
                 f"[{country}] Using LLM pipeline output instead of DOCX/text-cache"
             )
             results_df = pipeline_df
+            if country == "Korea":
+                results_df = _apply_korea_audited_pipeline_repairs(results_df)
             results_path = country_dir / f"{country.lower().replace(' ','_')}_docx_results.csv"
             _write_year_slice(
                 results_path,
@@ -1718,22 +2257,32 @@ def compile_country(
             # Convert pipeline output columns → raw_rows format so discover_agencies()
             # can identify agencies the LLM found that aren't in the canonical list.
             # This ensures we don't miss R&D budget lines that aren't yet hardcoded.
-            if not dry_run:
-                pipeline_as_raw = pd.DataFrame({
-                    "country":       results_df["country"],
-                    "year":          results_df["year"],
-                    "source_file":   results_df.get("source_file", ""),
-                    "entity_raw":    results_df["line_description_en"].fillna(""),
-                    "amount_current": pd.to_numeric(results_df["amount_local"], errors="coerce"),
-                    "section_name":  results_df.get("section_name_en", ""),
-                    "is_total_row":  results_df.get("item_type", "").eq("section_total"),
-                    "is_header_row": False,
-                    "table_index":   0,
-                    "row_index":     range(len(results_df)),
-                    "amount_prior":  None,
-                    "has_italic_entity": False,
-                    "cells_raw":     "[]",
-                })
+            pipeline_as_raw = pd.DataFrame({
+                "country":       results_df["country"],
+                "year":          results_df["year"],
+                "source_file":   results_df.get("source_file", ""),
+                "amount_current": pd.to_numeric(results_df["amount_local"], errors="coerce"),
+                "section_name":  results_df.get("section_name_en", ""),
+                "is_total_row":  results_df.get("item_type", "").eq("section_total"),
+                "is_header_row": False,
+                "table_index":   0,
+                "row_index":     range(len(results_df)),
+                "amount_prior":  None,
+                "has_italic_entity": False,
+                "cells_raw":     "[]",
+            })
+            entity_text = results_df.get("line_description", results_df.get("line_description_en", "")).fillna("").astype(str).str.strip()
+            section_text = results_df.get("section_name", results_df.get("section_name_en", "")).fillna("").astype(str).str.strip()
+            entity_en = results_df.get("line_description_en", "").fillna("").astype(str).str.strip()
+            section_en = results_df.get("section_name_en", "").fillna("").astype(str).str.strip()
+            is_section_total = results_df.get("item_type", pd.Series("", index=results_df.index)).astype(str).eq("section_total")
+            entity_raw = entity_text.where(~is_section_total, section_text)
+            entity_raw = entity_raw.where(entity_raw.str.len() > 0, entity_en)
+            entity_raw = entity_raw.where(entity_raw.str.len() > 0, section_en)
+            entity_raw = entity_raw.where(entity_raw.str.len() > 0, section_text)
+            pipeline_as_raw["entity_raw"] = entity_raw
+
+            if not dry_run and country != "Israel":
                 logger.info(f"Agency discovery: {country}")
                 try:
                     discover_agencies(
@@ -1762,6 +2311,46 @@ def compile_country(
                 )
                 logger.info(f"Detail series → {series_path}")
 
+                series_trace_df = _build_series_traceability(series_df, country)
+                if not series_trace_df.empty:
+                    series_trace_path = country_dir / f"{cname}_series_traceability.csv"
+                    _write_year_slice(
+                        series_trace_path,
+                        series_trace_df,
+                        year_range=year_range,
+                        sort_cols=["year", "canonical_name", "source_file"],
+                    )
+                    logger.info(f"Series traceability → {series_trace_path}")
+
+                source_trace_df = _build_source_traceability(series_df, country)
+                if not source_trace_df.empty:
+                    source_trace_path = country_dir / f"{cname}_source_traceability.csv"
+                    source_trace_df.to_csv(source_trace_path, index=False)
+                    logger.info(f"Source traceability → {source_trace_path}")
+
+                verified_df = _build_verified_override_audit(series_df)
+                if not verified_df.empty:
+                    verified_path = country_dir / f"{cname}_verified_overrides.csv"
+                    _write_year_slice(
+                        verified_path,
+                        verified_df,
+                        year_range=year_range,
+                        sort_cols=["country", "canonical_name", "year", "source_file"],
+                    )
+                    logger.info(f"Verified overrides → {verified_path}")
+
+                if country == "Korea":
+                    theme_df = _build_korea_theme_panel(year_range=year_range)
+                    if not theme_df.empty:
+                        theme_path = country_dir / "korea_theme_panel.csv"
+                        _write_year_slice(
+                            theme_path,
+                            theme_df,
+                            year_range=year_range,
+                            sort_cols=["year", "theme_bucket", "source_file", "page_number"],
+                        )
+                        logger.info(f"Korea theme panel → {theme_path}")
+
                 totals_df = build_totals_series(series_df, country=country)
                 if not totals_df.empty:
                     totals_path = country_dir / f"{cname}_docx_totals.csv"
@@ -1772,6 +2361,17 @@ def compile_country(
                         sort_cols=["country", "canonical_name", "year"],
                     )
                     logger.info(f"Totals series → {totals_path}")
+
+                audit_df = _build_full_audit(pipeline_as_raw, series_df, country)
+                if not audit_df.empty:
+                    audit_path = country_dir / f"{cname}_docx_audit.csv"
+                    _write_year_slice(
+                        audit_path,
+                        audit_df,
+                        year_range=year_range,
+                        sort_cols=["canonical_name", "year", "source_file"],
+                    )
+                    logger.info(f"Full audit database → {audit_path} ({len(audit_df)} rows)")
 
                 gap_df, _ = build_gap_report(
                     series_df=series_df,
@@ -1892,6 +2492,46 @@ def compile_country(
             sort_cols=["country", "canonical_name", "year", "source_file"],
         )
         logger.info(f"Detail series → {series_path}")
+
+        series_trace_df = _build_series_traceability(series_df, country)
+        if not series_trace_df.empty:
+            series_trace_path = country_dir / f"{cname}_series_traceability.csv"
+            _write_year_slice(
+                series_trace_path,
+                series_trace_df,
+                year_range=year_range,
+                sort_cols=["year", "canonical_name", "source_file"],
+            )
+            logger.info(f"Series traceability → {series_trace_path}")
+
+        source_trace_df = _build_source_traceability(series_df, country)
+        if not source_trace_df.empty:
+            source_trace_path = country_dir / f"{cname}_source_traceability.csv"
+            source_trace_df.to_csv(source_trace_path, index=False)
+            logger.info(f"Source traceability → {source_trace_path}")
+
+        verified_df = _build_verified_override_audit(series_df)
+        if not verified_df.empty:
+            verified_path = country_dir / f"{cname}_verified_overrides.csv"
+            _write_year_slice(
+                verified_path,
+                verified_df,
+                year_range=year_range,
+                sort_cols=["country", "canonical_name", "year", "source_file"],
+            )
+            logger.info(f"Verified overrides → {verified_path}")
+
+        if country == "Korea":
+            theme_df = _build_korea_theme_panel(year_range=year_range)
+            if not theme_df.empty:
+                theme_path = country_dir / "korea_theme_panel.csv"
+                _write_year_slice(
+                    theme_path,
+                    theme_df,
+                    year_range=year_range,
+                    sort_cols=["year", "theme_bucket", "source_file", "page_number"],
+                )
+                logger.info(f"Korea theme panel → {theme_path}")
 
         # ── Totals series ─────────────────────────────────────────────────────
         # One row per (agency, year). Sums amounts across Acts with restatement flag.

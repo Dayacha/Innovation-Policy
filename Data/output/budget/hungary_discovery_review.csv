@@ -1,0 +1,4 @@
+canonical_name,category,name_variants,preferred_item_type,active_years,notes,agency_type,confidence,source_entity,n_years_seen,avg_amount,reason,country
+EU Developments,innovation_instruments,[],"['section_total', 'program_total', 'line_item']","(2009, 2025)","This entity likely supports EU development projects, which can include R&D.",rd_programme,0.7,XIX. UNIÓS FEJLESZTÉSEK,16,37740.25,confidence below threshold,Hungary
+INTERACT Programme,innovation_instruments,[],"['section_total', 'program_total', 'line_item']","(2010, 2011)",This programme supports cross-border cooperation and may involve R&D.,rd_programme,0.6,INTERACT 2007–2013,2,17333.5,confidence below threshold,Hungary
+ETE HU-CRO Programme,innovation_instruments,[],"['section_total', 'program_total', 'line_item']","(2010, 2017)",This programme may involve research collaboration between Hungary and Croatia.,rd_programme,0.5,ETE HU-CRO,8,15494.0,confidence below threshold,Hungary

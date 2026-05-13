@@ -1,0 +1,35 @@
+country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
+Latvia,1992,Science Programme (Latvia),rd_ministry,ok,,,,,none,274155.0,,638528.0
+Latvia,1993,Science Programme (Latvia),rd_ministry,ok,,,,,none,638528.0,274155.0,5718864.0
+Latvia,1995,Science Programme (Latvia),rd_ministry,ok,,,,,none,5718864.0,638528.0,7321512.0
+Latvia,1996,Science Programme (Latvia),rd_ministry,ok,,,,,none,7321512.0,5718864.0,8755763.0
+Latvia,1998,Science Programme (Latvia),rd_ministry,ok,,,,,none,8755763.0,7321512.0,9262103.0
+Latvia,1999,Science Programme (Latvia),rd_ministry,ok,,,,,none,9262103.0,8755763.0,10135464.0
+Latvia,2000,Science Programme (Latvia),rd_ministry,ok,,,,,none,10135464.0,9262103.0,11405638.0
+Latvia,2001,Science Programme (Latvia),rd_ministry,ok,,,,,none,11405638.0,10135464.0,11688764.0
+Latvia,2003,Science Programme (Latvia),rd_ministry,ok,,,,,none,11688764.0,11405638.0,8544825.0
+Latvia,2006,Science Programme (Latvia),rd_ministry,ok,,,,,none,8544825.0,11688764.0,
+Latvia,1996,Fundamental Scientific Research (Latvia),direct_rd,ok,,,,,none,5687898.0,,5000000.0
+Latvia,2000,Fundamental Scientific Research (Latvia),direct_rd,ok,,,,,none,5000000.0,5687898.0,2000000.0
+Latvia,2006,Fundamental Scientific Research (Latvia),direct_rd,ok,,,,,none,2000000.0,5000000.0,
+Latvia,1997,Science Base Funding (Latvia),science_agency,ok,,,,,none,6731662.0,,7415859.0
+Latvia,1999,Science Base Funding (Latvia),science_agency,ok,,,,,none,7415859.0,6731662.0,6700000.0
+Latvia,2000,Science Base Funding (Latvia),science_agency,ok,,,,,none,6700000.0,7415859.0,7646507.0
+Latvia,2001,Science Base Funding (Latvia),science_agency,ok,,,,,none,7646507.0,6700000.0,7930511.0
+Latvia,2003,Science Base Funding (Latvia),science_agency,ok,,,,,none,7930511.0,7646507.0,4625554.0
+Latvia,2006,Science Base Funding (Latvia),science_agency,ok,,,,,none,4625554.0,7930511.0,8482229.0
+Latvia,2009,Science Base Funding (Latvia),science_agency,ok,,,,,none,8482229.0,4625554.0,
+Latvia,1996,State-Commissioned Scientific Research (Latvia),direct_rd,ok,,,,,none,702855.0,,728375.0
+Latvia,1997,State-Commissioned Scientific Research (Latvia),direct_rd,ok,,,,,none,728375.0,702855.0,764794.0
+Latvia,1998,State-Commissioned Scientific Research (Latvia),direct_rd,ok,,,,,none,764794.0,728375.0,529571.0
+Latvia,2000,State-Commissioned Scientific Research (Latvia),direct_rd,ok,,,,,none,529571.0,764794.0,554571.0
+Latvia,2001,State-Commissioned Scientific Research (Latvia),direct_rd,ok,,,,,none,554571.0,529571.0,70209.0
+Latvia,2003,State-Commissioned Scientific Research (Latvia),direct_rd,ok,,,,,none,70209.0,554571.0,
+Latvia,1992,Latvian Academy of Sciences,science_agency,ok,,,,,none,13500.0,,19400.0
+Latvia,1993,Latvian Academy of Sciences,science_agency,ok,,,,,none,19400.0,13500.0,
+Latvia,1996,University Science Development (Latvia),higher_education,ok,,,,,none,90000.0,,4000000.0
+Latvia,2000,University Science Development (Latvia),higher_education,ok,,,,,none,4000000.0,90000.0,2400000.0
+Latvia,2006,University Science Development (Latvia),higher_education,ok,,,,,none,2400000.0,4000000.0,4000000.0
+Latvia,2015,University Science Development (Latvia),higher_education,ok,,,,,none,4000000.0,2400000.0,
+Latvia,2009,State Research Programmes (Latvia),direct_rd,ok,,,,,none,6034377.0,,2000000.0
+Latvia,2018,State Research Programmes (Latvia),direct_rd,ok,,,,,none,2000000.0,6034377.0,

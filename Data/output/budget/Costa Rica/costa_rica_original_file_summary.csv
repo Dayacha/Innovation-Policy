@@ -1,0 +1,25 @@
+source_file,verified_rows,years,canonicals,evidence_types
+pdf_1cbc124dbce0__2017_Tomo2_Ley_de_presupuesto.txt.gz,2,2017,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas); INCIENSA (health and nutrition research),direct_line_verified
+pdf_286dfbab2290__2014_Tomo4_Ley_de_presupuesto.txt.gz,1,2014,INCIENSA (health and nutrition research),direct_line_verified
+pdf_2ca1f7962cd2__2013_Tomo2_Ley_de_presupuesto.txt.gz,3,2013,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza); INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria); UCR (Universidad de Costa Rica),composite_verified; direct_line_verified; program_total_verified
+pdf_2cd269e29d69__2011_Ley_de_presupuesto.txt.gz,3,2011,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza); INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria); UCR (Universidad de Costa Rica),direct_line_verified
+pdf_2d582cab4909__2019_Ley_de_presupuesto.txt.gz,0,,,
+pdf_32e42c6d9f07__2012_Ley_de_presupuesto.txt.gz,0,,,
+pdf_3ff9fc5832c2__2014_Tomo1_Ley_de_presupuesto.txt.gz,0,,,
+pdf_4c260828c63b__2010_Ley_de_presupuesto.txt.gz,3,2010,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas); INCIENSA (health and nutrition research); UCR (Universidad de Costa Rica),composite_verified; direct_line_verified
+pdf_4f4ae1d3c84d__2014_Tomo5_Ley_de_presupuesto.txt.gz,2,2014,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas); UCR (Universidad de Costa Rica),composite_verified; direct_line_verified
+pdf_65d032f4c4ef__2020_Ley_de_presupuesto.txt.gz,4,2020,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza); CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas); INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria); UCR (Universidad de Costa Rica),direct_line_verified
+pdf_676af6f56c56__2013_Tomo4_Ley_de_presupuesto.txt.gz,1,2013,INCIENSA (health and nutrition research),direct_line_verified
+pdf_68dbbb7d1c42__2016_Ley_de_presupuesto.txt.gz,0,,,
+pdf_6fdfe60f9731__2018_Ley_de_presupuesto.txt.gz,0,,,
+pdf_70b402f40a19__2024_Ley_de_presupuesto.txt.gz,5,2024,"CATIE (Centro Agronómico Tropical de Investigación y Enseñanza); INCIENSA (health and nutrition research); MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones); Promotora Costarricense de Innovación e Investigación (PCII); UCR (Universidad de Costa Rica)",composite_verified; direct_line_verified; program_total_verified
+pdf_7961e5e0fed7__1989_act_no_numbers_ley-7111.txt.gz,0,,,
+pdf_941ca4fcb3ac__2023_Ley_de_presupuesto.txt.gz,0,,,
+pdf_94c1ada0fee0__2013_Tomo6_Ley_de_presupuesto.txt.gz,0,,,
+pdf_9ae02f7a514b__2022_Ley_de_presupuesto.txt.gz,0,,,
+pdf_a05d2c99190d__2015_Ley_de_presupuesto.txt.gz,0,,,
+pdf_aa090ab603b8__2013_Tomo5_Ley_de_presupuesto.txt.gz,2,2013,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas); UCR (Universidad de Costa Rica),composite_verified; direct_line_verified
+pdf_ac902c30ecd9__2021_Ley_de_presupuesto.txt.gz,5,2021,"CATIE (Centro Agronómico Tropical de Investigación y Enseñanza); CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas); INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria); MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones); UCR (Universidad de Costa Rica)",composite_verified; direct_line_verified; program_total_verified
+pdf_b6df2745474e__2017_Tomo3_Ley_de_presupuesto.txt.gz,2,2017,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones); UCR (Universidad de Costa Rica)",composite_verified; program_total_verified
+pdf_b7628d47c028__2017_Tomo1_Ley_de_presupuesto.txt.gz,2,2017,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza); UCR (Universidad de Costa Rica),composite_verified; direct_line_verified
+pdf_ef12aca9f998__2025_Ley_de_presupuesto.txt.gz,5,2025,"CATIE (Centro Agronómico Tropical de Investigación y Enseñanza); INCIENSA (health and nutrition research); MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones); Promotora Costarricense de Innovación e Investigación (PCII); UCR (Universidad de Costa Rica)",composite_verified; direct_line_verified; program_total_verified

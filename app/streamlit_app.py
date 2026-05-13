@@ -19,7 +19,8 @@ from app.data_loader import (
     RD_CATEGORY_COLORS, RD_CATEGORY_LABELS,
     REFORM_PANEL, STAGE_LABELS, STAGE_PATHS, STATUS_LABELS,
     SUBTHEME_COLORS, SUBTHEME_LABELS, SUBTHEME_SHORT,
-    budget_available, get_app_password, load_budget, load_reform_panel, load_reforms,
+    budget_available, get_app_password, load_budget, load_korea_theme_panel,
+    load_reform_panel, load_reforms,
     load_reform_mentions, load_reform_panel_subtheme,
     reforms_available,
     available_reform_stages, load_reforms_stage, load_reform_panel_stage,
@@ -261,6 +262,33 @@ PLOTLY_BASE = dict(
     plot_bgcolor="#ffffff",
     paper_bgcolor="#ffffff",
 )
+
+
+def _format_korea_source_amount(amount_thousand_krw):
+    """Render Korea amounts in reader-friendly source-style units."""
+    try:
+        amt = float(amount_thousand_krw)
+    except Exception:
+        return "—"
+    if pd.isna(amt):
+        return "—"
+
+    jo = amt / 1_000_000_000.0
+    eok = amt / 100_000.0
+
+    if jo >= 1:
+        if abs(jo - round(jo)) < 1e-9:
+            return f"{int(round(jo))}조원"
+        if abs(jo * 10 - round(jo * 10)) < 1e-8:
+            return f"{jo:.1f}조원"
+        return f"{jo:.2f}조원"
+
+    if eok >= 1:
+        if abs(eok - round(eok)) < 1e-6:
+            return f"{int(round(eok)):,}억원"
+        return f"{eok:,.1f}억원"
+
+    return f"{amt * 1000:,.0f}원"
 
 
 def render_table(df, col_labels=None, max_rows=500, num_cols=None, bool_cols=None, wide_cols=None):
@@ -730,6 +758,25 @@ with TAB_BUDGET:
             ),
             "rating": "moderate",
         },
+        "Costa Rica": {
+            "years": "1989, 2010–2025 (the audited comparable backbone is much narrower)",
+            "source": "Annual budget laws, including several multi-volume tomos and annex-style tables",
+            "gaps": (
+                "Costa Rica should be read as a conservative, traceability-first panel rather than as a dense "
+                "continuous annual series. The original files change the object being measured across years, "
+                "mixing annual international quotas (CATIE), institutional transfer bundles (CONICIT, PCII), "
+                "programme totals (MICITT, some INTA, modern INCIENSA), and narrow university sub-lines (UCR). "
+                "A high-recall extraction therefore overstates comparability. The audited panel intentionally "
+                "keeps only the short backbone that can be defended from the original documents and drops FEES, "
+                "ITCR/TEC, UCR proxy sub-lines, ING-page fragments, and third-party transfers that are not a "
+                "clean institutional R&D appropriation."
+            ),
+            "fit": (
+                "Limited to moderate — useful as a short audited institutional backbone, but not as a dense "
+                "long-run annual R&D budget series."
+            ),
+            "rating": "limited",
+        },
         "Chile": {
             "years": "1999–2025",
             "source": "National budget law tables (Ley de Presupuestos), usually reported in thousands of Chilean pesos",
@@ -770,6 +817,21 @@ with TAB_BUDGET:
             "fit": "Limited to moderate — strong for 2003–2009 and 2021+; thin or absent for 2010–2020 and most pre-2003 years.",
             "rating": "limited",
         },
+        "Hungary": {
+            "years": "1992–2025 with documented gaps in 1991, 2000, 2003, 2004, 2006, 2008, and 2009",
+            "source": "Annual Hungarian budget laws / Magyar Közlöny budget texts, with audited overrides traced to original PDFs or stable parsed budget text",
+            "gaps": (
+                "Hungary is now usable as a traced institutional series, but not as a complete annual panel. "
+                "The strongest rows are the audited MTA, library, fund, and research-network totals carried as verified overrides. "
+                "The main remaining weakness is historical MTA coverage in a small set of years where the original chapter "
+                "heading is visible but the chapter-total amount is truncated in the PDF text layer, so no defendable institutional "
+                "total reaches raw_rows. 1991 is weaker still: the current cached source text does not expose a detectable MTA "
+                "chapter heading at all. National Agricultural Research and Innovation Centre was intentionally removed from the "
+                "audited panel because the current source inventory does not yield a stable institution-level total across reruns."
+            ),
+            "fit": "Moderate — strong for audited institutional totals and modern R&D funds; incomplete for a narrow set of historical MTA years.",
+            "rating": "moderate",
+        },
         "Iceland": {
             "years": "1975–2025",
             "source": "Icelandic budget bills and annex tables, often reported in m.kr. with OCR-sensitive historical scans",
@@ -783,6 +845,20 @@ with TAB_BUDGET:
             "fit": "Moderate — useful for institutional analysis in most years, but incomplete in the aggregate-only 2017–2018 window.",
             "rating": "moderate",
         },
+        "Israel": {
+            "years": "1975–2025",
+            "source": "Annual Israeli budget laws and budget tables, including scanned historical PDFs and several biannual / summary-style modern files",
+            "gaps": (
+                "Israel is now usable as a conservative, traceability-first institutional panel, but the source family is heterogeneous. "
+                "Historical scans are OCR-sensitive, the monetary regime changes across ILP / old shekel / NIS eras, "
+                "and some modern files behave more like summary-style budget pages than clean institutional ledgers. "
+                "The audited panel therefore keeps only explicit council, ministry, authority, fund, and named-agency rows, "
+                "and intentionally leaves several smaller institutions sparse rather than forcing continuity. "
+                "For 2023–2025, the ministry row should be read as a broader Section 19 science-plus-culture bundle rather than as a pure ministry-of-science total."
+            ),
+            "fit": "Moderate — strongest for the audited National Council pre-1992 and Ministry of Science 1992+ backbone; weaker for sparse agencies and the modern Section 19 bundle years.",
+            "rating": "moderate",
+        },
         "Japan": {
             "years": "1975–2025",
             "source": "Budget of Japan science and technology tables, operating grants, and historical predecessor rows",
@@ -794,6 +870,28 @@ with TAB_BUDGET:
             ),
             "fit": "Moderate to good — strongest from the 2000s onward; historical coverage is broad but partly bridged.",
             "rating": "moderate",
+        },
+        "Korea": {
+            "years": "2018–2025 core audited panel, plus a thematic layer for 2019 and 2022–2025",
+            "source": (
+                "Korean budget briefs, 홍보자료, and fiscal-plan summary tables; "
+                "the app separates a core audited panel from a Korea-only thematic panel that also preserves source-display units"
+            ),
+            "gaps": (
+                "Korea should not be read as a clean ministry-by-ministry appropriations panel. The core layer keeps "
+                "only conservative annual totals and audited subtotals, while the thematic layer captures explicit "
+                "theme-based amounts such as AI, semiconductors, bio, space, quantum, and strategic technology when "
+                "they appear clearly in the original page. Most supported files are summary-style PDFs rather than "
+                "full ledgers, and some stronger source material may still sit in HWP files that are not yet ingested. "
+                "The main remaining core-panel gaps in the current inventory are MSIT 2018, 2019, and 2021, plus "
+                "Strategic Technology 2021."
+            ),
+            "fit": (
+                "Limited to moderate — useful only when read as a two-layer source family: a conservative core audited "
+                "series for annual totals, plus a thematic panel for policy-priority buckets. Not suitable as a complete "
+                "institutional budget ledger."
+            ),
+            "rating": "limited",
         },
         "UK": {
             "years": "1993–2025 (episodic — not a continuous series)",
@@ -843,6 +941,22 @@ with TAB_BUDGET:
             ),
             "fit": "Moderate — useful for the 1991–2011 institutional series, with a cautious post-2011 hybrid continuation.",
             "rating": "moderate",
+        },
+        "Latvia": {
+            "years": "1992–2018, with a short early ruble-era bridge and a mainly programme-based core from 1995 onward",
+            "source": "Annual Latvian budget laws and budget tables (`likumi.lv` PDFs and a small number of legacy budget-document wrappers)",
+            "gaps": (
+                "Latvia is still one of the weaker audited budget panels in the app, but it is now more tightly traced to the original files than before. "
+                "The earliest surviving observations (1992–1993) are explicitly in thousand rubles and should be treated only as a short bridge, not as "
+                "directly comparable with the later LVL/EUR years. From 1995 onward the usable backbone is mostly programme- and subprogramme-based rather "
+                "than a stable roster of named science agencies: the strongest part of the panel is the audited cluster around science totals, science base "
+                "funding / scientific-activity provision, state-commissioned research, and university science development in the late 1990s and 2000s. "
+                "Many other apparent rows in the source family were wrapper text, zero rows, finance-mechanics shells, ERDF sub-lines, or institutional "
+                "subcomponents misread as totals. Late observations such as 2015 and 2018 are valid but behave more like targeted earmarks than a full "
+                "science budget table."
+            ),
+            "fit": "Limited — usable only for cautious, audited programme-level trend reading; weak for institutional continuity and cross-era comparison.",
+            "rating": "limited",
         },
         "Norway": {
             "years": "1975–2026",
@@ -1175,21 +1289,123 @@ with TAB_BUDGET:
             lambda col: col.str.contains(_bud_search, case=False, na=False)
         ).any(axis=1)
         _tbl = _tbl[_mask]
+    _is_korea_only = (
+        not _tbl.empty
+        and "country" in _tbl.columns
+        and set(_tbl["country"].dropna().unique()) == {"Korea"}
+    )
+    if _is_korea_only:
+        _tbl["amount_display_source"] = pd.to_numeric(
+            _tbl["amount_local"], errors="coerce"
+        ).map(_format_korea_source_amount)
     if _multi_currency:
         caption_note(f"{len(_tbl):,} rows  ·  {_n_countries} countries (amounts in local currency)")
     else:
         caption_note(f"{len(_tbl):,} rows  ·  {_ccy} {_tbl['amount_local'].sum()/1e6:,.1f} M")
-    render_table(
-        _tbl[_BUD_DISP_COLS].sort_values("year"),
-        col_labels=_BUD_COL_LABELS,
-        num_cols=["amount_local"],
-        wide_cols=["budget_line_display", "ministry_display", "series_notes"],
-    )
+    if _is_korea_only:
+        caption_note(
+            "Korea display amounts are shown in reader-facing Korean units (억원 / 조원). "
+            "The pipeline still stores normalized values internally."
+        )
+        _korea_cols = [c for c in [
+            "country", "year", "ministry_display", "budget_line_display",
+            "amount_display_source", "currency", "budget_category",
+            "item_type", "source_file", "series_notes",
+        ] if c in _tbl.columns]
+        _korea_labels = dict(_BUD_COL_LABELS)
+        _korea_labels["amount_display_source"] = "Amount (Korean display)"
+        render_table(
+            _tbl[_korea_cols].sort_values("year"),
+            col_labels=_korea_labels,
+            wide_cols=["budget_line_display", "ministry_display", "series_notes"],
+        )
+    else:
+        render_table(
+            _tbl[_BUD_DISP_COLS].sort_values("year"),
+            col_labels=_BUD_COL_LABELS,
+            num_cols=["amount_local"],
+            wide_cols=["budget_line_display", "ministry_display", "series_notes"],
+        )
+    _bud_download_cols = _BUD_DISP_COLS
+    if _is_korea_only:
+        _bud_download_cols = [c for c in [
+            "country", "year", "ministry_display", "budget_line_display",
+            "amount_display_source", "currency", "budget_category",
+            "item_type", "source_file", "series_notes",
+        ] if c in _tbl.columns]
     st.download_button(
         "Download CSV",
-        _tbl[_BUD_DISP_COLS].to_csv(index=False).encode("utf-8"),
+        _tbl[_bud_download_cols].to_csv(index=False).encode("utf-8"),
         "budget_lines.csv", "text/csv", key="bud_dl",
     )
+
+    # ── Korea-only thematic panel ──
+    _has_korea = "country" in db_f.columns and "Korea" in set(db_f["country"].dropna())
+    if _has_korea:
+        _k_theme = load_korea_theme_panel()
+        if not _k_theme.empty and "year" in _k_theme.columns:
+            _k_theme = _k_theme[
+                (_k_theme["year"] >= yr_b[0]) & (_k_theme["year"] <= yr_b[1])
+            ].copy()
+            if not _k_theme.empty:
+                section_header("Korea thematic R&D panel")
+                caption_note(
+                    "Korea's source family mixes audited totals with theme-based budget briefs. "
+                    "This panel preserves explicit thematic subtotals as shown in the original files, "
+                    "alongside normalized KRW values for filtering and charting."
+                )
+
+                _k_chart = _k_theme.copy()
+                _k_chart["Amount (M)"] = _k_chart["amount_local"] / 1e6
+                _k_fig = px.bar(
+                    _k_chart,
+                    x="year",
+                    y="Amount (M)",
+                    color="theme_bucket",
+                    barmode="group",
+                    labels={"year": "Year", "Amount (M)": "KRW (millions)", "theme_bucket": ""},
+                    custom_data=["theme_label", "source_amount_display", "source_file", "page_number"],
+                )
+                _k_fig.update_traces(
+                    marker_line_width=0,
+                    hovertemplate=(
+                        "<b>%{customdata[0]}</b><br>"
+                        "Year: %{x}<br>"
+                        "Amount: %{y:,.0f} M KRW<br>"
+                        "Source amount: %{customdata[1]}<br>"
+                        "Source: %{customdata[2]} (p. %{customdata[3]})<extra></extra>"
+                    ),
+                )
+                apply_style(_k_fig, height=360, xtitle="Year", ytitle="KRW (millions)")
+                st.plotly_chart(_k_fig, use_container_width=True)
+
+                _K_THEME_COLS = [c for c in [
+                    "year", "theme_bucket", "theme_label", "source_amount_display",
+                    "source_file",
+                    "page_number", "comparability_note",
+                ] if c in _k_theme.columns]
+                _K_THEME_LABELS = {
+                    "year": "Year",
+                    "theme_bucket": "Theme bucket",
+                    "theme_label": "Theme label",
+                    "source_amount_display": "Amount in source",
+                    "source_file": "Source file",
+                    "page_number": "Page",
+                    "comparability_note": "Comparability note",
+                }
+                render_table(
+                    _k_theme[_K_THEME_COLS].sort_values(["year", "theme_bucket"]),
+                    col_labels=_K_THEME_LABELS,
+                    num_cols=["page_number"],
+                    wide_cols=["theme_label", "source_file", "comparability_note"],
+                )
+                st.download_button(
+                    "Download Korea thematic panel (CSV)",
+                    _k_theme[_K_THEME_COLS].to_csv(index=False).encode("utf-8"),
+                    "korea_theme_panel.csv",
+                    "text/csv",
+                    key="bud_dl_korea_theme",
+                )
 
 
 # ═════════════════════════════════════════════════════════════════════════════

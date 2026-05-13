@@ -36,6 +36,7 @@ from budget.agency_text_utils import (
 )
 from budget.canonical_series import _get_agencies_for_country
 from budget.llm_client import BudgetLLMClient
+from budget.manual_curation import is_locked_observation
 from budget.pdf_reader import extract_pages
 from budget.pipeline import load_config
 
@@ -229,6 +230,13 @@ def review_gaps(
     review_df = gap_df.copy()
     if only_action:
         review_df = review_df[review_df["action"] == only_action].copy()
+    if not review_df.empty:
+        review_df = review_df[
+            ~review_df.apply(
+                lambda r: is_locked_observation(country, str(r.get("canonical_name", "")), int(r.get("year"))),
+                axis=1,
+            )
+        ].copy()
     if limit:
         review_df = review_df.head(limit).copy()
 

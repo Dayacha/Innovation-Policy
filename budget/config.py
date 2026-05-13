@@ -1171,6 +1171,40 @@ COUNTRY_CONTEXT: dict[str, dict] = {
             "state-commissioned scientific research, and university science development/infrastructure lines. Keep broad ministry totals conservative."
         ),
     },
+    "Lithuania": {
+        "currency": "EUR",
+        "currency_symbol": "€",
+        "language": "lithuanian",
+        "ocr_langs": "lit+eng",
+        "ocr_zoom": 2.5,
+        "unit_hint": (
+            "ERA-DEPENDENT currency and usually FULL units. "
+            "(1) Pre-2015 budgets: Lithuanian litas (LTL / litų). Set currency='LTL', unit='unit'. "
+            "(2) 2015 onward: euro. Set currency='EUR', unit='unit'. "
+            "If the file explicitly says 'tūkst.' or another scale, follow the header; otherwise do NOT rescale."
+        ),
+        "known_agencies": [
+            "Švietimo ir mokslo ministerija / Švietimo, mokslo ir sporto ministerija",
+            "Valstybinė mokslo, studijų ir technologijų tarnyba",
+            "Mokslas ir studijos",
+            "Lietuvos mokslo taryba",
+            "Valstybinės mokslo ir studijų institucijos",
+            "Mokslinių tyrimų įstaigos",
+            "Ekonomikos ir inovacijų ministerija",
+        ],
+        "mixed_ministries": [
+            "Broad education ministry totals — too much teaching, student support, and administration mixed in",
+            "Student loan and study-loan lines",
+            "Sports, school-basket, and general education transfers",
+            "General innovation ministry / investment incentives without explicit research or technology-development content",
+        ],
+        "doc_type_hint": (
+            "Lithuanian annual budget law. The source family is mixed: some years contain rich programme tables, while others are short legal-wrapper texts. "
+            "Strong targets are science/studies programmes and explicitly named research institutions or funds. "
+            "Look for Mokslas ir studijos, Valstybinė mokslo, studijų ir technologijų tarnyba, Lietuvos mokslo taryba, "
+            "moksliniai tyrimai, and university or research-institute R&D earmarks. Keep broad ministry totals conservative."
+        ),
+    },
     "Israel": {
         "currency": "ILS",
         "currency_symbol": "₪",

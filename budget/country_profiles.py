@@ -578,7 +578,10 @@ COUNTRY_PROFILES: dict[str, dict] = {
     # -----------------------------------------------------------------------
     "New Zealand": {
         "skip_if": [
-            # Placeholder — add after running NZ documents
+            "Any line containing 'Development' but not also containing a science/research signal — too many non-R&D development programmes appear in NZ Appropriation Acts.",
+            "War pensions, housing development, regional development, and social development lines without a science/research signal.",
+            "Student support and generic tertiary-education lines unless the line explicitly names a research fund, science vote, or research institute.",
+            "Generic MBIE departmental administration lines without science/research content.",
         ],
         "include_note": [
             "Vote Science and Innovation is the primary R&D vote — all lines within it "
@@ -586,7 +589,23 @@ COUNTRY_PROFILES: dict[str, dict] = {
             "Crown Research Institute (CRI) operating funding is in-scope as science_agency.",
             "DSIR (Department of Scientific and Industrial Research) in early years "
             "is a dedicated research agency — include its operating appropriations.",
+            "Modern science funds explicitly named under Science, Innovation and Technology are in scope: Endeavour Fund, Health Research Fund, Marsden Fund, Partnered Research Fund, Catalyst Fund, and Callaghan Innovation.",
+            "Crown Research Institutes, NIWA, GNS, AgResearch, Plant and Food, and Callaghan Innovation operating appropriations are in scope when explicitly named.",
         ],
+        "year_notes": {
+            **{y: (
+                f"New Zealand {y}: early appropriations. Strong signals are DSIR and related Scientific and Industrial Research votes. "
+                "Do not confuse general 'Development' programmes with R&D."
+            ) for y in range(1975, 1993)},
+            **{y: (
+                f"New Zealand {y}: transition to Crown Research / Research, Science and Technology structure. "
+                "Look for Crown Research Institutes, FRST-like science funding, and named research appropriations."
+            ) for y in range(1993, 2015)},
+            **{y: (
+                f"New Zealand {y}: modern Vote Science, Innovation and Technology era. "
+                "Strong targets: MBIE science vote, Endeavour Fund, Marsden Fund, Health Research Fund, Partnered Research Fund, Catalyst Fund, and Callaghan Innovation."
+            ) for y in range(2015, 2026)},
+        },
     },
 
     # -----------------------------------------------------------------------
@@ -2024,6 +2043,36 @@ COUNTRY_PROFILES: dict[str, dict] = {
                 f"Latvia {y}: many files are short legal-wrapper budgets with only selected earmarks visible. "
                 "Extract explicit science earmarks and programme lines, but expect lower yield than the 1997–2013 detailed programme-table era."
             ) for y in range(2014, 2026)},
+        },
+    },
+    "Lithuania": {
+        "skip_if": [
+            "Broad Švietimo ir mokslo ministerija / Švietimo, mokslo ir sporto ministerija totals — the ministry includes education, student loans, and non-R&D operations.",
+            "Moksleivio krepšelis / school basket / general school-financing lines.",
+            "Student loan, study loan, and tuition-support lines without explicit research content.",
+            "Generic innovation or investment-support lines unless they explicitly mention research, technology development, or science institutions.",
+            "General university operating or student-transfer lines without explicit scientific research wording.",
+        ],
+        "include_note": [
+            "Mokslas ir studijos / science and studies programme lines are in scope when clearly budgeted.",
+            "Valstybinė mokslo, studijų ir technologijų tarnyba and Lietuvos mokslo taryba are in scope when explicitly named.",
+            "Mokslinių tyrimų įstaigoms numatyti asignavimai, state-commissioned research, and fundamental/basic research lines are core R&D.",
+            "University and institute lines are in scope only when explicitly for research activity, scientific infrastructure, or research institutions.",
+            "Pre-2015 usually means full LTL units; 2015+ usually means full EUR units unless the header says otherwise.",
+        ],
+        "year_notes": {
+            **{y: (
+                f"Lithuania {y}: transition-era budget. Some files are detailed tables, others much thinner. "
+                "Prioritise explicit science/studies programmes, research institutions, and state-commissioned research lines."
+            ) for y in range(1991, 2005)},
+            **{y: (
+                f"Lithuania {y}: mixed era. Richer programme tables appear in some years, but many lines still combine higher education and research. "
+                "Extract only explicit research, science, technology, or research-institution rows."
+            ) for y in range(2005, 2015)},
+            **{y: (
+                f"Lithuania {y}: modern legal-wrapper tendency. Expect many education-and-science ministry references but fewer direct R&D rows. "
+                "Keep to explicit research, technology-development, or named science-institution appropriations."
+            ) for y in range(2015, 2026)},
         },
     },
     "Israel": {

@@ -10,6 +10,7 @@ import streamlit as st
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 BUDGET_DATABASE          = PROJECT_ROOT / "Data/output/budget/rd_database.csv"
+KOREA_THEME_PANEL        = PROJECT_ROOT / "Data/output/budget/Korea/korea_theme_panel.csv"
 # Legacy paths (old rule-based pipeline — kept for reference only)
 BUDGET_RESULTS_AI            = PROJECT_ROOT / "Data/output/budget/results_ai_verified.csv"
 BUDGET_RESULTS_REVIEW_STATUS = PROJECT_ROOT / "Data/output/budget/results_review_status.csv"
@@ -286,10 +287,16 @@ ORIENTATION_LABELS = {
 
 # ── Data loaders ──────────────────────────────────────────────────────────────
 
-@st.cache_data
-def load_budget():
-    """Load the R&D budget database from the budget pipeline."""
+def _budget_database_mtime() -> float | None:
     if not BUDGET_DATABASE.exists():
+        return None
+    return BUDGET_DATABASE.stat().st_mtime
+
+
+@st.cache_data
+def _load_budget_cached(_mtime: float | None):
+    """Load the R&D budget database from the budget pipeline."""
+    if _mtime is None or not BUDGET_DATABASE.exists():
         return pd.DataFrame()
 
     df = pd.read_csv(BUDGET_DATABASE)
@@ -314,6 +321,28 @@ def load_budget():
         if col not in df.columns:
             df[col] = None
 
+    return df
+
+
+def load_budget():
+    return _load_budget_cached(_budget_database_mtime())
+
+
+@st.cache_data
+def load_korea_theme_panel():
+    """Load the Korea-only thematic R&D panel when available."""
+    if not KOREA_THEME_PANEL.exists():
+        return pd.DataFrame()
+
+    df = pd.read_csv(KOREA_THEME_PANEL)
+    for col in ("year", "page_number"):
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+    if "amount_local" in df.columns:
+        df["amount_local"] = pd.to_numeric(df["amount_local"], errors="coerce")
+    if "year" in df.columns:
+        df = df.dropna(subset=["year"]).copy()
+        df["year"] = df["year"].astype(int)
     return df
 
 

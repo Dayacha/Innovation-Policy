@@ -29,6 +29,7 @@ import pandas as pd
 from budget import config as cfg
 from budget.canonical_series import build_totals_series
 from budget.compile import build_combined_database
+from budget.manual_curation import is_locked_observation
 
 logger = logging.getLogger(__name__)
 
@@ -104,6 +105,11 @@ def apply_gap_review(
             "skip_reason": "",
             "match_reason": "",
         }
+
+        if is_locked_observation(country, canonical_name, year):
+            audit["skip_reason"] = "locked_manual_curation"
+            audit_rows.append(audit)
+            continue
 
         if verdict not in {"correct", "drop"}:
             audit["skip_reason"] = "verdict_not_actionable"

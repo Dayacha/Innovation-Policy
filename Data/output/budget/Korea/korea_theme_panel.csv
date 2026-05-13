@@ -1,0 +1,19 @@
+country,year,theme_bucket,theme_label,source_amount_display,amount_local,currency,unit,source_unit,source_file,page_number,comparability_note
+Korea,2019,AI / Data Economy,Data / AI economy,"10,493억원",1049300000.0,KRW,thousand,억원,2019년도 예산안 개요.pdf,27,"Broad thematic subtotal from a budget-summary table; useful for theme tracking, not a ministry appropriation."
+Korea,2022,Quantum / 6G,Quantum / 6G-related R&D,927억원,92700000.0,KRW,thousand,억원,3. 2022년 예산안.pdf,101,Combined next-generation communications and quantum subtotal from the 2022 frontier-strategy section.
+Korea,2022,Semiconductor,BIG3+ semiconductor-related R&D,0.4조원,400000000.0,KRW,thousand,조원,3. 2022년 예산안.pdf,100,Broad semiconductor theme from the 2022 R&D field summary; not directly comparable to narrower project lines.
+Korea,2022,Space,Space-related R&D,0.64조원,640000000.0,KRW,thousand,조원,3. 2022년 예산안.pdf,101,Broad space subtotal from the 2022 frontier-strategy section.
+Korea,2022,Strategic Technology,Future industry strategic R&D investment,6.2조원,6200000000.0,KRW,thousand,조원,3. 2022년 예산안.pdf,49,Broad strategic-technology subtotal from the 2022 R&D summary pages.
+Korea,2023,Future Mobility,Future mobility,"7,846억원",784600000.0,KRW,thousand,억원,2. 2023년 예산안 홍보자료★.pdf,33,Explicit future-mobility subtotal from the 2023 strategic-technology table.
+Korea,2023,Quantum / 5G / 6G,5G / 6G / quantum,"2,952억원",295200000.0,KRW,thousand,억원,2. 2023년 예산안 홍보자료★.pdf,33,Combined communications-and-quantum subtotal from the 2023 strategic-technology table.
+Korea,2023,Semiconductor,Semiconductor,"6,098억원",609800000.0,KRW,thousand,억원,2. 2023년 예산안 홍보자료★.pdf,33,Explicit semiconductor subtotal from the 2023 strategic-technology table.
+Korea,2023,Strategic Technology,Core strategic technologies,"45,123억원",4512300000.0,KRW,thousand,억원,2. 2023년 예산안 홍보자료★.pdf,33,Broad strategic-technology subtotal from an audited table in the 2023 budget brief.
+Korea,2024,AI,AI-related projects,"12,028억원",1202800000.0,KRW,thousand,억원,2. 2024년  예산안 홍보자료.pdf,29,Explicit theme subtotal from the 2024 advanced-services table.
+Korea,2024,Bio,Bio-related projects,"19,442억원",1944200000.0,KRW,thousand,억원,2. 2024년  예산안 홍보자료.pdf,29,Explicit theme subtotal from the 2024 advanced-services table.
+Korea,2024,Cyber Security,Cyber security projects,"3,656억원",365600000.0,KRW,thousand,억원,2. 2024년  예산안 홍보자료.pdf,29,Explicit theme subtotal from the 2024 advanced-services table.
+Korea,2024,Digital Platform Government,Digital platform government projects,"9,262억원",926200000.0,KRW,thousand,억원,2. 2024년  예산안 홍보자료.pdf,29,Explicit theme subtotal from the 2024 advanced-services table.
+Korea,2025,3 Game Changers,Three game changers,"35,446억원",3544600000.0,KRW,thousand,억원,2. 2025 예산안 홍보자료.pdf,20,Explicit game-changer subtotal from the 2025 R&D reform table.
+Korea,2025,AI,AI-related R&D,1.2조원,1200000000.0,KRW,thousand,조원,2. 2025 예산안 홍보자료.pdf,50,Broad AI subtotal from the 2025 3-game-changer summary.
+Korea,2025,Bio,Bio-related R&D,2.1조원,2100000000.0,KRW,thousand,조원,2. 2025 예산안 홍보자료.pdf,50,Broad bio subtotal from the 2025 3-game-changer summary.
+Korea,2025,Quantum,Quantum-related R&D,0.20조원,200000000.0,KRW,thousand,조원,2. 2025 예산안 홍보자료.pdf,50,Broad quantum subtotal from the 2025 3-game-changer summary.
+Korea,2025,Strategic Technology,National strategic technologies / future challenge,7.1조원,7100000000.0,KRW,thousand,조원,2. 2025 예산안 홍보자료.pdf,50,Broad strategic-technology subtotal from the 2025 R&D field summary.

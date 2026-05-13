@@ -14,6 +14,15 @@ _DEFENCE_POLICE = re.compile(r"aizsardzības akadēm|aizsardzibas akadem|policij
 _HOSPITAL = re.compile(r"universitātes slimnī|universitates slimni|klīniskā universitātes slimnī|kliniska univers", re.IGNORECASE)
 _SPORTS_CREDIT = re.compile(r"\bsports\b|studiju kred|studējošo kred|studentu kred", re.IGNORECASE)
 _SECTION_TOTAL = re.compile(r"ministrija\s*[—-]\s*(kopā|kopa)|\bkopā\b|\bkopa\b", re.IGNORECASE)
+_FINANCE_FLOW = re.compile(
+    r"resursi izdevumu segšanai|total revenue|ieņēmumi|grant from general revenues|subsidy from general revenue|"
+    r"subsidy from general revenues|dotācija no vispārējiem ieņēmumiem|maksas pakalpojumi|paid services and other own revenues|"
+    r"foreign financial assistance|ārvalstu finanšu palīdzība|maintenance expenditures|uzturēšanas izdevumi|"
+    r"current expenditures|kārtējie izdevumi|compensation|atlīdzība|goods and services|preces un pakalpojumi|"
+    r"total liabilities|state basic budget|valsts pamatbudžets|resources for expenditure coverage - total|expenditure - total",
+    re.IGNORECASE,
+)
+_NON_RD_SPECIAL = re.compile(r"tiesu ekspert|judicial expertise|patent office|patentu valde", re.IGNORECASE)
 
 
 def _note(df: pd.DataFrame, mask: pd.Series, text: str) -> None:
@@ -47,11 +56,22 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
         df.loc[sports_credit, "decision"] = "review"
         _note(df, sports_credit, "[latvia_sports_credit_non_rd]")
 
+    non_rd_special = desc.str.contains(_NON_RD_SPECIAL, regex=True)
+    if non_rd_special.any():
+        df.loc[non_rd_special, "decision"] = "review"
+        df.loc[non_rd_special, "aggregation_role"] = "non_rd"
+        _note(df, non_rd_special, "[latvia_non_rd_special]")
+
     section = desc.str.contains(_SECTION_TOTAL, regex=True)
     if "item_type" in df.columns:
         section = section | df["item_type"].eq("section_total")
     if section.any():
         df.loc[section, "aggregation_role"] = df.loc[section, "aggregation_role"].replace("", "section")
         _note(df, section, "[latvia_section_total]")
+
+    finance_flow = desc.str.contains(_FINANCE_FLOW, regex=True)
+    if finance_flow.any():
+        df.loc[finance_flow, "aggregation_role"] = "redundant"
+        _note(df, finance_flow, "[latvia_finance_flow_redundant]")
 
     return df.reset_index(drop=True)

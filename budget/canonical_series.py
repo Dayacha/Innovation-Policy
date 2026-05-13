@@ -41,6 +41,8 @@ from typing import Optional
 
 import pandas as pd
 
+from budget.manual_curation import get_locked_series_entries
+
 logger = logging.getLogger(__name__)
 
 __all__ = ["build_canonical_series", "CANONICAL_AGENCIES"]
@@ -50,6 +52,7 @@ _OUTPUT_UNIT_BY_CURRENCY = {
     "CAD": "dollar",
     "NZD": "dollar",
     "USD": "dollar",
+    "HUF": "forint",
     "JPY": "yen",
     "EUR": "euro",
     "DEM": "mark",
@@ -234,6 +237,683 @@ _ESTONIA_VERIFIED_OVERRIDES: dict[int, dict[str, tuple[float, int, str, str]]] =
             "2025 123122024014.pdf",
         ),
     },
+}
+_HUNGARY_VERIFIED_OVERRIDES: dict[int, dict[str, tuple[float, int | None, str, str]]] = {
+    1992: {
+        "Hungarian Academy of Sciences (MTA)": (
+            6_860_900_000.0,
+            65,
+            "HUF",
+            "1992 1991. évi XCI. törvény.pdf",
+        ),
+    },
+    1993: {
+        "Hungarian Academy of Sciences (MTA)": (
+            6_745_600_000.0,
+            None,
+            "HUF",
+            "1993 1992. évi LXXX. törvény.pdf",
+        ),
+    },
+    1994: {
+        "Hungarian Academy of Sciences (MTA)": (
+            6_598_300_000.0,
+            None,
+            "HUF",
+            "1994 1993. évi CXI. törvény.pdf",
+        ),
+    },
+    1995: {
+        "Hungarian Academy of Sciences (MTA)": (
+            10_081_500_000.0,
+            None,
+            "HUF",
+            "1995 1994. évi CIV. törvény.pdf",
+        ),
+    },
+    1996: {
+        "Hungarian Academy of Sciences (MTA)": (
+            10_933_700_000.0,
+            None,
+            "HUF",
+            "1996 1995. évi CXXI. törvény.pdf",
+        ),
+    },
+    1997: {
+        "Hungarian Academy of Sciences (MTA)": (
+            13_431_600_000.0,
+            132,
+            "HUF",
+            "1997 1996. évi CXXIV. törvény.pdf",
+        ),
+    },
+    1998: {
+        "Hungarian Academy of Sciences (MTA)": (
+            16_123_600_000.0,
+            143,
+            "HUF",
+            "1998 1997. évi CXLVI. törvény.pdf",
+        ),
+    },
+    1999: {
+        "Hungarian Academy of Sciences (MTA)": (
+            26_383_000_000.0,
+            None,
+            "HUF",
+            "1999 (1998). évi XC. törvény.pdf",
+        ),
+    },
+    2001: {
+        "Hungarian Academy of Sciences (MTA)": (
+            33_159_400_000.0,
+            None,
+            "HUF",
+            "2001-2002  2000. évi CXXXIII. törvény.pdf",
+        ),
+    },
+    2005: {
+        "Hungarian Academy of Sciences (MTA)": (
+            47_370_000_000.0,
+            None,
+            "HUF",
+            "2005 2004. évi CXXXV. törvény.pdf",
+        ),
+    },
+    2007: {
+        "Hungarian Academy of Sciences (MTA)": (
+            50_063_000_000.0,
+            None,
+            "HUF",
+            "2007  2006. évi CXXVII. törvény.pdf",
+        ),
+    },
+    2010: {
+        "Hungarian Academy of Sciences (MTA)": (
+            48_372_800_000.0,
+            None,
+            "HUF",
+            "2010 MK_09_179.pdf",
+        ),
+        "Research and Technological Innovation Fund": (
+            43_695_900_000.0,
+            123,
+            "HUF",
+            "pdf_4e5ee92e2c1d__2010_MK_09_179.txt",
+        ),
+    },
+    2011: {
+        "Hungarian Academy of Sciences (MTA)": (
+            51_505_800_000.0,
+            None,
+            "HUF",
+            "2011 MK_10_200.pdf",
+        ),
+        "Research and Technological Innovation Fund": (
+            45_977_900_000.0,
+            0,
+            "HUF",
+            "pdf_fc70ccc08085__2011_MK_10_200.txt",
+        ),
+        "INTERREG IVC Programme": (
+            2_777_000_000.0,
+            0,
+            "HUF",
+            "pdf_fc70ccc08085__2011_MK_10_200.txt",
+        ),
+    },
+    2012: {
+        "Hungarian Academy of Sciences (MTA)": (
+            57_483_100_000.0,
+            None,
+            "HUF",
+            "2012 MK_161.pdf",
+        ),
+        "Research and Technological Innovation Fund": (
+            45_200_000_000.0,
+            0,
+            "HUF",
+            "pdf_ec2d2781b7dc__2012_MK_161.txt",
+        ),
+        "INTERREG IVC Programme": (
+            1_469_000_000.0,
+            0,
+            "HUF",
+            "pdf_ec2d2781b7dc__2012_MK_161.txt",
+        ),
+    },
+    2013: {
+        "Hungarian Academy of Sciences (MTA)": (
+            59_109_500_000.0,
+            None,
+            "HUF",
+            "2013 MK_12_172.pdf",
+        ),
+        "MTA Library and Information Centre": (
+            1_426_000_000.0,
+            0,
+            "HUF",
+            "pdf_809afb5be165__2013_MK_12_172.txt",
+        ),
+        "Research and Technological Innovation Fund": (
+            37_664_500_000.0,
+            0,
+            "HUF",
+            "pdf_809afb5be165__2013_MK_12_172.txt",
+        ),
+        "INTERREG IVC Programme": (
+            5_417_000_000.0,
+            0,
+            "HUF",
+            "pdf_809afb5be165__2013_MK_12_172.txt",
+        ),
+    },
+    2014: {
+        "Hungarian Academy of Sciences (MTA)": (
+            63_203_500_000.0,
+            None,
+            "HUF",
+            "2014 MK_13_216.pdf",
+        ),
+        "MTA Library and Information Centre": (
+            1_426_000_000.0,
+            0,
+            "HUF",
+            "pdf_5bc63b673739__2014_MK_13_216.txt",
+        ),
+        "Research and Technological Innovation Fund": (
+            35_357_600_000.0,
+            0,
+            "HUF",
+            "pdf_5bc63b673739__2014_MK_13_216.txt",
+        ),
+        "INTERREG IVC Programme": (
+            1_503_000_000.0,
+            0,
+            "HUF",
+            "pdf_5bc63b673739__2014_MK_13_216.txt",
+        ),
+    },
+    2015: {
+        "Hungarian Academy of Sciences (MTA)": (
+            56_318_100_000.0,
+            None,
+            "HUF",
+            "2015 MK_14_184.pdf",
+        ),
+        "MTA Library and Information Centre": (
+            1_426_000_000.0,
+            0,
+            "HUF",
+            "pdf_e3a7a139c79d__2015_MK_14_184.txt",
+        ),
+        "INTERREG IVC Programme": (
+            1_357_900_000.0,
+            187,
+            "HUF",
+            "pdf_e3a7a139c79d__2015_MK_14_184.txt",
+        ),
+        "National Research, Development and Innovation Fund (Hungary)": (
+            77_951_600_000.0,
+            187,
+            "HUF",
+            "pdf_e3a7a139c79d__2015_MK_14_184.txt",
+        ),
+    },
+    2016: {
+        "Hungarian Academy of Sciences (MTA)": (
+            56_194_800_000.0,
+            152,
+            "HUF",
+            "2016 MK_15_097.pdf",
+        ),
+        "MTA Library and Information Centre": (
+            1_426_000_000.0,
+            0,
+            "HUF",
+            "pdf_a5ef93808955__2016_MK_15_097.txt",
+        ),
+        "National Research, Development and Innovation Fund (Hungary)": (
+            79_451_600_000.0,
+            0,
+            "HUF",
+            "pdf_a5ef93808955__2016_MK_15_097.txt",
+        ),
+    },
+    2017: {
+        "Hungarian Academy of Sciences (MTA)": (
+            68_945_500_000.0,
+            91,
+            "HUF",
+            "2017 MK_16_091.pdf",
+        ),
+        "MTA Library and Information Centre": (
+            1_426_000_000.0,
+            0,
+            "HUF",
+            "pdf_8de59207bc3d__2017_MK_16_091.txt",
+        ),
+        "National Research, Development and Innovation Fund (Hungary)": (
+            78_915_000_000.0,
+            90,
+            "HUF",
+            "pdf_8de59207bc3d__2017_MK_16_091.txt",
+        ),
+    },
+    2018: {
+        "Hungarian Academy of Sciences (MTA)": (
+            62_611_700_000.0,
+            100,
+            "HUF",
+            "2018 MK_17_100.pdf",
+        ),
+        "MTA Library and Information Centre": (
+            1_950_000_000.0,
+            0,
+            "HUF",
+            "pdf_3efc4efd2e1c__2018_MK_17_100.txt",
+        ),
+        "National Research, Development and Innovation Fund (Hungary)": (
+            82_073_000_000.0,
+            155,
+            "HUF",
+            "pdf_3efc4efd2e1c__2018_MK_17_100.txt",
+        ),
+    },
+    2019: {
+        "Hungarian Academy of Sciences (MTA)": (
+            56_146_500_000.0,
+            84,
+            "HUF",
+            "2019 MK_18_123.pdf",
+        ),
+        "MTA Library and Information Centre": (
+            1_950_000_000.0,
+            85,
+            "HUF",
+            "pdf_17c40a8f2c21__2019_MK_18_123.txt",
+        ),
+        "National Research, Development and Innovation Fund (Hungary)": (
+            78_587_000_000.0,
+            85,
+            "HUF",
+            "pdf_17c40a8f2c21__2019_MK_18_123.txt",
+        ),
+    },
+    2020: {
+        "Hungarian Academy of Sciences (MTA)": (
+            17_184_900_000.0,
+            59,
+            "HUF",
+            "2020 MK_19_128.pdf",
+        ),
+        "MTA Library and Information Centre": (
+            1_950_000_000.0,
+            0,
+            "HUF",
+            "pdf_779604bc932b__2020_MK_19_128.txt",
+        ),
+        "Eötvös Loránd Research Network": (
+            48_228_800_000.0,
+            78,
+            "HUF",
+            "pdf_779604bc932b__2020_MK_19_128.txt",
+        ),
+        "National Research, Development and Innovation Fund (Hungary)": (
+            137_812_200_000.0,
+            71,
+            "HUF",
+            "pdf_779604bc932b__2020_MK_19_128.txt",
+        ),
+    },
+    2021: {
+        "Hungarian Academy of Sciences (MTA)": (
+            17_134_400_000.0,
+            40,
+            "HUF",
+            "2021 MK_20_170.pdf",
+        ),
+        "MTA Library and Information Centre": (
+            1_950_000_000.0,
+            0,
+            "HUF",
+            "pdf_c349f811a655__2021_MK_20_170.txt",
+        ),
+        "Eötvös Loránd Research Network": (
+            70_666_400_000.0,
+            59,
+            "HUF",
+            "pdf_c349f811a655__2021_MK_20_170.txt",
+        ),
+        "National Research, Development and Innovation Fund (Hungary)": (
+            137_812_200_000.0,
+            71,
+            "HUF",
+            "pdf_c349f811a655__2021_MK_20_170.txt",
+        ),
+    },
+    2022: {
+        "Hungarian Academy of Sciences (MTA)": (
+            28_765_700_000.0,
+            53,
+            "HUF",
+            "2022 MK_21_120.pdf",
+        ),
+        "MTA Library and Information Centre": (
+            1_950_000_000.0,
+            0,
+            "HUF",
+            "pdf_fe4092e4966b__2022_MK_21_120.txt",
+        ),
+        "Eötvös Loránd Research Network": (
+            66_122_200_000.0,
+            62,
+            "HUF",
+            "pdf_fe4092e4966b__2022_MK_21_120.txt",
+        ),
+        "National Research, Development and Innovation Fund (Hungary)": (
+            143_946_900_000.0,
+            73,
+            "HUF",
+            "pdf_fe4092e4966b__2022_MK_21_120.txt",
+        ),
+    },
+    2023: {
+        "Hungarian Academy of Sciences (MTA)": (
+            30_566_400_000.0,
+            74,
+            "HUF",
+            "2023 MK_22_127.pdf",
+        ),
+        "MTA Library and Information Centre": (
+            1_950_000_000.0,
+            0,
+            "HUF",
+            "pdf_8328edd9fb03__2023_MK_22_127.txt",
+        ),
+        "Eötvös Loránd Research Network": (
+            67_001_700_000.0,
+            125,
+            "HUF",
+            "pdf_8328edd9fb03__2023_MK_22_127.txt",
+        ),
+        "National Research, Development and Innovation Fund (Hungary)": (
+            172_762_400_000.0,
+            135,
+            "HUF",
+            "pdf_8328edd9fb03__2023_MK_22_127.txt",
+        ),
+    },
+    2024: {
+        "Hungarian Academy of Sciences (MTA)": (
+            30_706_800_000.0,
+            41,
+            "HUF",
+            "2024 MK_23_104.pdf",
+        ),
+        "MTA Library and Information Centre": (
+            1_950_000_000.0,
+            0,
+            "HUF",
+            "pdf_862d254bf1e1__2024_MK_23_104.txt",
+        ),
+        "Hungarian Research Network": (
+            66_091_600_000.0,
+            71,
+            "HUF",
+            "pdf_862d254bf1e1__2024_MK_23_104.txt",
+        ),
+        "National Research, Development and Innovation Fund (Hungary)": (
+            154_118_800_000.0,
+            83,
+            "HUF",
+            "pdf_862d254bf1e1__2024_MK_23_104.txt",
+        ),
+    },
+    2025: {
+        "Hungarian Academy of Sciences (MTA)": (
+            37_063_700_000.0,
+            43,
+            "HUF",
+            "2025 MK_24_136.pdf",
+        ),
+        "MTA Library and Information Centre": (
+            1_950_000_000.0,
+            0,
+            "HUF",
+            "pdf_ad532cad1ed4__2025_MK_24_136.txt",
+        ),
+        "Hungarian Research Network": (
+            73_579_100_000.0,
+            77,
+            "HUF",
+            "pdf_ad532cad1ed4__2025_MK_24_136.txt",
+        ),
+        "National Research, Development and Innovation Fund (Hungary)": (
+            137_127_400_000.0,
+            86,
+            "HUF",
+            "pdf_ad532cad1ed4__2025_MK_24_136.txt",
+        ),
+    },
+}
+
+_KOREA_VERIFIED_DROPS: set[tuple[int, str]] = {
+    (2019, "Ministry of Science and ICT (Korea)"),
+    (2021, "Ministry of Science and ICT (Korea)"),
+    (2022, "Ministry of Science and ICT (Korea)"),
+    (2018, "Strategic Technology R&D Programmes (Korea)"),
+    (2019, "Strategic Technology R&D Programmes (Korea)"),
+    (2021, "Strategic Technology R&D Programmes (Korea)"),
+    (2024, "Strategic Technology R&D Programmes (Korea)"),
+}
+
+_KOREA_VERIFIED_OVERRIDES: dict[int, dict[str, tuple[float, int, str, str]]] = {
+    2018: {
+        "National R&D Programmes (Korea)": (
+            19_633_800_000.0,
+            55,
+            "KRW",
+            "2018년도 예산안 개요.pdf",
+        ),
+        "Strategic Technology R&D Programmes (Korea)": (
+            1_400_000_000.0,
+            28,
+            "KRW",
+            "2018년도 예산안 개요.pdf",
+        ),
+    },
+    2019: {
+        "National R&D Programmes (Korea)": (
+            20_400_000_000.0,
+            6,
+            "KRW",
+            "2019년도 예산안 개요.pdf",
+        ),
+        "Strategic Technology R&D Programmes (Korea)": (
+            1_513_700_000.0,
+            27,
+            "KRW",
+            "2019년도 예산안 개요.pdf",
+        ),
+    },
+    2021: {
+        "National R&D Programmes (Korea)": (
+            27_400_000_000.0,
+            17,
+            "KRW",
+            "7. 2021-2025년 국가재정운용계획 주요내용.pdf",
+        ),
+    },
+    2022: {
+        "Ministry of Science and ICT (Korea)": (
+            9_626_200_000.0,
+            101,
+            "KRW",
+            "3. 2022년 예산안.pdf",
+        ),
+        "National R&D Programmes (Korea)": (
+            29_800_000_000.0,
+            8,
+            "KRW",
+            "3. 2022년 예산안.pdf",
+        ),
+        "Strategic Technology R&D Programmes (Korea)": (
+            6_200_000_000.0,
+            49,
+            "KRW",
+            "3. 2022년 예산안.pdf",
+        ),
+    },
+    2023: {
+        "Ministry of Science and ICT (Korea)": (
+            9_977_500_000.0,
+            60,
+            "KRW",
+            "2. 2023년 예산안 홍보자료★.pdf",
+        ),
+        "National R&D Programmes (Korea)": (
+            30_700_000_000.0,
+            9,
+            "KRW",
+            "2. 2023년 예산안 홍보자료★.pdf",
+        ),
+        "Strategic Technology R&D Programmes (Korea)": (
+            4_512_300_000.0,
+            33,
+            "KRW",
+            "2. 2023년 예산안 홍보자료★.pdf",
+        ),
+    },
+    2024: {
+        "Ministry of Science and ICT (Korea)": (
+            9_076_800_000.0,
+            55,
+            "KRW",
+            "2. 2024년  예산안 홍보자료.pdf",
+        ),
+        "National R&D Programmes (Korea)": (
+            25_900_000_000.0,
+            7,
+            "KRW",
+            "2. 2024년  예산안 홍보자료.pdf",
+        ),
+        "Strategic Technology R&D Programmes (Korea)": (
+            5_000_000_000.0,
+            19,
+            "KRW",
+            "2. 2024년  예산안 홍보자료.pdf",
+        ),
+    },
+    2025: {
+        "Ministry of Science and ICT (Korea)": (
+            10_911_200_000.0,
+            51,
+            "KRW",
+            "2. 2025 예산안 홍보자료.pdf",
+        ),
+        "National R&D Programmes (Korea)": (
+            29_700_000_000.0,
+            6,
+            "KRW",
+            "2. 2025 예산안 홍보자료.pdf",
+        ),
+        "Strategic Technology R&D Programmes (Korea)": (
+            3_544_600_000.0,
+            20,
+            "KRW",
+            "2. 2025 예산안 홍보자료.pdf",
+        ),
+    },
+}
+
+_ISRAEL_VERIFIED_DROPS: set[tuple[int, str]] = {
+    # 2013 space row surviving today is pulled from the 2014 half of the
+    # biannual budget file. Do not keep it as a 2013 observation.
+    (2013, "Israeli Space Agency (סוכנות החלל הישראלית)"),
+    # 2019 ministry match currently comes from a noisy OCR summary page rather
+    # than a clean ministry table.
+    (2019, "Ministry of Science and Technology (Israel)"),
+}
+
+_ISRAEL_VERIFIED_OVERRIDES: dict[int, dict[str, tuple[float, int, str, str]]] = {
+    2011: {
+        "Ministry of Science and Technology (Israel)": (
+            1_400_000_000.0,
+            200,
+            "ILS",
+            "2011-2012_Israel.pdf",
+        ),
+    },
+    1980: {
+        "National Council for R&D (Israel, pre-1992)": (
+            604_700_000_000.0,
+            97,
+            "ILS_OLD",
+            "1980_Israel.pdf",
+        ),
+    },
+    1981: {
+        "National Council for R&D (Israel, pre-1992)": (
+            1_000_000_000_000.0,
+            27,
+            "ILS_OLD",
+            "1981_Israel.pdf",
+        ),
+    },
+    1982: {
+        "National Council for R&D (Israel, pre-1992)": (
+            749_000_000_000.0,
+            102,
+            "ILS_OLD",
+            "1982_Israel.pdf",
+        ),
+    },
+    1983: {
+        "National Council for R&D (Israel, pre-1992)": (
+            156_300_000_000.0,
+            11,
+            "ILS_OLD",
+            "1983_Israel.pdf",
+        ),
+    },
+    1984: {
+        "National Council for R&D (Israel, pre-1992)": (
+            411_000_000_000.0,
+            12,
+            "ILS_OLD",
+            "1984_Israel.pdf",
+        ),
+    },
+    2013: {
+        "Ministry of Science and Technology (Israel)": (
+            1_117_322_000.0,
+            28,
+            "ILS",
+            "2013-2014_Israel.pdf",
+        ),
+    },
+    2015: {
+        "Ministry of Science and Technology (Israel)": (
+            1_361_253_000.0,
+            31,
+            "ILS",
+            "2015-2016_Israel.pdf",
+        ),
+    },
+    2025: {
+        "Israel Innovation Authority (from 2016)": (
+            2_008_207_000.0,
+            48,
+            "ILS",
+            "2025_Israel.pdf",
+        ),
+    },
+}
+
+_KOREA_CANONICAL_NOTES: dict[str, str] = {
+    "Ministry of Science and ICT (Korea)": "",
+    "National R&D Programmes (Korea)": "Programmatic canonical for summary-style budget sources; not an institutional series.",
+    "Strategic Technology R&D Programmes (Korea)": "Theme-level canonical for strategic R&D programmes in Korean budget briefs.",
 }
 _UK_GENERIC_DISCOVERED_PATTERNS = [
     re.compile(r"\bfund(?:ing)?\b", re.IGNORECASE),
@@ -1383,6 +2063,402 @@ _CHILE_VERIFIED_OVERRIDES: dict[int, dict[str, tuple[float, int, str, str]]] = {
     },
 }
 
+_COSTA_RICA_VERIFIED_OVERRIDES: dict[int, dict[str, tuple]] = {
+    2010: {
+        "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)": (
+            751_503_500.0,
+            96,
+            "CRC",
+            "pdf_4c260828c63b__2010_Ley_de_presupuesto.txt",
+        ),
+        "INCIENSA (health and nutrition research)": (
+            154_500_000.0,
+            89,
+            "CRC",
+            "pdf_4c260828c63b__2010_Ley_de_presupuesto.txt",
+            "operating transfer on page 89",
+        ),
+        "UCR (Universidad de Costa Rica)": (
+            13_100_000.0,
+            97,
+            "CRC",
+            "pdf_4c260828c63b__2010_Ley_de_presupuesto.txt",
+            "convenio CITA/MAG/UCR/MICIT operating transfer on page 97",
+        ),
+    },
+    2011: {
+        "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)": (
+            11_805_900.0,
+            429,
+            "CRC",
+            "pdf_2cd269e29d69__2011_Ley_de_presupuesto.txt",
+            "ordinary annual quota on page 429",
+        ),
+        "INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria)": (
+            12_387_747_000.0,
+            440,
+            "CRC",
+            "pdf_2cd269e29d69__2011_Ley_de_presupuesto.txt",
+        ),
+        "UCR (Universidad de Costa Rica)": (
+            5_900_000.0,
+            428,
+            "CRC",
+            "pdf_2cd269e29d69__2011_Ley_de_presupuesto.txt",
+            "sede regional limon transfer on page 428",
+        ),
+    },
+    2012: {},
+    2013: {
+        "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)": (
+            26_000_000.0,
+            144,
+            "CRC",
+            "pdf_2ca1f7962cd2__2013_Tomo2_Ley_de_presupuesto.txt",
+        ),
+        "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)": (
+            876_300_000.0,
+            96,
+            "CRC",
+            "pdf_aa090ab603b8__2013_Tomo5_Ley_de_presupuesto.txt",
+            "fondo de incentivos transfer on tomo 5 page 96",
+        ),
+        "INCIENSA (health and nutrition research)": (
+            3_246_436_000.0,
+            28,
+            "CRC",
+            "pdf_676af6f56c56__2013_Tomo4_Ley_de_presupuesto.txt",
+        ),
+        "INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria)": (
+            4_043_611_000.0,
+            161,
+            "CRC",
+            "pdf_2ca1f7962cd2__2013_Tomo2_Ley_de_presupuesto.txt",
+            "program total for investigacion agropecuaria on tomo 2 page 161; replaces prior double-counted summary",
+        ),
+        "UCR (Universidad de Costa Rica)": (
+            47_300_000.0,
+            96,
+            "CRC",
+            "pdf_2ca1f7962cd2__2013_Tomo2_Ley_de_presupuesto.txt; pdf_aa090ab603b8__2013_Tomo5_Ley_de_presupuesto.txt",
+            "sum of sede regional limon transfer 6,400,000 on tomo 2 page 151 and convenio CITA-MAG transfer 40,900,000 on tomo 5 page 96",
+        ),
+    },
+    2014: {
+        "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)": (
+            642_232_000.0,
+            89,
+            "CRC",
+            "pdf_4f4ae1d3c84d__2014_Tomo5_Ley_de_presupuesto.txt",
+        ),
+        "INCIENSA (health and nutrition research)": (
+            3_821_328_000.0,
+            22,
+            "CRC",
+            "pdf_286dfbab2290__2014_Tomo4_Ley_de_presupuesto.txt",
+        ),
+        "UCR (Universidad de Costa Rica)": (
+            163_550_000.0,
+            89,
+            "CRC",
+            "pdf_4f4ae1d3c84d__2014_Tomo5_Ley_de_presupuesto.txt",
+            "sum of convenio CITA-MAG transfer 40,900,000 and convenio CITA/MAG/UCR/MICIT transfer 122,650,000 on tomo 5 page 89",
+        ),
+    },
+    2017: {
+        "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)": (
+            27_510_000.0,
+            363,
+            "CRC",
+            "pdf_b7628d47c028__2017_Tomo1_Ley_de_presupuesto.txt",
+        ),
+        "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)": (
+            100_000_000.0,
+            217,
+            "CRC",
+            "pdf_1cbc124dbce0__2017_Tomo2_Ley_de_presupuesto.txt",
+        ),
+        "INCIENSA (health and nutrition research)": (
+            4_934_000_000.0,
+            228,
+            "CRC",
+            "pdf_1cbc124dbce0__2017_Tomo2_Ley_de_presupuesto.txt",
+        ),
+        "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)": (
+            6_753_000_922.0,
+            40,
+            "CRC",
+            "pdf_b6df2745474e__2017_Tomo3_Ley_de_presupuesto.txt",
+        ),
+        "UCR (Universidad de Costa Rica)": (
+            46_500_000.0,
+            363,
+            "CRC",
+            "pdf_b7628d47c028__2017_Tomo1_Ley_de_presupuesto.txt; pdf_b6df2745474e__2017_Tomo3_Ley_de_presupuesto.txt",
+            "sum of sede regional limon transfer 15,500,000 on tomo 1 page 361 and convenio CITA-MAG transfer 31,000,000 on tomo 3 page 57",
+        ),
+    },
+    2016: {},
+    2018: {},
+    2019: {},
+    2020: {
+        "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)": (
+            30_550_000.0,
+            368,
+            "CRC",
+            "pdf_65d032f4c4ef__2020_Ley_de_presupuesto.txt",
+        ),
+        "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)": (
+            1_856_800_000.0,
+            645,
+            "CRC",
+            "pdf_65d032f4c4ef__2020_Ley_de_presupuesto.txt",
+        ),
+        "INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria)": (
+            383_160_000.0,
+            368,
+            "CRC",
+            "pdf_65d032f4c4ef__2020_Ley_de_presupuesto.txt",
+        ),
+        "UCR (Universidad de Costa Rica)": (
+            16_200_000.0,
+            369,
+            "CRC",
+            "pdf_65d032f4c4ef__2020_Ley_de_presupuesto.txt",
+            "sede regional limon transfer on page 369",
+        ),
+    },
+    2021: {
+        "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)": (
+            30_600_000.0,
+            435,
+            "CRC",
+            "pdf_ac902c30ecd9__2021_Ley_de_presupuesto.txt",
+        ),
+        "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)": (
+            1_839_934_582.0,
+            1432,
+            "CRC",
+            "pdf_ac902c30ecd9__2021_Ley_de_presupuesto.txt",
+        ),
+        "INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria)": (
+            4_629_768_709.0,
+            415,
+            "CRC",
+            "pdf_ac902c30ecd9__2021_Ley_de_presupuesto.txt",
+        ),
+        "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)": (
+            5_205_572_746.0,
+            1416,
+            "CRC",
+            "pdf_ac902c30ecd9__2021_Ley_de_presupuesto.txt",
+        ),
+        "UCR (Universidad de Costa Rica)": (
+            48_600_000.0,
+            434,
+            "CRC",
+            "pdf_ac902c30ecd9__2021_Ley_de_presupuesto.txt",
+            "sum of sede regional limon transfer 16,200,000 on page 434 and convenio CITA-MAG transfer 32,400,000 on page 1431",
+        ),
+    },
+    2022: {
+    },
+    2023: {
+    },
+    2024: {
+        "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)": (
+            27_090_000.0,
+            434,
+            "CRC",
+            "pdf_70b402f40a19__2024_Ley_de_presupuesto.txt",
+        ),
+        "INCIENSA (health and nutrition research)": (
+            7_405_300_000.0,
+            1061,
+            "CRC",
+            "pdf_70b402f40a19__2024_Ley_de_presupuesto.txt",
+        ),
+        "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)": (
+            8_789_530_987.0,
+            1564,
+            "CRC",
+            "pdf_70b402f40a19__2024_Ley_de_presupuesto.txt",
+        ),
+        "Promotora Costarricense de Innovación e Investigación (PCII)": (
+            1_571_508_437.0,
+            1423,
+            "CRC",
+            "pdf_70b402f40a19__2024_Ley_de_presupuesto.txt",
+        ),
+        "UCR (Universidad de Costa Rica)": (
+            48_600_000.0,
+            432,
+            "CRC",
+            "pdf_70b402f40a19__2024_Ley_de_presupuesto.txt",
+            "sum of sede regional limon transfer 16,200,000 on page 432 and convenio CITA-MAG transfer 32,400,000 on page 1578",
+        ),
+    },
+    2025: {
+        "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)": (
+            30_100_000.0,
+            471,
+            "CRC",
+            "pdf_ef12aca9f998__2025_Ley_de_presupuesto.txt",
+        ),
+        "INCIENSA (health and nutrition research)": (
+            6_440_000_000.0,
+            884,
+            "CRC",
+            "pdf_ef12aca9f998__2025_Ley_de_presupuesto.txt",
+        ),
+        "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)": (
+            7_890_373_607.0,
+            1416,
+            "CRC",
+            "pdf_ef12aca9f998__2025_Ley_de_presupuesto.txt",
+        ),
+        "Promotora Costarricense de Innovación e Investigación (PCII)": (
+            1_571_508_437.0,
+            1426,
+            "CRC",
+            "pdf_ef12aca9f998__2025_Ley_de_presupuesto.txt",
+        ),
+        "UCR (Universidad de Costa Rica)": (
+            948_600_000.0,
+            61,
+            "CRC",
+            "pdf_ef12aca9f998__2025_Ley_de_presupuesto.txt",
+            "sum of RSN transfer 900,000,000 on page 61, sede regional limon transfer 16,200,000 on page 459, and convenio CITA-MAG transfer 32,400,000 on page 1425",
+        ),
+    },
+}
+
+_COSTA_RICA_VERIFIED_DROPS: set[tuple[int, str]] = {
+    (2010, "FEES (Fondo Especial de Educación Superior)"),
+    (2011, "FEES (Fondo Especial de Educación Superior)"),
+    (2012, "FEES (Fondo Especial de Educación Superior)"),
+    (2013, "FEES (Fondo Especial de Educación Superior)"),
+    (2014, "FEES (Fondo Especial de Educación Superior)"),
+    (2015, "FEES (Fondo Especial de Educación Superior)"),
+    (2016, "FEES (Fondo Especial de Educación Superior)"),
+    (2017, "FEES (Fondo Especial de Educación Superior)"),
+    (2018, "FEES (Fondo Especial de Educación Superior)"),
+    (2019, "FEES (Fondo Especial de Educación Superior)"),
+    (2020, "FEES (Fondo Especial de Educación Superior)"),
+    (2021, "FEES (Fondo Especial de Educación Superior)"),
+    (2022, "FEES (Fondo Especial de Educación Superior)"),
+    (2023, "FEES (Fondo Especial de Educación Superior)"),
+    (2024, "FEES (Fondo Especial de Educación Superior)"),
+    (2025, "FEES (Fondo Especial de Educación Superior)"),
+    (2011, "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)"),
+    (2012, "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)"),
+    (2010, "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)"),
+    (2012, "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)"),
+    (2014, "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)"),
+    (2015, "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)"),
+    (2016, "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)"),
+    (2018, "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)"),
+    (2019, "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)"),
+    (2022, "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)"),
+    (2023, "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)"),
+    (2010, "INCIENSA (health and nutrition research)"),
+    (2010, "INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria)"),
+    (2010, "ITCR / TEC (Instituto Tecnológico de Costa Rica)"),
+    (2011, "ITCR / TEC (Instituto Tecnológico de Costa Rica)"),
+    (2010, "UCR (Universidad de Costa Rica)"),
+    (2010, "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)"),
+    (2011, "INCIENSA (health and nutrition research)"),
+    (2011, "UCR (Universidad de Costa Rica)"),
+    (2012, "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)"),
+    (2012, "ITCR / TEC (Instituto Tecnológico de Costa Rica)"),
+    (2012, "INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria)"),
+    (2012, "INCIENSA (health and nutrition research)"),
+    (2012, "UCR (Universidad de Costa Rica)"),
+    (2013, "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)"),
+    (2013, "INCIENSA (health and nutrition research)"),
+    (2013, "UCR (Universidad de Costa Rica)"),
+    (2013, "ITCR / TEC (Instituto Tecnológico de Costa Rica)"),
+    (2014, "INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria)"),
+    (2014, "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)"),
+    (2014, "INCIENSA (health and nutrition research)"),
+    (2014, "UCR (Universidad de Costa Rica)"),
+    (2014, "ITCR / TEC (Instituto Tecnológico de Costa Rica)"),
+    (2015, "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)"),
+    (2015, "ITCR / TEC (Instituto Tecnológico de Costa Rica)"),
+    (2015, "INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria)"),
+    (2015, "INCIENSA (health and nutrition research)"),
+    (2015, "Promotora Costarricense de Innovación e Investigación (PCII)"),
+    (2015, "UCR (Universidad de Costa Rica)"),
+    (2016, "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)"),
+    (2016, "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)"),
+    (2016, "ITCR / TEC (Instituto Tecnológico de Costa Rica)"),
+    (2016, "INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria)"),
+    (2016, "INCIENSA (health and nutrition research)"),
+    (2016, "Promotora Costarricense de Innovación e Investigación (PCII)"),
+    (2016, "UCR (Universidad de Costa Rica)"),
+    (2017, "INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria)"),
+    (2017, "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)"),
+    (2017, "INCIENSA (health and nutrition research)"),
+    (2017, "UCR (Universidad de Costa Rica)"),
+    (2017, "ITCR / TEC (Instituto Tecnológico de Costa Rica)"),
+    (2011, "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)"),
+    (2013, "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)"),
+    (2014, "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)"),
+    (2015, "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)"),
+    (2016, "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)"),
+    (2017, "Promotora Costarricense de Innovación e Investigación (PCII)"),
+    (2018, "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)"),
+    (2018, "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)"),
+    (2018, "ITCR / TEC (Instituto Tecnológico de Costa Rica)"),
+    (2018, "INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria)"),
+    (2018, "INCIENSA (health and nutrition research)"),
+    (2018, "Promotora Costarricense de Innovación e Investigación (PCII)"),
+    (2018, "UCR (Universidad de Costa Rica)"),
+    (2018, "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)"),
+    (2019, "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)"),
+    (2019, "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)"),
+    (2019, "ITCR / TEC (Instituto Tecnológico de Costa Rica)"),
+    (2019, "INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria)"),
+    (2019, "INCIENSA (health and nutrition research)"),
+    (2019, "Promotora Costarricense de Innovación e Investigación (PCII)"),
+    (2019, "UCR (Universidad de Costa Rica)"),
+    (2019, "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)"),
+    (2020, "UCR (Universidad de Costa Rica)"),
+    (2020, "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)"),
+    (2020, "INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria)"),
+    (2020, "ITCR / TEC (Instituto Tecnológico de Costa Rica)"),
+    (2020, "Promotora Costarricense de Innovación e Investigación (PCII)"),
+    (2020, "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)"),
+    (2021, "ITCR / TEC (Instituto Tecnológico de Costa Rica)"),
+    (2021, "INCIENSA (health and nutrition research)"),
+    (2021, "Promotora Costarricense de Innovación e Investigación (PCII)"),
+    (2021, "UCR (Universidad de Costa Rica)"),
+    (2022, "ITCR / TEC (Instituto Tecnológico de Costa Rica)"),
+    (2022, "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)"),
+    (2022, "INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria)"),
+    (2022, "Promotora Costarricense de Innovación e Investigación (PCII)"),
+    (2022, "INCIENSA (health and nutrition research)"),
+    (2022, "UCR (Universidad de Costa Rica)"),
+    (2022, "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)"),
+    (2023, "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)"),
+    (2023, "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)"),
+    (2023, "ITCR / TEC (Instituto Tecnológico de Costa Rica)"),
+    (2023, "INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria)"),
+    (2023, "Promotora Costarricense de Innovación e Investigación (PCII)"),
+    (2020, "INCIENSA (health and nutrition research)"),
+    (2023, "INCIENSA (health and nutrition research)"),
+    (2023, "UCR (Universidad de Costa Rica)"),
+    (2023, "MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)"),
+    (2024, "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)"),
+    (2024, "ITCR / TEC (Instituto Tecnológico de Costa Rica)"),
+    (2024, "INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria)"),
+    (2024, "UCR (Universidad de Costa Rica)"),
+    (2025, "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)"),
+    (2025, "ITCR / TEC (Instituto Tecnológico de Costa Rica)"),
+    (2025, "INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria)"),
+    (2025, "UCR (Universidad de Costa Rica)"),
+}
+
 _ICELAND_VERIFIED_OVERRIDES: dict[int, dict[str, tuple[float, int, str, str]]] = {
     1988: {
         # Verified against the original 1988 Iceland budget text:
@@ -2276,7 +3352,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "science and industry research act",
                 "csiro",
             ],
-            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "preferred_item_type": ["program_total", "line_item"],
             "active_years": (1926, 2099),
             "notes": "Core public research agency. Pre-1949: Advisory Council of Science. "
                      "Continuously tracked since 1975 in these files.",
@@ -5002,20 +6078,115 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
     ],
 
     # -----------------------------------------------------------------------
-    # NEW ZEALAND — skeleton
+    # NEW ZEALAND
+    # Hybrid panel across three eras:
+    #   (1) DSIR / Scientific and Industrial Research
+    #   (2) Crown Research / FRST transition
+    #   (3) Vote Science, Innovation and Technology + named science funds
     # -----------------------------------------------------------------------
     "New Zealand": [
         {
-            "canonical_name": "DSIR / Crown Research Institutes",
+            "canonical_name": "DSIR (New Zealand)",
             "category": "science_agency",
             "name_variants": [
                 "department of scientific and industrial research",
+                "scientific and industrial research",
+                "vote-scientific and industrial research",
+                "vote scientific and industrial research",
                 "dsir",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (1975, 1992),
+            "max_amount_local": 2_000_000,
+            "notes": "Dedicated science agency in the pre-CRI era.",
+        },
+        {
+            "canonical_name": "Foundation for Research, Science and Technology (New Zealand)",
+            "category": "science_agency",
+            "name_variants": [
+                "foundation for research, science and technology",
+                "foundation for research science and technology",
+                "frst",
+                "research, science and technology",
+                "research science and technology",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (1990, 2011),
+            "max_amount_local": 3_000_000,
+            "notes": "Core science funding structure in the transition era.",
+        },
+        {
+            "canonical_name": "Crown Research Institutes (New Zealand)",
+            "category": "science_agency",
+            "name_variants": [
+                "crown research institutes",
                 "crown research institute",
-                "foundation for research, science",
+                "agresearch",
+                "industrial research limited",
+                "irl",
+                "gns science",
+                "institute of geological and nuclear sciences",
+                "niwa",
+                "national institute of water and atmospheric research",
+                "landcare research",
+                "plant and food research",
+                "new zealand institute for plant and food research",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (1992, 2099),
+            "max_amount_local": 5_000_000,
+            "notes": "CRI family and named institutes.",
+        },
+        {
+            "canonical_name": "Vote Science, Innovation and Technology (New Zealand)",
+            "category": "rd_ministry",
+            "name_variants": [
+                "vote science and innovation",
+                "science, innovation and technology",
+                "science innovation and technology",
+                "ministry of business, innovation and employment",
+                "mbie science",
             ],
             "preferred_item_type": ["section_total", "program_total"],
-            "active_years": (1926, 2099),
+            "active_years": (2012, 2099),
+            "max_amount_local": 10_000_000,
+            "notes": "Modern science vote under MBIE-era appropriations.",
+        },
+        {
+            "canonical_name": "Marsden Fund (New Zealand)",
+            "category": "science_agency",
+            "name_variants": [
+                "marsden fund",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1994, 2099),
+            "max_amount_local": 1_000_000,
+        },
+        {
+            "canonical_name": "Callaghan Innovation",
+            "category": "science_agency",
+            "name_variants": [
+                "callaghan innovation",
+                "callaghan innovation - operations",
+                "callaghan innovation operations",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (2013, 2099),
+            "max_amount_local": 2_000_000,
+        },
+        {
+            "canonical_name": "Endeavour / Catalyst / Partnered Research Funds (New Zealand)",
+            "category": "rd_ministry",
+            "name_variants": [
+                "endeavour fund",
+                "catalyst fund",
+                "partnered research fund",
+                "health research fund",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (2015, 2099),
+            "max_amount_local": 3_000_000,
+            "notes": "Modern explicit science funds visible in recent estimates acts.",
         },
     ],
 
@@ -7042,11 +8213,28 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             "name_variants": [
                 "mta könyvtár és információs központ",
                 "mta konyvtar es informacios kozpont",
+                "mta könyvtára",
+                "mta konyvtara",
                 "library and information centre",
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (2013, 2099),
             "max_amount_local": 20_000_000,
+        },
+        {
+            "canonical_name": "Research and Technological Innovation Fund",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "kutatási és technológiai innovációs alap",
+                "kutatasi es technologiai innovacios alap",
+                "lxix. kutatási és technológiai innovációs alap",
+                "lxix. kutatasi es technologiai innovacios alap",
+                "hazai innováció támogatása",
+                "hazai innovacio tamogatasa",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (2010, 2014),
+            "max_amount_local": 60_000_000,
         },
         {
             "canonical_name": "National Research, Development and Innovation Fund (Hungary)",
@@ -7064,16 +8252,55 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             "max_amount_local": 200_000_000,
         },
         {
+            "canonical_name": "Eötvös Loránd Research Network",
+            "category": "science_agency",
+            "name_variants": [
+                "xxxvi. eötvös loránd kutatási hálózat",
+                "xxxvi. eotvos lorand kutatasi halozat",
+                "elkh kutatóközpontok",
+                "elkh kutatóintézetek",
+                "elkh támogatott kutatóhelyek",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (2020, 2023),
+            "max_amount_local": 100_000_000,
+        },
+        {
+            "canonical_name": "Hungarian Research Network",
+            "category": "science_agency",
+            "name_variants": [
+                "xxxvi. magyar kutatási hálózat",
+                "xxxvi. magyar kutatasi halozat",
+                "hun-ren központ és kutatóhálózat",
+                "hun-ren kozpont es kutatohalozat",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (2024, 2099),
+            "max_amount_local": 100_000_000,
+        },
+        {
+            "canonical_name": "INTERREG IVC Programme",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "interreg ivc",
+            ],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "active_years": (2011, 2015),
+            "max_amount_local": 10_000_000,
+        },
+        {
             "canonical_name": "National Agricultural Research and Innovation Centre (Hungary)",
             "category": "science_agency",
             "name_variants": [
                 "nemzeti agrárkutatási és innovációs központ",
                 "nemzeti agrarkutatasi es innovacios kozpont",
-                "agrárkutatás támogatása",
-                "agrarkutatas tamogatasa",
             ],
             "preferred_item_type": ["line_item", "program_total"],
-            "active_years": (2013, 2099),
+            # The institution is only visible in the audited source texts from
+            # 2016 through 2021. Earlier and later years reference different
+            # agricultural support structures, so keeping a wider active window
+            # creates avoidable false gaps and blocks cleaner future discovery.
+            "active_years": (2016, 2021),
             "max_amount_local": 50_000_000,
         },
     ],
@@ -7089,32 +8316,85 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "science programme",
             ],
             "preferred_item_type": ["program_total", "section_total"],
-            "active_years": (1991, 2099),
-            "max_amount_local": 100_000_000,
+            "strict_preferred_item_types": True,
+            "active_years": (1992, 2009),
+            "expected_years": [1992, 1993, 1995, 1996, 1998, 1999, 2000, 2001, 2003, 2006],
+            "min_amount_local": 250_000,
+            "max_amount_local": 20_000_000,
+            "exclude_match_groups": [[
+                r"science base funding",
+                r"fundamental scientific research",
+                r"state-commissioned scientific research",
+                r"state administration institution ordered research",
+                r"state institutions' ordered research",
+                r"development of scientific activities in universities",
+                r"provision and development of scientific infrastructure in universities",
+                r"promotion of scientific competitiveness",
+                r"state research programs",
+                r"latvian science council",
+                r"participation in the eu framework programme",
+                r"participation in european union framework programme",
+                r"other european community programs",
+            ]],
             "notes": "Hybrid programme-level canonical for Latvian science budget lines across eras.",
         },
         {
             "canonical_name": "Fundamental Scientific Research (Latvia)",
-            "category": "science_agency",
+            "category": "direct_rd",
             "name_variants": [
                 "fundamentālie zinātniskie pētījumi",
                 "fundamentalie zinatniskie petijumi",
                 "fundamentālie zinatniskie pētījumi",
             ],
             "preferred_item_type": ["line_item", "program_total"],
-            "active_years": (1991, 2099),
+            "strict_preferred_item_types": True,
+            "active_years": (1996, 2009),
+            "expected_years": [1996, 2000, 2006],
             "max_amount_local": 50_000_000,
         },
         {
-            "canonical_name": "Latvian Science Council",
+            "canonical_name": "Science Base Funding (Latvia)",
             "category": "science_agency",
             "name_variants": [
-                "latvijas zinātnes padome",
-                "latvijas zinatnes padome",
-                "science council of latvia",
+                "zinātnes bāzes finansējums",
+                "zinatnes bazes finansējums",
+                "science base funding",
+                "zinātniskās darbības nodrošinājums",
+                "zinatniskas darbibas nodrosinajums",
+                "zinātniskās darbības nodrošināšana",
+                "zinatniskas darbibas nodrosinasana",
+                "ensuring scientific activity",
+                "ensuring scientific activities",
+                "provision of scientific activities",
             ],
-            "preferred_item_type": ["line_item", "program_total"],
-            "active_years": (1991, 2099),
+            "preferred_item_type": ["program_total", "line_item"],
+            "strict_preferred_item_types": True,
+            "active_years": (1997, 2009),
+            "expected_years": [1997, 1999, 2000, 2001, 2003, 2006, 2009],
+            "max_amount_local": 20_000_000,
+            "exclude_match_groups": [[
+                r"resources for expenditure coverage",
+                r"subsidy from general revenues?",
+                r"grant from general revenues?",
+                r"remuneration",
+                r"current expenditures",
+                r"maintenance expenditures",
+            ]],
+        },
+        {
+            "canonical_name": "State-Commissioned Scientific Research (Latvia)",
+            "category": "direct_rd",
+            "name_variants": [
+                "valsts pārvaldes institūciju pasūtītie zinātniskie pētījumi",
+                "valsts parvaldes instituciju pasutitie zinatniskie petijumi",
+                "state-commissioned scientific research",
+                "state administration institution ordered research",
+                "state institutions' ordered research",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "strict_preferred_item_types": True,
+            "active_years": (1996, 2009),
+            "expected_years": [1996, 1997, 1998, 2000, 2001, 2003],
             "max_amount_local": 20_000_000,
         },
         {
@@ -7128,9 +8408,10 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "latvijas akadēmiskā bibliotēka",
                 "latvijas akademiska biblioteka",
             ],
-            "preferred_item_type": ["line_item", "program_total"],
-            "active_years": (1991, 2099),
-            "max_amount_local": 30_000_000,
+            "preferred_item_type": ["program_total", "section_total", "line_item"],
+            "active_years": (1992, 1993),
+            "expected_years": [1992, 1993],
+            "max_amount_local": 500_000,
         },
         {
             "canonical_name": "University Science Development (Latvia)",
@@ -7142,12 +8423,84 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "zinatniskas infrastrukturas nodrosinasana un attistiba augstskolas",
                 "investīcijas zinātnei",
                 "investicijas zinatnei",
-                "zinātnes bāzes finansējums",
-                "zinatnes bazes finansējums",
+                "additional funding for the development of scientific activities in higher education institutions and colleges",
             ],
             "preferred_item_type": ["line_item", "program_total"],
-            "active_years": (1996, 2099),
+            "active_years": (1996, 2015),
+            "expected_years": [1996, 2000, 2006, 2015],
             "max_amount_local": 50_000_000,
+        },
+        {
+            "canonical_name": "State Research Programmes (Latvia)",
+            "category": "direct_rd",
+            "name_variants": [
+                "valsts pētījumu programmas",
+                "valsts petijumu programmas",
+                "state research programs",
+                "state research program in energy",
+                "valsts pētījumu programma enerģētikā",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (2009, 2018),
+            "expected_years": [2009, 2018],
+            "max_amount_local": 20_000_000,
+        },
+    ],
+    "Lithuania": [
+        {
+            "canonical_name": "Science and Studies Programme (Lithuania)",
+            "category": "rd_ministry",
+            "name_variants": [
+                "mokslas ir studijos",
+                "mokslas ir studijos.",
+                "mokslo ir studijų",
+                "mokslo ir studiju",
+                "science and studies",
+            ],
+            "preferred_item_type": ["program_total", "section_total"],
+            "active_years": (1991, 2099),
+            "max_amount_local": 5_000_000_000,
+            "notes": "Hybrid programme-level canonical for broad science-and-studies appropriations.",
+        },
+        {
+            "canonical_name": "State Science, Studies and Technology Service (Lithuania)",
+            "category": "science_agency",
+            "name_variants": [
+                "valstybinė mokslo, studijų ir technologijų tarnyba",
+                "valstybine mokslo studiju ir technologiju tarnyba",
+                "state science studies and technology service",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1991, 2004),
+            "max_amount_local": 500_000_000,
+        },
+        {
+            "canonical_name": "Lithuanian Research Council",
+            "category": "science_agency",
+            "name_variants": [
+                "lietuvos mokslo taryba",
+                "lithuanian research council",
+                "research council of lithuania",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1991, 2099),
+            "max_amount_local": 1_000_000_000,
+        },
+        {
+            "canonical_name": "State Research Institutions (Lithuania)",
+            "category": "science_agency",
+            "name_variants": [
+                "valstybinių mokslo ir studijų institucijų",
+                "valstybiniu mokslo ir studiju instituciju",
+                "state research and studies institutions",
+                "mokslinių tyrimų",
+                "moksliniu tyrimu",
+                "scientific research",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1995, 2099),
+            "max_amount_local": 2_000_000_000,
+            "notes": "Use conservatively; includes explicit state research institution appropriations.",
         },
     ],
     "Israel": [
@@ -7161,10 +8514,23 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "ministry of science and technology",
                 "ministry of science",
                 "science ministry",
-                "19",          # 2-digit budget code
             ],
             "preferred_item_type": ["section_total", "program_total"],
+            "preferred_match_groups": [[
+                r"\btotal general\b",
+                r"\bbudget of the ministry of science\b",
+                r"\btotal budget for the ministry of science and technology\b",
+                r"\btotal\b",
+                r"\bexpenditure\b",
+            ]],
+            "enforce_preferred_match_groups": True,
+            "expected_years": [
+                1992, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002,
+                2004, 2005, 2007, 2008, 2009, 2011, 2013, 2015, 2017,
+                2021, 2022, 2023, 2024, 2025,
+            ],
             "active_years": (1992, 2099),
+            "max_amount_local": 20_000_000_000,
             "notes": "Budget code 19. Created 1992. Sub-codes: 02=R&D Council, 03=Research, 05=Infrastructure, 07=Space Agency.",
         },
         # ── Pre-1992 science governance ───────────────────────────────────────
@@ -7176,10 +8542,35 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "המועצה הלאומית למחקר",
                 "national council for research and development",
                 "national council for research",
-                "74",          # budget code in 1985-era documents
             ],
-            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "preferred_match_groups": [[
+                r"\btotal\b",
+                r"\btotal amount\b",
+                r"\btotal expenditures\b",
+                r"\bexpenses of the national council\b",
+                r"\bnational council for r&d\b",
+                r"\bresearch and development\b",
+            ]],
+            "enforce_preferred_match_groups": True,
+            "exclude_match_groups": [[
+                r"government participation",
+                r"income from external sources",
+                r"current expenses",
+                r"supported bodies",
+                r"ministry of science and development",
+                r"earth science research",
+                r"kamea",
+                r"energy sources development",
+                r"medical research",
+                r"agricultural research",
+                r"technological research",
+                r"research grants",
+                r"grants for r&d",
+            ]],
             "active_years": (1960, 1992),
+            "expected_years": [1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991],
+            "max_amount_local": 2_100_000_000,
             "notes": "Budget code 74 in 1985-era files. Precursor to Ministry of Science.",
         },
         # ── Innovation / industrial R&D ───────────────────────────────────────
@@ -7193,7 +8584,9 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "innovation authority",
             ],
             "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "expected_years": [2017, 2025],
             "active_years": (2016, 2099),
+            "max_amount_local": 10_000_000_000,
             "notes": "Replaced the Office of the Chief Scientist at Ministry of Economy in 2016.",
         },
         {
@@ -7207,7 +8600,9 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "ocs",
             ],
             "preferred_item_type": ["line_item", "program_total"],
+            "expected_years": [1986, 2013],
             "active_years": (1975, 2016),
+            "max_amount_local": 10_000_000_000,
             "notes": "Appeared as sub-lines in Ministry of Industry/Economy. Replaced by Innovation Authority 2016.",
         },
         # ── Basic research funding ─────────────────────────────────────────────
@@ -7232,7 +8627,9 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "kamea",
             ],
             "preferred_item_type": ["line_item"],
+            "expected_years": [1987, 1991],
             "active_years": (1975, 2099),
+            "max_amount_local": 2_000_000_000,
             "notes": "Competitive applied research fund. Appears as sub-line in industry ministry (code 31 05).",
         },
         # ── Space ──────────────────────────────────────────────────────────────
@@ -7243,10 +8640,11 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "סוכנות החלל הישראלית",
                 "israeli space agency",
                 "space agency",
-                "19 07",       # sub-code within Ministry of Science
             ],
             "preferred_item_type": ["line_item", "program_total"],
+            "expected_years": [1995, 2004, 2005, 2007, 2011, 2019, 2021, 2022],
             "active_years": (1983, 2099),
+            "max_amount_local": 5_000_000_000,
         },
         # ── Universities / research institutes ────────────────────────────────
         {
@@ -7485,6 +8883,50 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["section_total", "program_total", "line_item"],
             "active_years": (1990, 2099),
+            "min_amount_local": 1_000_000.0,
+            "max_amount_local": 20_000_000_000.0,
+            "preferred_match_groups": [
+                [
+                    r"ministerio de ciencia",
+                    r"coordinaci[oó]n y des\.\s*cient",
+                    r"promoci[oó]n de la investigaci[oó]n",
+                    r"direcci[oó]n de investigaci[oó]n y desarrollo tecnol",
+                    r"transferencias al sector ciencia",
+                    r"impulso de la econom[ií]a a trav[eé]s de la innovaci[oó]n",
+                    r"desarrollo de planes,\s*programas y proyectos vinculados",
+                ]
+            ],
+            "enforce_preferred_match_groups": True,
+            "exclude_match_groups": [
+                [
+                    r"jefe unidad de planificaci[oó]n",
+                    r"director de certificaciones",
+                    r"director de fomento de la ciencia",
+                    r"director de innovaci[oó]n",
+                    r"asociaci[oó]n solidarista",
+                    r"firma digital",
+                    r"^ministerio de ciencia",
+                    r"^ministry of science",
+                    r"total budget for micitt",
+                    r"total of the ministry of science",
+                    r"instituto costarricense de investigaci[oó]n y ense[nñ]anza en nutrici[oó]n y salud",
+                    r"research and development related to economic affairs",
+                    r"servicios de desarrollo de sistemas inform",
+                    r"equipo sanitario, de laboratorio e investigaci[oó]n",
+                    r"tintas, pinturas y diluyentes",
+                    r"bienes intangibles",
+                    r"comunicaciones$",
+                    r"rector[ií]a del sector telecomunicaciones",
+                    r"servicios p[úu]blicos generales",
+                    r"protecci[oó]n social",
+                    r"protecci[oó]n del medio ambiente",
+                    r"combustibles y energ[íi]a",
+                    r"asuntos econ[oó]micos",
+                    r"el transporte",
+                    r"orden p[úu]blico",
+                    r"la salud",
+                ]
+            ],
         },
         {
             "canonical_name": "CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas)",
@@ -7496,6 +8938,10 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1972, 2099),
+            "min_amount_local": 10_000_000.0,
+            "max_amount_local": 1_500_000_000.0,
+            "preferred_match_groups": [[r"\bconicit\b", r"consejo nacional de investigaciones cient", r"consejo nacional para investigaciones cient"]],
+            "enforce_preferred_match_groups": True,
             "notes": "Main competitive research funding body in Costa Rica.",
         },
         {
@@ -7508,6 +8954,9 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (2015, 2099),
+            "min_amount_local": 5_000_000.0,
+            "preferred_match_groups": [[r"\bpcii\b", r"promotora costarricense de innovaci[oó]n e investigaci[oó]n"]],
+            "enforce_preferred_match_groups": True,
         },
         # ── Universities ──────────────────────────────────────────────────────
         {
@@ -7521,6 +8970,10 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1940, 2099),
+            "min_amount_local": 1_000_000.0,
+            "max_amount_local": 1_000_000_000.0,
+            "preferred_match_groups": [[r"universidad de costa rica", r"\bucr\b", r"v[ií]nculo externo", r"cita/mag/ucr/micit"]],
+            "enforce_preferred_match_groups": True,
             "notes": "Receives bulk FEES transfer; include only explicit research/Vínculo Externo sub-lines.",
         },
         {
@@ -7534,6 +8987,9 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1971, 2099),
+            "min_amount_local": 1_000_000.0,
+            "preferred_match_groups": [[r"instituto tecnol[oó]gico de costa rica", r"\bitcr\b"]],
+            "enforce_preferred_match_groups": True,
         },
         {
             "canonical_name": "FEES (Fondo Especial de Educación Superior)",
@@ -7558,6 +9014,16 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (2000, 2099),
+            "min_amount_local": 1_000_000.0,
+            "max_amount_local": 13_000_000_000.0,
+            "preferred_match_groups": [[r"instituto nacional de innovaci[oó]n y transferencia en tecnolog[ií]a agropecuaria", r"\binta\b", r"investigaci[oó]n agropecuaria"]],
+            "enforce_preferred_match_groups": True,
+            "exclude_match_groups": [[
+                r"total budget for inta",
+                r"total for inta",
+                r"research and development in agricultural technology",
+                r"agricultural research projects",
+            ]],
         },
         {
             "canonical_name": "INCIENSA (health and nutrition research)",
@@ -7569,6 +9035,16 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1975, 2099),
+            "min_amount_local": 1_000_000.0,
+            "max_amount_local": 8_000_000_000.0,
+            "preferred_match_groups": [[r"\binciensa\b", r"instituto costarricense de investigaci[oó]n y ense[nñ]anza en nutrici[oó]n y salud"]],
+            "enforce_preferred_match_groups": True,
+            "exclude_match_groups": [[
+                r"transfer to inciensa",
+                r"cooperation agreement between the ministry of health and inciensa",
+                r"dm-jg-3090-2019",
+                r"super[aá]vit donaci[oó]n",
+            ]],
         },
         {
             "canonical_name": "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)",
@@ -7580,6 +9056,9 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1942, 2099),
+            "min_amount_local": 1_000_000.0,
+            "preferred_match_groups": [[r"\bcatie\b", r"centro agron[oó]mico tropical de investigaci[oó]n y ense[nñ]anza"]],
+            "enforce_preferred_match_groups": True,
         },
     ],
 }
@@ -7927,6 +9406,51 @@ def _best_amount_for_agency(
             else:
                 return None
 
+    if agency.get("_country") == "Israel":
+        max_amt_il = agency.get("max_amount_local")
+        if max_amt_il is not None:
+            expanded_il = matches.apply(
+                lambda r: float(r.get("amount_local") or 0)
+                * _SCALE_TO_BASE_UNIT.get(str(r.get("unit") or "").strip().lower(), 1.0),
+                axis=1,
+            )
+            filtered = matches[(expanded_il > 0) & (expanded_il <= max_amt_il)].copy()
+            if not filtered.empty:
+                matches = filtered
+            else:
+                return None
+
+    if agency.get("_country") == "Latvia":
+        min_amt_lv = agency.get("min_amount_local")
+        max_amt_lv = agency.get("max_amount_local")
+        if min_amt_lv is not None or max_amt_lv is not None:
+            amt_lv = pd.to_numeric(matches.get("amount_local"), errors="coerce")
+            keep_lv = amt_lv > 0
+            if min_amt_lv is not None:
+                keep_lv &= amt_lv >= float(min_amt_lv)
+            if max_amt_lv is not None:
+                keep_lv &= amt_lv <= float(max_amt_lv)
+            filtered = matches[keep_lv].copy()
+            if not filtered.empty:
+                matches = filtered
+            else:
+                return None
+
+    if agency.get("_country") == "Costa Rica":
+        amt_cr = pd.to_numeric(matches.get("amount_local"), errors="coerce")
+        min_amt_cr = agency.get("min_amount_local")
+        max_amt_cr = agency.get("max_amount_local")
+        keep = pd.Series(True, index=matches.index)
+        if min_amt_cr is not None:
+            keep &= amt_cr.ge(float(min_amt_cr))
+        if max_amt_cr is not None:
+            keep &= amt_cr.le(float(max_amt_cr))
+        filtered = matches[keep.fillna(False)].copy()
+        if not filtered.empty:
+            matches = filtered
+        elif min_amt_cr is not None or max_amt_cr is not None:
+            return None
+
     # Iceland-specific quality controls:
     # Pipeline output is the right source for Iceland, but some OCR-heavy rows
     # still inflate a thousands-valued figure into a full-ISK amount before the
@@ -8244,6 +9768,24 @@ def _get_agencies_for_country(country: str) -> list[dict]:
     Discovered agencies that duplicate an existing canonical_name are skipped.
     """
     hardcoded = CANONICAL_AGENCIES.get(country, [])
+    if country == "Israel":
+        _israel_drop = {
+            "Israel Science Foundation (ISF / קרן מדע ישראל)",
+            "Hebrew University of Jerusalem",
+            "Technion — Israel Institute of Technology",
+            "Weizmann Institute of Science",
+            "Volcani Center (Agricultural Research)",
+        }
+        hardcoded = [
+            agency for agency in hardcoded
+            if agency.get("canonical_name") not in _israel_drop
+        ]
+    if country == "Hungary":
+        hardcoded = [
+            agency
+            for agency in hardcoded
+            if agency.get("canonical_name") != "National Agricultural Research and Innovation Centre (Hungary)"
+        ]
     existing_names = {a["canonical_name"].lower() for a in hardcoded}
     existing_aliases = set()
     existing_aliases_norm = set()
@@ -8333,6 +9875,25 @@ def _get_agencies_for_country(country: str) -> list[dict]:
             # fragment the audited institutional series.
             return True
 
+        if country == "Costa Rica":
+            # Costa Rica discovery is currently dominated by functional budget
+            # categories and input-object lines rather than stable institutions.
+            # Keep the audited panel conservative and institutional for now.
+            return True
+
+        if country == "Israel":
+            # Israel discovery is useful for review, but the current output is
+            # dominated by programme labels and one-off budget lines rather than
+            # stable institutions. Keep discoveries out of the canonical panel.
+            return True
+
+        if country == "Korea":
+            # Korea discovery is useful for surfacing new programme / agency
+            # candidates for review, but the current source family is dominated
+            # by one-off budget-brief summaries. Keep discoveries in the review
+            # artefacts without auto-merging them into the final canonical panel.
+            return True
+
         if country == "Estonia":
             name = str(agency.get("canonical_name", "")).strip()
             source = str(agency.get("source_entity", "")).strip()
@@ -8357,6 +9918,14 @@ def _get_agencies_for_country(country: str) -> list[dict]:
             if agency_type == "rd_programme":
                 return True
             return not bool(_COLOMBIA_ORGANISATION_HINTS.search(text))
+
+        if country == "Latvia":
+            # Latvia discovery is still useful for surfacing candidate
+            # programmes and institutions, but current recurrent candidates are
+            # programme labels rather than standalone institutions. Keep them in
+            # the review artifacts without auto-merging them into the audited
+            # final panel.
+            return str(agency.get("agency_type", "")).strip().lower() == "rd_programme"
 
         if country != "Japan":
             return False
@@ -8691,6 +10260,36 @@ def build_canonical_series(
                 f"[Estonia] Fixed {rub_mask.sum()} 1991 RUB rows: unit='thousand' → 'unit' (original law is in roubles, not thousand roubles)"
             )
 
+    if country == "Latvia" and not subset.empty:
+        # Latvia budget laws from 1995 onward mostly present full LVL/EUR
+        # amounts, while 1992-1993 are explicitly in thousand rubles.
+        # Preserve the early ruble unit/currency, but remove the spurious
+        # "thousand" scaling for the later LVL/EUR eras before matching.
+        unit_lv = subset.get("unit", pd.Series("", index=subset.index)).fillna("").str.lower()
+        year_lv = pd.to_numeric(subset.get("year", pd.Series(dtype=float)), errors="coerce")
+        curr_lv = subset.get("currency", pd.Series("", index=subset.index)).fillna("").str.upper()
+        amt_lv = pd.to_numeric(subset.get("amount_local"), errors="coerce")
+
+        early_rub_mask = year_lv.le(1993) & amt_lv.notna()
+        if early_rub_mask.any():
+            subset.loc[early_rub_mask, "currency"] = "RUB"
+
+        thousand_mask = unit_lv.eq("thousand") & year_lv.ge(1994) & amt_lv.notna()
+        if thousand_mask.any():
+            subset.loc[thousand_mask, "unit"] = "unit"
+
+        bad_unit_mask = unit_lv.isin(["euro", "unknown"]) & year_lv.ge(1994) & amt_lv.notna()
+        if bad_unit_mask.any():
+            subset.loc[bad_unit_mask, "unit"] = "unit"
+
+        pre_euro_mask = year_lv.between(1994, 2013, inclusive="both") & curr_lv.eq("EUR") & amt_lv.notna()
+        if pre_euro_mask.any():
+            subset.loc[pre_euro_mask, "currency"] = "LVL"
+
+        zero_mask = amt_lv.eq(0)
+        if zero_mask.any():
+            subset = subset.loc[~zero_mask].copy()
+
     if country == "Belgium" and not subset.empty:
         year_be = pd.to_numeric(subset.get("year", pd.Series(dtype=float)), errors="coerce")
         curr_be = subset.get("currency", pd.Series("", index=subset.index)).fillna("").str.upper()
@@ -9013,11 +10612,19 @@ def build_canonical_series(
                 best = _best_amount_for_agency(file_matches, agency["preferred_item_type"], agency)
                 if best is None:
                     continue
-                amount_local, unit = _expand_to_base_unit(
-                    best.get("amount_local"),
-                    best.get("unit"),
-                    best.get("currency"),
-                )
+                if country == "Costa Rica":
+                    # Costa Rica compile outputs are already stored in the final
+                    # reporting unit we want to keep: thousand CRC. Expanding a
+                    # second time here reintroduces a 1,000x inflation in the
+                    # canonical series.
+                    amount_local = pd.to_numeric(best.get("amount_local"), errors="coerce")
+                    unit = best.get("unit")
+                else:
+                    amount_local, unit = _expand_to_base_unit(
+                        best.get("amount_local"),
+                        best.get("unit"),
+                        best.get("currency"),
+                    )
                 records.append({
                     "country": country,
                     "year": yr_int,
@@ -9575,6 +11182,74 @@ def build_canonical_series(
                 notes = str(out.at[target_idx, "series_notes"] or "").strip()
                 out.at[target_idx, "series_notes"] = f"{notes}; manual override from original Chile budget file".strip("; ").strip()
 
+    if country == "Costa Rica":
+        for year, overrides in _COSTA_RICA_VERIFIED_OVERRIDES.items():
+            for canonical_name, override in overrides.items():
+                if len(override) == 4:
+                    amount_local, page_number, currency, source_file = override
+                    override_notes = ""
+                else:
+                    amount_local, page_number, currency, source_file, override_notes = override
+                mask = (out["year"] == year) & (out["canonical_name"] == canonical_name)
+                if not mask.any():
+                    ref_row = out[out["canonical_name"] == canonical_name]
+                    if ref_row.empty:
+                        continue
+                    new_row = ref_row.iloc[0].copy()
+                    new_row["year"] = year
+                    new_row["amount_local"] = float(amount_local)
+                    new_row["unit"] = "thousand"
+                    new_row["currency"] = currency
+                    new_row["item_type"] = "verified_override"
+                    new_row["line_description_en"] = "Verified against original Costa Rica budget file"
+                    new_row["source_file"] = source_file
+                    new_row["page_number"] = float(page_number)
+                    note_parts = ["manual override from original Costa Rica budget file"]
+                    if override_notes:
+                        note_parts.append(str(override_notes).strip())
+                    new_row["series_notes"] = "; ".join(note_parts)
+                    out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
+                    continue
+                target_idx = out.index[mask][0]
+                out.loc[mask, "amount_local"] = None
+                out.loc[mask, "unit"] = None
+                out.loc[mask, "currency"] = None
+                out.loc[mask, "item_type"] = None
+                out.loc[mask, "line_description_en"] = None
+                out.loc[mask, "page_number"] = None
+                out.at[target_idx, "amount_local"] = float(amount_local)
+                out.at[target_idx, "unit"] = "thousand"
+                out.at[target_idx, "currency"] = currency
+                out.at[target_idx, "item_type"] = "verified_override"
+                out.at[target_idx, "line_description_en"] = "Verified against original Costa Rica budget file"
+                out.at[target_idx, "source_file"] = source_file
+                out.at[target_idx, "page_number"] = float(page_number)
+                notes = str(out.at[target_idx, "series_notes"] or "").strip()
+                note_parts = [notes, "manual override from original Costa Rica budget file"]
+                if override_notes:
+                    note_parts.append(str(override_notes).strip())
+                out.at[target_idx, "series_notes"] = "; ".join(part for part in note_parts if part)
+        for year, canonical_name in _COSTA_RICA_VERIFIED_DROPS:
+            mask = (out["year"] == year) & (out["canonical_name"] == canonical_name)
+            if not mask.any():
+                continue
+            out.loc[
+                mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+        out["_cr_has_amount"] = out["amount_local"].notna().astype(int)
+        out["_cr_is_override"] = (out["item_type"] == "verified_override").astype(int)
+        out = (
+            out.sort_values(
+                ["canonical_name", "year", "_cr_has_amount", "_cr_is_override"],
+                ascending=[True, True, False, False],
+                kind="stable",
+            )
+            .drop_duplicates(["canonical_name", "year"], keep="first")
+            .drop(columns=["_cr_has_amount", "_cr_is_override"])
+            .reset_index(drop=True)
+        )
+
     if country == "Iceland":
         for year, overrides in _ICELAND_VERIFIED_OVERRIDES.items():
             for canonical_name, (amount_local, page_number, currency, source_file) in overrides.items():
@@ -9611,6 +11286,201 @@ def build_canonical_series(
                 out.at[target_idx, "page_number"] = float(page_number)
                 notes = str(out.at[target_idx, "series_notes"] or "").strip()
                 out.at[target_idx, "series_notes"] = f"{notes}; manual override from original Iceland budget file".strip("; ").strip()
+
+    if country == "Israel":
+        israel_year = pd.to_numeric(out.get("year"), errors="coerce")
+
+        for year, canonical_name in _ISRAEL_VERIFIED_DROPS:
+            mask = out["canonical_name"].eq(canonical_name) & israel_year.eq(year)
+            if not mask.any():
+                continue
+            out.loc[
+                mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Israel source audit: surviving match was a noisy summary row or wrong budget-year half".strip("; ").strip()
+            )
+
+        for year, overrides in _ISRAEL_VERIFIED_OVERRIDES.items():
+            for canonical_name, (amount_local, page_number, currency, source_file) in overrides.items():
+                mask = out["canonical_name"].eq(canonical_name) & israel_year.eq(year)
+                if not mask.any():
+                    ref_row = out[out["canonical_name"] == canonical_name]
+                    if ref_row.empty:
+                        continue
+                    new_row = ref_row.iloc[0].copy()
+                    new_row["year"] = year
+                    new_row["amount_local"] = float(amount_local)
+                    new_row["unit"] = "thousand"
+                    new_row["currency"] = currency
+                    new_row["item_type"] = "verified_override"
+                    new_row["line_description_en"] = "Verified against original Israel budget file"
+                    new_row["source_file"] = source_file
+                    new_row["page_number"] = float(page_number)
+                    new_row["series_notes"] = "manual override from original Israel budget file"
+                    out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
+                    continue
+
+                target_idx = out.index[mask][0]
+                out.loc[
+                    mask,
+                    ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+                ] = [None, None, None, None, None, None, None]
+                out.at[target_idx, "amount_local"] = float(amount_local)
+                out.at[target_idx, "unit"] = "thousand"
+                out.at[target_idx, "currency"] = currency
+                out.at[target_idx, "item_type"] = "verified_override"
+                out.at[target_idx, "line_description_en"] = "Verified against original Israel budget file"
+                out.at[target_idx, "source_file"] = source_file
+                out.at[target_idx, "page_number"] = float(page_number)
+                notes = str(out.at[target_idx, "series_notes"] or "").strip()
+                out.at[target_idx, "series_notes"] = f"{notes}; manual override from original Israel budget file".strip("; ").strip()
+
+    if country == "Hungary":
+        for year, overrides in _HUNGARY_VERIFIED_OVERRIDES.items():
+            for canonical_name, (amount_local, page_number, currency, source_file) in overrides.items():
+                mask = (out["year"] == year) & (out["canonical_name"] == canonical_name)
+                if not mask.any():
+                    ref_row = out[out["canonical_name"] == canonical_name]
+                    if ref_row.empty:
+                        continue
+                    new_row = ref_row.iloc[0].copy()
+                    new_row["year"] = year
+                    new_row["amount_local"] = float(amount_local)
+                    new_row["unit"] = "forint"
+                    new_row["currency"] = currency
+                    new_row["item_type"] = "verified_override"
+                    if canonical_name == "Hungarian Academy of Sciences (MTA)":
+                        new_row["line_description_en"] = "Verified MTA chapter total from original Hungary budget PDF"
+                        new_row["series_notes"] = "manual override from original Hungary budget file (MTA chapter total)"
+                    elif canonical_name == "MTA Library and Information Centre":
+                        new_row["line_description_en"] = "Verified MTA Library support line from original Hungary budget text"
+                        new_row["series_notes"] = "manual override from original Hungary budget file (library support provision)"
+                    elif canonical_name in {"Eötvös Loránd Research Network", "Hungarian Research Network"}:
+                        new_row["line_description_en"] = "Verified chapter total for Hungary research network from original budget table"
+                        new_row["series_notes"] = "manual override from original Hungary budget file (research-network chapter total)"
+                    elif canonical_name == "INTERREG IVC Programme":
+                        new_row["line_description_en"] = "Verified INTERREG IVC programme appropriation from original Hungary budget table"
+                        new_row["series_notes"] = "manual override from original Hungary budget file (INTERREG IVC row)"
+                    else:
+                        new_row["line_description_en"] = "Verified R&D fund total from original Hungary budget table"
+                        new_row["series_notes"] = "manual override from original Hungary budget file (R&D fund total)"
+                    new_row["source_file"] = source_file
+                    new_row["page_number"] = page_number
+                    out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
+                    continue
+
+                target_idx = out.index[mask][0]
+                out.loc[
+                    mask,
+                    ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+                ] = [None, None, None, None, None, None, None]
+                out.at[target_idx, "amount_local"] = float(amount_local)
+                out.at[target_idx, "unit"] = "forint"
+                out.at[target_idx, "currency"] = currency
+                out.at[target_idx, "item_type"] = "verified_override"
+                out.at[target_idx, "source_file"] = source_file
+                out.at[target_idx, "page_number"] = page_number
+                if canonical_name == "Hungarian Academy of Sciences (MTA)":
+                    desc = "Verified MTA chapter total from original Hungary budget PDF"
+                    note = "manual override from original Hungary budget file (MTA chapter total)"
+                elif canonical_name == "MTA Library and Information Centre":
+                    desc = "Verified MTA Library support line from original Hungary budget text"
+                    note = "manual override from original Hungary budget file (library support provision)"
+                elif canonical_name in {"Eötvös Loránd Research Network", "Hungarian Research Network"}:
+                    desc = "Verified chapter total for Hungary research network from original budget table"
+                    note = "manual override from original Hungary budget file (research-network chapter total)"
+                elif canonical_name == "INTERREG IVC Programme":
+                    desc = "Verified INTERREG IVC programme appropriation from original Hungary budget table"
+                    note = "manual override from original Hungary budget file (INTERREG IVC row)"
+                else:
+                    desc = "Verified R&D fund total from original Hungary budget table"
+                    note = "manual override from original Hungary budget file (R&D fund total)"
+                out.at[target_idx, "line_description_en"] = desc
+                notes = str(out.at[target_idx, "series_notes"] or "").strip()
+                out.at[target_idx, "series_notes"] = f"{notes}; {note}".strip("; ").strip()
+
+    if country == "Korea":
+        for year, canonical_name in _KOREA_VERIFIED_DROPS:
+            mask = out["canonical_name"].eq(canonical_name) & pd.to_numeric(out["year"], errors="coerce").eq(year)
+            if not mask.any():
+                continue
+            out.loc[
+                mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Korea source audit: surviving match was a noisy fragment or non-comparable summary row".strip("; ").strip()
+            )
+
+        for year, overrides in _KOREA_VERIFIED_OVERRIDES.items():
+            for canonical_name, (amount_local, page_number, currency, source_file) in overrides.items():
+                mask = out["canonical_name"].eq(canonical_name) & pd.to_numeric(out["year"], errors="coerce").eq(year)
+                if not mask.any():
+                    ref_row = out[out["canonical_name"] == canonical_name]
+                    if ref_row.empty:
+                        continue
+                    new_row = ref_row.iloc[0].copy()
+                    new_row["year"] = year
+                    new_row["amount_local"] = float(amount_local)
+                    new_row["unit"] = "thousand"
+                    new_row["currency"] = currency
+                    new_row["item_type"] = "verified_override"
+                    if canonical_name == "Ministry of Science and ICT (Korea)":
+                        new_row["line_description_en"] = "Verified MSIT / science-technology-communication budget total from original Korea budget brief"
+                        note = "manual override from original Korea budget brief (MSIT total)"
+                    elif canonical_name == "National R&D Programmes (Korea)":
+                        new_row["line_description_en"] = "Verified Korea annual total R&D budget from original budget brief / fiscal-plan table"
+                        note = "manual override from original Korea budget brief (annual total R&D)"
+                    else:
+                        new_row["line_description_en"] = "Verified strategic-technology R&D subtotal from original Korea budget brief"
+                        note = "manual override from original Korea budget brief (strategic-technology subtotal)"
+                    base_note = _KOREA_CANONICAL_NOTES.get(canonical_name, "").strip()
+                    new_row["series_notes"] = "; ".join(part for part in [base_note, note] if part)
+                    new_row["source_file"] = source_file
+                    new_row["page_number"] = page_number
+                    out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
+                    continue
+
+                target_idx = out.index[mask][0]
+                out.loc[
+                    mask,
+                    ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+                ] = [None, None, None, None, None, None, None]
+                out.at[target_idx, "amount_local"] = float(amount_local)
+                out.at[target_idx, "unit"] = "thousand"
+                out.at[target_idx, "currency"] = currency
+                out.at[target_idx, "item_type"] = "verified_override"
+                out.at[target_idx, "source_file"] = source_file
+                out.at[target_idx, "page_number"] = float(page_number)
+                if canonical_name == "Ministry of Science and ICT (Korea)":
+                    desc = "Verified MSIT / science-technology-communication budget total from original Korea budget brief"
+                    note = "manual override from original Korea budget brief (MSIT total)"
+                elif canonical_name == "National R&D Programmes (Korea)":
+                    desc = "Verified Korea annual total R&D budget from original budget brief / fiscal-plan table"
+                    note = "manual override from original Korea budget brief (annual total R&D)"
+                else:
+                    desc = "Verified strategic-technology R&D subtotal from original Korea budget brief"
+                    note = "manual override from original Korea budget brief (strategic-technology subtotal)"
+                out.at[target_idx, "line_description_en"] = desc
+                base_note = _KOREA_CANONICAL_NOTES.get(canonical_name, "").strip()
+                out.at[target_idx, "series_notes"] = "; ".join(part for part in [base_note, note] if part)
+
+        out["_kr_has_amount"] = out["amount_local"].notna().astype(int)
+        out["_kr_is_override"] = (out["item_type"] == "verified_override").astype(int)
+        out = (
+            out.sort_values(
+                ["canonical_name", "year", "_kr_has_amount", "_kr_is_override"],
+                ascending=[True, True, False, False],
+                kind="stable",
+            )
+            .drop_duplicates(["canonical_name", "year"], keep="first")
+            .drop(columns=["_kr_has_amount", "_kr_is_override"])
+            .reset_index(drop=True)
+        )
 
     if country == "Australia":
         amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
@@ -9974,6 +11844,240 @@ def build_canonical_series(
         # it mixes portfolio totals with institution lines and only adds fake gaps.
         out = out[~out["canonical_name"].eq("Ministry of Education and Research (Estonia)")].copy()
 
+    if country == "Latvia":
+        amounts = pd.to_numeric(out["amount_local"], errors="coerce")
+        years = pd.to_numeric(out["year"], errors="coerce")
+        canonical = out["canonical_name"].fillna("").astype(str)
+        line_desc = out["line_description_en"].fillna("").astype(str)
+        source_file = out["source_file"].fillna("").astype(str)
+        latvia_verified_overrides = {
+            (1997, "Science Base Funding (Latvia)"): (
+                6_731_662.0,
+                24.0,
+                "LVL",
+                "likumi_lv_305681_12.12.1997__lv.pdf",
+                "Verified 1997 scientific-activities provision from the original Latvia budget table",
+                "manual override from original Latvia budget file (page 24, programme 05.01.00 total expenditures)",
+            ),
+            (1999, "Science Base Funding (Latvia)"): (
+                7_415_859.0,
+                42.0,
+                "LVL",
+                "likumi_lv_22778_03.11.1999__lv.pdf",
+                "Verified 1999 scientific-activities provision from the original Latvia budget table",
+                "manual override from original Latvia budget file (page 42, programme 05.01.00 total expenditures)",
+            ),
+            (2001, "Science Base Funding (Latvia)"): (
+                7_646_507.0,
+                60.0,
+                "LVL",
+                "likumi_lv_13735_07.07.2001__lv.pdf",
+                "Verified 2001 provision of scientific activities from the original Latvia budget table",
+                "manual override from original Latvia budget file (page 60, programme 05.01.00 total expenditures)",
+            ),
+            (2003, "Science Base Funding (Latvia)"): (
+                7_930_511.0,
+                61.0,
+                "LVL",
+                "2003 likumi_lv_72288_27.11.2003__lv.pdf",
+                "Verified 2003 ensuring scientific activity from the original Latvia budget table",
+                "manual override from original Latvia budget file (page 61, programme 05.01.00 total expenditures)",
+            ),
+            (2006, "Science Base Funding (Latvia)"): (
+                4_625_554.0,
+                64.0,
+                "LVL",
+                "likumi_lv_121006_09.11.2006__lv.pdf",
+                "Verified 2006 science base funding from the original Latvia budget table",
+                "manual override from original Latvia budget file (page 64, programme 05.02.00 total expenditures)",
+            ),
+            (2000, "State-Commissioned Scientific Research (Latvia)"): (
+                529_571.0,
+                55.0,
+                "LVL",
+                "likumi_lv_305669_18.11.2000__lv.pdf",
+                "Verified 2000 total expenditures for State-commissioned scientific research from the original Latvia budget table",
+                "manual override from original Latvia budget file (page 55, programme 05.06.00 total expenditures)",
+            ),
+            (2001, "State-Commissioned Scientific Research (Latvia)"): (
+                554_571.0,
+                60.0,
+                "LVL",
+                "likumi_lv_13735_07.07.2001__lv.pdf",
+                "Verified 2001 state-commissioned scientific research from the original Latvia budget table",
+                "manual override from original Latvia budget file (page 60, programme 05.06.00 total expenditures)",
+            ),
+            (2003, "State-Commissioned Scientific Research (Latvia)"): (
+                70_209.0,
+                61.0,
+                "LVL",
+                "2003 likumi_lv_72288_27.11.2003__lv.pdf",
+                "Verified 2003 state-commissioned scientific research from the original Latvia budget table",
+                "manual override from original Latvia budget file (page 61, programme 05.06.00 total expenditures)",
+            ),
+            (2018, "State Research Programmes (Latvia)"): (
+                2_000_000.0,
+                10.0,
+                "EUR",
+                "likumi_lv_295569_01.01.2018__lv.pdf",
+                "Verified 2018 state research programme in energy from the original Latvia budget law",
+                "manual override from original Latvia budget file (page 10, subprogramme 29.05.00 energy state research programme)",
+            ),
+            (2006, "Science Programme (Latvia)"): (
+                8_544_825.0,
+                64.0,
+                "LVL",
+                "likumi_lv_121006_09.11.2006__lv.pdf",
+                "Verified 2006 ensuring scientific activity total from the original Latvia budget table",
+                "manual override from original Latvia budget file (page 64, programme 05.01.00 total expenditures)",
+            ),
+            (2006, "University Science Development (Latvia)"): (
+                2_400_000.0,
+                63.0,
+                "LVL",
+                "likumi_lv_121006_09.11.2006__lv.pdf",
+                "Verified 2006 development of scientific activities in universities from the original Latvia budget table",
+                "manual override from original Latvia budget file (page 63, programme 03.12.00 total expenditures)",
+            ),
+        }
+
+        # Latvia's rich tables frequently emit both a substantive programme row
+        # and nearby financing mechanics for the same budget line. Keep the
+        # programme/institution rows and null the financing shells.
+        finance_mechanics = line_desc.str.contains(
+            r"total revenue|resources for expenditure coverage|grant from general revenues|subsidy from general revenue|"
+            r"paid services and other own revenues|foreign financial assistance|maintenance expenditures|current expenditures|"
+            r"expenditure - total|total liabilities|compensation|goods and services|state basic budget",
+            case=False,
+            regex=True,
+            na=False,
+        )
+        if finance_mechanics.any():
+            out.loc[
+                finance_mechanics,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            amounts = pd.to_numeric(out["amount_local"], errors="coerce")
+
+        # Broad ministry and non-core legal/forensic rows are not part of the
+        # core science-budget panel.
+        non_core = canonical.isin(
+            {
+                "Scientific research of judicial expertise",
+                "Patent Office",
+            }
+        )
+        if non_core.any():
+            out.loc[
+                non_core,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            amounts = pd.to_numeric(out["amount_local"], errors="coerce")
+
+        # Keep the early Academy series historical only; later rows are mostly
+        # OCR/targeted-recovery misassignments from broader science programmes.
+        late_academy = canonical.eq("Latvian Academy of Sciences") & years.gt(1993)
+        if late_academy.any():
+            out.loc[
+                late_academy,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            amounts = pd.to_numeric(out["amount_local"], errors="coerce")
+
+        # The 1993 "Latvian Science Council" survivor is not a real Council
+        # appropriation. The original table is "Zinātnu akadēmija — kopā".
+        false_science_council = canonical.eq("Latvian Science Council") & years.eq(1993)
+        if false_science_council.any():
+            out.loc[
+                false_science_council,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            amounts = pd.to_numeric(out["amount_local"], errors="coerce")
+
+        # Normalize documentary era currencies and final unit labels.
+        early_rub = years.le(1993) & amounts.notna()
+        pre_euro = years.between(1994, 2013, inclusive="both") & amounts.notna()
+        post_euro = years.ge(2014) & amounts.notna()
+        if early_rub.any():
+            out.loc[early_rub, "amount_local"] = amounts.loc[early_rub] / 1000.0
+            out.loc[early_rub, "currency"] = "RUB"
+            out.loc[early_rub, "unit"] = "thousand"
+        if pre_euro.any():
+            out.loc[pre_euro, "currency"] = "LVL"
+            out.loc[pre_euro, "unit"] = "unit"
+        if post_euro.any():
+            out.loc[post_euro, "currency"] = "EUR"
+            out.loc[post_euro, "unit"] = "euro"
+
+        # Duplicate English/local wrappers of the exact same legal text should
+        # count as restatements, not additive acts. Keep the official Latvian
+        # law file when both are present with the same amount.
+        duplicate_exact = []
+        real = out[pd.to_numeric(out["amount_local"], errors="coerce").notna()].copy()
+        for (canon_name, year, amount), grp in real.groupby(["canonical_name", "year", "amount_local"], dropna=False):
+            if len(grp) < 2:
+                continue
+            if not grp["source_file"].astype(str).str.contains(r"Finance law for|BUDZETS\.DOC", case=False, regex=True, na=False).any():
+                continue
+            preferred = grp[grp["source_file"].astype(str).str.contains(r"likumi_lv_", case=False, regex=True, na=False)]
+            if preferred.empty:
+                continue
+            keep_idx = preferred.index[0]
+            duplicate_exact.extend(idx for idx in grp.index if idx != keep_idx)
+        if duplicate_exact:
+            out.loc[
+                duplicate_exact,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+
+        for (year, canonical_name), (
+            amount_local,
+            page_number,
+            currency,
+            source_name,
+            description,
+            note,
+        ) in latvia_verified_overrides.items():
+            mask = canonical.eq(canonical_name) & years.eq(year)
+            if mask.any():
+                target_idx = out.index[mask][0]
+            else:
+                ref_row = out[canonical.eq(canonical_name)]
+                if ref_row.empty:
+                    continue
+                target_idx = len(out)
+                new_row = ref_row.iloc[0].copy()
+                new_row["year"] = int(year)
+                new_row["amount_local"] = None
+                new_row["unit"] = None
+                new_row["currency"] = None
+                new_row["item_type"] = None
+                new_row["line_description_en"] = None
+                new_row["source_file"] = None
+                new_row["page_number"] = None
+                out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
+                canonical = out["canonical_name"].fillna("").astype(str)
+                years = pd.to_numeric(out["year"], errors="coerce")
+                mask = canonical.eq(canonical_name) & years.eq(year)
+            out.loc[
+                mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            out.at[target_idx, "amount_local"] = float(amount_local)
+            out.at[target_idx, "unit"] = "unit"
+            out.at[target_idx, "currency"] = currency
+            out.at[target_idx, "item_type"] = "verified_override"
+            out.at[target_idx, "line_description_en"] = description
+            out.at[target_idx, "source_file"] = source_name
+            out.at[target_idx, "page_number"] = page_number
+            notes = str(out.at[target_idx, "series_notes"] or "").strip()
+            out.at[target_idx, "series_notes"] = f"{notes}; {note}".strip("; ").strip()
+
+        # Latvia overrides can null duplicate survivor rows when multiple
+        # candidates existed for the same canonical-year cell. Drop those
+        # empty placeholders from the final exported series.
+        out = out[pd.to_numeric(out["amount_local"], errors="coerce").notna()].copy()
+
     if country == "Belgium":
         canonical = out["canonical_name"].fillna("").astype(str)
         hardcoded_names = {agency["canonical_name"] for agency in CANONICAL_AGENCIES.get("Belgium", [])}
@@ -10091,6 +12195,43 @@ def build_canonical_series(
                     out.loc[out_mask, "source_file"] = chosen.get("source_file")
                 if "page_number" in out.columns:
                     out.loc[out_mask, "page_number"] = chosen.get("page_number")
+
+    locked_entries = get_locked_series_entries(country)
+    if locked_entries:
+        for year, canonical_name, amount_local, unit, currency, source_file, page_number, item_type, line_description_en in locked_entries:
+            mask = out["canonical_name"].eq(canonical_name) & pd.to_numeric(out["year"], errors="coerce").eq(int(year))
+            if not mask.any():
+                ref_row = out[out["canonical_name"] == canonical_name]
+                if ref_row.empty:
+                    continue
+                new_row = ref_row.iloc[0].copy()
+                new_row["year"] = int(year)
+                new_row["amount_local"] = float(amount_local)
+                new_row["unit"] = unit
+                new_row["currency"] = currency
+                new_row["item_type"] = item_type
+                new_row["line_description_en"] = line_description_en
+                new_row["source_file"] = source_file
+                new_row["page_number"] = float(page_number) if page_number is not None else None
+                base_note = str(new_row.get("series_notes", "") or "").strip()
+                new_row["series_notes"] = "; ".join(part for part in [base_note, "locked manual curation"] if part)
+                out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
+                continue
+
+            target_idx = out.index[mask][0]
+            out.loc[
+                mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            out.at[target_idx, "amount_local"] = float(amount_local)
+            out.at[target_idx, "unit"] = unit
+            out.at[target_idx, "currency"] = currency
+            out.at[target_idx, "item_type"] = item_type
+            out.at[target_idx, "line_description_en"] = line_description_en
+            out.at[target_idx, "source_file"] = source_file
+            out.at[target_idx, "page_number"] = float(page_number) if page_number is not None else None
+            notes = str(out.at[target_idx, "series_notes"] or "").strip()
+            out.at[target_idx, "series_notes"] = "; ".join(part for part in [notes, "locked manual curation"] if part)
 
     out = out.sort_values(["canonical_name", "year"]).reset_index(drop=True)
 

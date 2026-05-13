@@ -1,67 +1,177 @@
-# Korea — source notes
+# Korea Source Notes
 
-## Source family
+## PEINSA Quality Note
+- Korea is a mixed-quality source family.
+- The current source inventory supports a defendable final series, but not a clean institutional budget panel.
+- Most usable PDFs are budget briefs, summaries, `홍보자료`, and fiscal-plan pages rather than classic appropriation ledgers.
+- The final Korea database should be interpreted as a conservative programme/theme series with a small audited ministry subtotal, not as proof of complete annual ministry coverage.
 
-- The folder mixes PDF and HWP files.
-- Current pipeline supports `.pdf`, `.docx`, `.doc` discovery only; `.hwp` is not yet part of the extraction path.
-- The sampled PDFs are mostly budget proposal summaries / briefs / 홍보자료, not classic appropriation ledgers.
+## Current Final Coverage
+- Final Korea rows in `rd_database.csv`: `17`
+- Final observed years: `2018, 2019, 2021, 2022, 2023, 2024, 2025`
+- Final canonicals currently retained:
+  - `Ministry of Science and ICT (Korea)`
+  - `National R&D Programmes (Korea)`
+  - `Strategic Technology R&D Programmes (Korea)`
+- All final Korea rows are stored as `KRW` in `thousand` units.
 
-## 5-file manual audit used for prep
+## Traceability Status
+- Row-level verified override file:
+  - `Data/output/budget/Korea/korea_verified_overrides.csv`
+- Current traceability status:
+  - `17` rows: manually verified against the current original Korea files
+- Current gap audit:
+  - `Data/output/budget/Korea/korea_gap_report.csv`
 
-- `2018년도 예산안 개요.pdf`
-- `2019년도 예산안 개요.pdf`
-- `3. 2022년 예산안.pdf`
+## Source Family
+- The folder mixes `PDF` and `HWP` files.
+- Current pipeline discovery supports `.pdf`, `.docx`, `.doc`.
+- `.hwp` is not yet part of the extraction path.
+- This matters for Korea:
+  - some potentially better institutional detail may exist in the HWP files,
+  - but the current final panel only uses the supported PDF family.
+
+## File Coverage
+- Current visible year coverage in the Korea input folder is:
+  - `2018`
+  - `2019`
+  - `2021`
+  - `2022`
+  - `2023`
+  - `2024`
+  - `2025`
+- There is no recoverable `2020` source in the current folder.
+- There is no long pre-2018 annual run in the current supported PDF inventory.
+- The folder also contains:
+  - `leaflet.pdf`
+  - `예산안 인포그래픽 1.pdf`
+  - two `HWP` files
+
+## What The Current Audit Showed
+- Korea extraction does not fail mainly because of postprocess.
+- The real bottlenecks are:
+  - short source coverage,
+  - unsupported `HWP`,
+  - OCR-poor or infographic-style PDFs,
+  - summary documents that mix macro totals, programme packages, and ministry examples.
+- `results.csv` for Korea was materially richer than the legacy text-cache path.
+- The current final Korea panel therefore depends on:
+  - pipeline-first extraction,
+  - manual verification of a small number of defensible totals/subtotals.
+
+## Strong Years / Source Pattern
+- Strong annual `National R&D` total years:
+  - `2018`
+  - `2019`
+  - `2021`
+  - `2022`
+  - `2023`
+  - `2024`
+  - `2025`
+- Strong `Strategic Technology` subtotal years:
+  - `2018`
+  - `2019`
+  - `2022`
+  - `2023`
+  - `2024`
+  - `2025`
+- Strong `MSIT` subtotal years:
+  - `2022`
+  - `2023`
+  - `2024`
+  - `2025`
+
+## Years That Need Special Interpretation
+- `2018` and `2019`:
+  - usable for `National R&D` and a strategic-technology-style subtotal,
+  - but weak for a clean `MSIT` annual subtotal.
+- `2021`:
+  - usable for the annual `National R&D` total,
+  - not currently strong enough for a defendable `MSIT` subtotal,
+  - not currently strong enough for a defendable `Strategic Technology` subtotal.
+- `2022–2025`:
+  - the strongest part of the current Korea panel,
+  - but still based mainly on budget briefs and summary pages rather than line-by-line institutional ledgers.
+
+## Files / Years That Do Not Give Recoverable Information
 - `2023년 예산안_건전재정기조 확립.pdf`
-- `2. 2025 예산안 홍보자료.pdf`
+  - OCR-poor summary brief.
+  - Produced no usable final extraction rows.
+- `3. 2023년 예산안 인포그래픽★.pdf`
+  - infographic-style source.
+  - Produced no usable final extraction rows.
+- `2024 예산안-성장동력 확보를 위한 미래준비 투자.pdf`
+  - weak automatic extraction.
+  - Useful for targeted manual reading, but not a strong general extraction source.
+- `leaflet.pdf`
+  - contains some budget language,
+  - but behaves like a PR / overview leaflet rather than a stable annual budget source.
+- `예산안 인포그래픽 1.pdf`
+  - infographic-style source with poor extraction value.
+- `2020`
+  - not recoverable from the current source folder because the file is not present.
 
-## What the samples show
-
-- Strong thematic R&D language appears often:
-  - `R&D`
-  - `연구개발`
-  - `AI`
-  - `반도체`
-  - `혁신`
-  - `과학기술`
-- The family is weak for institutional appropriation extraction.
-- `2018`, `2019`, and `2022` PDFs contain extractable text but mostly high-level narrative and macro budget framing.
-- `2023년 예산안_건전재정기조 확립.pdf` yields almost no usable text via `pdftotext`.
-- `2017년도 예산안.pdf`, `3. 2020년 예산안.pdf`, and `3. 2021년 예산안.pdf` also yielded effectively zero machine-readable text via `pdftotext`.
-- The currently visible evidence supports programme/theme-level extraction, not a clean agency panel.
-
-## Concrete programme-level positives from the larger review
-
-- `2. 2024년 예산안 홍보자료.pdf` contains extractable strategic-technology R&D lines such as:
-  - `AI` with `7,371억원`
-  - `첨단바이오` with `9,626억원`
-  - `양자` with `1,252억원`
-  - `KARPA-H 프로젝트` with `495억원`
-  - `우주산업 클러스터` with `100억원`
-- These are usable as conservative `program_total` style rows if the extractor is strict.
-
-## Unit / number notes
-
-- Units are document-dependent and explicitly stated in the text:
+## Unit / Number Notes
+- Korea source units are document-dependent and must be read from the page:
   - `조원`
   - `억원`
   - sometimes full `원`
 - Do not infer scale from number size alone.
+- Several Korea summary pages mix abbreviated display figures with translated extraction rows.
+- For the final panel, the retained Korea values were manually normalised to `thousand KRW`.
 
-## Likely in-scope material
+## Likely R&D Actors In Korea
+- `Ministry of Science and ICT`
+- `National R&D` / `Government R&D` annual totals
+- strategic technology / super-gap technology budget groupings
+- explicit programme lines tied to:
+  - `AI`
+  - `semiconductor`
+  - `quantum`
+  - `bio`
+  - `space`
 
-- Explicit amount + named R&D programme/theme pairs only
-- Ministry of Science and ICT totals only when they are clear annual appropriations
-- Programme lines tied to `연구개발`, `국가연구개발`, `AI`, `반도체`, `우주`, `바이오`, `양자`
+## Likely False Positives
+- broad macro totals such as:
+  - `총지출`
+  - `총수입`
+  - `재정수지`
+  - `국가채무`
+- infographic pages
+- PR / summary narrative pages
+- defence, welfare, housing, labour, or regional support pages without clear R&D appropriation wording
+- one-off thematic captions that look science-adjacent but are not stable annual comparables
 
-## Likely false positives / noise
+## Final Korea Interpretation
+- The current Korea panel is usable, but narrow.
+- It should be interpreted as:
+  - one annual `National R&D` total series,
+  - one audited `MSIT` subtotal series where explicit pages exist,
+  - one audited `Strategic Technology` subtotal series where explicit pages exist.
+- It should NOT be interpreted as:
+  - a complete ministry-by-ministry public R&D panel,
+  - a complete annual institutional budget history,
+  - a full inventory of Korean public R&D actors.
 
-- `총지출`, `총수입`, `재정수지`, `국가채무`
-- Macro narrative / PR / infographic pages
-- Loans, guarantees, and industrial financing announcements without explicit R&D appropriation wording
-- Welfare, housing, labour, or regional-support pages without R&D signal
+## Remaining Documented Gaps
+- `MSIT`:
+  - `2018`
+  - `2019`
+  - `2021`
+- `Strategic Technology`:
+  - `2021`
+- These are currently documented source/extraction limits in the present inventory, not ordinary postprocess misses.
 
-## Extraction stance
+## Audit Artifacts To Preserve
+- `Data/output/budget/Korea/korea_verified_overrides.csv`
+- `Data/output/budget/Korea/korea_gap_report.csv`
+- `Data/output/budget/Korea/korea_reextract_queue.csv`
 
-- Korea is not ready for a clean institutional series from this source family.
-- It is still viable for a conservative first large extraction if the goal is to capture programme-level R&D budget signals from the PDFs already supported by the pipeline.
-- Real upgrade path later: add an HWP ingestion path, because some better source detail may live there.
+## Recommended PEINSA Interpretation
+- Korea is usable now as a conservative audited panel.
+- Do not present it as a complete institutional R&D budget history.
+- The strongest interpretation is:
+  - annual `National R&D` totals,
+  - audited `MSIT` subtotals in the years where they are explicit,
+  - audited strategic-technology subtotals in the years where they are explicit.
+- `2021 MSIT` and `2021 Strategic Technology` should remain open unless better originals or HWP support are added later.

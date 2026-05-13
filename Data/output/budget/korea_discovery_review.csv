@@ -1,0 +1,3 @@
+canonical_name,category,name_variants,preferred_item_type,active_years,notes,agency_type,confidence,source_entity,n_years_seen,avg_amount,reason,country
+Research on Data Exchange Platform Construction,innovation_instruments,[],"['section_total', 'program_total', 'line_item']","(2019, 2019)","Researching data exchange platforms, relevant to R&D.",rd_programme,0.7,데이터 거래소 구축방안 연구,1,1000000000.0,confidence below threshold,Korea
+Unexplored Challenge Areas,direct_rd,[],"['section_total', 'program_total', 'line_item']","(2023, 2023)","This initiative encourages research in unexplored areas, directly related to R&D.",rd_programme,0.7,미개척 도전분야,1,4257.0,confidence below threshold,Korea

@@ -1,0 +1,140 @@
+country,year,canonical_name,category,amount_local,unit,currency,item_type,line_description_en,source_file,page_number,series_notes
+Costa Rica,2010,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2011,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,11805900.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_2cd269e29d69__2011_Ley_de_presupuesto.txt,429.0,manual override from original Costa Rica budget file; ordinary annual quota on page 429
+Costa Rica,2012,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2013,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,26000000.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_2ca1f7962cd2__2013_Tomo2_Ley_de_presupuesto.txt,144.0,gap: no matching rows in this year; manual override from original Costa Rica budget file
+Costa Rica,2014,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2015,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2016,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2017,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,27510000.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_b7628d47c028__2017_Tomo1_Ley_de_presupuesto.txt,363.0,gap: no matching rows in this year; manual override from original Costa Rica budget file
+Costa Rica,2018,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2019,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2020,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,30550000.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_65d032f4c4ef__2020_Ley_de_presupuesto.txt,368.0,gap: no matching rows in this year; manual override from original Costa Rica budget file
+Costa Rica,2021,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,30600000.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_ac902c30ecd9__2021_Ley_de_presupuesto.txt,435.0,gap: no matching rows in this year; manual override from original Costa Rica budget file
+Costa Rica,2022,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2023,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2024,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,27090000.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_70b402f40a19__2024_Ley_de_presupuesto.txt,434.0,gap: no matching rows in this year; manual override from original Costa Rica budget file
+Costa Rica,2025,CATIE (Centro Agronómico Tropical de Investigación y Enseñanza),science_agency,30100000.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_ef12aca9f998__2025_Ley_de_presupuesto.txt,471.0,gap: no matching rows in this year; manual override from original Costa Rica budget file
+Costa Rica,2010,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas),science_agency,751503500.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_4c260828c63b__2010_Ley_de_presupuesto.txt,96.0,Main competitive research funding body in Costa Rica.; manual override from original Costa Rica budget file
+Costa Rica,2011,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas),science_agency,,,,,,,,Main competitive research funding body in Costa Rica.
+Costa Rica,2012,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2013,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas),science_agency,,,,,,,,Main competitive research funding body in Costa Rica.; manual override from original Costa Rica budget file; fondo de incentivos transfer on tomo 5 page 96
+Costa Rica,2014,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas),science_agency,,,,,,,,Main competitive research funding body in Costa Rica.; manual override from original Costa Rica budget file
+Costa Rica,2015,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas),science_agency,,,,,,,,Main competitive research funding body in Costa Rica.
+Costa Rica,2016,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2017,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas),science_agency,,,,,,,,Main competitive research funding body in Costa Rica.; manual override from original Costa Rica budget file
+Costa Rica,2018,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2019,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2020,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas),science_agency,,,,,,,,gap: no matching rows in this year; manual override from original Costa Rica budget file
+Costa Rica,2021,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas),science_agency,1839934582.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_ac902c30ecd9__2021_Ley_de_presupuesto.txt,1432.0,Main competitive research funding body in Costa Rica.; manual override from original Costa Rica budget file
+Costa Rica,2022,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2023,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas),science_agency,,,,,,,,Main competitive research funding body in Costa Rica.
+Costa Rica,2024,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas),science_agency,,,,,,,,Main competitive research funding body in Costa Rica.
+Costa Rica,2025,CONICIT (Consejo Nacional para Investigaciones Científicas y Tecnológicas),science_agency,,,,,,,,Main competitive research funding body in Costa Rica.
+Costa Rica,2010,FEES (Fondo Especial de Educación Superior),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2011,FEES (Fondo Especial de Educación Superior),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2012,FEES (Fondo Especial de Educación Superior),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2013,FEES (Fondo Especial de Educación Superior),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2014,FEES (Fondo Especial de Educación Superior),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2015,FEES (Fondo Especial de Educación Superior),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2016,FEES (Fondo Especial de Educación Superior),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2017,FEES (Fondo Especial de Educación Superior),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2018,FEES (Fondo Especial de Educación Superior),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2019,FEES (Fondo Especial de Educación Superior),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2020,FEES (Fondo Especial de Educación Superior),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2021,FEES (Fondo Especial de Educación Superior),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2022,FEES (Fondo Especial de Educación Superior),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2023,FEES (Fondo Especial de Educación Superior),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2024,FEES (Fondo Especial de Educación Superior),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2025,FEES (Fondo Especial de Educación Superior),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2010,INCIENSA (health and nutrition research),science_agency,,,,,,,,manual override from original Costa Rica budget file; operating transfer on page 89
+Costa Rica,2011,INCIENSA (health and nutrition research),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2012,INCIENSA (health and nutrition research),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2013,INCIENSA (health and nutrition research),science_agency,,,,,,,,manual override from original Costa Rica budget file
+Costa Rica,2014,INCIENSA (health and nutrition research),science_agency,,,,,,,,manual override from original Costa Rica budget file
+Costa Rica,2015,INCIENSA (health and nutrition research),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2016,INCIENSA (health and nutrition research),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2017,INCIENSA (health and nutrition research),science_agency,,,,,,,,manual override from original Costa Rica budget file
+Costa Rica,2018,INCIENSA (health and nutrition research),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2019,INCIENSA (health and nutrition research),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2020,INCIENSA (health and nutrition research),science_agency,,,,,,,,
+Costa Rica,2021,INCIENSA (health and nutrition research),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2022,INCIENSA (health and nutrition research),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2023,INCIENSA (health and nutrition research),science_agency,,,,,,,,
+Costa Rica,2024,INCIENSA (health and nutrition research),science_agency,7405300000.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_70b402f40a19__2024_Ley_de_presupuesto.txt,1061.0,manual override from original Costa Rica budget file
+Costa Rica,2025,INCIENSA (health and nutrition research),science_agency,6440000000.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_ef12aca9f998__2025_Ley_de_presupuesto.txt,884.0,manual override from original Costa Rica budget file
+Costa Rica,2010,INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2011,INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria),science_agency,12387747000.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_2cd269e29d69__2011_Ley_de_presupuesto.txt,440.0,manual override from original Costa Rica budget file
+Costa Rica,2012,INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2013,INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria),science_agency,4043611000.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_2ca1f7962cd2__2013_Tomo2_Ley_de_presupuesto.txt,161.0,manual override from original Costa Rica budget file; program total for investigacion agropecuaria on tomo 2 page 161; replaces prior double-counted summary
+Costa Rica,2014,INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria),science_agency,,,,,,,,
+Costa Rica,2015,INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2016,INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2017,INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria),science_agency,,,,,,,,
+Costa Rica,2018,INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2019,INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2020,INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria),science_agency,,,,,,,,manual override from original Costa Rica budget file
+Costa Rica,2021,INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria),science_agency,4629768709.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_ac902c30ecd9__2021_Ley_de_presupuesto.txt,415.0,manual override from original Costa Rica budget file
+Costa Rica,2022,INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2023,INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria),science_agency,,,,,,,,
+Costa Rica,2024,INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria),science_agency,,,,,,,,
+Costa Rica,2025,INTA (Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria),science_agency,,,,,,,,
+Costa Rica,2010,ITCR / TEC (Instituto Tecnológico de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2011,ITCR / TEC (Instituto Tecnológico de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2012,ITCR / TEC (Instituto Tecnológico de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2013,ITCR / TEC (Instituto Tecnológico de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2014,ITCR / TEC (Instituto Tecnológico de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2015,ITCR / TEC (Instituto Tecnológico de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2016,ITCR / TEC (Instituto Tecnológico de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2017,ITCR / TEC (Instituto Tecnológico de Costa Rica),higher_education,,,,,,,,
+Costa Rica,2018,ITCR / TEC (Instituto Tecnológico de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2019,ITCR / TEC (Instituto Tecnológico de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2020,ITCR / TEC (Instituto Tecnológico de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2021,ITCR / TEC (Instituto Tecnológico de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2022,ITCR / TEC (Instituto Tecnológico de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2023,ITCR / TEC (Instituto Tecnológico de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2024,ITCR / TEC (Instituto Tecnológico de Costa Rica),higher_education,,,,,,,,
+Costa Rica,2025,ITCR / TEC (Instituto Tecnológico de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2010,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,,,,,,,,gap: no matching rows in this year
+Costa Rica,2011,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,,,,,,,,
+Costa Rica,2012,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,,,,,,,,gap: no matching rows in this year
+Costa Rica,2013,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,,,,,,,,
+Costa Rica,2014,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,,,,,,,,
+Costa Rica,2015,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,,,,,,,,
+Costa Rica,2016,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,,,,,,,,
+Costa Rica,2017,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,6753000922.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_b6df2745474e__2017_Tomo3_Ley_de_presupuesto.txt,40.0,manual override from original Costa Rica budget file
+Costa Rica,2018,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,,,,,,,,gap: no matching rows in this year
+Costa Rica,2019,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,,,,,,,,gap: no matching rows in this year
+Costa Rica,2020,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,,,,,,,,gap: no matching rows in this year
+Costa Rica,2021,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,5205572746.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_ac902c30ecd9__2021_Ley_de_presupuesto.txt,1416.0,manual override from original Costa Rica budget file
+Costa Rica,2022,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,,,,,,,,gap: no matching rows in this year
+Costa Rica,2023,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,,,,,,,,gap: no matching rows in this year
+Costa Rica,2024,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,8789530987.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_70b402f40a19__2024_Ley_de_presupuesto.txt,1564.0,gap: no matching rows in this year; manual override from original Costa Rica budget file
+Costa Rica,2025,"MICITT (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones)",rd_ministry,7890373607.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_ef12aca9f998__2025_Ley_de_presupuesto.txt,1416.0,manual override from original Costa Rica budget file
+Costa Rica,2015,Promotora Costarricense de Innovación e Investigación (PCII),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2016,Promotora Costarricense de Innovación e Investigación (PCII),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2017,Promotora Costarricense de Innovación e Investigación (PCII),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2018,Promotora Costarricense de Innovación e Investigación (PCII),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2019,Promotora Costarricense de Innovación e Investigación (PCII),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2020,Promotora Costarricense de Innovación e Investigación (PCII),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2021,Promotora Costarricense de Innovación e Investigación (PCII),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2022,Promotora Costarricense de Innovación e Investigación (PCII),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2023,Promotora Costarricense de Innovación e Investigación (PCII),science_agency,,,,,,,,gap: no matching rows in this year
+Costa Rica,2024,Promotora Costarricense de Innovación e Investigación (PCII),science_agency,1571508437.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_70b402f40a19__2024_Ley_de_presupuesto.txt,1423.0,manual override from original Costa Rica budget file
+Costa Rica,2025,Promotora Costarricense de Innovación e Investigación (PCII),science_agency,1571508437.0,thousand,CRC,verified_override,Verified against original Costa Rica budget file,pdf_ef12aca9f998__2025_Ley_de_presupuesto.txt,1426.0,manual override from original Costa Rica budget file
+Costa Rica,2010,UCR (Universidad de Costa Rica),higher_education,,,,,,,,Receives bulk FEES transfer; include only explicit research/Vínculo Externo sub-lines.; manual override from original Costa Rica budget file; convenio CITA/MAG/UCR/MICIT operating transfer on page 97
+Costa Rica,2011,UCR (Universidad de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year; manual override from original Costa Rica budget file; sede regional limon transfer on page 428
+Costa Rica,2012,UCR (Universidad de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2013,UCR (Universidad de Costa Rica),higher_education,,,,,,,,"Receives bulk FEES transfer; include only explicit research/Vínculo Externo sub-lines.; manual override from original Costa Rica budget file; sum of sede regional limon transfer 6,400,000 on tomo 2 page 151 and convenio CITA-MAG transfer 40,900,000 on tomo 5 page 96"
+Costa Rica,2014,UCR (Universidad de Costa Rica),higher_education,,,,,,,,"Receives bulk FEES transfer; include only explicit research/Vínculo Externo sub-lines.; manual override from original Costa Rica budget file; sum of convenio CITA-MAG transfer 40,900,000 and convenio CITA/MAG/UCR/MICIT transfer 122,650,000 on tomo 5 page 89"
+Costa Rica,2015,UCR (Universidad de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2016,UCR (Universidad de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2017,UCR (Universidad de Costa Rica),higher_education,,,,,,,,"Receives bulk FEES transfer; include only explicit research/Vínculo Externo sub-lines.; manual override from original Costa Rica budget file; sum of sede regional limon transfer 15,500,000 on tomo 1 page 361 and convenio CITA-MAG transfer 31,000,000 on tomo 3 page 57"
+Costa Rica,2018,UCR (Universidad de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2019,UCR (Universidad de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2020,UCR (Universidad de Costa Rica),higher_education,,,,,,,,Receives bulk FEES transfer; include only explicit research/Vínculo Externo sub-lines.; manual override from original Costa Rica budget file; sede regional limon transfer on page 369
+Costa Rica,2021,UCR (Universidad de Costa Rica),higher_education,,,,,,,,"Receives bulk FEES transfer; include only explicit research/Vínculo Externo sub-lines.; manual override from original Costa Rica budget file; sum of sede regional limon transfer 16,200,000 on page 434 and convenio CITA-MAG transfer 32,400,000 on page 1431"
+Costa Rica,2022,UCR (Universidad de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2023,UCR (Universidad de Costa Rica),higher_education,,,,,,,,gap: no matching rows in this year
+Costa Rica,2024,UCR (Universidad de Costa Rica),higher_education,,,,,,,,"Receives bulk FEES transfer; include only explicit research/Vínculo Externo sub-lines.; manual override from original Costa Rica budget file; sum of sede regional limon transfer 16,200,000 on page 432 and convenio CITA-MAG transfer 32,400,000 on page 1578"
+Costa Rica,2025,UCR (Universidad de Costa Rica),higher_education,,,,,,,,"Receives bulk FEES transfer; include only explicit research/Vínculo Externo sub-lines.; manual override from original Costa Rica budget file; sum of RSN transfer 900,000,000 on page 61, sede regional limon transfer 16,200,000 on page 459, and convenio CITA-MAG transfer 32,400,000 on page 1425"

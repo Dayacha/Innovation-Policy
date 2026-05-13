@@ -168,6 +168,19 @@ def _extract_docx(path: Path) -> list[PageText]:
     if table_rows:
         all_text += "\n\n--- TABLES ---\n" + "\n".join(table_rows)
 
+    if not all_text.strip():
+        try:
+            import subprocess
+            proc = subprocess.run(
+                ["textutil", "-convert", "txt", "-stdout", str(path)],
+                capture_output=True,
+                text=True,
+                check=True,
+            )
+            all_text = proc.stdout
+        except Exception:
+            pass
+
     # Split into ~page-sized chunks (3000 chars each) for chunked processing
     chunk_size = 3000
     chunks = [all_text[i : i + chunk_size] for i in range(0, len(all_text), chunk_size)]
