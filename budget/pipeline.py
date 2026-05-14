@@ -18,6 +18,7 @@ Entry point:
 from __future__ import annotations
 
 import argparse
+import dataclasses
 import json
 import logging
 import re
@@ -229,6 +230,7 @@ def _process_file(
         force_reextract=False,
         ocr_zoom=float(country_ctx.get("ocr_zoom", blm_cfg.get("ocr_zoom", 2.0))),
         ocr_langs=str(country_ctx.get("ocr_langs", blm_cfg.get("ocr_langs", "eng"))),
+        force_ocr=bool(country_ctx.get("force_ocr", False)),
     )
 
     if not pages:
@@ -499,6 +501,17 @@ def run_pipeline(
                 logger.info(f"Targeted recovery complete. {added} additional rows found.")
         except Exception as e:
             logger.warning(f"Targeted recovery failed (non-fatal): {e}")
+
+    # Normalize any dataclass rows returned by extraction/recovery so downstream
+    # cleaner/dedup/postprocess always operate on plain dict records.
+    if all_rows:
+        normalized_rows = []
+        for row in all_rows:
+            if dataclasses.is_dataclass(row):
+                normalized_rows.append(dataclasses.asdict(row))
+            else:
+                normalized_rows.append(row)
+        all_rows = normalized_rows
 
     # Apply country-specific cleaners before final write
     if all_rows:

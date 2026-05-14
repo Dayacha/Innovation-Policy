@@ -1,0 +1,265 @@
+country,year,canonical_name,category,gap_type,gap_subtype,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,series_currency,prev_amount,next_amount
+Slovakia,2005,APVV (Agentúra na podporu výskumu a vývoja),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,200000000.0
+Slovakia,2006,APVV (Agentúra na podporu výskumu a vývoja),science_agency,ok,,,,,,none,200000000.0,SKK,,1482453.0
+Slovakia,2007,APVV (Agentúra na podporu výskumu a vývoja),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,200000000.0,1482453.0
+Slovakia,2008,APVV (Agentúra na podporu výskumu a vývoja),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,200000000.0,1482453.0
+Slovakia,2009,APVV (Agentúra na podporu výskumu a vývoja),science_agency,ok,,,,,,none,1482453.0,EUR,200000000.0,120000000.0
+Slovakia,2010,APVV (Agentúra na podporu výskumu a vývoja),science_agency,ok,,,,,,none,120000000.0,EUR,1482453.0,120000000.0
+Slovakia,2011,APVV (Agentúra na podporu výskumu a vývoja),science_agency,ok,,,,,,none,120000000.0,EUR,120000000.0,100000000.0
+Slovakia,2012,APVV (Agentúra na podporu výskumu a vývoja),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,120000000.0,100000000.0
+Slovakia,2013,APVV (Agentúra na podporu výskumu a vývoja),science_agency,ok,,,,,,none,100000000.0,EUR,120000000.0,500000.0
+Slovakia,2014,APVV (Agentúra na podporu výskumu a vývoja),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,100000000.0,500000.0
+Slovakia,2015,APVV (Agentúra na podporu výskumu a vývoja),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,100000000.0,500000.0
+Slovakia,2016,APVV (Agentúra na podporu výskumu a vývoja),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,100000000.0,500000.0
+Slovakia,2017,APVV (Agentúra na podporu výskumu a vývoja),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,100000000.0,500000.0
+Slovakia,2018,APVV (Agentúra na podporu výskumu a vývoja),science_agency,ok,,,,,,none,500000.0,EUR,100000000.0,120000000.0
+Slovakia,2019,APVV (Agentúra na podporu výskumu a vývoja),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,500000.0,120000000.0
+Slovakia,2020,APVV (Agentúra na podporu výskumu a vývoja),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,500000.0,120000000.0
+Slovakia,2021,APVV (Agentúra na podporu výskumu a vývoja),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,500000.0,120000000.0
+Slovakia,2022,APVV (Agentúra na podporu výskumu a vývoja),science_agency,ok,,,,,,none,120000000.0,EUR,500000.0,
+Slovakia,2025,APVV (Agentúra na podporu výskumu a vývoja),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,120000000.0,
+Slovakia,1993,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,500000000.0
+Slovakia,1994,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,500000000.0
+Slovakia,1995,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,500000000.0
+Slovakia,1996,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,500000000.0
+Slovakia,1997,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,500000000.0
+Slovakia,1998,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,500000000.0
+Slovakia,1999,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,500000000.0
+Slovakia,2000,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,500000000.0
+Slovakia,2001,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,500000000.0
+Slovakia,2002,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,500000000.0
+Slovakia,2003,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,500000000.0
+Slovakia,2004,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,500000000.0
+Slovakia,2005,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,500000000.0
+Slovakia,2006,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,ok,,,,,,none,500000000.0,SKK,,100000000.0
+Slovakia,2007,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,500000000.0,100000000.0
+Slovakia,2008,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,500000000.0,100000000.0
+Slovakia,2009,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,500000000.0,100000000.0
+Slovakia,2010,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,ok,,,,,,none,100000000.0,EUR,500000000.0,0.0
+Slovakia,2011,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,100000000.0,0.0
+Slovakia,2012,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,100000000.0,0.0
+Slovakia,2013,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,ok,,,,,,none,0.0,EUR,100000000.0,100000000.0
+Slovakia,2014,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,0.0,100000000.0
+Slovakia,2015,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,0.0,100000000.0
+Slovakia,2016,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,0.0,100000000.0
+Slovakia,2017,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,0.0,100000000.0
+Slovakia,2018,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,0.0,100000000.0
+Slovakia,2019,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,0.0,100000000.0
+Slovakia,2020,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,0.0,100000000.0
+Slovakia,2021,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,0.0,100000000.0
+Slovakia,2022,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,ok,,,,,,none,100000000.0,EUR,0.0,
+Slovakia,2025,VEGA (Vedecká grantová agentúra MŠ SR a SAV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,100000000.0,
+Slovakia,1992,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,695624000.0,SKK,,473311000.0
+Slovakia,1993,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,473311000.0,SKK,695624000.0,381000000.0
+Slovakia,1994,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,381000000.0,SKK,473311000.0,556323000.0
+Slovakia,1995,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,556323000.0,SKK,381000000.0,690838000.0
+Slovakia,1996,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,690838000.0,SKK,556323000.0,12000000.0
+Slovakia,1997,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,12000000.0,SKK,690838000.0,18000000.0
+Slovakia,1998,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,18000000.0,SKK,12000000.0,820776000.0
+Slovakia,1999,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,820776000.0,SKK,18000000.0,852819000.0
+Slovakia,2000,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,852819000.0,SKK,820776000.0,878143000.0
+Slovakia,2001,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,878143000.0,SKK,852819000.0,940050000.0
+Slovakia,2002,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,940050000.0,SKK,878143000.0,1105326000.0
+Slovakia,2003,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,1105326000.0,SKK,940050000.0,1442957000.0
+Slovakia,2004,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,1442957000.0,SKK,1105326000.0,1481677000.0
+Slovakia,2005,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,1481677000.0,SKK,1442957000.0,134620000.0
+Slovakia,2006,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,134620000.0,SKK,1481677000.0,1589238000.0
+Slovakia,2007,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,1589238000.0,SKK,134620000.0,1834101000.0
+Slovakia,2008,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,1834101000.0,SKK,1589238000.0,63633028.0
+Slovakia,2009,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,63633028.0,EUR,1834101000.0,65326009.0
+Slovakia,2010,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,65326009.0,EUR,63633028.0,59551028.0
+Slovakia,2011,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,59551028.0,EUR,65326009.0,58985607.0
+Slovakia,2012,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,58985607.0,EUR,59551028.0,60076460.0
+Slovakia,2013,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,60076460.0,EUR,58985607.0,60796384.0
+Slovakia,2014,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,60796384.0,EUR,60076460.0,58520775.0
+Slovakia,2015,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,58520775.0,EUR,60796384.0,60000000.0
+Slovakia,2016,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,60000000.0,EUR,58520775.0,130000000.0
+Slovakia,2017,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,130000000.0,EUR,60000000.0,67102604.0
+Slovakia,2018,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,67102604.0,EUR,130000000.0,69413550.0
+Slovakia,2019,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,69413550.0,EUR,67102604.0,130000000.0
+Slovakia,2020,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,130000000.0,EUR,69413550.0,83600429.0
+Slovakia,2021,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,83600429.0,EUR,130000000.0,85012127.0
+Slovakia,2022,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,85012127.0,EUR,83600429.0,138756937.0
+Slovakia,2025,SAV (Slovenská akadémia vied),science_agency,ok,,,,,,none,138756937.0,EUR,85012127.0,
+Slovakia,1992,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,18173561000.0,SKK,,18437794000.0
+Slovakia,1993,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,18437794000.0,SKK,18173561000.0,18688695000.0
+Slovakia,1994,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,18688695000.0,SKK,18437794000.0,24797684000.0
+Slovakia,1995,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,24797684000.0,SKK,18688695000.0,27667038000.0
+Slovakia,1996,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,27667038000.0,SKK,24797684000.0,5822694000.0
+Slovakia,1997,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,5822694000.0,SKK,27667038000.0,6772693000.0
+Slovakia,1998,Ministerstvo školstva SR (kapitola 20),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,5822694000.0,6772693000.0
+Slovakia,1999,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,6772693000.0,SKK,5822694000.0,200000000.0
+Slovakia,2000,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,200000000.0,SKK,6772693000.0,7705008000.0
+Slovakia,2001,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,7705008000.0,SKK,200000000.0,9687762000.0
+Slovakia,2002,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,9687762000.0,SKK,7705008000.0,10208445000.0
+Slovakia,2003,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,10208445000.0,SKK,9687762000.0,41541953000.0
+Slovakia,2004,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,41541953000.0,SKK,10208445000.0,44700037000.0
+Slovakia,2005,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,44700037000.0,SKK,41541953000.0,33950386000.0
+Slovakia,2006,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,33950386000.0,SKK,44700037000.0,51360826000.0
+Slovakia,2007,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,51360826000.0,SKK,33950386000.0,55494212000.0
+Slovakia,2008,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,55494212000.0,SKK,51360826000.0,2170267753.0
+Slovakia,2009,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,2170267753.0,EUR,55494212000.0,2348231752.0
+Slovakia,2010,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,2348231752.0,EUR,2170267753.0,2323259742.0
+Slovakia,2011,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,2323259742.0,EUR,2348231752.0,2434334571.0
+Slovakia,2012,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,2434334571.0,EUR,2323259742.0,2464621850.0
+Slovakia,2013,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,2464621850.0,EUR,2434334571.0,2257016865.0
+Slovakia,2014,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,2257016865.0,EUR,2464621850.0,2091143891.0
+Slovakia,2015,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,2091143891.0,EUR,2257016865.0,2150110646.0
+Slovakia,2016,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,2150110646.0,EUR,2091143891.0,1433710444.0
+Slovakia,2017,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,1433710444.0,EUR,2150110646.0,40317223.0
+Slovakia,2018,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,40317223.0,EUR,1433710444.0,1361102879.0
+Slovakia,2019,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,1361102879.0,EUR,40317223.0,1581963859.0
+Slovakia,2020,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,1581963859.0,EUR,1361102879.0,1751342149.0
+Slovakia,2021,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,1751342149.0,EUR,1581963859.0,3643684873.0
+Slovakia,2022,Ministerstvo školstva SR (kapitola 20),higher_education,ok,,,,,,none,3643684873.0,EUR,1751342149.0,5358963927.0
+Slovakia,2025,Ministerstvo školstva SR (kapitola 20),higher_education,outlier,,"Amount 5,358,963,927 outside expected range [-507,237,468 – 4,565,173,634] (IQR × 3.0) within EUR observations. Possible current/prior year confusion or unit error.",,,,verify,5358963927.0,EUR,3643684873.0,
+Slovakia,1995,Agentúra pre vedecký výskum (pre-APVV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Slovakia,1996,Agentúra pre vedecký výskum (pre-APVV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Slovakia,1997,Agentúra pre vedecký výskum (pre-APVV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Slovakia,1998,Agentúra pre vedecký výskum (pre-APVV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Slovakia,1999,Agentúra pre vedecký výskum (pre-APVV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Slovakia,2000,Agentúra pre vedecký výskum (pre-APVV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Slovakia,2001,Agentúra pre vedecký výskum (pre-APVV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Slovakia,2002,Agentúra pre vedecký výskum (pre-APVV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Slovakia,2003,Agentúra pre vedecký výskum (pre-APVV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Slovakia,2004,Agentúra pre vedecký výskum (pre-APVV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Slovakia,2005,Agentúra pre vedecký výskum (pre-APVV),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Slovakia,1993,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,8400000.0
+Slovakia,1994,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,8400000.0
+Slovakia,1995,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,8400000.0
+Slovakia,1996,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,8400000.0
+Slovakia,1997,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,8400000.0
+Slovakia,1998,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,8400000.0
+Slovakia,1999,CERN (Slovak contribution),direct_rd,ok,,,,,,none,8400000.0,SKK,,7560000.0
+Slovakia,2000,CERN (Slovak contribution),direct_rd,ok,,,,,,none,7560000.0,SKK,8400000.0,
+Slovakia,2001,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2002,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2003,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2004,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2005,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2006,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2007,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2008,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2009,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2010,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2011,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2012,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2013,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2014,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2015,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2016,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2017,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2018,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2019,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2020,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2021,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2022,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,2025,CERN (Slovak contribution),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,7560000.0,
+Slovakia,1992,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,33950386000.0
+Slovakia,1993,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,33950386000.0
+Slovakia,1994,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,33950386000.0
+Slovakia,1995,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,33950386000.0
+Slovakia,1996,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,33950386000.0
+Slovakia,1997,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,33950386000.0
+Slovakia,1998,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,33950386000.0
+Slovakia,1999,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,33950386000.0
+Slovakia,2000,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,33950386000.0
+Slovakia,2001,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,33950386000.0
+Slovakia,2002,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,33950386000.0
+Slovakia,2003,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,33950386000.0
+Slovakia,2004,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,33950386000.0
+Slovakia,2005,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,33950386000.0
+Slovakia,2006,Oblasť 740 — veda a výskum (science and research),direct_rd,ok,,,,,,none,33950386000.0,SKK,,
+Slovakia,2007,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,33950386000.0,
+Slovakia,2008,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,33950386000.0,
+Slovakia,2009,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,33950386000.0,
+Slovakia,2010,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,33950386000.0,
+Slovakia,2011,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,33950386000.0,
+Slovakia,2012,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,33950386000.0,
+Slovakia,2013,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,33950386000.0,
+Slovakia,2014,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,33950386000.0,
+Slovakia,2015,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,33950386000.0,
+Slovakia,2016,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,33950386000.0,
+Slovakia,2017,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,33950386000.0,
+Slovakia,2018,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,33950386000.0,
+Slovakia,2019,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,33950386000.0,
+Slovakia,2020,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,33950386000.0,
+Slovakia,2021,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,33950386000.0,
+Slovakia,2022,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,33950386000.0,
+Slovakia,2025,Oblasť 740 — veda a výskum (science and research),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,33950386000.0,
+Slovakia,2019,"Support for Research, Development and Innovations - Specific Objective 1.2.2",direct_rd,ok,,,,,,none,202130054.0,EUR,,318323634.0
+Slovakia,2020,"Support for Research, Development and Innovations - Specific Objective 1.2.2",direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,202130054.0,318323634.0
+Slovakia,2021,"Support for Research, Development and Innovations - Specific Objective 1.2.2",direct_rd,ok,,,,,,none,318323634.0,EUR,202130054.0,
+Slovakia,2014,Operational Program Research and Development,direct_rd,ok,,,,,,none,285954988.0,EUR,,236385983.0
+Slovakia,2015,Operational Program Research and Development,direct_rd,ok,,,,,,none,236385983.0,EUR,285954988.0,16534339.0
+Slovakia,2016,Operational Program Research and Development,direct_rd,ok,,,,,,none,16534339.0,EUR,236385983.0,
+Slovakia,2012,Support for Research and Development,direct_rd,ok,,,,,,none,404405315.0,EUR,,0.0
+Slovakia,2013,Support for Research and Development,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,404405315.0,0.0
+Slovakia,2014,Support for Research and Development,direct_rd,ok,,,,,,none,0.0,EUR,404405315.0,
+Slovakia,2015,Support for Research and Development,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,0.0,
+Slovakia,2016,Support for Research and Development,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,0.0,
+Slovakia,2017,Support for Research and Development,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,0.0,
+Slovakia,2018,Support for Research and Development,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,0.0,
+Slovakia,2019,Support for Research and Development,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,0.0,
+Slovakia,2020,Support for Research and Development,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,0.0,
+Slovakia,2021,Support for Research and Development,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,0.0,
+Slovakia,2022,Support for Research and Development,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,0.0,
+Slovakia,2020,Operational Program Research and Innovations – Part of the Ministry of Economy,direct_rd,ok,,,,,,none,83059857.0,EUR,,
+Slovakia,2013,"Research and Development in Natural, Technical, Medical and Social Sciences and Their Assurance",direct_rd,ok,,,,,,none,60076460.0,EUR,,58520775.0
+Slovakia,2014,"Research and Development in Natural, Technical, Medical and Social Sciences and Their Assurance",direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,60076460.0,58520775.0
+Slovakia,2015,"Research and Development in Natural, Technical, Medical and Social Sciences and Their Assurance",direct_rd,ok,,,,,,none,58520775.0,EUR,60076460.0,60000000.0
+Slovakia,2016,"Research and Development in Natural, Technical, Medical and Social Sciences and Their Assurance",direct_rd,ok,,,,,,none,60000000.0,EUR,58520775.0,62666620.0
+Slovakia,2017,"Research and Development in Natural, Technical, Medical and Social Sciences and Their Assurance",direct_rd,ok,,,,,,none,62666620.0,EUR,60000000.0,68524253.0
+Slovakia,2018,"Research and Development in Natural, Technical, Medical and Social Sciences and Their Assurance",direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,62666620.0,68524253.0
+Slovakia,2019,"Research and Development in Natural, Technical, Medical and Social Sciences and Their Assurance",direct_rd,ok,,,,,,none,68524253.0,EUR,62666620.0,84294866.0
+Slovakia,2020,"Research and Development in Natural, Technical, Medical and Social Sciences and Their Assurance",direct_rd,ok,,,,,,none,84294866.0,EUR,68524253.0,
+Slovakia,2019,"Support for Research, Development and Innovations (Specific Objectives 1.1.1, 1.1.2, 1.1.3, 1.2.1)",direct_rd,ok,,,,,,none,4266856.0,EUR,,125637585.0
+Slovakia,2020,"Support for Research, Development and Innovations (Specific Objectives 1.1.1, 1.1.2, 1.1.3, 1.2.1)",direct_rd,ok,,,,,,none,125637585.0,EUR,4266856.0,
+Slovakia,2006,Research and Development Tasks Supported by the Agency for Research and Development Support,direct_rd,ok,,,,,,none,380000000.0,SKK,,951126000.0
+Slovakia,2007,Research and Development Tasks Supported by the Agency for Research and Development Support,direct_rd,ok,,,,,,none,951126000.0,SKK,380000000.0,968297000.0
+Slovakia,2008,Research and Development Tasks Supported by the Agency for Research and Development Support,direct_rd,ok,,,,,,none,968297000.0,SKK,951126000.0,20514143.0
+Slovakia,2009,Research and Development Tasks Supported by the Agency for Research and Development Support,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,968297000.0,20514143.0
+Slovakia,2010,Research and Development Tasks Supported by the Agency for Research and Development Support,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,968297000.0,20514143.0
+Slovakia,2011,Research and Development Tasks Supported by the Agency for Research and Development Support,direct_rd,ok,,,,,,none,20514143.0,EUR,968297000.0,21813643.0
+Slovakia,2012,Research and Development Tasks Supported by the Agency for Research and Development Support,direct_rd,ok,,,,,,none,21813643.0,EUR,20514143.0,26271370.0
+Slovakia,2013,Research and Development Tasks Supported by the Agency for Research and Development Support,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,21813643.0,26271370.0
+Slovakia,2014,Research and Development Tasks Supported by the Agency for Research and Development Support,direct_rd,ok,,,,,,none,26271370.0,EUR,21813643.0,0.0
+Slovakia,2015,Research and Development Tasks Supported by the Agency for Research and Development Support,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,26271370.0,0.0
+Slovakia,2016,Research and Development Tasks Supported by the Agency for Research and Development Support,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,26271370.0,0.0
+Slovakia,2017,Research and Development Tasks Supported by the Agency for Research and Development Support,direct_rd,ok,,,,,,none,0.0,EUR,26271370.0,41819554.0
+Slovakia,2018,Research and Development Tasks Supported by the Agency for Research and Development Support,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,0.0,41819554.0
+Slovakia,2019,Research and Development Tasks Supported by the Agency for Research and Development Support,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,0.0,41819554.0
+Slovakia,2020,Research and Development Tasks Supported by the Agency for Research and Development Support,direct_rd,ok,,,,,,none,41819554.0,EUR,0.0,41527088.0
+Slovakia,2021,Research and Development Tasks Supported by the Agency for Research and Development Support,direct_rd,ok,,,,,,none,41527088.0,EUR,41819554.0,41537662.0
+Slovakia,2022,Research and Development Tasks Supported by the Agency for Research and Development Support,direct_rd,ok,,,,,,none,41537662.0,EUR,41527088.0,
+Slovakia,2006,National Program for the Development of Science and Technology,direct_rd,ok,,,,,,none,134620000.0,SKK,,41555851.0
+Slovakia,2007,National Program for the Development of Science and Technology,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,134620000.0,41555851.0
+Slovakia,2008,National Program for the Development of Science and Technology,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,134620000.0,41555851.0
+Slovakia,2009,National Program for the Development of Science and Technology,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,134620000.0,41555851.0
+Slovakia,2010,National Program for the Development of Science and Technology,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,134620000.0,41555851.0
+Slovakia,2011,National Program for the Development of Science and Technology,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,134620000.0,41555851.0
+Slovakia,2012,National Program for the Development of Science and Technology,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,134620000.0,41555851.0
+Slovakia,2013,National Program for the Development of Science and Technology,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,134620000.0,41555851.0
+Slovakia,2014,National Program for the Development of Science and Technology,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,134620000.0,41555851.0
+Slovakia,2015,National Program for the Development of Science and Technology,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,134620000.0,41555851.0
+Slovakia,2016,National Program for the Development of Science and Technology,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,134620000.0,41555851.0
+Slovakia,2017,National Program for the Development of Science and Technology,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,134620000.0,41555851.0
+Slovakia,2018,National Program for the Development of Science and Technology,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,134620000.0,41555851.0
+Slovakia,2019,National Program for the Development of Science and Technology,direct_rd,ok,,,,,,none,41555851.0,EUR,134620000.0,
+Slovakia,2005,Expenditures on Science and Technology,direct_rd,ok,,,,,,none,1798974000.0,SKK,,
+Slovakia,2017,State Orders for Research and Development to Support Sector Policy,direct_rd,ok,,,,,,none,1660720.0,EUR,,
+Slovakia,2003,Contribution of Slovakia to the VI Framework Programme for Research and Technological Development,innovation_instruments,ok,,,,,,none,500000000.0,SKK,,
+Slovakia,2003,INFOVEK,innovation_instruments,ok,,,,,,none,319909000.0,SKK,,
+Slovakia,1994,Contribution to Basic Research,direct_rd,ok,,,,,,none,241000000.0,SKK,,
+Slovakia,2007,State Programs for the Development of Research and Development Infrastructure,direct_rd,ok,,,,,,none,192061000.0,SKK,,236084000.0
+Slovakia,2008,State Programs for the Development of Research and Development Infrastructure,direct_rd,ok,,,,,,none,236084000.0,SKK,192061000.0,
+Slovakia,1994,Contribution to Scientific Research,direct_rd,ok,,,,,,none,140638000.0,SKK,,
+Slovakia,2006,State Programs for Research and Development,direct_rd,ok,,,,,,none,104599000.0,SKK,,
+Slovakia,2005,Applied Research at Universities,direct_rd,ok,,,,,,none,103860000.0,SKK,,
+Slovakia,1995,Grants for Scientific Projects,direct_rd,ok,,,,,,none,30000000.0,SKK,,
+Slovakia,1997,Cooperation with the European Union in Research and Development of Technologies - 4th EU Framework Program,direct_rd,ok,,,,,,none,10000000.0,SKK,,
+Slovakia,1996,Contribution for Scientific Societies,innovation_instruments,ok,,,,,,none,2300000.0,SKK,,
+Slovakia,1997,Transfer to Scientific Societies,innovation_instruments,ok,,,,,,none,2070000.0,SKK,,2366000.0
+Slovakia,1998,Transfer to Scientific Societies,innovation_instruments,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,2070000.0,2366000.0
+Slovakia,1999,Transfer to Scientific Societies,innovation_instruments,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,2070000.0,2366000.0
+Slovakia,2000,Transfer to Scientific Societies,innovation_instruments,ok,,,,,,none,2366000.0,SKK,2070000.0,

@@ -22,7 +22,7 @@ _PAGE_MARKER = re.compile(
     r"=== Page ([\d.]+) \| method: (\S+) ===\n?"
 )
 
-COUNTRIES = ["Belgium", "Chile", "Estonia", "Iceland", "Israel", "Colombia", "Costa Rica"]
+COUNTRIES = ["Belgium", "Chile", "Estonia", "Iceland", "Israel", "Colombia", "Costa Rica", "Czech Republic"]
 
 
 def parse_txt_gz(path: Path) -> list[dict]:

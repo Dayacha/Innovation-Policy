@@ -601,6 +601,7 @@ def discover_agencies(
     min_years: int = MIN_YEARS,
     min_avg_amount: float = MIN_AVG_AMOUNT,
     dry_run: bool = False,
+    output_dir: Path = cfg.OUTPUT_DIR,
 ) -> list[dict]:
     """
     Discover new R&D agencies from raw_rows for a country.
@@ -801,7 +802,7 @@ def discover_agencies(
 
     # Write review CSV (append)
     all_review = review
-    review_path = cfg.OUTPUT_DIR / f"{country.lower().replace(' ','_')}_discovery_review.csv"
+    review_path = Path(output_dir) / f"{country.lower().replace(' ','_')}_discovery_review.csv"
     if all_review:
         review_df = pd.DataFrame(all_review)
         review_df["country"] = country

@@ -638,6 +638,8 @@ COUNTRY_CONTEXT: dict[str, dict] = {
         "currency": "SEK",
         "currency_symbol": "kr",
         "language": "swedish",
+        "ocr_langs": "swe+eng",
+        "ocr_zoom": 2.5,
         "unit_hint": (
             "Amounts are in THOUSANDS of Swedish kronor (tusental kronor / tkr). "
             "Set unit='thousand'. "
@@ -717,16 +719,21 @@ COUNTRY_CONTEXT: dict[str, dict] = {
         "currency": "EUR",           # EUR from 2002; ATS (Schilling) before 2002
         "currency_symbol": "€",
         "language": "german",
+        "ocr_langs": "deu+eng",
+        "ocr_zoom": 2.5,
         "unit_hint": (
-            "ERA-DEPENDENT UNITS — check the document header: "
-            "(1) 1975-2001 (ATS era): amounts in THOUSANDS of Austrian Schillings (in Tausend ATS). "
-            "Set currency='ATS', unit='thousand'. "
-            "(2) 2002+ (EUR era): amounts in THOUSANDS of euros (in Tausend EUR). "
-            "Set currency='EUR', unit='thousand'. "
-            "IMPORTANT: Austrian number format: period '.' is the thousands separator, "
-            "comma ',' is the decimal. Example: '280.000' = 280,000 thousand ATS/EUR. "
-            "NEVER assume unit='million' unless the text explicitly says 'Millionen'. "
-            "The 1 EUR = 13.7603 ATS conversion rate was fixed from 1999."
+            "ERA-DEPENDENT UNITS — ALL YEARS use MILLIONS (not thousands). "
+            "The table header always reads '(Beträge in Millionen Schilling)' or "
+            "'(Beträge in Millionen Euro)'. Set unit='million' for all years. "
+            "(1) 1975-2001 (ATS era): amounts in MILLIONS of Austrian Schillings. "
+            "Set currency='ATS', unit='million'. "
+            "1 EUR = 13.7603 ATS (fixed rate from 1 January 1999). "
+            "(2) 2002+ (EUR era): amounts in MILLIONS of euros (Millionen Euro). "
+            "Set currency='EUR', unit='million'. "
+            "Austrian number format: period '.' is the thousands separator, "
+            "comma ',' is the decimal. "
+            "Example: '6.303,815' = 6,303.815 million EUR. '280' = 280 million EUR. "
+            "NEVER set unit='thousand' — Austrian Bundesvoranschlag uses Millionen throughout."
         ),
         "known_agencies": [
             # Core R&D funding agencies
@@ -940,6 +947,59 @@ COUNTRY_CONTEXT: dict[str, dict] = {
             "INCLUDE: Suomen Akatemia research grants (29.60.50), Tekes/Business Finland "
             "innovation appropriations (32.20), VTT institutional grant, GTK, individual "
             "research institute operating budgets."
+        ),
+    },
+    "Czech Republic": {
+        "currency": "CZK",
+        "currency_symbol": "Kč",
+        "language": "czech",
+        "ocr_langs": "ces+eng",
+        "ocr_zoom": 2.5,
+        "unit_hint": (
+            "ERA- AND FILE-DEPENDENT units: "
+            "(1) Early annex years (especially 1993-2000) often use MILLIONS of Czech koruna "
+            "('v mil. Kč'). Set currency='CZK', unit='million'. "
+            "(2) Many annex/docx years around 2001-2015 use THOUSANDS of Czech koruna "
+            "('v tis. Kč' / 'v tisících Kč'). Set currency='CZK', unit='thousand'. "
+            "(3) Modern law text can show FULL koruna amounts ('Kč') in the statute itself. "
+            "Set unit='unit' when the text is in full CZK. "
+            "ALWAYS read the table header or annex header to confirm the scale; do NOT infer a fixed unit from number size alone. "
+            "Czech number format usually uses SPACE or period as thousands separator and comma as decimal."
+        ),
+        "known_agencies": [
+            "Akademie věd České republiky / Akademie věd ČR (Academy of Sciences of the Czech Republic)",
+            "Grantová agentura České republiky / GA ČR (Czech Science Foundation / Grant Agency of the Czech Republic)",
+            "Technologická agentura České republiky / TA ČR (Technology Agency of the Czech Republic, from 2009/2010)",
+            "Ministerstvo školství, mládeže a tělovýchovy / MŠMT (Ministry of Education, Youth and Sports)",
+            "Ministerstvo průmyslu a obchodu / MPO (Ministry of Industry and Trade)",
+            "Úřad průmyslového vlastnictví (Industrial Property Office)",
+            "Státní úřad pro jadernou bezpečnost (nuclear safety authority)",
+            "vysoké školy / univerzity (universities) when research is explicitly identified",
+            "výzkum a vývoj (research and development)",
+            "věda a výzkum (science and research)",
+            "inovace / technologický výzkum (innovation / technological research)",
+        ],
+        "mixed_ministries": [
+            "Ministerstvo obrany (Ministry of Defence)",
+            "Ministerstvo vnitra (Ministry of the Interior)",
+            "Ministerstvo dopravy / Ministerstvo dopravy a spojů (Transport ministry)",
+            "Ministerstvo práce a sociálních věcí (Labour and Social Affairs)",
+            "Ministerstvo zdravotnictví (Health ministry) unless a named research institute is explicit",
+            "Ministerstvo zemědělství (Agriculture ministry) unless a named research institute is explicit",
+            "Všeobecná pokladní správa",
+            "Operace státních finančních aktiv",
+            "broad chapter totals ('Celkový přehled', 'Příjmy/Výdaje celkem')",
+        ],
+        "doc_type_hint": (
+            "Czech state budget law (Zákon o státním rozpočtu České republiky) with critical annex files (Přílohy). "
+            "SOURCE FAMILY MATTERS: many years have both the main law text and annexes, and the annexes usually contain the real institution-level detail. "
+            "ERA GUIDE: "
+            "(1) 1993-2000: annex-heavy era; many useful pages are in Přílohy PDFs and often use 'v mil. Kč'. "
+            "(2) 2001-2008: annex/docx era; detailed chapter tables often in annexes/docx and often use 'v tis. Kč'. "
+            "(3) 2009+: some years are fuller compiled budget laws, but the main law text can still overproduce aggregate totals; prefer named agencies, programmes, and annex table rows over macro legal totals. "
+            "KEY TARGETS: Akademie věd ČR, Grantová agentura ČR, Technologická agentura ČR, explicit 'výzkum', 'vývoj', 'věda', 'inovace' lines, university research, and named research institutes. "
+            "KEY RISK: the main law text often contains broad chapter totals and legal macro aggregates that are not institution-level R&D appropriations. "
+            "SKIP: municipal/regional transfers, public debt, social transfers, defence/interior operations, transport infrastructure, and broad chapter totals unless a specific research institution or research programme is named."
         ),
     },
     "Belgium": {
@@ -1205,6 +1265,150 @@ COUNTRY_CONTEXT: dict[str, dict] = {
             "moksliniai tyrimai, and university or research-institute R&D earmarks. Keep broad ministry totals conservative."
         ),
     },
+    "Luxembourg": {
+        "currency": "EUR",
+        "currency_symbol": "€",
+        "language": "french",
+        "ocr_langs": "fra+deu+eng",
+        "ocr_zoom": 2.5,
+        "unit_hint": (
+            "ERA-DEPENDENT currency. Luxembourg uses PERIOD as the thousands separator "
+            "(e.g. 1.234.567 = 1,234,567). "
+            "(1) 1975–2001: Luxembourg franc (LUF / fr.lux.). "
+            "Budget amounts are in FULL FRANCS (unit='unit') unless a table header says 'en milliers' or similar. "
+            "1 EUR = 40.3399 LUF (fixed conversion rate from 1 January 1999). "
+            "(2) 2002+: Euro (€). Amounts are in FULL EUROS (unit='unit'). "
+            "Luxembourg is a small country — research-line amounts are typically in the hundreds of thousands "
+            "to low tens of millions of EUR. "
+            "Always read the budget heading or article title to confirm scale."
+        ),
+        "known_agencies": [
+            "FNR — Fonds National de la Recherche (National Research Fund, from 1999); "
+            "primary competitive R&D funding body",
+            "Université du Luxembourg (UniLu, from 2003) — public research university",
+            "LIST — Luxembourg Institute of Science and Technology (2015+, from CRP Henri Tudor)",
+            "LISER — Luxembourg Institute of Socio-Economic Research (2015+, from CEPS/INSTEAD)",
+            "LIH — Luxembourg Institute of Health (2015+, from CRP Santé)",
+            "CRP Henri Tudor — Centre de Recherche Public Henri Tudor (pre-2015)",
+            "CRP Gabriel Lippmann — Centre de Recherche Public Gabriel Lippmann (pre-2015)",
+            "CRP Santé — Centre de Recherche Public de la Santé (pre-2015)",
+            "CNRS — Centre National de la Recherche Scientifique (French, bilateral cooperation contributions)",
+            "Ministère de l'Enseignement Supérieur et de la Recherche — primary R&D ministry (section 03)",
+            "Département de la Culture, de l'Enseignement Supérieur et de la Recherche (pre-2009 name)",
+            "Service de Coordination de la Recherche et de l'Innovation (SCRI)",
+            "Agence Spatiale Luxembourgeoise (SES Space involvement, small)",
+        ],
+        "mixed_ministries": [
+            "Ministère de l'Education Nationale — skip broad primary/secondary education totals; "
+            "include only named university or research lines",
+            "Ministère de l'Economie — include only named R&D/innovation fund lines",
+            "Ministère de la Santé — include only named health-research programme lines",
+            "Ministère de la Défense — skip; Luxembourg has minimal defence R&D",
+            "Broad social-transfer ministry totals (sécurité sociale, pensions) — non-R&D",
+        ],
+        "doc_type_hint": (
+            "Luxembourg budget: 'Loi concernant le budget des recettes et des dépenses de l'Etat'. "
+            "SOURCE: Published in the Mémorial A (Journal Officiel du Grand-Duché de Luxembourg) "
+            "for years up to approx. 2009; later years appear as standalone 'budget-de-l-etat-YYYY.pdf' files. "
+            "NOTE: The 1997 file (43.7 MB) and the 2002 file (32 MB) are large scanned images — OCR is required. "
+            "NOTE: Year 1986 is missing from the collection. "
+            "BUDGET STRUCTURE (modern): "
+            "  - Ministère (e.g. 03 = Enseignement Supérieur et Recherche) "
+            "  - Section (e.g. 03.0 = Enseignement supérieur et recherche, Dépenses générales) "
+            "  - Article (e.g. 11.010 — staff costs, or higher article numbers for transfers/grants) "
+            "  - Libellé (description of the expenditure) "
+            "KEY R&D SECTION: 03 — Ministère de l'Enseignement Supérieur et de la Recherche "
+            "(exact name varies by year; pre-2009 it may be a département within another ministry). "
+            "FNR appears as a transfer line to a public body ('subvention', 'dotation', or 'transfert'). "
+            "KEY FRENCH R&D TERMS: recherche (research), développement (development), innovation, "
+            "enseignement supérieur (higher education), science, technologie, subvention de recherche, "
+            "fonds de recherche, programme de recherche, projet de recherche. "
+            "SKIP: debt service (intérêts de la dette / service de la dette), "
+            "pensions and social transfers (Caisse Nationale d'Assurance Pension / CNAP), "
+            "primary and secondary education totals without named research line, "
+            "police and defence lines, and broad sector totals."
+        ),
+    },
+    "Mexico": {
+        "currency": "MXN",
+        "currency_symbol": "$",
+        "language": "spanish",
+        "ocr_langs": "spa+eng",
+        "ocr_zoom": 2.5,
+        "unit_hint": (
+            "CRITICAL — scale depends on the table header and era: "
+            "(1) 1975–1992: OLD peso (peso antiguo / moneda nacional). "
+            "1 new peso (1993+) = 1,000 old pesos. Amounts in the table header may say 'miles de pesos' "
+            "(=thousands of old pesos) or just 'pesos'. "
+            "(2) 1993+: New peso (peso nuevo / MXN). "
+            "Summary tables (Resumen / Clasificación por Ramos) often say '(Millones de pesos)' — set unit='million'. "
+            "Detailed chapter tables (chapters/partidas) often show full pesos — set unit='unit'. "
+            "CONACYT/CONAHCyT (Ramo 38) detailed tables from 2007+ show amounts in plain pesos. "
+            "ALWAYS read the table header (e.g. '(pesos)', '(Millones de pesos)', '(Miles de pesos)') before assigning unit. "
+            "ANEXO 'PROGRAMA DE CIENCIA Y TECNOLOGÍA' tables: header says '(pesos)' — set unit='unit' (full pesos). "
+            "Example: '17,279,570,709' = 17.3 billion pesos (not millions — the comma is a thousands separator). "
+            "COLUMN SELECTION: always extract the 'Aprobado' column. "
+            "'Monto Total' includes Recursos Propios (own-source revenues) and must NOT be used as the budget figure. "
+            "NOTE: 1999 and 2000 each have two identical files in this folder (exact duplicates); only process one."
+        ),
+        "known_agencies": [
+            "CONACYT — Consejo Nacional de Ciencia y Tecnología (1971–2022), Ramo 38; "
+            "renamed CONAHCyT (Consejo Nacional de Humanidades, Ciencias y Tecnologías) in 2022",
+            "CONAHCyT — Consejo Nacional de Humanidades, Ciencias y Tecnologías (2022+), Ramo 38",
+            "Ramo 38 — the dedicated science/technology budget ramo; PRIMARY R&D SOURCE",
+            "CINVESTAV — Centro de Investigación y de Estudios Avanzados del IPN (supervised by IPN/SEP)",
+            "IPN — Instituto Politécnico Nacional (Ramo 11 / SEP); key public research-teaching university",
+            "UNAM — Universidad Nacional Autónoma de México (Ramo 11 / SEP); largest public research university",
+            "Centros Públicos de Investigación (CPIs) supervised by CONACYT: CICESE, CIESAS, CIO, CIDESI, "
+            "CIQA, CIAD, CENAPRED, CIMMYT (partial), CIATEJ, CICY, INFOTEC, LANOTEC, CENIDET, etc.",
+            "ININ — Instituto Nacional de Investigaciones Nucleares (under SENER / energy ministry)",
+            "SENER — Secretaría de Energía (Ramo 18): includes ININ and nuclear/energy research",
+            "SEP — Secretaría de Educación Pública (Ramo 11): universities, IPN, CINVESTAV, CETI",
+            "SAGARPA/SADER — Secretaría de Agricultura: INIFAP (agricultural R&D), COLPOS",
+            "INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias",
+            "IMPI — Instituto Mexicano de la Propiedad Industrial (IP, minor R&D component)",
+            "Agencia Espacial Mexicana (AEM, from 2010) — appears as sub-line in Ramo 38",
+            "Fondo Sectorial (CONACYT + ministry joint funds — e.g. CONACYT-SEP, CONACYT-SENER)",
+            "Fondo Institucional (FOINS) — CONACYT institutional research fund",
+            "Programa Nacional de Ciencia y Tecnología — pre-2001 era CONACYT programme name",
+        ],
+        "mixed_ministries": [
+            "SEP (Ramo 11) — include only named research/innovation lines for IPN, UNAM, CINVESTAV, CPIs; "
+            "skip broad education transfers (subsidio educativo, escuelas, becas generales)",
+            "SENER (Ramo 18) — include ININ and nuclear/energy research; skip oil-sector operations",
+            "SAGARPA/SADER — include INIFAP, COLPOS; skip crop insurance, rural subsidies",
+            "SEDENA/SEMAR (defence ramos) — skip entirely unless explicitly labelled 'investigación'",
+            "IMSS/ISSSTE (health/social security ramos) — include only explicitly labelled research lines; "
+            "skip pension, social-insurance, and health-service totals",
+            "Ramo 06 Hacienda — debt service; always skip",
+            "Ramo 23 Provisiones Salariales y Económicas — general reserve; skip",
+            "Ramo 28/33/39 Aportaciones Federales — transfers to states; skip unless science-labelled",
+        ],
+        "doc_type_hint": (
+            "Mexican Presupuesto de Egresos de la Federación (PEF), published in the "
+            "Diario Oficial de la Federación (DOF) as a supplemento ordinario, typically in late November or December. "
+            "FILE NAMING: '{year} DDMMYYYY-MAT.pdf' = main DOF issue (Matutino); "
+            "'-VES.pdf' = evening/supplemental DOF edition. "
+            "The MAT files for 1994–2005 are large scanned images (10–200+ MB); OCR will be needed. "
+            "The 'PEF incomplete tables/' subdirectory contains focused text-layer PEF files for select years — "
+            "these are NOT auto-discovered by the pipeline (only top-level files are processed). "
+            "BUDGET STRUCTURE: "
+            "  - Ramo: top-level ministry/entity code (e.g. Ramo 38 = CONACYT/CONAHCyT). "
+            "  - Unidad Responsable (UR): sub-unit within a Ramo. "
+            "  - Misión/Función/Programa/Proyecto (post-2007 results-based budgeting). "
+            "  - Capitulo/Concepto/Partida: object-of-expenditure classification (e.g. Capítulo 3000 = services). "
+            "KEY R&D RAMOS: Ramo 38 (CONACYT/CONAHCyT), Ramo 11 (SEP, includes UNAM/IPN), "
+            "Ramo 18 (SENER, includes ININ). "
+            "KEY SPANISH R&D TERMS: investigación (research), ciencia (science), tecnología (technology), "
+            "desarrollo (development), innovación (innovation), centro de investigación, fondo de investigación, "
+            "programas nacionales estratégicos (PRONACES, post-2020 CONAHCyT programme). "
+            "SKIP: servicio de la deuda (Ramo 06 / debt service), pensiones/retiro (IMSS/ISSSTE), "
+            "Aportaciones Federales para municipios (Ramo 28/33), infraestructura vial (SCT/SICT roads), "
+            "defensa sin señal de investigación (SEDENA/SEMAR), programas sociales (BIENESTAR/SEDESOL). "
+            "PRE-1993: amounts are in old pesos; apply 1,000× conversion to new pesos. "
+            "POST-1993: amounts in new pesos (MXN)."
+        ),
+    },
     "Israel": {
         "currency": "ILS",
         "currency_symbol": "₪",
@@ -1444,6 +1648,448 @@ COUNTRY_CONTEXT: dict[str, dict] = {
             "UNIT: full colones, period=thousands separator. "
             "SKIP: MOPT roads/infrastructure, broad education transfers without research label, "
             "CCSS general health services, pension funds, public debt service."
+        ),
+    },
+    "Italy": {
+        "currency": "EUR",
+        "currency_symbol": "€",
+        "language": "italian",
+        "ocr_langs": "ita+eng",
+        "ocr_zoom": 2.5,
+        "unit_hint": (
+            "CRITICAL — unit depends on year and document part: "
+            "(1) 1986–2001: ITL (lire). Amounts usually in MILIONI (millions) of lire for programme/chapter totals. "
+            "Pre-1997 files (e.g. 1986-1996) are scanned image PDFs — expect zero or garbled text. "
+            "(2) 2002–2016: EUR, amounts in MIGLIAIA DI EURO (thousands of euros). "
+            "Tables are headed '(MIGLIAIA DI EURO)'. Convert: multiply by 1,000 for full euros. "
+            "(3) 2017+: EUR, amounts in full euros (euro interi). BILANCIO PER AZIONI tables show full euros directly. "
+            "Companion file (e.g. SO_040-1 alongside SO_040): contains the multi-year BILANCIO PER AZIONI tables; "
+            "use this for programme-level amounts. "
+            "IMPORTANT: Italy uses '.' as the thousands separator and ',' as decimal (e.g., 1.234.567 = 1,234,567)."
+        ),
+        "known_agencies": [
+            "Ministero dell'università e della ricerca (MUR) — renamed from MIUR in 2020, from MURST 1989–1999; "
+            "state-of-preview table (stato di previsione) is the budget section for MUR",
+            "Ministero dell'istruzione, dell'università e della ricerca (MIUR) — 1999–2020",
+            "Ministero dell'università e della ricerca scientifica e tecnologica (MURST) — 1989–1999",
+            "CNR — Consiglio Nazionale delle Ricerche (National Research Council); key ente di ricerca vigilato MUR",
+            "ENEA — Agenzia nazionale per le nuove tecnologie, l'energia e lo sviluppo economico sostenibile",
+            "ASI — Agenzia Spaziale Italiana (Italian Space Agency, 1988+)",
+            "INFN — Istituto Nazionale di Fisica Nucleare",
+            "INAF — Istituto Nazionale di Astrofisica (2002+)",
+            "INGV — Istituto Nazionale di Geofisica e Vulcanologia",
+            "OGS — Istituto Nazionale di Oceanografia e di Geofisica Sperimentale",
+            "ISTAT — Istituto Nazionale di Statistica (minor R&D component)",
+            "ISS — Istituto Superiore di Sanità (health research)",
+            "ISSM / IRCCS — Istituti di Ricovero e Cura a Carattere Scientifico (health R&D)",
+            "FOE — Fondo Ordinario per gli Enti di ricerca (capitolo 1678 pre-reform; main block grant to research institutes)",
+            "FIRST — Fondo per gli Investimenti nella Ricerca Scientifica e Tecnologica (2007+, capitolo 1694 approx)",
+            "PRIN — Progetti di Rilevante Interesse Nazionale (university research grant scheme)",
+            "Missione 17 — Ricerca e innovazione (R&D mission code across all ministries)",
+            "Ministero delle imprese e del made in Italy (MIMIT, 2022+) — industrial R&D, Fondo innovazione",
+            "Ministero dello sviluppo economico (MISE, until 2022) — industrial R&D",
+        ],
+        "doc_type_hint": (
+            "Italian state budget: 'Bilancio di previsione dello Stato' published in the Gazzetta Ufficiale "
+            "(Supplemento ordinario). TWO-FILE STRUCTURE per year: one file is the main budget law (legge di bilancio) "
+            "containing the legal text and articles; the companion file (often labelled SO_NNN-1 or a higher SO number) "
+            "contains the ALLEGATI (attachments) with detailed mission/programme/chapter tables. "
+            "BUDGET STRUCTURE (2009 reform onward): Ministry → Missione (mission) → Programma → Capitolo/Azione. "
+            "KEY R&D MISSIONS: "
+            "  - Missione 17: Ricerca e innovazione (appears under MUR, health, environment, culture, defence). "
+            "  - Missione 23: Istruzione universitaria e formazione post-universitaria (university funding, FFO). "
+            "NOTE: FFO (Fondo di Finanziamento Ordinario per le università) is bulk university teaching transfer — "
+            "only include if the specific line is labelled as research/R&D component, not the full FFO. "
+            "PRE-2009 STRUCTURE: Unità previsionale di base (UPB) codes like 4.2.1.2 'Ricerca applicata'. "
+            "KEY ITALIAN R&D TERMS: ricerca (research), innovazione (innovation), scienza (science), "
+            "sviluppo (development), tecnologia (technology), ente di ricerca (research institute), "
+            "finanziamento della ricerca (research funding). "
+            "SKIP: FFO bulk transfer (pure teaching), debt service (interessi sul debito), "
+            "social transfers (pensioni, assistenza sociale), infrastructure (infrastrutture viarie, ferrovie), "
+            "defence procurement without research signal (programmi di armamento). "
+            "YEAR 1986–1996: early files are scanned image PDFs — OCR will return little or no text; "
+            "treat as image-heavy and flag accordingly."
+        ),
+    },
+    "Slovenia": {
+        "currency": "EUR",
+        "currency_symbol": "€",
+        "language": "slovenian",
+        "ocr_langs": "slv+eng",
+        "ocr_zoom": 2.5,
+        "unit_hint": (
+            "CRITICAL — currency/unit changed in 2007: "
+            "(1) 1991–2006: SIT (Slovenian tolar). Amounts are in THOUSANDS of SIT ('v 000 tolarjih' or 'v tisoč tolarjih'). "
+            "Use unit='thousand' with currency='SIT'. "
+            "(2) 2007+: EUR, full euros ('v EUR'). Use unit='unit' with currency='EUR'. "
+            "Slovenia uses '.' as thousands separator and ',' as decimal. "
+            "MULTI-FILE structure: main 'u{year}XXX.pdf' (general part + summary tables) "
+            "+ companion 'RS_-YYYY-NNN-...P001/P002/P003.pdf' files (detailed project/programme tables). "
+            "Some years have biennial budgets covering two fiscal years in one document."
+        ),
+        "known_agencies": [
+            "ARRS — Agencija za raziskovalno dejavnost Republike Slovenije "
+            "(Slovenian Research Agency, established 2004; key funder of research programmes and projects)",
+            "Ministrstvo za visoko šolstvo, znanost in tehnologijo (MVZT) — 2004–2012, ministry code 3211",
+            "Ministrstvo za izobraževanje, znanost in šport (MIZŠ) — 2012–present, ministry code 3330",
+            "SAZU — Slovenska akademija znanosti in umetnosti (Slovenian Academy of Sciences and Arts), code 3911",
+            "SPIRIT — Javna agencija za internacionalizacijo podjetij (business/innovation agency)",
+            "SPS — Slovenian Enterprise Fund (Javni sklad RS za podjetništvo)",
+            "Javna agencija za tehnološki razvoj (pre-ARRS, until 2004)",
+            "Programme code 0501 — Urejanje sistema in podporne dejavnosti (science system governance)",
+            "Programme code 0502 — Znanstveno raziskovalna dejavnost (scientific research activity) — MAIN R&D CODE",
+            "Programme code 0503 — Človeški viri v podporo znanosti / Mladi raziskovalci (researchers/mobility)",
+            "Programme code 0504 — Tehnološki razvoj / Podpora tehnološkim razvojnim projektom (tech development)",
+            "Sub-programme 050201 — Raziskovalni programi in projekti (research programmes and projects)",
+            "Sub-programme 050202 — Mednarodne aktivnosti na področju znanosti (international science)",
+            "Sub-programme 050204 — Podpora raziskovalni infrastrukturi (research infrastructure)",
+            "Ministry code 33 / 3330 — education and science ministry (later MIZŠ)",
+            "Ministry code 32 / 3211 — higher education, science and technology ministry (earlier MVZT)",
+        ],
+        "doc_type_hint": (
+            "Slovenian state budget: 'Proračun Republike Slovenije za leto XXXX' published in Uradni list "
+            "Republike Slovenije (Official Gazette). "
+            "STRUCTURE: Ministry code (2/4-digit) → Policy area code (2-digit, e.g. 05=science) → "
+            "Programme code (4-digit, e.g. 0502) → Sub-programme (6-digit, e.g. 050201). "
+            "KEY R&D POLICY AREA: 05 = ZNANOST IN TEHNOLOŠKI RAZVOJ / ZNANOST IN INFORMACIJSKA DRUŽBA. "
+            "Programme 0502 (Znanstveno raziskovalna dejavnost) is the PRIMARY R&D appropriation. "
+            "MULTI-FILE STRUCTURE: The main 'u{year}XXX.pdf' file (from Uradni list) contains the general budget "
+            "overview and ministry-level tables. Companion 'RS_-YYYY-NNN-...P001/P002/P003.pdf' files contain "
+            "project-level detail; these are worth scanning for individual research project appropriations. "
+            "Some years (2014+2015, 2018+2019) have biennial budgets — one document for two years. "
+            "Standalone 'YYYY.pdf' files may be amendment laws or execution laws (ZIPRS) — lower extraction priority. "
+            "KEY SLOVENIAN R&D TERMS: raziskovalni/raziskovalna (research), razvoj (development), "
+            "inovacije (innovation), znanje (knowledge), tehnologija (technology), "
+            "mladi raziskovalci (young researchers). "
+            "SKIP: debt service (servisiranje javnega dolga), social transfers (pokojnine, socialna varnost), "
+            "defence without research signal (obramba), basic school education (osnovna šola, vrtci), "
+            "road/transport infrastructure (ceste, železnice) without research signal. "
+            "YEAR 1991–1994: early files (u1991014 etc.) are scanned image PDFs — expect zero or minimal text."
+        ),
+    },
+    "Portugal": {
+        "currency": "EUR",
+        "currency_symbol": "€",
+        "language": "portuguese",
+        "ocr_langs": "por+eng",
+        "ocr_zoom": 2.5,
+        "unit_hint": (
+            "ERA-DEPENDENT currency. Portugal uses SPACE as thousands separator and COMMA as decimal "
+            "(e.g. 281 634 915 = 281,634,915). "
+            "(1) 1977–2001: Portuguese escudo (PTE / escudos). "
+            "Amounts may be in FULL ESCUDOS (unit='unit') or in CONTOS (1 conto = 1 000 escudos, unit='thousand'). "
+            "Early budgets (1977-1984) sometimes use MILHAR DE CONTOS (millions of escudos). "
+            "1 EUR = 200.482 PTE (fixed rate from 1 January 1999). "
+            "(2) 2002+: Euro (€). Amounts are in FULL EUROS (unit='unit'). "
+            "FCT budget in 2005 was approx. €282 million (full euros). "
+            "ALWAYS confirm the unit from the table header or first budgetary article."
+        ),
+        "known_agencies": [
+            "FCT — Fundação para a Ciência e a Tecnologia, I.P. (from 1997); "
+            "primary competitive R&D funder; budget chapter 50 of the science ministry",
+            "JNICT — Junta Nacional de Investigação Científica e Tecnológica (pre-1997); "
+            "predecessor to FCT",
+            "INIC — Instituto Nacional de Investigação Científica (pre-1990s era)",
+            "ANI — Agência Nacional de Inovação (from 2009; merged ADI + OTIC + SIR)",
+            "LNEC — Laboratório Nacional de Engenharia Civil (civil engineering research)",
+            "LNETI — Laboratório Nacional de Engenharia e Tecnologia Industrial (pre-INETI)",
+            "INETI — Instituto Nacional de Engenharia, Tecnologia e Inovação (pre-2007 merger)",
+            "INRB — Instituto Nacional dos Recursos Biológicos (agriculture/fisheries R&D)",
+            "INIAV — Instituto Nacional de Investigação Agrária e Veterinária",
+            "IST — Instituto Superior Técnico (part of ULisboa; major research university)",
+            "Universidades públicas — UP, UC, UL/ULisboa, UNL/Nova Lisboa, UBI, UAlg, UE, UM, UA; "
+            "include only when a named research or R&D line appears (not broad subsídio educativo)",
+            "Ministério da Ciência e Tecnologia / MCES / MCTES / MCTESTP — primary R&D ministry; "
+            "name changed multiple times: MC (pre-1999), MCT (1999-2001), MCES (2002-2005), "
+            "MCTES (2005-2011), MCTESTP (2011+), later MCTES again",
+            "Capítulo 50 — science ministry budget chapter in older format (pre-programme-based budgeting)",
+            "P002 — Programa Investigação Científica e Tecnológica e Inovação (programme code post-2005)",
+        ],
+        "mixed_ministries": [
+            "Ministério da Educação — skip broad primary/secondary school totals; "
+            "include only higher education research lines (universities named)",
+            "Ministério da Saúde — include only named health-research programmes (INSA, CHRC); "
+            "skip broad hospital and social health transfers",
+            "Ministério da Defesa Nacional — skip; include only if explicitly labelled investigação",
+            "Ministério da Administração Interna / PJ — 'investigação' means criminal investigation; "
+            "skip all Polícia Judiciária / PSP lines",
+            "Segurança Social / transferências correntes broad totals — non-R&D",
+            "Serviço de Estrangeiros e Fronteiras / PGR — investigação = criminal investigation",
+        ],
+        "doc_type_hint": (
+            "Portuguese Lei do Orçamento de Estado (OE), published in Diário da República, 1.ª série. "
+            "FILE NAMING: most files are 'Lei orcamento para {YYYY}.pdf'; some years use a DOC code "
+            "('YYYY code.pdf') or a formal law name ('YYYY Lei_NN_YYYY-OE...'). "
+            "IMPORTANT DUPLICATES: "
+            "'Lei orcamento para 1985.pdf' and 'Lei orcamento para 1986.pdf' are IDENTICAL files "
+            "(same byte count) — one label is wrong; treat as year 1986 only (the 1985 budget was "
+            "passed as Lei 66-B/84 covering both years). Similarly, '1997 02040557.pdf' and "
+            "'Lei orcamento para 1997.pdf' are the same file — process only one. "
+            "TEXT LAYER: Files 1977–2000 are SCANNED IMAGE PDFs (OCR with por+eng needed). "
+            "Files from 2001 onwards have digital text layers. "
+            "The large 2020–2024 files (26–31 MB) are digitally typeset with heavy formatting — "
+            "text layer is present but pages are graphics-heavy. "
+            "BUDGET STRUCTURE (modern, post-2004 programme-based): "
+            "  - Programa (P001, P002 …) — functional programme; P002 = R&D and innovation "
+            "  - Medida (M001, M002 …) — M002 = INVESTIGAÇÃO CIENTÍFICA; M099 can = Investigação criminal "
+            "  - Organismo/Capítulo — ministry chapter code (Capítulo 50 = science ministry in older format) "
+            "CRITICAL WARNING: 'investigação' (investigation) is used in both scientific R&D context "
+            "(Investigação Científica, FCT) AND criminal/police context "
+            "(Polícia Judiciária, PGR, Serviços de Investigação). "
+            "Always verify context — criminal investigation lines are NOT R&D. "
+            "KEY PORTUGUESE R&D TERMS: investigação científica (scientific research), "
+            "desenvolvimento tecnológico (technological development), ciência e tecnologia, "
+            "inovação, financiamento da investigação, bolsas de investigação (research grants), "
+            "laboratório de estado (state laboratory), centro de investigação. "
+            "SKIP: serviço da dívida pública (debt service), prestações sociais / segurança social "
+            "(social transfers), ensino básico e secundário without named R&D component, "
+            "infraestruturas rodoviárias / ferroviárias (transport infrastructure), "
+            "forças armadas without investigação label, and investigação criminal/judiciária."
+        ),
+    },
+    "Turkey": {
+        "currency": "TRY",
+        "currency_symbol": "₺",
+        "language": "turkish",
+        "ocr_langs": "tur+eng",
+        "ocr_zoom": 2.5,
+        "unit_hint": (
+            "ERA-DEPENDENT currency. Turkey uses PERIOD as the thousands separator and COMMA as decimal "
+            "(e.g. 329.857.000 = 329,857,000). "
+            "(1) Pre-2005: Turkish lira (TRL / TL). HYPERINFLATION era — typical amounts in TRILLIONS "
+            "of lira for agency budgets (e.g. 1.234.567.890.123 TRL). "
+            "1 YTL (new Turkish lira, introduced 1 January 2005) = 1,000,000 old TRL. "
+            "(2) 2005-2008: Yeni Türk Lirası (YTL). Amounts reset to millions range. "
+            "(3) 2009+: Turkish Lira (TL/TRY — same currency, 'Yeni' dropped). "
+            "Unit is FULL CURRENCY UNITS throughout (unit='unit'). "
+            "Always read the table header or budget law article to confirm unit scale. "
+            "ALWAYS confirm currency era from the year. Budget in force for: "
+            "1975-2004 = TRL (old lira, hyperinflation), 2005-2008 = YTL, 2009+ = TL."
+        ),
+        "known_agencies": [
+            "TÜBİTAK — Türkiye Bilimsel ve Teknolojik Araştırma Kurumu "
+            "(Scientific and Technological Research Council of Turkey); "
+            "ÖZEL BÜTÇELİ (special budget) entity; appears in (II) SAYILI CETVEL, "
+            "NOT in (I) SAYILI CETVEL (general budget). Primary R&D funder.",
+            "TÜBA — Türkiye Bilimler Akademisi (Turkish Academy of Sciences); "
+            "ÖZEL BÜTÇELİ entity.",
+            "TAEK — Türkiye Atom Enerjisi Kurumu (Turkish Atomic Energy Authority); "
+            "ÖZEL BÜTÇELİ entity; nuclear R&D.",
+            "YÖK — Yükseköğretim Kurulu (Council of Higher Education); "
+            "coordinates university system.",
+            "Sanayi ve Teknoloji Bakanlığı — Ministry of Industry and Technology "
+            "(GENEL BÜTÇELİ; present in (I) SAYILI CETVEL). "
+            "Name variations: Bilim, Sanayi ve Teknoloji Bakanlığı (2011-2018), "
+            "Sanayi ve Teknoloji Bakanlığı (2018+), Sanayi ve Ticaret Bakanlığı (pre-2011).",
+            "KOSGEB — Küçük ve Orta Ölçekli İşletmeleri Geliştirme ve Destekleme İdaresi Başkanlığı "
+            "(SME support — some R&D/innovation mandates; ÖZEL BÜTÇELİ).",
+            "Milli Eğitim Bakanlığı (MEB) — Ministry of National Education; "
+            "skip broad K-12 lines; include only named university research lines.",
+            "Yükseköğretim Kurumları — Universities (ÖZEL BÜTÇELİ from 2006+); "
+            "include only when a named araştırma (research) programme or R&D line appears.",
+            "TTGV — Türkiye Teknoloji Geliştirme Vakfı (technology development fund); "
+            "off-budget but sometimes appears as transfer line.",
+            "Türkiye Uzay Ajansı (TUA, from 2018) — Turkish Space Agency.",
+            "Savunma Sanayii Başkanlığı (SSB) — Defence Industries Presidency; "
+            "skip general procurement; include only explicitly labelled R&D lines.",
+        ],
+        "mixed_ministries": [
+            "Millî Savunma Bakanlığı (MSB) — Ministry of National Defence: skip operational and "
+            "procurement lines; include only explicitly labelled 'araştırma', 'geliştirme', 'Ar-Ge' lines.",
+            "Sağlık Bakanlığı — Ministry of Health: include only named health-research programmes; "
+            "skip hospital operations and social health transfers.",
+            "Tarım ve Orman Bakanlığı (and predecessors) — include only named agricultural/forestry "
+            "research institutes (e.g. TARI research stations); skip general subsidy lines.",
+            "Hazine ve Maliye Bakanlığı — skip all debt-service and transfer lines.",
+            "İçişleri Bakanlığı / Jandarma / Emniyet — 'araştırma' here means criminal investigation; "
+            "skip all interior ministry and law-enforcement lines.",
+        ],
+        "doc_type_hint": (
+            "Turkish budget law: Bütçe Kanunu / Merkezi Yönetim Bütçe Kanunu, "
+            "published in the Official Gazette (Resmî Gazete). "
+            "FILE NAMING: files follow various conventions — "
+            "'YYYY bütçe kanunu.pdf', 'YYYY kanun.pdf', 'YYYY_merkezi_yonetim.pdf', "
+            "UUID-named scans, or year-prefixed filenames. "
+            "IMPORTANT DUPLICATES: "
+            "1990 and 1991 files are IDENTICAL (same byte content — one is mislabelled). "
+            "2001 has both a scanned UUID file and a 'Kanun' text file — use the Kanun file. "
+            "2002 similarly has a duplicate '(1)' copy — process only one. "
+            "DOCUMENT STRUCTURE: "
+            "Modern files (2010+) use 'EKONOMİK SINIFLANDIRMAYA GÖRE' (economic classification) "
+            "with columns: Kurumsal Kod (institutional code), Ekonomik Kod (economic code), "
+            "Ödenek (appropriation), Toplam (total). "
+            "CRITICAL — TWO BUDGET TABLES IN EACH LAW: "
+            "(I) SAYILI CETVEL — GENEL BÜTÇELİ İDARELER (General Budget entities). "
+            "Includes ministries and attached agencies (Sanayi ve Teknoloji Bakanlığı appears here). "
+            "(II) SAYILI CETVEL — ÖZEL BÜTÇELİ İDARELER (Special/Autonomous Budget entities). "
+            "TÜBİTAK, TÜBA, TAEK, YÖK, KOSGEB, and all universities appear HERE. "
+            "Files labelled '2-a' or containing only '(I) SAYILI CETVEL' DO NOT contain TÜBİTAK. "
+            "To extract TÜBİTAK data, upload files containing (II) SAYILI CETVEL. "
+            "TEXT LAYER: files from mid-1980s onward generally have text layers; "
+            "1975-1982 are likely scanned. Use tur+eng OCR for all years. "
+            "KEY TURKISH R&D TERMS: araştırma (research), geliştirme (development), "
+            "Ar-Ge (R&D), bilimsel araştırma (scientific research), teknoloji (technology), "
+            "inovasyon (innovation), bilim (science), üniversite araştırma (university research). "
+            "SKIP: kamu borç (public debt), sosyal güvenlik (social security), "
+            "emeklilik (pensions), savunma genel (general defence without Ar-Ge label), "
+            "ulaştırma/karayolu (transport/roads), ilköğretim/ortaöğretim (K-12 education)."
+        ),
+    },
+    "Slovakia": {
+        "currency": "EUR",           # EUR from 2009; SKK (Slovak koruna) before 2009
+        "currency_symbol": "€",
+        "language": "slovak",
+        "ocr_langs": "slk+eng",
+        "ocr_zoom": 2.5,
+        "unit_hint": (
+            "ERA-DEPENDENT units — always read the law text header: "
+            "(1) Pre-2009 (SKK era): amounts in THOUSANDS of Slovak koruna ('tis. Sk' / 'tisíc Sk'). "
+            "Set currency='SKK', unit='thousand'. "
+            "Slovakia joined the eurozone 1 January 2009 at 30.1260 SKK per EUR. "
+            "(2) 2009+ (EUR era): amounts in FULL EUROS (full euro amounts, not thousands). "
+            "Set currency='EUR', unit='unit'. "
+            "Example 2025: SAV = 138,756,937 EUR on a single kapitola line. "
+            "Slovak number format: SPACE or period as thousands separator, comma as decimal. "
+            "NEVER assume thousands in the EUR era unless the header explicitly says 'tis. EUR'."
+        ),
+        "known_agencies": [
+            # Science funding agencies
+            "APVV — Agentúra na podporu výskumu a vývoja (Slovak Research and Development Agency, from 2005)",
+            "VEGA — Vedecká grantová agentúra MŠ SR a SAV (grant agency under Ministry of Education and SAV)",
+            "SAV — Slovenská akadémia vied (Slovak Academy of Sciences); kapitola 51",
+            "Ministerstvo školstva SR / Ministerstvo školstva, výskumu, vývoja a mládeže SR; kapitola 20",
+            "Ministerstvo školstva, vedy, výskumu a športu SR (renamed versions of the education/science ministry)",
+            # Universities (funded under kapitola 20 sub-items)
+            "Univerzita Komenského v Bratislave (Comenius University)",
+            "Slovenská technická univerzita v Bratislave (STU, Slovak Technical University)",
+            "Technická univerzita v Košiciach (TUKE)",
+            "Žilinská univerzita v Žiline (University of Žilina)",
+            # Applied research / innovation
+            "SARIO (Slovak Investment and Trade Development Agency — some R&D functions)",
+            "Výskumné ústavy (Research Institutes under Ministerstvo školstva)",
+            # Pre-APVV funding agency
+            "Agentúra pre vedecký výskum (predecessor to APVV, pre-2005)",
+            # Budget division codes for R&D
+            "Oblasť 730 (vzdelávanie / education) — contains universities and HE R&D funding",
+            "Oblasť 740 (veda a výskum / science and research) — direct R&D appropriations including APVV, SAV",
+        ],
+        "mixed_ministries": [
+            "Ministerstvo obrany SR (defence, kapitola 21) — skip unless 'výskum' or 'vývoj' explicitly present",
+            "Ministerstvo financií SR (finance, kapitola 09) — skip, debt and financial admin",
+            "Ministerstvo vnútra SR (interior, kapitola 20 pre-1993) — skip unless research named",
+            "Ministerstvo práce, sociálnych vecí a rodiny SR — skip, social transfers",
+            "Ministerstvo dopravy SR — skip, transport infrastructure without research label",
+            "Sociálna poisťovňa / Všeobecná zdravotná poisťovňa — skip, social insurance",
+            "Zákonom o štátnom dlhu — skip, debt service",
+        ],
+        "doc_type_hint": (
+            "Slovak state budget: 'zákon o štátnom rozpočte' published in Zbierka zákonov SR. "
+            "STRUCTURE: Kapitoly (chapters) by ministry/agency number, then Skupiny (groups), "
+            "Podskupiny (sub-groups), Triedy (classes), Diely (divisions) and Oddiely (sections). "
+            "Older budgets use programme codes under each Kapitola. "
+            "KEY R&D CHAPTERS: "
+            "  Kapitola 20: Ministerstvo školstva SR / Ministerstvo školstva, výskumu, vývoja a mládeže SR "
+            "(universities, APVV, VEGA, research institutes — primary R&D chapter). "
+            "  Kapitola 51: Slovenská akadémia vied (SAV) — basic research. "
+            "BUDGET ERAS: "
+            "(1) 1991-2008 (SKK era): amounts in tis. Sk. Look for 'veda a výskum', "
+            "'výskum a vývoj', 'aplikovaný výskum na vysokých školách', VEGA lines, "
+            "CERN participation ('príspevok do CERN'), international science cooperation. "
+            "(2) 2009+ (EUR era): amounts in full euros. SAV and Ministerstvo školstva "
+            "are main R&D kapitoly. APVV appears as named line under MŠ SR. "
+            "AFTER 2013: Ministry renamed to Ministerstvo školstva, vedy, výskumu a športu SR. "
+            "AFTER 2023: Further renamed to Ministerstvo školstva, výskumu, vývoja a mládeže SR. "
+            "KEY SLOVAK R&D TERMS: výskum (research), vývoj (development), veda (science), "
+            "inovácie (innovation), vysoké školy (higher education institutions), "
+            "vedecký výskum (scientific research), aplikovaný výskum (applied research). "
+            "SKIP: sociálne dávky (social benefits), obrana (defence) without research label, "
+            "dlhová služba (debt service), dopravná infraštruktúra (transport infrastructure). "
+            "YEAR 1990: the file labelled '1990' in the Slovakia folder is actually a Polish "
+            "budget document (Dziennik Ustaw) — DO NOT extract as Slovak budget."
+        ),
+    },
+    "Poland": {
+        "currency": "PLN",
+        "currency_symbol": "zł",
+        "language": "polish",
+        "ocr_langs": "pol+eng",
+        "ocr_zoom": 2.5,
+        "unit_hint": (
+            "ERA-DEPENDENT units. "
+            "CRITICAL REDENOMINATION: On 1 January 1995 the Polish złoty was redenominated "
+            "at 1 new PLN = 10,000 old PLN (stary złoty). "
+            "For 1990-1994 files, ALWAYS read the page header first: many early annexes say "
+            "'w milionach złotych', so set unit='million'; if the header instead says "
+            "'w tys. zł' / 'w tysiącach złotych', set unit='thousand'. "
+            "For 1995 onward, budget tables normally use THOUSANDS of new PLN, so set unit='thousand'. "
+            "Polish number format: SPACE or period as thousands separator, comma as decimal. "
+            "Example: '1 234 567' = 1,234,567 thousand PLN. "
+            "Do not invent round placeholder values; extract the printed amount exactly."
+        ),
+        "known_agencies": [
+            # Core R&D funding agencies
+            "NCN — Narodowe Centrum Nauki (National Science Centre, from 2011); Part 28, Chapter 730",
+            "NCBiR / NCBR — Narodowe Centrum Badań i Rozwoju (National Centre for Research and Development, from 2007)",
+            "PAN — Polska Akademia Nauk (Polish Academy of Sciences); Part 67 (own chapter) or Part 28 sub-items",
+            "MNISW — Ministerstwo Nauki i Szkolnictwa Wyższego (Ministry of Science and Higher Education)",
+            "MEiN — Ministerstwo Edukacji i Nauki (Ministry of Education and Science, 2021-2024)",
+            "MNiSW / MEN — earlier names for the science ministry",
+            # Universities (funded under Part 28 Szkolnictwo wyższe i nauka)
+            "Politechnika Warszawska (Warsaw University of Technology)",
+            "Politechnika Gdańska, Politechnika Krakowska, Politechnika Wrocławska, "
+            "Politechnika Łódzka, Politechnika Poznańska (technical universities)",
+            "Uniwersytet Warszawski (University of Warsaw)",
+            "Uniwersytet Jagielloński w Krakowie (Jagiellonian University)",
+            "AGH — Akademia Górniczo-Hutnicza (AGH University of Science and Technology, Kraków)",
+            "Szkoła Główna Handlowa (SGH, Warsaw School of Economics)",
+            # Budget parts
+            "Część 28 — Szkolnictwo wyższe i nauka (Higher Education and Science) — primary R&D part",
+            "Część 67 — Polska Akademia Nauk (Polish Academy of Sciences)",
+            # International R&D cooperation
+            "CERN (składka / contribution to CERN)",
+            "ESA (European Space Agency contributions)",
+            "COST, Horyzont Europa / Horizon Europe participation",
+        ],
+        "mixed_ministries": [
+            "Część 29 — Obrona Narodowa (Ministry of National Defence) — skip unless research named",
+            "Część 42 — Sprawy Wewnętrzne (Interior) — skip, administration",
+            "Część 19 — Budżet / Finanse (Finance ministry) — skip, debt and fiscal operations",
+            "Część 39 — Transport (Transport) — skip, infrastructure without research label",
+            "Część 44 — Zabezpieczenie Społeczne / ZUS — skip, social transfers",
+            "Część 73 — Zakład Ubezpieczeń Społecznych (ZUS) — skip, social insurance",
+            "Dług publiczny — skip, public debt service",
+            "Rezerwy celowe (contingency reserves without R&D label) — skip",
+        ],
+        "doc_type_hint": (
+            "Polish 'Ustawa Budżetowa' (Budget Act), published in Dziennik Ustaw Rzeczypospolitej Polskiej (DzU). "
+            "DOCUMENT STRUCTURE: "
+            "Części (Parts, numbered sequentially) → Działy (Divisions, 3-digit codes) → "
+            "Rozdziały (Chapters, 5-digit codes) → Paragrafy (Paragraphs, 4-digit codes). "
+            "KEY R&D PART: Część 28 — Szkolnictwo wyższe i nauka (Higher Education and Science). "
+            "Within Part 28: "
+            "  Dział 730 Szkolnictwo wyższe — universities, higher education grants, dydaktyka + badania. "
+            "  Dział 740 Prace badawczo-rozwojowe w dziedzinie nauki — direct R&D (NCN, NCBiR, PAN). "
+            "  Dział 730 Rozdział 73001 — subwencje dla uczelni (block grants to universities). "
+            "Pre-2007 years: the research funding agency landscape is different. "
+            "KBN (Komitet Badań Naukowych, 1991-2005) was the main R&D committee. "
+            "Post-KBN transition: MNiSW created 2005; NCBiR created 2007; NCN created 2011. "
+            "Part 67 = PAN (Polish Academy of Sciences) — own separate budget part. "
+            "BUDGET ERAS: "
+            "(1) 1990-1994: old złoty (PLN pre-redenomination); many annex pages use 'w milionach złotych', "
+            "though some pages may still use thousands. "
+            "Look for KBN, PAN, research grants under ministries. "
+            "(2) 1995-2006: new PLN, tys. zł; KBN era → gradual transfer to MNiSW. "
+            "(3) 2007-2010: MNiSW, NCBiR created 2007; NCN created 2011. "
+            "(4) 2011+: modern structure — NCN (basic research), NCBiR (applied R&D), "
+            "subwencje for universities. "
+            "UNIT: read the page header; do not force one unit across all eras. "
+            "SKIP: ZUS/social insurance (bardzo duże kwoty), obrona narodowa without research, "
+            "infrastruktura drogowa i kolejowa without research label, rezerwa ogólna (general reserve), "
+            "obsługa długu publicznego (public debt service). "
+            "KEY POLISH R&D TERMS: badania naukowe (scientific research), prace badawcze (research work), "
+            "prace badawczo-rozwojowe (R&D), nauka (science), innowacje (innovation), "
+            "szkolnictwo wyższe (higher education), badania podstawowe (basic research), "
+            "badania stosowane (applied research), działalność statutowa (statutory activity of institutes)."
         ),
     },
 }

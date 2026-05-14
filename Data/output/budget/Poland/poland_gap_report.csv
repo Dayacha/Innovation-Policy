@@ -1,0 +1,105 @@
+country,year,canonical_name,category,gap_type,gap_subtype,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,series_currency,prev_amount,next_amount
+Poland,2011,NCN (Narodowe Centrum Nauki),science_agency,ok,,,,,,none,279965000.0,PLN,,899993000.0
+Poland,2013,NCN (Narodowe Centrum Nauki),science_agency,ok,,,,,,none,899993000.0,PLN,279965000.0,1775016000.0
+Poland,2014,NCN (Narodowe Centrum Nauki),science_agency,ok,,,,,,none,1775016000.0,PLN,899993000.0,976452000.0
+Poland,2015,NCN (Narodowe Centrum Nauki),science_agency,ok,,,,,,none,976452000.0,PLN,1775016000.0,434208000.0
+Poland,2016,NCN (Narodowe Centrum Nauki),science_agency,ok,,,,,,none,434208000.0,PLN,976452000.0,1192559000.0
+Poland,2017,NCN (Narodowe Centrum Nauki),science_agency,ok,,,,,,none,1192559000.0,PLN,434208000.0,1352730000.0
+Poland,2018,NCN (Narodowe Centrum Nauki),science_agency,ok,,,,,,none,1352730000.0,PLN,1192559000.0,925378000.0
+Poland,2019,NCN (Narodowe Centrum Nauki),science_agency,ok,,,,,,none,925378000.0,PLN,1352730000.0,1280772000.0
+Poland,2020,NCN (Narodowe Centrum Nauki),science_agency,ok,,,,,,none,1280772000.0,PLN,925378000.0,1281000000.0
+Poland,2021,NCN (Narodowe Centrum Nauki),science_agency,ok,,,,,,none,1281000000.0,PLN,1280772000.0,1435114000.0
+Poland,2022,NCN (Narodowe Centrum Nauki),science_agency,ok,,,,,,none,1435114000.0,PLN,1281000000.0,1436577000.0
+Poland,2023,NCN (Narodowe Centrum Nauki),science_agency,ok,,,,,,none,1436577000.0,PLN,1435114000.0,1441896000.0
+Poland,2024,NCN (Narodowe Centrum Nauki),science_agency,ok,,,,,,none,1441896000.0,PLN,1436577000.0,1747861000.0
+Poland,2025,NCN (Narodowe Centrum Nauki),science_agency,ok,,,,,,none,1747861000.0,PLN,1441896000.0,
+Poland,2008,NCBiR (Narodowe Centrum Badań i Rozwoju),science_agency,ok,,,,,,none,200000000.0,PLN,,618255000.0
+Poland,2010,NCBiR (Narodowe Centrum Badań i Rozwoju),science_agency,ok,,,,,,none,618255000.0,PLN,200000000.0,610365000.0
+Poland,2011,NCBiR (Narodowe Centrum Badań i Rozwoju),science_agency,ok,,,,,,none,610365000.0,PLN,618255000.0,1695208000.0
+Poland,2013,NCBiR (Narodowe Centrum Badań i Rozwoju),science_agency,ok,,,,,,none,1695208000.0,PLN,610365000.0,1788873000.0
+Poland,2014,NCBiR (Narodowe Centrum Badań i Rozwoju),science_agency,ok,,,,,,none,1788873000.0,PLN,1695208000.0,1319954000.0
+Poland,2015,NCBiR (Narodowe Centrum Badań i Rozwoju),science_agency,ok,,,,,,none,1319954000.0,PLN,1788873000.0,496114000.0
+Poland,2016,NCBiR (Narodowe Centrum Badań i Rozwoju),science_agency,ok,,,,,,none,496114000.0,PLN,1319954000.0,2344421000.0
+Poland,2017,NCBiR (Narodowe Centrum Badań i Rozwoju),science_agency,ok,,,,,,none,2344421000.0,PLN,496114000.0,1115007000.0
+Poland,2018,NCBiR (Narodowe Centrum Badań i Rozwoju),science_agency,ok,,,,,,none,1115007000.0,PLN,2344421000.0,1408735000.0
+Poland,2019,NCBiR (Narodowe Centrum Badań i Rozwoju),science_agency,ok,,,,,,none,1408735000.0,PLN,1115007000.0,1332715000.0
+Poland,2020,NCBiR (Narodowe Centrum Badań i Rozwoju),science_agency,ok,,,,,,none,1332715000.0,PLN,1408735000.0,1150921000.0
+Poland,2021,NCBiR (Narodowe Centrum Badań i Rozwoju),science_agency,ok,,,,,,none,1150921000.0,PLN,1332715000.0,1241221000.0
+Poland,2022,NCBiR (Narodowe Centrum Badań i Rozwoju),science_agency,ok,,,,,,none,1241221000.0,PLN,1150921000.0,935222000.0
+Poland,2023,NCBiR (Narodowe Centrum Badań i Rozwoju),science_agency,ok,,,,,,none,935222000.0,PLN,1241221000.0,763113000.0
+Poland,2024,NCBiR (Narodowe Centrum Badań i Rozwoju),science_agency,ok,,,,,,none,763113000.0,PLN,935222000.0,1088273000.0
+Poland,2025,NCBiR (Narodowe Centrum Badań i Rozwoju),science_agency,ok,,,,,,none,1088273000.0,PLN,763113000.0,
+Poland,1990,PAN (Polska Akademia Nauk),science_agency,ok,,,,,,none,100000000.0,PLN,,113133000.0
+Poland,1991,PAN (Polska Akademia Nauk),science_agency,ok,,,,,,none,113133000.0,PLN,100000000.0,46270000.0
+Poland,1992,PAN (Polska Akademia Nauk),science_agency,ok,,,,,,none,46270000.0,PLN,113133000.0,124121000.0
+Poland,1993,PAN (Polska Akademia Nauk),science_agency,ok,,,,,,none,124121000.0,PLN,46270000.0,33553000.0
+Poland,1996,PAN (Polska Akademia Nauk),science_agency,missing,real_missing,real_missing: Quick scan did not surface a confirmed clean PAN appropriation for this year during the manual pass. Source audit: 1996 text.pdf.,audited,,1996 text.pdf,none,,,124121000.0,33553000.0
+Poland,1997,PAN (Polska Akademia Nauk),science_agency,ok,,,,,,none,33553000.0,PLN,124121000.0,42692000.0
+Poland,1998,PAN (Polska Akademia Nauk),science_agency,ok,,,,,,none,42692000.0,PLN,33553000.0,120061000.0
+Poland,1999,PAN (Polska Akademia Nauk),science_agency,ok,,,,,,none,120061000.0,PLN,42692000.0,300000000.0
+Poland,2008,PAN (Polska Akademia Nauk),science_agency,ok,,,,,,none,300000000.0,PLN,120061000.0,54468000.0
+Poland,2010,PAN (Polska Akademia Nauk),science_agency,ok,,,,,,none,54468000.0,PLN,300000000.0,79924000.0
+Poland,2011,PAN (Polska Akademia Nauk),science_agency,ok,,,,,,none,79924000.0,PLN,54468000.0,300000000.0
+Poland,2013,PAN (Polska Akademia Nauk),science_agency,ok,,,,,,none,300000000.0,PLN,79924000.0,299189000.0
+Poland,2014,PAN (Polska Akademia Nauk),science_agency,missing,documented_but_not_comparable,"documented_but_not_comparable: Page lists PAN sub-lines for organs, auxiliary units, and other activity only; no single clear PAN annual appropriation was identified in this block. Source audit: 2014 text.pdf p. 252.",audited,,2014 text.pdf,none,,,300000000.0,299189000.0
+Poland,2015,PAN (Polska Akademia Nauk),science_agency,missing,documented_but_not_comparable,documented_but_not_comparable: Page lists PAN sub-lines rather than a clean institutional total; prior survivor was misassigned from another block. Source audit: 2015 text.pdf p. 257.,audited,,2015 text.pdf,none,,,300000000.0,299189000.0
+Poland,2016,PAN (Polska Akademia Nauk),science_agency,missing,documented_but_not_comparable,"documented_but_not_comparable: Original clearly mentions PAN and several amounts, but they are decomposed grants and activity components, not a clean comparable PAN appropriation. Source audit: 2016 D2016000027802.pdf p. 255.",audited,,2016 D2016000027802.pdf,none,,,300000000.0,299189000.0
+Poland,2017,PAN (Polska Akademia Nauk),science_agency,missing,documented_but_not_comparable,documented_but_not_comparable: PAN appears with multiple component lines; manual review did not find a single defendable annual total comparable with retained years. Source audit: 2017 text.pdf p. 262.,audited,,2017 text.pdf,none,,,300000000.0,299189000.0
+Poland,2018,PAN (Polska Akademia Nauk),science_agency,missing,documented_but_not_comparable,"documented_but_not_comparable: PAN block is present, but the earlier retained 34,889 figure was only 'other activities' and not a full PAN appropriation. Source audit: 2018 text.pdf p. 261.",audited,,2018 text.pdf,none,,,300000000.0,299189000.0
+Poland,2019,PAN (Polska Akademia Nauk),science_agency,missing,documented_but_not_comparable,"documented_but_not_comparable: PAN is present in the original, but the rows reviewed are fragmented and do not provide a clean institutional total suitable for the final panel. Source audit: 2019 text.pdf p. 262-274.",audited,,2019 text.pdf,none,,,300000000.0,299189000.0
+Poland,2020,PAN (Polska Akademia Nauk),science_agency,missing,documented_but_not_comparable,"documented_but_not_comparable: PAN appears in multiple blocks, but the identified amounts are partial program/activity lines rather than a single defendable PAN appropriation. Source audit: 2020 text.pdf p. 241-253.",audited,,2020 text.pdf,none,,,300000000.0,299189000.0
+Poland,2021,PAN (Polska Akademia Nauk),science_agency,missing,documented_but_not_comparable,"documented_but_not_comparable: PAN is mentioned in the source, but current evidence still points to fragmented sub-lines rather than a stable annual total. Source audit: 2021 text.pdf p. 246-259.",audited,,2021 text.pdf,none,,,300000000.0,299189000.0
+Poland,2022,PAN (Polska Akademia Nauk),science_agency,ok,,,,,,none,299189000.0,PLN,300000000.0,110894000.0
+Poland,2023,PAN (Polska Akademia Nauk),science_agency,ok,,,,,,none,110894000.0,PLN,299189000.0,140000000.0
+Poland,2024,PAN (Polska Akademia Nauk),science_agency,missing,documented_but_not_comparable,"documented_but_not_comparable: PAN appears in the original, but only decomposed lines were confirmed during manual review; no clear final total was validated. Source audit: 2024 text.pdf p. 242-256.",audited,,2024 text.pdf,none,,,110894000.0,140000000.0
+Poland,2025,PAN (Polska Akademia Nauk),science_agency,ok,,,,,,none,140000000.0,PLN,110894000.0,
+Poland,1991,KBN (Komitet Badań Naukowych),science_agency,missing,documented_but_not_comparable,"documented_but_not_comparable: Original has a KBN total in 'w milionach złotych', but it is a pre-redenomination old-zloty context and was removed for comparability rather than missingness. Source audit: 1991 text.pdf p. 21.",audited,,1991 text.pdf,none,,,,174086000.0
+Poland,1992,KBN (Komitet Badań Naukowych),science_agency,ok,,,,,,none,174086000.0,PLN,,200000000.0
+Poland,1993,KBN (Komitet Badań Naukowych),science_agency,ok,,,,,,none,200000000.0,PLN,174086000.0,500000000.0
+Poland,1996,KBN (Komitet Badań Naukowych),science_agency,missing,documented_but_not_comparable,"documented_but_not_comparable: The available extracted KBN mention is only a very small 5,920-thousand row, which behaves like a weak sub-line rather than a defensible main annual appropriation. Source audit: 1996 text.pdf p. 11.",audited,,1996 text.pdf,none,,,200000000.0,500000000.0
+Poland,1997,KBN (Komitet Badań Naukowych),science_agency,ok,,,,,,none,500000000.0,PLN,200000000.0,1335010000.0
+Poland,1998,KBN (Komitet Badań Naukowych),science_agency,ok,,,,,,none,1335010000.0,PLN,500000000.0,2742811000.0
+Poland,1999,KBN (Komitet Badań Naukowych),science_agency,ok,,,,,,none,2742811000.0,PLN,1335010000.0,
+Poland,1991,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,,30000000.0
+Poland,1992,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,,30000000.0
+Poland,1993,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,,30000000.0
+Poland,1996,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,,30000000.0
+Poland,1997,CERN (Polish contribution),direct_rd,ok,,,,,,none,30000000.0,PLN,,
+Poland,1998,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,30000000.0,
+Poland,1999,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,30000000.0,
+Poland,2008,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,30000000.0,
+Poland,2010,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,30000000.0,
+Poland,2011,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,30000000.0,
+Poland,2013,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,30000000.0,
+Poland,2014,CERN (Polish contribution),direct_rd,missing,traceability_weak,traceability_weak: The earlier 2014 survivor looked like a page-selection error inside the NCN/NCBiR zone and was removed for traceability reasons. Source audit: 2014 text.pdf p. 295-296.,audited,,2014 text.pdf,none,,,30000000.0,
+Poland,2015,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,30000000.0,
+Poland,2016,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,30000000.0,
+Poland,2017,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,30000000.0,
+Poland,2018,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,30000000.0,
+Poland,2019,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,30000000.0,
+Poland,2020,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,30000000.0,
+Poland,2021,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,30000000.0,
+Poland,2022,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,30000000.0,
+Poland,2023,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,30000000.0,
+Poland,2024,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,30000000.0,
+Poland,2025,CERN (Polish contribution),direct_rd,missing,real_missing,real_missing: No manual evidence of a clean CERN contribution row was confirmed in this pass.,audited,,,none,,,30000000.0,
+Poland,2014,Regional Initiative of Excellence,innovation_instruments,ok,,,,,,none,390325000.0,PLN,,150000000.0
+Poland,2015,Regional Initiative of Excellence,innovation_instruments,missing,real_missing,real_missing: No direct manual confirmation was captured in the original during this pass; current gap should stay unless a dedicated source trace is found.,audited,,,none,,,390325000.0,150000000.0
+Poland,2016,Regional Initiative of Excellence,innovation_instruments,missing,real_missing,real_missing: No direct manual confirmation was captured in the original during this pass; current gap should stay unless a dedicated source trace is found.,audited,,,none,,,390325000.0,150000000.0
+Poland,2017,Regional Initiative of Excellence,innovation_instruments,missing,real_missing,real_missing: No direct manual confirmation was captured in the original during this pass; current gap should stay unless a dedicated source trace is found.,audited,,,none,,,390325000.0,150000000.0
+Poland,2018,Regional Initiative of Excellence,innovation_instruments,missing,real_missing,real_missing: No direct manual confirmation was captured in the original during this pass; current gap should stay unless a dedicated source trace is found.,audited,,,none,,,390325000.0,150000000.0
+Poland,2019,Regional Initiative of Excellence,innovation_instruments,missing,real_missing,real_missing: No direct manual confirmation was captured in the original during this pass; current gap should stay unless a dedicated source trace is found.,audited,,,none,,,390325000.0,150000000.0
+Poland,2020,Regional Initiative of Excellence,innovation_instruments,missing,real_missing,real_missing: No direct manual confirmation was captured in the original during this pass; current gap should stay unless a dedicated source trace is found.,audited,,,none,,,390325000.0,150000000.0
+Poland,2021,Regional Initiative of Excellence,innovation_instruments,ok,,,,,,none,150000000.0,PLN,390325000.0,100000000.0
+Poland,2022,Regional Initiative of Excellence,innovation_instruments,missing,real_missing,real_missing: No direct manual confirmation was captured in the original during this pass; current gap should stay unless a dedicated source trace is found.,audited,,,none,,,150000000.0,100000000.0
+Poland,2023,Regional Initiative of Excellence,innovation_instruments,ok,,,,,,none,100000000.0,PLN,150000000.0,
+Poland,2024,Regional Initiative of Excellence,innovation_instruments,missing,traceability_weak,"traceability_weak: A large amount appears in the section-28 listing, but the prior survivor was removed because the trace was not stable enough to defend as a standalone final series. Source audit: 2024 text.pdf p. 248.",audited,,2024 text.pdf,none,,,100000000.0,
+Poland,2025,Research Reactor MARIA Modernization Program,direct_rd,ok,,,,,,none,91744000.0,PLN,,
+Poland,2021,Łukasiewicz Research Network,innovation_instruments,missing,documented_but_not_comparable,"documented_but_not_comparable: The 2021 survivor is a network-wide activity line, while later years are documented only through Centrum Łukasiewicz or centre-plus-institutes evidence, so this cannot anchor a consistent series. Source audit: 2021 text.pdf p. 60 and 530-531.",audited,,2021 text.pdf,none,,,,
+Poland,2022,Łukasiewicz Research Network,innovation_instruments,missing,documented_but_not_comparable,"documented_but_not_comparable: Original has both a budget listing for Centrum Łukasiewicz and Instytuty Sieci Badawczej Łukasiewicz plus a separate financial plan for Centrum Łukasiewicz, but those levels do not match the broader network-wide survivor previously kept for 2021. Source audit: 2022 text.pdf p. 249 and 551-552.",audited,,2022 text.pdf,none,,,,
+Poland,2023,Łukasiewicz Research Network,innovation_instruments,missing,documented_but_not_comparable,"documented_but_not_comparable: Original has a section-28 listing and a financial plan for Centrum Łukasiewicz with budget support, but this is centre-level evidence and not directly comparable with a network-wide series. Source audit: 2023 text.pdf p. 245 and 546-547.",audited,,2023 text.pdf,none,,,,
+Poland,2024,Łukasiewicz Research Network,innovation_instruments,missing,documented_but_not_comparable,"documented_but_not_comparable: Original again has a listing and a financial plan for Centrum Łukasiewicz; manual audit keeps the gap because the evidence is centre-level or centre-plus-institutes, not a consistent network-wide appropriation. Source audit: 2024 text.pdf p. 248 and 565-566.",audited,,2024 text.pdf,none,,,,
+Poland,2021,Polish Space Agency Activities,science_agency,ok,,,,,,none,12566000.0,PLN,,12566000.0
+Poland,2022,Polish Space Agency Activities,science_agency,ok,,,,,,none,12566000.0,PLN,12566000.0,19324000.0
+Poland,2023,Polish Space Agency Activities,science_agency,ok,,,,,,none,19324000.0,PLN,12566000.0,20773000.0
+Poland,2024,Polish Space Agency Activities,science_agency,ok,,,,,,none,20773000.0,PLN,19324000.0,

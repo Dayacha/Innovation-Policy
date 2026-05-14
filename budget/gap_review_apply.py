@@ -68,7 +68,31 @@ def apply_gap_review(
     audit_path = country_dir / f"{cname}_gap_review_applied.csv"
 
     if not review_path.exists():
-        raise FileNotFoundError(review_path)
+        logger.warning(f"No gap review file for {country}: {review_path} — nothing to apply")
+        audit_df = pd.DataFrame(
+            [
+                {
+                    "country": country,
+                    "year": None,
+                    "canonical_name": None,
+                    "verdict": None,
+                    "old_rows": 0,
+                    "old_amounts": "",
+                    "review_amount": None,
+                    "review_unit": None,
+                    "preferred_source_files": "[]",
+                    "reason": "no_gap_review_file",
+                    "confidence": 0.0,
+                    "applied": False,
+                    "skip_reason": "no_gap_review_file",
+                    "match_reason": "",
+                }
+            ]
+        )
+        audit_df.to_csv(audit_path, index=False)
+        logger.info(f"Apply audit → {audit_path}")
+        build_combined_database(output_dir=output_dir)
+        return audit_df
     if not series_path.exists():
         raise FileNotFoundError(series_path)
 

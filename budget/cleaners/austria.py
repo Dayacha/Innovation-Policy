@@ -102,9 +102,9 @@ _SECTION_TOTAL_PATTERNS = re.compile(
     re.IGNORECASE,
 )
 
-# Outlier thresholds (in amount_local units — i.e. thousands of currency)
-_OUTLIER_EUR_THOUSAND = 5_000_000.0     # > €5B implausible for single Austrian R&D line
-_OUTLIER_ATS_THOUSAND = 100_000_000.0  # > 100B ATS implausible
+# Outlier thresholds (in amount_local units — i.e. MILLIONS of currency)
+_OUTLIER_EUR_MILLION = 5_000.0      # > €5B (5,000 million) implausible for single R&D line
+_OUTLIER_ATS_MILLION = 100_000.0    # > 100B ATS (100,000 million) implausible
 
 
 def _note(df: pd.DataFrame, mask: pd.Series, text: str) -> None:
@@ -205,12 +205,12 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
         unit_s = df["unit"].fillna("").str.lower()
         amt = pd.to_numeric(df["amount_local"], errors="coerce")
 
-        # Post-2001 EUR thousands: > €5B implausible for a single R&D line
+        # Post-2001 EUR millions: > €5B implausible for a single R&D line
         eur_outlier = (
             (year_num >= 2002)
-            & unit_s.isin(["thousand", "1000", "tausend"])
+            & unit_s.isin(["million", "millionen", "million eur"])
             & amt.notna()
-            & (amt > _OUTLIER_EUR_THOUSAND)
+            & (amt > _OUTLIER_EUR_MILLION)
             & (df["decision"] == "include")
         )
         if eur_outlier.any():
@@ -218,14 +218,14 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
             if "confidence" in df.columns:
                 df.loc[eur_outlier, "confidence"] = 0.2
             _note(df, eur_outlier,
-                  "[outlier: > €5B (thousands EUR) — likely UG total, not single R&D line]")
+                  "[outlier: > €5B (millions EUR) — likely UG total, not single R&D line]")
 
-        # Pre-2002 ATS thousands: > 100B ATS implausible
+        # Pre-2002 ATS millions: > 100B ATS implausible
         ats_outlier = (
             (year_num < 2002)
-            & unit_s.isin(["thousand", "1000", "tausend"])
+            & unit_s.isin(["million", "millionen", "million ats"])
             & amt.notna()
-            & (amt > _OUTLIER_ATS_THOUSAND)
+            & (amt > _OUTLIER_ATS_MILLION)
             & (df["decision"] == "include")
         )
         if ats_outlier.any():
@@ -233,32 +233,21 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
             if "confidence" in df.columns:
                 df.loc[ats_outlier, "confidence"] = 0.3
             _note(df, ats_outlier,
-                  "[outlier: > 100B ATS (thousands) — likely chapter total, not single R&D line]")
+                  "[outlier: > 100B ATS (millions) — likely chapter total, not single R&D line]")
 
     # -------------------------------------------------------------------
-    # 6. Unit-era mismatch: post-2001 rows with unit='million' are suspect
-    #    (Austrian budget uses thousands, not millions)
+    # 6. Unit-era mismatch: rows with unit='thousand' are suspect
+    #    (Austrian Bundesvoranschlag uses MILLIONS throughout all years)
     # -------------------------------------------------------------------
     if "unit" in df.columns:
         unit_s = df["unit"].fillna("").str.lower()
-        post_million = (
-            (year_num >= 2002)
-            & unit_s.isin(["million", "millionen"])
+        wrong_unit = (
+            unit_s.isin(["thousand", "tausend", "1000"])
             & ~df["aggregation_role"].isin(["non_rd", "redundant", "section"])
         )
-        if post_million.any():
-            _note(df, post_million,
-                  "[unit_check: post-2001 row has unit=million — "
-                  "Bundesvoranschlag uses Tausend EUR (thousands); verify source page header]")
-
-        pre_million = (
-            (year_num < 2002)
-            & unit_s.isin(["million", "millionen"])
-            & ~df["aggregation_role"].isin(["non_rd", "redundant", "section"])
-        )
-        if pre_million.any():
-            _note(df, pre_million,
-                  "[unit_check: pre-2002 row has unit=million — "
-                  "pre-2002 Bundesvoranschlag uses Tausend ATS (thousands); verify source page header]")
+        if wrong_unit.any():
+            _note(df, wrong_unit,
+                  "[unit_check: unit=thousand is incorrect for Austria — "
+                  "Bundesvoranschlag uses Millionen (millions) throughout all years; verify source page]")
 
     return df

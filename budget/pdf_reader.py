@@ -18,6 +18,7 @@ import gzip
 import hashlib
 import json
 import logging
+import shutil
 import re
 import struct
 from dataclasses import dataclass
@@ -88,45 +89,107 @@ def _deserialize_pages(data: list[dict]) -> list[PageText]:
 
 _MIN_DIRECT_TEXT_CHARS = 80   # threshold below which we run OCR
 _MIN_ALNUM_RATIO = 0.20
+# Italian budget PDFs (2001-2016) have landscape-rotated financial tables whose
+# text layer is extracted character-by-character in vertical reading order,
+# producing garbled output like "DIRE Z IONE" instead of "DIREZIONE".
+# This manifests as an unusually high proportion of single-character tokens.
+_MAX_SINGLE_CHAR_TOKEN_RATIO = 0.28
 
 
 def _text_is_usable(text: str) -> bool:
     if len(text) < _MIN_DIRECT_TEXT_CHARS:
         return False
     alnum = sum(c.isalnum() for c in text)
-    return (alnum / max(len(text), 1)) >= _MIN_ALNUM_RATIO
+    if (alnum / max(len(text), 1)) < _MIN_ALNUM_RATIO:
+        return False
+    # Detect garbled vertical/rotated text: too many 1-char tokens signals
+    # that the PDF text layer was read column-by-column instead of row-by-row.
+    tokens = text.split()
+    if len(tokens) >= 20:
+        single_char_ratio = sum(1 for t in tokens if len(t) == 1) / len(tokens)
+        if single_char_ratio > _MAX_SINGLE_CHAR_TOKEN_RATIO:
+            return False
+    return True
 
 
-def _extract_pdf(path: Path, ocr_zoom: float = 2.0, ocr_langs: str = "eng") -> list[PageText]:
-    """Extract text from a PDF, page by page. Falls back to OCR on sparse pages."""
+def _extract_pdf(
+    path: Path,
+    ocr_zoom: float = 2.0,
+    ocr_langs: str = "eng",
+    force_ocr: bool = False,
+) -> list[PageText]:
+    """Extract text from a PDF, page by page.
+
+    Falls back to OCR on sparse pages or pages with garbled rotated text.
+    Set force_ocr=True to skip the direct-text layer entirely (useful for
+    countries whose PDFs always have unreliable embedded text layers, e.g.
+    Italy 2001-2016 landscape budget tables).
+    """
     try:
         import fitz  # PyMuPDF
     except ImportError:
         raise ImportError("PyMuPDF (fitz) required: pip install pymupdf")
 
     pages: list[PageText] = []
+    if hasattr(fitz, "TOOLS"):
+        try:
+            fitz.TOOLS.mupdf_display_errors(False)
+            fitz.TOOLS.mupdf_display_warnings(False)
+            fitz.TOOLS.reset_mupdf_warnings()
+        except Exception:
+            pass
+
     doc = fitz.open(str(path))
-    for page_index in range(len(doc)):
-        page_obj = doc[page_index]
-        page_num = page_index + 1
-        direct_text = page_obj.get_text("text")
+    try:
+        for page_index in range(len(doc)):
+            page_obj = doc[page_index]
+            page_num = page_index + 1
+            try:
+                direct_text = page_obj.get_text("text")
+            except Exception as e:
+                logger.debug("Direct text extraction failed on %s page %s: %s", path.name, page_num, e)
+                direct_text = ""
 
-        if _text_is_usable(direct_text):
-            pages.append(PageText(page_num=page_num, text=direct_text.strip(), method="direct"))
-        else:
-            # Try OCR
-            ocr_text = _ocr_page(page_obj, zoom=ocr_zoom, langs=ocr_langs)
-            if ocr_text:
-                pages.append(PageText(page_num=page_num, text=ocr_text.strip(), method="ocr"))
-            else:
+            use_direct = (not force_ocr) and _text_is_usable(direct_text)
+
+            if use_direct:
                 pages.append(PageText(page_num=page_num, text=direct_text.strip(), method="direct"))
+            else:
+                # Try OCR — use auto-orientation mode (psm 1) so Tesseract detects
+                # and corrects landscape / rotated pages automatically.
+                ocr_text = _ocr_page(
+                    page_obj,
+                    zoom=ocr_zoom,
+                    langs=ocr_langs,
+                    # psm 1 = auto with OSD (detects 90°/180°/270° rotation).
+                    # Falls back to psm 6 if OSD fails.
+                    use_osd=True,
+                )
+                if ocr_text:
+                    pages.append(PageText(page_num=page_num, text=ocr_text.strip(), method="ocr"))
+                else:
+                    # Last resort: keep whatever direct text we have
+                    pages.append(PageText(page_num=page_num, text=direct_text.strip(), method="direct"))
+    finally:
+        doc.close()
 
-    doc.close()
+    if hasattr(fitz, "TOOLS"):
+        try:
+            suppressed = fitz.TOOLS.mupdf_warnings()
+            if suppressed:
+                logger.debug("MuPDF suppressed warnings for %s: %s", path.name, suppressed)
+        except Exception:
+            pass
     return pages
 
 
-def _ocr_page(page_obj, zoom: float, langs: str) -> str:
-    """OCR a single PDF page using pytesseract."""
+def _ocr_page(page_obj, zoom: float, langs: str, use_osd: bool = False) -> str:
+    """OCR a single PDF page using pytesseract.
+
+    use_osd=True uses --psm 1 (auto with orientation and script detection),
+    which lets Tesseract auto-correct landscape / rotated pages.  Falls back
+    to --psm 6 if the OSD pass raises an error (e.g. missing osd.traineddata).
+    """
     try:
         import pytesseract
         from PIL import Image
@@ -136,9 +199,28 @@ def _ocr_page(page_obj, zoom: float, langs: str) -> str:
         return ""
 
     try:
+        tesseract_cmd = shutil.which("tesseract")
+        if not tesseract_cmd:
+            for candidate in ("/opt/homebrew/bin/tesseract", "/usr/local/bin/tesseract"):
+                if Path(candidate).exists():
+                    tesseract_cmd = candidate
+                    break
+        if tesseract_cmd:
+            pytesseract.pytesseract.tesseract_cmd = tesseract_cmd
+
         mat = fitz.Matrix(zoom, zoom)
         pix = page_obj.get_pixmap(matrix=mat, alpha=False)
         img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+
+        if use_osd:
+            try:
+                # psm 1: automatic page segmentation with OSD — handles rotation
+                result = pytesseract.image_to_string(img, lang=langs, config="--psm 1")
+                if result.strip():
+                    return result
+            except Exception as osd_err:
+                logger.debug(f"OSD OCR failed ({osd_err}), falling back to psm 6")
+
         return pytesseract.image_to_string(img, lang=langs, config="--psm 6")
     except Exception as e:
         logger.debug(f"OCR failed: {e}")
@@ -232,6 +314,7 @@ def extract_pages(
     force_reextract: bool = False,
     ocr_zoom: float = 2.0,
     ocr_langs: str = "eng",
+    force_ocr: bool = False,
 ) -> list[PageText]:
     """
     Extract text from a PDF or DOCX file, using cache if available.
@@ -242,6 +325,8 @@ def extract_pages(
         force_reextract:  If True, ignore cache and re-extract.
         ocr_zoom:         Pixel zoom factor for OCR (higher = better quality, slower).
         ocr_langs:        Tesseract language codes, e.g. "eng", "eng+fra+dan".
+        force_ocr:        If True, skip the direct text layer and always OCR (useful for
+                          countries whose PDFs have unreliable embedded text layers).
 
     Returns:
         List of PageText objects, one per page (1-indexed).
@@ -263,7 +348,7 @@ def extract_pages(
     logger.info(f"Extracting text from: {path.name}")
 
     if suffix == ".pdf":
-        pages = _extract_pdf(path, ocr_zoom=ocr_zoom, ocr_langs=ocr_langs)
+        pages = _extract_pdf(path, ocr_zoom=ocr_zoom, ocr_langs=ocr_langs, force_ocr=force_ocr)
     elif suffix == ".docx":
         pages = _extract_docx(path)
     elif suffix == ".doc":

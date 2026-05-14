@@ -1,0 +1,76 @@
+country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
+Czech Republic,1993,Grantová agentura České republiky (GA ČR),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,466361000.0
+Czech Republic,1994,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,466361000.0,,225000000.0
+Czech Republic,1996,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,225000000.0,466361000.0,500000000.0
+Czech Republic,1997,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,500000000.0,225000000.0,965414000.0
+Czech Republic,1998,Grantová agentura České republiky (GA ČR),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,500000000.0,965414000.0
+Czech Republic,1999,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,965414000.0,500000000.0,1072735000.0
+Czech Republic,2000,Grantová agentura České republiky (GA ČR),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,965414000.0,1072735000.0
+Czech Republic,2001,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,1072735000.0,965414000.0,1074478000.0
+Czech Republic,2002,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,1074478000.0,1072735000.0,1325610000.0
+Czech Republic,2003,Grantová agentura České republiky (GA ČR),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,1074478000.0,1325610000.0
+Czech Republic,2004,Grantová agentura České republiky (GA ČR),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,1074478000.0,1325610000.0
+Czech Republic,2005,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,1325610000.0,1074478000.0,1399410000.0
+Czech Republic,2006,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,1399410000.0,1325610000.0,1531116000.0
+Czech Republic,2007,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,1531116000.0,1399410000.0,1534710000.0
+Czech Republic,2008,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,1534710000.0,1531116000.0,1833145000.0
+Czech Republic,2009,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,1833145000.0,1534710000.0,3023794000.0
+Czech Republic,2012,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,3023794000.0,1833145000.0,3309429000.0
+Czech Republic,2013,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,3309429000.0,3023794000.0,3464547000.0
+Czech Republic,2014,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,3464547000.0,3309429000.0,3683086907.0
+Czech Republic,2015,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,3683086907.0,3464547000.0,3833110000.0
+Czech Republic,2016,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,3833110000.0,3683086907.0,4257427000.0
+Czech Republic,2017,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,4257427000.0,3833110000.0,4333066000.0
+Czech Republic,2018,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,4333066000.0,4257427000.0,4390784794.0
+Czech Republic,2019,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,4390784794.0,4333066000.0,4360546000.0
+Czech Republic,2020,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,4360546000.0,4390784794.0,4380546000.0
+Czech Republic,2021,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,4380546000.0,4360546000.0,4669819125.0
+Czech Republic,2022,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,4669819125.0,4380546000.0,4600000000.0
+Czech Republic,2023,Grantová agentura České republiky (GA ČR),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,4669819125.0,4600000000.0
+Czech Republic,2024,Grantová agentura České republiky (GA ČR),science_agency,ok,,,,,none,4600000000.0,4669819125.0,
+Czech Republic,2025,Grantová agentura České republiky (GA ČR),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,4600000000.0,
+Czech Republic,2009,Technologická agentura České republiky (TA ČR),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,2170206000.0
+Czech Republic,2012,Technologická agentura České republiky (TA ČR),science_agency,ok,,,,,none,2170206000.0,,2962491761.0
+Czech Republic,2013,Technologická agentura České republiky (TA ČR),science_agency,ok,,,,,none,2962491761.0,2170206000.0,2864898160.0
+Czech Republic,2014,Technologická agentura České republiky (TA ČR),science_agency,ok,,,,,none,2864898160.0,2962491761.0,2864898160.0
+Czech Republic,2015,Technologická agentura České republiky (TA ČR),science_agency,ok,,,,,none,2864898160.0,2864898160.0,2958939000.0
+Czech Republic,2016,Technologická agentura České republiky (TA ČR),science_agency,ok,,,,,none,2958939000.0,2864898160.0,4274646444.0
+Czech Republic,2017,Technologická agentura České republiky (TA ČR),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,2958939000.0,4274646444.0
+Czech Republic,2018,Technologická agentura České republiky (TA ČR),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,2958939000.0,4274646444.0
+Czech Republic,2019,Technologická agentura České republiky (TA ČR),science_agency,ok,,,,,none,4274646444.0,2958939000.0,4102464850.0
+Czech Republic,2020,Technologická agentura České republiky (TA ČR),science_agency,ok,,,,,none,4102464850.0,4274646444.0,4926456032.0
+Czech Republic,2021,Technologická agentura České republiky (TA ČR),science_agency,ok,,,,,none,4926456032.0,4102464850.0,5664987717.0
+Czech Republic,2022,Technologická agentura České republiky (TA ČR),science_agency,ok,,,,,none,5664987717.0,4926456032.0,6327572010.0
+Czech Republic,2023,Technologická agentura České republiky (TA ČR),science_agency,ok,,,,,none,6327572010.0,5664987717.0,6282134018.0
+Czech Republic,2024,Technologická agentura České republiky (TA ČR),science_agency,ok,,,,,none,6282134018.0,6327572010.0,
+Czech Republic,2025,Technologická agentura České republiky (TA ČR),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,6282134018.0,
+Czech Republic,1993,Akademie věd České republiky (AV ČR),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1347014000.0
+Czech Republic,1994,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,1347014000.0,,265000000.0
+Czech Republic,1996,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,265000000.0,1347014000.0,300000000.0
+Czech Republic,1997,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,300000000.0,265000000.0,2147124000.0
+Czech Republic,1998,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,2147124000.0,300000000.0,2410327000.0
+Czech Republic,1999,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,2410327000.0,2147124000.0,2149521000.0
+Czech Republic,2000,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,2149521000.0,2410327000.0,3047532000.0
+Czech Republic,2001,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,3047532000.0,2149521000.0,3140527000.0
+Czech Republic,2002,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,3140527000.0,3047532000.0,3651134000.0
+Czech Republic,2003,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,3651134000.0,3140527000.0,4033338000.0
+Czech Republic,2004,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,4033338000.0,3651134000.0,4439780000.0
+Czech Republic,2005,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,4439780000.0,4033338000.0,4709059000.0
+Czech Republic,2006,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,4709059000.0,4439780000.0,5617230000.0
+Czech Republic,2007,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,5617230000.0,4709059000.0,5529486000.0
+Czech Republic,2008,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,5529486000.0,5617230000.0,5887180000.0
+Czech Republic,2009,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,5887180000.0,5529486000.0,4668406000.0
+Czech Republic,2012,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,4668406000.0,5887180000.0,4449192000.0
+Czech Republic,2013,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,4449192000.0,4668406000.0,4452257359.0
+Czech Republic,2014,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,4452257359.0,4449192000.0,4522355819.0
+Czech Republic,2015,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,4522355819.0,4452257359.0,4829411000.0
+Czech Republic,2016,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,4829411000.0,4522355819.0,5133171000.0
+Czech Republic,2017,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,5133171000.0,4829411000.0,5684692000.0
+Czech Republic,2018,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,5684692000.0,5133171000.0,6022421793.0
+Czech Republic,2019,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,6022421793.0,5684692000.0,6563390450.0
+Czech Republic,2020,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,6563390450.0,6022421793.0,6789651580.0
+Czech Republic,2021,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,6789651580.0,6563390450.0,7081401581.0
+Czech Republic,2022,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,7081401581.0,6789651580.0,7177502810.0
+Czech Republic,2023,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,7177502810.0,7081401581.0,7642481529.0
+Czech Republic,2024,Akademie věd České republiky (AV ČR),science_agency,ok,,,,,none,7642481529.0,7177502810.0,
+Czech Republic,2025,Akademie věd České republiky (AV ČR),science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,7642481529.0,

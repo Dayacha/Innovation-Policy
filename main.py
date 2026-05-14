@@ -48,7 +48,7 @@ Cross-verification (two-model merger):
     Step 1 — primary run (gpt-4o-mini, output_suffix: ""):
         python main.py --reforms-only
 
-    Step 2 — secondary run (claude-sonnet-4, set output_suffix: "anthropic" in config):
+    Step 2 — secondary run (use a second provider/model, e.g. set output_suffix: "openai_b" in config):
         python main.py --reforms-only
 
     Step 3 — merge and adjudicate:
@@ -58,7 +58,7 @@ Cross-verification (two-model merger):
         python main.py --reforms-cross-verify --build-panel-only
 
 Full automated pipeline (all three stages in one command):
-    Checks Run A status, runs Run B (Anthropic), then cross-verifies.
+    Checks Run A status, runs Run B (secondary provider/model), then cross-verifies.
     No manual config.yaml changes needed — API keys resolved automatically.
 
         python main.py --reforms-full-pipeline

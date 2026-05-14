@@ -306,6 +306,43 @@ def _load_budget_cached(_mtime: float | None):
     df = df.dropna(subset=["year", "amount_local"])
     df["year"] = df["year"].astype(int)
 
+    def _currency_era(row) -> str:
+        country = str(row.get("country", "") or "")
+        currency = str(row.get("currency", "") or "").upper()
+        year = row.get("year")
+        if country == "Slovakia":
+            if currency == "SKK":
+                return "Pre-2009 SKK era"
+            if currency == "EUR":
+                return "2009+ EUR era"
+        if country == "Finland":
+            if currency == "FIM":
+                return "Pre-2002 FIM era"
+            if currency == "EUR":
+                return "2002+ EUR era"
+        if country == "France":
+            if currency == "FRF":
+                return "Pre-2002 FRF era"
+            if currency == "EUR":
+                return "2002+ EUR era"
+        if country == "Netherlands":
+            if currency == "NLG":
+                return "Pre-2002 NLG era"
+            if currency == "EUR":
+                return "2002+ EUR era"
+        if country == "Lithuania":
+            if currency == "TAL":
+                return "1993 talonas era"
+            if currency == "LTL":
+                return "1994-2014 litas era"
+            if currency == "EUR":
+                return "2015+ EUR era"
+        if currency:
+            return currency
+        return ""
+
+    df["currency_era"] = df.apply(_currency_era, axis=1)
+
     # Map category → rd_category for chart compatibility
     df["rd_category"] = df.get("category", pd.Series("other", index=df.index)).fillna("other")
     df["rd_category_label"] = df["rd_category"].map(lambda x: RD_CATEGORY_LABELS.get(x, x))

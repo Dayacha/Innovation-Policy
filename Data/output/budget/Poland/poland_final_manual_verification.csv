@@ -1,0 +1,59 @@
+country,year,canonical_name,amount_local,source_file,page_number,verification_status,same_page_name_hit,same_page_amount_hit,neighbor_name_hit
+Poland,1997,CERN (Polish contribution),30000000,1997 text.pdf,422,amount_only_same_page,False,True,False
+Poland,1992,KBN (Komitet Badań Naukowych),174086000,1992 text.pdf,23,explicit_same_page,True,True,False
+Poland,1993,KBN (Komitet Badań Naukowych),200000000,1993 text.pdf,22,explicit_same_page,True,True,False
+Poland,1997,KBN (Komitet Badań Naukowych),500000000,1997 text.pdf,422,amount_only_same_page,False,True,False
+Poland,1998,KBN (Komitet Badań Naukowych),1335010000,1998 text.pdf,13,amount_only_same_page,False,True,False
+Poland,1999,KBN (Komitet Badań Naukowych),2742811000,1999 D1999017015402.pdf,41,explicit_same_page,True,True,False
+Poland,2008,NCBiR (Narodowe Centrum Badań i Rozwoju),200000000,2008 text.pdf,228,weak_text_trace,False,False,False
+Poland,2010,NCBiR (Narodowe Centrum Badań i Rozwoju),618255000,2010 text.pdf,214,weak_text_trace,False,False,False
+Poland,2011,NCBiR (Narodowe Centrum Badań i Rozwoju),610365000,2011 text.pdf,196,amount_only_same_page,False,True,False
+Poland,2013,NCBiR (Narodowe Centrum Badań i Rozwoju),1695208000,2013 text.pdf,356,explicit_same_page,True,True,True
+Poland,2014,NCBiR (Narodowe Centrum Badań i Rozwoju),1788873000,2014 text.pdf,296,explicit_same_page,True,True,True
+Poland,2015,NCBiR (Narodowe Centrum Badań i Rozwoju),1319954000,2015 text.pdf,48,explicit_same_page,True,True,False
+Poland,2016,NCBiR (Narodowe Centrum Badań i Rozwoju),496114000,2016 D2016000027802.pdf,260,explicit_same_page,True,True,False
+Poland,2017,NCBiR (Narodowe Centrum Badań i Rozwoju),2344421000,2017 text.pdf,259,explicit_same_page,True,True,False
+Poland,2018,NCBiR (Narodowe Centrum Badań i Rozwoju),1115007000,2018 text.pdf,56,weak_text_trace,False,False,False
+Poland,2019,NCBiR (Narodowe Centrum Badań i Rozwoju),1408735000,2019 text.pdf,312,explicit_same_page,True,True,True
+Poland,2020,NCBiR (Narodowe Centrum Badań i Rozwoju),1332715000,2020 text.pdf,292,explicit_same_page,True,True,True
+Poland,2021,NCBiR (Narodowe Centrum Badań i Rozwoju),1150921000,2021 text.pdf,60,weak_text_trace,False,False,False
+Poland,2022,NCBiR (Narodowe Centrum Badań i Rozwoju),1241221000,2022 text.pdf,58,weak_text_trace,False,False,False
+Poland,2023,NCBiR (Narodowe Centrum Badań i Rozwoju),935222000,2023 text.pdf,49,explicit_same_page,True,True,False
+Poland,2024,NCBiR (Narodowe Centrum Badań i Rozwoju),763113000,2024 text.pdf,57,name_same_page_amount_weak,True,False,False
+Poland,2025,NCBiR (Narodowe Centrum Badań i Rozwoju),1088273000,2025 text.pdf,57,name_same_page_amount_weak,True,False,False
+Poland,2011,NCN (Narodowe Centrum Nauki),279965000,2011 text.pdf,196,explicit_same_page,True,True,False
+Poland,2013,NCN (Narodowe Centrum Nauki),899993000,2013 text.pdf,354,explicit_same_page,True,True,True
+Poland,2014,NCN (Narodowe Centrum Nauki),1775016000,2014 text.pdf,295,heading_neighbor_amount_same_page,False,True,True
+Poland,2015,NCN (Narodowe Centrum Nauki),976452000,2015 text.pdf,262,explicit_same_page,True,True,False
+Poland,2016,NCN (Narodowe Centrum Nauki),434208000,2016 D2016000027802.pdf,306,heading_neighbor_amount_same_page,False,True,True
+Poland,2017,NCN (Narodowe Centrum Nauki),1192559000,2017 text.pdf,49,explicit_same_page,True,True,False
+Poland,2018,NCN (Narodowe Centrum Nauki),1352730000,2018 text.pdf,56,weak_text_trace,False,False,False
+Poland,2019,NCN (Narodowe Centrum Nauki),925378000,2019 text.pdf,292,amount_only_same_page,False,True,False
+Poland,2020,NCN (Narodowe Centrum Nauki),1280772000,2020 text.pdf,57,weak_text_trace,False,False,False
+Poland,2021,NCN (Narodowe Centrum Nauki),1281000000,2021 text.pdf,60,weak_text_trace,False,False,False
+Poland,2022,NCN (Narodowe Centrum Nauki),1435114000,2022 text.pdf,58,weak_text_trace,False,False,False
+Poland,2023,NCN (Narodowe Centrum Nauki),1436577000,2023 text.pdf,49,explicit_same_page,True,True,False
+Poland,2024,NCN (Narodowe Centrum Nauki),1441896000,2024 text.pdf,57,weak_text_trace,False,False,False
+Poland,2025,NCN (Narodowe Centrum Nauki),1747861000,2025 text.pdf,57,weak_text_trace,False,False,False
+Poland,1990,PAN (Polska Akademia Nauk),100000000,1990 text.pdf,22,explicit_same_page,True,True,False
+Poland,1991,PAN (Polska Akademia Nauk),113133000,1991 text.pdf,19,explicit_same_page,True,True,False
+Poland,1992,PAN (Polska Akademia Nauk),46270000,1992 text.pdf,21,heading_neighbor_amount_weak,False,False,True
+Poland,1993,PAN (Polska Akademia Nauk),124121000,1993 text.pdf,20,weak_text_trace,False,False,False
+Poland,1997,PAN (Polska Akademia Nauk),33553000,1997 text.pdf,55,weak_text_trace,False,False,False
+Poland,1998,PAN (Polska Akademia Nauk),42692000,1998 text.pdf,55,explicit_same_page,True,True,False
+Poland,1999,PAN (Polska Akademia Nauk),120061000,1999 D1999017015402.pdf,111,explicit_same_page,True,True,False
+Poland,2008,PAN (Polska Akademia Nauk),300000000,2008 text.pdf,331,weak_text_trace,False,False,False
+Poland,2010,PAN (Polska Akademia Nauk),54468000,2010 text.pdf,57,explicit_same_page,True,True,False
+Poland,2011,PAN (Polska Akademia Nauk),79924000,2011 text.pdf,192,explicit_same_page,True,True,False
+Poland,2013,PAN (Polska Akademia Nauk),300000000,2013 text.pdf,398,amount_only_same_page,False,True,False
+Poland,2022,PAN (Polska Akademia Nauk),299189000,2022 text.pdf,326,weak_text_trace,False,False,False
+Poland,2023,PAN (Polska Akademia Nauk),110894000,2023 text.pdf,67,heading_neighbor_amount_weak,False,False,True
+Poland,2025,PAN (Polska Akademia Nauk),140000000,2025 text.pdf,334,amount_only_same_page,False,True,False
+Poland,2021,Polish Space Agency Activities,12566000,2021 text.pdf,49,heading_neighbor_amount_weak,False,False,True
+Poland,2022,Polish Space Agency Activities,12566000,2022 text.pdf,49,heading_neighbor_amount_weak,False,False,True
+Poland,2023,Polish Space Agency Activities,19324000,2023 text.pdf,45,heading_neighbor_amount_weak,False,False,True
+Poland,2024,Polish Space Agency Activities,20773000,2024 text.pdf,48,explicit_same_page,True,True,False
+Poland,2014,Regional Initiative of Excellence,390325000,2014 text.pdf,296,amount_only_same_page,False,True,False
+Poland,2021,Regional Initiative of Excellence,150000000,2021 text.pdf,330,weak_text_trace,False,False,False
+Poland,2023,Regional Initiative of Excellence,100000000,2023 text.pdf,320,weak_text_trace,False,False,False
+Poland,2025,Research Reactor MARIA Modernization Program,91744000,2025 text.pdf,312,explicit_same_page,True,True,False

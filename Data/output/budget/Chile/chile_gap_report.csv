@@ -21,11 +21,11 @@ Chile,2017,CONICYT / ANID,science_agency,ok,,,,,none,267254295000.0,255982757000
 Chile,2018,CONICYT / ANID,science_agency,ok,,,,,none,277429910000.0,267254295000.0,288300661000.0
 Chile,2019,CONICYT / ANID,science_agency,ok,,,,,none,288300661000.0,277429910000.0,304493223000.0
 Chile,2020,CONICYT / ANID,science_agency,ok,,,,,none,304493223000.0,288300661000.0,287533769000.0
-Chile,2021,CONICYT / ANID,science_agency,ok,,,,,none,287533769000.0,304493223000.0,300858107000.0
-Chile,2022,CONICYT / ANID,science_agency,ok,,,,,none,300858107000.0,287533769000.0,312088973000.0
-Chile,2023,CONICYT / ANID,science_agency,ok,,,,,none,312088973000.0,300858107000.0,322532595000.0
-Chile,2024,CONICYT / ANID,science_agency,ok,,,,,none,322532595000.0,312088973000.0,340604113000.0
-Chile,2025,CONICYT / ANID,science_agency,ok,,,,,none,340604113000.0,322532595000.0,
+Chile,2021,CONICYT / ANID,science_agency,ok,,,,,none,287533769000.0,304493223000.0,60705049000.0
+Chile,2022,CONICYT / ANID,science_agency,ok,,,,,none,60705049000.0,287533769000.0,312088973000.0
+Chile,2023,CONICYT / ANID,science_agency,ok,,,,,none,312088973000.0,60705049000.0,101578943000.0
+Chile,2024,CONICYT / ANID,science_agency,ok,,,,,none,101578943000.0,312088973000.0,104074491000.0
+Chile,2025,CONICYT / ANID,science_agency,ok,,,,,none,104074491000.0,101578943000.0,
 Chile,1999,CORFO innovation and technology funding,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,15206218000.0
 Chile,2000,CORFO innovation and technology funding,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,15206218000.0
 Chile,2001,CORFO innovation and technology funding,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,15206218000.0
@@ -257,7 +257,7 @@ Chile,2010,Fisheries Research Fund,direct_rd,ok,,,,,none,2704204000.0,1280312000
 Chile,2011,Fisheries Research Fund,direct_rd,ok,,,,,none,2476245000.0,2704204000.0,2853980000.0
 Chile,2012,Fisheries Research Fund,direct_rd,ok,,,,,none,2853980000.0,2476245000.0,3219098000.0
 Chile,2013,Fisheries Research Fund,direct_rd,ok,,,,,none,3219098000.0,2853980000.0,6086261000.0
-Chile,2014,Fisheries Research Fund,direct_rd,ok,,,,,none,6086261000.0,3219098000.0,5843991000.0
+Chile,2014,Fisheries Research Fund,direct_rd,outlier,"Amount 6,086,261,000 outside expected range [-682,739,750 – 6,076,778,750] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,6086261000.0,3219098000.0,5843991000.0
 Chile,2015,Fisheries Research Fund,direct_rd,ok,,,,,none,5843991000.0,6086261000.0,6066063000.0
 Chile,2016,Fisheries Research Fund,direct_rd,ok,,,,,none,6066063000.0,5843991000.0,5172115000.0
 Chile,2017,Fisheries Research Fund,direct_rd,ok,,,,,none,5172115000.0,6066063000.0,3545454000.0
@@ -312,11 +312,11 @@ Chile,2017,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,none,
 Chile,2018,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,none,2759704000.0,2958851000.0,2408924000.0
 Chile,2019,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,none,2408924000.0,2759704000.0,904000000.0
 Chile,2020,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,none,904000000.0,2408924000.0,9939882000.0
-Chile,2021,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,none,9939882000.0,904000000.0,8969143000.0
-Chile,2022,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,none,8969143000.0,9939882000.0,9014891000.0
-Chile,2023,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,none,9014891000.0,8969143000.0,12305582000.0
-Chile,2024,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,none,12305582000.0,9014891000.0,12114163000.0
-Chile,2025,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,none,12114163000.0,12305582000.0,
+Chile,2021,Technological Consortiums - CORFO,innovation_instruments,outlier,"Amount 9,939,882,000 outside expected range [582,142,750 – 5,049,254,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,9939882000.0,904000000.0,
+Chile,2022,Technological Consortiums - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,9939882000.0,
+Chile,2023,Technological Consortiums - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,9939882000.0,
+Chile,2024,Technological Consortiums - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,9939882000.0,
+Chile,2025,Technological Consortiums - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,9939882000.0,
 Chile,2010,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,1369900000.0
 Chile,2011,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,1369900000.0
 Chile,2012,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,1369900000.0

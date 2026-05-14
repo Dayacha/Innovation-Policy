@@ -50,6 +50,8 @@ __all__ = ["build_canonical_series", "CANONICAL_AGENCIES"]
 _OUTPUT_UNIT_BY_CURRENCY = {
     "AUD": "dollar",
     "CAD": "dollar",
+    "CZK": "koruna",
+    "SKK": "koruna",
     "NZD": "dollar",
     "USD": "dollar",
     "HUF": "forint",
@@ -69,6 +71,8 @@ _OUTPUT_UNIT_BY_CURRENCY = {
     "ATS": "schilling",
     "EEK": "kroon",
     "RUB": "ruble",
+    "LTL": "litas",
+    "TAL": "talonas",
 }
 
 _SCALE_TO_BASE_UNIT = {
@@ -134,12 +138,84 @@ _COLOMBIA_ORGANISATION_HINTS = re.compile(
     r")\b",
     re.IGNORECASE,
 )
+_NEW_ZEALAND_ORGANISATION_HINTS = re.compile(
+    r"\b(?:"
+    r"institute|institutes|callaghan|agresearch|niwa|gns|plant and food|"
+    r"regional research institute"
+    r")\b",
+    re.IGNORECASE,
+)
 _ESTONIA_VERIFIED_DROPS = (
     ("University of Tartu", 2004),
     ("Tallinn University of Technology", 2004),
     ("University of Tartu", 2010),
     ("Tallinn University of Technology", 2010),
 )
+_NEW_ZEALAND_VERIFIED_DROPS: set[tuple[int, str]] = {
+    # 1975 DSIR is a Works and Trading Account total, not the DSIR budget row.
+    # 1977 and 1984 DSIR totals are OCR-corrupted vote aggregates, not
+    # defensible agency appropriations. 1992 CRI "1" is a page/index artefact.
+    # 1990/1995/2001 RST vote totals are not recoverable cleanly from the
+    # cached original or collapse onto non-comparable vote lines.
+    # 1996-1997 Marsden rows are OCR/index mismatches rather than clean fund
+    # observations from the source page.
+    (1975, "DSIR (New Zealand)"),
+    (1977, "DSIR (New Zealand)"),
+    (1984, "DSIR (New Zealand)"),
+    (1992, "Crown Research Institutes (New Zealand)"),
+    (1990, "Research, Science and Technology Vote (New Zealand)"),
+    (1995, "Research, Science and Technology Vote (New Zealand)"),
+    (2001, "Research, Science and Technology Vote (New Zealand)"),
+    (1996, "Marsden Fund (New Zealand)"),
+    (1997, "Marsden Fund (New Zealand)"),
+}
+_NEW_ZEALAND_VERIFIED_OVERRIDES: dict[int, dict[str, tuple[float, int, str, str, str]]] = {
+    2015: {
+        "Callaghan Innovation": (
+            63_710_000.0,
+            10,
+            "NZD",
+            "2015_Appropriation Estimates Act.pdf",
+            "Science and Innovation: Callaghan Innovation",
+        ),
+    },
+    2019: {
+        "Callaghan Innovation": (
+            75_151_000.0,
+            10,
+            "NZD",
+            "2019_Appropriation Estimates Act.pdf",
+            "Research, Science and Innovation: Callaghan Innovation - Operations",
+        ),
+    },
+    2020: {
+        "Callaghan Innovation": (
+            80_288_000.0,
+            9,
+            "NZD",
+            "2020_Appropriation Estimates Act.pdf",
+            "Research, Science and Innovation: Callaghan Innovation - Operations",
+        ),
+    },
+    2021: {
+        "Callaghan Innovation": (
+            79_823_000.0,
+            11,
+            "NZD",
+            "2021_Appropriation Estimates Act.pdf",
+            "Research, Science and Innovation: Callaghan Innovation - Operations",
+        ),
+    },
+    2023: {
+        "Callaghan Innovation": (
+            85_868_000.0,
+            10,
+            "NZD",
+            "2023_Appropriation Estimates Act.pdf",
+            "Research, Science and Innovation: Callaghan Innovation - Operations",
+        ),
+    },
+}
 _BELGIUM_VERIFIED_DROPS = (
     # 2012-2013 science-policy tables in the current Belgium corpus are
     # January-March provisional appropriations ("janvier-mars" /
@@ -237,6 +313,1674 @@ _ESTONIA_VERIFIED_OVERRIDES: dict[int, dict[str, tuple[float, int, str, str]]] =
             "2025 123122024014.pdf",
         ),
     },
+}
+_LITHUANIA_VERIFIED_OVERRIDES: dict[int, dict[str, tuple[float, int, str, str]]] = {
+    # Verified against original Lithuania budget tables / text cache.
+    1993: {
+        "State Science, Studies and Technology Service (Lithuania)": (
+            6_531_015_000.0,
+            2,
+            "TAL",
+            "1993 TAR.8C4914C2ACED.docx",
+        ),
+        "State Research Centre for the Genocide of the Lithuanian Population": (
+            8_300_000.0,
+            2,
+            "TAL",
+            "1993 TAR.8C4914C2ACED.docx",
+        ),
+    },
+    1994: {
+        "State Science, Studies and Technology Service (Lithuania)": (
+            408_000.0,
+            0,
+            "LTL",
+            "1994 TAIS_33485.docx",
+        ),
+    },
+    1996: {
+        "Lithuanian Genocide and Resistance Research Centre": (
+            4_651_000.0,
+            1,
+            "LTL",
+            "1996 TAR.11F4B795287C.docx",
+        ),
+    },
+    1997: {
+        "Lithuanian Genocide and Resistance Research Centre": (
+            3_141_000.0,
+            13,
+            "LTL",
+            "1997 TAIS_41654.docx",
+        ),
+        "Lithuanian Geological Survey under the Ministry of Construction and Urban Planning": (
+            2_808_000.0,
+            13,
+            "LTL",
+            "1997 TAIS_41654.docx",
+        ),
+    },
+    1998: {
+        "National Energy Efficiency Improvement and Strategy Programs": (
+            4_166_000.0,
+            1,
+            "LTL",
+            "1998 TAR.A94C9B003D30.docx",
+        ),
+        "Science and Studies Programme (Lithuania)": (
+            541_169_000.0,
+            0,
+            "LTL",
+            "1998 TAR.A94C9B003D30.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            5_902_000.0,
+            0,
+            "LTL",
+            "1998 TAR.A94C9B003D30.docx",
+        ),
+        "Lithuanian Geological Survey under the Ministry of Construction and Urban Planning": (
+            3_506_000.0,
+            1,
+            "LTL",
+            "1998 TAR.A94C9B003D30.docx",
+        ),
+    },
+    1999: {
+        "Science and Studies Programme (Lithuania)": (
+            370_333_000.0,
+            4,
+            "LTL",
+            "1999 TAIS_102336.docx",
+        ),
+        "State Science, Studies and Technology Service (Lithuania)": (
+            1_419_000.0,
+            8,
+            "LTL",
+            "1999 TAIS_102336.docx",
+        ),
+        "Fundamental Scientific Research": (
+            3_390_000.0,
+            5,
+            "LTL",
+            "1999 TAIS_102336.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            6_631_000.0,
+            8,
+            "LTL",
+            "1999 TAIS_102336.docx",
+        ),
+    },
+    2001: {
+        "Science and Studies Programme (Lithuania)": (
+            611_927_000.0,
+            1,
+            "LTL",
+            "2001 TAIS_156412.docx",
+        ),
+        "State Science, Studies and Technology Service (Lithuania)": (
+            5_052_000.0,
+            1,
+            "LTL",
+            "2001 TAIS_156412.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            3_198_000.0,
+            1,
+            "LTL",
+            "2001 TAIS_156412.docx",
+        ),
+    },
+    2002: {
+        "Lithuanian Genocide and Resistance Research Centre": (
+            5_925_000.0,
+            1,
+            "LTL",
+            "2002 TAR.E8D4F01C9643.docx",
+        ),
+    },
+    2003: {
+        "Lithuanian Research Council": (
+            800_000.0,
+            1,
+            "LTL",
+            "2003 TAR.BCA0F623B8BA.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            2_987_000.0,
+            1,
+            "LTL",
+            "2003 TAR.BCA0F623B8BA.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            9_497_000.0,
+            1,
+            "LTL",
+            "2003 TAR.BCA0F623B8BA.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            4_875_000.0,
+            1,
+            "LTL",
+            "2003 TAR.BCA0F623B8BA.docx",
+        ),
+        "Lithuanian History Institute": (
+            2_089_000.0,
+            1,
+            "LTL",
+            "2003 TAR.BCA0F623B8BA.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            1_974_000.0,
+            1,
+            "LTL",
+            "2003 TAR.BCA0F623B8BA.docx",
+        ),
+    },
+    2004: {
+        "Lithuanian Research Council": (
+            800_000.0,
+            1,
+            "LTL",
+            "2004 TAR.538D8DA9A346.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            3_571_000.0,
+            1,
+            "LTL",
+            "2004 TAR.538D8DA9A346.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            10_754_000.0,
+            1,
+            "LTL",
+            "2004 TAR.538D8DA9A346.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            4_551_000.0,
+            1,
+            "LTL",
+            "2004 TAR.538D8DA9A346.docx",
+        ),
+        "Lithuanian History Institute": (
+            2_422_000.0,
+            1,
+            "LTL",
+            "2004 TAR.538D8DA9A346.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            2_053_000.0,
+            1,
+            "LTL",
+            "2004 TAR.538D8DA9A346.docx",
+        ),
+    },
+    2005: {
+        "Lithuanian Research Council": (
+            865_000.0,
+            16,
+            "LTL",
+            "2005 TAIS_259480.pdf",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            5_191_000.0,
+            14,
+            "LTL",
+            "2005 TAIS_259480.pdf",
+        ),
+    },
+    2006: {
+        "Lithuanian Research Council": (
+            945_000.0,
+            1,
+            "LTL",
+            "2006 TAR.1BAE24CE65A7.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            6_576_000.0,
+            1,
+            "LTL",
+            "2006 TAR.1BAE24CE65A7.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            13_019_000.0,
+            1,
+            "LTL",
+            "2006 TAR.1BAE24CE65A7.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            5_632_000.0,
+            1,
+            "LTL",
+            "2006 TAR.1BAE24CE65A7.docx",
+        ),
+        "Lithuanian History Institute": (
+            2_935_000.0,
+            1,
+            "LTL",
+            "2006 TAR.1BAE24CE65A7.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            2_224_000.0,
+            1,
+            "LTL",
+            "2006 TAR.1BAE24CE65A7.docx",
+        ),
+    },
+    2007: {
+        "Lithuanian Research Council": (
+            984_000.0,
+            1,
+            "LTL",
+            "2007 TAR.802CCF0B0455.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            6_522_000.0,
+            1,
+            "LTL",
+            "2007 TAR.802CCF0B0455.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            14_271_000.0,
+            1,
+            "LTL",
+            "2007 TAR.802CCF0B0455.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            4_815_000.0,
+            1,
+            "LTL",
+            "2007 TAR.802CCF0B0455.docx",
+        ),
+        "Lithuanian History Institute": (
+            3_205_000.0,
+            1,
+            "LTL",
+            "2007 TAR.802CCF0B0455.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            2_965_000.0,
+            1,
+            "LTL",
+            "2007 TAR.802CCF0B0455.docx",
+        ),
+    },
+    2008: {
+        "Lithuanian Research Council": (
+            2_153_000.0,
+            1,
+            "LTL",
+            "2008 TAR.E51A2DE98B9E.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            7_699_000.0,
+            1,
+            "LTL",
+            "2008 TAR.E51A2DE98B9E.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            16_880_000.0,
+            1,
+            "LTL",
+            "2008 TAR.E51A2DE98B9E.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            6_261_000.0,
+            1,
+            "LTL",
+            "2008 TAR.E51A2DE98B9E.docx",
+        ),
+        "Lithuanian History Institute": (
+            3_955_000.0,
+            1,
+            "LTL",
+            "2008 TAR.E51A2DE98B9E.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            4_524_000.0,
+            1,
+            "LTL",
+            "2008 TAR.E51A2DE98B9E.docx",
+        ),
+    },
+    2009: {
+        "Lithuanian Research Council": (
+            6_492_000.0,
+            1,
+            "LTL",
+            "2009 TAR.D641C5B5ADFD.docx",
+        ),
+        "Chemistry Institute": (
+            7_949_000.0,
+            2,
+            "LTL",
+            "2009 TAR.D641C5B5ADFD.docx",
+        ),
+        "Institute of Geology and Geography": (
+            3_950_000.0,
+            2,
+            "LTL",
+            "2009 TAR.D641C5B5ADFD.docx",
+        ),
+        "Institute of Lithuanian Literature and Folklore": (
+            3_745_000.0,
+            2,
+            "LTL",
+            "2009 TAR.D641C5B5ADFD.docx",
+        ),
+        "Institute of Semiconductor Physics": (
+            10_019_000.0,
+            2,
+            "LTL",
+            "2009 TAR.D641C5B5ADFD.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            4_807_000.0,
+            1,
+            "LTL",
+            "2009 TAR.D641C5B5ADFD.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            4_841_000.0,
+            1,
+            "LTL",
+            "2009 TAR.D641C5B5ADFD.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            17_281_000.0,
+            2,
+            "LTL",
+            "2009 TAR.D641C5B5ADFD.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            7_585_000.0,
+            2,
+            "LTL",
+            "2009 TAR.D641C5B5ADFD.docx",
+        ),
+        "Lithuanian History Institute": (
+            3_951_000.0,
+            2,
+            "LTL",
+            "2009 TAR.D641C5B5ADFD.docx",
+        ),
+        "Lithuanian Institute of Horticulture": (
+            4_654_000.0,
+            2,
+            "LTL",
+            "2009 TAR.D641C5B5ADFD.docx",
+        ),
+        "National Cancer Institute": (
+            6_505_000.0,
+            2,
+            "LTL",
+            "2009 TAR.D641C5B5ADFD.docx",
+        ),
+    },
+    2010: {
+        "Lithuanian Research Council": (
+            54_909_000.0,
+            1,
+            "LTL",
+            "2010 TAR.E5C7DCAD90FA.docx",
+        ),
+        "Chemistry Institute": (
+            5_798_000.0,
+            2,
+            "LTL",
+            "2010 TAR.E5C7DCAD90FA.docx",
+        ),
+        "Institute of Geology and Geography": (
+            2_931_000.0,
+            2,
+            "LTL",
+            "2010 TAR.E5C7DCAD90FA.docx",
+        ),
+        "Institute of Lithuanian Literature and Folklore": (
+            2_868_000.0,
+            2,
+            "LTL",
+            "2010 TAR.E5C7DCAD90FA.docx",
+        ),
+        "Institute of Semiconductor Physics": (
+            6_660_000.0,
+            2,
+            "LTL",
+            "2010 TAR.E5C7DCAD90FA.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            3_266_000.0,
+            1,
+            "LTL",
+            "2010 TAR.E5C7DCAD90FA.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            2_554_000.0,
+            1,
+            "LTL",
+            "2010 TAR.E5C7DCAD90FA.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            13_993_000.0,
+            2,
+            "LTL",
+            "2010 TAR.E5C7DCAD90FA.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            5_325_000.0,
+            1,
+            "LTL",
+            "2010 TAR.E5C7DCAD90FA.docx",
+        ),
+        "Lithuanian History Institute": (
+            2_875_000.0,
+            2,
+            "LTL",
+            "2010 TAR.E5C7DCAD90FA.docx",
+        ),
+        "Lithuanian Institute of Horticulture": (
+            3_929_000.0,
+            2,
+            "LTL",
+            "2010 TAR.E5C7DCAD90FA.docx",
+        ),
+        "National Cancer Institute": (
+            3_695_000.0,
+            2,
+            "LTL",
+            "2010 TAR.E5C7DCAD90FA.docx",
+        ),
+    },
+    2011: {
+        "Lithuanian Research Council": (
+            91_018_000.0,
+            1,
+            "LTL",
+            "2011 TAR.FE51590E2B56.docx",
+        ),
+        "Centre for Physical Sciences and Technology (Lithuania)": (
+            17_635_000.0,
+            2,
+            "LTL",
+            "2011 TAR.FE51590E2B56.docx",
+        ),
+        "Institute of Lithuanian Literature and Folklore": (
+            2_917_000.0,
+            2,
+            "LTL",
+            "2011 TAR.FE51590E2B56.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            3_251_000.0,
+            2,
+            "LTL",
+            "2011 TAR.FE51590E2B56.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            2_573_000.0,
+            2,
+            "LTL",
+            "2011 TAR.FE51590E2B56.docx",
+        ),
+        "Lithuanian Culture Research Institute": (
+            2_389_000.0,
+            2,
+            "LTL",
+            "2011 TAR.FE51590E2B56.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            14_565_000.0,
+            2,
+            "LTL",
+            "2011 TAR.FE51590E2B56.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            5_669_000.0,
+            1,
+            "LTL",
+            "2011 TAR.FE51590E2B56.docx",
+        ),
+        "Lithuanian History Institute": (
+            3_027_000.0,
+            2,
+            "LTL",
+            "2011 TAR.FE51590E2B56.docx",
+        ),
+        "Lithuanian Research Centre for Agriculture and Forestry": (
+            15_712_000.0,
+            2,
+            "LTL",
+            "2011 TAR.FE51590E2B56.docx",
+        ),
+        "National Cancer Institute": (
+            3_904_000.0,
+            2,
+            "LTL",
+            "2011 TAR.FE51590E2B56.docx",
+        ),
+        "Nature Research Center": (
+            10_661_000.0,
+            2,
+            "LTL",
+            "2011 TAR.FE51590E2B56.docx",
+        ),
+        "State Research Institute Center for Innovative Medicine": (
+            5_886_000.0,
+            2,
+            "LTL",
+            "2011 TAR.FE51590E2B56.docx",
+        ),
+    },
+    2012: {
+        "Lithuanian Research Council": (
+            102_596_000.0,
+            1,
+            "LTL",
+            "2012 TAR.B75745DE003E.docx",
+        ),
+        "Centre for Physical Sciences and Technology (Lithuania)": (
+            18_577_000.0,
+            1,
+            "LTL",
+            "2012 TAR.B75745DE003E.docx",
+        ),
+        "Institute of Lithuanian Literature and Folklore": (
+            2_894_000.0,
+            1,
+            "LTL",
+            "2012 TAR.B75745DE003E.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            3_234_000.0,
+            1,
+            "LTL",
+            "2012 TAR.B75745DE003E.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            8_460_000.0,
+            1,
+            "LTL",
+            "2012 TAR.B75745DE003E.docx",
+        ),
+        "Lithuanian Culture Research Institute": (
+            2_444_000.0,
+            1,
+            "LTL",
+            "2012 TAR.B75745DE003E.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            13_705_000.0,
+            1,
+            "LTL",
+            "2012 TAR.B75745DE003E.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            6_007_000.0,
+            1,
+            "LTL",
+            "2012 TAR.B75745DE003E.docx",
+        ),
+        "Lithuanian History Institute": (
+            3_147_000.0,
+            1,
+            "LTL",
+            "2012 TAR.B75745DE003E.docx",
+        ),
+        "Lithuanian Research Centre for Agriculture and Forestry": (
+            16_802_000.0,
+            1,
+            "LTL",
+            "2012 TAR.B75745DE003E.docx",
+        ),
+        "Nature Research Center": (
+            11_429_000.0,
+            1,
+            "LTL",
+            "2012 TAR.B75745DE003E.docx",
+        ),
+        "State Research Institute Center for Innovative Medicine": (
+            8_149_000.0,
+            1,
+            "LTL",
+            "2012 TAR.B75745DE003E.docx",
+        ),
+    },
+    2013: {
+        "Lithuanian Research Council": (
+            101_257_000.0,
+            1,
+            "LTL",
+            "2013 TAR.CABB5B7DAFB1.docx",
+        ),
+        "Centre for Physical Sciences and Technology (Lithuania)": (
+            20_344_000.0,
+            1,
+            "LTL",
+            "2013 TAR.CABB5B7DAFB1.docx",
+        ),
+        "Institute of Lithuanian Literature and Folklore": (
+            3_162_000.0,
+            1,
+            "LTL",
+            "2013 TAR.CABB5B7DAFB1.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            3_489_000.0,
+            1,
+            "LTL",
+            "2013 TAR.CABB5B7DAFB1.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            8_710_000.0,
+            1,
+            "LTL",
+            "2013 TAR.CABB5B7DAFB1.docx",
+        ),
+        "Lithuanian Culture Research Institute": (
+            2_317_000.0,
+            1,
+            "LTL",
+            "2013 TAR.CABB5B7DAFB1.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            12_168_000.0,
+            1,
+            "LTL",
+            "2013 TAR.CABB5B7DAFB1.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            6_051_000.0,
+            1,
+            "LTL",
+            "2013 TAR.CABB5B7DAFB1.docx",
+        ),
+        "Lithuanian History Institute": (
+            3_276_000.0,
+            1,
+            "LTL",
+            "2013 TAR.CABB5B7DAFB1.docx",
+        ),
+        "Lithuanian Research Centre for Agriculture and Forestry": (
+            18_618_000.0,
+            1,
+            "LTL",
+            "2013 TAR.CABB5B7DAFB1.docx",
+        ),
+        "Nature Research Center": (
+            9_976_000.0,
+            1,
+            "LTL",
+            "2013 TAR.CABB5B7DAFB1.docx",
+        ),
+        "State Research Institute Center for Innovative Medicine": (
+            3_231_000.0,
+            1,
+            "LTL",
+            "2013 TAR.CABB5B7DAFB1.docx",
+        ),
+    },
+    2014: {
+        "Lithuanian Research Council": (
+            109_326_000.0,
+            1,
+            "LTL",
+            "2014 TAIS_462848.docx",
+        ),
+        "Centre for Physical Sciences and Technology (Lithuania)": (
+            22_769_000.0,
+            1,
+            "LTL",
+            "2014 TAIS_462848.docx",
+        ),
+        "Institute of Lithuanian Literature and Folklore": (
+            3_415_000.0,
+            1,
+            "LTL",
+            "2014 TAIS_462848.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            3_068_000.0,
+            1,
+            "LTL",
+            "2014 TAIS_462848.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            9_143_000.0,
+            1,
+            "LTL",
+            "2014 TAIS_462848.docx",
+        ),
+        "Lithuanian Culture Research Institute": (
+            2_527_000.0,
+            1,
+            "LTL",
+            "2014 TAIS_462848.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            12_063_000.0,
+            1,
+            "LTL",
+            "2014 TAIS_462848.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            6_260_000.0,
+            1,
+            "LTL",
+            "2014 TAIS_462848.docx",
+        ),
+        "Lithuanian History Institute": (
+            3_572_000.0,
+            1,
+            "LTL",
+            "2014 TAIS_462848.docx",
+        ),
+        "Lithuanian Research Centre for Agriculture and Forestry": (
+            20_049_000.0,
+            1,
+            "LTL",
+            "2014 TAIS_462848.docx",
+        ),
+        "Nature Research Center": (
+            10_451_000.0,
+            1,
+            "LTL",
+            "2014 TAIS_462848.docx",
+        ),
+        "State Research Institute Center for Innovative Medicine": (
+            3_501_000.0,
+            1,
+            "LTL",
+            "2014 TAIS_462848.docx",
+        ),
+    },
+    2015: {
+        "Lithuanian Research Council": (
+            23_549_554.0,
+            1,
+            "EUR",
+            "2015 12-1408.docx",
+        ),
+        "Centre for Physical Sciences and Technology (Lithuania)": (
+            7_145_012.0,
+            1,
+            "EUR",
+            "2015 12-1408.docx",
+        ),
+        "Institute of Lithuanian Literature and Folklore": (
+            1_067_917.0,
+            1,
+            "EUR",
+            "2015 12-1408.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            908_827.0,
+            1,
+            "EUR",
+            "2015 12-1408.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            2_898_343.0,
+            1,
+            "EUR",
+            "2015 12-1408.docx",
+        ),
+        "Lithuanian Culture Research Institute": (
+            778_991.0,
+            1,
+            "EUR",
+            "2015 12-1408.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            3_522_070.0,
+            1,
+            "EUR",
+            "2015 12-1408.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            1_872_798.0,
+            1,
+            "EUR",
+            "2015 12-1408.docx",
+        ),
+        "Lithuanian History Institute": (
+            1_138_699.0,
+            1,
+            "EUR",
+            "2015 12-1408.docx",
+        ),
+        "Lithuanian Research Centre for Agriculture and Forestry": (
+            6_033_683.0,
+            1,
+            "EUR",
+            "2015 12-1408.docx",
+        ),
+        "National Cancer Institute": (
+            1_023_343.0,
+            1,
+            "EUR",
+            "2015 12-1408.docx",
+        ),
+        "Nature Research Center": (
+            3_847_457.0,
+            1,
+            "EUR",
+            "2015 12-1408.docx",
+        ),
+        "State Research Institute Center for Innovative Medicine": (
+            1_143_622.0,
+            1,
+            "EUR",
+            "2015 12-1408.docx",
+        ),
+    },
+    2016: {
+        "Lithuanian Research Council": (
+            18_639_000.0,
+            1,
+            "EUR",
+            "2016 12-2161.docx",
+        ),
+        "Centre for Physical Sciences and Technology (Lithuania)": (
+            7_716_000.0,
+            1,
+            "EUR",
+            "2016 12-2161.docx",
+        ),
+        "Institute of Lithuanian Literature and Folklore": (
+            1_085_000.0,
+            1,
+            "EUR",
+            "2016 12-2161.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            1_007_000.0,
+            1,
+            "EUR",
+            "2016 12-2161.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            3_103_000.0,
+            1,
+            "EUR",
+            "2016 12-2161.docx",
+        ),
+        "Lithuanian Culture Research Institute": (
+            761_000.0,
+            1,
+            "EUR",
+            "2016 12-2161.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            3_545_000.0,
+            1,
+            "EUR",
+            "2016 12-2161.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            2_165_000.0,
+            1,
+            "EUR",
+            "2016 12-2161.docx",
+        ),
+        "Lithuanian History Institute": (
+            1_304_000.0,
+            1,
+            "EUR",
+            "2016 12-2161.docx",
+        ),
+        "Lithuanian Research Centre for Agriculture and Forestry": (
+            6_675_000.0,
+            1,
+            "EUR",
+            "2016 12-2161.docx",
+        ),
+        "National Cancer Institute": (
+            1_419_000.0,
+            1,
+            "EUR",
+            "2016 12-2161.docx",
+        ),
+        "Nature Research Center": (
+            3_840_000.0,
+            1,
+            "EUR",
+            "2016 12-2161.docx",
+        ),
+        "State Research Institute Center for Innovative Medicine": (
+            1_241_000.0,
+            1,
+            "EUR",
+            "2016 12-2161.docx",
+        ),
+    },
+    2017: {
+        "Lithuanian Research Council": (
+            18_641_000.0,
+            2,
+            "EUR",
+            "2017 XIII-177.docx",
+        ),
+        "Centre for Physical Sciences and Technology (Lithuania)": (
+            12_321_000.0,
+            2,
+            "EUR",
+            "2017 XIII-177.docx",
+        ),
+        "Institute of Lithuanian Literature and Folklore": (
+            1_141_000.0,
+            2,
+            "EUR",
+            "2017 XIII-177.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            1_054_000.0,
+            2,
+            "EUR",
+            "2017 XIII-177.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            4_306_000.0,
+            2,
+            "EUR",
+            "2017 XIII-177.docx",
+        ),
+        "Lithuanian Culture Research Institute": (
+            801_000.0,
+            2,
+            "EUR",
+            "2017 XIII-177.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            3_466_000.0,
+            2,
+            "EUR",
+            "2017 XIII-177.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            2_266_000.0,
+            1,
+            "EUR",
+            "2017 XIII-177.docx",
+        ),
+        "Lithuanian History Institute": (
+            1_574_000.0,
+            1,
+            "EUR",
+            "2017 XIII-177.docx",
+        ),
+        "Lithuanian Research Centre for Agriculture and Forestry": (
+            7_074_000.0,
+            2,
+            "EUR",
+            "2017 XIII-177.docx",
+        ),
+        "National Cancer Institute": (
+            3_839_000.0,
+            2,
+            "EUR",
+            "2017 XIII-177.docx",
+        ),
+        "Nature Research Center": (
+            4_569_000.0,
+            2,
+            "EUR",
+            "2017 XIII-177.docx",
+        ),
+        "State Research Institute Center for Innovative Medicine": (
+            1_420_000.0,
+            2,
+            "EUR",
+            "2017 XIII-177.docx",
+        ),
+    },
+    2018: {
+        "Lithuanian Research Council": (
+            18_913_000.0,
+            2,
+            "EUR",
+            "2018 XIII-868.docx",
+        ),
+        "Centre for Physical Sciences and Technology (Lithuania)": (
+            10_966_000.0,
+            2,
+            "EUR",
+            "2018 XIII-868.docx",
+        ),
+        "Institute of Lithuanian Literature and Folklore": (
+            1_213_000.0,
+            2,
+            "EUR",
+            "2018 XIII-868.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            1_078_000.0,
+            2,
+            "EUR",
+            "2018 XIII-868.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            4_099_000.0,
+            2,
+            "EUR",
+            "2018 XIII-868.docx",
+        ),
+        "Lithuanian Culture Research Institute": (
+            884_000.0,
+            2,
+            "EUR",
+            "2018 XIII-868.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            3_702_000.0,
+            2,
+            "EUR",
+            "2018 XIII-868.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            2_540_000.0,
+            1,
+            "EUR",
+            "2018 XIII-868.docx",
+        ),
+        "Lithuanian History Institute": (
+            1_620_000.0,
+            2,
+            "EUR",
+            "2018 XIII-868.docx",
+        ),
+        "Lithuanian Research Centre for Agriculture and Forestry": (
+            7_544_000.0,
+            2,
+            "EUR",
+            "2018 XIII-868.docx",
+        ),
+        "National Cancer Institute": (
+            3_775_000.0,
+            2,
+            "EUR",
+            "2018 XIII-868.docx",
+        ),
+        "Nature Research Center": (
+            4_321_000.0,
+            2,
+            "EUR",
+            "2018 XIII-868.docx",
+        ),
+        "State Research Institute Center for Innovative Medicine": (
+            1_215_000.0,
+            2,
+            "EUR",
+            "2018 XIII-868.docx",
+        ),
+    },
+    2019: {
+        "Lithuanian Research Council": (
+            19_125_000.0,
+            1,
+            "EUR",
+            "2019 XIII-1710.docx",
+        ),
+        "Centre for Physical Sciences and Technology (Lithuania)": (
+            10_347_000.0,
+            2,
+            "EUR",
+            "2019 XIII-1710.docx",
+        ),
+        "Institute of Lithuanian Literature and Folklore": (
+            1_485_000.0,
+            2,
+            "EUR",
+            "2019 XIII-1710.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            1_167_000.0,
+            2,
+            "EUR",
+            "2019 XIII-1710.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            4_395_000.0,
+            2,
+            "EUR",
+            "2019 XIII-1710.docx",
+        ),
+        "Lithuanian Culture Research Institute": (
+            1_245_000.0,
+            2,
+            "EUR",
+            "2019 XIII-1710.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            4_782_000.0,
+            2,
+            "EUR",
+            "2019 XIII-1710.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            2_688_000.0,
+            2,
+            "EUR",
+            "2019 XIII-1710.docx",
+        ),
+        "Lithuanian History Institute": (
+            2_169_000.0,
+            2,
+            "EUR",
+            "2019 XIII-1710.docx",
+        ),
+        "Lithuanian Research Centre for Agriculture and Forestry": (
+            8_062_000.0,
+            2,
+            "EUR",
+            "2019 XIII-1710.docx",
+        ),
+        "National Cancer Institute": (
+            2_363_000.0,
+            2,
+            "EUR",
+            "2019 XIII-1710.docx",
+        ),
+        "Nature Research Center": (
+            4_487_000.0,
+            2,
+            "EUR",
+            "2019 XIII-1710.docx",
+        ),
+        "State Research Institute Center for Innovative Medicine": (
+            1_284_000.0,
+            2,
+            "EUR",
+            "2019 XIII-1710.docx",
+        ),
+    },
+    2020: {
+        "Lithuanian Research Council": (
+            22_270_000.0,
+            1,
+            "EUR",
+            "2020 XIII-2695.docx",
+        ),
+        "Centre for Physical Sciences and Technology (Lithuania)": (
+            11_587_000.0,
+            2,
+            "EUR",
+            "2020 XIII-2695.docx",
+        ),
+        "Institute of Lithuanian Literature and Folklore": (
+            1_682_000.0,
+            2,
+            "EUR",
+            "2020 XIII-2695.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            1_349_000.0,
+            2,
+            "EUR",
+            "2020 XIII-2695.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            4_461_000.0,
+            2,
+            "EUR",
+            "2020 XIII-2695.docx",
+        ),
+        "Lithuanian Culture Research Institute": (
+            1_613_000.0,
+            2,
+            "EUR",
+            "2020 XIII-2695.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            5_156_000.0,
+            2,
+            "EUR",
+            "2020 XIII-2695.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            2_895_000.0,
+            2,
+            "EUR",
+            "2020 XIII-2695.docx",
+        ),
+        "Lithuanian History Institute": (
+            2_571_000.0,
+            2,
+            "EUR",
+            "2020 XIII-2695.docx",
+        ),
+        "Lithuanian Research Centre for Agriculture and Forestry": (
+            8_172_000.0,
+            2,
+            "EUR",
+            "2020 XIII-2695.docx",
+        ),
+        "National Cancer Institute": (
+            1_640_000.0,
+            2,
+            "EUR",
+            "2020 XIII-2695.docx",
+        ),
+        "Nature Research Center": (
+            4_977_000.0,
+            2,
+            "EUR",
+            "2020 XIII-2695.docx",
+        ),
+        "State Research Institute Center for Innovative Medicine": (
+            1_349_000.0,
+            2,
+            "EUR",
+            "2020 XIII-2695.docx",
+        ),
+    },
+    2021: {
+        "Centre for Physical Sciences and Technology (Lithuania)": (
+            11_584_000.0,
+            22,
+            "EUR",
+            "2021 AR_2021-07-01.pdf",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            3_208_000.0,
+            22,
+            "EUR",
+            "2021 AR_2021-07-01.pdf",
+        ),
+        "Lithuanian Research Centre for Agriculture and Forestry": (
+            6_152_000.0,
+            22,
+            "EUR",
+            "2021 AR_2021-07-01.pdf",
+        ),
+        "Lithuanian Energy Institute": (
+            4_913_000.0,
+            22,
+            "EUR",
+            "2021 AR_2021-07-01.pdf",
+        ),
+        "Nature Research Center": (
+            5_337_000.0,
+            22,
+            "EUR",
+            "2021 AR_2021-07-01.pdf",
+        ),
+        "Lithuanian Academy of Sciences": (
+            5_628_000.0,
+            22,
+            "EUR",
+            "2021 AR_2021-07-01.pdf",
+        ),
+        "Lithuanian Research Council": (
+            22_329_000.0,
+            23,
+            "EUR",
+            "2021 AR_2021-07-01.pdf",
+        ),
+        "National Cancer Institute": (
+            1_715_000.0,
+            22,
+            "EUR",
+            "2021 AR_2021-07-01.pdf",
+        ),
+        "Lithuanian History Institute": (
+            2_936_000.0,
+            22,
+            "EUR",
+            "2021 AR_2021-07-01.pdf",
+        ),
+        "Lithuanian Culture Research Institute": (
+            1_857_000.0,
+            22,
+            "EUR",
+            "2021 AR_2021-07-01.pdf",
+        ),
+        "Institute of Lithuanian Literature and Folklore": (
+            1_933_000.0,
+            22,
+            "EUR",
+            "2021 AR_2021-07-01.pdf",
+        ),
+        "Institute of the Lithuanian Language": (
+            1_838_000.0,
+            22,
+            "EUR",
+            "2021 AR_2021-07-01.pdf",
+        ),
+        "State Research Institute Center for Innovative Medicine": (
+            1_538_000.0,
+            22,
+            "EUR",
+            "2021 AR_2021-07-01.pdf",
+        ),
+    },
+    2022: {
+        "Lithuanian Research Council": (
+            31_013_000.0,
+            1,
+            "EUR",
+            "2022 XIV-745.docx",
+        ),
+        "Centre for Physical Sciences and Technology (Lithuania)": (
+            12_845_000.0,
+            1,
+            "EUR",
+            "2022 XIV-745.docx",
+        ),
+        "Institute of Lithuanian Literature and Folklore": (
+            2_548_000.0,
+            1,
+            "EUR",
+            "2022 XIV-745.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            2_000_000.0,
+            1,
+            "EUR",
+            "2022 XIV-745.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            5_882_000.0,
+            1,
+            "EUR",
+            "2022 XIV-745.docx",
+        ),
+        "Lithuanian Culture Research Institute": (
+            2_305_000.0,
+            1,
+            "EUR",
+            "2022 XIV-745.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            5_830_000.0,
+            1,
+            "EUR",
+            "2022 XIV-745.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            3_766_000.0,
+            1,
+            "EUR",
+            "2022 XIV-745.docx",
+        ),
+        "Lithuanian History Institute": (
+            3_508_000.0,
+            1,
+            "EUR",
+            "2022 XIV-745.docx",
+        ),
+        "Lithuanian Research Centre for Agriculture and Forestry": (
+            6_110_000.0,
+            1,
+            "EUR",
+            "2022 XIV-745.docx",
+        ),
+        "National Cancer Institute": (
+            2_425_000.0,
+            1,
+            "EUR",
+            "2022 XIV-745.docx",
+        ),
+        "Nature Research Center": (
+            6_796_000.0,
+            1,
+            "EUR",
+            "2022 XIV-745.docx",
+        ),
+        "State Research Institute Center for Innovative Medicine": (
+            1_782_000.0,
+            1,
+            "EUR",
+            "2022 XIV-745.docx",
+        ),
+    },
+    2023: {
+        "Lithuanian Research Council": (
+            50_065_000.0,
+            1,
+            "EUR",
+            "2023 XIV-1556.docx",
+        ),
+        "Centre for Physical Sciences and Technology (Lithuania)": (
+            16_447_000.0,
+            1,
+            "EUR",
+            "2023 XIV-1556.docx",
+        ),
+        "Institute of Lithuanian Literature and Folklore": (
+            3_363_000.0,
+            1,
+            "EUR",
+            "2023 XIV-1556.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            2_486_000.0,
+            1,
+            "EUR",
+            "2023 XIV-1556.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            9_701_000.0,
+            1,
+            "EUR",
+            "2023 XIV-1556.docx",
+        ),
+        "Lithuanian Culture Research Institute": (
+            2_783_000.0,
+            1,
+            "EUR",
+            "2023 XIV-1556.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            7_106_000.0,
+            1,
+            "EUR",
+            "2023 XIV-1556.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            4_086_000.0,
+            1,
+            "EUR",
+            "2023 XIV-1556.docx",
+        ),
+        "Lithuanian History Institute": (
+            4_400_000.0,
+            1,
+            "EUR",
+            "2023 XIV-1556.docx",
+        ),
+        "Lithuanian Research Centre for Agriculture and Forestry": (
+            7_655_000.0,
+            1,
+            "EUR",
+            "2023 XIV-1556.docx",
+        ),
+        "National Cancer Institute": (
+            2_517_000.0,
+            1,
+            "EUR",
+            "2023 XIV-1556.docx",
+        ),
+        "Nature Research Center": (
+            8_984_000.0,
+            1,
+            "EUR",
+            "2023 XIV-1556.docx",
+        ),
+        "State Research Institute Center for Innovative Medicine": (
+            2_335_000.0,
+            1,
+            "EUR",
+            "2023 XIV-1556.docx",
+        ),
+    },
+    2024: {
+        "Lithuanian Research Council": (
+            59_870_000.0,
+            1,
+            "EUR",
+            "2024 XIV-2297.docx",
+        ),
+        "Centre for Physical Sciences and Technology (Lithuania)": (
+            18_909_000.0,
+            1,
+            "EUR",
+            "2024 XIV-2297.docx",
+        ),
+        "Institute of Lithuanian Literature and Folklore": (
+            3_765_000.0,
+            1,
+            "EUR",
+            "2024 XIV-2297.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            2_960_000.0,
+            1,
+            "EUR",
+            "2024 XIV-2297.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            10_992_000.0,
+            1,
+            "EUR",
+            "2024 XIV-2297.docx",
+        ),
+        "Lithuanian Culture Research Institute": (
+            3_222_000.0,
+            1,
+            "EUR",
+            "2024 XIV-2297.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            7_821_000.0,
+            1,
+            "EUR",
+            "2024 XIV-2297.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            4_734_000.0,
+            1,
+            "EUR",
+            "2024 XIV-2297.docx",
+        ),
+        "Lithuanian History Institute": (
+            5_463_000.0,
+            1,
+            "EUR",
+            "2024 XIV-2297.docx",
+        ),
+        "Lithuanian Research Centre for Agriculture and Forestry": (
+            9_213_000.0,
+            1,
+            "EUR",
+            "2024 XIV-2297.docx",
+        ),
+        "National Cancer Institute": (
+            1_807_000.0,
+            1,
+            "EUR",
+            "2024 XIV-2297.docx",
+        ),
+        "Nature Research Center": (
+            10_134_000.0,
+            1,
+            "EUR",
+            "2024 XIV-2297.docx",
+        ),
+        "State Research Institute Center for Innovative Medicine": (
+            2_667_000.0,
+            1,
+            "EUR",
+            "2024 XIV-2297.docx",
+        ),
+    },
+    2025: {
+        "Lithuanian Research Council": (
+            67_564_000.0,
+            2,
+            "EUR",
+            "2025 XV-89.docx",
+        ),
+        "Centre for Physical Sciences and Technology (Lithuania)": (
+            21_975_000.0,
+            2,
+            "EUR",
+            "2025 XV-89.docx",
+        ),
+        "Institute of Lithuanian Literature and Folklore": (
+            4_539_000.0,
+            2,
+            "EUR",
+            "2025 XV-89.docx",
+        ),
+        "Institute of the Lithuanian Language": (
+            3_669_000.0,
+            2,
+            "EUR",
+            "2025 XV-89.docx",
+        ),
+        "Lithuanian Academy of Sciences": (
+            8_493_000.0,
+            2,
+            "EUR",
+            "2025 XV-89.docx",
+        ),
+        "Lithuanian Culture Research Institute": (
+            3_911_000.0,
+            2,
+            "EUR",
+            "2025 XV-89.docx",
+        ),
+        "Lithuanian Energy Institute": (
+            8_866_000.0,
+            2,
+            "EUR",
+            "2025 XV-89.docx",
+        ),
+        "Lithuanian Genocide and Resistance Research Centre": (
+            4_923_000.0,
+            2,
+            "EUR",
+            "2025 XV-89.docx",
+        ),
+        "Lithuanian History Institute": (
+            6_515_000.0,
+            2,
+            "EUR",
+            "2025 XV-89.docx",
+        ),
+        "Lithuanian Research Centre for Agriculture and Forestry": (
+            11_227_000.0,
+            2,
+            "EUR",
+            "2025 XV-89.docx",
+        ),
+        "National Cancer Institute": (
+            3_110_000.0,
+            2,
+            "EUR",
+            "2025 XV-89.docx",
+        ),
+        "Nature Research Center": (
+            11_966_000.0,
+            2,
+            "EUR",
+            "2025 XV-89.docx",
+        ),
+        "State Research Institute Center for Innovative Medicine": (
+            3_883_000.0,
+            2,
+            "EUR",
+            "2025 XV-89.docx",
+        ),
+    },
+}
+_LITHUANIA_VERIFIED_DROPS: set[tuple[int, str]] = {
+    # 1993 is documented in thousand talonas, but this service row remains
+    # methodologically incomparable to the post-stabilization series and
+    # visually dominates all later years. Keep the trace in source audit, but
+    # exclude it from the final panel.
+    (1993, "State Science, Studies and Technology Service (Lithuania)"),
 }
 _HUNGARY_VERIFIED_OVERRIDES: dict[int, dict[str, tuple[float, int | None, str, str]]] = {
     1992: {
@@ -3314,6 +5058,8 @@ def _base_output_unit(currency: object, fallback_unit: object) -> object:
     cur = str(currency or "").strip().upper()
     if cur == "CLP":
         return "peso"
+    if cur == "PLN":
+        return "zloty"
     if cur in _OUTPUT_UNIT_BY_CURRENCY:
         return _OUTPUT_UNIT_BY_CURRENCY[cur]
     return fallback_unit
@@ -6096,24 +7842,24 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "dsir",
             ],
             "preferred_item_type": ["section_total", "program_total", "line_item"],
-            "active_years": (1975, 1992),
-            "max_amount_local": 2_000_000,
+            "active_years": (1975, 1990),
+            "max_amount_local": 300_000,
             "notes": "Dedicated science agency in the pre-CRI era.",
         },
         {
-            "canonical_name": "Foundation for Research, Science and Technology (New Zealand)",
-            "category": "science_agency",
+            "canonical_name": "Research, Science and Technology Vote (New Zealand)",
+            "category": "rd_ministry",
             "name_variants": [
-                "foundation for research, science and technology",
-                "foundation for research science and technology",
-                "frst",
-                "research, science and technology",
-                "research science and technology",
+                "total for research, science and technology",
+                "total appropriations for research, science and technology",
+                "total for vote science and innovation",
             ],
-            "preferred_item_type": ["section_total", "program_total", "line_item"],
+            "preferred_item_type": ["section_total"],
+            "strict_preferred_item_types": True,
             "active_years": (1990, 2011),
-            "max_amount_local": 3_000_000,
-            "notes": "Core science funding structure in the transition era.",
+            "expected_years": [1990, 1995, 1996, 1997, 1998, 1999, 2001, 2010],
+            "max_amount_local": 1_500_000_000,
+            "notes": "Documented vote-level total for the FRST / RST transition era.",
         },
         {
             "canonical_name": "Crown Research Institutes (New Zealand)",
@@ -6121,6 +7867,8 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             "name_variants": [
                 "crown research institutes",
                 "crown research institute",
+                "crown research institute core funding",
+                "crown research institutes core funding",
                 "agresearch",
                 "industrial research limited",
                 "irl",
@@ -6133,24 +7881,23 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "new zealand institute for plant and food research",
             ],
             "preferred_item_type": ["program_total", "line_item"],
-            "active_years": (1992, 2099),
-            "max_amount_local": 5_000_000,
-            "notes": "CRI family and named institutes.",
+            "strict_preferred_item_types": True,
+            "active_years": (2011, 2015),
+            "max_amount_local": 400_000,
+            "notes": "Explicit CRI core-funding rows only; avoids indirect vote components.",
         },
         {
-            "canonical_name": "Vote Science, Innovation and Technology (New Zealand)",
-            "category": "rd_ministry",
+            "canonical_name": "Strategic Science Investment Fund (New Zealand)",
+            "category": "rd_fund",
             "name_variants": [
-                "vote science and innovation",
-                "science, innovation and technology",
-                "science innovation and technology",
-                "ministry of business, innovation and employment",
-                "mbie science",
+                "strategic science investment fund",
             ],
-            "preferred_item_type": ["section_total", "program_total"],
-            "active_years": (2012, 2099),
-            "max_amount_local": 10_000_000,
-            "notes": "Modern science vote under MBIE-era appropriations.",
+            "preferred_item_type": ["program_total", "line_item"],
+            "strict_preferred_item_types": True,
+            "active_years": (2017, 2099),
+            "expected_years": [2017, 2018, 2020, 2021, 2022, 2023, 2024, 2025],
+            "max_amount_local": 500_000_000,
+            "notes": "Explicit SSIF appropriations in the modern MBIE-era science vote.",
         },
         {
             "canonical_name": "Marsden Fund (New Zealand)",
@@ -6159,34 +7906,66 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "marsden fund",
             ],
             "preferred_item_type": ["line_item", "program_total"],
-            "active_years": (1994, 2099),
+            "active_years": (1998, 2099),
             "max_amount_local": 1_000_000,
+            "notes": "Starts only once the fund amount is cleanly recoverable from the source tables.",
         },
         {
             "canonical_name": "Callaghan Innovation",
             "category": "science_agency",
             "name_variants": [
-                "callaghan innovation",
                 "callaghan innovation - operations",
                 "callaghan innovation operations",
             ],
             "preferred_item_type": ["line_item", "program_total"],
-            "active_years": (2013, 2099),
+            "active_years": (2015, 2099),
             "max_amount_local": 2_000_000,
+            "notes": "Tracks the comparable agency / operations appropriation. Excludes early strategic-investment rows.",
         },
         {
-            "canonical_name": "Endeavour / Catalyst / Partnered Research Funds (New Zealand)",
-            "category": "rd_ministry",
+            "canonical_name": "Endeavour Fund (New Zealand)",
+            "category": "rd_fund",
             "name_variants": [
                 "endeavour fund",
-                "catalyst fund",
-                "partnered research fund",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "strict_preferred_item_types": True,
+            "active_years": (2018, 2099),
+            "max_amount_local": 3_000_000,
+            "notes": "Explicit modern contestable science fund visible in estimates acts.",
+        },
+        {
+            "canonical_name": "Health Research Fund (New Zealand)",
+            "category": "rd_fund",
+            "name_variants": [
                 "health research fund",
             ],
             "preferred_item_type": ["line_item", "program_total"],
-            "active_years": (2015, 2099),
-            "max_amount_local": 3_000_000,
-            "notes": "Modern explicit science funds visible in recent estimates acts.",
+            "strict_preferred_item_types": True,
+            "active_years": (2016, 2099),
+            "max_amount_local": 2_000_000,
+        },
+        {
+            "canonical_name": "Partnered Research Fund (New Zealand)",
+            "category": "rd_fund",
+            "name_variants": [
+                "partnered research fund",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "strict_preferred_item_types": True,
+            "active_years": (2016, 2099),
+            "max_amount_local": 1_000_000,
+        },
+        {
+            "canonical_name": "Catalyst Fund (New Zealand)",
+            "category": "rd_fund",
+            "name_variants": [
+                "catalyst fund",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "strict_preferred_item_types": True,
+            "active_years": (2016, 2099),
+            "max_amount_local": 1_000_000,
         },
     ],
 
@@ -6609,8 +8388,8 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1967, 2099),
-            # FWF ~280M EUR in 2023 (= 280,000 thousand EUR). >1B implausible single grant.
-            "max_amount_local": 1_500_000,   # in thousands of currency unit
+            # FWF ~280M EUR/year. amounts in MILLIONS. >1,500M implausible single line.
+            "max_amount_local": 1_500,   # in millions of currency unit
             "notes": "Annual state appropriation — core basic research funder.",
         },
         {
@@ -6628,8 +8407,8 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1967, 2099),
-            # FFG ~700M EUR in recent years (includes programme-specific grants).
-            "max_amount_local": 3_000_000,
+            # FFG ~700M EUR/year. amounts in MILLIONS.
+            "max_amount_local": 3_000,
             "notes": "FFG created 2004 from merger of FFF + BIT + ASA. "
                      "Pre-2004 match via 'fff' variant.",
         },
@@ -6646,8 +8425,8 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1847, 2099),
-            # ÖAW ~100M EUR/year.
-            "max_amount_local": 500_000,
+            # ÖAW ~100M EUR/year. amounts in MILLIONS.
+            "max_amount_local": 500,
         },
         {
             "canonical_name": "AIT Austrian Institute of Technology",
@@ -6660,7 +8439,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (2009, 2099),
-            "max_amount_local": 500_000,
+            "max_amount_local": 500,  # in millions
             "notes": "Formed 2009 from Arsenal Research.",
         },
         {
@@ -6673,8 +8452,8 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (2006, 2099),
-            # IST Austria state grant ~200M EUR/year.
-            "max_amount_local": 500_000,
+            # IST Austria state grant ~200M EUR/year. amounts in MILLIONS.
+            "max_amount_local": 500,
             "notes": "Annual state grant from BMBWF.",
         },
         {
@@ -6689,7 +8468,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1988, 2099),
-            "max_amount_local": 200_000,
+            "max_amount_local": 200,  # in millions
         },
         {
             "canonical_name": "Ludwig Boltzmann Gesellschaft",
@@ -6701,7 +8480,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1960, 2099),
-            "max_amount_local": 100_000,
+            "max_amount_local": 100,  # in millions
         },
 
         # --- International contributions ---
@@ -6716,7 +8495,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1959, 2099),
-            "max_amount_local": 200_000,
+            "max_amount_local": 200,  # in millions
         },
         {
             "canonical_name": "ESA-Beitrag (Austria)",
@@ -6730,7 +8509,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1975, 2099),
-            "max_amount_local": 150_000,
+            "max_amount_local": 150,  # in millions
         },
 
         # --- Universities ---
@@ -6745,7 +8524,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1365, 2099),
-            "max_amount_local": 1_500_000,
+            "max_amount_local": 1_500,  # in millions
         },
         {
             "canonical_name": "Technische Universitat Wien (TU Wien)",
@@ -6759,7 +8538,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1815, 2099),
-            "max_amount_local": 1_000_000,
+            "max_amount_local": 1_000,  # in millions
         },
         {
             "canonical_name": "Universitat Graz (Karl-Franzens)",
@@ -6773,7 +8552,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1585, 2099),
-            "max_amount_local": 700_000,
+            "max_amount_local": 700,  # in millions
         },
         {
             "canonical_name": "Technische Universitat Graz (TU Graz)",
@@ -7813,6 +9592,58 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             "notes": "Programmatic continuation after the institutional series. Use as a post-2011 hybrid bridge only, not as a directly comparable agency line.",
         },
     ],
+    "Czech Republic": [
+        {
+            "canonical_name": "Grantová agentura České republiky (GA ČR)",
+            "category": "science_agency",
+            "notes": "Czech Science Foundation — competitive basic research grants. Major R&D funder from 1993.",
+            "name_variants": [
+                "grantová agentura české republiky",
+                "grantova agentura ceske republiky",
+                "ga čr",
+                "ga cr",
+                "grantová agentura",
+                "grantova agentura",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1993, 2099),
+            "min_amount_local": 1_000_000.0,
+        },
+        {
+            "canonical_name": "Technologická agentura České republiky (TA ČR)",
+            "category": "science_agency",
+            "notes": "Technology Agency of the Czech Republic — applied research and innovation grants. Created 2009.",
+            "name_variants": [
+                "technologická agentura české republiky",
+                "technologicka agentura ceske republiky",
+                "ta čr",
+                "ta cr",
+                "technologická agentura",
+                "technologicka agentura",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (2009, 2099),
+            "min_amount_local": 1_000_000.0,
+        },
+        {
+            "canonical_name": "Akademie věd České republiky (AV ČR)",
+            "category": "science_agency",
+            "notes": "Czech Academy of Sciences — network of research institutes. Major public R&D performer.",
+            "name_variants": [
+                "akademie věd české republiky",
+                "akademie ved ceske republiky",
+                "akademie věd čr",
+                "akademie věd cr",
+                "av čr",
+                "av cr",
+                "akademie věd",
+                "akademie ved",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1993, 2099),
+            "min_amount_local": 1_000_000.0,
+        },
+    ],
     "Iceland": [
         # ── Post-2003: Rannís ─────────────────────────────────────────────────
         {
@@ -8453,8 +10284,6 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             "name_variants": [
                 "mokslas ir studijos",
                 "mokslas ir studijos.",
-                "mokslo ir studijų",
-                "mokslo ir studiju",
                 "science and studies",
             ],
             "preferred_item_type": ["program_total", "section_total"],
@@ -8468,11 +10297,16 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             "name_variants": [
                 "valstybinė mokslo, studijų ir technologijų tarnyba",
                 "valstybine mokslo studiju ir technologiju tarnyba",
+                "mokslo ir studijų departamentas prie švietimo ir mokslo ministerijos",
+                "mokslo ir studiju departamentas prie svietimo ir mokslo ministerijos",
+                "science and studies department under the ministry of education and science",
                 "state science studies and technology service",
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1991, 2004),
+            "expected_years": [1994, 1999, 2001],
             "max_amount_local": 500_000_000,
+            "notes": "1993 original is documented but excluded from the final panel because the pre-litas thousand-talonas appropriation is not methodologically comparable to the later series.",
         },
         {
             "canonical_name": "Lithuanian Research Council",
@@ -8484,23 +10318,242 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1991, 2099),
+            "expected_years": [2005, 2009, 2010, 2011, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
             "max_amount_local": 1_000_000_000,
         },
         {
-            "canonical_name": "State Research Institutions (Lithuania)",
+            "canonical_name": "Centre for Physical Sciences and Technology (Lithuania)",
             "category": "science_agency",
             "name_variants": [
-                "valstybinių mokslo ir studijų institucijų",
-                "valstybiniu mokslo ir studiju instituciju",
-                "state research and studies institutions",
-                "mokslinių tyrimų",
-                "moksliniu tyrimu",
-                "scientific research",
+                "valstybinis mokslinių tyrimų institutas fizinių ir technologijos mokslų centras",
+                "valstybinis moksliniu tyrimu institutas fiziniu ir technologijos mokslu centras",
+                "fizinių ir technologijos mokslų centras",
+                "fiziniu ir technologijos mokslu centras",
+                "centre for physical sciences and technology",
+                "center for physical sciences and technology",
             ],
             "preferred_item_type": ["line_item", "program_total"],
-            "active_years": (1995, 2099),
+            "active_years": (2011, 2099),
             "max_amount_local": 2_000_000_000,
-            "notes": "Use conservatively; includes explicit state research institution appropriations.",
+            "notes": "Explicit FTMC institutional appropriation only; avoids generic research-institutions false positives.",
+        },
+        {
+            "canonical_name": "Lithuanian Genocide and Resistance Research Centre",
+            "category": "science_agency",
+            "name_variants": [
+                "lietuvos gyventojų genocido ir rezistencijos tyrimo centras",
+                "lithuanian genocide and resistance research centre",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1997, 2099),
+            "expected_years": [1997, 1998, 1999, 2001, 2005, 2009, 2010, 2011, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+            "max_amount_local": 50_000_000,
+            "notes": "Verified against original Lithuania budget files using the institution total column where multi-column appropriation tables are present.",
+        },
+    ],
+    "Luxembourg": [
+        # ── FNR ───────────────────────────────────────────────────────────────
+        {
+            "canonical_name": "FNR — Fonds National de la Recherche (Luxembourg)",
+            "category": "rd_agency",
+            "name_variants": [
+                "Fonds National de la Recherche",
+                "FNR",
+                "fonds national de la recherche luxembourg",
+                "national research fund",
+            ],
+            "rd_category": "direct_rd",
+            "active_years": (1999, 2099),
+            "max_amount_local": 100_000_000,
+            "notes": "Primary competitive R&D funder. Amounts in full EUR.",
+        },
+        # ── Public research institutes ────────────────────────────────────────
+        {
+            "canonical_name": "LIST / CRP Henri Tudor (Luxembourg)",
+            "category": "research_institute",
+            "name_variants": [
+                "Luxembourg Institute of Science and Technology",
+                "LIST",
+                "Centre de Recherche Public Henri Tudor",
+                "CRP Henri Tudor",
+                "CRP Tudor",
+            ],
+            "rd_category": "direct_rd",
+            "active_years": (1987, 2099),
+            "max_amount_local": 80_000_000,
+        },
+        {
+            "canonical_name": "LISER / CEPS-INSTEAD (Luxembourg)",
+            "category": "research_institute",
+            "name_variants": [
+                "Luxembourg Institute of Socio-Economic Research",
+                "LISER",
+                "CEPS/INSTEAD",
+                "CEPS INSTEAD",
+                "Centre d'Etudes de Populations, de Pauvreté et de Politiques Socio-Economiques",
+            ],
+            "rd_category": "direct_rd",
+            "active_years": (1990, 2099),
+            "max_amount_local": 30_000_000,
+        },
+        {
+            "canonical_name": "LIH / CRP Santé (Luxembourg)",
+            "category": "research_institute",
+            "name_variants": [
+                "Luxembourg Institute of Health",
+                "LIH",
+                "Centre de Recherche Public de la Santé",
+                "CRP Santé",
+                "CRP de la Santé",
+            ],
+            "rd_category": "direct_rd",
+            "active_years": (1990, 2099),
+            "max_amount_local": 30_000_000,
+        },
+        {
+            "canonical_name": "CRP Gabriel Lippmann (Luxembourg)",
+            "category": "research_institute",
+            "name_variants": [
+                "Centre de Recherche Public Gabriel Lippmann",
+                "CRP Gabriel Lippmann",
+                "CRP Lippmann",
+            ],
+            "rd_category": "direct_rd",
+            "active_years": (1987, 2015),
+            "max_amount_local": 30_000_000,
+        },
+        # ── Université du Luxembourg ──────────────────────────────────────────
+        {
+            "canonical_name": "Université du Luxembourg",
+            "category": "higher_education",
+            "name_variants": [
+                "Université du Luxembourg",
+                "University of Luxembourg",
+                "Uni.lu",
+                "UniLu",
+            ],
+            "rd_category": "higher_education",
+            "active_years": (2003, 2099),
+            "max_amount_local": 200_000_000,
+        },
+        # ── Research ministry section ─────────────────────────────────────────
+        {
+            "canonical_name": "Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg)",
+            "category": "rd_ministry",
+            "name_variants": [
+                "Ministère de l'enseignement supérieur et de la recherche",
+                "Département de la culture, de l'enseignement supérieur et de la recherche",
+                "enseignement supérieur et recherche",
+                "section 03",
+                "03 — ministere de l'enseignement superieur",
+            ],
+            "rd_category": "direct_rd",
+            "active_years": (1975, 2099),
+            "section_total": True,
+            "max_amount_local": 500_000_000,
+        },
+    ],
+    "Mexico": [
+        # ── Ramo 38: CONACYT / CONAHCyT ──────────────────────────────────────
+        {
+            "canonical_name": "CONACYT / CONAHCyT — Ramo 38 (Mexico)",
+            "category": "rd_agency",
+            "name_variants": [
+                "Consejo Nacional de Ciencia y Tecnología",
+                "CONACYT",
+                "Consejo Nacional de Humanidades, Ciencias y Tecnologías",
+                "CONAHCyT",
+                "Ramo 38",
+                "ramo 38 conacyt",
+                "ramo 38 conahcyt",
+                "38 CONACYT",
+            ],
+            "rd_category": "direct_rd",
+            "active_years": (1975, 2099),
+            "section_total": True,
+            "max_amount_local": 30_000_000_000,
+            "notes": "Primary R&D ramo. Pre-1993 amounts in old pesos (×1000 to convert to new MXN). "
+                     "Renamed CONAHCyT from 2022 but Ramo 38 code retained.",
+        },
+        # ── Research centres supervised by CONACYT ────────────────────────────
+        {
+            "canonical_name": "Centros Públicos de Investigación CONACYT (Mexico)",
+            "category": "research_institute",
+            "name_variants": [
+                "Centros Públicos de Investigación",
+                "centros públicos de investigación",
+                "centros de investigación",
+                "CICESE", "CIESAS", "CIO", "CIDESI", "CIQA", "CIAD",
+                "CENAPRED", "CIATEJ", "CICY", "INFOTEC", "CENIDET", "CIMAV",
+                "apoyos institucionales para actividades científicas",
+            ],
+            "rd_category": "direct_rd",
+            "active_years": (1985, 2099),
+            "max_amount_local": 10_000_000_000,
+        },
+        # ── IPN and CINVESTAV (Ramo 11 SEP) ──────────────────────────────────
+        {
+            "canonical_name": "IPN — Instituto Politécnico Nacional (Mexico)",
+            "category": "higher_education",
+            "name_variants": [
+                "Instituto Politécnico Nacional",
+                "Instituto Politecnico Nacional",
+                "IPN",
+                "politécnico",
+            ],
+            "rd_category": "higher_education",
+            "active_years": (1975, 2099),
+            "max_amount_local": 20_000_000_000,
+        },
+        {
+            "canonical_name": "CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico)",
+            "category": "research_institute",
+            "name_variants": [
+                "Centro de Investigación y de Estudios Avanzados",
+                "CINVESTAV",
+                "cinvestav del ipn",
+            ],
+            "rd_category": "direct_rd",
+            "active_years": (1975, 2099),
+            "max_amount_local": 5_000_000_000,
+        },
+        # ── UNAM (Ramo 11 SEP) ────────────────────────────────────────────────
+        {
+            "canonical_name": "UNAM — Universidad Nacional Autónoma de México (Mexico)",
+            "category": "higher_education",
+            "name_variants": [
+                "Universidad Nacional Autónoma de México",
+                "Universidad Nacional Autonoma de Mexico",
+                "UNAM",
+            ],
+            "rd_category": "higher_education",
+            "active_years": (1975, 2099),
+            "max_amount_local": 50_000_000_000,
+        },
+        # ── ININ / nuclear research (Ramo 18 SENER) ──────────────────────────
+        {
+            "canonical_name": "ININ — Instituto Nacional de Investigaciones Nucleares (Mexico)",
+            "category": "research_institute",
+            "name_variants": [
+                "Instituto Nacional de Investigaciones Nucleares",
+                "ININ",
+            ],
+            "rd_category": "direct_rd",
+            "active_years": (1975, 2099),
+            "max_amount_local": 3_000_000_000,
+        },
+        # ── INIFAP / agricultural R&D ─────────────────────────────────────────
+        {
+            "canonical_name": "INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",
+            "category": "research_institute",
+            "name_variants": [
+                "Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias",
+                "Instituto Nacional de Investigaciones Forestales",
+                "INIFAP",
+            ],
+            "rd_category": "direct_rd",
+            "active_years": (1985, 2099),
+            "max_amount_local": 3_000_000_000,
         },
     ],
     "Israel": [
@@ -9061,6 +11114,776 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             "enforce_preferred_match_groups": True,
         },
     ],
+    "Italy": [
+        {
+            "canonical_name": "Ministero dell'università e della ricerca (MUR/MIUR/MURST)",
+            "category": "ministry",
+            "notes": "Italy's main R&D ministry: MURST 1989–1999, MIUR 1999–2020, MUR 2020+.",
+            "name_variants": [
+                "ministero dell'università e della ricerca",
+                "ministero dell'universita' e della ricerca",
+                "mur",
+                "ministero dell'istruzione, dell'università e della ricerca",
+                "ministero dell'istruzione, dell'universita' e della ricerca",
+                "miur",
+                "ministero dell'università e della ricerca scientifica e tecnologica",
+                "murst",
+                "istruzione, università e ricerca",
+                "universita' e ricerca",
+                "istruzione, universita' e ricerca",
+            ],
+            "preferred_item_type": ["section_total", "program_total"],
+            "active_years": (1989, 2099),
+        },
+        {
+            "canonical_name": "FOE — Fondo Ordinario per gli Enti di ricerca",
+            "category": "direct_rd",
+            "notes": "Main block grant to MUR-supervised research institutes (CNR, ENEA, ASI, INFN, INAF).",
+            "name_variants": [
+                "fondo ordinario per gli enti di ricerca",
+                "foe",
+                "fondo per il finanziamento ordinario degli enti",
+                "enti pubblici di ricerca",
+                "fondo unico per gli enti di ricerca",
+                "capitolo 1678",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1990, 2099),
+            "min_amount_local": 100_000_000.0,
+        },
+        {
+            "canonical_name": "FIRST / FAR / FIRB — Fondi per la ricerca",
+            "category": "direct_rd",
+            "notes": "Key competitive R&D fund (FIRST 2007+; FAR and FIRB pre-2007 predecessors).",
+            "name_variants": [
+                "fondo per gli investimenti nella ricerca scientifica e tecnologica",
+                "first",
+                "fondo agevolazioni alla ricerca",
+                "far",
+                "fondo per la ricerca di base",
+                "firb",
+                "fondo per gli investimenti della ricerca di base",
+                "capitolo 1694",
+                "ricerca di base e applicata",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1995, 2099),
+            "min_amount_local": 10_000_000.0,
+        },
+        {
+            "canonical_name": "PRIN — Progetti di Rilevante Interesse Nazionale",
+            "category": "direct_rd",
+            "notes": "Competitive university research grants of national relevance.",
+            "name_variants": [
+                "progetti di rilevante interesse nazionale",
+                "prin",
+                "programmi di ricerca di interesse nazionale",
+                "ricerca di interesse nazionale delle università",
+            ],
+            "preferred_item_type": ["line_item"],
+            "active_years": (1999, 2099),
+        },
+        {
+            "canonical_name": "CNR — Consiglio Nazionale delle Ricerche",
+            "category": "science_agency",
+            "notes": "Italy's main multidisciplinary research council. MUR-supervised.",
+            "name_variants": [
+                "consiglio nazionale delle ricerche",
+                "cnr",
+                "c.n.r.",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1923, 2099),
+            "min_amount_local": 50_000_000.0,
+        },
+        {
+            "canonical_name": "ENEA",
+            "category": "science_agency",
+            "notes": "Energy and environment research agency. MUR-supervised.",
+            "name_variants": [
+                "agenzia nazionale per le nuove tecnologie",
+                "enea",
+                "ente per le nuove tecnologie, l'energia e l'ambiente",
+                "ente per le nuove tecnologie, l'energia e lo sviluppo",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1952, 2099),
+            "min_amount_local": 10_000_000.0,
+        },
+        {
+            "canonical_name": "ASI — Agenzia Spaziale Italiana",
+            "category": "science_agency",
+            "notes": "Italian Space Agency, established 1988.",
+            "name_variants": [
+                "agenzia spaziale italiana",
+                "asi",
+                "a.s.i.",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1988, 2099),
+            "min_amount_local": 10_000_000.0,
+        },
+        {
+            "canonical_name": "INFN — Istituto Nazionale di Fisica Nucleare",
+            "category": "science_agency",
+            "notes": "National nuclear physics institute. MUR-supervised.",
+            "name_variants": [
+                "istituto nazionale di fisica nucleare",
+                "infn",
+                "i.n.f.n.",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1951, 2099),
+            "min_amount_local": 10_000_000.0,
+        },
+        {
+            "canonical_name": "INAF — Istituto Nazionale di Astrofisica",
+            "category": "science_agency",
+            "notes": "National astrophysics institute, created 2002.",
+            "name_variants": [
+                "istituto nazionale di astrofisica",
+                "inaf",
+                "i.n.a.f.",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (2002, 2099),
+        },
+        {
+            "canonical_name": "Missione 17 — Ricerca e innovazione",
+            "category": "direct_rd",
+            "notes": "Cross-ministry R&D mission code (2010+ budget reform). Appears under MUR, health, environment, culture.",
+            "name_variants": [
+                "ricerca e innovazione",
+                "missione 17",
+                "ricerca scientifica e tecnologica di base e applicata",
+                "ricerca di base e applicata",
+                "ricerca per il settore della sanità pubblica",
+                "ricerca per il settore zooprofilattico",
+            ],
+            "preferred_item_type": ["program_total", "section_total"],
+            "active_years": (2010, 2099),
+            "min_amount_local": 1_000_000.0,
+        },
+    ],
+    "Slovenia": [
+        {
+            "canonical_name": "ARRS — Agencija za raziskovalno dejavnost Republike Slovenije",
+            "category": "science_agency",
+            "notes": "Slovenian Research Agency (2004+). Primary funder of research programmes/projects.",
+            "name_variants": [
+                "agencija za raziskovalno dejavnost",
+                "agencija za raziskovalno dejavnost republike slovenije",
+                "arrs",
+                "javna agencija za tehnološki razvoj",
+                "javna agencija za tehnoloski razvoj",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (2004, 2099),
+            "min_amount_local": 1_000_000.0,
+        },
+        {
+            "canonical_name": "Programme 0502 — Znanstveno raziskovalna dejavnost",
+            "category": "direct_rd",
+            "notes": "Primary R&D programme code in Slovenian budget across all years.",
+            "name_variants": [
+                "znanstveno raziskovalna dejavnost",
+                "0502",
+                "05023201",
+                "05023330",
+                "05023211",
+                "raziskovalni programi in projekti",
+                "050201",
+                "mednarodne aktivnosti na področju znanosti",
+                "050202",
+                "podpora raziskovalni infrastrukturi",
+                "050204",
+                "ciljni raziskovalni projekti",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (1995, 2099),
+        },
+        {
+            "canonical_name": "SAZU — Slovenska akademija znanosti in umetnosti",
+            "category": "science_agency",
+            "notes": "Slovenian Academy of Sciences and Arts. Code 3911.",
+            "name_variants": [
+                "slovenska akademija znanosti in umetnosti",
+                "sazu",
+                "3911",
+                "050203",
+                "znanstveno raziskovalna dejavnost slovenske akademije",
+            ],
+            "preferred_item_type": ["program_total", "line_item"],
+            "active_years": (1938, 2099),
+            "min_amount_local": 500_000.0,
+        },
+        {
+            "canonical_name": "Ministrstvo za visoko šolstvo, znanost in tehnologijo (MVZT)",
+            "category": "ministry",
+            "notes": "Ministry for Higher Education, Science and Technology, code 3211, 2004–2012.",
+            "name_variants": [
+                "ministrstvo za visoko šolstvo, znanost in tehnologijo",
+                "ministrstvo za visoko solstvo, znanost in tehnologijo",
+                "mvzt",
+                "3211",
+            ],
+            "preferred_item_type": ["section_total"],
+            "active_years": (2004, 2012),
+        },
+        {
+            "canonical_name": "Ministrstvo za izobraževanje, znanost in šport (MIZŠ)",
+            "category": "ministry",
+            "notes": "Ministry of Education, Science and Sport, code 3330, 2012+. Main R&D ministry.",
+            "name_variants": [
+                "ministrstvo za izobraževanje, znanost in šport",
+                "ministrstvo za izobrazevanje, znanost in sport",
+                "mizš",
+                "mizs",
+                "3330",
+            ],
+            "preferred_item_type": ["section_total"],
+            "active_years": (2012, 2099),
+        },
+        {
+            "canonical_name": "Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti",
+            "category": "direct_rd",
+            "notes": "Young researchers scheme and researcher mobility — direct R&D human capital.",
+            "name_variants": [
+                "mladi raziskovalci",
+                "človeški viri v podporo znanosti",
+                "cloveški viri v podporo znanosti",
+                "0503",
+                "050302",
+                "spodbude najboljšim raziskovalcem",
+                "mobilnost in spodbude",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1995, 2099),
+        },
+    ],
+
+    # -----------------------------------------------------------------------
+    # SLOVAKIA
+    # Unit: tis. Sk (thousands SKK) 1992-2008; full EUR 2009+.
+    # Key kapitoly: 20 (MŠ SR / science ministry), 51 (SAV).
+    # -----------------------------------------------------------------------
+    "Slovakia": [
+
+        # --- Core R&D funding agencies ---
+        {
+            "canonical_name": "APVV (Agentúra na podporu výskumu a vývoja)",
+            "category": "science_agency",
+            "name_variants": [
+                "apvv",
+                "agentúra na podporu výskumu a vývoja",
+                "agentúra pre vedecký výskum",
+                "agency for the support of research and development",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (2005, 2099),
+            # APVV ~90-120M EUR/year in 2020s; in SKK era, much smaller
+            "max_amount_local": 500_000_000,   # EUR (full); in SKK era (thousands) ~3-5B
+            "notes": "Created 2005, replacing Agentúra pre vedecký výskum. "
+                     "Main competitive R&D grant agency under Ministerstvo školstva SR.",
+        },
+        {
+            "canonical_name": "VEGA (Vedecká grantová agentúra MŠ SR a SAV)",
+            "category": "science_agency",
+            "name_variants": [
+                "vega",
+                "vedecká grantová agentúra",
+                "vedecka grantova agentura",
+                "scientific grant agency",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1993, 2099),
+            "max_amount_local": 200_000_000,
+            "notes": "Grant scheme for basic research at universities and SAV. "
+                     "Jointly managed by MŠ SR and SAV.",
+        },
+        {
+            "canonical_name": "SAV (Slovenská akadémia vied)",
+            "category": "science_agency",
+            "name_variants": [
+                "sav",
+                "slovenská akadémia vied",
+                "slovenska akademia vied",
+                "slovak academy of sciences",
+                "kapitola 51",
+            ],
+            "preferred_item_type": ["section_total", "program_total"],
+            "active_years": (1992, 2099),
+            # SAV ~130-140M EUR/year in 2020s; plausible up to 300M EUR
+            "max_amount_local": 300_000_000,
+            "strict_preferred_item_types": True,
+            "notes": "Slovak Academy of Sciences — own budget chapter (kapitola 51). "
+                     "Entire kapitola 51 appropriation counts as R&D.",
+        },
+        {
+            "canonical_name": "Ministerstvo školstva SR (kapitola 20)",
+            "category": "higher_education",
+            "name_variants": [
+                "ministerstvo školstva sr",
+                "ministerstvo školstva",
+                "ministerstvo školstva, vedy, výskumu a športu",
+                "ministerstvo školstva, výskumu, vývoja a mládeže",
+                "mš sr",
+                "mšvvš sr",
+                "mšvvm sr",
+                "ministry of education sr",
+            ],
+            "preferred_item_type": ["section_total", "program_total"],
+            "active_years": (1992, 2099),
+            "max_amount_local": 8_000_000_000,
+            "strict_preferred_item_types": True,
+            "notes": "Primary budget chapter for science and higher education. "
+                     "Contains universities, APVV, VEGA, and research institutes. "
+                     "Use section_total for total chapter; prefer named sub-items for detail.",
+        },
+
+        # --- Pre-APVV era ---
+        {
+            "canonical_name": "Agentúra pre vedecký výskum (pre-APVV)",
+            "category": "science_agency",
+            "name_variants": [
+                "agentúra pre vedecký výskum",
+                "agentúra pre vedecký výskum a vývoj",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1995, 2005),
+            "max_amount_local": 3_000_000,   # thousands SKK
+            "notes": "Predecessor to APVV. Replaced by APVV in 2005.",
+        },
+
+        # --- International R&D cooperation ---
+        {
+            "canonical_name": "CERN (Slovak contribution)",
+            "category": "direct_rd",
+            "name_variants": [
+                "príspevok do cern",
+                "prispevok do cern",
+                "cern",
+                "príspevok sr do cern",
+            ],
+            "preferred_item_type": ["line_item"],
+            "active_years": (1993, 2099),
+            "max_amount_local": 20_000_000,
+            "notes": "Slovak annual contribution to CERN. Appears under MŠ SR or as "
+                     "named line in international cooperation budget.",
+        },
+
+        # --- Budget division code for R&D ---
+        {
+            "canonical_name": "Oblasť 740 — veda a výskum (science and research)",
+            "category": "direct_rd",
+            "name_variants": [
+                "740",
+                "veda a výskum",
+                "veda a vyskum",
+                "science and research",
+                "oblasť 740",
+                "oblast 740",
+            ],
+            "preferred_item_type": ["section_total", "program_total"],
+            "active_years": (1992, 2099),
+            "max_amount_local": 5_000_000_000,
+            "notes": "Budget sector code 740 = science and research. "
+                     "All appropriations under this code are direct R&D.",
+        },
+    ],
+
+    # -----------------------------------------------------------------------
+    # POLAND
+    "Portugal": [
+        # ── FCT / JNICT ───────────────────────────────────────────────────────
+        {
+            "canonical_name": "FCT — Fundação para a Ciência e a Tecnologia (Portugal)",
+            "category": "rd_agency",
+            "name_variants": [
+                "Fundação para a Ciência e a Tecnologia",
+                "Fundação para a Ciência e Tecnologia",
+                "FCT",
+                "FCT, I.P.",
+                "FCT I.P.",
+                "fct ip",
+                "fundacao para a ciencia e tecnologia",
+            ],
+            "rd_category": "direct_rd",
+            "active_years": (1997, 2099),
+            "max_amount_local": 1_000_000_000,
+            "notes": "Primary R&D funder from 1997. Amounts in full EUR (2002+) or PTE (pre-2002).",
+        },
+        {
+            "canonical_name": "JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal)",
+            "category": "rd_agency",
+            "name_variants": [
+                "Junta Nacional de Investigação Científica e Tecnológica",
+                "JNICT",
+                "junta nacional de investigacao",
+            ],
+            "rd_category": "direct_rd",
+            "active_years": (1977, 1997),
+            "max_amount_local": 200_000_000_000,
+            "notes": "Pre-FCT competitive R&D funder. Amounts in PTE (escudos).",
+        },
+        # ── Science ministry ──────────────────────────────────────────────────
+        {
+            "canonical_name": "Ministério da Ciência e Tecnologia — Capítulo 50 (Portugal)",
+            "category": "rd_ministry",
+            "name_variants": [
+                "Ministério da Ciência e Tecnologia",
+                "Ministério da Ciência, Inovação e Ensino Superior",
+                "Ministério da Ciência, Tecnologia e Ensino Superior",
+                "MCTES",
+                "MCES",
+                "capítulo 50",
+                "capitulo 50",
+                "Cap. 50",
+            ],
+            "rd_category": "direct_rd",
+            "section_total": True,
+            "active_years": (1977, 2099),
+            "max_amount_local": 2_000_000_000,
+        },
+        # ── ANI ───────────────────────────────────────────────────────────────
+        {
+            "canonical_name": "ANI — Agência Nacional de Inovação (Portugal)",
+            "category": "rd_agency",
+            "name_variants": [
+                "Agência Nacional de Inovação",
+                "ANI",
+                "ani ip",
+                "agencia nacional de inovacao",
+            ],
+            "rd_category": "direct_rd",
+            "active_years": (2009, 2099),
+            "max_amount_local": 200_000_000,
+        },
+        # ── State laboratories ────────────────────────────────────────────────
+        {
+            "canonical_name": "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)",
+            "category": "research_institute",
+            "name_variants": [
+                "Laboratório Nacional de Engenharia Civil",
+                "LNEC",
+            ],
+            "rd_category": "direct_rd",
+            "active_years": (1977, 2099),
+            "max_amount_local": 50_000_000,
+        },
+        {
+            "canonical_name": "P002 — Investigação Científica e Tecnológica e Inovação (Portugal)",
+            "category": "rd_programme",
+            "name_variants": [
+                "P002",
+                "P-002",
+                "Investigação Científica e Tecnológica e Inovação",
+                "INVESTIGAÇÃO CIENTÍFICA E TECNOLÓGICA E INOVAÇÃO",
+                "programa investigação científica",
+            ],
+            "rd_category": "direct_rd",
+            "section_total": True,
+            "active_years": (2005, 2099),
+            "max_amount_local": 2_000_000_000,
+        },
+    ],
+    # Unit: tys. zł (thousands PLN) throughout.
+    # 1995 redenomination: 1 new PLN = 10,000 old PLN.
+    # Key budget parts: Część 28 (HE & science), Część 67 (PAN).
+    # -----------------------------------------------------------------------
+    "Poland": [
+
+        # --- Core R&D funding agencies (post-2007/2011) ---
+        {
+            "canonical_name": "NCN (Narodowe Centrum Nauki)",
+            "category": "science_agency",
+            "name_variants": [
+                "ncn",
+                "narodowe centrum nauki",
+                "national science centre",
+                "national science center",
+            ],
+            "exclude_match_groups": [[
+                r"grants?\s+for\s+basic\s+research",
+                r"badania\s+podstawowe",
+                r"środki\s+(?:przekazane|przyznane)\s+innym\s+podmiotom",
+            ]],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (2011, 2099),
+            # NCN ~2-3B tys. zł/year in 2020s
+            "max_amount_local": 10_000_000,   # thousands PLN
+            "notes": "Created 2011 as the main basic research grant agency in Poland. "
+                     "Appears in Część 28, Dział 740.",
+        },
+        {
+            "canonical_name": "NCBiR (Narodowe Centrum Badań i Rozwoju)",
+            "category": "science_agency",
+            "name_variants": [
+                "ncbir",
+                "ncbr",
+                "narodowe centrum badań i rozwoju",
+                "national centre for research and development",
+                "center for research and development",
+            ],
+            "exclude_match_groups": [[
+                r"grants?\s+for\s+applied\s+research",
+                r"badania\s+stosowane",
+                r"środki\s+(?:przekazane|przyznane)\s+innym\s+podmiotom",
+                r"financing\s+projects?\s+with\s+eu\s+funds",
+            ]],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (2007, 2099),
+            "max_amount_local": 10_000_000,
+            "notes": "Applied R&D and innovation agency created 2007. "
+                     "Manages EU-co-financed and national R&D programmes.",
+        },
+        {
+            "canonical_name": "PAN (Polska Akademia Nauk)",
+            "category": "science_agency",
+            "name_variants": [
+                "pan",
+                "polska akademia nauk",
+                "polish academy of sciences",
+                "część 67",
+                "czesc 67",
+            ],
+            "preferred_item_type": ["program_total", "section_total"],
+            "active_years": (1990, 2099),
+            "max_amount_local": 2_000_000,
+            "notes": "Polish Academy of Sciences — own budget part (Część 67). "
+                     "Full appropriation is R&D. Also appears as sub-items in Część 28.",
+        },
+
+        # --- Pre-2007 R&D agencies ---
+        {
+            "canonical_name": "KBN (Komitet Badań Naukowych)",
+            "category": "science_agency",
+            "name_variants": [
+                "kbn",
+                "komitet badań naukowych",
+                "committee for scientific research",
+                "państwowy komitet badań naukowych",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1991, 2005),
+            "max_amount_local": 5_000_000,
+            "notes": "State Committee for Scientific Research, 1991-2005. "
+                     "Key R&D body before creation of MNiSW and NCBiR.",
+        },
+
+        # --- Ministry (as appropriating body) ---
+        {
+            "canonical_name": "MNiSW / MEiN (Ministry of Science and Higher Education)",
+            "category": "higher_education",
+            "name_variants": [
+                "mnisw",
+                "ministerstwo nauki i szkolnictwa wyższego",
+                "ministerstwo nauki",
+                "mein",
+                "ministerstwo edukacji i nauki",
+                "ministry of science and higher education",
+                "ministry of education and science",
+            ],
+            "preferred_item_type": ["section_total", "program_total"],
+            "active_years": (2005, 2099),
+            "max_amount_local": 100_000_000,
+            "notes": "Created 2005. Renamed MEiN (2021-2024) then split back. "
+                     "Administers Część 28 (Szkolnictwo wyższe i nauka).",
+        },
+
+        # --- Budget part / division codes ---
+        {
+            "canonical_name": "Część 28 — Szkolnictwo wyższe i nauka",
+            "category": "higher_education",
+            "name_variants": [
+                "część 28",
+                "czesc 28",
+                "szkolnictwo wyższe i nauka",
+                "szkolnictwo wyzsze i nauka",
+                "higher education and science",
+            ],
+            "preferred_item_type": ["section_total"],
+            "active_years": (1991, 2099),
+            "max_amount_local": 500_000_000,
+            "notes": "Primary budget part for R&D and HE in Poland. "
+                     "Contains universities (Dział 730) and direct R&D (Dział 740).",
+        },
+        {
+            "canonical_name": "Dział 740 — Działalność badawcza i rozwojowa",
+            "category": "direct_rd",
+            "name_variants": [
+                "740",
+                "działalność badawcza i rozwojowa",
+                "prace badawczo-rozwojowe",
+                "prace badawcze",
+                "badania naukowe",
+                "dział 740",
+                "dzial 740",
+            ],
+            "preferred_item_type": ["section_total", "program_total"],
+            "active_years": (1990, 2099),
+            "max_amount_local": 20_000_000,
+            "notes": "Budget division code 740 = R&D activity. "
+                     "All lines under this division are direct R&D.",
+        },
+
+        # --- International R&D cooperation ---
+        {
+            "canonical_name": "CERN (Polish contribution)",
+            "category": "direct_rd",
+            "name_variants": [
+                "cern",
+                "składka do cern",
+                "skladka do cern",
+                "wkład do cern",
+                "udział w cern",
+            ],
+            "preferred_item_type": ["line_item"],
+            "active_years": (1991, 2099),
+            "max_amount_local": 200_000,
+            "notes": "Polish annual contribution to CERN. Appears under MNiSW or "
+                     "international cooperation budget lines.",
+        },
+
+        # --- Universities (key ones, as budget series) ---
+        {
+            "canonical_name": "Subwencje dla uczelni (university block grants, Część 28)",
+            "category": "higher_education",
+            "name_variants": [
+                "subwencje dla uczelni",
+                "subwencja",
+                "dotacje dla uczelni",
+                "finansowanie uczelni",
+                "73001",
+                "rozdział 73001",
+                "szkolnictwo wyższe",
+                "dział 730",
+            ],
+            "preferred_item_type": ["program_total", "section_total"],
+            "active_years": (1990, 2099),
+            "max_amount_local": 400_000_000,
+            "notes": "University block grants under Część 28, Dział 730. "
+                     "Cover teaching and research — tag as higher_education.",
+        },
+    ],
+    # Currency: TRL (hyperinflation, amounts in trillions) until 2004;
+    # YTL 2005-2008 (1 YTL = 1,000,000 TRL); TL 2009+ (same as YTL).
+    # TÜBİTAK, TÜBA, TAEK are ÖZEL BÜTÇELİ — (II) SAYILI CETVEL only.
+    # Ministry of Industry and Technology is GENEL BÜTÇELİ — (I) SAYILI CETVEL.
+    # -----------------------------------------------------------------------
+    "Turkey": [
+
+        # ── TÜBİTAK ──────────────────────────────────────────────────────────
+        {
+            "canonical_name": "TÜBİTAK (Turkey)",
+            "category": "science_agency",
+            "name_variants": [
+                "tübitak",
+                "tubitak",
+                "türkiye bilimsel ve teknolojik araştırma kurumu",
+                "turkiye bilimsel ve teknolojik arastirma kurumu",
+                "scientific and technological research council of turkey",
+                "tübitak genel sekreterliği",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1963, 2099),
+            # Post-2005 (YTL/TL): TÜBİTAK budget ~3-8B TL in 2020s
+            # Pre-2005 (TRL): amounts in quadrillions of old lira
+            "max_amount_local": 50_000_000_000,
+            "notes": "Özel Bütçeli (special budget) entity — appears in (II) SAYILI CETVEL. "
+                     "NOT present in files containing only (I) SAYILI CETVEL. "
+                     "Primary competitive R&D funder in Turkey.",
+        },
+
+        # ── TÜBA ─────────────────────────────────────────────────────────────
+        {
+            "canonical_name": "TÜBA (Turkey)",
+            "category": "science_agency",
+            "name_variants": [
+                "tüba",
+                "tuba",
+                "türkiye bilimler akademisi",
+                "turkiye bilimler akademisi",
+                "turkish academy of sciences",
+            ],
+            "preferred_item_type": ["line_item"],
+            "active_years": (1993, 2099),
+            "max_amount_local": 500_000_000,
+            "notes": "Özel Bütçeli — appears in (II) SAYILI CETVEL.",
+        },
+
+        # ── TAEK ─────────────────────────────────────────────────────────────
+        {
+            "canonical_name": "TAEK — Türkiye Atom Enerjisi Kurumu (Turkey)",
+            "category": "science_agency",
+            "name_variants": [
+                "taek",
+                "türkiye atom enerjisi kurumu",
+                "turkiye atom enerjisi kurumu",
+                "turkish atomic energy authority",
+                "atom enerjisi kurumu",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1956, 2099),
+            "max_amount_local": 5_000_000_000,
+            "notes": "Nuclear R&D authority. Özel Bütçeli — appears in (II) SAYILI CETVEL.",
+        },
+
+        # ── Ministry of Industry and Technology ──────────────────────────────
+        {
+            "canonical_name": "Sanayi ve Teknoloji Bakanlığı (Turkey)",
+            "category": "science_agency",
+            "name_variants": [
+                "sanayi ve teknoloji bakanlığı",
+                "sanayi ve teknoloji bakanligi",
+                "bilim sanayi ve teknoloji bakanlığı",
+                "bilim sanayi ve teknoloji bakanligi",
+                "sanayi ve ticaret bakanlığı",
+                "ministry of industry and technology",
+                "ministry of science industry and technology",
+            ],
+            "preferred_item_type": ["section_total", "program_total"],
+            "section_total": True,
+            "active_years": (1975, 2099),
+            "max_amount_local": 100_000_000_000,
+            "notes": "Genel Bütçeli — present in (I) SAYILI CETVEL. "
+                     "R&D allocation is a subset of total ministry budget. "
+                     "Name changed: Sanayi ve Ticaret (pre-2011), Bilim Sanayi ve Teknoloji (2011-2018), "
+                     "Sanayi ve Teknoloji (2018+).",
+        },
+
+        # ── KOSGEB ───────────────────────────────────────────────────────────
+        {
+            "canonical_name": "KOSGEB (Turkey)",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "kosgeb",
+                "küçük ve orta ölçekli işletmeleri geliştirme",
+                "kucuk ve orta olcekli isletmeleri gelistirme",
+                "sme development organization",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (1990, 2099),
+            "max_amount_local": 10_000_000_000,
+            "notes": "Özel Bütçeli SME support agency with R&D/innovation mandate.",
+        },
+
+        # ── Turkish Space Agency ──────────────────────────────────────────────
+        {
+            "canonical_name": "Türkiye Uzay Ajansı / TUA (Turkey)",
+            "category": "science_agency",
+            "name_variants": [
+                "türkiye uzay ajansı",
+                "turkiye uzay ajansi",
+                "tua",
+                "turkish space agency",
+            ],
+            "preferred_item_type": ["line_item"],
+            "active_years": (2018, 2099),
+            "max_amount_local": 5_000_000_000,
+            "notes": "Established 2018. Özel Bütçeli.",
+        },
+    ],
 }
 
 
@@ -9288,6 +12111,20 @@ def _best_amount_for_agency(
                 # than use clearly-wrong data (e.g. section totals picked up as the
                 # only row for an agency in a given year).
                 return None
+
+    # Slovakia-specific unit correction:
+    # Manual audit of the extracted rows for 2009, 2010, 2018 and 2022 shows
+    # that EUR-era appropriations are often mislabeled as unit='thousand' even
+    # though the page value already represents the full-euro amount. Relabel
+    # before ranking so later expansion is a no-op instead of an erroneous ×1000.
+    if agency.get("_country") == "Slovakia":
+        yr_sk = pd.to_numeric(matches.get("year"), errors="coerce")
+        curr_sk = matches.get("currency", pd.Series("", index=matches.index)).fillna("").astype(str).str.upper()
+        unit_sk = matches.get("unit", pd.Series("", index=matches.index)).fillna("").astype(str).str.strip().str.lower()
+        relabel_mask = yr_sk.ge(2009) & curr_sk.eq("EUR") & unit_sk.eq("thousand")
+        if relabel_mask.any():
+            matches = matches.copy()
+            matches.loc[relabel_mask, "unit"] = "unit"
 
     # Denmark-specific quality controls:
     # Danish Finanslov amounts are in thousands of DKK (unit='thousand').
@@ -9927,6 +12764,17 @@ def _get_agencies_for_country(country: str) -> list[dict]:
             # final panel.
             return str(agency.get("agency_type", "")).strip().lower() == "rd_programme"
 
+        if country == "New Zealand":
+            agency_type = str(agency.get("agency_type", "")).strip().lower()
+            if agency_type in {"rd_programme", "rd_fund"}:
+                return True
+            name = str(agency.get("canonical_name", "")).strip()
+            source = str(agency.get("source_entity", "")).strip()
+            text = " ".join(x for x in [name, source] if x)
+            if not text:
+                return True
+            return not bool(_NEW_ZEALAND_ORGANISATION_HINTS.search(text))
+
         if country != "Japan":
             return False
 
@@ -10289,6 +13137,34 @@ def build_canonical_series(
         zero_mask = amt_lv.eq(0)
         if zero_mask.any():
             subset = subset.loc[~zero_mask].copy()
+
+    if country == "Lithuania" and not subset.empty:
+        # Lithuania uses three monetary eras in these files:
+        #   1993 = talonas, 1994-2014 = litas, 2015+ = euro.
+        # The extractor frequently mislabeled all rows as EUR/euro even when
+        # the stored amount is already in full local-currency units.
+        unit_lt = subset.get("unit", pd.Series("", index=subset.index)).fillna("").str.lower()
+        year_lt = pd.to_numeric(subset.get("year", pd.Series(dtype=float)), errors="coerce")
+        curr_lt = subset.get("currency", pd.Series("", index=subset.index)).fillna("").str.upper()
+        amt_lt = pd.to_numeric(subset.get("amount_local"), errors="coerce")
+
+        tal_mask = year_lt.eq(1993) & amt_lt.notna()
+        if tal_mask.any():
+            subset.loc[tal_mask, "currency"] = "TAL"
+
+        litas_mask = year_lt.between(1994, 2014, inclusive="both") & amt_lt.notna()
+        if litas_mask.any():
+            subset.loc[litas_mask, "currency"] = "LTL"
+
+        euro_mask = year_lt.ge(2015) & amt_lt.notna() & curr_lt.ne("EUR")
+        if euro_mask.any():
+            subset.loc[euro_mask, "currency"] = "EUR"
+
+        bad_unit_mask = unit_lt.isin(["euro", "unknown"]) & amt_lt.notna()
+        if bad_unit_mask.any():
+            subset.loc[bad_unit_mask, "unit"] = subset.loc[bad_unit_mask, "currency"].apply(
+                lambda cur: _base_output_unit(cur, "unit")
+            )
 
     if country == "Belgium" and not subset.empty:
         year_be = pd.to_numeric(subset.get("year", pd.Series(dtype=float)), errors="coerce")
@@ -11145,6 +14021,71 @@ def build_canonical_series(
                 notes = str(out.at[target_idx, "series_notes"] or "").strip()
                 out.at[target_idx, "series_notes"] = f"{notes}; manual override from original Estonia budget file".strip("; ").strip()
 
+    if country == "Lithuania":
+        for year, overrides in _LITHUANIA_VERIFIED_OVERRIDES.items():
+            for canonical_name, (amount_local, page_number, currency, source_file) in overrides.items():
+                mask = (out["year"] == year) & (out["canonical_name"] == canonical_name)
+                unit = _base_output_unit(currency, "unit")
+                page_value = str(int(page_number)) if page_number is not None else None
+                if not mask.any():
+                    ref_row = out[out["canonical_name"] == canonical_name]
+                    if ref_row.empty:
+                        continue
+                    new_row = ref_row.iloc[0].copy()
+                    new_row["year"] = year
+                    new_row["amount_local"] = float(amount_local)
+                    new_row["unit"] = unit
+                    new_row["currency"] = currency
+                    new_row["item_type"] = "verified_override"
+                    new_row["line_description_en"] = "Verified against original Lithuania budget file"
+                    new_row["source_file"] = source_file
+                    new_row["page_number"] = page_value
+                    new_row["series_notes"] = "manual override from original Lithuania budget file"
+                    out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
+                    continue
+                target_idx = out.index[mask][0]
+                out.loc[mask, "amount_local"] = None
+                out.loc[mask, "unit"] = None
+                out.loc[mask, "currency"] = None
+                out.loc[mask, "item_type"] = None
+                out.loc[mask, "line_description_en"] = None
+                out.loc[mask, "page_number"] = None
+                out.at[target_idx, "amount_local"] = float(amount_local)
+                out.at[target_idx, "unit"] = unit
+                out.at[target_idx, "currency"] = currency
+                out.at[target_idx, "item_type"] = "verified_override"
+                out.at[target_idx, "line_description_en"] = "Verified against original Lithuania budget file"
+                out.at[target_idx, "source_file"] = source_file
+                out.at[target_idx, "page_number"] = page_value
+                notes = str(out.at[target_idx, "series_notes"] or "").strip()
+                out.at[target_idx, "series_notes"] = f"{notes}; manual override from original Lithuania budget file".strip("; ").strip()
+
+        lt_manual_drop = pd.Series(False, index=out.index)
+        for year, canonical_name in _LITHUANIA_VERIFIED_DROPS:
+            lt_manual_drop = lt_manual_drop | (
+                out["canonical_name"].eq(canonical_name)
+                & pd.to_numeric(out["year"], errors="coerce").eq(year)
+            )
+        if lt_manual_drop.any():
+            out.loc[
+                lt_manual_drop,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+
+        lt_name = out["canonical_name"].fillna("").astype(str)
+        university_mask = lt_name.str.contains(r"university", case=False, regex=True)
+        arts_mask = lt_name.isin(
+            {
+                "Lithuanian Academy of Music and Theatre",
+                "Vilnius Academy of Arts",
+            }
+        )
+        overlapping_programme_mask = lt_name.eq("Science and Studies Programme (Lithuania)")
+        special_investigation_mask = lt_name.eq("Special Investigation Service of the Republic of Lithuania")
+        out = out.loc[
+            ~(university_mask | arts_mask | overlapping_programme_mask | special_investigation_mask)
+        ].reset_index(drop=True)
+
     if country == "Chile":
         for year, overrides in _CHILE_VERIFIED_OVERRIDES.items():
             for canonical_name, (amount_local, page_number, currency, source_file) in overrides.items():
@@ -11247,6 +14188,62 @@ def build_canonical_series(
             )
             .drop_duplicates(["canonical_name", "year"], keep="first")
             .drop(columns=["_cr_has_amount", "_cr_is_override"])
+            .reset_index(drop=True)
+        )
+
+    if country == "New Zealand":
+        for year, overrides in _NEW_ZEALAND_VERIFIED_OVERRIDES.items():
+            for canonical_name, (amount_local, page_number, currency, source_file, line_description) in overrides.items():
+                mask = (out["year"] == year) & (out["canonical_name"] == canonical_name)
+                if not mask.any():
+                    ref_row = out[out["canonical_name"] == canonical_name]
+                    if ref_row.empty:
+                        continue
+                    new_row = ref_row.iloc[0].copy()
+                    new_row["year"] = year
+                    new_row["amount_local"] = float(amount_local)
+                    new_row["unit"] = "dollar"
+                    new_row["currency"] = currency
+                    new_row["item_type"] = "verified_override"
+                    new_row["line_description_en"] = line_description
+                    new_row["source_file"] = source_file
+                    new_row["page_number"] = str(page_number)
+                    new_row["series_notes"] = "manual override from original New Zealand budget file"
+                    out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
+                    continue
+                target_idx = out.index[mask][0]
+                out.loc[mask, "amount_local"] = None
+                out.loc[mask, "unit"] = None
+                out.loc[mask, "currency"] = None
+                out.loc[mask, "item_type"] = None
+                out.loc[mask, "line_description_en"] = None
+                out.loc[mask, "page_number"] = None
+                out.at[target_idx, "amount_local"] = float(amount_local)
+                out.at[target_idx, "unit"] = "dollar"
+                out.at[target_idx, "currency"] = currency
+                out.at[target_idx, "item_type"] = "verified_override"
+                out.at[target_idx, "line_description_en"] = line_description
+                out.at[target_idx, "source_file"] = source_file
+                out.at[target_idx, "page_number"] = str(page_number)
+                notes = str(out.at[target_idx, "series_notes"] or "").strip()
+                out.at[target_idx, "series_notes"] = f"{notes}; manual override from original New Zealand budget file".strip("; ").strip()
+        for year, canonical_name in _NEW_ZEALAND_VERIFIED_DROPS:
+            mask = (out["year"] == year) & (out["canonical_name"] == canonical_name)
+            if not mask.any():
+                continue
+            out.loc[
+                mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+        out["_nz_has_amount"] = out["amount_local"].notna().astype(int)
+        out = (
+            out.sort_values(
+                ["canonical_name", "year", "_nz_has_amount"],
+                ascending=[True, True, False],
+                kind="stable",
+            )
+            .drop_duplicates(["canonical_name", "year"], keep="first")
+            .drop(columns=["_nz_has_amount"])
             .reset_index(drop=True)
         )
 
@@ -11546,6 +14543,1315 @@ def build_canonical_series(
                 lambda s: f"{s}; dropped after source audit: traceable but not a defensible final R&D appropriation".strip("; ").strip()
             )
 
+    if country == "Poland":
+        canonical = out["canonical_name"].fillna("").astype(str)
+        year_num = pd.to_numeric(out["year"], errors="coerce")
+        amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+        unit_norm = out["unit"].fillna("").astype(str).str.strip().str.lower()
+        allowed_poland_canonicals = {
+            "CERN (Polish contribution)",
+            "KBN (Komitet Badań Naukowych)",
+            "NCBiR (Narodowe Centrum Badań i Rozwoju)",
+            "NCN (Narodowe Centrum Nauki)",
+            "PAN (Polska Akademia Nauk)",
+            "Polish Space Agency Activities",
+            "Regional Initiative of Excellence",
+            "Research Reactor MARIA Modernization Program",
+            "Łukasiewicz Research Network",
+        }
+        section_amounts = {
+            int(year): float(amount)
+            for year, amount in out.loc[
+                canonical.eq("Część 28 — Szkolnictwo wyższe i nauka") & amount_num.notna(),
+                ["year", "amount_local"],
+            ].itertuples(index=False, name=None)
+            if pd.notna(year) and pd.notna(amount)
+        }
+
+        residual_thousand = amount_num.notna() & unit_norm.eq("thousand")
+        if residual_thousand.any():
+            out.loc[residual_thousand, "amount_local"] = amount_num.loc[residual_thousand] * 1000.0
+            out.loc[residual_thousand, "unit"] = "zloty"
+            amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+            unit_norm = out["unit"].fillna("").astype(str).str.strip().str.lower()
+
+        residual_million = amount_num.notna() & unit_norm.eq("million")
+        if residual_million.any():
+            out.loc[residual_million, "amount_local"] = amount_num.loc[residual_million] * 1_000_000.0
+            out.loc[residual_million, "unit"] = "zloty"
+            amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+
+        generic_poland_mask = ~canonical.isin(allowed_poland_canonicals)
+        if generic_poland_mask.any():
+            out.loc[
+                generic_poland_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[generic_poland_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[generic_poland_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Poland source audit: final panel restricted to audited institution/program canonicals".strip("; ").strip()
+            )
+
+        broad_poland_mask = canonical.isin(
+            {
+                "Część 28 — Szkolnictwo wyższe i nauka",
+                "MNiSW / MEiN (Ministry of Science and Higher Education)",
+            }
+        )
+        if broad_poland_mask.any():
+            out.loc[
+                broad_poland_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[broad_poland_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[broad_poland_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Poland source audit: broad ministry/part aggregate, not a defensible institutional series".strip("; ").strip()
+            )
+
+        amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+        university_dup_mask = canonical.eq("Subwencje dla uczelni (university block grants, Część 28)") & (
+            out["item_type"].fillna("").astype(str).str.lower().eq("section_total")
+            | out.apply(
+                lambda r: (
+                    pd.notna(r.get("amount_local"))
+                    and pd.notna(r.get("year"))
+                    and section_amounts.get(int(r["year"])) == float(r["amount_local"])
+                ),
+                axis=1,
+            )
+        )
+        if university_dup_mask.any():
+            out.loc[
+                university_dup_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[university_dup_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[university_dup_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Poland source audit: duplicate of broad Part 28 aggregate, not a distinct university block-grant line".strip("; ").strip()
+            )
+
+        amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+        suspicious_round_mask = (
+            canonical.isin(
+                {
+                    "Dział 740 — Działalność badawcza i rozwojowa",
+                    "NCN (Narodowe Centrum Nauki)",
+                    "NCBiR (Narodowe Centrum Badań i Rozwoju)",
+                    "PAN (Polska Akademia Nauk)",
+                    "Subwencje dla uczelni (university block grants, Część 28)",
+                }
+            )
+            & amount_num.isin(
+                {
+                    9_876_543_000.0,
+                    12_345_678_000.0,
+                    30_000_000_000.0,
+                    50_000_000_000.0,
+                    100_000_000_000.0,
+                    200_000_000_000.0,
+                    300_000_000_000.0,
+                    500_000_000_000.0,
+                    921_000_000_000.0,
+                }
+            )
+        )
+        if suspicious_round_mask.any():
+            out.loc[
+                suspicious_round_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[suspicious_round_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[suspicious_round_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Poland source audit: synthetic placeholder/summary value not supported by the original budget page".strip("; ").strip()
+            )
+
+        raw_poland = subset.copy()
+        raw_poland["year"] = pd.to_numeric(raw_poland["year"], errors="coerce")
+
+        def _poland_raw_pick(
+            year: int,
+            include_patterns: list[str],
+            prefer_patterns: list[str],
+            *,
+            exclude_patterns: list[str] | None = None,
+            max_amount: float | None = None,
+        ) -> Optional[pd.Series]:
+            work = raw_poland[raw_poland["year"].eq(year)].copy()
+            if work.empty:
+                return None
+
+            text = (
+                work.get("line_description_en", pd.Series("", index=work.index)).fillna("").astype(str)
+                + " "
+                + work.get("line_description", pd.Series("", index=work.index)).fillna("").astype(str)
+                + " "
+                + work.get("section_name_en", pd.Series("", index=work.index)).fillna("").astype(str)
+                + " "
+                + work.get("section_name", pd.Series("", index=work.index)).fillna("").astype(str)
+            )
+            include_mask = pd.Series(False, index=work.index)
+            for pat in include_patterns:
+                include_mask |= text.str.contains(pat, case=False, regex=True, na=False)
+            work = work[include_mask].copy()
+            if work.empty:
+                return None
+
+            if exclude_patterns:
+                exclude_mask = pd.Series(False, index=work.index)
+                for pat in exclude_patterns:
+                    exclude_mask |= text.loc[work.index].str.contains(pat, case=False, regex=True, na=False)
+                trimmed = work.loc[~exclude_mask].copy()
+                if not trimmed.empty:
+                    work = trimmed
+
+            base_rows = work.apply(
+                lambda r: _expand_to_base_unit(r.get("amount_local"), r.get("unit"), r.get("currency")),
+                axis=1,
+                result_type="expand",
+            )
+            work["_base_amount"] = pd.to_numeric(base_rows[0], errors="coerce")
+            work["_base_unit"] = base_rows[1]
+            work = work[work["_base_amount"].notna()].copy()
+            if work.empty:
+                return None
+            if max_amount is not None:
+                trimmed = work[work["_base_amount"] <= float(max_amount)].copy()
+                if not trimmed.empty:
+                    work = trimmed
+
+            pref_text = text.loc[work.index]
+            work["_prefer_score"] = 0
+            for idx, pat in enumerate(prefer_patterns, start=1):
+                work.loc[pref_text.str.contains(pat, case=False, regex=True, na=False), "_prefer_score"] += (10 - idx)
+
+            item_rank = {"program_total": 3, "line_item": 2, "section_total": 1}
+            work["_item_rank"] = work.get("item_type", pd.Series("", index=work.index)).fillna("").map(item_rank).fillna(0)
+            work["_page_rank"] = pd.to_numeric(work.get("page_number"), errors="coerce").fillna(0)
+            work = work.sort_values(
+                ["_prefer_score", "_item_rank", "_base_amount", "_page_rank"],
+                ascending=[False, False, False, False],
+                kind="stable",
+            )
+            return work.iloc[0]
+
+        poland_recover_specs = {
+            "NCN (Narodowe Centrum Nauki)": {
+                "years": range(2011, 2026),
+                "include": [
+                    r"activities of the national science centre",
+                    r"\bnational science centre\b",
+                    r"narodowe centrum nauki",
+                    r"\bncn\b",
+                ],
+                "prefer": [
+                    r"activities of the national science centre",
+                    r"plan finansowy",
+                    r"\bnational science centre\b$",
+                ],
+                "exclude": [
+                    r"grants?\s+for\s+basic\s+research",
+                    r"division 740.*national science centre",
+                    r"środki\s+(?:przekazane|przyznane)\s+innym\s+podmiotom",
+                ],
+                "max_amount": 5_000_000_000.0,
+            },
+            "NCBiR (Narodowe Centrum Badań i Rozwoju)": {
+                "years": range(2007, 2026),
+                "include": [
+                    r"activities of the national centre for research and development",
+                    r"\bnational centre for research and development\b",
+                    r"narodowe centrum badań i rozwoju",
+                    r"narodowe centrum badan i rozwoju",
+                    r"\bncbir\b|\bncbr\b",
+                ],
+                "prefer": [
+                    r"activities of the national centre for research and development",
+                    r"plan finansowy",
+                    r"\bnational centre for research and development\b$",
+                ],
+                "exclude": [
+                    r"grants?\s+for\s+applied\s+research",
+                    r"division 740.*national centre for research and development",
+                    r"środki\s+(?:przekazane|przyznane)\s+innym\s+podmiotom",
+                ],
+                "max_amount": 5_000_000_000.0,
+            },
+            "PAN (Polska Akademia Nauk)": {
+                "years": range(1990, 2026),
+                "include": [
+                    r"polish academy of sciences",
+                    r"polska akademia nauk",
+                    r"\bpan\b",
+                ],
+                "prefer": [
+                    r"total expenditures",
+                    r"suma ogólna|suma ogolna",
+                    r"polish academy of sciences$",
+                ],
+                "exclude": [
+                    r"auxiliary scientific units",
+                    r"remaining activities",
+                    r"activities of the bodies and",
+                ],
+                "max_amount": 2_500_000_000.0,
+            },
+            "Dział 740 — Działalność badawcza i rozwojowa": {
+                "years": range(1990, 2026),
+                "include": [
+                    r"division 740 research and development in science",
+                    r"research and development activities",
+                    r"dział 740",
+                    r"dzial 740",
+                ],
+                "prefer": [
+                    r"division 740 research and development in science",
+                    r"research and development activities",
+                    r"dział 740",
+                ],
+                "exclude": [
+                    r"national science centre",
+                    r"national centre for research and development",
+                    r"grants?\s+for\s+basic\s+research",
+                    r"grants?\s+for\s+applied\s+research",
+                ],
+                "max_amount": 5_000_000_000.0,
+            },
+        }
+
+        for canonical_name, spec in poland_recover_specs.items():
+            for year in spec["years"]:
+                mask = canonical.eq(canonical_name) & year_num.eq(year)
+                if not mask.any():
+                    continue
+                best = _poland_raw_pick(
+                    int(year),
+                    spec["include"],
+                    spec["prefer"],
+                    exclude_patterns=spec.get("exclude"),
+                    max_amount=spec.get("max_amount"),
+                )
+                if best is None:
+                    continue
+                target_idx = out.index[mask][0]
+                out.loc[
+                    mask,
+                    ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+                ] = [None, None, None, None, None, None, None]
+                out.at[target_idx, "amount_local"] = float(best["_base_amount"])
+                out.at[target_idx, "unit"] = best["_base_unit"]
+                out.at[target_idx, "currency"] = best.get("currency")
+                out.at[target_idx, "item_type"] = best.get("item_type")
+                out.at[target_idx, "line_description_en"] = best.get("line_description_en")
+                out.at[target_idx, "source_file"] = best.get("source_file")
+                out.at[target_idx, "page_number"] = best.get("page_number")
+                notes = str(out.at[target_idx, "series_notes"] or "").strip()
+                out.at[target_idx, "series_notes"] = f"{notes}; recovered from Poland source-audited row".strip("; ").strip()
+
+        amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+        poland_caps = {
+            "NCN (Narodowe Centrum Nauki)": 5_000_000_000.0,
+            "NCBiR (Narodowe Centrum Badań i Rozwoju)": 5_000_000_000.0,
+            "PAN (Polska Akademia Nauk)": 2_500_000_000.0,
+            "Dział 740 — Działalność badawcza i rozwojowa": 5_000_000_000.0,
+        }
+        for canonical_name, maximum in poland_caps.items():
+            cap_mask = canonical.eq(canonical_name) & amount_num.notna() & amount_num.gt(float(maximum))
+            if not cap_mask.any():
+                continue
+            out.loc[
+                cap_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[cap_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[cap_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Poland source audit: exceeds plausible institutional ceiling and behaves like a summary/placeholder row".strip("; ").strip()
+            )
+
+        amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+        zero_or_low_mask = (
+            (
+                canonical.eq("NCBiR (Narodowe Centrum Badań i Rozwoju)")
+                & amount_num.notna()
+                & amount_num.lt(50_000_000.0)
+            )
+            | (
+                canonical.eq("NCN (Narodowe Centrum Nauki)")
+                & amount_num.notna()
+                & amount_num.lt(50_000_000.0)
+            )
+            | (
+                canonical.isin(
+                    {
+                        "Dział 740 — Działalność badawcza i rozwojowa",
+                        "PAN (Polska Akademia Nauk)",
+                    }
+                )
+                & amount_num.notna()
+                & amount_num.le(0)
+            )
+        )
+        if zero_or_low_mask.any():
+            out.loc[
+                zero_or_low_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[zero_or_low_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[zero_or_low_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Poland source audit: zero/near-zero survivor is not a defensible annual appropriation".strip("; ").strip()
+            )
+
+        poland_verified_overrides = {
+            (1999, "KBN (Komitet Badań Naukowych)"): (
+                2_742_811_000.0,
+                "zloty",
+                "PLN",
+                "verified_override",
+                "Research and development activities (main KBN budget section)",
+                "1999 D1999017015402.pdf",
+                "41.0",
+                "overridden after Poland source audit with exact main budget-section appropriation",
+            ),
+            (2013, "NCBiR (Narodowe Centrum Badań i Rozwoju)"): (
+                1_695_208_000.0,
+                "zloty",
+                "PLN",
+                "verified_override",
+                "Dotacje ogółem (financial plan, cash basis)",
+                "2013 text.pdf",
+                "356.0",
+                "overridden after Poland source audit with exact financial-plan appropriation",
+            ),
+            (2019, "NCBiR (Narodowe Centrum Badań i Rozwoju)"): (
+                1_408_735_000.0,
+                "zloty",
+                "PLN",
+                "verified_override",
+                "Dotacje ogółem (financial plan, cash basis)",
+                "2019 text.pdf",
+                "312.0",
+                "overridden after Poland source audit with exact financial-plan appropriation",
+            ),
+            (2020, "NCBiR (Narodowe Centrum Badań i Rozwoju)"): (
+                1_332_715_000.0,
+                "zloty",
+                "PLN",
+                "verified_override",
+                "Dotacje ogółem (financial plan, cash basis)",
+                "2020 text.pdf",
+                "292.0",
+                "overridden after Poland source audit with exact financial-plan appropriation",
+            ),
+        }
+        for (override_year, override_name), (
+            override_amount,
+            override_unit,
+            override_currency,
+            override_item_type,
+            override_desc,
+            override_file,
+            override_page,
+            override_note,
+        ) in poland_verified_overrides.items():
+            override_mask = canonical.eq(override_name) & year_num.eq(override_year)
+            if not override_mask.any():
+                continue
+            target_idx = out.index[override_mask][0]
+            out.loc[
+                override_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            out.at[target_idx, "amount_local"] = float(override_amount)
+            out.at[target_idx, "unit"] = override_unit
+            out.at[target_idx, "currency"] = override_currency
+            out.at[target_idx, "item_type"] = override_item_type
+            out.at[target_idx, "line_description_en"] = override_desc
+            out.at[target_idx, "source_file"] = override_file
+            if pd.api.types.is_numeric_dtype(out["page_number"]):
+                out.at[target_idx, "page_number"] = pd.to_numeric(override_page, errors="coerce")
+            else:
+                out.at[target_idx, "page_number"] = str(override_page)
+            notes = str(out.at[target_idx, "series_notes"] or "").strip()
+            out.at[target_idx, "series_notes"] = f"{notes}; {override_note}".strip("; ").strip()
+
+        pan_bad_source_mask = canonical.eq("PAN (Polska Akademia Nauk)") & (
+            year_num.isin([2014, 2015, 2017, 2019, 2020, 2021])
+            | (
+                pd.to_numeric(out.get("page_number"), errors="coerce").eq(615)
+                & out["source_file"].fillna("").astype(str).str.contains(r"2021", case=False, regex=True, na=False)
+            )
+        )
+        if pan_bad_source_mask.any():
+            out.loc[
+                pan_bad_source_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[pan_bad_source_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[pan_bad_source_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Poland source audit: source page belongs to a generic grant block or another agency, not a defensible PAN appropriation".strip("; ").strip()
+            )
+
+        amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+        kbn_old_currency_mask = canonical.eq("KBN (Komitet Badań Naukowych)") & year_num.eq(1991) & amount_num.notna()
+        if kbn_old_currency_mask.any():
+            out.loc[
+                kbn_old_currency_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[kbn_old_currency_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[kbn_old_currency_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Poland source audit: 1991 KBN is a pre-redenomination old-zloty total that remains non-comparable under the current extracted series".strip("; ").strip()
+            )
+
+        kbn_low_or_aux_mask = canonical.eq("KBN (Komitet Badań Naukowych)") & amount_num.notna() & amount_num.lt(10_000_000.0)
+        if kbn_low_or_aux_mask.any():
+            out.loc[
+                kbn_low_or_aux_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[kbn_low_or_aux_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[kbn_low_or_aux_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Poland source audit: low KBN survivor comes from an auxiliary-budget row, not the main annual appropriation".strip("; ").strip()
+            )
+
+        weak_traceability_mask = (
+            (canonical.eq("CERN (Polish contribution)") & year_num.eq(2014))
+            | (canonical.eq("PAN (Polska Akademia Nauk)") & year_num.eq(2018))
+            | (canonical.eq("Regional Initiative of Excellence") & year_num.eq(2024))
+        )
+        if weak_traceability_mask.any():
+            out.loc[
+                weak_traceability_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[weak_traceability_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[weak_traceability_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Poland source audit: still traceability-weak or organizationally ambiguous for a real final series".strip("; ").strip()
+            )
+
+        lukasiewicz_level_mismatch_mask = canonical.eq("Łukasiewicz Research Network") & year_num.isin([2021, 2023, 2024])
+        if lukasiewicz_level_mismatch_mask.any():
+            out.loc[
+                lukasiewicz_level_mismatch_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[lukasiewicz_level_mismatch_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[lukasiewicz_level_mismatch_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Poland source audit: Łukasiewicz survivors mix a network-wide activity row (2021) with centre-only or centre-plus-institutes rows (2023-2024), so the level is not comparable enough for the final panel".strip("; ").strip()
+            )
+
+        poland_verification_path = Path("Data/output/budget/Poland/poland_final_manual_verification.csv")
+        if poland_verification_path.exists():
+            try:
+                verification_df = pd.read_csv(poland_verification_path)
+            except Exception:
+                verification_df = pd.DataFrame()
+            if not verification_df.empty:
+                verification_df = verification_df.copy()
+                verification_df["year"] = pd.to_numeric(verification_df["year"], errors="coerce")
+                verification_df["page_number"] = pd.to_numeric(verification_df["page_number"], errors="coerce")
+                verification_df["canonical_name"] = verification_df["canonical_name"].fillna("").astype(str)
+                verification_df["source_file"] = verification_df["source_file"].fillna("").astype(str)
+                verification_df["verification_status"] = verification_df["verification_status"].fillna("").astype(str)
+                strict_drop_statuses = {
+                    "weak_text_trace",
+                    "amount_only_same_page",
+                    "heading_neighbor_amount_weak",
+                    "heading_neighbor_amount_same_page",
+                    "name_same_page_amount_weak",
+                }
+                strict_drop_df = verification_df[
+                    verification_df["verification_status"].isin(strict_drop_statuses)
+                ].dropna(subset=["year"])
+                if not strict_drop_df.empty:
+                    drop_keys = {
+                        (
+                            int(row["year"]),
+                            str(row["canonical_name"]),
+                            str(row["source_file"]),
+                            pd.to_numeric(row["page_number"], errors="coerce"),
+                        )
+                        for _, row in strict_drop_df.iterrows()
+                    }
+                    out_page_num = pd.to_numeric(out.get("page_number"), errors="coerce")
+                    strict_trace_mask = pd.Series(False, index=out.index)
+                    for drop_year, drop_name, drop_file, drop_page in drop_keys:
+                        strict_trace_mask = strict_trace_mask | (
+                            canonical.eq(drop_name)
+                            & year_num.eq(drop_year)
+                            & out["source_file"].fillna("").astype(str).eq(drop_file)
+                            & out_page_num.eq(drop_page)
+                        )
+                    if strict_trace_mask.any():
+                        out.loc[
+                            strict_trace_mask,
+                            ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+                        ] = [None, None, None, None, None, None, None]
+                        notes = out.loc[strict_trace_mask, "series_notes"].fillna("").astype(str).str.strip()
+                        out.loc[strict_trace_mask, "series_notes"] = notes.apply(
+                            lambda s: f"{s}; dropped after Poland final manual verification: page-level trace is too weak for a strict final panel".strip("; ").strip()
+                        )
+
+        canonical = out["canonical_name"].fillna("").astype(str)
+        final_generic_poland_mask = ~canonical.isin(allowed_poland_canonicals)
+        if final_generic_poland_mask.any():
+            out.loc[
+                final_generic_poland_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[final_generic_poland_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[final_generic_poland_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; final Poland panel excludes non-audited generic or aggregate canonicals".strip("; ").strip()
+            )
+
+        out = out[out["canonical_name"].isin(allowed_poland_canonicals)].copy()
+
+    if country == "Slovenia":
+        canonical = out["canonical_name"].fillna("").astype(str)
+        year_num = pd.to_numeric(out["year"], errors="coerce")
+        amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+        line_text = out["line_description_en"].fillna("").astype(str)
+        source_text = out["source_file"].fillna("").astype(str)
+        hardcoded_names = {agency["canonical_name"] for agency in CANONICAL_AGENCIES.get("Slovenia", [])}
+        ministry_names = {
+            "Ministrstvo za visoko šolstvo, znanost in tehnologijo (MVZT)",
+            "Ministrstvo za izobraževanje, znanost in šport (MIZŠ)",
+        }
+        final_panel_names = hardcoded_names - ministry_names
+
+        # Keep discovery visible in slovenia_discovery_review.csv, but keep the
+        # final canonical panel restricted to audited canonicals until more
+        # institutions are verified against the original PDFs.
+        discovered_generic_mask = ~canonical.isin(hardcoded_names)
+        if discovered_generic_mask.any():
+            out.loc[
+                discovered_generic_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[discovered_generic_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[discovered_generic_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; retained in discovery review but excluded from final Slovenia panel pending source audit".strip("; ").strip()
+            )
+
+        # Ministry-wide totals are traceable, but they mix incompatible levels
+        # with agency/programme rows and visually dominate the time series.
+        ministry_mask = canonical.isin(ministry_names)
+        if ministry_mask.any():
+            out.loc[
+                ministry_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[ministry_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[ministry_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Slovenia source audit: ministry total is traceable but not comparable with agency/programme appropriations".strip("; ").strip()
+            )
+
+        # 2024-2025 ARRS survivors are not the core ARRS operating grant; they
+        # are PPUD sub-lines inside targeted agricultural projects.
+        aris_subline_mask = (
+            canonical.eq("ARRS — Agencija za raziskovalno dejavnost Republike Slovenije")
+            & year_num.isin([2024, 2025])
+            & out["item_type"].fillna("").astype(str).ne("verified_override")
+        )
+        if aris_subline_mask.any():
+            out.loc[
+                aris_subline_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[aris_subline_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[aris_subline_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Slovenia source audit: 2024-2025 survivor is a PPUD sub-line from agricultural targeted research projects, not the ARRS base appropriation".strip("; ").strip()
+            )
+
+        # ARRS should reflect the agency's operating appropriation, not
+        # equipment, international-cooperation bundles, or generic project lines.
+        aris_mask = canonical.eq("ARRS — Agencija za raziskovalno dejavnost Republike Slovenije") & amount_num.notna()
+        aris_operation_mask = line_text.str.contains(
+            r"delovanje arrs|operation of arrs|operation of the slovenian research agency|delovanje aris|operation of aris",
+            case=False,
+            regex=True,
+            na=False,
+        ) | out["item_type"].fillna("").astype(str).eq("verified_override")
+        bad_aris_mask = aris_mask & ~aris_operation_mask
+        if bad_aris_mask.any():
+            out.loc[
+                bad_aris_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[bad_aris_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[bad_aris_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Slovenia source audit: ARRS series keeps only defendable operating appropriations (Delovanje ARRS/ARIS)".strip("; ").strip()
+            )
+
+        # Programme 0503 is often polluted by SAZU support activity,
+        # electronic-communications lines, or inflated project/package totals.
+        prog0503_mask = canonical.eq("Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti") & amount_num.notna()
+        bad_0503_text = line_text.str.contains(
+            r"support(?:ing)? activit|electronic communications|development and promotion in the field of electronic communications|support activit|programs in support of science|human resources in support of science$|0503 human resources in support of science$",
+            case=False,
+            regex=True,
+            na=False,
+        )
+        bad_0503_source = out["source_file"].fillna("").astype(str).eq("2004 2005 u2013102.pdf")
+        bad_0503_size = (
+            ((out["currency"].fillna("") == "EUR") & amount_num.gt(10_000_000.0))
+            | ((out["currency"].fillna("") == "SIT") & amount_num.gt(500_000_000.0))
+        )
+        bad_0503_tiny = (
+            (out["currency"].fillna("") == "SIT")
+            & amount_num.gt(0.0)
+            & amount_num.lt(1_000_000.0)
+        )
+        bad_0503_zero = amount_num.eq(0.0) & out["item_type"].fillna("").astype(str).ne("verified_override")
+        bad_0503_mask = prog0503_mask & (
+            bad_0503_text | bad_0503_source | bad_0503_size | bad_0503_tiny | bad_0503_zero
+        )
+        if bad_0503_mask.any():
+            out.loc[
+                bad_0503_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[bad_0503_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[bad_0503_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Slovenia source audit: Programme 0503 survivor is a misfiled source, SAZU/generic summary line, electronic-communications line, or implausible artefact".strip("; ").strip()
+            )
+
+        # Some early 0502 survivors are clearly tiny sub-lines (e.g. forestry,
+        # space projects) or OCR-zero artefacts rather than the full science
+        # programme total.
+        prog0502_mask = canonical.eq("Programme 0502 — Znanstveno raziskovalna dejavnost") & amount_num.notna()
+        bad_0502_tiny_sit = (
+            prog0502_mask
+            & out["currency"].fillna("").eq("SIT")
+            & amount_num.ge(0.0)
+            & amount_num.lt(1_000_000_000.0)
+            & out["item_type"].fillna("").astype(str).ne("verified_override")
+        )
+        if bad_0502_tiny_sit.any():
+            out.loc[
+                bad_0502_tiny_sit,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[bad_0502_tiny_sit, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[bad_0502_tiny_sit, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Slovenia source audit: early 0502 survivor is a tiny sub-line or OCR-zero artefact rather than the full science programme total".strip("; ").strip()
+            )
+
+        # SAZU should keep only rows explicitly traceable to the institution,
+        # not generic science-system packages or infrastructure bundles that
+        # happen to co-occur with academy keywords elsewhere in the document.
+        sazu_mask = canonical.eq("SAZU — Slovenska akademija znanosti in umetnosti") & amount_num.notna()
+        sazu_explicit_mask = line_text.str.contains(
+            r"\bsazu\b|academy of sciences and arts|scientific research center sazu|scientific research center sat|scientific research activity of the slovenian academy|support activities - sazu|total for sazu|slovenian academy of sciences and arts",
+            case=False,
+            regex=True,
+            na=False,
+        ) | out["item_type"].fillna("").astype(str).eq("verified_override")
+        bad_sazu_source = source_text.eq("2004 2005 u2013102.pdf")
+        bad_sazu_size = (
+            ((out["currency"].fillna("") == "EUR") & amount_num.gt(20_000_000.0))
+            | ((out["currency"].fillna("") == "SIT") & amount_num.gt(2_000_000_000.0))
+        )
+        bad_sazu_mask = sazu_mask & (~sazu_explicit_mask | bad_sazu_source | bad_sazu_size)
+        if bad_sazu_mask.any():
+            out.loc[
+                bad_sazu_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[bad_sazu_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[bad_sazu_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Slovenia source audit: SAZU series keeps only institution-explicit rows traceable to the original budget line".strip("; ").strip()
+            )
+
+        # Slovenia outputs should be in base units in the final series. Convert
+        # surviving SIT rows that already passed through base-unit expansion to
+        # plain unit labels, and flatten cosmetic 'euro' labels likewise.
+        sit_thousand_mask = canonical.isin(hardcoded_names) & amount_num.notna() & out["currency"].fillna("").eq("SIT") & out["unit"].fillna("").str.lower().eq("thousand")
+        if sit_thousand_mask.any():
+            out.loc[sit_thousand_mask, "unit"] = "unit"
+
+        euro_label_mask = canonical.isin(hardcoded_names) & amount_num.notna() & out["currency"].fillna("").eq("EUR") & out["unit"].fillna("").str.lower().eq("euro")
+        if euro_label_mask.any():
+            out.loc[euro_label_mask, "unit"] = "unit"
+
+        out = out[out["canonical_name"].isin(final_panel_names)].copy()
+
+    if country == "Czech Republic":
+        canonical = out["canonical_name"].fillna("").astype(str)
+        year_num = pd.to_numeric(out["year"], errors="coerce")
+        amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+        source_text = out["source_file"].fillna("").astype(str)
+        hardcoded_names = {agency["canonical_name"] for agency in CANONICAL_AGENCIES.get("Czech Republic", [])}
+
+        # The 1993-labelled file tied to Act 434/2024 is a known source anomaly
+        # in the Czech corpus. Keep it visible in audit inputs, but do not let it
+        # manufacture a fake 1993 baseline in the final canonical panel.
+        misfiled_1993_mask = (
+            year_num.eq(1993)
+            & source_text.str.contains(r"434-2024|2025-12-20", case=False, regex=True, na=False)
+        )
+        if misfiled_1993_mask.any():
+            out.loc[
+                misfiled_1993_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[misfiled_1993_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[misfiled_1993_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Czech source audit: 1993-labelled source is a misfiled 2024/2025 law artefact".strip("; ").strip()
+            )
+
+        # Early Czech pipeline rows mix some plausible million-CZK appropriations
+        # with clearly inflated summary/OCR artefacts. Drop only the survivors
+        # whose expanded CZK amounts are far beyond a defensible institutional
+        # series, rather than trying to guess a corrective divisor.
+        inflated_science_mask = (
+            canonical.isin(
+                {
+                    "Akademie věd České republiky (AV ČR)",
+                    "Grantová agentura České republiky (GA ČR)",
+                    "Technologická agentura České republiky (TA ČR)",
+                }
+            )
+            & amount_num.gt(20_000_000_000.0)
+        )
+        inflated_ministry_mask = (
+            canonical.eq("Ministerstvo školství, mládeže a tělovýchovy (MŠMT)")
+            & amount_num.gt(200_000_000_000.0)
+        )
+        inflated_direct_rd_mask = (
+            canonical.eq("Výzkum a vývoj (R&D appropriations)")
+            & amount_num.gt(100_000_000_000.0)
+        )
+        czech_inflated_mask = inflated_science_mask | inflated_ministry_mask | inflated_direct_rd_mask
+        if czech_inflated_mask.any():
+            out.loc[
+                czech_inflated_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[czech_inflated_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[czech_inflated_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Czech source audit: implausibly inflated summary/unit artefact".strip("; ").strip()
+            )
+
+        # Keep Czech agency discovery for audit/review, but do not let generic
+        # programme labels auto-enter the final panel. The reliable final series
+        # should stay institutional: GA CR, TA CR, AV CR.
+        discovered_generic_mask = ~canonical.isin(hardcoded_names)
+        if discovered_generic_mask.any():
+            out.loc[
+                discovered_generic_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[discovered_generic_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[discovered_generic_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Czech source audit: discovery candidate retained for review but excluded from final institutional panel".strip("; ").strip()
+            )
+
+        # Zero rows in late Czech budget laws are metadata placeholders for
+        # aggregate RDI clauses, not defensible appropriations for the agencies.
+        zero_or_negative_mask = canonical.isin(hardcoded_names) & amount_num.le(0)
+        if zero_or_negative_mask.any():
+            out.loc[
+                zero_or_negative_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[zero_or_negative_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[zero_or_negative_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Czech source audit: zero-value placeholder is not a usable agency appropriation".strip("; ").strip()
+            )
+
+        # 2004 GA CR = 1,000,000 CZK is far below the surrounding series and is
+        # best treated as a parsing/unit artefact until a better source row is
+        # recovered.
+        implausibly_low_ga_mask = (
+            canonical.eq("Grantová agentura České republiky (GA ČR)")
+            & amount_num.notna()
+            & amount_num.lt(50_000_000.0)
+        )
+        if implausibly_low_ga_mask.any():
+            out.loc[
+                implausibly_low_ga_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[implausibly_low_ga_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[implausibly_low_ga_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Czech source audit: implausibly low against adjacent GA CR appropriations".strip("; ").strip()
+            )
+
+        ambiguous_ga_2000_mask = (
+            canonical.eq("Grantová agentura České republiky (GA ČR)")
+            & year_num.eq(2000)
+            & amount_num.notna()
+        )
+        if ambiguous_ga_2000_mask.any():
+            out.loc[
+                ambiguous_ga_2000_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[ambiguous_ga_2000_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[ambiguous_ga_2000_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Czech source audit: 2000 GA CR has conflicting candidate amounts in the same source and needs manual recovery".strip("; ").strip()
+            )
+
+        # Early Czech budget annexes (1997-2000) contain a small set of agency
+        # rows where the extracted numeric value is plausible only if treated as
+        # already being in base CZK rather than "thousand CZK". Recover only the
+        # rows with a stable institutional owner and a coherent adjacent-series
+        # trajectory.
+        czech_verified_overrides = {
+            (1997, "Akademie věd České republiky (AV ČR)"): (
+                300_000_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Funding for research and development",
+                "1997 Zak_1996-315_Prilohy-k-zakonu-c-3151996-Sb.pdf",
+                14,
+            ),
+            (1998, "Akademie věd České republiky (AV ČR)"): (
+                2_147_124_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "1998 Zak_1997-348_Prilohy-k-zakonu-c-3481997-Sb.pdf",
+                24,
+            ),
+            (1999, "Akademie věd České republiky (AV ČR)"): (
+                2_410_327_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures on research and development",
+                "1999 Zak_1999-022_Prilohy-k-zakonu-c-221999-Sb.pdf",
+                24,
+            ),
+            (2000, "Akademie věd České republiky (AV ČR)"): (
+                2_149_521_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures on research and development",
+                "2000 Zak_2000-058_Prilohy-k-zakonu-c-582000-Sb.pdf",
+                24,
+            ),
+            (2003, "Akademie věd České republiky (AV ČR)"): (
+                3_651_134_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Akademie věd České republiky",
+                "2003 czech_budget_annexes_CONTENT_2003.docx",
+                2,
+            ),
+            (2004, "Akademie věd České republiky (AV ČR)"): (
+                4_033_338_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Akademie věd České republiky",
+                "2004 czech_budget_annexes_CONTENT_2004.docx",
+                2,
+            ),
+            (1997, "Grantová agentura České republiky (GA ČR)"): (
+                500_000_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Support for research and development",
+                "1997 Zak_1996-315_Prilohy-k-zakonu-c-3151996-Sb.pdf",
+                7,
+            ),
+            (1999, "Grantová agentura České republiky (GA ČR)"): (
+                965_414_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "1999 Zak_1999-022_Prilohy-k-zakonu-c-221999-Sb.pdf",
+                12,
+            ),
+            (2016, "Grantová agentura České republiky (GA ČR)"): (
+                3_833_110_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2016 Zak_2015-400_Zakon-o-statnim-rozpoctu-CR-na-rok-2016-Kompletni-vcetne-priloh.pdf",
+                24,
+            ),
+            (2012, "Grantová agentura České republiky (GA ČR)"): (
+                3_023_794_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2012 Zak_2011-455_Prilohy-k-zakonu-c-4552011-Sb-o-statnim-rozpoctu-Ceske-republiky-na-rok-2012.pdf",
+                22,
+            ),
+            (2013, "Grantová agentura České republiky (GA ČR)"): (
+                3_309_429_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2013 Zak_2012-504_Prilohy-k-zakonu-c-5042012-Sb-o-statnim-rozpoctu-Ceske-republiky-na-rok-2013.pdf",
+                21,
+            ),
+            (2014, "Grantová agentura České republiky (GA ČR)"): (
+                3_464_547_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2014 Zak_2013-475_Prilohy-k-zakonu-o-statnim-rozpoctu-Ceske-republiky-na-rok-2014.pdf",
+                21,
+            ),
+            (2015, "Grantová agentura České republiky (GA ČR)"): (
+                3_683_086_907.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2015 Zak_2014-345_Prilohy-k-zakonu-o-statnim-rozpoctu-Ceske-republiky-na-rok-2015.pdf",
+                21,
+            ),
+            (2017, "Grantová agentura České republiky (GA ČR)"): (
+                4_257_427_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2017 Zak_2016-457_Zakon-o-statnim-rozpoctu-Ceske-republiky-na-rok-2017.pdf",
+                25,
+            ),
+            (2018, "Grantová agentura České republiky (GA ČR)"): (
+                4_333_066_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2018 Zak_2017-474_Zakon-o-statnim-rozpoctu-Ceske-republiky-na-rok-2018.pdf",
+                25,
+            ),
+            (2019, "Grantová agentura České republiky (GA ČR)"): (
+                4_390_784_794.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2019 Zak_2018-336_Zakon-o-statnim-rozpoctu-Ceske-republiky-na-rok-2019.pdf",
+                25,
+            ),
+            (2020, "Grantová agentura České republiky (GA ČR)"): (
+                4_360_546_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2020 Zak_2019-355_Zakon-o-statnim-rozpoctu-Ceske-republiky-na-rok-2020.pdf",
+                24,
+            ),
+            (2021, "Grantová agentura České republiky (GA ČR)"): (
+                4_380_546_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2021 Zak_2020-600_Zakon-o-statni-rozpoctu-Ceske-republiky-na-rok-2021.pdf",
+                23,
+            ),
+            (2024, "Grantová agentura České republiky (GA ČR)"): (
+                4_600_000_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2024 2023-12-29_Zakon-o-statnim-rozpoctu-Ceske-republiky-na-rok-2024.pdf",
+                24,
+            ),
+            (2016, "Akademie věd České republiky (AV ČR)"): (
+                4_829_411_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2016 Zak_2015-400_Zakon-o-statnim-rozpoctu-CR-na-rok-2016-Kompletni-vcetne-priloh.pdf",
+                47,
+            ),
+            (2012, "Akademie věd České republiky (AV ČR)"): (
+                4_668_406_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2012 Zak_2011-455_Prilohy-k-zakonu-c-4552011-Sb-o-statnim-rozpoctu-Ceske-republiky-na-rok-2012.pdf",
+                45,
+            ),
+            (2013, "Akademie věd České republiky (AV ČR)"): (
+                4_449_192_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2013 Zak_2012-504_Prilohy-k-zakonu-c-5042012-Sb-o-statnim-rozpoctu-Ceske-republiky-na-rok-2013.pdf",
+                44,
+            ),
+            (2014, "Akademie věd České republiky (AV ČR)"): (
+                4_452_257_359.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2014 Zak_2013-475_Prilohy-k-zakonu-o-statnim-rozpoctu-Ceske-republiky-na-rok-2014.pdf",
+                44,
+            ),
+            (2015, "Akademie věd České republiky (AV ČR)"): (
+                4_522_355_819.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2015 Zak_2014-345_Prilohy-k-zakonu-o-statnim-rozpoctu-Ceske-republiky-na-rok-2015.pdf",
+                44,
+            ),
+            (2017, "Akademie věd České republiky (AV ČR)"): (
+                5_133_171_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2017 Zak_2016-457_Zakon-o-statnim-rozpoctu-Ceske-republiky-na-rok-2017.pdf",
+                50,
+            ),
+            (2018, "Akademie věd České republiky (AV ČR)"): (
+                5_684_692_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2018 Zak_2017-474_Zakon-o-statnim-rozpoctu-Ceske-republiky-na-rok-2018.pdf",
+                50,
+            ),
+            (2019, "Akademie věd České republiky (AV ČR)"): (
+                6_022_421_793.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2019 Zak_2018-336_Zakon-o-statnim-rozpoctu-Ceske-republiky-na-rok-2019.pdf",
+                50,
+            ),
+            (2020, "Akademie věd České republiky (AV ČR)"): (
+                6_563_390_450.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2020 Zak_2019-355_Zakon-o-statnim-rozpoctu-Ceske-republiky-na-rok-2020.pdf",
+                49,
+            ),
+            (2021, "Akademie věd České republiky (AV ČR)"): (
+                6_789_651_580.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2021 Zak_2020-600_Zakon-o-statni-rozpoctu-Ceske-republiky-na-rok-2021.pdf",
+                48,
+            ),
+            (2022, "Akademie věd České republiky (AV ČR)"): (
+                7_081_401_581.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2022 Zak_2022-057_Zakon-o-statnim-rozpoctu-Ceske-republiky-na-rok-2022.pdf",
+                49,
+            ),
+            (2023, "Akademie věd České republiky (AV ČR)"): (
+                7_177_502_810.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2023 2023-01-01_Zakon-c-449-2022-Sb-o-statnim-rozpoctu-Ceske-republiky-na-rok-2023.pdf",
+                49,
+            ),
+            (2024, "Akademie věd České republiky (AV ČR)"): (
+                7_642_481_529.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2024 2023-12-29_Zakon-o-statnim-rozpoctu-Ceske-republiky-na-rok-2024.pdf",
+                49,
+            ),
+            (2016, "Technologická agentura České republiky (TA ČR)"): (
+                2_958_939_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2016 Zak_2015-400_Zakon-o-statnim-rozpoctu-CR-na-rok-2016-Kompletni-vcetne-priloh.pdf",
+                52,
+            ),
+            (2012, "Technologická agentura České republiky (TA ČR)"): (
+                2_170_206_000.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2012 Zak_2011-455_Prilohy-k-zakonu-c-4552011-Sb-o-statnim-rozpoctu-Ceske-republiky-na-rok-2012.pdf",
+                49,
+            ),
+            (2013, "Technologická agentura České republiky (TA ČR)"): (
+                2_962_491_761.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2013 Zak_2012-504_Prilohy-k-zakonu-c-5042012-Sb-o-statnim-rozpoctu-Ceske-republiky-na-rok-2013.pdf",
+                49,
+            ),
+            (2014, "Technologická agentura České republiky (TA ČR)"): (
+                2_864_898_160.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2014 Zak_2013-475_Prilohy-k-zakonu-o-statnim-rozpoctu-Ceske-republiky-na-rok-2014.pdf",
+                49,
+            ),
+            (2015, "Technologická agentura České republiky (TA ČR)"): (
+                2_864_898_160.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2015 Zak_2014-345_Prilohy-k-zakonu-o-statnim-rozpoctu-Ceske-republiky-na-rok-2015.pdf",
+                49,
+            ),
+            (2019, "Technologická agentura České republiky (TA ČR)"): (
+                4_274_646_444.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2019 Zak_2018-336_Zakon-o-statnim-rozpoctu-Ceske-republiky-na-rok-2019.pdf",
+                58,
+            ),
+            (2020, "Technologická agentura České republiky (TA ČR)"): (
+                4_102_464_850.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2020 Zak_2019-355_Zakon-o-statnim-rozpoctu-Ceske-republiky-na-rok-2020.pdf",
+                57,
+            ),
+            (2021, "Technologická agentura České republiky (TA ČR)"): (
+                4_926_456_032.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2021 Zak_2020-600_Zakon-o-statni-rozpoctu-Ceske-republiky-na-rok-2021.pdf",
+                56,
+            ),
+            (2022, "Technologická agentura České republiky (TA ČR)"): (
+                5_664_987_717.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2022 Zak_2022-057_Zakon-o-statnim-rozpoctu-Ceske-republiky-na-rok-2022.pdf",
+                58,
+            ),
+            (2022, "Grantová agentura České republiky (GA ČR)"): (
+                4_669_819_125.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2022 Zak_2022-057_Zakon-o-statnim-rozpoctu-Ceske-republiky-na-rok-2022.pdf",
+                24,
+            ),
+            (2023, "Technologická agentura České republiky (TA ČR)"): (
+                6_327_572_010.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2023 2023-01-01_Zakon-c-449-2022-Sb-o-statnim-rozpoctu-Ceske-republiky-na-rok-2023.pdf",
+                59,
+            ),
+            (2024, "Technologická agentura České republiky (TA ČR)"): (
+                6_282_134_018.0,
+                "koruna",
+                "CZK",
+                "manual_recovery",
+                "Total expenditures",
+                "2024 2023-12-29_Zakon-o-statnim-rozpoctu-Ceske-republiky-na-rok-2024.pdf",
+                58,
+            ),
+        }
+        czech_hardcoded_meta = {
+            agency["canonical_name"]: {
+                "category": agency.get("category"),
+                "notes": agency.get("notes"),
+            }
+            for agency in CANONICAL_AGENCIES.get("Czech Republic", [])
+        }
+        for (year, canonical_name), (
+            amount_local,
+            unit,
+            currency,
+            item_type,
+            line_description_en,
+            source_file,
+            page_number,
+        ) in czech_verified_overrides.items():
+            mask = canonical.eq(canonical_name) & year_num.eq(year)
+            note = "recovered from audited Czech agency source row or chapter summary block with explicit total and page traceability"
+            if not mask.any():
+                template = {col: None for col in out.columns}
+                template["country"] = country
+                template["year"] = int(year)
+                template["canonical_name"] = canonical_name
+                template["category"] = czech_hardcoded_meta.get(canonical_name, {}).get("category")
+                template["amount_local"] = float(amount_local)
+                template["unit"] = unit
+                template["currency"] = currency
+                template["item_type"] = item_type
+                template["line_description_en"] = line_description_en
+                template["source_file"] = source_file
+                template["page_number"] = str(page_number)
+                base_notes = str(czech_hardcoded_meta.get(canonical_name, {}).get("notes") or "").strip()
+                template["series_notes"] = f"{base_notes}; gap: no matching rows in this year; {note}".strip("; ").strip()
+                out = pd.concat([out, pd.DataFrame([template])], ignore_index=True)
+                canonical = out["canonical_name"].fillna("").astype(str)
+                year_num = pd.to_numeric(out["year"], errors="coerce")
+                amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+                source_text = out["source_file"].fillna("").astype(str)
+                continue
+
+            out.loc[
+                mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            target_idx = out.index[mask][0]
+            out.at[target_idx, "amount_local"] = float(amount_local)
+            out.at[target_idx, "unit"] = unit
+            out.at[target_idx, "currency"] = currency
+            out.at[target_idx, "item_type"] = item_type
+            out.at[target_idx, "line_description_en"] = line_description_en
+            out.at[target_idx, "source_file"] = source_file
+            out.at[target_idx, "page_number"] = str(page_number)
+            notes = str(out.at[target_idx, "series_notes"] or "").strip()
+            out.at[target_idx, "series_notes"] = f"{notes}; {note}".strip("; ").strip()
+
+        out = out[out["canonical_name"].isin(hardcoded_names)].copy()
+
     if country == "UK":
         line_desc = out["line_description_en"].fillna("").astype(str)
 
@@ -11843,6 +16149,107 @@ def build_canonical_series(
         # Exclude the ministry aggregate entirely from Estonia's final panel:
         # it mixes portfolio totals with institution lines and only adds fake gaps.
         out = out[~out["canonical_name"].eq("Ministry of Education and Research (Estonia)")].copy()
+
+    if country == "Slovakia":
+        amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+        unit_norm = out["unit"].fillna("").astype(str).str.strip().str.lower()
+
+        # Keep final units human-readable and directly comparable to the audited
+        # page values: full koruna/euro, not 'thousand' or generic 'unit'.
+        thousand_mask = amount_num.notna() & unit_norm.eq("thousand")
+        if thousand_mask.any():
+            out.loc[thousand_mask, "amount_local"] = amount_num.loc[thousand_mask] * 1000.0
+            out.loc[thousand_mask, "unit"] = out.loc[thousand_mask].apply(
+                lambda r: _base_output_unit(r.get("currency"), r.get("unit")),
+                axis=1,
+            )
+            amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+            unit_norm = out["unit"].fillna("").astype(str).str.strip().str.lower()
+
+        generic_unit_mask = amount_num.notna() & unit_norm.isin(["", "unit"])
+        if generic_unit_mask.any():
+            out.loc[generic_unit_mask, "unit"] = out.loc[generic_unit_mask].apply(
+                lambda r: _base_output_unit(r.get("currency"), r.get("unit")),
+                axis=1,
+            )
+
+        # Deduplicate mirrored source files such as "...pdf" and "... (1).pdf"
+        # when they point to the same selected observation.
+        source_series = out.get("source_file", pd.Series("", index=out.index)).fillna("").astype(str)
+        out["_sk_source_norm"] = source_series.str.replace(r" \(\d+\)(?=\.pdf$)", "", regex=True)
+        out["_sk_has_copy_suffix"] = source_series.str.contains(r" \(\d+\)(?=\.pdf$)", regex=True).astype(int)
+        out["_sk_amount_key"] = pd.to_numeric(out["amount_local"], errors="coerce")
+        dedup_cols = [
+            "canonical_name",
+            "year",
+            "_sk_source_norm",
+            "_sk_amount_key",
+            "unit",
+            "currency",
+            "item_type",
+            "line_description_en",
+        ]
+        out = (
+            out.sort_values(
+                dedup_cols + ["_sk_has_copy_suffix"],
+                ascending=[True, True, True, True, True, True, True, True, True],
+                kind="stable",
+            )
+            .drop_duplicates(dedup_cols, keep="first")
+            .drop(columns=["_sk_source_norm", "_sk_has_copy_suffix", "_sk_amount_key"])
+            .reset_index(drop=True)
+        )
+
+        # Manual audit: in 2022 the generic "Support for Research and
+        # Development" line is a duplicate rendering of the more specific
+        # APVV-supported R&D tasks line on the same page with the same amount.
+        amt_sk = pd.to_numeric(out["amount_local"], errors="coerce")
+        generic_support = out["canonical_name"].eq("Support for Research and Development")
+        specific_support = out["canonical_name"].eq(
+            "Research and Development Tasks Supported by the Agency for Research and Development Support"
+        )
+        for year, source_file, amount in out.loc[
+            specific_support & amt_sk.notna(),
+            ["year", "source_file", "amount_local"],
+        ].itertuples(index=False, name=None):
+            dup_mask = (
+                generic_support
+                & out["year"].eq(year)
+                & out["source_file"].eq(source_file)
+                & pd.to_numeric(out["amount_local"], errors="coerce").eq(float(amount))
+            )
+            if dup_mask.any():
+                out.loc[
+                    dup_mask,
+                    ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+                ] = [None, None, None, None, None, None, None]
+                notes = out.loc[dup_mask, "series_notes"].fillna("").astype(str).str.strip()
+                out.loc[dup_mask, "series_notes"] = notes.apply(
+                    lambda s: f"{s}; dropped after Slovakia source audit: duplicate wording of the audited APVV-supported R&D tasks line".strip("; ").strip()
+                )
+
+        # Manual audit of the 2025 source file: the single-page table supports
+        # the ministry chapter total and the SAV chapter total, but it does not
+        # explicitly name APVV or VEGA anywhere in the original text. The
+        # extracted APVV/VEGA amounts are therefore not document-verifiable in
+        # this source and should not appear as audited point observations.
+        unverifiable_2025 = (
+            out["year"].eq(2025)
+            & out["source_file"].fillna("").astype(str).eq("2025 20250101_5681740-2.pdf")
+            & out["canonical_name"].isin([
+                "APVV (Agentúra na podporu výskumu a vývoja)",
+                "VEGA (Vedecká grantová agentúra MŠ SR a SAV)",
+            ])
+        )
+        if unverifiable_2025.any():
+            out.loc[
+                unverifiable_2025,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[unverifiable_2025, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[unverifiable_2025, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Slovakia source audit: 2025 source file does not explicitly name this agency/line in the original table".strip("; ").strip()
+            )
 
     if country == "Latvia":
         amounts = pd.to_numeric(out["amount_local"], errors="coerce")
@@ -12212,7 +16619,7 @@ def build_canonical_series(
                 new_row["item_type"] = item_type
                 new_row["line_description_en"] = line_description_en
                 new_row["source_file"] = source_file
-                new_row["page_number"] = float(page_number) if page_number is not None else None
+                new_row["page_number"] = str(page_number) if page_number is not None else None
                 base_note = str(new_row.get("series_notes", "") or "").strip()
                 new_row["series_notes"] = "; ".join(part for part in [base_note, "locked manual curation"] if part)
                 out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
@@ -12229,9 +16636,24 @@ def build_canonical_series(
             out.at[target_idx, "item_type"] = item_type
             out.at[target_idx, "line_description_en"] = line_description_en
             out.at[target_idx, "source_file"] = source_file
-            out.at[target_idx, "page_number"] = float(page_number) if page_number is not None else None
+            out.at[target_idx, "page_number"] = str(page_number) if page_number is not None else None
             notes = str(out.at[target_idx, "series_notes"] or "").strip()
             out.at[target_idx, "series_notes"] = "; ".join(part for part in [notes, "locked manual curation"] if part)
+
+    # Final series should contain at most one row per canonical-year. When a
+    # locked override is added after gap rows were already materialized, keep
+    # the verified row and discard the empty duplicate.
+    out["_is_verified_override"] = (out["item_type"] == "verified_override").astype(int)
+    out["_has_amount"] = pd.to_numeric(out["amount_local"], errors="coerce").notna().astype(int)
+    out = (
+        out.sort_values(
+            ["canonical_name", "year", "_is_verified_override", "_has_amount"],
+            ascending=[True, True, False, False],
+        )
+        .drop_duplicates(["canonical_name", "year"], keep="first")
+        .drop(columns=["_is_verified_override", "_has_amount"])
+        .reset_index(drop=True)
+    )
 
     out = out.sort_values(["canonical_name", "year"]).reset_index(drop=True)
 

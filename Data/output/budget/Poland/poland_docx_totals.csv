@@ -1,0 +1,105 @@
+country,canonical_name,year,amount_total,amount_primary,n_acts,acts,additive_flag,currency,unit,category
+Poland,CERN (Polish contribution),1991,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),1992,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),1993,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),1996,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),1997,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),1998,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),1999,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),2008,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),2010,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),2011,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),2013,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),2014,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),2015,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),2016,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),2017,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),2018,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),2019,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),2020,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),2021,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),2022,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),2023,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),2024,,,0,,gap,,,direct_rd
+Poland,CERN (Polish contribution),2025,,,0,,gap,,,direct_rd
+Poland,KBN (Komitet Badań Naukowych),1991,,,0,,gap,,,science_agency
+Poland,KBN (Komitet Badań Naukowych),1992,174086000.0,174086000.0,1,1992 text.pdf,single,PLN,zloty,science_agency
+Poland,KBN (Komitet Badań Naukowych),1993,200000000.0,200000000.0,1,1993 text.pdf,single,PLN,zloty,science_agency
+Poland,KBN (Komitet Badań Naukowych),1996,,,0,,gap,,,science_agency
+Poland,KBN (Komitet Badań Naukowych),1997,,,0,,gap,,,science_agency
+Poland,KBN (Komitet Badań Naukowych),1998,,,0,,gap,,,science_agency
+Poland,KBN (Komitet Badań Naukowych),1999,2742811000.0,2742811000.0,1,1999 D1999017015402.pdf,single,PLN,zloty,science_agency
+Poland,NCBiR (Narodowe Centrum Badań i Rozwoju),2008,,,0,,gap,,,science_agency
+Poland,NCBiR (Narodowe Centrum Badań i Rozwoju),2010,,,0,,gap,,,science_agency
+Poland,NCBiR (Narodowe Centrum Badań i Rozwoju),2011,,,0,,gap,,,science_agency
+Poland,NCBiR (Narodowe Centrum Badań i Rozwoju),2013,1695208000.0,1695208000.0,1,2013 text.pdf,single,PLN,zloty,science_agency
+Poland,NCBiR (Narodowe Centrum Badań i Rozwoju),2014,1788873000.0,1788873000.0,1,2014 text.pdf,single,PLN,zloty,science_agency
+Poland,NCBiR (Narodowe Centrum Badań i Rozwoju),2015,1319954000.0,1319954000.0,1,2015 text.pdf,single,PLN,zloty,science_agency
+Poland,NCBiR (Narodowe Centrum Badań i Rozwoju),2016,496114000.0,496114000.0,1,2016 D2016000027802.pdf,single,PLN,zloty,science_agency
+Poland,NCBiR (Narodowe Centrum Badań i Rozwoju),2017,2344421000.0,2344421000.0,1,2017 text.pdf,single,PLN,zloty,science_agency
+Poland,NCBiR (Narodowe Centrum Badań i Rozwoju),2018,,,0,,gap,,,science_agency
+Poland,NCBiR (Narodowe Centrum Badań i Rozwoju),2019,1408735000.0,1408735000.0,1,2019 text.pdf,single,PLN,zloty,science_agency
+Poland,NCBiR (Narodowe Centrum Badań i Rozwoju),2020,1332715000.0,1332715000.0,1,2020 text.pdf,single,PLN,zloty,science_agency
+Poland,NCBiR (Narodowe Centrum Badań i Rozwoju),2021,,,0,,gap,,,science_agency
+Poland,NCBiR (Narodowe Centrum Badań i Rozwoju),2022,,,0,,gap,,,science_agency
+Poland,NCBiR (Narodowe Centrum Badań i Rozwoju),2023,935222000.0,935222000.0,1,2023 text.pdf,single,PLN,zloty,science_agency
+Poland,NCBiR (Narodowe Centrum Badań i Rozwoju),2024,,,0,,gap,,,science_agency
+Poland,NCBiR (Narodowe Centrum Badań i Rozwoju),2025,,,0,,gap,,,science_agency
+Poland,NCN (Narodowe Centrum Nauki),2011,279965000.0,279965000.0,1,2011 text.pdf,single,PLN,zloty,science_agency
+Poland,NCN (Narodowe Centrum Nauki),2013,899993000.0,899993000.0,1,2013 text.pdf,single,PLN,zloty,science_agency
+Poland,NCN (Narodowe Centrum Nauki),2014,,,0,,gap,,,science_agency
+Poland,NCN (Narodowe Centrum Nauki),2015,976452000.0,976452000.0,1,2015 text.pdf,single,PLN,zloty,science_agency
+Poland,NCN (Narodowe Centrum Nauki),2016,,,0,,gap,,,science_agency
+Poland,NCN (Narodowe Centrum Nauki),2017,1192559000.0,1192559000.0,1,2017 text.pdf,single,PLN,zloty,science_agency
+Poland,NCN (Narodowe Centrum Nauki),2018,,,0,,gap,,,science_agency
+Poland,NCN (Narodowe Centrum Nauki),2019,,,0,,gap,,,science_agency
+Poland,NCN (Narodowe Centrum Nauki),2020,,,0,,gap,,,science_agency
+Poland,NCN (Narodowe Centrum Nauki),2021,,,0,,gap,,,science_agency
+Poland,NCN (Narodowe Centrum Nauki),2022,,,0,,gap,,,science_agency
+Poland,NCN (Narodowe Centrum Nauki),2023,1436577000.0,1436577000.0,1,2023 text.pdf,single,PLN,zloty,science_agency
+Poland,NCN (Narodowe Centrum Nauki),2024,,,0,,gap,,,science_agency
+Poland,NCN (Narodowe Centrum Nauki),2025,,,0,,gap,,,science_agency
+Poland,PAN (Polska Akademia Nauk),1990,100000000.0,100000000.0,1,1990 text.pdf,single,PLN,zloty,science_agency
+Poland,PAN (Polska Akademia Nauk),1991,113133000.0,113133000.0,1,1991 text.pdf,single,PLN,zloty,science_agency
+Poland,PAN (Polska Akademia Nauk),1992,,,0,,gap,,,science_agency
+Poland,PAN (Polska Akademia Nauk),1993,,,0,,gap,,,science_agency
+Poland,PAN (Polska Akademia Nauk),1996,,,0,,gap,,,science_agency
+Poland,PAN (Polska Akademia Nauk),1997,,,0,,gap,,,science_agency
+Poland,PAN (Polska Akademia Nauk),1998,42692000.0,42692000.0,1,1998 text.pdf,single,PLN,zloty,science_agency
+Poland,PAN (Polska Akademia Nauk),1999,120061000.0,120061000.0,1,1999 D1999017015402.pdf,single,PLN,zloty,science_agency
+Poland,PAN (Polska Akademia Nauk),2008,,,0,,gap,,,science_agency
+Poland,PAN (Polska Akademia Nauk),2010,54468000.0,54468000.0,1,2010 text.pdf,single,PLN,zloty,science_agency
+Poland,PAN (Polska Akademia Nauk),2011,79924000.0,79924000.0,1,2011 text.pdf,single,PLN,zloty,science_agency
+Poland,PAN (Polska Akademia Nauk),2013,,,0,,gap,,,science_agency
+Poland,PAN (Polska Akademia Nauk),2014,,,0,,gap,,,science_agency
+Poland,PAN (Polska Akademia Nauk),2015,,,0,,gap,,,science_agency
+Poland,PAN (Polska Akademia Nauk),2016,,,0,,gap,,,science_agency
+Poland,PAN (Polska Akademia Nauk),2017,,,0,,gap,,,science_agency
+Poland,PAN (Polska Akademia Nauk),2018,,,0,,gap,,,science_agency
+Poland,PAN (Polska Akademia Nauk),2019,,,0,,gap,,,science_agency
+Poland,PAN (Polska Akademia Nauk),2020,,,0,,gap,,,science_agency
+Poland,PAN (Polska Akademia Nauk),2021,,,0,,gap,,,science_agency
+Poland,PAN (Polska Akademia Nauk),2022,,,0,,gap,,,science_agency
+Poland,PAN (Polska Akademia Nauk),2023,,,0,,gap,,,science_agency
+Poland,PAN (Polska Akademia Nauk),2024,,,0,,gap,,,science_agency
+Poland,PAN (Polska Akademia Nauk),2025,,,0,,gap,,,science_agency
+Poland,Polish Space Agency Activities,2021,,,0,,gap,,,science_agency
+Poland,Polish Space Agency Activities,2022,,,0,,gap,,,science_agency
+Poland,Polish Space Agency Activities,2023,,,0,,gap,,,science_agency
+Poland,Polish Space Agency Activities,2024,20773000.0,20773000.0,1,2024 text.pdf,single,PLN,zloty,science_agency
+Poland,Regional Initiative of Excellence,2014,,,0,,gap,,,innovation_instruments
+Poland,Regional Initiative of Excellence,2015,,,0,,gap,,,innovation_instruments
+Poland,Regional Initiative of Excellence,2016,,,0,,gap,,,innovation_instruments
+Poland,Regional Initiative of Excellence,2017,,,0,,gap,,,innovation_instruments
+Poland,Regional Initiative of Excellence,2018,,,0,,gap,,,innovation_instruments
+Poland,Regional Initiative of Excellence,2019,,,0,,gap,,,innovation_instruments
+Poland,Regional Initiative of Excellence,2020,,,0,,gap,,,innovation_instruments
+Poland,Regional Initiative of Excellence,2021,,,0,,gap,,,innovation_instruments
+Poland,Regional Initiative of Excellence,2022,,,0,,gap,,,innovation_instruments
+Poland,Regional Initiative of Excellence,2023,,,0,,gap,,,innovation_instruments
+Poland,Regional Initiative of Excellence,2024,,,0,,gap,,,innovation_instruments
+Poland,Research Reactor MARIA Modernization Program,2025,91744000.0,91744000.0,1,2025 text.pdf,single,PLN,zloty,direct_rd
+Poland,Łukasiewicz Research Network,2021,,,0,,gap,,,innovation_instruments
+Poland,Łukasiewicz Research Network,2022,,,0,,gap,,,innovation_instruments
+Poland,Łukasiewicz Research Network,2023,,,0,,gap,,,innovation_instruments
+Poland,Łukasiewicz Research Network,2024,,,0,,gap,,,innovation_instruments

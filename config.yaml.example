@@ -18,7 +18,7 @@
 # =============================================================================
 llm:
   # Provider: "anthropic" or "openai"
-  provider: "anthropic"
+  provider: "openai"
 
   # API key — or set via environment variable:
   #   Anthropic → ANTHROPIC_API_KEY
@@ -29,7 +29,7 @@ llm:
   #   Anthropic: "claude-sonnet-4-6"  (best quality)
   #              "claude-haiku-4-5-20251001"  (cheaper, high-volume runs)
   #   OpenAI:    "gpt-4o", "gpt-4o-mini"
-  model: "claude-sonnet-4-6"
+  model: "gpt-4o-mini"
 
   # Temperature 0 = fully deterministic (recommended for replicability)
   temperature: 0

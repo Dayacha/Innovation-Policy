@@ -677,6 +677,82 @@ if not _dr.empty:
 else:
     dr_f = pd.DataFrame()
 
+
+def _filtered_budget_df() -> pd.DataFrame:
+    if not budget_available():
+        return pd.DataFrame()
+    _db = load_budget()
+    if _db.empty:
+        return _db
+    _m = (_db["year"] >= yr_b[0]) & (_db["year"] <= yr_b[1])
+    if dec_b and "decision" in _db.columns:
+        _m &= _db["decision"].isin(dec_b)
+    if cat_b != "All":
+        _m &= _db["budget_category"] == cat_b
+    if sel_bud_ctry and "country" in _db.columns:
+        _m &= _db["country"].isin(sel_bud_ctry)
+    if conf_b is not None and "confidence" in _db.columns:
+        _conf = pd.to_numeric(_db["confidence"], errors="coerce")
+        _m &= _conf.between(conf_b[0], conf_b[1], inclusive="both")
+    return _db[_m].copy()
+
+
+def _budget_currency_color_map(values: list[str]) -> dict[str, str]:
+    _fallback = [NAVY, ORANGE, TEAL, GREEN, BLUE, "#9B59B6", "#E74C3C", GREY]
+    _base = {
+        "EUR": ORANGE,
+        "SKK": NAVY,
+        "SIT": NAVY,
+        "LTL": "#1F4E79",
+        "TAL": "#C0392B",
+        "FIM": "#006D77",
+        "FRF": TEAL,
+        "DEM": "#9B59B6",
+        "NLG": GREEN,
+        "DKK": BLUE,
+        "NOK": "#E74C3C",
+        "CHF": "#F39C12",
+        "SEK": "#27AE60",
+        "GBP": "#1ABC9C",
+        "JPY": "#8E44AD",
+        "CAD": "#E67E22",
+        "AUD": "#16A085",
+    }
+    out = {}
+    for i, v in enumerate(values):
+        key = str(v)
+        code = key
+        if "(" in key and ")" in key:
+            inner = key.rsplit("(", 1)[-1].split(")", 1)[0].strip()
+            if inner:
+                code = inner
+        out[v] = _base.get(code, _base.get(key, _fallback[i % len(_fallback)]))
+    return out
+
+
+def _budget_currency_label(value: str) -> str:
+    code = str(value or "").strip().upper()
+    labels = {
+        "EUR": "EUR — euro",
+        "SKK": "SKK — Slovak koruna",
+        "FIM": "FIM — Finnish markka",
+        "FRF": "FRF — French franc",
+        "DEM": "DEM — Deutsche Mark",
+        "NLG": "NLG — Dutch guilder",
+        "DKK": "DKK — Danish krone",
+        "NOK": "NOK — Norwegian krone",
+        "SEK": "SEK — Swedish krona",
+        "CHF": "CHF — Swiss franc",
+        "GBP": "GBP — pound sterling",
+        "JPY": "JPY — yen",
+        "CAD": "CAD — Canadian dollar",
+        "AUD": "AUD — Australian dollar",
+        "LTL": "LTL — Lithuanian litas",
+        "SIT": "SIT — Slovenian tolar",
+        "TAL": "TAL — Lithuanian talonas",
+    }
+    return labels.get(code, code or "Unknown currency")
+
 TAB_BUDGET, TAB_REFORMS, TAB_COMBINED, TAB_TABLE, TAB_METHODS = st.tabs([
     "R&D Budget",
     "Innovation Reforms",
@@ -756,6 +832,24 @@ with TAB_BUDGET:
                 "Moderate — strongest for COLCIENCIAS/MinCiencias and named science institutions; "
                 "long-run trends should be read as a documented but discontinuous institutional panel."
             ),
+            "rating": "moderate",
+        },
+        "Czech Republic": {
+            "years": "1994–2024, with audited institutional gaps",
+            "source": "State budget acts, annex budget tables, and audited text-cache reconstructions from Czech budget files",
+            "gaps": (
+                "The Czech panel is intentionally conservative and fully traceable to individual source files and page "
+                "numbers. The current app-ready series keeps only audited institutional lines: the Czech Academy of "
+                "Sciences (AV ČR), the Czech Science Foundation (GA ČR), and, where the chapter totals are explicit, "
+                "the Technology Agency (TA ČR). Several modern observations were manually recovered from chapter "
+                "summary blocks that state an explicit 'Vydaje celkem' total. Generic R&D/innovation totals, zero-value "
+                "placeholders, legal-structure rows, misfiled 1993 material, and ambiguous scale/OCR candidates remain "
+                "excluded from the final panel. Coverage is now strong through the audited early series, the recovered "
+                "2012–2015 chapter totals, and the audited modern block from 2016–2024. The remaining gaps are "
+                "concentrated in misfiled 1993 material, unresolved GA ČR early anomalies, TA ČR pre-stabilization "
+                "years, and still-ambiguous 2025 summary-table rows."
+            ),
+            "fit": "Moderate to strong for audited institutional trends; limited for system-wide totals and for agency-years that still lack an explicit recoverable chapter total.",
             "rating": "moderate",
         },
         "Costa Rica": {
@@ -958,6 +1052,29 @@ with TAB_BUDGET:
             "fit": "Limited — usable only for cautious, audited programme-level trend reading; weak for institutional continuity and cross-era comparison.",
             "rating": "limited",
         },
+        "Lithuania": {
+            "years": "1993–2025 (audited backbone; still hybrid across monetary and reporting eras)",
+            "source": (
+                "Annual Lithuanian budget laws and annex tables, combining parsed DOCX/PDF tables with "
+                "manual verified overrides traced to the original files"
+            ),
+            "gaps": (
+                "Lithuania is now a much stronger traceability-first panel than before, but it remains a hybrid series. "
+                "The monetary regime changes from talonas (1993) to litas (1994–2014) to euro (2015 onward), and the "
+                "budget presentation also changes across eras. Several years had to be rebuilt from institution-level "
+                "totals in the original documents because the raw extractor either missed the file entirely or picked "
+                "secondary columns such as wage or asset-acquisition sublines instead of the full institutional appropriation. "
+                "The app therefore shows a documented institutional backbone, not a single homogeneous currency-constant series. "
+                "The very large 1993 State Science, Studies and Technology Service amount is intentionally excluded from the "
+                "final panel because it comes from a pre-litas thousand-talonas appropriation that is not methodologically "
+                "comparable with the later series."
+            ),
+            "fit": (
+                "Moderate to good — strong for audited named institutions and for 2003 onward continuity, but long-run "
+                "cross-era comparison still requires explicit currency conversion and caution."
+            ),
+            "rating": "moderate",
+        },
         "Norway": {
             "years": "1975–2026",
             "source": "Statsbudsjettet (State Budget) — annual budget proposition documents",
@@ -981,6 +1098,47 @@ with TAB_BUDGET:
             ),
             "fit": "Moderate to good — complete timeline but the 2002 currency switch means long-run comparisons require care.",
             "rating": "moderate",
+        },
+        "New Zealand": {
+            "years": "1975–2025 (audited institutional backbone; strongest from 1996 onward)",
+            "source": (
+                "Annual Appropriation Estimates Acts and earlier budget volumes, traced to cached original text and "
+                "normalized to full New Zealand dollars (NZD)"
+            ),
+            "gaps": (
+                "New Zealand is now a conservative, traceability-first panel rather than a dense uninterrupted science-budget ledger. "
+                "The strongest anchor points are the DSIR-era institutional totals, the explicit Research, Science and Technology vote "
+                "in 1996–1999 and 2010, Crown Research Institute core funding in 2011–2015, and the modern named funds and agencies "
+                "from 2015 onward. The main remaining weakness is 2000–2009: the underlying budget files often expose Marsden Fund "
+                "cleanly but not a defensible whole-of-vote total, so that decade is structurally partial in the institutional panel. "
+                "A small set of years remains intentionally blank because the source text is ambiguous or non-recoverable, including "
+                "DSIR 1975/1977/1984, the science-vote gaps in 1990/1995/2001, and Regional Research Institutes in 2020."
+            ),
+            "fit": (
+                "Moderate to good — strong for audited institutional and fund analysis, especially 1996+ and the modern 2015+ portfolio; "
+                "long-run trend reading should treat 2000–2009 as partial coverage rather than a complete annual science budget."
+            ),
+            "rating": "moderate",
+        },
+        "Poland": {
+            "years": "1990–2025 in the source family; the current app-ready panel keeps only 24 strictly audited observations",
+            "source": (
+                "Annual Polish budget laws and annex-style budget tables, plus a small set of manual verified overrides "
+                "traced to the original PDFs"
+            ),
+            "gaps": (
+                "Poland is highly discontinuous in its current audited form and should not be read as a coherent annual time series. "
+                "The strict app-ready panel keeps only 24 explicit same-page matches across 1990–2025, which leaves most years and "
+                "most institution-year combinations blank. Many exclusions are not because the documents are silent, but because the "
+                "available pages only expose weak numeric traces, fragmented sub-lines, generic aggregates, or level-mismatched entities. "
+                "The source inventory is also structurally weak in several years: 1995 and 2012 behave like incomplete legal-wrapper PDFs, "
+                "2000 has a broken text layer, and 2001–2007 plus 2009 look more like legal text than usable institutional budget annexes."
+            ),
+            "fit": (
+                "Limited — usable only as a sparse, traceability-first reference panel for a few audited institutional points; "
+                "not suitable as a consistent long-run time series of Polish public R&D."
+            ),
+            "rating": "limited",
         },
         "Finland": {
             "years": "1985–2025",
@@ -1011,6 +1169,20 @@ with TAB_BUDGET:
                 "are in full Swiss francs (not thousands or millions), which required unit correction in the pipeline."
             ),
             "fit": "Moderate — strong from 2021+; historical pre-2021 coverage is partial and agency-level only for aggregate ETH-Bereich.",
+            "rating": "moderate",
+        },
+        "Slovakia": {
+            "years": "1992–2025, with a verified source gap in 2023–2024",
+            "source": "Annual Slovak state budget laws and annex tables, plus manual source audits of modern PDFs",
+            "gaps": (
+                "The panel starts in 1992 because the repo does not currently contain a usable 1991 Slovak budget file, "
+                "and the lone 1990 file in the folder is actually a Polish budget misfiled under Slovakia. "
+                "There is also a verified break between 2022 and 2025: the 2023 PDF in the repo is only the legal act text "
+                "without the numeric annex tables, and the 2024 PDF is only a one-page aggregate balance summary rather than the "
+                "detailed expenditure annex. Those two years are therefore genuine source limitations, not just missed extraction. "
+                "Long-run charts also span two monetary regimes: pre-2009 Slovak koruna (SKK) and 2009 onward euro (EUR)."
+            ),
+            "fit": "Moderate — usable for audited institutional trends, but cross-era level comparison requires explicit currency conversion and the 2023–2024 source gap must be respected.",
             "rating": "moderate",
         },
         "Spain": {
@@ -1057,18 +1229,31 @@ with TAB_BUDGET:
                 unsafe_allow_html=True,
             )
 
-    db = load_budget()
-    m = (db["year"] >= yr_b[0]) & (db["year"] <= yr_b[1])
-    if dec_b and "decision" in db.columns:
-        m &= db["decision"].isin(dec_b)
-    if cat_b != "All":
-        m &= db["budget_category"] == cat_b
-    if sel_bud_ctry and "country" in db.columns:
-        m &= db["country"].isin(sel_bud_ctry)
-    if conf_b is not None and "confidence" in db.columns:
-        _conf = pd.to_numeric(db["confidence"], errors="coerce")
-        m &= _conf.between(conf_b[0], conf_b[1], inclusive="both")
-    db_f = db[m].copy()
+    if "Poland" in _active_countries:
+        st.markdown(
+            """
+            <div style="
+                margin:.1rem 0 .9rem 0;
+                padding:.65rem .8rem;
+                border:1px solid #cfe2ff;
+                border-left:4px solid #0d6efd;
+                border-radius:6px;
+                background:#f4f8ff;
+                color:#163a5f;
+                font-size:.78rem;">
+                <div style="font-weight:800;margin-bottom:.2rem;">Poland panel shown: strict audited panel</div>
+                <div>
+                    The app currently displays the strict Poland panel with
+                    <b>24 observations</b>, all retained only when the institution and amount
+                    can be defended on the same source page. Weaker block-trace rows are excluded
+                    from the app-ready view.
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+    db_f = _filtered_budget_df()
 
     # ── Currency helpers ──
     _currencies = db_f["currency"].dropna().unique() if "currency" in db_f.columns else []
@@ -1107,38 +1292,20 @@ with TAB_BUDGET:
         yr_ct = db_f.groupby(["year", gcol1, "currency"])["amount_local"].sum().reset_index()
         yr_ct[_amt_col] = _to_millions(yr_ct["amount_local"])
         if db_f["country"].nunique() == 1:
-            yr_ct["label"] = yr_ct["currency"].fillna("Unknown currency")
+            yr_ct["label"] = yr_ct["currency"].map(_budget_currency_label).fillna("Unknown currency")
         else:
-            yr_ct["label"] = yr_ct[gcol1] + " (" + yr_ct["currency"].fillna("Unknown") + ")"
+            yr_ct["label"] = yr_ct[gcol1] + " (" + yr_ct["currency"].map(_budget_currency_label).fillna("Unknown") + ")"
         _ytitle1 = "Amount (millions, local currency)"
         if db_f["country"].nunique() == 1:
             _cap1 = ("Bars are grouped by currency. This selection mixes multiple currencies "
                      "(for example FRF and EUR), so levels are not directly comparable across the full span.")
-            _currency_palette = {
-                "EUR": ORANGE,
-                "FIM": NAVY,    # Finnish markka (pre-2002)
-                "FRF": TEAL,    # French franc (pre-2002)
-                "DEM": "#9B59B6",  # Deutsche Mark (pre-2002)
-                "NLG": GREEN,   # Dutch guilder (pre-2002)
-                "DKK": BLUE,    # Danish krone
-                "NOK": "#E74C3C",  # Norwegian krone
-                "CHF": "#F39C12",  # Swiss franc
-                "SEK": "#27AE60",  # Swedish krona
-                "GBP": "#1ABC9C",  # British pound
-                "JPY": "#8E44AD",  # Japanese yen
-                "CAD": "#E67E22",  # Canadian dollar
-                "AUD": "#16A085",  # Australian dollar
-            }
-            _sorted_ccy = sorted(yr_ct["currency"].dropna().unique())
-            _color_map1 = {
-                c: _currency_palette.get(c, _ctry_pal[i % len(_ctry_pal)])
-                for i, c in enumerate(_sorted_ccy)
-            }
+            _sorted_labels = sorted(yr_ct["label"].dropna().unique())
+            _color_map1 = _budget_currency_color_map(_sorted_labels)
         else:
             _cap1 = ("Bars are grouped by country-currency pair — each bar shows spending in its own local currency. "
                      "Figures are NOT comparable across countries or currencies. Select a single country for absolute trends.")
             _sorted_pairs = sorted(yr_ct["label"].dropna().unique())
-            _color_map1 = {c: _ctry_pal[i % len(_ctry_pal)] for i, c in enumerate(_sorted_pairs)}
+            _color_map1 = _budget_currency_color_map(_sorted_pairs)
     else:
         section_header(f"R&D-related budget by year and category ({_ccy} millions)")
         gcol1 = "budget_category"
@@ -1182,6 +1349,8 @@ with TAB_BUDGET:
 
     if _multi_currency:
         st.info("Some selected years mix currencies. Ministry totals, category shares, and year-over-year change are hidden because they would aggregate non-comparable currencies.")
+        if db_f["country"].nunique() == 1 and set(db_f["country"].dropna().astype(str)) == {"Slovakia"}:
+            st.warning("Slovakia has a verified source gap in 2023–2024, and the visible series mixes SKK (pre-2009) with EUR (2009 onward). Do not read the full span as a single comparable monetary trend.")
     else:
         # ── Chart 2 & 3 side by side ──
         col_a, col_b_ = st.columns(2)
@@ -1269,12 +1438,12 @@ with TAB_BUDGET:
     section_header("Budget line detail")
     _BUD_DISP_COLS = [c for c in [
         "country", "year", "ministry_display", "budget_line_display",
-        "amount_local", "unit", "currency", "budget_category", "item_type", "source_file", "series_notes",
+        "amount_local", "unit", "currency", "currency_era", "budget_category", "item_type", "source_file", "series_notes",
     ] if c in db_f.columns]
     _BUD_COL_LABELS = {
         "country": "Country", "year": "Year", "ministry_display": "Ministry",
         "budget_line_display": "Description", "amount_local": f"Amount ({_ccy})",
-        "unit": "Unit", "currency": "Currency", "budget_category": "R&D category",
+        "unit": "Unit", "currency": "Currency", "currency_era": "Currency era", "budget_category": "R&D category",
         "item_type": "Item type",
         "source_file": "Source file",
         "series_notes": "Series notes",
@@ -1300,6 +1469,8 @@ with TAB_BUDGET:
         ).map(_format_korea_source_amount)
     if _multi_currency:
         caption_note(f"{len(_tbl):,} rows  ·  {_n_countries} countries (amounts in local currency)")
+        if _n_countries == 1 and "country" in _tbl.columns and set(_tbl["country"].dropna().astype(str)) == {"Slovakia"}:
+            caption_note("Slovakia switches from SKK to EUR in 2009. Use the Currency era column to separate pre-2009 and 2009+ rows.")
     else:
         caption_note(f"{len(_tbl):,} rows  ·  {_ccy} {_tbl['amount_local'].sum()/1e6:,.1f} M")
     if _is_korea_only:
@@ -2039,7 +2210,7 @@ with TAB_COMBINED:
     section_header("Stream comparison")
     # Build dynamic time-range labels from actual data
     if bk:
-        _db_cmp = load_budget()
+        _db_cmp = _filtered_budget_df()
         _bud_yrs_cmp = sorted(_db_cmp["year"].dropna().unique())
         _bud_ctry_cmp = sorted(_db_cmp["country"].dropna().unique()) if "country" in _db_cmp.columns else ["Denmark"]
         _s1_range = f"{min(_bud_yrs_cmp)}&#8211;{max(_bud_yrs_cmp)} ({', '.join(_bud_ctry_cmp)})" if _bud_yrs_cmp else "n/a"
@@ -2139,60 +2310,90 @@ with TAB_COMBINED:
     # ── Dual-axis overlay ──
     if bk and rk and not dr_f.empty:
         section_header("R&D budget allocation vs. innovation reform activity")
-        _db3 = load_budget()
-        _db3_ccy = _db3["currency"].dropna().unique() if "currency" in _db3.columns else []
-        _db3_lbl = _db3_ccy[0] if len(_db3_ccy) == 1 else "local currency"
-        b_yr3 = _db3.groupby("year")["amount_local"].sum().reset_index()
-        b_yr3["Amt M"] = b_yr3["amount_local"] / 1e6
-        df_i3 = dr_f.dropna(subset=["display_year"]).copy()
-        df_i3["yr"] = df_i3["display_year"].astype(int)
-        rc3 = df_i3.groupby("yr").size().reset_index(name="n")
-        fig_dual = go.Figure()
-        fig_dual.add_trace(go.Bar(
-            x=b_yr3["year"], y=b_yr3["Amt M"],
-            name=f"R&D budget ({_db3_lbl} M)",
-            marker_color=NAVY, opacity=0.72, marker_line_width=0, yaxis="y1",
-        ))
-        if not rc3.empty:
-            fig_dual.add_trace(go.Scatter(
-                x=rc3["yr"], y=rc3["n"],
-                name="Innovation reform events",
-                mode="lines+markers",
-                line=dict(color=ORANGE, width=2.5),
-                marker=dict(size=8, color=ORANGE, line=dict(width=2, color="white")),
-                yaxis="y2",
-            ))
-        if "is_major_reform" in df_i3.columns:
-            maj3 = df_i3[df_i3["is_major_reform"]].groupby("yr").size().reset_index(name="nm")
-            if not maj3.empty:
+        _db3 = _filtered_budget_df()
+        if not _db3.empty:
+            _db3_ccy = _db3["currency"].dropna().unique() if "currency" in _db3.columns else []
+            _db3_multi = len(_db3_ccy) > 1
+            _db3_lbl = _db3_ccy[0] if len(_db3_ccy) == 1 else "local currency"
+            df_i3 = dr_f.dropna(subset=["display_year"]).copy()
+            df_i3["yr"] = df_i3["display_year"].astype(int)
+            rc3 = df_i3.groupby("yr").size().reset_index(name="n")
+            fig_dual = go.Figure()
+            if _db3_multi:
+                if _db3["country"].nunique() == 1:
+                    b_yr3 = _db3.groupby(["year", "currency"], dropna=False)["amount_local"].sum().reset_index()
+                    b_yr3["label"] = b_yr3["currency"].fillna("Unknown currency")
+                    _bar_colors = _budget_currency_color_map(sorted(b_yr3["label"].dropna().unique()))
+                else:
+                    b_yr3 = _db3.groupby(["year", "country", "currency"], dropna=False)["amount_local"].sum().reset_index()
+                    b_yr3["label"] = b_yr3["country"] + " (" + b_yr3["currency"].fillna("Unknown") + ")"
+                    _labels = sorted(b_yr3["label"].dropna().unique())
+                    _pal = [NAVY, ORANGE, TEAL, GREEN, BLUE, "#9B59B6", "#E74C3C", GREY]
+                    _bar_colors = {lab: _pal[i % len(_pal)] for i, lab in enumerate(_labels)}
+                b_yr3["Amt M"] = b_yr3["amount_local"] / 1e6
+                for _label in sorted(b_yr3["label"].dropna().unique()):
+                    _sub = b_yr3[b_yr3["label"] == _label]
+                    fig_dual.add_trace(go.Bar(
+                        x=_sub["year"], y=_sub["Amt M"],
+                        name=str(_label),
+                        marker_color=_bar_colors.get(_label, NAVY),
+                        opacity=0.8, marker_line_width=0, yaxis="y1",
+                    ))
+                _ytitle_dual = "R&D Budget (millions, local currency)"
+            else:
+                b_yr3 = _db3.groupby("year")["amount_local"].sum().reset_index()
+                b_yr3["Amt M"] = b_yr3["amount_local"] / 1e6
+                fig_dual.add_trace(go.Bar(
+                    x=b_yr3["year"], y=b_yr3["Amt M"],
+                    name=f"R&D budget ({_db3_lbl} M)",
+                    marker_color=NAVY, opacity=0.72, marker_line_width=0, yaxis="y1",
+                ))
+                _ytitle_dual = f"R&D Budget ({_db3_lbl} millions)"
+            if not rc3.empty:
                 fig_dual.add_trace(go.Scatter(
-                    x=maj3["yr"], y=maj3["nm"],
-                    name="Major reform events",
-                    mode="markers",
-                    marker=dict(symbol="diamond", size=14,
-                                color="white", line=dict(width=2.5, color=ORANGE)),
+                    x=rc3["yr"], y=rc3["n"],
+                    name="Innovation reform events",
+                    mode="lines+markers",
+                    line=dict(color=ORANGE, width=2.5),
+                    marker=dict(size=8, color=ORANGE, line=dict(width=2, color="white")),
                     yaxis="y2",
                 ))
-        fig_dual.update_layout(
-            height=400,
-            xaxis=dict(title="Year", dtick=2, showgrid=False,
-                       linecolor=BORDER, tickfont=dict(size=10.5)),
-            yaxis=dict(title=f"R&D Budget ({_db3_lbl} millions)", side="left",
-                       gridcolor="#EBEBEB", linecolor=BORDER),
-            yaxis2=dict(title="Reform event count", side="right",
-                        overlaying="y", showgrid=False, linecolor=BORDER),
-            legend=dict(orientation="h", y=1.05, x=0, font=dict(size=10.5),
-                        bgcolor="rgba(0,0,0,0)"),
-            **PLOTLY_BASE,
-            margin=dict(t=44, b=36, l=8, r=8),
-        )
-        st.plotly_chart(fig_dual, use_container_width=True)
-        _b_span = f"{b_yr3['year'].min()}–{b_yr3['year'].max()}" if not b_yr3.empty else "n/a"
-        _r_span = f"{rc3['yr'].min()}–{rc3['yr'].max()}" if not rc3.empty else "n/a"
-        caption_note(
-            f"Finance Bills: {_b_span}. OECD Survey reforms: {_r_span}. "
-            "The two streams are complementary evidence of innovation policy effort."
-        )
+            if "is_major_reform" in df_i3.columns:
+                maj3 = df_i3[df_i3["is_major_reform"]].groupby("yr").size().reset_index(name="nm")
+                if not maj3.empty:
+                    fig_dual.add_trace(go.Scatter(
+                        x=maj3["yr"], y=maj3["nm"],
+                        name="Major reform events",
+                        mode="markers",
+                        marker=dict(symbol="diamond", size=14,
+                                    color="white", line=dict(width=2.5, color=ORANGE)),
+                        yaxis="y2",
+                    ))
+            fig_dual.update_layout(
+                height=400,
+                xaxis=dict(title="Year", dtick=2, showgrid=False,
+                           linecolor=BORDER, tickfont=dict(size=10.5)),
+                yaxis=dict(title=_ytitle_dual, side="left",
+                           gridcolor="#EBEBEB", linecolor=BORDER),
+                yaxis2=dict(title="Reform event count", side="right",
+                            overlaying="y", showgrid=False, linecolor=BORDER),
+                legend=dict(orientation="h", y=1.05, x=0, font=dict(size=10.5),
+                            bgcolor="rgba(0,0,0,0)"),
+                barmode="group" if _db3_multi else "relative",
+                **PLOTLY_BASE,
+                margin=dict(t=44, b=36, l=8, r=8),
+            )
+            st.plotly_chart(fig_dual, use_container_width=True)
+            _b_span = f"{b_yr3['year'].min()}–{b_yr3['year'].max()}" if not b_yr3.empty else "n/a"
+            _r_span = f"{rc3['yr'].min()}–{rc3['yr'].max()}" if not rc3.empty else "n/a"
+            _dual_note = (
+                "Budget bars are split by currency because the current selection mixes monetary regimes."
+                if _db3_multi else
+                "Budget bars are shown in a single currency."
+            )
+            caption_note(
+                f"Finance Bills: {_b_span}. OECD Survey reforms: {_r_span}. {_dual_note}"
+            )
 
     # ── Subtheme composition over time (reform_panel_subtheme) ──
     if rk:
@@ -2259,29 +2460,45 @@ with TAB_COMBINED:
     # ── Budget trend (Stream 1 only, always show if available) ──
     if bk:
         section_header("R&D budget by year (Stream 1)")
-        _db3 = load_budget()
+        _db3 = _filtered_budget_df()
         if not _db3.empty:
             _b3_ccy = _db3["currency"].dropna().unique() if "currency" in _db3.columns else []
             _b3_lbl = _b3_ccy[0] if len(_b3_ccy) == 1 else "local currency"
             _b3_multi = len(_b3_ccy) > 1
             if _b3_multi:
-                b_yr3 = _db3.groupby(["year", "country"])["amount_local"].sum().reset_index()
+                if _db3["country"].nunique() == 1:
+                    b_yr3 = _db3.groupby(["year", "currency"], dropna=False)["amount_local"].sum().reset_index()
+                    b_yr3["label"] = b_yr3["currency"].map(_budget_currency_label).fillna("Unknown currency")
+                    _color_map3 = _budget_currency_color_map(sorted(b_yr3["label"].dropna().unique()))
+                    _color_col = "label"
+                    _b3_cap = "Bars are grouped by currency because the selected budget panel mixes monetary regimes."
+                else:
+                    b_yr3 = _db3.groupby(["year", "country", "currency"], dropna=False)["amount_local"].sum().reset_index()
+                    b_yr3["label"] = b_yr3["country"] + " (" + b_yr3["currency"].map(_budget_currency_label).fillna("Unknown") + ")"
+                    _labels = sorted(b_yr3["label"].dropna().unique())
+                    _color_map3 = _budget_currency_color_map(_labels)
+                    _color_col = "label"
+                    _b3_cap = "Bars are grouped by country-currency pair. Levels are not comparable across currencies."
             else:
                 b_yr3 = _db3.groupby("year")["amount_local"].sum().reset_index()
+                _color_map3 = None
+                _color_col = None
+                _b3_cap = "Bars are shown in a single currency."
             b_yr3["Amt M"] = b_yr3["amount_local"] / 1e6
-            _b3_ytitle = f"{_b3_lbl} (millions)"
+            _b3_ytitle = "Amount (millions, local currency)" if _b3_multi else f"{_b3_lbl} (millions)"
             fig_b3 = px.bar(
                 b_yr3, x="year", y="Amt M",
-                color="country" if _b3_multi else None,
-                labels={"year": "Year", "Amt M": _b3_ytitle, "country": "Country"},
-                color_discrete_sequence=[NAVY],
+                color=_color_col,
+                labels={"year": "Year", "Amt M": _b3_ytitle, "country": "Country", "label": ""},
+                color_discrete_map=_color_map3,
+                color_discrete_sequence=[NAVY] if not _b3_multi else None,
                 barmode="group" if _b3_multi else "relative",
             )
             fig_b3.update_traces(marker_line_width=0)
             apply_style(fig_b3, height=240, xtitle="Year", ytitle=_b3_ytitle)
             st.plotly_chart(fig_b3, use_container_width=True)
             _b3_countries = sorted(_db3["country"].dropna().unique()) if "country" in _db3.columns else []
-            caption_note(f"Finance Bills — {', '.join(_b3_countries) if _b3_countries else 'all countries'}. High-confidence R&D lines only.")
+            caption_note(f"Finance Bills — {', '.join(_b3_countries) if _b3_countries else 'all countries'}. {_b3_cap}")
 
     # ── Top reforms table ──
     if rk and not dr_f.empty:
@@ -2338,7 +2555,7 @@ with TAB_TABLE:
     _T5_BUD_LABELS = {
         "country": "Country", "year": "Year", "section_code": "Ministry code",
         "ministry_display": "Ministry", "budget_line_display": "Description",
-        "amount_local": "Amount (local currency)", "unit": "Unit", "currency": "Currency",
+        "amount_local": "Amount (local currency)", "unit": "Unit", "currency": "Currency", "currency_era": "Currency era",
         "budget_category": "R&D category", "item_type": "Item type",
         "source_file": "Source", "page_number": "Page", "series_notes": "Series notes",
     }
@@ -2377,6 +2594,8 @@ with TAB_TABLE:
                 caption_note(f"{len(df5):,} rows  ·  {_t5_ccy[0]} {df5['amount_local'].sum()/1e6:,.1f} M")
             else:
                 caption_note(f"{len(df5):,} rows  ·  multiple currencies (see Currency column)")
+                if "country" in df5.columns and set(df5["country"].dropna().astype(str)) == {"Slovakia"}:
+                    caption_note("Slovakia switches from SKK to EUR in 2009. Use the Currency era column to separate pre-2009 and 2009+ rows.")
             render_table(_df5_disp.sort_values(["year","section_code"] if "section_code" in cols5 else ["year"]),
                          col_labels=_T5_BUD_LABELS,
                          num_cols=["amount_local","page_number"],

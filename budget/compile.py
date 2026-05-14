@@ -58,6 +58,8 @@ _OUTPUT_UNIT_BY_CURRENCY = {
     "CAD": "dollar",
     "NZD": "dollar",
     "USD": "dollar",
+    "SKK": "koruna",
+    "PLN": "zloty",
     "JPY": "yen",
     "EUR": "euro",
     "DEM": "mark",
@@ -202,6 +204,11 @@ def _agency_discovery_kwargs(country: str) -> dict:
         # Korea budget briefs surface many one-off programme captions. Keep
         # discovery focused on recurring candidates so compile iterations do
         # not spend tokens on ephemeral summary labels.
+        return {"min_years": 2}
+    if country == "Poland":
+        # Poland results contain many one-off programme captions and placeholder
+        # section totals. Requiring recurrence keeps discovery open to new
+        # institutions while avoiding token spend on single-year noise.
         return {"min_years": 2}
     return {}
 
@@ -1097,12 +1104,40 @@ def _build_source_traceability(series_df: pd.DataFrame, country: str) -> pd.Data
     cname = country.lower().replace(" ", "_")
     pdf_root = Path("Data/input/finance_bills") / country
     pdfs = sorted(p.name for p in pdf_root.glob(f"*_{country}.pdf"))
+    if not pdfs:
+        pdfs = sorted(p.name for p in pdf_root.glob("*.pdf"))
     if not pdfs and series_df.empty:
         return pd.DataFrame()
+
+    known_source_notes: dict[str, dict[str, str]] = {
+        "Slovakia": {
+            "2023 zakonypreludi_sk_526_2022_zz_20230101.pdf": "Manual source audit: the original PDF is the legal budget act text with references to annexes, but it does not include the numeric annex tables needed for traceable agency/programme appropriations.",
+            "2024 20240101_5598091-2.pdf": "Manual source audit: the original PDF is only a one-page aggregate state-budget balance summary, not the detailed expenditure annex needed for traceable R&D agency appropriations.",
+        },
+        "Slovenia": {
+            "2004 2005 u2013102.pdf": "Manual source audit: file is mislabelled. Page 1 shows a 2012 closing-account / execution document, not the 2004/2005 national budget annex, so it must not drive annual series selection for those years.",
+            "2014 u2013101.pdf": "Manual source audit: this is the ZIPRS1415 budget-execution law text for 2014-2015. It does not contain the national budget annex tables needed for traceable agency/programme appropriations.",
+            "2014.pdf": "Manual source audit: available file is an Uradni list legal/gazette wrapper, not the numeric state-budget annex. Re-running extraction on the same PDF is unlikely to recover defendable R&D appropriations.",
+        },
+    }.get(country, {})
 
     rows = []
     for source_file in pdfs:
         subset = series_df[series_df["source_file"].astype(str) == source_file].copy() if not series_df.empty else pd.DataFrame()
+        source_note = known_source_notes.get(source_file, "")
+        if not subset.empty:
+            traceability_status = "covered_by_final_series"
+        elif "mislabelled" in source_note.lower() or "misfiled" in source_note.lower():
+            traceability_status = "source_audited_misfiled"
+        elif (
+            "does not contain the national budget annex" in source_note.lower()
+            or "not the numeric state-budget annex" in source_note.lower()
+            or "does not include the numeric annex tables" in source_note.lower()
+            or "not the detailed expenditure annex" in source_note.lower()
+        ):
+            traceability_status = "source_audited_not_budget_annex"
+        else:
+            traceability_status = "not_used_in_final_series"
         rows.append(
             {
                 "source_file": source_file,
@@ -1113,7 +1148,8 @@ def _build_source_traceability(series_df: pd.DataFrame, country: str) -> pd.Data
                 "selected_pages": " | ".join(subset["page_number"].astype(str).tolist()) if not subset.empty else "",
                 "selected_line_descriptions": " | ".join(subset["line_description_en"].fillna("").astype(str).tolist()) if not subset.empty else "",
                 "selected_amounts": " | ".join(subset["amount_local"].astype(str).tolist()) if not subset.empty else "",
-                "traceability_status": "covered_by_final_series" if not subset.empty else "not_used_in_final_series",
+                "traceability_status": traceability_status,
+                "source_audit_note": source_note,
             }
         )
 
@@ -1863,6 +1899,63 @@ def _load_pipeline_results(
     return df.reset_index(drop=True)
 
 
+def _load_country_results_snapshot(
+    results_csv: Path,
+    year_range: Optional[tuple[int, int]] = None,
+) -> pd.DataFrame:
+    """
+    Load an existing per-country compile snapshot if one already exists.
+
+    This is a safety net for countries where a prior country-local CSV is
+    materially richer than the shared root results.csv. It prevents compile
+    reruns from overwriting a stronger audited country snapshot with a stale
+    global ledger slice.
+    """
+    try:
+        df = pd.read_csv(results_csv)
+    except Exception:
+        return pd.DataFrame()
+
+    if "year" not in df.columns:
+        return pd.DataFrame()
+
+    df["year"] = pd.to_numeric(df["year"], errors="coerce")
+    df = df.dropna(subset=["year"])
+    if df.empty:
+        return df
+    df["year"] = df["year"].astype(int)
+
+    if year_range:
+        df = df[(df["year"] >= year_range[0]) & (df["year"] <= year_range[1])]
+
+    for col in [
+        "line_description_en",
+        "section_name_en",
+        "line_description",
+        "amount_local",
+        "unit",
+        "currency",
+        "item_type",
+        "decision",
+        "confidence",
+        "source_file",
+        "page_number",
+        "rd_category",
+    ]:
+        if col not in df.columns:
+            df[col] = ""
+
+    df["amount_local"] = pd.to_numeric(df["amount_local"], errors="coerce")
+    if "decision" in df.columns:
+        df = df[df["decision"].isin(["include", "review"])].copy()
+
+    logger.info(
+        f"Loaded {len(df)} rows from existing country snapshot "
+        f"({results_csv.name}), years: {sorted(df['year'].unique().tolist()) if not df.empty else []}"
+    )
+    return df.reset_index(drop=True)
+
+
 def _load_compile_recovery_rows(
     results_csv: Path,
     country: str,
@@ -2088,6 +2181,7 @@ def compile_country(
     # e.g. Data/output/budget/Australia/australia_docx_series.csv
     country_dir = output_dir / country
     country_dir.mkdir(parents=True, exist_ok=True)
+    country_results_csv = country_dir / f"{country.lower().replace(' ','_')}_docx_results.csv"
 
     raw_rows_csv = output_dir / "raw_rows.csv"  # shared across all countries
 
@@ -2218,10 +2312,12 @@ def compile_country(
         "Norway", "Denmark",                           # text-cache exists but LLM wins
         "Estonia",                                     # text-cache parse is materially weaker than pipeline output
         "Belgium",                                     # text-cache/docx path is materially weaker than pipeline output
+        "Czech Republic",                              # local parser latches onto noisy annex/legal artefacts; pipeline output retains the useful agency/RDI rows
         "Latvia",                                      # local parser collapses to sparse DOCX rows; pipeline output preserves the richer science programme tables
         "Iceland",                                     # text-cache parse is noisy; pipeline output preserves institution lines
         "Korea",                                       # budget-summary PDFs are materially richer in pipeline output than text-cache parser
         "Israel",                                      # text-cache/docx path latches onto OCR-heavy table summaries; pipeline rows are materially cleaner
+        "New Zealand",                                 # country DOCX artifact is sparse/noisy; pipeline results preserve the real science vote/fund rows
         "Spain",                                       # pipeline output is materially richer than legacy text-cache parsing
         "Sweden", "Netherlands", "Switzerland",        # future: no text-cache expected
     }
@@ -2244,14 +2340,36 @@ def compile_country(
             results_df = pipeline_df
             if country == "Korea":
                 results_df = _apply_korea_audited_pipeline_repairs(results_df)
-            results_path = country_dir / f"{country.lower().replace(' ','_')}_docx_results.csv"
+            existing_country_df = _load_country_results_snapshot(country_results_csv, year_range)
+            chosen_label = "root results.csv"
+            if not existing_country_df.empty:
+                pipeline_score = (
+                    int(pipeline_df["year"].nunique()) if not pipeline_df.empty else 0,
+                    int(pipeline_df["year"].max()) if not pipeline_df.empty else -1,
+                    len(pipeline_df),
+                )
+                existing_score = (
+                    int(existing_country_df["year"].nunique()),
+                    int(existing_country_df["year"].max()),
+                    len(existing_country_df),
+                )
+                if pipeline_df.empty or existing_score > pipeline_score:
+                    logger.info(
+                        f"[{country}] Reusing richer country-local results snapshot "
+                        f"({country_results_csv.name}) instead of shared results.csv"
+                    )
+                    pipeline_df = existing_country_df
+                    chosen_label = country_results_csv.name
+
+            results_df = pipeline_df
+            logger.info(f"[{country}] Seeded compile from {chosen_label}")
             _write_year_slice(
-                results_path,
+                country_results_csv,
                 results_df,
                 year_range=year_range,
                 sort_cols=["country", "year", "source_file", "page_number", "line_description_en"],
             )
-            logger.info(f"Results → {results_path} ({len(results_df)} rows)")
+            logger.info(f"Results → {country_results_csv} ({len(results_df)} rows)")
 
             # ── Agency discovery on pipeline output ───────────────────────────
             # Convert pipeline output columns → raw_rows format so discover_agencies()
@@ -2289,6 +2407,7 @@ def compile_country(
                         pipeline_as_raw,
                         country=country,
                         config=config,
+                        output_dir=country_dir,
                         **_agency_discovery_kwargs(country),
                     )
                 except Exception as exc:
@@ -2433,6 +2552,7 @@ def compile_country(
             raw_df,
             country=country,
             config=config,
+            output_dir=country_dir,
             **_agency_discovery_kwargs(country),
         )
 

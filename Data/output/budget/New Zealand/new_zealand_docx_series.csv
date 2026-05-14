@@ -1,32 +1,119 @@
 country,year,canonical_name,category,amount_local,unit,currency,item_type,line_description_en,source_file,page_number,series_notes
-New Zealand,1996,Crown Research Institutes (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1997,Crown Research Institutes (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1998,Crown Research Institutes (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1999,Crown Research Institutes (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,2002,Crown Research Institutes (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1975,DSIR (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1976,DSIR (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1977,DSIR (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1978,DSIR (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1979,DSIR (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1980,DSIR (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1981,DSIR (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1982,DSIR (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1983,DSIR (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1984,DSIR (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1985,DSIR (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1986,DSIR (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1987,DSIR (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1989,DSIR (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1990,DSIR (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1990,"Foundation for Research, Science and Technology (New Zealand)",science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1996,"Foundation for Research, Science and Technology (New Zealand)",science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1997,"Foundation for Research, Science and Technology (New Zealand)",science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1998,"Foundation for Research, Science and Technology (New Zealand)",science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1999,"Foundation for Research, Science and Technology (New Zealand)",science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,2002,"Foundation for Research, Science and Technology (New Zealand)",science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1996,Marsden Fund (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1997,Marsden Fund (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1998,Marsden Fund (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,1999,Marsden Fund (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
-New Zealand,2002,Marsden Fund (New Zealand),science_agency,,,,,,,,gap: no matching rows in this year
+New Zealand,2015,Callaghan Innovation,science_agency,63710000.0,dollar,NZD,verified_override,Science and Innovation: Callaghan Innovation,2015_Appropriation Estimates Act.pdf,10,gap: no matching rows in this year; manual override from original New Zealand budget file
+New Zealand,2016,Callaghan Innovation,science_agency,59651000.0,dollar,NZD,program_total,Callaghan Innovation - Operations,2016_Appropriation Estimates Act.pdf,11,Tracks the comparable agency / operations appropriation. Excludes early strategic-investment rows.
+New Zealand,2017,Callaghan Innovation,science_agency,59651000.0,dollar,NZD,line_item,Callaghan Innovation - Operations,2017_Appropriation Estimates Act.pdf,9,Tracks the comparable agency / operations appropriation. Excludes early strategic-investment rows.
+New Zealand,2018,Callaghan Innovation,science_agency,59651000.0,dollar,NZD,program_total,Callaghan Innovation - Operations,2018_Appropriation Estimates Act.pdf,10,Tracks the comparable agency / operations appropriation. Excludes early strategic-investment rows.
+New Zealand,2019,Callaghan Innovation,science_agency,75151000.0,dollar,NZD,verified_override,"Research, Science and Innovation: Callaghan Innovation - Operations",2019_Appropriation Estimates Act.pdf,10,gap: no matching rows in this year; manual override from original New Zealand budget file
+New Zealand,2020,Callaghan Innovation,science_agency,80288000.0,dollar,NZD,verified_override,"Research, Science and Innovation: Callaghan Innovation - Operations",2020_Appropriation Estimates Act.pdf,9,gap: no matching rows in this year; manual override from original New Zealand budget file
+New Zealand,2021,Callaghan Innovation,science_agency,79823000.0,dollar,NZD,verified_override,"Research, Science and Innovation: Callaghan Innovation - Operations",2021_Appropriation Estimates Act.pdf,11,gap: no matching rows in this year; manual override from original New Zealand budget file
+New Zealand,2022,Callaghan Innovation,science_agency,81240000.0,dollar,NZD,line_item,Callaghan Innovation - Operations,2022_Appropriation Estimates Act.pdf,11,Tracks the comparable agency / operations appropriation. Excludes early strategic-investment rows.
+New Zealand,2023,Callaghan Innovation,science_agency,85868000.0,dollar,NZD,verified_override,"Research, Science and Innovation: Callaghan Innovation - Operations",2023_Appropriation Estimates Act.pdf,10,gap: no matching rows in this year; manual override from original New Zealand budget file
+New Zealand,2024,Callaghan Innovation,science_agency,85844000.0,dollar,NZD,program_total,Callaghan Innovation - Operations,2024_Appropriation Estimates Act.pdf,11,Tracks the comparable agency / operations appropriation. Excludes early strategic-investment rows.
+New Zealand,2025,Callaghan Innovation,science_agency,95479000.0,dollar,NZD,line_item,Callaghan Innovation - Operations,2025_Appropriation Estimates Act.pdf,11,Tracks the comparable agency / operations appropriation. Excludes early strategic-investment rows.
+New Zealand,2016,Catalyst Fund (New Zealand),rd_fund,12675000.0,dollar,NZD,program_total,Catalyst Fund,2016_Appropriation Estimates Act.pdf,9,
+New Zealand,2017,Catalyst Fund (New Zealand),rd_fund,13351000.0,dollar,NZD,program_total,Catalyst Fund,2017_Appropriation Estimates Act.pdf,9,
+New Zealand,2018,Catalyst Fund (New Zealand),rd_fund,8251000.0,dollar,NZD,program_total,Catalyst Fund,2018_Appropriation Estimates Act.pdf,10,
+New Zealand,2019,Catalyst Fund (New Zealand),rd_fund,17451000.0,dollar,NZD,program_total,Catalyst Fund,2019_Appropriation Estimates Act.pdf,10,
+New Zealand,2020,Catalyst Fund (New Zealand),rd_fund,34751000.0,dollar,NZD,program_total,"Research, Science and Innovation: Catalyst Fund",2020_Appropriation Estimates Act.pdf,9,
+New Zealand,2021,Catalyst Fund (New Zealand),rd_fund,36501000.0,dollar,NZD,program_total,Catalyst Fund,2021_Appropriation Estimates Act.pdf,11,
+New Zealand,2022,Catalyst Fund (New Zealand),rd_fund,45251000.0,dollar,NZD,program_total,Catalyst Fund,2022_Appropriation Estimates Act.pdf,10,
+New Zealand,2023,Catalyst Fund (New Zealand),rd_fund,35751000.0,dollar,NZD,program_total,Catalyst Fund,2023_Appropriation Estimates Act.pdf,10,
+New Zealand,2024,Catalyst Fund (New Zealand),rd_fund,52961000.0,dollar,NZD,program_total,Catalyst Fund,2024_Appropriation Estimates Act.pdf,10,
+New Zealand,2025,Catalyst Fund (New Zealand),rd_fund,41441000.0,dollar,NZD,line_item,Catalyst Fund,2025_Appropriation Estimates Act.pdf,10,
+New Zealand,2011,Crown Research Institutes (New Zealand),science_agency,215145000.0,dollar,NZD,program_total,Crown Research Institute Core Funding,2011_Appropriation Estimates Act.pdf,48,Explicit CRI core-funding rows only; avoids indirect vote components.
+New Zealand,2012,Crown Research Institutes (New Zealand),science_agency,220145000.0,dollar,NZD,program_total,Crown Research Institute Core Funding,2012_Appropriation Estimates Act.pdf,45,Explicit CRI core-funding rows only; avoids indirect vote components.
+New Zealand,2013,Crown Research Institutes (New Zealand),science_agency,201622000.0,dollar,NZD,program_total,Crown Research Institute Core Funding,2013_Appropriation Estimates Act.pdf,45,Explicit CRI core-funding rows only; avoids indirect vote components.
+New Zealand,2014,Crown Research Institutes (New Zealand),science_agency,201622000.0,dollar,NZD,line_item,Crown Research Institute Core Funding,2014_Appropriation Estimates Act.pdf,30,Explicit CRI core-funding rows only; avoids indirect vote components.
+New Zealand,2015,Crown Research Institutes (New Zealand),science_agency,201622000.0,dollar,NZD,program_total,Science and Innovation: Crown Research Institute Core Funding,2015_Appropriation Estimates Act.pdf,8,Explicit CRI core-funding rows only; avoids indirect vote components.
+New Zealand,1975,DSIR (New Zealand),science_agency,,,,,,,,Dedicated science agency in the pre-CRI era.
+New Zealand,1976,DSIR (New Zealand),science_agency,177645000.0,dollar,NZD,section_total,Total for Scientific and Industrial Research,1976 aa19761976n145203.pdf,4,Dedicated science agency in the pre-CRI era.
+New Zealand,1977,DSIR (New Zealand),science_agency,,,,,,,,Dedicated science agency in the pre-CRI era.
+New Zealand,1978,DSIR (New Zealand),science_agency,42785000.0,dollar,NZD,section_total,Total for Scientific and Industrial Research,1978 aa19781978n84203.pdf,4,Dedicated science agency in the pre-CRI era.
+New Zealand,1979,DSIR (New Zealand),science_agency,51090000.0,dollar,NZD,section_total,Total for Scientific and Industrial Research,1979 aa19791979n45203.pdf,4,Dedicated science agency in the pre-CRI era.
+New Zealand,1980,DSIR (New Zealand),science_agency,65460000.0,dollar,NZD,section_total,Total for Scientific and Industrial Research,1980 aa19801980n46203.pdf,263,Dedicated science agency in the pre-CRI era.
+New Zealand,1981,DSIR (New Zealand),science_agency,81305000.0,dollar,NZD,section_total,Total for Scientific and Industrial Research,1981 aa19811981n133203.pdf,4,Dedicated science agency in the pre-CRI era.
+New Zealand,1982,DSIR (New Zealand),science_agency,98030000.0,dollar,NZD,section_total,Total for Scientific and Industrial Research,1982 aa19821982n184203.pdf,4,Dedicated science agency in the pre-CRI era.
+New Zealand,1983,DSIR (New Zealand),science_agency,100915000.0,dollar,NZD,section_total,Total for Scientific and Industrial Research,1983 aa19831983n154203.pdf,305,Dedicated science agency in the pre-CRI era.
+New Zealand,1984,DSIR (New Zealand),science_agency,,,,,,,,Dedicated science agency in the pre-CRI era.
+New Zealand,1985,DSIR (New Zealand),science_agency,107215000.0,dollar,NZD,section_total,Total for Scientific and Industrial Research,1985 aa19851985n58203.pdf,4,Dedicated science agency in the pre-CRI era.
+New Zealand,1986,DSIR (New Zealand),science_agency,147781000.0,dollar,NZD,section_total,Total for Scientific and Industrial Research,1986 aa19861986n125203.pdf,215,Dedicated science agency in the pre-CRI era.
+New Zealand,1987,DSIR (New Zealand),science_agency,156776000.0,dollar,NZD,section_total,Total for Scientific and Industrial Research,1987 aa19871987n198203.pdf,216,Dedicated science agency in the pre-CRI era.
+New Zealand,1989,DSIR (New Zealand),science_agency,185558000.0,dollar,NZD,section_total,Total for Scientific and Industrial Research,1989 aa19881988n152203.pdf,197,Dedicated science agency in the pre-CRI era.
+New Zealand,1990,DSIR (New Zealand),science_agency,41877000.0,dollar,NZD,line_item,Scientific and Industrial Research,1990 aa19901990n38203.pdf,16,Dedicated science agency in the pre-CRI era.
+New Zealand,2018,Endeavour Fund (New Zealand),rd_fund,216363000.0,dollar,NZD,program_total,Endeavour Fund,2018_Appropriation Estimates Act.pdf,9,Explicit modern contestable science fund visible in estimates acts.
+New Zealand,2019,Endeavour Fund (New Zealand),rd_fund,223236000.0,dollar,NZD,program_total,Endeavour Fund,2019_Appropriation Estimates Act.pdf,9,Explicit modern contestable science fund visible in estimates acts.
+New Zealand,2020,Endeavour Fund (New Zealand),rd_fund,242712000.0,dollar,NZD,program_total,"Research, Science and Innovation: Endeavour Fund",2020_Appropriation Estimates Act.pdf,8,Explicit modern contestable science fund visible in estimates acts.
+New Zealand,2021,Endeavour Fund (New Zealand),rd_fund,227665000.0,dollar,NZD,program_total,Endeavour Fund,2021_Appropriation Estimates Act.pdf,10,Explicit modern contestable science fund visible in estimates acts.
+New Zealand,2022,Endeavour Fund (New Zealand),rd_fund,230257000.0,dollar,NZD,program_total,Endeavour Fund,2022_Appropriation Estimates Act.pdf,9,Explicit modern contestable science fund visible in estimates acts.
+New Zealand,2023,Endeavour Fund (New Zealand),rd_fund,243362000.0,dollar,NZD,program_total,Endeavour Fund,2023_Appropriation Estimates Act.pdf,9,Explicit modern contestable science fund visible in estimates acts.
+New Zealand,2024,Endeavour Fund (New Zealand),rd_fund,246857000.0,dollar,NZD,program_total,Endeavour Fund,2024_Appropriation Estimates Act.pdf,9,Explicit modern contestable science fund visible in estimates acts.
+New Zealand,2025,Endeavour Fund (New Zealand),rd_fund,245124000.0,dollar,NZD,program_total,Endeavour Fund,2025_Appropriation Estimates Act.pdf,8,Explicit modern contestable science fund visible in estimates acts.
+New Zealand,2016,Health Research Fund (New Zealand),rd_fund,87175000.0,dollar,NZD,program_total,Health Research Fund,2016_Appropriation Estimates Act.pdf,8,
+New Zealand,2017,Health Research Fund (New Zealand),rd_fund,92986000.0,dollar,NZD,program_total,Health Research Fund,2017_Appropriation Estimates Act.pdf,8,
+New Zealand,2018,Health Research Fund (New Zealand),rd_fund,100641000.0,dollar,NZD,program_total,Health Research Fund,2018_Appropriation Estimates Act.pdf,9,
+New Zealand,2019,Health Research Fund (New Zealand),rd_fund,117489000.0,dollar,NZD,program_total,Health Research Fund,2019_Appropriation Estimates Act.pdf,9,
+New Zealand,2020,Health Research Fund (New Zealand),rd_fund,117489000.0,dollar,NZD,program_total,"Research, Science and Innovation: Health Research Fund",2020_Appropriation Estimates Act.pdf,8,
+New Zealand,2021,Health Research Fund (New Zealand),rd_fund,117489000.0,dollar,NZD,program_total,Health Research Fund,2021_Appropriation Estimates Act.pdf,10,
+New Zealand,2022,Health Research Fund (New Zealand),rd_fund,127489000.0,dollar,NZD,program_total,Health Research Fund,2022_Appropriation Estimates Act.pdf,9,
+New Zealand,2023,Health Research Fund (New Zealand),rd_fund,117489000.0,dollar,NZD,program_total,Health Research Fund,2023_Appropriation Estimates Act.pdf,9,
+New Zealand,2024,Health Research Fund (New Zealand),rd_fund,124989000.0,dollar,NZD,program_total,Health Research Fund,2024_Appropriation Estimates Act.pdf,9,
+New Zealand,2025,Health Research Fund (New Zealand),rd_fund,107660000.0,dollar,NZD,line_item,Health Research Fund,2025_Appropriation Estimates Act.pdf,9,
+New Zealand,1998,Marsden Fund (New Zealand),science_agency,21839000.0,dollar,NZD,program_total,Marsden Fund,1998_Appropriation Estimates Act.pdf,24,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,1999,Marsden Fund (New Zealand),science_agency,22839000.0,dollar,NZD,program_total,Marsden Fund,1999_Appropriation Estimates Act.pdf,25,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2000,Marsden Fund (New Zealand),science_agency,25839000.0,dollar,NZD,program_total,Marsden Fund,2000_Appropriation Estimates Act.pdf,29,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2001,Marsden Fund (New Zealand),science_agency,27839000.0,dollar,NZD,program_total,Marsden Fund,2001_Appropriation Estimates Act.pdf,36,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2002,Marsden Fund (New Zealand),science_agency,30839000.0,dollar,NZD,program_total,Marsden Fund,2002_Appropriation Estimates Act.pdf,37,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2003,Marsden Fund (New Zealand),science_agency,32789000.0,dollar,NZD,program_total,Marsden Fund,2003_Appropriation Estimates Act.pdf,36,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2005,Marsden Fund (New Zealand),science_agency,33928000.0,dollar,NZD,program_total,Marsden Fund,2005_Appropriation Estimates Act.pdf,33,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2006,Marsden Fund (New Zealand),science_agency,33878000.0,dollar,NZD,program_total,Marsden Fund,2006_Appropriation Estimates Act.pdf,145,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2007,Marsden Fund (New Zealand),science_agency,35878000.0,dollar,NZD,program_total,Marsden Fund,2007_Appropriation Estimates Act.pdf,43,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2008,Marsden Fund (New Zealand),science_agency,37878000.0,dollar,NZD,line_item,Marsden Fund,2008_Appropriation Estimates Act.pdf,47,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2009,Marsden Fund (New Zealand),science_agency,46878000.0,dollar,NZD,line_item,Marsden Fund,2009_Appropriation Estimates Act.pdf,48,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2010,Marsden Fund (New Zealand),science_agency,46755000.0,dollar,NZD,line_item,Marsden Fund,2010_Appropriation Estimates Act.pdf,52,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2011,Marsden Fund (New Zealand),science_agency,46755000.0,dollar,NZD,line_item,Marsden Fund,2011_Appropriation Estimates Act.pdf,48,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2012,Marsden Fund (New Zealand),science_agency,46755000.0,dollar,NZD,program_total,Marsden Fund,2012_Appropriation Estimates Act.pdf,45,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2013,Marsden Fund (New Zealand),science_agency,51755000.0,dollar,NZD,line_item,Marsden Fund,2013_Appropriation Estimates Act.pdf,45,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2014,Marsden Fund (New Zealand),science_agency,52383000.0,dollar,NZD,line_item,Marsden Fund,2014_Appropriation Estimates Act.pdf,30,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2015,Marsden Fund (New Zealand),science_agency,53627000.0,dollar,NZD,program_total,Science and Innovation: Marsden Fund,2015_Appropriation Estimates Act.pdf,8,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2016,Marsden Fund (New Zealand),science_agency,57755000.0,dollar,NZD,program_total,Marsden Fund,2016_Appropriation Estimates Act.pdf,8,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2017,Marsden Fund (New Zealand),science_agency,63755000.0,dollar,NZD,program_total,Marsden Fund,2017_Appropriation Estimates Act.pdf,8,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2018,Marsden Fund (New Zealand),science_agency,70545000.0,dollar,NZD,program_total,Marsden Fund,2018_Appropriation Estimates Act.pdf,9,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2019,Marsden Fund (New Zealand),science_agency,78545000.0,dollar,NZD,program_total,Marsden Fund,2019_Appropriation Estimates Act.pdf,9,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2020,Marsden Fund (New Zealand),science_agency,78545000.0,dollar,NZD,program_total,"Research, Science and Innovation: Marsden Fund",2020_Appropriation Estimates Act.pdf,8,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2021,Marsden Fund (New Zealand),science_agency,78545000.0,dollar,NZD,program_total,Marsden Fund,2021_Appropriation Estimates Act.pdf,10,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2022,Marsden Fund (New Zealand),science_agency,78545000.0,dollar,NZD,program_total,Marsden Fund,2022_Appropriation Estimates Act.pdf,9,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2023,Marsden Fund (New Zealand),science_agency,78545000.0,dollar,NZD,program_total,Marsden Fund,2023_Appropriation Estimates Act.pdf,9,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2024,Marsden Fund (New Zealand),science_agency,78545000.0,dollar,NZD,program_total,Marsden Fund,2024_Appropriation Estimates Act.pdf,9,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2025,Marsden Fund (New Zealand),science_agency,78545000.0,dollar,NZD,line_item,Marsden Fund,2025_Appropriation Estimates Act.pdf,9,Starts only once the fund amount is cleanly recoverable from the source tables.
+New Zealand,2016,Partnered Research Fund (New Zealand),rd_fund,37162000.0,dollar,NZD,program_total,Partnered Research Fund,2016_Appropriation Estimates Act.pdf,8,
+New Zealand,2017,Partnered Research Fund (New Zealand),rd_fund,37161000.0,dollar,NZD,program_total,Partnered Research Fund,2017_Appropriation Estimates Act.pdf,8,
+New Zealand,2018,Partnered Research Fund (New Zealand),rd_fund,37771000.0,dollar,NZD,program_total,Partnered Research Fund,2018_Appropriation Estimates Act.pdf,9,
+New Zealand,2019,Partnered Research Fund (New Zealand),rd_fund,39473000.0,dollar,NZD,program_total,Partnered Research Fund,2019_Appropriation Estimates Act.pdf,9,
+New Zealand,2020,Partnered Research Fund (New Zealand),rd_fund,33390000.0,dollar,NZD,program_total,"Research, Science and Innovation: Partnered Research Fund",2020_Appropriation Estimates Act.pdf,8,
+New Zealand,2021,Partnered Research Fund (New Zealand),rd_fund,28656000.0,dollar,NZD,program_total,Partnered Research Fund,2021_Appropriation Estimates Act.pdf,10,
+New Zealand,2022,Partnered Research Fund (New Zealand),rd_fund,27888000.0,dollar,NZD,program_total,Partnered Research Fund,2022_Appropriation Estimates Act.pdf,9,
+New Zealand,2023,Partnered Research Fund (New Zealand),rd_fund,25596000.0,dollar,NZD,program_total,Partnered Research Fund,2023_Appropriation Estimates Act.pdf,9,
+New Zealand,2024,Partnered Research Fund (New Zealand),rd_fund,22328000.0,dollar,NZD,program_total,Partnered Research Fund,2024_Appropriation Estimates Act.pdf,9,
+New Zealand,2025,Partnered Research Fund (New Zealand),rd_fund,21178000.0,dollar,NZD,line_item,Partnered Research Fund,2025_Appropriation Estimates Act.pdf,9,
+New Zealand,2017,Regional Research Institutes,science_agency,23584000.0,dollar,NZD,program_total,Regional Research Institutes,2017_Appropriation Estimates Act.pdf,9,These institutes focus on regional research and development initiatives.
+New Zealand,2018,Regional Research Institutes,science_agency,20000000.0,dollar,NZD,program_total,Regional Research Institutes,2018_Appropriation Estimates Act.pdf,10,These institutes focus on regional research and development initiatives.
+New Zealand,2019,Regional Research Institutes,science_agency,22408000.0,dollar,NZD,program_total,Regional Research Institutes,2019_Appropriation Estimates Act.pdf,10,These institutes focus on regional research and development initiatives.
+New Zealand,2020,Regional Research Institutes,science_agency,,,,,,,,gap: no matching rows in this year
+New Zealand,2021,Regional Research Institutes,science_agency,8522000.0,dollar,NZD,line_item,Regional Research Institutes,2021_Appropriation Estimates Act.pdf,11,These institutes focus on regional research and development initiatives.
+New Zealand,2022,Regional Research Institutes,science_agency,7801000.0,dollar,NZD,line_item,Regional Research Institutes,2022_Appropriation Estimates Act.pdf,10,These institutes focus on regional research and development initiatives.
+New Zealand,1990,"Research, Science and Technology Vote (New Zealand)",rd_ministry,,,,,,,,Documented vote-level total for the FRST / RST transition era.
+New Zealand,1995,"Research, Science and Technology Vote (New Zealand)",rd_ministry,,,,,,,,Documented vote-level total for the FRST / RST transition era.
+New Zealand,1996,"Research, Science and Technology Vote (New Zealand)",rd_ministry,267699000.0,dollar,NZD,section_total,"Total for Research, Science and Technology",1996_Appropriation Estimates Act.pdf,23,Documented vote-level total for the FRST / RST transition era.
+New Zealand,1997,"Research, Science and Technology Vote (New Zealand)",rd_ministry,287465000.0,dollar,NZD,section_total,"Total for Research, Science and Technology",1997_Appropriation Estimates Act.pdf,24,Documented vote-level total for the FRST / RST transition era.
+New Zealand,1998,"Research, Science and Technology Vote (New Zealand)",rd_ministry,317335000.0,dollar,NZD,section_total,Total for Vote Science and Innovation,1998_Appropriation Estimates Act.pdf,24,Documented vote-level total for the FRST / RST transition era.
+New Zealand,1999,"Research, Science and Technology Vote (New Zealand)",rd_ministry,326985000.0,dollar,NZD,section_total,Total for Vote Science and Innovation,1999_Appropriation Estimates Act.pdf,25,Documented vote-level total for the FRST / RST transition era.
+New Zealand,2001,"Research, Science and Technology Vote (New Zealand)",rd_ministry,,,,,,,,Documented vote-level total for the FRST / RST transition era.
+New Zealand,2010,"Research, Science and Technology Vote (New Zealand)",rd_ministry,279000000.0,dollar,NZD,section_total,"Total for Research, Science and Technology",2010_Appropriation Estimates Act.pdf,52,Documented vote-level total for the FRST / RST transition era.
+New Zealand,2017,Strategic Science Investment Fund (New Zealand),rd_fund,260985000.0,dollar,NZD,line_item,Strategic Science Investment Fund,2017_Appropriation Estimates Act.pdf,9,Explicit SSIF appropriations in the modern MBIE-era science vote.
+New Zealand,2018,Strategic Science Investment Fund (New Zealand),rd_fund,271263000.0,dollar,NZD,program_total,Strategic Science Investment Fund,2018_Appropriation Estimates Act.pdf,10,Explicit SSIF appropriations in the modern MBIE-era science vote.
+New Zealand,2020,Strategic Science Investment Fund (New Zealand),rd_fund,323681000.0,dollar,NZD,program_total,"Research, Science and Innovation: Strategic Science Investment Fund",2020_Appropriation Estimates Act.pdf,10,Explicit SSIF appropriations in the modern MBIE-era science vote.
+New Zealand,2021,Strategic Science Investment Fund (New Zealand),rd_fund,340545000.0,dollar,NZD,line_item,Strategic Science Investment Fund,2021_Appropriation Estimates Act.pdf,11,Explicit SSIF appropriations in the modern MBIE-era science vote.
+New Zealand,2022,Strategic Science Investment Fund (New Zealand),rd_fund,362588000.0,dollar,NZD,line_item,Strategic Science Investment Fund,2022_Appropriation Estimates Act.pdf,11,Explicit SSIF appropriations in the modern MBIE-era science vote.
+New Zealand,2023,Strategic Science Investment Fund (New Zealand),rd_fund,354062000.0,dollar,NZD,line_item,Strategic Science Investment Fund,2023_Appropriation Estimates Act.pdf,12,Explicit SSIF appropriations in the modern MBIE-era science vote.
+New Zealand,2024,Strategic Science Investment Fund (New Zealand),rd_fund,358566000.0,dollar,NZD,program_total,Strategic Science Investment Fund,2024_Appropriation Estimates Act.pdf,11,Explicit SSIF appropriations in the modern MBIE-era science vote.
+New Zealand,2025,Strategic Science Investment Fund (New Zealand),rd_fund,358065000.0,dollar,NZD,program_total,Strategic Science Investment Fund,2025_Appropriation Estimates Act.pdf,11,Explicit SSIF appropriations in the modern MBIE-era science vote.

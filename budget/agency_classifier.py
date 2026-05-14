@@ -181,10 +181,7 @@ def classify_agencies(
     -------
     Updated registry DataFrame.
     """
-    from budget.llm_client import BudgetLLMClient
-
     registry = load_registry(registry_file)
-    client = BudgetLLMClient.from_config(config)
 
     # Collect unique (country, agency_name) pairs from section_name_en
     df = results_df.copy()
@@ -238,6 +235,9 @@ def classify_agencies(
         if len(new_agencies) > 20:
             print(f"  ... and {len(new_agencies)-20} more")
         return registry
+
+    from budget.llm_client import BudgetLLMClient
+    client = BudgetLLMClient.from_config(config)
 
     if new_agencies:
         logger.info(

@@ -1,0 +1,115 @@
+country,year,canonical_name,category,gap_type,gap_subtype,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,series_currency,prev_amount,next_amount
+Slovenia,2004,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,3198652.0
+Slovenia,2005,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,3198652.0
+Slovenia,2006,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,3198652.0
+Slovenia,2007,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,3198652.0
+Slovenia,2008,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,3198652.0
+Slovenia,2009,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,3198652.0
+Slovenia,2010,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,3198652.0
+Slovenia,2011,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,ok,,,,,,none,3198652.0,EUR,,3198652.0
+Slovenia,2012,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,ok,,,,,,none,3198652.0,EUR,3198652.0,2700000.0
+Slovenia,2013,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3198652.0,2700000.0
+Slovenia,2015,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,ok,,,,,,none,2700000.0,EUR,3198652.0,2959267.0
+Slovenia,2016,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,ok,,,,,,none,2959267.0,EUR,2700000.0,2970469.0
+Slovenia,2017,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,ok,,,,,,none,2970469.0,EUR,2959267.0,3595469.0
+Slovenia,2018,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,ok,,,,,,none,3595469.0,EUR,2970469.0,3648196.0
+Slovenia,2019,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,ok,,,,,,none,3648196.0,EUR,3595469.0,3910054.0
+Slovenia,2020,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,ok,,,,,,none,3910054.0,EUR,3648196.0,3915427.0
+Slovenia,2021,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,ok,,,,,,none,3915427.0,EUR,3910054.0,4500000.0
+Slovenia,2022,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,ok,,,,,,none,4500000.0,EUR,3915427.0,5629258.0
+Slovenia,2023,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,ok,,,,,,none,5629258.0,EUR,4500000.0,6935000.0
+Slovenia,2024,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,ok,,,,,,none,6935000.0,EUR,5629258.0,9430012.0
+Slovenia,2025,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,science_agency,ok,,,,,,none,9430012.0,EUR,6935000.0,
+Slovenia,1995,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,24274766000.0
+Slovenia,1996,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,24274766000.0
+Slovenia,1997,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,24274766000.0
+Slovenia,1998,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,24274766000.0
+Slovenia,1999,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,24274766000.0
+Slovenia,2000,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,24274766000.0
+Slovenia,2001,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,24274766000.0,SIT,,26788695000.0
+Slovenia,2002,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,26788695000.0,SIT,24274766000.0,28821059000.0
+Slovenia,2003,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,28821059000.0,SIT,26788695000.0,31399927000.0
+Slovenia,2004,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,31399927000.0,SIT,28821059000.0,32080394000.0
+Slovenia,2005,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,32080394000.0,SIT,31399927000.0,34480096000.0
+Slovenia,2006,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,34480096000.0,SIT,32080394000.0,143883000.0
+Slovenia,2007,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,143883000.0,EUR,34480096000.0,37254650.0
+Slovenia,2008,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,37254650.0,EUR,143883000.0,173531954.0
+Slovenia,2009,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,173531954.0,EUR,37254650.0,191826216.0
+Slovenia,2010,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,191826216.0,EUR,173531954.0,226692429.0
+Slovenia,2011,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,226692429.0,EUR,191826216.0,203661079.0
+Slovenia,2012,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,203661079.0,EUR,226692429.0,167976945.0
+Slovenia,2013,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,167976945.0,EUR,203661079.0,135558193.0
+Slovenia,2015,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,135558193.0,EUR,167976945.0,188104677.0
+Slovenia,2016,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,188104677.0,EUR,135558193.0,215666722.0
+Slovenia,2017,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,215666722.0,EUR,188104677.0,242949117.0
+Slovenia,2018,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,242949117.0,EUR,215666722.0,249002396.0
+Slovenia,2019,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,249002396.0,EUR,242949117.0,306498850.0
+Slovenia,2020,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,306498850.0,EUR,249002396.0,327188033.0
+Slovenia,2021,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,327188033.0,EUR,306498850.0,364075611.0
+Slovenia,2022,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,364075611.0,EUR,327188033.0,389895145.0
+Slovenia,2023,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,389895145.0,EUR,364075611.0,407736802.0
+Slovenia,2024,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,407736802.0,EUR,389895145.0,465702894.0
+Slovenia,2025,Programme 0502 — Znanstveno raziskovalna dejavnost,direct_rd,ok,,,,,,none,465702894.0,EUR,407736802.0,
+Slovenia,1992,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,77763150.0,SIT,,195214000.0
+Slovenia,1993,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,77763150.0,195214000.0
+Slovenia,1994,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,195214000.0,SIT,77763150.0,492970000.0
+Slovenia,1995,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,195214000.0,492970000.0
+Slovenia,1996,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,492970000.0,SIT,195214000.0,459528000.0
+Slovenia,1997,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,459528000.0,SIT,492970000.0,625146000.0
+Slovenia,1998,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,625146000.0,SIT,459528000.0,663021000.0
+Slovenia,1999,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,663021000.0,SIT,625146000.0,687310000.0
+Slovenia,2000,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,687310000.0,SIT,663021000.0,665229000.0
+Slovenia,2001,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,665229000.0,SIT,687310000.0,770612000.0
+Slovenia,2002,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,770612000.0,SIT,665229000.0,767787000.0
+Slovenia,2003,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,767787000.0,SIT,770612000.0,929948000.0
+Slovenia,2004,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,767787000.0,929948000.0
+Slovenia,2005,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,929948000.0,SIT,767787000.0,3964000.0
+Slovenia,2006,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,929948000.0,3964000.0
+Slovenia,2007,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,3964000.0,EUR,929948000.0,4201406.0
+Slovenia,2008,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3964000.0,4201406.0
+Slovenia,2009,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3964000.0,4201406.0
+Slovenia,2010,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,4201406.0,EUR,3964000.0,3300044.0
+Slovenia,2011,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,4201406.0,3300044.0
+Slovenia,2012,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,4201406.0,3300044.0
+Slovenia,2013,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,4201406.0,3300044.0
+Slovenia,2015,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,3300044.0,EUR,4201406.0,2989899.0
+Slovenia,2016,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3300044.0,2989899.0
+Slovenia,2017,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3300044.0,2989899.0
+Slovenia,2018,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,2989899.0,EUR,3300044.0,3080248.0
+Slovenia,2019,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,3080248.0,EUR,2989899.0,3678427.0
+Slovenia,2020,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,3678427.0,EUR,3080248.0,3774627.0
+Slovenia,2021,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,3774627.0,EUR,3678427.0,3793627.0
+Slovenia,2022,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,3793627.0,EUR,3774627.0,4120000.0
+Slovenia,2023,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,4120000.0,EUR,3793627.0,3746598.0
+Slovenia,2024,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,3746598.0,EUR,4120000.0,4569580.0
+Slovenia,2025,SAZU — Slovenska akademija znanosti in umetnosti,science_agency,ok,,,,,,none,4569580.0,EUR,3746598.0,
+Slovenia,1995,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,95000000.0
+Slovenia,1996,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,95000000.0
+Slovenia,1997,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,95000000.0
+Slovenia,1998,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,95000000.0
+Slovenia,1999,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,95000000.0
+Slovenia,2000,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,95000000.0
+Slovenia,2001,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,95000000.0
+Slovenia,2002,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,ok,,,,,,none,95000000.0,SIT,,170000.0
+Slovenia,2003,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,95000000.0,170000.0
+Slovenia,2004,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,95000000.0,170000.0
+Slovenia,2005,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,95000000.0,170000.0
+Slovenia,2006,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,95000000.0,170000.0
+Slovenia,2007,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,95000000.0,170000.0
+Slovenia,2008,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,95000000.0,170000.0
+Slovenia,2009,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,95000000.0,170000.0
+Slovenia,2010,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,95000000.0,170000.0
+Slovenia,2011,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,95000000.0,170000.0
+Slovenia,2012,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,95000000.0,170000.0
+Slovenia,2013,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,95000000.0,170000.0
+Slovenia,2015,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,95000000.0,170000.0
+Slovenia,2016,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,95000000.0,170000.0
+Slovenia,2017,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,95000000.0,170000.0
+Slovenia,2018,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,95000000.0,170000.0
+Slovenia,2019,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,ok,,,,,,none,170000.0,EUR,95000000.0,210000.0
+Slovenia,2020,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,ok,,,,,,none,210000.0,EUR,170000.0,210000.0
+Slovenia,2021,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,ok,,,,,,none,210000.0,EUR,210000.0,310000.0
+Slovenia,2022,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,ok,,,,,,none,310000.0,EUR,210000.0,350000.0
+Slovenia,2023,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,ok,,,,,,none,350000.0,EUR,310000.0,
+Slovenia,2024,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,350000.0,
+Slovenia,2025,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,350000.0,

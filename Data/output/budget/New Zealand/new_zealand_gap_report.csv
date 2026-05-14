@@ -1,32 +1,119 @@
 country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
-New Zealand,1975,DSIR (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1976,DSIR (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1977,DSIR (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1978,DSIR (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1979,DSIR (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1980,DSIR (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1981,DSIR (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1982,DSIR (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1983,DSIR (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1984,DSIR (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1985,DSIR (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1986,DSIR (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1987,DSIR (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1989,DSIR (New Zealand),science_agency,missing,Year has 2 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1990,DSIR (New Zealand),science_agency,missing,Year has 2 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1990,"Foundation for Research, Science and Technology (New Zealand)",science_agency,missing,Year has 2 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1996,"Foundation for Research, Science and Technology (New Zealand)",science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1997,"Foundation for Research, Science and Technology (New Zealand)",science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1998,"Foundation for Research, Science and Technology (New Zealand)",science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1999,"Foundation for Research, Science and Technology (New Zealand)",science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,2002,"Foundation for Research, Science and Technology (New Zealand)",science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1996,Crown Research Institutes (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1997,Crown Research Institutes (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1998,Crown Research Institutes (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1999,Crown Research Institutes (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,2002,Crown Research Institutes (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1996,Marsden Fund (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1997,Marsden Fund (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1998,Marsden Fund (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,1999,Marsden Fund (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-New Zealand,2002,Marsden Fund (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
+New Zealand,1975,DSIR (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,177645000.0
+New Zealand,1976,DSIR (New Zealand),science_agency,ok,,,,,none,177645000.0,,42785000.0
+New Zealand,1977,DSIR (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,177645000.0,42785000.0
+New Zealand,1978,DSIR (New Zealand),science_agency,ok,,,,,none,42785000.0,177645000.0,51090000.0
+New Zealand,1979,DSIR (New Zealand),science_agency,ok,,,,,none,51090000.0,42785000.0,65460000.0
+New Zealand,1980,DSIR (New Zealand),science_agency,ok,,,,,none,65460000.0,51090000.0,81305000.0
+New Zealand,1981,DSIR (New Zealand),science_agency,ok,,,,,none,81305000.0,65460000.0,98030000.0
+New Zealand,1982,DSIR (New Zealand),science_agency,ok,,,,,none,98030000.0,81305000.0,100915000.0
+New Zealand,1983,DSIR (New Zealand),science_agency,ok,,,,,none,100915000.0,98030000.0,107215000.0
+New Zealand,1984,DSIR (New Zealand),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,100915000.0,107215000.0
+New Zealand,1985,DSIR (New Zealand),science_agency,ok,,,,,none,107215000.0,100915000.0,147781000.0
+New Zealand,1986,DSIR (New Zealand),science_agency,ok,,,,,none,147781000.0,107215000.0,156776000.0
+New Zealand,1987,DSIR (New Zealand),science_agency,ok,,,,,none,156776000.0,147781000.0,185558000.0
+New Zealand,1989,DSIR (New Zealand),science_agency,ok,,,,,none,185558000.0,156776000.0,41877000.0
+New Zealand,1990,DSIR (New Zealand),science_agency,ok,,,,,none,41877000.0,185558000.0,
+New Zealand,1990,"Research, Science and Technology Vote (New Zealand)",rd_ministry,missing,Year has 2 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,267699000.0
+New Zealand,1995,"Research, Science and Technology Vote (New Zealand)",rd_ministry,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,267699000.0
+New Zealand,1996,"Research, Science and Technology Vote (New Zealand)",rd_ministry,ok,,,,,none,267699000.0,,287465000.0
+New Zealand,1997,"Research, Science and Technology Vote (New Zealand)",rd_ministry,ok,,,,,none,287465000.0,267699000.0,317335000.0
+New Zealand,1998,"Research, Science and Technology Vote (New Zealand)",rd_ministry,ok,,,,,none,317335000.0,287465000.0,326985000.0
+New Zealand,1999,"Research, Science and Technology Vote (New Zealand)",rd_ministry,ok,,,,,none,326985000.0,317335000.0,279000000.0
+New Zealand,2001,"Research, Science and Technology Vote (New Zealand)",rd_ministry,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,326985000.0,279000000.0
+New Zealand,2010,"Research, Science and Technology Vote (New Zealand)",rd_ministry,ok,,,,,none,279000000.0,326985000.0,
+New Zealand,2011,Crown Research Institutes (New Zealand),science_agency,ok,,,,,none,215145000.0,,220145000.0
+New Zealand,2012,Crown Research Institutes (New Zealand),science_agency,ok,,,,,none,220145000.0,215145000.0,201622000.0
+New Zealand,2013,Crown Research Institutes (New Zealand),science_agency,ok,,,,,none,201622000.0,220145000.0,201622000.0
+New Zealand,2014,Crown Research Institutes (New Zealand),science_agency,ok,,,,,none,201622000.0,201622000.0,201622000.0
+New Zealand,2015,Crown Research Institutes (New Zealand),science_agency,ok,,,,,none,201622000.0,201622000.0,
+New Zealand,2017,Strategic Science Investment Fund (New Zealand),rd_fund,ok,,,,,none,260985000.0,,271263000.0
+New Zealand,2018,Strategic Science Investment Fund (New Zealand),rd_fund,ok,,,,,none,271263000.0,260985000.0,323681000.0
+New Zealand,2020,Strategic Science Investment Fund (New Zealand),rd_fund,ok,,,,,none,323681000.0,271263000.0,340545000.0
+New Zealand,2021,Strategic Science Investment Fund (New Zealand),rd_fund,ok,,,,,none,340545000.0,323681000.0,362588000.0
+New Zealand,2022,Strategic Science Investment Fund (New Zealand),rd_fund,ok,,,,,none,362588000.0,340545000.0,354062000.0
+New Zealand,2023,Strategic Science Investment Fund (New Zealand),rd_fund,ok,,,,,none,354062000.0,362588000.0,358566000.0
+New Zealand,2024,Strategic Science Investment Fund (New Zealand),rd_fund,ok,,,,,none,358566000.0,354062000.0,358065000.0
+New Zealand,2025,Strategic Science Investment Fund (New Zealand),rd_fund,ok,,,,,none,358065000.0,358566000.0,
+New Zealand,1998,Marsden Fund (New Zealand),science_agency,ok,,,,,none,21839000.0,,22839000.0
+New Zealand,1999,Marsden Fund (New Zealand),science_agency,ok,,,,,none,22839000.0,21839000.0,25839000.0
+New Zealand,2000,Marsden Fund (New Zealand),science_agency,ok,,,,,none,25839000.0,22839000.0,27839000.0
+New Zealand,2001,Marsden Fund (New Zealand),science_agency,ok,,,,,none,27839000.0,25839000.0,30839000.0
+New Zealand,2002,Marsden Fund (New Zealand),science_agency,ok,,,,,none,30839000.0,27839000.0,32789000.0
+New Zealand,2003,Marsden Fund (New Zealand),science_agency,ok,,,,,none,32789000.0,30839000.0,33928000.0
+New Zealand,2005,Marsden Fund (New Zealand),science_agency,ok,,,,,none,33928000.0,32789000.0,33878000.0
+New Zealand,2006,Marsden Fund (New Zealand),science_agency,ok,,,,,none,33878000.0,33928000.0,35878000.0
+New Zealand,2007,Marsden Fund (New Zealand),science_agency,ok,,,,,none,35878000.0,33878000.0,37878000.0
+New Zealand,2008,Marsden Fund (New Zealand),science_agency,ok,,,,,none,37878000.0,35878000.0,46878000.0
+New Zealand,2009,Marsden Fund (New Zealand),science_agency,ok,,,,,none,46878000.0,37878000.0,46755000.0
+New Zealand,2010,Marsden Fund (New Zealand),science_agency,ok,,,,,none,46755000.0,46878000.0,46755000.0
+New Zealand,2011,Marsden Fund (New Zealand),science_agency,ok,,,,,none,46755000.0,46755000.0,46755000.0
+New Zealand,2012,Marsden Fund (New Zealand),science_agency,ok,,,,,none,46755000.0,46755000.0,51755000.0
+New Zealand,2013,Marsden Fund (New Zealand),science_agency,ok,,,,,none,51755000.0,46755000.0,52383000.0
+New Zealand,2014,Marsden Fund (New Zealand),science_agency,ok,,,,,none,52383000.0,51755000.0,53627000.0
+New Zealand,2015,Marsden Fund (New Zealand),science_agency,ok,,,,,none,53627000.0,52383000.0,57755000.0
+New Zealand,2016,Marsden Fund (New Zealand),science_agency,ok,,,,,none,57755000.0,53627000.0,63755000.0
+New Zealand,2017,Marsden Fund (New Zealand),science_agency,ok,,,,,none,63755000.0,57755000.0,70545000.0
+New Zealand,2018,Marsden Fund (New Zealand),science_agency,ok,,,,,none,70545000.0,63755000.0,78545000.0
+New Zealand,2019,Marsden Fund (New Zealand),science_agency,ok,,,,,none,78545000.0,70545000.0,78545000.0
+New Zealand,2020,Marsden Fund (New Zealand),science_agency,ok,,,,,none,78545000.0,78545000.0,78545000.0
+New Zealand,2021,Marsden Fund (New Zealand),science_agency,ok,,,,,none,78545000.0,78545000.0,78545000.0
+New Zealand,2022,Marsden Fund (New Zealand),science_agency,ok,,,,,none,78545000.0,78545000.0,78545000.0
+New Zealand,2023,Marsden Fund (New Zealand),science_agency,ok,,,,,none,78545000.0,78545000.0,78545000.0
+New Zealand,2024,Marsden Fund (New Zealand),science_agency,ok,,,,,none,78545000.0,78545000.0,78545000.0
+New Zealand,2025,Marsden Fund (New Zealand),science_agency,ok,,,,,none,78545000.0,78545000.0,
+New Zealand,2015,Callaghan Innovation,science_agency,ok,,,,,none,63710000.0,,59651000.0
+New Zealand,2016,Callaghan Innovation,science_agency,ok,,,,,none,59651000.0,63710000.0,59651000.0
+New Zealand,2017,Callaghan Innovation,science_agency,ok,,,,,none,59651000.0,59651000.0,59651000.0
+New Zealand,2018,Callaghan Innovation,science_agency,ok,,,,,none,59651000.0,59651000.0,75151000.0
+New Zealand,2019,Callaghan Innovation,science_agency,ok,,,,,none,75151000.0,59651000.0,80288000.0
+New Zealand,2020,Callaghan Innovation,science_agency,ok,,,,,none,80288000.0,75151000.0,79823000.0
+New Zealand,2021,Callaghan Innovation,science_agency,ok,,,,,none,79823000.0,80288000.0,81240000.0
+New Zealand,2022,Callaghan Innovation,science_agency,ok,,,,,none,81240000.0,79823000.0,85868000.0
+New Zealand,2023,Callaghan Innovation,science_agency,ok,,,,,none,85868000.0,81240000.0,85844000.0
+New Zealand,2024,Callaghan Innovation,science_agency,ok,,,,,none,85844000.0,85868000.0,95479000.0
+New Zealand,2025,Callaghan Innovation,science_agency,ok,,,,,none,95479000.0,85844000.0,
+New Zealand,2018,Endeavour Fund (New Zealand),rd_fund,ok,,,,,none,216363000.0,,223236000.0
+New Zealand,2019,Endeavour Fund (New Zealand),rd_fund,ok,,,,,none,223236000.0,216363000.0,242712000.0
+New Zealand,2020,Endeavour Fund (New Zealand),rd_fund,ok,,,,,none,242712000.0,223236000.0,227665000.0
+New Zealand,2021,Endeavour Fund (New Zealand),rd_fund,ok,,,,,none,227665000.0,242712000.0,230257000.0
+New Zealand,2022,Endeavour Fund (New Zealand),rd_fund,ok,,,,,none,230257000.0,227665000.0,243362000.0
+New Zealand,2023,Endeavour Fund (New Zealand),rd_fund,ok,,,,,none,243362000.0,230257000.0,246857000.0
+New Zealand,2024,Endeavour Fund (New Zealand),rd_fund,ok,,,,,none,246857000.0,243362000.0,245124000.0
+New Zealand,2025,Endeavour Fund (New Zealand),rd_fund,ok,,,,,none,245124000.0,246857000.0,
+New Zealand,2016,Health Research Fund (New Zealand),rd_fund,ok,,,,,none,87175000.0,,92986000.0
+New Zealand,2017,Health Research Fund (New Zealand),rd_fund,ok,,,,,none,92986000.0,87175000.0,100641000.0
+New Zealand,2018,Health Research Fund (New Zealand),rd_fund,ok,,,,,none,100641000.0,92986000.0,117489000.0
+New Zealand,2019,Health Research Fund (New Zealand),rd_fund,ok,,,,,none,117489000.0,100641000.0,117489000.0
+New Zealand,2020,Health Research Fund (New Zealand),rd_fund,ok,,,,,none,117489000.0,117489000.0,117489000.0
+New Zealand,2021,Health Research Fund (New Zealand),rd_fund,ok,,,,,none,117489000.0,117489000.0,127489000.0
+New Zealand,2022,Health Research Fund (New Zealand),rd_fund,ok,,,,,none,127489000.0,117489000.0,117489000.0
+New Zealand,2023,Health Research Fund (New Zealand),rd_fund,ok,,,,,none,117489000.0,127489000.0,124989000.0
+New Zealand,2024,Health Research Fund (New Zealand),rd_fund,ok,,,,,none,124989000.0,117489000.0,107660000.0
+New Zealand,2025,Health Research Fund (New Zealand),rd_fund,ok,,,,,none,107660000.0,124989000.0,
+New Zealand,2016,Partnered Research Fund (New Zealand),rd_fund,ok,,,,,none,37162000.0,,37161000.0
+New Zealand,2017,Partnered Research Fund (New Zealand),rd_fund,ok,,,,,none,37161000.0,37162000.0,37771000.0
+New Zealand,2018,Partnered Research Fund (New Zealand),rd_fund,ok,,,,,none,37771000.0,37161000.0,39473000.0
+New Zealand,2019,Partnered Research Fund (New Zealand),rd_fund,ok,,,,,none,39473000.0,37771000.0,33390000.0
+New Zealand,2020,Partnered Research Fund (New Zealand),rd_fund,ok,,,,,none,33390000.0,39473000.0,28656000.0
+New Zealand,2021,Partnered Research Fund (New Zealand),rd_fund,ok,,,,,none,28656000.0,33390000.0,27888000.0
+New Zealand,2022,Partnered Research Fund (New Zealand),rd_fund,ok,,,,,none,27888000.0,28656000.0,25596000.0
+New Zealand,2023,Partnered Research Fund (New Zealand),rd_fund,ok,,,,,none,25596000.0,27888000.0,22328000.0
+New Zealand,2024,Partnered Research Fund (New Zealand),rd_fund,ok,,,,,none,22328000.0,25596000.0,21178000.0
+New Zealand,2025,Partnered Research Fund (New Zealand),rd_fund,ok,,,,,none,21178000.0,22328000.0,
+New Zealand,2016,Catalyst Fund (New Zealand),rd_fund,ok,,,,,none,12675000.0,,13351000.0
+New Zealand,2017,Catalyst Fund (New Zealand),rd_fund,ok,,,,,none,13351000.0,12675000.0,8251000.0
+New Zealand,2018,Catalyst Fund (New Zealand),rd_fund,ok,,,,,none,8251000.0,13351000.0,17451000.0
+New Zealand,2019,Catalyst Fund (New Zealand),rd_fund,ok,,,,,none,17451000.0,8251000.0,34751000.0
+New Zealand,2020,Catalyst Fund (New Zealand),rd_fund,ok,,,,,none,34751000.0,17451000.0,36501000.0
+New Zealand,2021,Catalyst Fund (New Zealand),rd_fund,ok,,,,,none,36501000.0,34751000.0,45251000.0
+New Zealand,2022,Catalyst Fund (New Zealand),rd_fund,ok,,,,,none,45251000.0,36501000.0,35751000.0
+New Zealand,2023,Catalyst Fund (New Zealand),rd_fund,ok,,,,,none,35751000.0,45251000.0,52961000.0
+New Zealand,2024,Catalyst Fund (New Zealand),rd_fund,ok,,,,,none,52961000.0,35751000.0,41441000.0
+New Zealand,2025,Catalyst Fund (New Zealand),rd_fund,ok,,,,,none,41441000.0,52961000.0,
+New Zealand,2017,Regional Research Institutes,science_agency,ok,,,,,none,23584000.0,,20000000.0
+New Zealand,2018,Regional Research Institutes,science_agency,ok,,,,,none,20000000.0,23584000.0,22408000.0
+New Zealand,2019,Regional Research Institutes,science_agency,ok,,,,,none,22408000.0,20000000.0,8522000.0
+New Zealand,2020,Regional Research Institutes,science_agency,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,22408000.0,8522000.0
+New Zealand,2021,Regional Research Institutes,science_agency,ok,,,,,none,8522000.0,22408000.0,7801000.0
+New Zealand,2022,Regional Research Institutes,science_agency,ok,,,,,none,7801000.0,8522000.0,

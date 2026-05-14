@@ -1,0 +1,2 @@
+country,year,canonical_name,category,amount_local,currency,unit,item_type,source_kind,source_file,page_number,line_description_en,series_notes,traceability_status
+Slovakia,2025,Ministerstvo školstva SR (kapitola 20),higher_education,5358963927.0,EUR,euro,verified_override,original_pdf,2025 20250101_5681740-2.pdf,1.0,"Verified against original 2025 budget table: the ministry chapter total is 5,358,963,927 EUR; prior extraction had incorrectly picked 672,888 from a secondary column",gap: no matching rows in this year; locked manual curation,verified_against_original_file
