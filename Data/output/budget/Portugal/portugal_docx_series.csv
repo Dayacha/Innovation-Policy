@@ -6,11 +6,11 @@ Portugal,2012,ANI — Agência Nacional de Inovação (Portugal),rd_agency,,,,,,
 Portugal,2013,ANI — Agência Nacional de Inovação (Portugal),rd_agency,,,,,,,,gap: no matching rows in this year
 Portugal,2014,ANI — Agência Nacional de Inovação (Portugal),rd_agency,,,,,,,,"dropped after Portugal source audit: original page is a legal text, plurianual project table, or non-institutional support line rather than a clean agency appropriation"
 Portugal,2015,ANI — Agência Nacional de Inovação (Portugal),rd_agency,,,,,,,,gap: no matching rows in this year
-Portugal,2016,ANI — Agência Nacional de Inovação (Portugal),rd_agency,,,,,,,,gap: no matching rows in this year
-Portugal,2017,ANI — Agência Nacional de Inovação (Portugal),rd_agency,,,,,,,,gap: no matching rows in this year
-Portugal,2018,ANI — Agência Nacional de Inovação (Portugal),rd_agency,,,,,,,,gap: no matching rows in this year
-Portugal,2019,ANI — Agência Nacional de Inovação (Portugal),rd_agency,,,,,,,,gap: no matching rows in this year
-Portugal,2020,ANI — Agência Nacional de Inovação (Portugal),rd_agency,,,,,,,,gap: no matching rows in this year
+Portugal,2016,ANI — Agência Nacional de Inovação (Portugal),rd_agency,9399812.0,euro,EUR,verified_override,"AGENCIA NACIONAL DE INOVAÇAO, SA",Lei orcamento para 2016.pdf,108,manual override from original Portugal budget file (MAPA VII / 2016 deterministic page-aligned parser)
+Portugal,2017,ANI — Agência Nacional de Inovação (Portugal),rd_agency,7908853.0,euro,EUR,verified_override,"AGENCIA NACIONAL DE INOVAÇAO, SA",2017 Lei_42_2016-OE2017_VersaoDR.pdf,119,manual override from original Portugal budget file (MAPA VII / 2017 deterministic page-aligned parser)
+Portugal,2018,ANI — Agência Nacional de Inovação (Portugal),rd_agency,12233793.0,euro,EUR,verified_override,"AGENCIA NACIONAL DE INOVAÇAO, SA",Lei orcamento para 2018.pdf,134,manual override from original Portugal budget file (MAPA VII / 2018 deterministic page-aligned parser)
+Portugal,2019,ANI — Agência Nacional de Inovação (Portugal),rd_agency,2068804.0,euro,EUR,verified_override,"AGENCIA NACIONAL DE INOVAÇAO, SA",Lei orcamento para 2019.pdf,135,manual override from original Portugal budget file (MAPA VII / 2019 deterministic page-aligned parser)
+Portugal,2020,ANI — Agência Nacional de Inovação (Portugal),rd_agency,18289688.0,euro,EUR,verified_override,"AGENCIA NACIONAL DE INOVAÇAO, SA",Lei orcamento para 2020.pdf,233,manual override from original Portugal budget file (MAPA VII / 2020 deterministic page-aligned parser)
 Portugal,2021,ANI — Agência Nacional de Inovação (Portugal),rd_agency,,,,,,,,gap: no matching rows in this year
 Portugal,2022,ANI — Agência Nacional de Inovação (Portugal),rd_agency,,,,,,,,gap: no matching rows in this year
 Portugal,2023,ANI — Agência Nacional de Inovação (Portugal),rd_agency,,,,,,,,gap: no matching rows in this year
@@ -80,20 +80,20 @@ Portugal,2002,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),rese
 Portugal,2003,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,"dropped after Portugal source audit: original page is a legal text, plurianual project table, or non-institutional support line rather than a clean agency appropriation"
 Portugal,2004,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,gap: no matching rows in this year
 Portugal,2005,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,gap: no matching rows in this year
-Portugal,2006,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,gap: no matching rows in this year
-Portugal,2007,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,gap: no matching rows in this year
-Portugal,2009,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,gap: no matching rows in this year
-Portugal,2010,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,gap: no matching rows in this year
-Portugal,2011,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,"gap: no matching rows in this year; dropped after Portugal source audit: original page is a legal text, plurianual project table, or non-institutional support line rather than a clean agency appropriation"
-Portugal,2012,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,gap: no matching rows in this year
-Portugal,2013,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,gap: no matching rows in this year
-Portugal,2014,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,gap: no matching rows in this year
-Portugal,2015,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,gap: no matching rows in this year
-Portugal,2016,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,gap: no matching rows in this year
-Portugal,2017,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,gap: no matching rows in this year
-Portugal,2018,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,gap: no matching rows in this year
-Portugal,2019,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,gap: no matching rows in this year
-Portugal,2020,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,gap: no matching rows in this year
+Portugal,2006,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,36747743.0,euro,EUR,verified_override,LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL,2006 00020361.pdf,77,manual override from original Portugal budget file (MAPA VII / 2006 deterministic page-aligned parser)
+Portugal,2007,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,31002012.0,euro,EUR,verified_override,LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL,Lei orcamento para 2007.pdf,95,manual override from original Portugal budget file (MAPA VII / 2007 deterministic page-aligned parser)
+Portugal,2009,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,34204446.0,euro,EUR,verified_override,LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL,Lei orcamento para 2009.pdf,102,manual override from original Portugal budget file (MAPA VII / 2009 deterministic page-aligned parser)
+Portugal,2010,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,38977133.0,euro,EUR,verified_override,LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL,Lei orcamento para 2010.pdf,89,manual override from original Portugal budget file (MAPA VII / 2010 deterministic page-aligned parser)
+Portugal,2011,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,35886658.0,euro,EUR,verified_override,LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL,Lei orcamento para 2011.pdf,93,manual override from original Portugal budget file (MAPA VII / 2011 deterministic page-aligned parser)
+Portugal,2012,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,30112820.0,euro,EUR,verified_override,LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL,Lei orcamento para 2012.pdf,127,manual override from original Portugal budget file (MAPA VII / 2012 deterministic page-aligned parser)
+Portugal,2013,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,30050258.0,euro,EUR,verified_override,LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL,Lei orcamento para 2013.pdf,130,manual override from original Portugal budget file (MAPA VII / 2013 deterministic page-aligned parser)
+Portugal,2014,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,58314791.0,euro,EUR,verified_override,LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL,Lei orcamento para 2014.pdf,121,manual override from original Portugal budget file (MAPA VII / 2014 deterministic page-aligned parser)
+Portugal,2015,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,65587229.0,euro,EUR,verified_override,LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL,Lei orcamento para 2015.pdf,122,manual override from original Portugal budget file (MAPA VII / 2015 deterministic page-aligned parser)
+Portugal,2016,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,46466908.0,euro,EUR,verified_override,LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL,Lei orcamento para 2016.pdf,107,manual override from original Portugal budget file (MAPA VII / 2016 deterministic page-aligned parser)
+Portugal,2017,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,57212675.0,euro,EUR,verified_override,LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL,2017 Lei_42_2016-OE2017_VersaoDR.pdf,119,manual override from original Portugal budget file (MAPA VII / 2017 deterministic page-aligned parser)
+Portugal,2018,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,8103487.0,euro,EUR,verified_override,LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL,Lei orcamento para 2018.pdf,134,manual override from original Portugal budget file (MAPA VII / 2018 deterministic page-aligned parser)
+Portugal,2019,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,14546389.0,euro,EUR,verified_override,LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL,Lei orcamento para 2019.pdf,135,manual override from original Portugal budget file (MAPA VII / 2019 deterministic page-aligned parser)
+Portugal,2020,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,6395138.0,euro,EUR,verified_override,LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL,Lei orcamento para 2020.pdf,242,manual override from original Portugal budget file (MAPA VII / 2020 deterministic page-aligned parser)
 Portugal,2021,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,gap: no matching rows in this year
 Portugal,2022,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,gap: no matching rows in this year
 Portugal,2023,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),research_institute,,,,,,,,gap: no matching rows in this year

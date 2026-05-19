@@ -71,6 +71,7 @@ _OUTPUT_UNIT_BY_CURRENCY = {
     "CHF": "franc",
     "BEF": "franc",
     "ATS": "schilling",
+    "ITL": "lira",
     "EEK": "kroon",
     "RUB": "ruble",
     "LTL": "litas",
@@ -11316,7 +11317,6 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "firb",
                 "fondo per gli investimenti della ricerca di base",
                 "capitolo 1694",
-                "ricerca di base e applicata",
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1995, 2099),
@@ -11970,7 +11970,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1963, 2099),
-            "expected_years": [1975, 1978, 1982, 2006, 2007, 2008, 2009],
+            "expected_years": [2006, 2007, 2008, 2009],
             # Post-2005 (YTL/TL): TÜBİTAK budget ~3-8B TL in 2020s
             # Pre-2005 (TRL): amounts in quadrillions of old lira
             "max_amount_local": 50_000_000_000,
@@ -12010,7 +12010,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1956, 2099),
-            "expected_years": [1975, 1976, 1977, 1978, 1982, 2006, 2007, 2008, 2009],
+            "expected_years": [1976, 1977, 2006, 2007, 2008, 2009],
             "max_amount_local": 5_000_000_000,
             "notes": "Nuclear R&D authority. Özel Bütçeli — appears in (II) SAYILI CETVEL.",
         },
@@ -13625,6 +13625,34 @@ def build_canonical_series(
             )
             subset.loc[grant_thousand_eur, "unit"] = "unit"
 
+    if country == "Italy" and not subset.empty:
+        year_it = pd.to_numeric(subset.get("year", pd.Series(dtype=float)), errors="coerce")
+        curr_it = subset.get("currency", pd.Series("", index=subset.index)).fillna("").astype(str).str.upper()
+        unit_it = subset.get("unit", pd.Series("", index=subset.index)).fillna("").astype(str).str.strip().str.lower()
+        amt_it = pd.to_numeric(subset.get("amount_local"), errors="coerce")
+
+        pre_euro_mask = year_it.le(2001) & curr_it.eq("ITL") & amt_it.notna()
+
+        # Italy's pre-euro rows mix two recurring signatures:
+        # 1. amounts already captured in full lire but mislabeled as "thousand"
+        # 2. printed million-lire values also mislabeled as "thousand"
+        # Use a conservative size split so later expansion lands on full currency units.
+        full_lira_mask = pre_euro_mask & unit_it.eq("thousand") & amt_it.ge(10_000_000)
+        million_lira_mask = pre_euro_mask & unit_it.eq("thousand") & amt_it.lt(10_000_000)
+        if full_lira_mask.any():
+            subset.loc[full_lira_mask, "unit"] = "unit"
+        if million_lira_mask.any():
+            subset.loc[million_lira_mask, "unit"] = "million"
+
+        literal_lira_mask = pre_euro_mask & unit_it.isin(["", "lire", "lira", "unit"])
+        if literal_lira_mask.any():
+            subset.loc[literal_lira_mask, "unit"] = "unit"
+
+        post_euro_mask = year_it.ge(2002) & curr_it.eq("EUR") & amt_it.notna()
+        post_euro_full_mask = post_euro_mask & unit_it.isin(["", "unit", "euro"])
+        if post_euro_full_mask.any():
+            subset.loc[post_euro_full_mask, "unit"] = "unit"
+
     if country == "Turkey" and not subset.empty:
         # Turkey mixes three source families with different comparability:
         #   1. Budget laws / budget justifications -> budget appropriations
@@ -13930,6 +13958,180 @@ def build_canonical_series(
     if out.empty:
         return out
 
+    if country == "Italy":
+        amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+        canonical = out["canonical_name"].fillna("").astype(str)
+        year_num = pd.to_numeric(out["year"], errors="coerce")
+        currency = out["currency"].fillna("").astype(str).str.upper()
+        unit_norm = out["unit"].fillna("").astype(str).str.strip().str.lower()
+        line_desc = out["line_description_en"].fillna("").astype(str)
+
+        aggregate_canonicals = {
+            "Ministero dell'università e della ricerca (MUR/MIUR/MURST)",
+            "Missione 17 — Ricerca e innovazione",
+        }
+        aggregate_mask = canonical.isin(aggregate_canonicals)
+        if aggregate_mask.any():
+            out.loc[
+                aggregate_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[aggregate_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[aggregate_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; excluded from final Italy panel: broad ministry/mission aggregate retained only for audit traceability".strip("; ").strip()
+            )
+            amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+            unit_norm = out["unit"].fillna("").astype(str).str.strip().str.lower()
+
+        total_heading_mask = (
+            amount_num.notna()
+            & canonical.isin(
+                {
+                    "FOE — Fondo Ordinario per gli Enti di ricerca",
+                    "FIRST / FAR / FIRB — Fondi per la ricerca",
+                    "PRIN — Progetti di Rilevante Interesse Nazionale",
+                    "CNR — Consiglio Nazionale delle Ricerche",
+                    "ENEA",
+                    "ASI — Agenzia Spaziale Italiana",
+                    "INFN — Istituto Nazionale di Fisica Nucleare",
+                    "INAF — Istituto Nazionale di Astrofisica",
+                }
+            )
+            & line_desc.str.contains(
+                r"total|totale per il ministero|totale del ministero|totale della sezione|totale della rubrica|totale del titolo|totale generale",
+                case=False,
+                regex=True,
+                na=False,
+            )
+        )
+        if total_heading_mask.any():
+            out.loc[
+                total_heading_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[total_heading_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[total_heading_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Italy audit: generic total heading would mix aggregate and institutional levels".strip("; ").strip()
+            )
+            amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+            unit_norm = out["unit"].fillna("").astype(str).str.strip().str.lower()
+
+        zero_or_negative_mask = amount_num.notna() & amount_num.le(0)
+        if zero_or_negative_mask.any():
+            out.loc[
+                zero_or_negative_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[zero_or_negative_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[zero_or_negative_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Italy audit: zero-value placeholder is not a transparent budget appropriation".strip("; ").strip()
+            )
+            amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+
+        first_text = line_desc.str.lower()
+        explicit_first_mask = canonical.eq("FIRST / FAR / FIRB — Fondi per la ricerca")
+        weak_first_match = explicit_first_mask & ~first_text.str.contains(
+            r"fondo per gli investimenti nella ricerca|fund for investments in scientific and technological research|research facilitation fund|fondo agevolazioni alla ricerca|\bfar\b|\bfirb\b|fondo per la ricerca di base|fund for basic research",
+            regex=True,
+            na=False,
+        )
+        if weak_first_match.any():
+            out.loc[
+                weak_first_match,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[weak_first_match, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[weak_first_match, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Italy audit: weak FIRST/FAR/FIRB text match".strip("; ").strip()
+            )
+            amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+
+        cnr_bad_text = canonical.eq("CNR — Consiglio Nazionale delle Ricerche") & line_desc.str.contains(
+            r"strategic committee|comitato strategico",
+            case=False,
+            regex=True,
+            na=False,
+        )
+        if cnr_bad_text.any():
+            out.loc[
+                cnr_bad_text,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[cnr_bad_text, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[cnr_bad_text, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Italy audit: committee operating support is not a clean CNR budget series anchor".strip("; ").strip()
+            )
+            amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+
+        generic_unit_mask = amount_num.notna() & unit_norm.isin(["", "unit"])
+        if generic_unit_mask.any():
+            out.loc[generic_unit_mask, "unit"] = out.loc[generic_unit_mask].apply(
+                lambda r: _base_output_unit(r.get("currency"), r.get("unit")),
+                axis=1,
+            )
+
+        amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+        modern_caps = {
+            "CNR — Consiglio Nazionale delle Ricerche": 5_000_000_000.0,
+            "ASI — Agenzia Spaziale Italiana": 3_500_000_000.0,
+            "ENEA": 2_000_000_000.0,
+            "FOE — Fondo Ordinario per gli Enti di ricerca": 2_000_000_000.0,
+            "FIRST / FAR / FIRB — Fondi per la ricerca": 1_000_000_000.0,
+            "PRIN — Progetti di Rilevante Interesse Nazionale": 1_000_000_000.0,
+            "INFN — Istituto Nazionale di Fisica Nucleare": 1_500_000_000.0,
+            "INAF — Istituto Nazionale di Astrofisica": 1_500_000_000.0,
+        }
+        for canonical_name, maximum in modern_caps.items():
+            cap_mask = (
+                canonical.eq(canonical_name)
+                & year_num.ge(2002)
+                & currency.eq("EUR")
+                & amount_num.notna()
+                & amount_num.gt(float(maximum))
+            )
+            if not cap_mask.any():
+                continue
+            out.loc[
+                cap_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[cap_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[cap_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Italy audit: exceeds conservative EUR cap for this institutional series".strip("; ").strip()
+            )
+            amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+
+        early_floor_mask = (
+            canonical.eq("CNR — Consiglio Nazionale delle Ricerche")
+            & year_num.le(2001)
+            & currency.eq("ITL")
+            & amount_num.notna()
+            & amount_num.lt(100_000_000.0)
+        )
+        if early_floor_mask.any():
+            out.loc[
+                early_floor_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[early_floor_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[early_floor_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Italy audit: implausibly small pre-euro CNR survivor".strip("; ").strip()
+            )
+            amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+
+        implausible_itl = year_num.le(2001) & currency.eq("ITL") & amount_num.gt(20_000_000_000_000.0)
+        implausible_eur = year_num.ge(2002) & currency.eq("EUR") & amount_num.gt(20_000_000_000.0)
+        italy_implausible = implausible_itl | implausible_eur
+        if italy_implausible.any():
+            out.loc[
+                italy_implausible,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[italy_implausible, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[italy_implausible, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Italy audit: implausible scale after documentary unit normalization".strip("; ").strip()
+            )
+
     if country == "Turkey":
         raw_turkey = subset.copy()
         raw_turkey["_year_num"] = pd.to_numeric(raw_turkey.get("year"), errors="coerce")
@@ -14036,7 +14238,7 @@ def build_canonical_series(
 
         turkey_specs = {
             "TÜBİTAK (Turkey)": {
-                "years": [1975, 1978, 1982, 2006, 2007, 2008, 2009],
+                "years": [2006, 2007, 2008, 2009],
                 "include": [
                     r"\btübitak\b|\btubitak\b",
                     r"scientific and technological research council of turkey",
@@ -14058,7 +14260,7 @@ def build_canonical_series(
                 ],
             },
             "TAEK — Türkiye Atom Enerjisi Kurumu (Turkey)": {
-                "years": [1975, 1976, 1977, 1978, 1982, 2006, 2007, 2008, 2009],
+                "years": [1976, 1977, 2006, 2007, 2008, 2009],
                 "include": [
                     r"\btaek\b",
                     r"turkish atomic energy authority",
@@ -17298,6 +17500,15 @@ def build_canonical_series(
         years = pd.to_numeric(out["year"], errors="coerce")
 
         portugal_verified_overrides = {
+            (2006, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"): (
+                36_747_743.0,
+                "euro",
+                "EUR",
+                "2006 00020361.pdf",
+                77,
+                "LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL",
+                "manual override from original Portugal budget file (MAPA VII / 2006 deterministic page-aligned parser)",
+            ),
             (2007, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
                 552_084_349.0,
                 "euro",
@@ -17306,6 +17517,15 @@ def build_canonical_series(
                 86,
                 "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA",
                 "manual override from original Portugal budget file (MAPA V / 2007 autonomous-services table)",
+            ),
+            (2007, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"): (
+                31_002_012.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2007.pdf",
+                95,
+                "LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL",
+                "manual override from original Portugal budget file (MAPA VII / 2007 deterministic page-aligned parser)",
             ),
             (2009, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
                 654_236_704.0,
@@ -17316,6 +17536,15 @@ def build_canonical_series(
                 "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
                 "manual override from original Portugal budget file (MAPA VII / 2009 autonomous-services table)",
             ),
+            (2009, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"): (
+                34_204_446.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2009.pdf",
+                102,
+                "LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL",
+                "manual override from original Portugal budget file (MAPA VII / 2009 deterministic page-aligned parser)",
+            ),
             (2010, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
                 501_451_988.0,
                 "euro",
@@ -17324,6 +17553,33 @@ def build_canonical_series(
                 90,
                 "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
                 "manual override from original Portugal budget file (MAPA VII / 2010 autonomous-services table)",
+            ),
+            (2010, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"): (
+                38_977_133.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2010.pdf",
+                89,
+                "LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL",
+                "manual override from original Portugal budget file (MAPA VII / 2010 deterministic page-aligned parser)",
+            ),
+            (2011, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
+                82_335_508.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2011.pdf",
+                94,
+                "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
+                "manual override from original Portugal budget file (MAPA VII / 2011 deterministic page-aligned parser)",
+            ),
+            (2011, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"): (
+                35_886_658.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2011.pdf",
+                93,
+                "LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL",
+                "manual override from original Portugal budget file (MAPA VII / 2011 deterministic page-aligned parser)",
             ),
             (2012, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
                 394_575_542.0,
@@ -17334,6 +17590,15 @@ def build_canonical_series(
                 "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
                 "manual override from original Portugal budget file (MAPA VII / 2012 autonomous-services table)",
             ),
+            (2012, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"): (
+                30_112_820.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2012.pdf",
+                127,
+                "LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL",
+                "manual override from original Portugal budget file (MAPA VII / 2012 deterministic page-aligned parser)",
+            ),
             (2013, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
                 420_884_807.0,
                 "euro",
@@ -17342,6 +17607,33 @@ def build_canonical_series(
                 131,
                 "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
                 "manual override from original Portugal budget file (MAPA VII / 2013 autonomous-services table)",
+            ),
+            (2013, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"): (
+                30_050_258.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2013.pdf",
+                130,
+                "LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL",
+                "manual override from original Portugal budget file (MAPA VII / 2013 deterministic page-aligned parser)",
+            ),
+            (2014, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
+                404_198_171.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2014.pdf",
+                123,
+                "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
+                "manual override from original Portugal budget file (MAPA VII / 2014 deterministic page-aligned parser)",
+            ),
+            (2014, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"): (
+                58_314_791.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2014.pdf",
+                121,
+                "LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL",
+                "manual override from original Portugal budget file (MAPA VII / 2014 deterministic page-aligned parser)",
             ),
             (2015, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
                 426_506_331.0,
@@ -17352,6 +17644,15 @@ def build_canonical_series(
                 "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
                 "manual override from original Portugal budget file (MAPA VII / 2015 autonomous-services table)",
             ),
+            (2015, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"): (
+                65_587_229.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2015.pdf",
+                122,
+                "LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL",
+                "manual override from original Portugal budget file (MAPA VII / 2015 deterministic page-aligned parser)",
+            ),
             (2016, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
                 425_726_708.0,
                 "euro",
@@ -17360,6 +17661,24 @@ def build_canonical_series(
                 102,
                 "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
                 "manual override from original Portugal budget file (2016 autonomous-services table)",
+            ),
+            (2016, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"): (
+                46_466_908.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2016.pdf",
+                107,
+                "LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL",
+                "manual override from original Portugal budget file (MAPA VII / 2016 deterministic page-aligned parser)",
+            ),
+            (2016, "ANI — Agência Nacional de Inovação (Portugal)"): (
+                9_399_812.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2016.pdf",
+                108,
+                "AGENCIA NACIONAL DE INOVAÇAO, SA",
+                "manual override from original Portugal budget file (MAPA VII / 2016 deterministic page-aligned parser)",
             ),
             (2017, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
                 444_782_248.0,
@@ -17370,6 +17689,24 @@ def build_canonical_series(
                 "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
                 "manual override from original Portugal budget file (2017 autonomous-services table)",
             ),
+            (2017, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"): (
+                57_212_675.0,
+                "euro",
+                "EUR",
+                "2017 Lei_42_2016-OE2017_VersaoDR.pdf",
+                119,
+                "LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL",
+                "manual override from original Portugal budget file (MAPA VII / 2017 deterministic page-aligned parser)",
+            ),
+            (2017, "ANI — Agência Nacional de Inovação (Portugal)"): (
+                7_908_853.0,
+                "euro",
+                "EUR",
+                "2017 Lei_42_2016-OE2017_VersaoDR.pdf",
+                119,
+                "AGENCIA NACIONAL DE INOVAÇAO, SA",
+                "manual override from original Portugal budget file (MAPA VII / 2017 deterministic page-aligned parser)",
+            ),
             (2018, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
                 507_718_842.0,
                 "euro",
@@ -17378,6 +17715,24 @@ def build_canonical_series(
                 129,
                 "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
                 "manual override from original Portugal budget file (2018 autonomous-services table)",
+            ),
+            (2018, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"): (
+                8_103_487.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2018.pdf",
+                134,
+                "LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL",
+                "manual override from original Portugal budget file (MAPA VII / 2018 deterministic page-aligned parser)",
+            ),
+            (2018, "ANI — Agência Nacional de Inovação (Portugal)"): (
+                12_233_793.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2018.pdf",
+                134,
+                "AGENCIA NACIONAL DE INOVAÇAO, SA",
+                "manual override from original Portugal budget file (MAPA VII / 2018 deterministic page-aligned parser)",
             ),
             (2019, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
                 560_122_571.0,
@@ -17388,6 +17743,24 @@ def build_canonical_series(
                 "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
                 "manual override from original Portugal budget file (2019 autonomous-services table)",
             ),
+            (2019, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"): (
+                14_546_389.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2019.pdf",
+                135,
+                "LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL",
+                "manual override from original Portugal budget file (MAPA VII / 2019 deterministic page-aligned parser)",
+            ),
+            (2019, "ANI — Agência Nacional de Inovação (Portugal)"): (
+                2_068_804.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2019.pdf",
+                135,
+                "AGENCIA NACIONAL DE INOVAÇAO, SA",
+                "manual override from original Portugal budget file (MAPA VII / 2019 deterministic page-aligned parser)",
+            ),
             (2020, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
                 557_463_880.0,
                 "euro",
@@ -17396,6 +17769,24 @@ def build_canonical_series(
                 222,
                 "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
                 "manual override from original Portugal budget file (2020 autonomous-services table)",
+            ),
+            (2020, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"): (
+                6_395_138.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2020.pdf",
+                242,
+                "LABORATÓRIO NACIONAL DE ENGENHARIA CIVIL",
+                "manual override from original Portugal budget file (MAPA VII / 2020 deterministic page-aligned parser)",
+            ),
+            (2020, "ANI — Agência Nacional de Inovação (Portugal)"): (
+                18_289_688.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2020.pdf",
+                233,
+                "AGENCIA NACIONAL DE INOVAÇAO, SA",
+                "manual override from original Portugal budget file (MAPA VII / 2020 deterministic page-aligned parser)",
             ),
         }
         for (override_year, override_name), (
@@ -17431,10 +17822,7 @@ def build_canonical_series(
             (2004, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
             (2005, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
             (2009, "ANI — Agência Nacional de Inovação (Portugal)"),
-            (2011, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
-            (2011, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"),
             (2014, "ANI — Agência Nacional de Inovação (Portugal)"),
-            (2014, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
             (2021, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
             (2022, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
             (2024, "ANI — Agência Nacional de Inovação (Portugal)"),

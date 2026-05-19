@@ -1268,6 +1268,27 @@ with TAB_BUDGET:
             "fit": "Moderate to good — usable for long-run trend context, strongest for 2018+ institutional analysis and for the verified 463B programme series.",
             "rating": "moderate",
         },
+        "Turkey": {
+            "years": "1976–1977, 2006–2009",
+            "source": (
+                "Original Turkish budget laws and budget-justification tables, with manual PDF review of weak historical survivors "
+                "and row-level verification for 2006–2009"
+            ),
+            "gaps": (
+                "Turkey is intentionally presented as a strict, traceability-first panel. Several earlier candidate observations "
+                "(notably 1975, 1978, and 1982) were removed after manual review of the original PDFs because the retained rows "
+                "could not be tied to defensible agency appropriations on the cited pages. The strongest evidence is concentrated "
+                "in 2006–2009, where TÜBİTAK, TAEK, TÜBA, and KOSGEB can be traced to exact budget-table rows. The two retained "
+                "1970s points (1976 and 1977 for TAEK) are usable but rely on strong page-level anchors rather than fully clean "
+                "literal row excerpts. There is currently no defendable continuous institutional series for the long gap between "
+                "the late 1970s and 2006."
+            ),
+            "fit": (
+                "Limited but reliable — suitable as a small audited institutional reference panel, especially for 2006–2009; "
+                "not suitable as a dense continuous long-run R&D budget series for Turkey."
+            ),
+            "rating": "limited",
+        },
     }
     _BUD_RATING_COLORS = {
         "good":     ("#1a7340", "#d4edda", "#1a734020"),

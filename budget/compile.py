@@ -1621,6 +1621,56 @@ def _output_unit_for_country(country: str) -> str:
     return "thousand"
 
 
+def _materialize_country_output_units(df: pd.DataFrame, country: str) -> pd.DataFrame:
+    """
+    Expand country-specific scaled units into full local-currency amounts for
+    human-auditable output files.
+
+    This keeps the country-level `*_docx_results.csv` directly comparable to the
+    final series/totals outputs instead of mixing `thousand` with base units.
+    """
+    if df.empty or country != "Italy":
+        return df
+
+    out = df.copy()
+    year_num = pd.to_numeric(out.get("year", pd.Series(dtype=float)), errors="coerce")
+    amount_num = pd.to_numeric(out.get("amount_local", pd.Series(dtype=float)), errors="coerce")
+    currency = out.get("currency", pd.Series("", index=out.index)).fillna("").astype(str).str.upper()
+    unit_norm = out.get("unit", pd.Series("", index=out.index)).fillna("").astype(str).str.strip().str.lower()
+
+    pre_euro_any = year_num.le(2001) & currency.eq("ITL")
+    pre_euro = pre_euro_any & amount_num.notna()
+    pre_full_lira = pre_euro & unit_norm.eq("thousand") & amount_num.ge(10_000_000)
+    pre_million_lira = pre_euro & unit_norm.eq("thousand") & amount_num.lt(10_000_000)
+    pre_literal = pre_euro_any & unit_norm.isin(["", "unit", "lira", "lire"])
+    pre_missing_scaled = pre_euro_any & unit_norm.eq("thousand") & amount_num.isna()
+
+    if pre_full_lira.any():
+        out.loc[pre_full_lira, "unit"] = "lira"
+    if pre_million_lira.any():
+        out.loc[pre_million_lira, "amount_local"] = amount_num.loc[pre_million_lira] * 1_000_000.0
+        out.loc[pre_million_lira, "unit"] = "lira"
+    if pre_literal.any():
+        out.loc[pre_literal, "unit"] = "lira"
+    if pre_missing_scaled.any():
+        out.loc[pre_missing_scaled, "unit"] = "lira"
+
+    post_euro_any = year_num.ge(2002) & currency.eq("EUR")
+    post_euro = post_euro_any & amount_num.notna()
+    post_thousand = post_euro & unit_norm.eq("thousand")
+    post_literal = post_euro_any & unit_norm.isin(["", "unit", "euro"])
+    post_missing_scaled = post_euro_any & unit_norm.eq("thousand") & amount_num.isna()
+    if post_thousand.any():
+        out.loc[post_thousand, "amount_local"] = amount_num.loc[post_thousand] * 1000.0
+        out.loc[post_thousand, "unit"] = "euro"
+    if post_literal.any():
+        out.loc[post_literal, "unit"] = "euro"
+    if post_missing_scaled.any():
+        out.loc[post_missing_scaled, "unit"] = "euro"
+
+    return out
+
+
 def _filter_country_raw_noise(df: pd.DataFrame, country: str) -> pd.DataFrame:
     """
     Drop obviously non-entity legislative/table artefacts before entity dedup.
@@ -2683,6 +2733,7 @@ def compile_country(
         "Israel",                                      # text-cache/docx path latches onto OCR-heavy table summaries; pipeline rows are materially cleaner
         "New Zealand",                                 # country DOCX artifact is sparse/noisy; pipeline results preserve the real science vote/fund rows
         "Portugal",                                    # targeted text parsing is useful for audit trails, but results.csv remains richer and safer as compile seed
+        "Italy",                                       # cleaned pipeline rows are materially safer than legacy parser output for the mixed ITL/EUR budget corpus
         "Spain",                                       # pipeline output is materially richer than legacy text-cache parsing
         "Sweden", "Netherlands", "Switzerland",        # future: no text-cache expected
     }
@@ -2696,6 +2747,10 @@ def compile_country(
         # pipeline.py has already run LLM extraction and left results.csv.
         # If so, use that output directly — no double LLM cost.
         pipeline_csv = output_dir / "results.csv"
+        if country == "Italy":
+            italy_clean_csv = output_dir / "results_clean.csv"
+            if italy_clean_csv.exists():
+                pipeline_csv = italy_clean_csv
         pipeline_df = _load_pipeline_results(pipeline_csv, country, year_range)
 
         if not pipeline_df.empty:
@@ -2706,7 +2761,7 @@ def compile_country(
             if country == "Korea":
                 results_df = _apply_korea_audited_pipeline_repairs(results_df)
             existing_country_df = _load_country_results_snapshot(country_results_csv, year_range)
-            chosen_label = "root results.csv"
+            chosen_label = pipeline_csv.name
             if not existing_country_df.empty and country != "Luxembourg":
                 pipeline_mtime = pipeline_csv.stat().st_mtime if pipeline_csv.exists() else -1.0
                 existing_mtime = country_results_csv.stat().st_mtime if country_results_csv.exists() else -1.0
@@ -2734,6 +2789,7 @@ def compile_country(
                     )
 
             results_df = pipeline_df
+            results_df = _materialize_country_output_units(results_df, country)
             logger.info(f"[{country}] Seeded compile from {chosen_label}")
             _write_year_slice(
                 country_results_csv,
