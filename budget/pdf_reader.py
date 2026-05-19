@@ -97,6 +97,7 @@ _MAX_SINGLE_CHAR_TOKEN_RATIO = 0.28
 _CID_TOKEN_RE = re.compile(r"\(cid:\d+\)")
 _MAX_CID_TOKEN_RATIO = 0.12
 _SHIFTED_CTRL_MIN = 5
+_SHIFTED_LINE_RE = re.compile(r"[\x03\^=]")
 
 
 def _decode_shifted_char(ch: str) -> str:
@@ -128,7 +129,7 @@ def _decode_shifted_text_layer(text: str) -> str:
         if re.fullmatch(r"[\d\s.,\-–—()]+", stripped):
             decoded_lines.append(line)
             continue
-        if "\x03" in line or re.search(r"[A-Za-z]", line):
+        if _SHIFTED_LINE_RE.search(line):
             decoded_lines.append("".join(_decode_shifted_char(ch) for ch in line))
         else:
             decoded_lines.append(line)

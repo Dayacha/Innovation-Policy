@@ -66613,6 +66613,46 @@
       "source_entity": "Total des dépenses du programme de recherche et innovation",
       "n_years_seen": 1,
       "avg_amount": 6100.0
+    },
+    {
+      "canonical_name": "Total Financial Contributions for Public Research Centers",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1990,
+        1990
+      ],
+      "notes": "This entity provides financial contributions specifically aimed at public research centers.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Total Contributions financières dans l'intérêt des centres de recherche publics",
+      "n_years_seen": 1,
+      "avg_amount": 4717000.0
+    },
+    {
+      "canonical_name": "Contributions to Various Public Research Centers",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1990,
+        1990
+      ],
+      "notes": "This entity supports various public research centers, indicating its relevance to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Contributions à divers centres de recherche publics",
+      "n_years_seen": 1,
+      "avg_amount": 3228000.0
     }
   ],
   "Portugal": [

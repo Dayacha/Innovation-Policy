@@ -23,6 +23,7 @@ Usage:
 from __future__ import annotations
 
 import gzip
+import hashlib
 import logging
 import re
 from pathlib import Path
@@ -35,6 +36,7 @@ logger = logging.getLogger(__name__)
 
 TEXT_CACHE_DIR = Path("Data/output/budget/full_text")
 CHILE_SOURCE_PDF_DIR = Path("Data/input/finance_bills/Chile")
+PORTUGAL_SOURCE_PDF_DIR = Path("Data/input/finance_bills/Portugal")
 
 # Regex for ALL-CAPS agency name lines (≥3 caps words, may span multiple lines)
 _RE_CAPS_LINE = re.compile(r"^[A-Z][A-Z\s\(\)\-'\.&/,]{10,}$")
@@ -124,6 +126,44 @@ _CHILE_TARGET_MINISTRIES = {
     "ministerio de energia",
     "ministerio de salud",
 }
+_RE_PORTUGAL_PAGE = re.compile(r"^=== Page (\d+)(?:\.0)?")
+_RE_PORTUGAL_AMOUNT = re.compile(r"^-?\s*\d{1,3}(?:[ .]\d{3})+(?:,\d+)?\s*$")
+_RE_PORTUGAL_MAP = re.compile(r"\bMAPA\s+(V|VII)\b", re.IGNORECASE)
+_RE_PORTUGAL_SKIP_PAGE = re.compile(
+    r"RESPONSABILIDADES CONTRATUAIS PLURIANUAIS|"
+    r"MAPA\s+XIV|"
+    r"FREGUESIA|"
+    r"MUNIC[IÍ]PIO|"
+    r"DISTRITO|"
+    r"\bRA\b",
+    re.IGNORECASE,
+)
+_RE_PORTUGAL_TARGET_ENTITY = re.compile(
+    r"FUNDA[ÇC][AÃ]O PARA A CI[ÊE]NCIA E (?:A )?TECNOLOGIA|"
+    r"\bFCT\b|"
+    r"JUNTA NACIONAL DE INVESTIGA[ÇC][AÃ]O CIENT[IÍ]FICA E TECNOL[ÓO]GICA|"
+    r"\bJNICT\b|"
+    r"LABORAT[ÓO]RIO NACIONAL DE ENGENHARIA CIVIL|"
+    r"\bLNEC\b|"
+    r"AG[ÊE]NCIA NACIONAL DE INOVA[ÇC][AÃ]O|"
+    r"\bANI\b",
+    re.IGNORECASE,
+)
+_RE_PORTUGAL_ENTITY_START = re.compile(
+    r"^(FUNDA[ÇC][AÃ]O|FUNDO|INSTITUTO|LABORAT[ÓO]RIO|AG[ÊE]NCIA|AGENCIA|"
+    r"JUNTA|UNIVERSIDADE|ESCOLA|SAS\b|UL\b|UTL\b|CP\b|METRO\b|AUTORIDADE|"
+    r"COMISS[ÃA]O|ENTIDADE|REGI[ÃA]O|TURISMO|ADMINISTRA[ÇC][ÃA]O|OPART\b|"
+    r"RADIO\b|TEATRO\b|COA\b|IMAR\b|ISCTE\b|MOBI\.E|POLIS\b|SPGM\b|MARINA\b|"
+    r"INSTITUI[ÇC][ÃA]O\b|CENTRO\b|AICEP\b|CINEMATECA\b|COFRE\b|ASSEMBLEIA\b|"
+    r"PRESID[ÊE]NCIA\b|TRIBUNAL\b|SERVI[ÇC]O\b)",
+    re.IGNORECASE,
+)
+_PORTUGAL_ENTITY_MIN_AMOUNT = {
+    "fct": 1_000_000.0,
+    "jnict": 1_000_000.0,
+    "lnec": 1_000_000.0,
+    "ani": 500_000.0,
+}
 
 
 def _parse_fiscal_year(filename: str) -> Optional[int]:
@@ -157,6 +197,22 @@ def _parse_fiscal_year(filename: str) -> Optional[int]:
     if m2:
         return int(m2.group(0))
     return None
+
+
+def _cache_style_file_id(path: Path) -> str:
+    return hashlib.md5(str(path).encode()).hexdigest()[:12]
+
+
+def _render_pages_to_cache_text(pages: list[object]) -> str:
+    rendered: list[str] = []
+    for pg in pages:
+        method = getattr(pg, "method", "unknown")
+        page_num = getattr(pg, "page_num", 0)
+        rendered.append(f"=== Page {page_num} | method: {method} ===")
+        text = str(getattr(pg, "text", "") or "").rstrip()
+        if text:
+            rendered.append(text)
+    return "\n".join(rendered) + "\n"
 
 
 def _is_caps_agency_name(line: str) -> bool:
@@ -365,15 +421,7 @@ def _chile_text_cache_is_effectively_empty(lines: list[str]) -> bool:
 
 
 def _render_pages_to_chile_cache_text(pages: list[object]) -> str:
-    rendered: list[str] = []
-    for pg in pages:
-        method = getattr(pg, "method", "unknown")
-        page_num = getattr(pg, "page_num", 0)
-        rendered.append(f"=== Page {page_num}.0 | method: {method} ===")
-        text = str(getattr(pg, "text", "") or "").rstrip()
-        if text:
-            rendered.append(text)
-    return "\n".join(rendered) + "\n"
+    return _render_pages_to_cache_text(pages).replace("=== Page ", "=== Page ").replace(" | method:", ".0 | method:")
 
 
 def _normalise_ministry_name(name: str) -> str:
@@ -648,6 +696,223 @@ def _parse_chile_text_file(file_path: Path, country: str, year: int) -> list[Raw
     return rows
 
 
+def _ensure_portugal_text_cache(
+    year_range: Optional[tuple[int, int]],
+    text_cache_dir: Path = TEXT_CACHE_DIR,
+) -> Path:
+    country_dir = text_cache_dir / "Portugal"
+    country_dir.mkdir(parents=True, exist_ok=True)
+
+    if year_range is None:
+        return country_dir
+
+    from budget.pdf_reader import extract_pages
+
+    start, end = year_range
+    page_cache_dir = country_dir / "_pagecache"
+    for pdf_path in sorted(PORTUGAL_SOURCE_PDF_DIR.glob("*.pdf")):
+        year = _parse_fiscal_year(pdf_path.name)
+        if year is None or not (start <= year <= end):
+            continue
+        out_name = f"pdf_{_cache_style_file_id(pdf_path)}__{pdf_path.stem}.txt.gz"
+        out_path = country_dir / out_name
+        if out_path.exists():
+            continue
+        pages = extract_pages(
+            pdf_path,
+            cache_dir=page_cache_dir,
+            force_reextract=False,
+            ocr_langs="por+eng",
+        )
+        rendered = _render_pages_to_cache_text(pages)
+        with gzip.open(out_path, "wt", encoding="utf-8") as f:
+            f.write(rendered)
+    return country_dir
+
+
+def _clean_portugal_line(text: str) -> str:
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def _parse_portugal_amount(text: str) -> Optional[float]:
+    cleaned = _clean_portugal_line(text)
+    if not _RE_PORTUGAL_AMOUNT.match(cleaned):
+        return None
+    digits = cleaned.replace(" ", "").replace(".", "").replace(",", ".")
+    try:
+        return float(digits)
+    except ValueError:
+        return None
+
+
+def _looks_like_portugal_entity_start(text: str) -> bool:
+    cleaned = _clean_portugal_line(text)
+    return bool(_RE_PORTUGAL_ENTITY_START.match(cleaned))
+
+
+def _is_portugal_metadata_line(text: str) -> bool:
+    cleaned = _clean_portugal_line(text)
+    if not cleaned:
+        return True
+    upper = cleaned.upper()
+    if upper.startswith(("DIÁRIO DA REPÚBLICA", "ANO ECONÓMICO", "PÁGINA", "FONTE:", "DESIGNAÇÃO", "IMPORTÂNCIAS EM")):
+        return True
+    if upper in {"-", "–", "—", "MAPA V", "MAPA VII"}:
+        return True
+    if re.fullmatch(r"\d{1,2}", cleaned):
+        return True
+    return False
+
+
+def _parse_portugal_page(
+    page_lines: list[str],
+    source_file: str,
+    country: str,
+    year: int,
+    page_number: int,
+) -> list[RawRow]:
+    page_text = "\n".join(page_lines)
+    if _RE_PORTUGAL_SKIP_PAGE.search(page_text):
+        return []
+    upper_text = page_text.upper()
+    if "DESIGNAÇÃO" not in upper_text:
+        return []
+    if not _RE_PORTUGAL_TARGET_ENTITY.search(page_text):
+        return []
+    amount_line_count = sum(1 for raw in page_lines if _parse_portugal_amount(raw) is not None)
+    is_map_page = bool(_RE_PORTUGAL_MAP.search(page_text))
+    if not is_map_page and amount_line_count < 5:
+        return []
+
+    amount_started = False
+    entity_started = False
+    amounts: list[float] = []
+    entities: list[str] = []
+    current_entity = ""
+    section_bits: list[str] = []
+
+    for raw in page_lines:
+        line = _clean_portugal_line(raw)
+        if not line:
+            continue
+        if not amount_started:
+            if _RE_PORTUGAL_AMOUNT.match(line):
+                amount = _parse_portugal_amount(line)
+                if amount is not None:
+                    amounts.append(amount)
+                    amount_started = True
+                continue
+            if not _is_portugal_metadata_line(line) and (line.isupper() or line.upper() == line):
+                section_bits.append(line)
+            continue
+
+        if not entity_started:
+            amount = _parse_portugal_amount(line)
+            if amount is not None:
+                amounts.append(amount)
+                continue
+            entity_started = True
+
+        upper = line.upper()
+        if upper.startswith("DESIGNAÇÃO"):
+            break
+        if _is_portugal_metadata_line(line):
+            continue
+        if _looks_like_portugal_entity_start(line):
+            if current_entity:
+                entities.append(current_entity)
+            current_entity = line
+        elif current_entity:
+            current_entity = f"{current_entity} {line}".strip()
+        else:
+            current_entity = line
+
+    if current_entity:
+        entities.append(current_entity)
+
+    if not amounts or not entities:
+        return []
+
+    clean_section_bits = [
+        bit
+        for bit in section_bits
+        if not re.fullmatch(r"\d+", bit)
+        and bit.upper() not in {"MAPA V", "MAPA VII", "DESIGNAÇÃO", "IMPORTÂNCIAS EM EUROS"}
+    ]
+    section_name = " | ".join(clean_section_bits[-4:]).strip()
+    rows: list[RawRow] = []
+    seen: set[tuple[str, float]] = set()
+    for entity, amount in zip(entities, amounts):
+        if not _RE_PORTUGAL_TARGET_ENTITY.search(entity):
+            continue
+        entity_upper = entity.upper()
+        if "FUNDA" in entity_upper or "FCT" in entity_upper:
+            if amount < _PORTUGAL_ENTITY_MIN_AMOUNT["fct"]:
+                continue
+        elif "JNICT" in entity_upper or "JUNTA NACIONAL DE INVESTIGA" in entity_upper:
+            if amount < _PORTUGAL_ENTITY_MIN_AMOUNT["jnict"]:
+                continue
+        elif "LNEC" in entity_upper or "LABORAT" in entity_upper:
+            if amount < _PORTUGAL_ENTITY_MIN_AMOUNT["lnec"]:
+                continue
+        elif "AGENCIA NACIONAL DE INOVA" in entity_upper or re.search(r"\bANI\b", entity_upper):
+            if amount < _PORTUGAL_ENTITY_MIN_AMOUNT["ani"]:
+                continue
+        key = (entity.lower(), float(amount))
+        if key in seen:
+            continue
+        seen.add(key)
+        rows.append(
+            RawRow(
+                country=country,
+                year=year,
+                source_file=source_file,
+                page_number=page_number,
+                section_name=section_name or entity,
+                entity_raw=entity,
+                amount_current=amount,
+                amount_prior=None,
+                is_header_row=False,
+                is_total_row=False,
+                cells_raw=[],
+            )
+        )
+    return rows
+
+
+def _parse_portugal_text_file(file_path: Path, country: str, year: int) -> list[RawRow]:
+    try:
+        with gzip.open(file_path, "rt", encoding="utf-8", errors="replace") as f:
+            lines = f.read().splitlines()
+    except Exception as e:
+        logger.warning(f"Could not read {file_path}: {e}")
+        return []
+
+    source_file = file_path.stem
+    rows: list[RawRow] = []
+    page_number = 0
+    page_lines: list[str] = []
+
+    def flush_page() -> None:
+        nonlocal rows, page_lines, page_number
+        if page_number <= 0 or not page_lines:
+            return
+        rows.extend(_parse_portugal_page(page_lines, source_file, country, year, page_number))
+
+    for raw in lines:
+        m = _RE_PORTUGAL_PAGE.match(raw.strip())
+        if m:
+            flush_page()
+            page_number = int(m.group(1))
+            page_lines = []
+            continue
+        page_lines.append(raw)
+    flush_page()
+
+    logger.info(f"[{country} {year}] {file_path.name}: {len(rows)} Portugal rows parsed")
+    return rows
+
+
 def parse_text_file(
     file_path: Path,
     country: str,
@@ -658,6 +923,8 @@ def parse_text_file(
     """
     if country == "Chile":
         return _parse_chile_text_file(file_path, country, year)
+    if country == "Portugal":
+        return _parse_portugal_text_file(file_path, country, year)
 
     try:
         with gzip.open(file_path, "rt", encoding="utf-8", errors="replace") as f:
@@ -718,6 +985,9 @@ def parse_text_cache(
     Returns:
         List of RawRow records
     """
+    if country == "Portugal" and year_range is not None:
+        _ensure_portugal_text_cache(year_range=year_range, text_cache_dir=text_cache_dir)
+
     country_dir = text_cache_dir / country
     if not country_dir.exists():
         logger.warning(f"Text cache directory not found: {country_dir}")

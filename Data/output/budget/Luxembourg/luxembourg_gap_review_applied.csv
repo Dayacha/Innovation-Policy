@@ -1,0 +1,2 @@
+country,year,canonical_name,verdict,old_rows,old_amounts,review_amount,review_unit,preferred_source_files,reason,confidence,applied,skip_reason,match_reason
+Luxembourg,,,,0,,,,[],no_gap_review_file,0.0,False,no_gap_review_file,

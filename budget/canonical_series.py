@@ -14043,12 +14043,13 @@ def build_canonical_series(
                     r"türkiye bilimsel ve teknolojik araştırma kurumu|turkiye bilimsel ve teknolojik arastirma kurumu",
                 ],
                 "prefer": [
+                    r"research and development projects|support for scientific research",
+                    r"scientific and technological research council of turkey.*research and development projects",
                     r"budget of tübitak|budget of tubitak",
                     r"scientific and technological research council of turkey.*total appropriation",
-                    r"scientific and technological research council of turkey.*research and development projects",
                     r"scientific and technological research council of turkey$",
+                    r"research projects support program|research funds",
                     r"total appropriation|genel ödenek toplam[ıi]|toplam ödenek",
-                    r"research and development projects|research projects support program|research funds",
                 ],
                 "exclude": [
                     r"carry forward unspent",
@@ -14064,13 +14065,13 @@ def build_canonical_series(
                     r"türkiye atom enerjisi kurumu|turkiye atom enerjisi kurumu",
                 ],
                 "prefer": [
+                    r"scientific and technical research and application in the field of nuclear energy",
+                    r"nuclear research projects?",
                     r"budget of the turkish atomic energy authority",
                     r"turkish atomic energy authority.*total appropriation",
-                    r"scientific and technical research and application in the field of nuclear energy",
                     r"research and development$",
                     r"turkish atomic energy authority$",
                     r"total appropriation|genel ödenek toplam[ıi]|toplam ödenek",
-                    r"nuclear research projects?",
                 ],
                 "exclude": [
                     r"carry forward unspent",
@@ -16227,6 +16228,21 @@ def build_canonical_series(
             notes = out.loc[weak_ministry_item_mask, "series_notes"].fillna("").astype(str).str.strip()
             out.loc[weak_ministry_item_mask, "series_notes"] = notes.apply(
                 lambda s: f"{s}; dropped after Luxembourg source audit: ministry series keeps only section/program totals, not embedded line items".strip("; ").strip()
+            )
+
+        early_ministry_total_mask = (
+            ministry_mask
+            & year_num.le(1998)
+            & out["item_type"].fillna("").astype(str).isin(["section_total", "program_total"])
+        )
+        if early_ministry_total_mask.any():
+            out.loc[
+                early_ministry_total_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[early_ministry_total_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[early_ministry_total_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Luxembourg source audit: early ministry totals (1975-1998) are not yet page-verified and several traced pages resolve to non-matching education/health sections, so the aggregate series is excluded until rebuilt from original files".strip("; ").strip()
             )
 
         wrong_total_mask = line_text.str.contains(

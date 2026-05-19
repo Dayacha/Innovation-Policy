@@ -13,26 +13,17 @@ Luxembourg,2011,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok
 Luxembourg,2012,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,45000000.0,EUR,35240000.0,52000000.0
 Luxembourg,2013,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,52000000.0,EUR,45000000.0,52000000.0
 Luxembourg,2014,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,52000000.0,EUR,52000000.0,60000000.0
-Luxembourg,2015,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,60000000.0,EUR,52000000.0,69000000.0
-Luxembourg,2016,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,69000000.0,EUR,60000000.0,69000000.0
-Luxembourg,2017,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,69000000.0,EUR,69000000.0,69000000.0
-Luxembourg,2018,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,69000000.0,EUR,69000000.0,69000000.0
-Luxembourg,2019,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,69000000.0,EUR,69000000.0,66790000.0
-Luxembourg,2020,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,66790000.0,EUR,69000000.0,66830000.0
+Luxembourg,2015,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,60000000.0,EUR,52000000.0,60000000.0
+Luxembourg,2016,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,60000000.0,EUR,60000000.0,64802060.0
+Luxembourg,2017,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,64802060.0,EUR,60000000.0,64802060.0
+Luxembourg,2018,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,64802060.0,EUR,64802060.0,64790000.0
+Luxembourg,2019,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,64790000.0,EUR,64802060.0,66790000.0
+Luxembourg,2020,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,66790000.0,EUR,64790000.0,66830000.0
 Luxembourg,2021,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,66830000.0,EUR,66790000.0,69030000.0
 Luxembourg,2022,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,69030000.0,EUR,66830000.0,70000000.0
 Luxembourg,2023,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,70000000.0,EUR,69030000.0,75000000.0
 Luxembourg,2024,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,75000000.0,EUR,70000000.0,80000000.0
 Luxembourg,2025,FNR — Fonds National de la Recherche (Luxembourg),rd_agency,ok,,,,,,none,80000000.0,EUR,75000000.0,
-Luxembourg,1987,LIST / CRP Henri Tudor (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,17900000.0
-Luxembourg,1988,LIST / CRP Henri Tudor (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,17900000.0
-Luxembourg,1989,LIST / CRP Henri Tudor (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,17900000.0
-Luxembourg,1990,LIST / CRP Henri Tudor (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,17900000.0
-Luxembourg,1991,LIST / CRP Henri Tudor (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,17900000.0
-Luxembourg,1993,LIST / CRP Henri Tudor (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,17900000.0
-Luxembourg,1994,LIST / CRP Henri Tudor (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,17900000.0
-Luxembourg,1996,LIST / CRP Henri Tudor (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,17900000.0
-Luxembourg,1998,LIST / CRP Henri Tudor (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,17900000.0
 Luxembourg,2001,LIST / CRP Henri Tudor (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,17900000.0
 Luxembourg,2002,LIST / CRP Henri Tudor (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,17900000.0
 Luxembourg,2003,LIST / CRP Henri Tudor (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,17900000.0
@@ -47,23 +38,17 @@ Luxembourg,2011,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,n
 Luxembourg,2012,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,22420000.0,EUR,20400000.0,20030000.0
 Luxembourg,2013,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,20030000.0,EUR,22420000.0,22000000.0
 Luxembourg,2014,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,22000000.0,EUR,20030000.0,39000000.0
-Luxembourg,2015,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,39000000.0,EUR,22000000.0,53000000.0
-Luxembourg,2016,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,53000000.0,EUR,39000000.0,53000000.0
-Luxembourg,2017,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,53000000.0,EUR,53000000.0,53000000.0
-Luxembourg,2018,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,53000000.0,EUR,53000000.0,53000000.0
-Luxembourg,2019,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,53000000.0,EUR,53000000.0,47770000.0
-Luxembourg,2020,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,47770000.0,EUR,53000000.0,51360000.0
+Luxembourg,2015,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,39000000.0,EUR,22000000.0,39000000.0
+Luxembourg,2016,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,39000000.0,EUR,39000000.0,41229900.0
+Luxembourg,2017,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,41229900.0,EUR,39000000.0,41229900.0
+Luxembourg,2018,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,41229900.0,EUR,41229900.0,45040000.0
+Luxembourg,2019,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,45040000.0,EUR,41229900.0,47770000.0
+Luxembourg,2020,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,47770000.0,EUR,45040000.0,51360000.0
 Luxembourg,2021,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,51360000.0,EUR,47770000.0,52940000.0
 Luxembourg,2022,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,52940000.0,EUR,51360000.0,53970000.0
 Luxembourg,2023,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,53970000.0,EUR,52940000.0,55500000.0
 Luxembourg,2024,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,55500000.0,EUR,53970000.0,57700000.0
 Luxembourg,2025,LIST / CRP Henri Tudor (Luxembourg),research_institute,ok,,,,,,none,57700000.0,EUR,55500000.0,
-Luxembourg,1990,LISER / CEPS-INSTEAD (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,4920000.0
-Luxembourg,1991,LISER / CEPS-INSTEAD (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,4920000.0
-Luxembourg,1993,LISER / CEPS-INSTEAD (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,4920000.0
-Luxembourg,1994,LISER / CEPS-INSTEAD (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,4920000.0
-Luxembourg,1996,LISER / CEPS-INSTEAD (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,4920000.0
-Luxembourg,1998,LISER / CEPS-INSTEAD (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,4920000.0
 Luxembourg,2001,LISER / CEPS-INSTEAD (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,4920000.0
 Luxembourg,2002,LISER / CEPS-INSTEAD (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,4920000.0
 Luxembourg,2003,LISER / CEPS-INSTEAD (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,4920000.0
@@ -79,22 +64,16 @@ Luxembourg,2012,LISER / CEPS-INSTEAD (Luxembourg),research_institute,missing,,Ye
 Luxembourg,2013,LISER / CEPS-INSTEAD (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,6500000.0,10400000.0
 Luxembourg,2014,LISER / CEPS-INSTEAD (Luxembourg),research_institute,ok,,,,,,none,10400000.0,EUR,6500000.0,10500000.0
 Luxembourg,2015,LISER / CEPS-INSTEAD (Luxembourg),research_institute,ok,,,,,,none,10500000.0,EUR,10400000.0,10500000.0
-Luxembourg,2016,LISER / CEPS-INSTEAD (Luxembourg),research_institute,ok,,,,,,none,10500000.0,EUR,10500000.0,14000000.0
-Luxembourg,2017,LISER / CEPS-INSTEAD (Luxembourg),research_institute,ok,,,,,,none,14000000.0,EUR,10500000.0,14000000.0
-Luxembourg,2018,LISER / CEPS-INSTEAD (Luxembourg),research_institute,ok,,,,,,none,14000000.0,EUR,14000000.0,14000000.0
-Luxembourg,2019,LISER / CEPS-INSTEAD (Luxembourg),research_institute,ok,,,,,,none,14000000.0,EUR,14000000.0,11990000.0
-Luxembourg,2020,LISER / CEPS-INSTEAD (Luxembourg),research_institute,ok,,,,,,none,11990000.0,EUR,14000000.0,14000000.0
+Luxembourg,2016,LISER / CEPS-INSTEAD (Luxembourg),research_institute,ok,,,,,,none,10500000.0,EUR,10500000.0,10271690.0
+Luxembourg,2017,LISER / CEPS-INSTEAD (Luxembourg),research_institute,ok,,,,,,none,10271690.0,EUR,10500000.0,10271690.0
+Luxembourg,2018,LISER / CEPS-INSTEAD (Luxembourg),research_institute,ok,,,,,,none,10271690.0,EUR,10271690.0,11500000.0
+Luxembourg,2019,LISER / CEPS-INSTEAD (Luxembourg),research_institute,ok,,,,,,none,11500000.0,EUR,10271690.0,11990000.0
+Luxembourg,2020,LISER / CEPS-INSTEAD (Luxembourg),research_institute,ok,,,,,,none,11990000.0,EUR,11500000.0,14000000.0
 Luxembourg,2021,LISER / CEPS-INSTEAD (Luxembourg),research_institute,ok,,,,,,none,14000000.0,EUR,11990000.0,14430000.0
 Luxembourg,2022,LISER / CEPS-INSTEAD (Luxembourg),research_institute,ok,,,,,,none,14430000.0,EUR,14000000.0,15210000.0
 Luxembourg,2023,LISER / CEPS-INSTEAD (Luxembourg),research_institute,ok,,,,,,none,15210000.0,EUR,14430000.0,15820000.0
 Luxembourg,2024,LISER / CEPS-INSTEAD (Luxembourg),research_institute,ok,,,,,,none,15820000.0,EUR,15210000.0,17190000.0
 Luxembourg,2025,LISER / CEPS-INSTEAD (Luxembourg),research_institute,ok,,,,,,none,17190000.0,EUR,15820000.0,
-Luxembourg,1990,LIH / CRP Santé (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15500000.0
-Luxembourg,1991,LIH / CRP Santé (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15500000.0
-Luxembourg,1993,LIH / CRP Santé (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15500000.0
-Luxembourg,1994,LIH / CRP Santé (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15500000.0
-Luxembourg,1996,LIH / CRP Santé (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15500000.0
-Luxembourg,1998,LIH / CRP Santé (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15500000.0
 Luxembourg,2001,LIH / CRP Santé (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15500000.0
 Luxembourg,2002,LIH / CRP Santé (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15500000.0
 Luxembourg,2003,LIH / CRP Santé (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15500000.0
@@ -109,26 +88,17 @@ Luxembourg,2011,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,19
 Luxembourg,2012,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,21500000.0,EUR,19100000.0,20000000.0
 Luxembourg,2013,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,20000000.0,EUR,21500000.0,23000000.0
 Luxembourg,2014,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,23000000.0,EUR,20000000.0,31100000.0
-Luxembourg,2015,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,31100000.0,EUR,23000000.0,44000000.0
-Luxembourg,2016,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,44000000.0,EUR,31100000.0,44000000.0
-Luxembourg,2017,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,44000000.0,EUR,44000000.0,44000000.0
-Luxembourg,2018,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,44000000.0,EUR,44000000.0,44000000.0
-Luxembourg,2019,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,44000000.0,EUR,44000000.0,38770000.0
-Luxembourg,2020,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,38770000.0,EUR,44000000.0,43260000.0
+Luxembourg,2015,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,31100000.0,EUR,23000000.0,31100000.0
+Luxembourg,2016,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,31100000.0,EUR,31100000.0,30589780.0
+Luxembourg,2017,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,30589780.0,EUR,31100000.0,30589780.0
+Luxembourg,2018,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,30589780.0,EUR,30589780.0,35850000.0
+Luxembourg,2019,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,35850000.0,EUR,30589780.0,38770000.0
+Luxembourg,2020,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,38770000.0,EUR,35850000.0,43260000.0
 Luxembourg,2021,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,43260000.0,EUR,38770000.0,44300000.0
 Luxembourg,2022,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,44300000.0,EUR,43260000.0,44970000.0
 Luxembourg,2023,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,44970000.0,EUR,44300000.0,45970000.0
 Luxembourg,2024,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,45970000.0,EUR,44970000.0,48100000.0
 Luxembourg,2025,LIH / CRP Santé (Luxembourg),research_institute,ok,,,,,,none,48100000.0,EUR,45970000.0,
-Luxembourg,1987,CRP Gabriel Lippmann (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15400000.0
-Luxembourg,1988,CRP Gabriel Lippmann (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15400000.0
-Luxembourg,1989,CRP Gabriel Lippmann (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15400000.0
-Luxembourg,1990,CRP Gabriel Lippmann (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15400000.0
-Luxembourg,1991,CRP Gabriel Lippmann (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15400000.0
-Luxembourg,1993,CRP Gabriel Lippmann (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15400000.0
-Luxembourg,1994,CRP Gabriel Lippmann (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15400000.0
-Luxembourg,1996,CRP Gabriel Lippmann (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15400000.0
-Luxembourg,1998,CRP Gabriel Lippmann (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15400000.0
 Luxembourg,2001,CRP Gabriel Lippmann (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15400000.0
 Luxembourg,2002,CRP Gabriel Lippmann (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15400000.0
 Luxembourg,2003,CRP Gabriel Lippmann (Luxembourg),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,15400000.0
@@ -167,46 +137,3 @@ Luxembourg,2022,Université du Luxembourg,higher_education,ok,,,,,,none,22067000
 Luxembourg,2023,Université du Luxembourg,higher_education,ok,,,,,,none,223950000.0,EUR,220670000.0,238180000.0
 Luxembourg,2024,Université du Luxembourg,higher_education,ok,,,,,,none,238180000.0,EUR,223950000.0,249632000.0
 Luxembourg,2025,Université du Luxembourg,higher_education,ok,,,,,,none,249632000.0,EUR,238180000.0,
-Luxembourg,1975,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,ok,,,,,,none,10000000.0,LUF,,150512000.0
-Luxembourg,1976,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,ok,,,,,,none,150512000.0,LUF,10000000.0,25175000.0
-Luxembourg,1977,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,ok,,,,,,none,25175000.0,LUF,150512000.0,60000000.0
-Luxembourg,1978,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,ok,,,,,,none,60000000.0,LUF,25175000.0,15000000.0
-Luxembourg,1979,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,ok,,,,,,none,15000000.0,LUF,60000000.0,12000000.0
-Luxembourg,1980,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,ok,,,,,,none,12000000.0,LUF,15000000.0,23960000.0
-Luxembourg,1983,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,ok,,,,,,none,23960000.0,LUF,12000000.0,244900000.0
-Luxembourg,1984,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,ok,,,,,,none,244900000.0,LUF,23960000.0,126625000.0
-Luxembourg,1985,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,ok,,,,,,none,126625000.0,LUF,244900000.0,25000000.0
-Luxembourg,1987,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,ok,,,,,,none,25000000.0,LUF,126625000.0,130000000.0
-Luxembourg,1988,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,ok,,,,,,none,130000000.0,LUF,25000000.0,45000000.0
-Luxembourg,1989,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,ok,,,,,,none,45000000.0,LUF,130000000.0,164477000.0
-Luxembourg,1990,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,ok,,,,,,none,164477000.0,LUF,45000000.0,420478000.0
-Luxembourg,1991,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,ok,,,,,,none,420478000.0,LUF,164477000.0,334541000.0
-Luxembourg,1993,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,ok,,,,,,none,334541000.0,LUF,420478000.0,187200000.0
-Luxembourg,1994,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,ok,,,,,,none,187200000.0,LUF,334541000.0,393554000.0
-Luxembourg,1996,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,ok,,,,,,none,393554000.0,LUF,187200000.0,461873000.0
-Luxembourg,1998,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,ok,,,,,,none,461873000.0,LUF,393554000.0,
-Luxembourg,2001,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2002,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2003,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2004,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2005,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2006,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2007,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2008,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2009,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2010,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2011,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2012,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2013,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2014,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2015,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2016,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2017,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2018,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2019,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2020,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2021,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2022,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2023,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2024,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,
-Luxembourg,2025,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,461873000.0,

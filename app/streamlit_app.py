@@ -1097,6 +1097,26 @@ with TAB_BUDGET:
             ),
             "rating": "moderate",
         },
+        "Luxembourg": {
+            "years": "2001–2025 for the final audited panel; earlier source files are preserved but excluded from the app-ready series",
+            "source": (
+                "Luxembourg annual state budget laws and annex tables, with page-level manual verification against the "
+                "original PDFs for every observation retained in the final panel"
+            ),
+            "gaps": (
+                "Luxembourg is now a deliberately conservative, traceability-first institutional panel. The final app-ready "
+                "series keeps 105 observations across 6 canonicals, and all retained rows are locked `verified_override` "
+                "entries traced to the original budget pages. Earlier ministry totals from the late 1970s to 1990s were "
+                "removed after source audit because several traced pages resolved to mixed or non-matching culture, health, "
+                "laboratory, or higher-education sections rather than a clean research-ministry aggregate. The panel is "
+                "therefore narrower than the raw extraction history, but materially cleaner."
+            ),
+            "fit": (
+                "Good for a compact institutional backbone from 2001 onward — especially FNR, Université du Luxembourg, "
+                "LIST, LISER, LIH, and CRP Gabriel Lippmann. Not suitable as a complete long-run ministry-total series."
+            ),
+            "rating": "good",
+        },
         "Mexico": {
             "years": "1986–2024 (usable years are discontinuous)",
             "source": "Federal budget decrees and annex tables for CONACYT / Ramo 38 and selected named institutions",

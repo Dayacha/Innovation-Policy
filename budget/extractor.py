@@ -18,6 +18,7 @@ from __future__ import annotations
 import hashlib
 import json
 import logging
+import re
 from pathlib import Path
 from typing import Optional
 
@@ -35,6 +36,11 @@ from budget.prompts import (
 )
 
 logger = logging.getLogger(__name__)
+
+_PORTUGAL_SKIP_SCAN_RE = re.compile(
+    r"freguesia\s*/\s*munic|total\s+munic|adicional\s+total\s+transfer",
+    re.IGNORECASE,
+)
 
 
 # ---------------------------------------------------------------------------
@@ -125,7 +131,14 @@ def scan_pages(
         return []
 
     relevant: list[PageText] = []
-    batches = [pages[i : i + _SCAN_BATCH_SIZE] for i in range(0, len(pages), _SCAN_BATCH_SIZE)]
+    candidate_pages: list[PageText] = []
+    for pg in pages:
+        if country == "Portugal" and _PORTUGAL_SKIP_SCAN_RE.search(pg.text):
+            logger.debug(f"  p{pg.page_num}: deterministically skipped (Portugal municipal transfer table)")
+            continue
+        candidate_pages.append(pg)
+
+    batches = [candidate_pages[i : i + _SCAN_BATCH_SIZE] for i in range(0, len(candidate_pages), _SCAN_BATCH_SIZE)]
 
     original_model = client.model
     scan_model = scan_model or cfg.SCAN_MODEL

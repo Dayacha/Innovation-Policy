@@ -1098,6 +1098,131 @@ def _snippet_from_lines(lines: list[str], idx: int, before: int = 3, after: int 
     return " | ".join(snippet)
 
 
+_TURKEY_TRACE_ALIAS_MAP = {
+    "tubitak": [
+        "turkiye bilimsel ve teknolojik arastirma kurumu",
+        "tubitak",
+    ],
+    "tuba": [
+        "turkiye bilimler akademisi baskanligi",
+        "turkiye bilimler akademisi",
+        "tuba",
+    ],
+    "taek": [
+        "turkiye atom enerjisi kurumu",
+        "atom enerjisi kurumu",
+        "taek",
+    ],
+    "kosgeb": [
+        "kucuk ve orta olcekli sanayi gelistirme ve destekleme idaresi baskanligi",
+        "kucuk ve orta olcekli sanayi gelistirme ve destekleme",
+        "kosgeb",
+    ],
+}
+
+
+def _compact_trace_search(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "", _normalise_trace_search(text))
+
+
+def _turkey_trace_aliases(row: pd.Series) -> list[str]:
+    canonical_norm = _normalise_trace_search(str(row.get("canonical_name") or ""))
+    canonical_compact = _compact_trace_search(str(row.get("canonical_name") or ""))
+    for key, aliases in _TURKEY_TRACE_ALIAS_MAP.items():
+        if key in canonical_norm or key in canonical_compact:
+            return aliases
+    line_desc_norm = _normalise_trace_search(str(row.get("line_description_en") or ""))
+    if "atom" in line_desc_norm or "nukleer" in line_desc_norm:
+        return _TURKEY_TRACE_ALIAS_MAP["taek"]
+    return []
+
+
+def _turkey_amount_line(line: str) -> bool:
+    stripped = str(line or "").strip()
+    return bool(stripped) and bool(re.fullmatch(r"[\d\., ]+", stripped))
+
+
+def _trace_number_compact(text: str) -> str:
+    return re.sub(r"\D+", "", str(text or ""))
+
+
+def _extract_turkey_exact_excerpt(page_lines: list[str], row: pd.Series) -> str:
+    year = pd.to_numeric(pd.Series([row.get("year")]), errors="coerce").iloc[0]
+    if pd.isna(year):
+        return ""
+    year = int(year)
+    amount_tokens = set(_trace_amount_tokens(row.get("amount_local")))
+    if not amount_tokens:
+        return ""
+    amount_compacts = {_trace_number_compact(token) for token in amount_tokens if _trace_number_compact(token)}
+
+    if year == 2006:
+        try:
+            name_header_idx = next(i for i, line in enumerate(page_lines) if "İDARENİN ADI" in line)
+            offer_idx = next(i for i, line in enumerate(page_lines) if "Hükümetin Teklifi" in line)
+        except StopIteration:
+            return ""
+
+        agency_lines = [line.strip() for line in page_lines[name_header_idx + 1:offer_idx] if str(line).strip()]
+        amount_lines = [line.strip() for line in page_lines[offer_idx + 1:] if _turkey_amount_line(line)]
+        target_idx = next(
+            (
+                i for i, line in enumerate(amount_lines)
+                if line in amount_tokens or _trace_number_compact(line) in amount_compacts
+            ),
+            None,
+        )
+        if target_idx is None or target_idx >= len(amount_lines):
+            return ""
+        amount_line = amount_lines[target_idx]
+        if target_idx >= len(agency_lines):
+            return ""
+        return " | ".join(
+            [
+                "(TABLO 2-b)",
+                agency_lines[target_idx],
+                "Hükümetin Teklifi",
+                amount_line,
+            ]
+        )
+
+    if year in {2007, 2008, 2009}:
+        for idx, line in enumerate(page_lines):
+            if line.strip() not in amount_tokens and _trace_number_compact(line) not in amount_compacts:
+                continue
+            agency_idx = next(
+                (
+                    j for j in range(idx - 1, max(-1, idx - 8), -1)
+                    if not _turkey_amount_line(page_lines[j]) and page_lines[j].strip()
+                ),
+                None,
+            )
+            if agency_idx is None:
+                continue
+            amount_lines: list[str] = []
+            for candidate in page_lines[agency_idx + 1:]:
+                if _turkey_amount_line(candidate):
+                    amount_lines.append(candidate.strip())
+                    if len(amount_lines) >= 5:
+                        break
+                elif amount_lines:
+                    break
+            if any(item in amount_tokens or _trace_number_compact(item) in amount_compacts for item in amount_lines):
+                header = next((segment.strip() for segment in page_lines[:3] if segment.strip()), "2009 Yılı Bütçe Gerekçesi")
+                return " | ".join([header, page_lines[agency_idx].strip(), *amount_lines])
+
+    if year in {1976, 1977}:
+        for idx, line in enumerate(page_lines):
+            line_compact = _trace_number_compact(line)
+            if not any(token in line for token in amount_tokens) and line_compact not in amount_compacts:
+                continue
+            snippet = _snippet_from_lines(page_lines, idx, before=10, after=6)
+            if any(term in _normalise_trace_search(snippet) for term in ["nukleer", "arastirma", "bilimsel", "teknik"]):
+                return snippet
+
+    return ""
+
+
 def _turkey_trace_snippet_ok(snippet: str, row: pd.Series) -> bool:
     snippet_norm = _normalise_trace_search(snippet)
     if not snippet_norm:
@@ -1191,6 +1316,11 @@ def _extract_trace_excerpt(cache_path: str, row: pd.Series) -> str:
     amount_tokens = _trace_amount_tokens(row.get("amount_local"))
     country = str(row.get("country") or "")
 
+    if country == "Turkey" and page_scoped:
+        turkey_exact = _extract_turkey_exact_excerpt(page_lines, row)
+        if turkey_exact:
+            return turkey_exact
+
     def _accept_snippet(snippet: str) -> bool:
         if not snippet:
             return False
@@ -1248,6 +1378,21 @@ def _extract_trace_excerpt(cache_path: str, row: pd.Series) -> str:
     return ""
 
 
+def _trace_method_label(excerpt: str) -> str:
+    text = str(excerpt or "").strip()
+    if not text:
+        return ""
+    if text.startswith("[anchor]"):
+        return "page_anchor"
+    if "(TABLO 2-b)" in text:
+        return "table_row_aligned"
+    if "=== Page 89.0" in text:
+        return "table_row_multiyear"
+    if "=== Page " in text:
+        return "page_context_excerpt"
+    return "page_excerpt"
+
+
 def _build_series_traceability(series_df: pd.DataFrame, country: str) -> pd.DataFrame:
     if series_df.empty:
         return pd.DataFrame()
@@ -1266,6 +1411,7 @@ def _build_series_traceability(series_df: pd.DataFrame, country: str) -> pd.Data
         else "",
         axis=1,
     )
+    out["trace_method"] = out["trace_excerpt"].map(_trace_method_label)
 
     preferred_cols = [
         "year",
@@ -1281,6 +1427,7 @@ def _build_series_traceability(series_df: pd.DataFrame, country: str) -> pd.Data
         "full_text_cache",
         "line_description_en",
         "traceability_status",
+        "trace_method",
         "trace_excerpt",
         "series_notes",
     ]
@@ -1321,6 +1468,16 @@ def _build_source_traceability(series_df: pd.DataFrame, country: str) -> pd.Data
     for source_file in pdfs:
         subset = series_df[series_df["source_file"].astype(str) == source_file].copy() if not series_df.empty else pd.DataFrame()
         source_note = known_source_notes.get(source_file, "")
+        if country == "Luxembourg" and not source_note:
+            match = re.match(r"^(\d{4})", str(source_file))
+            source_year = int(match.group(1)) if match else None
+            if source_year is not None and source_year <= 2000:
+                source_note = (
+                    "Manual source audit: early Luxembourg aggregate ministry/section totals were excluded from the "
+                    "final panel after page-level review found mixed or non-matching sections. Rebuilding a "
+                    "defendable pre-2001 aggregate series would require a fresh original-file audit rather than "
+                    "reusing these traced totals."
+                )
         if not subset.empty:
             traceability_status = "covered_by_final_series"
         elif "mislabelled" in source_note.lower() or "misfiled" in source_note.lower():
@@ -2525,6 +2682,7 @@ def compile_country(
         "Korea",                                       # budget-summary PDFs are materially richer in pipeline output than text-cache parser
         "Israel",                                      # text-cache/docx path latches onto OCR-heavy table summaries; pipeline rows are materially cleaner
         "New Zealand",                                 # country DOCX artifact is sparse/noisy; pipeline results preserve the real science vote/fund rows
+        "Portugal",                                    # targeted text parsing is useful for audit trails, but results.csv remains richer and safer as compile seed
         "Spain",                                       # pipeline output is materially richer than legacy text-cache parsing
         "Sweden", "Netherlands", "Switzerland",        # future: no text-cache expected
     }
