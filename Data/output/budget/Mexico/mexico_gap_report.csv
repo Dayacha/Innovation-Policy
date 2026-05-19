@@ -1,0 +1,270 @@
+country,year,canonical_name,category,gap_type,gap_subtype,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,series_currency,prev_amount,next_amount
+Mexico,1986,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,8859247600.0
+Mexico,1987,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,8859247600.0
+Mexico,2001,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,8859247600.0
+Mexico,2002,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,8859247600.0
+Mexico,2003,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,8859247600.0
+Mexico,2006,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,ok,,,,,,none,8859247600.0,MXN,,9330648958.0
+Mexico,2007,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,ok,,,,,,none,9330648958.0,MXN,8859247600.0,11876003700.0
+Mexico,2008,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,ok,,,,,,none,11876003700.0,MXN,9330648958.0,15474732726.0
+Mexico,2009,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,ok,,,,,,none,15474732726.0,MXN,11876003700.0,15946592413.0
+Mexico,2010,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,ok,,,,,,none,15946592413.0,MXN,15474732726.0,17279570709.0
+Mexico,2011,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,ok,,,,,,none,17279570709.0,MXN,15946592413.0,21872176958.0
+Mexico,2012,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,ok,,,,,,none,21872176958.0,MXN,17279570709.0,25245962047.0
+Mexico,2013,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,ok,,,,,,none,25245962047.0,MXN,21872176958.0,31086324134.0
+Mexico,2014,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,ok,,,,,,none,31086324134.0,MXN,25245962047.0,33706667621.0
+Mexico,2015,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,ok,,,,,,none,33706667621.0,MXN,31086324134.0,34010260421.0
+Mexico,2016,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,ok,,,,,,none,34010260421.0,MXN,33706667621.0,26963512279.0
+Mexico,2017,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,ok,,,,,,none,26963512279.0,MXN,34010260421.0,27225876510.0
+Mexico,2018,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,ok,,,,,,none,27225876510.0,MXN,26963512279.0,26573104028.0
+Mexico,2020,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,27225876510.0,26573104028.0
+Mexico,2021,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,ok,,,,,,none,26573104028.0,MXN,27225876510.0,33170745272.0
+Mexico,2024,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,ok,,,,,,none,33170745272.0,MXN,26573104028.0,
+Mexico,1986,Centros Públicos de Investigación CONACYT (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,300000000.0
+Mexico,1987,Centros Públicos de Investigación CONACYT (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,300000000.0
+Mexico,2001,Centros Públicos de Investigación CONACYT (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,300000000.0
+Mexico,2002,Centros Públicos de Investigación CONACYT (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,300000000.0
+Mexico,2003,Centros Públicos de Investigación CONACYT (Mexico),research_institute,ok,,,,,,none,300000000.0,MXN,,140500000.0
+Mexico,2006,Centros Públicos de Investigación CONACYT (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,300000000.0,140500000.0
+Mexico,2007,Centros Públicos de Investigación CONACYT (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,300000000.0,140500000.0
+Mexico,2008,Centros Públicos de Investigación CONACYT (Mexico),research_institute,ok,,,,,,none,140500000.0,MXN,300000000.0,1500000000.0
+Mexico,2009,Centros Públicos de Investigación CONACYT (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,140500000.0,1500000000.0
+Mexico,2010,Centros Públicos de Investigación CONACYT (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,140500000.0,1500000000.0
+Mexico,2011,Centros Públicos de Investigación CONACYT (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,140500000.0,1500000000.0
+Mexico,2012,Centros Públicos de Investigación CONACYT (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,140500000.0,1500000000.0
+Mexico,2013,Centros Públicos de Investigación CONACYT (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,140500000.0,1500000000.0
+Mexico,2014,Centros Públicos de Investigación CONACYT (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,140500000.0,1500000000.0
+Mexico,2015,Centros Públicos de Investigación CONACYT (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,140500000.0,1500000000.0
+Mexico,2016,Centros Públicos de Investigación CONACYT (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,140500000.0,1500000000.0
+Mexico,2017,Centros Públicos de Investigación CONACYT (Mexico),research_institute,ok,,,,,,none,1500000000.0,MXN,140500000.0,
+Mexico,2018,Centros Públicos de Investigación CONACYT (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1500000000.0,
+Mexico,2020,Centros Públicos de Investigación CONACYT (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1500000000.0,
+Mexico,2021,Centros Públicos de Investigación CONACYT (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1500000000.0,
+Mexico,2024,Centros Públicos de Investigación CONACYT (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1500000000.0,
+Mexico,1986,IPN — Instituto Politécnico Nacional (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,212500000.0
+Mexico,1987,IPN — Instituto Politécnico Nacional (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,212500000.0
+Mexico,2001,IPN — Instituto Politécnico Nacional (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,212500000.0
+Mexico,2002,IPN — Instituto Politécnico Nacional (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,212500000.0
+Mexico,2003,IPN — Instituto Politécnico Nacional (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,212500000.0
+Mexico,2006,IPN — Instituto Politécnico Nacional (Mexico),higher_education,ok,,,,,,none,212500000.0,MXN,,491000000.0
+Mexico,2007,IPN — Instituto Politécnico Nacional (Mexico),higher_education,ok,,,,,,none,491000000.0,MXN,212500000.0,450000000.0
+Mexico,2008,IPN — Instituto Politécnico Nacional (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,491000000.0,450000000.0
+Mexico,2009,IPN — Instituto Politécnico Nacional (Mexico),higher_education,ok,,,,,,none,450000000.0,MXN,491000000.0,1334916427.0
+Mexico,2010,IPN — Instituto Politécnico Nacional (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,450000000.0,1334916427.0
+Mexico,2011,IPN — Instituto Politécnico Nacional (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,450000000.0,1334916427.0
+Mexico,2012,IPN — Instituto Politécnico Nacional (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,450000000.0,1334916427.0
+Mexico,2013,IPN — Instituto Politécnico Nacional (Mexico),higher_education,ok,,,,,,none,1334916427.0,MXN,450000000.0,3929918682.0
+Mexico,2014,IPN — Instituto Politécnico Nacional (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1334916427.0,3929918682.0
+Mexico,2015,IPN — Instituto Politécnico Nacional (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1334916427.0,3929918682.0
+Mexico,2016,IPN — Instituto Politécnico Nacional (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1334916427.0,3929918682.0
+Mexico,2017,IPN — Instituto Politécnico Nacional (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1334916427.0,3929918682.0
+Mexico,2018,IPN — Instituto Politécnico Nacional (Mexico),higher_education,ok,,,,,,none,3929918682.0,MXN,1334916427.0,5446575745.0
+Mexico,2020,IPN — Instituto Politécnico Nacional (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3929918682.0,5446575745.0
+Mexico,2021,IPN — Instituto Politécnico Nacional (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3929918682.0,5446575745.0
+Mexico,2024,IPN — Instituto Politécnico Nacional (Mexico),higher_education,ok,,,,,,none,5446575745.0,MXN,3929918682.0,
+Mexico,1986,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,100000000.0
+Mexico,1987,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,100000000.0
+Mexico,2001,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,100000000.0
+Mexico,2002,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,100000000.0
+Mexico,2003,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,100000000.0
+Mexico,2006,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,ok,,,,,,none,100000000.0,MXN,,90000000.0
+Mexico,2007,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,ok,,,,,,none,90000000.0,MXN,100000000.0,95000000.0
+Mexico,2008,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,90000000.0,95000000.0
+Mexico,2009,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,ok,,,,,,none,95000000.0,MXN,90000000.0,1882976326.0
+Mexico,2010,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,95000000.0,1882976326.0
+Mexico,2011,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,ok,,,,,,none,1882976326.0,MXN,95000000.0,2149930492.0
+Mexico,2012,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1882976326.0,2149930492.0
+Mexico,2013,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,ok,,,,,,none,2149930492.0,MXN,1882976326.0,2004433950.0
+Mexico,2014,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,ok,,,,,,none,2004433950.0,MXN,2149930492.0,2232639342.0
+Mexico,2015,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,2004433950.0,2232639342.0
+Mexico,2016,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,2004433950.0,2232639342.0
+Mexico,2017,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,2004433950.0,2232639342.0
+Mexico,2018,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,ok,,,,,,none,2232639342.0,MXN,2004433950.0,2404759338.0
+Mexico,2020,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,ok,,,,,,none,2404759338.0,MXN,2232639342.0,3147042279.0
+Mexico,2021,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,ok,,,,,,none,3147042279.0,MXN,2404759338.0,3299640842.0
+Mexico,2024,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,ok,,,,,,none,3299640842.0,MXN,3147042279.0,
+Mexico,1986,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,169203768.0
+Mexico,1987,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,169203768.0
+Mexico,2001,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,169203768.0
+Mexico,2002,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,169203768.0
+Mexico,2003,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,169203768.0
+Mexico,2006,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,169203768.0
+Mexico,2007,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,169203768.0
+Mexico,2008,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,169203768.0
+Mexico,2009,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,169203768.0
+Mexico,2010,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,169203768.0
+Mexico,2011,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,ok,,,,,,none,169203768.0,MXN,,208205657.0
+Mexico,2012,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,169203768.0,208205657.0
+Mexico,2013,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,ok,,,,,,none,208205657.0,MXN,169203768.0,242522636.0
+Mexico,2014,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,ok,,,,,,none,242522636.0,MXN,208205657.0,538429413.0
+Mexico,2015,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,242522636.0,538429413.0
+Mexico,2016,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,ok,,,,,,none,538429413.0,MXN,242522636.0,244633011.0
+Mexico,2017,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,ok,,,,,,none,244633011.0,MXN,538429413.0,375359683.0
+Mexico,2018,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,244633011.0,375359683.0
+Mexico,2020,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,244633011.0,375359683.0
+Mexico,2021,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,244633011.0,375359683.0
+Mexico,2024,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,ok,,,,,,none,375359683.0,MXN,244633011.0,
+Mexico,1986,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,133396620.0
+Mexico,1987,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,133396620.0
+Mexico,2001,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,133396620.0
+Mexico,2002,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,133396620.0
+Mexico,2003,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,133396620.0
+Mexico,2006,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,133396620.0
+Mexico,2007,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,133396620.0
+Mexico,2008,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,133396620.0
+Mexico,2009,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,133396620.0
+Mexico,2010,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,133396620.0
+Mexico,2011,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,ok,,,,,,none,133396620.0,MXN,,163426361.0
+Mexico,2012,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,133396620.0,163426361.0
+Mexico,2013,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,ok,,,,,,none,163426361.0,MXN,133396620.0,173524632.0
+Mexico,2014,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,ok,,,,,,none,173524632.0,MXN,163426361.0,246352545.0
+Mexico,2015,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,173524632.0,246352545.0
+Mexico,2016,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,ok,,,,,,none,246352545.0,MXN,173524632.0,169545838.0
+Mexico,2017,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,ok,,,,,,none,169545838.0,MXN,246352545.0,225132571.0
+Mexico,2018,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,169545838.0,225132571.0
+Mexico,2020,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,169545838.0,225132571.0
+Mexico,2021,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,ok,,,,,,none,225132571.0,MXN,169545838.0,
+Mexico,2024,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,225132571.0,
+Mexico,1986,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,131173865.0
+Mexico,1987,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,131173865.0
+Mexico,2001,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,131173865.0
+Mexico,2002,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,131173865.0
+Mexico,2003,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,131173865.0
+Mexico,2006,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,131173865.0
+Mexico,2007,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,131173865.0
+Mexico,2008,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,131173865.0
+Mexico,2009,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,131173865.0
+Mexico,2010,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,131173865.0
+Mexico,2011,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,ok,,,,,,none,131173865.0,MXN,,157259268.0
+Mexico,2012,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,131173865.0,157259268.0
+Mexico,2013,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,ok,,,,,,none,157259268.0,MXN,131173865.0,182981293.0
+Mexico,2014,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,ok,,,,,,none,182981293.0,MXN,157259268.0,207933168.0
+Mexico,2015,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,182981293.0,207933168.0
+Mexico,2016,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,ok,,,,,,none,207933168.0,MXN,182981293.0,166741594.0
+Mexico,2017,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,ok,,,,,,none,166741594.0,MXN,207933168.0,212977650.0
+Mexico,2018,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,166741594.0,212977650.0
+Mexico,2020,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,166741594.0,212977650.0
+Mexico,2021,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,ok,,,,,,none,212977650.0,MXN,166741594.0,256930521.0
+Mexico,2024,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,ok,,,,,,none,256930521.0,MXN,212977650.0,
+Mexico,1986,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,680000000.0
+Mexico,1987,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,680000000.0
+Mexico,2001,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,680000000.0
+Mexico,2002,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,680000000.0
+Mexico,2003,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,680000000.0
+Mexico,2006,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,680000000.0
+Mexico,2007,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,ok,,,,,,none,680000000.0,MXN,,700000000.0
+Mexico,2008,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,680000000.0,700000000.0
+Mexico,2009,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,ok,,,,,,none,700000000.0,MXN,680000000.0,5769731040.0
+Mexico,2010,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,700000000.0,5769731040.0
+Mexico,2011,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,ok,,,,,,none,5769731040.0,MXN,700000000.0,8698958700.0
+Mexico,2012,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,5769731040.0,8698958700.0
+Mexico,2013,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,ok,,,,,,none,8698958700.0,MXN,5769731040.0,12334527146.0
+Mexico,2014,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,8698958700.0,12334527146.0
+Mexico,2015,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,8698958700.0,12334527146.0
+Mexico,2016,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,8698958700.0,12334527146.0
+Mexico,2017,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,8698958700.0,12334527146.0
+Mexico,2018,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,ok,,,,,,none,12334527146.0,MXN,8698958700.0,15836059144.0
+Mexico,2020,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,12334527146.0,15836059144.0
+Mexico,2021,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,ok,,,,,,none,15836059144.0,MXN,12334527146.0,18929093278.0
+Mexico,2024,UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,ok,,,,,,none,18929093278.0,MXN,15836059144.0,
+Mexico,1986,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,451714399.0
+Mexico,1987,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,451714399.0
+Mexico,2001,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,451714399.0
+Mexico,2002,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,451714399.0
+Mexico,2003,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,451714399.0
+Mexico,2006,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,451714399.0
+Mexico,2007,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,451714399.0
+Mexico,2008,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,451714399.0
+Mexico,2009,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,451714399.0
+Mexico,2010,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,451714399.0
+Mexico,2011,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,ok,,,,,,none,451714399.0,MXN,,500000000.0
+Mexico,2012,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,451714399.0,500000000.0
+Mexico,2013,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,451714399.0,500000000.0
+Mexico,2014,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,451714399.0,500000000.0
+Mexico,2015,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,451714399.0,500000000.0
+Mexico,2016,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,451714399.0,500000000.0
+Mexico,2017,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,ok,,,,,,none,500000000.0,MXN,451714399.0,543755159.0
+Mexico,2018,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,ok,,,,,,none,543755159.0,MXN,500000000.0,906393775.0
+Mexico,2020,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,ok,,,,,,none,906393775.0,MXN,543755159.0,922773729.0
+Mexico,2021,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,ok,,,,,,none,922773729.0,MXN,906393775.0,
+Mexico,2024,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,922773729.0,
+Mexico,1986,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1317238965.0
+Mexico,1987,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1317238965.0
+Mexico,2001,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1317238965.0
+Mexico,2002,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1317238965.0
+Mexico,2003,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1317238965.0
+Mexico,2006,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1317238965.0
+Mexico,2007,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1317238965.0
+Mexico,2008,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1317238965.0
+Mexico,2009,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1317238965.0
+Mexico,2010,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1317238965.0
+Mexico,2011,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1317238965.0
+Mexico,2012,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1317238965.0
+Mexico,2013,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,ok,,,,,,none,1317238965.0,MXN,,1091480035.0
+Mexico,2014,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1317238965.0,1091480035.0
+Mexico,2015,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1317238965.0,1091480035.0
+Mexico,2016,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,ok,,,,,,none,1091480035.0,MXN,1317238965.0,
+Mexico,2017,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1091480035.0,
+Mexico,2018,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1091480035.0,
+Mexico,2020,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1091480035.0,
+Mexico,2021,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1091480035.0,
+Mexico,2024,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1091480035.0,
+Mexico,2010,Mexican Space Agency,science_agency,ok,,,,,,none,10000000.0,MXN,,54457650.0
+Mexico,2011,Mexican Space Agency,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,54457650.0
+Mexico,2012,Mexican Space Agency,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,54457650.0
+Mexico,2013,Mexican Space Agency,science_agency,ok,,,,,,none,54457650.0,MXN,10000000.0,112811973.0
+Mexico,2014,Mexican Space Agency,science_agency,ok,,,,,,none,112811973.0,MXN,54457650.0,90467913.0
+Mexico,2015,Mexican Space Agency,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,112811973.0,90467913.0
+Mexico,2016,Mexican Space Agency,science_agency,ok,,,,,,none,90467913.0,MXN,112811973.0,92482883.0
+Mexico,2017,Mexican Space Agency,science_agency,ok,,,,,,none,92482883.0,MXN,90467913.0,67625350.0
+Mexico,2018,Mexican Space Agency,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,92482883.0,67625350.0
+Mexico,2020,Mexican Space Agency,science_agency,ok,,,,,,none,67625350.0,MXN,92482883.0,73913894.0
+Mexico,2021,Mexican Space Agency,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,67625350.0,73913894.0
+Mexico,2024,Mexican Space Agency,science_agency,ok,,,,,,none,73913894.0,MXN,67625350.0,
+Mexico,2018,Metropolitan Autonomous University,higher_education,ok,,,,,,none,3048708947.0,MXN,,
+Mexico,2016,Chapingo Autonomous University,higher_education,ok,,,,,,none,2553400000.0,MXN,,
+Mexico,2010,Mixed Fund,innovation_instruments,ok,,,,,,none,390000000.0,MXN,,
+Mexico,2011,College of the Southern Border,science_agency,ok,,,,,,none,239272825.0,MXN,,298204244.0
+Mexico,2012,College of the Southern Border,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,239272825.0,298204244.0
+Mexico,2013,College of the Southern Border,science_agency,ok,,,,,,none,298204244.0,MXN,239272825.0,330806751.0
+Mexico,2014,College of the Southern Border,science_agency,ok,,,,,,none,330806751.0,MXN,298204244.0,401212700.0
+Mexico,2015,College of the Southern Border,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,330806751.0,401212700.0
+Mexico,2016,College of the Southern Border,science_agency,ok,,,,,,none,401212700.0,MXN,330806751.0,
+Mexico,2011,CIATEQ Advanced Technology Center,science_agency,ok,,,,,,none,149613299.0,MXN,,170308467.0
+Mexico,2012,CIATEQ Advanced Technology Center,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,149613299.0,170308467.0
+Mexico,2013,CIATEQ Advanced Technology Center,science_agency,ok,,,,,,none,170308467.0,MXN,149613299.0,246409525.0
+Mexico,2014,CIATEQ Advanced Technology Center,science_agency,ok,,,,,,none,246409525.0,MXN,170308467.0,625054216.0
+Mexico,2015,CIATEQ Advanced Technology Center,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,246409525.0,625054216.0
+Mexico,2016,CIATEQ Advanced Technology Center,science_agency,ok,,,,,,none,625054216.0,MXN,246409525.0,
+Mexico,2011,Ecology Institute,science_agency,ok,,,,,,none,208060201.0,MXN,,233223136.0
+Mexico,2012,Ecology Institute,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,208060201.0,233223136.0
+Mexico,2013,Ecology Institute,science_agency,ok,,,,,,none,233223136.0,MXN,208060201.0,350359050.0
+Mexico,2014,Ecology Institute,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,233223136.0,350359050.0
+Mexico,2015,Ecology Institute,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,233223136.0,350359050.0
+Mexico,2016,Ecology Institute,science_agency,ok,,,,,,none,350359050.0,MXN,233223136.0,
+Mexico,2011,College of the Northern Border,science_agency,ok,,,,,,none,202926687.0,MXN,,237876070.0
+Mexico,2012,College of the Northern Border,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,202926687.0,237876070.0
+Mexico,2013,College of the Northern Border,science_agency,ok,,,,,,none,237876070.0,MXN,202926687.0,271522460.0
+Mexico,2014,College of the Northern Border,science_agency,ok,,,,,,none,271522460.0,MXN,237876070.0,341059907.0
+Mexico,2015,College of the Northern Border,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,271522460.0,341059907.0
+Mexico,2016,College of the Northern Border,science_agency,ok,,,,,,none,341059907.0,MXN,271522460.0,
+Mexico,2011,"The College of Michoacán, A.C.",higher_education,ok,,,,,,none,93087326.0,MXN,,112615829.0
+Mexico,2012,"The College of Michoacán, A.C.",higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,93087326.0,112615829.0
+Mexico,2013,"The College of Michoacán, A.C.",higher_education,ok,,,,,,none,112615829.0,MXN,93087326.0,128566639.0
+Mexico,2014,"The College of Michoacán, A.C.",higher_education,ok,,,,,,none,128566639.0,MXN,112615829.0,151235542.0
+Mexico,2015,"The College of Michoacán, A.C.",higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,128566639.0,151235542.0
+Mexico,2016,"The College of Michoacán, A.C.",higher_education,ok,,,,,,none,151235542.0,MXN,128566639.0,
+Mexico,2011,"The College of San Luis, A.C.",higher_education,ok,,,,,,none,72401204.0,MXN,,93946840.0
+Mexico,2012,"The College of San Luis, A.C.",higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,72401204.0,93946840.0
+Mexico,2013,"The College of San Luis, A.C.",higher_education,ok,,,,,,none,93946840.0,MXN,72401204.0,109537863.0
+Mexico,2014,"The College of San Luis, A.C.",higher_education,ok,,,,,,none,109537863.0,MXN,93946840.0,126676997.0
+Mexico,2015,"The College of San Luis, A.C.",higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,109537863.0,126676997.0
+Mexico,2016,"The College of San Luis, A.C.",higher_education,ok,,,,,,none,126676997.0,MXN,109537863.0,
+Mexico,2011,Mario Molina Center (regional studies in energy and environmental management),science_agency,ok,,,,,,none,46000000.0,MXN,,
+Mexico,2011,Operational Expenses for the Large Millimeter Telescope Project,science_agency,ok,,,,,,none,25000000.0,MXN,,
+Mexico,2012,Global Change and Environmental Sustainability (Stage 2),science_agency,ok,,,,,,none,12000000.0,MXN,,
+Mexico,2012,Development of Equipment for Mechatronics,direct_rd,ok,,,,,,none,10900000.0,MXN,,
+Mexico,2012,State Center for Renewable and Alternative Energies,science_agency,ok,,,,,,none,5000000.0,MXN,,
+Mexico,2012,Strengthening of the 'Descubre' Technology Center,direct_rd,ok,,,,,,none,4000000.0,MXN,,
+Mexico,2012,Development of Medicines from Endemic Medicinal Plants of Tlaxcala,direct_rd,ok,,,,,,none,532000.0,MXN,,
+Mexico,2008,New Fund for Science and Technology,innovation_instruments,ok,,,,,,none,500000.0,MXN,,

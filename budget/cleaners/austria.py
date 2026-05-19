@@ -6,12 +6,15 @@ Document type: Bundesfinanzgesetz (BFG) / Bundesvoranschlag (BVA), German.
 KEY ISSUES TO HANDLE:
 
 1. Unit era (CRITICAL):
-   - 1975-2001: amounts in THOUSANDS of Austrian Schillings (Tausend ATS).
-                → unit='thousand', currency='ATS'
-   - 2002+:     amounts in THOUSANDS of euros (Tausend EUR / in Tausend Euro).
-                → unit='thousand', currency='EUR'
-   A post-2001 row with unit='million' will be 1000x too large.
-   Flag mismatches for verification.
+   - 1975-2001: amounts in MILLIONS of Austrian Schillings
+                ("Beträge in Millionen Schilling").
+                → unit='million', currency='ATS'
+   - 2002+:     amounts in MILLIONS of euros
+                ("Beträge in Millionen Euro").
+                → unit='million', currency='EUR'
+   Many Austria rows are currently mislabelled as unit='thousand'. In addition,
+   values like "20,421" are often parsed as 20421 instead of 20.421, so some
+   rows need both a unit relabel and a divide-by-1000 correction.
 
 2. Budget structure reform 2013 (Haushaltsrechtsreform):
    Pre-2013:  Einzelpläne (Kapitel system).
@@ -40,8 +43,8 @@ KEY ISSUES TO HANDLE:
    or item_type='section_total'.
 
 7. Outlier detection:
-   Post-2001 (EUR thousands): single R&D line > 5,000,000 thousand (= €5B) implausible.
-   Pre-2002  (ATS thousands): single R&D line > 100,000,000 thousand (= 100B ATS) implausible.
+   Post-2001 (EUR millions): single R&D line > 5,000 million (= €5B) implausible.
+   Pre-2002  (ATS millions): single R&D line > 100,000 million (= 100B ATS) implausible.
 
 8. UG 31 signal: rows with a clear UG 31 / Einzelplan 13 context and research signal
    should be high-confidence (leave decision='include' if already set).
@@ -141,6 +144,49 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
     has_research = combined.apply(lambda d: bool(_RESEARCH_SIGNAL.search(d)))
 
     # -------------------------------------------------------------------
+    # 0. Fix Austria's documented currency/unit regime before any ranking.
+    # -------------------------------------------------------------------
+    if "currency" in df.columns:
+        expected_currency = pd.Series(pd.NA, index=df.index, dtype="object")
+        expected_currency.loc[year_num < 2002] = "ATS"
+        expected_currency.loc[year_num >= 2002] = "EUR"
+        currency_mask = (
+            expected_currency.notna()
+            & df["currency"].fillna("").astype(str).str.upper().ne(expected_currency)
+        )
+        if currency_mask.any():
+            df.loc[currency_mask, "currency"] = expected_currency.loc[currency_mask]
+            _note(df, currency_mask, "[currency_fix: Austria pre-2002=ATS, 2002+=EUR]")
+
+    if "unit" in df.columns and "amount_local" in df.columns:
+        unit_s = df["unit"].fillna("").astype(str).str.lower().str.strip()
+        amount_num = pd.to_numeric(df["amount_local"], errors="coerce")
+        thousand_mask = unit_s.isin(["thousand", "tausend", "1000"])
+        if thousand_mask.any():
+            rounded = amount_num.round()
+            integer_like = thousand_mask & amount_num.notna() & ((amount_num - rounded).abs() < 1e-9)
+            extra_thousands_mask = integer_like & rounded.abs().ge(1_000_000) & rounded.mod(1000).eq(0)
+            decimal_comma_mask = integer_like & ~extra_thousands_mask
+
+            if extra_thousands_mask.any():
+                df.loc[extra_thousands_mask, "amount_local"] = amount_num.loc[extra_thousands_mask] / 1_000_000.0
+                _note(
+                    df,
+                    extra_thousands_mask,
+                    "[unit_fix: Austria value had extra trailing 000s; converted thousand→million and ÷1,000,000]",
+                )
+
+            if decimal_comma_mask.any():
+                df.loc[decimal_comma_mask, "amount_local"] = amount_num.loc[decimal_comma_mask] / 1000.0
+                _note(
+                    df,
+                    decimal_comma_mask,
+                    "[unit_fix: Austria decimal comma lost; converted thousand→million and ÷1,000]",
+                )
+            df.loc[thousand_mask, "unit"] = "million"
+            _note(df, thousand_mask, "[unit_fix: Austria budget tables use Millionen, not thousand]")
+
+    # -------------------------------------------------------------------
     # 1. Social transfers → non_rd
     # -------------------------------------------------------------------
     social_mask = combined.apply(lambda d: bool(_SOCIAL_TRANSFERS.search(d)))
@@ -234,20 +280,5 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
                 df.loc[ats_outlier, "confidence"] = 0.3
             _note(df, ats_outlier,
                   "[outlier: > 100B ATS (millions) — likely chapter total, not single R&D line]")
-
-    # -------------------------------------------------------------------
-    # 6. Unit-era mismatch: rows with unit='thousand' are suspect
-    #    (Austrian Bundesvoranschlag uses MILLIONS throughout all years)
-    # -------------------------------------------------------------------
-    if "unit" in df.columns:
-        unit_s = df["unit"].fillna("").str.lower()
-        wrong_unit = (
-            unit_s.isin(["thousand", "tausend", "1000"])
-            & ~df["aggregation_role"].isin(["non_rd", "redundant", "section"])
-        )
-        if wrong_unit.any():
-            _note(df, wrong_unit,
-                  "[unit_check: unit=thousand is incorrect for Austria — "
-                  "Bundesvoranschlag uses Millionen (millions) throughout all years; verify source page]")
 
     return df

@@ -300,7 +300,10 @@ _COUNTRY_SCAN_HINTS: dict[str, str] = {
         "'P002', 'P-002', 'Investigação Científica e Tecnológica e Inovação', "
         "'investigação científica', 'I&D', 'ciência e tecnologia', "
         "'bolsas de doutoramento', 'bolsas de investigação', 'centros de investigação', "
-        "'CERN', 'ESA', or any page showing budget allocations for named R&D institutes or FCT. "
+        "'CERN', 'ESA', "
+        "'MAPA V', 'MAPA VII', 'DESPESAS DOS SERVIÇOS E FUNDOS AUTÓNOMOS', "
+        "'RECEITAS DOS SERVIÇOS E FUNDOS AUTÓNOMOS', "
+        "or any page showing a NAMED institutional budget row for FCT/JNICT/ANI/LNEC in an annual budget table. "
         "CRITICAL — Mark relevant=false for pages containing: "
         "'Polícia Judiciária', 'PJ', 'PGR', 'PSP', 'GNR', 'SEF' "
         "(investigação here = criminal investigation, NOT scientific R&D), "
@@ -309,6 +312,12 @@ _COUNTRY_SCAN_HINTS: dict[str, str] = {
         "'Forças Armadas', 'Defesa Nacional' without 'investigação científica' label, "
         "'Infraestruturas de Portugal', 'EP Estradas', 'REFER' (transport infrastructure), "
         "'ensino básico', 'ensino secundário' broad totals without named R&D, "
+        "'responsabilidades contratuais plurianuais', 'programação financeira plurianual', "
+        "'MAPA 14', 'PIDDAC APOIOS', 'PIDDAC TRADICIONAL', 'Nº Projectos', "
+        "pages that only show project financing schedules or plurianual columns rather than a current-year institutional appropriation, "
+        "and pages that only mention transfers to FCT/ANI/LNEC/JNICT in legal text "
+        "('transferência', 'transfer of funds', 'até ao montante', 'Fundo Azul', 'Fundo de Contragarantia Mútuo'). "
+        "Treat those pages as not relevant unless they ALSO contain a named annual budget row for the institution. "
         "and table-of-contents or legislative preamble pages. "
         "NOTE: Files 1977-2000 are scanned — accept any page that OCR suggests "
         "contains a science ministry section or named R&D institution. "
@@ -405,6 +414,19 @@ _COUNTRY_SCAN_HINTS: dict[str, str] = {
         "'Karayolları', 'Devlet Demiryolları', 'TCDD' transport infrastructure without Ar-Ge, "
         "'İlköğretim', 'Ortaöğretim', 'MEB' K-12 education broad totals, "
         "and table-of-contents or legislative preamble pages. "
+        "DOCUMENT TYPE WARNINGS — Turkey collection contains mixed document types: "
+        "(1) 'GenelFaaliyetRaporu_XXXX.pdf' = post-facto General Activity Report, NOT a budget "
+        "appropriation document — mark ALL pages relevant=false. "
+        "(2) 'Merkezi-Yonetim-Kesin-Hesabi' = Central Government Final Accounts (actual "
+        "spending, not appropriations) — mark relevant=false unless you need out-turn data. "
+        "(3) 'tbmm22140033ss1270/ss1271.pdf' = Kesin Hesap Kanunu (Final Accounts Law) — skip. "
+        "(4) 'kanuntbmmc09XXXXX.pdf' = budget law articles only, no appropriation tables — "
+        "mark relevant=false (budget amounts are in the annex Cetveller, not the law text). "
+        "(5) '2-a-XXXX-Yılı-Genel-Bütçeli-İdareler-Ekonomik-Kod-İcmali' (3-page files, "
+        "2010-2025) = General Budget economic-code summary, NO TÜBİTAK/TÜBA/TAEK — "
+        "mark ALL pages relevant=false. "
+        "BEST FILES: large UUID-named PDFs (e.g. 'f8229ba6-...pdf', 'dfd35a0d-...pdf'), "
+        "'ButceGerekcesi_XXXX.pdf', or the multi-hundred-page numbered files (e.g. '1981 17265.pdf'). "
         "NOTE: 1990 file is an exact duplicate of 1991 — mark all 1990 pages relevant=false. "
         "NOTE: Pre-2005 TRL amounts appear as 12-15 digit numbers (hyperinflation era) — "
         "this is expected, not an error."
@@ -614,7 +636,14 @@ Do NOT extract items you would mark as "skip" — just omit them from the output
 3. If an amount is absent, set amount_local to null.
 4. Read the FULL line description before deciding. The section name alone is not \
    sufficient — "Department of Science" can contain non-R&D lines.
-5. Output valid JSON only. No prose, no markdown fences, no explanation outside JSON.
+5. NEVER fabricate a budget row from narrative/legal prose. If the page contains only \
+   legal authorisations, policy commitments, or descriptive text without an explicit \
+   budget table row or clearly printed appropriation amount tied to the item, DO NOT \
+   emit a synthetic "total", "funding", or "appropriation" line.
+6. If a page mentions a science body (e.g. FCT, ANI, university, laboratory) but does \
+   not print a defendable annual budget amount for that body on the page, return no item \
+   for that body. Mentions alone are not enough.
+7. Output valid JSON only. No prose, no markdown fences, no explanation outside JSON.
 
 ## Number format guide by country
 Different countries use different thousands separators. Parse accordingly:
@@ -732,6 +761,8 @@ Mark relevant=true ONLY for pages with:
 
 Mark relevant=false for pages that only contain:
 - Table of contents, preamble, legislative text, definitions
+- Narrative legal articles, policy declarations, or authorisation clauses without a \
+  budget table row or explicit appropriation amount
 - Foreign aid, development assistance, or overseas programmes (even if labelled "research")
 - Education department spending on curriculum, monitoring, evaluation, or scholarships
 - Capital works and equipment procurement tables

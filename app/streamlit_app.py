@@ -786,6 +786,28 @@ with TAB_BUDGET:
             "fit": "Moderate — useful for broad trends, strongest where named science agencies are explicit.",
             "rating": "moderate",
         },
+        "Austria": {
+            "years": "1976–2026",
+            "source": (
+                "Austrian federal budget laws and annex tables (Bundesvoranschlag / Bundesfinanzgesetz), "
+                "with compile-side cleaning and a small set of manual verified overrides traced to original budget pages"
+            ),
+            "gaps": (
+                "Austria is intentionally presented as a conservative, traceability-first institutional panel. "
+                "The final app-ready series keeps only 162 audited observations across 10 active series, all stored in full "
+                "currency units (`schilling` before the euro era and `euro` afterward) rather than `thousand`. "
+                "Several tempting rows in the source family were deliberately excluded because they came from chapter summaries, "
+                "performance/KPI pages, or generic funding buckets rather than clean institution-level appropriations. "
+                "The strongest verified overrides are the ÖAW rows for 1996–1999 and 2012. Remaining gaps are mostly structural: "
+                "many older PDFs expose only scan-heavy annexes such as staffing or systemisation tables, while several modern "
+                "pages mention FWF, ÖAW, FFG, ISTA, CERN, or ESA only narratively rather than as explicit budget lines."
+            ),
+            "fit": (
+                "Moderate — strong for a small audited institutional backbone and transparent source tracing; "
+                "not suitable as a dense continuous ledger of all Austrian public R&D appropriations."
+            ),
+            "rating": "moderate",
+        },
         "Belgium": {
             "years": "1994–2025",
             "source": "Federal finance laws and science-policy budget annexes in French and Dutch",
@@ -1075,6 +1097,19 @@ with TAB_BUDGET:
             ),
             "rating": "moderate",
         },
+        "Mexico": {
+            "years": "1986–2024 (usable years are discontinuous)",
+            "source": "Federal budget decrees and annex tables for CONACYT / Ramo 38 and selected named institutions",
+            "gaps": (
+                "The Mexican panel is intentionally conservative. Final amounts are normalized to full Mexican pesos "
+                "(MXN), and surviving rows were kept only where they can be checked against the original budget document; "
+                "narrow research-only, project-specific, or proxy rows were removed when they did not represent an "
+                "institution-wide budget. Several years remain missing because the currently available files are either "
+                "wrong-source, non-budget legal text, or not reliably extractable, especially 2004–2005, 2019, 2022, and 2023."
+            ),
+            "fit": "Moderate — strongest for audited CONACYT / Ramo 38 totals and a subset of clearly documented institutional lines.",
+            "rating": "moderate",
+        },
         "Norway": {
             "years": "1975–2026",
             "source": "Statsbudsjettet (State Budget) — annual budget proposition documents",
@@ -1183,6 +1218,21 @@ with TAB_BUDGET:
                 "Long-run charts also span two monetary regimes: pre-2009 Slovak koruna (SKK) and 2009 onward euro (EUR)."
             ),
             "fit": "Moderate — usable for audited institutional trends, but cross-era level comparison requires explicit currency conversion and the 2023–2024 source gap must be respected.",
+            "rating": "moderate",
+        },
+        "Slovenia": {
+            "years": "1992–2025, audited as a conservative six-series R&D panel",
+            "source": "Uradni list budget acts, RS companion budget files, and manual verification against original Slovenian budget PDFs",
+            "gaps": (
+                "The Slovenian panel is intentionally conservative and traceability-first. It currently keeps 87 verified observations across six "
+                "audited series rather than trying to represent the full Slovenian public R&D system. The strongest long-run anchors are "
+                "SAZU and programme 0502, with ARRS explicit from 2004 onward and two additional modern series added for European Space Agency "
+                "programmes and research and innovation capacities. Important source constraints remain: 2014 in the current file set behaves like "
+                "legal-wrapper text rather than a recoverable numeric annex, one misfiled 2004/2005 file was explicitly excluded, and 32 "
+                "series-year combinations still remain genuine missing values. Long-run interpretation also spans two monetary regimes: SIT before "
+                "2007 and EUR from 2007 onward."
+            ),
+            "fit": "Moderate to good — strong for the audited R&D core and modern level checks, but still a partial institutional panel rather than a complete whole-of-government R&D ledger.",
             "rating": "moderate",
         },
         "Spain": {

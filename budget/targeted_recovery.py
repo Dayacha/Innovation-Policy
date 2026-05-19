@@ -37,6 +37,30 @@ logger = logging.getLogger(__name__)
 # Limit scope to institutions / research bodies; generic programmes are better
 # handled by the main extraction logic and ordinary dedup.
 _ELIGIBLE_CATEGORIES = {"science_agency", "research_infrastructure"}
+_METRIC_LABEL_PATTERNS = (
+    re.compile(r"\berc grants?\b", re.I),
+    re.compile(r"\bgrants? from erc\b", re.I),
+    re.compile(r"\bpublikationen?\b", re.I),
+    re.compile(r"\bpublications?\b", re.I),
+    re.compile(r"\bdissertation", re.I),
+    re.compile(r"\bkennzahl\b", re.I),
+    re.compile(r"\banzahl\b", re.I),
+    re.compile(r"\bcount of\b", re.I),
+    re.compile(r"\bnumber of\b", re.I),
+)
+_AUSTRIA_GENERIC_RECOVERY_LABELS = {
+    "aufwendungen",
+    "forderungen",
+    "summe",
+    "total",
+    "funding",
+    "expenditures",
+    "grants",
+    "transfer expenditure",
+    "transfer expenditures",
+    "operational material expenses",
+    "personnel expenses",
+}
 
 _SYSTEM_PROMPT = """You are a government budget extraction specialist.
 
@@ -116,6 +140,8 @@ def _recovery_currency(country: str, year: int) -> str:
     # pre-2002 snippets, which then could not enter the canonical series.
     if country == "Belgium" and year < 2002:
         return "BEF"
+    if country == "Austria" and year < 2002:
+        return "ATS"
     return cfg.COUNTRY_CONTEXT.get(country, cfg.DEFAULT_COUNTRY_CONTEXT).get("currency", "LOCAL")
 
 
@@ -173,7 +199,19 @@ def _filter_recovered_rows(rows: list[dict]) -> list[dict]:
             if str(r.get("line_description", "") or "").strip().lower() != "program expenditures"
         ]
 
-    return rows
+    filtered: list[dict] = []
+    for row in rows:
+        label = str(row.get("line_description", "") or "").strip()
+        notes = str(row.get("notes", "") or "").strip()
+        unit = str(row.get("unit", "") or "").strip().lower()
+        blob = " ".join(x for x in [label, notes] if x)
+        if any(pat.search(blob) for pat in _METRIC_LABEL_PATTERNS):
+            continue
+        if unit in {"anzahl", "count"}:
+            continue
+        filtered.append(row)
+
+    return filtered
 
 
 def _recover_for_agency(
@@ -262,6 +300,16 @@ def _recover_for_agency(
             "notes": item.get("notes", f"Recovered for missing agency: {agency['canonical_name']}"),
         })
     rows = _filter_recovered_rows(rows)
+    if country == "Austria":
+        austrian_rows: list[dict] = []
+        for row in rows:
+            label = str(row.get("line_description", "") or "").strip().lower()
+            if label in _AUSTRIA_GENERIC_RECOVERY_LABELS:
+                continue
+            if label.startswith("ausgaben nach maßgabe"):
+                continue
+            austrian_rows.append(row)
+        rows = austrian_rows
     if rows:
         logger.info(
             f"[{country}] Targeted recovery: {source_file} -> {agency['canonical_name']} "

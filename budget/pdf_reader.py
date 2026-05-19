@@ -94,10 +94,75 @@ _MIN_ALNUM_RATIO = 0.20
 # producing garbled output like "DIRE Z IONE" instead of "DIREZIONE".
 # This manifests as an unusually high proportion of single-character tokens.
 _MAX_SINGLE_CHAR_TOKEN_RATIO = 0.28
+_CID_TOKEN_RE = re.compile(r"\(cid:\d+\)")
+_MAX_CID_TOKEN_RATIO = 0.12
+_SHIFTED_CTRL_MIN = 5
+
+
+def _decode_shifted_char(ch: str) -> str:
+    o = ord(ch)
+    if o == 3:
+        return " "
+    if 3 < o <= 126:
+        return chr(o + 29)
+    return ch
+
+
+def _looks_shifted_text_layer(text: str) -> bool:
+    if not text:
+        return False
+    if text.count("\x03") >= _SHIFTED_CTRL_MIN:
+        return True
+    return False
+
+
+def _decode_shifted_text_layer(text: str) -> str:
+    """Decode Portugal-style shifted text layers while preserving plain numeric rows."""
+    decoded_lines: list[str] = []
+    for line in text.splitlines():
+        stripped = line.strip()
+        if not stripped:
+            decoded_lines.append(line)
+            continue
+        # Leave pure numeric lines untouched; these are already legible.
+        if re.fullmatch(r"[\d\s.,\-–—()]+", stripped):
+            decoded_lines.append(line)
+            continue
+        if "\x03" in line or re.search(r"[A-Za-z]", line):
+            decoded_lines.append("".join(_decode_shifted_char(ch) for ch in line))
+        else:
+            decoded_lines.append(line)
+    return "\n".join(decoded_lines)
+
+
+def _looks_cid_encoded(text: str) -> bool:
+    if not text:
+        return False
+    matches = _CID_TOKEN_RE.findall(text)
+    if len(matches) < 8:
+        return False
+    token_count = max(len(text.split()), 1)
+    return (len(matches) / token_count) >= _MAX_CID_TOKEN_RATIO
+
+
+def _sanitize_cid_text(text: str) -> str:
+    """Keep only the readable header/context from CID-garbled pages."""
+    kept: list[str] = []
+    for line in text.splitlines():
+        if _CID_TOKEN_RE.search(line):
+            continue
+        clean = line.strip()
+        if clean:
+            kept.append(clean)
+    if kept:
+        return "\n".join(kept[:20])
+    return "[UNPARSEABLE_CID_ENCODED_TABLE]"
 
 
 def _text_is_usable(text: str) -> bool:
     if len(text) < _MIN_DIRECT_TEXT_CHARS:
+        return False
+    if _looks_cid_encoded(text):
         return False
     alnum = sum(c.isalnum() for c in text)
     if (alnum / max(len(text), 1)) < _MIN_ALNUM_RATIO:
@@ -150,6 +215,9 @@ def _extract_pdf(
                 logger.debug("Direct text extraction failed on %s page %s: %s", path.name, page_num, e)
                 direct_text = ""
 
+            if _looks_shifted_text_layer(direct_text):
+                direct_text = _decode_shifted_text_layer(direct_text)
+
             use_direct = (not force_ocr) and _text_is_usable(direct_text)
 
             if use_direct:
@@ -168,8 +236,14 @@ def _extract_pdf(
                 if ocr_text:
                     pages.append(PageText(page_num=page_num, text=ocr_text.strip(), method="ocr"))
                 else:
-                    # Last resort: keep whatever direct text we have
-                    pages.append(PageText(page_num=page_num, text=direct_text.strip(), method="direct"))
+                    # Last resort: keep only readable context from CID-garbled
+                    # pages so downstream logic does not treat encoded table
+                    # noise as real budget text.
+                    if _looks_cid_encoded(direct_text):
+                        fallback_text = _sanitize_cid_text(direct_text)
+                        pages.append(PageText(page_num=page_num, text=fallback_text, method="direct_cid"))
+                    else:
+                        pages.append(PageText(page_num=page_num, text=direct_text.strip(), method="direct"))
     finally:
         doc.close()
 

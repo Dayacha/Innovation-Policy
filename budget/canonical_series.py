@@ -59,7 +59,9 @@ _OUTPUT_UNIT_BY_CURRENCY = {
     "EUR": "euro",
     "DEM": "mark",
     "FRF": "franc",
+    "LUF": "franc",
     "GBP": "pound",
+    "PTE": "escudo",
     "DKK": "krone",
     "NOK": "krone",
     "SEK": "krona",
@@ -73,6 +75,9 @@ _OUTPUT_UNIT_BY_CURRENCY = {
     "RUB": "ruble",
     "LTL": "litas",
     "TAL": "talonas",
+    "TRL": "lira",
+    "YTL": "lira",
+    "TRY": "lira",
 }
 
 _SCALE_TO_BASE_UNIT = {
@@ -8388,8 +8393,15 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1967, 2099),
-            # FWF ~280M EUR/year. amounts in MILLIONS. >1,500M implausible single line.
-            "max_amount_local": 1_500,   # in millions of currency unit
+            "preferred_match_groups": [[
+                r"\bfwf\b",
+                r"fonds zur f[öo]rderung der wissenschaftlichen forschung",
+                r"austrian science fund",
+                r"wissenschaftsfonds",
+            ]],
+            "enforce_preferred_match_groups": True,
+            "min_amount_local": 1,
+            "max_amount_local": 1_500,
             "notes": "Annual state appropriation — core basic research funder.",
         },
         {
@@ -8407,7 +8419,6 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1967, 2099),
-            # FFG ~700M EUR/year. amounts in MILLIONS.
             "max_amount_local": 3_000,
             "notes": "FFG created 2004 from merger of FFF + BIT + ASA. "
                      "Pre-2004 match via 'fff' variant.",
@@ -8425,7 +8436,15 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1847, 2099),
-            # ÖAW ~100M EUR/year. amounts in MILLIONS.
+            "preferred_match_groups": [[
+                r"\böaw\b",
+                r"\boaw\b",
+                r"[öo]sterreichische akademie der wissenschaften",
+                r"austrian academy of sciences",
+                r"akademie der wissenschaften",
+            ]],
+            "enforce_preferred_match_groups": True,
+            "min_amount_local": 1,
             "max_amount_local": 500,
         },
         {
@@ -8439,7 +8458,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (2009, 2099),
-            "max_amount_local": 500,  # in millions
+            "max_amount_local": 500,
             "notes": "Formed 2009 from Arsenal Research.",
         },
         {
@@ -8452,7 +8471,6 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (2006, 2099),
-            # IST Austria state grant ~200M EUR/year. amounts in MILLIONS.
             "max_amount_local": 500,
             "notes": "Annual state grant from BMBWF.",
         },
@@ -8468,7 +8486,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1988, 2099),
-            "max_amount_local": 200,  # in millions
+            "max_amount_local": 200,
         },
         {
             "canonical_name": "Ludwig Boltzmann Gesellschaft",
@@ -8480,7 +8498,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1960, 2099),
-            "max_amount_local": 100,  # in millions
+            "max_amount_local": 100,
         },
 
         # --- International contributions ---
@@ -8495,7 +8513,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1959, 2099),
-            "max_amount_local": 200,  # in millions
+            "max_amount_local": 200,
         },
         {
             "canonical_name": "ESA-Beitrag (Austria)",
@@ -8509,7 +8527,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1975, 2099),
-            "max_amount_local": 150,  # in millions
+            "max_amount_local": 150,
         },
 
         # --- Universities ---
@@ -8667,7 +8685,21 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "wissenschaft und forschung",
             ],
             "preferred_item_type": ["section_total"],
+            "strict_preferred_item_types": True,
+            "preferred_match_groups": [[
+                r"\btotal\b",
+                r"\bsumme\b",
+                r"total expenditures",
+                r"wissenschaft und forschung",
+                r"ug 31",
+                r"untergliederung 31",
+                r"einzelplan 13",
+            ]],
+            "enforce_preferred_match_groups": True,
             "active_years": (1975, 2099),
+            "min_amount_local_ats": 10_000,
+            "min_amount_local_eur": 1_000,
+            "max_amount_local": 100_000,
             "notes": "Ministry name changed: BMWF → BMWV → BMBWK → BMWFW → BMBWF. "
                      "Use as section total only if individual FWF/FFG/ÖAW lines unavailable.",
         },
@@ -10362,6 +10394,8 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "fonds national de la recherche luxembourg",
                 "national research fund",
             ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "strict_preferred_item_types": True,
             "rd_category": "direct_rd",
             "active_years": (1999, 2099),
             "max_amount_local": 100_000_000,
@@ -10378,6 +10412,8 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "CRP Henri Tudor",
                 "CRP Tudor",
             ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "strict_preferred_item_types": True,
             "rd_category": "direct_rd",
             "active_years": (1987, 2099),
             "max_amount_local": 80_000_000,
@@ -10392,6 +10428,8 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "CEPS INSTEAD",
                 "Centre d'Etudes de Populations, de Pauvreté et de Politiques Socio-Economiques",
             ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "strict_preferred_item_types": True,
             "rd_category": "direct_rd",
             "active_years": (1990, 2099),
             "max_amount_local": 30_000_000,
@@ -10406,9 +10444,11 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "CRP Santé",
                 "CRP de la Santé",
             ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "strict_preferred_item_types": True,
             "rd_category": "direct_rd",
             "active_years": (1990, 2099),
-            "max_amount_local": 30_000_000,
+            "max_amount_local": 60_000_000,
         },
         {
             "canonical_name": "CRP Gabriel Lippmann (Luxembourg)",
@@ -10418,6 +10458,8 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "CRP Gabriel Lippmann",
                 "CRP Lippmann",
             ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "strict_preferred_item_types": True,
             "rd_category": "direct_rd",
             "active_years": (1987, 2015),
             "max_amount_local": 30_000_000,
@@ -10432,9 +10474,11 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "Uni.lu",
                 "UniLu",
             ],
+            "preferred_item_type": ["line_item"],
+            "strict_preferred_item_types": True,
             "rd_category": "higher_education",
             "active_years": (2003, 2099),
-            "max_amount_local": 200_000_000,
+            "max_amount_local": 300_000_000,
         },
         # ── Research ministry section ─────────────────────────────────────────
         {
@@ -10447,6 +10491,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "section 03",
                 "03 — ministere de l'enseignement superieur",
             ],
+            "preferred_item_type": ["section_total", "program_total"],
             "rd_category": "direct_rd",
             "active_years": (1975, 2099),
             "section_total": True,
@@ -10471,7 +10516,34 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             "rd_category": "direct_rd",
             "active_years": (1975, 2099),
             "section_total": True,
-            "max_amount_local": 30_000_000_000,
+            "preferred_match_groups": [[
+                r"total budget for conacyt",
+                r"total budget for ramo 38",
+                r"total for ramo 38",
+                r"total expenditure of the national council of science and technology",
+                r"total budget for the national council of science and technology",
+                r"total budget for national council of science and technology",
+                r"total for the national council of science and technology",
+            ]],
+            "enforce_preferred_match_groups": True,
+            "choose_smallest_match": True,
+            "min_amount_local": 5_000_000_000,
+            "max_amount_local": 40_000_000_000,
+            "exclude_match_groups": [[
+                r"investigaci[oó]n cient[ií]fica,\s*desarrollo e innovaci[oó]n",
+                r"programa de ciencia y tecnolog[ií]a",
+                r"science and technology program",
+                r"becas de posgrado",
+                r"postgraduate scholarships",
+                r"sistema nacional de investigadores",
+                r"national system of researchers",
+                r"fomento regional de las capacidades",
+                r"regional promotion of scientific, technological and innovation capacities",
+                r"fortalecimiento .* capacidades",
+                r"strengthening .* capacities",
+                r"apoyos para actividades cient[ií]ficas",
+            ]],
+            "strict_exclude_match_groups": True,
             "notes": "Primary R&D ramo. Pre-1993 amounts in old pesos (×1000 to convert to new MXN). "
                      "Renamed CONAHCyT from 2022 but Ramo 38 code retained.",
         },
@@ -10485,10 +10557,20 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "centros de investigación",
                 "CICESE", "CIESAS", "CIO", "CIDESI", "CIQA", "CIAD",
                 "CENAPRED", "CIATEJ", "CICY", "INFOTEC", "CENIDET", "CIMAV",
-                "apoyos institucionales para actividades científicas",
+                "Apoyos Institucionales (Inversión en Centros Públicos de Investigación)",
             ],
             "rd_category": "direct_rd",
             "active_years": (1985, 2099),
+            "exclude_match_groups": [[
+                r"apoyos institucionales para actividades cient[ií]ficas",
+                r"institutional support for scientific,\s*technological,\s*and innovation activities",
+                r"apoyos institucionales$",
+                r"institutional support$",
+                r"\bpiit\b",
+                r"construction of research centers",
+                r"construcci[oó]n de centros de investigaci[oó]n",
+            ]],
+            "strict_exclude_match_groups": True,
             "max_amount_local": 10_000_000_000,
         },
         # ── IPN and CINVESTAV (Ramo 11 SEP) ──────────────────────────────────
@@ -10503,6 +10585,16 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "rd_category": "higher_education",
             "active_years": (1975, 2099),
+            "exclude_match_groups": [[
+                r"centro de investigaci[oó]n y de estudios avanzados",
+                r"center for research and advanced studies",
+                r"\bcinvestav\b",
+                r"investigaci[oó]n y desarrollo en el ipn",
+                r"research and development at ipn",
+                r"instituto politécnico nacional\s*-\s*investigaci[oó]n",
+                r"national polytechnic institute\s*-\s*research",
+            ]],
+            "strict_exclude_match_groups": True,
             "max_amount_local": 20_000_000_000,
         },
         {
@@ -10517,6 +10609,44 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             "active_years": (1975, 2099),
             "max_amount_local": 5_000_000_000,
         },
+        {
+            "canonical_name": "CICY — Centro de Investigación Científica de Yucatán (Mexico)",
+            "category": "research_institute",
+            "name_variants": [
+                "Centro de Investigación Científica de Yucatán",
+                "Scientific Research Center of Yucatán",
+                "CICY",
+                "Budget for Centro de Investigación Científica de Yucatán",
+                "Budget for Scientific Research Center of Yucatán",
+            ],
+            "rd_category": "direct_rd",
+            "active_years": (1975, 2099),
+            "max_amount_local": 2_000_000_000,
+        },
+        {
+            "canonical_name": "CIMAV — Centro de Investigación en Materiales Avanzados (Mexico)",
+            "category": "research_institute",
+            "name_variants": [
+                "Centro de Investigación en Materiales Avanzados",
+                "Advanced Materials Research Center",
+                "CIMAV",
+            ],
+            "rd_category": "direct_rd",
+            "active_years": (1975, 2099),
+            "max_amount_local": 2_000_000_000,
+        },
+        {
+            "canonical_name": "CIMAT — Centro de Investigación en Matemáticas (Mexico)",
+            "category": "research_institute",
+            "name_variants": [
+                "Centro de Investigación en Matemáticas",
+                "Mathematics Research Center",
+                "CIMAT",
+            ],
+            "rd_category": "direct_rd",
+            "active_years": (1975, 2099),
+            "max_amount_local": 2_000_000_000,
+        },
         # ── UNAM (Ramo 11 SEP) ────────────────────────────────────────────────
         {
             "canonical_name": "UNAM — Universidad Nacional Autónoma de México (Mexico)",
@@ -10528,6 +10658,15 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "rd_category": "higher_education",
             "active_years": (1975, 2099),
+            "exclude_match_groups": [[
+                r"museo,\s*investigaci[oó]n y docencia en biolog[ií]a marina",
+                r"museum,\s*research,\s*and teaching in marine biology",
+                r"investigaci[oó]n y desarrollo en la unam",
+                r"research and development at unam",
+                r"universidad nacional aut[oó]noma de m[eé]xico\s*-\s*investigaci[oó]n",
+                r"national autonomous university of mexico\s*-\s*research",
+            ]],
+            "strict_exclude_match_groups": True,
             "max_amount_local": 50_000_000_000,
         },
         # ── ININ / nuclear research (Ramo 18 SENER) ──────────────────────────
@@ -10554,6 +10693,19 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             "rd_category": "direct_rd",
             "active_years": (1985, 2099),
             "max_amount_local": 3_000_000_000,
+        },
+        {
+            "canonical_name": "Mexican Space Agency",
+            "category": "science_agency",
+            "name_variants": [
+                "Agencia Espacial Mexicana",
+                "Mexican Space Agency",
+                "AEM",
+            ],
+            "rd_category": "direct_rd",
+            "preferred_item_type": ["line_item", "program_total"],
+            "choose_smallest_match": True,
+            "active_years": (2010, 2099),
         },
     ],
     "Israel": [
@@ -11360,6 +11512,33 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1995, 2099),
         },
+        {
+            "canonical_name": "European Space Agency Programs",
+            "category": "direct_rd",
+            "notes": "Slovenian budget appropriations for ESA programmes. Kept as a separate direct R&D series rather than folded into 0502.",
+            "name_variants": [
+                "programi evropske vesoljske agencije",
+                "european space agency programs",
+                "2130-17-0002",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (2023, 2025),
+            "min_amount_local": 1_000_000.0,
+        },
+        {
+            "canonical_name": "Development of Research and Innovation Capacities",
+            "category": "innovation_instruments",
+            "notes": "Research and innovation capacities block under 0504/050401 and ministry 1630. Audited as additive to the core 0502 science programme.",
+            "name_variants": [
+                "razvoj raziskovalne in inovacijske zmogljivosti",
+                "development of research and innovation capacities",
+                "1630-24-s001",
+                "1630-24-0001",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "active_years": (2024, 2025),
+            "min_amount_local": 1_000_000.0,
+        },
     ],
 
     # -----------------------------------------------------------------------
@@ -11508,9 +11687,10 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "fct ip",
                 "fundacao para a ciencia e tecnologia",
             ],
+            "preferred_item_type": ["line_item", "program_total"],
             "rd_category": "direct_rd",
             "active_years": (1997, 2099),
-            "max_amount_local": 1_000_000_000,
+            "max_amount_local": 600_000_000,
             "notes": "Primary R&D funder from 1997. Amounts in full EUR (2002+) or PTE (pre-2002).",
         },
         {
@@ -11521,9 +11701,10 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "JNICT",
                 "junta nacional de investigacao",
             ],
+            "preferred_item_type": ["line_item"],
             "rd_category": "direct_rd",
             "active_years": (1977, 1997),
-            "max_amount_local": 200_000_000_000,
+            "max_amount_local": 20_000_000_000,
             "notes": "Pre-FCT competitive R&D funder. Amounts in PTE (escudos).",
         },
         # ── Science ministry ──────────────────────────────────────────────────
@@ -11555,9 +11736,10 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "ani ip",
                 "agencia nacional de inovacao",
             ],
+            "preferred_item_type": ["line_item"],
             "rd_category": "direct_rd",
             "active_years": (2009, 2099),
-            "max_amount_local": 200_000_000,
+            "max_amount_local": 250_000_000,
         },
         # ── State laboratories ────────────────────────────────────────────────
         {
@@ -11567,9 +11749,10 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "Laboratório Nacional de Engenharia Civil",
                 "LNEC",
             ],
+            "preferred_item_type": ["line_item"],
             "rd_category": "direct_rd",
             "active_years": (1977, 2099),
-            "max_amount_local": 50_000_000,
+            "max_amount_local": 100_000_000,
         },
         {
             "canonical_name": "P002 — Investigação Científica e Tecnológica e Inovação (Portugal)",
@@ -11787,6 +11970,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1963, 2099),
+            "expected_years": [1975, 1978, 1982, 2006, 2007, 2008, 2009],
             # Post-2005 (YTL/TL): TÜBİTAK budget ~3-8B TL in 2020s
             # Pre-2005 (TRL): amounts in quadrillions of old lira
             "max_amount_local": 50_000_000_000,
@@ -11808,6 +11992,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item"],
             "active_years": (1993, 2099),
+            "expected_years": [2006, 2007, 2008, 2009],
             "max_amount_local": 500_000_000,
             "notes": "Özel Bütçeli — appears in (II) SAYILI CETVEL.",
         },
@@ -11825,6 +12010,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1956, 2099),
+            "expected_years": [1975, 1976, 1977, 1978, 1982, 2006, 2007, 2008, 2009],
             "max_amount_local": 5_000_000_000,
             "notes": "Nuclear R&D authority. Özel Bütçeli — appears in (II) SAYILI CETVEL.",
         },
@@ -11864,6 +12050,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1990, 2099),
+            "expected_years": [2006, 2007, 2008, 2009],
             "max_amount_local": 10_000_000_000,
             "notes": "Özel Bütçeli SME support agency with R&D/innovation mandate.",
         },
@@ -12229,6 +12416,58 @@ def _best_amount_for_agency(
             else:
                 return None
 
+    if agency.get("_country") == "Luxembourg":
+        matches = matches.copy()
+        canonical_name_lu = str(agency.get("canonical_name", "") or "")
+        desc_en_lu = matches.get("line_description_en", pd.Series("", index=matches.index)).fillna("").astype(str)
+        desc_raw_lu = matches.get("line_description", pd.Series("", index=matches.index)).fillna("").astype(str)
+        sec_en_lu = matches.get("section_name_en", pd.Series("", index=matches.index)).fillna("").astype(str)
+        sec_raw_lu = matches.get("section_name", pd.Series("", index=matches.index)).fillna("").astype(str)
+        text_lu = desc_en_lu + " " + desc_raw_lu + " " + sec_en_lu + " " + sec_raw_lu
+        amount_lu = pd.to_numeric(matches.get("amount_local"), errors="coerce")
+        unit_lu = matches.get("unit", pd.Series("", index=matches.index)).fillna("").astype(str).str.strip().str.lower()
+        currency_lu = matches.get("currency", pd.Series("", index=matches.index)).fillna("").astype(str).str.upper()
+
+        relabel_lu = amount_lu.notna() & unit_lu.eq("thousand") & currency_lu.isin(["EUR", "LUF"])
+        if relabel_lu.any():
+            matches.loc[relabel_lu, "unit"] = "unit"
+
+        if canonical_name_lu != "Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg)":
+            total_line_mask = desc_en_lu.str.match(r"^\s*total\b", case=False, na=False) | desc_raw_lu.str.match(r"^\s*total\b", case=False, na=False)
+            if total_line_mask.any():
+                filtered = matches.loc[~total_line_mask].copy()
+                if not filtered.empty:
+                    matches = filtered
+                    desc_en_lu = matches.get("line_description_en", pd.Series("", index=matches.index)).fillna("").astype(str)
+                    desc_raw_lu = matches.get("line_description", pd.Series("", index=matches.index)).fillna("").astype(str)
+                    sec_en_lu = matches.get("section_name_en", pd.Series("", index=matches.index)).fillna("").astype(str)
+                    sec_raw_lu = matches.get("section_name", pd.Series("", index=matches.index)).fillna("").astype(str)
+                    text_lu = desc_en_lu + " " + desc_raw_lu + " " + sec_en_lu + " " + sec_raw_lu
+
+        bad_cross_ministry_mask = text_lu.str.contains(
+            r"transport|housing|logement|recettes pour ordre|revenues for order|d[ée]penses pour ordre|expenses for order",
+            case=False,
+            regex=True,
+            na=False,
+        )
+        if bad_cross_ministry_mask.any():
+            filtered = matches.loc[~bad_cross_ministry_mask].copy()
+            if not filtered.empty:
+                matches = filtered
+
+        max_amt_lu = agency.get("max_amount_local")
+        if max_amt_lu is not None:
+            expanded_lu = matches.apply(
+                lambda r: float(r.get("amount_local") or 0)
+                * _SCALE_TO_BASE_UNIT.get(str(r.get("unit") or "").strip().lower(), 1.0),
+                axis=1,
+            )
+            filtered = matches[(expanded_lu > 0) & (expanded_lu <= float(max_amt_lu))].copy()
+            if not filtered.empty:
+                matches = filtered
+            else:
+                return None
+
     if agency.get("_country") == "Colombia":
         max_amt_co = agency.get("max_amount_local")
         if max_amt_co is not None:
@@ -12287,6 +12526,54 @@ def _best_amount_for_agency(
             matches = filtered
         elif min_amt_cr is not None or max_amt_cr is not None:
             return None
+
+    if agency.get("_country") == "Austria":
+        # Austria amounts are normalized to MILLIONS before canonical selection.
+        # Use conservative per-agency min/max bounds to drop chapter/global
+        # totals that share an agency name on summary pages, while preserving
+        # document-verifiable institutional lines when they exist.
+        amt_at = pd.to_numeric(matches.get("amount_local"), errors="coerce")
+        curr_at = matches.get("currency", pd.Series("", index=matches.index)).fillna("").astype(str).str.upper()
+        min_amt_at = agency.get("min_amount_local")
+        max_amt_at = agency.get("max_amount_local")
+        min_amt_at_ats = agency.get("min_amount_local_ats")
+        min_amt_at_eur = agency.get("min_amount_local_eur")
+        if (
+            min_amt_at is not None
+            or max_amt_at is not None
+            or min_amt_at_ats is not None
+            or min_amt_at_eur is not None
+        ):
+            keep = amt_at.gt(0)
+            if min_amt_at is not None:
+                keep &= amt_at.ge(float(min_amt_at))
+            if min_amt_at_ats is not None:
+                keep &= ~curr_at.eq("ATS") | amt_at.ge(float(min_amt_at_ats))
+            if min_amt_at_eur is not None:
+                keep &= ~curr_at.eq("EUR") | amt_at.ge(float(min_amt_at_eur))
+            if max_amt_at is not None:
+                keep &= amt_at.le(float(max_amt_at))
+            filtered = matches[keep.fillna(False)].copy()
+            if not filtered.empty:
+                matches = filtered
+            else:
+                return None
+
+    if agency.get("_country") == "Mexico":
+        amt_mx = pd.to_numeric(matches.get("amount_local"), errors="coerce")
+        min_amt_mx = agency.get("min_amount_local")
+        max_amt_mx = agency.get("max_amount_local")
+        if min_amt_mx is not None or max_amt_mx is not None:
+            keep = amt_mx.gt(0)
+            if min_amt_mx is not None:
+                keep &= amt_mx.ge(float(min_amt_mx))
+            if max_amt_mx is not None:
+                keep &= amt_mx.le(float(max_amt_mx))
+            filtered = matches[keep.fillna(False)].copy()
+            if not filtered.empty:
+                matches = filtered
+            else:
+                return None
 
     # Iceland-specific quality controls:
     # Pipeline output is the right source for Iceland, but some OCR-heavy rows
@@ -12705,6 +12992,23 @@ def _get_agencies_for_country(country: str) -> list[dict]:
             # Block all discovered agencies; rely solely on hardcoded ones.
             return True
 
+        if country == "Austria":
+            # Austria discovery is still valuable for surfacing candidate
+            # institutions in the review artefacts, but the current merge set
+            # is dominated by programme labels, global budgets, ministry totals,
+            # and one-off budget buckets. Keep discovery visible for audit, but
+            # do not auto-merge it into the canonical institutional panel.
+            return True
+
+        if country == "Turkey":
+            # Turkey discovery is still valuable for surfacing candidate
+            # institutions and budget lines for manual review, but the current
+            # discovered set is dominated by programme captions, project titles,
+            # transfer labels, and one-off university lines. Keep those visible
+            # in the audit artefacts without auto-merging them into the final
+            # canonical institutional panel.
+            return True
+
         if country == "Iceland":
             # Keep Iceland discovery outputs available for review, but do not
             # merge them into the canonical panel. The current discovered set is
@@ -12722,6 +13026,13 @@ def _get_agencies_for_country(country: str) -> list[dict]:
             # Israel discovery is useful for review, but the current output is
             # dominated by programme labels and one-off budget lines rather than
             # stable institutions. Keep discoveries out of the canonical panel.
+            return True
+
+        if country == "Portugal":
+            # Portugal discovery surfaces many programme captions, support lines
+            # and one-off legal transfers. Keep them in review artefacts and
+            # source results, but do not auto-merge them into the final
+            # canonical institutional series until they are manually audited.
             return True
 
         if country == "Korea":
@@ -13077,6 +13388,55 @@ def build_canonical_series(
                 f"pre-1993: {pre93_mask.sum()} rows (≥1M)."
             )
 
+    if country == "Mexico" and not subset.empty:
+        # Mexico 2003+ CTI annex rows are typically expressed in full pesos even
+        # when the extractor labels them as "thousand". Relabeling avoids a
+        # spurious ×1000 expansion in the final canonical series.
+        year_mx = pd.to_numeric(subset.get("year", pd.Series(dtype=float)), errors="coerce")
+        curr_mx = subset.get("currency", pd.Series("", index=subset.index)).fillna("").astype(str).str.upper()
+        unit_mx = subset.get("unit", pd.Series("", index=subset.index)).fillna("").astype(str).str.strip().str.lower()
+        amt_mx = pd.to_numeric(subset.get("amount_local"), errors="coerce")
+        text_mx = (
+            subset.get("section_name", pd.Series("", index=subset.index)).fillna("").astype(str)
+            + " "
+            + subset.get("section_name_en", pd.Series("", index=subset.index)).fillna("").astype(str)
+            + " "
+            + subset.get("line_description", pd.Series("", index=subset.index)).fillna("").astype(str)
+            + " "
+            + subset.get("line_description_en", pd.Series("", index=subset.index)).fillna("").astype(str)
+        ).str.lower()
+        relabel_mx = year_mx.ge(2007) & curr_mx.eq("MXN") & unit_mx.eq("thousand") & amt_mx.ge(100_000)
+        relabel_mx |= year_mx.between(2003, 2006, inclusive="both") & curr_mx.eq("MXN") & unit_mx.eq("thousand") & amt_mx.ge(1_000_000)
+        relabel_mx |= (
+            year_mx.ge(2003)
+            & curr_mx.eq("MXN")
+            & unit_mx.eq("thousand")
+            & text_mx.str.contains(r"agencia espacial mexicana|mexican space agency", regex=True, na=False)
+        )
+        if relabel_mx.any():
+            subset.loc[relabel_mx, "unit"] = "unit"
+            logger.debug(
+                f"[Mexico] Normalized {relabel_mx.sum()} rows: "
+                f"unit='thousand' → 'unit' for 2003+ CTI annex full-peso rows"
+            )
+
+    if country == "Luxembourg" and not subset.empty:
+        # Luxembourg budget tables print full LUF/EUR amounts with periods as
+        # thousands separators. The extractor frequently mistakes that layout
+        # for a "thousand" scale. Relabel before matching so later expansion
+        # leaves the documentary amount unchanged.
+        unit_lu = subset.get("unit", pd.Series("", index=subset.index)).fillna("").str.lower()
+        curr_lu = subset.get("currency", pd.Series("", index=subset.index)).fillna("").str.upper()
+        amt_lu = pd.to_numeric(subset.get("amount_local"), errors="coerce")
+
+        full_unit_mask = unit_lu.eq("thousand") & curr_lu.isin(["LUF", "EUR"]) & amt_lu.notna()
+        if full_unit_mask.any():
+            subset.loc[full_unit_mask, "unit"] = "unit"
+            logger.debug(
+                f"[Luxembourg] Normalized {full_unit_mask.sum()} rows: "
+                f"unit='thousand' → 'unit' for full-value budget rows"
+            )
+
     if country == "Estonia" and not subset.empty:
         # Estonia often exposes full-unit amounts in budget text/tables while the
         # extractor labels them as "thousand". Correct only the clearly inflated
@@ -13264,6 +13624,34 @@ def build_canonical_series(
                 pd.to_numeric(subset.loc[grant_thousand_eur, "amount_local"], errors="coerce") * 1000.0
             )
             subset.loc[grant_thousand_eur, "unit"] = "unit"
+
+    if country == "Turkey" and not subset.empty:
+        # Turkey mixes three source families with different comparability:
+        #   1. Budget laws / budget justifications -> budget appropriations
+        #   2. Genel Faaliyet Raporu             -> execution / realization
+        #   3. Kesin Hesap                       -> final accounts
+        # Keep the final canonical panel on budget-family documents only.
+        source_tr = subset.get("source_file", pd.Series("", index=subset.index)).fillna("").astype(str)
+        pass_tr = subset.get("extraction_pass", pd.Series("", index=subset.index)).fillna("").astype(str)
+        activity_mask = source_tr.str.contains(r"GenelFaaliyetRaporu", case=False, regex=True, na=False)
+        final_account_mask = source_tr.str.contains(
+            r"Kesin.?Hesab|Merkezi.?Y[öo]netim.?Kesin",
+            case=False,
+            regex=True,
+            na=False,
+        )
+        targeted_mask = pass_tr.eq("targeted_recovery")
+        subset = subset.loc[~(activity_mask | final_account_mask | targeted_mask)].copy()
+
+        # Turkey budget-law / justification tables are typically printed in full
+        # lira values even when extraction labels them as "thousand". Keep the
+        # printed value and normalize later to the final base-currency unit.
+        unit_tr = subset.get("unit", pd.Series("", index=subset.index)).fillna("").astype(str).str.lower()
+        relabel_tr = unit_tr.eq("thousand")
+        if relabel_tr.any():
+            subset.loc[relabel_tr, "unit"] = "unit"
+
+        subset = subset[pd.to_numeric(subset.get("amount_local"), errors="coerce").gt(0)].copy()
 
     if country == "Netherlands" and not subset.empty:
         # -----------------------------------------------------------------------
@@ -13485,7 +13873,11 @@ def build_canonical_series(
             # for the same year. build_totals_series handles aggregation.
             emitted = 0
             for source_file, file_matches in matches.groupby("source_file"):
-                best = _best_amount_for_agency(file_matches, agency["preferred_item_type"], agency)
+                preferred_item_type = agency.get(
+                    "preferred_item_type",
+                    ["section_total", "program_total", "line_item"],
+                )
+                best = _best_amount_for_agency(file_matches, preferred_item_type, agency)
                 if best is None:
                     continue
                 if country == "Costa Rica":
@@ -13537,6 +13929,495 @@ def build_canonical_series(
     out = pd.DataFrame(records)
     if out.empty:
         return out
+
+    if country == "Turkey":
+        raw_turkey = subset.copy()
+        raw_turkey["_year_num"] = pd.to_numeric(raw_turkey.get("year"), errors="coerce")
+
+        def _clean_turkey_series_note(text: object) -> str:
+            note = str(text or "").strip()
+            if note.lower().startswith("gap: no matching rows in this year"):
+                return ""
+            return note
+
+        def _turkey_raw_pick(
+            year: int,
+            include_patterns: list[str],
+            prefer_patterns: list[str],
+            *,
+            exclude_patterns: list[str] | None = None,
+            min_amount: float | None = None,
+            max_amount: float | None = None,
+        ) -> Optional[pd.Series]:
+            work = raw_turkey[raw_turkey["_year_num"].eq(int(year))].copy()
+            if work.empty:
+                return None
+
+            text = (
+                work.get("line_description_en", pd.Series("", index=work.index)).fillna("").astype(str)
+                + " "
+                + work.get("line_description", pd.Series("", index=work.index)).fillna("").astype(str)
+                + " "
+                + work.get("section_name_en", pd.Series("", index=work.index)).fillna("").astype(str)
+                + " "
+                + work.get("section_name", pd.Series("", index=work.index)).fillna("").astype(str)
+            )
+
+            include_mask = pd.Series(False, index=work.index)
+            for pat in include_patterns:
+                include_mask |= text.str.contains(pat, case=False, regex=True, na=False)
+            work = work.loc[include_mask].copy()
+            if work.empty:
+                return None
+
+            if exclude_patterns:
+                exclude_mask = pd.Series(False, index=work.index)
+                for pat in exclude_patterns:
+                    exclude_mask |= text.loc[work.index].str.contains(pat, case=False, regex=True, na=False)
+                trimmed = work.loc[~exclude_mask].copy()
+                if not trimmed.empty:
+                    work = trimmed
+
+            expanded = work.apply(
+                lambda r: _expand_to_base_unit(r.get("amount_local"), r.get("unit"), r.get("currency")),
+                axis=1,
+                result_type="expand",
+            )
+            work["_base_amount"] = pd.to_numeric(expanded[0], errors="coerce")
+            work["_base_unit"] = expanded[1]
+            work = work[work["_base_amount"].notna() & work["_base_amount"].gt(0)].copy()
+            if work.empty:
+                return None
+
+            if min_amount is not None:
+                work = work[work["_base_amount"].ge(float(min_amount))].copy()
+            if max_amount is not None:
+                work = work[work["_base_amount"].le(float(max_amount))].copy()
+            if work.empty:
+                return None
+
+            text_work = text.loc[work.index]
+            section_work = (
+                work.get("section_name_en", pd.Series("", index=work.index)).fillna("").astype(str)
+                + " "
+                + work.get("section_name", pd.Series("", index=work.index)).fillna("").astype(str)
+            )
+            work["_prefer_score"] = 0
+            for idx, pat in enumerate(prefer_patterns, start=1):
+                work.loc[text_work.str.contains(pat, case=False, regex=True, na=False), "_prefer_score"] += (
+                    (len(prefer_patterns) + 1 - idx) * 10
+                )
+
+            work["_generic_section"] = section_work.str.contains(
+                r"special budget entities|general budget entities|transfers|özel bütçeli idareler|genel bütçeli idareler",
+                case=False,
+                regex=True,
+                na=False,
+            )
+            work["_transfer_like"] = text_work.str.contains(
+                r"to be paid to|payments? to independent budget|transfers? to independent budget|yard[ıi]mlar|ödenecektir",
+                case=False,
+                regex=True,
+                na=False,
+            )
+            item_rank = {"line_item": 3, "program_total": 2, "section_total": 1}
+            work["_item_rank"] = work.get("item_type", pd.Series("", index=work.index)).fillna("").map(item_rank).fillna(0)
+            work["_page_rank"] = pd.to_numeric(
+                work.get("page_number", pd.Series("", index=work.index)).astype(str).str.extract(r"(\d+)")[0],
+                errors="coerce",
+            ).fillna(0)
+
+            work = work.sort_values(
+                ["_prefer_score", "_generic_section", "_transfer_like", "_item_rank", "_base_amount", "_page_rank"],
+                ascending=[False, True, True, False, False, False],
+                kind="stable",
+            )
+            return work.iloc[0]
+
+        turkey_specs = {
+            "TÜBİTAK (Turkey)": {
+                "years": [1975, 1978, 1982, 2006, 2007, 2008, 2009],
+                "include": [
+                    r"\btübitak\b|\btubitak\b",
+                    r"scientific and technological research council of turkey",
+                    r"türkiye bilimsel ve teknolojik araştırma kurumu|turkiye bilimsel ve teknolojik arastirma kurumu",
+                ],
+                "prefer": [
+                    r"budget of tübitak|budget of tubitak",
+                    r"scientific and technological research council of turkey.*total appropriation",
+                    r"scientific and technological research council of turkey.*research and development projects",
+                    r"scientific and technological research council of turkey$",
+                    r"total appropriation|genel ödenek toplam[ıi]|toplam ödenek",
+                    r"research and development projects|research projects support program|research funds",
+                ],
+                "exclude": [
+                    r"carry forward unspent",
+                    r"science education",
+                    r"international organizations",
+                ],
+            },
+            "TAEK — Türkiye Atom Enerjisi Kurumu (Turkey)": {
+                "years": [1975, 1976, 1977, 1978, 1982, 2006, 2007, 2008, 2009],
+                "include": [
+                    r"\btaek\b",
+                    r"turkish atomic energy authority",
+                    r"türkiye atom enerjisi kurumu|turkiye atom enerjisi kurumu",
+                ],
+                "prefer": [
+                    r"budget of the turkish atomic energy authority",
+                    r"turkish atomic energy authority.*total appropriation",
+                    r"scientific and technical research and application in the field of nuclear energy",
+                    r"research and development$",
+                    r"turkish atomic energy authority$",
+                    r"total appropriation|genel ödenek toplam[ıi]|toplam ödenek",
+                    r"nuclear research projects?",
+                ],
+                "exclude": [
+                    r"carry forward unspent",
+                ],
+            },
+            "TÜBA (Turkey)": {
+                "years": [2006, 2007, 2008, 2009],
+                "include": [
+                    r"\btüba\b|\btuba\b",
+                    r"turkish academy of sciences",
+                    r"türkiye bilimler akademisi|turkiye bilimler akademisi",
+                ],
+                "prefer": [
+                    r"turkish academy of sciences$",
+                    r"total appropriation|genel ödenek toplam[ıi]|toplam ödenek",
+                ],
+                "min_amount": 1_000_000.0,
+            },
+            "KOSGEB (Turkey)": {
+                "years": [2006, 2007, 2008, 2009],
+                "include": [
+                    r"\bkosgeb\b",
+                    r"small and medium enterprises development and support administration",
+                    r"küçük ve orta ölçekli sanayi geliştirme ve destekleme idaresi başkanlığı",
+                ],
+                "prefer": [
+                    r"small and medium enterprises development and support administration$",
+                    r"budget of kosgeb|r&d supports|ar-ge destekleri",
+                ],
+                "min_amount": 10_000_000.0,
+            },
+        }
+
+        for canonical_name, spec in turkey_specs.items():
+            year_mask = out["canonical_name"].eq(canonical_name)
+            if not year_mask.any():
+                continue
+            for year in sorted(pd.to_numeric(out.loc[year_mask, "year"], errors="coerce").dropna().astype(int).unique()):
+                best = _turkey_raw_pick(
+                    int(year),
+                    spec["include"],
+                    spec["prefer"],
+                    exclude_patterns=spec.get("exclude"),
+                    min_amount=spec.get("min_amount"),
+                    max_amount=spec.get("max_amount"),
+                )
+                if best is None:
+                    continue
+                mask = out["canonical_name"].eq(canonical_name) & pd.to_numeric(out["year"], errors="coerce").eq(int(year))
+                if not mask.any():
+                    continue
+                target_idx = out.index[mask][0]
+                out.loc[
+                    mask,
+                    ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+                ] = [None, None, None, None, None, None, None]
+                out.at[target_idx, "amount_local"] = float(best["_base_amount"])
+                out.at[target_idx, "unit"] = best["_base_unit"]
+                out.at[target_idx, "currency"] = best.get("currency")
+                out.at[target_idx, "item_type"] = best.get("item_type")
+                out.at[target_idx, "line_description_en"] = best.get("line_description_en")
+                out.at[target_idx, "source_file"] = best.get("source_file")
+                out.at[target_idx, "page_number"] = best.get("page_number")
+                notes = _clean_turkey_series_note(out.at[target_idx, "series_notes"])
+                out.at[target_idx, "series_notes"] = (
+                    f"{notes}; selected from Turkey budget-family source row after excluding activity reports, final accounts, and targeted recovery noise"
+                    .strip("; ")
+                    .strip()
+                )
+
+        turkey_verified_overrides = {
+            (2006, "TÜBİTAK (Turkey)"): (965_158_000.0, 132, "YTL", "2006 tbmm22103031ss1028.pdf"),
+            (2006, "TAEK — Türkiye Atom Enerjisi Kurumu (Turkey)"): (50_050_000.0, 132, "YTL", "2006 tbmm22103031ss1028.pdf"),
+            (2006, "TÜBA (Turkey)"): (4_641_000.0, 132, "YTL", "2006 tbmm22103031ss1028.pdf"),
+            (2006, "KOSGEB (Turkey)"): (209_890_000.0, 132, "YTL", "2006 tbmm22103031ss1028.pdf"),
+            (2007, "TÜBİTAK (Turkey)"): (938_335_000.0, 89, "YTL", "2009-ButceGerekcesi_2009.pdf"),
+            (2008, "TÜBİTAK (Turkey)"): (1_005_923_000.0, 89, "YTL", "2009-ButceGerekcesi_2009.pdf"),
+            (2009, "TÜBİTAK (Turkey)"): (1_127_085_000.0, 89, "TRY", "2009-ButceGerekcesi_2009.pdf"),
+            (2007, "TAEK — Türkiye Atom Enerjisi Kurumu (Turkey)"): (65_075_000.0, 89, "YTL", "2009-ButceGerekcesi_2009.pdf"),
+            (2008, "TAEK — Türkiye Atom Enerjisi Kurumu (Turkey)"): (65_139_000.0, 89, "YTL", "2009-ButceGerekcesi_2009.pdf"),
+            (2009, "TAEK — Türkiye Atom Enerjisi Kurumu (Turkey)"): (82_169_000.0, 89, "TRY", "2009-ButceGerekcesi_2009.pdf"),
+            (2007, "TÜBA (Turkey)"): (6_275_000.0, 89, "YTL", "2009-ButceGerekcesi_2009.pdf"),
+            (2008, "TÜBA (Turkey)"): (6_575_000.0, 89, "YTL", "2009-ButceGerekcesi_2009.pdf"),
+            (2009, "TÜBA (Turkey)"): (7_997_000.0, 89, "TRY", "2009-ButceGerekcesi_2009.pdf"),
+            (2007, "KOSGEB (Turkey)"): (221_968_000.0, 89, "YTL", "2009-ButceGerekcesi_2009.pdf"),
+            (2008, "KOSGEB (Turkey)"): (222_368_000.0, 89, "YTL", "2009-ButceGerekcesi_2009.pdf"),
+            (2009, "KOSGEB (Turkey)"): (329_330_000.0, 89, "TRY", "2009-ButceGerekcesi_2009.pdf"),
+        }
+        for (year, canonical_name), (amount_local, page_number, currency, source_file) in turkey_verified_overrides.items():
+            mask = out["canonical_name"].eq(canonical_name) & pd.to_numeric(out["year"], errors="coerce").eq(int(year))
+            if not mask.any():
+                continue
+            target_idx = out.index[mask][0]
+            out.loc[
+                mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            out.at[target_idx, "amount_local"] = float(amount_local)
+            out.at[target_idx, "unit"] = "unit"
+            out.at[target_idx, "currency"] = currency
+            out.at[target_idx, "item_type"] = "verified_override"
+            if int(year) == 2006 and source_file == "2006 tbmm22103031ss1028.pdf":
+                out.at[target_idx, "line_description_en"] = "2006 budget proposal TABLO 2-b — special-budget other administrations audited manually"
+            else:
+                out.at[target_idx, "line_description_en"] = "2009 budget-justification multi-year table — audited annual column"
+            out.at[target_idx, "source_file"] = source_file
+            out.at[target_idx, "page_number"] = str(page_number)
+            notes = _clean_turkey_series_note(out.at[target_idx, "series_notes"])
+            if int(year) == 2006 and source_file == "2006 tbmm22103031ss1028.pdf":
+                out.at[target_idx, "series_notes"] = (
+                    f"{notes}; verified from 2006 bütçe tasarısı TABLO 2-b using the audited special-budget administrations table"
+                    .strip("; ")
+                    .strip()
+                )
+            else:
+                out.at[target_idx, "series_notes"] = (
+                    f"{notes}; verified from 2009 Bütçe Gerekçesi TABLO 9 using the audited 2007-2009 annual columns"
+                    .strip("; ")
+                    .strip()
+                )
+
+        turkey_drop_pairs = {
+            (2005, "TÜBİTAK (Turkey)"),
+            (2005, "TAEK — Türkiye Atom Enerjisi Kurumu (Turkey)"),
+            (1976, "TÜBİTAK (Turkey)"),
+            (1977, "TÜBİTAK (Turkey)"),
+            (1980, "TÜBİTAK (Turkey)"),
+            (1981, "TÜBİTAK (Turkey)"),
+            (1979, "TÜBİTAK (Turkey)"),
+            (2000, "TÜBİTAK (Turkey)"),
+            (1981, "TAEK — Türkiye Atom Enerjisi Kurumu (Turkey)"),
+            (2005, "TÜBA (Turkey)"),
+        }
+        turkey_drop_mask = out.apply(
+            lambda r: (r.get("year"), r.get("canonical_name")) in turkey_drop_pairs,
+            axis=1,
+        )
+        if turkey_drop_mask.any():
+            out.loc[
+                turkey_drop_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[turkey_drop_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[turkey_drop_mask, "series_notes"] = notes.apply(
+                lambda s: (
+                    f"{s}; dropped after Turkey source audit: surviving row is transfer-like, project-specific, or too generic to defend as a transparent institutional budget appropriation"
+                    .strip("; ")
+                    .strip()
+                )
+            )
+
+        out = out.loc[~out["canonical_name"].eq("Sanayi ve Teknoloji Bakanlığı (Turkey)")].copy()
+
+        amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+        unit_norm = out["unit"].fillna("").astype(str).str.strip().str.lower()
+        thousand_mask = amount_num.notna() & unit_norm.eq("thousand")
+        if thousand_mask.any():
+            out.loc[thousand_mask, "amount_local"] = amount_num.loc[thousand_mask] * 1000.0
+            out.loc[thousand_mask, "unit"] = out.loc[thousand_mask].apply(
+                lambda r: _base_output_unit(r.get("currency"), r.get("unit")),
+                axis=1,
+            )
+            amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+            unit_norm = out["unit"].fillna("").astype(str).str.strip().str.lower()
+
+        generic_unit_mask = amount_num.notna() & unit_norm.isin(["", "unit"])
+        if generic_unit_mask.any():
+            out.loc[generic_unit_mask, "unit"] = out.loc[generic_unit_mask].apply(
+                lambda r: _base_output_unit(r.get("currency"), r.get("unit")),
+                axis=1,
+            )
+
+    if country == "Mexico":
+        mexico_verified_overrides = {
+            (2017, "Mexican Space Agency"): (
+                92_482_883.0,
+                159,
+                "MXN",
+                "2017 30112016-MAT.pdf",
+                "Agencia Espacial Mexicana",
+            ),
+        }
+        for (year, canonical_name), (amount_local, page_number, currency, source_file, line_desc) in mexico_verified_overrides.items():
+            mask = (out["year"] == year) & (out["canonical_name"] == canonical_name)
+            if not mask.any():
+                continue
+            target_idx = out.index[mask][0]
+            out.loc[mask, ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"]] = [None, None, None, None, None, None, None]
+            out.at[target_idx, "amount_local"] = float(amount_local)
+            out.at[target_idx, "unit"] = "unit"
+            out.at[target_idx, "currency"] = currency
+            out.at[target_idx, "item_type"] = "verified_override"
+            out.at[target_idx, "line_description_en"] = line_desc
+            out.at[target_idx, "source_file"] = source_file
+            out.at[target_idx, "page_number"] = str(page_number)
+            notes = str(out.at[target_idx, "series_notes"] or "").strip()
+            out.at[target_idx, "series_notes"] = f"{notes}; verified against original Mexico CTI annex".strip("; ").strip()
+
+        # Conservative Mexico clean-up after source audit:
+        # 1. drop survivors whose current scale remains ambiguous in the available
+        #    file inventory, even though the underlying row is real.
+        # 2. drop CONACYT totals when only a generic "Total" survivor remains and
+        #    no explicit Ramo 38 / CONACYT total survives canonical selection.
+        mexico_drop_pairs = {
+            (2012, "CIATEQ Advanced Technology Center"),
+            (2012, "College of the Northern Border"),
+            (2012, "College of the Southern Border"),
+            (2012, "Ecology Institute"),
+            (2012, "Mexican Space Agency"),
+            (2014, "Ecology Institute"),
+            (2015, "CIATEQ Advanced Technology Center"),
+            (2015, "College of the Northern Border"),
+            (2015, "College of the Southern Border"),
+            (2015, "Ecology Institute"),
+            (2015, "Mexican Space Agency"),
+            (2018, "Mexican Space Agency"),
+            (2020, "CONACYT / CONAHCyT — Ramo 38 (Mexico)"),
+            (2021, "Mexican Space Agency"),
+        }
+        mx_pair_mask = out.apply(
+            lambda r: (r.get("year"), r.get("canonical_name")) in mexico_drop_pairs,
+            axis=1,
+        )
+        if mx_pair_mask.any():
+            out.loc[
+                mx_pair_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[mx_pair_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[mx_pair_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Mexico source audit: surviving row is real but the scale is not defendable enough for the final institutional panel".strip("; ").strip()
+            )
+
+    if country == "Austria":
+        austria_verified_overrides = {
+            (1996, "OAW (Osterreichische Akademie der Wissenschaften)"): (
+                380_499_000.0,
+                "schilling",
+                "ATS",
+                "1996_Austria_proposal.pdf",
+                58,
+                "Förderungen",
+            ),
+            (1997, "OAW (Osterreichische Akademie der Wissenschaften)"): (
+                385_000_000.0,
+                "schilling",
+                "ATS",
+                "1997_Austria_proposal.pdf",
+                58,
+                "Förderungen",
+            ),
+            (1998, "OAW (Osterreichische Akademie der Wissenschaften)"): (
+                405_000_000.0,
+                "schilling",
+                "ATS",
+                "1998_Austria.pdf",
+                58,
+                "Förderungen",
+            ),
+            (1999, "OAW (Osterreichische Akademie der Wissenschaften)"): (
+                489_000_000.0,
+                "schilling",
+                "ATS",
+                "1999_Austria.pdf",
+                60,
+                "Summe 1417",
+            ),
+            (2012, "OAW (Osterreichische Akademie der Wissenschaften)"): (
+                81_519_000.0,
+                "euro",
+                "EUR",
+                "2012 Anlagen COO_2026_100_2_717880.pdf",
+                170,
+                "Summe 3117",
+            ),
+        }
+        for (year, canonical_name), (amount_local, unit, currency, source_file, page_number, line_desc) in austria_verified_overrides.items():
+            mask = (out["year"] == year) & (out["canonical_name"] == canonical_name)
+            if not mask.any():
+                continue
+            target_idx = out.index[mask][0]
+            out.loc[mask, ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"]] = [None, None, None, None, None, None, None]
+            out.at[target_idx, "amount_local"] = float(amount_local)
+            out.at[target_idx, "unit"] = unit
+            out.at[target_idx, "currency"] = currency
+            out.at[target_idx, "item_type"] = "verified_override"
+            out.at[target_idx, "line_description_en"] = line_desc
+            out.at[target_idx, "source_file"] = source_file
+            out.at[target_idx, "page_number"] = str(page_number)
+            notes = str(out.at[target_idx, "series_notes"] or "").strip()
+            out.at[target_idx, "series_notes"] = f"{notes}; verified against original Austria budget".strip("; ").strip()
+
+        austria_verified_drops = {
+            # Verified against original PDFs: these extractions come from
+            # summary / indicator pages, not clean institution-level
+            # appropriations, so keep them as explicit gaps.
+            (2012, "FWF (Fonds zur Forderung der wissenschaftlichen Forschung)"),
+            (2013, "FWF (Fonds zur Forderung der wissenschaftlichen Forschung)"),
+            (2018, "FWF (Fonds zur Forderung der wissenschaftlichen Forschung)"),
+            (2020, "FWF (Fonds zur Forderung der wissenschaftlichen Forschung)"),
+            (2021, "FWF (Fonds zur Forderung der wissenschaftlichen Forschung)"),
+            (2022, "FWF (Fonds zur Forderung der wissenschaftlichen Forschung)"),
+            (2023, "FWF (Fonds zur Forderung der wissenschaftlichen Forschung)"),
+            (2024, "FWF (Fonds zur Forderung der wissenschaftlichen Forschung)"),
+            (2026, "FWF (Fonds zur Forderung der wissenschaftlichen Forschung)"),
+            (2012, "FFG (Forschungsfoerderungsgesellschaft)"),
+            (2013, "FFG (Forschungsfoerderungsgesellschaft)"),
+            (2014, "FFG (Forschungsfoerderungsgesellschaft)"),
+            (2015, "FFG (Forschungsfoerderungsgesellschaft)"),
+            (2017, "FFG (Forschungsfoerderungsgesellschaft)"),
+            (2019, "FFG (Forschungsfoerderungsgesellschaft)"),
+            (2021, "FFG (Forschungsfoerderungsgesellschaft)"),
+            (2022, "FFG (Forschungsfoerderungsgesellschaft)"),
+            (2023, "FFG (Forschungsfoerderungsgesellschaft)"),
+            (2024, "FFG (Forschungsfoerderungsgesellschaft)"),
+            (2026, "FFG (Forschungsfoerderungsgesellschaft)"),
+            (2022, "OAW (Osterreichische Akademie der Wissenschaften)"),
+            (2023, "OAW (Osterreichische Akademie der Wissenschaften)"),
+            (2026, "OAW (Osterreichische Akademie der Wissenschaften)"),
+            (2010, "AIT Austrian Institute of Technology"),
+            (2010, "Christian Doppler Forschungsgesellschaft (CD-Labor)"),
+            (2018, "IST Austria"),
+            (2010, "IST Austria"),
+            (2021, "IST Austria"),
+            (2022, "IST Austria"),
+            (2023, "IST Austria"),
+            (2026, "IST Austria"),
+            (2001, "Ludwig Boltzmann Gesellschaft"),
+            (2012, "CERN-Beitrag (Austria)"),
+            (2022, "CERN-Beitrag (Austria)"),
+            (2026, "CERN-Beitrag (Austria)"),
+            (2012, "ESA-Beitrag (Austria)"),
+            (2022, "ESA-Beitrag (Austria)"),
+            (2026, "ESA-Beitrag (Austria)"),
+        }
+        for year, canonical_name in austria_verified_drops:
+            mask = (out["year"] == year) & (out["canonical_name"] == canonical_name)
+            if not mask.any():
+                continue
+            out.loc[
+                mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[mask, "series_notes"].fillna("").astype(str)
+            out.loc[mask, "series_notes"] = notes.apply(
+                lambda x: f"{x}; dropped after original-file audit: no clean institutional appropriation line".strip("; ").strip()
+            )
 
     if country == "Japan":
         out.loc[
@@ -15275,6 +16156,168 @@ def build_canonical_series(
 
         out = out[out["canonical_name"].isin(final_panel_names)].copy()
 
+    if country == "Luxembourg":
+        canonical = out["canonical_name"].fillna("").astype(str)
+        year_num = pd.to_numeric(out["year"], errors="coerce")
+        amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+        currency_lu = out["currency"].fillna("").astype(str).str.upper()
+        unit_lu = out["unit"].fillna("").astype(str).str.lower()
+        line_text = out["line_description_en"].fillna("").astype(str) + " " + out.get("line_description", pd.Series("", index=out.index)).fillna("").astype(str)
+        hardcoded_names = {agency["canonical_name"] for agency in CANONICAL_AGENCIES.get("Luxembourg", [])}
+
+        thousand_mask = amount_num.notna() & unit_lu.eq("thousand") & currency_lu.isin(["EUR", "LUF"])
+        if thousand_mask.any():
+            out.loc[thousand_mask, "amount_local"] = amount_num.loc[thousand_mask] * 1000.0
+            out.loc[thousand_mask, "unit"] = out.loc[thousand_mask, "currency"].map({"EUR": "euro", "LUF": "franc"}).fillna("unit")
+            amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+            unit_lu = out["unit"].fillna("").astype(str).str.lower()
+
+        discovered_generic_mask = ~canonical.isin(hardcoded_names)
+        if discovered_generic_mask.any():
+            out.loc[
+                discovered_generic_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[discovered_generic_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[discovered_generic_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; retained in discovery review but excluded from final Luxembourg panel pending source audit".strip("; ").strip()
+            )
+
+        euro_unit_mask = amount_num.notna() & currency_lu.eq("EUR") & unit_lu.eq("unit")
+        if euro_unit_mask.any():
+            out.loc[euro_unit_mask, "unit"] = "euro"
+        luf_unit_mask = amount_num.notna() & currency_lu.eq("LUF") & unit_lu.eq("unit")
+        if luf_unit_mask.any():
+            out.loc[luf_unit_mask, "unit"] = "franc"
+
+        ministry_mask = canonical.eq("Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg)")
+        bad_ministry_text = ministry_mask & ~line_text.str.contains(
+            r"higher education|enseignement sup[ée]rieur|research|recherche",
+            case=False,
+            regex=True,
+            na=False,
+        )
+        if bad_ministry_text.any():
+            out.loc[
+                bad_ministry_text,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[bad_ministry_text, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[bad_ministry_text, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Luxembourg source audit: ministry survivor does not explicitly describe higher-education/research appropriations".strip("; ").strip()
+            )
+
+        late_ministry_mask = ministry_mask & year_num.ge(1999)
+        if late_ministry_mask.any():
+            out.loc[
+                late_ministry_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[late_ministry_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[late_ministry_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Luxembourg source audit: post-1999 ministry totals mix incompatible levels and duplicate institution-level appropriations".strip("; ").strip()
+            )
+
+        weak_ministry_item_mask = ministry_mask & ~out["item_type"].fillna("").astype(str).isin(["section_total", "program_total", "verified_override"])
+        if weak_ministry_item_mask.any():
+            out.loc[
+                weak_ministry_item_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[weak_ministry_item_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[weak_ministry_item_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Luxembourg source audit: ministry series keeps only section/program totals, not embedded line items".strip("; ").strip()
+            )
+
+        wrong_total_mask = line_text.str.contains(
+            r"transport|housing|logement|recettes pour ordre|revenues for order|d[ée]penses pour ordre|expenses for order",
+            case=False,
+            regex=True,
+            na=False,
+        )
+        if wrong_total_mask.any():
+            out.loc[
+                wrong_total_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[wrong_total_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[wrong_total_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Luxembourg source audit: cross-ministry or ordre total misassigned to the research panel".strip("; ").strip()
+            )
+
+        unilu_mask = canonical.eq("Université du Luxembourg") & amount_num.notna()
+        weak_unilu_mask = unilu_mask & (
+            amount_num.lt(5_000_000.0)
+            | line_text.str.contains(
+                r"cooperation agreement|water management|salaries of civil servants|collaboration with the university|research programs and projects undertaken in collaboration",
+                case=False,
+                regex=True,
+                na=False,
+            )
+        ) & out["item_type"].fillna("").astype(str).ne("verified_override")
+        if weak_unilu_mask.any():
+            out.loc[
+                weak_unilu_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[weak_unilu_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[weak_unilu_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Luxembourg source audit: UniLu survivor is a small thematic sub-line or administrative fragment, not the institution's core appropriation".strip("; ").strip()
+            )
+
+        list_mask = canonical.eq("LIST / CRP Henri Tudor (Luxembourg)") & amount_num.notna()
+        weak_list_mask = list_mask & (
+            amount_num.lt(5_000_000.0)
+            | line_text.str.contains(
+                r"management of the network|compensation for third-party services|research projects",
+                case=False,
+                regex=True,
+                na=False,
+            )
+        ) & out["item_type"].fillna("").astype(str).ne("verified_override")
+        if weak_list_mask.any():
+            out.loc[
+                weak_list_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[weak_list_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[weak_list_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Luxembourg source audit: LIST/CRP Henri Tudor survivor is a targeted project or service-compensation sub-line, not the institution's core appropriation".strip("; ").strip()
+            )
+
+        preverified_list_mask = (
+            canonical.eq("LIST / CRP Henri Tudor (Luxembourg)")
+            & year_num.isin([1997, 2006, 2007])
+            & out["item_type"].fillna("").astype(str).ne("verified_override")
+        )
+        if preverified_list_mask.any():
+            out.loc[
+                preverified_list_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[preverified_list_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[preverified_list_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Luxembourg source audit: early LIST survivors (1997, 2006-2007) were traced to non-matching pages and are excluded until explicitly verified".strip("; ").strip()
+            )
+
+        lippmann_2006_mask = (
+            canonical.eq("CRP Gabriel Lippmann (Luxembourg)")
+            & year_num.eq(2006)
+            & out["item_type"].fillna("").astype(str).ne("verified_override")
+        )
+        if lippmann_2006_mask.any():
+            out.loc[
+                lippmann_2006_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[lippmann_2006_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[lippmann_2006_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Luxembourg source audit: 2006 CRP Gabriel Lippmann survivor was traced to a non-matching source page and is excluded until explicitly verified".strip("; ").strip()
+            )
+
+        out = out[pd.to_numeric(out["amount_local"], errors="coerce").notna()].copy()
+        out = out[out["canonical_name"].isin(hardcoded_names)].copy()
+
     if country == "Czech Republic":
         canonical = out["canonical_name"].fillna("").astype(str)
         year_num = pd.to_numeric(out["year"], errors="coerce")
@@ -16150,6 +17193,254 @@ def build_canonical_series(
         # it mixes portfolio totals with institution lines and only adds fake gaps.
         out = out[~out["canonical_name"].eq("Ministry of Education and Research (Estonia)")].copy()
 
+    if country == "Portugal":
+        amounts = pd.to_numeric(out["amount_local"], errors="coerce")
+        canonical = out["canonical_name"].fillna("").astype(str)
+        years = pd.to_numeric(out["year"], errors="coerce")
+        currency = out["currency"].fillna("").astype(str).str.upper()
+        source = out["source_file"].fillna("").astype(str)
+
+        # Keep the final Portugal panel institution-focused. Chapter/programme
+        # aggregates remain available in the country-level results/audit files,
+        # but they are not methodologically comparable to agency appropriations.
+        portugal_aggregate_canonicals = {
+            "Ministério da Ciência e Tecnologia — Capítulo 50 (Portugal)",
+            "P002 — Investigação Científica e Tecnológica e Inovação (Portugal)",
+        }
+        aggregate_mask = canonical.isin(portugal_aggregate_canonicals)
+        if aggregate_mask.any():
+            out.loc[
+                aggregate_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            amounts = pd.to_numeric(out["amount_local"], errors="coerce")
+
+        # Rows carrying EUR before the euro-accounting transition are too
+        # unstable to anchor the final transparent panel.
+        pre1999_eur_mask = years.lt(1999) & currency.eq("EUR") & amounts.notna()
+        if pre1999_eur_mask.any():
+            out.loc[
+                pre1999_eur_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            amounts = pd.to_numeric(out["amount_local"], errors="coerce")
+
+        # Present remaining rows in full local-currency units.
+        generic_unit_mask = amounts.notna() & out["unit"].fillna("").astype(str).str.strip().str.lower().isin(["", "unit", "thousand"])
+        if generic_unit_mask.any():
+            out.loc[generic_unit_mask, "unit"] = out.loc[generic_unit_mask].apply(
+                lambda r: _base_output_unit(r.get("currency"), r.get("unit")),
+                axis=1,
+            )
+
+        # Suppress tiny earmarks / pass-through transfers that matched FCT/ANI
+        # by name but are not credible agency-budget observations.
+        min_amount_masks = {
+            "FCT — Fundação para a Ciência e a Tecnologia (Portugal)": 5_000_000.0,
+            "ANI — Agência Nacional de Inovação (Portugal)": 1_000_000.0,
+        }
+        amounts = pd.to_numeric(out["amount_local"], errors="coerce")
+        for canonical_name, minimum in min_amount_masks.items():
+            mask = (
+                out["canonical_name"].eq(canonical_name)
+                & out["currency"].fillna("").astype(str).str.upper().eq("EUR")
+                & amounts.notna()
+                & amounts.lt(minimum)
+            )
+            if not mask.any():
+                continue
+            out.loc[
+                mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            amounts = pd.to_numeric(out["amount_local"], errors="coerce")
+
+        # 1997 has duplicate source files with the same underlying budget.
+        # Prefer the canonical "Lei orcamento..." file when observations are identical.
+        out["_pt_source_pref"] = source.str.contains(r"^Lei orcamento para ", case=False, regex=True).astype(int)
+        out["_pt_amount_key"] = pd.to_numeric(out["amount_local"], errors="coerce")
+        dedup_cols = [
+            "canonical_name",
+            "year",
+            "_pt_amount_key",
+            "unit",
+            "currency",
+            "item_type",
+            "line_description_en",
+        ]
+        out = (
+            out.sort_values(
+                dedup_cols + ["_pt_source_pref", "source_file"],
+                ascending=[True, True, True, True, True, True, True, False, True],
+                kind="stable",
+            )
+            .drop_duplicates(dedup_cols, keep="first")
+            .drop(columns=["_pt_source_pref", "_pt_amount_key"])
+            .reset_index(drop=True)
+        )
+        canonical = out["canonical_name"].fillna("").astype(str)
+        years = pd.to_numeric(out["year"], errors="coerce")
+
+        portugal_verified_overrides = {
+            (2007, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
+                552_084_349.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2007.pdf",
+                86,
+                "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA",
+                "manual override from original Portugal budget file (MAPA V / 2007 autonomous-services table)",
+            ),
+            (2009, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
+                654_236_704.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2009.pdf",
+                104,
+                "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
+                "manual override from original Portugal budget file (MAPA VII / 2009 autonomous-services table)",
+            ),
+            (2010, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
+                501_451_988.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2010.pdf",
+                90,
+                "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
+                "manual override from original Portugal budget file (MAPA VII / 2010 autonomous-services table)",
+            ),
+            (2012, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
+                394_575_542.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2012.pdf",
+                128,
+                "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
+                "manual override from original Portugal budget file (MAPA VII / 2012 autonomous-services table)",
+            ),
+            (2013, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
+                420_884_807.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2013.pdf",
+                131,
+                "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
+                "manual override from original Portugal budget file (MAPA VII / 2013 autonomous-services table)",
+            ),
+            (2015, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
+                426_506_331.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2015.pdf",
+                125,
+                "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
+                "manual override from original Portugal budget file (MAPA VII / 2015 autonomous-services table)",
+            ),
+            (2016, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
+                425_726_708.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2016.pdf",
+                102,
+                "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
+                "manual override from original Portugal budget file (2016 autonomous-services table)",
+            ),
+            (2017, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
+                444_782_248.0,
+                "euro",
+                "EUR",
+                "2017 Lei_42_2016-OE2017_VersaoDR.pdf",
+                100,
+                "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
+                "manual override from original Portugal budget file (2017 autonomous-services table)",
+            ),
+            (2018, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
+                507_718_842.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2018.pdf",
+                129,
+                "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
+                "manual override from original Portugal budget file (2018 autonomous-services table)",
+            ),
+            (2019, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
+                560_122_571.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2019.pdf",
+                129,
+                "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
+                "manual override from original Portugal budget file (2019 autonomous-services table)",
+            ),
+            (2020, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"): (
+                557_463_880.0,
+                "euro",
+                "EUR",
+                "Lei orcamento para 2020.pdf",
+                222,
+                "FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.",
+                "manual override from original Portugal budget file (2020 autonomous-services table)",
+            ),
+        }
+        for (override_year, override_name), (
+            override_amount,
+            override_unit,
+            override_currency,
+            override_file,
+            override_page,
+            override_desc,
+            override_note,
+        ) in portugal_verified_overrides.items():
+            override_mask = canonical.eq(override_name) & years.eq(override_year)
+            if not override_mask.any():
+                continue
+            target_idx = out.index[override_mask][0]
+            notes = str(out.at[target_idx, "series_notes"] or "").strip()
+            out.at[target_idx, "amount_local"] = float(override_amount)
+            out.at[target_idx, "unit"] = override_unit
+            out.at[target_idx, "currency"] = override_currency
+            out.at[target_idx, "item_type"] = "verified_override"
+            out.at[target_idx, "line_description_en"] = override_desc
+            out.at[target_idx, "source_file"] = override_file
+            out.at[target_idx, "page_number"] = str(override_page)
+            out.at[target_idx, "series_notes"] = f"{notes}; {override_note}".strip("; ").strip()
+
+        portugal_manual_drops = [
+            (2000, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"),
+            (2001, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
+            (2002, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
+            (2002, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"),
+            (2003, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
+            (2003, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"),
+            (2004, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
+            (2005, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
+            (2009, "ANI — Agência Nacional de Inovação (Portugal)"),
+            (2011, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
+            (2011, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"),
+            (2014, "ANI — Agência Nacional de Inovação (Portugal)"),
+            (2014, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
+            (2021, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
+            (2022, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
+            (2024, "ANI — Agência Nacional de Inovação (Portugal)"),
+            (2024, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
+            (2025, "ANI — Agência Nacional de Inovação (Portugal)"),
+            (2025, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
+        ]
+        for drop_year, drop_name in portugal_manual_drops:
+            drop_mask = canonical.eq(drop_name) & years.eq(drop_year)
+            if not drop_mask.any():
+                continue
+            notes = out.loc[drop_mask, "series_notes"].fillna("").astype(str)
+            out.loc[drop_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Portugal source audit: original page is a legal text, plurianual project table, or non-institutional support line rather than a clean agency appropriation".strip("; ").strip()
+            )
+            out.loc[
+                drop_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+
+        out = out.loc[~out["canonical_name"].isin(portugal_aggregate_canonicals)].reset_index(drop=True)
+
     if country == "Slovakia":
         amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
         unit_norm = out["unit"].fillna("").astype(str).str.strip().str.lower()
@@ -16656,9 +17947,10 @@ def build_canonical_series(
     )
 
     out = out.sort_values(["canonical_name", "year"]).reset_index(drop=True)
+    final_agency_count = out["canonical_name"].nunique()
 
     logger.info(
-        f"Canonical series [{country}]: {len(agencies)} agencies, "
+        f"Canonical series [{country}]: {final_agency_count} agencies, "
         f"{out['year'].nunique()} years, "
         f"{out['amount_local'].notna().sum()} data points, "
         f"{out['amount_local'].isna().sum()} gaps."

@@ -13,11 +13,14 @@ Examples:
 from __future__ import annotations
 
 import argparse
+import gzip
 import logging
+import re
 from pathlib import Path
 
 from budget import config as cfg
 from budget.config import get_country_context
+from budget.pdf_reader import _file_id
 from budget.pdf_reader import extract_pages
 from budget.pipeline import _discover_files, load_config
 
@@ -56,6 +59,35 @@ _OCR_LANG_HINTS = {
 }
 
 
+def _safe_cache_stem(path: Path) -> str:
+    """Return a stable filename stem for country-local txt.gz mirrors."""
+    stem = path.stem
+    stem = re.sub(r"[/\\]+", "_", stem)
+    return stem
+
+
+def _render_pages_for_country_cache(pages: list[object]) -> str:
+    rendered: list[str] = []
+    for pg in pages:
+        page_num = getattr(pg, "page_num", 0)
+        method = getattr(pg, "method", "unknown")
+        rendered.append(f"=== Page {page_num}.0 | method: {method} ===")
+        text = str(getattr(pg, "text", "") or "").rstrip()
+        if text:
+            rendered.append(text)
+    return "\n".join(rendered).rstrip() + "\n"
+
+
+def _write_country_cache(country_cache_dir: Path, source_path: Path, pages: list[object]) -> Path:
+    """Mirror extracted pages into full_text/<Country>/pdf_<hash>__<stem>.txt.gz."""
+    country_cache_dir.mkdir(parents=True, exist_ok=True)
+    dest = country_cache_dir / f"pdf_{_file_id(source_path)}__{_safe_cache_stem(source_path)}.txt.gz"
+    payload = _render_pages_for_country_cache(pages)
+    with gzip.open(dest, "wt", encoding="utf-8") as fh:
+        fh.write(payload)
+    return dest
+
+
 def _parse_years(value: str | None) -> tuple[int, int] | None:
     if not value:
         return None
@@ -73,6 +105,7 @@ def run_preextract(
     countries: list[str] | None = None,
     year_range: tuple[int, int] | None = None,
     force_reextract: bool = False,
+    materialize_country_cache: bool = False,
 ) -> int:
     config = load_config()
     budget_cfg = config.get("budget", {})
@@ -109,6 +142,10 @@ def run_preextract(
                 ocr_langs=str(country_ctx.get("ocr_langs", ocr_langs)),
                 force_ocr=bool(country_ctx.get("force_ocr", False)),
             )
+            if materialize_country_cache:
+                country_cache_dir = cache_dir / country
+                mirrored_path = _write_country_cache(country_cache_dir, path, pages)
+                logger.debug("[%s %s] mirrored text cache -> %s", country, year, mirrored_path)
             methods = {}
             for page in pages:
                 methods[page.method] = methods.get(page.method, 0) + 1
@@ -151,6 +188,11 @@ def main() -> int:
         help="Ignore any existing cached text and re-extract.",
     )
     parser.add_argument(
+        "--materialize-country-cache",
+        action="store_true",
+        help="Also write full_text/<Country>/pdf_<hash>__<source>.txt.gz mirrors used by compile traceability.",
+    )
+    parser.add_argument(
         "--log-level",
         default="INFO",
         choices=["DEBUG", "INFO", "WARNING", "ERROR"],
@@ -168,6 +210,7 @@ def main() -> int:
         countries=args.countries,
         year_range=year_range,
         force_reextract=args.fresh,
+        materialize_country_cache=args.materialize_country_cache,
     )
 
 

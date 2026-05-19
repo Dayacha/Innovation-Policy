@@ -2139,16 +2139,47 @@ COUNTRY_PROFILES: dict[str, dict] = {
         ],
         "year_notes": {
             **{y: (
-                "SCANNED FILE: 1997 (43.7 MB) and 2002 (32 MB) are large scanned images — OCR required."
-            ) for y in [1997, 2002]},
-            **{y: (
-                "LUF ERA: amounts in Luxembourg franc (LUF). 1 EUR = 40.3399 LUF."
+                "LUF ERA: amounts in full Luxembourg franc (LUF), unit='unit'. 1 EUR = 40.3399 LUF. "
+                "Research lines are in hundreds of thousands to tens of millions of LUF. "
+                "Scanned images — OCR required for all pages."
             ) for y in range(1975, 2002)},
+            1997: (
+                "LUF ERA: amounts in full Luxembourg franc (LUF), unit='unit'. 1 EUR = 40.3399 LUF. "
+                "SCANNED FILE (43.7 MB) — OCR required."
+            ),
             2002: (
                 "CURRENCY TRANSITION YEAR: Luxembourg switched to euro on 1 January 2002. "
-                "This file covers fiscal year 2002 — amounts should be in full EUR. "
-                "ALSO: this file is a large scanned image (32 MB) — OCR required."
+                "This file covers fiscal year 2002 — amounts in full EUR, unit='unit'. "
+                "SCANNED FILE (32 MB) — OCR required."
             ),
+            **{y: (
+                "EUR ERA (2003-2014): amounts in full euros, unit='unit'. "
+                "Key institutions: FNR (Fonds National de la Recherche, dotation ~40-70M EUR), "
+                "Université du Luxembourg (founded 2003, state contribution 03.2), "
+                "CRP Henri Tudor, CRP Gabriel Lippmann, CRP Santé, CEPS/INSTEAD — "
+                "these are the pre-merger names; after 2015 they become LIST/LISER/LIH. "
+                "All R&D lines are in budget section 03 (Ministère de l'Enseignement Supérieur et de la Recherche). "
+                "Text files have direct PDF layer — clean extraction, no OCR issues."
+            ) for y in range(2003, 2015)},
+            2003: (
+                "EUR ERA: amounts in full euros, unit='unit'. "
+                "INSTITUTION CHANGE: Université du Luxembourg founded by law November 2003 — "
+                "first budget appearance may be small (startup costs only). "
+                "CRP Henri Tudor, CRP Gabriel Lippmann, CRP Santé still active under old names."
+            ),
+            **{y: (
+                "EUR ERA (2015+): amounts in full euros, unit='unit'. "
+                "INSTITUTION REFORM 2015: the three CRP institutes were merged and renamed — "
+                "CRP Henri Tudor → LIST (Luxembourg Institute of Science and Technology), "
+                "CEPS/INSTEAD → LISER (Luxembourg Institute of Socio-Economic Research), "
+                "CRP Santé → LIH (Luxembourg Institute of Health). "
+                "CRP Gabriel Lippmann merged into LIST in 2015. "
+                "Budget section 03.3 'Recherche et innovation' now shows: "
+                "FNR dotation (~69M EUR in 2022), LISER contribution (~14M), "
+                "LIST contribution (~53M), LIH contribution (~44M). "
+                "Total Ministère budget ~600M EUR (includes Uni.lu ~220M in section 03.2). "
+                "Text files have direct PDF layer — clean extraction."
+            ) for y in range(2015, 2026)},
         },
     },
     "Mexico": {
@@ -2732,13 +2763,16 @@ COUNTRY_PROFILES: dict[str, dict] = {
             "Also '1997 02040557.pdf' and 'Lei orcamento para 1997.pdf' are identical — skip the code version.",
         ],
         "include_note": [
-            "FCT (Fundação para a Ciência e Tecnologia) — include ALL FCT budget lines; "
-            "it appears under Capítulo 50 of the science ministry or as a labelled transfer.",
+            "FCT (Fundação para a Ciência e Tecnologia) — include named institutional annual budget rows "
+            "for FCT, especially in MAPA V / MAPA VII services-and-funds tables or other annual expenditure tables. "
+            "Do NOT treat transfer authorisations, pass-through articles, or plurianual project schedules as the FCT institutional total.",
             "JNICT (pre-1997) — include all JNICT operational and programme lines.",
             "INIC (pre-1990s) — include all INIC lines.",
-            "P002 — Programa Investigação Científica e Tecnológica e Inovação: include all lines.",
+            "P002 — Programa Investigação Científica e Tecnológica e Inovação: include only when it is an annual budget table total. "
+            "If it appears in plurianual/project-schedule format, keep for audit but do not treat it as the main institutional appropriation.",
             "Laboratórios de Estado with research mandate: LNEC, LNETI, INETI, INIAV, INRB — include.",
-            "ANI (Agência Nacional de Inovação, from 2009) — include all lines.",
+            "ANI (Agência Nacional de Inovação, from 2009) — include named institutional budget rows only; "
+            "exclude legal transfer clauses and guarantee-fund pass-through mentions.",
             "Universidades públicas: include only when line explicitly labelled 'investigação', "
             "'centros de investigação', 'I&D', or 'bolsas de doutoramento' — not broad teaching subsidies.",
             "COMPETE / POCI / POSC EU co-financed R&D programmes under science ministry — include.",
@@ -2763,6 +2797,23 @@ COUNTRY_PROFILES: dict[str, dict] = {
             2002: (
                 "CURRENCY TRANSITION: Portugal adopted the euro on 1 January 2002. "
                 "Budget amounts for fiscal 2002 are in full EUR."
+            ),
+            **{y: (
+                "EUR ERA (2003+): amounts in full euros, unit='unit'. "
+                "FCT (Fundação para a Ciência e a Tecnologia) is the primary R&D funding agency — "
+                "look for 'FCT', 'Fundação para a Ciência', 'ciência e tecnologia' appropriation lines. "
+                "Budget structure: Ministério da Ciência, Tecnologia e Ensino Superior (or variant name). "
+                "Text files have a direct PDF layer — clean extraction, no OCR issues."
+            ) for y in range(2003, 2026)},
+            **{y: (
+                "EUR ERA — TROIKA AUSTERITY (2011-2014): FCT budget was cut sharply under the "
+                "EU/IMF adjustment programme. Amounts significantly lower than 2009-2010 baseline. "
+                "This is correct data — not a scanning error. amounts still in full EUR, unit='unit'."
+            ) for y in range(2011, 2015)},
+            2013: (
+                "EUR ERA — TROIKA AUSTERITY: FCT budget at trough. "
+                "Also: Portugal 2013 Lei do Orçamento was a supplemental/revised budget — "
+                "check whether file is the original or the revised law."
             ),
         },
     },
@@ -2856,33 +2907,70 @@ COUNTRY_PROFILES: dict[str, dict] = {
             "'savunma teknolojileri geliştirme': include as direct_rd (defence R&D).",
         ],
         "year_notes": {
+            **{y: (
+                "TRL ERA (1975-2004): amounts in full old Turkish lira (TRL), unit='unit'. "
+                "TÜBİTAK appears as a transfer payment from the General Budget: "
+                "'Bağımsız bütçeli idarelere yapılacak yardımlar (TÜBİTAK'a ödenecektir)'. "
+                "Large budget documents (400-1100+ pages) contain the full Bütçe Cetvelleri. "
+                "OCR quality varies — spaced/garbled letters in some scanned pages is expected."
+            ) for y in range(1975, 1990)},
             1990: (
                 "DUPLICATE YEAR: 1990 budget file is byte-for-byte identical to 1991. "
                 "Treat data extracted from this file as 1991 only. Mark year=1990 decision=exclude."
             ),
+            **{y: (
+                "TRL ERA: amounts in full old Turkish lira (TRL), unit='unit'. "
+                "TÜBİTAK appears as a transfer in the general budget Cetvelleri. "
+                "Hyperinflation: by late 1990s, TÜBİTAK budget in tens of trillions TRL."
+            ) for y in range(1991, 2001)},
             2001: (
                 "TWO 2001 FILES: a UUID-named scanned PDF (garbled OCR) and a 'Kanun' text-layer file. "
-                "Use the Kanun text file. Amounts in old Turkish lira (TRL) — hyperinflation era. "
-                "Expect quadrillions of TRL for large agencies."
+                "Use the Kanun text file. Amounts in old TRL — hyperinflation era."
             ),
             2002: (
                 "TWO 2002 FILES: an original and a '(1)' duplicate copy. Process only one. "
                 "Hyperinflation era — amounts in old TRL."
             ),
+            **{y: (
+                "TRL ERA (late hyperinflation): amounts in old TRL, unit='unit'. "
+                "Multiple document types in collection — prioritise UUID-named or 'f8229ba6'-style files "
+                "which are the full Merkezi Yönetim Bütçe Kanunu with annexes."
+            ) for y in range(2003, 2005)},
             2004: (
                 "LAST YEAR of old Turkish lira (TRL) era. "
-                "1 YTL = 1,000,000 TRL redenomination took effect 1 January 2005."
+                "1 YTL = 1,000,000 TRL redenomination took effect 1 January 2005. "
+                "Multiple files in collection: use the large UUID-named file for full appropriation tables."
             ),
             2005: (
-                "REDENOMINATION YEAR: Turkey replaced the old lira (TRL) with the "
-                "Yeni Türk Lirası (YTL) on 1 January 2005. 1 YTL = 1,000,000 old TRL. "
-                "Budget amounts for fiscal 2005 are in YTL. "
-                "TÜBİTAK budget dropped from trillions TRL to single-digit billions YTL."
+                "REDENOMINATION YEAR: Turkey replaced old TRL with Yeni Türk Lirası (YTL) "
+                "on 1 January 2005. 1 YTL = 1,000,000 old TRL. Budget amounts in YTL. "
+                "TÜBİTAK budget dropped from trillions TRL to single-digit billions YTL. "
+                "NOTE: 'tbmm22140033ss1270.pdf' and 'ss1271.pdf' are KESIN HESAP (final accounts) "
+                "for prior years — not the FY2005 budget appropriation."
             ),
+            **{y: (
+                "YTL ERA (2006-2008): amounts in Yeni Türk Lirası (YTL), unit='unit'. "
+                "DOCUMENT TYPES in collection: (a) 'kanuntbmmc09XXXXX.pdf' = budget law articles only "
+                "(no appropriation tables); (b) 'GenelFaaliyetRaporu_XXXX.pdf' = post-facto activity "
+                "report (NOT a budget document); (c) 'tbmm22103031ss1028.pdf' (2006) = TBMM budget "
+                "committee report with policy discussion; (d) '2008-Merkezi-Yonetim-Kesin-Hesabi' = "
+                "final accounts (actual spending, not appropriations). "
+                "PRIORITISE: the large UUID-named PDF or 'ButceGerekcesi' document for actual appropriations."
+            ) for y in range(2006, 2009)},
             2009: (
-                "CURRENCY RENAME: 'Yeni' (New) was dropped; YTL became TL (Turkish Lira) "
-                "from 1 January 2009. Same currency, same conversion rate — just renamed."
+                "CURRENCY RENAME: 'Yeni' dropped; YTL became TL from 1 January 2009. Same currency. "
+                "Multiple files: 'ButceGerekcesi_2009.pdf' (314p) = budget justification with detailed "
+                "programme data; 'kanuntbmmc09305828.pdf' = law articles only."
             ),
+            **{y: (
+                "CRITICAL — NO TÜBİTAK DATA: The only file for this year is a 3-page "
+                "'Ekonomik Kod İcmali' (Economic Code Summary) of the GENERAL BUDGET (I) SAYILI CETVEL. "
+                "This shows aggregate spending by economic category for general-budget institutions only. "
+                "TÜBİTAK, TÜBA, and TAEK are ÖZEL BÜTÇELİ (Special Budget, II SAYILI CETVEL) and "
+                "DO NOT APPEAR in this file. Mark ALL pages relevant=false. "
+                "The user needs to upload the (II) SAYILI CETVEL / Özel Bütçeli Idareler file "
+                "to extract TÜBİTAK data for this year."
+            ) for y in range(2010, 2026)},
         },
     },
     # Unit: tys. zł (thousands PLN) throughout all years.

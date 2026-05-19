@@ -17893,3 +17893,721 @@ Czech Republic,CELKOVY PREHLED VYDAJU STÂTNIHO ROZPOCTU PODLE KAPITOL,mixed_min
 Czech Republic,TLUMACÏ OV,unclear,0.0,Unclear Agency Name,,False,Agency name is unclear and does not specify a clear function.,llm
 Czech Republic,FINANCNi VZTAH STATNIHO ROZPOCTU K ROZPOCTU HLAVNIHO MESTA PRAHY,mixed_ministry,50.0,Financial Relations of the State Budget to the Budget of the Capital City of Prague,,True,This agency deals with financial relations between state and local budgets.,llm
 Czech Republic,FINANCNI VZTAHY STATNIHO ROZPOCTU K ROZPOCTUM KRAJU,mixed_ministry,50.0,Financial Relations of the State Budget to Regional Budgets,,True,This agency deals with financial relations between state and regional budgets.,llm
+Turkey,GELİRLERİNDEN RED VE İADELER,unclear,0.0,Refunds and Returns from Revenues,,False,The name suggests a focus on refunds rather than R&D.,llm
+Turkey,GEÇEN YILDAN,unclear,0.0,From Last Year,,False,The name does not indicate a specific agency or function.,llm
+Turkey,RED VE İADELER,unclear,0.0,Returns and Refunds,,False,"Focuses on returns and refunds, not R&D.",llm
+Turkey,YILI: 2009,unclear,0.0,Year: 2009,,False,Does not represent an agency.,llm
+Turkey,EKONOMİK SINIFLANDIRMAYA GORE ÖZET GELİR,unclear,0.0,Summary Income According to Economic Classification,,False,Describes a classification rather than an agency.,llm
+Turkey,MALİ KURULUŞLARA YATIRILAN SER MAL VE HİZMET ÜRETEN KURULUŞL DÖNER SERMAYELİ KURULUŞLARA SERMAYE TAAHHÜTLERİ HESABI (-),unclear,0.0,Capital Commitments Account for Financial Institutions,,False,"Complex name, unclear agency type.",llm
+Turkey,DAMGA VERGİSİ,unclear,0.0,Stamp Tax,,False,Refers to a tax rather than an agency.,llm
+Turkey,G44. 724.474 83,unclear,0.0,G44. 724.474 83,,False,Not identifiable as an agency.,llm
+Turkey,"GİDER TAAHHÜTLERİ KARŞILIĞI HE VERİLEN GARANTİ HESAPLARI VERİLEN GARANTİLER HESABI VERİLEN GARANTİLER KARŞILIĞI HE VERİLEN TAAHHÜT BELGELERİ HES VERİLEN TAAHHÜT BELGELERİ KAR DEĞERLİ KAĞIT VE ÖZEL TAHAKKUK DEĞERLİ KAĞIT AMBARLARI HESAB,",unclear,0.0,Accounts for Guarantees Given Against Expenditure Commitments,,False,Complex and unclear agency type.,llm
+Turkey,NET TAHSILAT,unclear,0.0,Net Collection,,False,"Refers to financial collection, not an agency.",llm
+Turkey,"AG,794,602.646,02",unclear,0.0,"AG,794,602.646,02",,False,Not identifiable as an agency.,llm
+Turkey,DEVREDİLEN,unclear,0.0,Transferred,,False,Does not represent an agency.,llm
+Turkey,ÖDENEK TOPLAMI,unclear,0.0,Total Budget,,False,"Refers to budget totals, not an agency.",llm
+Turkey,BÜTÇE GELİRİ,unclear,0.0,Budget Revenue,,False,"Refers to revenue, not an agency.",llm
+Turkey,GENEL BÜTÇELİ İDARELERİN GELİR CETVELİ,unclear,0.0,Income Table of General Budget Administrations,,False,"Describes a financial table, not an agency.",llm
+Turkey,ERTESİ YILA DEVREDİLEN HAZİNE GARANTİLERİ,unclear,0.0,Treasury Guarantees Carried Over to the Next Year,,False,"Refers to guarantees, not an agency.",llm
+Turkey,ÖDENEK ÜSTÜ,unclear,0.0,Above Budget,,False,Does not represent an agency.,llm
+Turkey,GİDERLERİİ,unclear,0.0,Expenditures,,False,"Refers to expenditures, not an agency.",llm
+Turkey,GELİR HESAPLARI,unclear,0.0,Income Accounts,,False,"Refers to accounts, not an agency.",llm
+Turkey,ÖDENEK TOPLAMI | Ger | ÖDENEK TOPLAMI,unclear,0.0,Total Budget | Ger | Total Budget,,False,"Refers to budget totals, not an agency.",llm
+Turkey,ATT AD.AO4 TZ ATTA ADS TZ,unclear,0.0,ATT AD.AO4 TZ ATTA ADS TZ,,False,Not identifiable as an agency.,llm
+Turkey,"B8,611,300,00",unclear,0.0,"B8,611,300,00",,False,Not identifiable as an agency.,llm
+Turkey,S4 SAKARYA,unclear,0.0,S4 Sakarya,,False,Not identifiable as an agency.,llm
+Turkey,TAHSİLAT TAHAKKUK,unclear,0.0,Collection Accrual,,False,"Refers to financial processes, not an agency.",llm
+Turkey,KIŞI VE KURUMLARDAN ALINAN P?,unclear,0.0,P? Received from Individuals and Institutions,,False,Unclear and does not represent an agency.,llm
+Turkey,MAL VE HIZMET ALIM GİDERLERİ,unclear,0.0,Expenditure on Goods and Services,,False,"Not a specific agency, but a budget category.",llm
+Turkey,HİZMETLERİ,unclear,0.0,Services,,False,"General term, not a specific agency.",llm
+Turkey,BÜTÇE GİDERİ i,unclear,0.0,Budget Expenditure,,False,"Not a specific agency, but a budget term.",llm
+Turkey,DIŞ MALI BORÇLAR HESABI,unclear,0.0,External Debt Account,,False,"Not a specific agency, but a financial account.",llm
+Turkey,YEDEK TOPLAM ÖDENEKLER HARCAMA,unclear,0.0,Total Reserve Expenditure,,False,"Not a specific agency, but a budget category.",llm
+Turkey,ÖZEL BÜTÇELİ İDARELERİN GELİR İL DAĞILIMI,unclear,0.0,Revenue Distribution of Special Budget Agencies,,False,"Not a specific agency, but a revenue distribution term.",llm
+Turkey,A1382.01744,unclear,0.0,A1382.01744,,False,Not a recognizable agency name.,llm
+Turkey,BÜTÇE GİDERİ,unclear,0.0,Budget Expenditure,,False,"Not a specific agency, but a budget term.",llm
+Turkey,İÇİŞLERİ BAKANLIĞI,mixed_ministry,50.0,Ministry of Interior,,True,A government ministry with mixed responsibilities.,llm
+Turkey,GENEL BÜTÇELİ İDARELERİN GELİR İL DAĞILIMI,unclear,0.0,Revenue Distribution of General Budget Agencies,,False,"Not a specific agency, but a revenue distribution term.",llm
+Turkey,YILI: 2008,unclear,0.0,Year: 2008,,False,"Not an agency, just a year reference.",llm
+Turkey,"X 132) KURUMCA VERİLEN BORÇLARDAN A 2,986,932,042,05",unclear,0.0,X 132) Loans Granted by the Institution,,False,"Not a specific agency, but a financial statement.",llm
+Turkey,YIL İÇİNDE ÖDENEK TOPLAMI İPTAL EDİLEN (1034445974841 4442) - ODENEK (2461810413),unclear,0.0,Total Budget Cancelled Within the Year,,False,"Not a specific agency, but a budget statement.",llm
+Turkey,B.012.844.240.55,unclear,0.0,B.012.844.240.55,,False,Not a recognizable agency name.,llm
+Turkey,NET TAHSİLAT,unclear,0.0,Net Collection,,False,"Not a specific agency, but a financial term.",llm
+Turkey,YILIGINDE ÖDENEK TOPLAMI İPTAL EDİLEN (143¢4454749419412) - ODENEK (24548410413),unclear,0.0,Total Budget Cancelled Within the Year,,False,"Not a specific agency, but a budget statement.",llm
+Turkey,ÖZEL BÜTÇELİ İDARELERİN GEÇİCİ MİZANI,unclear,0.0,Temporary Balance of Special Budget Agencies,,False,"Not a specific agency, but a financial term.",llm
+Turkey,"ATAA07.205,01",unclear,0.0,"ATAA07.205,01",,False,Not a recognizable agency name.,llm
+Turkey,GELECEK YILA DEVREDİLEN,unclear,0.0,Carried Over to Next Year,,False,"Not a specific agency, but a budget term.",llm
+Turkey,"TAN4319,96",unclear,0.0,"TAN4319,96",,False,Not a recognizable agency name.,llm
+Turkey,DEVLET SU İŞLERİ GENEL MÜDÜRLÜĞ GENEL TOPLAM,mixed_ministry,50.0,General Directorate of State Hydraulic Works,,True,A government agency with mixed responsibilities.,llm
+Turkey,GELİR IL DAĞILIMI,unclear,0.0,Revenue Distribution,,False,"Not a specific agency, but a revenue term.",llm
+Turkey,ÖZEL BÜTÇELİ İDARELERİN,unclear,0.0,Special Budget Agencies,,False,"Not a specific agency, but a category.",llm
+Turkey,ALACAKLARDAN TOPLAM TAHSILAT NET TAHSILAT,unclear,0.0,Total Collection from Receivables Net Collection,,False,"Not a specific agency, but a financial term.",llm
+Turkey,GELIRLERINDEN RED VE İADELER,unclear,0.0,Rejections and Refunds from Revenues,,False,"Not a specific agency, but a financial term.",llm
+Turkey,İPTAL EDİLEN,unclear,0.0,Cancelled,,False,The name suggests a cancellation but lacks context.,llm
+Turkey,BÜTÇE GELİRLERİNDEN RED VE İADELER,unclear,0.0,Rejections and Refunds from Budget Revenues,,False,Describes a financial process rather than an agency.,llm
+Turkey,GEÇEN YILDAR,unclear,0.0,Last Year,,False,"Refers to a time period, not an agency.",llm
+Turkey,MAL VE HİZMET ALIM GİDERLERİ,unclear,0.0,Expenditures for Goods and Services Procurement,,False,"Describes expenditure categories, not an agency.",llm
+Turkey,"S.724.428,748,63",unclear,0.0,"S.724.428,748,63",,False,"Appears to be a numerical value, not an agency.",llm
+Turkey,"SANAYI VE TICARET BAKANLIĞI 76,573,288,26 8.645,279,57 17.062.914,70 107.828.330,39 3.276.827,84 30.557.770,01 180.046.174,00 ENERA VE TABI KAYNAKLAR BAKANLI 14.005,245,32 1.940.512,78 23.579,913,89 124.962,437,70 0.668,030,14 91.887.000,00 38.857.411,58",mixed_ministry,50.0,Ministry of Industry and Trade,,True,Identified as a ministry involved in both R&D and other functions.,llm
+Turkey,KURUMLAR KARLARI,unclear,0.0,Institutional Profits,,False,"Refers to profits, not an agency.",llm
+Turkey,GİDERLERİ TRANSFERLER,unclear,0.0,Expenditures Transfers,,False,"Describes a financial process, not an agency.",llm
+Turkey,"GENEL TOPLAM 42720019 14766646 12,661,479 11941960 15,710,564 14,626,968 16,422,065 19,689,066 17088479",unclear,0.0,Total General,,False,"Appears to be a summary of figures, not an agency.",llm
+Turkey,TRANSFERLER,unclear,0.0,Transfers,,False,"Refers to transfers, not an agency.",llm
+Turkey,YILE: 2008,unclear,0.0,Year: 2008,,False,"Refers to a year, not an agency.",llm
+Turkey,İPTAL EDİLEN ÖZEL GELİR,unclear,0.0,Cancelled Special Income,,False,"Describes a financial term, not an agency.",llm
+Turkey,KURUMLARDAN VE KİŞİLERDEN ALINAN YARDIM VE BA,unclear,0.0,Aid and Donations Received from Institutions and Individuals,,False,"Describes a financial process, not an agency.",llm
+Turkey,DİCLE ÜNİVERSİTESİ,mixed_ministry,70.0,Dicle University,,True,A university that may have R&D activities.,llm
+Turkey,ALINAN BAĞIŞ VE YARDIMLAR İLE ÖZEL GELİRLER,unclear,0.0,Donations and Aid Received with Special Revenues,,False,"Describes a financial process, not an agency.",llm
+Turkey,"A2.047.270,76",unclear,0.0,"A2.047.270,76",,False,"Appears to be a numerical value, not an agency.",llm
+Turkey,YILI; 2008,unclear,0.0,Year; 2008,,False,"Refers to a year, not an agency.",llm
+Turkey,ABUN-D9 14:53:24,unclear,0.0,ABUN-D9 14:53:24,,False,"Appears to be a timestamp or code, not an agency.",llm
+Turkey,DICLE ÜNİVERSİTESİ,mixed_ministry,70.0,Dicle University,,True,A university that may have R&D activities.,llm
+Turkey,AÇIKLAMA TOPLAM,unclear,0.0,Total Explanation,,False,"Describes a summary, not an agency.",llm
+Turkey,GELİRLERİNDEN REO VE İADELER,unclear,0.0,Rejections and Refunds from Revenues,,False,"Describes a financial process, not an agency.",llm
+Turkey,"GENÇLİK VE SPOR GENEL MÜDÜRL 426.399.000,00 oca 206.259,320,60 Y 24.675.000, 63718.975,00 69.718.971,00 DEVLET TİYATROLARI GENEL MÜDÜ 110,889,000,00 , 6,00 1,359,000,00 0,09 4.455,940,00 4.455,940,00 DEVLET OPERA VE BALESİ GENEL? 141,028,000,00 0,00 445,000,00 0,00 10,641,000,00 10,641,000,00 ORMAN GENEL MÜDÜRLÜĞÜ 886,744,000,00 000 47.328.000,00 000 57.859,00 57.B59,00 VAKIFLAR GENEL MÜDÜRLÜĞÜ 443.246,000,00 9,00 22,581,894,45 N 0,00 20,421.864,00 20,421.864,00 HUDUT VE SAHİLLER SAĞLIK GENE 101,058 000,C0 44,795,904,04 80.931.300,00 000 752.744,00 782.744,00",unclear,0.0,Ministry of Youth and Sports,,False,Cannot determine R&D focus from the name alone.,llm
+Turkey,DİĞER ÇEŞİTLİ GELİRLER,unclear,0.0,Other Various Revenues,,False,"Describes a category of revenues, not an agency.",llm
+Turkey,GENEL BÜTÇELİ İDARELERİN EKONOMİK SINIFLANDIRMAYA GÖRE ÖDENEK ÜSTÜ BÜTÇE GİDERLERİ CETVELİ,unclear,0.0,Exceeding Budget Expenditures Table According to Economic Classification of General Budget Agencies,,False,"Describes a financial document, not an agency.",llm
+Turkey,YIL İÇİNDE,unclear,0.0,Within the Year,,False,"Refers to a time frame, not an agency.",llm
+Turkey,VERGİ VE MÜLKİYET GELİRLERİ GELİRLERİ,unclear,0.0,Tax and Property Revenue,,False,The name suggests a focus on revenue collection rather than R&D.,llm
+Turkey,"T4478,396,38",unclear,0.0,Unknown,,False,"The name appears to be a numerical code, not an agency.",llm
+Turkey,TAŞINIR SATIŞ GELİRLERİ,unclear,0.0,Movable Asset Sales Revenue,,False,"Focuses on revenue from asset sales, not R&D.",llm
+Turkey,ÖZEL BÜTÇELİ İDARELERİN GELİR IL DAĞILIMI ICMALI,unclear,0.0,Revenue Distribution of Special Budget Agencies,,False,"Describes revenue distribution, not R&D activities.",llm
+Turkey,GENEL BÜTÇELİ İDARELERİN KESİN MİZANI,unclear,0.0,Final Balance of General Budget Agencies,,False,"Refers to budget accounting, not R&D.",llm
+Turkey,TİCARİ MALLAR HESABI,unclear,0.0,Commercial Goods Account,,False,"Focuses on commercial accounts, not R&D.",llm
+Turkey,SOSYAL GÜVENLİK VE SOSYAL,unclear,0.0,Social Security and Social,,False,"Related to social security, not R&D.",llm
+Turkey,GELIRLERINOEN NET RED VE İADELER TAHSİLAT,unclear,0.0,Net Revenue Reductions and Refunds Collection,,False,"Focuses on revenue collection, not R&D.",llm
+Turkey,İPTAL EDİLEN (1081415070112) -,unclear,0.0,Cancelled (1081415070112),,False,"Refers to a cancelled item, not an agency.",llm
+Turkey,GENEL TOPLAM,unclear,0.0,Total General,,False,"General total, not an agency.",llm
+Turkey,DÜZENLEYİCİ VE DENETLEYİCİ KURUMLARIN GELİR CETVELİ,unclear,0.0,Revenue Table of Regulatory and Supervisory Institutions,,False,"Focuses on regulatory revenue, not R&D.",llm
+Turkey,PARA CEZALARI,unclear,0.0,Monetary Penalties,,False,"Related to penalties, not R&D.",llm
+Turkey,SOSYAL GÜVENLİK VE SOSYAL YARDIM HİZMET,unclear,0.0,Social Security and Social Assistance Services,,False,"Focuses on social services, not R&D.",llm
+Turkey,DİĞER SERMAYE SATIŞ GELİRLERİ,unclear,0.0,Other Capital Sale Revenues,,False,"Focuses on capital sales, not R&D.",llm
+Turkey,İNDİRİM İADE VE ISKONTOLAR HE,unclear,0.0,Discount Refunds and Allowances,,False,"Related to discounts, not R&D.",llm
+Turkey,FAIZ GELİRLERİ,unclear,0.0,Interest Revenues,,False,"Focuses on interest income, not R&D.",llm
+Turkey,"SULEYMAN DEMİREL ÜNİVERSİTESİ 69,050,634,15 8.725.00,23 | © 2080835556 610,102,67 | ( 3124810073",unclear,0.0,Suleyman Demirel University,,False,"Appears to be a university reference, not a budget agency.",llm
+Turkey,"B.213.768,04",unclear,0.0,Unknown,,False,"Appears to be a numerical value, not an agency.",llm
+Turkey,"B1,699,720,87",unclear,0.0,Unknown,,False,"Appears to be a numerical value, not an agency.",llm
+Turkey,ARA TOPLAM,unclear,0.0,Subtotal,,False,"Refers to a subtotal, not an agency.",llm
+Turkey,SERMAYE GELİRLERİ TAŞINMAZ SATIŞ GELİRLERİ,unclear,0.0,Capital Revenues from Real Estate Sales,,False,"Focuses on real estate sales, not R&D.",llm
+Turkey,IPTAL EDİLEN,unclear,0.0,Cancelled,,False,"Refers to a cancelled item, not an agency.",llm
+Turkey,RED VEİADELER,unclear,0.0,Reductions and Refunds,,False,"Focuses on refunds, not R&D.",llm
+Turkey,EKONOMİK SINIFLANDIRMAYA GÖRE ÖZET GELİR İL DAĞILIMI,unclear,0.0,Summary Revenue Distribution According to Economic Classification,,False,"Describes revenue distribution, not R&D.",llm
+Turkey,"B.967.099,85",unclear,0.0,Unknown,,False,"Appears to be a numerical value, not an agency.",llm
+Turkey,İHRACATI GELİŞTİRME ETÜT MERKEZ.,unclear,0.0,Export Development Study Center,,False,The name suggests a focus on export development but lacks clarity on its specific role.,llm
+Turkey,YILI ; 2009,unclear,0.0,Year; 2009,,False,This appears to be a reference to a year rather than an agency.,llm
+Turkey,B0.277.348.46,unclear,0.0,B0.277.348.46,,False,"This looks like a code or identifier, not an agency name.",llm
+Turkey,"KİT VE KAMU BANKALARI GELİRİ,",unclear,0.0,Revenue of State Economic Enterprises and Public Banks,,False,The name suggests a focus on revenue but lacks clarity on its specific role.,llm
+Turkey,MUS ALPARSLAN ÜNMERSİTESİ,unclear,0.0,Muş Alparslan University,,False,"This is a university name, not a budget agency.",llm
+Turkey,TRANSFERLERİ,unclear,0.0,Transfers,,False,This term refers to transfers but does not specify an agency.,llm
+Turkey,İL TOPLAMI,unclear,0.0,Provincial Total,,False,"This seems to refer to a total for a province, not an agency.",llm
+Turkey,"CUMHURBAŞKANLIĞI 84,540,418,44 TEMM 328,728.233,08",unclear,0.0,Presidency,,False,"This appears to be a financial entry related to the presidency, not an agency.",llm
+Turkey,ÜNİVERSİTESİ,unclear,0.0,University,,False,"This is a generic term for a university, not a specific agency.",llm
+Turkey,"AT.762,000,00",unclear,0.0,"AT.762,000.00",,False,"This appears to be a financial figure, not an agency name.",llm
+Turkey,VE MÜLKİYET,unclear,0.0,And Property,,False,This phrase does not specify an agency.,llm
+Turkey,GENEL BÜTÇELİ İDARELERİN GELİR İL DAĞILINI İCMALİ,unclear,0.0,Summary of Revenue Distribution of General Budget Agencies,,False,"This refers to a summary report, not an agency.",llm
+Turkey,GELECEK YILA DEVREDILEN,unclear,0.0,Carried Over to Next Year,,False,"This term refers to budget carryovers, not an agency.",llm
+Turkey,HL TOPLAMI,unclear,0.0,HL Total,,False,"This seems to refer to a total, not an agency.",llm
+Turkey,ANKARA ÜNİVERSİTESİ,unclear,0.0,Ankara University,,False,"This is a university name, not a budget agency.",llm
+Turkey,MAL VE HİZMET SATIŞ GELİRLERİ,unclear,0.0,Revenue from Sale of Goods and Services,,False,"This refers to revenue types, not an agency.",llm
+Turkey,"B,BAB.811,06",unclear,0.0,"B,BAB.811.06",,False,"This appears to be a code or identifier, not an agency name.",llm
+Turkey,KORUMA REFAHI | HİZMETLERİ HİZMETLERİ,unclear,0.0,Protection Welfare | Services,,False,"This seems to refer to welfare services, not a specific agency.",llm
+Turkey,SERMAYE GİDERLERİ SERMAYE TRANSFERLERİ,unclear,0.0,Capital Expenditures Capital Transfers,,False,"This refers to budget categories, not an agency.",llm
+Turkey,BORÇ ALACAK,unclear,0.0,Debt Receivable,,False,"This term refers to financial concepts, not an agency.",llm
+Turkey,DİĞER ÇEŞTİLİ GELİRLER,unclear,0.0,Other Various Revenues,,False,"This refers to revenue types, not an agency.",llm
+Turkey,TOPLAM TOPLAM TAHAKKUK TAHSİLAT,unclear,0.0,Total Total Accrual Collection,,False,"This seems to refer to a financial summary, not an agency.",llm
+Turkey,"B685.404,94",unclear,0.0,B685.404.94,,False,"This appears to be a financial figure, not an agency name.",llm
+Turkey,DIGER İDARELERDEN ALINAN BAĞIŞ VE YARDMLAR,unclear,0.0,Donations and Aid Received from Other Agencies,,False,"This refers to funding sources, not an agency.",llm
+Turkey,DİĞER ÇEŞİTU GELİRLER,unclear,0.0,Other Various Revenues,,False,"This refers to revenue types, not an agency.",llm
+Turkey,ERTESİ YILA DEVREDİLEN,unclear,0.0,Unclear Agency,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,"ATTA49.404,72",unclear,0.0,Unclear Agency,,False,The name appears to be a financial figure rather than an agency.,llm
+Turkey,MUHASEBE BİRİMİ,mixed_ministry,0.0,Accounting Unit,,False,This is likely a unit within a ministry rather than a dedicated agency.,llm
+Turkey,"ABAT4.330,37",unclear,0.0,Unclear Agency,,False,The name appears to be a financial figure rather than an agency.,llm
+Turkey,GERÇEKLEŞME,unclear,0.0,Unclear Agency,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,"B04.738,76",unclear,0.0,Unclear Agency,,False,The name appears to be a financial figure rather than an agency.,llm
+Turkey,"DİĞER GELİRLER 534.300.000,00 402.364.273,01",unclear,0.0,Unclear Agency,,False,The name appears to be a financial statement rather than an agency.,llm
+Turkey,TOPLAM TOPLAM GELİRLERİNDEN TAHAKKUK TAHSİLAT RED VE İADELER,unclear,0.0,Unclear Agency,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,Ii TOPLAMI,unclear,0.0,Unclear Agency,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,"GA20466,80",unclear,0.0,Unclear Agency,,False,The name appears to be a financial figure rather than an agency.,llm
+Turkey,SİLME - DÜŞME,unclear,0.0,Unclear Agency,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,TAHSİLAT |,unclear,0.0,Unclear Agency,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,"ANADOLU ÜNİVERSİTESİ 125.5B.991,57",mixed_ministry,0.0,Anadolu University,,False,This is an educational institution rather than a dedicated research agency.,llm
+Turkey,"BE.007.914,72",unclear,0.0,Unclear Agency,,False,The name appears to be a financial figure rather than an agency.,llm
+Turkey,TÜRKİYE VE ORTA DOĞU AMME | TÜRKİYE BILIMGEL VE TEKNOLOS TÜRKİYE BİLİMLER AKADEMİSİ BA HUDUT VE SAHİLLER SAĞLIK GEN TÜRKİYE ATOM ENERJISI KURUM TÜRK İŞBIRLIĞI VE KALKINMA iD MADEN TETKİK VE ARAMA GENEL,mixed_ministry,0.0,Turkey and Middle East Public,,False,This appears to be a combination of multiple agencies or institutions.,llm
+Turkey,"AB.816.A18,08",unclear,0.0,Unclear Agency,,False,The name appears to be a financial figure rather than an agency.,llm
+Turkey,"AA4T.B45,43",unclear,0.0,Unclear Agency,,False,The name appears to be a financial figure rather than an agency.,llm
+Turkey,"AT793,741,20 $.627.205,08 615.441,17",unclear,0.0,Unclear Agency,,False,The name appears to be a financial figure rather than an agency.,llm
+Turkey,"B.430.692,91",unclear,0.0,Unclear Agency,,False,The name appears to be a financial figure rather than an agency.,llm
+Turkey,IL TOPLAMI,unclear,0.0,Unclear Agency,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,MALLARIN KULLANMA VEYA FAALIVETTE BULUNMA IZK,unclear,0.0,Unclear Agency,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,"H450.102,01",unclear,0.0,Unclear Agency,,False,The name appears to be a financial figure rather than an agency.,llm
+Turkey,"T.766.143,07",unclear,0.0,Unclear Agency,,False,The name appears to be a financial figure rather than an agency.,llm
+Turkey,"TESİS, MAKİNE VE CİHAZLAR HESA 11.701.179,78 8.695.695,61 TAŞITLAR HESABI 1.410,479,67 80.735,92 DEMİRBAŞLAR HESABI 80.888,540,49 63.884.650,77 KURUM TOPLAMI 6,600.126,16 3.227.806,12 İLK MADDE VE MALZEME HESABI 652,537,74 2.153,858,26 TESİS, MAKİNE VE CIHAZLAR HESA 1.947.122,90 43,224,58 TAŞITLAR HESABI 76.000,00 DEMİRBAŞLAR HESABİ 2.824.455.55 1.030.822,68 KURUM TOPLAMI 11.745.086,29 5.784.932,91 İLK MADDE VE MALZEME HESABI 291.368,39 3.817.102,05 TESİS, MAKİNE VE CİHAZLAR HESA 1.280.B16,64 182.303,46 TAŞITLAR HESABI 78.052,77 311.262.109 DEMİRBAŞLAR HESABI 10.098.837,49 1.474,265,30 KURUM TOPLAMI 10.263.743,68 13.227.273,63 İLK MADDE VE MALZEME HESABI 4.140.508,54 7.849,996 85 TESİS, MAKİNE VE CIHAZLAR HESA 2.218.708,53 1.973.496,15 TAŞITLAR HESABI 3.092,22 1,032.698,61 DEMİRBAŞLAR HESABİ 3,841.334,48 2.671.082,02 KURUM TOPLAMI 133,954.452,63 11.822.984,52 İLK MADDE VE MALZEME HESABI 170.878,08 3.738,249,06 TESİS, MAKİNE VE CİHAZLAR HESA 10.817.BBO,97 12,692,539,71 TASITLAR HESABI 115.197.415,37 94.165,168,60 DEMİRBAŞLAR HESAB! 7.768.280.21 3.227.027.15 KURUM TOPLAMI 36.797.507,26 12.17.893,99 İLK MADDE VE MALZEME HESABI 2,224,362,25 9.798,583,61 TESIS, MAKINE VE CIHAZLAR HESA §,392,450,74 121.587,41 TAŞITLAR HESABI 69d.247,18 1.041.001,97",unclear,0.0,"Tesis, Makine ve Cihazlar",,False,The name does not provide enough information to determine if it is a dedicated R&D agency or a mixed ministry.,llm
+Turkey,İL DAĞILIMI,unclear,0.0,Unclear Agency,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,KURUMLARINA DEVLET PRİMİ,unclear,0.0,State Premium Institutions,,False,The name suggests a financial institution but lacks clarity on its specific function.,llm
+Turkey,BORÇ TUTARI,unclear,0.0,Debt Amount,,False,This appears to be a financial term rather than an agency.,llm
+Turkey,"B.047.188,36",unclear,0.0,"B.047.188,36",,False,"This looks like a financial figure, not an agency.",llm
+Turkey,TAHSILAT NET TAHSILAT,unclear,0.0,Net Collection,,False,The name suggests a financial process rather than an agency.,llm
+Turkey,"B0%6.314,06",unclear,0.0,"B0%6.314,06",,False,"This appears to be a financial figure or code, not an agency.",llm
+Turkey,"B8.209.408,24",unclear,0.0,"B8.209.408,24",,False,"This looks like a financial figure, not an agency.",llm
+Turkey,"KIRA GELİRLERİ 1.708408,85 1.808.992,78",unclear,0.0,Rental Income,,False,This seems to refer to income rather than an agency.,llm
+Turkey,OROCT-00 16:51:03,unclear,0.0,OROCT-00 16:51:03,,False,"This appears to be a timestamp or code, not an agency.",llm
+Turkey,"KAMU DÜZENİ VE GÜVENLİK Hİ EKONOMİK İŞLER VE HİZMETİ, DİNLENME, KÜLTÜR VE DİN Aİ",mixed_ministry,50.0,"Public Order and Security Economic Affairs and Services, Recreation, Culture and Religion",,True,This name suggests a ministry involved in various sectors including economic affairs.,llm
+Turkey,"B376,044,46",unclear,0.0,"B376,044,46",,False,"This appears to be a financial figure, not an agency.",llm
+Turkey,"B.220.453,40",unclear,0.0,"B.220.453,40",,False,"This looks like a financial figure, not an agency.",llm
+Turkey,YUL İÇİNDE,unclear,0.0,Within the Year,,False,This phrase does not refer to an agency.,llm
+Turkey,GELIRLERINDEN NET RED VE İADELER,unclear,0.0,Net Rejections and Refunds from Revenues,,False,This seems to refer to a financial process rather than an agency.,llm
+Turkey,SERMAYE GELİRLER!,unclear,0.0,Capital Income,,False,"This appears to refer to a type of income, not an agency.",llm
+Turkey,MAL VE HIZMET SATIŞ GELİRLERİ,unclear,0.0,Goods and Services Sales Revenues,,False,This refers to revenue types rather than an agency.,llm
+Turkey,"ÇUKUROVA ÜNİVERSİTESİ 204,669,000,00 x 0,00 8.497.678,00 14.865.790,00 14,866,790 00 ONDOKUZ MAYIS ÜNİVERSİTESİ 159,204,100,00 1.830.905,00 8.055.851,09 . 9,480,750,00 9,490 75000 KARADENİZ TEKNIK ÜNİVERSİTESİ 156,446,000,00 0,00 21.233.458,20 8,986,150,00 8,986,150,00 ATATURK ÜNİVERSİTESİ 216,947,000,00 K 0,00 19.107.792,88 18.896.709,00 18,996,709,00 İNÖNÜ ÜNİVERSİTESİ 116,455,009,00 X 3.086.885,00 10,002,353,00 40,002,353,00 FIRAT UNIVERSITESI 140,737,000,00 9.000.279,69 K 11,527,458,54 11,527 45,54 DİCLE ÜNİVERSİTESİ 151.390.000,00 1.092,500,00 12.313.860,00 12,313,B50,00",unclear,0.0,Various University Financial Figures,,False,"This is a long string of financial data related to universities, not an agency.",llm
+Turkey,"B09.515,89",unclear,0.0,"B09.515,89",,False,"This appears to be a financial figure, not an agency.",llm
+Turkey,KESİN HESAP CETVELİ,unclear,0.0,Final Account Statement,,False,This refers to a financial document rather than an agency.,llm
+Turkey,DIGER ÇEŞİTLİ GELİRLER,unclear,0.0,Other Various Revenues,,False,This refers to types of revenue rather than an agency.,llm
+Turkey,KIRKLARELİ ÜNİVERSİTESİ,unclear,0.0,Kırklareli University,,False,"This is a university, not a budget agency.",llm
+Turkey,YEDEK ÖDENEKDEN AKTARMALARLA,unclear,0.0,Transfers from Reserve Appropriations,,False,This refers to a financial process rather than an agency.,llm
+Turkey,GELİRLERİNDEN NET REO VE İADELER TAHSİLAT,unclear,0.0,Net Rejections and Refunds Collection from Revenues,,False,This seems to refer to a financial process rather than an agency.,llm
+Turkey,YILI İÇİNDE EKLENEN ÖZEL,unclear,0.0,Special Added Within the Year,,False,This phrase does not refer to an agency.,llm
+Turkey,TAŞINMAZ SATIS GELİRLERİ,unclear,0.0,Real Estate Sales Revenues,,False,This refers to revenue types rather than an agency.,llm
+Turkey,"ANAYASA MAHKEMESİ 2.026.569,81 3.514,191,39 YARGITAY 11.800,757,81 33,635,326,59 DANIŞTAY 5.233.653,12 91,318.262,94 SAYIŞTAY 9,160, 185,97 67.037,343,45 BAŞBAKANLIK 1,806.641.953,38 2.248.073,80 MILL ISTIHBARAT TEŞKİLATI 415.826.144,11 MİLLİ GÜVENLİK KURULU GER 10.235.314,63 BASIN YAYIN VE ENFORMASY 3.520.807,38",unclear,0.0,Various Government Financial Figures,,False,"This is a long string of financial data related to various government entities, not a single agency.",llm
+Turkey,DİĞER TEŞEBBÜS VE MÜLKİYET GELİRLERİ 2.72483 272448,unclear,0.0,Other Initiatives and Property Revenues,,False,"The name suggests it relates to various revenues, not specifically R&D.",llm
+Turkey,"ATEB630,18",unclear,0.0,"ATEB630,18",,False,The name does not provide clear information about its function.,llm
+Turkey,DEVREDILEN T -,unclear,0.0,Transferred T -,,False,The name is incomplete and unclear in its purpose.,llm
+Turkey,YIL İŞİNDE,unclear,0.0,Year in Work,,False,The name does not indicate a specific agency or function.,llm
+Turkey,TAŞINMAZ SATIŞ GELİRLERİ,unclear,0.0,Real Estate Sales Revenues,,False,"This refers to revenue from real estate sales, not R&D.",llm
+Turkey,FAZ GELİRLERİ,unclear,0.0,Excess Revenues,,False,"The name suggests it relates to financial revenues, not R&D.",llm
+Turkey,GEÇ.YILDAN DEV. ÖZEL ÖDENEK,unclear,0.0,Special Allocation Transferred from Last Year,,False,"This refers to budget allocations, not R&D.",llm
+Turkey,DEMİRBAŞLAR HESABI KURUM TOPLAMI,unclear,0.0,Inventory Account Institution Total,,False,"This refers to inventory accounting, not R&D.",llm
+Turkey,"B.572.313,77",unclear,0.0,"B.572.313,77",,False,"The name appears to be a financial figure, not an agency.",llm
+Turkey,TOPLAM BÜTÇE,unclear,0.0,Total Budget,,False,"This refers to the overall budget, not a specific agency.",llm
+Turkey,"B.101,405,04",unclear,0.0,"B.101,405,04",,False,"The name appears to be a financial figure, not an agency.",llm
+Turkey,DEVREDILEN,unclear,0.0,Transferred,,False,The name is incomplete and unclear in its purpose.,llm
+Turkey,GENEL. BÜTÇELİ İDARELERİN GELİR İL DAĞILIMI,unclear,0.0,Income Distribution of General Budget Agencies,,False,"This refers to income distribution, not R&D.",llm
+Turkey,"YE.822.042,43",unclear,0.0,"YE.822.042,43",,False,"The name appears to be a financial figure, not an agency.",llm
+Turkey,GENEL BÜTÇELİ İDARELERİN GEÇİCİ MİZANI,unclear,0.0,Temporary Balance of General Budget Agencies,,False,"This refers to financial balance, not R&D.",llm
+Turkey,"B.722.5956,82",unclear,0.0,"B.722.5956,82",,False,"The name appears to be a financial figure, not an agency.",llm
+Turkey,KIRA GELİRLERİ,unclear,0.0,Rental Revenues,,False,"This refers to rental income, not R&D.",llm
+Turkey,EKLENEN ÖZEL (14),unclear,0.0,Added Special (14),,False,The name is unclear and does not indicate an agency.,llm
+Turkey,FONKSİYONEL SINIFLANDIRMAYA GÖRE BÜTÇE GİDERLERİ İCMALİ,unclear,0.0,Budget Expenditure Summary by Functional Classification,,False,"This refers to budget expenditures, not R&D.",llm
+Turkey,"B.0B4.126,76",unclear,0.0,"B.0B4.126,76",,False,"The name appears to be a financial figure, not an agency.",llm
+Turkey,"B.257.240,43",unclear,0.0,"B.257.240,43",,False,"The name appears to be a financial figure, not an agency.",llm
+Turkey,"TAGE.S28,48",unclear,0.0,"TAGE.S28,48",,False,The name does not provide clear information about its function.,llm
+Turkey,ERZINCAN ÜNİVERSİTESİ,mixed_ministry,20.0,Erzincan University,,True,Universities typically engage in R&D activities.,llm
+Turkey,"BB1.779,73",unclear,0.0,"BB1.779,73",,False,"The name appears to be a financial figure, not an agency.",llm
+Turkey,B.367.188.14,unclear,0.0,B.367.188.14,,False,"The name appears to be a financial figure, not an agency.",llm
+Turkey,KESİNLEŞEN SAYIŞTAY İLAMLARI UYGULAMA SONUÇLARI CETVELİ,unclear,0.0,Finalized Court of Accounts Reports Implementation Results Table,,False,The name suggests a report rather than an agency.,llm
+Turkey,SAYIŞTAY İLAMLARI UYGULAMA SONUÇLARI CETVELİ,unclear,0.0,Court of Accounts Reports Implementation Results Table,,False,The name suggests a report rather than an agency.,llm
+Turkey,"Ğ 14.035.808 664,54)",unclear,0.0,Unclear Entry,,False,The input does not represent a recognizable agency name.,llm
+Turkey,"A79.870,13",unclear,0.0,Unclear Entry,,False,The input does not represent a recognizable agency name.,llm
+Turkey,GELIRLERINDEN NET RED VE İADELER TAHSİLAT,unclear,0.0,Net Refunds and Returns Collection from Revenues,,False,The name suggests a financial process rather than an agency.,llm
+Turkey,"AT.733.447,24",unclear,0.0,Unclear Entry,,False,The input does not represent a recognizable agency name.,llm
+Turkey,SERMAYE SERMAYE GİDERLERİ TRANSFERLERİ,unclear,0.0,Capital Expenditure Transfers,,False,The name suggests a financial process rather than an agency.,llm
+Turkey,"AT26.791,41",unclear,0.0,Unclear Entry,,False,The input does not represent a recognizable agency name.,llm
+Turkey,ASUNLA0 11:1127,unclear,0.0,Unclear Entry,,False,The input does not represent a recognizable agency name.,llm
+Turkey,TAHAKKUK TAHSİLAT,unclear,0.0,Accrual Collection,,False,The name suggests a financial process rather than an agency.,llm
+Turkey,"T1.174,381,60",unclear,0.0,Unclear Entry,,False,The input does not represent a recognizable agency name.,llm
+Turkey,NET DEĞER HESABI,unclear,0.0,Net Value Account,,False,The name suggests a financial process rather than an agency.,llm
+Turkey,"B48.673,88",unclear,0.0,Unclear Entry,,False,The input does not represent a recognizable agency name.,llm
+Turkey,"BABLIYA,10 GAM 134,10",unclear,0.0,Unclear Entry,,False,The input does not represent a recognizable agency name.,llm
+Turkey,"A2947,278,78",unclear,0.0,Unclear Entry,,False,The input does not represent a recognizable agency name.,llm
+Turkey,DEVREDEN ÖDENEK,unclear,0.0,Carryover Budget,,False,The name suggests a financial process rather than an agency.,llm
+Turkey,BİZMETLERİ,unclear,0.0,Services,,False,The input does not represent a recognizable agency name.,llm
+Turkey,"TAN0,764,37",unclear,0.0,Unclear Entry,,False,The input does not represent a recognizable agency name.,llm
+Turkey,"B.160.990,55",unclear,0.0,Unclear Entry,,False,The input does not represent a recognizable agency name.,llm
+Turkey,YILI: 2003,unclear,0.0,Year: 2003,,False,The input does not represent a recognizable agency name.,llm
+Turkey,"B1417.288,12",unclear,0.0,Unclear Entry,,False,The input does not represent a recognizable agency name.,llm
+Turkey,KARŞILAŞTIRMALI BÜTÇE GİDERLERİ KESİN HESAP CETVELİ,unclear,0.0,Comparative Budget Expenditure Final Account Table,,False,The name suggests a report rather than an agency.,llm
+Turkey,"MUHASEBE BİRİMİ TİPİ BAKANLIK MERKEZ SAYMANLIKLARI DEFTERDARLIK MUHASEBE MÜD, MAL MÜDÜRLÜKLERİ VERS} DAİRELERİ DİGER KURUM SAYMANLIKLAR? KURUM SAYMANLIKLARI TCK.05 ASKERİ SAYHMANLIKLAR GÜMRÜK SAYMANLIKLARI GENEL TOPLAM.",unclear,0.0,Accounting Unit Type Ministry Central Accountancy Directorate,,False,The input is too lengthy and unclear to represent a specific agency.,llm
+Turkey,"ESKİŞEHİR OSMANGAZI ONIVERSIT 101.156.000,00 0,00 7.238.574,00 GALATASARAY ÜNİVERSİTESİ 33.238.000,00 0,00 1.132.674,88",unclear,0.0,Eskişehir Osmangazi University and Galatasaray University Financial Data,,False,The input suggests financial data rather than an agency.,llm
+Turkey,"TAŞINMAZ SATIŞ GELİRLERİ 89,718,77 89.718,77",unclear,0.0,Real Estate Sale Revenues,,False,The name suggests a financial process rather than an agency.,llm
+Turkey,İZ BEDELLE İZLENEN KIYMETLER H İZ BEDELLE İZLENEN KIYMETLER KA,unclear,0.0,Unclear Agency,,False,The name does not provide clear information about its function.,llm
+Turkey,"ÇEVRE KORUMA HİZMETLERİ İSKAN VE TOPLUM REFAHI HİZMETLERİ SAĞLIK HİZMETLERİ DİNLENME, KÜLTÜR VE DİN HİZMETLERİ EĞİTİM HİZMETLERİ SOSYAL GÜVENLİK VE SOSYAL YARDIM HİZMET",mixed_ministry,0.0,Ministry of Environment and Social Services,,False,Covers multiple sectors indicating a mixed ministry.,llm
+Turkey,TOPLAM BÜTÇE) İPTAL EDİLEN GELİRİ ÖZEL GELİR,unclear,0.0,Unclear Agency,,False,The name suggests a financial term rather than an agency.,llm
+Turkey,"B.647.161,30",unclear,0.0,Unclear Agency,,False,"This appears to be a financial figure, not an agency.",llm
+Turkey,STM AAS 4789411,unclear,0.0,Unclear Agency,,False,The name does not provide clear information about its function.,llm
+Turkey,"T29.266.877,88",unclear,0.0,Unclear Agency,,False,"This appears to be a financial figure, not an agency.",llm
+Turkey,DEVLET PRİMİ,unclear,0.0,Unclear Agency,,False,The name suggests a financial term rather than an agency.,llm
+Turkey,"M43.273,71",unclear,0.0,Unclear Agency,,False,"This appears to be a financial figure, not an agency.",llm
+Turkey,"GALATASARAY ÜNİVERSİTESİ 37.B74.000,00 oca 981.900,00 2.506,800,00 2.506.B00,00",unclear,0.0,Unclear Agency,,False,"This appears to be a financial figure related to a university, not an agency.",llm
+Turkey,"ST.796.863,70",unclear,0.0,Unclear Agency,,False,"This appears to be a financial figure, not an agency.",llm
+Turkey,TAŞINMAZ SATIŞ GELİRLER),unclear,0.0,Unclear Agency,,False,The name suggests a financial term rather than an agency.,llm
+Turkey,NET ARTIĞI,unclear,0.0,Unclear Agency,,False,The name suggests a financial term rather than an agency.,llm
+Turkey,REERRBERRERSBS,unclear,0.0,Unclear Agency,,False,The name does not provide clear information about its function.,llm
+Turkey,EKONOMİK SINIFLANDIRMAYA GÖRE BÜTÇE GİDERLERİ İCMALİ,unclear,0.0,Unclear Agency,,False,The name suggests a financial term rather than an agency.,llm
+Turkey,"T.236.834,21",unclear,0.0,Unclear Agency,,False,"This appears to be a financial figure, not an agency.",llm
+Turkey,"EB.108,24 183,061,35 7.081,40 176.979,95 681,024.84",unclear,0.0,Unclear Agency,,False,"This appears to be a financial figure, not an agency.",llm
+Turkey,MAL VE HİZMET ALIM GİDERLERİ FAİZ GİDERLERİ,unclear,0.0,Unclear Agency,,False,The name suggests a financial term rather than an agency.,llm
+Turkey,"HARÇLAR 17.093.495,09 157223472 16.281,90 16.886,032,82 16.827.213,19",unclear,0.0,Unclear Agency,,False,"This appears to be a financial figure, not an agency.",llm
+Turkey,"DİĞER ÇEŞİTLİ GEURLER 3.347.930,23 4.107.843,81",unclear,0.0,Unclear Agency,,False,"This appears to be a financial figure, not an agency.",llm
+Turkey,"B.228.519,68",unclear,0.0,Unclear Agency,,False,"This appears to be a financial figure, not an agency.",llm
+Turkey,YILI; 20038,unclear,0.0,Unclear Agency,,False,The name does not provide clear information about its function.,llm
+Turkey,KURUM TOPLAMI,unclear,0.0,Unclear Agency,,False,The name does not provide clear information about its function.,llm
+Turkey,"ABATA.T17,90",unclear,0.0,Unclear Agency,,False,The name does not provide clear information about its function.,llm
+Turkey,"BAAT.287,07",unclear,0.0,Unclear Agency,,False,The name does not provide clear information about its function.,llm
+Turkey,GENEL BÜTÇELİ İDARELERİN KESİN MİZANI YILI; 2008,unclear,0.0,Unclear Agency,,False,The name suggests a financial report rather than an agency.,llm
+Turkey,"İÇİŞLERİ BAKANLIĞI 1.893,861,009,00 28,290,000,00 0,00 0,00 3.770.825,00 172,316.000,00 56,071.790,00 56.071.780,00",mixed_ministry,0.0,Ministry of Interior,,False,Budget details suggest a mixed ministry focus.,llm
+Turkey,"ATATLTZT 94 -16,747.307,28",unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,YEL. İÇİNDE,unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,DURAN VARLIKLAR,unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,"B37BA73,01",unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,"TAŞITLAR HESABI 9,00 12,52 12.52 6.26 6,26 DEMİRBAŞLAR HESABI 1.570.498,76 3.767.08B,B1 5.337.567,57 1,478.274,65 3.859.292,92 GIRESUN ÜNİVERSİTESİ KURUM TOPLAMI A,412.485,65 3.887.046,96 8,299,631,61 1,824,166,37 6.475.386,24 İLK MADDE VE MALZEME HESABI 354.588,29 1.313.698,47 1.66B.286,76 1.313.605,73 354.681,03 TESİS, MAKİNE VE CİHAZLAR HESA 976.812,61 411.84B,07 1.388.460,68 81,371.58 1.207.089,10 TAŞITLAR HESABİ 384.648,72 107.817,03 492.485,75 0,00 492,485,765 DEMIRBASLAR HESABI 2.696.436,03 2,053,882,29 4,750.318,42 429.188,06 4.321.130,36 HITIT ÜNİVERSİTESİ KURUM TOPLAMI 3.963.544,67 4.001.788,61 7.956.334,28 1.726.209,22 6.229.126,06 İLK MADDE VE MALZEME HESABI 353.188,03 935.949,36 1.289.147,39 570.387,73 718.759,66 TESİS, MAKİNE VE CİHAZLAR HESA 887.634,69 §48.277,42 1.435.912,11 126.614,14 1.309.297,97 TAŞITLAR HESABİ 12B.588,00 128.588,00 0,00 128.588,00 DEMİRBAŞLAR HESABİ 2.584.123.95 2.517.562,B4 5.101.886,78 1.029.205,35 4.072.48D,43 BOZOK ÜNİVERSİTESİ KURUM TOPLAMI 4.469.566,39 13.566.477,88 18.036.043,27 3.441.166,46 14.594.876,81 İLK MADDE VE MALZEME HESABI 422.460,36 856.792,24 1.279.252,60 965.498,49 313.756,11 TESİS, MAKİNE VE GİHAZLAR HESA 1.188.495,18 8,479,117,63 9.667.612,B1 929,831,64 8.737.781,17 TAŞITLAR HESABI 194.516,35 438,974,05 633.490,41 11.B00,00 621.890,41 DEMİRBAŞLAR HESABI 2,664.083,49 3.791.593,96 6.455,687,45 1.534,038,33 4.921.649,12 ADIYAMAN ÜNİVERSİTESİ KURUM TOPLAMI 3,749.118,72 6.561.942,40 10,311.061,12 9.606.641,68 6.704.419,44 İLK MADDE VE MALZEME HESABI 698.139,62 1.634.419,58 2.332.559,20 4.413.106,56 919.452,64 TESİS, MAKİNE VE CİHAZLAR HESA 546.635,39 1,586.965,37 2.133,600,76 875,210.46 1.258.390,30 TAŞITLAR HESABI 212.458,72 630,050,15 B42,50B,87 204.181,65 838.327,22 DEMİRBAŞLAR HESABI 2.291.884,99 2.710.507,30 5.002.392,29 1,114,143,01 3,888.249,28 ORDU UNIVERSITESI KURUM TOPLAMI 3.470.742,79 7.B63,639,77 11.340.282,56 3.573,386,97 7.766,995,65 İLK MADDE VE MALZEME HESABI 547,636,60 1,602.218,13 2.049,854,73 1.103.12871 946.725,02 TESİS, MAKİNE VE CİHAZLAR HESA 880.048,11 1.058.006 ,38 2.B36.054,47 748.882,94 2.087.071,53 TAŞITLAR HESABİ 69.653,29 214.682,48 284.241,77 0,00 284.241.77 DEMİRBAŞLAR HESABI 1.973.498,79 4.196.732,80 5.170.231.59 1.721.275,28 4,448,956,33 AMASYA ÜNİVERSİTESİ KURUM TOPLAMI 3,183.105,15 7.327.387,17 10.510.472,32 §.124.072,52",unclear,0.0,TAŞITLAR HESABI,,False,The name does not provide clear information about the agency's focus on R&D.,llm
+Turkey,"B.068.264,1$",unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,"META 30,34",unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,GÜV. VE SOSYAL,unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,ÖZEL ÖDENEK,unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,FAALİYET BORÇLARI,unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,OSMANİYE KORKUT ATA ONIVERSITES BİNGÖL ÜNVERSİTESİ,unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,SOSYAL GÜVENLİK KURUNLARINA DEVLET PRİMİ GİDERLERİ,unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,"BAB4.767,28",unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,GELİRLERİNDEN NEF REO VE İADELER TAHSİLAT,unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,"Z174484,70",unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,"ATALT3B.B84,67",unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,SAVUNMA DÜZENİ VE EKONOMİK ÇEVRE TOPLUM - SAĞLIK KÜLTÜR VE HİZMETLERİ GÜVENLİK İŞLER VE KORUMA REFAHI HİZMETLERİ DİN HİZMETLERİ HİZMETLER HİZMETLERİ HİZMETLERİ HİZMETLERİ,unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,DEVREDİLEN DEVREDİLEN ÖZEL ÖDENEK ÖZEL ÖDENEK,unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,"TESİS, MAKİNE VE CİHAZLAR HESA 0,00 507.344,20",unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,GEÇ.YILDAN DEV. DÜŞÜLEN ÖZEL ÖDENEK,unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,İTARIM VE KÖYİŞLERİ BAKANLIĞI,mixed_ministry,0.0,Ministry of Agriculture and Forestry,,False,Budget details suggest a mixed ministry focus.,llm
+Turkey,ÖZEL BÜTÇELİ İDARELERİN KESİN MİZANI,unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,GÜVENLİK. MAL VE KURUMLARINA | HİZMETALIM FAZ CARİ SERMAYE SERMAYE _ DEVLET PRİMİ GİDERLERİ GİDERLERİ TRANSFERLER GİDERLERİ TRANSFERLERİ,unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,DİĞER CESITU GELİRLER,unclear,0.0,Unclear Agency,,False,Insufficient information to classify.,llm
+Turkey,"DEVLET SU İŞLERİ GENEL MÜDÜRLÜĞÜ,",mixed_ministry,50.0,General Directorate of State Hydraulic Works,,True,Involved in water resources management and infrastructure development.,llm
+Turkey,TAHSİLATIN,unclear,0.0,Collection,,False,Not a recognized agency name; unclear context.,llm
+Turkey,ÖZ KAYNAKLAR,unclear,0.0,Own Resources,,False,Not a specific agency; refers to funding sources.,llm
+Turkey,"B17.951,05",unclear,0.0,"B17.951,05",,False,Not a valid agency name; appears to be a financial figure.,llm
+Turkey,"ABA 343,39",unclear,0.0,"ABA 343,39",,False,Not a valid agency name; appears to be a financial figure.,llm
+Turkey,TEŞEBBÜS VE MÜLKİYET GELİRLERİ MAL VE HIZMET SATIŞ GELİRLERİ,unclear,0.0,Revenue from Enterprises and Property Sales,,False,"Describes a revenue category, not an agency.",llm
+Turkey,ÖZEL BÜTÇELİ İDARELERİN EKONOMİK SINIFLANDIRMAYA GÖRE ÖDENEK ÜSTÜ BÜTÇE GİDERLERİ CETVELİ,unclear,0.0,Exceeding Budget Expenditures of Special Budget Agencies,,False,"Refers to a budget classification, not an agency.",llm
+Turkey,ÖZEL BÜTÇELİ İDARELERİN KESİN MIZANI,unclear,0.0,Final Balance of Special Budget Agencies,,False,"Refers to financial reporting, not an agency.",llm
+Turkey,BONRA KALAN BORG TUTARI,unclear,0.0,Remaining Debt Amount,,False,Not an agency; refers to a financial term.,llm
+Turkey,DÖNEMø TÜFE,unclear,0.0,Period CPI,,False,Not an agency; refers to economic indicator.,llm
+Turkey,"B32,910,36",unclear,0.0,"B32,910,36",,False,Not a valid agency name; appears to be a financial figure.,llm
+Turkey,YILLİÇİNDE EKLENEN ÖZEL,unclear,0.0,Special Added Within the Year,,False,Not an agency; refers to a financial term.,llm
+Turkey,FAİZ GİDERLERİ,unclear,0.0,Interest Expenses,,False,Not an agency; refers to a financial term.,llm
+Turkey,"MILLI PRODOKTIVITE MERKEZİ 10.151.000,00 0,00 2.244,000,00 000 264,271,00 TÜRK PATENT ENSTITOSU 35,734,000,00 000 7085.00 0,00 144,000,00 ULUSAL BOR ARAŞTIRMA ENSTITUS 8.093.000,00 0,00 0.00 0,00 304,000,00",unclear,0.0,National Productivity Center and Others,,False,Not a valid agency name; appears to be a financial report.,llm
+Turkey,SONRA KALAN BORG SUTARI,unclear,0.0,Remaining Debt Amount,,False,Not an agency; refers to a financial term.,llm
+Turkey,"TAT12,27 207.638,29",unclear,0.0,"TAT12,27 207.638,29",,False,Not a valid agency name; appears to be a financial figure.,llm
+Turkey,"A61,980,95",unclear,0.0,"A61,980,95",,False,Not a valid agency name; appears to be a financial figure.,llm
+Turkey,"B.134.623,35",unclear,0.0,"B.134.623,35",,False,Not a valid agency name; appears to be a financial figure.,llm
+Turkey,RA35.71474,unclear,0.0,RA35.71474,,False,Not a valid agency name; unclear context.,llm
+Turkey,"TA9TA18,35",unclear,0.0,"TA9TA18,35",,False,Not a valid agency name; unclear context.,llm
+Turkey,HİZMET ALIM,unclear,0.0,Service Procurement,,False,Not an agency; refers to a procurement process.,llm
+Turkey,"M10,143,473,29",unclear,0.0,"M10,143,473,29",,False,Not a valid agency name; appears to be a financial figure.,llm
+Turkey,"SILME.- DUSME TERKINDEN, SONRA KALAN BORG TUTARI",unclear,0.0,Remaining Debt Amount After Deletion,,False,Not an agency; refers to a financial term.,llm
+Turkey,"TESİS, MAKİNE VE CİHAZLAR HESABI",unclear,0.0,"Account for Facilities, Machinery, and Equipment",,False,Not an agency; refers to an accounting category.,llm
+Turkey,ERTESİ YILA DEVREDİLEN BORGTUTAR!,unclear,0.0,Debt Amount Carried Over to the Next Year,,False,Not an agency; refers to a financial term.,llm
+Turkey,VILE: 2008,unclear,0.0,VILE: 2008,,False,Not identifiable as a budget agency.,llm
+Turkey,"YILI:, 2008",unclear,0.0,"YILI:, 2008",,False,Not identifiable as a budget agency.,llm
+Turkey,"AT ABB 328,22",unclear,0.0,"AT ABB 328,22",,False,Not identifiable as a budget agency.,llm
+Turkey,DİĞER BORÇLAR,unclear,0.0,DİĞER BORÇLAR,,False,Not identifiable as a budget agency.,llm
+Turkey,TAHSİLATIN.,unclear,0.0,TAHSİLATIN.,,False,Not identifiable as a budget agency.,llm
+Turkey,ERTESİ YILA DEVREDİLEN ÖZEL GELİR,unclear,0.0,ERTESİ YILA DEVREDİLEN ÖZEL GELİR,,False,Not identifiable as a budget agency.,llm
+Turkey,YILI: 2005,unclear,0.0,YILI: 2005,,False,Not identifiable as a budget agency.,llm
+Turkey,"B.747.560.933,67",unclear,0.0,"B.747.560.933,67",,False,Not identifiable as a budget agency.,llm
+Turkey,CUMHURBAŞKANLIĞI,mixed_ministry,50.0,Presidency of Turkey,,True,The presidency may have mixed functions including R&D.,llm
+Turkey,DİĞER ÇEŞİTLİ DÖNEN VARLIKLAR,unclear,0.0,DİĞER ÇEŞİTLİ DÖNEN VARLIKLAR,,False,Not identifiable as a budget agency.,llm
+Turkey,"A58.638.995,82",unclear,0.0,"A58.638.995,82",,False,Not identifiable as a budget agency.,llm
+Turkey,DİYARBAKIR,unclear,0.0,DİYARBAKIR,,False,Not identifiable as a budget agency.,llm
+Turkey,B047.83778,unclear,0.0,B047.83778,,False,Not identifiable as a budget agency.,llm
+Turkey,TAHSILAT ARTIĞI,unclear,0.0,TAHSILAT ARTIĞI,,False,Not identifiable as a budget agency.,llm
+Turkey,KURUMLARDAN VE KİŞİLERDEN AI,unclear,0.0,KURUMLARDAN VE KİŞİLERDEN AI,,False,Not identifiable as a budget agency.,llm
+Turkey,"B.267.249,43",unclear,0.0,"B.267.249,43",,False,Not identifiable as a budget agency.,llm
+Turkey,"GEÇ.YILDAN DEV, ÖZEL ÖDENEK",unclear,0.0,"GEÇ.YILDAN DEV, ÖZEL ÖDENEK",,False,Not identifiable as a budget agency.,llm
+Turkey,ORTA VE UZUN VADELİ İÇ BORÇLAR,unclear,0.0,ORTA VE UZUN VADELİ İÇ BORÇLAR,,False,Not identifiable as a budget agency.,llm
+Turkey,BÜTÇE UYGULAMA SONUÇLARI,unclear,0.0,BÜTÇE UYGULAMA SONUÇLARI,,False,Not identifiable as a budget agency.,llm
+Turkey,"B.358.950,79",unclear,0.0,"B.358.950,79",,False,Not identifiable as a budget agency.,llm
+Turkey,RİZNET ALIM FAZ GARİ SERMAYE SERMAYE,unclear,0.0,RİZNET ALIM FAZ GARİ SERMAYE SERMAYE,,False,Not identifiable as a budget agency.,llm
+Turkey,YAKINLARI KİŞİ SAYISI,unclear,0.0,YAKINLARI KİŞİ SAYISI,,False,Not identifiable as a budget agency.,llm
+Turkey,GENEL EKONOMøK DURUM,unclear,0.0,GENEL EKONOMøK DURUM,,False,Not identifiable as a budget agency.,llm
+Turkey,DİĞER GELİRLER,unclear,0.0,DİĞER GELİRLER,,False,Not identifiable as a budget agency.,llm
+Turkey,TOPLAM GELİRLERİNDEN NET NET TAHSİLAT RED VE İADELER TAHSİLAT TAHAKKUK,unclear,0.0,TOPLAM GELİRLERİNDEN NET NET TAHSİLAT RED VE İADELER TAHSİLAT TAHAKKUK,,False,Not identifiable as a budget agency.,llm
+Turkey,TAHSILATIN,unclear,0.0,Revenue Collection,,False,The name suggests a focus on revenue collection but lacks clarity on R&D involvement.,llm
+Turkey,İLK MADDE VE MALZEME HESABI,unclear,0.0,Raw Material and Supply Account,,False,"The name indicates an accounting function, not clearly related to R&D.",llm
+Turkey,"İL TOPLAMI 192.087.947,16 137 408.580,67 24.747.953,52",unclear,0.0,Provincial Total,,False,This appears to be a financial summary rather than an agency.,llm
+Turkey,"DÖNEN VARLIKLAR 6.454,829,807.634,60 6.378.160.081.758,34 76.698.907.661,22 29.181.784,96 ÖN ÖDEMELER 19.043.205.399,74 11.141.872.178,97 7.901.333,220,77 0,00 PERSONEL AVANSLARI HESABI 2.911.285.901,19 2.911.265.801,19 0,00 0,00",unclear,0.0,Current Assets and Prepayments,,False,"This is a financial statement, not an agency.",llm
+Turkey,"BB2.034,33 614.218,80",unclear,0.0,Unclear Financial Data,,False,"This appears to be a financial figure, not an agency.",llm
+Turkey,ÖZEL BÜTÇELİ İDARELERİN GELİR İL DAĞILIMI İCMALI,unclear,0.0,Distribution of Income of Special Budget Agencies,,False,"This refers to income distribution, not a specific agency.",llm
+Turkey,ÖDENECEK DİĞER YÜKÜMLÜLÜKLE,unclear,0.0,Other Payable Obligations,,False,"This is a financial term, not an agency.",llm
+Turkey,TABAN AYLIK KATSAYISI,unclear,0.0,Base Monthly Coefficient,,False,"This is a financial metric, not an agency.",llm
+Turkey,GENEL TOPLAN,unclear,0.0,General Collection,,False,This is vague and does not specify an agency.,llm
+Turkey,TAZMøNATLARIN EMEKLø KESENEöøNE YANSIMA ORANI (5),unclear,0.0,Pension Contribution Rate,,False,"This is a financial term, not an agency.",llm
+Turkey,AYLIK KATSAYISI,unclear,0.0,Monthly Coefficient,,False,"This is a financial metric, not an agency.",llm
+Turkey,"KOCAELİ ÜNİVERSİTESİ 88.034.284,39 8.430.329,19 22.543.491,33 464,210.49 49.404,206,55 SAKARYA UNIVERSITES! 48,311.367,72 5.108.040,21 18,423,226,90 593,479.55 31853.834,25",unclear,0.0,Kocaeli University and Sakarya University Financial Data,,False,"This appears to be financial data related to universities, not an agency.",llm
+Turkey,"T.T44,478,38",unclear,0.0,Unclear Financial Data,,False,This is unclear and does not specify an agency.,llm
+Turkey,DÜZCE ÜNİVERSİTESİ,unclear,0.0,Düzce University,,False,"This is a university, not a government budget agency.",llm
+Turkey,OSMANøYE KORKUT ATA ÜNøVERSøTESø,unclear,0.0,Osmaniye Korkut Ata University,,False,"This is a university, not a government budget agency.",llm
+Turkey,"GENÇLİK VE SPOR GENEL MÜDÜRL 405.275.000,00 0,00 0,00 74.774.028,00 49.000.000,00 28.023,.200,00 DEVLET TIYATROLARI GENEL MODE 99.802.000,00 0,00 0,00 2.852.608.47 0,00 6,483.970,00 DEVLET OPERA VE BALESİ GENEL? 119.509.000,00 0,00 000 950.000,00 0,00",mixed_ministry,20.0,General Directorate of Youth and Sports,,True,"This agency is involved in youth and sports, likely with some R&D activities.",llm
+Turkey,ERTESİ YILA TAHSİLATIN DEVREDİLEN TAHMİNE TAHAKKUK ORANI ARTIĞI (%),unclear,0.0,Revenue Carryover Rate,,False,"This is a financial term, not an agency.",llm
+Turkey,"NAZIM GİDER 217.016.623,31",unclear,0.0,Nazim Expenditure,,False,"This is a financial term, not an agency.",llm
+Turkey,"SOSYAL GÜVENLİK EĞİTİM HİZMETLERİ | VE SOSYAL YARDIM | || SENEL HİZMETLERİ TOPLAM,",unclear,0.0,Social Security Education Services and Social Assistance,,False,"This refers to social services, not a specific agency.",llm
+Turkey,SİLİNEN TOPLAM KAMU ALAGAĞI,unclear,0.0,Deleted Total Public Receivables,,False,"This is a financial term, not an agency.",llm
+Turkey,BÜTÇE EMANETLERİ HESABI,unclear,0.0,Budget Trust Account,,False,"This is a financial account, not an agency.",llm
+Turkey,AøLE YARDIMI (Eù) (TL/YTL),unclear,0.0,Family Assistance,,False,"This is a financial term, not an agency.",llm
+Turkey,SİLİNEN TOPLAM KAMU ALACAĞI,unclear,0.0,Deleted Total Public Receivables,,False,"This is a financial term, not an agency.",llm
+Turkey,ARTIù ORANI (%),unclear,0.0,Surplus Rate,,False,"This is a financial term, not an agency.",llm
+Turkey,KARAMANOöLU MEHMETBEY ÜNøVERSøTESø,unclear,0.0,Karamanoğlu Mehmetbey University,,False,"This is a university, not a government budget agency.",llm
+Turkey,DİN HİZMETLERİ HİZMETLERİ,unclear,0.0,Directorate of Religious Services,,False,Agency name is unclear and does not indicate a specific research and development focus.,llm
+Turkey,ALACAKLARDAN,unclear,0.0,Receivables,,False,Agency name is unclear and does not indicate a specific research and development focus.,llm
+Turkey,"EKONOMIK ÇEVRE İŞLER VE KORUMA HİZMETLER HİZMETLERİ RADYO VE TELEVİZYON ÜST 58.748324,07 BİLGİ TEKNOLOMLERI VE İLE 34.501.773,88 17,880.606,.45 | 1,234,174.808,89 SERMAYE PIYASASI KURULU 22,848.857,77 383935546 | 27,023.648,65 BANKACILIK DÜZENLEME VE 6 436,977,168 49.063.210,07",unclear,0.0,Economic Environmental Affairs and Protection Services,,False,"Agency name is overly complex and unclear, making it difficult to classify.",llm
+Turkey,ORANI (%40-,unclear,0.0,Ratio (%40-,,False,Agency name is incomplete and does not provide sufficient context.,llm
+Turkey,"ZATTTA17,04 23.881.72243",unclear,0.0,"ZATTTA17,04 23.881.72243",,False,Agency name is unclear and does not indicate a specific research and development focus.,llm
+Turkey,"TA97.779,73",unclear,0.0,"TA97.779,73",,False,Agency name is unclear and does not indicate a specific research and development focus.,llm
+Turkey,NAMIK KEMAL ÜNøVERSøTESø,mixed_ministry,50.0,Namık Kemal University,,True,University likely engages in research and development activities.,llm
+Turkey,"B.224.430,81",unclear,0.0,"B.224.430,81",,False,Agency name is unclear and does not indicate a specific research and development focus.,llm
+Turkey,TARIM REFORMU GENEL MÜDÜRLÜöÜ,mixed_ministry,40.0,General Directorate of Agricultural Reform,,True,Agency is involved in agricultural research and development.,llm
+Turkey,HIZMET ALIN,unclear,0.0,Service Received,,False,Agency name is unclear and does not indicate a specific research and development focus.,llm
+Turkey,GENEL BÜTÇE,unclear,0.0,General Budget,,False,Agency name is too broad and does not indicate a specific research and development focus.,llm
+Turkey,HESAP AÇIKLAMA DEVREDEN GİREN KODU | 1.DÜZEY,unclear,0.0,Account Explanation Transferred Entry Code | Level 1,,False,Agency name is unclear and does not indicate a specific research and development focus.,llm
+Turkey,"ULUSLARARASI TICARET VE MUAMELELERDEN ALINAN 353,60 358,60 253,60",unclear,0.0,International Trade and Transactions Received,,False,Agency name is unclear and does not indicate a specific research and development focus.,llm
+Turkey,MERKEZù YÖNETùM BÜTÇE TOPLAMI,unclear,0.0,Central Management Budget Total,,False,Agency name is unclear and does not indicate a specific research and development focus.,llm
+Turkey,BOATLATANI,unclear,0.0,BOATLATANI,,False,Agency name is unclear and does not indicate a specific research and development focus.,llm
+Turkey,ÇANKIRI KARATEKøN ÜNøVERSøTESø,mixed_ministry,50.0,Çankırı Karatekin University,,True,University likely engages in research and development activities.,llm
+Turkey,REKABET KURUMU,mixed_ministry,60.0,Competition Authority,,True,Agency is involved in research and development related to competition policy.,llm
+Turkey,ADIYAMAN ÜNøVERSøTESø,mixed_ministry,50.0,Adıyaman University,,True,University likely engages in research and development activities.,llm
+Turkey,"KIŞI VE KURUMLARDAN ALINAN PAYLAR 384.625.677,49 383.044.720,93 27.B48,67 383.316.876,26 304.597.831,81",unclear,0.0,Shares Received from Individuals and Institutions,,False,Agency name is unclear and does not indicate a specific research and development focus.,llm
+Turkey,"GSYH, GENEL BÜTÇE VERGø GELøRLERø VE VERGø YÜKÜ",unclear,0.0,"GDP, General Budget Tax Revenues and Tax Burden",,False,Agency name is unclear and does not indicate a specific research and development focus.,llm
+Turkey,TOPLAMI TOPLAM TAHAKKUK TAHSİLAT,unclear,0.0,Total Accrual Collection Total,,False,Agency name is unclear and does not indicate a specific research and development focus.,llm
+Turkey,KODU ADI BORÇ ALACAK,unclear,0.0,Code Name Debt Receivable,,False,Agency name is unclear and does not indicate a specific research and development focus.,llm
+Turkey,"B.488.143,91",unclear,0.0,"B.488.143,91",,False,Agency name is unclear and does not indicate a specific research and development focus.,llm
+Turkey,KODU ADI GİDERLERİ,unclear,0.0,Code Name Expenses,,False,Agency name is unclear and does not indicate a specific research and development focus.,llm
+Turkey,MEHMET AKøF ERSOY ÜNøVERSøTESø,mixed_ministry,50.0,Mehmet Akif Ersoy University,,True,University likely engages in research and development activities.,llm
+Turkey,"V778.178,87",unclear,0.0,Unclear,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,BORÇTUTARI,unclear,0.0,Unclear,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,GÜVENLøK VE SOSYAL YARDIM,mixed_ministry,50.0,Ministry of Security and Social Assistance,,True,This agency is involved in social assistance and security.,llm
+Turkey,YAN ÖDEME KATSAYISI,unclear,0.0,Unclear,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,"MALLARIN KULLANMA VEYA FAALİYETTE BULUNMA IZ 188,00",unclear,0.0,Unclear,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,DEVLET PLANLAMA TEùKøLATI MÜSTEùARLIöI,dedicated_rd,100.0,State Planning Organization,,True,This agency is dedicated to research and development planning.,llm
+Turkey,A-GENEL BÜTÇE GELøRLERø (I+II+III+IV+V+VI),unclear,0.0,Unclear,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,II-TEùEBBÜS VE MÜLKøYET GELøRLERø (1+2+3+4+5+6),unclear,0.0,Unclear,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,ERCİYES ÜNİVERSİTESİ,rd_programme,70.0,Erciyes University,,True,This university is involved in research and development activities.,llm
+Turkey,KURUMCA VERİLEN BORÇLARDAN A DİĞER KURUM ALACAKLARI HESABI MALİ DURAN VARLIKLAR MALI KURULUŞLARA YATIRILAN SER MAL VE HİZMET ÜRETEN KURULUŞL SERMAYE TAAHHÜTLERİ HESABİ (3 MADDİ DURAN VARLIKLAR,unclear,0.0,Unclear,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,ANAYASA MAHKEMESø,unclear,0.0,Constitutional Court,,False,"This is a judicial body, not primarily focused on R&D.",llm
+Turkey,FONKSİYONEL VE EKONOMİK SINIFLANDIRMAYA GÖRE BÜTÇE GİDERLERİ İCMALİ,unclear,0.0,Unclear,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,MALøYE BAKANLIöI,mixed_ministry,50.0,Ministry of Finance,,True,"This ministry handles financial matters, including some R&D funding.",llm
+Turkey,BANKACILIK DÜZENLEME VE DENET ENERJİ PIYASASt DÜZENLEME KUR KAMU İHALE KURUMU,unclear,0.0,Unclear,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,"TEŞEBBÜS VE MÜLKİYET GELIRLE 2.321.194,736,00 96,692,059,68 2.873,349.464,43 2.970.042.318,11 2.829.289,916,0$ 19.679.892,83 2.508.610.022,53 121,89 MAL VE HIZMET SATIŞ GELİRLERİ 1.781.779.800,00 89,824,081,43 2.175.121.137,59 2.264.948.219,02 2.197.837.764,8$ 11.866.882,96 2.120,171.111,90 12108",unclear,0.0,Unclear,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,"TESİS, MAKİNE VE CİHAZLAR HESA TAŞITLAR HESABI DEMİRBAŞLAR HESABI KURUM TOPLAMI",unclear,0.0,Unclear,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,YILLIK TÜFE,unclear,0.0,Unclear,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,ÇALIùMA VE SOSYAL GÜVENLøK BAKANLIöI,mixed_ministry,50.0,Ministry of Labor and Social Security,,True,This ministry is involved in social security and labor issues.,llm
+Turkey,DEVLET SU øùLERø GENEL MÜDÜRLÜöÜ,mixed_ministry,50.0,General Directorate of State Hydraulic Works,,True,This agency manages water resources and may engage in related R&D.,llm
+Turkey,HACETTEPE ÜNøVERSøTESø,rd_programme,70.0,Hacettepe University,,True,This university is involved in research and development activities.,llm
+Turkey,KASTAMONU ÜNøVERSøTESø,rd_programme,70.0,Kastamonu University,,True,This university is involved in research and development activities.,llm
+Turkey,"PARA CEZALARI 16.318.611,18 B.405,474,83 041.137,16 1464.337,67 18.377,474,02",unclear,0.0,Unclear,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,CUMHURBAùKANLIöI,mixed_ministry,50.0,Presidency of the Republic,,True,"This agency oversees various governmental functions, including R&D.",llm
+Turkey,DOKUZ EYLÜL ÜNøVERSøTESø,rd_programme,70.0,Dokuz Eylul University,,True,This university is involved in research and development activities.,llm
+Turkey,"KIŞI VE KURUMLARDAN ALINAN PAYLAR 2447.112392,41 2.497.243,330,62 2.432.781.831,60 2.442.680.883,49",unclear,0.0,Unclear,,False,The name does not provide clear information about the agency's function.,llm
+Turkey,DÖNER SERMAYELİ KURULUŞLARA SERMAYE TAAHHÜTLERİ HESABI (-) MADDİ DURAN VARLIKLAR,unclear,0.0,Capital Commitments for Revenue-Generating Institutions,,False,The name suggests a financial account rather than a research agency.,llm
+Turkey,AAIS ASE ORD,unclear,0.0,AAIS ASE ORD,,False,The name does not provide clear information about its function.,llm
+Turkey,ONDOKUZ MAYIS ÜNøVERSøTESø,mixed_ministry,50.0,Ondokuz Mayıs University,,True,Universities typically engage in research and development activities.,llm
+Turkey,GÜMRÜK MÜSTEùARLIöI,unclear,0.0,Customs Directorate,,False,"Primarily focused on customs and trade, not R&D.",llm
+Turkey,MAL VE HøZMET ALIM GøDERLERø,unclear,0.0,Procurement of Goods and Services,,False,"This appears to be a procurement function, not R&D.",llm
+Turkey,SøVøL HAVACILIK GENEL MÜDÜRLÜöÜ,mixed_ministry,30.0,General Directorate of Civil Aviation,,True,Involved in aviation research and development.,llm
+Turkey,KADININ STATÜSÜ GENEL MÜDÜRLÜöÜ,mixed_ministry,20.0,General Directorate of Women's Status,,True,May engage in research related to women's issues.,llm
+Turkey,PAMUKKALE ÜNøVERSøTESø,mixed_ministry,50.0,Pamukkale University,,True,Universities typically engage in research and development activities.,llm
+Turkey,SAöLIK BAKANLIöI,mixed_ministry,40.0,Ministry of Health,,True,Involved in health-related research and development.,llm
+Turkey,VI. BORÇ VERME,unclear,0.0,Debt Lending VI,,False,"The name suggests a financial function, not R&D.",llm
+Turkey,TÜRKøYE BøLøMSEL VE TEKNOLOJøK ARAùTIRMA KURUMU,dedicated_rd,100.0,Turkey Regional and Technological Research Institution,,True,Clearly a dedicated research agency.,llm
+Turkey,KARAYOLLARI GENEL MÜDÜRLÜöÜ,mixed_ministry,30.0,General Directorate of Highways,,True,Involved in infrastructure research and development.,llm
+Turkey,GALATASARAY ÜNøVERSøTESø,mixed_ministry,50.0,Galatasaray University,,True,Universities typically engage in research and development activities.,llm
+Turkey,"KARABÜK ÜNİVERSİTESİ 228.6712 1,078,713,03",mixed_ministry,50.0,Karabük University,,True,Universities typically engage in research and development activities.,llm
+Turkey,VII. YEDEK ÖDENEKLER,unclear,0.0,Reserve Appropriations VII,,False,"The name suggests a financial function, not R&D.",llm
+Turkey,GAP BÖLGE KALKINMA øDARESø BAùKANLIöI,mixed_ministry,40.0,GAP Regional Development Administration,,True,Involved in regional development research.,llm
+Turkey,YÜKSEKÖöRETøM KURULU,mixed_ministry,30.0,Higher Education Council,,True,Involved in higher education research and policy.,llm
+Turkey,GENEL BÜTÇELİ İDARELERİN,unclear,0.0,General Budget Agencies,,False,"The name suggests a financial function, not R&D.",llm
+Turkey,SERMAYE TRANSFERLERø,unclear,0.0,Capital Transfers,,False,"The name suggests a financial function, not R&D.",llm
+Turkey,AFYON KOCATEPE ÜNøVERSøTESø,mixed_ministry,50.0,Afyon Kocatepe University,,True,Universities typically engage in research and development activities.,llm
+Turkey,X_ 0.049486,unclear,0.0,X_ 0.049486,,False,The name does not provide clear information about its function.,llm
+Turkey,ENERJø VE TABøø KAYNAKLAR BAKANLIöI,mixed_ministry,40.0,Ministry of Energy and Natural Resources,,True,Involved in energy research and development.,llm
+Turkey,ULAùTIRMA BAKANLIöI,mixed_ministry,40.0,Ministry of Transport,,True,Involved in transport-related research and development.,llm
+Turkey,SAHøL GÜVENLøK KOMUTANLIöI,unclear,0.0,Coast Guard Command,,False,"Primarily focused on security, not R&D.",llm
+Turkey,"ÇUKUROVA UNIVERSITES) 188.638.000,00 641.542,40 11.012.322,25 ONDOKUZ MAYIS UNIVERSITESI 130.102.500,00 706.882,30 5.083.679.00",unclear,0.0,Çukurova University,,False,"The name appears to be a financial report, not an agency.",llm
+Turkey,DUMLUPINAR ÜNøVERSøTESø,mixed_ministry,50.0,Dumlupınar University,,True,University involved in research and development.,llm
+Turkey,GÖREV ZARARI,unclear,0.0,Task Loss,,False,Not a recognized agency related to R&D.,llm
+Turkey,AøLE YARDIMI  (ÇOCUK) (TL/YTL) (3) (4),unclear,0.0,Child Assistance,,False,Not a recognized agency related to R&D.,llm
+Turkey,BAúLANGIC ÖDENE÷ù,unclear,0.0,Start Payment,,False,Not a recognized agency related to R&D.,llm
+Turkey,GENEL BÜTÇE KAPSAMINDAKù KAMU ùDARELERù,unclear,0.0,Public Institutions within General Budget,,False,Not a specific agency related to R&D.,llm
+Turkey,YILSONU ÖDENE÷ù,unclear,0.0,Year-End Payment,,False,Not a recognized agency related to R&D.,llm
+Turkey,YÜZÜNCÜ YIL ÜNøVERSøTESø,mixed_ministry,50.0,Yüzüncü Yıl University,,True,University involved in research and development.,llm
+Turkey,II. MERKEZø YÖNETøM BÜTÇE BÜYÜKLÜKLERø,unclear,0.0,II. Central Management Budget Sizes,,False,Not a recognized agency related to R&D.,llm
+Turkey,SERMAYE GøDERLERø,unclear,0.0,Capital Revenues,,False,Not a recognized agency related to R&D.,llm
+Turkey,KIRIKKALE ÜNøVERSøTESø,mixed_ministry,50.0,Kırıkkale University,,True,University involved in research and development.,llm
+Turkey,MADEN TETKøK VE ARAMA GENEL MÜDÜRLÜöÜ,dedicated_rd,100.0,General Directorate of Mining Exploration and Research,,True,Dedicated agency for research in mining.,llm
+Turkey,V- SERMAYE GELøRLERø,unclear,0.0,V- Capital Revenues,,False,Not a recognized agency related to R&D.,llm
+Turkey,PERSONEL GøDERLERø,unclear,0.0,Personnel Revenues,,False,Not a recognized agency related to R&D.,llm
+Turkey,MøLLø SAVUNMA BAKANLIöI,mixed_ministry,30.0,Ministry of Defense,,True,Involved in defense-related R&D.,llm
+Turkey,GSYH'YE ORANI,unclear,0.0,GDP Ratio,,False,Not a recognized agency related to R&D.,llm
+Turkey,SOSYAL GÜV. KUR. DEVLET PRøMø,unclear,0.0,Social Security Institution State Premium,,False,Not a recognized agency related to R&D.,llm
+Turkey,DEVLET PERSONEL BAùKANLIöI,unclear,0.0,State Personnel Presidency,,False,Not a recognized agency related to R&D.,llm
+Turkey,TELEKOMÜNøKASYON KURUMU,mixed_ministry,40.0,Telecommunication Authority,,True,Involved in telecommunications R&D.,llm
+Turkey,"SOSYAL YARDIMLAŞMA VE D, 344,002,20 27147549 SOSYAL HİZMETLER VE GOCL 9.794,080,64 9,089,208,35 AVRUPA BIRLIĞI GENEL SEKF 5.080.922.02 13106378",unclear,0.0,Social Assistance and Services,,False,Not a recognized agency related to R&D.,llm
+Turkey,"IV-FAøZLER, PAYLAR VE CEZALAR (1+2+3+4)",unclear,0.0,"IV- Interests, Shares and Penalties",,False,Not a recognized agency related to R&D.,llm
+Turkey,TÜRK PATENT ENSTøTÜSÜ,dedicated_rd,100.0,Turkish Patent Institute,,True,Dedicated agency for intellectual property and innovation.,llm
+Turkey,"B.376,14 5.376,14",unclear,0.0,"B.376,14 5.376,14",,False,Not a recognized agency related to R&D.,llm
+Turkey,ÇANAKKALE ONSEKøZ MART ÜNøVERSøTESø,mixed_ministry,50.0,Çanakkale Onsekiz Mart University,,True,University involved in research and development.,llm
+Turkey,"B.973.174,5:",unclear,0.0,"B.973.174,5:",,False,Not a recognized agency related to R&D.,llm
+Turkey,SOSYAL HøZMETLER VE Ç.E.K. GENEL MÜDÜRLÜöÜ,unclear,0.0,General Directorate of Social Services and Child Protection,,False,Not a recognized agency related to R&D.,llm
+Turkey,"DEMİRBAŞLAR HESABI KURUM TOPLAMI İLK MADDE VE MALZEME HESABI TESİS, MAKİNE VE CİHAZLAR HESA TAŞITLAR HESABI",unclear,0.0,Unclear Agency,,False,The name does not clearly indicate a dedicated research and development agency.,llm
+Turkey,ADNAN MENDERES ÜNøVERSøTESø,mixed_ministry,50.0,Adnan Menderes University,,True,Universities typically engage in research and development activities.,llm
+Turkey,JANDARMA GENEL KOMUTANLIöI,unclear,0.0,Gendarmerie General Command,,False,"Primarily a military agency, not focused on R&D.",llm
+Turkey,FøNANSMAN KAYNAKLARI,unclear,0.0,Financing Resources,,False,The name does not clearly indicate a dedicated research and development agency.,llm
+Turkey,FONKSøYONEL SINIFLANDIRMAYA GÖRE GøDERLERøN BÜTÇE øÇøNDEKø PAYI,unclear,0.0,Functional Classification of Expenditures,,False,The name suggests a budget classification rather than an R&D agency.,llm
+Turkey,"BÜTÇE EMANETLERİ HESABI 992.857.277,72 1.432.344.581,30 439,487.303,58",unclear,0.0,Budget Trust Accounts,,False,This appears to be a financial account rather than an agency.,llm
+Turkey,DEVLET OPERA VE BALESø GENEL MÜDÜRLÜöÜ,mixed_ministry,30.0,State Opera and Ballet General Directorate,,True,"Involved in cultural development, which may include some R&D.",llm
+Turkey,SANDIKLARI,unclear,0.0,Funds,,False,The name does not clearly indicate a dedicated research and development agency.,llm
+Turkey,MøMAR SøNAN GÜZEL SANATLAR ÜNøVERSøTESø,mixed_ministry,50.0,Mimar Sinan Fine Arts University,,True,Universities typically engage in research and development activities.,llm
+Turkey,SOSYAL YARDIMLAùMA VE DAYANIùMA GENEL MÜDÜRLÜöÜ,mixed_ministry,20.0,General Directorate of Social Assistance and Solidarity,,True,Involved in social programs which may include some R&D.,llm
+Turkey,"TÜTÜN, TÜTÜN MAMULLERø VE ALKOLLÜ øÇKøLER PøYASASI DÜZENLEME KURUMU",mixed_ministry,10.0,"Tobacco, Tobacco Products and Alcoholic Beverages Market Regulation Authority",,True,May engage in regulatory research related to its sector.,llm
+Turkey,ÖZEL ÇEVRE KORUMA KURUMU BAùKANLIöI,mixed_ministry,40.0,Special Environmental Protection Agency,,True,Involved in environmental research and protection.,llm
+Turkey,KÜÇÜK VE ORTA ÖLÇEKLø SANAYø GELøùTøRME VE DESTEKLEME øDARESø BAùKANLIöI,mixed_ministry,50.0,Small and Medium Enterprises Development and Support Administration,,True,Supports R&D for small and medium enterprises.,llm
+Turkey,DEVLET TAHVøLø VE HAZøNE BONOLARININ VADE YAPISI,unclear,0.0,State Bonds and Treasury Bills Maturity Structure,,False,This appears to be a financial structure rather than an agency.,llm
+Turkey,TÜRK STANDARTLARI ENSTøTÜSÜ,mixed_ministry,60.0,Turkish Standards Institute,,True,Involved in standardization which may include R&D activities.,llm
+Turkey,DÜZENLEYùCù VE DENETLETùCù KURUMLAR,unclear,0.0,Regulatory and Supervisory Institutions,,False,The name does not clearly indicate a dedicated research and development agency.,llm
+Turkey,HAZùNE YARDIMI ve GELùRDEN AYRILAN PAYLAR (-),unclear,0.0,Treasury Assistance and Allocated Shares,,False,The name does not clearly indicate a dedicated research and development agency.,llm
+Turkey,GELøR POLøTøKASI VE UYGULAMALARI,unclear,0.0,Revenue Policy and Applications,,False,The name does not clearly indicate a dedicated research and development agency.,llm
+Turkey,"B.224430,81",unclear,0.0,Unclear Agency,,False,The name does not clearly indicate a dedicated research and development agency.,llm
+Turkey,II- KøT'LERDEN SAöLANAN GELøRLER (1),unclear,0.0,Unclear Agency,,False,The name does not clearly indicate a dedicated research and development agency.,llm
+Turkey,MENKUL KIYMET VE VARLIKLAR MENKUL VARLIKLAR HESABI FAALİYET ALACAKLARI,unclear,0.0,Securities and Assets Accounts,,False,The name does not clearly indicate a dedicated research and development agency.,llm
+Turkey,ZONGULDAK KARAELMAS ÜNøVERSøTESø,mixed_ministry,50.0,Zonguldak Karaelmas University,,True,Universities typically engage in research and development activities.,llm
+Turkey,CEZA VE øNFAZ KURUMLARI øLE TUTUKEVLERø øù YURTLARI KURUMU,unclear,0.0,Penitentiary and Detention Houses Institution,,False,"Primarily a correctional institution, not focused on R&D.",llm
+Turkey,TÜRKøYE VE ORTA DOöU AMME øDARESø ENSTøTÜSÜ,mixed_ministry,40.0,Turkey and Middle East Public Administration Institute,,True,Involved in public administration research.,llm
+Turkey,ORMAN GENEL MÜDÜRLÜöÜ,mixed_ministry,30.0,General Directorate of Forestry,,True,Involved in forestry research and development.,llm
+Turkey,KøT BÜTÇE TRANSFERLERø,unclear,0.0,Budget Transfers,,False,The name suggests a budget transfer agency but lacks clarity on its specific function.,llm
+Turkey,SÜLEYMAN DEMøREL ÜNøVERSøTESø,mixed_ministry,50.0,Suleyman Demirel University,,True,A university that likely engages in research and development activities.,llm
+Turkey,AøLE VE SOSYAL ARAùTIRMALAR GENEL MÜDÜRLÜöÜ,dedicated_rd,100.0,General Directorate of Family and Social Research,,True,"Focuses on social research, indicating a dedicated R&D agency.",llm
+Turkey,GENÇLøK VE SPOR GENEL MÜDÜRLÜöÜ,mixed_ministry,30.0,General Directorate of Youth and Sports,,True,"Involved in youth and sports development, likely includes some R&D.",llm
+Turkey,SAYIŞTAY İLAMLARI UYGULAMA SONUÇLARI İCMALİ,unclear,0.0,Court of Accounts Implementation Results Summary,,False,"Unclear function related to budget oversight, not R&D focused.",llm
+Turkey,"ATATÜRK KÜLTÜR, DøL VE TARøH YÜKSEK KURUMU BAùKANLIöI",mixed_ministry,40.0,"Atatürk Culture, Language and History High Institution",,True,"Cultural and historical research, likely includes R&D activities.",llm
+Turkey,BANKACILIK DÜZENLEME VE DENETLEME KURUMU,unclear,0.0,Banking Regulation and Supervision Agency,,False,"Regulatory agency, not primarily focused on R&D.",llm
+Turkey,BASIN-YAYIN VE ENFORMASYON GENEL MÜDÜRLÜöÜ,unclear,0.0,General Directorate of Press and Information,,False,"Focuses on media and information, not R&D.",llm
+Turkey,CELAL BAYAR ÜNøVERSøTESø,mixed_ministry,50.0,Celal Bayar University,,True,A university that likely engages in research and development activities.,llm
+Turkey,GENEL KAMU HøZMETLERø,unclear,0.0,General Public Services,,False,"General public service agency, unclear R&D focus.",llm
+Turkey,MAL VE HøZMET ALIMI,unclear,0.0,Procurement of Goods and Services,,False,"Procurement agency, not focused on R&D.",llm
+Turkey,"BS.983.299,35",unclear,0.0,Unclear,,False,Not a recognizable agency name.,llm
+Turkey,TELEKOM (%15)**,unclear,0.0,Telecom,,False,"Unclear reference, not a specific agency.",llm
+Turkey,DEVLET METEOROLOJø øùLERø GENEL MÜDÜRLÜöÜ,dedicated_rd,100.0,General Directorate of State Meteorology,,True,"Focuses on meteorological research, indicating a dedicated R&D agency.",llm
+Turkey,YÜKSEK ÖöRENøM KREDø VE YURTLAR KURUMU GENEL MÜDÜRLÜöÜ,mixed_ministry,30.0,General Directorate of Higher Education Loans and Dormitories,,True,"Involved in education support, likely includes some R&D.",llm
+Turkey,KøTLERDE ORTALAMA,unclear,0.0,Average in Budgets,,False,"Unclear reference, not a specific agency.",llm
+Turkey,"DEMİRBAŞLAR HESABI 4.523.852.14 2.909.788,49 7.433.638,63 1.233.330,98 6.200.307,65 CEZA VE İNFAZ KURUM. ILE KURUM TOPLAMI 16,187.768,10 84,974,895,64 81.162.660,74 60.024.827,19 21.138,033,55 KURUMU ER İŞ YURT. İLK MADDE VE MALZEME HESABI 4.258.933,68 57.526.285,45 61.785,219,13 58.096.716,08 3.688.503,07 TESİS, MAKİNE VE CİHAZLAR HESA 8.031,521,86 5.229,785,41 13.261.287,27 1.524.272,63 11.737.014,64 TAŞITLAR HESABI 1.395.803,49 169,956,07 1,885.759,56 85.877,96 1.509.881,60 DEMİRBAŞLAR HESABI 2.501,496,07 2.048,808,71 4.550,394,78 247,760,854 4.202.634,24 SIVIL HAVACILIK GENEL KURUM TOPLAMI 734.958,16 233449945 3.069,457,61 1,369.542,26 MÜDÜRLÜĞÜ İLK MADDE VE MALZEME HESABI 8.905,08 201.587,01 210.492,08 210.469,61 22,48 TESİS, MAKİNE VE CİHAZLAR HESA 3.586,22 1.786,61 537283 9,00 5.372,83 DEMİRBAŞLAR HESABI 722.466,86 2.131.128,83 2.853.502,69 1,169,072,65 1.694.520,04 MESLEKİ YETERLİLİK KURUMU KURUM TOPLAMI 8.340,64 67,682,741 146,023,36 “0,00 146.023,35 İLK MADDE VE MALZEME HESABI 0,00 10.915,00 10.915,00 0,00 10.915,00 TESİS, MAKİNE VE CİHAZLAR HESA 0,00 690,30 690,30 0,00 690,30 DEMİRBAŞLAR HESABI 88,340,684 46.077,41 134.418,05 0,00 134.418,05",unclear,0.0,Unclear,,False,Not a recognizable agency name.,llm
+Turkey,EMNøYET GENEL MÜDÜRLÜöÜ,mixed_ministry,20.0,General Directorate of Security,,True,"Involved in security research, likely includes some R&D.",llm
+Turkey,ÇUKUROVA ÜNøVERSøTESø,mixed_ministry,50.0,Çukurova University,,True,A university that likely engages in research and development activities.,llm
+Turkey,MAHSUP DÖNEMİNE AKTARILAN KUL MAHSUP DÖNEMİNE AKTARILAN ÖD NAKİT DIŞI TEMİNAT VE KİŞİLERE,unclear,0.0,Unclear,,False,Not a recognizable agency name.,llm
+Turkey,GENEL øDARE HøZMETLERø,unclear,0.0,General Administrative Services,,False,"General administrative agency, unclear R&D focus.",llm
+Turkey,SERMAYE TRANSFERLERİ,unclear,0.0,Capital Transfers,,False,"Unclear function related to financial transfers, not R&D focused.",llm
+Turkey,ULUSAL BOR ARAùTIRMA ENSTøTÜSÜ,dedicated_rd,100.0,National Boron Research Institute,,True,"Dedicated to boron research, indicating a dedicated R&D agency.",llm
+Turkey,ÇEVRE VE ORMAN BAKANLIöI,mixed_ministry,30.0,Ministry of Environment and Forestry,,True,"Involved in environmental research, likely includes some R&D.",llm
+Turkey,KÜLTÜR VE TURøZM BAKANLIöI,mixed_ministry,30.0,Ministry of Culture and Tourism,,True,"Involved in cultural research, likely includes some R&D.",llm
+Turkey,GEC.YILDAN DEV. DÜŞÜLEN ÖZEL ÖDENEK,unclear,0.0,Special Allocation for the Year,,False,The name suggests a specific allocation but lacks clarity on its purpose.,llm
+Turkey,MUSTAFA KEMAL ÜNøVERSøTESø,mixed_ministry,50.0,Mustafa Kemal University,,True,A university that likely engages in research and development.,llm
+Turkey,KODU ADI BORÇ ALACAK BORÇ,unclear,0.0,Code Name Debt Receivable Debt,,False,The name is ambiguous and does not indicate a clear agency.,llm
+Turkey,GEBZE YÜKSEK TEKNOLOJø ENSTøTÜSÜ,dedicated_rd,100.0,Gebze High Technology Institute,,True,A dedicated research institute focused on technology.,llm
+Turkey,BAYINDIRLIK VE øSKAN BAKANLIöI,mixed_ministry,30.0,Ministry of Public Works and Settlement,,True,A ministry that may engage in some R&D activities.,llm
+Turkey,"KÜÇÜK VE ORTA ÖLÇEKLİ SANAYI C 222.368.000,00 51.628.288,00 000 141.258,458,00 141.258.458,00 İHRACATI GELİŞTİRME ETÜT MERK 13.435.000,00 , 0,00 434.258,72",unclear,0.0,SME Export Development Study Center,,False,The name is overly complex and unclear.,llm
+Turkey,TAPU VE KADASTRO GENEL MÜDÜRLÜöÜ,mixed_ministry,20.0,General Directorate of Land Registry and Cadastre,,True,A governmental agency with some potential for R&D in land management.,llm
+Turkey,KIRIK VADE(**),unclear,0.0,Broken Term,,False,The name does not provide enough context.,llm
+Turkey,ÇEVRE KORUMA HøZMETLERø,mixed_ministry,40.0,Environmental Protection Services,,True,An agency likely involved in environmental research.,llm
+Turkey,KAYNAK ÖDEME FARKI,unclear,0.0,Resource Payment Difference,,False,The name is vague and does not indicate a clear agency.,llm
+Turkey,VAKIFLAR GENEL MÜDÜRLÜöÜ,mixed_ministry,25.0,General Directorate of Foundations,,True,An agency that may engage in some R&D related to foundations.,llm
+Turkey,III. TOPLAM GELùRLER (NET),unclear,0.0,Total Revenues (Net),,False,The name does not refer to an agency.,llm
+Turkey,DEVLET YATIRIM BANKASI (EXøMBANK),mixed_ministry,30.0,State Investment Bank (Eximbank),,True,A bank that may support R&D through financing.,llm
+Turkey,SANAYø VE TøCARET BAKANLIöI,mixed_ministry,30.0,Ministry of Industry and Trade,,True,A ministry that likely engages in R&D activities.,llm
+Turkey,KURUMLARIN GELøRLERø,unclear,0.0,Institutional Revenues,,False,The name does not refer to an agency.,llm
+Turkey,"TEŞEBBÜS VE MÜLKİYET GELİRLERİ 23.109.000,00 20.568.127,69",unclear,0.0,Initiative and Property Revenues,,False,The name is overly complex and unclear.,llm
+Turkey,YIL İÇİNDE ÖDENEK TOPLAMI İPTAL EDİLEN (1930454748411) = ÖDEMEK ÜSTÜ ÖDEMEK (24848410443) GIDER,unclear,0.0,Total Allocated Budget Cancelled,,False,The name does not refer to an agency.,llm
+Turkey,KAMU DÜZENø VE GÜVENLøK HøZMETLERø,mixed_ministry,30.0,Public Order and Security Services,,True,An agency that may engage in R&D related to public safety.,llm
+Turkey,YAùLILIK AYLIöI,unclear,0.0,Old Age Pension,,False,The name does not refer to an agency.,llm
+Turkey,"DøNLENME, KÜLTÜR VE DøN HøZMETLERø",mixed_ministry,30.0,"Recreation, Culture and Tourism Services",,True,An agency that may engage in cultural R&D.,llm
+Turkey,TÜRK AKREDøTASYON KURUMU,mixed_ministry,50.0,Turkish Accreditation Agency,,True,"An agency involved in standards and quality, likely engaging in R&D.",llm
+Turkey,KAMU øHALE KURUMU,mixed_ministry,30.0,Public Procurement Agency,,True,An agency that may engage in R&D related to procurement.,llm
+Turkey,SOSYAL HøZMETLER VE ÇOCUK ESøRGEME KURUMU GENEL MÜDÜRLÜöÜ,mixed_ministry,30.0,General Directorate of Social Services and Child Protection,,True,An agency that may engage in R&D related to social services.,llm
+Turkey,ABANT øZZET BAYSAL ÜNøVERSøTESø,mixed_ministry,50.0,Abant Izzet Baysal University,,True,A university that likely engages in research and development.,llm
+Turkey,DEVLET TøYATROLARI GENEL MÜDÜRLÜöÜ,mixed_ministry,30.0,State Theatres General Directorate,,True,An agency that may engage in cultural R&D.,llm
+Turkey,MAHSUP DÖNEMİNE AKTARILAN ÖD NAKİT DIŞI TEMİNAT VE KİŞİLERE TEMİNAT MEKTUPLARI HESABI TEMİNAT MEKTUPLARI EMANETLERİ KİŞİLERE AİT MENKUL KIYMETLER,unclear,0.0,Unclear Agency,,False,The name is too complex and does not clearly indicate a specific agency type.,llm
+Turkey,HUDUT VE SAHøLLER SAöLIK GENEL MÜDÜRLÜöÜ,mixed_ministry,20.0,General Directorate of Border and Coastal Health,,True,This agency is involved in health and safety at borders and coasts.,llm
+Turkey,MAKROEKONOMøK GÖSTERGELER VE POLøTøKALAR,unclear,0.0,Unclear Agency,,False,The name suggests a focus on macroeconomic indicators but lacks clarity.,llm
+Turkey,KIRIK VADE,unclear,0.0,Unclear Agency,,False,The term is vague and does not specify an agency.,llm
+Turkey,III-ALINAN BAöIùLAR VE YARDIMLAR øLE ÖZEL GELøRLER (1+6),unclear,0.0,Unclear Agency,,False,The name is not indicative of a specific agency.,llm
+Turkey,BORÇLANMA DIùI KAYNAKLAR,unclear,0.0,Unclear Agency,,False,The name suggests borrowing sources but lacks clarity.,llm
+Turkey,"GİDERLERİ DEVLET PRİMİ | | ALI GİDERLERİ İDERLERİ TRANSFERLER | GİDERLERİ TRANSFERLERİ KODU Abı GİDERLERİ,",unclear,0.0,Unclear Agency,,False,The name is overly complex and unclear.,llm
+Turkey,AKR/ AVANS,unclear,0.0,Unclear Agency,,False,The name does not provide enough information to classify.,llm
+Turkey,TEŞEBBÜS VE MÜLKİYET GELİRLERİ,unclear,0.0,Unclear Agency,,False,The name suggests income from initiatives and property but lacks clarity.,llm
+Turkey,AKTİF HESAPLAR DÖNEN VARLIKLAR,unclear,0.0,Unclear Agency,,False,The name is vague and does not specify an agency.,llm
+Turkey,"ORMAN GENEL MÜDÜRLÜĞÜ 614,825,000,00 0,00 0,00 150,106.000,00 0,00 820,000,00",mixed_ministry,30.0,General Directorate of Forestry,,True,This agency is responsible for forestry management.,llm
+Turkey,A. GENEL BÜTÇE GELùRLERù,unclear,0.0,Unclear Agency,,False,The name is not indicative of a specific agency.,llm
+Turkey,TÜRKøYE ATOM ENERJøSø KURUMU,dedicated_rd,100.0,Turkey Atomic Energy Authority,,True,This agency is dedicated to research and development in atomic energy.,llm
+Turkey,SOSYAL GOVENLIK KURUMLARINA DEVLET PRİHİ GİDERLERİ,mixed_ministry,25.0,State Contributions to Social Security Institutions,,True,This agency deals with state funding for social security.,llm
+Turkey,SAVUNMA SANAYø MÜSTEùARLIöI,mixed_ministry,40.0,Defense Industry Agency,,True,This agency is involved in the defense industry.,llm
+Turkey,ENERJø PøYASASI DÜZENLEME KURUMU,mixed_ministry,30.0,Energy Market Regulatory Authority,,True,This agency regulates the energy market.,llm
+Turkey,KAHRAMANMARAù SÜTÇÜ øMAM ÜNøVERSøTESø,unclear,0.0,Unclear Agency,,False,The name suggests a university but lacks clarity.,llm
+Turkey,C.  2009-2011 DÖNEMøNDE YAPILACAK ÇALIùMALAR,unclear,0.0,Unclear Agency,,False,The name is vague and does not specify an agency.,llm
+Turkey,"B.779.851,74",unclear,0.0,Unclear Agency,,False,The name does not provide enough information to classify.,llm
+Turkey,TPAO (%10),mixed_ministry,50.0,Turkish Petroleum Corporation,,True,This agency is involved in petroleum and energy.,llm
+Turkey,DEMİRBAŞLAR HESABI,unclear,0.0,Unclear Agency,,False,The name is vague and does not specify an agency.,llm
+Turkey,UZUN VADELø TOPLAM STOKA STOKA ORANI (%),unclear,0.0,Unclear Agency,,False,The name does not provide enough information to classify.,llm
+Turkey,"B40.808,74 936.968,71",unclear,0.0,Unclear Agency,,False,The name is not indicative of a specific agency.,llm
+Turkey,MERKEZø YÖNETøM BÜTÇE FøNANSMANI,unclear,0.0,Unclear Agency,,False,The name is vague and does not specify an agency.,llm
+Turkey,TAR2149171,unclear,0.0,Unclear Agency,,False,The name does not provide enough information to classify.,llm
+Turkey,NET BORÇLANMA,unclear,0.0,Net Borrowing,,False,The name suggests a financial term rather than an agency.,llm
+Turkey,RADYO VE TELEVøZYON ÜST KURULU,mixed_ministry,0.0,Radio and Television Supreme Council,,False,"Regulatory agency for broadcasting, not primarily focused on R&D.",llm
+Turkey,SERMAYE PøYASASI KURULU,mixed_ministry,0.0,Capital Markets Board,,False,"Regulatory body for capital markets, not focused on R&D.",llm
+Turkey,"TEŞEBBÜS VE MÜLKİYET GELRLERİ 171.565.909,01 160,694,988,98 982,207,800 148.712.781,10 170.693.761,21 MAL VE HIZMET SATIŞ GELİRLERİ 28.665.048,87 28.212.541,16 66.657,29 20.147.003,86 28.599491,58",unclear,0.0,Revenue from Enterprises and Property,,False,The name appears to be a financial report rather than an agency.,llm
+Turkey,SERMAYE TRANSFERø,unclear,0.0,Capital Transfers,,False,The name suggests a financial term rather than an agency.,llm
+Turkey,ADALET BAKANLIöI,mixed_ministry,0.0,Ministry of Justice,,False,"Government ministry, not primarily focused on R&D.",llm
+Turkey,Ot | GENEL KAMU HİZMETLERİ 000,unclear,0.0,General Public Services,,False,The name is unclear and does not specify an agency.,llm
+Turkey,III. DIù BORÇLANMA (NET),unclear,0.0,Net Borrowing III,,False,The name suggests a financial term rather than an agency.,llm
+Turkey,BÖLÜM II TOPLAMI,unclear,0.0,Section II Total,,False,The name appears to be a financial report rather than an agency.,llm
+Turkey,I. TOPLAM GELùRLER (RED VE ùADELER DAHùL),unclear,0.0,Total Revenues I (Including Reductions and Adjustments),,False,The name appears to be a financial report rather than an agency.,llm
+Turkey,"PARA CEZALARI 21,382.617,29 0.382427,03 540,414,62. 8,842.042,41 20.842,202,67",unclear,0.0,Monetary Penalties,,False,The name appears to be a financial report rather than an agency.,llm
+Turkey,DİĞER GELİRLER 260.320,unclear,0.0,Other Revenues,,False,The name appears to be a financial report rather than an agency.,llm
+Turkey,"B.103,254,24",unclear,0.0,"B.103,254.24",,False,The name is unclear and does not specify an agency.,llm
+Turkey,PROJE MALİYETİ KARŞILIĞI HESAB,unclear,0.0,Project Cost Account,,False,The name appears to be a financial report rather than an agency.,llm
+Turkey,II-GøDERLER,unclear,0.0,II-Expenditures,,False,The name appears to be a financial report rather than an agency.,llm
+Turkey,TAHSILAT TAHAKKUK,unclear,0.0,Collection Accrual,,False,The name appears to be a financial report rather than an agency.,llm
+Turkey,YEDEK ÖDENEK,unclear,0.0,Reserve Appropriation,,False,The name appears to be a financial term rather than an agency.,llm
+Turkey,GENEL BÜTÇE DIŞI KURUM VE KURU DOĞRUDAN DIŞ PROJE KREDİLERİN DOĞRUDAN DİŞ PROJE KREDİLERİN GENEL TOPLAM,unclear,0.0,Total of Direct Foreign Project Credits Outside the General Budget,,False,The name appears to be a financial report rather than an agency.,llm
+Turkey,SİLİNEN TOPLAM KANU ALACAĞI,unclear,0.0,Deleted Total Legal Receivables,,False,The name appears to be a financial report rather than an agency.,llm
+Turkey,VII.FAùZ DIúI TOPLAM GùDERLER,unclear,0.0,VII. Total Expenditures,,False,The name appears to be a financial report rather than an agency.,llm
+Turkey,ÖöRETøM ELEMANLARI,unclear,0.0,Teaching Staff,,False,The name suggests a category rather than an agency.,llm
+Turkey,GENEL TOPLAM (BÖLÜM I+II+III),unclear,0.0,Total (Section I+II+III),,False,The name appears to be a financial report rather than an agency.,llm
+Turkey,"MILLI EĞİTİM BAKANLIĞI 15.681.508.403,70 | 1.887.488.411,11 | 2,818.189.987,99 X 1.983.574.986,60 | 1551533919968 274.400.000,00 00 N 24.193,893,689,38 BAYINDIRLIK VE İSKAN BAKANLIĞI 288,710.048,71 41.501.780,04 57.732.022.29 54.107.215,66 328.548.049,21 137 484.851,26 79.583.060,19 1.187.86.727,96 TAPU VE KADASTRO GENEL MÜDÜRLÜ 255.328.758,3$ 38.941.989,80 33.631.717,66 975.000,00 78.438.118,72 000 0,00 KARAYOLLARI GENEL MÜDÜRLÜĞÜ 705.331,192,41 114,443.57234 978,778,022,08 472.887,75 | 6.136.589.438,59 249,268.999,43 0,00",unclear,0.0,Ministry of National Education and Other Ministries,,False,The name includes multiple ministries and appears to be a financial report.,llm
+Turkey,"T7.492.703,73 T7A92.703,73 TT AG2,703,73 77.492.703,73",unclear,0.0,"T7.492.703,73",,False,The name is unclear and does not specify an agency.,llm
+Turkey,KURUM ALACAKLARI KURUMCA VERİLEN BORGLARDAN A,unclear,0.0,Institutional Receivables from Loans Granted,,False,The name appears to be a financial report rather than an agency.,llm
+Turkey,NAMIK KEMAL ÜNİVERSİTESİ,mixed_ministry,50.0,Namik Kemal University,,True,University involved in research and development.,llm
+Turkey,ALINAN BAĞIŞ VE YARDIMLAR ILE ÖZEL GELİRLER,unclear,0.0,Donations and Special Revenues,,False,Not clearly defined as a research agency.,llm
+Turkey,KAYDEDùLEN ÖDENEKLER,unclear,0.0,Recorded Allocations,,False,"Not a specific agency, more of a financial term.",llm
+Turkey,YATIRIMLAR,unclear,0.0,Investments,,False,"General term for investments, not an agency.",llm
+Turkey,KURUMCA VERİLEN BORÇLARDAN A,unclear,0.0,Institutional Loans,,False,"Not a specific agency, refers to loans.",llm
+Turkey,İL TOPLAMI 159.761.61341,unclear,0.0,Provincial Total,,False,"Not an agency, more of a financial summary.",llm
+Turkey,MAL VE CARİ SERMAYE SERNAYE BORG YEDEK,unclear,0.0,Goods and Current Capital Reserve,,False,"Not a specific agency, refers to financial reserves.",llm
+Turkey,"KURUM TOPLAMI İLK MADDE VE MALZEME HESABI TESİS, MAKİNE VE CİHAZLAR HESA TAŞITLAR HESABI DEMİRBAŞLAR HESABI",unclear,0.0,Institutional Total for Raw Materials and Equipment Accounts,,False,"Not an agency, refers to accounting categories.",llm
+Turkey,FAùZ DIúI BÜTÇE FAZLASI,unclear,0.0,Budget Surplus,,False,"Not an agency, refers to budgetary surplus.",llm
+Turkey,BÖLÜM I TOPLAMI,unclear,0.0,Section I Total,,False,"Not an agency, refers to a section total.",llm
+Turkey,V.HAZùNE YARDIMI ve GELùRDEN AYRILAN PAYLAR,unclear,0.0,Treasury Assistance and Allocated Shares,,False,"Not a specific agency, refers to treasury assistance.",llm
+Turkey,PASİF HESAPLAR,unclear,0.0,Passive Accounts,,False,"Not an agency, refers to accounting terms.",llm
+Turkey,AKTIF HESAPLAR,unclear,0.0,Active Accounts,,False,"Not an agency, refers to accounting terms.",llm
+Turkey,SOSYAL GÜVENLøK KURUMLARINA DEVLET PRøMø,unclear,0.0,State Premiums to Social Security Institutions,,False,"Not a specific agency, refers to state premiums.",llm
+Turkey,BÖLÜM III TOPLAMI,unclear,0.0,Section III Total,,False,"Not an agency, refers to a section total.",llm
+Turkey,AVUKATLIK HøZMETLERø,unclear,0.0,Legal Services,,False,"Not an agency, refers to legal services.",llm
+Turkey,GÜVENLİK KORUMA,unclear,0.0,Security Protection,,False,"Not a specific agency, refers to security services.",llm
+Turkey,"T4328:875.892,58.",unclear,0.0,"T4328:875.892,58",,False,"Not an agency, appears to be a financial entry.",llm
+Turkey,BORÇLANILAN,unclear,0.0,Borrowed,,False,"Not a specific agency, refers to borrowing.",llm
+Turkey,ÖZEL BÜTÇE KAPSAMINDAKù ùDARELER,unclear,0.0,Special Budget Entities,,False,"Not a specific agency, refers to budget entities.",llm
+Turkey,KIYEM (%10),unclear,0.0,Kiyem (10%),,False,"Not an agency, refers to a percentage.",llm
+Turkey,"Y.Ö.K., ÜNøVERSøTELER VE YÜKSEK TEKNOLOJø ENSTøTÜLERø",mixed_ministry,50.0,"YÖK, Universities and Higher Technology Institutes",,True,Involved in higher education and research.,llm
+Turkey,ÖZEL BÜTÇELù ùDARELER / MYB,unclear,0.0,Special Budget Entities / MYB,,False,"Not a specific agency, refers to budget entities.",llm
+Turkey,MERKEZø YÖNETøM DIù BORÇLARI,unclear,0.0,Central Management Foreign Debts,,False,"Not a specific agency, refers to debts.",llm
+Turkey,HAZùNE YARDIMI ve GELùRDEN AYRILAN PAYLAR  (-),unclear,0.0,Treasury Assistance and Allocated Shares (-),,False,"Not a specific agency, refers to treasury assistance.",llm
+Turkey,C. 2009 YILI MERKEZø YÖNETøM BÜTÇE BÜYÜKLÜKLERø,unclear,0.0,Central Government Budget Sizes 2009,,False,This appears to be a budget report rather than an agency.,llm
+Turkey,KARAMANOĞLU MEHMET BEY ÜNİVERSİTESİ,mixed_ministry,50.0,Karamanoğlu Mehmet Bey University,,True,"This is a university, which typically has a mixed funding structure.",llm
+Turkey,"B.997.204,92",unclear,0.0,Unclear Budget Figure,,False,This appears to be a budget figure rather than an agency.,llm
+Turkey,TABLO 3: MAHALLø øDARELER  GELøR VE HARCAMALARI (1),unclear,0.0,Table 3: Local Administration Revenues and Expenditures,,False,"This is a table reference, not an agency.",llm
+Turkey,GENEL BÜTÇELø øDARELER TOPLAMI,unclear,0.0,Total of General Budget Agencies,,False,This refers to a total rather than a specific agency.,llm
+Turkey,GøDERLER TOPLAMI,unclear,0.0,Total Revenues,,False,"This is a financial term, not an agency.",llm
+Turkey,YARDIMCI HøZMETLER,unclear,0.0,Auxiliary Services,,False,This refers to services rather than an agency.,llm
+Turkey,EKLENEN ÖDENEK | DÜŞÜLEN ÖDENEK,unclear,0.0,Added Allocation | Deducted Allocation,,False,"This is a financial term, not an agency.",llm
+Turkey,BAúLANGIÇ ÖDENE÷ù,unclear,0.0,Initial Allocation,,False,"This is a financial term, not an agency.",llm
+Turkey,DEVREDİLEN ÖZEL SDENEK,unclear,0.0,Transferred Special Fund,,False,This refers to a fund rather than an agency.,llm
+Turkey,ALACAKLILARA GÖRE TOPLAM,unclear,0.0,Total by Creditors,,False,"This is a financial term, not an agency.",llm
+Turkey,SERMAYE TRANSFERLERø (NET),unclear,0.0,Capital Transfers (Net),,False,"This is a financial term, not an agency.",llm
+Turkey,ÇEŞİU VERGİ DIŞI GELİRLE 14.140,unclear,0.0,"Various Non-Tax Revenues 14,140",,False,"This is a financial term, not an agency.",llm
+Turkey,SOSYAL GÜVENLøK KURUMU,mixed_ministry,70.0,Social Security Institution,,True,This is a government agency related to social security.,llm
+Turkey,PARASAL OLMAYAN KURULUùLAR,unclear,0.0,Non-Monetary Institutions,,False,This refers to institutions rather than an agency.,llm
+Turkey,TOPLAN ÜTçE ÖDENEK DERE,unclear,0.0,Total Budget Allocation Rate,,False,"This is a financial term, not an agency.",llm
+Turkey,"KAHRAMANMARAŞ SÜTÇÜ İMAM ÜNİV 33.813,842,99 391287121 9494,738,53 214.081,64 95.594,068,71",mixed_ministry,50.0,Kahramanmaraş Sütçü Imam University,,True,"This is a university, which typically has a mixed funding structure.",llm
+Turkey,GENEL BÜTÇE KAPSAMINDAKø KAMU øDARELERø,unclear,0.0,Public Agencies within the General Budget,,False,This refers to a category rather than a specific agency.,llm
+Turkey,TABLO 4: DÖNER SERMAYELø KURULUùLAR FøNANSMAN DENGESø (1),unclear,0.0,Table 4: Revolving Capital Institutions Financial Balance,,False,"This is a table reference, not an agency.",llm
+Turkey,RADYO VE TELEVİZYON ÜST KURUL BILGI TEKNOLOJİLERİ VE İLETİŞİM SERMAYE PIYASASI KURULU,mixed_ministry,60.0,Radio and Television Supreme Council,,True,This is a regulatory agency related to media.,llm
+Turkey,B - ÖZEL ALACAKLILAR,unclear,0.0,B - Special Creditors,,False,This refers to a category rather than a specific agency.,llm
+Turkey,GELİR VE KAZANÇ ÜZERİNDEN ALINAN VERGİLER,unclear,0.0,Taxes on Income and Profits,,False,"This is a financial term, not an agency.",llm
+Turkey,VI- ALACAKLARDAN TAHSøLAT,unclear,0.0,VI- Collection from Receivables,,False,"This is a financial term, not an agency.",llm
+Turkey,"İZMIR YÜKSEK TEKNOLOJ) ENSTTTÜS 16.510,093,09 2305,949,49 6.239.074,11 184,625.06 25.121.888,97 GEBZE YÜKSEK TEKNOLON ENSTITUS 14.417.713,69 1833.714,85 4.428.407,04 122,329.73 15.381.883,61 HARRAN ÜNİVERSİTESİ 36.116.577,40 4.381.507,04 9847240,88 318,979,39 47,880.274,14",mixed_ministry,50.0,"Izmir Institute of Technology, Gebze Institute of Technology, Harran University",,True,"These are universities, which typically have a mixed funding structure.",llm
+Turkey,CARİ SERMAYE SERMAYE BORG YEDEK FAİZ GİDERLERİ TRANSFERLER GİDERLERİ TRANSFERLERİ VERME ÖDENEKLER,unclear,0.0,Current Capital Capital Borrowing Reserve Interest Expenses Transfers Expenditures Allocations,,False,"This is a financial term, not an agency.",llm
+Turkey,"YÜZÜNCÜ YIL ÜNİVERSİTESİ 60.682.798,84 .780.530,48 20.346 520,54 572,109.68 14.333.180,08 GAZIANTEP ÜNİVERSİTESİ 40,618.698,87 5.297.598,53 14,309.552,94 641.985,79 | O 2529802168",unclear,0.0,Yüzüncü Yıl University and Gaziantep University,,False,The name includes financial figures and is unclear.,llm
+Turkey,VIII. FAùZ DIúI BÜTÇE FAZLASI (III-VII),unclear,0.0,VIII. Budget Surplus (III-VII),,False,The name refers to a budget surplus and lacks clarity.,llm
+Turkey,YATIRIM HARCAMALARI,unclear,0.0,Investment Expenditures,,False,The name refers to investment expenditures and lacks clarity.,llm
+Turkey,BORC VERME,unclear,0.0,Lending,,False,The name refers to lending and lacks clarity.,llm
+Turkey,FAùZ DIúI BÜTÇE FAZLASI/GSYH (VIII/GSYH),unclear,0.0,Budget Surplus/GDP (VIII/GDP),,False,The name refers to a budget surplus in relation to GDP and lacks clarity.,llm
+Turkey,DÖNER SERMAYELER VE KEFALET SANDIKLARI,mixed_ministry,50.0,Revolving Funds and Guarantee Funds,,True,This agency manages funds that may include R&D activities.,llm
+Turkey,"SERMAYE GELİRLERİ 1.256,870,64 1.268,876,64 5.207,15 1.261,663,51 1,281.663,81 TAŞINMAZ SATIŞ GELİRLERİ 1.268.8T0,84 1.256.B70,64 8.207,13 1.261.663,51 1,281,663,51",unclear,0.0,Capital Revenues,,False,The name includes financial figures and is unclear.,llm
+Turkey,A-RESMø ALACAKLILAR,unclear,0.0,A-Receivables,,False,The name is unclear and lacks context.,llm
+Turkey,"KIRIKKALE ÜNİVERSİTESİ 31996,055,93 3.894.716,13 9,621,959,55 293.21859 18.176.596,17 ESKİŞEHİR OSMANGAZI UNIVERSITES 53.663.702,55 6.088,026,06 13.947,000,83 1.258,190,45 25,054,780,79 GALATASARAY ÜNİVERSİTESİ 13,501.887,66 1,520.206,22 5.396.057,44 161.293,94 10.132.120,91",unclear,0.0,KIRIKKALE UNIVERSITY,,False,Cannot determine from the name alone.,llm
+Turkey,MESLEKø YETERLøLøK KURUMU,mixed_ministry,50.0,Vocational Qualification Institution,,True,This agency may engage in R&D related to vocational training.,llm
+Turkey,"İL TOPLAMI 39.500,688,64 27.762.637,08 22.191.954,09 27.939,004,96",unclear,0.0,Provincial Total,,False,The name includes financial figures and is unclear.,llm
+Turkey,ÖZELLEùTøRME PROGRAMINDA YER ALAN KURULUùLAR(4),unclear,0.0,Entities in the Privatization Program,,False,The name is unclear and lacks context.,llm
+Turkey,"OFLAR 108.565,64 SST S87",unclear,0.0,Oflar,,False,The name is unclear and lacks context.,llm
+Turkey,SOSYAL SøGORTALAR KURUMU BAùKANLIöI,mixed_ministry,50.0,Social Security Institution,,True,This agency may engage in R&D related to social security.,llm
+Turkey,ÖZEL BÜTÇELİ İDARELERİN FONKSİYONEL SINIFLANDIRMAYA GÖRE ÖDENEK ÜSTÜ BÜTÇE GİDERLERİ CETVELİ,unclear,0.0,Functional Classification of Special Budget Agencies,,False,The name is unclear and lacks context.,llm
+Turkey,YILI: 200$,unclear,0.0,Year: 200$,,False,The name is unclear and lacks context.,llm
+Turkey,II. RED VE ùADELER (-),unclear,0.0,II. Rejections and Proposals (-),,False,The name is unclear and lacks context.,llm
+Turkey,ÖĞŞLERMLERİ,unclear,0.0,Educational Activities,,False,The name is unclear and lacks context.,llm
+Turkey,"DOGRUDAN DIS PROJE KREDILERIN 253.615.927,21 213.437.038,52 40,178.888,69 DOGRUDAN DIS PROJE KREDILERIN 213.437.038,52 253.615.927,21",unclear,0.0,Direct Foreign Project Loans,,False,The name includes financial figures and is unclear.,llm
+Turkey,"REKABET KURUMU 25.562.734,50 10.523,540,93",mixed_ministry,50.0,Competition Authority,,True,This agency may engage in R&D related to competition policy.,llm
+Turkey,"SERMAYE GELİRLERİ 397.182,70 397.182,70 397.182,70 397.182,70 TAŞINMAZ SATIŞ GELİRLERİ 397,182,70 397.182,70 397.182.710 397.182,70",unclear,0.0,Capital Revenues,,False,The name includes financial figures and is unclear.,llm
+Turkey,"PARA CEZALARI 49,780.047,75 19.793.244,34 1,808.830,70 18.287.613,61 48.274.417,08",unclear,0.0,Monetary Penalties,,False,The name includes financial figures and is unclear.,llm
+Turkey,KISA VADELø TOPLAM STOKA STOKA ORANI (%),unclear,0.0,Short-Term Total Stock Ratio (%),,False,The name is unclear and lacks context.,llm
+Turkey,KARŞILAŞTIRMALI BÜTÇE GİDERLERİ KESİN HESAP CETVELİ YUL; 2008,unclear,0.0,Comparative Budget Expenditures Final Account Table YUL; 2008,,False,The name is unclear and lacks context.,llm
+Turkey,"FAALİYET VE BÜTÇE HESAPLARI 2.542.912.246.866,75 2.517.009.458.843,77",unclear,0.0,Activity and Budget Accounts,,False,The name includes financial figures and is unclear.,llm
+Turkey,KAMU BANKALARI(5),unclear,0.0,Public Banks,,False,The name suggests a focus on banking rather than research and development.,llm
+Turkey,MERKEZø YÖNETøM BÜTÇESø,mixed_ministry,50.0,Central Government Budget,,True,"This agency manages the overall budget, which may include R&D funding.",llm
+Turkey,ÖZEL BÜTÇELİ İDARELERİN BÜTÇE GİDERLERİ KESİN HESAP CETVELLERİ,mixed_ministry,30.0,Budget Expenditures of Special Budget Agencies,,True,Special budget agencies may have R&D components.,llm
+Turkey,"B.205.A11,57",unclear,0.0,Unclear Agency,,False,The name does not provide enough information to classify.,llm
+Turkey,"GENEL TOPLAM 31.846.98 1.741,782,07 1.773.729,05",unclear,0.0,Total Summary,,False,This appears to be a summary figure rather than an agency.,llm
+Turkey,DÜZ. ve DENET. KURUMLAR  / MYB,unclear,0.0,Regulatory and Supervisory Institutions,,False,"The name suggests regulatory functions, not R&D.",llm
+Turkey,TABLO 2: FON GELøR VE GøDERLERø (1),unclear,0.0,Table of Fund Revenues and Expenditures,,False,"This is a table reference, not an agency.",llm
+Turkey,SOSYAL GÜVENLøK KURUMLARI,mixed_ministry,20.0,Social Security Institutions,,True,May include R&D related to social programs.,llm
+Turkey,"HİZMETLERİ TÜRK İŞBIRLIĞI VE KALKINMA | © 3967255735 39,672.537,38",unclear,0.0,Turkish Cooperation and Development Services,,False,The name suggests cooperation rather than a specific agency.,llm
+Turkey,ERTESİ YILA,unclear,0.0,Next Year,,False,This does not refer to an agency.,llm
+Turkey,ÖZEL BÜTÇELø DøöER øDARELER TOPLAMI,mixed_ministry,30.0,Total of Special Budget Agencies,,True,May include R&D components.,llm
+Turkey,B.894.052.16,unclear,0.0,Unclear Agency,,False,The name does not provide enough information to classify.,llm
+Turkey,RESMø KALKINMA BANKALARI,unclear,0.0,Official Development Banks,,False,"Focus on development banking, not R&D.",llm
+Turkey,ERSONEL KORNA A MAL VE HİZMET FAİZ SERMAYE SERMAYE YEDEK TOPLAM,unclear,0.0,Personnel and Service Capital Total,,False,The name suggests financial management rather than R&D.,llm
+Turkey,IMF-ULUSLARARASI PARA FONU,unclear,0.0,International Monetary Fund,,False,"An international financial institution, not a national agency.",llm
+Turkey,REKEEEERE LE,unclear,0.0,Unclear Agency,,False,The name does not provide enough information to classify.,llm
+Turkey,KESİN HESAP RED VE İADE CETVELİ AÇIKLAMASI,unclear,0.0,Final Account Rejection and Refund Table Explanation,,False,"This is a procedural document, not an agency.",llm
+Turkey,IBRD-ULUSLARARASI øMAR VE KALKINMA BANKASI,unclear,0.0,International Bank for Reconstruction and Development,,False,"An international financial institution, not a national agency.",llm
+Turkey,TøCARø BANKALAR,unclear,0.0,Commercial Banks,,False,"Focus on commercial banking, not R&D.",llm
+Turkey,PASøF SøGORTALI,unclear,0.0,Unclear Agency,,False,The name does not provide enough information to classify.,llm
+Turkey,"ABST?.7A2,54",unclear,0.0,Unclear Agency,,False,The name does not provide enough information to classify.,llm
+Turkey,TÜTÜN VE ALKOL PIYASASI DÜZENLER GENEL TOPLAM,unclear,0.0,Total Regulation of Tobacco and Alcohol Markets,,False,"Focus on market regulation, not R&D.",llm
+Turkey,VERGø DIùI NORMAL GELøRLER,unclear,0.0,Normal Tax Revenues,,False,"This refers to tax revenues, not an agency.",llm
+Turkey,BAö-KUR GENEL MÜDÜRLÜöÜ,mixed_ministry,25.0,Social Security Institution General Directorate,,True,May include R&D related to social programs.,llm
+Turkey,MAL VE HIZMET FAIZ ALIM GİDERLERİ GİDERLERİ,unclear,0.0,Expenditures on Goods and Services,,False,"This refers to expenditures, not an agency.",llm
+Turkey,AYLIK ALAN,unclear,0.0,Monthly Area,,False,The name does not clearly indicate a research and development agency.,llm
+Turkey,PASøF SøGORTALI SAYISI,unclear,0.0,Number of Insured Persons,,False,"The name suggests a statistical or insurance-related agency, not R&D.",llm
+Turkey,"HARÇLAR 21.003.482,02 19,024.789,23 307.887,38 18.717.121,05 20.805.814,84",unclear,0.0,Fees,,False,This appears to be a financial figure rather than an agency.,llm
+Turkey,BÜTÇE KANUNUNA GÖRE SILINENLER,unclear,0.0,Deleted According to Budget Law,,False,The name does not refer to a specific agency.,llm
+Turkey,"FAALİYET BORÇLARI 204.739,822.589,94",unclear,0.0,Activity Debts,,False,This seems to be a financial term rather than an agency.,llm
+Turkey,T.C. EMEKLø SANDIöI GENEL MÜDÜRLÜöÜ,mixed_ministry,20.0,General Directorate of the Social Security Institution,,True,"This agency has a mixed focus, including some R&D activities.",llm
+Turkey,"KURUM TOPLAMI İLK MADDE VE MALZEME HESABI TESİS, MAKİNE VE CİHAZLAR HESA TAŞITLAR HESABI DEMİRBAŞLAR HESABI KURUM TOPLAMI İLK MADDE VE MALZEME HESABI TESİS, MAKİNE VE GİHAZLAR HESA",unclear,0.0,Institution Total Initial Material and Equipment Accounts,,False,"This appears to be a financial account description, not an agency.",llm
+Turkey,PERSONEL(A+B),unclear,0.0,Personnel (A+B),,False,This seems to refer to personnel accounting rather than an agency.,llm
+Turkey,TOPLU KONUT øDARESø BAùKANLIöI,mixed_ministry,10.0,General Directorate of Housing,,True,This agency may engage in some R&D related to housing.,llm
+Turkey,"BAŞBAKANLIK YÜKSEK DENE 2330.21,21 79.385,13,",unclear,0.0,Prime Ministry High Test,,False,The name does not clearly indicate a research and development agency.,llm
+Turkey,B. ÖZEL BÜTÇE ÖZ GELùRLERù,unclear,0.0,Special Budget Special Revenues,,False,This appears to be a financial term rather than an agency.,llm
+Turkey,GELøR GøDER FARKI,unclear,0.0,Revenue Difference,,False,This seems to be a financial term rather than an agency.,llm
+Turkey,"DİĞER TEŞEBBÜS VE MÜLKİYET GELİRLERİ 6.238,00 6.236,00 8427 44 BAIT AL",unclear,0.0,Other Initiatives and Property Revenues,,False,This appears to be a financial term rather than an agency.,llm
+Turkey,BÜTÇE KANUNUNA SİLİNEN TOPLAM GÖRE SİLİNENLER KAMU ALACAĞI,unclear,0.0,Total Deleted According to Budget Law Public Receivables,,False,The name does not refer to a specific agency.,llm
+Turkey,"DİĞER ÇEŞİTLİ GELİRLER 2.698,02 909,06 908,66 2.603,02",unclear,0.0,Other Various Revenues,,False,This appears to be a financial term rather than an agency.,llm
+Turkey,"GELİR HESAPLARI 4.694.919.930,974,15 GELİRLER HESABI 4.694.919.830,974,15",unclear,0.0,GELİR HESAPLARI,,False,Agency name does not provide clear indication of R&D focus.,llm
+Turkey,ÖZEL KANUNU BULUNAN KURULUùLAR(6),unclear,0.0,Institutions with Special Laws,,False,The name does not clearly indicate a research and development agency.,llm
+Turkey,B.128.062.07,unclear,0.0,B.128.062.07,,False,"This appears to be a code or reference number, not an agency.",llm
+Turkey,TÜRKøYE øù KURUMU GENEL MÜDÜRLÜöÜ,mixed_ministry,15.0,General Directorate of Turkey,,True,This agency may engage in some R&D activities.,llm
+Turkey,"SİVİL HAVACILIK GENEL MÜD! 658,976,93 189.428,7 6.012.316,91 MESLEKİ YETERULIK KURUM 885.186,45 679,049,41",mixed_ministry,25.0,General Directorate of Civil Aviation,,True,This agency may engage in R&D related to aviation.,llm
+Turkey,TİNA 028-1460,unclear,0.0,TINA 028-1460,,False,"This appears to be a code or reference number, not an agency.",llm
+Turkey,"B.111.861,07",unclear,0.0,"B.111.861,07",,False,"This appears to be a code or reference number, not an agency.",llm
+Turkey,AKRJ AVANS ARTIĞI ARA TOPLAM,unclear,0.0,AKRJ Advance Surplus Intermediate Total,,False,This seems to be a financial term rather than an agency.,llm
+Turkey,DÜZENLEYøCø VE DENETLEYøCø KURUMLAR,mixed_ministry,30.0,Regulatory and Supervisory Institutions,,True,This agency may engage in R&D related to regulations.,llm
+Turkey,GELİRLERİNDEN NET NET RED VE İADELER TAHSİLAT TAHAKKUK,unclear,0.0,Net Reductions and Refunds from Revenues,,False,This appears to be a financial term rather than an agency.,llm
+Turkey,GENEL BÜTÇELİ İDARELERİN FONKSİYONEL SINIFLANDIRMAYA GÖRE ÖDENEK ÜSTÜ BÜTÇE GİDERLERİ CETVELİ YILI: 2008,unclear,0.0,General Budget Agencies Functional Classification Exceeding Budget Expenditures Table Year: 2008,,False,The name suggests a classification document rather than an agency.,llm
+Turkey,TABAN AYLIöI GÖSTERGESø,unclear,0.0,Base Monthly Indicator,,False,This appears to be an economic indicator rather than an agency.,llm
+Turkey,AYB-AVRUPA YATIRIM BANKASI,mixed_ministry,50.0,European Investment Bank,,True,This is a financial institution involved in development funding.,llm
+Turkey,"BAŞBAKANLIK 1.688.210,000,00 0,00 116.244.100,00 26.126.300,00 236.097.714,00 12.064,888,00 12.064.839,00 MILLI İSTİHBARAT TEŞKİLATI MOST 423.557.000,00 .! 474,758,83 0,00 0,00 21.090.000,00 .676.000,00 MILLI GÜVENLİK KURULU GENEL SE 11.036.000,c0 0,00 0,00 0,00 528,000,00. BASIN YAYIN VE ENFORMASYON GE 58.991,000,00 0,00 0,00",unclear,0.0,Prime Ministry Budget Details,,False,This appears to be a budget report rather than an agency.,llm
+Turkey,CARø TRANSFERLER (NET),unclear,0.0,Net Transfers,,False,"This refers to financial transfers, not an agency.",llm
+Turkey,KODU SERMAYE GİDERLERİ SERMAYE TRANSFERLERİ BORÇ VERME YEDEK ÖDENEKLER,unclear,0.0,Code Capital Expenditures Capital Transfers Loan Reserves,,False,This seems to be a financial categorization rather than an agency.,llm
+Turkey,MSB AKARYAKIT øKMAL VE NATO POL TESøSLERø øùLETMESø BAùKANLIöI,mixed_ministry,30.0,Ministry of National Defense Fuel Supply and NATO POL Facilities,,True,This ministry is involved in defense and logistics.,llm
+Turkey,"BOB.109.216,24",unclear,0.0,BOB 109.216.24,,False,"This appears to be a financial figure, not an agency.",llm
+Turkey,VERİLEN GARANTİLER KARŞILIĞI HE VERİLEN TAAHHÜT BELGELERİ HES VERİLEN TAAHHÜT BELGELERİ KAR DEĞERLİ KAĞIT VE ÖZEL TAHAKKUK DEĞERLİ KAĞIT AMBARLARI HESAB,unclear,0.0,Guarantees Given Against Commitment Documents,,False,"This refers to financial guarantees, not an agency.",llm
+Turkey,SOSYAL HøZMETLER VE ÇOCUK ESøRGEME KURUMU GENEL,mixed_ministry,60.0,General Directorate of Social Services and Child Protection,,True,This agency focuses on social services and child protection.,llm
+Turkey,KAMU FøNANSMAN KURULUùLARI,mixed_ministry,40.0,Public Financing Institutions,,True,This agency deals with public financing and budget management.,llm
+Turkey,V-FøNANSMAN AÇIöI,unclear,0.0,V-Financing Opening,,False,This appears to be a financial term rather than an agency.,llm
+Turkey,MERKEZø HÜKÜMETLER,unclear,0.0,Central Governments,,False,This refers to a category rather than a specific agency.,llm
+Turkey,TEŞEBBÜS VE MÜLKİYE 16.094 1462844 1.376.741,unclear,0.0,Initiative and Property,,False,"This appears to be a financial entry, not an agency.",llm
+Turkey,KÜÇÜK VE ORTA ÖLÇEKLø SANAYø GELøùTøRME VE DESTEKLEME øDARESø,mixed_ministry,70.0,Small and Medium-Sized Industry Development and Support Agency,,True,This agency supports small and medium enterprises.,llm
+Turkey,UN. 2008 YILI ÖZEL BÜTÇELİ İDARELERİN KESİN HESABI,unclear,0.0,2008 Special Budget Agencies Final Account,,False,This appears to be a financial report rather than an agency.,llm
+Turkey,GÜVENLİK MAL VE Ni KURUMLARINA | HİZMETALIM FAİZ CARİ SERMAYE SERMAYE DEYLET rail GİDERLERİ GİDERLERİ TRANSFERLER | GİDERLERİ TRANSFERLERİ,unclear,0.0,Security Goods and Institutions,,False,This seems to be a financial categorization rather than an agency.,llm
+Turkey,E. GENEL BÜTÇELİ İDARELERİN DİĞER CETVELLERİ,unclear,0.0,Other Tables of General Budget Agencies,,False,This appears to be a classification document rather than an agency.,llm

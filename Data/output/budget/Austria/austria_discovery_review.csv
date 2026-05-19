@@ -1,0 +1,2 @@
+canonical_name,category,name_variants,preferred_item_type,active_years,notes,agency_type,confidence,source_entity,n_years_seen,avg_amount,reason,country
+Tertiary Education,higher_education,[],"['section_total', 'program_total', 'line_item']","(2013, 2026)",Related to higher education which often includes R&D activities.,higher_education,0.6,Tertiäre Bildung,8,3867.739375,confidence below threshold,Austria

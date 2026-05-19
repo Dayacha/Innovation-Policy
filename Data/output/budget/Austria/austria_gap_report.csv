@@ -1,0 +1,902 @@
+country,year,canonical_name,category,gap_type,gap_subtype,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,series_currency,prev_amount,next_amount
+Austria,1976,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,500000000.0,ATS,,430848000.0
+Austria,1977,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,500000000.0,430848000.0
+Austria,1978,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,500000000.0,430848000.0
+Austria,1979,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,500000000.0,430848000.0
+Austria,1980,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,500000000.0,430848000.0
+Austria,1981,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,500000000.0,430848000.0
+Austria,1982,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,500000000.0,430848000.0
+Austria,1983,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,430848000.0,ATS,500000000.0,201000000.0
+Austria,1984,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,201000000.0,ATS,430848000.0,200000000.0
+Austria,1985,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,200000000.0,ATS,201000000.0,82532000.0
+Austria,1986,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,200000000.0,82532000.0
+Austria,1988,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,82532000.0,ATS,200000000.0,731285000.0
+Austria,1989,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,82532000.0,731285000.0
+Austria,1990,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,731285000.0,ATS,82532000.0,2000000.0
+Austria,1991,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,731285000.0,2000000.0
+Austria,1992,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,2000000.0,ATS,731285000.0,2000000.0
+Austria,1993,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,2000000.0,ATS,2000000.0,300000000.0
+Austria,1994,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,300000000.0,ATS,2000000.0,500000000.0
+Austria,1995,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,500000000.0,ATS,300000000.0,475000000.0
+Austria,1996,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,475000000.0,ATS,500000000.0,515000000.0
+Austria,1997,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,515000000.0,ATS,475000000.0,280000000.0
+Austria,1998,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,515000000.0,280000000.0
+Austria,1999,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,280000000.0,ATS,515000000.0,405625000.0
+Austria,2000,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,405625000.0,ATS,280000000.0,569500000.0
+Austria,2001,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,569500000.0,ATS,405625000.0,792950000.0
+Austria,2002,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,792950000.0,EUR,569500000.0,43862000.0
+Austria,2003,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,43862000.0,EUR,792950000.0,178686000.0
+Austria,2004,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,178686000.0,EUR,43862000.0,280000000.0
+Austria,2005,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,280000000.0,EUR,178686000.0,612261000.0
+Austria,2006,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,612261000.0,EUR,280000000.0,235381000.0
+Austria,2007,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,235381000.0,EUR,612261000.0,242380000.0
+Austria,2008,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,242380000.0,EUR,235381000.0,213332000.0
+Austria,2009,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,213332000.0,EUR,242380000.0,217642000.0
+Austria,2010,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,217642000.0,EUR,213332000.0,458200000.0
+Austria,2011,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,ok,,,,,,none,458200000.0,EUR,217642000.0,
+Austria,2012,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,458200000.0,
+Austria,2013,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,458200000.0,
+Austria,2014,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,458200000.0,
+Austria,2015,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,458200000.0,
+Austria,2016,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,458200000.0,
+Austria,2017,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,458200000.0,
+Austria,2018,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,458200000.0,
+Austria,2019,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,458200000.0,
+Austria,2020,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,458200000.0,
+Austria,2021,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,458200000.0,
+Austria,2022,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,458200000.0,
+Austria,2023,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,458200000.0,
+Austria,2024,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,458200000.0,
+Austria,2025,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,458200000.0,
+Austria,2026,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,458200000.0,
+Austria,1976,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,94795000.0
+Austria,1977,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,94795000.0
+Austria,1978,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,94795000.0
+Austria,1979,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,94795000.0
+Austria,1980,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,94795000.0
+Austria,1981,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,94795000.0
+Austria,1982,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,94795000.0
+Austria,1983,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,94795000.0,ATS,,500000000.0
+Austria,1984,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,500000000.0,ATS,94795000.0,120000000.0
+Austria,1985,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,120000000.0,ATS,500000000.0,800000000.0
+Austria,1986,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,120000000.0,800000000.0
+Austria,1988,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,120000000.0,800000000.0
+Austria,1989,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,120000000.0,800000000.0
+Austria,1990,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,120000000.0,800000000.0
+Austria,1991,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,120000000.0,800000000.0
+Austria,1992,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,800000000.0,ATS,120000000.0,500000000.0
+Austria,1993,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,500000000.0,ATS,800000000.0,200000000.0
+Austria,1994,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,200000000.0,ATS,500000000.0,300000000.0
+Austria,1995,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,300000000.0,ATS,200000000.0,120000000.0
+Austria,1996,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,120000000.0,ATS,300000000.0,380000000.0
+Austria,1997,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,380000000.0,ATS,120000000.0,530001000.0
+Austria,1998,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,380000000.0,530001000.0
+Austria,1999,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,380000000.0,530001000.0
+Austria,2000,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,530001000.0,ATS,380000000.0,560014000.0
+Austria,2001,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,560014000.0,ATS,530001000.0,40698000.0
+Austria,2002,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,40698000.0,EUR,560014000.0,57998000.0
+Austria,2003,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,57998000.0,EUR,40698000.0,58000000.0
+Austria,2004,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,58000000.0,EUR,57998000.0,15718000.0
+Austria,2005,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,15718000.0,EUR,58000000.0,164190000.0
+Austria,2006,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,15718000.0,164190000.0
+Austria,2007,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,164190000.0,EUR,15718000.0,110213000.0
+Austria,2008,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,110213000.0,EUR,164190000.0,113168000.0
+Austria,2009,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,113168000.0,EUR,110213000.0,117513000.0
+Austria,2010,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,117513000.0,EUR,113168000.0,96900000.0
+Austria,2011,FFG (Forschungsfoerderungsgesellschaft),science_agency,ok,,,,,,none,96900000.0,EUR,117513000.0,
+Austria,2012,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,96900000.0,
+Austria,2013,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,96900000.0,
+Austria,2014,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,96900000.0,
+Austria,2015,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,96900000.0,
+Austria,2016,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,96900000.0,
+Austria,2017,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,96900000.0,
+Austria,2018,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,96900000.0,
+Austria,2019,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,96900000.0,
+Austria,2020,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,96900000.0,
+Austria,2021,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,96900000.0,
+Austria,2022,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,96900000.0,
+Austria,2023,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,96900000.0,
+Austria,2024,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,96900000.0,
+Austria,2025,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,96900000.0,
+Austria,2026,FFG (Forschungsfoerderungsgesellschaft),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,96900000.0,
+Austria,1976,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,79303000.0,ATS,,84338000.0
+Austria,1977,OAW (Osterreichische Akademie der Wissenschaften),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,79303000.0,84338000.0
+Austria,1978,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,84338000.0,ATS,79303000.0,112581000.0
+Austria,1979,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,112581000.0,ATS,84338000.0,104121000.0
+Austria,1980,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,104121000.0,ATS,112581000.0,94221000.0
+Austria,1981,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,94221000.0,ATS,104121000.0,127545000.0
+Austria,1982,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,127545000.0,ATS,94221000.0,430848000.0
+Austria,1983,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,430848000.0,ATS,127545000.0,71666000.0
+Austria,1984,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,71666000.0,ATS,430848000.0,50000000.0
+Austria,1985,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,50000000.0,ATS,71666000.0,189251000.0
+Austria,1986,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,189251000.0,ATS,50000000.0,47344000.0
+Austria,1988,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,47344000.0,ATS,189251000.0,147508000.0
+Austria,1989,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,147508000.0,ATS,47344000.0,199757000.0
+Austria,1990,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,199757000.0,ATS,147508000.0,238090000.0
+Austria,1991,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,238090000.0,ATS,199757000.0,243090000.0
+Austria,1992,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,243090000.0,ATS,238090000.0,1500000.0
+Austria,1993,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,1500000.0,ATS,243090000.0,150000000.0
+Austria,1994,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,150000000.0,ATS,1500000.0,200000000.0
+Austria,1995,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,200000000.0,ATS,150000000.0,380499000.0
+Austria,1996,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,380499000.0,ATS,200000000.0,385000000.0
+Austria,1997,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,385000000.0,ATS,380499000.0,405000000.0
+Austria,1998,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,405000000.0,ATS,385000000.0,489000000.0
+Austria,1999,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,489000000.0,ATS,405000000.0,50000000.0
+Austria,2000,OAW (Osterreichische Akademie der Wissenschaften),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,489000000.0,50000000.0
+Austria,2001,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,50000000.0,ATS,489000000.0,222928000.0
+Austria,2002,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,222928000.0,EUR,50000000.0,35310000.0
+Austria,2003,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,35310000.0,EUR,222928000.0,359411000.0
+Austria,2004,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,359411000.0,EUR,35310000.0,25370000.0
+Austria,2005,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,25370000.0,EUR,359411000.0,340384000.0
+Austria,2006,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,340384000.0,EUR,25370000.0,33225000.0
+Austria,2007,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,33225000.0,EUR,340384000.0,33225000.0
+Austria,2008,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,33225000.0,EUR,33225000.0,339583000.0
+Austria,2009,OAW (Osterreichische Akademie der Wissenschaften),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,33225000.0,339583000.0
+Austria,2010,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,339583000.0,EUR,33225000.0,50500000.0
+Austria,2011,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,50500000.0,EUR,339583000.0,81519000.0
+Austria,2012,OAW (Osterreichische Akademie der Wissenschaften),science_agency,ok,,,,,,none,81519000.0,EUR,50500000.0,
+Austria,2013,OAW (Osterreichische Akademie der Wissenschaften),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,81519000.0,
+Austria,2014,OAW (Osterreichische Akademie der Wissenschaften),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,81519000.0,
+Austria,2015,OAW (Osterreichische Akademie der Wissenschaften),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,81519000.0,
+Austria,2016,OAW (Osterreichische Akademie der Wissenschaften),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,81519000.0,
+Austria,2017,OAW (Osterreichische Akademie der Wissenschaften),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,81519000.0,
+Austria,2018,OAW (Osterreichische Akademie der Wissenschaften),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,81519000.0,
+Austria,2019,OAW (Osterreichische Akademie der Wissenschaften),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,81519000.0,
+Austria,2020,OAW (Osterreichische Akademie der Wissenschaften),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,81519000.0,
+Austria,2021,OAW (Osterreichische Akademie der Wissenschaften),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,81519000.0,
+Austria,2022,OAW (Osterreichische Akademie der Wissenschaften),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,81519000.0,
+Austria,2023,OAW (Osterreichische Akademie der Wissenschaften),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,81519000.0,
+Austria,2024,OAW (Osterreichische Akademie der Wissenschaften),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,81519000.0,
+Austria,2025,OAW (Osterreichische Akademie der Wissenschaften),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,81519000.0,
+Austria,2026,OAW (Osterreichische Akademie der Wissenschaften),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,81519000.0,
+Austria,2009,AIT Austrian Institute of Technology,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2010,AIT Austrian Institute of Technology,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2011,AIT Austrian Institute of Technology,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2012,AIT Austrian Institute of Technology,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2013,AIT Austrian Institute of Technology,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2014,AIT Austrian Institute of Technology,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2015,AIT Austrian Institute of Technology,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2016,AIT Austrian Institute of Technology,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2017,AIT Austrian Institute of Technology,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2018,AIT Austrian Institute of Technology,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2019,AIT Austrian Institute of Technology,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2020,AIT Austrian Institute of Technology,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2021,AIT Austrian Institute of Technology,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2022,AIT Austrian Institute of Technology,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2023,AIT Austrian Institute of Technology,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2024,AIT Austrian Institute of Technology,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2025,AIT Austrian Institute of Technology,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2026,AIT Austrian Institute of Technology,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2006,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,50000000.0
+Austria,2007,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,50000000.0
+Austria,2008,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,50000000.0
+Austria,2009,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,50000000.0
+Austria,2010,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,50000000.0
+Austria,2011,IST Austria,science_agency,ok,,,,,,none,50000000.0,EUR,,
+Austria,2012,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,
+Austria,2013,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,
+Austria,2014,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,
+Austria,2015,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,
+Austria,2016,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,
+Austria,2017,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,
+Austria,2018,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,
+Austria,2019,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,
+Austria,2020,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,
+Austria,2021,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,
+Austria,2022,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,
+Austria,2023,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,
+Austria,2024,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,
+Austria,2025,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,
+Austria,2026,IST Austria,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,
+Austria,1988,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,5000000.0
+Austria,1989,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,5000000.0
+Austria,1990,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,ok,,,,,,none,5000000.0,ATS,,150000000.0
+Austria,1991,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,5000000.0,150000000.0
+Austria,1992,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,ok,,,,,,none,150000000.0,ATS,5000000.0,50000000.0
+Austria,1993,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,150000000.0,50000000.0
+Austria,1994,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,ok,,,,,,none,50000000.0,ATS,150000000.0,100000000.0
+Austria,1995,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,ok,,,,,,none,100000000.0,ATS,50000000.0,20000000.0
+Austria,1996,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,ok,,,,,,none,20000000.0,ATS,100000000.0,50000000.0
+Austria,1997,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,ok,,,,,,none,50000000.0,ATS,20000000.0,50000000.0
+Austria,1998,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,50000000.0
+Austria,1999,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,ok,,,,,,none,50000000.0,ATS,50000000.0,15000000.0
+Austria,2000,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,15000000.0
+Austria,2001,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,ok,,,,,,none,15000000.0,ATS,50000000.0,50000000.0
+Austria,2002,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,15000000.0,50000000.0
+Austria,2003,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,15000000.0,50000000.0
+Austria,2004,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,15000000.0,50000000.0
+Austria,2005,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,ok,,,,,,none,50000000.0,EUR,15000000.0,20000000.0
+Austria,2006,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,20000000.0
+Austria,2007,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,20000000.0
+Austria,2008,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,20000000.0
+Austria,2009,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,20000000.0
+Austria,2010,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,20000000.0
+Austria,2011,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,ok,,,,,,none,20000000.0,EUR,50000000.0,
+Austria,2012,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2013,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2014,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2015,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2016,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2017,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2018,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2019,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2020,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2021,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2022,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2023,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2024,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2025,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2026,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,1976,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10000000.0
+Austria,1977,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10000000.0
+Austria,1978,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10000000.0
+Austria,1979,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10000000.0
+Austria,1980,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10000000.0
+Austria,1981,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10000000.0
+Austria,1982,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10000000.0
+Austria,1983,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10000000.0
+Austria,1984,Ludwig Boltzmann Gesellschaft,science_agency,ok,,,,,,none,10000000.0,ATS,,10000000.0
+Austria,1985,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,10000000.0
+Austria,1986,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,10000000.0
+Austria,1988,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,10000000.0
+Austria,1989,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,10000000.0
+Austria,1990,Ludwig Boltzmann Gesellschaft,science_agency,ok,,,,,,none,10000000.0,ATS,10000000.0,
+Austria,1991,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,1992,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,1993,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,1994,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,1995,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,1996,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,1997,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,1998,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,1999,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2000,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2001,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2002,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2003,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2004,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2005,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2006,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2007,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2008,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2009,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2010,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2011,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2012,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2013,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2014,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2015,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2016,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2017,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2018,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2019,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2020,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2021,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2022,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2023,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2024,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2025,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,2026,Ludwig Boltzmann Gesellschaft,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,
+Austria,1976,CERN-Beitrag (Austria),direct_rd,ok,,,,,,none,100000000.0,ATS,,5000000.0
+Austria,1977,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,100000000.0,5000000.0
+Austria,1978,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,100000000.0,5000000.0
+Austria,1979,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,100000000.0,5000000.0
+Austria,1980,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,100000000.0,5000000.0
+Austria,1981,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,100000000.0,5000000.0
+Austria,1982,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,100000000.0,5000000.0
+Austria,1983,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,100000000.0,5000000.0
+Austria,1984,CERN-Beitrag (Austria),direct_rd,ok,,,,,,none,5000000.0,ATS,100000000.0,2000000.0
+Austria,1985,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,5000000.0,2000000.0
+Austria,1986,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,5000000.0,2000000.0
+Austria,1988,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,5000000.0,2000000.0
+Austria,1989,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,5000000.0,2000000.0
+Austria,1990,CERN-Beitrag (Austria),direct_rd,ok,,,,,,none,2000000.0,ATS,5000000.0,124057000.0
+Austria,1991,CERN-Beitrag (Austria),direct_rd,ok,,,,,,none,124057000.0,ATS,2000000.0,100000000.0
+Austria,1992,CERN-Beitrag (Austria),direct_rd,ok,,,,,,none,100000000.0,ATS,124057000.0,100000000.0
+Austria,1993,CERN-Beitrag (Austria),direct_rd,ok,,,,,,none,100000000.0,ATS,100000000.0,20000000.0
+Austria,1994,CERN-Beitrag (Austria),direct_rd,ok,,,,,,none,20000000.0,ATS,100000000.0,75000000.0
+Austria,1995,CERN-Beitrag (Austria),direct_rd,ok,,,,,,none,75000000.0,ATS,20000000.0,89000000.0
+Austria,1996,CERN-Beitrag (Austria),direct_rd,ok,,,,,,none,89000000.0,ATS,75000000.0,132000000.0
+Austria,1997,CERN-Beitrag (Austria),direct_rd,ok,,,,,,none,132000000.0,ATS,89000000.0,20000000.0
+Austria,1998,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,132000000.0,20000000.0
+Austria,1999,CERN-Beitrag (Austria),direct_rd,ok,,,,,,none,20000000.0,ATS,132000000.0,20000000.0
+Austria,2000,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,20000000.0
+Austria,2001,CERN-Beitrag (Austria),direct_rd,ok,,,,,,none,20000000.0,ATS,20000000.0,20000000.0
+Austria,2002,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,20000000.0
+Austria,2003,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,20000000.0
+Austria,2004,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,20000000.0
+Austria,2005,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,20000000.0
+Austria,2006,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,20000000.0
+Austria,2007,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,20000000.0
+Austria,2008,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,20000000.0
+Austria,2009,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,20000000.0
+Austria,2010,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,20000000.0
+Austria,2011,CERN-Beitrag (Austria),direct_rd,ok,,,,,,none,20000000.0,EUR,20000000.0,
+Austria,2012,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2013,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2014,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2015,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2016,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2017,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2018,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2019,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2020,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2021,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2022,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2023,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2024,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2025,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,2026,CERN-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,20000000.0,
+Austria,1976,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1500000.0
+Austria,1977,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1500000.0
+Austria,1978,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1500000.0
+Austria,1979,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1500000.0
+Austria,1980,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1500000.0
+Austria,1981,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1500000.0
+Austria,1982,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1500000.0
+Austria,1983,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1500000.0
+Austria,1984,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1500000.0
+Austria,1985,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1500000.0
+Austria,1986,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1500000.0
+Austria,1988,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1500000.0
+Austria,1989,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,1500000.0
+Austria,1990,ESA-Beitrag (Austria),direct_rd,ok,,,,,,none,1500000.0,ATS,,70000.0
+Austria,1991,ESA-Beitrag (Austria),direct_rd,ok,,,,,,none,70000.0,ATS,1500000.0,50000000.0
+Austria,1992,ESA-Beitrag (Austria),direct_rd,ok,,,,,,none,50000000.0,ATS,70000.0,132000000.0
+Austria,1993,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,132000000.0
+Austria,1994,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,132000000.0
+Austria,1995,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,132000000.0
+Austria,1996,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000.0,132000000.0
+Austria,1997,ESA-Beitrag (Austria),direct_rd,ok,,,,,,none,132000000.0,ATS,50000000.0,15000000.0
+Austria,1998,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,132000000.0,15000000.0
+Austria,1999,ESA-Beitrag (Austria),direct_rd,ok,,,,,,none,15000000.0,ATS,132000000.0,15000000.0
+Austria,2000,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,15000000.0,15000000.0
+Austria,2001,ESA-Beitrag (Austria),direct_rd,ok,,,,,,none,15000000.0,ATS,15000000.0,3000000.0
+Austria,2002,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,15000000.0,3000000.0
+Austria,2003,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,15000000.0,3000000.0
+Austria,2004,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,15000000.0,3000000.0
+Austria,2005,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,15000000.0,3000000.0
+Austria,2006,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,15000000.0,3000000.0
+Austria,2007,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,15000000.0,3000000.0
+Austria,2008,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,15000000.0,3000000.0
+Austria,2009,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,15000000.0,3000000.0
+Austria,2010,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,15000000.0,3000000.0
+Austria,2011,ESA-Beitrag (Austria),direct_rd,ok,,,,,,none,3000000.0,EUR,15000000.0,
+Austria,2012,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3000000.0,
+Austria,2013,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3000000.0,
+Austria,2014,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3000000.0,
+Austria,2015,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3000000.0,
+Austria,2016,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3000000.0,
+Austria,2017,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3000000.0,
+Austria,2018,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3000000.0,
+Austria,2019,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3000000.0,
+Austria,2020,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3000000.0,
+Austria,2021,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3000000.0,
+Austria,2022,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3000000.0,
+Austria,2023,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3000000.0,
+Austria,2024,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3000000.0,
+Austria,2025,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3000000.0,
+Austria,2026,ESA-Beitrag (Austria),direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,3000000.0,
+Austria,1976,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1977,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1978,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1979,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1980,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1981,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1982,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1983,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1984,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1985,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1986,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1988,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1989,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1990,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1991,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1992,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1993,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1994,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1995,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1996,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1997,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1998,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1999,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2000,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2001,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2002,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2003,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2004,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2005,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2006,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2007,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2008,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2009,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2010,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2011,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2012,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2013,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2014,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2015,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2016,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2017,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2018,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2019,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2020,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2021,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2022,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2023,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2024,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2025,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2026,Universitat Wien,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1976,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1977,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1978,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1979,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1980,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1981,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1982,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1983,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1984,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1985,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1986,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1988,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1989,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1990,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1991,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1992,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1993,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1994,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1995,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1996,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1997,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1998,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1999,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2000,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2001,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2002,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2003,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2004,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2005,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2006,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2007,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2008,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2009,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2010,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2011,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2012,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2013,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2014,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2015,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2016,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2017,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2018,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2019,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2020,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2021,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2022,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2023,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2024,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2025,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2026,Technische Universitat Wien (TU Wien),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1976,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1977,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1978,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1979,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1980,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1981,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1982,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1983,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1984,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1985,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1986,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1988,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1989,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1990,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1991,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1992,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1993,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1994,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1995,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1996,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1997,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1998,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1999,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2000,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2001,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2002,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2003,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2004,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2005,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2006,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2007,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2008,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2009,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2010,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2011,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2012,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2013,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2014,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2015,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2016,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2017,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2018,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2019,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2020,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2021,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2022,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2023,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2024,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2025,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2026,Universitat Graz (Karl-Franzens),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1976,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1977,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1978,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1979,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1980,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1981,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1982,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1983,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1984,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1985,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1986,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1988,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1989,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1990,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1991,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1992,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1993,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1994,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1995,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1996,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1997,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1998,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1999,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2000,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2001,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2002,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2003,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2004,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2005,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2006,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2007,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2008,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2009,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2010,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2011,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2012,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2013,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2014,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2015,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2016,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2017,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2018,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2019,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2020,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2021,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2022,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2023,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2024,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2025,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2026,Technische Universitat Graz (TU Graz),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1976,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1977,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1978,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1979,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1980,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1981,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1982,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1983,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1984,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1985,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1986,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1988,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1989,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1990,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1991,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1992,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1993,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1994,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1995,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1996,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1997,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1998,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1999,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2000,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2001,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2002,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2003,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2004,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2005,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2006,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2007,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2008,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2009,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2010,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2011,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2012,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2013,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2014,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2015,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2016,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2017,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2018,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2019,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2020,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2021,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2022,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2023,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2024,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2025,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2026,Johannes Kepler Universitat Linz (JKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2004,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2005,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2006,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2007,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2008,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2009,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2010,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2011,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2012,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2013,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2014,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2015,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2016,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2017,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2018,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2019,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2020,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2021,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2022,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2023,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2024,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2025,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2026,Medizinische Universitat Wien (MedUni),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1976,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1977,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1978,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1979,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1980,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1981,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1982,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1983,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1984,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1985,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1986,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1988,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1989,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1990,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1991,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1992,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1993,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1994,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1995,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1996,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1997,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1998,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1999,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2000,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2001,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2002,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2003,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2004,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2005,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2006,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2007,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2008,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2009,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2010,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2011,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2012,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2013,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2014,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2015,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2016,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2017,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2018,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2019,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2020,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2021,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2022,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2023,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2024,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2025,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2026,Universitat Innsbruck,higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1976,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1977,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1978,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1979,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1980,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1981,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1982,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1983,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1984,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1985,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1986,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1988,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1989,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1990,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1991,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1992,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1993,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1994,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1995,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1996,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1997,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1998,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1999,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2000,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2001,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2002,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2003,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2004,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2005,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2006,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2007,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2008,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2009,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2010,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2011,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2012,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2013,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2014,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2015,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2016,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2017,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2018,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2019,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2020,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2021,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2022,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2023,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2024,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2025,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2026,Wirtschaftsuniversitat Wien (WU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1976,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1977,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1978,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1979,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1980,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1981,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1982,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1983,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1984,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1985,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1986,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1988,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1989,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1990,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1991,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1992,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1993,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1994,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1995,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1996,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1997,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1998,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1999,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2000,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2001,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2002,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2003,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2004,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2005,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2006,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2007,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2008,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2009,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2010,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2011,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2012,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2013,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2014,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2015,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2016,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2017,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2018,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2019,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2020,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2021,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2022,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2023,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2024,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2025,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,2026,Universitat fur Bodenkultur Wien (BOKU),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Austria,1976,Universitaten (collective Austria),higher_education,ok,,,,,,none,3835051000.0,ATS,,4147370000.0
+Austria,1977,Universitaten (collective Austria),higher_education,ok,,,,,,none,4147370000.0,ATS,3835051000.0,1398564000.0
+Austria,1978,Universitaten (collective Austria),higher_education,ok,,,,,,none,1398564000.0,ATS,4147370000.0,5193065000.0
+Austria,1979,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1398564000.0,5193065000.0
+Austria,1980,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1398564000.0,5193065000.0
+Austria,1981,Universitaten (collective Austria),higher_education,ok,,,,,,none,5193065000.0,ATS,1398564000.0,4226640000.0000005
+Austria,1982,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,5193065000.0,4226640000.0000005
+Austria,1983,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,5193065000.0,4226640000.0000005
+Austria,1984,Universitaten (collective Austria),higher_education,ok,,,,,,none,4226640000.0000005,ATS,5193065000.0,4663871000.0
+Austria,1985,Universitaten (collective Austria),higher_education,ok,,,,,,none,4663871000.0,ATS,4226640000.0000005,0.0
+Austria,1986,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,4663871000.0,0.0
+Austria,1988,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,4663871000.0,0.0
+Austria,1989,Universitaten (collective Austria),higher_education,ok,,,,,,none,0.0,ATS,4663871000.0,315706000.0
+Austria,1990,Universitaten (collective Austria),higher_education,ok,,,,,,none,315706000.0,ATS,0.0,9214284000.0
+Austria,1991,Universitaten (collective Austria),higher_education,ok,,,,,,none,9214284000.0,ATS,315706000.0,8064768000.0
+Austria,1992,Universitaten (collective Austria),higher_education,ok,,,,,,none,8064768000.0,ATS,9214284000.0,8250475000.0
+Austria,1993,Universitaten (collective Austria),higher_education,ok,,,,,,none,8250475000.0,ATS,8064768000.0,1266921000.0
+Austria,1994,Universitaten (collective Austria),higher_education,ok,,,,,,none,1266921000.0,ATS,8250475000.0,5472853000.0
+Austria,1995,Universitaten (collective Austria),higher_education,ok,,,,,,none,5472853000.0,ATS,1266921000.0,9636022000.0
+Austria,1996,Universitaten (collective Austria),higher_education,ok,,,,,,none,9636022000.0,ATS,5472853000.0,9668683000.0
+Austria,1997,Universitaten (collective Austria),higher_education,ok,,,,,,none,9668683000.0,ATS,9636022000.0,1266921000.0
+Austria,1998,Universitaten (collective Austria),higher_education,ok,,,,,,none,1266921000.0,ATS,9668683000.0,10788684000.0
+Austria,1999,Universitaten (collective Austria),higher_education,ok,,,,,,none,10788684000.0,ATS,1266921000.0,1240535000.0
+Austria,2000,Universitaten (collective Austria),higher_education,ok,,,,,,none,1240535000.0,ATS,10788684000.0,21806595000.0
+Austria,2001,Universitaten (collective Austria),higher_education,ok,,,,,,none,21806595000.0,ATS,1240535000.0,1605640000.0
+Austria,2002,Universitaten (collective Austria),higher_education,ok,,,,,,none,1605640000.0,EUR,21806595000.0,144505000.0
+Austria,2003,Universitaten (collective Austria),higher_education,ok,,,,,,none,144505000.0,EUR,1605640000.0,2756088000.0
+Austria,2004,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,144505000.0,2756088000.0
+Austria,2005,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,144505000.0,2756088000.0
+Austria,2006,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,144505000.0,2756088000.0
+Austria,2007,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,144505000.0,2756088000.0
+Austria,2008,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,144505000.0,2756088000.0
+Austria,2009,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,144505000.0,2756088000.0
+Austria,2010,Universitaten (collective Austria),higher_education,ok,,,,,,none,2756088000.0,EUR,144505000.0,605600000.0
+Austria,2011,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,2756088000.0,605600000.0
+Austria,2012,Universitaten (collective Austria),higher_education,ok,,,,,,none,605600000.0,EUR,2756088000.0,
+Austria,2013,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,605600000.0,
+Austria,2014,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,605600000.0,
+Austria,2015,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,605600000.0,
+Austria,2016,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,605600000.0,
+Austria,2017,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,605600000.0,
+Austria,2018,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,605600000.0,
+Austria,2019,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,605600000.0,
+Austria,2020,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,605600000.0,
+Austria,2021,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,605600000.0,
+Austria,2022,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,605600000.0,
+Austria,2023,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,605600000.0,
+Austria,2024,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,605600000.0,
+Austria,2025,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,605600000.0,
+Austria,2026,Universitaten (collective Austria),higher_education,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,605600000.0,
+Austria,1976,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10624006000.0
+Austria,1977,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10624006000.0
+Austria,1978,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10624006000.0
+Austria,1979,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10624006000.0
+Austria,1980,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10624006000.0
+Austria,1981,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10624006000.0
+Austria,1982,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10624006000.0
+Austria,1983,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10624006000.0
+Austria,1984,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10624006000.0
+Austria,1985,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10624006000.0
+Austria,1986,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10624006000.0
+Austria,1988,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10624006000.0
+Austria,1989,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10624006000.0
+Austria,1990,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10624006000.0
+Austria,1991,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,10624006000.0
+Austria,1992,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,10624006000.0,ATS,,10759049000.0
+Austria,1993,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,10759049000.0,ATS,10624006000.0,30018400000.0
+Austria,1994,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10759049000.0,30018400000.0
+Austria,1995,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10759049000.0,30018400000.0
+Austria,1996,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,30018400000.0,ATS,10759049000.0,30150514000.0
+Austria,1997,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,30150514000.0,ATS,30018400000.0,27854292000.0
+Austria,1998,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,27854292000.0,ATS,30150514000.0,28318290000.0
+Austria,1999,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,28318290000.0,ATS,27854292000.0,14060570000.0
+Austria,2000,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,14060570000.0,ATS,28318290000.0,2364484000.0
+Austria,2001,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,14060570000.0,2364484000.0
+Austria,2002,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,2364484000.0,EUR,14060570000.0,1630158000.0
+Austria,2003,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,1630158000.0,EUR,2364484000.0,3501826000.0
+Austria,2004,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1630158000.0,3501826000.0
+Austria,2005,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1630158000.0,3501826000.0
+Austria,2006,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1630158000.0,3501826000.0
+Austria,2007,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,3501826000.0,EUR,1630158000.0,3538832000.0
+Austria,2008,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,3538832000.0,EUR,3501826000.0,3352170000.0
+Austria,2009,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,3352170000.0,EUR,3538832000.0,3744002000.0
+Austria,2010,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,3744002000.0,EUR,3352170000.0,7701700000.0
+Austria,2011,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,7701700000.0,EUR,3744002000.0,3847532000.0
+Austria,2012,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,3847532000.0,EUR,7701700000.0,4022015000.0
+Austria,2013,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,4022015000.0,EUR,3847532000.0,4081398000.0
+Austria,2014,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,4081398000.0,EUR,4022015000.0,4121788999.9999995
+Austria,2015,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,4121788999.9999995,EUR,4081398000.0,4281287999.9999995
+Austria,2016,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,4281287999.9999995,EUR,4121788999.9999995,4364024000.0
+Austria,2017,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,4364024000.0,EUR,4281287999.9999995,4460084000.0
+Austria,2018,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,4460084000.0,EUR,4364024000.0,4789900000.0
+Austria,2019,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,4789900000.0,EUR,4460084000.0,5030550000.0
+Austria,2020,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,5030550000.0,EUR,4789900000.0,5262476000.0
+Austria,2021,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,5262476000.0,EUR,5030550000.0,5623584000.0
+Austria,2022,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,5623584000.0,EUR,5262476000.0,6088602000.0
+Austria,2023,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,6088602000.0,EUR,5623584000.0,6474242000.0
+Austria,2024,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,6474242000.0,EUR,6088602000.0,7326309000.0
+Austria,2025,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,7326309000.0,EUR,6474242000.0,7355223000.0
+Austria,2026,BMBWF / Einzelplan 13 / UG 31 (total),rd_ministry,ok,,,,,,none,7355223000.0,EUR,7326309000.0,

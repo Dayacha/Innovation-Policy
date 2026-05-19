@@ -105,6 +105,18 @@ _MACRO_TOTAL_RE = re.compile(
     re.IGNORECASE,
 )
 
+_WRONG_MINISTRY_TOTAL_RE = re.compile(
+    r"total des d[eé]penses du minist[eè]re des transports|"
+    r"total des d[eé]penses du minist[eè]re du logement|"
+    r"total des recettes pour ordre|"
+    r"total des d[eé]penses pour ordre|"
+    r"total revenues for order|"
+    r"total expenditures for order|"
+    r"ministry of transport|"
+    r"ministry of housing",
+    re.IGNORECASE,
+)
+
 
 def _note(df: pd.DataFrame, mask: pd.Series, text: str) -> None:
     df.loc[mask, "cleaning_notes"] = df.loc[mask, "cleaning_notes"].fillna("") + text
@@ -126,6 +138,7 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
     sections = df.get("section_name", pd.Series("", index=df.index)).fillna("").astype(str)
     sections_en = df.get("section_name_en", pd.Series("", index=df.index)).fillna("").astype(str)
     combined = descs + " " + raw_descs + " " + sections + " " + sections_en
+    line_only = descs + " " + raw_descs
 
     year_num = pd.to_numeric(df.get("year", pd.Series(dtype=float)), errors="coerce")
     has_research = combined.str.contains(_RESEARCH_RE, regex=True)
@@ -178,6 +191,20 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
     if macro_mask.any():
         df.loc[macro_mask, "aggregation_role"] = df.loc[macro_mask, "aggregation_role"].replace("", "section")
         _note(df, macro_mask, "[luxembourg_macro_total: section aggregate] ")
+
+    wrong_total_mask = line_only.str.contains(_WRONG_MINISTRY_TOTAL_RE, regex=True)
+    if wrong_total_mask.any():
+        df.loc[wrong_total_mask, "aggregation_role"] = "non_rd"
+        df.loc[wrong_total_mask, "decision"] = "exclude"
+        _note(df, wrong_total_mask, "[luxembourg_wrong_ministry_total: excluded cross-ministry/ordre total misassigned to research section] ")
+
+    unit_s = df.get("unit", pd.Series("", index=df.index)).fillna("").astype(str).str.lower().str.strip()
+    currency_s = df.get("currency", pd.Series("", index=df.index)).fillna("").astype(str).str.upper().str.strip()
+    amount_num = pd.to_numeric(df.get("amount_local", pd.Series(dtype=float)), errors="coerce")
+    relabel_full_unit_mask = amount_num.notna() & unit_s.eq("thousand") & currency_s.isin(["LUF", "EUR"])
+    if relabel_full_unit_mask.any():
+        df.loc[relabel_full_unit_mask, "unit"] = "unit"
+        _note(df, relabel_full_unit_mask, "[luxembourg_full_currency_units: relabelled thousand→unit; Luxembourg pages are printed in full currency units] ")
 
     # Pre-EUR era note
     pre_eur = year_num < 2002

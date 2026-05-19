@@ -96,6 +96,14 @@ _TRANSPORT_RE = re.compile(
     re.IGNORECASE,
 )
 
+_CONSUMER_ADMIN_RE = re.compile(
+    r"consumer\s+court\s+application\s+limit|"
+    r"door.to.door\s+sales|"
+    r"kap[ıi]dan\s+sat[ıi][sş]|"
+    r"t[üu]ketici\s+mahkemesi",
+    re.IGNORECASE,
+)
+
 _EDUCATION_BROAD_RE = re.compile(
     r"ilköğretim\s+genel\b|ilkogretim\s+genel\b|"
     r"ortaöğretim\s+genel\b|ortaogretim\s+genel\b|"
@@ -185,6 +193,13 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
         df.loc[transport_mask, "aggregation_role"] = "non_rd"
         df.loc[transport_mask, "decision"] = "review"
         _note(df, transport_mask, "[turkey_transport_non_rd] ")
+
+    # Consumer-protection / administrative thresholds are not R&D.
+    consumer_admin_mask = combined.str.contains(_CONSUMER_ADMIN_RE, regex=True)
+    if consumer_admin_mask.any():
+        df.loc[consumer_admin_mask, "aggregation_role"] = "non_rd"
+        df.loc[consumer_admin_mask, "decision"] = "review"
+        _note(df, consumer_admin_mask, "[turkey_consumer_admin_non_rd] ")
 
     # Broad primary/secondary education without research signal
     educ_mask = combined.str.contains(_EDUCATION_BROAD_RE, regex=True) & ~has_research

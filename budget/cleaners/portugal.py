@@ -108,6 +108,49 @@ _MACRO_TOTAL_RE = re.compile(
     re.IGNORECASE,
 )
 
+_PLURIANNUAL_RE = re.compile(
+    r"responsabilidades\s+contratuais\s+plurianuais|"
+    r"encargos\s+escalonamento\s+plurianual|"
+    r"\bmapa\s+14\b|"
+    r"total\s+programa\b|"
+    r"\bgovernan[cç]a\b|"
+    r"programa[cç][aã]o\s+financeira\s+plurianual|"
+    r"piddac\s+(?:apoios|tradicional)|"
+    r"n[.ºo°]?\s*projectos\b|"
+    r"praxis\s+xxi\b",
+    re.IGNORECASE,
+)
+
+_TRANSFER_PASS_THROUGH_RE = re.compile(
+    r"^transfer|transfer[eê]ncias?\b|"
+    r"transfer\s+of\s+funds|"
+    r"até\s+ao\s+montante|up\s+to\s+the\s+amount|"
+    r"fundo\s+azul|blue\s+fund|"
+    r"fundo\s+de\s+contragarantia|counter.?guarantee\s+fund|"
+    r"transfer\s+organizations?|transfer[eê]ncias?\s+para\s+organiza",
+    re.IGNORECASE,
+)
+
+_GENERIC_RECENT_RE = re.compile(
+    r"total\s+(?:budget\s+of\s+the\s+)?ministry\s+of\s+science|"
+    r"total\s+for\s+the\s+ministry\s+of\s+science|"
+    r"budget\s+of\s+the\s+scientific\s+research\s+and\s+technological\s+innovation\s+program|"
+    r"total\s+of\s+the\s+program(?:me)?\s+for\s+scientific\s+and\s+technological\s+research\s+and\s+innovation|"
+    r"total\s+for\s+science\s+and\s+innovation|"
+    r"program(?:me)?\s+science\s+and\s+innovation|"
+    r"total\s+of\s+chapter\s+50|"
+    r"p011\s*-\s*science,\s*technology\s*and\s*higher\s*education|"
+    r"appropriations?\s+for\s+general\s+scientific\s+research\s+services|"
+    r"funding\s+for\s+scientific\s+research\b|"
+    r"support\s+for\s+scientific\s+research\s+projects\b|"
+    r"support\s+for\s+research\s+cent(?:er|re)s\b|"
+    r"technological\s+development\s+and\s+innovation\b|"
+    r"general\s+support\s+services\s+for\s+the\s+science\s+area\b|"
+    r"^projects$|"
+    r"phd\s+scholarships\b",
+    re.IGNORECASE,
+)
+
 _DUPLICATE_1985_RE = re.compile(
     r"lei\s+or[cç]amento\s+para\s+1985|orcamento\s+para\s+1985",
     re.IGNORECASE,
@@ -202,6 +245,70 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
         _note(df, pre_eur,
               "[portugal_escudo_era: amounts in PTE (escudo); "
               "1 EUR = 200.482 PTE. Unit may be 'unit' (escudos) or 'thousand' (contos).] ")
+
+    currency_s = df.get("currency", pd.Series("", index=df.index)).fillna("").astype(str).str.upper()
+    unit_s = df.get("unit", pd.Series("", index=df.index)).fillna("").astype(str).str.lower()
+
+    # Portugal's euro-era tables are printed in full euros, not "thousand EUR".
+    # The extractor often preserves the full printed number but mislabels the
+    # row as unit='thousand', creating a 1000x inflation downstream.
+    euro_full_mask = year_num.ge(1999) & currency_s.eq("EUR") & unit_s.eq("thousand")
+    if euro_full_mask.any():
+        df.loc[euro_full_mask, "unit"] = "unit"
+        _note(df, euro_full_mask,
+              "[portugal_euro_full_unit: EUR-era table uses full euros; relabelled unit from thousand to unit] ")
+
+    # Pre-1999 EUR rows are not methodologically trustworthy for Portugal's
+    # annual budget series and should not silently drive the final panel.
+    pre_1999_eur = year_num.lt(1999) & currency_s.eq("EUR")
+    if pre_1999_eur.any():
+        df.loc[pre_1999_eur, "decision"] = "review"
+        _note(df, pre_1999_eur,
+              "[portugal_pre1999_eur: EUR-labelled row before euro accounting transition; verify against original before use] ")
+
+    plurianual_mask = (
+        combined.str.contains(_PLURIANNUAL_RE, regex=True)
+        | (
+            df.get("section_name_en", pd.Series("", index=df.index))
+            .fillna("")
+            .astype(str)
+            .str.fullmatch(r"GOVERNANCE", case=False)
+        )
+    )
+    if plurianual_mask.any():
+        df.loc[plurianual_mask, "decision"] = "review"
+        df.loc[plurianual_mask, "aggregation_role"] = "redundant"
+        _note(df, plurianual_mask,
+              "[portugal_pluriannual_or_summary_table: plurianual responsibilities / summary programme table, not a clean annual institutional appropriation] ")
+
+    pass_through_mask = combined.str.contains(_TRANSFER_PASS_THROUGH_RE, regex=True) & has_research
+    if pass_through_mask.any():
+        df.loc[pass_through_mask, "decision"] = "review"
+        df.loc[pass_through_mask, "aggregation_role"] = "redundant"
+        _note(
+            df,
+            pass_through_mask,
+            "[portugal_pass_through_or_legal_transfer: mentions an R&D institution but appears to be a transfer/legal authorization, not a direct annual appropriation] ",
+        )
+
+    explicit_agency_mask = combined.str.contains(
+        r"fct\b|funda[cç][aã]o\s+para\s+a\s+ci[eê]ncia|jnict\b|ani\b|"
+        r"ag[eê]ncia\s+nacional\s+de\s+inova[cç][aã]o|lnec\b",
+        regex=True,
+    )
+    generic_recent_mask = (
+        year_num.ge(2021)
+        & combined.str.contains(_GENERIC_RECENT_RE, regex=True)
+        & ~explicit_agency_mask
+    )
+    if generic_recent_mask.any():
+        df.loc[generic_recent_mask, "decision"] = "review"
+        df.loc[generic_recent_mask, "aggregation_role"] = "redundant"
+        _note(
+            df,
+            generic_recent_mask,
+            "[portugal_generic_recent_row: generic recent science wording without a named institutional budget row; likely narrative or programme summary, not a defendable agency appropriation] ",
+        )
 
     # Implausible single R&D line > 2B EUR (post-2002 only)
     amount_col = "amount_local" if "amount_local" in df.columns else None

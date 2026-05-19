@@ -1,0 +1,124 @@
+country,canonical_name,year,amount_total,amount_primary,n_acts,acts,additive_flag,currency,unit,category
+Luxembourg,CRP Gabriel Lippmann (Luxembourg),2008,15400000.0,15400000.0,1,2008 eli-etat-leg-memorial-2007-a236-fr-pdf.pdf,single,EUR,euro,research_institute
+Luxembourg,CRP Gabriel Lippmann (Luxembourg),2009,11300000.0,11300000.0,1,2009 eli-etat-leg-memorial-2008-a200-fr-pdf.pdf,single,EUR,euro,research_institute
+Luxembourg,CRP Gabriel Lippmann (Luxembourg),2010,13200000.0,13200000.0,1,budget-de-l-etat-2010.pdf,single,EUR,euro,research_institute
+Luxembourg,CRP Gabriel Lippmann (Luxembourg),2011,13200000.0,13200000.0,1,budget-de-l-etat-2011.pdf,single,EUR,euro,research_institute
+Luxembourg,CRP Gabriel Lippmann (Luxembourg),2012,15300000.0,15300000.0,1,budget-de-l-etat-2012.pdf,single,EUR,euro,research_institute
+Luxembourg,CRP Gabriel Lippmann (Luxembourg),2013,15600000.0,15600000.0,1,budget-de-l-etat-2013.pdf,single,EUR,euro,research_institute
+Luxembourg,CRP Gabriel Lippmann (Luxembourg),2014,15000000.0,15000000.0,1,budget-de-l-etat-2014.pdf,single,EUR,euro,research_institute
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2001,5000000.0,5000000.0,1,2001 eli-etat-leg-memorial-2000-a140-fr-pdf.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2002,7500000.0,7500000.0,1,2002 eli-etat-leg-memorial-2001-a148-fr-pdf.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2003,7833900.0,7833900.0,1,2003 eli-etat-leg-memorial-2002-a143-fr-pdf.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2004,11165000.0,11165000.0,1,2004 eli-etat-leg-memorial-2003-a184-fr-pdf.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2005,13090000.0,13090000.0,1,2005 eli-etat-leg-memorial-2004-a204-fr-pdf.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2006,14500000.0,14500000.0,1,2006 eli-etat-leg-memorial-2005-a217-fr-pdf.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2007,18000000.0,18000000.0,1,2007 eli-etat-leg-memorial-2006-a236-fr-pdf.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2008,22360000.0,22360000.0,1,2008 eli-etat-leg-memorial-2007-a236-fr-pdf.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2009,28200000.0,28200000.0,1,2009 eli-etat-leg-memorial-2008-a200-fr-pdf.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2010,40300000.0,40300000.0,1,budget-de-l-etat-2010.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2011,35240000.0,35240000.0,1,budget-de-l-etat-2011.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2012,45000000.0,45000000.0,1,budget-de-l-etat-2012.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2013,52000000.0,52000000.0,1,budget-de-l-etat-2013.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2014,52000000.0,52000000.0,1,budget-de-l-etat-2014.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2015,60000000.0,60000000.0,1,budget-de-l-etat-2015.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2016,69000000.0,69000000.0,1,budget-de-l-etat-2016.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2017,69000000.0,69000000.0,1,budget-de-l-etat-2017.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2018,69000000.0,69000000.0,1,budget-de-l-etat-2018.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2019,69000000.0,69000000.0,1,2019budget-de-l-Etat.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2020,66790000.0,66790000.0,1,budget-de-l-Etat-2020.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2021,66830000.0,66830000.0,1,budget-de-l-Etat-2021.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2022,69030000.0,69030000.0,1,budget-de-l-Etat-2022.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2023,70000000.0,70000000.0,1,budget-de-l-etat-2023.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2024,75000000.0,75000000.0,1,budget-de-letat-2024.pdf,single,EUR,euro,rd_agency
+Luxembourg,FNR — Fonds National de la Recherche (Luxembourg),2025,80000000.0,80000000.0,1,budget-de-letat-2025.pdf,single,EUR,euro,rd_agency
+Luxembourg,LIH / CRP Santé (Luxembourg),2008,15500000.0,15500000.0,1,2008 eli-etat-leg-memorial-2007-a236-fr-pdf.pdf,single,EUR,euro,research_institute
+Luxembourg,LIH / CRP Santé (Luxembourg),2009,16200000.0,16200000.0,1,2009 eli-etat-leg-memorial-2008-a200-fr-pdf.pdf,single,EUR,euro,research_institute
+Luxembourg,LIH / CRP Santé (Luxembourg),2010,19100000.0,19100000.0,1,budget-de-l-etat-2010.pdf,single,EUR,euro,research_institute
+Luxembourg,LIH / CRP Santé (Luxembourg),2011,19100000.0,19100000.0,1,budget-de-l-etat-2011.pdf,single,EUR,euro,research_institute
+Luxembourg,LIH / CRP Santé (Luxembourg),2012,21500000.0,21500000.0,1,budget-de-l-etat-2012.pdf,single,EUR,euro,research_institute
+Luxembourg,LIH / CRP Santé (Luxembourg),2013,20000000.0,20000000.0,1,budget-de-l-etat-2013.pdf,single,EUR,euro,research_institute
+Luxembourg,LIH / CRP Santé (Luxembourg),2014,23000000.0,23000000.0,1,budget-de-l-etat-2014.pdf,single,EUR,euro,research_institute
+Luxembourg,LIH / CRP Santé (Luxembourg),2015,31100000.0,31100000.0,1,budget-de-l-etat-2015.pdf,single,EUR,euro,research_institute
+Luxembourg,LIH / CRP Santé (Luxembourg),2016,44000000.0,44000000.0,1,budget-de-l-etat-2016.pdf,single,EUR,euro,research_institute
+Luxembourg,LIH / CRP Santé (Luxembourg),2017,44000000.0,44000000.0,1,budget-de-l-etat-2017.pdf,single,EUR,euro,research_institute
+Luxembourg,LIH / CRP Santé (Luxembourg),2018,44000000.0,44000000.0,1,budget-de-l-etat-2018.pdf,single,EUR,euro,research_institute
+Luxembourg,LIH / CRP Santé (Luxembourg),2019,44000000.0,44000000.0,1,2019budget-de-l-Etat.pdf,single,EUR,euro,research_institute
+Luxembourg,LIH / CRP Santé (Luxembourg),2020,38770000.0,38770000.0,1,budget-de-l-Etat-2020.pdf,single,EUR,euro,research_institute
+Luxembourg,LIH / CRP Santé (Luxembourg),2021,43260000.0,43260000.0,1,budget-de-l-Etat-2021.pdf,single,EUR,euro,research_institute
+Luxembourg,LIH / CRP Santé (Luxembourg),2022,44300000.0,44300000.0,1,budget-de-l-Etat-2022.pdf,single,EUR,euro,research_institute
+Luxembourg,LIH / CRP Santé (Luxembourg),2023,44970000.0,44970000.0,1,budget-de-l-etat-2023.pdf,single,EUR,euro,research_institute
+Luxembourg,LIH / CRP Santé (Luxembourg),2024,45970000.0,45970000.0,1,budget-de-letat-2024.pdf,single,EUR,euro,research_institute
+Luxembourg,LIH / CRP Santé (Luxembourg),2025,48100000.0,48100000.0,1,budget-de-letat-2025.pdf,single,EUR,euro,research_institute
+Luxembourg,LISER / CEPS-INSTEAD (Luxembourg),2005,4920000.0,4920000.0,1,2005 eli-etat-leg-memorial-2004-a204-fr-pdf.pdf,single,EUR,euro,research_institute
+Luxembourg,LISER / CEPS-INSTEAD (Luxembourg),2006,5265000.0,5265000.0,1,2006 eli-etat-leg-memorial-2005-a217-fr-pdf.pdf,single,EUR,euro,research_institute
+Luxembourg,LISER / CEPS-INSTEAD (Luxembourg),2007,6500000.0,6500000.0,1,2007 eli-etat-leg-memorial-2006-a236-fr-pdf.pdf,single,EUR,euro,research_institute
+Luxembourg,LISER / CEPS-INSTEAD (Luxembourg),2014,10400000.0,10400000.0,1,budget-de-l-etat-2014.pdf,single,EUR,euro,research_institute
+Luxembourg,LISER / CEPS-INSTEAD (Luxembourg),2015,10500000.0,10500000.0,1,budget-de-l-etat-2015.pdf,single,EUR,euro,research_institute
+Luxembourg,LISER / CEPS-INSTEAD (Luxembourg),2016,10500000.0,10500000.0,1,budget-de-l-etat-2016.pdf,single,EUR,euro,research_institute
+Luxembourg,LISER / CEPS-INSTEAD (Luxembourg),2017,14000000.0,14000000.0,1,budget-de-l-etat-2017.pdf,single,EUR,euro,research_institute
+Luxembourg,LISER / CEPS-INSTEAD (Luxembourg),2018,14000000.0,14000000.0,1,budget-de-l-etat-2018.pdf,single,EUR,euro,research_institute
+Luxembourg,LISER / CEPS-INSTEAD (Luxembourg),2019,14000000.0,14000000.0,1,2019budget-de-l-Etat.pdf,single,EUR,euro,research_institute
+Luxembourg,LISER / CEPS-INSTEAD (Luxembourg),2020,11990000.0,11990000.0,1,budget-de-l-Etat-2020.pdf,single,EUR,euro,research_institute
+Luxembourg,LISER / CEPS-INSTEAD (Luxembourg),2021,14000000.0,14000000.0,1,budget-de-l-Etat-2021.pdf,single,EUR,euro,research_institute
+Luxembourg,LISER / CEPS-INSTEAD (Luxembourg),2022,14430000.0,14430000.0,1,budget-de-l-Etat-2022.pdf,single,EUR,euro,research_institute
+Luxembourg,LISER / CEPS-INSTEAD (Luxembourg),2023,15210000.0,15210000.0,1,budget-de-l-etat-2023.pdf,single,EUR,euro,research_institute
+Luxembourg,LISER / CEPS-INSTEAD (Luxembourg),2024,15820000.0,15820000.0,1,budget-de-letat-2024.pdf,single,EUR,euro,research_institute
+Luxembourg,LISER / CEPS-INSTEAD (Luxembourg),2025,17190000.0,17190000.0,1,budget-de-letat-2025.pdf,single,EUR,euro,research_institute
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2008,17900000.0,17900000.0,1,2008 eli-etat-leg-memorial-2007-a236-fr-pdf.pdf,single,EUR,euro,research_institute
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2009,18900000.0,18900000.0,1,2009 eli-etat-leg-memorial-2008-a200-fr-pdf.pdf,single,EUR,euro,research_institute
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2010,20400000.0,20400000.0,1,budget-de-l-etat-2010.pdf,single,EUR,euro,research_institute
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2011,20400000.0,20400000.0,1,budget-de-l-etat-2011.pdf,single,EUR,euro,research_institute
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2012,22420000.0,22420000.0,1,budget-de-l-etat-2012.pdf,single,EUR,euro,research_institute
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2013,20030000.0,20030000.0,1,budget-de-l-etat-2013.pdf,single,EUR,euro,research_institute
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2014,22000000.0,22000000.0,1,budget-de-l-etat-2014.pdf,single,EUR,euro,research_institute
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2015,39000000.0,39000000.0,1,budget-de-l-etat-2015.pdf,single,EUR,euro,research_institute
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2016,53000000.0,53000000.0,1,budget-de-l-etat-2016.pdf,single,EUR,euro,research_institute
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2017,53000000.0,53000000.0,1,budget-de-l-etat-2017.pdf,single,EUR,euro,research_institute
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2018,53000000.0,53000000.0,1,budget-de-l-etat-2018.pdf,single,EUR,euro,research_institute
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2019,53000000.0,53000000.0,1,2019budget-de-l-Etat.pdf,single,EUR,euro,research_institute
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2020,47770000.0,47770000.0,1,budget-de-l-Etat-2020.pdf,single,EUR,euro,research_institute
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2021,51360000.0,51360000.0,1,budget-de-l-Etat-2021.pdf,single,EUR,euro,research_institute
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2022,52940000.0,52940000.0,1,budget-de-l-Etat-2022.pdf,single,EUR,euro,research_institute
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2023,53970000.0,53970000.0,1,budget-de-l-etat-2023.pdf,single,EUR,euro,research_institute
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2024,55500000.0,55500000.0,1,budget-de-letat-2024.pdf,single,EUR,euro,research_institute
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2025,57700000.0,57700000.0,1,budget-de-letat-2025.pdf,single,EUR,euro,research_institute
+Luxembourg,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),1975,10000000.0,10000000.0,1,1975 eli-etat-leg-memorial-1974-a92-fr-pdf.pdf,single,LUF,franc,rd_ministry
+Luxembourg,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),1976,150512000.0,150512000.0,1,1976 eli-etat-leg-memorial-1975-a89-fr-pdf.pdf,single,LUF,franc,rd_ministry
+Luxembourg,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),1977,25175000.0,25175000.0,1,1977 eli-etat-leg-memorial-1976-a79-fr-pdf.pdf,single,LUF,franc,rd_ministry
+Luxembourg,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),1978,60000000.0,60000000.0,1,1978 eli-etat-leg-memorial-1977-a77-fr-pdf.pdf,single,LUF,franc,rd_ministry
+Luxembourg,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),1979,15000000.0,15000000.0,1,1979 eli-etat-leg-memorial-1978-a86-fr-pdf.pdf,single,LUF,franc,rd_ministry
+Luxembourg,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),1980,12000000.0,12000000.0,1,1980 eli-etat-leg-memorial-1979-a95-fr-pdf.pdf,single,LUF,franc,rd_ministry
+Luxembourg,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),1983,23960000.0,23960000.0,1,1983 eli-etat-leg-memorial-1982-a109-fr-pdf.pdf,single,LUF,franc,rd_ministry
+Luxembourg,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),1984,244900000.0,244900000.0,1,1984 eli-etat-leg-memorial-1983-a111-fr-pdf.pdf,single,LUF,franc,rd_ministry
+Luxembourg,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),1985,126625000.0,126625000.0,1,1985 eli-etat-leg-memorial-1984-a111-fr-pdf.pdf,single,LUF,franc,rd_ministry
+Luxembourg,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),1987,25000000.0,25000000.0,1,1987 eli-etat-leg-memorial-1986-a104-fr-pdf.pdf,single,LUF,franc,rd_ministry
+Luxembourg,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),1988,130000000.0,130000000.0,1,1988 eli-etat-leg-memorial-1987-a106-fr-pdf.pdf,single,LUF,franc,rd_ministry
+Luxembourg,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),1989,45000000.0,45000000.0,1,1989 eli-etat-leg-memorial-1988-a69-fr-pdf.pdf,single,LUF,franc,rd_ministry
+Luxembourg,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),1990,164477000.0,164477000.0,1,1990 eli-etat-leg-memorial-1989-a81-fr-pdf.pdf,single,LUF,franc,rd_ministry
+Luxembourg,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),1991,420478000.0,420478000.0,1,1991 eli-etat-leg-memorial-1990-a71-fr-pdf.pdf,single,LUF,franc,rd_ministry
+Luxembourg,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),1993,334541000.0,334541000.0,1,1993 eli-etat-leg-memorial-1992-a100-fr-pdf.pdf,single,LUF,franc,rd_ministry
+Luxembourg,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),1994,187200000.0,187200000.0,1,1994 eli-etat-leg-memorial-1993-a97-fr-pdf.pdf,single,LUF,franc,rd_ministry
+Luxembourg,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),1996,393554000.0,393554000.0,1,1996 eli-etat-leg-memorial-1995-a98-fr-pdf.pdf,single,LUF,franc,rd_ministry
+Luxembourg,Ministère de l'Enseignement Supérieur et de la Recherche (Luxembourg),1998,461873000.0,461873000.0,1,1998 eli-etat-leg-memorial-1997-a98-fr-pdf.pdf,single,LUF,franc,rd_ministry
+Luxembourg,Université du Luxembourg,2004,20391507.0,20391507.0,1,2004 eli-etat-leg-memorial-2003-a184-fr-pdf.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2005,31238340.0,31238340.0,1,2005 eli-etat-leg-memorial-2004-a204-fr-pdf.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2006,44054340.0,44054340.0,1,2006 eli-etat-leg-memorial-2005-a217-fr-pdf.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2007,48500000.0,48500000.0,1,2007 eli-etat-leg-memorial-2006-a236-fr-pdf.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2008,58000000.0,58000000.0,1,2008 eli-etat-leg-memorial-2007-a236-fr-pdf.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2009,72000000.0,72000000.0,1,2009 eli-etat-leg-memorial-2008-a200-fr-pdf.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2010,72000000.0,72000000.0,1,budget-de-l-etat-2010.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2011,87600000.0,87600000.0,1,budget-de-l-etat-2011.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2012,101666674.0,101666674.0,1,budget-de-l-etat-2012.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2013,114000000.0,114000000.0,1,budget-de-l-etat-2013.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2014,128694000.0,128694000.0,1,budget-de-l-etat-2014.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2015,145435000.0,145435000.0,1,budget-de-l-etat-2015.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2016,147136500.0,147136500.0,1,budget-de-l-etat-2016.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2017,157467500.0,157467500.0,1,budget-de-l-etat-2017.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2018,156887500.0,156887500.0,1,budget-de-l-etat-2018.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2019,184910000.0,184910000.0,1,2019budget-de-l-Etat.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2020,198130000.0,198130000.0,1,budget-de-l-Etat-2020.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2021,215600000.0,215600000.0,1,budget-de-l-Etat-2021.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2022,220670000.0,220670000.0,1,budget-de-l-Etat-2022.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2023,223950000.0,223950000.0,1,budget-de-l-etat-2023.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2024,238180000.0,238180000.0,1,budget-de-letat-2024.pdf,single,EUR,euro,higher_education
+Luxembourg,Université du Luxembourg,2025,249632000.0,249632000.0,1,budget-de-letat-2025.pdf,single,EUR,euro,higher_education

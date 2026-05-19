@@ -1,0 +1,902 @@
+country,canonical_name,year,amount_total,amount_primary,n_acts,acts,additive_flag,currency,unit,category
+Austria,AIT Austrian Institute of Technology,2009,,,0,,gap,,,science_agency
+Austria,AIT Austrian Institute of Technology,2010,,,0,,gap,,,science_agency
+Austria,AIT Austrian Institute of Technology,2011,,,0,,gap,,,science_agency
+Austria,AIT Austrian Institute of Technology,2012,,,0,,gap,,,science_agency
+Austria,AIT Austrian Institute of Technology,2013,,,0,,gap,,,science_agency
+Austria,AIT Austrian Institute of Technology,2014,,,0,,gap,,,science_agency
+Austria,AIT Austrian Institute of Technology,2015,,,0,,gap,,,science_agency
+Austria,AIT Austrian Institute of Technology,2016,,,0,,gap,,,science_agency
+Austria,AIT Austrian Institute of Technology,2017,,,0,,gap,,,science_agency
+Austria,AIT Austrian Institute of Technology,2018,,,0,,gap,,,science_agency
+Austria,AIT Austrian Institute of Technology,2019,,,0,,gap,,,science_agency
+Austria,AIT Austrian Institute of Technology,2020,,,0,,gap,,,science_agency
+Austria,AIT Austrian Institute of Technology,2021,,,0,,gap,,,science_agency
+Austria,AIT Austrian Institute of Technology,2022,,,0,,gap,,,science_agency
+Austria,AIT Austrian Institute of Technology,2023,,,0,,gap,,,science_agency
+Austria,AIT Austrian Institute of Technology,2024,,,0,,gap,,,science_agency
+Austria,AIT Austrian Institute of Technology,2025,,,0,,gap,,,science_agency
+Austria,AIT Austrian Institute of Technology,2026,,,0,,gap,,,science_agency
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1976,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1977,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1978,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1979,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1980,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1981,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1982,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1983,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1984,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1985,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1986,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1988,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1989,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1990,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1991,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1992,10624006000.0,10624006000.0,1,1992_Austria.pdf,single,ATS,schilling,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1993,10759049000.0,10759049000.0,1,1993_Austria.pdf,single,ATS,schilling,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1994,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1995,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1996,30018400000.0,30018400000.0,1,1996_Austria_proposal.pdf,single,ATS,schilling,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1997,30150514000.0,30150514000.0,1,1997_Austria_proposal.pdf,single,ATS,schilling,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1998,27854292000.0,27854292000.0,1,1998_Austria.pdf,single,ATS,schilling,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),1999,28318290000.0,28318290000.0,1,1999_Austria.pdf,single,ATS,schilling,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2000,14060570000.0,14060570000.0,1,2000_Austria.pdf,single,ATS,schilling,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2001,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2002,2364484000.0,2364484000.0,1,2002_Austria.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2003,1630158000.0,1630158000.0,1,2003_Austria.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2004,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2005,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2006,,,0,,gap,,,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2007,3501826000.0,3501826000.0,1,2007 Anlagen COO_2026_100_2_342682.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2008,3538832000.0,3538832000.0,1,2008 Anlagen COO_2026_100_2_342695.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2009,3352170000.0,3352170000.0,1,2009 Anlagen COO_2026_100_2_539063.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2010,3744002000.0,3744002000.0,1,2010 Anlagen COO_2026_100_2_539074.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2011,7701700000.0,7701700000.0,1,2011 Anlagen COO_2026_100_2_642644.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2012,3847532000.0,3847532000.0,1,2012 Anlagen COO_2026_100_2_717880.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2013,4022015000.0,4022015000.0,1,2013 Anlagen COO_2026_100_2_820081.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2014,4081398000.0,4081398000.0,1,2014 Anlagen COO_2026_100_2_999189.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2015,4121788999.9999995,4121788999.9999995,1,2015 Anlagen COO_2026_100_2_999206.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2016,4281287999.9999995,4281287999.9999995,1,2016 Anlagen COO_2026_100_2_1160018.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2017,4364024000.0,4364024000.0,1,2017 Anlagen COO_2026_100_2_1315468.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2018,4460084000.0,4460084000.0,1,2018 Anlagen COO_2026_100_2_1516380.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2019,4789900000.0,4789900000.0,1,2019 Anlagen COO_2026_100_2_1516401.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2020,5030550000.0,5030550000.0,1,2020 Anlagen COO_2026_100_2_1750563.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2021,5262476000.0,5262476000.0,1,2021 Anlagen COO_2026_100_2_1814939.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2022,5623584000.0,5623584000.0,1,2022 Anlagen_0001_244184DB_8F25_451C_846B_6C4C7BD15ADA.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2023,6088602000.0,6088602000.0,1,2023 Anlagen_0001_C4324C91_98E6_4FDE_B63A_4BFB9024E450.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2024,6474242000.0,6474242000.0,1,2024 Anlagen_0001_D396E640_5C29_4BB7_ACC6_C42B39D0A249.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2025,7326309000.0,7326309000.0,1,2025 Anlagen_0001_60D0FD25_F712_413E_A4F6_F1E3DAA846F4.pdf,single,EUR,euro,rd_ministry
+Austria,BMBWF / Einzelplan 13 / UG 31 (total),2026,7355223000.0,7355223000.0,1,2026 Anlagen_0001_9EE68750_263F_48B5_901D_46FB19C42ED1.pdf,single,EUR,euro,rd_ministry
+Austria,CERN-Beitrag (Austria),1976,100000000.0,100000000.0,1,1976_Austria.pdf,single,ATS,schilling,direct_rd
+Austria,CERN-Beitrag (Austria),1977,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),1978,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),1979,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),1980,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),1981,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),1982,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),1983,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),1984,5000000.0,5000000.0,1,1984_Austria.pdf,single,ATS,schilling,direct_rd
+Austria,CERN-Beitrag (Austria),1985,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),1986,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),1988,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),1989,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),1990,2000000.0,2000000.0,1,1990_Austria.pdf,single,ATS,schilling,direct_rd
+Austria,CERN-Beitrag (Austria),1991,124057000.0,124057000.0,1,1991_Austria_proposal.pdf,single,ATS,schilling,direct_rd
+Austria,CERN-Beitrag (Austria),1992,100000000.0,100000000.0,1,1992_Austria.pdf,single,ATS,schilling,direct_rd
+Austria,CERN-Beitrag (Austria),1993,100000000.0,100000000.0,1,1993_Austria.pdf,single,ATS,schilling,direct_rd
+Austria,CERN-Beitrag (Austria),1994,20000000.0,20000000.0,1,1994_Austria.pdf,single,ATS,schilling,direct_rd
+Austria,CERN-Beitrag (Austria),1995,75000000.0,75000000.0,1,1995_Austria.pdf,single,ATS,schilling,direct_rd
+Austria,CERN-Beitrag (Austria),1996,89000000.0,89000000.0,1,1996_Austria_proposal.pdf,single,ATS,schilling,direct_rd
+Austria,CERN-Beitrag (Austria),1997,132000000.0,132000000.0,1,1997_Austria_proposal.pdf,single,ATS,schilling,direct_rd
+Austria,CERN-Beitrag (Austria),1998,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),1999,20000000.0,20000000.0,1,1999_Austria.pdf,single,ATS,schilling,direct_rd
+Austria,CERN-Beitrag (Austria),2000,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2001,20000000.0,20000000.0,1,2001_Austria.pdf,single,ATS,schilling,direct_rd
+Austria,CERN-Beitrag (Austria),2002,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2003,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2004,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2005,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2006,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2007,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2008,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2009,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2010,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2011,20000000.0,20000000.0,1,2011 Anlagen COO_2026_100_2_642644.pdf,single,EUR,euro,direct_rd
+Austria,CERN-Beitrag (Austria),2012,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2013,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2014,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2015,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2016,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2017,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2018,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2019,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2020,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2021,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2022,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2023,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2024,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2025,,,0,,gap,,,direct_rd
+Austria,CERN-Beitrag (Austria),2026,,,0,,gap,,,direct_rd
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),1988,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),1989,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),1990,5000000.0,5000000.0,1,1990_Austria.pdf,single,ATS,schilling,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),1991,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),1992,150000000.0,150000000.0,1,1992_Austria.pdf,single,ATS,schilling,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),1993,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),1994,50000000.0,50000000.0,1,1994_Austria.pdf,single,ATS,schilling,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),1995,100000000.0,100000000.0,1,1995_Austria.pdf,single,ATS,schilling,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),1996,20000000.0,20000000.0,1,1996_Austria_proposal.pdf,single,ATS,schilling,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),1997,50000000.0,50000000.0,1,1997_Austria_proposal.pdf,single,ATS,schilling,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),1998,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),1999,50000000.0,50000000.0,1,1999_Austria.pdf,single,ATS,schilling,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2000,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2001,15000000.0,15000000.0,1,2001_Austria.pdf,single,ATS,schilling,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2002,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2003,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2004,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2005,50000000.0,50000000.0,1,2005 Anlagen COO_2026_100_2_151164.pdf,single,EUR,euro,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2006,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2007,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2008,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2009,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2010,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2011,20000000.0,20000000.0,1,2011 Anlagen COO_2026_100_2_642644.pdf,single,EUR,euro,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2012,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2013,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2014,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2015,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2016,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2017,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2018,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2019,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2020,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2021,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2022,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2023,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2024,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2025,,,0,,gap,,,science_agency
+Austria,Christian Doppler Forschungsgesellschaft (CD-Labor),2026,,,0,,gap,,,science_agency
+Austria,ESA-Beitrag (Austria),1976,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),1977,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),1978,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),1979,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),1980,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),1981,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),1982,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),1983,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),1984,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),1985,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),1986,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),1988,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),1989,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),1990,1500000.0,1500000.0,1,1990_Austria.pdf,single,ATS,schilling,direct_rd
+Austria,ESA-Beitrag (Austria),1991,70000.0,70000.0,1,1991_Austria_proposal.pdf,single,ATS,schilling,direct_rd
+Austria,ESA-Beitrag (Austria),1992,50000000.0,50000000.0,1,1992_Austria.pdf,single,ATS,schilling,direct_rd
+Austria,ESA-Beitrag (Austria),1993,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),1994,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),1995,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),1996,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),1997,132000000.0,132000000.0,1,1997_Austria_proposal.pdf,single,ATS,schilling,direct_rd
+Austria,ESA-Beitrag (Austria),1998,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),1999,15000000.0,15000000.0,1,1999_Austria.pdf,single,ATS,schilling,direct_rd
+Austria,ESA-Beitrag (Austria),2000,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2001,15000000.0,15000000.0,1,2001_Austria.pdf,single,ATS,schilling,direct_rd
+Austria,ESA-Beitrag (Austria),2002,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2003,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2004,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2005,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2006,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2007,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2008,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2009,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2010,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2011,3000000.0,3000000.0,1,2011 Anlagen COO_2026_100_2_642644.pdf,single,EUR,euro,direct_rd
+Austria,ESA-Beitrag (Austria),2012,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2013,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2014,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2015,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2016,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2017,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2018,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2019,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2020,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2021,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2022,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2023,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2024,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2025,,,0,,gap,,,direct_rd
+Austria,ESA-Beitrag (Austria),2026,,,0,,gap,,,direct_rd
+Austria,FFG (Forschungsfoerderungsgesellschaft),1976,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1977,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1978,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1979,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1980,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1981,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1982,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1983,94795000.0,94795000.0,1,1983_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1984,500000000.0,500000000.0,1,1984_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1985,120000000.0,120000000.0,1,1985_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1986,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1988,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1989,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1990,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1991,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1992,800000000.0,800000000.0,1,1992_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1993,500000000.0,500000000.0,1,1993_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1994,200000000.0,200000000.0,1,1994_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1995,300000000.0,300000000.0,1,1995_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1996,120000000.0,120000000.0,1,1996_Austria_proposal.pdf,single,ATS,schilling,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1997,380000000.0,380000000.0,1,1997_Austria_proposal.pdf,single,ATS,schilling,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1998,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),1999,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2000,530001000.0,530001000.0,1,2000_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2001,560014000.0,560014000.0,1,2001_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2002,40698000.0,40698000.0,1,2002_Austria.pdf,single,EUR,euro,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2003,57998000.0,57998000.0,1,2003_Austria.pdf,single,EUR,euro,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2004,58000000.0,58000000.0,1,2004_Austria.pdf,single,EUR,euro,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2005,15718000.0,15718000.0,1,2005 Anlagen COO_2026_100_2_151164.pdf,single,EUR,euro,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2006,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2007,164190000.0,164190000.0,1,2007 Anlagen COO_2026_100_2_342682.pdf,single,EUR,euro,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2008,110213000.0,110213000.0,1,2008 Anlagen COO_2026_100_2_342695.pdf,single,EUR,euro,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2009,113168000.0,113168000.0,1,2009 Anlagen COO_2026_100_2_539063.pdf,single,EUR,euro,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2010,117513000.0,117513000.0,1,2010 Anlagen COO_2026_100_2_539074.pdf,single,EUR,euro,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2011,96900000.0,96900000.0,1,2011 Anlagen COO_2026_100_2_642644.pdf,single,EUR,euro,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2012,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2013,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2014,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2015,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2016,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2017,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2018,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2019,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2020,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2021,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2022,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2023,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2024,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2025,,,0,,gap,,,science_agency
+Austria,FFG (Forschungsfoerderungsgesellschaft),2026,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1976,500000000.0,500000000.0,1,1976_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1977,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1978,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1979,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1980,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1981,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1982,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1983,430848000.0,430848000.0,1,1983_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1984,201000000.0,201000000.0,1,1984_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1985,200000000.0,200000000.0,1,1985_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1986,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1988,82532000.0,82532000.0,1,1988_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1989,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1990,731285000.0,731285000.0,1,1990_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1991,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1992,2000000.0,2000000.0,1,1992_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1993,2000000.0,2000000.0,1,1993_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1994,300000000.0,300000000.0,1,1994_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1995,500000000.0,500000000.0,1,1995_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1996,475000000.0,475000000.0,1,1996_Austria_proposal.pdf,single,ATS,schilling,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1997,515000000.0,515000000.0,1,1997_Austria_proposal.pdf,single,ATS,schilling,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1998,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),1999,280000000.0,280000000.0,1,1999_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2000,405625000.0,405625000.0,1,2000_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2001,569500000.0,569500000.0,1,2001_Austria.pdf,single,ATS,schilling,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2002,792950000.0,792950000.0,1,2002_Austria.pdf,single,EUR,euro,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2003,43862000.0,43862000.0,1,2003_Austria.pdf,single,EUR,euro,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2004,178686000.0,178686000.0,1,2004_Austria.pdf,single,EUR,euro,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2005,280000000.0,280000000.0,1,2005 Anlagen COO_2026_100_2_151164.pdf,single,EUR,euro,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2006,612261000.0,612261000.0,1,2006 Anlagen COO_2026_100_2_189726.pdf,single,EUR,euro,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2007,235381000.0,235381000.0,1,2007 Anlagen COO_2026_100_2_342682.pdf,single,EUR,euro,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2008,242380000.0,242380000.0,1,2008 Anlagen COO_2026_100_2_342695.pdf,single,EUR,euro,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2009,213332000.0,213332000.0,1,2009 Anlagen COO_2026_100_2_539063.pdf,single,EUR,euro,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2010,217642000.0,217642000.0,1,2010 Anlagen COO_2026_100_2_539074.pdf,single,EUR,euro,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2011,458200000.0,458200000.0,1,2011 Anlagen COO_2026_100_2_642644.pdf,single,EUR,euro,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2012,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2013,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2014,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2015,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2016,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2017,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2018,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2019,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2020,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2021,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2022,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2023,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2024,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2025,,,0,,gap,,,science_agency
+Austria,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),2026,,,0,,gap,,,science_agency
+Austria,IST Austria,2006,,,0,,gap,,,science_agency
+Austria,IST Austria,2007,,,0,,gap,,,science_agency
+Austria,IST Austria,2008,,,0,,gap,,,science_agency
+Austria,IST Austria,2009,,,0,,gap,,,science_agency
+Austria,IST Austria,2010,,,0,,gap,,,science_agency
+Austria,IST Austria,2011,50000000.0,50000000.0,1,2011 Anlagen COO_2026_100_2_642644.pdf,single,EUR,euro,science_agency
+Austria,IST Austria,2012,,,0,,gap,,,science_agency
+Austria,IST Austria,2013,,,0,,gap,,,science_agency
+Austria,IST Austria,2014,,,0,,gap,,,science_agency
+Austria,IST Austria,2015,,,0,,gap,,,science_agency
+Austria,IST Austria,2016,,,0,,gap,,,science_agency
+Austria,IST Austria,2017,,,0,,gap,,,science_agency
+Austria,IST Austria,2018,,,0,,gap,,,science_agency
+Austria,IST Austria,2019,,,0,,gap,,,science_agency
+Austria,IST Austria,2020,,,0,,gap,,,science_agency
+Austria,IST Austria,2021,,,0,,gap,,,science_agency
+Austria,IST Austria,2022,,,0,,gap,,,science_agency
+Austria,IST Austria,2023,,,0,,gap,,,science_agency
+Austria,IST Austria,2024,,,0,,gap,,,science_agency
+Austria,IST Austria,2025,,,0,,gap,,,science_agency
+Austria,IST Austria,2026,,,0,,gap,,,science_agency
+Austria,Johannes Kepler Universitat Linz (JKU),1976,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1977,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1978,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1979,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1980,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1981,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1982,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1983,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1984,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1985,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1986,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1988,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1989,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1990,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1991,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1992,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1993,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1994,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1995,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1996,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1997,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1998,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),1999,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2000,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2001,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2002,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2003,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2004,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2005,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2006,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2007,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2008,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2009,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2010,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2011,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2012,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2013,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2014,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2015,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2016,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2017,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2018,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2019,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2020,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2021,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2022,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2023,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2024,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2025,,,0,,gap,,,higher_education
+Austria,Johannes Kepler Universitat Linz (JKU),2026,,,0,,gap,,,higher_education
+Austria,Ludwig Boltzmann Gesellschaft,1976,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1977,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1978,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1979,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1980,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1981,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1982,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1983,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1984,10000000.0,10000000.0,1,1984_Austria.pdf,single,ATS,schilling,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1985,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1986,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1988,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1989,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1990,10000000.0,10000000.0,1,1990_Austria.pdf,single,ATS,schilling,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1991,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1992,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1993,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1994,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1995,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1996,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1997,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1998,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,1999,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2000,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2001,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2002,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2003,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2004,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2005,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2006,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2007,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2008,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2009,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2010,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2011,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2012,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2013,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2014,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2015,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2016,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2017,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2018,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2019,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2020,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2021,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2022,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2023,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2024,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2025,,,0,,gap,,,science_agency
+Austria,Ludwig Boltzmann Gesellschaft,2026,,,0,,gap,,,science_agency
+Austria,Medizinische Universitat Wien (MedUni),2004,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2005,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2006,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2007,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2008,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2009,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2010,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2011,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2012,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2013,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2014,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2015,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2016,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2017,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2018,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2019,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2020,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2021,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2022,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2023,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2024,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2025,,,0,,gap,,,higher_education
+Austria,Medizinische Universitat Wien (MedUni),2026,,,0,,gap,,,higher_education
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1976,79303000.0,79303000.0,1,1976_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1977,,,0,,gap,,,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1978,84338000.0,84338000.0,1,1978_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1979,112581000.0,112581000.0,1,1979_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1980,104121000.0,104121000.0,1,1980_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1981,94221000.0,94221000.0,1,1981_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1982,127545000.0,127545000.0,1,1982_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1983,430848000.0,430848000.0,1,1983_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1984,71666000.0,71666000.0,1,1984_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1985,50000000.0,50000000.0,1,1985_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1986,189251000.0,189251000.0,1,1986_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1988,47344000.0,47344000.0,1,1988_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1989,147508000.0,147508000.0,1,1989_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1990,199757000.0,199757000.0,1,1990_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1991,238090000.0,238090000.0,1,1991_Austria_proposal.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1992,243090000.0,243090000.0,1,1992_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1993,1500000.0,1500000.0,1,1993_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1994,150000000.0,150000000.0,1,1994_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1995,200000000.0,200000000.0,1,1995_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1996,380499000.0,380499000.0,1,1996_Austria_proposal.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1997,385000000.0,385000000.0,1,1997_Austria_proposal.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1998,405000000.0,405000000.0,1,1998_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),1999,489000000.0,489000000.0,1,1999_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2000,,,0,,gap,,,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2001,50000000.0,50000000.0,1,2001_Austria.pdf,single,ATS,schilling,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2002,222928000.0,222928000.0,1,2002_Austria.pdf,single,EUR,euro,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2003,35310000.0,35310000.0,1,2003_Austria.pdf,single,EUR,euro,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2004,359411000.0,359411000.0,1,2004_Austria.pdf,single,EUR,euro,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2005,25370000.0,25370000.0,1,2005 Anlagen COO_2026_100_2_151164.pdf,single,EUR,euro,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2006,340384000.0,340384000.0,1,2006 Anlagen COO_2026_100_2_189726.pdf,single,EUR,euro,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2007,33225000.0,33225000.0,1,2007 Anlagen COO_2026_100_2_342682.pdf,single,EUR,euro,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2008,33225000.0,33225000.0,1,2008 Anlagen COO_2026_100_2_342695.pdf,single,EUR,euro,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2009,,,0,,gap,,,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2010,339583000.0,339583000.0,1,2010 Anlagen COO_2026_100_2_539074.pdf,single,EUR,euro,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2011,50500000.0,50500000.0,1,2011 Anlagen COO_2026_100_2_642644.pdf,single,EUR,euro,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2012,81519000.0,81519000.0,1,2012 Anlagen COO_2026_100_2_717880.pdf,single,EUR,euro,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2013,,,0,,gap,,,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2014,,,0,,gap,,,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2015,,,0,,gap,,,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2016,,,0,,gap,,,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2017,,,0,,gap,,,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2018,,,0,,gap,,,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2019,,,0,,gap,,,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2020,,,0,,gap,,,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2021,,,0,,gap,,,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2022,,,0,,gap,,,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2023,,,0,,gap,,,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2024,,,0,,gap,,,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2025,,,0,,gap,,,science_agency
+Austria,OAW (Osterreichische Akademie der Wissenschaften),2026,,,0,,gap,,,science_agency
+Austria,Technische Universitat Graz (TU Graz),1976,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1977,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1978,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1979,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1980,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1981,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1982,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1983,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1984,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1985,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1986,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1988,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1989,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1990,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1991,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1992,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1993,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1994,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1995,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1996,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1997,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1998,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),1999,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2000,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2001,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2002,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2003,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2004,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2005,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2006,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2007,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2008,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2009,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2010,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2011,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2012,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2013,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2014,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2015,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2016,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2017,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2018,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2019,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2020,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2021,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2022,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2023,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2024,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2025,,,0,,gap,,,higher_education
+Austria,Technische Universitat Graz (TU Graz),2026,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1976,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1977,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1978,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1979,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1980,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1981,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1982,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1983,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1984,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1985,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1986,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1988,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1989,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1990,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1991,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1992,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1993,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1994,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1995,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1996,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1997,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1998,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),1999,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2000,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2001,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2002,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2003,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2004,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2005,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2006,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2007,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2008,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2009,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2010,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2011,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2012,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2013,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2014,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2015,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2016,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2017,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2018,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2019,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2020,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2021,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2022,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2023,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2024,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2025,,,0,,gap,,,higher_education
+Austria,Technische Universitat Wien (TU Wien),2026,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1976,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1977,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1978,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1979,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1980,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1981,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1982,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1983,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1984,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1985,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1986,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1988,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1989,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1990,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1991,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1992,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1993,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1994,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1995,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1996,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1997,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1998,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),1999,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2000,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2001,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2002,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2003,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2004,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2005,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2006,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2007,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2008,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2009,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2010,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2011,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2012,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2013,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2014,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2015,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2016,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2017,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2018,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2019,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2020,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2021,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2022,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2023,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2024,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2025,,,0,,gap,,,higher_education
+Austria,Universitat Graz (Karl-Franzens),2026,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1976,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1977,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1978,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1979,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1980,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1981,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1982,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1983,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1984,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1985,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1986,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1988,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1989,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1990,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1991,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1992,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1993,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1994,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1995,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1996,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1997,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1998,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,1999,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2000,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2001,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2002,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2003,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2004,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2005,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2006,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2007,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2008,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2009,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2010,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2011,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2012,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2013,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2014,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2015,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2016,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2017,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2018,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2019,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2020,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2021,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2022,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2023,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2024,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2025,,,0,,gap,,,higher_education
+Austria,Universitat Innsbruck,2026,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1976,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1977,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1978,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1979,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1980,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1981,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1982,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1983,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1984,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1985,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1986,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1988,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1989,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1990,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1991,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1992,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1993,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1994,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1995,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1996,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1997,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1998,,,0,,gap,,,higher_education
+Austria,Universitat Wien,1999,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2000,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2001,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2002,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2003,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2004,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2005,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2006,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2007,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2008,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2009,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2010,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2011,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2012,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2013,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2014,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2015,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2016,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2017,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2018,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2019,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2020,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2021,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2022,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2023,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2024,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2025,,,0,,gap,,,higher_education
+Austria,Universitat Wien,2026,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1976,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1977,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1978,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1979,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1980,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1981,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1982,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1983,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1984,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1985,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1986,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1988,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1989,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1990,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1991,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1992,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1993,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1994,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1995,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1996,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1997,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1998,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),1999,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2000,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2001,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2002,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2003,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2004,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2005,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2006,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2007,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2008,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2009,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2010,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2011,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2012,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2013,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2014,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2015,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2016,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2017,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2018,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2019,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2020,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2021,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2022,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2023,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2024,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2025,,,0,,gap,,,higher_education
+Austria,Universitat fur Bodenkultur Wien (BOKU),2026,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),1976,3835051000.0,3835051000.0,1,1976_Austria.pdf,single,ATS,schilling,higher_education
+Austria,Universitaten (collective Austria),1977,4147370000.0,4147370000.0,1,1977_Austria.pdf,single,ATS,schilling,higher_education
+Austria,Universitaten (collective Austria),1978,1398564000.0,1398564000.0,1,1978_Austria.pdf,single,ATS,schilling,higher_education
+Austria,Universitaten (collective Austria),1979,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),1980,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),1981,5193065000.0,5193065000.0,1,1981_Austria.pdf,single,ATS,schilling,higher_education
+Austria,Universitaten (collective Austria),1982,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),1983,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),1984,4226640000.0000005,4226640000.0000005,1,1984_Austria.pdf,single,ATS,schilling,higher_education
+Austria,Universitaten (collective Austria),1985,4663871000.0,4663871000.0,1,1985_Austria.pdf,single,ATS,schilling,higher_education
+Austria,Universitaten (collective Austria),1986,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),1988,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),1989,0.0,0.0,1,1989_Austria.pdf,single,ATS,schilling,higher_education
+Austria,Universitaten (collective Austria),1990,315706000.0,315706000.0,1,1990_Austria.pdf,single,ATS,schilling,higher_education
+Austria,Universitaten (collective Austria),1991,9214284000.0,9214284000.0,1,1991_Austria_proposal.pdf,single,ATS,schilling,higher_education
+Austria,Universitaten (collective Austria),1992,8064768000.0,8064768000.0,1,1992_Austria.pdf,single,ATS,schilling,higher_education
+Austria,Universitaten (collective Austria),1993,8250475000.0,8250475000.0,1,1993_Austria.pdf,single,ATS,schilling,higher_education
+Austria,Universitaten (collective Austria),1994,1266921000.0,1266921000.0,1,1994_Austria.pdf,single,ATS,schilling,higher_education
+Austria,Universitaten (collective Austria),1995,5472853000.0,5472853000.0,1,1995_Austria.pdf,single,ATS,schilling,higher_education
+Austria,Universitaten (collective Austria),1996,9636022000.0,9636022000.0,1,1996_Austria_proposal.pdf,single,ATS,schilling,higher_education
+Austria,Universitaten (collective Austria),1997,9668683000.0,9668683000.0,1,1997_Austria_proposal.pdf,single,ATS,schilling,higher_education
+Austria,Universitaten (collective Austria),1998,1266921000.0,1266921000.0,1,1998_Austria.pdf,single,ATS,schilling,higher_education
+Austria,Universitaten (collective Austria),1999,10788684000.0,10788684000.0,1,1999_Austria.pdf,single,ATS,schilling,higher_education
+Austria,Universitaten (collective Austria),2000,1240535000.0,1240535000.0,1,2000_Austria.pdf,single,ATS,schilling,higher_education
+Austria,Universitaten (collective Austria),2001,21806595000.0,21806595000.0,1,2001_Austria.pdf,single,ATS,schilling,higher_education
+Austria,Universitaten (collective Austria),2002,1605640000.0,1605640000.0,1,2002_Austria.pdf,single,EUR,euro,higher_education
+Austria,Universitaten (collective Austria),2003,144505000.0,144505000.0,1,2003_Austria.pdf,single,EUR,euro,higher_education
+Austria,Universitaten (collective Austria),2004,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2005,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2006,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2007,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2008,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2009,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2010,2756088000.0,2756088000.0,1,2010 Anlagen COO_2026_100_2_539074.pdf,single,EUR,euro,higher_education
+Austria,Universitaten (collective Austria),2011,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2012,605600000.0,605600000.0,1,2012 Anlagen COO_2026_100_2_717880.pdf,single,EUR,euro,higher_education
+Austria,Universitaten (collective Austria),2013,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2014,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2015,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2016,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2017,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2018,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2019,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2020,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2021,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2022,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2023,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2024,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2025,,,0,,gap,,,higher_education
+Austria,Universitaten (collective Austria),2026,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1976,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1977,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1978,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1979,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1980,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1981,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1982,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1983,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1984,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1985,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1986,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1988,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1989,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1990,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1991,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1992,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1993,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1994,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1995,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1996,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1997,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1998,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),1999,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2000,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2001,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2002,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2003,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2004,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2005,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2006,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2007,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2008,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2009,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2010,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2011,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2012,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2013,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2014,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2015,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2016,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2017,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2018,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2019,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2020,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2021,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2022,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2023,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2024,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2025,,,0,,gap,,,higher_education
+Austria,Wirtschaftsuniversitat Wien (WU),2026,,,0,,gap,,,higher_education

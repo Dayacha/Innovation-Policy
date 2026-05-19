@@ -55,6 +55,7 @@ RAW_ROWS_CSV = cfg.OUTPUT_DIR / "raw_rows.csv"
 
 _OUTPUT_UNIT_BY_CURRENCY = {
     "AUD": "dollar",
+    "ATS": "schilling",
     "CAD": "dollar",
     "NZD": "dollar",
     "USD": "dollar",
@@ -64,6 +65,7 @@ _OUTPUT_UNIT_BY_CURRENCY = {
     "EUR": "euro",
     "DEM": "mark",
     "FRF": "franc",
+    "LUF": "franc",
     "GBP": "pound",
     "DKK": "krone",
     "NOK": "krone",
@@ -210,6 +212,11 @@ def _agency_discovery_kwargs(country: str) -> dict:
         # section totals. Requiring recurrence keeps discovery open to new
         # institutions while avoiding token spend on single-year noise.
         return {"min_years": 2}
+    if country == "Portugal":
+        # Portugal extraction surfaces many one-off legal transfers, chapter
+        # aggregates and programme captions. Keep discovery open to real new
+        # entities, but only when they recur and are financially material.
+        return {"min_years": 2, "min_avg_amount": 1_000_000}
     return {}
 
 
@@ -1065,6 +1072,182 @@ def _find_full_text_cache(country: str, source_file: str) -> str:
     return str(matches[0]) if matches else ""
 
 
+def _normalise_trace_search(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", str(text or "").lower()).strip()
+
+
+def _trace_amount_tokens(amount: object) -> list[str]:
+    try:
+        value = int(round(float(amount)))
+    except (TypeError, ValueError):
+        return []
+    if value <= 0:
+        return []
+
+    plain = str(value)
+    dot_grouped = f"{value:,}".replace(",", ".")
+    space_grouped = f"{value:,}".replace(",", " ")
+    compact_space = space_grouped.replace(" ", "")
+    return list(dict.fromkeys([plain, dot_grouped, space_grouped, compact_space]))
+
+
+def _snippet_from_lines(lines: list[str], idx: int, before: int = 3, after: int = 4) -> str:
+    start = max(0, idx - before)
+    end = min(len(lines), idx + after)
+    snippet = [segment.strip() for segment in lines[start:end] if segment.strip()]
+    return " | ".join(snippet)
+
+
+def _turkey_trace_snippet_ok(snippet: str, row: pd.Series) -> bool:
+    snippet_norm = _normalise_trace_search(snippet)
+    if not snippet_norm:
+        return False
+
+    year = pd.to_numeric(pd.Series([row.get("year")]), errors="coerce").iloc[0]
+    canonical_norm = _normalise_trace_search(str(row.get("canonical_name") or ""))
+
+    reject_terms = [
+        "vergi",
+        "istihsal",
+        "akaryakit",
+        "ihale",
+        "bankamiza",
+        "muteahhitlik",
+        "kapali zarf",
+        "universitesine",
+    ]
+    if any(term in snippet_norm for term in reject_terms):
+        return False
+
+    if "=== page" in snippet.lower() and pd.notna(year) and int(year) <= 1982:
+        return False
+
+    positive_terms = [
+        "arastirma",
+        "gelistirme",
+        "nukleer",
+        "atom enerjisi",
+        "tubitak",
+        "bilimler akademisi",
+        "kosgeb",
+        "bilimsel",
+        "teknik",
+    ]
+    has_positive_term = any(term in snippet_norm for term in positive_terms)
+    if has_positive_term:
+        if "taek" in canonical_norm and not any(term in snippet_norm for term in ["taek", "atom enerjisi", "nukleer"]):
+            return False
+        if "tubitak" in canonical_norm and not any(
+            term in snippet_norm for term in ["tubitak", "bilimsel", "teknik", "sanayi arastirma"]
+        ):
+            return False
+        return True
+
+    for key in ["canonical_name", "line_description_en"]:
+        value_norm = _normalise_trace_search(str(row.get(key) or ""))
+        tokens = [tok for tok in value_norm.split() if len(tok) >= 5]
+        if tokens and sum(tok in snippet_norm for tok in tokens) >= 2:
+            return True
+
+    return False
+
+
+def _extract_trace_excerpt(cache_path: str, row: pd.Series) -> str:
+    if not cache_path:
+        return ""
+
+    try:
+        with gzip.open(cache_path, "rt", encoding="utf-8", errors="ignore") as fh:
+            lines = fh.read().splitlines()
+    except OSError:
+        return ""
+
+    page_number = pd.to_numeric(pd.Series([row.get("page_number")]), errors="coerce").iloc[0]
+    page_lines = lines
+    page_scoped = False
+    if pd.notna(page_number):
+        marker = f"=== Page {int(page_number)}.0 |"
+        start_idx = next((idx for idx, line in enumerate(lines) if line.startswith(marker)), None)
+        if start_idx is not None:
+            end_idx = next(
+                (idx for idx in range(start_idx + 1, len(lines)) if lines[idx].startswith("=== Page ")),
+                len(lines),
+            )
+            page_lines = lines[start_idx:end_idx]
+            page_scoped = True
+
+    terms: list[str] = []
+    for key in ["line_description_en", "canonical_name"]:
+        value = str(row.get(key) or "").strip()
+        if value:
+            terms.append(value)
+    line_desc = str(row.get("line_description_en") or "").strip()
+    if line_desc and ":" in line_desc:
+        terms.append(line_desc.split(":", 1)[-1].strip())
+
+    seen: set[str] = set()
+    terms = [term for term in terms if not (term in seen or seen.add(term))]
+
+    amount_tokens = _trace_amount_tokens(row.get("amount_local"))
+    country = str(row.get("country") or "")
+
+    def _accept_snippet(snippet: str) -> bool:
+        if not snippet:
+            return False
+        if country == "Turkey":
+            return _turkey_trace_snippet_ok(snippet, row)
+        return True
+
+    def _search_lines(search_lines: list[str], *, use_amounts: bool) -> str:
+        for term in terms:
+            term_norm = _normalise_trace_search(term)
+            if not term_norm:
+                continue
+            for idx, line in enumerate(search_lines):
+                window = " ".join(segment.strip() for segment in search_lines[idx:idx + 5] if segment.strip())
+                if term.lower() in window.lower() or term_norm in _normalise_trace_search(window):
+                    snippet = _snippet_from_lines(search_lines, idx, before=2, after=6)
+                    if _accept_snippet(snippet):
+                        return snippet
+
+        if use_amounts:
+            for token in amount_tokens:
+                for idx, line in enumerate(search_lines):
+                    if token in line:
+                        snippet = _snippet_from_lines(search_lines, idx, before=6, after=3)
+                        if _accept_snippet(snippet):
+                            return snippet
+
+        return ""
+
+    excerpt = _search_lines(page_lines, use_amounts=True)
+    if excerpt:
+        return excerpt
+
+    if page_lines is not lines:
+        excerpt = _search_lines(lines, use_amounts=True)
+        if excerpt:
+            return excerpt
+
+    if page_scoped:
+        fallback = [segment.strip() for segment in page_lines[:12] if segment.strip()]
+        if fallback:
+            snippet = " | ".join(fallback)
+            if _accept_snippet(snippet):
+                return snippet
+
+    if country == "Turkey":
+        page_label = str(row.get("page_number") or "").strip()
+        desc = str(row.get("line_description_en") or "").strip()
+        amount = str(row.get("amount_local") or "").strip()
+        currency = str(row.get("currency") or "").strip()
+        anchor_parts = [part for part in [f"page {page_label}" if page_label else "", desc, amount, currency] if part]
+        if anchor_parts:
+            return "[anchor] " + " | ".join(anchor_parts)
+
+    return ""
+
+
 def _build_series_traceability(series_df: pd.DataFrame, country: str) -> pd.DataFrame:
     if series_df.empty:
         return pd.DataFrame()
@@ -1077,7 +1260,12 @@ def _build_series_traceability(series_df: pd.DataFrame, country: str) -> pd.Data
     out["traceability_status"] = out["item_type"].fillna("").map(
         lambda s: "verified_against_original_file" if str(s) == "verified_override" else "covered_by_final_series"
     )
-    out["trace_excerpt"] = pd.NA
+    out["trace_excerpt"] = out.apply(
+        lambda row: _extract_trace_excerpt(str(row.get("full_text_cache") or ""), row)
+        if str(row.get("full_text_cache") or "").strip()
+        else "",
+        axis=1,
+    )
 
     preferred_cols = [
         "year",
@@ -1119,6 +1307,14 @@ def _build_source_traceability(series_df: pd.DataFrame, country: str) -> pd.Data
             "2014 u2013101.pdf": "Manual source audit: this is the ZIPRS1415 budget-execution law text for 2014-2015. It does not contain the national budget annex tables needed for traceable agency/programme appropriations.",
             "2014.pdf": "Manual source audit: available file is an Uradni list legal/gazette wrapper, not the numeric state-budget annex. Re-running extraction on the same PDF is unlikely to recover defendable R&D appropriations.",
         },
+        "Turkey": {
+            "2006 GenelFaaliyetRaporu_2006.pdf": "Manual source audit: annual activity report. Uses execution / realization tables rather than budget-law appropriations, so it is excluded from the final budget series for comparability.",
+            "2007 GenelFaaliyetRaporu_2007.pdf": "Manual source audit: annual activity report. Uses execution / realization tables rather than budget-law appropriations, so it is excluded from the final budget series for comparability.",
+            "2008 GenelFaaliyetRaporu_2008.pdf": "Manual source audit: annual activity report. Uses execution / realization tables rather than budget-law appropriations, so it is excluded from the final budget series for comparability.",
+            "2009 GenelFaaliyetRaporu_2009.pdf": "Manual source audit: annual activity report. Page 110 explicitly states '(Bin TL)' and reports initial / year-end / realization values, not a clean budget appropriation row.",
+            "2008 2008-Merkezi-Yonetim-Kesin-Hesabi-.pdf": "Manual source audit: final-account / closing-account source, not a budget-law appropriation source. Excluded from the final Turkey budget panel to avoid mixing budget and execution concepts.",
+            "2009-Merkezi-Yönetim-Kesin-Hesabı-compressed.pdf": "Manual source audit: final-account / closing-account source, not a budget-law appropriation source. Excluded from the final Turkey budget panel to avoid mixing budget and execution concepts.",
+        },
     }.get(country, {})
 
     rows = []
@@ -1145,7 +1341,7 @@ def _build_source_traceability(series_df: pd.DataFrame, country: str) -> pd.Data
                 "full_text_cache": _find_full_text_cache(country, source_file),
                 "selected_rows": int(len(subset)),
                 "selected_canonicals": " | ".join(subset["canonical_name"].astype(str).tolist()) if not subset.empty else "",
-                "selected_pages": " | ".join(subset["page_number"].astype(str).tolist()) if not subset.empty else "",
+                "selected_pages": " | ".join(map(str, subset["page_number"].tolist())) if not subset.empty else "",
                 "selected_line_descriptions": " | ".join(subset["line_description_en"].fillna("").astype(str).tolist()) if not subset.empty else "",
                 "selected_amounts": " | ".join(subset["amount_local"].astype(str).tolist()) if not subset.empty else "",
                 "traceability_status": traceability_status,
@@ -1262,6 +1458,8 @@ def _output_unit_for_country(country: str) -> str:
     if country == "Canada":
         return "dollar"
     if country == "Colombia":
+        return "unit"
+    if country == "Luxembourg":
         return "unit"
     return "thousand"
 
@@ -1846,6 +2044,14 @@ def _load_pipeline_results(
         # "באלפי שקלים חדשים" / "thousands of new shekels".
         df.loc[year_num.between(1975, 1979, inclusive="both"), "unit"] = "unit"
 
+    # Apply the same country cleaner used by pipeline postprocess so compile can
+    # safely consume root results.csv without requiring a separate cleaner pass.
+    try:
+        from budget.cleaners import apply_country_cleaner
+        df = apply_country_cleaner(df, country=country)
+    except Exception as exc:
+        logger.warning(f"[{country}] Country cleaner failed during compile ingest: {exc}")
+
     # Keep only include/review rows (skip rows were explicitly rejected)
     df = df[df["decision"].isin(["include", "review"])].copy()
 
@@ -2312,6 +2518,7 @@ def compile_country(
         "Norway", "Denmark",                           # text-cache exists but LLM wins
         "Estonia",                                     # text-cache parse is materially weaker than pipeline output
         "Belgium",                                     # text-cache/docx path is materially weaker than pipeline output
+        "Austria",                                     # docx/text-cache path reintroduces KPI/summary artefacts; cleaned pipeline rows are the safer compile seed
         "Czech Republic",                              # local parser latches onto noisy annex/legal artefacts; pipeline output retains the useful agency/RDI rows
         "Latvia",                                      # local parser collapses to sparse DOCX rows; pipeline output preserves the richer science programme tables
         "Iceland",                                     # text-cache parse is noisy; pipeline output preserves institution lines
@@ -2342,7 +2549,9 @@ def compile_country(
                 results_df = _apply_korea_audited_pipeline_repairs(results_df)
             existing_country_df = _load_country_results_snapshot(country_results_csv, year_range)
             chosen_label = "root results.csv"
-            if not existing_country_df.empty:
+            if not existing_country_df.empty and country != "Luxembourg":
+                pipeline_mtime = pipeline_csv.stat().st_mtime if pipeline_csv.exists() else -1.0
+                existing_mtime = country_results_csv.stat().st_mtime if country_results_csv.exists() else -1.0
                 pipeline_score = (
                     int(pipeline_df["year"].nunique()) if not pipeline_df.empty else 0,
                     int(pipeline_df["year"].max()) if not pipeline_df.empty else -1,
@@ -2353,13 +2562,18 @@ def compile_country(
                     int(existing_country_df["year"].max()),
                     len(existing_country_df),
                 )
-                if pipeline_df.empty or existing_score > pipeline_score:
+                if pipeline_df.empty or (existing_score > pipeline_score and existing_mtime >= pipeline_mtime):
                     logger.info(
                         f"[{country}] Reusing richer country-local results snapshot "
                         f"({country_results_csv.name}) instead of shared results.csv"
                     )
                     pipeline_df = existing_country_df
                     chosen_label = country_results_csv.name
+                elif existing_score > pipeline_score and existing_mtime < pipeline_mtime:
+                    logger.info(
+                        f"[{country}] Ignoring stale country-local results snapshot "
+                        f"({country_results_csv.name}); shared results.csv is newer"
+                    )
 
             results_df = pipeline_df
             logger.info(f"[{country}] Seeded compile from {chosen_label}")

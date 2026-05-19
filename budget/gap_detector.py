@@ -125,6 +125,7 @@ _VERIFIED_TEMPORAL_OUTLIERS = {
     # 2025 u2024104.pdf page 55 explicitly lists "Delovanje ARIS" = 9,430,012
     # EUR for the current-year column. It is a real step-up in the audited
     # agency operating appropriation, not a year-confusion artefact.
+    ("Slovenia", "ARRS — Agencija za raziskovalno dejavnost Republike Slovenije", 2024),
     ("Slovenia", "ARRS — Agencija za raziskovalno dejavnost Republike Slovenije", 2025),
 }
 _SKIP_EXPECTED_YEARS = {

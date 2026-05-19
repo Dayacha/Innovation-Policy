@@ -1,0 +1,25 @@
+country,year,canonical_name,category,gap_type,gap_subtype,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,series_currency,prev_amount,next_amount
+Turkey,1975,TÜBİTAK (Turkey),science_agency,ok,,,,,,none,2000000000.0,TRL,,23600000.0
+Turkey,1978,TÜBİTAK (Turkey),science_agency,ok,,,,,,none,23600000.0,TRL,2000000000.0,1121834000.0
+Turkey,1982,TÜBİTAK (Turkey),science_agency,ok,,,,,,none,1121834000.0,TRL,23600000.0,965158000.0
+Turkey,2006,TÜBİTAK (Turkey),science_agency,ok,,,,,,none,965158000.0,YTL,1121834000.0,938335000.0
+Turkey,2007,TÜBİTAK (Turkey),science_agency,ok,,,,,,none,938335000.0,YTL,965158000.0,1005923000.0
+Turkey,2008,TÜBİTAK (Turkey),science_agency,ok,,,,,,none,1005923000.0,YTL,938335000.0,1127085000.0
+Turkey,2009,TÜBİTAK (Turkey),science_agency,ok,,,,,,none,1127085000.0,TRY,1005923000.0,
+Turkey,2006,TÜBA (Turkey),science_agency,ok,,,,,,none,4641000.0,YTL,,6275000.0
+Turkey,2007,TÜBA (Turkey),science_agency,ok,,,,,,none,6275000.0,YTL,4641000.0,6575000.0
+Turkey,2008,TÜBA (Turkey),science_agency,ok,,,,,,none,6575000.0,YTL,6275000.0,7997000.0
+Turkey,2009,TÜBA (Turkey),science_agency,ok,,,,,,none,7997000.0,TRY,6575000.0,
+Turkey,1975,TAEK — Türkiye Atom Enerjisi Kurumu (Turkey),science_agency,ok,,,,,,none,1500000000.0,TRL,,97971800.0
+Turkey,1976,TAEK — Türkiye Atom Enerjisi Kurumu (Turkey),science_agency,ok,,,,,,none,97971800.0,TRL,1500000000.0,143281500.0
+Turkey,1977,TAEK — Türkiye Atom Enerjisi Kurumu (Turkey),science_agency,ok,,,,,,none,143281500.0,TRL,97971800.0,15000000.0
+Turkey,1978,TAEK — Türkiye Atom Enerjisi Kurumu (Turkey),science_agency,ok,,,,,,none,15000000.0,TRL,143281500.0,5000000000.0
+Turkey,1982,TAEK — Türkiye Atom Enerjisi Kurumu (Turkey),science_agency,ok,,,,,,none,5000000000.0,TRL,15000000.0,50050000.0
+Turkey,2006,TAEK — Türkiye Atom Enerjisi Kurumu (Turkey),science_agency,ok,,,,,,none,50050000.0,YTL,5000000000.0,65075000.0
+Turkey,2007,TAEK — Türkiye Atom Enerjisi Kurumu (Turkey),science_agency,ok,,,,,,none,65075000.0,YTL,50050000.0,65139000.0
+Turkey,2008,TAEK — Türkiye Atom Enerjisi Kurumu (Turkey),science_agency,ok,,,,,,none,65139000.0,YTL,65075000.0,82169000.0
+Turkey,2009,TAEK — Türkiye Atom Enerjisi Kurumu (Turkey),science_agency,ok,,,,,,none,82169000.0,TRY,65139000.0,
+Turkey,2006,KOSGEB (Turkey),innovation_instruments,ok,,,,,,none,209890000.0,YTL,,221968000.0
+Turkey,2007,KOSGEB (Turkey),innovation_instruments,ok,,,,,,none,221968000.0,YTL,209890000.0,222368000.0
+Turkey,2008,KOSGEB (Turkey),innovation_instruments,ok,,,,,,none,222368000.0,YTL,221968000.0,329330000.0
+Turkey,2009,KOSGEB (Turkey),innovation_instruments,ok,,,,,,none,329330000.0,TRY,222368000.0,

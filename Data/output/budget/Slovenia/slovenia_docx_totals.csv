@@ -1,14 +1,14 @@
 country,canonical_name,year,amount_total,amount_primary,n_acts,acts,additive_flag,currency,unit,category
-Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2004,,,0,,gap,,,science_agency
-Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2005,,,0,,gap,,,science_agency
-Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2006,,,0,,gap,,,science_agency
-Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2007,,,0,,gap,,,science_agency
-Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2008,,,0,,gap,,,science_agency
-Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2009,,,0,,gap,,,science_agency
+Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2004,300486000.0,300486000.0,1,2004 u2003130.pdf,single,SIT,unit,science_agency
+Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2005,309349000.0,309349000.0,1,2004 u2003130.pdf,single,SIT,unit,science_agency
+Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2006,644689000.0,644689000.0,1,2006 2007 u2005116.pdf,single,SIT,unit,science_agency
+Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2007,2735000.0,2735000.0,1,2007 RS_-2005-116-05136-OB~P002-0000.pdf,single,EUR,unit,science_agency
+Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2008,3232602.0,3232602.0,1,2008 2009.pdf,single,EUR,unit,science_agency
+Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2009,3300902.0,3300902.0,1,2009 RS_-2007-114-05699-OB~P002-0000.pdf,single,EUR,unit,science_agency
 Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2010,,,0,,gap,,,science_agency
 Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2011,3198652.0,3198652.0,1,2011 2012 u2010096.pdf,single,EUR,unit,science_agency
 Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2012,3198652.0,3198652.0,1,2012 RS_-2010-096-05013-OB~P003-0000.pdf,single,EUR,unit,science_agency
-Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2013,,,0,,gap,,,science_agency
+Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2013,2700000.0,2700000.0,1,2013 u2012104.pdf,single,EUR,unit,science_agency
 Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2015,2700000.0,2700000.0,1,2015 RS_-2013-102-03719-OB~P003-0000.pdf,single,EUR,unit,science_agency
 Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2016,2959267.0,2959267.0,1,2016 u2015096.pdf,single,EUR,unit,science_agency
 Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2017,2970469.0,2970469.0,1,2017 u2016080.pdf,single,EUR,unit,science_agency
@@ -20,6 +20,11 @@ Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2022,45
 Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2023,5629258.0,5629258.0,1,2023 u2022150.pdf,single,EUR,unit,science_agency
 Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2024,6935000.0,6935000.0,1,2024 u2023123.pdf,single,EUR,unit,science_agency
 Slovenia,ARRS — Agencija za raziskovalno dejavnost Republike Slovenije,2025,9430012.0,9430012.0,1,2025 u2024104.pdf,single,EUR,unit,science_agency
+Slovenia,Development of Research and Innovation Capacities,2024,121043968.0,121043968.0,1,2024 u2023123.pdf,single,EUR,unit,innovation_instruments
+Slovenia,Development of Research and Innovation Capacities,2025,53477326.0,53477326.0,1,2025 u2024104.pdf,single,EUR,unit,innovation_instruments
+Slovenia,European Space Agency Programs,2023,5400000.0,5400000.0,1,2023 u2022150.pdf,single,EUR,unit,direct_rd
+Slovenia,European Space Agency Programs,2024,6300000.0,6300000.0,1,2024 u2023123.pdf,single,EUR,unit,direct_rd
+Slovenia,European Space Agency Programs,2025,7361400.0,7361400.0,1,2025 u2024104.pdf,single,EUR,unit,direct_rd
 Slovenia,Programme 0502 — Znanstveno raziskovalna dejavnost,1995,,,0,,gap,,,direct_rd
 Slovenia,Programme 0502 — Znanstveno raziskovalna dejavnost,1996,,,0,,gap,,,direct_rd
 Slovenia,Programme 0502 — Znanstveno raziskovalna dejavnost,1997,,,0,,gap,,,direct_rd
@@ -78,12 +83,12 @@ Slovenia,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znano
 Slovenia,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,2021,210000.0,210000.0,1,2021 u2020174.pdf,single,EUR,unit,direct_rd
 Slovenia,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,2022,310000.0,310000.0,1,2022 u2021187.pdf,single,EUR,unit,direct_rd
 Slovenia,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,2023,350000.0,350000.0,1,2023 u2022150.pdf,single,EUR,unit,direct_rd
-Slovenia,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,2024,,,0,,gap,,,direct_rd
+Slovenia,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,2024,390000.0,390000.0,1,2024 u2023123.pdf,single,EUR,unit,direct_rd
 Slovenia,Programme 0503 — Mladi raziskovalci / Človeški viri v podporo znanosti,2025,,,0,,gap,,,direct_rd
 Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,1992,77763150.0,77763150.0,1,1992 u1992016.pdf,single,SIT,unit,science_agency
-Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,1993,,,0,,gap,,,science_agency
+Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,1993,180586876.0,180586876.0,1,1993 u1993022.pdf,single,SIT,unit,science_agency
 Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,1994,195214000.0,195214000.0,1,1994 u1994026.pdf,single,SIT,unit,science_agency
-Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,1995,,,0,,gap,,,science_agency
+Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,1995,447163000.0,447163000.0,1,1995 u1995040.pdf,single,SIT,unit,science_agency
 Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,1996,492970000.0,492970000.0,1,1996 u1996005.pdf,single,SIT,unit,science_agency
 Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,1997,459528000.0,459528000.0,1,1997 u1997078.pdf,single,SIT,unit,science_agency
 Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,1998,625146000.0,625146000.0,1,1998 u1998034.pdf,single,SIT,unit,science_agency
@@ -92,19 +97,19 @@ Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2000,687310000.0,687
 Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2001,665229000.0,665229000.0,1,2001 u2001032.pdf,single,SIT,unit,science_agency
 Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2002,770612000.0,770612000.0,1,2002 u2001103.pdf,single,SIT,unit,science_agency
 Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2003,767787000.0,767787000.0,1,2003 u2002118.pdf,single,SIT,unit,science_agency
-Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2004,,,0,,gap,,,science_agency
+Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2004,859147000.0,859147000.0,1,2004 u2003130.pdf,single,SIT,unit,science_agency
 Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2005,929948000.0,929948000.0,1,2005 RS_-2003-130-05511-OB~P001-0000.pdf,single,SIT,unit,science_agency
-Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2006,,,0,,gap,,,science_agency
+Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2006,941790000.0,941790000.0,1,2006 2007 u2005116.pdf,single,SIT,unit,science_agency
 Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2007,3964000.0,3964000.0,1,2007 RS_-2005-116-05136-OB~P002-0000.pdf,single,EUR,unit,science_agency
-Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2008,,,0,,gap,,,science_agency
-Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2009,,,0,,gap,,,science_agency
+Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2008,3898134.0,3898134.0,1,2008 2009.pdf,single,EUR,unit,science_agency
+Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2009,3898708.0,3898708.0,1,2009 RS_-2007-114-05699-OB~P002-0000.pdf,single,EUR,unit,science_agency
 Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2010,4201406.0,4201406.0,1,2010 u2009099.pdf,single,EUR,unit,science_agency
 Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2011,,,0,,gap,,,science_agency
 Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2012,,,0,,gap,,,science_agency
-Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2013,,,0,,gap,,,science_agency
+Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2013,3543692.0,3543692.0,1,2013 u2012104.pdf,single,EUR,unit,science_agency
 Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2015,3300044.0,3300044.0,1,2015 RS_-2013-102-03719-OB~P002-0000.pdf,single,EUR,unit,science_agency
-Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2016,,,0,,gap,,,science_agency
-Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2017,,,0,,gap,,,science_agency
+Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2016,2818969.0,2818969.0,1,2016 u2015096.pdf,single,EUR,unit,science_agency
+Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2017,2883932.0,2883932.0,1,2017 u2016080.pdf,single,EUR,unit,science_agency
 Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2018,2989899.0,2989899.0,1,2018 2019 u2017071.pdf,single,EUR,unit,science_agency
 Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2019,3080248.0,3080248.0,1,2019 RS_-2017-071-03414-OB~P002-0000.pdf,single,EUR,unit,science_agency
 Slovenia,SAZU — Slovenska akademija znanosti in umetnosti,2020,3678427.0,3678427.0,1,2020 u2019075.pdf,single,EUR,unit,science_agency

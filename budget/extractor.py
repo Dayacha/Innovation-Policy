@@ -75,6 +75,35 @@ def _save_chunk_cache(cache_dir: Path, key: str, data: dict) -> None:
 _SCAN_BATCH_SIZE = 8
 
 
+def _scan_batch(
+    batch: list[PageText],
+    client: BudgetLLMClient,
+    country: str,
+    year: int,
+    doc_hint: str,
+    cache_dir: Optional[Path],
+    source_file: str,
+) -> dict:
+    page_pairs = [(str(pg.page_num), pg.text) for pg in batch]
+    user_prompt = build_batch_scan_user_prompt(page_pairs, country, year, doc_hint)
+    cache_key = _chunk_cache_key(source_file + "_scan", user_prompt)
+    cached = _load_chunk_cache(cache_dir, cache_key) if cache_dir else None
+
+    if cached is not None:
+        logger.debug(f"Scan cache hit: {cache_key[:8]}…")
+        return cached
+
+    result = client.call_json(
+        system_prompt=BATCH_SCAN_SYSTEM_PROMPT,
+        user_prompt=user_prompt,
+        max_tokens=1024,
+        operation=BudgetLLMClient.OP_SCAN,
+    )
+    if cache_dir:
+        _save_chunk_cache(cache_dir, cache_key, result)
+    return result
+
+
 def scan_pages(
     pages: list[PageText],
     client: BudgetLLMClient,
@@ -105,30 +134,44 @@ def scan_pages(
 
     try:
         for batch in batches:
-            page_pairs = [(str(pg.page_num), pg.text) for pg in batch]
-            user_prompt = build_batch_scan_user_prompt(page_pairs, country, year, doc_hint)
-
-            # Cache check
-            cache_key = _chunk_cache_key(source_file + "_scan", user_prompt)
-            cached = _load_chunk_cache(cache_dir, cache_key) if cache_dir else None
-
-            if cached is not None:
-                result = cached
-                logger.debug(f"Scan cache hit: {cache_key[:8]}…")
-            else:
-                result = client.call_json(
-                    system_prompt=BATCH_SCAN_SYSTEM_PROMPT,
-                    user_prompt=user_prompt,
-                    max_tokens=1024,   # 512 was too small — 8 pages × ~80 tokens/entry
-                    operation=BudgetLLMClient.OP_SCAN,
-                )
-                if cache_dir:
-                    _save_chunk_cache(cache_dir, cache_key, result)
+            result = _scan_batch(
+                batch=batch,
+                client=client,
+                country=country,
+                year=year,
+                doc_hint=doc_hint,
+                cache_dir=cache_dir,
+                source_file=source_file,
+            )
 
             if "_parse_error" in result:
                 logger.warning(f"Scan JSON parse error for batch starting p{batch[0].page_num}: {result.get('_parse_error')}")
-                # If scan fails, include the whole batch (safe default)
-                relevant.extend(batch)
+                # Retry page-by-page so one malformed batch does not force an
+                # entire block of irrelevant legal text into extraction.
+                for pg in batch:
+                    page_result = _scan_batch(
+                        batch=[pg],
+                        client=client,
+                        country=country,
+                        year=year,
+                        doc_hint=doc_hint,
+                        cache_dir=cache_dir,
+                        source_file=source_file,
+                    )
+                    if "_parse_error" in page_result:
+                        logger.warning(
+                            f"Scan JSON parse error on single page p{pg.page_num}: "
+                            f"{page_result.get('_parse_error')}"
+                        )
+                        continue
+                    entry = next(
+                        (item for item in page_result.get("pages", []) if str(item.get("page_id", "")) == str(pg.page_num)),
+                        None,
+                    )
+                    if not entry:
+                        continue
+                    if entry.get("relevant", False) and float(entry.get("confidence", 0.0)) >= threshold:
+                        relevant.append(pg)
                 continue
 
             # Build lookup: page_id → confidence

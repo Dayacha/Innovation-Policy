@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 import sys
 from pathlib import Path
 from typing import Optional
@@ -25,6 +26,9 @@ from reforms.llm_client import LLMClient as _BaseLLMClient, PRICING  # noqa: E40
 logger = logging.getLogger(__name__)
 
 __all__ = ["BudgetLLMClient", "PRICING"]
+
+
+_TRAILING_COMMA_RE = re.compile(r",\s*([}\]])")
 
 
 class BudgetLLMClient(_BaseLLMClient):
@@ -62,19 +66,93 @@ class BudgetLLMClient(_BaseLLMClient):
             # Drop first line (```json) and last line (```)
             text = "\n".join(lines[1:-1] if lines[-1].strip() == "```" else lines[1:])
 
+        parsed = self._parse_json_lenient(text)
+        if parsed is not None:
+            return parsed
+
         try:
-            return json.loads(text)
+            json.loads(text)
         except json.JSONDecodeError as e:
-            # Try to salvage: find the first { and last }
-            start = text.find("{")
-            end = text.rfind("}")
-            if start != -1 and end != -1 and end > start:
-                try:
-                    return json.loads(text[start : end + 1])
-                except json.JSONDecodeError:
-                    pass
             logger.warning(f"JSON parse failed ({e}). Raw response (first 500 chars): {text[:500]}")
             return {"items": [], "_parse_error": str(e), "_raw": text[:1000]}
+        return {"items": [], "_parse_error": "Unknown JSON parse failure", "_raw": text[:1000]}
+
+    @staticmethod
+    def _parse_json_lenient(text: str) -> Optional[dict]:
+        """Best-effort parser for near-valid JSON emitted by the model."""
+        candidates: list[str] = [text]
+
+        start = text.find("{")
+        if start != -1:
+            candidates.append(text[start:])
+        end = text.rfind("}")
+        if start != -1 and end != -1 and end > start:
+            candidates.append(text[start : end + 1])
+
+        # Some scan responses fail due to a single trailing comma or a missing
+        # closing bracket/brace near the end. Clean those before giving up.
+        for candidate in list(candidates):
+            cleaned = _TRAILING_COMMA_RE.sub(r"\1", candidate).strip()
+            if cleaned != candidate:
+                candidates.append(cleaned)
+            balanced = BudgetLLMClient._balance_json_candidate(cleaned)
+            if balanced != cleaned:
+                candidates.append(balanced)
+
+        decoder = json.JSONDecoder()
+        for candidate in candidates:
+            if not candidate:
+                continue
+            try:
+                parsed = json.loads(candidate)
+                if isinstance(parsed, dict):
+                    return parsed
+            except json.JSONDecodeError:
+                pass
+
+            try:
+                parsed, end_idx = decoder.raw_decode(candidate)
+                trailing = candidate[end_idx:].strip()
+                if isinstance(parsed, dict) and not trailing:
+                    return parsed
+            except json.JSONDecodeError:
+                continue
+
+        return None
+
+    @staticmethod
+    def _balance_json_candidate(text: str) -> str:
+        """Append missing JSON closers when the payload is truncated at the end."""
+        stack: list[str] = []
+        in_string = False
+        escaped = False
+
+        for ch in text:
+            if in_string:
+                if escaped:
+                    escaped = False
+                elif ch == "\\":
+                    escaped = True
+                elif ch == '"':
+                    in_string = False
+                continue
+
+            if ch == '"':
+                in_string = True
+            elif ch in "{[":
+                stack.append(ch)
+            elif ch == "}" and stack and stack[-1] == "{":
+                stack.pop()
+            elif ch == "]" and stack and stack[-1] == "[":
+                stack.pop()
+
+        if in_string:
+            text += '"'
+        if not stack:
+            return text
+
+        closers = "".join("}" if opener == "{" else "]" for opener in reversed(stack))
+        return text + closers
 
     @classmethod
     def from_config(cls, config: dict, usage_file: Optional[Path] = None) -> "BudgetLLMClient":

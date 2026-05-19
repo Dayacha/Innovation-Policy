@@ -791,9 +791,9 @@ COUNTRY_CONTEXT: dict[str, dict] = {
             "UG 33 = Wirtschaft (FFG, AWS, AIT). "
             "UG 34 = Verkehr, Innovation und Technologie (BMVIT — mixed). "
             "Within each UG: Globalbudgets (GB) then Detailbudgets (DB) with individual line items. "
-            "UNITS: amounts in Tausend ATS (pre-2002) or Tausend EUR (2002+). "
+            "UNITS: amounts in Millionen Schilling (pre-2002) or Millionen Euro (2002+). "
             "Austrian number format: '.' = thousands separator, ',' = decimal. "
-            "'280.000' = 280,000 thousand (= 280 million EUR). "
+            "'280,000' = 280.000 million. '7.321,280' = 7,321.280 million. "
             "UNIVERSITY FUNDING: Post-2002, universities receive a Globalbudget (block grant) "
             "via Leistungsvereinbarungen (performance agreements). "
             "The state budget shows only the total grant — not split into research vs teaching. "
@@ -1782,6 +1782,10 @@ COUNTRY_CONTEXT: dict[str, dict] = {
             "1 EUR = 200.482 PTE (fixed rate from 1 January 1999). "
             "(2) 2002+: Euro (€). Amounts are in FULL EUROS (unit='unit'). "
             "FCT budget in 2005 was approx. €282 million (full euros). "
+            "For 2007+ Portugal, the most reliable FCT observations usually come from "
+            "MAPA V / MAPA VII annual services-and-funds tables where the row is simply "
+            "'FUNDAÇÃO PARA A CIÊNCIA E TECNOLOGIA, I.P.' with a single annual amount. "
+            "Do NOT treat plurianual project schedules, PIDDAC project tables, or legal transfer articles as the institutional budget total. "
             "ALWAYS confirm the unit from the table header or first budgetary article."
         ),
         "known_agencies": [
