@@ -2,8 +2,8 @@ country,canonical_name,year,amount_total,amount_primary,n_acts,acts,additive_fla
 Latvia,Fundamental Scientific Research (Latvia),1996,5687898.0,5687898.0,1,likumi_lv_305652_21.11.1996__lv.pdf,single,LVL,unit,direct_rd
 Latvia,Fundamental Scientific Research (Latvia),2000,5000000.0,5000000.0,1,likumi_lv_305669_18.11.2000__lv.pdf,single,LVL,unit,direct_rd
 Latvia,Fundamental Scientific Research (Latvia),2006,2000000.0,2000000.0,1,likumi_lv_121006_09.11.2006__lv.pdf,single,LVL,unit,direct_rd
-Latvia,Latvian Academy of Sciences,1992,13500.0,13500.0,1,likumi_lv_74144_11.07.1992__lv.pdf,single,RUB,thousand,science_agency
-Latvia,Latvian Academy of Sciences,1993,19400.0,19400.0,1,likumi_lv_60011_21.04.1993__lv.pdf,single,RUB,thousand,science_agency
+Latvia,Latvian Academy of Sciences,1992,13500000.0,13500000.0,1,likumi_lv_74144_11.07.1992__lv.pdf,single,RUB,ruble,science_agency
+Latvia,Latvian Academy of Sciences,1993,19400000.0,19400000.0,1,likumi_lv_60011_21.04.1993__lv.pdf,single,RUB,ruble,science_agency
 Latvia,Science Base Funding (Latvia),1997,6731662.0,6731662.0,1,likumi_lv_305681_12.12.1997__lv.pdf,single,LVL,unit,science_agency
 Latvia,Science Base Funding (Latvia),1999,7415859.0,7415859.0,1,likumi_lv_22778_03.11.1999__lv.pdf,single,LVL,unit,science_agency
 Latvia,Science Base Funding (Latvia),2000,6700000.0,6700000.0,1,likumi_lv_305669_18.11.2000__lv.pdf,single,LVL,unit,science_agency
@@ -11,15 +11,15 @@ Latvia,Science Base Funding (Latvia),2001,7646507.0,7646507.0,1,likumi_lv_13735_
 Latvia,Science Base Funding (Latvia),2003,7930511.0,7930511.0,1,2003 likumi_lv_72288_27.11.2003__lv.pdf,single,LVL,unit,science_agency
 Latvia,Science Base Funding (Latvia),2006,4625554.0,4625554.0,1,likumi_lv_121006_09.11.2006__lv.pdf,single,LVL,unit,science_agency
 Latvia,Science Base Funding (Latvia),2009,8482229.0,8482229.0,1,likumi_lv_184709_01.07.2009__lv.pdf,single,LVL,unit,science_agency
-Latvia,Science Programme (Latvia),1992,274155.0,274155.0,1,likumi_lv_74144_11.07.1992__lv.pdf,single,RUB,thousand,rd_ministry
-Latvia,Science Programme (Latvia),1993,638528.0,638528.0,1,likumi_lv_60011_21.04.1993__lv.pdf,single,RUB,thousand,rd_ministry
+Latvia,Science Programme (Latvia),1992,274155000.0,274155000.0,1,likumi_lv_74144_11.07.1992__lv.pdf,single,RUB,ruble,rd_ministry
+Latvia,Science Programme (Latvia),1993,638528000.0,638528000.0,1,likumi_lv_60011_21.04.1993__lv.pdf,single,RUB,ruble,rd_ministry
 Latvia,Science Programme (Latvia),1995,5718864.0,5718864.0,1,likumi_lv_58940_20.12.1995__lv.pdf,single,LVL,unit,rd_ministry
 Latvia,Science Programme (Latvia),1996,7321512.0,7321512.0,1,likumi_lv_305652_21.11.1996__lv.pdf,single,LVL,unit,rd_ministry
 Latvia,Science Programme (Latvia),1998,8755763.0,8755763.0,1,likumi_lv_305566_23.12.1998__lv.pdf,single,LVL,unit,rd_ministry
 Latvia,Science Programme (Latvia),1999,9262103.0,9262103.0,1,likumi_lv_22778_03.11.1999__lv.pdf,single,LVL,unit,rd_ministry
 Latvia,Science Programme (Latvia),2000,10135464.0,10135464.0,1,likumi_lv_305669_18.11.2000__lv.pdf,single,LVL,unit,rd_ministry
 Latvia,Science Programme (Latvia),2001,11405638.0,11405638.0,1,likumi_lv_13735_07.07.2001__lv.pdf,single,LVL,unit,rd_ministry
-Latvia,Science Programme (Latvia),2003,11688764.0,11688764.0,1,2003 likumi_lv_72288_27.11.2003__lv.pdf,single,LVL,unit,rd_ministry
+Latvia,Science Programme (Latvia),2003,3180065.0,3180065.0,1,2003 BUDZETS.DOC,single,LVL,unit,rd_ministry
 Latvia,Science Programme (Latvia),2006,8544825.0,8544825.0,1,likumi_lv_121006_09.11.2006__lv.pdf,single,LVL,unit,rd_ministry
 Latvia,State Research Programmes (Latvia),2009,6034377.0,6034377.0,1,likumi_lv_184709_01.07.2009__lv.pdf,single,LVL,unit,direct_rd
 Latvia,State Research Programmes (Latvia),2018,2000000.0,2000000.0,1,likumi_lv_295569_01.01.2018__lv.pdf,single,EUR,unit,direct_rd

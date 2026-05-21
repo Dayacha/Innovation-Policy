@@ -296,6 +296,17 @@ def extract_chunks(
                 if cache_dir:
                     _save_chunk_cache(cache_dir, cache_key, result)
 
+        # Guard: LLM occasionally returns a string instead of a list of dicts.
+        # Iterating a string yields characters which then fail on .get().
+        if not isinstance(chunk_items, list):
+            logger.warning(
+                f"LLM returned non-list items for {source_file} pages {page_range} "
+                f"(type={type(chunk_items).__name__}) — skipping chunk"
+            )
+            chunk_items = []
+        # Filter out any non-dict elements inside the list
+        chunk_items = [it for it in chunk_items if isinstance(it, dict)]
+
         # Tag each item with page range info
         for item in chunk_items:
             if not item.get("page_number"):

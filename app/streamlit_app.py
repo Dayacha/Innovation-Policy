@@ -20,6 +20,9 @@ from app.data_loader import (
     REFORM_PANEL, STAGE_LABELS, STAGE_PATHS, STATUS_LABELS,
     SUBTHEME_COLORS, SUBTHEME_LABELS, SUBTHEME_SHORT,
     budget_available, get_app_password, load_budget, load_korea_theme_panel,
+    load_budget_country_gap_report, load_budget_country_gap_review_table,
+    load_budget_country_notes, load_budget_run_log,
+    load_budget_gap_deepdive_detail, load_budget_gap_deepdive_summary,
     load_reform_panel, load_reforms,
     load_reform_mentions, load_reform_panel_subtheme,
     reforms_available,
@@ -222,8 +225,13 @@ footer { display: none !important; }
 }
 
 /* ── Typography ── */
-body, p, li, td, th, span, div {
+body, p, li, td, th {
     font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !important;
+}
+/* Do NOT include span/div here — Streamlit renders expander arrows as spans with
+   a generated class; overriding font-family breaks the Material Icons ligature rendering */
+[data-testid="stIconMaterial"] {
+    font-family: "Material Symbols Rounded", "Material Icons", serif !important;
 }
 h1, h2, h3 { color: #003189 !important; }
 
@@ -423,6 +431,268 @@ def caption_note(text):
     )
 
 
+def _clean_text(value) -> str:
+    if value is None:
+        return ""
+    try:
+        if pd.isna(value):
+            return ""
+    except Exception:
+        pass
+    return str(value).strip()
+
+
+def _split_pipe_values(value) -> list[str]:
+    text = _clean_text(value)
+    if not text:
+        return []
+    return [part.strip() for part in text.split("|") if part.strip()]
+
+
+def _uniq_keep_order(values: list[str]) -> list[str]:
+    seen = set()
+    out = []
+    for value in values:
+        token = _clean_text(value)
+        if not token or token in seen:
+            continue
+        seen.add(token)
+        out.append(token)
+    return out
+
+
+def _preview_list(values: list[str], limit: int = 5) -> str:
+    values = _uniq_keep_order(values)
+    if not values:
+        return ""
+    if len(values) <= limit:
+        return ", ".join(values)
+    return ", ".join(values[:limit]) + f", +{len(values) - limit} more"
+
+
+def _smart_gap_note(
+    country: str,
+    year: int,
+    year_gaps: pd.DataFrame,
+    year_review: pd.DataFrame,
+    country_summary_row: pd.Series | None,
+    country_notes: dict[str, str],
+) -> str:
+    bullets: list[str] = []
+
+    flagged = year_gaps[year_gaps["gap_type"].fillna("ok") != "ok"].copy()
+    affected = _uniq_keep_order(flagged.get("canonical_name", pd.Series(dtype=str)).astype(str).tolist()) if not flagged.empty else []
+    source_files = []
+    if not year_review.empty and "source_file" in year_review.columns:
+        source_files.extend(year_review["source_file"].dropna().astype(str).tolist())
+    if not flagged.empty and "raw_row_file" in flagged.columns:
+        source_files.extend(flagged["raw_row_file"].dropna().astype(str).tolist())
+    source_files = _uniq_keep_order(source_files)
+
+    if flagged.empty:
+        bullets.append(f"No flagged `missing` or `outlier` rows are recorded for {country} {year} in the current gap report.")
+    else:
+        issue_mix = ", ".join(sorted(flagged["gap_type"].dropna().astype(str).unique()))
+        bullets.append(
+            f"{country} {year} has {len(flagged)} flagged series-year issue(s) across {len(affected)} series: {_preview_list(affected, limit=4)}."
+        )
+        bullets.append(f"Issue mix: {issue_mix}.")
+
+    if source_files:
+        bullets.append(f"Source document(s) checked for this year: {_preview_list(source_files, limit=3)}.")
+
+    if not year_review.empty:
+        review = year_review.iloc[0]
+        extracted = review.get("run_log_rows_extracted")
+        docx_rows = review.get("docx_results_rows")
+        audited = review.get("docx_audit_in_series_rows")
+        if pd.notna(extracted) or pd.notna(docx_rows) or pd.notna(audited):
+            bullets.append(
+                "Pipeline evidence: "
+                f"run log extracted {int(extracted) if pd.notna(extracted) else 0} rows, "
+                f"country results kept {int(docx_rows) if pd.notna(docx_rows) else 0}, "
+                f"final audited series kept {int(audited) if pd.notna(audited) else 0}."
+            )
+
+        issue_label = _clean_text(review.get("year_issue_label"))
+        if issue_label:
+            bullets.append(f"Year-level review: {issue_label}.")
+
+        extracted_entities = _split_pipe_values(review.get("extracted_entities"))
+        if extracted_entities:
+            bullets.append(
+                "The document did contain research-like rows, but they look to be sub-lines or non-comparable fragments rather than a defendable final series total: "
+                f"{_preview_list(extracted_entities, limit=5)}."
+            )
+
+        missing_queue = _split_pipe_values(review.get("missing_agencies_from_queue"))
+        if missing_queue:
+            bullets.append(f"Still missing from the queue after review: {_preview_list(missing_queue, limit=4)}.")
+
+        diagnosis_excerpt = _clean_text(review.get("diagnosis_excerpt"))
+        if diagnosis_excerpt:
+            bullets.append(textwrap.shorten(diagnosis_excerpt, width=220, placeholder="…"))
+
+        document_change_note = _clean_text(review.get("document_change_note"))
+        if document_change_note:
+            bullets.append(textwrap.shorten(document_change_note, width=220, placeholder="…"))
+
+        recommended_action = _clean_text(review.get("recommended_action"))
+        if recommended_action:
+            bullets.append(f"Recommended next step: {textwrap.shorten(recommended_action, width=220, placeholder='…')}")
+    else:
+        if not flagged.empty:
+            actions = _uniq_keep_order(flagged["action"].dropna().astype(str).tolist()) if "action" in flagged.columns else []
+            if actions:
+                bullets.append(f"Current pipeline action tag: {', '.join(actions)}.")
+
+        diagnoses = _uniq_keep_order(flagged["diagnosis"].dropna().astype(str).tolist()) if "diagnosis" in flagged.columns else []
+        if diagnoses:
+            bullets.append(textwrap.shorten(diagnoses[0], width=220, placeholder="…"))
+
+    if country_summary_row is not None:
+        summary_excerpt = _clean_text(country_summary_row.get("note_excerpt"))
+        if summary_excerpt:
+            bullets.append(f"Country note context: {textwrap.shorten(summary_excerpt, width=220, placeholder='…')}")
+
+    source_notes = _clean_text(country_notes.get("source_notes", ""))
+    quality_note = _clean_text(country_notes.get("quality_note", ""))
+    notes_text = source_notes or quality_note
+    if notes_text:
+        matching_line = ""
+        for line in notes_text.splitlines():
+            raw = line.strip().lstrip("-").strip()
+            if str(year) in raw or any(name in raw for name in affected[:3]):
+                matching_line = raw
+                break
+        if matching_line:
+            bullets.append(f"Source note cross-check: {textwrap.shorten(matching_line, width=220, placeholder='…')}")
+
+    return "\n".join(f"- {bullet}" for bullet in bullets if bullet)
+
+
+def _gap_issue_label_for_ui(label: str) -> str:
+    label = _clean_text(label)
+    mapping = {
+        "Needs targeted re-extraction": "Processed source needs deeper manual review",
+        "Raw rows exist but need reclassification": "Research-like rows found but not retained as final series",
+        "Document ran but returned zero rows": "Processed file yielded no usable R&D rows",
+        "Agency not named in parsed source": "Research references found, but no defendable target institution line",
+        "Aggregate-only OCW Art. 16 for NWO/KNAW": "Only an aggregate research-policy total is visible",
+        "extracted rows exist but are not making it into the final series": "Research-like rows found but not retained as final series",
+        "document changed structure": "Document structure or comparability break",
+        "unsupported format": "Misfiled or non-comparable source file",
+    }
+    return mapping.get(label, label)
+
+
+def _budget_gap_explorer_detail(
+    country: str,
+    year: int,
+    year_review: pd.DataFrame,
+    year_gap_report: pd.DataFrame,
+    year_run_log: pd.DataFrame,
+) -> tuple[str, str]:
+    if not year_review.empty:
+        _labels = _uniq_keep_order(
+            [_gap_issue_label_for_ui(v) for v in year_review.get("year_issue_label", pd.Series(dtype=str)).astype(str).tolist()]
+        )
+        _issue = _labels[0] if _labels else "Reviewed source gap"
+
+        _fragments: list[str] = []
+        _diag = _uniq_keep_order(year_review.get("diagnosis_excerpt", pd.Series(dtype=str)).astype(str).tolist())
+        _doc_notes = _uniq_keep_order(year_review.get("document_change_note", pd.Series(dtype=str)).astype(str).tolist())
+        _entities = _uniq_keep_order(
+            sum([_split_pipe_values(v) for v in year_review.get("extracted_entities", pd.Series(dtype=str)).tolist()], [])
+        )
+        _missing = _uniq_keep_order(
+            sum([_split_pipe_values(v) for v in year_review.get("missing_agencies_from_queue", pd.Series(dtype=str)).tolist()], [])
+        )
+
+        if _diag:
+            _fragments.append(textwrap.shorten(_diag[0], width=220, placeholder="…"))
+        if _doc_notes:
+            _fragments.append(textwrap.shorten(_doc_notes[0], width=220, placeholder="…"))
+        if _entities:
+            _fragments.append(
+                f"Processed source contains research-related references such as {_preview_list(_entities, limit=4)}."
+            )
+        if _missing:
+            _fragments.append(
+                f"The expected final series line is still not clearly recoverable for {_preview_list(_missing, limit=3)}."
+            )
+
+        _analysis = " ".join([frag for frag in _fragments if _clean_text(frag)]).strip()
+        if _analysis:
+            return _issue, _analysis
+        return _issue, "The source was reviewed manually, but no defendable final R&D line could be retained for this year."
+
+    if not year_gap_report.empty:
+        _diagnoses = _uniq_keep_order(year_gap_report.get("diagnosis", pd.Series(dtype=str)).astype(str).tolist())
+        _actions = _uniq_keep_order(year_gap_report.get("action", pd.Series(dtype=str)).astype(str).tolist())
+        _issue = "Gap under review"
+        if "reclassify" in _actions:
+            _issue = "Research-like rows found but not retained as final series"
+        elif "reextract" in _actions:
+            _issue = "Processed source needs deeper manual review"
+
+        if _diagnoses:
+            return _issue, textwrap.shorten(_diagnoses[0], width=240, placeholder="…")
+
+    if not year_run_log.empty and "status" in year_run_log.columns:
+        _statuses = year_run_log["status"].dropna().astype(str).unique().tolist()
+        if len(_statuses) > 0 and all(s == "error" for s in _statuses):
+            return (
+                "Pipeline processing error",
+                f"All logged document runs for {country} {year} ended in error; the gap is not being driven by a clean no-R&D result.",
+            )
+        if "error" in _statuses:
+            return (
+                "Mixed processing outcomes",
+                "Some files ran and others errored, so the gap reflects mixed document outcomes rather than a clean absence of R&D lines.",
+            )
+
+    _direct_files = _inventory_docs_for_year(country, year)
+    if not _direct_files:
+        _nearby = _nearby_inventory_docs(country, year, window=1)
+        if _nearby:
+            return (
+                "No year-specific source confirmed",
+                f"No reviewed run or gap record is linked directly to {country} {year}. The source folder does not contain a file whose name clearly matches {year}; nearest visible files are {_preview_list(_nearby, limit=3)}.",
+            )
+        return (
+            "No year-specific source confirmed",
+            f"No reviewed run or gap record is linked directly to {country} {year}, and no source file in the current folder names that year explicitly.",
+        )
+
+    return (
+        "Source file exists but no reviewed evidence is attached yet",
+        f"The source folder contains {_preview_list(_direct_files, limit=3)} for {country} {year}, but this year has not yet been tied to a country review row or explicit gap-report diagnosis.",
+    )
+
+
+def _country_source_files(country: str) -> list[str]:
+    root = Path(__file__).resolve().parent.parent / "Data" / "input" / "finance_bills" / str(country)
+    if not root.exists():
+        return []
+    return sorted([p.name for p in root.iterdir() if p.is_file()])
+
+
+def _inventory_docs_for_year(country: str, year: int) -> list[str]:
+    year_token = str(year)
+    files = _country_source_files(country)
+    return [name for name in files if year_token in name]
+
+
+def _nearby_inventory_docs(country: str, year: int, window: int = 1) -> list[str]:
+    files = _country_source_files(country)
+    out: list[str] = []
+    for candidate_year in range(year - window, year + window + 1):
+        token = str(candidate_year)
+        out.extend([name for name in files if token in name])
+    return _uniq_keep_order(out)
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # SIDEBAR — all filters
 # ─────────────────────────────────────────────────────────────────────────────
@@ -474,13 +744,11 @@ with st.sidebar:
                 value=(min(_yrs), max(_yrs)), key="yr_b",
                 label_visibility="collapsed",
             )
-            # Country selector — max 3 (amounts are in local currency; summing across currencies is misleading)
             _bud_ctry_opts = sorted(_db["country"].dropna().unique()) \
                 if "country" in _db.columns else ["Denmark"]
-            _bud_ctry_default = _bud_ctry_opts[:3] if len(_bud_ctry_opts) > 3 else _bud_ctry_opts
+            _bud_ctry_default = _bud_ctry_opts[:1] if _bud_ctry_opts else []
             sel_bud_ctry = st.multiselect(
-                "Country (max 3)", _bud_ctry_opts, default=_bud_ctry_default, key="bud_ctry",
-                max_selections=3,
+                "Country", _bud_ctry_opts, default=_bud_ctry_default, key="bud_ctry",
             )
             if not sel_bud_ctry:
                 st.caption("Select at least one country.")
@@ -1175,6 +1443,28 @@ with TAB_BUDGET:
             ),
             "rating": "moderate",
         },
+        "Portugal": {
+            "years": "1977–2025 in the source family; the current app-ready panel keeps 38 audited observations",
+            "source": (
+                "Annual Portuguese budget laws and annex tables, plus deterministic/manual source audits against the "
+                "original PDFs, especially MAPA V / MAPA VII pages where a clean institutional appropriation is visible"
+            ),
+            "gaps": (
+                "Portugal is intentionally presented as a narrow, traceability-first institutional panel. The final series "
+                "keeps only 38 defendable observations across FCT, JNICT, LNEC, and ANI, all stored in full currency units "
+                "(`escudo` before the euro era and `euro` afterward) rather than `thousand`. Many tempting rows in the source "
+                "family were deliberately excluded after manual page review because they resolved to chapter totals, municipal "
+                "tables, plurianual responsibility tables (for example MAPA 14), legal transfer language, or programme/project "
+                "bundles such as PIDDAC instead of a clean institution-level annual appropriation. Recent 2021–2025 gaps are "
+                "mostly structural in the current file set: the pages we can recover tend to be legal text or transfer-style "
+                "references rather than an explicit institutional budget row for FCT or ANI."
+            ),
+            "fit": (
+                "Moderate — strong as a conservative, transparent institutional backbone for Portugal; not suitable as a "
+                "complete annual ledger of all Portuguese public R&D appropriations."
+            ),
+            "rating": "moderate",
+        },
         "Poland": {
             "years": "1990–2025 in the source family; the current app-ready panel keeps only 24 strictly audited observations",
             "source": (
@@ -1297,8 +1587,143 @@ with TAB_BUDGET:
     }
 
     _active_countries = sel_bud_ctry if sel_bud_ctry else []
+
+    db_f = _filtered_budget_df()
+
+    # ── Currency helpers ──
+    _currencies = db_f["currency"].dropna().unique() if "currency" in db_f.columns else []
+    _multi_currency = len(_currencies) > 1
+    _ccy = _currencies[0] if len(_currencies) == 1 else "local currency"
+    _amt_col = "Amount (M)"  # generic column name for charts
+
+    def _fmt_amt(df_col):
+        return f"{_ccy} (millions)" if not _multi_currency else "Amount (millions, local currency)"
+
+    def _to_millions(series):
+        return series / 1e6
+
+    # ── KPI strip ──
+    _n_countries = db_f["country"].nunique() if "country" in db_f.columns else 1
+    _n_agencies  = db_f["canonical_name"].nunique() if "canonical_name" in db_f.columns else "—"
+    _yr_range    = f"{int(db_f['year'].min())}–{int(db_f['year'].max())}" if not db_f.empty else "—"
+    if _multi_currency:
+        _spend_kpi = f"{_n_countries} countries"
+    else:
+        _spend_kpi = f"{_ccy} {db_f['amount_local'].sum()/1e6:,.0f} M"
+    stat_row([
+        (f"{len(db_f):,}",      "Budget lines"),
+        (_spend_kpi,             "Total spend (local currency)"),
+        (_yr_range,              "Years covered"),
+        (f"{_n_agencies}",       "Agencies tracked"),
+    ])
+
+    # ── Chart 1: Line chart(s) by year ──
+    _ctry_pal = [NAVY, ORANGE, TEAL, GREEN, BLUE, "#9B59B6", "#E74C3C", GREY]
+    _n_ctry = db_f["country"].nunique() if "country" in db_f.columns else 1
+
+    if _multi_currency and _n_ctry > 1:
+        # Multiple countries: facet grid — split country panels into separate traces
+        # when a country changes currency across eras.
+        section_header("R&D-related budget over time by country (local currency)")
+        yr_country = db_f.groupby(["year", "country", "currency"], dropna=False)["amount_local"].sum().reset_index()
+        yr_country[_amt_col] = _to_millions(yr_country["amount_local"])
+        _all_years = sorted(db_f["year"].dropna().unique())
+        yr_country["currency"] = yr_country["currency"].fillna("Unknown")
+        yr_country["label"] = yr_country["currency"].map(_budget_currency_label).fillna("Unknown currency")
+        yr_country["series_key"] = yr_country["country"] + "||" + yr_country["label"]
+        _full_grid = pd.DataFrame(
+            [
+                (y, c, lbl, key)
+                for c, lbl, key in yr_country[["country", "label", "series_key"]].drop_duplicates().itertuples(index=False, name=None)
+                for y in _all_years
+            ],
+            columns=["year", "country", "label", "series_key"],
+        )
+        yr_country = _full_grid.merge(
+            yr_country.drop(columns=["currency"], errors="ignore"),
+            on=["year", "country", "label", "series_key"],
+            how="left",
+        )
+        yr_country["currency"] = yr_country["label"].str.split(" — ").str[0].fillna("Unknown")
+        _sorted_ctry = sorted(yr_country["country"].unique())
+        _currency_labels = sorted(yr_country["label"].dropna().unique())
+        _color_map1 = _budget_currency_color_map(_currency_labels)
+        _wrap = min(4, _n_ctry)
+        _n_rows = (_n_ctry + _wrap - 1) // _wrap
+        fig1 = px.line(
+            yr_country, x="year", y=_amt_col,
+            facet_col="country", facet_col_wrap=_wrap,
+            color="label",
+            line_dash="label",
+            line_group="series_key",
+            markers=True,
+            color_discrete_map=_color_map1,
+            labels={"year": "Year", _amt_col: "Amount (M, local)", "country": "", "label": ""},
+            custom_data=["country", "label"],
+            facet_row_spacing=0.03,
+            facet_col_spacing=0.06,
+        )
+        fig1.update_traces(
+            line_width=2, marker_size=5,
+            hovertemplate="<b>%{customdata[0]}</b><br>%{customdata[1]}<br>Year: %{x}<br>Amount: %{y:,.1f} M<extra></extra>",
+        )
+        fig1.update_yaxes(matches=None, showticklabels=True, mirror=False)
+        fig1.update_xaxes(matches="x", showticklabels=True, tickangle=-45)
+        fig1.for_each_annotation(lambda a: a.update(text=a.text.split("=")[-1]))
+        apply_style(fig1, height=185 * _n_rows, xtitle="", ytitle="Amount (M, local currency)")
+        st.plotly_chart(fig1, use_container_width=True)
+        caption_note("Each panel shows one country in its local currency. Countries with monetary transitions now split into separate lines by currency era. Y-axes are independent — do not compare levels across panels.")
+
+    elif _multi_currency:
+        section_header("R&D-related budget by year (local currency)")
+        yr_ct = db_f.groupby(["year", "currency"])["amount_local"].sum().reset_index()
+        yr_ct[_amt_col] = _to_millions(yr_ct["amount_local"])
+        yr_ct["label"] = yr_ct["currency"].map(_budget_currency_label).fillna("Unknown currency")
+        # Full year grid per currency — NaN where no data so line breaks at gaps
+        _sorted_labels = sorted(yr_ct["label"].dropna().unique())
+        _yr_range_mc = range(int(yr_ct["year"].min()), int(yr_ct["year"].max()) + 1)
+        _grid_mc = pd.DataFrame([(y, l) for l in _sorted_labels for y in _yr_range_mc], columns=["year", "label"])
+        yr_ct = _grid_mc.merge(yr_ct.drop(columns=["currency"], errors="ignore"), on=["year", "label"], how="left")
+        _color_map1 = _budget_currency_color_map(_sorted_labels)
+        fig1 = px.line(
+            yr_ct, x="year", y=_amt_col, color="label",
+            color_discrete_map=_color_map1,
+            markers=True,
+            labels={"year": "Year", _amt_col: "Amount (millions, local currency)", "label": ""},
+            custom_data=["label"],
+        )
+        fig1.update_traces(
+            line_width=2, marker_size=5,
+            hovertemplate="<b>%{customdata[0]}</b><br>Year: %{x}<br>Amount: %{y:,.0f} M<extra></extra>",
+        )
+        apply_style(fig1, height=360, xtitle="Year", ytitle="Amount (millions, local currency)")
+        st.plotly_chart(fig1, use_container_width=True)
+        caption_note("This selection mixes multiple currencies (e.g. FRF and EUR) — levels are not directly comparable across the full span.")
+
+    else:
+        section_header(f"R&D-related budget by year ({_ccy} millions)")
+        yr_ct = db_f.groupby("year")["amount_local"].sum().reset_index()
+        yr_ct[_amt_col] = _to_millions(yr_ct["amount_local"])
+        # Full year grid — NaN where no data so line breaks at gaps
+        _yr_range_sc = pd.DataFrame({"year": range(int(yr_ct["year"].min()), int(yr_ct["year"].max()) + 1)})
+        yr_ct = _yr_range_sc.merge(yr_ct, on="year", how="left")
+        _ytitle1 = _fmt_amt(None)
+        _countries_in_data = sorted(db_f["country"].dropna().unique()) if "country" in db_f.columns else []
+        fig1 = px.line(
+            yr_ct, x="year", y=_amt_col,
+            markers=True,
+            labels={"year": "Year", _amt_col: _ytitle1},
+        )
+        fig1.update_traces(
+            line_width=2, marker_size=5, line_color=NAVY,
+            hovertemplate="Year: %{x}<br>Amount: %{y:,.0f} M<extra></extra>",
+        )
+        apply_style(fig1, height=360, xtitle="Year", ytitle=_ytitle1)
+        st.plotly_chart(fig1, use_container_width=True)
+        caption_note(f"Source: Finance Bills — {', '.join(_countries_in_data)}. Numbers in {_ccy} millions.")
+
     _dq_notes = [(_c, _BUD_DOC_QUALITY[_c]) for _c in _active_countries if _c in _BUD_DOC_QUALITY]
-    if _dq_notes:
+    if _dq_notes and len(_active_countries) <= 3:
         _dq_cols = st.columns(len(_dq_notes))
         for _dq_col, (_dq_ctry, _dq) in zip(_dq_cols, _dq_notes):
             _fc, _bg, _border_bg = _BUD_RATING_COLORS.get(_dq["rating"], ("#555", "#f0f0f0", "#55555520"))
@@ -1344,99 +1769,93 @@ with TAB_BUDGET:
             unsafe_allow_html=True,
         )
 
-    db_f = _filtered_budget_df()
+    _gap_summary = load_budget_gap_deepdive_summary()
+    _gap_country_options = []
+    if not _gap_summary.empty and "country" in _gap_summary.columns:
+        _gap_country_options = sorted(_gap_summary["country"].dropna().astype(str).unique().tolist())
+    if _active_countries:
+        _gap_country_options = [c for c in _active_countries if c in _gap_country_options] or _active_countries
 
-    # ── Currency helpers ──
-    _currencies = db_f["currency"].dropna().unique() if "currency" in db_f.columns else []
-    _multi_currency = len(_currencies) > 1
-    _ccy = _currencies[0] if len(_currencies) == 1 else "local currency"
-    _amt_col = "Amount (M)"  # generic column name for charts
+    if _gap_country_options:
+        with st.expander("Budget Gap Explorer", expanded=bool(_active_countries and len(_active_countries) == 1)):
+            _full_bud = load_budget()
+            _selected_gap_countries = [c for c in _active_countries if c in _gap_country_options] or _gap_country_options
+            _run_log = load_budget_run_log()
+            _gap_rows = []
 
-    def _fmt_amt(df_col):
-        """Format amount column label for axis/legend."""
-        return f"{_ccy} (millions)" if not _multi_currency else "Amount (millions, local currency)"
+            for _gap_country in _selected_gap_countries:
+                _country_review = load_budget_country_gap_review_table(_gap_country)
+                _country_gap_report = load_budget_country_gap_report(_gap_country)
+                _ctry_all = (
+                    _full_bud[_full_bud["country"] == _gap_country]
+                    if "country" in _full_bud.columns else pd.DataFrame()
+                )
+                _calendar_gaps: list[int] = []
+                if not _ctry_all.empty and "year" in _ctry_all.columns:
+                    _yrs_with_data = set(_ctry_all["year"].dropna().astype(int).unique())
+                    if _yrs_with_data:
+                        _full_range = set(range(min(_yrs_with_data), max(_yrs_with_data) + 1))
+                        _calendar_gaps = sorted(_full_range - _yrs_with_data)
 
-    def _to_millions(series):
-        return series / 1e6
+                _ctry_log = (
+                    _run_log[_run_log["country"].str.lower() == _gap_country.lower()]
+                    if not _run_log.empty and "country" in _run_log.columns else pd.DataFrame()
+                )
 
-    # ── KPI strip ──
-    _n_countries = db_f["country"].nunique() if "country" in db_f.columns else 1
-    _n_agencies  = db_f["canonical_name"].nunique() if "canonical_name" in db_f.columns else "—"
-    _yr_range    = f"{int(db_f['year'].min())}–{int(db_f['year'].max())}" if not db_f.empty else "—"
-    if _multi_currency:
-        _spend_kpi = f"{_n_countries} countries"
-    else:
-        _spend_kpi = f"{_ccy} {db_f['amount_local'].sum()/1e6:,.0f} M"
-    stat_row([
-        (f"{len(db_f):,}",      "Budget lines"),
-        (_spend_kpi,             "Total spend (local currency)"),
-        (_yr_range,              "Years covered"),
-        (f"{_n_agencies}",       "Agencies tracked"),
-    ])
+                for _gy in _calendar_gaps:
+                    _yr_log = (
+                        _ctry_log[_ctry_log["year"] == _gy]
+                        if not _ctry_log.empty else pd.DataFrame()
+                    )
+                    _yr_review = (
+                        _country_review[_country_review["year"] == _gy]
+                        if not _country_review.empty and "year" in _country_review.columns else pd.DataFrame()
+                    )
+                    _yr_gap_report = (
+                        _country_gap_report[
+                            (_country_gap_report["year"] == _gy)
+                            & (_country_gap_report["gap_type"].fillna("ok") != "ok")
+                        ]
+                        if not _country_gap_report.empty and "year" in _country_gap_report.columns else pd.DataFrame()
+                    )
+                    if not _yr_log.empty and "source_file" in _yr_log.columns:
+                        _docs = ", ".join(_yr_log["source_file"].dropna().astype(str).unique())
+                    else:
+                        _inventory_docs = _inventory_docs_for_year(_gap_country, int(_gy))
+                        if _inventory_docs:
+                            _docs = ", ".join(_inventory_docs)
+                        else:
+                            _nearby_docs = _nearby_inventory_docs(_gap_country, int(_gy), window=1)
+                            _docs = ", ".join(_nearby_docs) if _nearby_docs else "—"
+                    _issue, _analysis = _budget_gap_explorer_detail(
+                        _gap_country,
+                        int(_gy),
+                        _yr_review,
+                        _yr_gap_report,
+                        _yr_log,
+                    )
 
-    # ── Chart 1: Stacked bar by year ──
-    _ctry_pal = [NAVY, ORANGE, TEAL, GREEN, BLUE, "#9B59B6", "#E74C3C", GREY]
-    if _multi_currency:
-        # Multi-currency: group by country — bars are GROUPED, never stacked (stacking sums different currencies)
-        section_header("R&D-related budget by year and country (local currency — bars grouped, not summed)")
-        gcol1 = "country"
-        yr_ct = db_f.groupby(["year", gcol1, "currency"])["amount_local"].sum().reset_index()
-        yr_ct[_amt_col] = _to_millions(yr_ct["amount_local"])
-        if db_f["country"].nunique() == 1:
-            yr_ct["label"] = yr_ct["currency"].map(_budget_currency_label).fillna("Unknown currency")
-        else:
-            yr_ct["label"] = yr_ct[gcol1] + " (" + yr_ct["currency"].map(_budget_currency_label).fillna("Unknown") + ")"
-        _ytitle1 = "Amount (millions, local currency)"
-        if db_f["country"].nunique() == 1:
-            _cap1 = ("Bars are grouped by currency. This selection mixes multiple currencies "
-                     "(for example FRF and EUR), so levels are not directly comparable across the full span.")
-            _sorted_labels = sorted(yr_ct["label"].dropna().unique())
-            _color_map1 = _budget_currency_color_map(_sorted_labels)
-        else:
-            _cap1 = ("Bars are grouped by country-currency pair — each bar shows spending in its own local currency. "
-                     "Figures are NOT comparable across countries or currencies. Select a single country for absolute trends.")
-            _sorted_pairs = sorted(yr_ct["label"].dropna().unique())
-            _color_map1 = _budget_currency_color_map(_sorted_pairs)
-    else:
-        section_header(f"R&D-related budget by year and category ({_ccy} millions)")
-        gcol1 = "budget_category"
-        yr_ct = db_f.groupby(["year", gcol1])["amount_local"].sum().reset_index()
-        yr_ct[_amt_col] = _to_millions(yr_ct["amount_local"])
-        # Use human-readable labels for legend
-        yr_ct["label"] = yr_ct[gcol1].map(
-            lambda x: RD_CATEGORY_LABELS.get(x, x.replace("_", " ").title())
-        )
-        _ytitle1 = _fmt_amt(None)
-        _countries_in_data = sorted(db_f["country"].dropna().unique()) if "country" in db_f.columns else []
-        _cap1 = (f"Source: Finance Bills — {', '.join(_countries_in_data)}. "
-                 f"Numbers in {_ccy} millions.")
-        # Build color map keyed on human-readable labels
-        _color_map1 = {
-            RD_CATEGORY_LABELS.get(k, k.replace("_", " ").title()): BUDGET_CATEGORY_COLORS.get(k, GREY)
-            for k in db_f[gcol1].dropna().unique()
-        }
+                    _gap_rows.append(
+                        {
+                            "Country": _gap_country,
+                            "Year": _gy,
+                            "Documents": _docs,
+                            "Issue": _issue,
+                            "Analysis": _analysis,
+                        }
+                    )
 
-    # Compute year totals for annotations
-    _yr_totals = yr_ct.groupby("year")[_amt_col].sum().reset_index()
-
-    # Single country → stack bars by R&D category to show composition
-    # Multiple countries → group bars side-by-side (never sum different currencies)
-    _barmode = "group" if _multi_currency else "stack"
-    fig1 = px.bar(
-        yr_ct, x="year", y=_amt_col, color="label",
-        color_discrete_map=_color_map1,
-        barmode=_barmode,
-        labels={"year": "Year", _amt_col: _ytitle1, "label": ""},
-        custom_data=["label"],
-    )
-    fig1.update_traces(
-        marker_line_width=0,
-        hovertemplate="<b>%{customdata[0]}</b><br>Year: %{x}<br>Amount: %{y:,.0f} M<extra></extra>",
-    )
-    apply_style(fig1, height=360, xtitle="Year", ytitle=_ytitle1)
-    fig1.update_yaxes(range=[0, _yr_totals[_amt_col].max() * 1.15])
-    st.plotly_chart(fig1, use_container_width=True)
-    caption_note(_cap1)
+            if not _gap_rows:
+                if len(_selected_gap_countries) == 1:
+                    st.info(f"No missing years detected for {_selected_gap_countries[0]} within its data range.")
+                else:
+                    st.info("No missing years detected for the selected countries within their data ranges.")
+            else:
+                render_table(
+                    pd.DataFrame(_gap_rows).sort_values(["Country", "Year"]).reset_index(drop=True),
+                    wide_cols=["Documents", "Issue", "Analysis"],
+                    max_rows=250,
+                )
 
     if _multi_currency:
         st.info("Some selected years mix currencies. Ministry totals, category shares, and year-over-year change are hidden because they would aggregate non-comparable currencies.")
@@ -1602,8 +2021,7 @@ with TAB_BUDGET:
     )
 
     # ── Korea-only thematic panel ──
-    _has_korea = "country" in db_f.columns and "Korea" in set(db_f["country"].dropna())
-    if _has_korea:
+    if _is_korea_only:
         _k_theme = load_korea_theme_panel()
         if not _k_theme.empty and "year" in _k_theme.columns:
             _k_theme = _k_theme[

@@ -1,678 +1,336 @@
-country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
-Chile,1999,CONICYT / ANID,science_agency,ok,,,,,none,29475902000.0,,8354926000.0
-Chile,2000,CONICYT / ANID,science_agency,ok,,,,,none,8354926000.0,29475902000.0,8755987000.0
-Chile,2001,CONICYT / ANID,science_agency,ok,,,,,none,8755987000.0,8354926000.0,37655285000.0
-Chile,2002,CONICYT / ANID,science_agency,ok,,,,,none,37655285000.0,8755987000.0,2511288000.0
-Chile,2003,CONICYT / ANID,science_agency,ok,,,,,none,2511288000.0,37655285000.0,38211277000.0
-Chile,2004,CONICYT / ANID,science_agency,ok,,,,,none,38211277000.0,2511288000.0,43886223000.0
-Chile,2005,CONICYT / ANID,science_agency,ok,,,,,none,43886223000.0,38211277000.0,51688206000.0
-Chile,2006,CONICYT / ANID,science_agency,ok,,,,,none,51688206000.0,43886223000.0,14208430000.0
-Chile,2007,CONICYT / ANID,science_agency,ok,,,,,none,14208430000.0,51688206000.0,13663246000.0
-Chile,2008,CONICYT / ANID,science_agency,ok,,,,,none,13663246000.0,14208430000.0,15217838000.0
-Chile,2009,CONICYT / ANID,science_agency,ok,,,,,none,15217838000.0,13663246000.0,116917838000.0
-Chile,2010,CONICYT / ANID,science_agency,ok,,,,,none,116917838000.0,15217838000.0,25540402000.0
-Chile,2011,CONICYT / ANID,science_agency,ok,,,,,none,25540402000.0,116917838000.0,145770177000.0
-Chile,2012,CONICYT / ANID,science_agency,ok,,,,,none,145770177000.0,25540402000.0,171607682000.0
-Chile,2013,CONICYT / ANID,science_agency,ok,,,,,none,171607682000.0,145770177000.0,177223363000.0
-Chile,2014,CONICYT / ANID,science_agency,ok,,,,,none,177223363000.0,171607682000.0,238856268000.0
-Chile,2015,CONICYT / ANID,science_agency,ok,,,,,none,238856268000.0,177223363000.0,255982757000.0
-Chile,2016,CONICYT / ANID,science_agency,ok,,,,,none,255982757000.0,238856268000.0,267254295000.0
-Chile,2017,CONICYT / ANID,science_agency,ok,,,,,none,267254295000.0,255982757000.0,277429910000.0
-Chile,2018,CONICYT / ANID,science_agency,ok,,,,,none,277429910000.0,267254295000.0,288300661000.0
-Chile,2019,CONICYT / ANID,science_agency,ok,,,,,none,288300661000.0,277429910000.0,304493223000.0
-Chile,2020,CONICYT / ANID,science_agency,ok,,,,,none,304493223000.0,288300661000.0,287533769000.0
-Chile,2021,CONICYT / ANID,science_agency,ok,,,,,none,287533769000.0,304493223000.0,60705049000.0
-Chile,2022,CONICYT / ANID,science_agency,ok,,,,,none,60705049000.0,287533769000.0,312088973000.0
-Chile,2023,CONICYT / ANID,science_agency,ok,,,,,none,312088973000.0,60705049000.0,101578943000.0
-Chile,2024,CONICYT / ANID,science_agency,ok,,,,,none,101578943000.0,312088973000.0,104074491000.0
-Chile,2025,CONICYT / ANID,science_agency,ok,,,,,none,104074491000.0,101578943000.0,
-Chile,1999,CORFO innovation and technology funding,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,15206218000.0
-Chile,2000,CORFO innovation and technology funding,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,15206218000.0
-Chile,2001,CORFO innovation and technology funding,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,15206218000.0
-Chile,2002,CORFO innovation and technology funding,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,15206218000.0
-Chile,2003,CORFO innovation and technology funding,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,15206218000.0
-Chile,2004,CORFO innovation and technology funding,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,15206218000.0
-Chile,2005,CORFO innovation and technology funding,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,15206218000.0
-Chile,2006,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,15206218000.0,,14330049000.0
-Chile,2007,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,14330049000.0,15206218000.0,18053890000.0
-Chile,2008,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,18053890000.0,14330049000.0,19070135000.0
-Chile,2009,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,19070135000.0,18053890000.0,18565603000.0
-Chile,2010,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,18565603000.0,19070135000.0,23438018000.0
-Chile,2011,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,23438018000.0,18565603000.0,21416254000.0
-Chile,2012,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,21416254000.0,23438018000.0,29560279000.0
-Chile,2013,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,29560279000.0,21416254000.0,12155030000.0
-Chile,2014,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,12155030000.0,29560279000.0,18402666000.0
-Chile,2015,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,18402666000.0,12155030000.0,26638111000.0
-Chile,2016,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,26638111000.0,18402666000.0,27217404000.0
-Chile,2017,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,27217404000.0,26638111000.0,27827214000.0
-Chile,2018,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,27827214000.0,27217404000.0,19603364000.0
-Chile,2019,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,19603364000.0,27827214000.0,5733830000.0
-Chile,2020,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,5733830000.0,19603364000.0,9939882000.0
-Chile,2021,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,9939882000.0,5733830000.0,3021091000.0
-Chile,2022,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,3021091000.0,9939882000.0,14314369000.0
-Chile,2023,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,14314369000.0,3021091000.0,14444987000.0
-Chile,2024,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,14444987000.0,14314369000.0,13633385000.0
-Chile,2025,CORFO innovation and technology funding,innovation_instruments,ok,,,,,none,13633385000.0,14444987000.0,
-Chile,1999,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,4565385000.0,,8354926000.0
-Chile,2000,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,8354926000.0,4565385000.0,8755987000.0
-Chile,2001,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,8755987000.0,8354926000.0,9703810000.0
-Chile,2002,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,9703810000.0,8755987000.0,9713560000.0
-Chile,2003,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,9713560000.0,9703810000.0,9900060000.0
-Chile,2004,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,9900060000.0,9713560000.0,9496909000.0
-Chile,2005,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,9496909000.0,9900060000.0,14208430000.0
-Chile,2006,Fund for the Promotion of Science and Technology,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,9496909000.0,14208430000.0
-Chile,2007,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,14208430000.0,9496909000.0,13663246000.0
-Chile,2008,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,13663246000.0,14208430000.0,15217838000.0
-Chile,2009,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,15217838000.0,13663246000.0,22278079000.0
-Chile,2010,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,22278079000.0,15217838000.0,25540402000.0
-Chile,2011,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,25540402000.0,22278079000.0,24522935000.0
-Chile,2012,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,24522935000.0,25540402000.0,30085312000.0
-Chile,2013,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,30085312000.0,24522935000.0,32378050000.0
-Chile,2014,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,32378050000.0,30085312000.0,34457620000.0
-Chile,2015,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,34457620000.0,32378050000.0,38434887000.0
-Chile,2016,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,38434887000.0,34457620000.0,40053750000.0
-Chile,2017,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,40053750000.0,38434887000.0,41442278000.0
-Chile,2018,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,41442278000.0,40053750000.0,45558816000.0
-Chile,2019,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,45558816000.0,41442278000.0,22511539000.0
-Chile,2020,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,22511539000.0,45558816000.0,22718356000.0
-Chile,2021,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,22718356000.0,22511539000.0,27981002000.0
-Chile,2022,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,27981002000.0,22718356000.0,42009913000.0
-Chile,2023,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,42009913000.0,27981002000.0,43480260000.0
-Chile,2024,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,43480260000.0,42009913000.0,44826358000.0
-Chile,2025,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,none,44826358000.0,43480260000.0,
-Chile,1999,INIA (Chile),science_agency,ok,,,,,none,6377428000.0,,6581506000.0
-Chile,2000,INIA (Chile),science_agency,ok,,,,,none,6581506000.0,6377428000.0,6746044000.0
-Chile,2001,INIA (Chile),science_agency,ok,,,,,none,6746044000.0,6581506000.0,6955171000.0
-Chile,2002,INIA (Chile),science_agency,ok,,,,,none,6955171000.0,6746044000.0,7255171000.0
-Chile,2003,INIA (Chile),science_agency,ok,,,,,none,7255171000.0,6955171000.0,7190630000.0
-Chile,2004,INIA (Chile),science_agency,ok,,,,,none,7190630000.0,7255171000.0,7421236000.0
-Chile,2005,INIA (Chile),science_agency,ok,,,,,none,7421236000.0,7190630000.0,7643873000.0
-Chile,2006,INIA (Chile),science_agency,ok,,,,,none,7643873000.0,7421236000.0,8212594000.0
-Chile,2007,INIA (Chile),science_agency,ok,,,,,none,8212594000.0,7643873000.0,9049599000.0
-Chile,2008,INIA (Chile),science_agency,ok,,,,,none,9049599000.0,8212594000.0,9610674000.0
-Chile,2009,INIA (Chile),science_agency,ok,,,,,none,9610674000.0,9049599000.0,11313377000.0
-Chile,2010,INIA (Chile),science_agency,ok,,,,,none,11313377000.0,9610674000.0,12646184000.0
-Chile,2011,INIA (Chile),science_agency,ok,,,,,none,12646184000.0,11313377000.0,12977640000.0
-Chile,2012,INIA (Chile),science_agency,ok,,,,,none,12977640000.0,12646184000.0,13554647000.0
-Chile,2013,INIA (Chile),science_agency,ok,,,,,none,13554647000.0,12977640000.0,14170520000.0
-Chile,2014,INIA (Chile),science_agency,ok,,,,,none,14170520000.0,13554647000.0,15200429000.0
-Chile,2015,INIA (Chile),science_agency,ok,,,,,none,15200429000.0,14170520000.0,16556183000.0
-Chile,2016,INIA (Chile),science_agency,ok,,,,,none,16556183000.0,15200429000.0,16875557000.0
-Chile,2017,INIA (Chile),science_agency,ok,,,,,none,16875557000.0,16556183000.0,17342185000.0
-Chile,2018,INIA (Chile),science_agency,ok,,,,,none,17342185000.0,16875557000.0,17775401000.0
-Chile,2019,INIA (Chile),science_agency,ok,,,,,none,17775401000.0,17342185000.0,18352799000.0
-Chile,2020,INIA (Chile),science_agency,ok,,,,,none,18352799000.0,17775401000.0,17107193000.0
-Chile,2021,INIA (Chile),science_agency,ok,,,,,none,17107193000.0,18352799000.0,17859910000.0
-Chile,2022,INIA (Chile),science_agency,ok,,,,,none,17859910000.0,17107193000.0,20325290000.0
-Chile,2023,INIA (Chile),science_agency,ok,,,,,none,20325290000.0,17859910000.0,21420649000.0
-Chile,2024,INIA (Chile),science_agency,ok,,,,,none,21420649000.0,20325290000.0,22320316000.0
-Chile,2025,INIA (Chile),science_agency,ok,,,,,none,22320316000.0,21420649000.0,
-Chile,1999,IFOP,science_agency,ok,,,,,none,367971000.0,,379746000.0
-Chile,2000,IFOP,science_agency,ok,,,,,none,379746000.0,367971000.0,389240000.0
-Chile,2001,IFOP,science_agency,ok,,,,,none,389240000.0,379746000.0,401306000.0
-Chile,2002,IFOP,science_agency,ok,,,,,none,401306000.0,389240000.0,385234000.0
-Chile,2003,IFOP,science_agency,ok,,,,,none,385234000.0,401306000.0,392630000.0
-Chile,2004,IFOP,science_agency,ok,,,,,none,392630000.0,385234000.0,396832000.0
-Chile,2005,IFOP,science_agency,ok,,,,,none,396832000.0,392630000.0,815760000.0
-Chile,2006,IFOP,science_agency,ok,,,,,none,815760000.0,396832000.0,905313000.0
-Chile,2007,IFOP,science_agency,ok,,,,,none,905313000.0,815760000.0,871585000.0
-Chile,2008,IFOP,science_agency,ok,,,,,none,871585000.0,905313000.0,1016606000.0
-Chile,2009,IFOP,science_agency,ok,,,,,none,1016606000.0,871585000.0,3603357000.0
-Chile,2010,IFOP,science_agency,ok,,,,,none,3603357000.0,1016606000.0,5376074000.0
-Chile,2011,IFOP,science_agency,ok,,,,,none,5376074000.0,3603357000.0,5526604000.0
-Chile,2012,IFOP,science_agency,ok,,,,,none,5526604000.0,5376074000.0,3894613000.0
-Chile,2013,IFOP,science_agency,ok,,,,,none,3894613000.0,5526604000.0,12935937000.0
-Chile,2014,IFOP,science_agency,ok,,,,,none,12935937000.0,3894613000.0,15439654000.0
-Chile,2015,IFOP,science_agency,ok,,,,,none,15439654000.0,12935937000.0,16026361000.0
-Chile,2016,IFOP,science_agency,ok,,,,,none,16026361000.0,15439654000.0,16507152000.0
-Chile,2017,IFOP,science_agency,ok,,,,,none,16507152000.0,16026361000.0,17527860000.0
-Chile,2018,IFOP,science_agency,ok,,,,,none,17527860000.0,16507152000.0,17965715000.0
-Chile,2019,IFOP,science_agency,ok,,,,,none,17965715000.0,17527860000.0,18432824000.0
-Chile,2020,IFOP,science_agency,ok,,,,,none,18432824000.0,17965715000.0,17779291000.0
-Chile,2021,IFOP,science_agency,ok,,,,,none,17779291000.0,18432824000.0,18561580000.0
-Chile,2022,IFOP,science_agency,ok,,,,,none,18561580000.0,17779291000.0,591435000.0
-Chile,2023,IFOP,science_agency,ok,,,,,none,591435000.0,18561580000.0,20421544000.0
-Chile,2024,IFOP,science_agency,ok,,,,,none,20421544000.0,591435000.0,21279249000.0
-Chile,2025,IFOP,science_agency,ok,,,,,none,21279249000.0,20421544000.0,
-Chile,1999,FIA (Chile),innovation_instruments,ok,,,,,none,3362980000.0,,3412428000.0
-Chile,2000,FIA (Chile),innovation_instruments,ok,,,,,none,3412428000.0,3362980000.0,3856489000.0
-Chile,2001,FIA (Chile),innovation_instruments,ok,,,,,none,3856489000.0,3412428000.0,4353543000.0
-Chile,2002,FIA (Chile),innovation_instruments,ok,,,,,none,4353543000.0,3856489000.0,4035007000.0
-Chile,2003,FIA (Chile),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,4353543000.0,4035007000.0
-Chile,2004,FIA (Chile),innovation_instruments,ok,,,,,none,4035007000.0,4353543000.0,4223053000.0
-Chile,2005,FIA (Chile),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,4035007000.0,4223053000.0
-Chile,2006,FIA (Chile),innovation_instruments,ok,,,,,none,4223053000.0,4035007000.0,6497090000.0
-Chile,2007,FIA (Chile),innovation_instruments,ok,,,,,none,6497090000.0,4223053000.0,6985234000.0
-Chile,2008,FIA (Chile),innovation_instruments,ok,,,,,none,6985234000.0,6497090000.0,7205615000.0
-Chile,2009,FIA (Chile),innovation_instruments,ok,,,,,none,7205615000.0,6985234000.0,7666977000.0
-Chile,2010,FIA (Chile),innovation_instruments,ok,,,,,none,7666977000.0,7205615000.0,8053115000.0
-Chile,2011,FIA (Chile),innovation_instruments,ok,,,,,none,8053115000.0,7666977000.0,8294141000.0
-Chile,2012,FIA (Chile),innovation_instruments,ok,,,,,none,8294141000.0,8053115000.0,8534671000.0
-Chile,2013,FIA (Chile),innovation_instruments,ok,,,,,none,8534671000.0,8294141000.0,8657354000.0
-Chile,2014,FIA (Chile),innovation_instruments,ok,,,,,none,8657354000.0,8534671000.0,8917075000.0
-Chile,2015,FIA (Chile),innovation_instruments,ok,,,,,none,8917075000.0,8657354000.0,9570260000.0
-Chile,2016,FIA (Chile),innovation_instruments,ok,,,,,none,9570260000.0,8917075000.0,10697405000.0
-Chile,2017,FIA (Chile),innovation_instruments,ok,,,,,none,10697405000.0,9570260000.0,11494921000.0
-Chile,2018,FIA (Chile),innovation_instruments,ok,,,,,none,11494921000.0,10697405000.0,9195426000.0
-Chile,2019,FIA (Chile),innovation_instruments,ok,,,,,none,9195426000.0,11494921000.0,9446206000.0
-Chile,2020,FIA (Chile),innovation_instruments,ok,,,,,none,9446206000.0,9195426000.0,8692845000.0
-Chile,2021,FIA (Chile),innovation_instruments,ok,,,,,none,8692845000.0,9446206000.0,8621563000.0
-Chile,2022,FIA (Chile),innovation_instruments,ok,,,,,none,8621563000.0,8692845000.0,9627585000.0
-Chile,2023,FIA (Chile),innovation_instruments,ok,,,,,none,9627585000.0,8621563000.0,9880359000.0
-Chile,2024,FIA (Chile),innovation_instruments,ok,,,,,none,9880359000.0,9627585000.0,10295334000.0
-Chile,2025,FIA (Chile),innovation_instruments,ok,,,,,none,10295334000.0,9880359000.0,
-Chile,1999,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,1441020000.0,,1397590000.0
-Chile,2000,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,1397590000.0,1441020000.0,1507811000.0
-Chile,2001,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,1507811000.0,1397590000.0,1665659000.0
-Chile,2002,INACH (Instituto Antártico Chileno),science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,1507811000.0,1665659000.0
-Chile,2003,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,1665659000.0,1507811000.0,1910930000.0
-Chile,2004,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,1910930000.0,1665659000.0,1835357000.0
-Chile,2005,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,1835357000.0,1910930000.0,1934575000.0
-Chile,2006,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,1934575000.0,1835357000.0,2152774000.0
-Chile,2007,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,2152774000.0,1934575000.0,2284200000.0
-Chile,2008,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,2284200000.0,2152774000.0,2576460000.0
-Chile,2009,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,2576460000.0,2284200000.0,2792047000.0
-Chile,2010,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,2792047000.0,2576460000.0,2986857000.0
-Chile,2011,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,2986857000.0,2792047000.0,3138832000.0
-Chile,2012,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,3138832000.0,2986857000.0,3460582000.0
-Chile,2013,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,3460582000.0,3138832000.0,3677752000.0
-Chile,2014,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,3677752000.0,3460582000.0,4117886000.0
-Chile,2015,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,4117886000.0,3677752000.0,3746166000.0
-Chile,2016,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,3746166000.0,4117886000.0,4243874000.0
-Chile,2017,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,4243874000.0,3746166000.0,4661279000.0
-Chile,2018,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,4661279000.0,4243874000.0,5539745000.0
-Chile,2019,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,5539745000.0,4661279000.0,6349307000.0
-Chile,2020,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,6349307000.0,5539745000.0,5163841000.0
-Chile,2021,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,5163841000.0,6349307000.0,5882923000.0
-Chile,2022,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,5882923000.0,5163841000.0,6224780000.0
-Chile,2023,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,6224780000.0,5882923000.0,7237694000.0
-Chile,2024,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,7237694000.0,6224780000.0,7494857000.0
-Chile,2025,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,none,7494857000.0,7237694000.0,
-Chile,1999,Chilean Institute of Public Health,science_agency,ok,,,,,none,1976197000.0,,2404839000.0
-Chile,2000,Chilean Institute of Public Health,science_agency,ok,,,,,none,2404839000.0,1976197000.0,2227471000.0
-Chile,2001,Chilean Institute of Public Health,science_agency,ok,,,,,none,2227471000.0,2404839000.0,2354306000.0
-Chile,2002,Chilean Institute of Public Health,science_agency,ok,,,,,none,2354306000.0,2227471000.0,2780220000.0
-Chile,2003,Chilean Institute of Public Health,science_agency,ok,,,,,none,2780220000.0,2354306000.0,2763847000.0
-Chile,2004,Chilean Institute of Public Health,science_agency,ok,,,,,none,2763847000.0,2780220000.0,3410201000.0
-Chile,2005,Chilean Institute of Public Health,science_agency,ok,,,,,none,3410201000.0,2763847000.0,4805884000.0
-Chile,2006,Chilean Institute of Public Health,science_agency,ok,,,,,none,4805884000.0,3410201000.0,4033933000.0
-Chile,2007,Chilean Institute of Public Health,science_agency,ok,,,,,none,4033933000.0,4805884000.0,5890212000.0
-Chile,2008,Chilean Institute of Public Health,science_agency,ok,,,,,none,5890212000.0,4033933000.0,5970947000.0
-Chile,2009,Chilean Institute of Public Health,science_agency,ok,,,,,none,5970947000.0,5890212000.0,8202556000.0
-Chile,2010,Chilean Institute of Public Health,science_agency,ok,,,,,none,8202556000.0,5970947000.0,10651640000.0
-Chile,2011,Chilean Institute of Public Health,science_agency,ok,,,,,none,10651640000.0,8202556000.0,10550682000.0
-Chile,2012,Chilean Institute of Public Health,science_agency,ok,,,,,none,10550682000.0,10651640000.0,11250789000.0
-Chile,2013,Chilean Institute of Public Health,science_agency,ok,,,,,none,11250789000.0,10550682000.0,12000183000.0
-Chile,2014,Chilean Institute of Public Health,science_agency,ok,,,,,none,12000183000.0,11250789000.0,12983750000.0
-Chile,2015,Chilean Institute of Public Health,science_agency,ok,,,,,none,12983750000.0,12000183000.0,14789558000.0
-Chile,2016,Chilean Institute of Public Health,science_agency,ok,,,,,none,14789558000.0,12983750000.0,15772026000.0
-Chile,2017,Chilean Institute of Public Health,science_agency,ok,,,,,none,15772026000.0,14789558000.0,16637114000.0
-Chile,2018,Chilean Institute of Public Health,science_agency,ok,,,,,none,16637114000.0,15772026000.0,14176366000.0
-Chile,2019,Chilean Institute of Public Health,science_agency,ok,,,,,none,14176366000.0,16637114000.0,15744903000.0
-Chile,2020,Chilean Institute of Public Health,science_agency,ok,,,,,none,15744903000.0,14176366000.0,14326030000.0
-Chile,2021,Chilean Institute of Public Health,science_agency,ok,,,,,none,14326030000.0,15744903000.0,17033020000.0
-Chile,2022,Chilean Institute of Public Health,science_agency,ok,,,,,none,17033020000.0,14326030000.0,18324855000.0
-Chile,2023,Chilean Institute of Public Health,science_agency,ok,,,,,none,18324855000.0,17033020000.0,25087580000.0
-Chile,2024,Chilean Institute of Public Health,science_agency,ok,,,,,none,25087580000.0,18324855000.0,27539086000.0
-Chile,2025,Chilean Institute of Public Health,science_agency,ok,,,,,none,27539086000.0,25087580000.0,
-Chile,1999,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,4072284000.0,,4042259000.0
-Chile,2000,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,4042259000.0,4072284000.0,4084212000.0
-Chile,2001,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,4084212000.0,4042259000.0,4153207000.0
-Chile,2002,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,4153207000.0,4084212000.0,3804556000.0
-Chile,2003,Chilean Nuclear Energy Commission,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,4153207000.0,3804556000.0
-Chile,2004,Chilean Nuclear Energy Commission,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,4153207000.0,3804556000.0
-Chile,2005,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,3804556000.0,4153207000.0,4095117000.0
-Chile,2006,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,4095117000.0,3804556000.0,4636726000.0
-Chile,2007,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,4636726000.0,4095117000.0,5373679000.0
-Chile,2008,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,5373679000.0,4636726000.0,5949665000.0
-Chile,2009,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,5949665000.0,5373679000.0,6969574000.0
-Chile,2010,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,6969574000.0,5949665000.0,7702613000.0
-Chile,2011,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,7702613000.0,6969574000.0,7774935000.0
-Chile,2012,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,7774935000.0,7702613000.0,7763859000.0
-Chile,2013,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,7763859000.0,7774935000.0,8155363000.0
-Chile,2014,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,8155363000.0,7763859000.0,8788302000.0
-Chile,2015,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,8788302000.0,8155363000.0,8606168000.0
-Chile,2016,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,8606168000.0,8788302000.0,7730877000.0
-Chile,2017,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,7730877000.0,8606168000.0,8344833000.0
-Chile,2018,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,8344833000.0,7730877000.0,8158493000.0
-Chile,2019,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,8158493000.0,8344833000.0,7760429000.0
-Chile,2020,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,7760429000.0,8158493000.0,4924522000.0
-Chile,2021,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,4924522000.0,7760429000.0,5808787000.0
-Chile,2022,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,5808787000.0,4924522000.0,9900136000.0
-Chile,2023,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,9900136000.0,5808787000.0,12208141000.0
-Chile,2024,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,12208141000.0,9900136000.0,12247441000.0
-Chile,2025,Chilean Nuclear Energy Commission,science_agency,ok,,,,,none,12247441000.0,12208141000.0,
-Chile,1999,Fisheries Research Fund,direct_rd,ok,,,,,none,1453200000.0,,2184280000.0
-Chile,2000,Fisheries Research Fund,direct_rd,ok,,,,,none,2184280000.0,1453200000.0,2306250000.0
-Chile,2001,Fisheries Research Fund,direct_rd,ok,,,,,none,2306250000.0,2184280000.0,2223094000.0
-Chile,2002,Fisheries Research Fund,direct_rd,ok,,,,,none,2223094000.0,2306250000.0,2169575000.0
-Chile,2003,Fisheries Research Fund,direct_rd,ok,,,,,none,2169575000.0,2223094000.0,2211231000.0
-Chile,2004,Fisheries Research Fund,direct_rd,ok,,,,,none,2211231000.0,2169575000.0,2169872000.0
-Chile,2005,Fisheries Research Fund,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,2211231000.0,2169872000.0
-Chile,2006,Fisheries Research Fund,direct_rd,ok,,,,,none,2169872000.0,2211231000.0,2245818000.0
-Chile,2007,Fisheries Research Fund,direct_rd,ok,,,,,none,2245818000.0,2169872000.0,937800000.0
-Chile,2008,Fisheries Research Fund,direct_rd,ok,,,,,none,937800000.0,2245818000.0,1280312000.0
-Chile,2009,Fisheries Research Fund,direct_rd,ok,,,,,none,1280312000.0,937800000.0,2704204000.0
-Chile,2010,Fisheries Research Fund,direct_rd,ok,,,,,none,2704204000.0,1280312000.0,2476245000.0
-Chile,2011,Fisheries Research Fund,direct_rd,ok,,,,,none,2476245000.0,2704204000.0,2853980000.0
-Chile,2012,Fisheries Research Fund,direct_rd,ok,,,,,none,2853980000.0,2476245000.0,3219098000.0
-Chile,2013,Fisheries Research Fund,direct_rd,ok,,,,,none,3219098000.0,2853980000.0,6086261000.0
-Chile,2014,Fisheries Research Fund,direct_rd,outlier,"Amount 6,086,261,000 outside expected range [-682,739,750 – 6,076,778,750] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,6086261000.0,3219098000.0,5843991000.0
-Chile,2015,Fisheries Research Fund,direct_rd,ok,,,,,none,5843991000.0,6086261000.0,6066063000.0
-Chile,2016,Fisheries Research Fund,direct_rd,ok,,,,,none,6066063000.0,5843991000.0,5172115000.0
-Chile,2017,Fisheries Research Fund,direct_rd,ok,,,,,none,5172115000.0,6066063000.0,3545454000.0
-Chile,2018,Fisheries Research Fund,direct_rd,ok,,,,,none,3545454000.0,5172115000.0,3119021000.0
-Chile,2019,Fisheries Research Fund,direct_rd,ok,,,,,none,3119021000.0,3545454000.0,3200116000.0
-Chile,2020,Fisheries Research Fund,direct_rd,ok,,,,,none,3200116000.0,3119021000.0,2806818000.0
-Chile,2021,Fisheries Research Fund,direct_rd,ok,,,,,none,2806818000.0,3200116000.0,2645393000.0
-Chile,2022,Fisheries Research Fund,direct_rd,ok,,,,,none,2645393000.0,2806818000.0,2517041000.0
-Chile,2023,Fisheries Research Fund,direct_rd,ok,,,,,none,2517041000.0,2645393000.0,2605138000.0
-Chile,2024,Fisheries Research Fund,direct_rd,ok,,,,,none,2605138000.0,2517041000.0,2410131000.0
-Chile,2025,Fisheries Research Fund,direct_rd,ok,,,,,none,2410131000.0,2605138000.0,
-Chile,2010,Public Innovation Committee,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,2822200000.0
-Chile,2011,Public Innovation Committee,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,2822200000.0
-Chile,2012,Public Innovation Committee,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,2822200000.0
-Chile,2013,Public Innovation Committee,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,2822200000.0
-Chile,2014,Public Innovation Committee,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,2822200000.0
-Chile,2015,Public Innovation Committee,innovation_instruments,ok,,,,,none,2822200000.0,,3072480000.0
-Chile,2016,Public Innovation Committee,innovation_instruments,ok,,,,,none,3072480000.0,2822200000.0,3164654000.0
-Chile,2017,Public Innovation Committee,innovation_instruments,ok,,,,,none,3164654000.0,3072480000.0,
-Chile,2018,Public Innovation Committee,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,3164654000.0,
-Chile,2019,Public Innovation Committee,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,3164654000.0,
-Chile,2020,Public Innovation Committee,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,3164654000.0,
-Chile,2021,Public Innovation Committee,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,3164654000.0,
-Chile,2022,Public Innovation Committee,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,3164654000.0,
-Chile,2023,Public Innovation Committee,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,3164654000.0,
-Chile,2024,Public Innovation Committee,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,3164654000.0,
-Chile,2025,Public Innovation Committee,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,3164654000.0,
-Chile,2010,Excellence Centers - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,3321600000.0
-Chile,2011,Excellence Centers - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,3321600000.0
-Chile,2012,Excellence Centers - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,3321600000.0
-Chile,2013,Excellence Centers - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,3321600000.0
-Chile,2014,Excellence Centers - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,3321600000.0
-Chile,2015,Excellence Centers - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,3321600000.0
-Chile,2016,Excellence Centers - CORFO,innovation_instruments,ok,,,,,none,3321600000.0,,3420722000.0
-Chile,2017,Excellence Centers - CORFO,innovation_instruments,ok,,,,,none,3420722000.0,3321600000.0,2889443000.0
-Chile,2018,Excellence Centers - CORFO,innovation_instruments,ok,,,,,none,2889443000.0,3420722000.0,1766871000.0
-Chile,2019,Excellence Centers - CORFO,innovation_instruments,ok,,,,,none,1766871000.0,2889443000.0,2657123000.0
-Chile,2020,Excellence Centers - CORFO,innovation_instruments,ok,,,,,none,2657123000.0,1766871000.0,
-Chile,2021,Excellence Centers - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,2657123000.0,
-Chile,2022,Excellence Centers - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,2657123000.0,
-Chile,2023,Excellence Centers - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,2657123000.0,
-Chile,2024,Excellence Centers - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,2657123000.0,
-Chile,2025,Excellence Centers - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,2657123000.0,
-Chile,2010,Technological Consortiums - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,3193420000.0
-Chile,2011,Technological Consortiums - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,3193420000.0
-Chile,2012,Technological Consortiums - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,3193420000.0
-Chile,2013,Technological Consortiums - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,3193420000.0
-Chile,2014,Technological Consortiums - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,3193420000.0
-Chile,2015,Technological Consortiums - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,3193420000.0
-Chile,2016,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,none,3193420000.0,,2958851000.0
-Chile,2017,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,none,2958851000.0,3193420000.0,2759704000.0
-Chile,2018,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,none,2759704000.0,2958851000.0,2408924000.0
-Chile,2019,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,none,2408924000.0,2759704000.0,904000000.0
-Chile,2020,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,none,904000000.0,2408924000.0,9939882000.0
-Chile,2021,Technological Consortiums - CORFO,innovation_instruments,outlier,"Amount 9,939,882,000 outside expected range [582,142,750 – 5,049,254,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,9939882000.0,904000000.0,
-Chile,2022,Technological Consortiums - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,9939882000.0,
-Chile,2023,Technological Consortiums - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,9939882000.0,
-Chile,2024,Technological Consortiums - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,9939882000.0,
-Chile,2025,Technological Consortiums - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,9939882000.0,
-Chile,2010,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,1369900000.0
-Chile,2011,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,1369900000.0
-Chile,2012,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,1369900000.0
-Chile,2013,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,1369900000.0
-Chile,2014,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,1369900000.0
-Chile,2015,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,1369900000.0
-Chile,2016,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,1369900000.0
-Chile,2017,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,ok,,,,,none,1369900000.0,,1394563000.0
-Chile,2018,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,ok,,,,,none,1394563000.0,1369900000.0,
-Chile,2019,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,1394563000.0,
-Chile,2020,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,1394563000.0,
-Chile,2021,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,1394563000.0,
-Chile,2022,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,1394563000.0,
-Chile,2023,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,1394563000.0,
-Chile,2024,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,1394563000.0,
-Chile,2025,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,1394563000.0,
-Chile,2010,Internationalization of the Innovative Effort,innovation_instruments,ok,,,,,none,247956000.0,,
-Chile,2011,Internationalization of the Innovative Effort,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,247956000.0,
-Chile,2012,Internationalization of the Innovative Effort,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,247956000.0,
-Chile,2013,Internationalization of the Innovative Effort,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,247956000.0,
-Chile,2014,Internationalization of the Innovative Effort,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,247956000.0,
-Chile,2015,Internationalization of the Innovative Effort,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,247956000.0,
-Chile,2016,Internationalization of the Innovative Effort,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,247956000.0,
-Chile,2017,Internationalization of the Innovative Effort,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,247956000.0,
-Chile,2018,Internationalization of the Innovative Effort,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,247956000.0,
-Chile,2019,Internationalization of the Innovative Effort,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,247956000.0,
-Chile,2020,Internationalization of the Innovative Effort,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,247956000.0,
-Chile,2021,Internationalization of the Innovative Effort,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,247956000.0,
-Chile,2022,Internationalization of the Innovative Effort,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,247956000.0,
-Chile,2023,Internationalization of the Innovative Effort,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,247956000.0,
-Chile,2024,Internationalization of the Innovative Effort,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,247956000.0,
-Chile,2025,Internationalization of the Innovative Effort,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,247956000.0,
-Chile,2010,Call for Agricultural Innovation Projects,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2011,Call for Agricultural Innovation Projects,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2012,Call for Agricultural Innovation Projects,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2013,Call for Agricultural Innovation Projects,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2014,Call for Agricultural Innovation Projects,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2015,Call for Agricultural Innovation Projects,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2016,Call for Agricultural Innovation Projects,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,Call for Agricultural Innovation Projects,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,Call for Agricultural Innovation Projects,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,Call for Agricultural Innovation Projects,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,Call for Agricultural Innovation Projects,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,Call for Agricultural Innovation Projects,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2022,Call for Agricultural Innovation Projects,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2023,Call for Agricultural Innovation Projects,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2024,Call for Agricultural Innovation Projects,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2025,Call for Agricultural Innovation Projects,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2009,Technological Innovation,innovation_instruments,ok,,,,,none,9610674000.0,,11313377000.0
-Chile,2010,Technological Innovation,innovation_instruments,ok,,,,,none,11313377000.0,9610674000.0,12646184000.0
-Chile,2011,Technological Innovation,innovation_instruments,ok,,,,,none,12646184000.0,11313377000.0,
-Chile,2009,Business Innovation - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2010,Business Innovation - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2011,Business Innovation - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2012,Business Innovation - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2013,Business Innovation - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2014,Business Innovation - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2015,Business Innovation - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2016,Business Innovation - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,Business Innovation - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,Business Innovation - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,Business Innovation - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,Business Innovation - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,Funding Fund for Research Centers in Priority Areas (FONDAP),direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,Funding Fund for Research Centers in Priority Areas (FONDAP),direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2022,Funding Fund for Research Centers in Priority Areas (FONDAP),direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2023,Funding Fund for Research Centers in Priority Areas (FONDAP),direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2024,Funding Fund for Research Centers in Priority Areas (FONDAP),direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2016,Contribution for the Promotion of Research,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,Contribution for the Promotion of Research,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,Contribution for the Promotion of Research,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,Contribution for the Promotion of Research,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,Contribution for the Promotion of Research,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,Contribution for the Promotion of Research,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2022,Contribution for the Promotion of Research,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2023,Contribution for the Promotion of Research,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2024,Contribution for the Promotion of Research,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2025,Contribution for the Promotion of Research,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2011,Chilean Energy Efficiency Agency,science_agency,ok,,,,,none,3793987000.0,,3386219000.0
-Chile,2012,Chilean Energy Efficiency Agency,science_agency,ok,,,,,none,3386219000.0,3793987000.0,4121145000.0
-Chile,2013,Chilean Energy Efficiency Agency,science_agency,ok,,,,,none,4121145000.0,3386219000.0,3486035000.0
-Chile,2014,Chilean Energy Efficiency Agency,science_agency,ok,,,,,none,3486035000.0,4121145000.0,5716500000.0
-Chile,2015,Chilean Energy Efficiency Agency,science_agency,ok,,,,,none,5716500000.0,3486035000.0,4151669000.0
-Chile,2016,Chilean Energy Efficiency Agency,science_agency,ok,,,,,none,4151669000.0,5716500000.0,2058719000.0
-Chile,2017,Chilean Energy Efficiency Agency,science_agency,ok,,,,,none,2058719000.0,4151669000.0,1998620000.0
-Chile,2018,Chilean Energy Efficiency Agency,science_agency,ok,,,,,none,1998620000.0,2058719000.0,2953297000.0
-Chile,2019,Chilean Energy Efficiency Agency,science_agency,ok,,,,,none,2953297000.0,1998620000.0,5904630000.0
-Chile,2020,Chilean Energy Efficiency Agency,science_agency,ok,,,,,none,5904630000.0,2953297000.0,6603364000.0
-Chile,2021,Chilean Energy Efficiency Agency,science_agency,ok,,,,,none,6603364000.0,5904630000.0,4686342000.0
-Chile,2022,Chilean Energy Efficiency Agency,science_agency,ok,,,,,none,4686342000.0,6603364000.0,4981582000.0
-Chile,2023,Chilean Energy Efficiency Agency,science_agency,ok,,,,,none,4981582000.0,4686342000.0,8503207000.0
-Chile,2024,Chilean Energy Efficiency Agency,science_agency,ok,,,,,none,8503207000.0,4981582000.0,4833314000.0
-Chile,2025,Chilean Energy Efficiency Agency,science_agency,ok,,,,,none,4833314000.0,8503207000.0,
-Chile,2016,Public Interest Innovation - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,Public Interest Innovation - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,Public Interest Innovation - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,Public Interest Innovation - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,Public Interest Innovation - CORFO,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2009,Forestry Institute,science_agency,ok,,,,,none,1427562000.0,,1505815000.0
-Chile,2010,Forestry Institute,science_agency,ok,,,,,none,1505815000.0,1427562000.0,2244518000.0
-Chile,2011,Forestry Institute,science_agency,ok,,,,,none,2244518000.0,1505815000.0,2303346000.0
-Chile,2012,Forestry Institute,science_agency,ok,,,,,none,2303346000.0,2244518000.0,2715887000.0
-Chile,2013,Forestry Institute,science_agency,ok,,,,,none,2715887000.0,2303346000.0,2900518000.0
-Chile,2014,Forestry Institute,science_agency,ok,,,,,none,2900518000.0,2715887000.0,3099383000.0
-Chile,2015,Forestry Institute,science_agency,ok,,,,,none,3099383000.0,2900518000.0,3577097000.0
-Chile,2016,Forestry Institute,science_agency,ok,,,,,none,3577097000.0,3099383000.0,3862750000.0
-Chile,2017,Forestry Institute,science_agency,ok,,,,,none,3862750000.0,3577097000.0,3970103000.0
-Chile,2018,Forestry Institute,science_agency,ok,,,,,none,3970103000.0,3862750000.0,4069279000.0
-Chile,2019,Forestry Institute,science_agency,ok,,,,,none,4069279000.0,3970103000.0,4552856000.0
-Chile,2020,Forestry Institute,science_agency,ok,,,,,none,4552856000.0,4069279000.0,4422531000.0
-Chile,2021,Forestry Institute,science_agency,ok,,,,,none,4422531000.0,4552856000.0,4617122000.0
-Chile,2022,Forestry Institute,science_agency,ok,,,,,none,4617122000.0,4422531000.0,4967199000.0
-Chile,2023,Forestry Institute,science_agency,ok,,,,,none,4967199000.0,4617122000.0,5346620000.0
-Chile,2024,Forestry Institute,science_agency,ok,,,,,none,5346620000.0,4967199000.0,5571178000.0
-Chile,2025,Forestry Institute,science_agency,ok,,,,,none,5571178000.0,5346620000.0,
-Chile,2020,Support for Innovation in Higher Education - Private Institutions,higher_education,ok,,,,,none,2346052000.0,,2085900000.0
-Chile,2021,Support for Innovation in Higher Education - Private Institutions,higher_education,ok,,,,,none,2085900000.0,2346052000.0,3284313000.0
-Chile,2022,Support for Innovation in Higher Education - Private Institutions,higher_education,ok,,,,,none,3284313000.0,2085900000.0,4011996000.0
-Chile,2023,Support for Innovation in Higher Education - Private Institutions,higher_education,ok,,,,,none,4011996000.0,3284313000.0,
-Chile,2012,Promotion of Science and Technology - Undersecretariat of Agriculture Program 02,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2013,Promotion of Science and Technology - Undersecretariat of Agriculture Program 02,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2014,Promotion of Science and Technology - Undersecretariat of Agriculture Program 02,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2009,Fund for Research on Native Forest Law,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2010,Fund for Research on Native Forest Law,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2011,Fund for Research on Native Forest Law,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2012,Fund for Research on Native Forest Law,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2013,Fund for Research on Native Forest Law,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2014,Fund for Research on Native Forest Law,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2015,Fund for Research on Native Forest Law,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2016,Fund for Research on Native Forest Law,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,Fund for Research on Native Forest Law,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,Fund for Research on Native Forest Law,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,Fund for Research on Native Forest Law,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,Fund for Research on Native Forest Law,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,Fund for Research on Native Forest Law,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2022,Fund for Research on Native Forest Law,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2023,Fund for Research on Native Forest Law,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2024,Fund for Research on Native Forest Law,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2025,Fund for Research on Native Forest Law,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2016,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,ok,,,,,none,431808000.0,,772500000.0
-Chile,2017,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,ok,,,,,none,772500000.0,431808000.0,987012000.0
-Chile,2018,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,ok,,,,,none,987012000.0,772500000.0,1055523000.0
-Chile,2019,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,ok,,,,,none,1055523000.0,987012000.0,1082967000.0
-Chile,2020,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,ok,,,,,none,1082967000.0,1055523000.0,
-Chile,2011,Technological Consortiums Biofuels,innovation_instruments,ok,,,,,none,3762288000.0,,1428861000.0
-Chile,2012,Technological Consortiums Biofuels,innovation_instruments,ok,,,,,none,1428861000.0,3762288000.0,1393130000.0
-Chile,2013,Technological Consortiums Biofuels,innovation_instruments,ok,,,,,none,1393130000.0,1428861000.0,1133887000.0
-Chile,2014,Technological Consortiums Biofuels,innovation_instruments,ok,,,,,none,1133887000.0,1393130000.0,
-Chile,2020,Promotion of Science and Technology - National Agency for R&D,science_agency,ok,,,,,none,47205187000.0,,
-Chile,2014,Innovation Fund for Competitiveness,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2023,Innovation Based on Science,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2024,Support for Higher Education Innovation - INES,higher_education,ok,,,,,none,8654669000.0,,8707040000.0
-Chile,2025,Support for Higher Education Innovation - INES,higher_education,ok,,,,,none,8707040000.0,8654669000.0,
-Chile,2020,Promotion of Science and Technology - Millennium Scientific Initiative,science_agency,ok,,,,,none,8371852000.0,,
-Chile,2009,National Energy Efficiency Program,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,Regional Scientific and Technological Research Program,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2001,Millennium Scientific Initiative Program,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,FIE - Program for Sanitary Management in Aquaculture,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,Support for Innovation in Higher Education - State Institutions,higher_education,ok,,,,,none,3128850000.0,,
-Chile,2016,FIE - Strategic Public Goods Project (Innova Committee),innovation_instruments,ok,,,,,none,2559403000.0,,
-Chile,2010,Strengthening Research and Development,direct_rd,ok,,,,,none,21094000.0,,
-Chile,2015,National Center for Innovation and Promotion of Sustainable Energies (CIFES),science_agency,ok,,,,,none,2211518000.0,,1974814000.0
-Chile,2016,National Center for Innovation and Promotion of Sustainable Energies (CIFES),science_agency,ok,,,,,none,1974814000.0,2211518000.0,
-Chile,2021,CORFO Program for Innovative Entrepreneurship in the Bío Bío Region,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,Science and Technology - CORFO Program 05,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2009,Undersecretariat of Telecommunications - Digital Infrastructure for Innovation and Competitiveness,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,"CORFO - Strengthening Territorial Competitiveness, Innovation, and Entrepreneurship",innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2010,Promotion and Strengthening of the Energy Efficiency Market,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2023,Institute of Agricultural Research,science_agency,ok,,,,,none,20325290000.0,,
-Chile,2021,Development of Capacities for Educational Studies and Research,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,Innova FOSIS - Country Commitment,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,Innova FOSIS - Country Commitment,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2022,Innova FOSIS - Country Commitment,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2023,Innova FOSIS - Country Commitment,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2024,Innova FOSIS - Country Commitment,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2025,Innova FOSIS - Country Commitment,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,Solar and Energy Innovation Committee,innovation_instruments,ok,,,,,none,720293000.0,,
-Chile,2021,Knowledge and Innovation,innovation_instruments,ok,,,,,none,287533769000.0,,
-Chile,2025,Public Technological and Research Institute of Lithium and Salars,science_agency,ok,,,,,none,625200000.0,,
-Chile,2021,CICÍTEM - Corporation for Scientific and Technological Research for Mining,science_agency,ok,,,,,none,546760000.0,,
-Chile,2016,Educational Research Fund with Expert Participation,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,Educational Research Fund with Expert Participation,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,Educational Research Fund with Expert Participation,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,Educational Research Fund with Expert Participation,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,Educational Research Fund with Expert Participation,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,National Fund for Health Research and Development,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2024,Citizen (ENUSC) - National Survey of Research and Development Expenditure,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,Technological Consortia - INNOVA,innovation_instruments,ok,,,,,none,450000000.0,,
-Chile,2009,CORFO INNOVA - Technology Diffusion and Transfer,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2015,Polymers through the Advanced Polymer Research Center,science_agency,ok,,,,,none,412000000.0,,
-Chile,2010,Competitive Antarctic Science Development,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2011,Competitive Antarctic Science Development,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2012,Competitive Antarctic Science Development,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2013,Competitive Antarctic Science Development,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2014,Competitive Antarctic Science Development,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2015,Competitive Antarctic Science Development,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2016,Competitive Antarctic Science Development,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,Competitive Antarctic Science Development,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,Competitive Antarctic Science Development,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,Competitive Antarctic Science Development,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,Competitive Antarctic Science Development,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,Competitive Antarctic Science Development,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2022,Competitive Antarctic Science Development,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2023,Competitive Antarctic Science Development,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2024,Competitive Antarctic Science Development,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2025,Competitive Antarctic Science Development,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,Innovation Survey - National Institute of Statistics,direct_rd,ok,,,,,none,424875000.0,,210330000.0
-Chile,2018,Innovation Survey - National Institute of Statistics,direct_rd,ok,,,,,none,210330000.0,424875000.0,458350000.0
-Chile,2019,Innovation Survey - National Institute of Statistics,direct_rd,ok,,,,,none,458350000.0,210330000.0,
-Chile,2011,INNOVA - North Macrozone Call for Alternative Energy Projects,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2011,"Innovation, Research and Development Survey",direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2009,Astronomical Research Agreement - ESO/AUI/NAOJ,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2010,Astronomical Research Agreement - ESO/AUI/NAOJ,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2011,Astronomical Research Agreement - ESO/AUI/NAOJ,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2012,Astronomical Research Agreement - ESO/AUI/NAOJ,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2011,INNOVA - Investment Initiatives 2009-2010,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2015,National Innovation Survey,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2016,National Innovation Survey,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,National Innovation Survey,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,National Innovation Survey,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2010,CORFO - Promotion of Innovation and Entrepreneurship,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2011,For Competitiveness and Innovation,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2012,For Competitiveness and Innovation,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2009,CORFO - Regional Competitive Innovation,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,CORFO - Transfer Program to Support Innovation and Entrepreneurship,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,International Antarctic Center,science_agency,ok,,,,,none,193640000.0,,278501000.0
-Chile,2018,International Antarctic Center,science_agency,ok,,,,,none,278501000.0,193640000.0,269214000.0
-Chile,2019,International Antarctic Center,science_agency,ok,,,,,none,269214000.0,278501000.0,262403000.0
-Chile,2020,International Antarctic Center,science_agency,ok,,,,,none,262403000.0,269214000.0,189418000.0
-Chile,2021,International Antarctic Center,science_agency,ok,,,,,none,189418000.0,262403000.0,171713000.0
-Chile,2022,International Antarctic Center,science_agency,ok,,,,,none,171713000.0,189418000.0,122711000.0
-Chile,2023,International Antarctic Center,science_agency,ok,,,,,none,122711000.0,171713000.0,178363000.0
-Chile,2024,International Antarctic Center,science_agency,ok,,,,,none,178363000.0,122711000.0,181208000.0
-Chile,2025,International Antarctic Center,science_agency,ok,,,,,none,181208000.0,178363000.0,
-Chile,2018,National Institute for Agricultural Development - Technical Transfer in Wood Development and Non-Timber Forest Products,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,National Institute for Agricultural Development - Technical Transfer in Wood Development and Non-Timber Forest Products,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,Metropolitan University of Educational Sciences - Development of Nanobiomaterials,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,University of O'Higgins - Social Innovation in the Tourism Sector,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,Regional Ministerial Secretariat of Agriculture - Development of Silvoagropecuary Valuation,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,Regional Ministerial Secretariat of Agriculture - Development of Silvoagropecuary Valuation,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,Regional Ministerial Secretariat of Agriculture - Development of Silvoagropecuary Valuation,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,Catholic University of the North - Consolidation of the Multilevel Innovation Model,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,University of Antofagasta - Education Innovation Observatory Transfer,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,University of Antofagasta - Education Innovation Observatory Transfer,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,Agri-food Innovation Initiatives,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2016,University of Chile - Technological Transfer and Innovation in Irrigation,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2010,INDAP Technology Transfer for Floriculture,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2011,INDAP Technology Transfer for Floriculture,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2012,INDAP Technology Transfer for Floriculture,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2013,INDAP Technology Transfer for Floriculture,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2014,INDAP Technology Transfer for Floriculture,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2009,UAP Innovation and Strengthening of Regional Competitive Capacities,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,CONAF Agroforestry Systems Reforestation in Arauco Dunes,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,CONAF Agroforestry Systems Reforestation in Arauco Dunes,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,CONAF Agroforestry Systems Reforestation in Arauco Dunes,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,CONAF Agroforestry Systems Reforestation in Arauco Dunes,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,CONAF Sustainable Management Transfer of Native Forest,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,Antarctic Scientific Sample Preservation Platform,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2013,Catholic University of Maule - Introduction of Oilseed Forest Species,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,University of Chile - Sustainable Pest Control Innovation,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,INNOVACHILE - Hydrogeological and Geophysical Studies Transfer,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,"University of Atacama - Regional Educational Hubs in Science, Technology, and Society",higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,Entrepreneurship and Innovation,innovation_instruments,ok,,,,,none,82080000.0,,
-Chile,2018,Universidad Arturo Prat - T-Logistic Logistics Innovation Center,higher_education,ok,,,,,none,102600000.0,,103000000.0
-Chile,2019,Universidad Arturo Prat - T-Logistic Logistics Innovation Center,higher_education,ok,,,,,none,103000000.0,102600000.0,
-Chile,2021,Universidad Arturo Prat - Technology for Plastic Degradation,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,University of Chile - Applied Research Transfer for Table Grape Rootstock,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,INFOR - Prototype for Technological Transfer in Forestry,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,INFOR - Prototype for Technological Transfer in Forestry,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2016,University of Chile - Germplasm Prospecting and Technology for Early Fruit Harvest,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,"Pontifical Catholic University of Chile - Design and Crafts, Innovation Platform",higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,University of Talca - O'Higgins Social Innovation Laboratory,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,Universidad Arturo Prat - Tarapacá Extreme Environments Research,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,Universidad Arturo Prat - Tarapacá Extreme Environments Research,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2001,Corporation for Technological Research,science_agency,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2016,MINVU - Wood Innovation Center Agreement,innovation_instruments,ok,,,,,none,67854000.0,,76410000.0
-Chile,2017,MINVU - Wood Innovation Center Agreement,innovation_instruments,ok,,,,,none,76410000.0,67854000.0,78397000.0
-Chile,2018,MINVU - Wood Innovation Center Agreement,innovation_instruments,ok,,,,,none,78397000.0,76410000.0,80355000.0
-Chile,2019,MINVU - Wood Innovation Center Agreement,innovation_instruments,ok,,,,,none,80355000.0,78397000.0,87210000.0
-Chile,2020,MINVU - Wood Innovation Center Agreement,innovation_instruments,ok,,,,,none,87210000.0,80355000.0,89172000.0
-Chile,2021,MINVU - Wood Innovation Center Agreement,innovation_instruments,ok,,,,,none,89172000.0,87210000.0,91047000.0
-Chile,2022,MINVU - Wood Innovation Center Agreement,innovation_instruments,ok,,,,,none,91047000.0,89172000.0,96783000.0
-Chile,2023,MINVU - Wood Innovation Center Agreement,innovation_instruments,ok,,,,,none,96783000.0,91047000.0,100395000.0
-Chile,2024,MINVU - Wood Innovation Center Agreement,innovation_instruments,ok,,,,,none,100395000.0,96783000.0,
-Chile,2016,Pontifical Catholic University of Chile - Innovation in Beehive Sanitary Situation,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2015,Pontifical Catholic University of Valparaíso - Transfer of Innovation Technologies for Dryland Quinoa,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,Santo Tomás University - Sustainable Aquaculture and Regional Oyster Industry,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,CORFO - Innovation Transfer Program to Strengthen the Environment,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,CORFO - Innovation Transfer Program to Strengthen the Environment,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,Pontifical Catholic University of Chile - Innovation and Training for Sustainable Irrigation,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2013,CORFO - Transfer of Innovative Entrepreneurship Ecosystem Development in the Region,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,"CORFO - Support for Innovation Entrepreneurship, Viraliza",innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2016,University of La Serena - Research Implementation and Evaluation of FVH Production,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2009,CORFO - Innovation for Competitiveness,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2015,University of Talca - Transfer of Employment of Rhizobacteria as Sustainable Technology,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,UMAG - Transfer of Technology for the Production of Highly Unsaturated Fatty Acids,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,CORFO-INNOVA - Transfer of Public Good (Region of Los Ríos),innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,Catholic University of the North - Development of Eco-Panels from Aquaculture Waste,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,University of Magallanes - Open Laboratory Prototype for Sub-Antarctic Sciences,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,University of Atacama - Transfer Program for Small-Scale Oyster Aquaculture,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,"University of Aysén - Integrated Multitrophic Aquaculture, Aysén Region",higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,Universidad Austral - Development of the Culture of Innovation and Entrepreneurship,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,Universidad de Chile - Comprehensive Innovation in Evaluation/Exposure to Contaminants,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,Universidad Andrés Bello - Innovation in Marketing towards Gabriela Mistral,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2015,Universidad Católica del Norte - Regional Innovation Center in Strategic Resources,higher_education,ok,,,,,none,59255000.0,,
-Chile,2020,Universidad Austral - Aysén Museums Network: Museological Research and Diagnosis,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2015,"Pontifical Catholic University of Chile - Onion Transfer, Innovation for Sustainable Cultivation",higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2016,CORFO-INNOVA - Technology Diffusion Program for the RMS,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2012,UACH CIEP - Human Capital Research in Water Systems and Ice Fields,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,CORFO-INNOVA - Regional Training and Certification Programs,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,CORFO-INNOVA - Regional Training and Certification Programs,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,INNOVACHILE - Human Capital Transfer for Innovation,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2016,University of Chile - Innovation for Frost Control,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,University of Chile - Innovation for Frost Control,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2010,CORFO INNOVA - Improvement of Environmental Management in Grape Production,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,University of Antofagasta - Transfer of Solar Technologies Laboratory Positioning,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,University of Antofagasta - Transfer of Solar Technologies Laboratory Positioning,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,INFOR - Development of Silvoagricultural Models: PFNM,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2015,University of Chile - Transfer of Innovation in Strawberry Management,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2012,INFOR - Research on New Species for Biomass and Dendroenergy Development,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2013,INFOR - Research on New Species for Biomass and Dendroenergy Development,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2013,INNOVA-CORFO - Transfer of Public Goods for Competitiveness,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2010,"UCV - Construction of Biotechnology Core, Curauma Scientific and Technological Park",higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,CORFO-INNOVA - Transfer Program for Activating Innovation Projects,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2016,Innovative Solutions for Water Supply,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,INNOVACHILE - Transfer Evaluation of Jibia Behavior,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2010,PUCV - Establishment of the First Stage of the Biotechnology Core,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2012,INFOR - Research on New Technologies and Industrial Development of Ponderosa Pine,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,University of Chile - Innovation and Optimization of Irrigation in Blueberries,higher_education,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,Innovador Programme,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,Innovador Programme,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,Innovador Programme,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,Innovative Technology Development for Mineral Concentration,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2001,Research Programs,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2010,Antarctic Thesis Program,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2011,Antarctic Thesis Program,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2012,Antarctic Thesis Program,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2013,Antarctic Thesis Program,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2014,Antarctic Thesis Program,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2015,Antarctic Thesis Program,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2016,Antarctic Thesis Program,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,Antarctic Thesis Program,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,Antarctic Thesis Program,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2019,Antarctic Thesis Program,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2020,Antarctic Thesis Program,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,Antarctic Thesis Program,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2022,Antarctic Thesis Program,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2023,Antarctic Thesis Program,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2024,Antarctic Thesis Program,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,UACH Program on Equity and Efficiency in Organ Transplantation,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2014,"UACH CIEP Program on Research, Innovation, and Development at the Marine Edge",direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2013,UACH CIEP Program on Human Capital Research in Water Systems and Ice Fields,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2018,U. de Atacama Program on New Technology Development for Oyster Seed Cultivation,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2012,U. de Los Lagos Innovative Technique for Genetic Parental Identification in Concholepas,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,U. de Atacama Research Center for Cobalt and Rare Earths,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,308 UACH-GeneTAURUS - Superiority in Quality and Efficiency,direct_rd,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2021,Inter-American Institute for Global Change Research,science_agency,ok,,,,,none,5455000.0,,
-Chile,2017,INNOVACHILE - Technology Transfer Program for Agricultural Producers,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
-Chile,2017,INNOVACHILE - Technology Transfer Program for Agricultural Reconversion,innovation_instruments,missing,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,
+country,year,canonical_name,category,gap_type,gap_subtype,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,series_currency,prev_amount,next_amount
+Chile,1999,CONICYT / ANID,science_agency,ok,,,,,,none,29475902000.0,CLP,,8354926000.0
+Chile,2000,CONICYT / ANID,science_agency,ok,,,,,,none,8354926000.0,CLP,29475902000.0,8755987000.0
+Chile,2001,CONICYT / ANID,science_agency,ok,,,,,,none,8755987000.0,CLP,8354926000.0,37655285000.0
+Chile,2002,CONICYT / ANID,science_agency,ok,,,,,,none,37655285000.0,CLP,8755987000.0,2511288000.0
+Chile,2003,CONICYT / ANID,science_agency,ok,,,,,,none,2511288000.0,CLP,37655285000.0,38211277000.0
+Chile,2004,CONICYT / ANID,science_agency,ok,,,,,,none,38211277000.0,CLP,2511288000.0,43886223000.0
+Chile,2005,CONICYT / ANID,science_agency,ok,,,,,,none,43886223000.0,CLP,38211277000.0,51688206000.0
+Chile,2006,CONICYT / ANID,science_agency,ok,,,,,,none,51688206000.0,CLP,43886223000.0,14208430000.0
+Chile,2007,CONICYT / ANID,science_agency,ok,,,,,,none,14208430000.0,CLP,51688206000.0,13663246000.0
+Chile,2008,CONICYT / ANID,science_agency,ok,,,,,,none,13663246000.0,CLP,14208430000.0,15217838000.0
+Chile,2009,CONICYT / ANID,science_agency,ok,,,,,,none,15217838000.0,CLP,13663246000.0,116917838000.0
+Chile,2010,CONICYT / ANID,science_agency,ok,,,,,,none,116917838000.0,CLP,15217838000.0,25540402000.0
+Chile,2011,CONICYT / ANID,science_agency,ok,,,,,,none,25540402000.0,CLP,116917838000.0,145770177000.0
+Chile,2012,CONICYT / ANID,science_agency,ok,,,,,,none,145770177000.0,CLP,25540402000.0,171607682000.0
+Chile,2013,CONICYT / ANID,science_agency,ok,,,,,,none,171607682000.0,CLP,145770177000.0,177223363000.0
+Chile,2014,CONICYT / ANID,science_agency,ok,,,,,,none,177223363000.0,CLP,171607682000.0,238856268000.0
+Chile,2015,CONICYT / ANID,science_agency,ok,,,,,,none,238856268000.0,CLP,177223363000.0,255982757000.0
+Chile,2016,CONICYT / ANID,science_agency,ok,,,,,,none,255982757000.0,CLP,238856268000.0,267254295000.0
+Chile,2017,CONICYT / ANID,science_agency,ok,,,,,,none,267254295000.0,CLP,255982757000.0,277429910000.0
+Chile,2018,CONICYT / ANID,science_agency,ok,,,,,,none,277429910000.0,CLP,267254295000.0,288300661000.0
+Chile,2019,CONICYT / ANID,science_agency,ok,,,,,,none,288300661000.0,CLP,277429910000.0,304493223000.0
+Chile,2020,CONICYT / ANID,science_agency,ok,,,,,,none,304493223000.0,CLP,288300661000.0,287533769000.0
+Chile,2021,CONICYT / ANID,science_agency,ok,,,,,,none,287533769000.0,CLP,304493223000.0,300858107000.0
+Chile,2022,CONICYT / ANID,science_agency,ok,,,,,,none,300858107000.0,CLP,287533769000.0,312088973000.0
+Chile,2023,CONICYT / ANID,science_agency,ok,,,,,,none,312088973000.0,CLP,300858107000.0,322532595000.0
+Chile,2024,CONICYT / ANID,science_agency,ok,,,,,,none,322532595000.0,CLP,312088973000.0,340604113000.0
+Chile,2025,CONICYT / ANID,science_agency,ok,,,,,,none,340604113000.0,CLP,322532595000.0,
+Chile,2006,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,15206218000.0,CLP,,14330049000.0
+Chile,2007,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,14330049000.0,CLP,15206218000.0,18053890000.0
+Chile,2008,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,18053890000.0,CLP,14330049000.0,19070135000.0
+Chile,2009,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,19070135000.0,CLP,18053890000.0,18565603000.0
+Chile,2010,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,18565603000.0,CLP,19070135000.0,23438018000.0
+Chile,2011,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,23438018000.0,CLP,18565603000.0,21416254000.0
+Chile,2012,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,21416254000.0,CLP,23438018000.0,29560279000.0
+Chile,2013,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,29560279000.0,CLP,21416254000.0,12155030000.0
+Chile,2014,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,12155030000.0,CLP,29560279000.0,18402666000.0
+Chile,2015,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,18402666000.0,CLP,12155030000.0,26638111000.0
+Chile,2016,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,26638111000.0,CLP,18402666000.0,27217404000.0
+Chile,2017,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,27217404000.0,CLP,26638111000.0,27827214000.0
+Chile,2018,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,27827214000.0,CLP,27217404000.0,19603364000.0
+Chile,2019,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,19603364000.0,CLP,27827214000.0,5733830000.0
+Chile,2020,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,5733830000.0,CLP,19603364000.0,9939882000.0
+Chile,2021,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,9939882000.0,CLP,5733830000.0,3021091000.0
+Chile,2022,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,3021091000.0,CLP,9939882000.0,14314369000.0
+Chile,2023,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,14314369000.0,CLP,3021091000.0,14444987000.0
+Chile,2024,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,14444987000.0,CLP,14314369000.0,13633385000.0
+Chile,2025,CORFO innovation and technology funding,innovation_instruments,ok,,,,,,none,13633385000.0,CLP,14444987000.0,
+Chile,1999,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,4565385000.0,CLP,,8354926000.0
+Chile,2000,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,8354926000.0,CLP,4565385000.0,8755987000.0
+Chile,2001,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,8755987000.0,CLP,8354926000.0,9703810000.0
+Chile,2002,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,9703810000.0,CLP,8755987000.0,9713560000.0
+Chile,2003,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,9713560000.0,CLP,9703810000.0,9900060000.0
+Chile,2004,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,9900060000.0,CLP,9713560000.0,9496909000.0
+Chile,2005,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,9496909000.0,CLP,9900060000.0,14208430000.0
+Chile,2006,Fund for the Promotion of Science and Technology,innovation_instruments,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,9496909000.0,14208430000.0
+Chile,2007,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,14208430000.0,CLP,9496909000.0,13663246000.0
+Chile,2008,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,13663246000.0,CLP,14208430000.0,15217838000.0
+Chile,2009,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,15217838000.0,CLP,13663246000.0,22278079000.0
+Chile,2010,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,22278079000.0,CLP,15217838000.0,25540402000.0
+Chile,2011,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,25540402000.0,CLP,22278079000.0,24522935000.0
+Chile,2012,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,24522935000.0,CLP,25540402000.0,30085312000.0
+Chile,2013,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,30085312000.0,CLP,24522935000.0,32378050000.0
+Chile,2014,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,32378050000.0,CLP,30085312000.0,34457620000.0
+Chile,2015,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,34457620000.0,CLP,32378050000.0,38434887000.0
+Chile,2016,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,38434887000.0,CLP,34457620000.0,40053750000.0
+Chile,2017,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,40053750000.0,CLP,38434887000.0,41442278000.0
+Chile,2018,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,41442278000.0,CLP,40053750000.0,45558816000.0
+Chile,2019,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,45558816000.0,CLP,41442278000.0,22511539000.0
+Chile,2020,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,22511539000.0,CLP,45558816000.0,22718356000.0
+Chile,2021,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,22718356000.0,CLP,22511539000.0,27981002000.0
+Chile,2022,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,27981002000.0,CLP,22718356000.0,42009913000.0
+Chile,2023,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,42009913000.0,CLP,27981002000.0,43480260000.0
+Chile,2024,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,43480260000.0,CLP,42009913000.0,44826358000.0
+Chile,2025,Fund for the Promotion of Science and Technology,innovation_instruments,ok,,,,,,none,44826358000.0,CLP,43480260000.0,
+Chile,1999,INIA (Chile),science_agency,ok,,,,,,none,6377428000.0,CLP,,6581506000.0
+Chile,2000,INIA (Chile),science_agency,ok,,,,,,none,6581506000.0,CLP,6377428000.0,6746044000.0
+Chile,2001,INIA (Chile),science_agency,ok,,,,,,none,6746044000.0,CLP,6581506000.0,6955171000.0
+Chile,2002,INIA (Chile),science_agency,ok,,,,,,none,6955171000.0,CLP,6746044000.0,7255171000.0
+Chile,2003,INIA (Chile),science_agency,ok,,,,,,none,7255171000.0,CLP,6955171000.0,7190630000.0
+Chile,2004,INIA (Chile),science_agency,ok,,,,,,none,7190630000.0,CLP,7255171000.0,7421236000.0
+Chile,2005,INIA (Chile),science_agency,ok,,,,,,none,7421236000.0,CLP,7190630000.0,7643873000.0
+Chile,2006,INIA (Chile),science_agency,ok,,,,,,none,7643873000.0,CLP,7421236000.0,8212594000.0
+Chile,2007,INIA (Chile),science_agency,ok,,,,,,none,8212594000.0,CLP,7643873000.0,9049599000.0
+Chile,2008,INIA (Chile),science_agency,ok,,,,,,none,9049599000.0,CLP,8212594000.0,9610674000.0
+Chile,2009,INIA (Chile),science_agency,ok,,,,,,none,9610674000.0,CLP,9049599000.0,11313377000.0
+Chile,2010,INIA (Chile),science_agency,ok,,,,,,none,11313377000.0,CLP,9610674000.0,12646184000.0
+Chile,2011,INIA (Chile),science_agency,ok,,,,,,none,12646184000.0,CLP,11313377000.0,12977640000.0
+Chile,2012,INIA (Chile),science_agency,ok,,,,,,none,12977640000.0,CLP,12646184000.0,13554647000.0
+Chile,2013,INIA (Chile),science_agency,ok,,,,,,none,13554647000.0,CLP,12977640000.0,14170520000.0
+Chile,2014,INIA (Chile),science_agency,ok,,,,,,none,14170520000.0,CLP,13554647000.0,15200429000.0
+Chile,2015,INIA (Chile),science_agency,ok,,,,,,none,15200429000.0,CLP,14170520000.0,16556183000.0
+Chile,2016,INIA (Chile),science_agency,ok,,,,,,none,16556183000.0,CLP,15200429000.0,16875557000.0
+Chile,2017,INIA (Chile),science_agency,ok,,,,,,none,16875557000.0,CLP,16556183000.0,17342185000.0
+Chile,2018,INIA (Chile),science_agency,ok,,,,,,none,17342185000.0,CLP,16875557000.0,17775401000.0
+Chile,2019,INIA (Chile),science_agency,ok,,,,,,none,17775401000.0,CLP,17342185000.0,18352799000.0
+Chile,2020,INIA (Chile),science_agency,ok,,,,,,none,18352799000.0,CLP,17775401000.0,17107193000.0
+Chile,2021,INIA (Chile),science_agency,ok,,,,,,none,17107193000.0,CLP,18352799000.0,17859910000.0
+Chile,2022,INIA (Chile),science_agency,ok,,,,,,none,17859910000.0,CLP,17107193000.0,20325290000.0
+Chile,2023,INIA (Chile),science_agency,ok,,,,,,none,20325290000.0,CLP,17859910000.0,21420649000.0
+Chile,2024,INIA (Chile),science_agency,ok,,,,,,none,21420649000.0,CLP,20325290000.0,22320316000.0
+Chile,2025,INIA (Chile),science_agency,ok,,,,,,none,22320316000.0,CLP,21420649000.0,
+Chile,1999,IFOP,science_agency,ok,,,,,,none,367971000.0,CLP,,379746000.0
+Chile,2000,IFOP,science_agency,ok,,,,,,none,379746000.0,CLP,367971000.0,389240000.0
+Chile,2001,IFOP,science_agency,ok,,,,,,none,389240000.0,CLP,379746000.0,401306000.0
+Chile,2002,IFOP,science_agency,ok,,,,,,none,401306000.0,CLP,389240000.0,385234000.0
+Chile,2003,IFOP,science_agency,ok,,,,,,none,385234000.0,CLP,401306000.0,392630000.0
+Chile,2004,IFOP,science_agency,ok,,,,,,none,392630000.0,CLP,385234000.0,396832000.0
+Chile,2005,IFOP,science_agency,ok,,,,,,none,396832000.0,CLP,392630000.0,815760000.0
+Chile,2006,IFOP,science_agency,ok,,,,,,none,815760000.0,CLP,396832000.0,905313000.0
+Chile,2007,IFOP,science_agency,ok,,,,,,none,905313000.0,CLP,815760000.0,871585000.0
+Chile,2008,IFOP,science_agency,ok,,,,,,none,871585000.0,CLP,905313000.0,1016606000.0
+Chile,2009,IFOP,science_agency,ok,,,,,,none,1016606000.0,CLP,871585000.0,3603357000.0
+Chile,2010,IFOP,science_agency,ok,,,,,,none,3603357000.0,CLP,1016606000.0,5376074000.0
+Chile,2011,IFOP,science_agency,ok,,,,,,none,5376074000.0,CLP,3603357000.0,5526604000.0
+Chile,2012,IFOP,science_agency,ok,,,,,,none,5526604000.0,CLP,5376074000.0,3894613000.0
+Chile,2013,IFOP,science_agency,ok,,,,,,none,3894613000.0,CLP,5526604000.0,12935937000.0
+Chile,2014,IFOP,science_agency,ok,,,,,,none,12935937000.0,CLP,3894613000.0,15439654000.0
+Chile,2015,IFOP,science_agency,ok,,,,,,none,15439654000.0,CLP,12935937000.0,16026361000.0
+Chile,2016,IFOP,science_agency,ok,,,,,,none,16026361000.0,CLP,15439654000.0,16507152000.0
+Chile,2017,IFOP,science_agency,ok,,,,,,none,16507152000.0,CLP,16026361000.0,17527860000.0
+Chile,2018,IFOP,science_agency,ok,,,,,,none,17527860000.0,CLP,16507152000.0,17965715000.0
+Chile,2019,IFOP,science_agency,ok,,,,,,none,17965715000.0,CLP,17527860000.0,18432824000.0
+Chile,2020,IFOP,science_agency,ok,,,,,,none,18432824000.0,CLP,17965715000.0,17779291000.0
+Chile,2021,IFOP,science_agency,ok,,,,,,none,17779291000.0,CLP,18432824000.0,18561580000.0
+Chile,2022,IFOP,science_agency,ok,,,,,,none,18561580000.0,CLP,17779291000.0,591435000.0
+Chile,2023,IFOP,science_agency,ok,,,,,,none,591435000.0,CLP,18561580000.0,20421544000.0
+Chile,2024,IFOP,science_agency,ok,,,,,,none,20421544000.0,CLP,591435000.0,21279249000.0
+Chile,2025,IFOP,science_agency,ok,,,,,,none,21279249000.0,CLP,20421544000.0,
+Chile,1999,FIA (Chile),innovation_instruments,ok,,,,,,none,3362980000.0,CLP,,3412428000.0
+Chile,2000,FIA (Chile),innovation_instruments,ok,,,,,,none,3412428000.0,CLP,3362980000.0,3856489000.0
+Chile,2001,FIA (Chile),innovation_instruments,ok,,,,,,none,3856489000.0,CLP,3412428000.0,4353543000.0
+Chile,2002,FIA (Chile),innovation_instruments,ok,,,,,,none,4353543000.0,CLP,3856489000.0,4035007000.0
+Chile,2003,FIA (Chile),innovation_instruments,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,4353543000.0,4035007000.0
+Chile,2004,FIA (Chile),innovation_instruments,ok,,,,,,none,4035007000.0,CLP,4353543000.0,4223053000.0
+Chile,2005,FIA (Chile),innovation_instruments,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,4035007000.0,4223053000.0
+Chile,2006,FIA (Chile),innovation_instruments,ok,,,,,,none,4223053000.0,CLP,4035007000.0,6497090000.0
+Chile,2007,FIA (Chile),innovation_instruments,ok,,,,,,none,6497090000.0,CLP,4223053000.0,6985234000.0
+Chile,2008,FIA (Chile),innovation_instruments,ok,,,,,,none,6985234000.0,CLP,6497090000.0,7205615000.0
+Chile,2009,FIA (Chile),innovation_instruments,ok,,,,,,none,7205615000.0,CLP,6985234000.0,7666977000.0
+Chile,2010,FIA (Chile),innovation_instruments,ok,,,,,,none,7666977000.0,CLP,7205615000.0,8053115000.0
+Chile,2011,FIA (Chile),innovation_instruments,ok,,,,,,none,8053115000.0,CLP,7666977000.0,8294141000.0
+Chile,2012,FIA (Chile),innovation_instruments,ok,,,,,,none,8294141000.0,CLP,8053115000.0,8534671000.0
+Chile,2013,FIA (Chile),innovation_instruments,ok,,,,,,none,8534671000.0,CLP,8294141000.0,8657354000.0
+Chile,2014,FIA (Chile),innovation_instruments,ok,,,,,,none,8657354000.0,CLP,8534671000.0,8917075000.0
+Chile,2015,FIA (Chile),innovation_instruments,ok,,,,,,none,8917075000.0,CLP,8657354000.0,9570260000.0
+Chile,2016,FIA (Chile),innovation_instruments,ok,,,,,,none,9570260000.0,CLP,8917075000.0,10697405000.0
+Chile,2017,FIA (Chile),innovation_instruments,ok,,,,,,none,10697405000.0,CLP,9570260000.0,11494921000.0
+Chile,2018,FIA (Chile),innovation_instruments,ok,,,,,,none,11494921000.0,CLP,10697405000.0,9195426000.0
+Chile,2019,FIA (Chile),innovation_instruments,ok,,,,,,none,9195426000.0,CLP,11494921000.0,9446206000.0
+Chile,2020,FIA (Chile),innovation_instruments,ok,,,,,,none,9446206000.0,CLP,9195426000.0,8692845000.0
+Chile,2021,FIA (Chile),innovation_instruments,ok,,,,,,none,8692845000.0,CLP,9446206000.0,8621563000.0
+Chile,2022,FIA (Chile),innovation_instruments,ok,,,,,,none,8621563000.0,CLP,8692845000.0,9627585000.0
+Chile,2023,FIA (Chile),innovation_instruments,ok,,,,,,none,9627585000.0,CLP,8621563000.0,9880359000.0
+Chile,2024,FIA (Chile),innovation_instruments,ok,,,,,,none,9880359000.0,CLP,9627585000.0,10295334000.0
+Chile,2025,FIA (Chile),innovation_instruments,ok,,,,,,none,10295334000.0,CLP,9880359000.0,
+Chile,1999,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,1441020000.0,CLP,,1397590000.0
+Chile,2000,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,1397590000.0,CLP,1441020000.0,1507811000.0
+Chile,2001,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,1507811000.0,CLP,1397590000.0,1665659000.0
+Chile,2002,INACH (Instituto Antártico Chileno),science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1507811000.0,1665659000.0
+Chile,2003,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,1665659000.0,CLP,1507811000.0,1910930000.0
+Chile,2004,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,1910930000.0,CLP,1665659000.0,1835357000.0
+Chile,2005,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,1835357000.0,CLP,1910930000.0,1934575000.0
+Chile,2006,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,1934575000.0,CLP,1835357000.0,2152774000.0
+Chile,2007,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,2152774000.0,CLP,1934575000.0,2284200000.0
+Chile,2008,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,2284200000.0,CLP,2152774000.0,2576460000.0
+Chile,2009,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,2576460000.0,CLP,2284200000.0,2792047000.0
+Chile,2010,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,2792047000.0,CLP,2576460000.0,2986857000.0
+Chile,2011,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,2986857000.0,CLP,2792047000.0,3138832000.0
+Chile,2012,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,3138832000.0,CLP,2986857000.0,3460582000.0
+Chile,2013,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,3460582000.0,CLP,3138832000.0,3677752000.0
+Chile,2014,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,3677752000.0,CLP,3460582000.0,4117886000.0
+Chile,2015,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,4117886000.0,CLP,3677752000.0,3746166000.0
+Chile,2016,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,3746166000.0,CLP,4117886000.0,4243874000.0
+Chile,2017,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,4243874000.0,CLP,3746166000.0,4661279000.0
+Chile,2018,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,4661279000.0,CLP,4243874000.0,5539745000.0
+Chile,2019,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,5539745000.0,CLP,4661279000.0,6349307000.0
+Chile,2020,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,6349307000.0,CLP,5539745000.0,5163841000.0
+Chile,2021,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,5163841000.0,CLP,6349307000.0,5882923000.0
+Chile,2022,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,5882923000.0,CLP,5163841000.0,6224780000.0
+Chile,2023,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,6224780000.0,CLP,5882923000.0,7237694000.0
+Chile,2024,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,7237694000.0,CLP,6224780000.0,7494857000.0
+Chile,2025,INACH (Instituto Antártico Chileno),science_agency,ok,,,,,,none,7494857000.0,CLP,7237694000.0,
+Chile,1999,Chilean Institute of Public Health,science_agency,ok,,,,,,none,1976197000.0,CLP,,2404839000.0
+Chile,2000,Chilean Institute of Public Health,science_agency,ok,,,,,,none,2404839000.0,CLP,1976197000.0,2227471000.0
+Chile,2001,Chilean Institute of Public Health,science_agency,ok,,,,,,none,2227471000.0,CLP,2404839000.0,2354306000.0
+Chile,2002,Chilean Institute of Public Health,science_agency,ok,,,,,,none,2354306000.0,CLP,2227471000.0,2780220000.0
+Chile,2003,Chilean Institute of Public Health,science_agency,ok,,,,,,none,2780220000.0,CLP,2354306000.0,2763847000.0
+Chile,2004,Chilean Institute of Public Health,science_agency,ok,,,,,,none,2763847000.0,CLP,2780220000.0,3410201000.0
+Chile,2005,Chilean Institute of Public Health,science_agency,ok,,,,,,none,3410201000.0,CLP,2763847000.0,4805884000.0
+Chile,2006,Chilean Institute of Public Health,science_agency,ok,,,,,,none,4805884000.0,CLP,3410201000.0,4033933000.0
+Chile,2007,Chilean Institute of Public Health,science_agency,ok,,,,,,none,4033933000.0,CLP,4805884000.0,5890212000.0
+Chile,2008,Chilean Institute of Public Health,science_agency,ok,,,,,,none,5890212000.0,CLP,4033933000.0,5970947000.0
+Chile,2009,Chilean Institute of Public Health,science_agency,ok,,,,,,none,5970947000.0,CLP,5890212000.0,8202556000.0
+Chile,2010,Chilean Institute of Public Health,science_agency,ok,,,,,,none,8202556000.0,CLP,5970947000.0,10651640000.0
+Chile,2011,Chilean Institute of Public Health,science_agency,ok,,,,,,none,10651640000.0,CLP,8202556000.0,10550682000.0
+Chile,2012,Chilean Institute of Public Health,science_agency,ok,,,,,,none,10550682000.0,CLP,10651640000.0,11250789000.0
+Chile,2013,Chilean Institute of Public Health,science_agency,ok,,,,,,none,11250789000.0,CLP,10550682000.0,12000183000.0
+Chile,2014,Chilean Institute of Public Health,science_agency,ok,,,,,,none,12000183000.0,CLP,11250789000.0,12983750000.0
+Chile,2015,Chilean Institute of Public Health,science_agency,ok,,,,,,none,12983750000.0,CLP,12000183000.0,14789558000.0
+Chile,2016,Chilean Institute of Public Health,science_agency,ok,,,,,,none,14789558000.0,CLP,12983750000.0,15772026000.0
+Chile,2017,Chilean Institute of Public Health,science_agency,ok,,,,,,none,15772026000.0,CLP,14789558000.0,16637114000.0
+Chile,2018,Chilean Institute of Public Health,science_agency,ok,,,,,,none,16637114000.0,CLP,15772026000.0,14176366000.0
+Chile,2019,Chilean Institute of Public Health,science_agency,ok,,,,,,none,14176366000.0,CLP,16637114000.0,15744903000.0
+Chile,2020,Chilean Institute of Public Health,science_agency,ok,,,,,,none,15744903000.0,CLP,14176366000.0,14326030000.0
+Chile,2021,Chilean Institute of Public Health,science_agency,ok,,,,,,none,14326030000.0,CLP,15744903000.0,17033020000.0
+Chile,2022,Chilean Institute of Public Health,science_agency,ok,,,,,,none,17033020000.0,CLP,14326030000.0,18324855000.0
+Chile,2023,Chilean Institute of Public Health,science_agency,ok,,,,,,none,18324855000.0,CLP,17033020000.0,25087580000.0
+Chile,2024,Chilean Institute of Public Health,science_agency,ok,,,,,,none,25087580000.0,CLP,18324855000.0,27539086000.0
+Chile,2025,Chilean Institute of Public Health,science_agency,ok,,,,,,none,27539086000.0,CLP,25087580000.0,
+Chile,1999,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,4072284000.0,CLP,,4042259000.0
+Chile,2000,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,4042259000.0,CLP,4072284000.0,4084212000.0
+Chile,2001,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,4084212000.0,CLP,4042259000.0,4153207000.0
+Chile,2002,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,4153207000.0,CLP,4084212000.0,3804556000.0
+Chile,2003,Chilean Nuclear Energy Commission,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,4153207000.0,3804556000.0
+Chile,2004,Chilean Nuclear Energy Commission,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,4153207000.0,3804556000.0
+Chile,2005,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,3804556000.0,CLP,4153207000.0,4095117000.0
+Chile,2006,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,4095117000.0,CLP,3804556000.0,4636726000.0
+Chile,2007,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,4636726000.0,CLP,4095117000.0,5373679000.0
+Chile,2008,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,5373679000.0,CLP,4636726000.0,5949665000.0
+Chile,2009,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,5949665000.0,CLP,5373679000.0,6969574000.0
+Chile,2010,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,6969574000.0,CLP,5949665000.0,7702613000.0
+Chile,2011,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,7702613000.0,CLP,6969574000.0,7774935000.0
+Chile,2012,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,7774935000.0,CLP,7702613000.0,7763859000.0
+Chile,2013,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,7763859000.0,CLP,7774935000.0,8155363000.0
+Chile,2014,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,8155363000.0,CLP,7763859000.0,8788302000.0
+Chile,2015,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,8788302000.0,CLP,8155363000.0,8606168000.0
+Chile,2016,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,8606168000.0,CLP,8788302000.0,7730877000.0
+Chile,2017,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,7730877000.0,CLP,8606168000.0,8344833000.0
+Chile,2018,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,8344833000.0,CLP,7730877000.0,8158493000.0
+Chile,2019,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,8158493000.0,CLP,8344833000.0,7760429000.0
+Chile,2020,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,7760429000.0,CLP,8158493000.0,4924522000.0
+Chile,2021,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,4924522000.0,CLP,7760429000.0,5808787000.0
+Chile,2022,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,5808787000.0,CLP,4924522000.0,9900136000.0
+Chile,2023,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,9900136000.0,CLP,5808787000.0,12208141000.0
+Chile,2024,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,12208141000.0,CLP,9900136000.0,12247441000.0
+Chile,2025,Chilean Nuclear Energy Commission,science_agency,ok,,,,,,none,12247441000.0,CLP,12208141000.0,
+Chile,1999,Fisheries Research Fund,direct_rd,ok,,,,,,none,1453200000.0,CLP,,2184280000.0
+Chile,2000,Fisheries Research Fund,direct_rd,ok,,,,,,none,2184280000.0,CLP,1453200000.0,2306250000.0
+Chile,2001,Fisheries Research Fund,direct_rd,ok,,,,,,none,2306250000.0,CLP,2184280000.0,2223094000.0
+Chile,2002,Fisheries Research Fund,direct_rd,ok,,,,,,none,2223094000.0,CLP,2306250000.0,2169575000.0
+Chile,2003,Fisheries Research Fund,direct_rd,ok,,,,,,none,2169575000.0,CLP,2223094000.0,2211231000.0
+Chile,2004,Fisheries Research Fund,direct_rd,ok,,,,,,none,2211231000.0,CLP,2169575000.0,2169872000.0
+Chile,2005,Fisheries Research Fund,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,2211231000.0,2169872000.0
+Chile,2006,Fisheries Research Fund,direct_rd,ok,,,,,,none,2169872000.0,CLP,2211231000.0,2245818000.0
+Chile,2007,Fisheries Research Fund,direct_rd,ok,,,,,,none,2245818000.0,CLP,2169872000.0,937800000.0
+Chile,2008,Fisheries Research Fund,direct_rd,ok,,,,,,none,937800000.0,CLP,2245818000.0,1280312000.0
+Chile,2009,Fisheries Research Fund,direct_rd,ok,,,,,,none,1280312000.0,CLP,937800000.0,2704204000.0
+Chile,2010,Fisheries Research Fund,direct_rd,ok,,,,,,none,2704204000.0,CLP,1280312000.0,2476245000.0
+Chile,2011,Fisheries Research Fund,direct_rd,ok,,,,,,none,2476245000.0,CLP,2704204000.0,2853980000.0
+Chile,2012,Fisheries Research Fund,direct_rd,ok,,,,,,none,2853980000.0,CLP,2476245000.0,3219098000.0
+Chile,2013,Fisheries Research Fund,direct_rd,ok,,,,,,none,3219098000.0,CLP,2853980000.0,6086261000.0
+Chile,2014,Fisheries Research Fund,direct_rd,ok,,,,,,none,6086261000.0,CLP,3219098000.0,5843991000.0
+Chile,2015,Fisheries Research Fund,direct_rd,ok,,,,,,none,5843991000.0,CLP,6086261000.0,6066063000.0
+Chile,2016,Fisheries Research Fund,direct_rd,ok,,,,,,none,6066063000.0,CLP,5843991000.0,5172115000.0
+Chile,2017,Fisheries Research Fund,direct_rd,ok,,,,,,none,5172115000.0,CLP,6066063000.0,3545454000.0
+Chile,2018,Fisheries Research Fund,direct_rd,ok,,,,,,none,3545454000.0,CLP,5172115000.0,3119021000.0
+Chile,2019,Fisheries Research Fund,direct_rd,ok,,,,,,none,3119021000.0,CLP,3545454000.0,3200116000.0
+Chile,2020,Fisheries Research Fund,direct_rd,ok,,,,,,none,3200116000.0,CLP,3119021000.0,2806818000.0
+Chile,2021,Fisheries Research Fund,direct_rd,ok,,,,,,none,2806818000.0,CLP,3200116000.0,2645393000.0
+Chile,2022,Fisheries Research Fund,direct_rd,ok,,,,,,none,2645393000.0,CLP,2806818000.0,2517041000.0
+Chile,2023,Fisheries Research Fund,direct_rd,ok,,,,,,none,2517041000.0,CLP,2645393000.0,2605138000.0
+Chile,2024,Fisheries Research Fund,direct_rd,ok,,,,,,none,2605138000.0,CLP,2517041000.0,2410131000.0
+Chile,2025,Fisheries Research Fund,direct_rd,ok,,,,,,none,2410131000.0,CLP,2605138000.0,
+Chile,2015,Public Innovation Committee,innovation_instruments,ok,,,,,,none,2822200000.0,CLP,,3072480000.0
+Chile,2016,Public Innovation Committee,innovation_instruments,ok,,,,,,none,3072480000.0,CLP,2822200000.0,3164654000.0
+Chile,2017,Public Innovation Committee,innovation_instruments,ok,,,,,,none,3164654000.0,CLP,3072480000.0,
+Chile,2016,Excellence Centers - CORFO,innovation_instruments,ok,,,,,,none,3321600000.0,CLP,,3420722000.0
+Chile,2017,Excellence Centers - CORFO,innovation_instruments,ok,,,,,,none,3420722000.0,CLP,3321600000.0,2889443000.0
+Chile,2018,Excellence Centers - CORFO,innovation_instruments,ok,,,,,,none,2889443000.0,CLP,3420722000.0,1766871000.0
+Chile,2019,Excellence Centers - CORFO,innovation_instruments,ok,,,,,,none,1766871000.0,CLP,2889443000.0,2657123000.0
+Chile,2020,Excellence Centers - CORFO,innovation_instruments,ok,,,,,,none,2657123000.0,CLP,1766871000.0,
+Chile,2016,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,,none,3193420000.0,CLP,,9939882000.0
+Chile,2021,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,,none,9939882000.0,CLP,3193420000.0,8969143000.0
+Chile,2022,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,,none,8969143000.0,CLP,9939882000.0,9014891000.0
+Chile,2023,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,,none,9014891000.0,CLP,8969143000.0,12305582000.0
+Chile,2024,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,,none,12305582000.0,CLP,9014891000.0,12114163000.0
+Chile,2025,Technological Consortiums - CORFO,innovation_instruments,ok,,,,,,none,12114163000.0,CLP,12305582000.0,
+Chile,2017,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,ok,,,,,,none,1369900000.0,CLP,,1394563000.0
+Chile,2018,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,ok,,,,,,none,1394563000.0,CLP,1369900000.0,
+Chile,2010,Internationalization of the Innovative Effort,innovation_instruments,ok,,,,,,none,247956000.0,CLP,,
+Chile,2018,Call for Agricultural Innovation Projects,innovation_instruments,ok,,,,,,none,102600000.0,CLP,,
+Chile,2011,Chilean Energy Efficiency Agency,science_agency,ok,,,,,,none,3793987000.0,CLP,,3386219000.0
+Chile,2012,Chilean Energy Efficiency Agency,science_agency,ok,,,,,,none,3386219000.0,CLP,3793987000.0,4121145000.0
+Chile,2013,Chilean Energy Efficiency Agency,science_agency,ok,,,,,,none,4121145000.0,CLP,3386219000.0,3486035000.0
+Chile,2014,Chilean Energy Efficiency Agency,science_agency,ok,,,,,,none,3486035000.0,CLP,4121145000.0,5716500000.0
+Chile,2015,Chilean Energy Efficiency Agency,science_agency,ok,,,,,,none,5716500000.0,CLP,3486035000.0,4151669000.0
+Chile,2016,Chilean Energy Efficiency Agency,science_agency,ok,,,,,,none,4151669000.0,CLP,5716500000.0,2058719000.0
+Chile,2017,Chilean Energy Efficiency Agency,science_agency,ok,,,,,,none,2058719000.0,CLP,4151669000.0,1998620000.0
+Chile,2018,Chilean Energy Efficiency Agency,science_agency,ok,,,,,,none,1998620000.0,CLP,2058719000.0,2953297000.0
+Chile,2019,Chilean Energy Efficiency Agency,science_agency,ok,,,,,,none,2953297000.0,CLP,1998620000.0,5904630000.0
+Chile,2020,Chilean Energy Efficiency Agency,science_agency,ok,,,,,,none,5904630000.0,CLP,2953297000.0,6603364000.0
+Chile,2021,Chilean Energy Efficiency Agency,science_agency,ok,,,,,,none,6603364000.0,CLP,5904630000.0,4686342000.0
+Chile,2022,Chilean Energy Efficiency Agency,science_agency,ok,,,,,,none,4686342000.0,CLP,6603364000.0,4981582000.0
+Chile,2023,Chilean Energy Efficiency Agency,science_agency,ok,,,,,,none,4981582000.0,CLP,4686342000.0,8503207000.0
+Chile,2024,Chilean Energy Efficiency Agency,science_agency,ok,,,,,,none,8503207000.0,CLP,4981582000.0,4833314000.0
+Chile,2025,Chilean Energy Efficiency Agency,science_agency,ok,,,,,,none,4833314000.0,CLP,8503207000.0,
+Chile,2009,Forestry Institute,science_agency,ok,,,,,,none,1427562000.0,CLP,,1505815000.0
+Chile,2010,Forestry Institute,science_agency,ok,,,,,,none,1505815000.0,CLP,1427562000.0,2244518000.0
+Chile,2011,Forestry Institute,science_agency,ok,,,,,,none,2244518000.0,CLP,1505815000.0,2303346000.0
+Chile,2012,Forestry Institute,science_agency,ok,,,,,,none,2303346000.0,CLP,2244518000.0,2715887000.0
+Chile,2013,Forestry Institute,science_agency,ok,,,,,,none,2715887000.0,CLP,2303346000.0,2900518000.0
+Chile,2014,Forestry Institute,science_agency,ok,,,,,,none,2900518000.0,CLP,2715887000.0,3099383000.0
+Chile,2015,Forestry Institute,science_agency,ok,,,,,,none,3099383000.0,CLP,2900518000.0,3577097000.0
+Chile,2016,Forestry Institute,science_agency,ok,,,,,,none,3577097000.0,CLP,3099383000.0,3862750000.0
+Chile,2017,Forestry Institute,science_agency,ok,,,,,,none,3862750000.0,CLP,3577097000.0,3970103000.0
+Chile,2018,Forestry Institute,science_agency,ok,,,,,,none,3970103000.0,CLP,3862750000.0,4069279000.0
+Chile,2019,Forestry Institute,science_agency,ok,,,,,,none,4069279000.0,CLP,3970103000.0,4552856000.0
+Chile,2020,Forestry Institute,science_agency,ok,,,,,,none,4552856000.0,CLP,4069279000.0,4422531000.0
+Chile,2021,Forestry Institute,science_agency,ok,,,,,,none,4422531000.0,CLP,4552856000.0,4617122000.0
+Chile,2022,Forestry Institute,science_agency,ok,,,,,,none,4617122000.0,CLP,4422531000.0,4967199000.0
+Chile,2023,Forestry Institute,science_agency,ok,,,,,,none,4967199000.0,CLP,4617122000.0,5346620000.0
+Chile,2024,Forestry Institute,science_agency,ok,,,,,,none,5346620000.0,CLP,4967199000.0,5571178000.0
+Chile,2025,Forestry Institute,science_agency,ok,,,,,,none,5571178000.0,CLP,5346620000.0,
+Chile,2016,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,ok,,,,,,none,431808000.0,CLP,,772500000.0
+Chile,2017,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,ok,,,,,,none,772500000.0,CLP,431808000.0,987012000.0
+Chile,2018,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,ok,,,,,,none,987012000.0,CLP,772500000.0,1055523000.0
+Chile,2019,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,ok,,,,,,none,1055523000.0,CLP,987012000.0,1082967000.0
+Chile,2020,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,ok,,,,,,none,1082967000.0,CLP,1055523000.0,
+Chile,2020,Promotion of Science and Technology - National Agency for R&D,science_agency,ok,,,,,,none,47205187000.0,CLP,,
+Chile,2015,National Center for Innovation and Promotion of Sustainable Energies (CIFES),science_agency,ok,,,,,,none,2211518000.0,CLP,,1974814000.0
+Chile,2016,National Center for Innovation and Promotion of Sustainable Energies (CIFES),science_agency,ok,,,,,,none,1974814000.0,CLP,2211518000.0,
+Chile,2023,Institute of Agricultural Research,science_agency,ok,,,,,,none,20325290000.0,CLP,,
+Chile,2025,Public Technological and Research Institute of Lithium and Salars,science_agency,ok,,,,,,none,625200000.0,CLP,,
+Chile,2021,CICÍTEM - Corporation for Scientific and Technological Research for Mining,science_agency,ok,,,,,,none,546760000.0,CLP,,
+Chile,2017,International Antarctic Center,science_agency,ok,,,,,,none,193640000.0,CLP,,278501000.0
+Chile,2018,International Antarctic Center,science_agency,ok,,,,,,none,278501000.0,CLP,193640000.0,269214000.0
+Chile,2019,International Antarctic Center,science_agency,ok,,,,,,none,269214000.0,CLP,278501000.0,262403000.0
+Chile,2020,International Antarctic Center,science_agency,ok,,,,,,none,262403000.0,CLP,269214000.0,189418000.0
+Chile,2021,International Antarctic Center,science_agency,ok,,,,,,none,189418000.0,CLP,262403000.0,171713000.0
+Chile,2022,International Antarctic Center,science_agency,ok,,,,,,none,171713000.0,CLP,189418000.0,122711000.0
+Chile,2023,International Antarctic Center,science_agency,ok,,,,,,none,122711000.0,CLP,171713000.0,178363000.0
+Chile,2024,International Antarctic Center,science_agency,ok,,,,,,none,178363000.0,CLP,122711000.0,181208000.0
+Chile,2025,International Antarctic Center,science_agency,ok,,,,,,none,181208000.0,CLP,178363000.0,
+Chile,2001,Corporation for Technological Research,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Chile,2021,Inter-American Institute for Global Change Research,science_agency,ok,,,,,,none,5455000.0,CLP,,

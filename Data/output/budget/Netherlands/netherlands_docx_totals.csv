@@ -62,14 +62,14 @@ Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),1988,1167000000.0
 Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),1989,1751000000.0,1751000000.0,1,1989 budget memorandum.pdf,single,NLG,guilder,innovation_instruments
 Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),1990,,,0,,gap,,,innovation_instruments
 Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),1991,,,0,,gap,,,innovation_instruments
-Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),1992,320000000.0,320000000.0,1,1992 budget memorandum.pdf,single,NLG,guilder,innovation_instruments
+Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),1992,220000000.0,220000000.0,1,1992 budget memorandum.pdf,single,NLG,guilder,innovation_instruments
 Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),1993,,,0,,gap,,,innovation_instruments
 Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),1994,376000000.0,376000000.0,1,1994 budget memorandum.pdf,single,NLG,guilder,innovation_instruments
 Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),1995,,,0,,gap,,,innovation_instruments
 Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),1996,,,0,,gap,,,innovation_instruments
 Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),1997,,,0,,gap,,,innovation_instruments
 Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),1998,30000000.0,30000000.0,1,1998 budget memorandum.pdf,single,NLG,guilder,innovation_instruments
-Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),1999,800000000.0,800000000.0,1,1999 budget memorandum.pdf,single,NLG,guilder,innovation_instruments
+Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),1999,378000000.0,378000000.0,1,1999 budget memorandum.pdf,single,NLG,guilder,innovation_instruments
 Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),2000,,,0,,gap,,,innovation_instruments
 Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),2001,,,0,,gap,,,innovation_instruments
 Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),2002,287142000.0,287142000.0,1,2002_ministry14.pdf,single,EUR,euro,innovation_instruments
@@ -91,11 +91,11 @@ Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),2017,2358000.0,23
 Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),2018,109547000.0,109547000.0,1,2018_ministry13.pdf,single,EUR,euro,innovation_instruments
 Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),2019,890000000.0,890000000.0,1,2019_ministry13.pdf,single,EUR,euro,innovation_instruments
 Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),2020,1075493000.0,1075493000.0,1,2020_ministry13.pdf,single,EUR,euro,innovation_instruments
-Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),2021,3181164000.0,2950996000.0,2,2021_ministry13.pdf | 2021_ministry14.pdf,additive,EUR,euro,innovation_instruments
-Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),2022,2454085000.0,2209546000.0,2,2022_ministry13.pdf | 2022_ministry14.pdf,additive,EUR,euro,innovation_instruments
-Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),2023,2971872000.0,2708363000.0,2,2023_ministry13.pdf | 2023_ministry14.pdf,additive,EUR,euro,innovation_instruments
-Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),2024,2648320000.0,2268712000.0,2,2024_ministry13.pdf | 2024_ministry14.pdf,additive,EUR,euro,innovation_instruments
-Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),2025,3165248000.0,2758165000.0,2,2025_ministry13.pdf | 2025_ministry14.pdf,additive,EUR,euro,innovation_instruments
+Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),2021,2950996000.0,2950996000.0,1,2021_ministry13.pdf,single,EUR,euro,innovation_instruments
+Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),2022,2209546000.0,2209546000.0,1,2022_ministry13.pdf,single,EUR,euro,innovation_instruments
+Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),2023,2708363000.0,2708363000.0,1,2023_ministry13.pdf,single,EUR,euro,innovation_instruments
+Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),2024,2268712000.0,2268712000.0,1,2024_ministry13.pdf,single,EUR,euro,innovation_instruments
+Netherlands,EZ Art. 02 Bedrijvenbeleid / innovatie (incl. TNO),2025,2758165000.0,2758165000.0,1,2025_ministry13.pdf,single,EUR,euro,innovation_instruments
 Netherlands,KNAW (Royal Netherlands Academy),1975,,,0,,gap,,,science_agency
 Netherlands,KNAW (Royal Netherlands Academy),1976,,,0,,gap,,,science_agency
 Netherlands,KNAW (Royal Netherlands Academy),1977,,,0,,gap,,,science_agency
@@ -193,7 +193,7 @@ Netherlands,KNMI (Royal Netherlands Meteorological Institute),2017,70277000.0,70
 Netherlands,KNMI (Royal Netherlands Meteorological Institute),2018,79312000.0,79312000.0,1,2018_ministry12.pdf,single,EUR,euro,science_agency
 Netherlands,KNMI (Royal Netherlands Meteorological Institute),2019,83042000.0,83042000.0,1,2019_ministry12.pdf,single,EUR,euro,science_agency
 Netherlands,KNMI (Royal Netherlands Meteorological Institute),2020,88297000.0,88297000.0,1,2020_ministry12.pdf,single,EUR,euro,science_agency
-Netherlands,KNMI (Royal Netherlands Meteorological Institute),2021,92075.0,92075.0,1,2021_ministry12.pdf,single,EUR,euro,science_agency
+Netherlands,KNMI (Royal Netherlands Meteorological Institute),2021,60697.0,60697.0,1,2021_ministry12.pdf,single,EUR,euro,science_agency
 Netherlands,KNMI (Royal Netherlands Meteorological Institute),2022,94761.0,94761.0,1,2022_ministry12.pdf,single,EUR,euro,science_agency
 Netherlands,KNMI (Royal Netherlands Meteorological Institute),2023,100793000.0,100793000.0,1,2023_ministry12.pdf,single,EUR,euro,science_agency
 Netherlands,KNMI (Royal Netherlands Meteorological Institute),2024,,,0,,gap,,,science_agency
@@ -208,6 +208,7 @@ Netherlands,NWO (Dutch Research Council),1980,185000000.0,185000000.0,1,1980 bud
 Netherlands,NWO (Dutch Research Council),1981,205000000.0,205000000.0,1,1981 budget memorandum.pdf,single,NLG,guilder,science_agency
 Netherlands,NWO (Dutch Research Council),1982,195000000.0,195000000.0,1,1982 budget memorandum.pdf,single,NLG,guilder,science_agency
 Netherlands,NWO (Dutch Research Council),1983,190000000.0,190000000.0,1,1983 budget memorandum.pdf,single,NLG,guilder,science_agency
+Netherlands,NWO (Dutch Research Council),1984,300000000.0,300000000.0,1,1984 budget memorandum.pdf,single,NLG,guilder,science_agency
 Netherlands,NWO (Dutch Research Council),1985,,,0,,gap,,,science_agency
 Netherlands,NWO (Dutch Research Council),1986,,,0,,gap,,,science_agency
 Netherlands,NWO (Dutch Research Council),1987,,,0,,gap,,,science_agency
@@ -377,7 +378,7 @@ Netherlands,RIVM (National Institute for Public Health),1997,,,0,,gap,,,science_
 Netherlands,RIVM (National Institute for Public Health),1998,,,0,,gap,,,science_agency
 Netherlands,RIVM (National Institute for Public Health),1999,144000000.0,144000000.0,1,1999 budget memorandum.pdf,single,EUR,euro,science_agency
 Netherlands,RIVM (National Institute for Public Health),2000,302487000.0,302487000.0,1,2000_ministry16.pdf,single,EUR,euro,science_agency
-Netherlands,RIVM (National Institute for Public Health),2001,310145000.0,310145000.0,1,2001_ministry16.pdf,single,EUR,euro,science_agency
+Netherlands,RIVM (National Institute for Public Health),2001,311582000.0,311582000.0,1,2001_ministry16.pdf,single,EUR,euro,science_agency
 Netherlands,RIVM (National Institute for Public Health),2002,143004000.0,143004000.0,1,2002_ministry16.pdf,single,EUR,euro,science_agency
 Netherlands,RIVM (National Institute for Public Health),2003,147214000.0,147214000.0,1,2003_ministry16.pdf,single,EUR,euro,science_agency
 Netherlands,RIVM (National Institute for Public Health),2004,18605000.0,18605000.0,1,2004_ministry16.pdf,single,EUR,euro,science_agency
@@ -391,7 +392,7 @@ Netherlands,RIVM (National Institute for Public Health),2011,346792000.0,3467920
 Netherlands,RIVM (National Institute for Public Health),2012,392109000.0,392109000.0,1,2012_ministry16.pdf,single,EUR,euro,science_agency
 Netherlands,RIVM (National Institute for Public Health),2013,373316000.0,373316000.0,1,2013_ministry16.pdf,single,EUR,euro,science_agency
 Netherlands,RIVM (National Institute for Public Health),2014,339207000.0,339207000.0,1,2014_ministry16.pdf,single,EUR,euro,science_agency
-Netherlands,RIVM (National Institute for Public Health),2015,185486.0,185486.0,1,2015_ministry16.pdf,single,EUR,euro,science_agency
+Netherlands,RIVM (National Institute for Public Health),2015,23047.0,23047.0,1,2015_ministry16.pdf,single,EUR,euro,science_agency
 Netherlands,RIVM (National Institute for Public Health),2016,,,0,,gap,,,science_agency
 Netherlands,RIVM (National Institute for Public Health),2017,3600000.0,3600000.0,1,2017_ministry16.pdf,single,EUR,euro,science_agency
 Netherlands,RIVM (National Institute for Public Health),2018,3700000.0,3700000.0,1,2018_ministry16.pdf,single,EUR,euro,science_agency
@@ -403,6 +404,19 @@ Netherlands,RIVM (National Institute for Public Health),2023,16500000.0,16500000
 Netherlands,RIVM (National Institute for Public Health),2024,,,0,,gap,,,science_agency
 Netherlands,RIVM (National Institute for Public Health),2025,,,0,,gap,,,science_agency
 Netherlands,RVO / Senter / SenterNovem (innovation instruments),1994,350000000.0,350000000.0,1,1994 budget memorandum.pdf,single,NLG,guilder,innovation_instruments
+Netherlands,Research and Development Work,1989,,,0,,gap,,,direct_rd
+Netherlands,Research and Development Work,1990,,,0,,gap,,,direct_rd
+Netherlands,Research and Development Work,1991,,,0,,gap,,,direct_rd
+Netherlands,Research and Development Work,1992,,,0,,gap,,,direct_rd
+Netherlands,Research and Development Work,1993,,,0,,gap,,,direct_rd
+Netherlands,Research and Development Work,1994,,,0,,gap,,,direct_rd
+Netherlands,Research and Development Work,1995,,,0,,gap,,,direct_rd
+Netherlands,Research and Development Work,1996,,,0,,gap,,,direct_rd
+Netherlands,Research and Development Work,1997,,,0,,gap,,,direct_rd
+Netherlands,Research and Development Work,1998,,,0,,gap,,,direct_rd
+Netherlands,Research and Development Work,1999,40000000.0,40000000.0,1,1999 budget memorandum.pdf,single,NLG,guilder,direct_rd
+Netherlands,Research and Development Work,2000,99971000.0,99971000.0,1,2000_ministry13.pdf,single,NLG,guilder,direct_rd
+Netherlands,Research and Development Work,2001,88169000.0,88169000.0,1,2001_ministry13.pdf,single,NLG,guilder,direct_rd
 Netherlands,TNO (Netherlands Organisation for Applied Research),1975,,,0,,gap,,,science_agency
 Netherlands,TNO (Netherlands Organisation for Applied Research),1976,,,0,,gap,,,science_agency
 Netherlands,TNO (Netherlands Organisation for Applied Research),1977,,,0,,gap,,,science_agency

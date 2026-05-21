@@ -2,21 +2,21 @@ country,canonical_name,year,amount_total,amount_primary,n_acts,acts,additive_fla
 Korea,Ministry of Science and ICT (Korea),2018,,,0,,gap,,,rd_ministry
 Korea,Ministry of Science and ICT (Korea),2019,,,0,,gap,,,rd_ministry
 Korea,Ministry of Science and ICT (Korea),2021,,,0,,gap,,,rd_ministry
-Korea,Ministry of Science and ICT (Korea),2022,9626200000.0,9626200000.0,1,3. 2022년 예산안.pdf,single,KRW,thousand,rd_ministry
-Korea,Ministry of Science and ICT (Korea),2023,9977500000.0,9977500000.0,1,2. 2023년 예산안 홍보자료★.pdf,single,KRW,thousand,rd_ministry
-Korea,Ministry of Science and ICT (Korea),2024,9076800000.0,9076800000.0,1,2. 2024년  예산안 홍보자료.pdf,single,KRW,thousand,rd_ministry
-Korea,Ministry of Science and ICT (Korea),2025,10911200000.0,10911200000.0,1,2. 2025 예산안 홍보자료.pdf,single,KRW,thousand,rd_ministry
-Korea,National R&D Programmes (Korea),2018,19633800000.0,19633800000.0,1,2018년도 예산안 개요.pdf,single,KRW,thousand,innovation_instruments
-Korea,National R&D Programmes (Korea),2019,20400000000.0,20400000000.0,1,2019년도 예산안 개요.pdf,single,KRW,thousand,innovation_instruments
-Korea,National R&D Programmes (Korea),2021,27400000000.0,27400000000.0,1,7. 2021-2025년 국가재정운용계획 주요내용.pdf,single,KRW,thousand,innovation_instruments
-Korea,National R&D Programmes (Korea),2022,29800000000.0,29800000000.0,1,3. 2022년 예산안.pdf,single,KRW,thousand,innovation_instruments
-Korea,National R&D Programmes (Korea),2023,30700000000.0,30700000000.0,1,2. 2023년 예산안 홍보자료★.pdf,single,KRW,thousand,innovation_instruments
-Korea,National R&D Programmes (Korea),2024,25900000000.0,25900000000.0,1,2. 2024년  예산안 홍보자료.pdf,single,KRW,thousand,innovation_instruments
-Korea,National R&D Programmes (Korea),2025,29700000000.0,29700000000.0,1,2. 2025 예산안 홍보자료.pdf,single,KRW,thousand,innovation_instruments
-Korea,Strategic Technology R&D Programmes (Korea),2018,1400000000.0,1400000000.0,1,2018년도 예산안 개요.pdf,single,KRW,thousand,innovation_instruments
-Korea,Strategic Technology R&D Programmes (Korea),2019,1513700000.0,1513700000.0,1,2019년도 예산안 개요.pdf,single,KRW,thousand,innovation_instruments
+Korea,Ministry of Science and ICT (Korea),2022,9626200000000.0,9626200000000.0,1,3. 2022년 예산안.pdf,single,KRW,won,rd_ministry
+Korea,Ministry of Science and ICT (Korea),2023,9977500000000.0,9977500000000.0,1,2. 2023년 예산안 홍보자료★.pdf,single,KRW,won,rd_ministry
+Korea,Ministry of Science and ICT (Korea),2024,9076800000000.0,9076800000000.0,1,2. 2024년  예산안 홍보자료.pdf,single,KRW,won,rd_ministry
+Korea,Ministry of Science and ICT (Korea),2025,10911200000000.0,10911200000000.0,1,2. 2025 예산안 홍보자료.pdf,single,KRW,won,rd_ministry
+Korea,National R&D Programmes (Korea),2018,19633800000000.0,19633800000000.0,1,2018년도 예산안 개요.pdf,single,KRW,won,innovation_instruments
+Korea,National R&D Programmes (Korea),2019,20400000000000.0,20400000000000.0,1,2019년도 예산안 개요.pdf,single,KRW,won,innovation_instruments
+Korea,National R&D Programmes (Korea),2021,27400000000000.0,27400000000000.0,1,7. 2021-2025년 국가재정운용계획 주요내용.pdf,single,KRW,won,innovation_instruments
+Korea,National R&D Programmes (Korea),2022,29800000000000.0,29800000000000.0,1,3. 2022년 예산안.pdf,single,KRW,won,innovation_instruments
+Korea,National R&D Programmes (Korea),2023,30700000000000.0,30700000000000.0,1,2. 2023년 예산안 홍보자료★.pdf,single,KRW,won,innovation_instruments
+Korea,National R&D Programmes (Korea),2024,25900000000000.0,25900000000000.0,1,2. 2024년  예산안 홍보자료.pdf,single,KRW,won,innovation_instruments
+Korea,National R&D Programmes (Korea),2025,29700000000000.0,29700000000000.0,1,2. 2025 예산안 홍보자료.pdf,single,KRW,won,innovation_instruments
+Korea,Strategic Technology R&D Programmes (Korea),2018,1400000000000.0,1400000000000.0,1,2018년도 예산안 개요.pdf,single,KRW,won,innovation_instruments
+Korea,Strategic Technology R&D Programmes (Korea),2019,1513700000000.0,1513700000000.0,1,2019년도 예산안 개요.pdf,single,KRW,won,innovation_instruments
 Korea,Strategic Technology R&D Programmes (Korea),2021,,,0,,gap,,,innovation_instruments
-Korea,Strategic Technology R&D Programmes (Korea),2022,6200000000.0,6200000000.0,1,3. 2022년 예산안.pdf,single,KRW,thousand,innovation_instruments
-Korea,Strategic Technology R&D Programmes (Korea),2023,4512300000.0,4512300000.0,1,2. 2023년 예산안 홍보자료★.pdf,single,KRW,thousand,innovation_instruments
-Korea,Strategic Technology R&D Programmes (Korea),2024,5000000000.0,5000000000.0,1,2. 2024년  예산안 홍보자료.pdf,single,KRW,thousand,innovation_instruments
-Korea,Strategic Technology R&D Programmes (Korea),2025,3544600000.0,3544600000.0,1,2. 2025 예산안 홍보자료.pdf,single,KRW,thousand,innovation_instruments
+Korea,Strategic Technology R&D Programmes (Korea),2022,6200000000000.0,6200000000000.0,1,3. 2022년 예산안.pdf,single,KRW,won,innovation_instruments
+Korea,Strategic Technology R&D Programmes (Korea),2023,4512300000000.0,4512300000000.0,1,2. 2023년 예산안 홍보자료★.pdf,single,KRW,won,innovation_instruments
+Korea,Strategic Technology R&D Programmes (Korea),2024,5000000000000.0,5000000000000.0,1,2. 2024년  예산안 홍보자료.pdf,single,KRW,won,innovation_instruments
+Korea,Strategic Technology R&D Programmes (Korea),2025,3544600000000.0,3544600000000.0,1,2. 2025 예산안 홍보자료.pdf,single,KRW,won,innovation_instruments

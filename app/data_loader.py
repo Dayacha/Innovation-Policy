@@ -10,7 +10,11 @@ import streamlit as st
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 BUDGET_DATABASE          = PROJECT_ROOT / "Data/output/budget/rd_database.csv"
+BUDGET_OUTPUT_DIR        = PROJECT_ROOT / "Data/output/budget"
+FINANCE_BILLS_DIR        = PROJECT_ROOT / "Data/input/finance_bills"
 KOREA_THEME_PANEL        = PROJECT_ROOT / "Data/output/budget/Korea/korea_theme_panel.csv"
+BUDGET_GAP_DEEPDIVE_SUMMARY = PROJECT_ROOT / "Data/output/budget/country_gap_deepdive_summary.csv"
+BUDGET_GAP_DEEPDIVE_DETAIL  = PROJECT_ROOT / "Data/output/budget/country_gap_deepdive_detail.csv"
 # Legacy paths (old rule-based pipeline — kept for reference only)
 BUDGET_RESULTS_AI            = PROJECT_ROOT / "Data/output/budget/results_ai_verified.csv"
 BUDGET_RESULTS_REVIEW_STATUS = PROJECT_ROOT / "Data/output/budget/results_review_status.csv"
@@ -381,6 +385,132 @@ def load_korea_theme_panel():
         df = df.dropna(subset=["year"]).copy()
         df["year"] = df["year"].astype(int)
     return df
+
+
+@st.cache_data
+def load_budget_gap_deepdive_summary():
+    if not BUDGET_GAP_DEEPDIVE_SUMMARY.exists():
+        return pd.DataFrame()
+    df = pd.read_csv(BUDGET_GAP_DEEPDIVE_SUMMARY)
+    for col in (
+        "criticality_rank",
+        "problem_years",
+        "missing_agency_years",
+        "outlier_agency_years",
+        "missing_years",
+        "outlier_years",
+        "missing_years_with_run_logs",
+        "missing_years_with_zero_row_docs",
+        "missing_years_without_run_logs",
+    ):
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+    if "criticality_score" in df.columns:
+        df["criticality_score"] = pd.to_numeric(df["criticality_score"], errors="coerce")
+    return df
+
+
+@st.cache_data
+def load_budget_gap_deepdive_detail():
+    if not BUDGET_GAP_DEEPDIVE_DETAIL.exists():
+        return pd.DataFrame()
+    df = pd.read_csv(BUDGET_GAP_DEEPDIVE_DETAIL)
+    for col in (
+        "criticality_rank",
+        "year",
+        "missing_agency_years",
+        "outlier_agency_years",
+        "run_docs_for_year",
+        "zero_row_docs_for_year",
+    ):
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+    if "criticality_score" in df.columns:
+        df["criticality_score"] = pd.to_numeric(df["criticality_score"], errors="coerce")
+    return df
+
+
+def _country_budget_output_dir(country: str) -> Path:
+    return BUDGET_OUTPUT_DIR / str(country)
+
+
+@st.cache_data
+def load_budget_run_log() -> pd.DataFrame:
+    path = BUDGET_OUTPUT_DIR / "run_log.jsonl"
+    if not path.exists():
+        return pd.DataFrame()
+    rows = []
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if line:
+                try:
+                    rows.append(json.loads(line))
+                except Exception:
+                    pass
+    if not rows:
+        return pd.DataFrame()
+    df = pd.DataFrame(rows)
+    if "year" in df.columns:
+        df["year"] = pd.to_numeric(df["year"], errors="coerce")
+    return df
+
+
+def _country_finance_bills_dir(country: str) -> Path:
+    return FINANCE_BILLS_DIR / str(country)
+
+
+@st.cache_data
+def load_budget_country_gap_report(country: str) -> pd.DataFrame:
+    country_dir = _country_budget_output_dir(country)
+    if not country_dir.exists():
+        return pd.DataFrame()
+
+    matches = sorted(country_dir.glob("*_gap_report.csv"))
+    if not matches:
+        return pd.DataFrame()
+
+    df = pd.read_csv(matches[0])
+    for col in ("year",):
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+    for col in ("raw_row_amount", "series_amount", "prev_amount", "next_amount"):
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+    return df
+
+
+@st.cache_data
+def load_budget_country_gap_review_table(country: str) -> pd.DataFrame:
+    country_dir = _country_budget_output_dir(country)
+    if not country_dir.exists():
+        return pd.DataFrame()
+
+    matches = sorted(country_dir.glob("*_country_gap_review_table.csv"))
+    if not matches:
+        return pd.DataFrame()
+
+    df = pd.read_csv(matches[0])
+    for col in ("year", "run_log_rows_extracted", "docx_results_rows", "docx_audit_in_series_rows"):
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+    return df
+
+
+@st.cache_data
+def load_budget_country_notes(country: str) -> dict[str, str]:
+    notes_dir = _country_finance_bills_dir(country)
+    notes = {"source_notes": "", "quality_note": ""}
+    if not notes_dir.exists():
+        return notes
+
+    source_path = notes_dir / "SOURCE_NOTES.md"
+    quality_path = notes_dir / "QUALITY_NOTE.md"
+    if source_path.exists():
+        notes["source_notes"] = source_path.read_text(encoding="utf-8")
+    if quality_path.exists():
+        notes["quality_note"] = quality_path.read_text(encoding="utf-8")
+    return notes
 
 
 @st.cache_data

@@ -1,56 +1,56 @@
-country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
-Israel,1992,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,21708.0,,56624.0
-Israel,1994,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,56624.0,21708.0,152824.0
-Israel,1995,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,152824.0,56624.0,176579.0
-Israel,1996,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,176579.0,152824.0,184250.0
-Israel,1997,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,184250.0,176579.0,825272.0
-Israel,1998,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,825272.0,184250.0,172618.0
-Israel,1999,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,172618.0,825272.0,636117.0
-Israel,2000,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,636117.0,172618.0,722050.0
-Israel,2001,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,722050.0,636117.0,497804.0
-Israel,2002,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,497804.0,722050.0,118947.0
-Israel,2004,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,118947.0,497804.0,118277.0
-Israel,2005,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,118277.0,118947.0,700837.0
-Israel,2007,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,700837.0,118277.0,709529.0
-Israel,2008,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,709529.0,700837.0,979860.0
-Israel,2009,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,979860.0,709529.0,1400000.0
-Israel,2011,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,1400000.0,979860.0,1117322.0
-Israel,2013,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,1117322.0,1400000.0,1361253.0
-Israel,2015,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,1361253.0,1117322.0,1573033.0
-Israel,2017,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,1573033.0,1361253.0,500513.603
-Israel,2021,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,500513.603,1573033.0,462500.134
-Israel,2022,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,462500.134,500513.603,2535972.0
-Israel,2023,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,2535972.0,462500.134,2749765.0
-Israel,2024,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,2749765.0,2535972.0,2807783.0
-Israel,2025,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,none,2807783.0,2749765.0,
-Israel,1975,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,none,115000000.0,,194100.0
-Israel,1976,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,none,194100.0,115000000.0,1000000.0
-Israel,1977,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,none,1000000.0,194100.0,519286.0
-Israel,1978,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,none,519286.0,1000000.0,1764000.0
-Israel,1979,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,none,1764000.0,519286.0,604700000.0
-Israel,1980,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,none,604700000.0,1764000.0,1000000000.0
-Israel,1981,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,none,1000000000.0,604700000.0,749000000.0
-Israel,1982,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,none,749000000.0,1000000000.0,156300000.0
-Israel,1983,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,none,156300000.0,749000000.0,411000000.0
-Israel,1984,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,none,411000000.0,156300000.0,2035.0
-Israel,1985,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,none,2035.0,411000000.0,3708.0
-Israel,1986,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,none,3708.0,2035.0,6400.0
-Israel,1987,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,none,6400.0,3708.0,5741.0
-Israel,1988,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,none,5741.0,6400.0,7364.0
-Israel,1989,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,none,7364.0,5741.0,17199.0
-Israel,1990,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,none,17199.0,7364.0,39503.0
-Israel,1991,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,none,39503.0,17199.0,
-Israel,2017,Israel Innovation Authority (from 2016),innovation_instruments,ok,,,,,none,175750.0,,2008207.0
-Israel,2025,Israel Innovation Authority (from 2016),innovation_instruments,ok,,,,,none,2008207.0,175750.0,
-Israel,1986,"Office of the Chief Scientist (Israel, pre-2016)",innovation_instruments,ok,,,,,none,486.0,,1684800.0
-Israel,2013,"Office of the Chief Scientist (Israel, pre-2016)",innovation_instruments,ok,,,,,none,1684800.0,486.0,
-Israel,1987,"KAMEA Fund (קרן קמ""ח)",innovation_instruments,ok,,,,,none,3783.0,,3300.0
-Israel,1991,"KAMEA Fund (קרן קמ""ח)",innovation_instruments,ok,,,,,none,3300.0,3783.0,
-Israel,1995,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,none,4644.0,,405.0
-Israel,2004,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,none,405.0,4644.0,15.343
-Israel,2005,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,none,15.343,405.0,444934.0
-Israel,2007,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,none,444934.0,15.343,271935.0
-Israel,2011,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,none,271935.0,444934.0,874951.0
-Israel,2019,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,none,874951.0,271935.0,561109.0
-Israel,2021,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,none,561109.0,874951.0,100000.0
-Israel,2022,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,none,100000.0,561109.0,
+country,year,canonical_name,category,gap_type,gap_subtype,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,series_currency,prev_amount,next_amount
+Israel,1992,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,21708.0,ILS,,56624.0
+Israel,1994,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,56624.0,ILS,21708.0,152824.0
+Israel,1995,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,152824.0,ILS,56624.0,176579.0
+Israel,1996,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,176579.0,ILS,152824.0,184250.0
+Israel,1997,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,184250.0,ILS,176579.0,825272.0
+Israel,1998,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,825272.0,ILS,184250.0,172618.0
+Israel,1999,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,172618.0,ILS,825272.0,636117.0
+Israel,2000,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,636117.0,ILS,172618.0,722050.0
+Israel,2001,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,722050.0,ILS,636117.0,497804.0
+Israel,2002,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,497804.0,ILS,722050.0,118947.0
+Israel,2004,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,118947.0,ILS,497804.0,118277.0
+Israel,2005,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,118277.0,ILS,118947.0,700837.0
+Israel,2007,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,700837.0,ILS,118277.0,709529.0
+Israel,2008,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,709529.0,ILS,700837.0,979860.0
+Israel,2009,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,979860.0,ILS,709529.0,1400000.0
+Israel,2011,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,1400000.0,ILS,979860.0,1117322.0
+Israel,2013,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,1117322.0,ILS,1400000.0,1361253.0
+Israel,2015,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,1361253.0,ILS,1117322.0,1573033.0
+Israel,2017,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,1573033.0,ILS,1361253.0,500513.603
+Israel,2021,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,500513.603,ILS,1573033.0,462500.134
+Israel,2022,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,462500.134,ILS,500513.603,2535972.0
+Israel,2023,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,2535972.0,ILS,462500.134,2749765.0
+Israel,2024,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,2749765.0,ILS,2535972.0,2807783.0
+Israel,2025,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,2807783.0,ILS,2749765.0,
+Israel,1975,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,,none,115000000.0,ILP,,194100.0
+Israel,1976,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,,none,194100.0,ILP,115000000.0,1000000.0
+Israel,1977,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,,none,1000000.0,ILP,194100.0,519286.0
+Israel,1978,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,,none,519286.0,ILP,1000000.0,1764000.0
+Israel,1979,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,,none,1764000.0,ILP,519286.0,604700000.0
+Israel,1980,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,,none,604700000.0,ILS_OLD,1764000.0,1000000000.0
+Israel,1981,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,,none,1000000000.0,ILS_OLD,604700000.0,749000000.0
+Israel,1982,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,,none,749000000.0,ILS_OLD,1000000000.0,156300000.0
+Israel,1983,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,,none,156300000.0,ILS_OLD,749000000.0,411000000.0
+Israel,1984,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,,none,411000000.0,ILS_OLD,156300000.0,2035.0
+Israel,1985,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,,none,2035.0,ILS_OLD,411000000.0,3708.0
+Israel,1986,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,,none,3708.0,ILS,2035.0,6400.0
+Israel,1987,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,,none,6400.0,ILS,3708.0,5741.0
+Israel,1988,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,,none,5741.0,ILS,6400.0,7364.0
+Israel,1989,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,,none,7364.0,ILS,5741.0,17199.0
+Israel,1990,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,,none,17199.0,ILS,7364.0,39503.0
+Israel,1991,"National Council for R&D (Israel, pre-1992)",science_agency,ok,,,,,,none,39503.0,ILS,17199.0,
+Israel,2017,Israel Innovation Authority (from 2016),innovation_instruments,ok,,,,,,none,175750.0,ILS,,2008207.0
+Israel,2025,Israel Innovation Authority (from 2016),innovation_instruments,ok,,,,,,none,2008207.0,ILS,175750.0,
+Israel,1986,"Office of the Chief Scientist (Israel, pre-2016)",innovation_instruments,ok,,,,,,none,486.0,ILS,,1684800.0
+Israel,2013,"Office of the Chief Scientist (Israel, pre-2016)",innovation_instruments,ok,,,,,,none,1684800.0,ILS,486.0,
+Israel,1987,"KAMEA Fund (קרן קמ""ח)",innovation_instruments,ok,,,,,,none,3783.0,ILS,,3300.0
+Israel,1991,"KAMEA Fund (קרן קמ""ח)",innovation_instruments,ok,,,,,,none,3300.0,ILS,3783.0,
+Israel,1995,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,,none,4644.0,ILS,,405.0
+Israel,2004,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,,none,405.0,ILS,4644.0,15.343
+Israel,2005,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,,none,15.343,ILS,405.0,444934.0
+Israel,2007,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,,none,444934.0,ILS,15.343,271935.0
+Israel,2011,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,,none,271935.0,ILS,444934.0,874951.0
+Israel,2019,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,,none,874951.0,ILS,271935.0,561109.0
+Israel,2021,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,,none,561109.0,ILS,874951.0,100000.0
+Israel,2022,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,,none,100000.0,ILS,561109.0,

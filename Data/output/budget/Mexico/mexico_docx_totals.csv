@@ -1,9 +1,9 @@
 country,canonical_name,year,amount_total,amount_primary,n_acts,acts,additive_flag,currency,unit,category
 Mexico,CIATEQ Advanced Technology Center,2011,149613299.0,149613299.0,1,2011 07122010-MAT.pdf,single,MXN,unit,science_agency
-Mexico,CIATEQ Advanced Technology Center,2012,,,0,,gap,,,science_agency
+Mexico,CIATEQ Advanced Technology Center,2012,165312440.0,165312440.0,1,2012 12122011-MAT.pdf,single,MXN,dollar,science_agency
 Mexico,CIATEQ Advanced Technology Center,2013,170308467.0,170308467.0,1,2013 27122012-MAT.pdf,single,MXN,unit,science_agency
 Mexico,CIATEQ Advanced Technology Center,2014,246409525.0,246409525.0,1,2014 03122013-MAT.pdf,single,MXN,unit,science_agency
-Mexico,CIATEQ Advanced Technology Center,2015,,,0,,gap,,,science_agency
+Mexico,CIATEQ Advanced Technology Center,2015,626363102.0,626363102.0,1,2015 03122014-MAT.pdf,single,MXN,dollar,science_agency
 Mexico,CIATEQ Advanced Technology Center,2016,625054216.0,625054216.0,1,2016 27112015-MAT.pdf,single,MXN,unit,science_agency
 Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),1986,,,0,,gap,,,research_institute
 Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),1987,,,0,,gap,,,research_institute
@@ -16,15 +16,15 @@ Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),2008,,
 Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),2009,,,0,,gap,,,research_institute
 Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),2010,,,0,,gap,,,research_institute
 Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),2011,169203768.0,169203768.0,1,2011 07122010-MAT.pdf,single,MXN,unit,research_institute
-Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),2012,,,0,,gap,,,research_institute
+Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),2012,204862237.0,204862237.0,1,2012 12122011-MAT.pdf,single,MXN,dollar,research_institute
 Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),2013,208205657.0,208205657.0,1,2013 27122012-MAT.pdf,single,MXN,unit,research_institute
 Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),2014,242522636.0,242522636.0,1,2014 03122013-MAT.pdf,single,MXN,unit,research_institute
-Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),2015,,,0,,gap,,,research_institute
+Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),2015,273902382.0,273902382.0,1,2015 03122014-MAT.pdf,single,MXN,dollar,research_institute
 Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),2016,538429413.0,538429413.0,1,2016 27112015-MAT.pdf,single,MXN,unit,research_institute
 Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),2017,244633011.0,244633011.0,1,2017 30112016-MAT.pdf,single,MXN,unit,research_institute
-Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),2018,,,0,,gap,,,research_institute
+Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),2018,483198343.0,483198343.0,1,2018 29112017-MAT.pdf,single,MXN,dollar,research_institute
 Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),2020,,,0,,gap,,,research_institute
-Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),2021,,,0,,gap,,,research_institute
+Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),2021,318466754.0,318466754.0,1,2021 .pdf,single,MXN,dollar,research_institute
 Mexico,CICY — Centro de Investigación Científica de Yucatán (Mexico),2024,375359683.0,375359683.0,1,2024 25112023-VES.pdf,single,MXN,unit,research_institute
 Mexico,CIMAT — Centro de Investigación en Matemáticas (Mexico),1986,,,0,,gap,,,research_institute
 Mexico,CIMAT — Centro de Investigación en Matemáticas (Mexico),1987,,,0,,gap,,,research_institute
@@ -37,14 +37,14 @@ Mexico,CIMAT — Centro de Investigación en Matemáticas (Mexico),2008,,,0,,gap
 Mexico,CIMAT — Centro de Investigación en Matemáticas (Mexico),2009,,,0,,gap,,,research_institute
 Mexico,CIMAT — Centro de Investigación en Matemáticas (Mexico),2010,,,0,,gap,,,research_institute
 Mexico,CIMAT — Centro de Investigación en Matemáticas (Mexico),2011,131173865.0,131173865.0,1,2011 07122010-MAT.pdf,single,MXN,unit,research_institute
-Mexico,CIMAT — Centro de Investigación en Matemáticas (Mexico),2012,,,0,,gap,,,research_institute
+Mexico,CIMAT — Centro de Investigación en Matemáticas (Mexico),2012,133515114.0,133515114.0,1,2012 12122011-MAT.pdf,single,MXN,dollar,research_institute
 Mexico,CIMAT — Centro de Investigación en Matemáticas (Mexico),2013,157259268.0,157259268.0,1,2013 27122012-MAT.pdf,single,MXN,unit,research_institute
 Mexico,CIMAT — Centro de Investigación en Matemáticas (Mexico),2014,182981293.0,182981293.0,1,2014 03122013-MAT.pdf,single,MXN,unit,research_institute
 Mexico,CIMAT — Centro de Investigación en Matemáticas (Mexico),2015,,,0,,gap,,,research_institute
 Mexico,CIMAT — Centro de Investigación en Matemáticas (Mexico),2016,207933168.0,207933168.0,1,2016 27112015-MAT.pdf,single,MXN,unit,research_institute
 Mexico,CIMAT — Centro de Investigación en Matemáticas (Mexico),2017,166741594.0,166741594.0,1,2017 30112016-MAT.pdf,single,MXN,unit,research_institute
-Mexico,CIMAT — Centro de Investigación en Matemáticas (Mexico),2018,,,0,,gap,,,research_institute
-Mexico,CIMAT — Centro de Investigación en Matemáticas (Mexico),2020,,,0,,gap,,,research_institute
+Mexico,CIMAT — Centro de Investigación en Matemáticas (Mexico),2018,170063398.0,170063398.0,1,2018 29112017-MAT.pdf,single,MXN,dollar,research_institute
+Mexico,CIMAT — Centro de Investigación en Matemáticas (Mexico),2020,210568814.0,210568814.0,1,2020 11122019-MAT.pdf,single,MXN,dollar,research_institute
 Mexico,CIMAT — Centro de Investigación en Matemáticas (Mexico),2021,212977650.0,212977650.0,1,2021 .pdf,single,MXN,unit,research_institute
 Mexico,CIMAT — Centro de Investigación en Matemáticas (Mexico),2024,256930521.0,256930521.0,1,2024 25112023-VES.pdf,single,MXN,unit,research_institute
 Mexico,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),1986,,,0,,gap,,,research_institute
@@ -58,16 +58,16 @@ Mexico,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),2008,
 Mexico,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),2009,,,0,,gap,,,research_institute
 Mexico,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),2010,,,0,,gap,,,research_institute
 Mexico,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),2011,133396620.0,133396620.0,1,2011 07122010-MAT.pdf,single,MXN,unit,research_institute
-Mexico,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),2012,,,0,,gap,,,research_institute
+Mexico,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),2012,165828783.0,165828783.0,1,2012 12122011-MAT.pdf,single,MXN,dollar,research_institute
 Mexico,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),2013,163426361.0,163426361.0,1,2013 27122012-MAT.pdf,single,MXN,unit,research_institute
 Mexico,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),2014,173524632.0,173524632.0,1,2014 03122013-MAT.pdf,single,MXN,unit,research_institute
-Mexico,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),2015,,,0,,gap,,,research_institute
+Mexico,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),2015,253443886.0,253443886.0,1,2015 03122014-MAT.pdf,single,MXN,dollar,research_institute
 Mexico,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),2016,246352545.0,246352545.0,1,2016 27112015-MAT.pdf,single,MXN,unit,research_institute
 Mexico,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),2017,169545838.0,169545838.0,1,2017 30112016-MAT.pdf,single,MXN,unit,research_institute
-Mexico,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),2018,,,0,,gap,,,research_institute
+Mexico,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),2018,237156031.0,237156031.0,1,2018 29112017-MAT.pdf,single,MXN,dollar,research_institute
 Mexico,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),2020,,,0,,gap,,,research_institute
 Mexico,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),2021,225132571.0,225132571.0,1,2021 .pdf,single,MXN,unit,research_institute
-Mexico,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),2024,,,0,,gap,,,research_institute
+Mexico,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),2024,256861364.0,256861364.0,1,2024 25112023-VES.pdf,single,MXN,dollar,research_institute
 Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),1986,,,0,,gap,,,research_institute
 Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),1987,,,0,,gap,,,research_institute
 Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2001,,,0,,gap,,,research_institute
@@ -75,16 +75,16 @@ Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2002
 Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2003,,,0,,gap,,,research_institute
 Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2006,100000000.0,100000000.0,1,2006 22122005-MAT.pdf,single,MXN,unit,research_institute
 Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2007,90000000.0,90000000.0,1,2007 28122006-MAT.pdf,single,MXN,unit,research_institute
-Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2008,,,0,,gap,,,research_institute
+Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2008,175000000.0,175000000.0,1,2008 13122007-MAT.pdf,single,MXN,dollar,research_institute
 Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2009,95000000.0,95000000.0,1,2009 28112008-MAT.pdf,single,MXN,unit,research_institute
-Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2010,,,0,,gap,,,research_institute
+Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2010,90000000.0,90000000.0,1,2010 07122009-MAT.pdf,single,MXN,dollar,research_institute
 Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2011,1882976326.0,1882976326.0,1,2011 07122010-MAT.pdf,single,MXN,unit,research_institute
-Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2012,,,0,,gap,,,research_institute
+Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2012,2079491959.0,2079491959.0,1,2012 12122011-MAT.pdf,single,MXN,dollar,research_institute
 Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2013,2149930492.0,2149930492.0,1,2013 27122012-MAT.pdf,single,MXN,unit,research_institute
 Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2014,2004433950.0,2004433950.0,1,2014 03122013-MAT.pdf,single,MXN,unit,research_institute
-Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2015,,,0,,gap,,,research_institute
-Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2016,,,0,,gap,,,research_institute
-Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2017,,,0,,gap,,,research_institute
+Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2015,2154034115.0,2154034115.0,1,2015 03122014-MAT.pdf,single,MXN,dollar,research_institute
+Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2016,2941474511.0,2941474511.0,1,2016 27112015-MAT.pdf,single,MXN,dollar,research_institute
+Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2017,3106632612.0,3106632612.0,1,2017 30112016-MAT.pdf,single,MXN,dollar,research_institute
 Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2018,2232639342.0,2232639342.0,1,2018 29112017-MAT.pdf,single,MXN,unit,research_institute
 Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2020,2404759338.0,2404759338.0,1,2020 11122019-MAT.pdf,single,MXN,unit,research_institute
 Mexico,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),2021,3147042279.0,3147042279.0,1,2021 .pdf,single,MXN,unit,research_institute
@@ -121,36 +121,36 @@ Mexico,Centros Públicos de Investigación CONACYT (Mexico),2008,140500000.0,140
 Mexico,Centros Públicos de Investigación CONACYT (Mexico),2009,,,0,,gap,,,research_institute
 Mexico,Centros Públicos de Investigación CONACYT (Mexico),2010,,,0,,gap,,,research_institute
 Mexico,Centros Públicos de Investigación CONACYT (Mexico),2011,,,0,,gap,,,research_institute
-Mexico,Centros Públicos de Investigación CONACYT (Mexico),2012,,,0,,gap,,,research_institute
+Mexico,Centros Públicos de Investigación CONACYT (Mexico),2012,204862237.0,204862237.0,1,2012 12122011-MAT.pdf,single,MXN,dollar,research_institute
 Mexico,Centros Públicos de Investigación CONACYT (Mexico),2013,,,0,,gap,,,research_institute
 Mexico,Centros Públicos de Investigación CONACYT (Mexico),2014,,,0,,gap,,,research_institute
-Mexico,Centros Públicos de Investigación CONACYT (Mexico),2015,,,0,,gap,,,research_institute
+Mexico,Centros Públicos de Investigación CONACYT (Mexico),2015,273902382.0,273902382.0,1,2015 03122014-MAT.pdf,single,MXN,dollar,research_institute
 Mexico,Centros Públicos de Investigación CONACYT (Mexico),2016,,,0,,gap,,,research_institute
 Mexico,Centros Públicos de Investigación CONACYT (Mexico),2017,1500000000.0,1500000000.0,1,2017 30112016-MAT.pdf,single,MXN,unit,research_institute
-Mexico,Centros Públicos de Investigación CONACYT (Mexico),2018,,,0,,gap,,,research_institute
+Mexico,Centros Públicos de Investigación CONACYT (Mexico),2018,483198343.0,483198343.0,1,2018 29112017-MAT.pdf,single,MXN,dollar,research_institute
 Mexico,Centros Públicos de Investigación CONACYT (Mexico),2020,,,0,,gap,,,research_institute
-Mexico,Centros Públicos de Investigación CONACYT (Mexico),2021,,,0,,gap,,,research_institute
-Mexico,Centros Públicos de Investigación CONACYT (Mexico),2024,,,0,,gap,,,research_institute
+Mexico,Centros Públicos de Investigación CONACYT (Mexico),2021,318466754.0,318466754.0,1,2021 .pdf,single,MXN,dollar,research_institute
+Mexico,Centros Públicos de Investigación CONACYT (Mexico),2024,256861364.0,256861364.0,1,2024 25112023-VES.pdf,single,MXN,dollar,research_institute
 Mexico,Chapingo Autonomous University,2016,2553400000.0,2553400000.0,1,2016 27112015-MAT.pdf,single,MXN,unit,higher_education
 Mexico,College of the Northern Border,2011,202926687.0,202926687.0,1,2011 07122010-MAT.pdf,single,MXN,unit,science_agency
-Mexico,College of the Northern Border,2012,,,0,,gap,,,science_agency
+Mexico,College of the Northern Border,2012,921593264.0,921593264.0,1,2012 12122011-MAT.pdf,single,MXN,dollar,science_agency
 Mexico,College of the Northern Border,2013,237876070.0,237876070.0,1,2013 27122012-MAT.pdf,single,MXN,unit,science_agency
 Mexico,College of the Northern Border,2014,271522460.0,271522460.0,1,2014 03122013-MAT.pdf,single,MXN,unit,science_agency
-Mexico,College of the Northern Border,2015,,,0,,gap,,,science_agency
+Mexico,College of the Northern Border,2015,990870817.0,990870817.0,1,2015 03122014-MAT.pdf,single,MXN,dollar,science_agency
 Mexico,College of the Northern Border,2016,341059907.0,341059907.0,1,2016 27112015-MAT.pdf,single,MXN,unit,science_agency
 Mexico,College of the Southern Border,2011,239272825.0,239272825.0,1,2011 07122010-MAT.pdf,single,MXN,unit,science_agency
-Mexico,College of the Southern Border,2012,,,0,,gap,,,science_agency
+Mexico,College of the Southern Border,2012,267830890.0,267830890.0,1,2012 12122011-MAT.pdf,single,MXN,dollar,science_agency
 Mexico,College of the Southern Border,2013,298204244.0,298204244.0,1,2013 27122012-MAT.pdf,single,MXN,unit,science_agency
 Mexico,College of the Southern Border,2014,330806751.0,330806751.0,1,2014 03122013-MAT.pdf,single,MXN,unit,science_agency
-Mexico,College of the Southern Border,2015,,,0,,gap,,,science_agency
+Mexico,College of the Southern Border,2015,353732033.0,353732033.0,1,2015 03122014-MAT.pdf,single,MXN,dollar,science_agency
 Mexico,College of the Southern Border,2016,401212700.0,401212700.0,1,2016 27112015-MAT.pdf,single,MXN,unit,science_agency
 Mexico,Development of Equipment for Mechatronics,2012,10900000.0,10900000.0,1,2012 12122011-MAT.pdf,single,MXN,unit,direct_rd
 Mexico,Development of Medicines from Endemic Medicinal Plants of Tlaxcala,2012,532000.0,532000.0,1,2012 12122011-MAT.pdf,single,MXN,unit,direct_rd
 Mexico,Ecology Institute,2011,208060201.0,208060201.0,1,2011 07122010-MAT.pdf,single,MXN,unit,science_agency
-Mexico,Ecology Institute,2012,,,0,,gap,,,science_agency
+Mexico,Ecology Institute,2012,215321479.0,215321479.0,1,2012 12122011-MAT.pdf,single,MXN,dollar,science_agency
 Mexico,Ecology Institute,2013,233223136.0,233223136.0,1,2013 27122012-MAT.pdf,single,MXN,unit,science_agency
-Mexico,Ecology Institute,2014,,,0,,gap,,,science_agency
-Mexico,Ecology Institute,2015,,,0,,gap,,,science_agency
+Mexico,Ecology Institute,2014,315188118.0,315188118.0,1,2014 03122013-MAT.pdf,single,MXN,dollar,science_agency
+Mexico,Ecology Institute,2015,203491460.0,203491460.0,1,2015 03122014-MAT.pdf,single,MXN,dollar,science_agency
 Mexico,Ecology Institute,2016,350359050.0,350359050.0,1,2016 27112015-MAT.pdf,single,MXN,unit,science_agency
 Mexico,Global Change and Environmental Sustainability (Stage 2),2012,12000000.0,12000000.0,1,2012 12122011-MAT.pdf,single,MXN,unit,science_agency
 Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",1986,,,0,,gap,,,research_institute
@@ -158,22 +158,22 @@ Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas 
 Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2001,,,0,,gap,,,research_institute
 Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2002,,,0,,gap,,,research_institute
 Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2003,,,0,,gap,,,research_institute
-Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2006,,,0,,gap,,,research_institute
-Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2007,,,0,,gap,,,research_institute
-Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2008,,,0,,gap,,,research_institute
+Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2006,1066200000.0,1066200000.0,1,2006 22122005-MAT.pdf,single,MXN,dollar,research_institute
+Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2007,1200000000.0,1200000000.0,1,2007 28122006-MAT.pdf,single,MXN,million,research_institute
+Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2008,1226800000.0,1226800000.0,1,2008 13122007-MAT.pdf,single,MXN,million,research_institute
 Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2009,,,0,,gap,,,research_institute
-Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2010,,,0,,gap,,,research_institute
-Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2011,,,0,,gap,,,research_institute
-Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2012,,,0,,gap,,,research_institute
+Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2010,262399999.99999997,262399999.99999997,1,2010 07122009-MAT.pdf,single,MXN,million,research_institute
+Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2011,73800000.0,73800000.0,1,2011 07122010-MAT.pdf,single,MXN,million,research_institute
+Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2012,710.0,710.0,1,2012 12122011-MAT.pdf,single,MXN,unknown,research_institute
 Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2013,1317238965.0,1317238965.0,1,2013 27122012-MAT.pdf,single,MXN,unit,research_institute
-Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2014,,,0,,gap,,,research_institute
-Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2015,,,0,,gap,,,research_institute
+Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2014,1737430578.0,1737430578.0,1,2014 03122013-MAT.pdf,single,MXN,unknown,research_institute
+Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2015,1359651898.0,1359651898.0,1,2015 03122014-MAT.pdf,single,MXN,unknown,research_institute
 Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2016,1091480035.0,1091480035.0,1,2016 27112015-MAT.pdf,single,MXN,unit,research_institute
-Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2017,,,0,,gap,,,research_institute
-Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2018,,,0,,gap,,,research_institute
-Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2020,,,0,,gap,,,research_institute
-Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2021,,,0,,gap,,,research_institute
-Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2024,,,0,,gap,,,research_institute
+Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2017,1441102591.0,1441102591.0,1,2017 30112016-MAT.pdf,single,MXN,unknown,research_institute
+Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2018,1288232884.0,1288232884.0,1,2018 29112017-MAT.pdf,single,MXN,dollar,research_institute
+Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2020,1372400000.0,1372400000.0,1,2020 11122019-MAT.pdf,single,MXN,million,research_institute
+Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2021,1302900000.0,1302900000.0,1,2021 .pdf,single,MXN,million,research_institute
+Mexico,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",2024,1417712938.0,1417712938.0,1,2024 25112023-VES.pdf,single,MXN,dollar,research_institute
 Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),1986,,,0,,gap,,,research_institute
 Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),1987,,,0,,gap,,,research_institute
 Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),2001,,,0,,gap,,,research_institute
@@ -185,16 +185,16 @@ Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),2008,,,
 Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),2009,,,0,,gap,,,research_institute
 Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),2010,,,0,,gap,,,research_institute
 Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),2011,451714399.0,451714399.0,1,2011 07122010-MAT.pdf,single,MXN,unit,research_institute
-Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),2012,,,0,,gap,,,research_institute
+Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),2012,502033970.0,502033970.0,1,2012 12122011-MAT.pdf,single,MXN,dollar,research_institute
 Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),2013,,,0,,gap,,,research_institute
-Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),2014,,,0,,gap,,,research_institute
-Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),2015,,,0,,gap,,,research_institute
+Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),2014,768223048.0,768223048.0,1,2014 03122013-MAT.pdf,single,MXN,dollar,research_institute
+Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),2015,766425192.0,766425192.0,1,2015 03122014-MAT.pdf,single,MXN,dollar,research_institute
 Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),2016,,,0,,gap,,,research_institute
 Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),2017,500000000.0,500000000.0,1,2017 30112016-MAT.pdf,single,MXN,unit,research_institute
 Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),2018,543755159.0,543755159.0,1,2018 29112017-MAT.pdf,single,MXN,unit,research_institute
 Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),2020,906393775.0,906393775.0,1,2020 11122019-MAT.pdf,single,MXN,unit,research_institute
 Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),2021,922773729.0,922773729.0,1,2021 .pdf,single,MXN,unit,research_institute
-Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),2024,,,0,,gap,,,research_institute
+Mexico,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),2024,969823203.0,969823203.0,1,2024 25112023-VES.pdf,single,MXN,dollar,research_institute
 Mexico,IPN — Instituto Politécnico Nacional (Mexico),1986,,,0,,gap,,,higher_education
 Mexico,IPN — Instituto Politécnico Nacional (Mexico),1987,,,0,,gap,,,higher_education
 Mexico,IPN — Instituto Politécnico Nacional (Mexico),2001,,,0,,gap,,,higher_education
@@ -220,15 +220,15 @@ Mexico,Mario Molina Center (regional studies in energy and environmental managem
 Mexico,Metropolitan Autonomous University,2018,3048708947.0,3048708947.0,1,2018 29112017-MAT.pdf,single,MXN,unit,higher_education
 Mexico,Mexican Space Agency,2010,10000000.0,10000000.0,1,2010 07122009-MAT.pdf,single,MXN,unit,science_agency
 Mexico,Mexican Space Agency,2011,,,0,,gap,,,science_agency
-Mexico,Mexican Space Agency,2012,,,0,,gap,,,science_agency
+Mexico,Mexican Space Agency,2012,60000000.0,60000000.0,1,2012 12122011-MAT.pdf,single,MXN,dollar,science_agency
 Mexico,Mexican Space Agency,2013,54457650.0,54457650.0,1,2013 27122012-MAT.pdf,single,MXN,unit,science_agency
 Mexico,Mexican Space Agency,2014,112811973.0,112811973.0,1,2014 03122013-MAT.pdf,single,MXN,unit,science_agency
-Mexico,Mexican Space Agency,2015,,,0,,gap,,,science_agency
+Mexico,Mexican Space Agency,2015,111983200.0,111983200.0,1,2015 03122014-MAT.pdf,single,MXN,dollar,science_agency
 Mexico,Mexican Space Agency,2016,90467913.0,90467913.0,1,2016 27112015-MAT.pdf,single,MXN,unit,science_agency
 Mexico,Mexican Space Agency,2017,92482883.0,92482883.0,1,2017 30112016-MAT.pdf,single,MXN,unit,science_agency
-Mexico,Mexican Space Agency,2018,,,0,,gap,,,science_agency
+Mexico,Mexican Space Agency,2018,77821489.0,77821489.0,1,2018 29112017-MAT.pdf,single,MXN,dollar,science_agency
 Mexico,Mexican Space Agency,2020,67625350.0,67625350.0,1,2020 11122019-MAT.pdf,single,MXN,unit,science_agency
-Mexico,Mexican Space Agency,2021,,,0,,gap,,,science_agency
+Mexico,Mexican Space Agency,2021,36447482.0,36447482.0,1,2021 .pdf,single,MXN,dollar,science_agency
 Mexico,Mexican Space Agency,2024,73913894.0,73913894.0,1,2024 25112023-VES.pdf,single,MXN,unit,science_agency
 Mexico,Mixed Fund,2010,390000000.0,390000000.0,1,2010 07122009-MAT.pdf,single,MXN,unit,innovation_instruments
 Mexico,New Fund for Science and Technology,2008,500000.0,500000.0,1,2008 13122007-MAT.pdf,single,MXN,unit,innovation_instruments

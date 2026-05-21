@@ -36,7 +36,11 @@ logger = logging.getLogger(__name__)
 
 # Limit scope to institutions / research bodies; generic programmes are better
 # handled by the main extraction logic and ordinary dedup.
-_ELIGIBLE_CATEGORIES = {"science_agency", "research_infrastructure"}
+# Mexico needs research_institute coverage here because several annex tables
+# print institute-level appropriations clearly, but the main extraction pass
+# intermittently misses them while targeted recovery was previously disabled for
+# that category.
+_ELIGIBLE_CATEGORIES = {"science_agency", "research_institute", "research_infrastructure"}
 _METRIC_LABEL_PATTERNS = (
     re.compile(r"\berc grants?\b", re.I),
     re.compile(r"\bgrants? from erc\b", re.I),

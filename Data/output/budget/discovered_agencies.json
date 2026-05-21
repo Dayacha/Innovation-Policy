@@ -844,30 +844,6 @@
       "avg_amount": 1000.0
     },
     {
-      "canonical_name": "Australian Centre for",
-      "category": "science_agency",
-      "name_variants": [
-        "ACF",
-        "Australian Centre for Research",
-        "Australian Centre for Innovation"
-      ],
-      "preferred_item_type": [
-        "section_total",
-        "program_total",
-        "line_item"
-      ],
-      "active_years": [
-        1900,
-        2099
-      ],
-      "notes": "The entity is likely a dedicated research agency focused on R&D activities.",
-      "agency_type": "dedicated_rd_agency",
-      "confidence": 0.85,
-      "source_entity": "Total: Australian Centre for",
-      "n_years_seen": 3,
-      "avg_amount": 46892.333333333336
-    },
-    {
       "canonical_name": "Office of the Renewable Energy",
       "category": "innovation_instruments",
       "name_variants": [
@@ -880,8 +856,8 @@
         "line_item"
       ],
       "active_years": [
-        1900,
-        2099
+        2004,
+        2005
       ],
       "notes": "The entity is involved in funding and promoting renewable energy research initiatives.",
       "agency_type": "rd_programme",
@@ -30539,7 +30515,28 @@
       "avg_amount": 1350.0
     }
   ],
-  "Netherlands": [],
+  "Netherlands": [
+    {
+      "canonical_name": "Research and Development Work",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1989,
+        2001
+      ],
+      "notes": "This term directly refers to R&D activities and funding.",
+      "agency_type": "rd_programme",
+      "confidence": 0.95,
+      "source_entity": "Speur- en ontwikkelingswerk",
+      "n_years_seen": 3,
+      "avg_amount": 69017000.0
+    }
+  ],
   "Switzerland": [
     {
       "canonical_name": "Total budget for education and fundamental research",
@@ -61756,6 +61753,66 @@
       "source_entity": "Avtomatizirani sistem za homogenizacijo vzorcev in izolacijo (DNA; RNA in proteini)",
       "n_years_seen": 1,
       "avg_amount": 20000.0
+    },
+    {
+      "canonical_name": "Development of Research Infrastructure Project CERIC",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2020
+      ],
+      "notes": "This project focuses on developing research infrastructure, which is directly relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Razvoj raziskovalne infrastrukture projekt CERIC",
+      "n_years_seen": 1,
+      "avg_amount": 3360771.0
+    },
+    {
+      "canonical_name": "International Project X5gon",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "This international project is aimed at enhancing research and development activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Mednarodni projekt X5gon",
+      "n_years_seen": 1,
+      "avg_amount": 2535770.0
+    },
+    {
+      "canonical_name": "Development of Research Infrastructure DARIAH",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2020
+      ],
+      "notes": "This program is focused on developing research infrastructure, relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Razvoj raziskovalne infrastrukture DARIAH",
+      "n_years_seen": 1,
+      "avg_amount": 102026.0
     }
   ],
   "Poland": [
@@ -71115,6 +71172,28 @@
       "source_entity": "M-021-SAÚDE - INVESTIGAÇÃO",
       "n_years_seen": 2,
       "avg_amount": 90768399.5
+    },
+    {
+      "canonical_name": "National Innovation Agency, SA",
+      "category": "innovation_instruments",
+      "name_variants": [
+        "Agência Nacional de Inovação, SA"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2016,
+        2020
+      ],
+      "notes": "This agency focuses on promoting innovation and R&D in Portugal.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "AGENCIA NACIONAL DE INOVAÇAO, SA",
+      "n_years_seen": 5,
+      "avg_amount": 9980190.0
     }
   ],
   "Turkey": [
@@ -72879,6 +72958,3388 @@
       "source_entity": "ABANT øZZET BAYSAL ÜNøVERSøTESø",
       "n_years_seen": 1,
       "avg_amount": 1054.0
+    }
+  ],
+  "Italy": [
+    {
+      "canonical_name": "Funding for State Universities",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2024,
+        2024
+      ],
+      "notes": "Directly supports universities which are key players in R&D.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Finanziamento delle universita' statali",
+      "n_years_seen": 1,
+      "avg_amount": 9198760621000.0
+    },
+    {
+      "canonical_name": "Expenses for Experimental Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1996
+      ],
+      "notes": "Specifically allocated for experimental research, making it highly relevant.",
+      "agency_type": "rd_programme",
+      "confidence": 0.95,
+      "source_entity": "SPESE PER RICERCHE SPERIMENTALI",
+      "n_years_seen": 1,
+      "avg_amount": 9000000000000.0
+    },
+    {
+      "canonical_name": "Contributions for Scientific and Technological Research Applied to Maritime Fishing",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1989,
+        1995
+      ],
+      "notes": "Directly supports research in a specific field, making it relevant.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Contributi per la ricerca scientifica e tecnologica applicata alla pesca marittima",
+      "n_years_seen": 2,
+      "avg_amount": 3752075000000.0
+    },
+    {
+      "canonical_name": "Fund for Scientific and Technological Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1988,
+        1989
+      ],
+      "notes": "Specifically allocated for scientific and technological research.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Fondo per la ricerca scientifica e tecnologica",
+      "n_years_seen": 2,
+      "avg_amount": 2563750000000.0
+    },
+    {
+      "canonical_name": "Interventions for Innovation in the Aerospace, Security, and Defense Sector",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2019
+      ],
+      "notes": "This program focuses on innovation in critical sectors, indicating R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Interventi per l'innovazione del sistema produttivo del settore dell'aerospazio, della sicurezza e della difesa",
+      "n_years_seen": 2,
+      "avg_amount": 2140275128500.0
+    },
+    {
+      "canonical_name": "Scientific and Technological Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1992,
+        1996
+      ],
+      "notes": "This entry is directly related to scientific and technological research funding.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "RUBRICA 3 - RICERCA SCIENTIFICA E TECNOLOGICA",
+      "n_years_seen": 3,
+      "avg_amount": 1885246499333.3333
+    },
+    {
+      "canonical_name": "Contributions to Research Activities of Public and Private Entities",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2019
+      ],
+      "notes": "This funding supports research activities, making it highly relevant to R&D.",
+      "agency_type": "rd_fund",
+      "confidence": 0.95,
+      "source_entity": "Contributi alle attività di ricerca degli enti pubblici e privati",
+      "n_years_seen": 2,
+      "avg_amount": 1792128919500.0
+    },
+    {
+      "canonical_name": "Expenses for Studies and Research Relevant to State Monopolies Administration",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1994,
+        1994
+      ],
+      "notes": "This entry involves studies and research related to state monopolies, indicating R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "SPESE PER STUDI E RICERCHE INTERESSANTI L'AMMINISTRAZIONE DEI MONOPOLI DI STATO",
+      "n_years_seen": 1,
+      "avg_amount": 1500000000000.0
+    },
+    {
+      "canonical_name": "Research and Development",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2024
+      ],
+      "notes": "This entry explicitly mentions research and development, confirming its relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.95,
+      "source_entity": "Ricerca e sviluppo",
+      "n_years_seen": 3,
+      "avg_amount": 1041000000000.0
+    },
+    {
+      "canonical_name": "Annual Contribution to the International Cancer Research Center in Lyon",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1989,
+        1994
+      ],
+      "notes": "This contribution supports cancer research, indicating strong R&D relevance.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "CONTRIBUTO ANNUO AL CENTRO INTERNAZIONALE DI RICERCHE PER IL CANCRO, CON SEDE IN LIONE",
+      "n_years_seen": 2,
+      "avg_amount": 900625000000.0
+    },
+    {
+      "canonical_name": "Enhancement of Scientific and Technological Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2024
+      ],
+      "notes": "This program aims to enhance scientific and technological research, confirming its relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Potenziamento ricerca scientifica e tecnologica",
+      "n_years_seen": 3,
+      "avg_amount": 677838383000.0
+    },
+    {
+      "canonical_name": "Interventions Department of Innovation",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2010,
+        2010
+      ],
+      "notes": "This entity focuses on innovation interventions, indicating a strong relevance to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "INTERVENTI DIPARTIMENTO DELL'INNOVAZIONE",
+      "n_years_seen": 1,
+      "avg_amount": 524249656000.0
+    },
+    {
+      "canonical_name": "Policies, Research Projects and Studies on New Technologies and Advanced Materials",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2024,
+        2024
+      ],
+      "notes": "This entity is directly involved in research and studies on new technologies, indicating high R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Politiche, progetti di ricerca e studi sulle nuove tecnologie ed i materiali avanzati",
+      "n_years_seen": 1,
+      "avg_amount": 495061921000.0
+    },
+    {
+      "canonical_name": "Alternative Energies",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1990,
+        1990
+      ],
+      "notes": "This entity is likely involved in research related to alternative energy sources, relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "NERGIE ALTERNATIVE",
+      "n_years_seen": 1,
+      "avg_amount": 450000000000.0
+    },
+    {
+      "canonical_name": "Expenses for Studies, Investigations, Research and Various Initiatives in Remediation, Water, Soil, Environment",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1992,
+        1992
+      ],
+      "notes": "This entity funds research initiatives in environmental areas, indicating strong R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Spese per studi, indagini, ricerche e iniziative varie in materia di bonifica, acqua, suolo, ambiente",
+      "n_years_seen": 1,
+      "avg_amount": 450000000000.0
+    },
+    {
+      "canonical_name": "Expenses for Studies, Research and Consultations with Universities, Institutes and Public and Private Experts",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1995,
+        1995
+      ],
+      "notes": "This entity collaborates with universities and experts for research, indicating high R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "SPESE PER STUDI, RICERCHE E CONSULENZE CON UNIVERSITA’, ISTITUTI E ESPERTI PUBBLICI E PRIVATI.",
+      "n_years_seen": 1,
+      "avg_amount": 417000000000.0
+    },
+    {
+      "canonical_name": "Expenses for Scientific Research Including Those Related to Studies and Experiences Concerning Flight Assistance",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1994,
+        1994
+      ],
+      "notes": "This entity funds scientific research related to flight assistance, indicating strong R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "SPESE PER LA RICERCA SCIENTIFICA COMPRESE QUELLE RELATIVE AGLI STUDI E ALLE ESPERIENZE INERENTI ALL’ASSISTENZA AL VOLO",
+      "n_years_seen": 1,
+      "avg_amount": 411430000000.0
+    },
+    {
+      "canonical_name": "Research for the Public Health Sector",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2024,
+        2024
+      ],
+      "notes": "This funding is specifically for public health research, making it highly relevant to R&D.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Ricerca per il settore della sanita' pubblica",
+      "n_years_seen": 1,
+      "avg_amount": 400000000000.0
+    },
+    {
+      "canonical_name": "Increase for National Space Programs",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2020
+      ],
+      "notes": "This entity supports national space programs, which are inherently R&D focused.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Incremento per i programmi spaziali nazionali",
+      "n_years_seen": 1,
+      "avg_amount": 390000000000.0
+    },
+    {
+      "canonical_name": "Research Grants for University Researchers",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1987,
+        1987
+      ],
+      "notes": "This entity provides grants for university researchers, directly supporting R&D activities.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "Assegni di ricerca per i ricercatori universitari",
+      "n_years_seen": 1,
+      "avg_amount": 387000000000.0
+    },
+    {
+      "canonical_name": "Implementation of Research and Technological Development Projects in the Aeronautics Industry",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2024
+      ],
+      "notes": "This entity focuses on R&D in the aeronautics industry, indicating high relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Realizzazione di progetti di ricerca e sviluppo tecnologico dell'industria aeronautica",
+      "n_years_seen": 3,
+      "avg_amount": 386319873000.0
+    },
+    {
+      "canonical_name": "Implementation of Interventions under the Special Fund for Applied Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1991,
+        1991
+      ],
+      "notes": "This entity implements interventions for applied research, indicating strong R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Attuazione degli interventi di cui al Fondo speciale per la ricerca applicata.",
+      "n_years_seen": 1,
+      "avg_amount": 350000000000.0
+    },
+    {
+      "canonical_name": "Expenditure for Scientific Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1986,
+        1996
+      ],
+      "notes": "This entity is directly related to funding scientific research activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "SPESE PER LA RICERCA SCIENTIFICA",
+      "n_years_seen": 10,
+      "avg_amount": 337699463414.63416
+    },
+    {
+      "canonical_name": "Expenditure for Scientific Research Covering Studies and Experiences Related to Flight Assistance",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1996
+      ],
+      "notes": "This entity funds research related to flight assistance, which is relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "SPESE PER LA RICERCA SCIENTIFICA COUPRESE QUELLE RELATIVE AGLI STUDI ED ALLE ESPERIENZE INERENTI ALL'ASSISTENZA AL VOLO.",
+      "n_years_seen": 1,
+      "avg_amount": 335355000000.0
+    },
+    {
+      "canonical_name": "Research for the Public Health and Zootechnical Sector",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2010
+      ],
+      "notes": "This entity is dedicated to research in public health, which is highly relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Ricerca per il settore della sanita' pubblica e zooprofilattico",
+      "n_years_seen": 2,
+      "avg_amount": 315084323000.0
+    },
+    {
+      "canonical_name": "Research on Cultural Heritage and Activities",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2009
+      ],
+      "notes": "This entity supports research in cultural heritage, contributing to R&D in the arts.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Ricerca in materia di beni e attivita' culturali (17.4)",
+      "n_years_seen": 1,
+      "avg_amount": 305601680000.0
+    },
+    {
+      "canonical_name": "Total Research for the Public Health Sector",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2019,
+        2024
+      ],
+      "notes": "This entity encompasses total research funding for public health, relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Totale Ricerca per il settore della sanita' pubblica",
+      "n_years_seen": 2,
+      "avg_amount": 305375926000.0
+    },
+    {
+      "canonical_name": "Research on Sustainable Technologies in Energy and Environmental Fields",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2024,
+        2024
+      ],
+      "notes": "This entity funds research on sustainable technologies, which is relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Ricerca sulle tecnologie sostenibili in ambito energetico e ambientale",
+      "n_years_seen": 1,
+      "avg_amount": 300940980000.0
+    },
+    {
+      "canonical_name": "Expenditure for Scientific and Technological Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1986,
+        1986
+      ],
+      "notes": "This entity is directly related to funding scientific and technological research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "SPESE PER LA RICERCA SCIENTIFICA E TECNOLOGICA",
+      "n_years_seen": 1,
+      "avg_amount": 300000000000.0
+    },
+    {
+      "canonical_name": "Integrated Research and Development Interventions",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2024
+      ],
+      "notes": "This entity supports integrated R&D interventions, making it relevant.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Interventi integrati di ricerca e sviluppo",
+      "n_years_seen": 3,
+      "avg_amount": 268897126800.0
+    },
+    {
+      "canonical_name": "Promotion and Development of Health Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2019
+      ],
+      "notes": "This entity promotes and develops health research, relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Promozione e sviluppo della ricerca sanitaria",
+      "n_years_seen": 2,
+      "avg_amount": 258660908000.0
+    },
+    {
+      "canonical_name": "Expenditure for Scientific Research Including Studies and Experiences Related to Flight Assistance",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1991,
+        1991
+      ],
+      "notes": "This entity funds research related to flight assistance, which is relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "SPESE PER LA RICERCA SCIENTIFICA COMPRESE QUELLE RELATIVE GLI STUDI ED ALLE ESPERIENZE INERENTI ALL'ASSISTENZA AL VOLO",
+      "n_years_seen": 1,
+      "avg_amount": 218999200000.0
+    },
+    {
+      "canonical_name": "Expenses for the Implementation of Mining Research Programs",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1988,
+        1992
+      ],
+      "notes": "This entity is directly related to research programs in the mining sector.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "SPESE PER L'EFFETTUAZIONE DEI PROGRAMMI DI RICERCA MINERARIA",
+      "n_years_seen": 2,
+      "avg_amount": 199006000000.0
+    },
+    {
+      "canonical_name": "Development, Innovation, and Research in Energy and Mining and Industrial Sectors",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2010
+      ],
+      "notes": "This entity supports R&D in energy and mining, indicating high relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Sviluppo, innovazione e ricerca in materia di energia ed in ambito minerario ed industriale",
+      "n_years_seen": 2,
+      "avg_amount": 187040830000.0
+    },
+    {
+      "canonical_name": "Interventions to Support Public Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2024
+      ],
+      "notes": "This entity is directly aimed at supporting public research initiatives.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Interventi di sostegno alla ricerca pubblica",
+      "n_years_seen": 3,
+      "avg_amount": 152453252750.0
+    },
+    {
+      "canonical_name": "Implementation of Interventions from the Special Fund for Applied Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1994,
+        1994
+      ],
+      "notes": "This fund is specifically for applied research, indicating high relevance.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "Attuazione degli interventi di cui al fondo speciale per la ricerca applicata",
+      "n_years_seen": 1,
+      "avg_amount": 150000000000.0
+    },
+    {
+      "canonical_name": "Expenses for Italy's Participation in the European Center for Nuclear Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1993,
+        1993
+      ],
+      "notes": "This entity is directly related to participation in nuclear research, indicating high relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "SPESE PER LA PARTECIPAZIONE DELL'ITALIA AL CENTRO EUROPEO DI RICERCHE NUCLEARI",
+      "n_years_seen": 1,
+      "avg_amount": 138567000000.0
+    },
+    {
+      "canonical_name": "National Research Program in Antarctica",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1990,
+        1990
+      ],
+      "notes": "This program is focused on research in Antarctica, indicating strong R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Programma nazionale di ricerche in Antartide",
+      "n_years_seen": 1,
+      "avg_amount": 125000000000.0
+    },
+    {
+      "canonical_name": "Special Fund for Applied Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1986,
+        1997
+      ],
+      "notes": "This fund is specifically designated for applied research, indicating high relevance.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "Fondo speciale per la ricerca applicata",
+      "n_years_seen": 3,
+      "avg_amount": 123416666666.66667
+    },
+    {
+      "canonical_name": "Promotion of Research in the Agricultural, Agro-Food, and Rural Sector, Plant Genetic Improvement",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2019
+      ],
+      "notes": "This entity supports research in agriculture and food, indicating strong R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Promozione della ricerca nel settore agricolo agroalimentare e rurale, miglioramento genetico vegetale",
+      "n_years_seen": 2,
+      "avg_amount": 118178411333.33333
+    },
+    {
+      "canonical_name": "Research, Innovation, Technologies, and Services for the Development of Communications and the Information Society",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2019,
+        2019
+      ],
+      "notes": "This entity is focused on research and innovation in communications, indicating relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Ricerca, innovazione, tecnologie e servizi per lo sviluppo delle comunicazioni e della societa' dell'informazione",
+      "n_years_seen": 1,
+      "avg_amount": 113694758000.0
+    },
+    {
+      "canonical_name": "Three-Year Funding Program",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1997,
+        1997
+      ],
+      "notes": "This program is likely focused on funding research and development initiatives.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Finanziamento programma triennale",
+      "n_years_seen": 1,
+      "avg_amount": 109500000000.0
+    },
+    {
+      "canonical_name": "Contributions to Non-State Universities",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2024,
+        2024
+      ],
+      "notes": "Funding for non-state universities can support R&D activities.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "Contributi a favore delle universita' non statali",
+      "n_years_seen": 1,
+      "avg_amount": 95570614000.0
+    },
+    {
+      "canonical_name": "Activation of Program Agreements in Scientific and Technological Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1996
+      ],
+      "notes": "This initiative directly relates to scientific and technological research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "ATTIVAZIONE DI ACCORDI DI PROGRAMMA NEL SETTORE DELLA RICERCA SCIENTIFICA E TECNOLOGICA",
+      "n_years_seen": 1,
+      "avg_amount": 94687000000.0
+    },
+    {
+      "canonical_name": "Expenses for Scientific Research Including Studies Related to Flight Assistance",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1988,
+        1988
+      ],
+      "notes": "This funding is specifically allocated for scientific research activities.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Spese per la ricerca scientifica comprese quelle relative agli studi e alle esperienze inerenti all'assistenza al volo",
+      "n_years_seen": 1,
+      "avg_amount": 94350000000.0
+    },
+    {
+      "canonical_name": "Total Research in Environmental Matters",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2019,
+        2019
+      ],
+      "notes": "This funding is dedicated to environmental research.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "Totale Ricerca in materia ambientale",
+      "n_years_seen": 1,
+      "avg_amount": 91179221000.0
+    },
+    {
+      "canonical_name": "Funding for the Higher Institute for Environmental Protection and Research",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2019
+      ],
+      "notes": "This institute is focused on environmental research, making it highly relevant.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "Finanziamento dell'Istituto Superiore per la Protezione e la Ricerca Ambientale",
+      "n_years_seen": 2,
+      "avg_amount": 90401274500.0
+    },
+    {
+      "canonical_name": "Applied Scientific and Technological Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2010
+      ],
+      "notes": "This program is directly related to applied research in science and technology.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Ricerca scientifica e tecnologica applicata",
+      "n_years_seen": 2,
+      "avg_amount": 89031106432.5
+    },
+    {
+      "canonical_name": "Fund for Applied Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1997
+      ],
+      "notes": "This fund is specifically designated for applied research initiatives.",
+      "agency_type": "rd_fund",
+      "confidence": 0.95,
+      "source_entity": "Fondo per la ricerca applicata",
+      "n_years_seen": 2,
+      "avg_amount": 84218500000.0
+    },
+    {
+      "canonical_name": "75 Million Euros for Hiring University Professors and Researchers",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "Funding for hiring researchers supports R&D activities in universities.",
+      "agency_type": "rd_fund",
+      "confidence": 0.75,
+      "source_entity": "75 milioni di euro per l’anno 2022 destinati all’assunzione di professori universitari, di ricercatori",
+      "n_years_seen": 1,
+      "avg_amount": 75000000000.0
+    },
+    {
+      "canonical_name": "Expenses for Research and Development Work and Management Services",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1987,
+        1987
+      ],
+      "notes": "This funding is explicitly for R&D work and services.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "Spese per lavori di ricerca e sviluppo e servizi di gestione",
+      "n_years_seen": 1,
+      "avg_amount": 69500000000.0
+    },
+    {
+      "canonical_name": "Research Grants",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1988,
+        2024
+      ],
+      "notes": "Research grants support R&D activities in various fields.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Assegni di ricerca",
+      "n_years_seen": 9,
+      "avg_amount": 69487971263.1579
+    },
+    {
+      "canonical_name": "New Five-Year Research Program in Antarctica",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1991,
+        1992
+      ],
+      "notes": "This program is focused on research in Antarctica, which is R&D relevant.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Nuovo programma quinquennale di ricerche in Antartide",
+      "n_years_seen": 2,
+      "avg_amount": 60000000000.0
+    },
+    {
+      "canonical_name": "Total Technological Research in the Defense Sector",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2010,
+        2010
+      ],
+      "notes": "This funding is dedicated to technological research in defense.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "Totale Ricerca tecnologica nel settore della difesa",
+      "n_years_seen": 1,
+      "avg_amount": 59708000000.0
+    },
+    {
+      "canonical_name": "Research in Environmental Matters",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2019
+      ],
+      "notes": "This funding is specifically for environmental research.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Ricerca in materia ambientale",
+      "n_years_seen": 4,
+      "avg_amount": 59064967844.0
+    },
+    {
+      "canonical_name": "Contributions to Research and Experimentation Institutes for Coordinated Research Programs",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1991,
+        1991
+      ],
+      "notes": "This program provides targeted funding for agricultural research initiatives.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "CONTRIBUTI AGLI ISTITUTI DI RICERCA E SPERIMENTAZIONE AGRARIA PER PROGRAMME FINALIZZATI E COORDINATI DI RICERCA",
+      "n_years_seen": 1,
+      "avg_amount": 55000000000.0
+    },
+    {
+      "canonical_name": "Expenses for Scientific Research Related to Flight Assistance Studies",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1987,
+        1987
+      ],
+      "notes": "This program funds scientific research related to aviation assistance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "SPESE PER LA RICERCA SCIENTIFICA COMPRESE QUELLE RELATIVE AGLI STUDI EO ALLE ESPERIENZE INERENTI ALL'ASSISTENZA AL VOLO",
+      "n_years_seen": 1,
+      "avg_amount": 53800000000.0
+    },
+    {
+      "canonical_name": "Contributions to ENI and IRI for Promoting Mining Research Abroad",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1986,
+        1986
+      ],
+      "notes": "This program supports research activities in the mining sector internationally.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "CONTRIBUTI ALL'ENI ED ALL'IRI PER LA PROMOZIONE DELL'ATTIVITA'DI RICERCA MINERARIA ALL'ESTERO",
+      "n_years_seen": 1,
+      "avg_amount": 53300000000.0
+    },
+    {
+      "canonical_name": "Technological Research in the Defense Sector",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2018
+      ],
+      "notes": "This program funds technological research specifically for defense applications.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Ricerca tecnologica nel settore della difesa",
+      "n_years_seen": 3,
+      "avg_amount": 53135481666.666664
+    },
+    {
+      "canonical_name": "Expenses for National Scientific Research and Experimentation in the Fisheries Sector",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1992,
+        1992
+      ],
+      "notes": "This program funds scientific research in the fisheries sector.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Spese per la ricerca e la sperimentazione scientifica di interesse nazionale nel settore ittico",
+      "n_years_seen": 1,
+      "avg_amount": 50000000000.0
+    },
+    {
+      "canonical_name": "State Contribution to the Management of the National Aerospace Research Program",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1996
+      ],
+      "notes": "This program supports national aerospace research initiatives.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "CONTRIBUTO DELLO STATO ALLE SPESE DI GESTIONE DEL PROGRAMMA NAZIONALE DI RICERCHE AEROSPAZIALI (PRORA)",
+      "n_years_seen": 1,
+      "avg_amount": 45000000000.0
+    },
+    {
+      "canonical_name": "Fund for Financing Basic Research Activities",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2017,
+        2017
+      ],
+      "notes": "This fund is dedicated to financing basic research activities.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Fondo per il finanziamento delle attività base di ricerca",
+      "n_years_seen": 1,
+      "avg_amount": 45000000000.0
+    },
+    {
+      "canonical_name": "Increase of the Fund for Ordinary Financing of Universities for Hiring Researchers",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2018
+      ],
+      "notes": "This fund supports the hiring of researchers in universities.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Incremento del fondo per il finanziamento ordinario delle università per l'assunzione di ricercatori.",
+      "n_years_seen": 1,
+      "avg_amount": 44250000000.0
+    },
+    {
+      "canonical_name": "PhD Scholarships",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2021,
+        2024
+      ],
+      "notes": "This program provides scholarships for doctoral research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Borse di dottorato",
+      "n_years_seen": 2,
+      "avg_amount": 44000000000.0
+    },
+    {
+      "canonical_name": "Increase of the Fund for Ordinary Financing of Universities",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2019,
+        2019
+      ],
+      "notes": "This fund supports the ordinary financing of universities, impacting research capacity.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Incremento del Fondo per il finanziamento ordinario delle università",
+      "n_years_seen": 1,
+      "avg_amount": 40000000000.0
+    },
+    {
+      "canonical_name": "Expenditure for the Purchase of Technological-Scientific Equipment of Relevant Interest",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1988,
+        1993
+      ],
+      "notes": "This program supports the acquisition of scientific equipment, which is essential for R&D activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "SPESE PER L'ACQUISTO DI ATTREZZATURE TECNICO-SCIENTIFICHE DI RILEVANTE INTERESSE",
+      "n_years_seen": 2,
+      "avg_amount": 35025000000.0
+    },
+    {
+      "canonical_name": "Contribution to Increase the Revolving Fund for Applied Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1996
+      ],
+      "notes": "This fund is aimed at enhancing applied research, making it relevant for R&D.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "SONMA DA VERSARE AD AUMENTO DEL FONDO DI ROTAZIONE PER LA RICERCA APPLICATA",
+      "n_years_seen": 1,
+      "avg_amount": 35000000000.0
+    },
+    {
+      "canonical_name": "Contributions to Enterprises for Operational Mining Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1993,
+        1993
+      ],
+      "notes": "This program provides funding for research in operational mining, which is a specific R&D area.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "CONTRIBUTI ALLE IMPRESE PER LA RICERCA MINERARIA OPERATIVA",
+      "n_years_seen": 1,
+      "avg_amount": 34751000000.0
+    },
+    {
+      "canonical_name": "Expenditure for the Implementation of Basic Mining Research Programs",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1986,
+        1996
+      ],
+      "notes": "This program is directly related to basic research in mining, making it relevant for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "SPESE PER L'EFFETTUAZIONE DEI PROGRAMMI DI RICERCA MINERARIA DI BASE",
+      "n_years_seen": 3,
+      "avg_amount": 32709763000.0
+    },
+    {
+      "canonical_name": "Contributions to Enterprises for Operational Mining Research in Designated Areas",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1987,
+        1994
+      ],
+      "notes": "This program funds operational mining research in specific areas, relevant for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "CONTRIBUTI ALLE IMPRESE PER LA RICERCA MINERARIA OPERATIVA NELLE AREE INDIZIATE DEL TERRITORIO NAZIONALE",
+      "n_years_seen": 3,
+      "avg_amount": 32530757666.666668
+    },
+    {
+      "canonical_name": "Expenditure for the Implementation of Mining Research Programs",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1993,
+        1993
+      ],
+      "notes": "This program is focused on mining research, making it relevant for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "SPESE PER L'EFFETTUAZIONE DEL PROGRAMMI DI RICERCA MINERARIA",
+      "n_years_seen": 1,
+      "avg_amount": 31442000000.0
+    },
+    {
+      "canonical_name": "Contribution for Mining Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1989,
+        1989
+      ],
+      "notes": "This contribution is specifically for mining research, making it relevant for R&D.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Contributo per la ricerca mineraria",
+      "n_years_seen": 1,
+      "avg_amount": 30000000000.0
+    },
+    {
+      "canonical_name": "Contributions to Enterprises for the Maintenance of Mines in State or Potential Cultivation",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1994,
+        1994
+      ],
+      "notes": "This program supports research related to mine maintenance, relevant for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "CONTRIBUTI ALLE IMPRESE PER IL MANTENIMENTO DI MINIERE IN STATO O DI POTENZIALE COLTIVAZIONE",
+      "n_years_seen": 1,
+      "avg_amount": 24630769000.0
+    },
+    {
+      "canonical_name": "Studies and Research on the Intrinsic Safety of Nuclear Power Plants",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1991,
+        1991
+      ],
+      "notes": "This research is directly related to safety in nuclear energy, making it relevant for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Studi e ricerche sulla sicurezza intrinseca delle centrali nucleari",
+      "n_years_seen": 1,
+      "avg_amount": 20000000000.0
+    },
+    {
+      "canonical_name": "INFM Funding",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1997,
+        1997
+      ],
+      "notes": "This funding is specifically allocated for research activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Finanziamento INFM",
+      "n_years_seen": 1,
+      "avg_amount": 20000000000.0
+    },
+    {
+      "canonical_name": "Expenses for Underwater Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1986,
+        1986
+      ],
+      "notes": "This funding is specifically for underwater research activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "SPESE PER RICERCHE SOTTOACQUEE",
+      "n_years_seen": 1,
+      "avg_amount": 19500000000.0
+    },
+    {
+      "canonical_name": "Contribution for the Development of Applied Research Activities in the Shipbuilding and Naval Propulsion Sector",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1988,
+        1988
+      ],
+      "notes": "This contribution is aimed at applied research in a specific sector.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "CONTRIBUTO PER LO SVILUPPO DELLE ATTIVITA’ DI RICERCA APPLICATA NEL SETTORE CELLA COSTRUZIONE E DELLA PROPULSIONE NAVALE",
+      "n_years_seen": 1,
+      "avg_amount": 17600000000.0
+    },
+    {
+      "canonical_name": "Scientific Research Initiatives in the Synchrotron Light Sector",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1989,
+        1991
+      ],
+      "notes": "This initiative is focused on scientific research in synchrotron light.",
+      "agency_type": "rd_programme",
+      "confidence": 0.95,
+      "source_entity": "Iniziative di ricerca scientifica nel settore della luce sincrotrone",
+      "n_years_seen": 2,
+      "avg_amount": 17517500000.0
+    },
+    {
+      "canonical_name": "Research in the Transport Sector",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2009
+      ],
+      "notes": "This funding is specifically for research in the transport sector.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Ricerca nel settore dei trasporti",
+      "n_years_seen": 1,
+      "avg_amount": 16800716000.0
+    },
+    {
+      "canonical_name": "Contributions to Research and Experimentation Institutes and Technical-Scientific Equipment",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1986,
+        1986
+      ],
+      "notes": "This funding supports research and experimentation institutes.",
+      "agency_type": "rd_fund",
+      "confidence": 0.75,
+      "source_entity": "Contributi agli istituti di ricerca e di sperimentazione amobiliari e delle attrezzature tecnico-scientifiche",
+      "n_years_seen": 1,
+      "avg_amount": 15500000000.0
+    },
+    {
+      "canonical_name": "Special Revolving Fund for Technological Innovation",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1993,
+        1995
+      ],
+      "notes": "This fund is dedicated to promoting technological innovation.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "FONDO SPECIALE ROTATIVO PER L'INNOVAZIONE TECNOLOGICA",
+      "n_years_seen": 2,
+      "avg_amount": 15012500000.0
+    },
+    {
+      "canonical_name": "Contributions to Regional Research and Experimentation Institutes",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1993,
+        1993
+      ],
+      "notes": "This funding supports regional research institutes.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "CONTRIBUTI AGLI ISTITUTI REGIONALI DI RICERCA E SPERIMENTAZIONE",
+      "n_years_seen": 1,
+      "avg_amount": 15000000000.0
+    },
+    {
+      "canonical_name": "State Contribution to the Management Expenses of the National Aerospace Research Program (PRORA)",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1992,
+        1992
+      ],
+      "notes": "This contribution is for managing a national aerospace research program.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "CONTRIBUTO DELLO STATO ALLE SPESE DI GESTIONE DEL PROGRAMMA NAZIONALE DI RICERCHE, AEROSPAZIALI (PRORA)",
+      "n_years_seen": 1,
+      "avg_amount": 14500000000.0
+    },
+    {
+      "canonical_name": "Contributions for the Operation of Agricultural Research and Experimentation Institutes",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1988,
+        1992
+      ],
+      "notes": "This funding supports agricultural research institutes.",
+      "agency_type": "rd_fund",
+      "confidence": 0.75,
+      "source_entity": "Contributi per il funzionamento degli istituti di ricerca e di sperimentazione agraria",
+      "n_years_seen": 2,
+      "avg_amount": 14414500000.0
+    },
+    {
+      "canonical_name": "Total Research in the Transport Sector",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2010,
+        2010
+      ],
+      "notes": "This is a comprehensive funding for research in the transport sector.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Totale Ricerca nel settore dei trasporti",
+      "n_years_seen": 1,
+      "avg_amount": 12463241000.0
+    },
+    {
+      "canonical_name": "Extraordinary Assignment for Strengthening and Developing Scientific Activities",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1986,
+        1986
+      ],
+      "notes": "This assignment is directly aimed at enhancing scientific activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "ASSEGNAZIONE STRAORDINARIA PER IL POTENZIAMENTO E LO SVILUPPO DELL'ATTIVITA’ SCIENTIFICA",
+      "n_years_seen": 1,
+      "avg_amount": 10500000000.0
+    },
+    {
+      "canonical_name": "Hiring of Researchers as per Article 24, Paragraph 3, Letter b) of Law 30 December 2010, No. 240",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2019,
+        2019
+      ],
+      "notes": "This program supports the hiring of researchers, contributing to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Assunzioni di ricercatori di cui all'articolo 24, comma 3, lettera b), della legge 30 dicembre 2010, n. 240",
+      "n_years_seen": 1,
+      "avg_amount": 10000000000.0
+    },
+    {
+      "canonical_name": "Expenses for Research and Experimentation Activities for the Safeguarding of the Adriatic Sea",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1995,
+        1995
+      ],
+      "notes": "This program is focused on research activities related to environmental protection.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "SPESE PER ATTIVITA’ DI RICERCA E SPERIMENTAZIONE PER LA SALVAGUARDIA DEL MARE ADRIATICO",
+      "n_years_seen": 1,
+      "avg_amount": 9000000000.0
+    },
+    {
+      "canonical_name": "Contributions for Scientific and Technological Research Applied to Fishing",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1994,
+        1994
+      ],
+      "notes": "This program directly supports research in scientific and technological applications in fishing.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "CONTRIBUTI PER LA RICERCA SCIENTIFICA E TECNOLOGICA APPLICATA ALLA PESCA",
+      "n_years_seen": 1,
+      "avg_amount": 8908000000.0
+    },
+    {
+      "canonical_name": "Funds for the Development and Implementation of National Research Plans in Environmental Matters",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1995,
+        1996
+      ],
+      "notes": "This funding is specifically for national research plans focused on environmental issues.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "SOMMA OCCORRENTE PER L'ELABORAZIONE E L'ATTUAZIONE DEI PIANI NAZIONALI DI RICERCA IN MATERIA AMBIENTALE",
+      "n_years_seen": 2,
+      "avg_amount": 8100000000.0
+    },
+    {
+      "canonical_name": "Astronomical and Astrophysical Observatories",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1997,
+        1997
+      ],
+      "notes": "These observatories are dedicated to research in astronomy and astrophysics.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.8,
+      "source_entity": "Osservatori astronomici e astrofisici",
+      "n_years_seen": 1,
+      "avg_amount": 8000000000.0
+    },
+    {
+      "canonical_name": "Expenses for Research Assignments to Recognized Scientific Institutes",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1993,
+        1993
+      ],
+      "notes": "This funding supports research assignments at recognized scientific institutions.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "SPESE PER INCARICHI DI RICERCA AD ISTITUTI DI RICONOSCIUTO VALORE SCIENTIFICO",
+      "n_years_seen": 1,
+      "avg_amount": 7500000000.0
+    },
+    {
+      "canonical_name": "Expenses for Basic Mining Research Programs",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1994,
+        1994
+      ],
+      "notes": "This funding is allocated for research programs in basic mining.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "SPESE PER L'EFFETTUAZIONE DEI PROGRANMI DI RICERCA MINERARIA DI BASE",
+      "n_years_seen": 1,
+      "avg_amount": 7455517000.0
+    },
+    {
+      "canonical_name": "Expenses for Studies, Investigations, and National Interest Research in Forestry Production",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1993,
+        1993
+      ],
+      "notes": "This funding supports national interest research in forestry production.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "SPESE PER STUDI, INDAGINI, RICERCHE DI INTERESSE NAZIONALE IN MATERIA DI PRODUZIONE FORESTALE",
+      "n_years_seen": 1,
+      "avg_amount": 6973988000.0
+    },
+    {
+      "canonical_name": "Technological Innovation and Research for the Development of Communications and the Information Society",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2010
+      ],
+      "notes": "This program focuses on technological innovation and research in communications.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Innovazione Tecnologica e ricerca per lo sviluppo delle comunicazioni e della societa' dell'informazione",
+      "n_years_seen": 2,
+      "avg_amount": 6641316333.333333
+    },
+    {
+      "canonical_name": "Authorized Expenditure for Research Projects",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2017,
+        2017
+      ],
+      "notes": "This funding is specifically for authorized research projects.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Spesa autorizzata per progetti di ricerca",
+      "n_years_seen": 1,
+      "avg_amount": 5807509000.0
+    },
+    {
+      "canonical_name": "Extraordinary Assignment for the Strengthening and Development of Scientific Activity",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1989,
+        1989
+      ],
+      "notes": "This funding is aimed at enhancing and developing scientific activities.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "ASSEGNAZIONE STRAORDINARIA PER IL POTENZIAMENTO E LO SVILUPPO DELL'ATTIVITA' SCIENTIFICA",
+      "n_years_seen": 1,
+      "avg_amount": 5000900000.0
+    },
+    {
+      "canonical_name": "Sincrotrone Trieste e Grenoble",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1997,
+        1997
+      ],
+      "notes": "This entity is focused on synchrotron radiation research, which is highly relevant for R&D.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "Sincrotrone Trieste e Grenoble",
+      "n_years_seen": 1,
+      "avg_amount": 5000000000.0
+    },
+    {
+      "canonical_name": "National Cancer Research Institute of Milan",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1987,
+        1987
+      ],
+      "notes": "This institute is dedicated to cancer research, making it highly relevant for R&D.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.85,
+      "source_entity": "SPESE PER L'ISTITUTO NAZIONALE PER LA RICERCA SUI TUMORI DI MILANO",
+      "n_years_seen": 1,
+      "avg_amount": 5000000000.0
+    },
+    {
+      "canonical_name": "Contributions for the Implementation of a National Program for Integrated Phytopathological Control",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1996
+      ],
+      "notes": "This program focuses on agricultural research, which is relevant for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "CONTRIBUTI PER LA REALIZZAZIONE DI UN PROGRAMMA NAZIONALE DI LOTTA FITOPATOLOGICA INTEGRATA",
+      "n_years_seen": 1,
+      "avg_amount": 5000000000.0
+    },
+    {
+      "canonical_name": "Research Grants and PhD Scholarships",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2021,
+        2021
+      ],
+      "notes": "These grants support research activities, making them relevant for R&D.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Assegni di ricerca, borse di dottorato",
+      "n_years_seen": 1,
+      "avg_amount": 5000000000.0
+    },
+    {
+      "canonical_name": "National Program of Research in Antarctica",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1991,
+        1991
+      ],
+      "notes": "This program focuses on research in Antarctica, which is highly relevant for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Programma nazionale di ncerche in Antartide.",
+      "n_years_seen": 1,
+      "avg_amount": 4000000000.0
+    },
+    {
+      "canonical_name": "Tax Credit for Research and Development Activities",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "This tax credit incentivizes R&D activities, making it highly relevant.",
+      "agency_type": "innovation_instruments",
+      "confidence": 0.9,
+      "source_entity": "Credito d'imposta per attività di ricerca e sviluppo",
+      "n_years_seen": 1,
+      "avg_amount": 4000000000.0
+    },
+    {
+      "canonical_name": "Expenses for Scientific Research",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1992,
+        1995
+      ],
+      "notes": "This entity is directly related to funding scientific research, making it relevant.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "spese PER LA RICERCA SCIENTIFICA",
+      "n_years_seen": 2,
+      "avg_amount": 3400000000.0
+    },
+    {
+      "canonical_name": "Research, Experiments, and Services for Communications, New Technologies, and Cybersecurity",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2019,
+        2019
+      ],
+      "notes": "This entity focuses on research in technology and cybersecurity, relevant for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Ricerca, sperimentazioni e servizi per le comunicazioni, nuove tecnologie e sicurezza informatica",
+      "n_years_seen": 1,
+      "avg_amount": 3240415000.0
+    },
+    {
+      "canonical_name": "Amount to be allocated to research and experimentation institutions and entities",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1993,
+        1995
+      ],
+      "notes": "This fund is directly allocated to research institutions.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "SOMMA DA ASSEGNARE ALLE ISTITUZIONI ED ENTI DI RICERCA E SPERIMENTAZIONE",
+      "n_years_seen": 2,
+      "avg_amount": 3221700000.0
+    },
+    {
+      "canonical_name": "Contributions for the operation of experimental stations",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1994,
+        1994
+      ],
+      "notes": "This fund supports the operation of experimental stations involved in R&D.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Contributi per il funzionamento delle stazioni sperimentali",
+      "n_years_seen": 1,
+      "avg_amount": 3060000000.0
+    },
+    {
+      "canonical_name": "Extraordinary allocation for the development of scientific activity",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1993,
+        1993
+      ],
+      "notes": "This allocation is aimed at enhancing scientific activities relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "ASSEGNAZIONE STRAORDINARIA PER LO SVILUPPO DELL'ATTIVITA' SCIENTIFICA",
+      "n_years_seen": 1,
+      "avg_amount": 2900000000.0
+    },
+    {
+      "canonical_name": "Contributions for the realization of IT and telematics projects",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1995,
+        1995
+      ],
+      "notes": "This fund supports projects in IT and telematics, which are relevant for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Contributi per la realizzazione di progetti di informatica e telematica",
+      "n_years_seen": 1,
+      "avg_amount": 2840000000.0
+    },
+    {
+      "canonical_name": "Laboratory analysis and research activities for combating agri-food fraud",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2019
+      ],
+      "notes": "This activity is directly related to research and experimentation in agri-food.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Analisi di laboratorio ed attività di ricerca e sperimentazione analitica per il contrasto alle frodi agroalimentari",
+      "n_years_seen": 2,
+      "avg_amount": 2838384500.0
+    },
+    {
+      "canonical_name": "Research grant for the Institute of Cell Biology",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2015,
+        2015
+      ],
+      "notes": "This grant is specifically for research at a biological institute.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "Assegno di ricerca per l'Istituto di biologia cellulare",
+      "n_years_seen": 1,
+      "avg_amount": 2582284000.0
+    },
+    {
+      "canonical_name": "Technological Investments for the ItalyMeteo Agency",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2018
+      ],
+      "notes": "This program is focused on technological investments in meteorology, which is relevant for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Investimenti tecnologici per l'Agenzia ItaliaMeteo",
+      "n_years_seen": 1,
+      "avg_amount": 2000000000.0
+    },
+    {
+      "canonical_name": "Funds for the Earth Observation from Space Research Program",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1995,
+        1995
+      ],
+      "notes": "This program is dedicated to research in Earth observation, which is a significant area of R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.95,
+      "source_entity": "SOMMA DA DESTINARE ALLA REALIZZAZIONE DEL PROGRAMMA DI RICERCA PER L'OSSERVAZIONE DELLA TERRA DALLO SPAZIO",
+      "n_years_seen": 1,
+      "avg_amount": 2000000000.0
+    },
+    {
+      "canonical_name": "National Institute of Geophysics and Volcanology",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2013,
+        2013
+      ],
+      "notes": "This institute is dedicated to geophysical and volcanological research, making it highly relevant for R&D.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "Istituto nazionale di geofisica e vulcanologia",
+      "n_years_seen": 1,
+      "avg_amount": 1630493000.0
+    },
+    {
+      "canonical_name": "Expenses for Studies, Research, and Surveys for Cultural Heritage Interventions",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1988,
+        1988
+      ],
+      "notes": "This funding is aimed at research related to cultural heritage, which is relevant for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "SPESE PER STUDI, RICERCHE E RILEVAZIONI PER LA PROGRAMMAZIONE E LA PROGETTAZIONE DI INTERVENTI SUI BENI CULTURALI",
+      "n_years_seen": 1,
+      "avg_amount": 1600000000.0
+    },
+    {
+      "canonical_name": "Expenses for Studies, Investigations, and Surveys in Health Activities",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1996
+      ],
+      "notes": "This funding supports health-related research, which is significant for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "SPESE PER STUDI, INDAGINI E RILEVAMENTI INERENTI ALLE ATTIVITA’ IN MATERIA SANITARIA.",
+      "n_years_seen": 1,
+      "avg_amount": 1585000000.0
+    },
+    {
+      "canonical_name": "Expenses for the Purchase and Maintenance of Laboratory Equipment",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1987,
+        1996
+      ],
+      "notes": "This funding supports laboratory equipment, which is essential for R&D activities.",
+      "agency_type": "rd_fund",
+      "confidence": 0.75,
+      "source_entity": "SPESE PER L'ACQUISTO E LA MANUTENZIONE DELLE ATTREZZATURE DI LABORATORIO",
+      "n_years_seen": 3,
+      "avg_amount": 1365500000.0
+    },
+    {
+      "canonical_name": "Annual Contribution to the International Cancer Research Center, COW SCOE in Lyon",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1992,
+        1992
+      ],
+      "notes": "This contribution is directed towards cancer research, which is highly relevant for R&D.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "CONTRIBUTO ANNUO AL CENTRO INTERNAZIONALE DI RICERCHE PER IL CANCRO, COW SCOE IN LIONE",
+      "n_years_seen": 1,
+      "avg_amount": 1350000000.0
+    },
+    {
+      "canonical_name": "National Institute of Oceanography and Experimental Geophysics",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2013,
+        2013
+      ],
+      "notes": "This institute focuses on oceanographic and geophysical research, making it relevant for R&D.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "Istituto nazionale di oceanografia e di geofisica sperimentale",
+      "n_years_seen": 1,
+      "avg_amount": 1298408000.0
+    },
+    {
+      "canonical_name": "Expenses for Experimental Research and Real Experiments",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1994,
+        1994
+      ],
+      "notes": "This funding is aimed at experimental research, which is directly relevant for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "SPESE PER RICERCHE SPERIMENTALI ED ESPERIMENTI DAL VERO",
+      "n_years_seen": 1,
+      "avg_amount": 1200000000.0
+    },
+    {
+      "canonical_name": "Funds to Increase the Revolving Fund for Applied Research",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1987,
+        1987
+      ],
+      "notes": "This fund supports applied research, which is relevant for R&D.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "SOMMA DA VERSARE AD AUMENTO DEL FONDO DI ROTAZIONE PER LA RICERCA APPLICATA",
+      "n_years_seen": 1,
+      "avg_amount": 1200000000.0
+    },
+    {
+      "canonical_name": "1 Billion Lira for Scientific Research Initiatives in the Synchrotron Light Sector",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1994,
+        1994
+      ],
+      "notes": "This funding is explicitly for scientific research in synchrotron light.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Somma di lire 1 miliardo per le iniziative di ricerca scientifica nel settore della luce di sincrotrone",
+      "n_years_seen": 1,
+      "avg_amount": 1000000000.0
+    },
+    {
+      "canonical_name": "Extraordinary Contribution to the EBRI Foundation",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2019,
+        2019
+      ],
+      "notes": "This contribution supports a research institute focused on brain research.",
+      "agency_type": "rd_fund",
+      "confidence": 0.95,
+      "source_entity": "Contributo straordinario alla Fondazione EBRI (European Brain Research Institute)",
+      "n_years_seen": 1,
+      "avg_amount": 1000000000.0
+    },
+    {
+      "canonical_name": "Fund for the Arctic Research Program",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2018
+      ],
+      "notes": "This fund is dedicated to research initiatives in the Arctic.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Fondo per il programma di ricerche in Artico",
+      "n_years_seen": 1,
+      "avg_amount": 1000000000.0
+    },
+    {
+      "canonical_name": "Expenses for Studies, Investigations, and Research, Including Experimental, in the Field of Remediation",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1988,
+        1988
+      ],
+      "notes": "This funding supports research related to remediation, which is R&D relevant.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "SPESE PER STUDI, INDAGINI E RICERCHE, ANCHE: SPERIMENTALI, IN MATERIA DI BONIFICA",
+      "n_years_seen": 1,
+      "avg_amount": 900000000.0
+    },
+    {
+      "canonical_name": "Expenses for Agreements with Research and Agricultural Experimentation Institutes, Universities, and Public Institutions",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1988,
+        1988
+      ],
+      "notes": "This funding supports agreements with research institutions, indicating R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "SPESE PER CONVENZIONI CON ISTITUTI OI RICERCA E DI SPERIMENAZIONE AGRARIA, ISTITUTI UNIVERSITARI ED ISTITUTI PUBBLICI",
+      "n_years_seen": 1,
+      "avg_amount": 900000000.0
+    },
+    {
+      "canonical_name": "Expenses for Scientific and Technological Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1994,
+        1994
+      ],
+      "notes": "This funding is explicitly for scientific and technological research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "SPESE PER RICERCA SCIENTIFICA E TECNOLOGICA",
+      "n_years_seen": 1,
+      "avg_amount": 700000000.0
+    },
+    {
+      "canonical_name": "Compensation for temporary consultants for research or study assignments",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1991,
+        1994
+      ],
+      "notes": "This entity directly supports research activities through consultant compensation.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Compensi a consulenti a tempo determinato per incarichi di ricerca o di studio su specifiche questioni",
+      "n_years_seen": 2,
+      "avg_amount": 700000000.0
+    },
+    {
+      "canonical_name": "Italian participation in the Human Frontiers International Program",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1991,
+        1991
+      ],
+      "notes": "This program supports international research collaboration.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Partecipazione italiana al programma internazionale Human frontiers",
+      "n_years_seen": 1,
+      "avg_amount": 500000000.0
+    },
+    {
+      "canonical_name": "Expenses for the implementation of a research, experimentation, and dissemination program in the sugar beet sector",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1986,
+        1986
+      ],
+      "notes": "This program is directly related to research and experimentation in a specific sector.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "SPESE PER L'ATTUAZIONE DI UN PROGRAMMA DI RICERCA, SPERIMENTAZIONE E DIVULGAZIONE NEL SETTORE BIETICOLO-SACCARIFERO",
+      "n_years_seen": 1,
+      "avg_amount": 500000000.0
+    },
+    {
+      "canonical_name": "Expenses for conducting research and documentation activities, studies, and consultancies",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1988,
+        1988
+      ],
+      "notes": "This entity supports various research and consultancy activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Spese per lo svolgimento di attività di ricerca e documentazione, studi e consulenze",
+      "n_years_seen": 1,
+      "avg_amount": 500000000.0
+    },
+    {
+      "canonical_name": "Expenses for research aimed at assessing the performance level of local public services",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1986,
+        1986
+      ],
+      "notes": "This research is focused on evaluating public service performance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "SPESE PER LA RICERCA FINALEIZZATO ALLA RILEVAZIONE DEL LIVELLO DI PRESTAZIONE DEI PUBBLICI SERVIZI LOCALI",
+      "n_years_seen": 1,
+      "avg_amount": 500000000.0
+    },
+    {
+      "canonical_name": "Scholarships for the training of doctoral research courses",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1986,
+        1986
+      ],
+      "notes": "This entity funds scholarships for doctoral research training.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "BORSE DI STUDIO PER LA FORMAZIONE DI CORSI DI DOTTORATO DI RICERCA",
+      "n_years_seen": 1,
+      "avg_amount": 500000000.0
+    },
+    {
+      "canonical_name": "Contribution to the International School for Advanced Studies (SISSA) in Trieste",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2020
+      ],
+      "notes": "This contribution supports advanced studies and research activities.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "Contributo alla Scuola Internazionale Superiore di Studi Avanzati (SISSA) di Trieste",
+      "n_years_seen": 1,
+      "avg_amount": 500000000.0
+    },
+    {
+      "canonical_name": "Expenses for conducting research and documentation activities",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1996
+      ],
+      "notes": "This entity supports research and documentation activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "SPESE PER LO SVOLGIMENTO DI ATTIVITA' DI RICERCA E DOCUMENTAZIONE",
+      "n_years_seen": 1,
+      "avg_amount": 470000000.0
+    },
+    {
+      "canonical_name": "Amount to be paid to increase the revolving fund for applied research",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1991,
+        1991
+      ],
+      "notes": "This fund is specifically aimed at supporting applied research.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "Somma da versare ad aumento del fondo di rotazione per la ricerca applicata",
+      "n_years_seen": 1,
+      "avg_amount": 350000000.0
+    },
+    {
+      "canonical_name": "Sum for financing the costs for the realization of 'targeted programs'",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1991,
+        1991
+      ],
+      "notes": "This entity funds targeted research programs.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Sommatoria per il finanziamento degli oneri destinati alla realizzazione dei «programmi finalizzati»",
+      "n_years_seen": 1,
+      "avg_amount": 350000000.0
+    },
+    {
+      "canonical_name": "Expenses for research, study, and programming activities",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1989,
+        1989
+      ],
+      "notes": "This entity supports various research and programming activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "SPESE PER L‘ATTIVITA’ DI RICERCA, DI STUDIO E PROGRAMMAZIONE",
+      "n_years_seen": 1,
+      "avg_amount": 315000000.0
+    },
+    {
+      "canonical_name": "Funding for Experimental Zooprophylactic Institutes for Current Research Activities",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1995,
+        1995
+      ],
+      "notes": "This funding is allocated for research activities in veterinary health.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "SOMMA DA ASSEGNARE AGLI ISTITUTI ZOOPROFILATTICI SPERIMENTALI PER IL FINANZIAMENTO DELL'ATTIVITA' DI RICERCA CORRENTE",
+      "n_years_seen": 1,
+      "avg_amount": 230000000.0
+    },
+    {
+      "canonical_name": "Expenses Related to Research Activities and Documentation",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1996
+      ],
+      "notes": "This entry pertains to expenses for conducting research activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "SPESE RELATIVE ALLO SVOLGIMENTO DI ATTIVITA' DI RICERCA E DOCUMENTAZIONE",
+      "n_years_seen": 1,
+      "avg_amount": 229000000.0
+    },
+    {
+      "canonical_name": "Expenses for Studies, Investigations, Research, and Various Initiatives in the Food Sector",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1986,
+        1986
+      ],
+      "notes": "This funding supports research initiatives in the food sector.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Spese per studi, indagini, ricerche ed iniziative varie interessanti il settore alimentare",
+      "n_years_seen": 1,
+      "avg_amount": 200000000.0
+    },
+    {
+      "canonical_name": "Expenses for the Operation of Research and Experimental Control Services for Safety in Mining Activities",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1992,
+        1992
+      ],
+      "notes": "This funding is for research and safety control in mining activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "SPESE PER IL FUNZIONAMENTO DEI SERVIZI DI RICERCA E DI CONTROLLO SPERIMENTALE PER LA SICUREZZA NELLE ATTIVITÀ MINERARIE",
+      "n_years_seen": 1,
+      "avg_amount": 179784000.0
+    },
+    {
+      "canonical_name": "Expenses for the Operation of Research and Experimental Control Services for Safety in Extractive Activities",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1986,
+        1993
+      ],
+      "notes": "This entry supports research and safety control in extractive activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "SPESE PER IL FUNZIONAMENTO DEI SERVIZI DI RICERCA E DI CONTROLLO SPERIMENTALE PER LA SICUREZZA NELL‘ATTIVITA’ ESTRATTIVA",
+      "n_years_seen": 2,
+      "avg_amount": 168000000.0
+    },
+    {
+      "canonical_name": "Expenses for Experimental Research and the Purchase of Related Equipment",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1987,
+        1987
+      ],
+      "notes": "This entry is directly related to funding experimental research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "SPESE PER RICERCHE SPERIMENTALI E PER L'ACQUISTO DELLE RELATIVE APPARECCHIATURE",
+      "n_years_seen": 1,
+      "avg_amount": 120000000.0
+    },
+    {
+      "canonical_name": "Expenses for the Establishment and Management of a Micro Propagation Laboratory",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1988,
+        1988
+      ],
+      "notes": "This funding is for establishing and managing a laboratory focused on micro propagation.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "SPESE PER ISTITUZIONE E GESTIONE DI UN LABORATORIO DI MICRO PROPAGAZIONE",
+      "n_years_seen": 1,
+      "avg_amount": 100000000.0
+    },
+    {
+      "canonical_name": "Expenses for the Operation of Scientific Laboratories",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1995,
+        1995
+      ],
+      "notes": "This entry supports the operation of scientific laboratories.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "SPESE PER IL FUNZIONAMENTO DEI LABORATORI SCIENTIFICI.",
+      "n_years_seen": 1,
+      "avg_amount": 100000000.0
+    },
+    {
+      "canonical_name": "Education and Scientific Research",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1991,
+        1991
+      ],
+      "notes": "This entry is focused on funding education and scientific research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "ISTRUZIONE E RICERCA SCIENTIFICA",
+      "n_years_seen": 1,
+      "avg_amount": 100000000.0
+    },
+    {
+      "canonical_name": "Contribution for the International Center for the Study of the Conservation and Restoration of Cultural Property",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1986,
+        1986
+      ],
+      "notes": "This contribution supports research and studies in cultural heritage conservation.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "CONTRIBUTO PER IL CENTRO INTERNAZIONALE DI STUDI PER LA CONSERVAZIONE ED IL RESTAURO DEI BENI CULTURALI",
+      "n_years_seen": 1,
+      "avg_amount": 90000000.0
+    },
+    {
+      "canonical_name": "Ordinary Fund for Research Entities and Institutions",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "This fund is dedicated to supporting research institutions directly.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Fondo ordinario per gli enti e le istituzioni di ricerca",
+      "n_years_seen": 1,
+      "avg_amount": 90000000.0
+    },
+    {
+      "canonical_name": "Scholarships for Research in the Field of Social Diseases",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1993,
+        1993
+      ],
+      "notes": "This program supports research in social diseases through scholarships.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "BORSE OF STUDIO PER LE RICERCNE NEL CAMPO DELLE MALATTIE SOCIALI",
+      "n_years_seen": 1,
+      "avg_amount": 70900000.0
+    },
+    {
+      "canonical_name": "Research, Innovation, Technologies and Services for the Development of Communications and Information Society",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2021,
+        2021
+      ],
+      "notes": "This program supports R&D in communications and information technologies.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Ricerca, innovazione, tecnologie e servizi per lo sviluppo delle comunicazioni e della società dell’informazione",
+      "n_years_seen": 1,
+      "avg_amount": 64000000.0
+    },
+    {
+      "canonical_name": "Expenses for Nationally Relevant Scientific Research and Experimentation in the Fisheries Sector and Pollution",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1988,
+        1989
+      ],
+      "notes": "This entry supports scientific research in fisheries and pollution, which is R&D relevant.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "SPESE PER LA RICERCA E LA SPERIMENTAZIONE SCIENTIFICA DI INTERESSE NAZIONALE NEL SETTORE ITTICO E DEGLI INQUINAMENTI",
+      "n_years_seen": 2,
+      "avg_amount": 55000000.0
+    },
+    {
+      "canonical_name": "Increase of the Italian Fund for Science",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "This fund is aimed at increasing support for scientific research.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Incremento del Fondo italiano per la scienza",
+      "n_years_seen": 1,
+      "avg_amount": 50000000.0
+    },
+    {
+      "canonical_name": "Italian Fund for Applied Sciences",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "This fund supports applied scientific research.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Fondo italiano per le scienze applicate",
+      "n_years_seen": 1,
+      "avg_amount": 50000000.0
+    },
+    {
+      "canonical_name": "Expenses for technical studies and technical publications",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1991,
+        1991
+      ],
+      "notes": "This entity supports technical studies which are relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "SPESE PER STUDI DI CARATTERE TECNICO E PER PUBBLICAZIONI TECNICHE",
+      "n_years_seen": 1,
+      "avg_amount": 40000000.0
+    },
+    {
+      "canonical_name": "Regulations on national scientific and technological research programs in Antarctica",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1994,
+        1994
+      ],
+      "notes": "This entity is directly related to scientific research programs.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Norme sui programmi nazionali di ricerca scientifica e tecnologica in Antartide",
+      "n_years_seen": 1,
+      "avg_amount": 39900000.0
+    },
+    {
+      "canonical_name": "Contributions for the operation of research and experimental agricultural institutes",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1996
+      ],
+      "notes": "This entity funds agricultural research institutes, which are relevant to R&D.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "CONTRIBUTI PER IL FUNZIONAMENTO DEGLI ISTITUTI DI RICERCA E DI SPERIMENTAZIONE AGRARIA",
+      "n_years_seen": 1,
+      "avg_amount": 37680000.0
+    },
+    {
+      "canonical_name": "Financing for scientific research initiatives",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1990,
+        1990
+      ],
+      "notes": "This entity is directly related to financing scientific research initiatives.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Financing for scientific research initiatives",
+      "n_years_seen": 1,
+      "avg_amount": 35000000.0
+    },
+    {
+      "canonical_name": "Fund for the coordination of scientific and technological research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1989,
+        1989
+      ],
+      "notes": "This entity is directly related to coordinating scientific and technological research.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "FONDO PER IL COORDINAMENTO DELLA RICERCA SCIENTIFICA E TECNOLOGICA",
+      "n_years_seen": 1,
+      "avg_amount": 15000000.0
+    },
+    {
+      "canonical_name": "Development of researchers and technologists",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2024,
+        2024
+      ],
+      "notes": "This entity supports the development of researchers, which is relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Development of researchers and technologists",
+      "n_years_seen": 1,
+      "avg_amount": 14520000.0
+    },
+    {
+      "canonical_name": "Fund for the fight against acquired immunodeficiency syndrome and for other study and research initiatives",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1993,
+        1993
+      ],
+      "notes": "This entity funds research initiatives related to health, which is relevant to R&D.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "Fondo per la lotta alla sindrome da immuno-deficienza acquisita e per altre iniziative di studio e ricerca",
+      "n_years_seen": 1,
+      "avg_amount": 11300000.0
+    },
+    {
+      "canonical_name": "Expenses for Studies, Investigations and Research in Progress",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1996
+      ],
+      "notes": "This entity is directly related to funding for research activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "SPESE PER STUDI, INDAGINI E RICERCHE ESEGUITI O IN CORSO DI ESECUZIONE",
+      "n_years_seen": 1,
+      "avg_amount": 10000000.0
+    },
+    {
+      "canonical_name": "Expenses for the Purchase of Technical and Scientific Equipment and Materials",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1995,
+        1995
+      ],
+      "notes": "This entity supports the acquisition of equipment necessary for research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "SPESE PER L'ACQUISTO DI STRUMENTAZIONI E MATERIALI TECNICI E SCIENTIFICI.",
+      "n_years_seen": 1,
+      "avg_amount": 10000000.0
+    },
+    {
+      "canonical_name": "Scientific Research - Chapter 7504",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1998,
+        1998
+      ],
+      "notes": "This funding is specifically allocated for scientific research activities.",
+      "agency_type": "rd_fund",
+      "confidence": 0.95,
+      "source_entity": "Ricerca scientifica - capp. 7504",
+      "n_years_seen": 1,
+      "avg_amount": 1293500.0
+    },
+    {
+      "canonical_name": "Scientific Research - Chapter 7527",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1998,
+        1998
+      ],
+      "notes": "This funding is specifically allocated for scientific research activities.",
+      "agency_type": "rd_fund",
+      "confidence": 0.95,
+      "source_entity": "Ricerca scientifica - capp. 7527",
+      "n_years_seen": 1,
+      "avg_amount": 1285000.0
+    },
+    {
+      "canonical_name": "Total for Item 3 - Scientific and Technological Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1991,
+        1991
+      ],
+      "notes": "Directly related to scientific and technological research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Totale della rubrica 3 - Ricerca scientifica e tecnologica",
+      "n_years_seen": 1,
+      "avg_amount": 2504594000000.0
+    },
+    {
+      "canonical_name": "Total for Research in Public Health and Zootechnical Sector",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2009
+      ],
+      "notes": "This funding is specifically allocated for research in public health, making it relevant to R&D.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "Totale per la Ricerca per il settore della sanita' pubblica e zooprofilattico",
+      "n_years_seen": 1,
+      "avg_amount": 517706784000.0
+    },
+    {
+      "canonical_name": "Total for Applied Scientific and Technological Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2009
+      ],
+      "notes": "This funding is specifically for applied scientific research, making it highly relevant to R&D.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Totale per la Ricerca scientifica e tecnologica applicata",
+      "n_years_seen": 1,
+      "avg_amount": 353971100000.0
+    },
+    {
+      "canonical_name": "Total for Research in the Public Health Sector",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2024
+      ],
+      "notes": "This entity is focused on total research funding in public health, relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Totale per la ricerca nel settore della sanità pubblica",
+      "n_years_seen": 2,
+      "avg_amount": 305304740500.0
     }
   ]
 }

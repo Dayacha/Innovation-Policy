@@ -1,9 +1,9 @@
 country,year,canonical_name,category,amount_local,unit,currency,item_type,line_description_en,source_file,page_number,series_notes
 Mexico,2011,CIATEQ Advanced Technology Center,science_agency,149613299.0,unit,MXN,line_item,"CIATEQ, A.C. Center for Advanced Technology",2011 07122010-MAT.pdf,419,Focuses on advanced technology research.
-Mexico,2012,CIATEQ Advanced Technology Center,science_agency,,,,,,,,Focuses on advanced technology research.; dropped after Mexico source audit: surviving row is real but the scale is not defendable enough for the final institutional panel
+Mexico,2012,CIATEQ Advanced Technology Center,science_agency,165312440.0,dollar,MXN,program_total,"Total for CIATEQ, A.C. Centro de Tecnología Avanzada",2012 12122011-MAT.pdf,205,Focuses on advanced technology research.
 Mexico,2013,CIATEQ Advanced Technology Center,science_agency,170308467.0,unit,MXN,line_item,"CIATEQ, A.C. Advanced Technology Center",2013 27122012-MAT.pdf,379,Focuses on advanced technology research.
 Mexico,2014,CIATEQ Advanced Technology Center,science_agency,246409525.0,unit,MXN,line_item,"CIATEQ, A.C. Advanced Technology Center",2014 03122013-MAT.pdf,289,Focuses on advanced technology research.
-Mexico,2015,CIATEQ Advanced Technology Center,science_agency,,,,,,,,Focuses on advanced technology research.; dropped after Mexico source audit: surviving row is real but the scale is not defendable enough for the final institutional panel
+Mexico,2015,CIATEQ Advanced Technology Center,science_agency,626363102.0,dollar,MXN,program_total,"Total for CIATEQ, A.C. Centro de Tecnología Avanzada",2015 03122014-MAT.pdf,178,Focuses on advanced technology research.
 Mexico,2016,CIATEQ Advanced Technology Center,science_agency,625054216.0,unit,MXN,line_item,"CIATEQ, A.C. Advanced Technology Center",2016 27112015-MAT.pdf,176,Focuses on advanced technology research.
 Mexico,1986,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,1987,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
@@ -16,15 +16,15 @@ Mexico,2008,CICY — Centro de Investigación Científica de Yucatán (Mexico),r
 Mexico,2009,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2010,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2011,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,169203768.0,unit,MXN,line_item,"Scientific Research Center of Yucatán, A.C.",2011 07122010-MAT.pdf,419,
-Mexico,2012,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2012,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,204862237.0,dollar,MXN,program_total,Total for Centro de Investigación Científica de Yucatán,2012 12122011-MAT.pdf,205,
 Mexico,2013,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,208205657.0,unit,MXN,line_item,"Scientific Research Center of Yucatán, A.C.",2013 27122012-MAT.pdf,379,
 Mexico,2014,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,242522636.0,unit,MXN,line_item,"Scientific Research Center of Yucatán, A.C.",2014 03122013-MAT.pdf,289,
-Mexico,2015,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2015,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,273902382.0,dollar,MXN,program_total,Total for Centro de Investigación Científica de Yucatán,2015 03122014-MAT.pdf,178,
 Mexico,2016,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,538429413.0,unit,MXN,line_item,"Scientific Research Center of Yucatán, A.C.",2016 27112015-MAT.pdf,176,
 Mexico,2017,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,244633011.0,unit,MXN,line_item,Budget for Scientific Research Center of Yucatán,2017 30112016-MAT.pdf,161,
-Mexico,2018,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2018,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,483198343.0,dollar,MXN,line_item,Centro de Investigación Científica de Yucatán,2018 29112017-MAT.pdf,177,
 Mexico,2020,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2021,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2021,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,318466754.0,dollar,MXN,line_item,Centro de Investigación Científica de Yucatán Total,2021 .pdf,379,
 Mexico,2024,CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,375359683.0,unit,MXN,line_item,"Scientific Research Center of Yucatán, A.C.",2024 25112023-VES.pdf,39,
 Mexico,1986,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,1987,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
@@ -37,14 +37,14 @@ Mexico,2008,CIMAT — Centro de Investigación en Matemáticas (Mexico),research
 Mexico,2009,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2010,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2011,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,131173865.0,unit,MXN,line_item,"Center for Research in Mathematics, A.C.",2011 07122010-MAT.pdf,419,
-Mexico,2012,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2012,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,133515114.0,dollar,MXN,line_item,"Centro de Investigación en Matemáticas, A.C.",2012 12122011-MAT.pdf,205,
 Mexico,2013,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,157259268.0,unit,MXN,line_item,"Mathematics Research Center, A.C.",2013 27122012-MAT.pdf,379,
 Mexico,2014,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,182981293.0,unit,MXN,line_item,"Research Center in Mathematics, A.C.",2014 03122013-MAT.pdf,289,
 Mexico,2015,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2016,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,207933168.0,unit,MXN,line_item,"Research Center in Mathematics, A.C.",2016 27112015-MAT.pdf,176,
 Mexico,2017,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,166741594.0,unit,MXN,line_item,Budget for Research Center in Mathematics,2017 30112016-MAT.pdf,161,
-Mexico,2018,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2020,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2018,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,170063398.0,dollar,MXN,program_total,Total for Centro de Investigación en Matemáticas,2018 29112017-MAT.pdf,177,
+Mexico,2020,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,210568814.0,dollar,MXN,line_item,Centro de Investigación en Matemáticas,2020 11122019-MAT.pdf,473,
 Mexico,2021,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,212977650.0,unit,MXN,line_item,"Mathematics Research Center, A.C.",2021 .pdf,378,
 Mexico,2024,CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,256930521.0,unit,MXN,line_item,"Mathematics Research Center, A.C.",2024 25112023-VES.pdf,39,
 Mexico,1986,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
@@ -58,16 +58,16 @@ Mexico,2008,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),
 Mexico,2009,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2010,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2011,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,133396620.0,unit,MXN,line_item,"Center for Research in Advanced Materials, S.C.",2011 07122010-MAT.pdf,419,
-Mexico,2012,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2012,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,165828783.0,dollar,MXN,program_total,Total for Centro de Investigación en Materiales Avanzados,2012 12122011-MAT.pdf,205,
 Mexico,2013,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,163426361.0,unit,MXN,line_item,"Advanced Materials Research Center, S.C.",2013 27122012-MAT.pdf,379,
 Mexico,2014,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,173524632.0,unit,MXN,line_item,"Research Center in Advanced Materials, S.C.",2014 03122013-MAT.pdf,289,
-Mexico,2015,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2015,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,253443886.0,dollar,MXN,line_item,CIMAV,2015 03122014-MAT.pdf,178,
 Mexico,2016,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,246352545.0,unit,MXN,line_item,"Research Center in Advanced Materials, S.C.",2016 27112015-MAT.pdf,176,
 Mexico,2017,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,169545838.0,unit,MXN,line_item,Budget for Research Center in Advanced Materials,2017 30112016-MAT.pdf,161,
-Mexico,2018,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2018,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,237156031.0,dollar,MXN,line_item,Total for CIMAV,2018 29112017-MAT.pdf,177,
 Mexico,2020,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2021,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,225132571.0,unit,MXN,line_item,"Advanced Materials Research Center, S.C.",2021 .pdf,378,
-Mexico,2024,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2024,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,256861364.0,dollar,MXN,program_total,Total for Centro de Investigación en Materiales Avanzados,2024 25112023-VES.pdf,40,
 Mexico,1986,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,1987,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2001,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
@@ -75,16 +75,16 @@ Mexico,2002,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico)
 Mexico,2003,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2006,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,100000000.0,unit,MXN,line_item,CINVESTAV,2006 22122005-MAT.pdf,205,
 Mexico,2007,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,90000000.0,unit,MXN,line_item,CINVESTAV,2007 28122006-MAT.pdf,160,
-Mexico,2008,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2008,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,175000000.0,dollar,MXN,line_item,CINVESTAV,2008 13122007-MAT.pdf,423,
 Mexico,2009,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,95000000.0,unit,MXN,line_item,CINVESTAV,2009 28112008-MAT.pdf,328,
-Mexico,2010,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2010,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,90000000.0,dollar,MXN,line_item,CINVESTAV,2010 07122009-MAT.pdf,293,
 Mexico,2011,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,1882976326.0,unit,MXN,line_item,Center for Research and Advanced Studies of the National Polytechnic Institute,2011 07122010-MAT.pdf,417,
-Mexico,2012,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2012,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2079491959.0,dollar,MXN,program_total,Total for CINVESTAV,2012 12122011-MAT.pdf,204,
 Mexico,2013,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2149930492.0,unit,MXN,line_item,Center for Research and Advanced Studies of the National Polytechnic Institute,2013 27122012-MAT.pdf,378,
 Mexico,2014,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2004433950.0,unit,MXN,program_total,Center for Research and Advanced Studies of the National Polytechnic Institute,2014 03122013-MAT.pdf,287,
-Mexico,2015,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2016,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2017,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2015,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2154034115.0,dollar,MXN,line_item,CINVESTAV,2015 03122014-MAT.pdf,176,
+Mexico,2016,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2941474511.0,dollar,MXN,program_total,Total for CINVESTAV,2016 27112015-MAT.pdf,175,
+Mexico,2017,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,3106632612.0,dollar,MXN,program_total,CINVESTAV Total,2017 30112016-MAT.pdf,159,
 Mexico,2018,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2232639342.0,unit,MXN,line_item,Center for Research and Advanced Studies of the National Polytechnic Institute,2018 29112017-MAT.pdf,175,
 Mexico,2020,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2404759338.0,unit,MXN,line_item,Center for Research and Advanced Studies of the National Polytechnic Institute,2020 11122019-MAT.pdf,471,
 Mexico,2021,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,3147042279.0,unit,MXN,line_item,Center for Research and Advanced Studies of the National Polytechnic Institute,2021 .pdf,377,
@@ -107,7 +107,7 @@ Mexico,2015,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,33706667621.0,unit
 Mexico,2016,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,34010260421.0,unit,MXN,section_total,Total budget for CONACYT,2016 27112015-MAT.pdf,170,Primary R&D ramo. Pre-1993 amounts in old pesos (×1000 to convert to new MXN). Renamed CONAHCyT from 2022 but Ramo 38 code retained.
 Mexico,2017,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,26963512279.0,unit,MXN,section_total,Total budget for CONACYT,2017 30112016-MAT.pdf,154,Primary R&D ramo. Pre-1993 amounts in old pesos (×1000 to convert to new MXN). Renamed CONAHCyT from 2022 but Ramo 38 code retained.
 Mexico,2018,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,27225876510.0,unit,MXN,section_total,Total budget for CONACYT,2018 29112017-MAT.pdf,164,Primary R&D ramo. Pre-1993 amounts in old pesos (×1000 to convert to new MXN). Renamed CONAHCyT from 2022 but Ramo 38 code retained.
-Mexico,2020,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,,,,,,,,gap: no matching rows in this year; dropped after Mexico source audit: surviving row is real but the scale is not defendable enough for the final institutional panel
+Mexico,2020,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,,,,,,,,gap: no matching rows in this year
 Mexico,2021,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,26573104028.0,unit,MXN,section_total,Total budget for CONACYT,2021 .pdf,367,Primary R&D ramo. Pre-1993 amounts in old pesos (×1000 to convert to new MXN). Renamed CONAHCyT from 2022 but Ramo 38 code retained.
 Mexico,2024,CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,33170745272.0,unit,MXN,section_total,Total budget for Ramo 38,2024 25112023-VES.pdf,39,Primary R&D ramo. Pre-1993 amounts in old pesos (×1000 to convert to new MXN). Renamed CONAHCyT from 2022 but Ramo 38 code retained.
 Mexico,1986,Centros Públicos de Investigación CONACYT (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
@@ -121,36 +121,36 @@ Mexico,2008,Centros Públicos de Investigación CONACYT (Mexico),research_instit
 Mexico,2009,Centros Públicos de Investigación CONACYT (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2010,Centros Públicos de Investigación CONACYT (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2011,Centros Públicos de Investigación CONACYT (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2012,Centros Públicos de Investigación CONACYT (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2012,Centros Públicos de Investigación CONACYT (Mexico),research_institute,204862237.0,dollar,MXN,program_total,Total for Centro de Investigación Científica de Yucatán,2012 12122011-MAT.pdf,205,
 Mexico,2013,Centros Públicos de Investigación CONACYT (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2014,Centros Públicos de Investigación CONACYT (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2015,Centros Públicos de Investigación CONACYT (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2015,Centros Públicos de Investigación CONACYT (Mexico),research_institute,273902382.0,dollar,MXN,program_total,Total for Centro de Investigación Científica de Yucatán,2015 03122014-MAT.pdf,178,
 Mexico,2016,Centros Públicos de Investigación CONACYT (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2017,Centros Públicos de Investigación CONACYT (Mexico),research_institute,1500000000.0,unit,MXN,line_item,Public Research Centers,2017 30112016-MAT.pdf,325,
-Mexico,2018,Centros Públicos de Investigación CONACYT (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2018,Centros Públicos de Investigación CONACYT (Mexico),research_institute,483198343.0,dollar,MXN,line_item,Centro de Investigación Científica de Yucatán,2018 29112017-MAT.pdf,177,
 Mexico,2020,Centros Públicos de Investigación CONACYT (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2021,Centros Públicos de Investigación CONACYT (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2024,Centros Públicos de Investigación CONACYT (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2021,Centros Públicos de Investigación CONACYT (Mexico),research_institute,318466754.0,dollar,MXN,line_item,Centro de Investigación Científica de Yucatán Total,2021 .pdf,379,
+Mexico,2024,Centros Públicos de Investigación CONACYT (Mexico),research_institute,256861364.0,dollar,MXN,program_total,Total for Centro de Investigación en Materiales Avanzados,2024 25112023-VES.pdf,40,
 Mexico,2016,Chapingo Autonomous University,higher_education,2553400000.0,unit,MXN,line_item,Autonomous University of Chapingo,2016 27112015-MAT.pdf,174,This university conducts research primarily in agricultural sciences.
 Mexico,2011,College of the Northern Border,science_agency,202926687.0,unit,MXN,line_item,"The College of the Northern Border, A.C.",2011 07122010-MAT.pdf,419,Focuses on research relevant to northern border issues.
-Mexico,2012,College of the Northern Border,science_agency,,,,,,,,Focuses on research relevant to northern border issues.; dropped after Mexico source audit: surviving row is real but the scale is not defendable enough for the final institutional panel
+Mexico,2012,College of the Northern Border,science_agency,921593264.0,dollar,MXN,line_item,"El Colegio de la Frontera Norte, A.C.",2012 12122011-MAT.pdf,205,Focuses on research relevant to northern border issues.
 Mexico,2013,College of the Northern Border,science_agency,237876070.0,unit,MXN,line_item,"Northern Border College, A.C.",2013 27122012-MAT.pdf,379,Focuses on research relevant to northern border issues.
 Mexico,2014,College of the Northern Border,science_agency,271522460.0,unit,MXN,line_item,"College of the Northern Border, A.C.",2014 03122013-MAT.pdf,289,Focuses on research relevant to northern border issues.
-Mexico,2015,College of the Northern Border,science_agency,,,,,,,,Focuses on research relevant to northern border issues.; dropped after Mexico source audit: surviving row is real but the scale is not defendable enough for the final institutional panel
+Mexico,2015,College of the Northern Border,science_agency,990870817.0,dollar,MXN,line_item,"El Colegio de la Frontera Norte, A.C.",2015 03122014-MAT.pdf,178,Focuses on research relevant to northern border issues.
 Mexico,2016,College of the Northern Border,science_agency,341059907.0,unit,MXN,line_item,"College of the Northern Border, A.C.",2016 27112015-MAT.pdf,176,Focuses on research relevant to northern border issues.
 Mexico,2011,College of the Southern Border,science_agency,239272825.0,unit,MXN,line_item,The College of the Southern Border,2011 07122010-MAT.pdf,419,Engages in research relevant to border issues.
-Mexico,2012,College of the Southern Border,science_agency,,,,,,,,Engages in research relevant to border issues.; dropped after Mexico source audit: surviving row is real but the scale is not defendable enough for the final institutional panel
+Mexico,2012,College of the Southern Border,science_agency,267830890.0,dollar,MXN,program_total,Total for El Colegio de la Frontera Sur,2012 12122011-MAT.pdf,205,Engages in research relevant to border issues.
 Mexico,2013,College of the Southern Border,science_agency,298204244.0,unit,MXN,line_item,Southern Border College,2013 27122012-MAT.pdf,379,Engages in research relevant to border issues.
 Mexico,2014,College of the Southern Border,science_agency,330806751.0,unit,MXN,line_item,College of the Southern Border,2014 03122013-MAT.pdf,289,Engages in research relevant to border issues.
-Mexico,2015,College of the Southern Border,science_agency,,,,,,,,Engages in research relevant to border issues.; dropped after Mexico source audit: surviving row is real but the scale is not defendable enough for the final institutional panel
+Mexico,2015,College of the Southern Border,science_agency,353732033.0,dollar,MXN,line_item,El Colegio de la Frontera Sur,2015 03122014-MAT.pdf,178,Engages in research relevant to border issues.
 Mexico,2016,College of the Southern Border,science_agency,401212700.0,unit,MXN,line_item,College of the Southern Border,2016 27112015-MAT.pdf,176,Engages in research relevant to border issues.
 Mexico,2012,Development of Equipment for Mechatronics,direct_rd,10900000.0,unit,MXN,line_item,Development of equipment for mechatronics,2012 12122011-MAT.pdf,319,This project focuses on R&D in mechatronics equipment.
 Mexico,2012,Development of Medicines from Endemic Medicinal Plants of Tlaxcala,direct_rd,532000.0,unit,MXN,line_item,Development of medicines from endemic medicinal plants of Tlaxcala,2012 12122011-MAT.pdf,319,This project focuses on R&D in pharmaceuticals using local resources.
 Mexico,2011,Ecology Institute,science_agency,208060201.0,unit,MXN,line_item,"Institute of Ecology, A.C.",2011 07122010-MAT.pdf,419,Dedicated to ecological research.
-Mexico,2012,Ecology Institute,science_agency,,,,,,,,Dedicated to ecological research.; dropped after Mexico source audit: surviving row is real but the scale is not defendable enough for the final institutional panel
+Mexico,2012,Ecology Institute,science_agency,215321479.0,dollar,MXN,program_total,"Total for Instituto de Ecología, A.C.",2012 12122011-MAT.pdf,205,Dedicated to ecological research.
 Mexico,2013,Ecology Institute,science_agency,233223136.0,unit,MXN,line_item,"Ecology Institute, A.C.",2013 27122012-MAT.pdf,379,Dedicated to ecological research.
-Mexico,2014,Ecology Institute,science_agency,,,,,,,,Dedicated to ecological research.; dropped after Mexico source audit: surviving row is real but the scale is not defendable enough for the final institutional panel
-Mexico,2015,Ecology Institute,science_agency,,,,,,,,Dedicated to ecological research.; dropped after Mexico source audit: surviving row is real but the scale is not defendable enough for the final institutional panel
+Mexico,2014,Ecology Institute,science_agency,315188118.0,dollar,MXN,line_item,"Total Instituto de Ecología, A.C.",2014 03122013-MAT.pdf,289,Dedicated to ecological research.
+Mexico,2015,Ecology Institute,science_agency,203491460.0,dollar,MXN,line_item,"Instituto de Ecología, A.C.",2015 03122014-MAT.pdf,178,Dedicated to ecological research.
 Mexico,2016,Ecology Institute,science_agency,350359050.0,unit,MXN,line_item,"Institute of Ecology, A.C.",2016 27112015-MAT.pdf,176,Dedicated to ecological research.
 Mexico,2012,Global Change and Environmental Sustainability (Stage 2),science_agency,12000000.0,unit,MXN,line_item,Global Change and Environmental Sustainability (Stage 2),2012 12122011-MAT.pdf,318,This program addresses environmental sustainability through research.
 Mexico,1986,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,,,,,,,,gap: no matching rows in this year
@@ -158,22 +158,22 @@ Mexico,1987,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agríc
 Mexico,2001,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2002,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2003,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2006,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2007,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2008,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2006,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,1066200000.0,dollar,MXN,program_total,Normal,2006 22122005-MAT.pdf,146,
+Mexico,2007,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,1200000000.0,million,MXN,line_item,INIFAP,2007 28122006-MAT.pdf,146,
+Mexico,2008,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,1226800000.0,million,MXN,line_item,INIFAP,2008 13122007-MAT.pdf,380,
 Mexico,2009,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2010,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2011,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2012,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2010,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,262399999.99999997,million,MXN,line_item,INIFAP,2010 07122009-MAT.pdf,258,
+Mexico,2011,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,73800000.0,million,MXN,line_item,INIFAP,2011 07122010-MAT.pdf,414,
+Mexico,2012,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,710.0,unknown,MXN,line_item,Programa de Desarrollo de Mercados Agropecuarios y Pesqueros e Información,2012 12122011-MAT.pdf,200,
 Mexico,2013,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,1317238965.0,unit,MXN,line_item,"National Institute of Forestry, Agricultural and Livestock Research",2013 27122012-MAT.pdf,378,
-Mexico,2014,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2015,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2014,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,1737430578.0,unknown,MXN,line_item,INIFAP Total,2014 03122013-MAT.pdf,287,
+Mexico,2015,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,1359651898.0,unknown,MXN,program_total,INIFAP Total,2015 03122014-MAT.pdf,176,
 Mexico,2016,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,1091480035.0,unit,MXN,line_item,"National Institute of Forestry, Agricultural and Livestock Research",2016 27112015-MAT.pdf,174,
-Mexico,2017,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2018,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2020,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2021,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2024,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2017,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,1441102591.0,unknown,MXN,program_total,Total INIFAP,2017 30112016-MAT.pdf,159,
+Mexico,2018,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,1288232884.0,dollar,MXN,program_total,Total INIFAP,2018 29112017-MAT.pdf,175,
+Mexico,2020,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,1372400000.0,million,MXN,line_item,INIFAP,2020 11122019-MAT.pdf,468,
+Mexico,2021,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,1302900000.0,million,MXN,line_item,INIFAP,2021 .pdf,374,
+Mexico,2024,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,1417712938.0,dollar,MXN,program_total,Total INIFAP,2024 25112023-VES.pdf,39,
 Mexico,1986,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,1987,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2001,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
@@ -185,16 +185,16 @@ Mexico,2008,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),re
 Mexico,2009,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2010,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2011,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,451714399.0,unit,MXN,line_item,National Institute of Nuclear Research,2011 07122010-MAT.pdf,419,
-Mexico,2012,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2012,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,502033970.0,dollar,MXN,line_item,Instituto Nacional de Investigaciones Nucleares,2012 12122011-MAT.pdf,205,
 Mexico,2013,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2014,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
-Mexico,2015,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2014,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,768223048.0,dollar,MXN,program_total,Total,2014 03122013-MAT.pdf,288,
+Mexico,2015,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,766425192.0,dollar,MXN,program_total,Total ININ,2015 03122014-MAT.pdf,177,
 Mexico,2016,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
 Mexico,2017,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,500000000.0,unit,MXN,line_item,Research and Development at ININ,2017 30112016-MAT.pdf,325,
 Mexico,2018,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,543755159.0,unit,MXN,line_item,National Institute of Nuclear Research,2018 29112017-MAT.pdf,176,
 Mexico,2020,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,906393775.0,unit,MXN,line_item,National Institute of Nuclear Research,2020 11122019-MAT.pdf,471,
 Mexico,2021,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,922773729.0,unit,MXN,line_item,National Institute of Nuclear Research,2021 .pdf,378,
-Mexico,2024,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,,,,,,,,gap: no matching rows in this year
+Mexico,2024,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,969823203.0,dollar,MXN,program_total,Total Instituto Nacional de Investigaciones Nucleares,2024 25112023-VES.pdf,40,
 Mexico,1986,IPN — Instituto Politécnico Nacional (Mexico),higher_education,,,,,,,,gap: no matching rows in this year
 Mexico,1987,IPN — Instituto Politécnico Nacional (Mexico),higher_education,,,,,,,,gap: no matching rows in this year
 Mexico,2001,IPN — Instituto Politécnico Nacional (Mexico),higher_education,,,,,,,,gap: no matching rows in this year
@@ -220,15 +220,15 @@ Mexico,2011,Mario Molina Center (regional studies in energy and environmental ma
 Mexico,2018,Metropolitan Autonomous University,higher_education,3048708947.0,unit,MXN,line_item,Metropolitan Autonomous University,2018 29112017-MAT.pdf,175,This university is involved in significant research and development activities.
 Mexico,2010,Mexican Space Agency,science_agency,10000000.0,unit,MXN,line_item,INSTITUTIONAL SUPPORT (MEXICAN SPACE AGENCY),2010 07122009-MAT.pdf,307,
 Mexico,2011,Mexican Space Agency,science_agency,,,,,,,,gap: no matching rows in this year
-Mexico,2012,Mexican Space Agency,science_agency,,,,,,,,dropped after Mexico source audit: surviving row is real but the scale is not defendable enough for the final institutional panel
+Mexico,2012,Mexican Space Agency,science_agency,60000000.0,dollar,MXN,line_item,Agencia Espacial Mexicana,2012 12122011-MAT.pdf,204,
 Mexico,2013,Mexican Space Agency,science_agency,54457650.0,unit,MXN,line_item,Mexican Space Agency,2013 27122012-MAT.pdf,378,
 Mexico,2014,Mexican Space Agency,science_agency,112811973.0,unit,MXN,line_item,Mexican Space Agency,2014 03122013-MAT.pdf,287,
-Mexico,2015,Mexican Space Agency,science_agency,,,,,,,,dropped after Mexico source audit: surviving row is real but the scale is not defendable enough for the final institutional panel
+Mexico,2015,Mexican Space Agency,science_agency,111983200.0,dollar,MXN,line_item,Agencia Espacial Mexicana Total,2015 03122014-MAT.pdf,176,
 Mexico,2016,Mexican Space Agency,science_agency,90467913.0,unit,MXN,line_item,Mexican Space Agency,2016 27112015-MAT.pdf,174,
 Mexico,2017,Mexican Space Agency,science_agency,92482883.0,unit,MXN,verified_override,Agencia Espacial Mexicana,2017 30112016-MAT.pdf,159,verified against original Mexico CTI annex
-Mexico,2018,Mexican Space Agency,science_agency,,,,,,,,dropped after Mexico source audit: surviving row is real but the scale is not defendable enough for the final institutional panel
+Mexico,2018,Mexican Space Agency,science_agency,77821489.0,dollar,MXN,line_item,Agencia Espacial Mexicana,2018 29112017-MAT.pdf,175,
 Mexico,2020,Mexican Space Agency,science_agency,67625350.0,unit,MXN,line_item,Mexican Space Agency,2020 11122019-MAT.pdf,471,
-Mexico,2021,Mexican Space Agency,science_agency,,,,,,,,dropped after Mexico source audit: surviving row is real but the scale is not defendable enough for the final institutional panel
+Mexico,2021,Mexican Space Agency,science_agency,36447482.0,dollar,MXN,line_item,Agencia Espacial Mexicana,2021 .pdf,377,
 Mexico,2024,Mexican Space Agency,science_agency,73913894.0,unit,MXN,line_item,Mexican Space Agency,2024 25112023-VES.pdf,39,
 Mexico,2010,Mixed Fund,innovation_instruments,390000000.0,unit,MXN,line_item,MIXED FUND,2010 07122009-MAT.pdf,307,This fund supports various R&D projects.
 Mexico,2008,New Fund for Science and Technology,innovation_instruments,500000.0,unit,MXN,line_item,New Fund for Science and Technology,2008 13122007-MAT.pdf,447,This fund is likely aimed at supporting R&D initiatives.

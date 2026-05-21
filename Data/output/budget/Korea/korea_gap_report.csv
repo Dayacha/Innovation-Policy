@@ -1,22 +1,22 @@
-country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
-Korea,2018,Ministry of Science and ICT (Korea),rd_ministry,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,9626200000.0
-Korea,2019,Ministry of Science and ICT (Korea),rd_ministry,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,9626200000.0
-Korea,2021,Ministry of Science and ICT (Korea),rd_ministry,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,9626200000.0
-Korea,2022,Ministry of Science and ICT (Korea),rd_ministry,ok,,,,,none,9626200000.0,,9977500000.0
-Korea,2023,Ministry of Science and ICT (Korea),rd_ministry,ok,,,,,none,9977500000.0,9626200000.0,9076800000.0
-Korea,2024,Ministry of Science and ICT (Korea),rd_ministry,ok,,,,,none,9076800000.0,9977500000.0,10911200000.0
-Korea,2025,Ministry of Science and ICT (Korea),rd_ministry,ok,,,,,none,10911200000.0,9076800000.0,
-Korea,2018,National R&D Programmes (Korea),innovation_instruments,ok,,,,,none,19633800000.0,,20400000000.0
-Korea,2019,National R&D Programmes (Korea),innovation_instruments,ok,,,,,none,20400000000.0,19633800000.0,27400000000.0
-Korea,2021,National R&D Programmes (Korea),innovation_instruments,ok,,,,,none,27400000000.0,20400000000.0,29800000000.0
-Korea,2022,National R&D Programmes (Korea),innovation_instruments,ok,,,,,none,29800000000.0,27400000000.0,30700000000.0
-Korea,2023,National R&D Programmes (Korea),innovation_instruments,ok,,,,,none,30700000000.0,29800000000.0,25900000000.0
-Korea,2024,National R&D Programmes (Korea),innovation_instruments,ok,,,,,none,25900000000.0,30700000000.0,29700000000.0
-Korea,2025,National R&D Programmes (Korea),innovation_instruments,ok,,,,,none,29700000000.0,25900000000.0,
-Korea,2018,Strategic Technology R&D Programmes (Korea),innovation_instruments,ok,,,,,none,1400000000.0,,1513700000.0
-Korea,2019,Strategic Technology R&D Programmes (Korea),innovation_instruments,ok,,,,,none,1513700000.0,1400000000.0,6200000000.0
-Korea,2021,Strategic Technology R&D Programmes (Korea),innovation_instruments,missing,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,1513700000.0,6200000000.0
-Korea,2022,Strategic Technology R&D Programmes (Korea),innovation_instruments,ok,,,,,none,6200000000.0,1513700000.0,4512300000.0
-Korea,2023,Strategic Technology R&D Programmes (Korea),innovation_instruments,ok,,,,,none,4512300000.0,6200000000.0,5000000000.0
-Korea,2024,Strategic Technology R&D Programmes (Korea),innovation_instruments,ok,,,,,none,5000000000.0,4512300000.0,3544600000.0
-Korea,2025,Strategic Technology R&D Programmes (Korea),innovation_instruments,ok,,,,,none,3544600000.0,5000000000.0,
+country,year,canonical_name,category,gap_type,gap_subtype,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,series_currency,prev_amount,next_amount
+Korea,2018,Ministry of Science and ICT (Korea),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,9626200000000.0
+Korea,2019,Ministry of Science and ICT (Korea),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,9626200000000.0
+Korea,2021,Ministry of Science and ICT (Korea),rd_ministry,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,9626200000000.0
+Korea,2022,Ministry of Science and ICT (Korea),rd_ministry,ok,,,,,,none,9626200000000.0,KRW,,9977500000000.0
+Korea,2023,Ministry of Science and ICT (Korea),rd_ministry,ok,,,,,,none,9977500000000.0,KRW,9626200000000.0,9076800000000.0
+Korea,2024,Ministry of Science and ICT (Korea),rd_ministry,ok,,,,,,none,9076800000000.0,KRW,9977500000000.0,10911200000000.0
+Korea,2025,Ministry of Science and ICT (Korea),rd_ministry,ok,,,,,,none,10911200000000.0,KRW,9076800000000.0,
+Korea,2018,National R&D Programmes (Korea),innovation_instruments,ok,,,,,,none,19633800000000.0,KRW,,20400000000000.0
+Korea,2019,National R&D Programmes (Korea),innovation_instruments,ok,,,,,,none,20400000000000.0,KRW,19633800000000.0,27400000000000.0
+Korea,2021,National R&D Programmes (Korea),innovation_instruments,ok,,,,,,none,27400000000000.0,KRW,20400000000000.0,29800000000000.0
+Korea,2022,National R&D Programmes (Korea),innovation_instruments,ok,,,,,,none,29800000000000.0,KRW,27400000000000.0,30700000000000.0
+Korea,2023,National R&D Programmes (Korea),innovation_instruments,ok,,,,,,none,30700000000000.0,KRW,29800000000000.0,25900000000000.0
+Korea,2024,National R&D Programmes (Korea),innovation_instruments,ok,,,,,,none,25900000000000.0,KRW,30700000000000.0,29700000000000.0
+Korea,2025,National R&D Programmes (Korea),innovation_instruments,ok,,,,,,none,29700000000000.0,KRW,25900000000000.0,
+Korea,2018,Strategic Technology R&D Programmes (Korea),innovation_instruments,ok,,,,,,none,1400000000000.0,KRW,,1513700000000.0
+Korea,2019,Strategic Technology R&D Programmes (Korea),innovation_instruments,ok,,,,,,none,1513700000000.0,KRW,1400000000000.0,6200000000000.0
+Korea,2021,Strategic Technology R&D Programmes (Korea),innovation_instruments,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1513700000000.0,6200000000000.0
+Korea,2022,Strategic Technology R&D Programmes (Korea),innovation_instruments,ok,,,,,,none,6200000000000.0,KRW,1513700000000.0,4512300000000.0
+Korea,2023,Strategic Technology R&D Programmes (Korea),innovation_instruments,ok,,,,,,none,4512300000000.0,KRW,6200000000000.0,5000000000000.0
+Korea,2024,Strategic Technology R&D Programmes (Korea),innovation_instruments,ok,,,,,,none,5000000000000.0,KRW,4512300000000.0,3544600000000.0
+Korea,2025,Strategic Technology R&D Programmes (Korea),innovation_instruments,ok,,,,,,none,3544600000000.0,KRW,5000000000000.0,

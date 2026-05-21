@@ -131,6 +131,18 @@ _VERIFIED_TEMPORAL_OUTLIERS = {
 _SKIP_EXPECTED_YEARS = {
     "Belgium": {(canonical_name, year) for canonical_name, year in _BELGIUM_VERIFIED_DROPS},
     "Costa Rica": {(canonical_name, year) for year, canonical_name in _COSTA_RICA_VERIFIED_DROPS},
+    "Italy": {
+        ("FOE — Fondo Ordinario per gli Enti di ricerca", 1992),
+        ("INFN — Istituto Nazionale di Fisica Nucleare", 1987),
+        ("CNR — Consiglio Nazionale delle Ricerche", 2009),
+        ("FIRST / FAR / FIRB — Fondi per la ricerca", 2010),
+        ("FOE — Fondo Ordinario per gli Enti di ricerca", 2010),
+        ("ASI — Agenzia Spaziale Italiana", 2013),
+        ("INAF — Istituto Nazionale di Astrofisica", 2013),
+        ("ASI — Agenzia Spaziale Italiana", 1996),
+        ("CNR — Consiglio Nazionale delle Ricerche", 2016),
+        ("CNR — Consiglio Nazionale delle Ricerche", 2020),
+    },
 }
 
 _COSTA_RICA_IGNORE_RAW_RECLASSIFY = {
@@ -681,6 +693,60 @@ def _apply_poland_final_verification_audit(
     return gap_df
 
 
+def _apply_italy_gap_audit(
+    gap_df: pd.DataFrame,
+    country: str,
+) -> pd.DataFrame:
+    """
+    Italy's broad ministry / mission canonicals are retained in the schema for
+    traceability, but they are intentionally excluded from the final panel after
+    original-file audit because they collapse mixed portfolio aggregates. Also
+    suppress years that were dropped after direct source review.
+    """
+    if country != "Italy" or gap_df.empty:
+        return gap_df
+
+    gap_df = gap_df.copy()
+    if "gap_subtype" not in gap_df.columns:
+        gap_df["gap_subtype"] = None
+
+    canonical = gap_df["canonical_name"].fillna("").astype(str)
+    aggregate_mask = canonical.isin(
+        {
+            "Ministero dell'università e della ricerca (MUR/MIUR/MURST)",
+            "Missione 17 — Ricerca e innovazione",
+        }
+    )
+    if aggregate_mask.any():
+        gap_df.loc[aggregate_mask, "gap_subtype"] = "documented_but_not_comparable"
+        gap_df.loc[aggregate_mask, "diagnosis"] = (
+            "Broad ministry / mission aggregate intentionally excluded from the final Italy panel after original-file audit because it mixes portfolio-level spending with institutional R&D lines."
+        )
+        gap_df.loc[aggregate_mask, "action"] = "none"
+        gap_df.loc[aggregate_mask, "raw_row_match"] = "audited"
+
+    documented_drop_map = {
+        ("FOE — Fondo Ordinario per gli Enti di ricerca", 1992): "Audited annex pages are section/rubrica summaries for Universita' e ricerca scientifica; the compiled FOE survivor does not map to a clean FOE line and is treated as a wrong-row attribution.",
+        ("CNR — Consiglio Nazionale delle Ricerche", 2009): "Programme-authorization prospectus row, not the clean annual CNR appropriation.",
+        ("FIRST / FAR / FIRB — Fondi per la ricerca", 2010): "Amount appears only in the 2012 column of Annex C/3, so the 2010 survivor is a year-confusion artefact.",
+        ("FOE — Fondo Ordinario per gli Enti di ricerca", 2010): "Source page is the ministry-wide current-expenditure breakdown, not a dedicated FOE appropriation line.",
+        ("ASI — Agenzia Spaziale Italiana", 2013): "Source page is the transfer-reduction annex for research bodies, not the annual ASI appropriation.",
+        ("INAF — Istituto Nazionale di Astrofisica", 2013): "Source page is the transfer-reduction annex for research bodies, not the annual INAF appropriation.",
+        ("CNR — Consiglio Nazionale delle Ricerche", 2016): "Legal clause cites a 2,582,284 euro earmark within CNR, not the total annual CNR budget.",
+        ("CNR — Consiglio Nazionale delle Ricerche", 2020): "Legal clause authorizes a 750,000 euro earmark for CNR, not the total annual CNR budget.",
+    }
+    for (canonical_name, year), note in documented_drop_map.items():
+        mask = canonical.eq(canonical_name) & pd.to_numeric(gap_df["year"], errors="coerce").eq(year)
+        if not mask.any():
+            continue
+        gap_df.loc[mask, "gap_subtype"] = "documented_but_not_comparable"
+        gap_df.loc[mask, "diagnosis"] = note
+        gap_df.loc[mask, "action"] = "none"
+        gap_df.loc[mask, "raw_row_match"] = "audited"
+
+    return gap_df
+
+
 def _belgium_gap_diagnosis_from_results(
     country: str,
     year: int,
@@ -943,6 +1009,88 @@ def _hungary_gap_diagnosis_from_full_text(
     )
 
 
+def _results_gap_diagnosis_from_country_results(
+    country: str,
+    year: int,
+    canonical: str,
+) -> tuple[Optional[str], Optional[str], Optional[str]]:
+    """
+    Fallback diagnosis when raw_rows coverage is empty but the country-level
+    extracted results already contain rows for the same year.
+
+    This avoids the misleading "documents may not be parsed yet" label in
+    countries where extraction succeeded downstream of the legacy raw_rows path.
+    """
+    country_dir = cfg.OUTPUT_DIR / country
+    results_path = country_dir / f"{country.lower().replace(' ', '_')}_docx_results.csv"
+    if not results_path.exists():
+        return None, None, None
+
+    try:
+        df = pd.read_csv(results_path)
+    except Exception:
+        return None, None, None
+
+    if df.empty or "year" not in df.columns:
+        return None, None, None
+
+    df["year"] = pd.to_numeric(df["year"], errors="coerce")
+    year_df = df[df["year"] == year].copy()
+    if year_df.empty:
+        return None, None, None
+
+    agencies = {a["canonical_name"]: a for a in _get_agencies_for_country(country)}
+    agency = agencies.get(canonical)
+    if not agency:
+        return (
+            f"Year has extracted rows in {results_path.name}, but no canonical mapping context was found for {canonical}.",
+            "reextract",
+            None,
+        )
+
+    def _matches_variant(row: pd.Series, variant: str) -> bool:
+        v = str(variant or "").strip().lower()
+        if not v:
+            return False
+        blob = " ".join(
+            str(row.get(col, "") or "")
+            for col in ("section_name", "section_name_en", "line_description", "line_description_en")
+        ).lower()
+        if len(v) <= 4:
+            return bool(re.search(r"(?<![a-z])" + re.escape(v) + r"(?![a-z])", blob))
+        return v in blob
+
+    match = None
+    for variant in agency.get("name_variants", []):
+        matches = year_df[year_df.apply(lambda r: _matches_variant(r, variant), axis=1)]
+        if not matches.empty:
+            match = matches.copy()
+            break
+
+    if match is not None and not match.empty:
+        amount_series = pd.to_numeric(match.get("amount_local"), errors="coerce").dropna()
+        source_file = str(match.iloc[0].get("source_file", ""))
+        if not amount_series.empty:
+            best_amount = float(amount_series.max())
+            return (
+                f"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year ({best_amount:,.0f} in {source_file}). The gap is downstream of extraction.",
+                "reclassify",
+                source_file,
+            )
+        return (
+            f"Year absent from raw_rows, but extracted results contain a matching text row for this agency-year in {source_file} without a defendable numeric total.",
+            "reextract",
+            source_file,
+        )
+
+    source_file = str(year_df.iloc[0].get("source_file", ""))
+    return (
+        f"Year absent from raw_rows, but {results_path.name} already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",
+        "reextract",
+        source_file,
+    )
+
+
 # ---------------------------------------------------------------------------
 # Step 1 — Detect gaps in canonical series
 # ---------------------------------------------------------------------------
@@ -966,6 +1114,13 @@ def detect_gaps(
     if not agencies:
         logger.warning(f"No canonical agencies defined for {country}")
         return pd.DataFrame()
+
+    if country == "Italy":
+        excluded = {
+            "Ministero dell'università e della ricerca (MUR/MIUR/MURST)",
+            "Missione 17 — Ricerca e innovazione",
+        }
+        agencies = [a for a in agencies if a["canonical_name"] not in excluded]
 
     # Respect the canonicals that survived series construction. Some country-
     # specific compile rules intentionally drop low-signal hardcoded agencies or
@@ -1132,6 +1287,12 @@ def search_raw_rows_for_gaps(
                 )
             if not specific_diag:
                 specific_diag, specific_action, specific_file = _hungary_gap_diagnosis_from_full_text(
+                    country=country,
+                    year=int(year),
+                    canonical=canonical,
+                )
+            if not specific_diag:
+                specific_diag, specific_action, specific_file = _results_gap_diagnosis_from_country_results(
                     country=country,
                     year=int(year),
                     canonical=canonical,
@@ -1342,6 +1503,7 @@ def build_gap_report(
     gap_df = _apply_poland_manual_gap_audit(gap_df, country, output_dir)
     gap_df = _apply_poland_zero_extraction_audit(gap_df, country, output_dir)
     gap_df = _apply_poland_final_verification_audit(gap_df, country, output_dir)
+    gap_df = _apply_italy_gap_audit(gap_df, country)
     if country == "Poland":
         _build_poland_source_recovery_plan(output_dir)
 
@@ -1395,15 +1557,16 @@ if __name__ == "__main__":
     parser.add_argument("--raw-rows", default=str(cfg.OUTPUT_DIR / "raw_rows.csv"))
     args = parser.parse_args()
 
-    series_path = args.series or str(
-        cfg.OUTPUT_DIR / f"{args.country.lower().replace(' ','_')}_docx_series.csv"
-    )
+    country_dir = cfg.OUTPUT_DIR / args.country
+    cname = args.country.lower().replace(" ", "_")
+    series_path = args.series or str(country_dir / f"{cname}_docx_series.csv")
 
     series_df = pd.read_csv(series_path)
     gap_df, queue_df = build_gap_report(
         series_df=series_df,
         country=args.country,
         raw_rows_csv=Path(args.raw_rows),
+        output_dir=country_dir,
     )
 
     print(f"\n=== Gap report for {args.country} ===")

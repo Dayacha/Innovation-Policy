@@ -1,0 +1,35 @@
+country,series_rows,non_null,unit_thousand,verified_override,agencies,min_year,max_year,gap_rows,missing,outliers,has_overrides,has_traceability
+Norway,17214,1084,0,0,334,1975,2026,17214,0,792,False,False
+Australia,2745,966,0,0,47,1975,2026,2384,0,164,False,False
+Canada,1342,656,0,0,30,1987,2024,1035,0,63,False,False
+France,2071,104,0,5,63,1970,2025,2071,0,58,False,False
+Switzerland,1875,184,18,0,44,1977,2025,1866,0,57,False,False
+Germany,10284,41,0,0,198,1955,2025,10207,0,41,False,False
+Finland,292,258,0,10,8,1985,2025,291,0,26,False,False
+UK,477,29,0,0,27,1982,2025,473,0,22,False,False
+Japan,648,386,0,67,17,1975,2025,648,0,20,False,False
+Denmark,5884,457,0,227,128,1975,2025,5994,110,12,False,False
+Chile,677,367,0,13,153,1999,2025,677,314,2,False,False
+Italy,429,188,0,0,142,1986,2024,385,197,2,False,True
+Slovakia,264,120,0,1,28,1992,2025,264,144,1,True,True
+Austria,901,163,0,5,20,1976,2026,901,738,0,True,True
+Netherlands,461,178,0,0,13,1975,2025,638,464,0,False,False
+Iceland,674,467,0,16,24,1975,2025,672,207,0,False,False
+Mexico,269,108,0,1,28,1986,2024,269,161,0,True,True
+Colombia,175,50,0,0,12,1996,2025,175,125,0,False,False
+Costa Rica,139,20,20,20,9,2010,2025,124,84,0,True,False
+Portugal,100,38,0,35,4,1977,2025,100,62,0,True,True
+Poland,104,24,0,4,9,1990,2025,104,46,0,True,True
+Luxembourg,105,105,0,105,6,2001,2025,138,33,0,True,True
+Slovenia,119,87,0,87,6,1992,2025,119,32,0,True,True
+Czech Republic,74,62,0,0,3,1993,2025,75,13,0,False,True
+Estonia,80,47,0,4,9,1991,2025,58,11,0,False,False
+Hungary,75,68,0,67,8,1991,2025,75,7,0,True,False
+New Zealand,118,111,0,5,11,1975,2025,118,7,0,True,True
+Korea,21,17,17,17,3,2018,2025,21,4,0,True,False
+Belgium,45,41,0,6,13,1994,2024,45,4,0,False,False
+Turkey,18,18,0,16,4,1976,2009,18,0,0,True,True
+Latvia,34,34,4,11,7,1992,2018,34,0,0,True,False
+Spain,38,38,0,11,11,2002,2023,38,0,0,False,False
+Israel,55,55,49,12,6,1975,2025,55,0,0,True,True
+Lithuania,263,262,0,262,22,1993,2025,215,0,0,True,True

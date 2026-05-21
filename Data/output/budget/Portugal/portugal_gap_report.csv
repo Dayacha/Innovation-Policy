@@ -11,12 +11,12 @@ Portugal,2005,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_ag
 Portugal,2006,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,14333071000.0,552084349.0
 Portugal,2007,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_agency,ok,,,,,,none,552084349.0,EUR,14333071000.0,654236704.0
 Portugal,2009,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_agency,ok,,,,,,none,654236704.0,EUR,552084349.0,501451988.0
-Portugal,2010,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_agency,ok,,,,,,none,501451988.0,EUR,654236704.0,394575542.0
-Portugal,2011,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,501451988.0,394575542.0
-Portugal,2012,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_agency,ok,,,,,,none,394575542.0,EUR,501451988.0,420884807.0
-Portugal,2013,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_agency,ok,,,,,,none,420884807.0,EUR,394575542.0,426506331.0
-Portugal,2014,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,420884807.0,426506331.0
-Portugal,2015,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_agency,ok,,,,,,none,426506331.0,EUR,420884807.0,425726708.0
+Portugal,2010,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_agency,ok,,,,,,none,501451988.0,EUR,654236704.0,82335508.0
+Portugal,2011,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_agency,ok,,,,,,none,82335508.0,EUR,501451988.0,394575542.0
+Portugal,2012,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_agency,ok,,,,,,none,394575542.0,EUR,82335508.0,420884807.0
+Portugal,2013,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_agency,ok,,,,,,none,420884807.0,EUR,394575542.0,404198171.0
+Portugal,2014,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_agency,ok,,,,,,none,404198171.0,EUR,420884807.0,426506331.0
+Portugal,2015,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_agency,ok,,,,,,none,426506331.0,EUR,404198171.0,425726708.0
 Portugal,2016,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_agency,ok,,,,,,none,425726708.0,EUR,426506331.0,444782248.0
 Portugal,2017,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_agency,ok,,,,,,none,444782248.0,EUR,425726708.0,507718842.0
 Portugal,2018,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_agency,ok,,,,,,none,507718842.0,EUR,444782248.0,560122571.0
@@ -30,17 +30,17 @@ Portugal,2025,FCT — Fundação para a Ciência e a Tecnologia (Portugal),rd_ag
 Portugal,1977,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,249849000.0
 Portugal,1985,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,249849000.0
 Portugal,1986,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,249849000.0
-Portugal,1987,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,ok,,,,,,none,249849000.0,PTE,,497900000.0
-Portugal,1988,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,249849000.0,497900000.0
-Portugal,1989,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,249849000.0,497900000.0
-Portugal,1990,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,249849000.0,497900000.0
-Portugal,1991,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,ok,,,,,,none,497900000.0,PTE,249849000.0,10000000.0
-Portugal,1992,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,ok,,,,,,none,10000000.0,PTE,497900000.0,1366378000.0
-Portugal,1993,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,ok,,,,,,none,1366378000.0,PTE,10000000.0,13629276000.0
-Portugal,1994,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,ok,,,,,,none,13629276000.0,PTE,1366378000.0,9373000000.0
-Portugal,1995,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,ok,,,,,,none,9373000000.0,PTE,13629276000.0,
-Portugal,1996,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,9373000000.0,
-Portugal,1997,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,9373000000.0,
+Portugal,1987,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,ok,,,,,,none,249849000.0,PTE,,10000000.0
+Portugal,1988,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,249849000.0,10000000.0
+Portugal,1989,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,249849000.0,10000000.0
+Portugal,1990,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,249849000.0,10000000.0
+Portugal,1991,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,249849000.0,10000000.0
+Portugal,1992,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,ok,,,,,,none,10000000.0,PTE,249849000.0,13629276000.0
+Portugal,1993,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000.0,13629276000.0
+Portugal,1994,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,ok,,,,,,none,13629276000.0,PTE,10000000.0,
+Portugal,1995,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,13629276000.0,
+Portugal,1996,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,13629276000.0,
+Portugal,1997,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,13629276000.0,
 Portugal,2009,ANI — Agência Nacional de Inovação (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,9399812.0
 Portugal,2010,ANI — Agência Nacional de Inovação (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,9399812.0
 Portugal,2011,ANI — Agência Nacional de Inovação (Portugal),rd_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,9399812.0

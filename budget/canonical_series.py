@@ -50,12 +50,15 @@ __all__ = ["build_canonical_series", "CANONICAL_AGENCIES"]
 _OUTPUT_UNIT_BY_CURRENCY = {
     "AUD": "dollar",
     "CAD": "dollar",
+    "CRC": "colon",
     "CZK": "koruna",
     "SKK": "koruna",
     "NZD": "dollar",
     "USD": "dollar",
     "HUF": "forint",
+    "ILS": "shekel",
     "JPY": "yen",
+    "KRW": "won",
     "EUR": "euro",
     "DEM": "mark",
     "FRF": "franc",
@@ -74,6 +77,7 @@ _OUTPUT_UNIT_BY_CURRENCY = {
     "ITL": "lira",
     "EEK": "kroon",
     "RUB": "ruble",
+    "LVL": "lats",
     "LTL": "litas",
     "TAL": "talonas",
     "TRL": "lira",
@@ -4911,6 +4915,38 @@ _JAPAN_VERIFIED_OVERRIDES: dict[int, dict[str, int]] = {
     },
 }
 
+_ITALY_VERIFIED_DROPS: set[tuple[int, str]] = {
+    # 1992 19911231_305_SO_094.pdf pp. 903-905 show section/rubrica summaries
+    # for "Universita' e ricerca scientifica"; the compiled FOE survivor at
+    # 825,900,217,000 ITL does not correspond to a clean FOE line in the
+    # audited annex block and is treated as a wrong-row attribution.
+    (1992, "FOE — Fondo Ordinario per gli Enti di ricerca"),
+    # 1987 19861230_301_SO_125.pdf p. 426 resolves to a broad education
+    # summary page, not to an INFN line. The surviving 230,000,000,000 ITL
+    # value is therefore not traceable enough for the final panel.
+    (1987, "INFN — Istituto Nazionale di Fisica Nucleare"),
+    # 2009 20081230_303_SO_286.pdf p. 534 is a programme-authorization
+    # prospectus, not the clean annual CNR appropriation.
+    (2009, "CNR — Consiglio Nazionale delle Ricerche"),
+    # 2010 20091230_302_SO_244.pdf p. 53 is a ministry-wide spending
+    # breakdown; p. 63 puts the 550.000 amount in the 2012 column.
+    (2010, "FIRST / FAR / FIRB — Fondi per la ricerca"),
+    (2010, "FOE — Fondo Ordinario per gli Enti di ricerca"),
+    # 2013 20121229_302_SO_212.pdf p. 240 is a transfer-reduction annex for
+    # research bodies, not the annual ASI/INAF appropriations.
+    (2013, "ASI — Agenzia Spaziale Italiana"),
+    (2013, "INAF — Istituto Nazionale di Astrofisica"),
+    # 1996 19951229_302_SO_154.pdf p. 738 shows two separate ASI programme
+    # lines (national/bilateral programmes and ESA collaboration), not a clean
+    # annual ASI total. Keeping only one of them would understate the agency.
+    (1996, "ASI — Agenzia Spaziale Italiana"),
+    # 2016 20151230_302_SO_071.pdf p. 14 cites a 2,582,284 euro earmark
+    # within the CNR allocation; 2020 20191230_304_SO_045.pdf p. 72 authorizes
+    # a 750,000 euro earmark in favor of CNR. Neither is the full CNR budget.
+    (2016, "CNR — Consiglio Nazionale delle Ricerche"),
+    (2020, "CNR — Consiglio Nazionale delle Ricerche"),
+}
+
 _JAPAN_VERIFIED_DROPS: set[tuple[int, str]] = {
     (1996, "RIKEN (Institute of Physical and Chemical Research)"),
     (2005, "National Institute for Environmental Studies"),
@@ -5163,6 +5199,31 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["section_total", "program_total", "line_item"],
             "active_years": (1972, 2099),
+        },
+        {
+            "canonical_name": "Australian Centre for International Agricultural Research",
+            "category": "direct_rd",
+            "name_variants": [
+                "australian centre for international agricultural research",
+                "aciar",
+                "australian centre for international agricultural research trust account",
+                "australian centre for international agricultural research trust fund",
+            ],
+            "preferred_item_type": ["line_item", "section_total", "program_total"],
+            "active_years": (1982, 2099),
+            "notes": "Dedicated agricultural R&D agency. Prefer annual No1 entity totals and trust-fund payment lines over supplementary appropriation rows.",
+        },
+        {
+            "canonical_name": "Australian Renewable Energy Agency",
+            "category": "innovation_instruments",
+            "name_variants": [
+                "australian renewable energy agency",
+                "arena",
+                "total: australian renewable energy agency",
+            ],
+            "preferred_item_type": ["section_total", "line_item", "program_total"],
+            "active_years": (2011, 2099),
+            "notes": "Dedicated renewable-energy innovation agency. Prefer annual No1 totals over supplementary appropriations.",
         },
         {
             "canonical_name": "Industrial R&D Grants",
@@ -9349,7 +9410,10 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "fondo de innovacion, ciencia y tecnologia",
             ],
             "preferred_item_type": ["program_total", "line_item"],
-            "active_years": (1975, 2099),
+            # The observable CORFO innovation committee / Innova Chile lines
+            # in the current Chile corpus start in 2006. Earlier years in the
+            # folder do not expose a directly comparable CORFO innovation line.
+            "active_years": (2006, 2099),
         },
         {
             "canonical_name": "Fund for the Promotion of Science and Technology",
@@ -9449,7 +9513,8 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "public innovation committee",
             ],
             "preferred_item_type": ["program_total", "line_item"],
-            "active_years": (2010, 2099),
+            "active_years": (2015, 2017),
+            "expected_years": [2015, 2016, 2017],
         },
         {
             "canonical_name": "Excellence Centers - CORFO",
@@ -9459,7 +9524,8 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "centers of excellence - corfo",
             ],
             "preferred_item_type": ["program_total", "line_item"],
-            "active_years": (2010, 2099),
+            "active_years": (2016, 2020),
+            "expected_years": [2016, 2017, 2018, 2019, 2020],
         },
         {
             "canonical_name": "Technological Consortiums - CORFO",
@@ -9473,7 +9539,8 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "technological programs and consortiums - corfo",
             ],
             "preferred_item_type": ["program_total", "line_item"],
-            "active_years": (2010, 2099),
+            "active_years": (2016, 2025),
+            "expected_years": [2016, 2021, 2022, 2023, 2024, 2025],
         },
         {
             "canonical_name": "FIE-Innovation and R&D for Enterprises (Innova Committee)",
@@ -9485,7 +9552,8 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "fie-innovation and r&d for enterprises (innova committee)",
             ],
             "preferred_item_type": ["program_total", "line_item"],
-            "active_years": (2010, 2099),
+            "active_years": (2017, 2018),
+            "expected_years": [2017, 2018],
         },
         {
             "canonical_name": "Internationalization of the Innovative Effort",
@@ -9500,19 +9568,25 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "internationalization of the innovative effort",
             ],
             "preferred_item_type": ["program_total", "line_item"],
-            "active_years": (2010, 2099),
+            "active_years": (2010, 2010),
+            "expected_years": [2010],
         },
         {
             "canonical_name": "Call for Agricultural Innovation Projects",
             "category": "innovation_instruments",
             "name_variants": [
+                "convocatoria proyectos innovación agraria",
+                "convocatoria proyectos innovacion agraria",
+                "convocatoria proyectos innovación agraria (3030777-0)",
+                "convocatoria proyectos innovacion agraria (3030777-0)",
                 "fundacion para la innovación agraria - transferencia convocatoria proyectos de innovación agraria",
                 "fundacion para la innovacion agraria - transferencia convocatoria proyectos de innovacion agraria",
                 "fundación para la innovación agraria - transferencia convocatoria proyectos de innovación agraria",
                 "call for agricultural innovation projects",
             ],
             "preferred_item_type": ["program_total", "line_item"],
-            "active_years": (2010, 2099),
+            "active_years": (2018, 2018),
+            "expected_years": [2018],
         },
     ],
     "Estonia": [
@@ -12154,6 +12228,83 @@ def _best_amount_for_agency(
 
     matches = matches.copy()
 
+    if agency.get("_country") == "Australia":
+        desc_au = matches.get("line_description_en", pd.Series("", index=matches.index)).fillna("").astype(str)
+        sec_au = matches.get("section_name_en", pd.Series("", index=matches.index)).fillna("").astype(str)
+        src_au = matches.get("source_file", pd.Series("", index=matches.index)).fillna("").astype(str)
+        year_au = pd.to_numeric(matches.get("year", pd.Series(dtype=float)), errors="coerce")
+
+        # OCR/page-grid artifacts in older Australian Appropriation Acts can
+        # survive as numeric-only sibling rows ("360", "128 474 313", etc.)
+        # inside the agency's own section. If a descriptive agency row also
+        # exists, drop the numeric-only artifacts before ranking.
+        numeric_only_mask = (
+            desc_au.str.strip().str.match(r"^[0-9][0-9\s,.\-]*$", na=False)
+            & sec_au.str.strip().str.match(r"^[0-9][0-9\s,.\-]*$", na=False)
+        )
+        if numeric_only_mask.any() and (~numeric_only_mask).any():
+            trimmed = matches.loc[~numeric_only_mask].copy()
+            if not trimmed.empty:
+                matches = trimmed
+                desc_au = matches.get("line_description_en", pd.Series("", index=matches.index)).fillna("").astype(str)
+                sec_au = matches.get("section_name_en", pd.Series("", index=matches.index)).fillna("").astype(str)
+                src_au = matches.get("source_file", pd.Series("", index=matches.index)).fillna("").astype(str)
+                year_au = pd.to_numeric(matches.get("year", pd.Series(dtype=float)), errors="coerce")
+
+        # Department / portfolio totals are not defensible agency observations.
+        # Keep only rows where the agency itself is named, not the broader
+        # ministry total that happens to live on the same page.
+        generic_total_mask = desc_au.str.match(
+            r"^\s*total:\s*(department|portfolio|education|industry|foreign affairs|environment|climate change)\b",
+            case=False,
+            na=False,
+        )
+        if generic_total_mask.any():
+            trimmed = matches.loc[~generic_total_mask].copy()
+            if not trimmed.empty:
+                matches = trimmed
+                desc_au = matches.get("line_description_en", pd.Series("", index=matches.index)).fillna("").astype(str)
+                sec_au = matches.get("section_name_en", pd.Series("", index=matches.index)).fillna("").astype(str)
+                src_au = matches.get("source_file", pd.Series("", index=matches.index)).fillna("").astype(str)
+                year_au = pd.to_numeric(matches.get("year", pd.Series(dtype=float)), errors="coerce")
+
+        # For early Australian Appropriation Acts, the defendable agency row is
+        # often the direct line item, while the sibling section_total is the full
+        # department total. When an explicit line/program row exists, prefer it.
+        early_explicit_mask = (
+            year_au.lt(1990)
+            & matches.get("item_type", pd.Series("", index=matches.index)).fillna("").isin(["line_item", "program_total"])
+            & (
+                desc_au.str.contains(
+                    r"commonwealth scientific and industrial|atomic energy act|australian atomic energy|australian institute of marine science|bureau of mineral resources|geoscience australia|bureau of meteorology",
+                    case=False,
+                    regex=True,
+                    na=False,
+                )
+                | sec_au.str.contains(
+                    r"commonwealth scientific and industrial|atomic energy act|australian atomic energy|australian institute of marine science|bureau of mineral resources|geoscience australia|bureau of meteorology",
+                    case=False,
+                    regex=True,
+                    na=False,
+                )
+            )
+        )
+        if early_explicit_mask.any():
+            trimmed = matches.loc[early_explicit_mask].copy()
+            if not trimmed.empty:
+                matches = trimmed
+                desc_au = matches.get("line_description_en", pd.Series("", index=matches.index)).fillna("").astype(str)
+                src_au = matches.get("source_file", pd.Series("", index=matches.index)).fillna("").astype(str)
+                year_au = pd.to_numeric(matches.get("year", pd.Series(dtype=float)), errors="coerce")
+
+        # Modern Australian annual appropriation entity totals live in No1. When
+        # both No1 and supplementary acts exist, keep the main annual bill.
+        modern_no1_mask = year_au.ge(2014) & src_au.str.contains(r"\bNo1\b", case=False, regex=True, na=False)
+        if modern_no1_mask.any():
+            trimmed = matches.loc[modern_no1_mask].copy()
+            if not trimmed.empty:
+                matches = trimmed
+
     if agency.get("_country") == "Japan":
         revenue_mask = matches.apply(_japan_row_is_revenue_like, axis=1)
         if revenue_mask.any():
@@ -12395,6 +12546,16 @@ def _best_amount_for_agency(
                 matches = filtered
             else:
                 return None  # all exceed cap → emit gap
+
+        # When both vetted institutional rows (`include`) and looser fallback
+        # rows (`review`) survive for the same agency-year, keep the vetted rows.
+        # This prevents large aggregate/recovery rows from overriding a cleaner
+        # named agency appropriation, while still allowing review-only fallback
+        # years through when no include row remains after plausibility filtering.
+        nl_decision = matches.get("decision", pd.Series("", index=matches.index)).fillna("").astype(str).str.lower()
+        include_matches = matches[nl_decision.eq("include")].copy()
+        if not include_matches.empty:
+            matches = include_matches
 
     # Spain-specific quality controls:
     # When using pipeline results, a few rows survive with clearly inflated
@@ -13074,6 +13235,20 @@ def _get_agencies_for_country(country: str) -> list[dict]:
             # the review artifacts without auto-merging them into the audited
             # final panel.
             return str(agency.get("agency_type", "")).strip().lower() == "rd_programme"
+
+        if country == "Chile":
+            # Chile's discovery output is useful for audit, but the current
+            # recurrent additions are mostly intermittent programme / fund
+            # labels and one-off project titles that fragment the institutional
+            # panel and create false annual gaps. Keep only stable discovered
+            # institutions available in the final canonical series.
+            agency_type = str(agency.get("agency_type", "")).strip().lower()
+            category = str(agency.get("category", "")).strip().lower()
+            if agency_type == "science_agency":
+                return False
+            if agency_type == "dedicated_rd_agency" and category == "science_agency":
+                return False
+            return True
 
         if country == "New Zealand":
             agency_type = str(agency.get("agency_type", "")).strip().lower()
@@ -13851,6 +14026,16 @@ def build_canonical_series(
                 continue
 
         explicit_years = agency.get("expected_years")
+        if (
+            country == "Chile"
+            and not explicit_years
+            and str(agency.get("agency_type", "")).strip().lower() in {"rd_programme", "rd_fund"}
+        ):
+            # Chile's discovered programme/fund lines are often intermittent
+            # regional or earmarked appropriations. Treat them as observed-year
+            # programmes, not annual institutional panels spanning every year
+            # between first and last sighting.
+            explicit_years = observed_years
         if explicit_years:
             iter_years = [int(y) for y in explicit_years if int(y) in input_years]
         else:
@@ -13957,6 +14142,8 @@ def build_canonical_series(
     out = pd.DataFrame(records)
     if out.empty:
         return out
+    if "page_number" in out.columns:
+        out["page_number"] = out["page_number"].astype(object)
 
     if country == "Italy":
         amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
@@ -13965,11 +14152,27 @@ def build_canonical_series(
         currency = out["currency"].fillna("").astype(str).str.upper()
         unit_norm = out["unit"].fillna("").astype(str).str.strip().str.lower()
         line_desc = out["line_description_en"].fillna("").astype(str)
+        hardcoded_names = {agency["canonical_name"] for agency in CANONICAL_AGENCIES.get("Italy", [])}
 
         aggregate_canonicals = {
             "Ministero dell'università e della ricerca (MUR/MIUR/MURST)",
             "Missione 17 — Ricerca e innovazione",
         }
+        final_panel_names = hardcoded_names - aggregate_canonicals
+
+        discovered_or_generic_mask = amount_num.notna() & ~canonical.isin(hardcoded_names)
+        if discovered_or_generic_mask.any():
+            out.loc[
+                discovered_or_generic_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[discovered_or_generic_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[discovered_or_generic_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; retained only for discovery traceability: final Italy panel is restricted to audited institutional/fund canonicals".strip("; ").strip()
+            )
+            amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+            unit_norm = out["unit"].fillna("").astype(str).str.strip().str.lower()
+
         aggregate_mask = canonical.isin(aggregate_canonicals)
         if aggregate_mask.any():
             out.loc[
@@ -13979,6 +14182,19 @@ def build_canonical_series(
             notes = out.loc[aggregate_mask, "series_notes"].fillna("").astype(str).str.strip()
             out.loc[aggregate_mask, "series_notes"] = notes.apply(
                 lambda s: f"{s}; excluded from final Italy panel: broad ministry/mission aggregate retained only for audit traceability".strip("; ").strip()
+            )
+            amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+            unit_norm = out["unit"].fillna("").astype(str).str.strip().str.lower()
+
+        pre_euro_eur_mask = year_num.le(2001) & currency.eq("EUR") & amount_num.notna()
+        if pre_euro_eur_mask.any():
+            out.loc[
+                pre_euro_eur_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[pre_euro_eur_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[pre_euro_eur_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Italy audit: pre-2002 budget-law appropriations should be in lire, so this EUR-labelled survivor is treated as column leakage or unit confusion".strip("; ").strip()
             )
             amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
             unit_norm = out["unit"].fillna("").astype(str).str.strip().str.lower()
@@ -14119,6 +14335,32 @@ def build_canonical_series(
             )
             amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
 
+        pre_euro_min_amounts = {
+            "ASI — Agenzia Spaziale Italiana": 10_000_000_000.0,
+            "ENEA": 10_000_000_000.0,
+            "FOE — Fondo Ordinario per gli Enti di ricerca": 10_000_000_000.0,
+            "INFN — Istituto Nazionale di Fisica Nucleare": 10_000_000_000.0,
+        }
+        for canonical_name, minimum in pre_euro_min_amounts.items():
+            floor_mask = (
+                canonical.eq(canonical_name)
+                & year_num.le(2001)
+                & currency.eq("ITL")
+                & amount_num.notna()
+                & amount_num.lt(float(minimum))
+            )
+            if not floor_mask.any():
+                continue
+            out.loc[
+                floor_mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[floor_mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[floor_mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after Italy audit: pre-euro survivor is far below the institution's documented scale and is treated as a sub-line or scale-loss artifact".strip("; ").strip()
+            )
+            amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+
         implausible_itl = year_num.le(2001) & currency.eq("ITL") & amount_num.gt(20_000_000_000_000.0)
         implausible_eur = year_num.ge(2002) & currency.eq("EUR") & amount_num.gt(20_000_000_000.0)
         italy_implausible = implausible_itl | implausible_eur
@@ -14131,6 +14373,21 @@ def build_canonical_series(
             out.loc[italy_implausible, "series_notes"] = notes.apply(
                 lambda s: f"{s}; dropped after Italy audit: implausible scale after documentary unit normalization".strip("; ").strip()
             )
+
+        for year, canonical_name in _ITALY_VERIFIED_DROPS:
+            mask = canonical.eq(canonical_name) & year_num.eq(year)
+            if not mask.any():
+                continue
+            out.loc[
+                mask,
+                ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
+            ] = [None, None, None, None, None, None, None]
+            notes = out.loc[mask, "series_notes"].fillna("").astype(str).str.strip()
+            out.loc[mask, "series_notes"] = notes.apply(
+                lambda s: f"{s}; dropped after original-file audit: modern survivor is a programme/reduction/legal-clause amount, not a clean institutional annual appropriation".strip("; ").strip()
+            )
+
+        out = out[out["canonical_name"].isin(final_panel_names)].copy()
 
     if country == "Turkey":
         raw_turkey = subset.copy()
@@ -14472,27 +14729,11 @@ def build_canonical_series(
             notes = str(out.at[target_idx, "series_notes"] or "").strip()
             out.at[target_idx, "series_notes"] = f"{notes}; verified against original Mexico CTI annex".strip("; ").strip()
 
-        # Conservative Mexico clean-up after source audit:
-        # 1. drop survivors whose current scale remains ambiguous in the available
-        #    file inventory, even though the underlying row is real.
-        # 2. drop CONACYT totals when only a generic "Total" survivor remains and
-        #    no explicit Ramo 38 / CONACYT total survives canonical selection.
-        mexico_drop_pairs = {
-            (2012, "CIATEQ Advanced Technology Center"),
-            (2012, "College of the Northern Border"),
-            (2012, "College of the Southern Border"),
-            (2012, "Ecology Institute"),
-            (2012, "Mexican Space Agency"),
-            (2014, "Ecology Institute"),
-            (2015, "CIATEQ Advanced Technology Center"),
-            (2015, "College of the Northern Border"),
-            (2015, "College of the Southern Border"),
-            (2015, "Ecology Institute"),
-            (2015, "Mexican Space Agency"),
-            (2018, "Mexican Space Agency"),
-            (2020, "CONACYT / CONAHCyT — Ramo 38 (Mexico)"),
-            (2021, "Mexican Space Agency"),
-        }
+        # Earlier Mexico audits conservatively blanked several rows whose scale
+        # was thought to be ambiguous. Re-checking the original annex pages
+        # shows these are ordinary peso-denominated institutional rows, so we
+        # no longer drop them here.
+        mexico_drop_pairs = set()
         mx_pair_mask = out.apply(
             lambda r: (r.get("year"), r.get("canonical_name")) in mexico_drop_pairs,
             axis=1,
@@ -14549,6 +14790,62 @@ def build_canonical_series(
                 170,
                 "Summe 3117",
             ),
+            (2022, "FWF (Fonds zur Forderung der wissenschaftlichen Forschung)"): (
+                120_000_000.0,
+                "euro",
+                "EUR",
+                "2022 Anlagen_0001_244184DB_8F25_451C_846B_6C4C7BD15ADA.pdf",
+                383,
+                "FWF - Fonds zur Förderung der wissenschaftlichen Forschung",
+            ),
+            (2022, "OAW (Osterreichische Akademie der Wissenschaften)"): (
+                30_000_000.0,
+                "euro",
+                "EUR",
+                "2022 Anlagen_0001_244184DB_8F25_451C_846B_6C4C7BD15ADA.pdf",
+                384,
+                "ÖAW - Österreichische Akademie der Wissenschaften",
+            ),
+            (2022, "IST Austria"): (
+                25_000_000.0,
+                "euro",
+                "EUR",
+                "2022 Anlagen_0001_244184DB_8F25_451C_846B_6C4C7BD15ADA.pdf",
+                384,
+                "IST Austria - Institute of Science and Technology Austria",
+            ),
+            (2023, "FFG (Forschungsfoerderungsgesellschaft)"): (
+                70_000_000.0,
+                "euro",
+                "EUR",
+                "2023 Anlagen_0001_C4324C91_98E6_4FDE_B63A_4BFB9024E450.pdf",
+                452,
+                "FFG (Forschungsförderungsgesellschaft)",
+            ),
+            (2023, "FWF (Fonds zur Forderung der wissenschaftlichen Forschung)"): (
+                100_000_000.0,
+                "euro",
+                "EUR",
+                "2023 Anlagen_0001_C4324C91_98E6_4FDE_B63A_4BFB9024E450.pdf",
+                452,
+                "FWF (Fonds zur Förderung der wissenschaftlichen Forschung)",
+            ),
+            (2023, "OAW (Osterreichische Akademie der Wissenschaften)"): (
+                50_000_000.0,
+                "euro",
+                "EUR",
+                "2023 Anlagen_0001_C4324C91_98E6_4FDE_B63A_4BFB9024E450.pdf",
+                452,
+                "ÖAW (Österreichische Akademie der Wissenschaften)",
+            ),
+            (2023, "IST Austria"): (
+                30_000_000.0,
+                "euro",
+                "EUR",
+                "2023 Anlagen_0001_C4324C91_98E6_4FDE_B63A_4BFB9024E450.pdf",
+                452,
+                "IST Austria (Institute of Science and Technology Austria)",
+            ),
         }
         for (year, canonical_name), (amount_local, unit, currency, source_file, page_number, line_desc) in austria_verified_overrides.items():
             mask = (out["year"] == year) & (out["canonical_name"] == canonical_name)
@@ -14575,8 +14872,6 @@ def build_canonical_series(
             (2018, "FWF (Fonds zur Forderung der wissenschaftlichen Forschung)"),
             (2020, "FWF (Fonds zur Forderung der wissenschaftlichen Forschung)"),
             (2021, "FWF (Fonds zur Forderung der wissenschaftlichen Forschung)"),
-            (2022, "FWF (Fonds zur Forderung der wissenschaftlichen Forschung)"),
-            (2023, "FWF (Fonds zur Forderung der wissenschaftlichen Forschung)"),
             (2024, "FWF (Fonds zur Forderung der wissenschaftlichen Forschung)"),
             (2026, "FWF (Fonds zur Forderung der wissenschaftlichen Forschung)"),
             (2012, "FFG (Forschungsfoerderungsgesellschaft)"),
@@ -14587,19 +14882,14 @@ def build_canonical_series(
             (2019, "FFG (Forschungsfoerderungsgesellschaft)"),
             (2021, "FFG (Forschungsfoerderungsgesellschaft)"),
             (2022, "FFG (Forschungsfoerderungsgesellschaft)"),
-            (2023, "FFG (Forschungsfoerderungsgesellschaft)"),
             (2024, "FFG (Forschungsfoerderungsgesellschaft)"),
             (2026, "FFG (Forschungsfoerderungsgesellschaft)"),
-            (2022, "OAW (Osterreichische Akademie der Wissenschaften)"),
-            (2023, "OAW (Osterreichische Akademie der Wissenschaften)"),
             (2026, "OAW (Osterreichische Akademie der Wissenschaften)"),
             (2010, "AIT Austrian Institute of Technology"),
             (2010, "Christian Doppler Forschungsgesellschaft (CD-Labor)"),
             (2018, "IST Austria"),
             (2010, "IST Austria"),
             (2021, "IST Austria"),
-            (2022, "IST Austria"),
-            (2023, "IST Austria"),
             (2026, "IST Austria"),
             (2001, "Ludwig Boltzmann Gesellschaft"),
             (2012, "CERN-Beitrag (Austria)"),
@@ -14941,7 +15231,7 @@ def build_canonical_series(
                     new_row["item_type"] = "verified_override"
                     new_row["line_description_en"] = "Verified against original Denmark budget file"
                     new_row["source_file"] = _DENMARK_VERIFIED_SOURCE_FILES.get(year)
-                    new_row["page_number"] = float(page_number)
+                    new_row["page_number"] = str(page_number)
                     new_row["series_notes"] = "manual override from original Denmark budget file"
                     out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
                     continue
@@ -14959,7 +15249,7 @@ def build_canonical_series(
                 out.at[target_idx, "item_type"] = "verified_override"
                 out.at[target_idx, "line_description_en"] = "Verified against original Denmark budget file"
                 out.at[target_idx, "source_file"] = _DENMARK_VERIFIED_SOURCE_FILES.get(year)
-                out.at[target_idx, "page_number"] = float(page_number)
+                out.at[target_idx, "page_number"] = str(page_number)
                 notes = str(out.at[target_idx, "series_notes"] or "").strip()
                 note = "manual override from original Denmark budget file"
                 out.at[target_idx, "series_notes"] = f"{notes}; {note}".strip("; ").strip()
@@ -15010,7 +15300,7 @@ def build_canonical_series(
                     new_row["item_type"] = "verified_override"
                     new_row["line_description_en"] = "Verified against original Spain budget file"
                     new_row["source_file"] = source_file
-                    new_row["page_number"] = float(page_number)
+                    new_row["page_number"] = str(page_number)
                     new_row["series_notes"] = "manual override from original Spain budget file"
                     out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
                     continue
@@ -15027,7 +15317,7 @@ def build_canonical_series(
                 out.at[target_idx, "item_type"] = "verified_override"
                 out.at[target_idx, "line_description_en"] = "Verified against original Spain budget file"
                 out.at[target_idx, "source_file"] = source_file
-                out.at[target_idx, "page_number"] = float(page_number)
+                out.at[target_idx, "page_number"] = str(page_number)
                 notes = str(out.at[target_idx, "series_notes"] or "").strip()
                 out.at[target_idx, "series_notes"] = f"{notes}; manual override from original Spain budget file".strip("; ").strip()
 
@@ -15047,7 +15337,7 @@ def build_canonical_series(
                     new_row["item_type"] = "verified_override"
                     new_row["line_description_en"] = "Verified against original Finland budget file"
                     new_row["source_file"] = source_file
-                    new_row["page_number"] = float(page_number)
+                    new_row["page_number"] = str(page_number)
                     new_row["series_notes"] = "manual override from original Finland budget file"
                     out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
                     continue
@@ -15064,7 +15354,7 @@ def build_canonical_series(
                 out.at[target_idx, "item_type"] = "verified_override"
                 out.at[target_idx, "line_description_en"] = "Verified against original Finland budget file"
                 out.at[target_idx, "source_file"] = source_file
-                out.at[target_idx, "page_number"] = float(page_number)
+                out.at[target_idx, "page_number"] = str(page_number)
                 notes = str(out.at[target_idx, "series_notes"] or "").strip()
                 out.at[target_idx, "series_notes"] = f"{notes}; manual override from original Finland budget file".strip("; ").strip()
 
@@ -15084,7 +15374,7 @@ def build_canonical_series(
                     new_row["item_type"] = "verified_override"
                     new_row["line_description_en"] = "Verified against original Estonia budget file"
                     new_row["source_file"] = source_file
-                    new_row["page_number"] = float(page_number)
+                    new_row["page_number"] = str(page_number)
                     new_row["series_notes"] = "manual override from original Estonia budget file"
                     out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
                     continue
@@ -15101,7 +15391,7 @@ def build_canonical_series(
                 out.at[target_idx, "item_type"] = "verified_override"
                 out.at[target_idx, "line_description_en"] = "Verified against original Estonia budget file"
                 out.at[target_idx, "source_file"] = source_file
-                out.at[target_idx, "page_number"] = float(page_number)
+                out.at[target_idx, "page_number"] = str(page_number)
                 notes = str(out.at[target_idx, "series_notes"] or "").strip()
                 out.at[target_idx, "series_notes"] = f"{notes}; manual override from original Estonia budget file".strip("; ").strip()
 
@@ -15186,7 +15476,7 @@ def build_canonical_series(
                     new_row["item_type"] = "verified_override"
                     new_row["line_description_en"] = "Verified against original Chile budget file"
                     new_row["source_file"] = source_file
-                    new_row["page_number"] = float(page_number)
+                    new_row["page_number"] = str(page_number)
                     new_row["series_notes"] = "manual override from original Chile budget file"
                     out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
                     continue
@@ -15203,7 +15493,7 @@ def build_canonical_series(
                 out.at[target_idx, "item_type"] = "verified_override"
                 out.at[target_idx, "line_description_en"] = "Verified against original Chile budget file"
                 out.at[target_idx, "source_file"] = source_file
-                out.at[target_idx, "page_number"] = float(page_number)
+                out.at[target_idx, "page_number"] = str(page_number)
                 notes = str(out.at[target_idx, "series_notes"] or "").strip()
                 out.at[target_idx, "series_notes"] = f"{notes}; manual override from original Chile budget file".strip("; ").strip()
 
@@ -15228,7 +15518,7 @@ def build_canonical_series(
                     new_row["item_type"] = "verified_override"
                     new_row["line_description_en"] = "Verified against original Costa Rica budget file"
                     new_row["source_file"] = source_file
-                    new_row["page_number"] = float(page_number)
+                    new_row["page_number"] = str(page_number)
                     note_parts = ["manual override from original Costa Rica budget file"]
                     if override_notes:
                         note_parts.append(str(override_notes).strip())
@@ -15248,7 +15538,7 @@ def build_canonical_series(
                 out.at[target_idx, "item_type"] = "verified_override"
                 out.at[target_idx, "line_description_en"] = "Verified against original Costa Rica budget file"
                 out.at[target_idx, "source_file"] = source_file
-                out.at[target_idx, "page_number"] = float(page_number)
+                out.at[target_idx, "page_number"] = str(page_number)
                 notes = str(out.at[target_idx, "series_notes"] or "").strip()
                 note_parts = [notes, "manual override from original Costa Rica budget file"]
                 if override_notes:
@@ -15274,6 +15564,15 @@ def build_canonical_series(
             .drop(columns=["_cr_has_amount", "_cr_is_override"])
             .reset_index(drop=True)
         )
+        amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+        unit_norm = out["unit"].fillna("").astype(str).str.strip().str.lower()
+        thousand_mask = amount_num.notna() & unit_norm.eq("thousand")
+        if thousand_mask.any():
+            out.loc[thousand_mask, "amount_local"] = amount_num.loc[thousand_mask] * 1000.0
+            out.loc[thousand_mask, "unit"] = out.loc[thousand_mask].apply(
+                lambda r: _base_output_unit(r.get("currency"), r.get("unit")),
+                axis=1,
+            )
 
     if country == "New Zealand":
         for year, overrides in _NEW_ZEALAND_VERIFIED_OVERRIDES.items():
@@ -15347,7 +15646,7 @@ def build_canonical_series(
                     new_row["item_type"] = "verified_override"
                     new_row["line_description_en"] = "Verified against original Iceland budget file"
                     new_row["source_file"] = source_file
-                    new_row["page_number"] = float(page_number)
+                    new_row["page_number"] = str(page_number)
                     new_row["series_notes"] = "manual override from original Iceland budget file"
                     out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
                     continue
@@ -15364,7 +15663,7 @@ def build_canonical_series(
                 out.at[target_idx, "item_type"] = "verified_override"
                 out.at[target_idx, "line_description_en"] = "Verified against original Iceland budget file"
                 out.at[target_idx, "source_file"] = source_file
-                out.at[target_idx, "page_number"] = float(page_number)
+                out.at[target_idx, "page_number"] = str(page_number)
                 notes = str(out.at[target_idx, "series_notes"] or "").strip()
                 out.at[target_idx, "series_notes"] = f"{notes}; manual override from original Iceland budget file".strip("; ").strip()
 
@@ -15399,7 +15698,7 @@ def build_canonical_series(
                     new_row["item_type"] = "verified_override"
                     new_row["line_description_en"] = "Verified against original Israel budget file"
                     new_row["source_file"] = source_file
-                    new_row["page_number"] = float(page_number)
+                    new_row["page_number"] = str(page_number)
                     new_row["series_notes"] = "manual override from original Israel budget file"
                     out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
                     continue
@@ -15415,9 +15714,19 @@ def build_canonical_series(
                 out.at[target_idx, "item_type"] = "verified_override"
                 out.at[target_idx, "line_description_en"] = "Verified against original Israel budget file"
                 out.at[target_idx, "source_file"] = source_file
-                out.at[target_idx, "page_number"] = float(page_number)
+                out.at[target_idx, "page_number"] = str(page_number)
                 notes = str(out.at[target_idx, "series_notes"] or "").strip()
                 out.at[target_idx, "series_notes"] = f"{notes}; manual override from original Israel budget file".strip("; ").strip()
+
+        israel_amounts = pd.to_numeric(out["amount_local"], errors="coerce")
+        israel_unit = out["unit"].fillna("").astype(str).str.strip().str.lower()
+        israel_thousand = israel_amounts.notna() & israel_unit.eq("thousand")
+        if israel_thousand.any():
+            out.loc[israel_thousand, "amount_local"] = israel_amounts.loc[israel_thousand] * 1000.0
+            out.loc[israel_thousand, "unit"] = out.loc[israel_thousand].apply(
+                lambda r: _base_output_unit(r.get("currency"), r.get("unit")),
+                axis=1,
+            )
 
     if country == "Hungary":
         for year, overrides in _HUNGARY_VERIFIED_OVERRIDES.items():
@@ -15449,7 +15758,7 @@ def build_canonical_series(
                         new_row["line_description_en"] = "Verified R&D fund total from original Hungary budget table"
                         new_row["series_notes"] = "manual override from original Hungary budget file (R&D fund total)"
                     new_row["source_file"] = source_file
-                    new_row["page_number"] = page_number
+                    new_row["page_number"] = str(page_number)
                     out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
                     continue
 
@@ -15536,7 +15845,7 @@ def build_canonical_series(
                 out.at[target_idx, "currency"] = currency
                 out.at[target_idx, "item_type"] = "verified_override"
                 out.at[target_idx, "source_file"] = source_file
-                out.at[target_idx, "page_number"] = float(page_number)
+                out.at[target_idx, "page_number"] = str(page_number)
                 if canonical_name == "Ministry of Science and ICT (Korea)":
                     desc = "Verified MSIT / science-technology-communication budget total from original Korea budget brief"
                     note = "manual override from original Korea budget brief (MSIT total)"
@@ -15562,6 +15871,15 @@ def build_canonical_series(
             .drop(columns=["_kr_has_amount", "_kr_is_override"])
             .reset_index(drop=True)
         )
+        amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
+        unit_norm = out["unit"].fillna("").astype(str).str.strip().str.lower()
+        thousand_mask = amount_num.notna() & unit_norm.eq("thousand")
+        if thousand_mask.any():
+            out.loc[thousand_mask, "amount_local"] = amount_num.loc[thousand_mask] * 1000.0
+            out.loc[thousand_mask, "unit"] = out.loc[thousand_mask].apply(
+                lambda r: _base_output_unit(r.get("currency"), r.get("unit")),
+                axis=1,
+            )
 
     if country == "Australia":
         amount_num = pd.to_numeric(out["amount_local"], errors="coerce")
@@ -17500,6 +17818,33 @@ def build_canonical_series(
         years = pd.to_numeric(out["year"], errors="coerce")
 
         portugal_verified_overrides = {
+            (1987, "JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal)"): (
+                249_849_000.0,
+                "escudo",
+                "PTE",
+                "Lei orcamento para 1987.pdf",
+                31,
+                "Junta Nacional de Investigação Científica e Tecnológica",
+                "manual override from original Portugal budget file (1987 institutional appropriations list; keeps the state-budget column used by the extracted series)",
+            ),
+            (1992, "JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal)"): (
+                10_000_000.0,
+                "escudo",
+                "PTE",
+                "Lei orcamento para 1992.pdf",
+                41,
+                "Junta Nacional de Investigação Científica e Tecnológica",
+                "manual override from original Portugal budget file (1992 institutional appropriations list)",
+            ),
+            (1994, "JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal)"): (
+                13_629_276_000.0,
+                "escudo",
+                "PTE",
+                "Lei orcamento para 1994.pdf",
+                59,
+                "JUNTA NACIONAL DE INVESTIGAÇÃO CIENTIFICA E TECNOLOGICA",
+                "manual override from original Portugal budget file (1994 institutional appropriations list)",
+            ),
             (2006, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"): (
                 36_747_743.0,
                 "euro",
@@ -17813,6 +18158,9 @@ def build_canonical_series(
             out.at[target_idx, "series_notes"] = f"{notes}; {override_note}".strip("; ").strip()
 
         portugal_manual_drops = [
+            (1991, "JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal)"),
+            (1993, "JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal)"),
+            (1995, "JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal)"),
             (2000, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"),
             (2001, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
             (2002, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
@@ -18132,6 +18480,16 @@ def build_canonical_series(
                 ["amount_local", "unit", "currency", "item_type", "line_description_en", "source_file", "page_number"],
             ] = [None, None, None, None, None, None, None]
 
+        amounts = pd.to_numeric(out["amount_local"], errors="coerce")
+        unit_norm = out["unit"].fillna("").astype(str).str.strip().str.lower()
+        residual_thousand = amounts.notna() & unit_norm.eq("thousand")
+        if residual_thousand.any():
+            out.loc[residual_thousand, "amount_local"] = amounts.loc[residual_thousand] * 1000.0
+            out.loc[residual_thousand, "unit"] = out.loc[residual_thousand].apply(
+                lambda r: _base_output_unit(r.get("currency"), r.get("unit")),
+                axis=1,
+            )
+
         for (year, canonical_name), (
             amount_local,
             page_number,
@@ -18171,7 +18529,7 @@ def build_canonical_series(
             out.at[target_idx, "item_type"] = "verified_override"
             out.at[target_idx, "line_description_en"] = description
             out.at[target_idx, "source_file"] = source_name
-            out.at[target_idx, "page_number"] = page_number
+            out.at[target_idx, "page_number"] = str(page_number)
             notes = str(out.at[target_idx, "series_notes"] or "").strip()
             out.at[target_idx, "series_notes"] = f"{notes}; {note}".strip("; ").strip()
 
@@ -18235,7 +18593,7 @@ def build_canonical_series(
                     note = "manual override from original Belgium budget file"
                 out.at[target_idx, "line_description_en"] = desc
                 out.at[target_idx, "source_file"] = source_file
-                out.at[target_idx, "page_number"] = page_number
+                out.at[target_idx, "page_number"] = str(page_number)
                 notes = str(out.at[target_idx, "series_notes"] or "").strip()
                 out.at[target_idx, "series_notes"] = f"{notes}; {note}".strip("; ").strip()
 

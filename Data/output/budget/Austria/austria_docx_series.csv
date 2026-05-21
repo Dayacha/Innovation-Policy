@@ -85,7 +85,7 @@ Austria,1991,CERN-Beitrag (Austria),direct_rd,124057000.0,schilling,ATS,line_ite
 Austria,1992,CERN-Beitrag (Austria),direct_rd,100000000.0,schilling,ATS,line_item,Contribution to CERN,1992_Austria.pdf,172,
 Austria,1993,CERN-Beitrag (Austria),direct_rd,100000000.0,schilling,ATS,line_item,Contribution to CERN,1993_Austria.pdf,90,
 Austria,1994,CERN-Beitrag (Austria),direct_rd,20000000.0,schilling,ATS,line_item,Contribution to CERN,1994_Austria.pdf,124,
-Austria,1995,CERN-Beitrag (Austria),direct_rd,75000000.0,schilling,ATS,line_item,Contribution to CERN,1995_Austria.pdf,188,
+Austria,1995,CERN-Beitrag (Austria),direct_rd,75000000.0,schilling,ATS,line_item,Contribution to CERN,1995_Austria.pdf,192,
 Austria,1996,CERN-Beitrag (Austria),direct_rd,89000000.0,schilling,ATS,line_item,Contribution to CERN,1996_Austria_proposal.pdf,196,
 Austria,1997,CERN-Beitrag (Austria),direct_rd,132000000.0,schilling,ATS,line_item,Contribution to CERN,1997_Austria_proposal.pdf,189,
 Austria,1998,CERN-Beitrag (Austria),direct_rd,,,,,,,,gap: no matching rows in this year
@@ -125,7 +125,7 @@ Austria,1992,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,
 Austria,1993,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,,,,,,,,gap: no matching rows in this year
 Austria,1994,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,50000000.0,schilling,ATS,line_item,Christian Doppler Research Society (CD-Labor),1994_Austria.pdf,124,
 Austria,1995,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,100000000.0,schilling,ATS,line_item,Christian Doppler Research Society (CD-Labor),1995_Austria.pdf,60,
-Austria,1996,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,20000000.0,schilling,ATS,line_item,Christian Doppler Research Society (CD-Labor),1996_Austria_proposal.pdf,140,
+Austria,1996,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,20000000.0,schilling,ATS,line_item,Christian Doppler Research Society (CD-Labor),1996_Austria_proposal.pdf,370,
 Austria,1997,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,50000000.0,schilling,ATS,line_item,Christian Doppler Research Society (CD-Labor),1997_Austria_proposal.pdf,469,
 Austria,1998,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,,,,,,,,gap: no matching rows in this year
 Austria,1999,Christian Doppler Forschungsgesellschaft (CD-Labor),science_agency,50000000.0,schilling,ATS,line_item,Christian Doppler Research Society (CD-Labor),1999_Austria.pdf,365-389,
@@ -252,7 +252,7 @@ Austria,2019,FFG (Forschungsfoerderungsgesellschaft),science_agency,,,,,,,,FFG c
 Austria,2020,FFG (Forschungsfoerderungsgesellschaft),science_agency,,,,,,,,gap: no matching rows in this year
 Austria,2021,FFG (Forschungsfoerderungsgesellschaft),science_agency,,,,,,,,FFG created 2004 from merger of FFF + BIT + ASA. Pre-2004 match via 'fff' variant.; dropped after original-file audit: no clean institutional appropriation line
 Austria,2022,FFG (Forschungsfoerderungsgesellschaft),science_agency,,,,,,,,FFG created 2004 from merger of FFF + BIT + ASA. Pre-2004 match via 'fff' variant.; dropped after original-file audit: no clean institutional appropriation line
-Austria,2023,FFG (Forschungsfoerderungsgesellschaft),science_agency,,,,,,,,FFG created 2004 from merger of FFF + BIT + ASA. Pre-2004 match via 'fff' variant.; dropped after original-file audit: no clean institutional appropriation line
+Austria,2023,FFG (Forschungsfoerderungsgesellschaft),science_agency,70000000.0,euro,EUR,verified_override,FFG (Forschungsförderungsgesellschaft),2023 Anlagen_0001_C4324C91_98E6_4FDE_B63A_4BFB9024E450.pdf,452,FFG created 2004 from merger of FFF + BIT + ASA. Pre-2004 match via 'fff' variant.; verified against original Austria budget
 Austria,2024,FFG (Forschungsfoerderungsgesellschaft),science_agency,,,,,,,,FFG created 2004 from merger of FFF + BIT + ASA. Pre-2004 match via 'fff' variant.; dropped after original-file audit: no clean institutional appropriation line
 Austria,2025,FFG (Forschungsfoerderungsgesellschaft),science_agency,,,,,,,,gap: no matching rows in this year
 Austria,2026,FFG (Forschungsfoerderungsgesellschaft),science_agency,,,,,,,,FFG created 2004 from merger of FFF + BIT + ASA. Pre-2004 match via 'fff' variant.; dropped after original-file audit: no clean institutional appropriation line
@@ -301,8 +301,8 @@ Austria,2018,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_
 Austria,2019,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,,,,,,,,gap: no matching rows in this year
 Austria,2020,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,,,,,,,,Annual state appropriation — core basic research funder.; dropped after original-file audit: no clean institutional appropriation line
 Austria,2021,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,,,,,,,,Annual state appropriation — core basic research funder.; dropped after original-file audit: no clean institutional appropriation line
-Austria,2022,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,,,,,,,,Annual state appropriation — core basic research funder.; dropped after original-file audit: no clean institutional appropriation line
-Austria,2023,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,,,,,,,,Annual state appropriation — core basic research funder.; dropped after original-file audit: no clean institutional appropriation line
+Austria,2022,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,120000000.0,euro,EUR,verified_override,FWF - Fonds zur Förderung der wissenschaftlichen Forschung,2022 Anlagen_0001_244184DB_8F25_451C_846B_6C4C7BD15ADA.pdf,383,Annual state appropriation — core basic research funder.; verified against original Austria budget
+Austria,2023,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,100000000.0,euro,EUR,verified_override,FWF (Fonds zur Förderung der wissenschaftlichen Forschung),2023 Anlagen_0001_C4324C91_98E6_4FDE_B63A_4BFB9024E450.pdf,452,Annual state appropriation — core basic research funder.; verified against original Austria budget
 Austria,2024,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,,,,,,,,Annual state appropriation — core basic research funder.; dropped after original-file audit: no clean institutional appropriation line
 Austria,2025,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,,,,,,,,gap: no matching rows in this year
 Austria,2026,FWF (Fonds zur Forderung der wissenschaftlichen Forschung),science_agency,,,,,,,,Annual state appropriation — core basic research funder.; dropped after original-file audit: no clean institutional appropriation line
@@ -322,8 +322,8 @@ Austria,2018,IST Austria,science_agency,,,,,,,,Annual state grant from BMBWF.; d
 Austria,2019,IST Austria,science_agency,,,,,,,,gap: no matching rows in this year
 Austria,2020,IST Austria,science_agency,,,,,,,,gap: no matching rows in this year
 Austria,2021,IST Austria,science_agency,,,,,,,,Annual state grant from BMBWF.; dropped after original-file audit: no clean institutional appropriation line
-Austria,2022,IST Austria,science_agency,,,,,,,,Annual state grant from BMBWF.; dropped after original-file audit: no clean institutional appropriation line
-Austria,2023,IST Austria,science_agency,,,,,,,,Annual state grant from BMBWF.; dropped after original-file audit: no clean institutional appropriation line
+Austria,2022,IST Austria,science_agency,25000000.0,euro,EUR,verified_override,IST Austria - Institute of Science and Technology Austria,2022 Anlagen_0001_244184DB_8F25_451C_846B_6C4C7BD15ADA.pdf,384,Annual state grant from BMBWF.; verified against original Austria budget
+Austria,2023,IST Austria,science_agency,30000000.0,euro,EUR,verified_override,IST Austria (Institute of Science and Technology Austria),2023 Anlagen_0001_C4324C91_98E6_4FDE_B63A_4BFB9024E450.pdf,452,Annual state grant from BMBWF.; verified against original Austria budget
 Austria,2024,IST Austria,science_agency,,,,,,,,gap: no matching rows in this year
 Austria,2025,IST Austria,science_agency,,,,,,,,gap: no matching rows in this year
 Austria,2026,IST Austria,science_agency,,,,,,,,Annual state grant from BMBWF.; dropped after original-file audit: no clean institutional appropriation line
@@ -495,8 +495,8 @@ Austria,2018,OAW (Osterreichische Akademie der Wissenschaften),science_agency,,,
 Austria,2019,OAW (Osterreichische Akademie der Wissenschaften),science_agency,,,,,,,,gap: no matching rows in this year
 Austria,2020,OAW (Osterreichische Akademie der Wissenschaften),science_agency,,,,,,,,gap: no matching rows in this year
 Austria,2021,OAW (Osterreichische Akademie der Wissenschaften),science_agency,,,,,,,,gap: no matching rows in this year
-Austria,2022,OAW (Osterreichische Akademie der Wissenschaften),science_agency,,,,,,,,dropped after original-file audit: no clean institutional appropriation line
-Austria,2023,OAW (Osterreichische Akademie der Wissenschaften),science_agency,,,,,,,,dropped after original-file audit: no clean institutional appropriation line
+Austria,2022,OAW (Osterreichische Akademie der Wissenschaften),science_agency,30000000.0,euro,EUR,verified_override,ÖAW - Österreichische Akademie der Wissenschaften,2022 Anlagen_0001_244184DB_8F25_451C_846B_6C4C7BD15ADA.pdf,384,verified against original Austria budget
+Austria,2023,OAW (Osterreichische Akademie der Wissenschaften),science_agency,50000000.0,euro,EUR,verified_override,ÖAW (Österreichische Akademie der Wissenschaften),2023 Anlagen_0001_C4324C91_98E6_4FDE_B63A_4BFB9024E450.pdf,452,verified against original Austria budget
 Austria,2024,OAW (Osterreichische Akademie der Wissenschaften),science_agency,,,,,,,,gap: no matching rows in this year
 Austria,2025,OAW (Osterreichische Akademie der Wissenschaften),science_agency,,,,,,,,gap: no matching rows in this year
 Austria,2026,OAW (Osterreichische Akademie der Wissenschaften),science_agency,,,,,,,,dropped after original-file audit: no clean institutional appropriation line

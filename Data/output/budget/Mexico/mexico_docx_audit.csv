@@ -1,209 +1,277 @@
 canonical_name,category,year,source_file,entity_raw,amount_current,section_name,table_index,row_index,in_series
-CIATEQ Advanced Technology Center,science_agency,2011,2011 07122010-MAT.pdf,"CIATEQ, A.C. Centro de Tecnología Avanzada",149613299.0,National Council of Science and Technology,0,72,True
-CIATEQ Advanced Technology Center,science_agency,2012,2012 12122011-MAT.pdf,"CIATEQ, A.C. Centro de Tecnología Avanzada",165312.44,CIATEQ Advanced Technology Center,0,125,True
-CIATEQ Advanced Technology Center,science_agency,2012,2012 12122011-MAT.pdf,"Total for CIATEQ, A.C. Centro de Tecnología Avanzada",165312.44,CIATEQ Advanced Technology Center,0,130,True
-CIATEQ Advanced Technology Center,science_agency,2013,2013 27122012-MAT.pdf,"CIATEQ, A.C. Centro de Tecnología Avanzada",170308467.0,National Council of Science and Technology,0,179,True
-CIATEQ Advanced Technology Center,science_agency,2014,2014 03122013-MAT.pdf,"CIATEQ, A.C. Centro de Tecnología Avanzada",246409525.0,National Council of Science and Technology,0,210,True
-CIATEQ Advanced Technology Center,science_agency,2015,2015 03122014-MAT.pdf,"CIATEQ, A.C. Centro de Tecnología Avanzada",289524.739,CIATEQ Advanced Technology Center,0,251,True
-CIATEQ Advanced Technology Center,science_agency,2015,2015 03122014-MAT.pdf,"CIATEQ, A.C. Centro de Tecnología Avanzada",259019.591,CIATEQ Advanced Technology Center,0,252,True
-CIATEQ Advanced Technology Center,science_agency,2015,2015 03122014-MAT.pdf,"Total for CIATEQ, A.C. Centro de Tecnología Avanzada",626363.102,CIATEQ Advanced Technology Center,0,258,True
-CIATEQ Advanced Technology Center,science_agency,2016,2016 27112015-MAT.pdf,"CIATEQ, A.C. Centro de Tecnología Avanzada",625054216.0,National Council of Science and Technology,0,272,True
-CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2011,2011 07122010-MAT.pdf,"Centro de Investigación Científica de Yucatán, A.C.",169203768.0,National Council of Science and Technology,0,88,True
-CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2013,2013 27122012-MAT.pdf,"Centro de Investigación Científica de Yucatán, A.C.",208205657.0,National Council of Science and Technology,0,197,True
-CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2014,2014 03122013-MAT.pdf,"Centro de Investigación Científica de Yucatán, A.C.",242522636.0,National Council of Science and Technology,0,227,True
-CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2016,2016 27112015-MAT.pdf,"Centro de Investigación Científica de Yucatán, A.C.",538429413.0,National Council of Science and Technology,0,291,True
-CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2017,2017 30112016-MAT.pdf,Budget for Centro de Investigación Científica de Yucatán,244633011.0,"Scientific Research Center of Yucatán, A.C.",0,322,True
-CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2024,2024 25112023-VES.pdf,"Centro de Investigación Científica de Yucatán, A.C.",375359683.0,"Humanities, Sciences, Technologies and Innovation",0,423,True
-CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2011,2011 07122010-MAT.pdf,"Centro de Investigación en Matemáticas, A.C.",131173865.0,National Council of Science and Technology,0,83,True
-CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2013,2013 27122012-MAT.pdf,"Centro de Investigación en Matemáticas, A.C.",157259268.0,National Council of Science and Technology,0,187,True
-CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2014,2014 03122013-MAT.pdf,"Centro de Investigación en Matemáticas, A.C.",182981293.0,National Council of Science and Technology,0,224,True
-CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2016,2016 27112015-MAT.pdf,"Centro de Investigación en Matemáticas, A.C.",207933168.0,National Council of Science and Technology,0,289,True
-CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2017,2017 30112016-MAT.pdf,Budget for Centro de Investigación en Matemáticas,166741594.0,"Research Center in Mathematics, A.C.",0,319,True
-CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2021,2021 .pdf,"Centro de Investigación en Matemáticas, A.C.",212977650.0,National Council of Science and Technology,0,400,True
-CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2024,2024 25112023-VES.pdf,"Centro de Investigación en Matemáticas, A.C.",256930521.0,"Humanities, Sciences, Technologies and Innovation",0,419,True
-CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2011,2011 07122010-MAT.pdf,"Centro de Investigación en Materiales Avanzados, S.C.",133396620.0,National Council of Science and Technology,0,79,True
-CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2013,2013 27122012-MAT.pdf,"Centro de Investigación en Materiales Avanzados, S.C.",163426361.0,National Council of Science and Technology,0,175,True
-CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2014,2014 03122013-MAT.pdf,"Centro de Investigación en Materiales Avanzados, S.C.",173524632.0,National Council of Science and Technology,0,220,True
-CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2016,2016 27112015-MAT.pdf,"Centro de Investigación en Materiales Avanzados, S.C.",246352545.0,National Council of Science and Technology,0,287,True
-CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2017,2017 30112016-MAT.pdf,Budget for Centro de Investigación en Materiales Avanzados,169545838.0,"Research Center in Advanced Materials, S.C.",0,317,True
-CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2021,2021 .pdf,"Centro de Investigación en Materiales Avanzados, S.C.",225132571.0,National Council of Science and Technology,0,398,True
-CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2006,2006 22122005-MAT.pdf,CINVESTAV,100000000.0,Public Education,0,13,True
-CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2007,2007 28122006-MAT.pdf,CINVESTAV,90000000.0,Secretariat of Public Education,0,19,True
-CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2009,2009 28112008-MAT.pdf,CINVESTAV,95000000.0,PUBLIC EDUCATION,0,40,True
-CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2011,2011 07122010-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,1882976326.0,Public Education,0,66,True
-CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2011,2011 07122010-MAT.pdf,CINVESTAV,50000000.0,National Council of Science and Technology,0,95,True
-CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2013,2013 27122012-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,2149930492.0,Public Education,0,168,True
-CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2014,2014 03122013-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,2004433950.0,National Council of Science and Technology,0,205,True
-CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2018,2018 29112017-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,2232639342.0,Secretariat of Public Education,0,351,True
-CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2020,2020 11122019-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,2404759338.0,Public Education,0,377,True
-CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2021,2021 .pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,3147042279.0,Public Education,0,395,True
-CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2024,2024 25112023-VES.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,3299640842.0,"Humanities, Sciences, Technologies and Innovation",0,415,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,1987,1987 31121986-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,0.0,National Council of Science and Technology,0,2,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2002,2002 01012002-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,500000000.0,National Council of Science and Technology,0,5,True
+CIATEQ Advanced Technology Center,science_agency,2011,2011 07122010-MAT.pdf,"CIATEQ, A.C. Centro de Tecnología Avanzada",149613299.0,National Council of Science and Technology,0,87,True
+CIATEQ Advanced Technology Center,science_agency,2012,2012 12122011-MAT.pdf,"CIATEQ, A.C. Centro de Tecnología Avanzada",165312440.0,CIATEQ Advanced Technology Center,0,434,True
+CIATEQ Advanced Technology Center,science_agency,2012,2012 12122011-MAT.pdf,"Total for CIATEQ, A.C. Centro de Tecnología Avanzada",165312440.0,CIATEQ Advanced Technology Center,0,435,True
+CIATEQ Advanced Technology Center,science_agency,2013,2013 27122012-MAT.pdf,"CIATEQ, A.C. Centro de Tecnología Avanzada",170308467.0,National Council of Science and Technology,0,177,True
+CIATEQ Advanced Technology Center,science_agency,2014,2014 03122013-MAT.pdf,"CIATEQ, A.C. Centro de Tecnología Avanzada",246409525.0,National Council of Science and Technology,0,215,True
+CIATEQ Advanced Technology Center,science_agency,2015,2015 03122014-MAT.pdf,"CIATEQ, A.C. Centro de Tecnología Avanzada",289524739.0,CIATEQ Advanced Technology Center,0,463,True
+CIATEQ Advanced Technology Center,science_agency,2015,2015 03122014-MAT.pdf,"CIATEQ, A.C. Centro de Tecnología Avanzada",259019591.0,CIATEQ Advanced Technology Center,0,464,True
+CIATEQ Advanced Technology Center,science_agency,2015,2015 03122014-MAT.pdf,"Total for CIATEQ, A.C. Centro de Tecnología Avanzada",626363102.0,CIATEQ Advanced Technology Center,0,465,True
+CIATEQ Advanced Technology Center,science_agency,2016,2016 27112015-MAT.pdf,"CIATEQ, A.C. Centro de Tecnología Avanzada",625054216.0,National Council of Science and Technology,0,258,True
+CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2011,2011 07122010-MAT.pdf,"Centro de Investigación Científica de Yucatán, A.C.",169203768.0,National Council of Science and Technology,0,73,True
+CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2012,2012 12122011-MAT.pdf,Centro de Investigación Científica de Yucatán,187782615.0,CICY — Centro de Investigación Científica de Yucatán (Mexico),0,417,True
+CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2012,2012 12122011-MAT.pdf,Total for Centro de Investigación Científica de Yucatán,204862237.0,CICY — Centro de Investigación Científica de Yucatán (Mexico),0,418,True
+CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2013,2013 27122012-MAT.pdf,"Centro de Investigación Científica de Yucatán, A.C.",208205657.0,National Council of Science and Technology,0,173,True
+CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2014,2014 03122013-MAT.pdf,"Centro de Investigación Científica de Yucatán, A.C.",242522636.0,National Council of Science and Technology,0,201,True
+CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2015,2015 03122014-MAT.pdf,Centro de Investigación Científica de Yucatán,613125433.0,CICY — Centro de Investigación Científica de Yucatán (Mexico),0,448,True
+CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2015,2015 03122014-MAT.pdf,Centro de Investigación Científica de Yucatán,257057716.0,CICY — Centro de Investigación Científica de Yucatán (Mexico),0,449,True
+CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2015,2015 03122014-MAT.pdf,Centro de Investigación Científica de Yucatán,16844666.0,CICY — Centro de Investigación Científica de Yucatán (Mexico),0,450,True
+CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2015,2015 03122014-MAT.pdf,Total for Centro de Investigación Científica de Yucatán,273902382.0,CICY — Centro de Investigación Científica de Yucatán (Mexico),0,451,True
+CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2016,2016 27112015-MAT.pdf,"Centro de Investigación Científica de Yucatán, A.C.",538429413.0,National Council of Science and Technology,0,255,True
+CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2017,2017 30112016-MAT.pdf,Budget for Centro de Investigación Científica de Yucatán,244633011.0,"Scientific Research Center of Yucatán, A.C.",0,297,True
+CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2018,2018 29112017-MAT.pdf,Centro de Investigación Científica de Yucatán,483198343.0,CICY — Centro de Investigación Científica de Yucatán (Mexico),0,480,True
+CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2018,2018 29112017-MAT.pdf,CICY Operating Budget,271674366.0,CICY — Centro de Investigación Científica de Yucatán (Mexico),0,481,True
+CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2018,2018 29112017-MAT.pdf,CICY Capital Budget,18348666.0,CICY — Centro de Investigación Científica de Yucatán (Mexico),0,482,True
+CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2018,2018 29112017-MAT.pdf,CICY Total Budget,290023032.0,CICY — Centro de Investigación Científica de Yucatán (Mexico),0,483,True
+CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2021,2021 .pdf,Centro de Investigación Científica de Yucatán,279897779.0,CICY — Centro de Investigación Científica de Yucatán (Mexico),0,496,True
+CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2021,2021 .pdf,Centro de Investigación Científica de Yucatán Total,318466754.0,CICY — Centro de Investigación Científica de Yucatán (Mexico),0,497,True
+CICY — Centro de Investigación Científica de Yucatán (Mexico),research_institute,2024,2024 25112023-VES.pdf,"Centro de Investigación Científica de Yucatán, A.C.",375359683.0,"Humanities, Sciences, Technologies and Innovation",0,392,True
+CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2011,2011 07122010-MAT.pdf,"Centro de Investigación en Matemáticas, A.C.",131173865.0,National Council of Science and Technology,0,77,True
+CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2012,2012 12122011-MAT.pdf,"Centro de Investigación en Matemáticas, A.C.",133515114.0,CIMAT — Centro de Investigación en Matemáticas (Mexico),0,421,True
+CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2012,2012 12122011-MAT.pdf,"Centro de Investigación en Matemáticas, A.C.",315777.0,CIMAT — Centro de Investigación en Matemáticas (Mexico),0,422,True
+CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2013,2013 27122012-MAT.pdf,"Centro de Investigación en Matemáticas, A.C.",157259268.0,National Council of Science and Technology,0,166,True
+CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2014,2014 03122013-MAT.pdf,"Centro de Investigación en Matemáticas, A.C.",182981293.0,National Council of Science and Technology,0,205,True
+CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2016,2016 27112015-MAT.pdf,"Centro de Investigación en Matemáticas, A.C.",207933168.0,National Council of Science and Technology,0,249,True
+CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2017,2017 30112016-MAT.pdf,Budget for Centro de Investigación en Matemáticas,166741594.0,"Research Center in Mathematics, A.C.",0,290,True
+CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2018,2018 29112017-MAT.pdf,"Centro de Investigación en Matemáticas, A.C.",65351542.0,CIMAT — Centro de Investigación en Matemáticas (Mexico),0,486,True
+CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2018,2018 29112017-MAT.pdf,Total for Centro de Investigación en Matemáticas,170063398.0,CIMAT — Centro de Investigación en Matemáticas (Mexico),0,487,True
+CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2020,2020 11122019-MAT.pdf,Centro de Investigación en Matemáticas,6573239.0,CIMAT — Centro de Investigación en Matemáticas (Mexico),0,491,True
+CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2020,2020 11122019-MAT.pdf,Centro de Investigación en Matemáticas,185136476.0,CIMAT — Centro de Investigación en Matemáticas (Mexico),0,492,True
+CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2020,2020 11122019-MAT.pdf,Centro de Investigación en Matemáticas,25432338.0,CIMAT — Centro de Investigación en Matemáticas (Mexico),0,493,True
+CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2020,2020 11122019-MAT.pdf,Centro de Investigación en Matemáticas,210568814.0,CIMAT — Centro de Investigación en Matemáticas (Mexico),0,494,True
+CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2021,2021 .pdf,"Centro de Investigación en Matemáticas, A.C.",212977650.0,National Council of Science and Technology,0,370,True
+CIMAT — Centro de Investigación en Matemáticas (Mexico),research_institute,2024,2024 25112023-VES.pdf,"Centro de Investigación en Matemáticas, A.C.",256930521.0,"Humanities, Sciences, Technologies and Innovation",0,394,True
+CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2011,2011 07122010-MAT.pdf,"Centro de Investigación en Materiales Avanzados, S.C.",133396620.0,National Council of Science and Technology,0,78,True
+CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2012,2012 12122011-MAT.pdf,Centro de Investigación en Materiales Avanzados,139828783.0,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),0,419,True
+CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2012,2012 12122011-MAT.pdf,Total for Centro de Investigación en Materiales Avanzados,165828783.0,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),0,420,True
+CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2013,2013 27122012-MAT.pdf,"Centro de Investigación en Materiales Avanzados, S.C.",163426361.0,National Council of Science and Technology,0,167,True
+CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2014,2014 03122013-MAT.pdf,"Centro de Investigación en Materiales Avanzados, S.C.",173524632.0,National Council of Science and Technology,0,206,True
+CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2015,2015 03122014-MAT.pdf,CIMAV,253443886.0,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),0,452,True
+CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2016,2016 27112015-MAT.pdf,"Centro de Investigación en Materiales Avanzados, S.C.",246352545.0,National Council of Science and Technology,0,250,True
+CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2017,2017 30112016-MAT.pdf,Budget for Centro de Investigación en Materiales Avanzados,169545838.0,"Research Center in Advanced Materials, S.C.",0,291,True
+CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2018,2018 29112017-MAT.pdf,Centro de Investigación en Materiales Avanzados,197778225.0,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),0,484,True
+CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2018,2018 29112017-MAT.pdf,Total for CIMAV,237156031.0,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),0,485,True
+CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2021,2021 .pdf,"Centro de Investigación en Materiales Avanzados, S.C.",225132571.0,National Council of Science and Technology,0,371,True
+CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2024,2024 25112023-VES.pdf,Centro de Investigación en Materiales Avanzados,256930521.0,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),0,501,True
+CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2024,2024 25112023-VES.pdf,Centro de Investigación en Materiales Avanzados,230369308.0,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),0,502,True
+CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2024,2024 25112023-VES.pdf,Centro de Investigación en Materiales Avanzados,26492056.0,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),0,503,True
+CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),research_institute,2024,2024 25112023-VES.pdf,Total for Centro de Investigación en Materiales Avanzados,256861364.0,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),0,504,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2006,2006 22122005-MAT.pdf,CINVESTAV,100000000.0,Public Education,0,14,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2007,2007 28122006-MAT.pdf,CINVESTAV,90000000.0,Secretariat of Public Education,0,20,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2008,2008 13122007-MAT.pdf,CINVESTAV,175000000.0,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),0,410,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2009,2009 28112008-MAT.pdf,CINVESTAV,95000000.0,PUBLIC EDUCATION,0,41,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2010,2010 07122009-MAT.pdf,CINVESTAV,90000000.0,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),0,412,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2011,2011 07122010-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,1882976326.0,Public Education,0,69,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2011,2011 07122010-MAT.pdf,CINVESTAV,50000000.0,National Council of Science and Technology,0,96,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2012,2012 12122011-MAT.pdf,CINVESTAV,2079491959.0,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),0,415,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2012,2012 12122011-MAT.pdf,Total for CINVESTAV,2079491959.0,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),0,416,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2013,2013 27122012-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,2149930492.0,Public Education,0,160,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2014,2014 03122013-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,2004433950.0,National Council of Science and Technology,0,198,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2015,2015 03122014-MAT.pdf,CINVESTAV,2154034115.0,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),0,447,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2016,2016 27112015-MAT.pdf,CINVESTAV,2203483307.0,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),0,468,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2016,2016 27112015-MAT.pdf,CINVESTAV,2796471.0,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),0,469,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2016,2016 27112015-MAT.pdf,Total for CINVESTAV,2941474511.0,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),0,470,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2017,2017 30112016-MAT.pdf,CINVESTAV,2214619094.0,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),0,473,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2017,2017 30112016-MAT.pdf,CINVESTAV,892013518.0,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),0,474,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2017,2017 30112016-MAT.pdf,CINVESTAV Total,3106632612.0,CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),0,475,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2018,2018 29112017-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,2232639342.0,Secretariat of Public Education,0,326,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2020,2020 11122019-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,2404759338.0,Public Education,0,356,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2021,2021 .pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,3147042279.0,Public Education,0,374,True
+CINVESTAV — Centro de Investigación y Estudios Avanzados (Mexico),research_institute,2024,2024 25112023-VES.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,3299640842.0,"Humanities, Sciences, Technologies and Innovation",0,387,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,1987,1987 31121986-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,0.0,National Council of Science and Technology,0,1,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2002,2002 01012002-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,500000000.0,National Council of Science and Technology,0,4,True
 CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2003,2003 30122002-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,22308411002.0,National Council of Science and Technology,0,6,True
 CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2003,2003 30122002-MAT.pdf,Programas del Consejo Nacional de Ciencia y Tecnología (CONACYT),,National Council of Science and Technology,0,7,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2006,2006 22122005-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,8859247600.0,National Council of Science and Technology,0,10,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2006,2006 22122005-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,0.0,National Council of Science and Technology,0,16,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2006,2006 22122005-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,0.0,National Council of Science and Technology,0,9,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2006,2006 22122005-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,8859247600.0,National Council of Science and Technology,0,11,True
 CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2007,2007 28122006-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,9330648958.0,National Council of Science and Technology,0,17,True
 CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2008,2008 13122007-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,11876003700.0,National Council of Science and Technology,0,23,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2008,2008 13122007-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,1000000000.0,National Council of Science and Technology,0,31,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2008,2008 13122007-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,1000000000.0,National Council of Science and Technology,0,25,True
 CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2008,2008 13122007-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,0.0,National Council of Science and Technology,0,32,True
 CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2009,2009 28112008-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,15474732726.0,National Council of Science and Technology,0,35,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2009,2009 28112008-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,15524732726.0,National Council of Science and Technology,0,39,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2009,2009 28112008-MAT.pdf,CONSEJO NACIONAL DE CIENCIA Y TECNOLOGÍA,150000000.0,NATIONAL COUNCIL OF SCIENCE AND TECHNOLOGY,0,45,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2010,2010 07122009-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,15946592413.0,National Council of Science and Technology,0,47,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2010,2010 07122009-MAT.pdf,Fondo Mixto CONACYT-Estado,,National Council of Science and Technology,0,49,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2010,2010 07122009-MAT.pdf,Fondo Sectorial CONACYT-SEP,,National Council of Science and Technology,0,52,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2010,2010 07122009-MAT.pdf,CONSEJO NACIONAL DE CIENCIA Y TECNOLOGÍA,730000000.0,NATIONAL COUNCIL OF SCIENCE AND TECHNOLOGY,0,60,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2011,2011 07122010-MAT.pdf,Fondo Mixto CONACYT-Estado,,Ramo 38 - National Council of Science and Technology,0,62,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2011,2011 07122010-MAT.pdf,Fondo Sectorial CONACYT-SEP,,Ramo 38 - National Council of Science and Technology,0,63,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2011,2011 07122010-MAT.pdf,Ramo 38 - Consejo Nacional de Ciencia y Tecnología,17279570709.0,Ramo 38 - National Council of Science and Technology,0,64,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2009,2009 28112008-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,15524732726.0,National Council of Science and Technology,0,37,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2009,2009 28112008-MAT.pdf,CONSEJO NACIONAL DE CIENCIA Y TECNOLOGÍA,150000000.0,NATIONAL COUNCIL OF SCIENCE AND TECHNOLOGY,0,44,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2010,2010 07122009-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,15946592413.0,National Council of Science and Technology,0,46,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2010,2010 07122009-MAT.pdf,Fondo Sectorial CONACYT-SEP,,National Council of Science and Technology,0,47,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2010,2010 07122009-MAT.pdf,Fondo Mixto CONACYT-Estado,,National Council of Science and Technology,0,48,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2010,2010 07122009-MAT.pdf,CONSEJO NACIONAL DE CIENCIA Y TECNOLOGÍA,730000000.0,NATIONAL COUNCIL OF SCIENCE AND TECHNOLOGY,0,53,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2011,2011 07122010-MAT.pdf,Ramo 38 - Consejo Nacional de Ciencia y Tecnología,17279570709.0,Ramo 38 - National Council of Science and Technology,0,61,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2011,2011 07122010-MAT.pdf,Fondo Sectorial CONACYT-SEP,,Ramo 38 - National Council of Science and Technology,0,62,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2011,2011 07122010-MAT.pdf,Fondo Mixto CONACYT-Estado,,Ramo 38 - National Council of Science and Technology,0,63,True
 CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2011,2011 07122010-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,17619011554.0,National Council of Science and Technology,0,65,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2011,2011 07122010-MAT.pdf,Fondo Sectorial CONACYT-SEP,17279570709.0,National Council of Science and Technology,0,70,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2011,2011 07122010-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,17279570709.0,National Council of Science and Technology,0,94,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2011,2011 07122010-MAT.pdf,CONACYT,17279570709.0,National Council of Science and Technology,0,96,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2011,2011 07122010-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,515000000.0,NATIONAL COUNCIL OF SCIENCE AND TECHNOLOGY,0,108,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2011,2011 07122010-MAT.pdf,CONSEJO NACIONAL DE CIENCIA Y TECNOLOGÍA,540000000.0,NATIONAL COUNCIL OF SCIENCE AND TECHNOLOGY,0,113,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2011,2011 07122010-MAT.pdf,Fondo Sectorial CONACYT-SEP,17279570709.0,National Council of Science and Technology,0,66,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2011,2011 07122010-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,17279570709.0,National Council of Science and Technology,0,71,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2011,2011 07122010-MAT.pdf,CONACYT,17279570709.0,National Council of Science and Technology,0,95,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2011,2011 07122010-MAT.pdf,CONSEJO NACIONAL DE CIENCIA Y TECNOLOGÍA,540000000.0,NATIONAL COUNCIL OF SCIENCE AND TECHNOLOGY,0,97,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2011,2011 07122010-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,515000000.0,NATIONAL COUNCIL OF SCIENCE AND TECHNOLOGY,0,98,True
 CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2012,2012 12122011-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,21872176958.0,National Council of Science and Technology,0,118,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2012,2012 12122011-MAT.pdf,Hipercentro de Investigación CONACYT,5000000.0,National Council of Science and Technology,0,135,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2012,2012 12122011-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,615000000.0,National Council of Science and Technology,0,143,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2012,2012 12122011-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,636500000.0,National Council of Science and Technology,0,146,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2012,2012 12122011-MAT.pdf,Constitución del Fondo Mixto CONACYT,7000000.0,Ramo 38: CONACYT,0,162,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2013,2013 27122012-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,25245962047.0,National Council of Science and Technology,0,167,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2013,2013 27122012-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,57888405814.0,National Council of Science and Technology,0,174,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2013,2013 27122012-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,25245962047.0,National Council of Science and Technology,0,200,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2014,2014 03122013-MAT.pdf,Fondo Sectorial CONACYT-SENER,,National Council of Science and Technology,0,202,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2014,2014 03122013-MAT.pdf,Fondo Sectorial CONACYT-SEP,,National Council of Science and Technology,0,203,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2014,2014 03122013-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,31086324134.0,National Council of Science and Technology,0,204,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2014,2014 03122013-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,340467410288.0,National Council of Science and Technology,0,232,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2014,2014 03122013-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,289972169720.0,National Council of Science and Technology,0,235,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2015,2015 03122014-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,33706667621.0,National Council of Science and Technology,0,241,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2015,2015 03122014-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,245050710.0,National Council of Science and Technology,0,262,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2016,2016 27112015-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,34010260421.0,National Council of Science and Technology,0,264,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2016,2016 27112015-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,37929796845.0,National Council of Science and Technology,0,293,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2016,2016 27112015-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,0.0,National Council of Science and Technology,0,294,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2016,2016 27112015-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,34010260421.0,National Council of Science and Technology,0,308,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2017,2017 30112016-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,26963512279.0,National Council of Science and Technology,0,310,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2017,2017 30112016-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,30652888332.0,National Council of Science and Technology,0,313,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2017,2017 30112016-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,90000000.0,National Council of Science and Technology,0,325,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2017,2017 30112016-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,366029992.0,National Council of Science and Technology,0,329,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2017,2017 30112016-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,26963512279.0,National Council of Science and Technology,0,338,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2017,2017 30112016-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,2659679781361.0,National Council of Science and Technology,0,339,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2017,2017 30112016-MAT.pdf,Fondo Mixto CONACYT-Estado,500000000.0,National Council of Science and Technology,0,341,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2017,2017 30112016-MAT.pdf,Fondo Sectorial CONACYT-SEP,1000000000.0,National Council of Science and Technology,0,346,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2018,2018 29112017-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,27225876510.0,National Council of Science and Technology,0,347,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2018,2018 29112017-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,31191272967.0,National Council of Science and Technology,0,359,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2018,2018 29112017-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,66335191.0,National Council of Science and Technology,0,368,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2020,2020 11122019-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,25658798449.0,National Council of Science and Technology,0,376,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2020,2020 11122019-MAT.pdf,Fondo Sectorial CONACYT-SENER,500000000.0,National Council of Science and Technology,0,382,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2020,2020 11122019-MAT.pdf,Fondo Sectorial CONACYT-SEP,1000000000.0,National Council of Science and Technology,0,383,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2020,2020 11122019-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,238031986.0,National Council of Science and Technology,0,386,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2021,2021 .pdf,Consejo Nacional de Ciencia y Tecnología,26573104028.0,National Council of Science and Technology,0,391,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2021,2021 .pdf,Consejo Nacional de Ciencia y Tecnología,224105958.0,National Council of Science and Technology,0,392,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2021,2021 .pdf,Consejo Nacional de Ciencia y Tecnología,30291180394.0,National Council of Science and Technology,0,402,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2021,2021 .pdf,Consejo Nacional de Ciencia y Tecnología,20189829182.0,National Council of Science and Technology,0,403,True
-CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2021,2021 .pdf,Consejo Nacional de Ciencia y Tecnología,40681358.0,National Council of Science and Technology,0,409,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2012,2012 12122011-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,636500000.0,National Council of Science and Technology,0,122,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2012,2012 12122011-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,615000000.0,National Council of Science and Technology,0,123,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2012,2012 12122011-MAT.pdf,Hipercentro de Investigación CONACYT,5000000.0,National Council of Science and Technology,0,138,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2012,2012 12122011-MAT.pdf,Constitución del Fondo Mixto CONACYT,7000000.0,Ramo 38: CONACYT,0,149,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2013,2013 27122012-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,25245962047.0,National Council of Science and Technology,0,155,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2013,2013 27122012-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,57888405814.0,National Council of Science and Technology,0,161,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2013,2013 27122012-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,25245962047.0,National Council of Science and Technology,0,164,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2014,2014 03122013-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,31086324134.0,National Council of Science and Technology,0,190,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2014,2014 03122013-MAT.pdf,Fondo Sectorial CONACYT-SEP,,National Council of Science and Technology,0,191,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2014,2014 03122013-MAT.pdf,Fondo Sectorial CONACYT-SENER,,National Council of Science and Technology,0,192,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2014,2014 03122013-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,340467410288.0,National Council of Science and Technology,0,194,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2014,2014 03122013-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,289972169720.0,National Council of Science and Technology,0,222,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2015,2015 03122014-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,33706667621.0,National Council of Science and Technology,0,228,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2015,2015 03122014-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,245050710.0,National Council of Science and Technology,0,236,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2016,2016 27112015-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,34010260421.0,National Council of Science and Technology,0,240,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2016,2016 27112015-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,37929796845.0,National Council of Science and Technology,0,247,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2016,2016 27112015-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,0.0,National Council of Science and Technology,0,271,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2016,2016 27112015-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,34010260421.0,National Council of Science and Technology,0,282,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2017,2017 30112016-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,26963512279.0,National Council of Science and Technology,0,286,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2017,2017 30112016-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,30652888332.0,National Council of Science and Technology,0,288,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2017,2017 30112016-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,90000000.0,National Council of Science and Technology,0,298,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2017,2017 30112016-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,366029992.0,National Council of Science and Technology,0,301,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2017,2017 30112016-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,26963512279.0,National Council of Science and Technology,0,307,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2017,2017 30112016-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,2659679781361.0,National Council of Science and Technology,0,314,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2017,2017 30112016-MAT.pdf,Fondo Sectorial CONACYT-SEP,1000000000.0,National Council of Science and Technology,0,315,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2017,2017 30112016-MAT.pdf,Fondo Mixto CONACYT-Estado,500000000.0,National Council of Science and Technology,0,316,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2018,2018 29112017-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,27225876510.0,National Council of Science and Technology,0,322,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2018,2018 29112017-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,31191272967.0,National Council of Science and Technology,0,332,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2018,2018 29112017-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,66335191.0,National Council of Science and Technology,0,337,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2020,2020 11122019-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,25658798449.0,National Council of Science and Technology,0,350,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2020,2020 11122019-MAT.pdf,Fondo Sectorial CONACYT-SEP,1000000000.0,National Council of Science and Technology,0,351,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2020,2020 11122019-MAT.pdf,Fondo Sectorial CONACYT-SENER,500000000.0,National Council of Science and Technology,0,352,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2020,2020 11122019-MAT.pdf,Consejo Nacional de Ciencia y Tecnología,238031986.0,National Council of Science and Technology,0,358,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2021,2021 .pdf,Consejo Nacional de Ciencia y Tecnología,26573104028.0,National Council of Science and Technology,0,362,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2021,2021 .pdf,Consejo Nacional de Ciencia y Tecnología,224105958.0,National Council of Science and Technology,0,366,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2021,2021 .pdf,Consejo Nacional de Ciencia y Tecnología,30291180394.0,National Council of Science and Technology,0,368,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2021,2021 .pdf,Consejo Nacional de Ciencia y Tecnología,20189829182.0,National Council of Science and Technology,0,375,True
+CONACYT / CONAHCyT — Ramo 38 (Mexico),rd_agency,2021,2021 .pdf,Consejo Nacional de Ciencia y Tecnología,40681358.0,National Council of Science and Technology,0,379,True
 Centros Públicos de Investigación CONACYT (Mexico),research_institute,2003,2003 30122002-MAT.pdf,Centros de investigación,300000000.0,Secretariat of Public Education,0,8,True
-Centros Públicos de Investigación CONACYT (Mexico),research_institute,2008,2008 13122007-MAT.pdf,Apoyos Institucionales (Inversión en Centros Públicos de Investigación),140500000.0,National Council of Science and Technology,0,25,True
+Centros Públicos de Investigación CONACYT (Mexico),research_institute,2008,2008 13122007-MAT.pdf,Apoyos Institucionales (Inversión en Centros Públicos de Investigación),140500000.0,National Council of Science and Technology,0,30,True
 Centros Públicos de Investigación CONACYT (Mexico),research_institute,2010,2010 07122009-MAT.pdf,Centros Públicos de Investigación,,National Council of Science and Technology,0,50,True
-Centros Públicos de Investigación CONACYT (Mexico),research_institute,2011,2011 07122010-MAT.pdf,Apoyos institucionales para centros públicos de investigación,,Ramo 38 - National Council of Science and Technology,0,61,True
-Centros Públicos de Investigación CONACYT (Mexico),research_institute,2011,2011 07122010-MAT.pdf,Ampliación del parque de investigación e innovación tecnológica (PIIT) y construcción de centros de investigación,72000000.0,NATIONAL COUNCIL OF SCIENCE AND TECHNOLOGY,0,105,True
-Centros Públicos de Investigación CONACYT (Mexico),research_institute,2014,2014 03122013-MAT.pdf,Apoyos institucionales para centros públicos de investigación,,National Council of Science and Technology,0,201,True
-Centros Públicos de Investigación CONACYT (Mexico),research_institute,2017,2017 30112016-MAT.pdf,Centros Públicos de Investigación,1500000000.0,National Council of Science and Technology,0,342,True
-Chapingo Autonomous University,higher_education,2016,2016 27112015-MAT.pdf,Universidad Autónoma Chapingo,2553400000.0,National Council of Science and Technology,0,265,True
-College of the Northern Border,science_agency,2011,2011 07122010-MAT.pdf,"El Colegio de la Frontera Norte, A.C.",202926687.0,National Council of Science and Technology,0,92,True
-College of the Northern Border,science_agency,2012,2012 12122011-MAT.pdf,"El Colegio de la Frontera Norte, A.C.",921593.264,College of the Northern Border,0,126,True
-College of the Northern Border,science_agency,2012,2012 12122011-MAT.pdf,"El Colegio de la Frontera Norte, A.C.",219151.975,College of the Northern Border,0,127,True
-College of the Northern Border,science_agency,2013,2013 27122012-MAT.pdf,"El Colegio de la Frontera Norte, A.C.",237876070.0,National Council of Science and Technology,0,190,True
-College of the Northern Border,science_agency,2014,2014 03122013-MAT.pdf,"El Colegio de la Frontera Norte, A.C.",271522460.0,National Council of Science and Technology,0,215,True
-College of the Northern Border,science_agency,2015,2015 03122014-MAT.pdf,"El Colegio de la Frontera Norte, A.C.",990870.817,College of the Northern Border,0,253,True
-College of the Northern Border,science_agency,2016,2016 27112015-MAT.pdf,"El Colegio de la Frontera Norte, A.C.",341059907.0,National Council of Science and Technology,0,279,True
-College of the Southern Border,science_agency,2011,2011 07122010-MAT.pdf,El Colegio de la Frontera Sur,239272825.0,National Council of Science and Technology,0,93,True
-College of the Southern Border,science_agency,2012,2012 12122011-MAT.pdf,El Colegio de la Frontera Sur,249416.975,College of the Southern Border,0,128,True
-College of the Southern Border,science_agency,2012,2012 12122011-MAT.pdf,Total for El Colegio de la Frontera Sur,267830.89,College of the Southern Border,0,131,True
-College of the Southern Border,science_agency,2013,2013 27122012-MAT.pdf,El Colegio de la Frontera Sur,298204244.0,National Council of Science and Technology,0,199,True
-College of the Southern Border,science_agency,2014,2014 03122013-MAT.pdf,El Colegio de la Frontera Sur,330806751.0,National Council of Science and Technology,0,216,True
-College of the Southern Border,science_agency,2015,2015 03122014-MAT.pdf,El Colegio de la Frontera Sur,353732.033,College of the Southern Border,0,254,True
-College of the Southern Border,science_agency,2015,2015 03122014-MAT.pdf,El Colegio de la Frontera Sur,330897.262,College of the Southern Border,0,255,True
-College of the Southern Border,science_agency,2015,2015 03122014-MAT.pdf,El Colegio de la Frontera Sur,63306.758,College of the Southern Border,0,256,True
-College of the Southern Border,science_agency,2016,2016 27112015-MAT.pdf,El Colegio de la Frontera Sur,401212700.0,National Council of Science and Technology,0,280,True
-Development of Equipment for Mechatronics,direct_rd,2012,2012 12122011-MAT.pdf,Desarrollo de equipamiento para mecatrónica,10900000.0,Ramo 38: CONACYT,0,159,True
-Development of Medicines from Endemic Medicinal Plants of Tlaxcala,direct_rd,2012,2012 12122011-MAT.pdf,Desarrollo de medicamentos a partir de plantas medicinales endemáticas de Tlaxcala,532000.0,Ramo 38: CONACYT,0,160,True
-Ecology Institute,science_agency,2011,2011 07122010-MAT.pdf,"Instituto de Ecología, A.C.",208060201.0,National Council of Science and Technology,0,85,True
-Ecology Institute,science_agency,2012,2012 12122011-MAT.pdf,"Instituto de Ecología, A.C.",178719.802,Ecology Institute,0,129,True
-Ecology Institute,science_agency,2012,2012 12122011-MAT.pdf,"Total for Instituto de Ecología, A.C.",215321.479,Ecology Institute,0,132,True
-Ecology Institute,science_agency,2013,2013 27122012-MAT.pdf,"Instituto de Ecología, A.C.",233223136.0,National Council of Science and Technology,0,184,True
-Ecology Institute,science_agency,2014,2014 03122013-MAT.pdf,"Instituto de Ecología, A.C.",255820.053,Ecology Institute,0,217,True
-Ecology Institute,science_agency,2014,2014 03122013-MAT.pdf,"Total Instituto de Ecología, A.C.",315188.118,Ecology Institute,0,229,True
-Ecology Institute,science_agency,2015,2015 03122014-MAT.pdf,"Instituto de Ecología, A.C.",203491.46,Ecology Institute,0,257,True
-Ecology Institute,science_agency,2016,2016 27112015-MAT.pdf,"Instituto de Ecología, A.C.",350359050.0,National Council of Science and Technology,0,282,True
-Global Change and Environmental Sustainability (Stage 2),science_agency,2012,2012 12122011-MAT.pdf,Cambio Global y Sustentabilidad Ambiental (Etapa 2),12000000.0,National Council of Science and Technology,0,141,True
-"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2013,2013 27122012-MAT.pdf,"Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias",1317238965.0,National Council of Science and Technology,0,171,True
-"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2016,2016 27112015-MAT.pdf,"Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias",1091480035.0,National Council of Science and Technology,0,267,True
-ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,2010,2010 07122009-MAT.pdf,Instituto Nacional de Investigaciones Nucleares,,Energy,0,46,True
-ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,2011,2011 07122010-MAT.pdf,Instituto Nacional de Investigaciones Nucleares,451714399.0,Energy,0,87,True
-ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,2017,2017 30112016-MAT.pdf,Investigación y Desarrollo en el ININ,500000000.0,Secretariat of Energy,0,343,True
-ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,2018,2018 29112017-MAT.pdf,Instituto Nacional de Investigaciones Nucleares,543755159.0,Energy,0,358,True
-ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,2020,2020 11122019-MAT.pdf,Instituto Nacional de Investigaciones Nucleares,906393775.0,Energy,0,380,True
-ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,2021,2021 .pdf,Instituto Nacional de Investigaciones Nucleares,922773729.0,Energy,0,401,True
-IPN — Instituto Politécnico Nacional (Mexico),higher_education,2006,2006 22122005-MAT.pdf,IPN,212500000.0,Public Education,0,14,True
-IPN — Instituto Politécnico Nacional (Mexico),higher_education,2007,2007 28122006-MAT.pdf,IPN,491000000.0,Secretariat of Public Education,0,20,True
-IPN — Instituto Politécnico Nacional (Mexico),higher_education,2009,2009 28112008-MAT.pdf,IPN,450000000.0,PUBLIC EDUCATION,0,41,True
-IPN — Instituto Politécnico Nacional (Mexico),higher_education,2011,2011 07122010-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,1882976326.0,Public Education,0,66,True
-IPN — Instituto Politécnico Nacional (Mexico),higher_education,2013,2013 27122012-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,2149930492.0,Public Education,0,168,True
-IPN — Instituto Politécnico Nacional (Mexico),higher_education,2013,2013 27122012-MAT.pdf,Instituto Politécnico Nacional,1334916427.0,Public Education,0,172,True
-IPN — Instituto Politécnico Nacional (Mexico),higher_education,2014,2014 03122013-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,2004433950.0,National Council of Science and Technology,0,205,True
-IPN — Instituto Politécnico Nacional (Mexico),higher_education,2017,2017 30112016-MAT.pdf,Investigación y Desarrollo en el IPN,300000000.0,Secretariat of Public Education,0,344,True
-IPN — Instituto Politécnico Nacional (Mexico),higher_education,2018,2018 29112017-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,2232639342.0,Secretariat of Public Education,0,351,True
-IPN — Instituto Politécnico Nacional (Mexico),higher_education,2018,2018 29112017-MAT.pdf,Instituto Politécnico Nacional,3929918682.0,Secretariat of Public Education,0,354,True
-IPN — Instituto Politécnico Nacional (Mexico),higher_education,2020,2020 11122019-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,2404759338.0,Public Education,0,377,True
-IPN — Instituto Politécnico Nacional (Mexico),higher_education,2020,2020 11122019-MAT.pdf,Instituto Politécnico Nacional - Investigación,4362211241.2,Public Education,0,381,True
-IPN — Instituto Politécnico Nacional (Mexico),higher_education,2021,2021 .pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,3147042279.0,Public Education,0,395,True
-IPN — Instituto Politécnico Nacional (Mexico),higher_education,2024,2024 25112023-VES.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,3299640842.0,"Humanities, Sciences, Technologies and Innovation",0,415,True
-IPN — Instituto Politécnico Nacional (Mexico),higher_education,2024,2024 25112023-VES.pdf,Instituto Politécnico Nacional,5446575745.0,"Humanities, Sciences, Technologies and Innovation",0,422,True
+Centros Públicos de Investigación CONACYT (Mexico),research_institute,2011,2011 07122010-MAT.pdf,Apoyos institucionales para centros públicos de investigación,,Ramo 38 - National Council of Science and Technology,0,64,True
+Centros Públicos de Investigación CONACYT (Mexico),research_institute,2011,2011 07122010-MAT.pdf,Ampliación del parque de investigación e innovación tecnológica (PIIT) y construcción de centros de investigación,72000000.0,NATIONAL COUNCIL OF SCIENCE AND TECHNOLOGY,0,99,True
+Centros Públicos de Investigación CONACYT (Mexico),research_institute,2014,2014 03122013-MAT.pdf,Apoyos institucionales para centros públicos de investigación,,National Council of Science and Technology,0,193,True
+Centros Públicos de Investigación CONACYT (Mexico),research_institute,2015,2015 03122014-MAT.pdf,CIMAV,253443886.0,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),0,452,True
+Centros Públicos de Investigación CONACYT (Mexico),research_institute,2017,2017 30112016-MAT.pdf,Centros Públicos de Investigación,1500000000.0,National Council of Science and Technology,0,318,True
+Centros Públicos de Investigación CONACYT (Mexico),research_institute,2018,2018 29112017-MAT.pdf,CICY Operating Budget,271674366.0,CICY — Centro de Investigación Científica de Yucatán (Mexico),0,481,True
+Centros Públicos de Investigación CONACYT (Mexico),research_institute,2018,2018 29112017-MAT.pdf,CICY Capital Budget,18348666.0,CICY — Centro de Investigación Científica de Yucatán (Mexico),0,482,True
+Centros Públicos de Investigación CONACYT (Mexico),research_institute,2018,2018 29112017-MAT.pdf,CICY Total Budget,290023032.0,CICY — Centro de Investigación Científica de Yucatán (Mexico),0,483,True
+Centros Públicos de Investigación CONACYT (Mexico),research_institute,2018,2018 29112017-MAT.pdf,Total for CIMAV,237156031.0,CIMAV — Centro de Investigación en Materiales Avanzados (Mexico),0,485,True
+Chapingo Autonomous University,higher_education,2016,2016 27112015-MAT.pdf,Universidad Autónoma Chapingo,2553400000.0,National Council of Science and Technology,0,246,True
+College of the Northern Border,science_agency,2011,2011 07122010-MAT.pdf,"El Colegio de la Frontera Norte, A.C.",202926687.0,National Council of Science and Technology,0,88,True
+College of the Northern Border,science_agency,2012,2012 12122011-MAT.pdf,"El Colegio de la Frontera Norte, A.C.",921593264.0,College of the Northern Border,0,438,True
+College of the Northern Border,science_agency,2012,2012 12122011-MAT.pdf,"El Colegio de la Frontera Norte, A.C.",219151975.0,College of the Northern Border,0,439,True
+College of the Northern Border,science_agency,2013,2013 27122012-MAT.pdf,"El Colegio de la Frontera Norte, A.C.",237876070.0,National Council of Science and Technology,0,178,True
+College of the Northern Border,science_agency,2014,2014 03122013-MAT.pdf,"El Colegio de la Frontera Norte, A.C.",271522460.0,National Council of Science and Technology,0,217,True
+College of the Northern Border,science_agency,2015,2015 03122014-MAT.pdf,"El Colegio de la Frontera Norte, A.C.",990870817.0,College of the Northern Border,0,467,True
+College of the Northern Border,science_agency,2016,2016 27112015-MAT.pdf,"El Colegio de la Frontera Norte, A.C.",341059907.0,National Council of Science and Technology,0,260,True
+College of the Southern Border,science_agency,2011,2011 07122010-MAT.pdf,El Colegio de la Frontera Sur,239272825.0,National Council of Science and Technology,0,89,True
+College of the Southern Border,science_agency,2012,2012 12122011-MAT.pdf,El Colegio de la Frontera Sur,249416975.0,College of the Southern Border,0,432,True
+College of the Southern Border,science_agency,2012,2012 12122011-MAT.pdf,Total for El Colegio de la Frontera Sur,267830890.0,College of the Southern Border,0,433,True
+College of the Southern Border,science_agency,2013,2013 27122012-MAT.pdf,El Colegio de la Frontera Sur,298204244.0,National Council of Science and Technology,0,179,True
+College of the Southern Border,science_agency,2014,2014 03122013-MAT.pdf,El Colegio de la Frontera Sur,330806751.0,National Council of Science and Technology,0,218,True
+College of the Southern Border,science_agency,2015,2015 03122014-MAT.pdf,El Colegio de la Frontera Sur,353732033.0,College of the Southern Border,0,460,True
+College of the Southern Border,science_agency,2015,2015 03122014-MAT.pdf,El Colegio de la Frontera Sur,330897262.0,College of the Southern Border,0,461,True
+College of the Southern Border,science_agency,2015,2015 03122014-MAT.pdf,El Colegio de la Frontera Sur,63306758.0,College of the Southern Border,0,462,True
+College of the Southern Border,science_agency,2016,2016 27112015-MAT.pdf,El Colegio de la Frontera Sur,401212700.0,National Council of Science and Technology,0,261,True
+Development of Equipment for Mechatronics,direct_rd,2012,2012 12122011-MAT.pdf,Desarrollo de equipamiento para mecatrónica,10900000.0,Ramo 38: CONACYT,0,152,True
+Development of Medicines from Endemic Medicinal Plants of Tlaxcala,direct_rd,2012,2012 12122011-MAT.pdf,Desarrollo de medicamentos a partir de plantas medicinales endemáticas de Tlaxcala,532000.0,Ramo 38: CONACYT,0,150,True
+Ecology Institute,science_agency,2011,2011 07122010-MAT.pdf,"Instituto de Ecología, A.C.",208060201.0,National Council of Science and Technology,0,92,True
+Ecology Institute,science_agency,2012,2012 12122011-MAT.pdf,"Instituto de Ecología, A.C.",178719802.0,Ecology Institute,0,436,True
+Ecology Institute,science_agency,2012,2012 12122011-MAT.pdf,"Total for Instituto de Ecología, A.C.",215321479.0,Ecology Institute,0,437,True
+Ecology Institute,science_agency,2013,2013 27122012-MAT.pdf,"Instituto de Ecología, A.C.",233223136.0,National Council of Science and Technology,0,183,True
+Ecology Institute,science_agency,2014,2014 03122013-MAT.pdf,"Instituto de Ecología, A.C.",255820053.0,Ecology Institute,0,445,True
+Ecology Institute,science_agency,2014,2014 03122013-MAT.pdf,"Total Instituto de Ecología, A.C.",315188118.0,Ecology Institute,0,446,True
+Ecology Institute,science_agency,2015,2015 03122014-MAT.pdf,"Instituto de Ecología, A.C.",203491460.0,Ecology Institute,0,466,True
+Ecology Institute,science_agency,2016,2016 27112015-MAT.pdf,"Instituto de Ecología, A.C.",350359050.0,National Council of Science and Technology,0,265,True
+Global Change and Environmental Sustainability (Stage 2),science_agency,2012,2012 12122011-MAT.pdf,Cambio Global y Sustentabilidad Ambiental (Etapa 2),12000000.0,National Council of Science and Technology,0,128,True
+"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2006,2006 22122005-MAT.pdf,INIFAP,1066200000.0,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",0,407,True
+"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2007,2007 28122006-MAT.pdf,INIFAP,1200.0,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",0,409,True
+"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2008,2008 13122007-MAT.pdf,INIFAP,1226.8,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",0,411,True
+"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2010,2010 07122009-MAT.pdf,INIFAP,262.4,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",0,413,True
+"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2011,2011 07122010-MAT.pdf,INIFAP,73.8,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",0,414,True
+"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2013,2013 27122012-MAT.pdf,"Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias",1317238965.0,National Council of Science and Technology,0,162,True
+"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2014,2014 03122013-MAT.pdf,INIFAP Total,1737430578.0,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",0,443,True
+"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2014,2014 03122013-MAT.pdf,INIFAP,1392.3,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",0,444,True
+"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2015,2015 03122014-MAT.pdf,INIFAP,1365.6,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",0,456,True
+"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2015,2015 03122014-MAT.pdf,INIFAP Total,1359651898.0,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",0,457,True
+"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2016,2016 27112015-MAT.pdf,"Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias",1091480035.0,National Council of Science and Technology,0,244,True
+"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2017,2017 30112016-MAT.pdf,Total INIFAP,1441102591.0,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",0,476,True
+"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2017,2017 30112016-MAT.pdf,INIFAP,1256.8,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",0,477,True
+"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2018,2018 29112017-MAT.pdf,INIFAP,1288.2,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",0,488,True
+"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2018,2018 29112017-MAT.pdf,Total INIFAP,1288232884.0,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",0,489,True
+"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2020,2020 11122019-MAT.pdf,INIFAP,1372.4,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",0,495,True
+"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2021,2021 .pdf,INIFAP,1302.9,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",0,498,True
+"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2024,2024 25112023-VES.pdf,INIFAP,1513.2,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",0,507,True
+"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",research_institute,2024,2024 25112023-VES.pdf,Total INIFAP,1417712938.0,"INIFAP — Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (Mexico)",0,508,True
+ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,2010,2010 07122009-MAT.pdf,Instituto Nacional de Investigaciones Nucleares,,Energy,0,51,True
+ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,2011,2011 07122010-MAT.pdf,Instituto Nacional de Investigaciones Nucleares,451714399.0,Energy,0,94,True
+ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,2012,2012 12122011-MAT.pdf,Instituto Nacional de Investigaciones Nucleares,502033970.0,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),0,423,True
+ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,2012,2012 12122011-MAT.pdf,Total for Instituto Nacional de Investigaciones Nucleares,4850896822.0,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),0,424,True
+ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,2015,2015 03122014-MAT.pdf,Total ININ,766425192.0,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),0,455,True
+ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,2016,2016 27112015-MAT.pdf,Instituto Nacional de Investigaciones Nucleares,6288169769.0,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),0,471,True
+ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,2017,2017 30112016-MAT.pdf,Investigación y Desarrollo en el ININ,500000000.0,Secretariat of Energy,0,321,True
+ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,2018,2018 29112017-MAT.pdf,Instituto Nacional de Investigaciones Nucleares,543755159.0,Energy,0,336,True
+ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,2020,2020 11122019-MAT.pdf,Instituto Nacional de Investigaciones Nucleares,906393775.0,Energy,0,357,True
+ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,2021,2021 .pdf,Instituto Nacional de Investigaciones Nucleares,922773729.0,Energy,0,372,True
+ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,2024,2024 25112023-VES.pdf,Instituto Nacional de Investigaciones Nucleares,149981379.0,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),0,505,True
+ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),research_institute,2024,2024 25112023-VES.pdf,Total Instituto Nacional de Investigaciones Nucleares,969823203.0,ININ — Instituto Nacional de Investigaciones Nucleares (Mexico),0,506,True
+IPN — Instituto Politécnico Nacional (Mexico),higher_education,2006,2006 22122005-MAT.pdf,IPN,212500000.0,Public Education,0,15,True
+IPN — Instituto Politécnico Nacional (Mexico),higher_education,2007,2007 28122006-MAT.pdf,IPN,491000000.0,Secretariat of Public Education,0,21,True
+IPN — Instituto Politécnico Nacional (Mexico),higher_education,2009,2009 28112008-MAT.pdf,IPN,450000000.0,PUBLIC EDUCATION,0,43,True
+IPN — Instituto Politécnico Nacional (Mexico),higher_education,2011,2011 07122010-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,1882976326.0,Public Education,0,69,True
+IPN — Instituto Politécnico Nacional (Mexico),higher_education,2013,2013 27122012-MAT.pdf,Instituto Politécnico Nacional,1334916427.0,Public Education,0,159,True
+IPN — Instituto Politécnico Nacional (Mexico),higher_education,2013,2013 27122012-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,2149930492.0,Public Education,0,160,True
+IPN — Instituto Politécnico Nacional (Mexico),higher_education,2014,2014 03122013-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,2004433950.0,National Council of Science and Technology,0,198,True
+IPN — Instituto Politécnico Nacional (Mexico),higher_education,2017,2017 30112016-MAT.pdf,Investigación y Desarrollo en el IPN,300000000.0,Secretariat of Public Education,0,319,True
+IPN — Instituto Politécnico Nacional (Mexico),higher_education,2018,2018 29112017-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,2232639342.0,Secretariat of Public Education,0,326,True
+IPN — Instituto Politécnico Nacional (Mexico),higher_education,2018,2018 29112017-MAT.pdf,Instituto Politécnico Nacional,3929918682.0,Secretariat of Public Education,0,327,True
+IPN — Instituto Politécnico Nacional (Mexico),higher_education,2020,2020 11122019-MAT.pdf,Instituto Politécnico Nacional - Investigación,4362211241.2,Public Education,0,355,True
+IPN — Instituto Politécnico Nacional (Mexico),higher_education,2020,2020 11122019-MAT.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,2404759338.0,Public Education,0,356,True
+IPN — Instituto Politécnico Nacional (Mexico),higher_education,2021,2021 .pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,3147042279.0,Public Education,0,374,True
+IPN — Instituto Politécnico Nacional (Mexico),higher_education,2024,2024 25112023-VES.pdf,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,3299640842.0,"Humanities, Sciences, Technologies and Innovation",0,387,True
+IPN — Instituto Politécnico Nacional (Mexico),higher_education,2024,2024 25112023-VES.pdf,Instituto Politécnico Nacional,5446575745.0,"Humanities, Sciences, Technologies and Innovation",0,389,True
 Mario Molina Center (regional studies in energy and environmental management),science_agency,2011,2011 07122010-MAT.pdf,Centro Mario Molina (estudios regionales en gestión energética y ambiental),46000000.0,NATIONAL COUNCIL OF SCIENCE AND TECHNOLOGY,0,107,True
-Metropolitan Autonomous University,higher_education,2018,2018 29112017-MAT.pdf,Universidad Autónoma Metropolitana,3048708947.0,Secretariat of Public Education,0,352,True
-Mexican Space Agency,science_agency,2010,2010 07122009-MAT.pdf,APOYOS INSTITUCIONALES (AGENCIA ESPACIAL MEXICANA),10000000.0,NATIONAL COUNCIL OF SCIENCE AND TECHNOLOGY,0,56,True
-Mexican Space Agency,science_agency,2012,2012 12122011-MAT.pdf,Agencia Espacial Mexicana,136362.753,Mexican Space Agency,0,122,True
-Mexican Space Agency,science_agency,2012,2012 12122011-MAT.pdf,Agencia Espacial Mexicana,60000.0,Mexican Space Agency,0,123,True
-Mexican Space Agency,science_agency,2012,2012 12122011-MAT.pdf,Total for Agencia Espacial Mexicana,60000.0,Mexican Space Agency,0,124,True
-Mexican Space Agency,science_agency,2013,2013 27122012-MAT.pdf,Agencia Espacial Mexicana,54457650.0,National Council of Science and Technology,0,169,True
-Mexican Space Agency,science_agency,2014,2014 03122013-MAT.pdf,Agencia Espacial Mexicana,112811973.0,National Council of Science and Technology,0,206,True
-Mexican Space Agency,science_agency,2015,2015 03122014-MAT.pdf,Agencia Espacial Mexicana,177966.277,Mexican Space Agency,0,249,True
-Mexican Space Agency,science_agency,2015,2015 03122014-MAT.pdf,Agencia Espacial Mexicana Total,111983.2,Mexican Space Agency,0,250,True
-Mexican Space Agency,science_agency,2016,2016 27112015-MAT.pdf,Agencia Espacial Mexicana,90467913.0,National Council of Science and Technology,0,266,True
-Mexican Space Agency,science_agency,2017,2017 30112016-MAT.pdf,Agencia Espacial Mexicana,186778.388,Mexican Space Agency,0,311,True
-Mexican Space Agency,science_agency,2017,2017 30112016-MAT.pdf,Agencia Espacial Mexicana Total,92482.883,Mexican Space Agency,0,312,True
-Mexican Space Agency,science_agency,2018,2018 29112017-MAT.pdf,Agencia Espacial Mexicana,77821.489,Mexican Space Agency,0,349,True
-Mexican Space Agency,science_agency,2020,2020 11122019-MAT.pdf,Agencia Espacial Mexicana,67625350.0,National Council of Science and Technology,0,378,True
-Mexican Space Agency,science_agency,2021,2021 .pdf,Agencia Espacial Mexicana,36447.482,Mexican Space Agency,0,394,True
-Mexican Space Agency,science_agency,2021,2021 .pdf,Total Agencia Espacial Mexicana,63640.626,Mexican Space Agency,0,397,True
-Mexican Space Agency,science_agency,2024,2024 25112023-VES.pdf,Agencia Espacial Mexicana,73913894.0,"Humanities, Sciences, Technologies and Innovation",0,420,True
-Mixed Fund,innovation_instruments,2010,2010 07122009-MAT.pdf,Fondo Mixto CONACYT-Estado,,National Council of Science and Technology,0,49,True
-Mixed Fund,innovation_instruments,2010,2010 07122009-MAT.pdf,FONDO MIXTO,390000000.0,NATIONAL COUNCIL OF SCIENCE AND TECHNOLOGY,0,59,True
-Mixed Fund,innovation_instruments,2011,2011 07122010-MAT.pdf,Fondo Mixto CONACYT-Estado,,Ramo 38 - National Council of Science and Technology,0,62,False
-Mixed Fund,innovation_instruments,2012,2012 12122011-MAT.pdf,Constitución del Fondo Mixto CONACYT,7000000.0,Ramo 38: CONACYT,0,162,False
-Mixed Fund,innovation_instruments,2017,2017 30112016-MAT.pdf,Fondo Mixto CONACYT-Estado,500000000.0,National Council of Science and Technology,0,341,False
-Mixed Fund,innovation_instruments,2021,2021 .pdf,Fondo Mixto de Investigación,,National Council of Science and Technology,0,389,False
+Metropolitan Autonomous University,higher_education,2018,2018 29112017-MAT.pdf,Universidad Autónoma Metropolitana,3048708947.0,Secretariat of Public Education,0,328,True
+Mexican Space Agency,science_agency,2010,2010 07122009-MAT.pdf,APOYOS INSTITUCIONALES (AGENCIA ESPACIAL MEXICANA),10000000.0,NATIONAL COUNCIL OF SCIENCE AND TECHNOLOGY,0,60,True
+Mexican Space Agency,science_agency,2012,2012 12122011-MAT.pdf,Agencia Espacial Mexicana,136362753.0,Mexican Space Agency,0,429,True
+Mexican Space Agency,science_agency,2012,2012 12122011-MAT.pdf,Agencia Espacial Mexicana,60000000.0,Mexican Space Agency,0,430,True
+Mexican Space Agency,science_agency,2012,2012 12122011-MAT.pdf,Total for Agencia Espacial Mexicana,60000000.0,Mexican Space Agency,0,431,True
+Mexican Space Agency,science_agency,2013,2013 27122012-MAT.pdf,Agencia Espacial Mexicana,54457650.0,National Council of Science and Technology,0,163,True
+Mexican Space Agency,science_agency,2014,2014 03122013-MAT.pdf,Agencia Espacial Mexicana,112811973.0,National Council of Science and Technology,0,200,True
+Mexican Space Agency,science_agency,2015,2015 03122014-MAT.pdf,Agencia Espacial Mexicana,177966277.0,Mexican Space Agency,0,458,True
+Mexican Space Agency,science_agency,2015,2015 03122014-MAT.pdf,Agencia Espacial Mexicana Total,111983200.0,Mexican Space Agency,0,459,True
+Mexican Space Agency,science_agency,2016,2016 27112015-MAT.pdf,Agencia Espacial Mexicana,90467913.0,National Council of Science and Technology,0,243,True
+Mexican Space Agency,science_agency,2017,2017 30112016-MAT.pdf,Agencia Espacial Mexicana,186778388.0,Mexican Space Agency,0,478,True
+Mexican Space Agency,science_agency,2017,2017 30112016-MAT.pdf,Agencia Espacial Mexicana Total,92482883.0,Mexican Space Agency,0,479,True
+Mexican Space Agency,science_agency,2018,2018 29112017-MAT.pdf,Agencia Espacial Mexicana,77821489.0,Mexican Space Agency,0,490,True
+Mexican Space Agency,science_agency,2020,2020 11122019-MAT.pdf,Agencia Espacial Mexicana,67625350.0,National Council of Science and Technology,0,353,True
+Mexican Space Agency,science_agency,2021,2021 .pdf,Agencia Espacial Mexicana,36447482.0,Mexican Space Agency,0,499,True
+Mexican Space Agency,science_agency,2021,2021 .pdf,Total Agencia Espacial Mexicana,63640626.0,Mexican Space Agency,0,500,True
+Mexican Space Agency,science_agency,2024,2024 25112023-VES.pdf,Agencia Espacial Mexicana,73913894.0,"Humanities, Sciences, Technologies and Innovation",0,390,True
+Mixed Fund,innovation_instruments,2010,2010 07122009-MAT.pdf,Fondo Mixto CONACYT-Estado,,National Council of Science and Technology,0,48,True
+Mixed Fund,innovation_instruments,2010,2010 07122009-MAT.pdf,FONDO MIXTO,390000000.0,NATIONAL COUNCIL OF SCIENCE AND TECHNOLOGY,0,54,True
+Mixed Fund,innovation_instruments,2011,2011 07122010-MAT.pdf,Fondo Mixto CONACYT-Estado,,Ramo 38 - National Council of Science and Technology,0,63,False
+Mixed Fund,innovation_instruments,2012,2012 12122011-MAT.pdf,Constitución del Fondo Mixto CONACYT,7000000.0,Ramo 38: CONACYT,0,149,False
+Mixed Fund,innovation_instruments,2017,2017 30112016-MAT.pdf,Fondo Mixto CONACYT-Estado,500000000.0,National Council of Science and Technology,0,316,False
+Mixed Fund,innovation_instruments,2021,2021 .pdf,Fondo Mixto de Investigación,,National Council of Science and Technology,0,364,False
 New Fund for Science and Technology,innovation_instruments,2008,2008 13122007-MAT.pdf,Fondo Nuevo para Ciencia y Tecnología,500000.0,National Council of Science and Technology,0,33,True
-Operational Expenses for the Large Millimeter Telescope Project,science_agency,2011,2011 07122010-MAT.pdf,Gasto operativo para el proyecto Gran Telescopio Milimétrico,25000000.0,NATIONAL COUNCIL OF SCIENCE AND TECHNOLOGY,0,111,True
-State Center for Renewable and Alternative Energies,science_agency,2012,2012 12122011-MAT.pdf,Centro Estatal de Energías Renovables y Alternativas,5000000.0,National Council of Science and Technology,0,148,True
-Strengthening of the 'Descubre' Technology Center,direct_rd,2012,2012 12122011-MAT.pdf,Fortalecimiento del Centro de Tecnología 'Descubre',4000000.0,National Council of Science and Technology,0,151,True
+Operational Expenses for the Large Millimeter Telescope Project,science_agency,2011,2011 07122010-MAT.pdf,Gasto operativo para el proyecto Gran Telescopio Milimétrico,25000000.0,NATIONAL COUNCIL OF SCIENCE AND TECHNOLOGY,0,117,True
+State Center for Renewable and Alternative Energies,science_agency,2012,2012 12122011-MAT.pdf,Centro Estatal de Energías Renovables y Alternativas,5000000.0,National Council of Science and Technology,0,134,True
+Strengthening of the 'Descubre' Technology Center,direct_rd,2012,2012 12122011-MAT.pdf,Fortalecimiento del Centro de Tecnología 'Descubre',4000000.0,National Council of Science and Technology,0,124,True
 "The College of Michoacán, A.C.",higher_education,2011,2011 07122010-MAT.pdf,"El Colegio de Michoacán, A.C.",93087326.0,National Council of Science and Technology,0,90,True
-"The College of Michoacán, A.C.",higher_education,2013,2013 27122012-MAT.pdf,"El Colegio de Michoacán, A.C.",112615829.0,National Council of Science and Technology,0,188,True
-"The College of Michoacán, A.C.",higher_education,2014,2014 03122013-MAT.pdf,"El Colegio de Michoacán, A.C.",128566639.0,National Council of Science and Technology,0,213,True
-"The College of Michoacán, A.C.",higher_education,2016,2016 27112015-MAT.pdf,"El Colegio de Michoacán, A.C.",151235542.0,National Council of Science and Technology,0,277,True
+"The College of Michoacán, A.C.",higher_education,2013,2013 27122012-MAT.pdf,"El Colegio de Michoacán, A.C.",112615829.0,National Council of Science and Technology,0,180,True
+"The College of Michoacán, A.C.",higher_education,2014,2014 03122013-MAT.pdf,"El Colegio de Michoacán, A.C.",128566639.0,National Council of Science and Technology,0,219,True
+"The College of Michoacán, A.C.",higher_education,2016,2016 27112015-MAT.pdf,"El Colegio de Michoacán, A.C.",151235542.0,National Council of Science and Technology,0,262,True
 "The College of San Luis, A.C.",higher_education,2011,2011 07122010-MAT.pdf,"El Colegio de San Luis, A.C.",72401204.0,National Council of Science and Technology,0,91,True
-"The College of San Luis, A.C.",higher_education,2013,2013 27122012-MAT.pdf,"El Colegio de San Luis, A.C.",93946840.0,National Council of Science and Technology,0,196,True
-"The College of San Luis, A.C.",higher_education,2014,2014 03122013-MAT.pdf,"El Colegio de San Luis, A.C.",109537863.0,National Council of Science and Technology,0,214,True
-"The College of San Luis, A.C.",higher_education,2016,2016 27112015-MAT.pdf,"El Colegio de San Luis, A.C.",126676997.0,National Council of Science and Technology,0,278,True
-UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,2006,2006 22122005-MAT.pdf,"UNAM.- Museo, investigación y docencia en Biología Marina y Ciencias del Mar",40000000.0,Public Education,0,15,True
+"The College of San Luis, A.C.",higher_education,2013,2013 27122012-MAT.pdf,"El Colegio de San Luis, A.C.",93946840.0,National Council of Science and Technology,0,181,True
+"The College of San Luis, A.C.",higher_education,2014,2014 03122013-MAT.pdf,"El Colegio de San Luis, A.C.",109537863.0,National Council of Science and Technology,0,220,True
+"The College of San Luis, A.C.",higher_education,2016,2016 27112015-MAT.pdf,"El Colegio de San Luis, A.C.",126676997.0,National Council of Science and Technology,0,263,True
+UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,2006,2006 22122005-MAT.pdf,"UNAM.- Museo, investigación y docencia en Biología Marina y Ciencias del Mar",40000000.0,Public Education,0,16,True
 UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,2007,2007 28122006-MAT.pdf,UNAM,680000000.0,Secretariat of Public Education,0,22,True
-UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,2009,2009 28112008-MAT.pdf,UNAM,700000000.0,PUBLIC EDUCATION,0,43,True
-UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,2011,2011 07122010-MAT.pdf,Universidad Nacional Autónoma de México,5769731040.0,Public Education,0,68,True
-UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,2013,2013 27122012-MAT.pdf,Universidad Nacional Autónoma de México,8698958700.0,Public Education,0,170,True
-UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,2017,2017 30112016-MAT.pdf,Investigación y Desarrollo en la UNAM,400000000.0,Secretariat of Public Education,0,345,True
-UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,2018,2018 29112017-MAT.pdf,Universidad Nacional Autónoma de México,12334527146.0,Secretariat of Public Education,0,353,True
-UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,2020,2020 11122019-MAT.pdf,Universidad Nacional Autónoma de México - Investigación,13541981557.7,Public Education,0,379,True
-UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,2021,2021 .pdf,Universidad Nacional Autónoma de México,15836059144.0,Public Education,0,396,True
-UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,2024,2024 25112023-VES.pdf,Universidad Nacional Autónoma de México,18929093278.0,"Humanities, Sciences, Technologies and Innovation",0,421,True
+UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,2009,2009 28112008-MAT.pdf,UNAM,700000000.0,PUBLIC EDUCATION,0,42,True
+UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,2011,2011 07122010-MAT.pdf,Universidad Nacional Autónoma de México,5769731040.0,Public Education,0,70,True
+UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,2013,2013 27122012-MAT.pdf,Universidad Nacional Autónoma de México,8698958700.0,Public Education,0,158,True
+UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,2017,2017 30112016-MAT.pdf,Investigación y Desarrollo en la UNAM,400000000.0,Secretariat of Public Education,0,320,True
+UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,2018,2018 29112017-MAT.pdf,Universidad Nacional Autónoma de México,12334527146.0,Secretariat of Public Education,0,325,True
+UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,2020,2020 11122019-MAT.pdf,Universidad Nacional Autónoma de México - Investigación,13541981557.7,Public Education,0,354,True
+UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,2021,2021 .pdf,Universidad Nacional Autónoma de México,15836059144.0,Public Education,0,373,True
+UNAM — Universidad Nacional Autónoma de México (Mexico),higher_education,2024,2024 25112023-VES.pdf,Universidad Nacional Autónoma de México,18929093278.0,"Humanities, Sciences, Technologies and Innovation",0,388,True

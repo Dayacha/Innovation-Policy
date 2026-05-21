@@ -1,678 +1,336 @@
 country,year,canonical_name,category,amount_local,unit,currency,item_type,line_description_en,source_file,page_number,series_notes
-Chile,2021,308 UACH-GeneTAURUS - Superiority in Quality and Efficiency,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2018,Agri-food Innovation Initiatives,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2019,Antarctic Scientific Sample Preservation Platform,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2010,Antarctic Thesis Program,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2011,Antarctic Thesis Program,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2012,Antarctic Thesis Program,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2013,Antarctic Thesis Program,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2014,Antarctic Thesis Program,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2015,Antarctic Thesis Program,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2016,Antarctic Thesis Program,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2017,Antarctic Thesis Program,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2018,Antarctic Thesis Program,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2019,Antarctic Thesis Program,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2020,Antarctic Thesis Program,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2021,Antarctic Thesis Program,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2022,Antarctic Thesis Program,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2023,Antarctic Thesis Program,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2024,Antarctic Thesis Program,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2009,Astronomical Research Agreement - ESO/AUI/NAOJ,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2010,Astronomical Research Agreement - ESO/AUI/NAOJ,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2011,Astronomical Research Agreement - ESO/AUI/NAOJ,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2012,Astronomical Research Agreement - ESO/AUI/NAOJ,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2009,Business Innovation - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2010,Business Innovation - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2011,Business Innovation - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2012,Business Innovation - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2013,Business Innovation - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2014,Business Innovation - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2015,Business Innovation - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2016,Business Innovation - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2017,Business Innovation - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2018,Business Innovation - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2019,Business Innovation - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2020,Business Innovation - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2021,CICÍTEM - Corporation for Scientific and Technological Research for Mining,science_agency,546760000.0,peso,CLP,line_item,CICITEM - Scientific and Technological Research Center for Mining,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,This corporation is dedicated to scientific and technological research in mining.
-Chile,2017,CONAF Agroforestry Systems Reforestation in Arauco Dunes,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2018,CONAF Agroforestry Systems Reforestation in Arauco Dunes,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2019,CONAF Agroforestry Systems Reforestation in Arauco Dunes,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2020,CONAF Agroforestry Systems Reforestation in Arauco Dunes,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2017,CONAF Sustainable Management Transfer of Native Forest,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,1999,CONICYT / ANID,science_agency,29475902000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_8636074d262c__1999_Ley_de_presupuestos.txt,0,
-Chile,2000,CONICYT / ANID,science_agency,8354926000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_ac8dfbecc451__2000_Ley_de_presupuestos.txt,0,
-Chile,2001,CONICYT / ANID,science_agency,8755987000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_4b53180aa4fb__2001_Ley_de_presupuestos.txt,0,
-Chile,2002,CONICYT / ANID,science_agency,37655285000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_1ceca0556d60__2002_Ley_de_presupuestos.txt,0,
-Chile,2003,CONICYT / ANID,science_agency,2511288000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_f3ec2daf2903__2003_Ley_de_presupuestos.txt,0,
-Chile,2004,CONICYT / ANID,science_agency,38211277000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_d20cea522b48__2004_Ley_de_presupuestos.txt,0,
-Chile,2005,CONICYT / ANID,science_agency,43886223000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_fd49be81e27e__2005_Ley_de_presupuestos.txt,0,
-Chile,2006,CONICYT / ANID,science_agency,51688206000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_cafaa6393595__2006_Ley_de_presupuestos.txt,0,
-Chile,2007,CONICYT / ANID,science_agency,14208430000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0,
-Chile,2008,CONICYT / ANID,science_agency,13663246000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0,
-Chile,2009,CONICYT / ANID,science_agency,15217838000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0,
-Chile,2010,CONICYT / ANID,science_agency,116917838000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0,
-Chile,2011,CONICYT / ANID,science_agency,25540402000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0,
-Chile,2012,CONICYT / ANID,science_agency,145770177000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0,
-Chile,2013,CONICYT / ANID,science_agency,171607682000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0,
-Chile,2014,CONICYT / ANID,science_agency,177223363000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0,
-Chile,2015,CONICYT / ANID,science_agency,238856268000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0,
-Chile,2016,CONICYT / ANID,science_agency,255982757000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0,
-Chile,2017,CONICYT / ANID,science_agency,267254295000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,
-Chile,2018,CONICYT / ANID,science_agency,277429910000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,
-Chile,2019,CONICYT / ANID,science_agency,288300661000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0,
-Chile,2020,CONICYT / ANID,science_agency,304493223000.0,peso,CLP,line_item,National Agency for Research and Development,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,
-Chile,2021,CONICYT / ANID,science_agency,287533769000.0,peso,CLP,line_item,National Agency for Research and Development,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,
-Chile,2022,CONICYT / ANID,science_agency,300858107000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0.0,manual override from original Chile budget file
-Chile,2023,CONICYT / ANID,science_agency,312088973000.0,peso,CLP,line_item,National Agency for Research and Development,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0,
-Chile,2024,CONICYT / ANID,science_agency,322532595000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0.0,manual override from original Chile budget file
-Chile,2025,CONICYT / ANID,science_agency,340604113000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0.0,manual override from original Chile budget file
-Chile,2018,CORFO - Innovation Transfer Program to Strengthen the Environment,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2019,CORFO - Innovation Transfer Program to Strengthen the Environment,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2009,CORFO - Innovation for Competitiveness,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2010,CORFO - Promotion of Innovation and Entrepreneurship,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2009,CORFO - Regional Competitive Innovation,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2020,"CORFO - Strengthening Territorial Competitiveness, Innovation, and Entrepreneurship",innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2021,"CORFO - Support for Innovation Entrepreneurship, Viraliza",innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2017,CORFO - Transfer Program to Support Innovation and Entrepreneurship,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2013,CORFO - Transfer of Innovative Entrepreneurship Ecosystem Development in the Region,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2010,CORFO INNOVA - Improvement of Environmental Management in Grape Production,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2009,CORFO INNOVA - Technology Diffusion and Transfer,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2021,CORFO Program for Innovative Entrepreneurship in the Bío Bío Region,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,1999,CORFO innovation and technology funding,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2000,CORFO innovation and technology funding,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2001,CORFO innovation and technology funding,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2002,CORFO innovation and technology funding,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2003,CORFO innovation and technology funding,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2004,CORFO innovation and technology funding,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2005,CORFO innovation and technology funding,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2006,CORFO innovation and technology funding,innovation_instruments,15206218000.0,peso,CLP,line_item,INNOVA CHILE Committee,pdf_cafaa6393595__2006_Ley_de_presupuestos.txt,0,
-Chile,2007,CORFO innovation and technology funding,innovation_instruments,14330049000.0,peso,CLP,line_item,Innova Chile Committee,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0,
-Chile,2008,CORFO innovation and technology funding,innovation_instruments,18053890000.0,peso,CLP,line_item,Innova Chile Committee,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0,
-Chile,2009,CORFO innovation and technology funding,innovation_instruments,19070135000.0,peso,CLP,line_item,Public Interest Innovation - Innova Chile Committee,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0,
-Chile,2010,CORFO innovation and technology funding,innovation_instruments,18565603000.0,peso,CLP,line_item,Public Interest Innovation - Innova Chile Committee,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0,
-Chile,2011,CORFO innovation and technology funding,innovation_instruments,23438018000.0,peso,CLP,line_item,Business Innovation - Innova Chile Committee,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0,
-Chile,2012,CORFO innovation and technology funding,innovation_instruments,21416254000.0,peso,CLP,line_item,Business Innovation - Innova Chile Committee,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0,
-Chile,2013,CORFO innovation and technology funding,innovation_instruments,29560279000.0,peso,CLP,line_item,Business Innovation - Innova Chile Committee,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0,
-Chile,2014,CORFO innovation and technology funding,innovation_instruments,12155030000.0,peso,CLP,line_item,Business Innovation - Innova Chile Committee,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0,
-Chile,2015,CORFO innovation and technology funding,innovation_instruments,18402666000.0,peso,CLP,line_item,Business Innovation - Innova Chile Committee,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0,
-Chile,2016,CORFO innovation and technology funding,innovation_instruments,26638111000.0,peso,CLP,line_item,Business Innovation - Innova Chile Committee,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0,
-Chile,2017,CORFO innovation and technology funding,innovation_instruments,27217404000.0,peso,CLP,line_item,Business Innovation - Innova Chile Committee,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,
-Chile,2018,CORFO innovation and technology funding,innovation_instruments,27827214000.0,peso,CLP,line_item,Business Innovation - Innova Chile Committee,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,
-Chile,2019,CORFO innovation and technology funding,innovation_instruments,19603364000.0,peso,CLP,line_item,Business Innovation - Innova Chile Committee,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0,
-Chile,2020,CORFO innovation and technology funding,innovation_instruments,5733830000.0,peso,CLP,line_item,Promotion of Science and Technology,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,
-Chile,2021,CORFO innovation and technology funding,innovation_instruments,9939882000.0,peso,CLP,line_item,Technological Programs and Consortiums - CORFO,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,
-Chile,2022,CORFO innovation and technology funding,innovation_instruments,3021091000.0,peso,CLP,line_item,INNOVA CHILE Committee,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0,
-Chile,2023,CORFO innovation and technology funding,innovation_instruments,14314369000.0,peso,CLP,line_item,INNOVA CHILE Committee,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0,
-Chile,2024,CORFO innovation and technology funding,innovation_instruments,14444987000.0,peso,CLP,line_item,INNOVA CHILE Committee,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0,
-Chile,2025,CORFO innovation and technology funding,innovation_instruments,13633385000.0,peso,CLP,line_item,INNOVA CHILE Committee,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0,
-Chile,2018,CORFO-INNOVA - Regional Training and Certification Programs,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2019,CORFO-INNOVA - Regional Training and Certification Programs,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2016,CORFO-INNOVA - Technology Diffusion Program for the RMS,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2017,CORFO-INNOVA - Transfer Program for Activating Innovation Projects,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2021,CORFO-INNOVA - Transfer of Public Good (Region of Los Ríos),innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2010,Call for Agricultural Innovation Projects,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2011,Call for Agricultural Innovation Projects,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2012,Call for Agricultural Innovation Projects,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2013,Call for Agricultural Innovation Projects,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2014,Call for Agricultural Innovation Projects,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2015,Call for Agricultural Innovation Projects,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2016,Call for Agricultural Innovation Projects,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2017,Call for Agricultural Innovation Projects,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2018,Call for Agricultural Innovation Projects,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2019,Call for Agricultural Innovation Projects,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2020,Call for Agricultural Innovation Projects,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2021,Call for Agricultural Innovation Projects,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2022,Call for Agricultural Innovation Projects,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2023,Call for Agricultural Innovation Projects,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2024,Call for Agricultural Innovation Projects,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2025,Call for Agricultural Innovation Projects,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2013,Catholic University of Maule - Introduction of Oilseed Forest Species,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2017,Catholic University of the North - Consolidation of the Multilevel Innovation Model,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2021,Catholic University of the North - Development of Eco-Panels from Aquaculture Waste,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2011,Chilean Energy Efficiency Agency,science_agency,3793987000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0,"Focuses on energy efficiency research, relevant for R&D."
-Chile,2012,Chilean Energy Efficiency Agency,science_agency,3386219000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0,"Focuses on energy efficiency research, relevant for R&D."
-Chile,2013,Chilean Energy Efficiency Agency,science_agency,4121145000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0,"Focuses on energy efficiency research, relevant for R&D."
-Chile,2014,Chilean Energy Efficiency Agency,science_agency,3486035000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0,"Focuses on energy efficiency research, relevant for R&D."
-Chile,2015,Chilean Energy Efficiency Agency,science_agency,5716500000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0,"Focuses on energy efficiency research, relevant for R&D."
-Chile,2016,Chilean Energy Efficiency Agency,science_agency,4151669000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0,"Focuses on energy efficiency research, relevant for R&D."
-Chile,2017,Chilean Energy Efficiency Agency,science_agency,2058719000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,"Focuses on energy efficiency research, relevant for R&D."
-Chile,2018,Chilean Energy Efficiency Agency,science_agency,1998620000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,"Focuses on energy efficiency research, relevant for R&D."
-Chile,2019,Chilean Energy Efficiency Agency,science_agency,2953297000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0,"Focuses on energy efficiency research, relevant for R&D."
-Chile,2020,Chilean Energy Efficiency Agency,science_agency,5904630000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,"Focuses on energy efficiency research, relevant for R&D."
-Chile,2021,Chilean Energy Efficiency Agency,science_agency,6603364000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,"Focuses on energy efficiency research, relevant for R&D."
-Chile,2022,Chilean Energy Efficiency Agency,science_agency,4686342000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0,"Focuses on energy efficiency research, relevant for R&D."
-Chile,2023,Chilean Energy Efficiency Agency,science_agency,4981582000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0,"Focuses on energy efficiency research, relevant for R&D."
-Chile,2024,Chilean Energy Efficiency Agency,science_agency,8503207000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0,"Focuses on energy efficiency research, relevant for R&D."
-Chile,2025,Chilean Energy Efficiency Agency,science_agency,4833314000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0,"Focuses on energy efficiency research, relevant for R&D."
-Chile,1999,Chilean Institute of Public Health,science_agency,1976197000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_8636074d262c__1999_Ley_de_presupuestos.txt,0,
-Chile,2000,Chilean Institute of Public Health,science_agency,2404839000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_ac8dfbecc451__2000_Ley_de_presupuestos.txt,0,
-Chile,2001,Chilean Institute of Public Health,science_agency,2227471000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_4b53180aa4fb__2001_Ley_de_presupuestos.txt,0,
-Chile,2002,Chilean Institute of Public Health,science_agency,2354306000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_1ceca0556d60__2002_Ley_de_presupuestos.txt,0,
-Chile,2003,Chilean Institute of Public Health,science_agency,2780220000.0,peso,CLP,line_item,Public Health Institute of Chile,pdf_f3ec2daf2903__2003_Ley_de_presupuestos.txt,0,
-Chile,2004,Chilean Institute of Public Health,science_agency,2763847000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_d20cea522b48__2004_Ley_de_presupuestos.txt,0,
-Chile,2005,Chilean Institute of Public Health,science_agency,3410201000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_fd49be81e27e__2005_Ley_de_presupuestos.txt,0,
-Chile,2006,Chilean Institute of Public Health,science_agency,4805884000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_cafaa6393595__2006_Ley_de_presupuestos.txt,0,
-Chile,2007,Chilean Institute of Public Health,science_agency,4033933000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0,
-Chile,2008,Chilean Institute of Public Health,science_agency,5890212000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0,
-Chile,2009,Chilean Institute of Public Health,science_agency,5970947000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0,
-Chile,2010,Chilean Institute of Public Health,science_agency,8202556000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0,
-Chile,2011,Chilean Institute of Public Health,science_agency,10651640000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0,
-Chile,2012,Chilean Institute of Public Health,science_agency,10550682000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0,
-Chile,2013,Chilean Institute of Public Health,science_agency,11250789000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0,
-Chile,2014,Chilean Institute of Public Health,science_agency,12000183000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0,
-Chile,2015,Chilean Institute of Public Health,science_agency,12983750000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0,
-Chile,2016,Chilean Institute of Public Health,science_agency,14789558000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0,
-Chile,2017,Chilean Institute of Public Health,science_agency,15772026000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,
-Chile,2018,Chilean Institute of Public Health,science_agency,16637114000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,
-Chile,2019,Chilean Institute of Public Health,science_agency,14176366000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0,
-Chile,2020,Chilean Institute of Public Health,science_agency,15744903000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,
-Chile,2021,Chilean Institute of Public Health,science_agency,14326030000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,
-Chile,2022,Chilean Institute of Public Health,science_agency,17033020000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0,
-Chile,2023,Chilean Institute of Public Health,science_agency,18324855000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0,
-Chile,2024,Chilean Institute of Public Health,science_agency,25087580000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0,
-Chile,2025,Chilean Institute of Public Health,science_agency,27539086000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0,
-Chile,1999,Chilean Nuclear Energy Commission,science_agency,4072284000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_8636074d262c__1999_Ley_de_presupuestos.txt,0,
-Chile,2000,Chilean Nuclear Energy Commission,science_agency,4042259000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_ac8dfbecc451__2000_Ley_de_presupuestos.txt,0,
-Chile,2001,Chilean Nuclear Energy Commission,science_agency,4084212000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_4b53180aa4fb__2001_Ley_de_presupuestos.txt,0,
-Chile,2002,Chilean Nuclear Energy Commission,science_agency,4153207000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_1ceca0556d60__2002_Ley_de_presupuestos.txt,0,
+Chile,2021,CICÍTEM - Corporation for Scientific and Technological Research for Mining,science_agency,546760000.0,peso,CLP,line_item,CICITEM - Scientific and Technological Research Center for Mining,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0.0,This corporation is dedicated to scientific and technological research in mining.
+Chile,1999,CONICYT / ANID,science_agency,29475902000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_8636074d262c__1999_Ley_de_presupuestos.txt,0.0,
+Chile,2000,CONICYT / ANID,science_agency,8354926000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_ac8dfbecc451__2000_Ley_de_presupuestos.txt,0.0,
+Chile,2001,CONICYT / ANID,science_agency,8755987000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_4b53180aa4fb__2001_Ley_de_presupuestos.txt,0.0,
+Chile,2002,CONICYT / ANID,science_agency,37655285000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_1ceca0556d60__2002_Ley_de_presupuestos.txt,0.0,
+Chile,2003,CONICYT / ANID,science_agency,2511288000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_f3ec2daf2903__2003_Ley_de_presupuestos.txt,0.0,
+Chile,2004,CONICYT / ANID,science_agency,38211277000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_d20cea522b48__2004_Ley_de_presupuestos.txt,0.0,
+Chile,2005,CONICYT / ANID,science_agency,43886223000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_fd49be81e27e__2005_Ley_de_presupuestos.txt,0.0,
+Chile,2006,CONICYT / ANID,science_agency,51688206000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_cafaa6393595__2006_Ley_de_presupuestos.txt,0.0,
+Chile,2007,CONICYT / ANID,science_agency,14208430000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0.0,
+Chile,2008,CONICYT / ANID,science_agency,13663246000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0.0,
+Chile,2009,CONICYT / ANID,science_agency,15217838000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0.0,
+Chile,2010,CONICYT / ANID,science_agency,116917838000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0.0,
+Chile,2011,CONICYT / ANID,science_agency,25540402000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0.0,
+Chile,2012,CONICYT / ANID,science_agency,145770177000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0.0,
+Chile,2013,CONICYT / ANID,science_agency,171607682000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0.0,
+Chile,2014,CONICYT / ANID,science_agency,177223363000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0.0,
+Chile,2015,CONICYT / ANID,science_agency,238856268000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0.0,
+Chile,2016,CONICYT / ANID,science_agency,255982757000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0.0,
+Chile,2017,CONICYT / ANID,science_agency,267254295000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0.0,
+Chile,2018,CONICYT / ANID,science_agency,277429910000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0.0,
+Chile,2019,CONICYT / ANID,science_agency,288300661000.0,peso,CLP,line_item,National Commission for Scientific and Technological Research,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0.0,
+Chile,2020,CONICYT / ANID,science_agency,304493223000.0,peso,CLP,line_item,National Agency for Research and Development,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0.0,
+Chile,2021,CONICYT / ANID,science_agency,287533769000.0,peso,CLP,line_item,National Agency for Research and Development,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0.0,
+Chile,2022,CONICYT / ANID,science_agency,300858107000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0,manual override from original Chile budget file
+Chile,2023,CONICYT / ANID,science_agency,312088973000.0,peso,CLP,line_item,National Agency for Research and Development,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0.0,
+Chile,2024,CONICYT / ANID,science_agency,322532595000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0,manual override from original Chile budget file
+Chile,2025,CONICYT / ANID,science_agency,340604113000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0,manual override from original Chile budget file
+Chile,2006,CORFO innovation and technology funding,innovation_instruments,15206218000.0,peso,CLP,line_item,INNOVA CHILE Committee,pdf_cafaa6393595__2006_Ley_de_presupuestos.txt,0.0,
+Chile,2007,CORFO innovation and technology funding,innovation_instruments,14330049000.0,peso,CLP,line_item,Innova Chile Committee,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0.0,
+Chile,2008,CORFO innovation and technology funding,innovation_instruments,18053890000.0,peso,CLP,line_item,Innova Chile Committee,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0.0,
+Chile,2009,CORFO innovation and technology funding,innovation_instruments,19070135000.0,peso,CLP,line_item,Public Interest Innovation - Innova Chile Committee,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0.0,
+Chile,2010,CORFO innovation and technology funding,innovation_instruments,18565603000.0,peso,CLP,line_item,Public Interest Innovation - Innova Chile Committee,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0.0,
+Chile,2011,CORFO innovation and technology funding,innovation_instruments,23438018000.0,peso,CLP,line_item,Business Innovation - Innova Chile Committee,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0.0,
+Chile,2012,CORFO innovation and technology funding,innovation_instruments,21416254000.0,peso,CLP,line_item,Business Innovation - Innova Chile Committee,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0.0,
+Chile,2013,CORFO innovation and technology funding,innovation_instruments,29560279000.0,peso,CLP,line_item,Business Innovation - Innova Chile Committee,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0.0,
+Chile,2014,CORFO innovation and technology funding,innovation_instruments,12155030000.0,peso,CLP,line_item,Business Innovation - Innova Chile Committee,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0.0,
+Chile,2015,CORFO innovation and technology funding,innovation_instruments,18402666000.0,peso,CLP,line_item,Business Innovation - Innova Chile Committee,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0.0,
+Chile,2016,CORFO innovation and technology funding,innovation_instruments,26638111000.0,peso,CLP,line_item,Business Innovation - Innova Chile Committee,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0.0,
+Chile,2017,CORFO innovation and technology funding,innovation_instruments,27217404000.0,peso,CLP,line_item,Business Innovation - Innova Chile Committee,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0.0,
+Chile,2018,CORFO innovation and technology funding,innovation_instruments,27827214000.0,peso,CLP,line_item,Business Innovation - Innova Chile Committee,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0.0,
+Chile,2019,CORFO innovation and technology funding,innovation_instruments,19603364000.0,peso,CLP,line_item,Business Innovation - Innova Chile Committee,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0.0,
+Chile,2020,CORFO innovation and technology funding,innovation_instruments,5733830000.0,peso,CLP,line_item,Promotion of Science and Technology,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0.0,
+Chile,2021,CORFO innovation and technology funding,innovation_instruments,9939882000.0,peso,CLP,line_item,Technological Programs and Consortiums - CORFO,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0.0,
+Chile,2022,CORFO innovation and technology funding,innovation_instruments,3021091000.0,peso,CLP,line_item,INNOVA CHILE Committee,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0.0,
+Chile,2023,CORFO innovation and technology funding,innovation_instruments,14314369000.0,peso,CLP,line_item,INNOVA CHILE Committee,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0.0,
+Chile,2024,CORFO innovation and technology funding,innovation_instruments,14444987000.0,peso,CLP,line_item,INNOVA CHILE Committee,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0.0,
+Chile,2025,CORFO innovation and technology funding,innovation_instruments,13633385000.0,peso,CLP,line_item,INNOVA CHILE Committee,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0.0,
+Chile,2018,Call for Agricultural Innovation Projects,innovation_instruments,102600000.0,peso,CLP,line_item,Foundation for Agricultural Innovation - Transfer of Agricultural Innovation Projects,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0.0,
+Chile,2011,Chilean Energy Efficiency Agency,science_agency,3793987000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0.0,"Focuses on energy efficiency research, relevant for R&D."
+Chile,2012,Chilean Energy Efficiency Agency,science_agency,3386219000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0.0,"Focuses on energy efficiency research, relevant for R&D."
+Chile,2013,Chilean Energy Efficiency Agency,science_agency,4121145000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0.0,"Focuses on energy efficiency research, relevant for R&D."
+Chile,2014,Chilean Energy Efficiency Agency,science_agency,3486035000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0.0,"Focuses on energy efficiency research, relevant for R&D."
+Chile,2015,Chilean Energy Efficiency Agency,science_agency,5716500000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0.0,"Focuses on energy efficiency research, relevant for R&D."
+Chile,2016,Chilean Energy Efficiency Agency,science_agency,4151669000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0.0,"Focuses on energy efficiency research, relevant for R&D."
+Chile,2017,Chilean Energy Efficiency Agency,science_agency,2058719000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0.0,"Focuses on energy efficiency research, relevant for R&D."
+Chile,2018,Chilean Energy Efficiency Agency,science_agency,1998620000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0.0,"Focuses on energy efficiency research, relevant for R&D."
+Chile,2019,Chilean Energy Efficiency Agency,science_agency,2953297000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0.0,"Focuses on energy efficiency research, relevant for R&D."
+Chile,2020,Chilean Energy Efficiency Agency,science_agency,5904630000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0.0,"Focuses on energy efficiency research, relevant for R&D."
+Chile,2021,Chilean Energy Efficiency Agency,science_agency,6603364000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0.0,"Focuses on energy efficiency research, relevant for R&D."
+Chile,2022,Chilean Energy Efficiency Agency,science_agency,4686342000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0.0,"Focuses on energy efficiency research, relevant for R&D."
+Chile,2023,Chilean Energy Efficiency Agency,science_agency,4981582000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0.0,"Focuses on energy efficiency research, relevant for R&D."
+Chile,2024,Chilean Energy Efficiency Agency,science_agency,8503207000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0.0,"Focuses on energy efficiency research, relevant for R&D."
+Chile,2025,Chilean Energy Efficiency Agency,science_agency,4833314000.0,peso,CLP,line_item,Chilean Agency for Energy Efficiency,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0.0,"Focuses on energy efficiency research, relevant for R&D."
+Chile,1999,Chilean Institute of Public Health,science_agency,1976197000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_8636074d262c__1999_Ley_de_presupuestos.txt,0.0,
+Chile,2000,Chilean Institute of Public Health,science_agency,2404839000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_ac8dfbecc451__2000_Ley_de_presupuestos.txt,0.0,
+Chile,2001,Chilean Institute of Public Health,science_agency,2227471000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_4b53180aa4fb__2001_Ley_de_presupuestos.txt,0.0,
+Chile,2002,Chilean Institute of Public Health,science_agency,2354306000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_1ceca0556d60__2002_Ley_de_presupuestos.txt,0.0,
+Chile,2003,Chilean Institute of Public Health,science_agency,2780220000.0,peso,CLP,line_item,Public Health Institute of Chile,pdf_f3ec2daf2903__2003_Ley_de_presupuestos.txt,0.0,
+Chile,2004,Chilean Institute of Public Health,science_agency,2763847000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_d20cea522b48__2004_Ley_de_presupuestos.txt,0.0,
+Chile,2005,Chilean Institute of Public Health,science_agency,3410201000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_fd49be81e27e__2005_Ley_de_presupuestos.txt,0.0,
+Chile,2006,Chilean Institute of Public Health,science_agency,4805884000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_cafaa6393595__2006_Ley_de_presupuestos.txt,0.0,
+Chile,2007,Chilean Institute of Public Health,science_agency,4033933000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0.0,
+Chile,2008,Chilean Institute of Public Health,science_agency,5890212000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0.0,
+Chile,2009,Chilean Institute of Public Health,science_agency,5970947000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0.0,
+Chile,2010,Chilean Institute of Public Health,science_agency,8202556000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0.0,
+Chile,2011,Chilean Institute of Public Health,science_agency,10651640000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0.0,
+Chile,2012,Chilean Institute of Public Health,science_agency,10550682000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0.0,
+Chile,2013,Chilean Institute of Public Health,science_agency,11250789000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0.0,
+Chile,2014,Chilean Institute of Public Health,science_agency,12000183000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0.0,
+Chile,2015,Chilean Institute of Public Health,science_agency,12983750000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0.0,
+Chile,2016,Chilean Institute of Public Health,science_agency,14789558000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0.0,
+Chile,2017,Chilean Institute of Public Health,science_agency,15772026000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0.0,
+Chile,2018,Chilean Institute of Public Health,science_agency,16637114000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0.0,
+Chile,2019,Chilean Institute of Public Health,science_agency,14176366000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0.0,
+Chile,2020,Chilean Institute of Public Health,science_agency,15744903000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0.0,
+Chile,2021,Chilean Institute of Public Health,science_agency,14326030000.0,peso,CLP,line_item,Chilean Institute of Public Health,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0.0,
+Chile,2022,Chilean Institute of Public Health,science_agency,17033020000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0.0,
+Chile,2023,Chilean Institute of Public Health,science_agency,18324855000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0.0,
+Chile,2024,Chilean Institute of Public Health,science_agency,25087580000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0.0,
+Chile,2025,Chilean Institute of Public Health,science_agency,27539086000.0,peso,CLP,line_item,Institute of Public Health of Chile,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0.0,
+Chile,1999,Chilean Nuclear Energy Commission,science_agency,4072284000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_8636074d262c__1999_Ley_de_presupuestos.txt,0.0,
+Chile,2000,Chilean Nuclear Energy Commission,science_agency,4042259000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_ac8dfbecc451__2000_Ley_de_presupuestos.txt,0.0,
+Chile,2001,Chilean Nuclear Energy Commission,science_agency,4084212000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_4b53180aa4fb__2001_Ley_de_presupuestos.txt,0.0,
+Chile,2002,Chilean Nuclear Energy Commission,science_agency,4153207000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_1ceca0556d60__2002_Ley_de_presupuestos.txt,0.0,
 Chile,2003,Chilean Nuclear Energy Commission,science_agency,,,,,,,,gap: no matching rows in this year
 Chile,2004,Chilean Nuclear Energy Commission,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2005,Chilean Nuclear Energy Commission,science_agency,3804556000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_fd49be81e27e__2005_Ley_de_presupuestos.txt,0,
-Chile,2006,Chilean Nuclear Energy Commission,science_agency,4095117000.0,peso,CLP,line_item,Chilean Commission on Nuclear Energy,pdf_cafaa6393595__2006_Ley_de_presupuestos.txt,0,
-Chile,2007,Chilean Nuclear Energy Commission,science_agency,4636726000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0,
-Chile,2008,Chilean Nuclear Energy Commission,science_agency,5373679000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0,
-Chile,2009,Chilean Nuclear Energy Commission,science_agency,5949665000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0,
-Chile,2010,Chilean Nuclear Energy Commission,science_agency,6969574000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0,
-Chile,2011,Chilean Nuclear Energy Commission,science_agency,7702613000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0,
-Chile,2012,Chilean Nuclear Energy Commission,science_agency,7774935000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0,
-Chile,2013,Chilean Nuclear Energy Commission,science_agency,7763859000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0,
-Chile,2014,Chilean Nuclear Energy Commission,science_agency,8155363000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0,
-Chile,2015,Chilean Nuclear Energy Commission,science_agency,8788302000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0,
-Chile,2016,Chilean Nuclear Energy Commission,science_agency,8606168000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0,
-Chile,2017,Chilean Nuclear Energy Commission,science_agency,7730877000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,
-Chile,2018,Chilean Nuclear Energy Commission,science_agency,8344833000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,
-Chile,2019,Chilean Nuclear Energy Commission,science_agency,8158493000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0,
-Chile,2020,Chilean Nuclear Energy Commission,science_agency,7760429000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,
-Chile,2021,Chilean Nuclear Energy Commission,science_agency,4924522000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,
-Chile,2022,Chilean Nuclear Energy Commission,science_agency,5808787000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0,
-Chile,2023,Chilean Nuclear Energy Commission,science_agency,9900136000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0,
-Chile,2024,Chilean Nuclear Energy Commission,science_agency,12208141000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0,
-Chile,2025,Chilean Nuclear Energy Commission,science_agency,12247441000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0,
-Chile,2024,Citizen (ENUSC) - National Survey of Research and Development Expenditure,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2010,Competitive Antarctic Science Development,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2011,Competitive Antarctic Science Development,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2012,Competitive Antarctic Science Development,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2013,Competitive Antarctic Science Development,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2014,Competitive Antarctic Science Development,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2015,Competitive Antarctic Science Development,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2016,Competitive Antarctic Science Development,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2017,Competitive Antarctic Science Development,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2018,Competitive Antarctic Science Development,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2019,Competitive Antarctic Science Development,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2020,Competitive Antarctic Science Development,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2021,Competitive Antarctic Science Development,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2022,Competitive Antarctic Science Development,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2023,Competitive Antarctic Science Development,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2024,Competitive Antarctic Science Development,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2025,Competitive Antarctic Science Development,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2016,Contribution for the Promotion of Research,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2017,Contribution for the Promotion of Research,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2018,Contribution for the Promotion of Research,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2019,Contribution for the Promotion of Research,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2020,Contribution for the Promotion of Research,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2021,Contribution for the Promotion of Research,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2022,Contribution for the Promotion of Research,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2023,Contribution for the Promotion of Research,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2024,Contribution for the Promotion of Research,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2025,Contribution for the Promotion of Research,science_agency,,,,,,,,gap: no matching rows in this year
+Chile,2005,Chilean Nuclear Energy Commission,science_agency,3804556000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_fd49be81e27e__2005_Ley_de_presupuestos.txt,0.0,
+Chile,2006,Chilean Nuclear Energy Commission,science_agency,4095117000.0,peso,CLP,line_item,Chilean Commission on Nuclear Energy,pdf_cafaa6393595__2006_Ley_de_presupuestos.txt,0.0,
+Chile,2007,Chilean Nuclear Energy Commission,science_agency,4636726000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0.0,
+Chile,2008,Chilean Nuclear Energy Commission,science_agency,5373679000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0.0,
+Chile,2009,Chilean Nuclear Energy Commission,science_agency,5949665000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0.0,
+Chile,2010,Chilean Nuclear Energy Commission,science_agency,6969574000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0.0,
+Chile,2011,Chilean Nuclear Energy Commission,science_agency,7702613000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0.0,
+Chile,2012,Chilean Nuclear Energy Commission,science_agency,7774935000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0.0,
+Chile,2013,Chilean Nuclear Energy Commission,science_agency,7763859000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0.0,
+Chile,2014,Chilean Nuclear Energy Commission,science_agency,8155363000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0.0,
+Chile,2015,Chilean Nuclear Energy Commission,science_agency,8788302000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0.0,
+Chile,2016,Chilean Nuclear Energy Commission,science_agency,8606168000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0.0,
+Chile,2017,Chilean Nuclear Energy Commission,science_agency,7730877000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0.0,
+Chile,2018,Chilean Nuclear Energy Commission,science_agency,8344833000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0.0,
+Chile,2019,Chilean Nuclear Energy Commission,science_agency,8158493000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0.0,
+Chile,2020,Chilean Nuclear Energy Commission,science_agency,7760429000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0.0,
+Chile,2021,Chilean Nuclear Energy Commission,science_agency,4924522000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0.0,
+Chile,2022,Chilean Nuclear Energy Commission,science_agency,5808787000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0.0,
+Chile,2023,Chilean Nuclear Energy Commission,science_agency,9900136000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0.0,
+Chile,2024,Chilean Nuclear Energy Commission,science_agency,12208141000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0.0,
+Chile,2025,Chilean Nuclear Energy Commission,science_agency,12247441000.0,peso,CLP,line_item,Chilean Nuclear Energy Commission,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0.0,
 Chile,2001,Corporation for Technological Research,science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2021,Development of Capacities for Educational Studies and Research,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2016,Educational Research Fund with Expert Participation,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2017,Educational Research Fund with Expert Participation,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2018,Educational Research Fund with Expert Participation,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2019,Educational Research Fund with Expert Participation,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2020,Educational Research Fund with Expert Participation,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2020,Entrepreneurship and Innovation,innovation_instruments,82080000.0,peso,CLP,line_item,SEREMI Agriculture - Virtual Center for Entrepreneurship and Innovation,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,Supports initiatives in entrepreneurship and innovation.
-Chile,2010,Excellence Centers - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2011,Excellence Centers - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2012,Excellence Centers - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2013,Excellence Centers - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2014,Excellence Centers - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2015,Excellence Centers - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2016,Excellence Centers - CORFO,innovation_instruments,3321600000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0.0,gap: no matching rows in this year; manual override from original Chile budget file
-Chile,2017,Excellence Centers - CORFO,innovation_instruments,3420722000.0,peso,CLP,line_item,Centers of Excellence - CORFO,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,
-Chile,2018,Excellence Centers - CORFO,innovation_instruments,2889443000.0,peso,CLP,line_item,Centers of Excellence - CORFO,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,
-Chile,2019,Excellence Centers - CORFO,innovation_instruments,1766871000.0,peso,CLP,line_item,Centers of Excellence - CORFO,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0,
-Chile,2020,Excellence Centers - CORFO,innovation_instruments,2657123000.0,peso,CLP,line_item,Centers of Excellence - CORFO,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,
-Chile,2021,Excellence Centers - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2022,Excellence Centers - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2023,Excellence Centers - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2024,Excellence Centers - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2025,Excellence Centers - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,1999,FIA (Chile),innovation_instruments,3362980000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_8636074d262c__1999_Ley_de_presupuestos.txt,0,
-Chile,2000,FIA (Chile),innovation_instruments,3412428000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_ac8dfbecc451__2000_Ley_de_presupuestos.txt,0,
-Chile,2001,FIA (Chile),innovation_instruments,3856489000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_4b53180aa4fb__2001_Ley_de_presupuestos.txt,0,
-Chile,2002,FIA (Chile),innovation_instruments,4353543000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_1ceca0556d60__2002_Ley_de_presupuestos.txt,0,
+Chile,2016,Excellence Centers - CORFO,innovation_instruments,3321600000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0,gap: no matching rows in this year; manual override from original Chile budget file
+Chile,2017,Excellence Centers - CORFO,innovation_instruments,3420722000.0,peso,CLP,line_item,Centers of Excellence - CORFO,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0.0,
+Chile,2018,Excellence Centers - CORFO,innovation_instruments,2889443000.0,peso,CLP,line_item,Centers of Excellence - CORFO,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0.0,
+Chile,2019,Excellence Centers - CORFO,innovation_instruments,1766871000.0,peso,CLP,line_item,Centers of Excellence - CORFO,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0.0,
+Chile,2020,Excellence Centers - CORFO,innovation_instruments,2657123000.0,peso,CLP,line_item,Centers of Excellence - CORFO,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0.0,
+Chile,1999,FIA (Chile),innovation_instruments,3362980000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_8636074d262c__1999_Ley_de_presupuestos.txt,0.0,
+Chile,2000,FIA (Chile),innovation_instruments,3412428000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_ac8dfbecc451__2000_Ley_de_presupuestos.txt,0.0,
+Chile,2001,FIA (Chile),innovation_instruments,3856489000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_4b53180aa4fb__2001_Ley_de_presupuestos.txt,0.0,
+Chile,2002,FIA (Chile),innovation_instruments,4353543000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_1ceca0556d60__2002_Ley_de_presupuestos.txt,0.0,
 Chile,2003,FIA (Chile),innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2004,FIA (Chile),innovation_instruments,4035007000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_d20cea522b48__2004_Ley_de_presupuestos.txt,0,
+Chile,2004,FIA (Chile),innovation_instruments,4035007000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_d20cea522b48__2004_Ley_de_presupuestos.txt,0.0,
 Chile,2005,FIA (Chile),innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2006,FIA (Chile),innovation_instruments,4223053000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_cafaa6393595__2006_Ley_de_presupuestos.txt,0,
-Chile,2007,FIA (Chile),innovation_instruments,6497090000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0,
-Chile,2008,FIA (Chile),innovation_instruments,6985234000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0,
-Chile,2009,FIA (Chile),innovation_instruments,7205615000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0,
-Chile,2010,FIA (Chile),innovation_instruments,7666977000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0,
-Chile,2011,FIA (Chile),innovation_instruments,8053115000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0,
-Chile,2012,FIA (Chile),innovation_instruments,8294141000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0,
-Chile,2013,FIA (Chile),innovation_instruments,8534671000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0,
-Chile,2014,FIA (Chile),innovation_instruments,8657354000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0,
-Chile,2015,FIA (Chile),innovation_instruments,8917075000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0,
-Chile,2016,FIA (Chile),innovation_instruments,9570260000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0,
-Chile,2017,FIA (Chile),innovation_instruments,10697405000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,
-Chile,2018,FIA (Chile),innovation_instruments,11494921000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,
-Chile,2019,FIA (Chile),innovation_instruments,9195426000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0,
-Chile,2020,FIA (Chile),innovation_instruments,9446206000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,
-Chile,2021,FIA (Chile),innovation_instruments,8692845000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,
-Chile,2022,FIA (Chile),innovation_instruments,8621563000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0,
-Chile,2023,FIA (Chile),innovation_instruments,9627585000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0,
-Chile,2024,FIA (Chile),innovation_instruments,9880359000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0,
-Chile,2025,FIA (Chile),innovation_instruments,10295334000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0,
-Chile,2018,FIE - Program for Sanitary Management in Aquaculture,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2016,FIE - Strategic Public Goods Project (Innova Committee),innovation_instruments,2559403000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0.0,gap: no matching rows in this year; manual override from original Chile budget file
-Chile,2010,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2011,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2012,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2013,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2014,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2015,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2016,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2017,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,1369900000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0.0,gap: no matching rows in this year; manual override from original Chile budget file
-Chile,2018,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,1394563000.0,peso,CLP,line_item,FIE - Business Innovation and R&D (Innova Committee),pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,
-Chile,2019,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2020,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2021,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2022,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2023,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2024,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2025,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,1999,Fisheries Research Fund,direct_rd,1453200000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_8636074d262c__1999_Ley_de_presupuestos.txt,0,
-Chile,2000,Fisheries Research Fund,direct_rd,2184280000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_ac8dfbecc451__2000_Ley_de_presupuestos.txt,0,
-Chile,2001,Fisheries Research Fund,direct_rd,2306250000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_4b53180aa4fb__2001_Ley_de_presupuestos.txt,0,
-Chile,2002,Fisheries Research Fund,direct_rd,2223094000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_1ceca0556d60__2002_Ley_de_presupuestos.txt,0,
-Chile,2003,Fisheries Research Fund,direct_rd,2169575000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_f3ec2daf2903__2003_Ley_de_presupuestos.txt,0,
-Chile,2004,Fisheries Research Fund,direct_rd,2211231000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_d20cea522b48__2004_Ley_de_presupuestos.txt,0,
+Chile,2006,FIA (Chile),innovation_instruments,4223053000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_cafaa6393595__2006_Ley_de_presupuestos.txt,0.0,
+Chile,2007,FIA (Chile),innovation_instruments,6497090000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0.0,
+Chile,2008,FIA (Chile),innovation_instruments,6985234000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0.0,
+Chile,2009,FIA (Chile),innovation_instruments,7205615000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0.0,
+Chile,2010,FIA (Chile),innovation_instruments,7666977000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0.0,
+Chile,2011,FIA (Chile),innovation_instruments,8053115000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0.0,
+Chile,2012,FIA (Chile),innovation_instruments,8294141000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0.0,
+Chile,2013,FIA (Chile),innovation_instruments,8534671000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0.0,
+Chile,2014,FIA (Chile),innovation_instruments,8657354000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0.0,
+Chile,2015,FIA (Chile),innovation_instruments,8917075000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0.0,
+Chile,2016,FIA (Chile),innovation_instruments,9570260000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0.0,
+Chile,2017,FIA (Chile),innovation_instruments,10697405000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0.0,
+Chile,2018,FIA (Chile),innovation_instruments,11494921000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0.0,
+Chile,2019,FIA (Chile),innovation_instruments,9195426000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0.0,
+Chile,2020,FIA (Chile),innovation_instruments,9446206000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0.0,
+Chile,2021,FIA (Chile),innovation_instruments,8692845000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0.0,
+Chile,2022,FIA (Chile),innovation_instruments,8621563000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0.0,
+Chile,2023,FIA (Chile),innovation_instruments,9627585000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0.0,
+Chile,2024,FIA (Chile),innovation_instruments,9880359000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0.0,
+Chile,2025,FIA (Chile),innovation_instruments,10295334000.0,peso,CLP,line_item,Foundation for Agricultural Innovation,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0.0,
+Chile,2017,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,1369900000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,gap: no matching rows in this year; manual override from original Chile budget file
+Chile,2018,FIE-Innovation and R&D for Enterprises (Innova Committee),innovation_instruments,1394563000.0,peso,CLP,line_item,FIE - Business Innovation and R&D (Innova Committee),pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0.0,
+Chile,1999,Fisheries Research Fund,direct_rd,1453200000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_8636074d262c__1999_Ley_de_presupuestos.txt,0.0,
+Chile,2000,Fisheries Research Fund,direct_rd,2184280000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_ac8dfbecc451__2000_Ley_de_presupuestos.txt,0.0,
+Chile,2001,Fisheries Research Fund,direct_rd,2306250000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_4b53180aa4fb__2001_Ley_de_presupuestos.txt,0.0,
+Chile,2002,Fisheries Research Fund,direct_rd,2223094000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_1ceca0556d60__2002_Ley_de_presupuestos.txt,0.0,
+Chile,2003,Fisheries Research Fund,direct_rd,2169575000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_f3ec2daf2903__2003_Ley_de_presupuestos.txt,0.0,
+Chile,2004,Fisheries Research Fund,direct_rd,2211231000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_d20cea522b48__2004_Ley_de_presupuestos.txt,0.0,
 Chile,2005,Fisheries Research Fund,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2006,Fisheries Research Fund,direct_rd,2169872000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_cafaa6393595__2006_Ley_de_presupuestos.txt,0,
-Chile,2007,Fisheries Research Fund,direct_rd,2245818000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0,
-Chile,2008,Fisheries Research Fund,direct_rd,937800000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0,
-Chile,2009,Fisheries Research Fund,direct_rd,1280312000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0,
-Chile,2010,Fisheries Research Fund,direct_rd,2704204000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0,
-Chile,2011,Fisheries Research Fund,direct_rd,2476245000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0,
-Chile,2012,Fisheries Research Fund,direct_rd,2853980000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0,
-Chile,2013,Fisheries Research Fund,direct_rd,3219098000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0,
-Chile,2014,Fisheries Research Fund,direct_rd,6086261000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0,
-Chile,2015,Fisheries Research Fund,direct_rd,5843991000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0,
-Chile,2016,Fisheries Research Fund,direct_rd,6066063000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0,
-Chile,2017,Fisheries Research Fund,direct_rd,5172115000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,
-Chile,2018,Fisheries Research Fund,direct_rd,3545454000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,
-Chile,2019,Fisheries Research Fund,direct_rd,3119021000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0,
-Chile,2020,Fisheries Research Fund,direct_rd,3200116000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,
-Chile,2021,Fisheries Research Fund,direct_rd,2806818000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,
-Chile,2022,Fisheries Research Fund,direct_rd,2645393000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0,
-Chile,2023,Fisheries Research Fund,direct_rd,2517041000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0,
-Chile,2024,Fisheries Research Fund,direct_rd,2605138000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0,
-Chile,2025,Fisheries Research Fund,direct_rd,2410131000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0,
-Chile,2011,For Competitiveness and Innovation,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2012,For Competitiveness and Innovation,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2009,Forestry Institute,science_agency,1427562000.0,peso,CLP,line_item,Forestry Institute,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0,"This institute is dedicated to forestry research, making it relevant to R&D."
-Chile,2010,Forestry Institute,science_agency,1505815000.0,peso,CLP,line_item,Forestry Institute,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0,"This institute is dedicated to forestry research, making it relevant to R&D."
-Chile,2011,Forestry Institute,science_agency,2244518000.0,peso,CLP,line_item,Forestry Institute,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0,"This institute is dedicated to forestry research, making it relevant to R&D."
-Chile,2012,Forestry Institute,science_agency,2303346000.0,peso,CLP,line_item,Forestry Institute,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0,"This institute is dedicated to forestry research, making it relevant to R&D."
-Chile,2013,Forestry Institute,science_agency,2715887000.0,peso,CLP,line_item,Forestry Institute,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0,"This institute is dedicated to forestry research, making it relevant to R&D."
-Chile,2014,Forestry Institute,science_agency,2900518000.0,peso,CLP,line_item,Forestry Institute,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0,"This institute is dedicated to forestry research, making it relevant to R&D."
-Chile,2015,Forestry Institute,science_agency,3099383000.0,peso,CLP,line_item,Forestry Institute,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0,"This institute is dedicated to forestry research, making it relevant to R&D."
-Chile,2016,Forestry Institute,science_agency,3577097000.0,peso,CLP,line_item,Forestry Institute,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0,"This institute is dedicated to forestry research, making it relevant to R&D."
-Chile,2017,Forestry Institute,science_agency,3862750000.0,peso,CLP,line_item,Forestry Institute,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,"This institute is dedicated to forestry research, making it relevant to R&D."
-Chile,2018,Forestry Institute,science_agency,3970103000.0,peso,CLP,line_item,Forestry Institute,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,"This institute is dedicated to forestry research, making it relevant to R&D."
-Chile,2019,Forestry Institute,science_agency,4069279000.0,peso,CLP,line_item,Forestry Institute,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0,"This institute is dedicated to forestry research, making it relevant to R&D."
-Chile,2020,Forestry Institute,science_agency,4552856000.0,peso,CLP,line_item,Forestry Institute,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,"This institute is dedicated to forestry research, making it relevant to R&D."
-Chile,2021,Forestry Institute,science_agency,4422531000.0,peso,CLP,line_item,Forestry Institute,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,"This institute is dedicated to forestry research, making it relevant to R&D."
-Chile,2022,Forestry Institute,science_agency,4617122000.0,peso,CLP,line_item,Forestry Institute,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0,"This institute is dedicated to forestry research, making it relevant to R&D."
-Chile,2023,Forestry Institute,science_agency,4967199000.0,peso,CLP,line_item,Forestry Institute,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0,"This institute is dedicated to forestry research, making it relevant to R&D."
-Chile,2024,Forestry Institute,science_agency,5346620000.0,peso,CLP,line_item,Forestry Institute,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0,"This institute is dedicated to forestry research, making it relevant to R&D."
-Chile,2025,Forestry Institute,science_agency,5571178000.0,peso,CLP,line_item,Forestry Institute,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0,"This institute is dedicated to forestry research, making it relevant to R&D."
-Chile,2009,Fund for Research on Native Forest Law,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2010,Fund for Research on Native Forest Law,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2011,Fund for Research on Native Forest Law,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2012,Fund for Research on Native Forest Law,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2013,Fund for Research on Native Forest Law,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2014,Fund for Research on Native Forest Law,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2015,Fund for Research on Native Forest Law,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2016,Fund for Research on Native Forest Law,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2017,Fund for Research on Native Forest Law,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2018,Fund for Research on Native Forest Law,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2019,Fund for Research on Native Forest Law,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2020,Fund for Research on Native Forest Law,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2021,Fund for Research on Native Forest Law,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2022,Fund for Research on Native Forest Law,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2023,Fund for Research on Native Forest Law,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2024,Fund for Research on Native Forest Law,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2025,Fund for Research on Native Forest Law,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,1999,Fund for the Promotion of Science and Technology,innovation_instruments,4565385000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_8636074d262c__1999_Ley_de_presupuestos.txt,0,
-Chile,2000,Fund for the Promotion of Science and Technology,innovation_instruments,8354926000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_ac8dfbecc451__2000_Ley_de_presupuestos.txt,0,
-Chile,2001,Fund for the Promotion of Science and Technology,innovation_instruments,8755987000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_4b53180aa4fb__2001_Ley_de_presupuestos.txt,0,
-Chile,2002,Fund for the Promotion of Science and Technology,innovation_instruments,9703810000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_1ceca0556d60__2002_Ley_de_presupuestos.txt,0,
-Chile,2003,Fund for the Promotion of Science and Technology,innovation_instruments,9713560000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_f3ec2daf2903__2003_Ley_de_presupuestos.txt,0,
-Chile,2004,Fund for the Promotion of Science and Technology,innovation_instruments,9900060000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_d20cea522b48__2004_Ley_de_presupuestos.txt,0,
-Chile,2005,Fund for the Promotion of Science and Technology,innovation_instruments,9496909000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_fd49be81e27e__2005_Ley_de_presupuestos.txt,0,
+Chile,2006,Fisheries Research Fund,direct_rd,2169872000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_cafaa6393595__2006_Ley_de_presupuestos.txt,0.0,
+Chile,2007,Fisheries Research Fund,direct_rd,2245818000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0.0,
+Chile,2008,Fisheries Research Fund,direct_rd,937800000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0.0,
+Chile,2009,Fisheries Research Fund,direct_rd,1280312000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0.0,
+Chile,2010,Fisheries Research Fund,direct_rd,2704204000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0.0,
+Chile,2011,Fisheries Research Fund,direct_rd,2476245000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0.0,
+Chile,2012,Fisheries Research Fund,direct_rd,2853980000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0.0,
+Chile,2013,Fisheries Research Fund,direct_rd,3219098000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0.0,
+Chile,2014,Fisheries Research Fund,direct_rd,6086261000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0.0,
+Chile,2015,Fisheries Research Fund,direct_rd,5843991000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0.0,
+Chile,2016,Fisheries Research Fund,direct_rd,6066063000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0.0,
+Chile,2017,Fisheries Research Fund,direct_rd,5172115000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0.0,
+Chile,2018,Fisheries Research Fund,direct_rd,3545454000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0.0,
+Chile,2019,Fisheries Research Fund,direct_rd,3119021000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0.0,
+Chile,2020,Fisheries Research Fund,direct_rd,3200116000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0.0,
+Chile,2021,Fisheries Research Fund,direct_rd,2806818000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0.0,
+Chile,2022,Fisheries Research Fund,direct_rd,2645393000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0.0,
+Chile,2023,Fisheries Research Fund,direct_rd,2517041000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0.0,
+Chile,2024,Fisheries Research Fund,direct_rd,2605138000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0.0,
+Chile,2025,Fisheries Research Fund,direct_rd,2410131000.0,peso,CLP,line_item,Fisheries Research Fund,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0.0,
+Chile,2009,Forestry Institute,science_agency,1427562000.0,peso,CLP,line_item,Forestry Institute,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0.0,"This institute is dedicated to forestry research, making it relevant to R&D."
+Chile,2010,Forestry Institute,science_agency,1505815000.0,peso,CLP,line_item,Forestry Institute,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0.0,"This institute is dedicated to forestry research, making it relevant to R&D."
+Chile,2011,Forestry Institute,science_agency,2244518000.0,peso,CLP,line_item,Forestry Institute,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0.0,"This institute is dedicated to forestry research, making it relevant to R&D."
+Chile,2012,Forestry Institute,science_agency,2303346000.0,peso,CLP,line_item,Forestry Institute,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0.0,"This institute is dedicated to forestry research, making it relevant to R&D."
+Chile,2013,Forestry Institute,science_agency,2715887000.0,peso,CLP,line_item,Forestry Institute,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0.0,"This institute is dedicated to forestry research, making it relevant to R&D."
+Chile,2014,Forestry Institute,science_agency,2900518000.0,peso,CLP,line_item,Forestry Institute,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0.0,"This institute is dedicated to forestry research, making it relevant to R&D."
+Chile,2015,Forestry Institute,science_agency,3099383000.0,peso,CLP,line_item,Forestry Institute,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0.0,"This institute is dedicated to forestry research, making it relevant to R&D."
+Chile,2016,Forestry Institute,science_agency,3577097000.0,peso,CLP,line_item,Forestry Institute,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0.0,"This institute is dedicated to forestry research, making it relevant to R&D."
+Chile,2017,Forestry Institute,science_agency,3862750000.0,peso,CLP,line_item,Forestry Institute,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0.0,"This institute is dedicated to forestry research, making it relevant to R&D."
+Chile,2018,Forestry Institute,science_agency,3970103000.0,peso,CLP,line_item,Forestry Institute,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0.0,"This institute is dedicated to forestry research, making it relevant to R&D."
+Chile,2019,Forestry Institute,science_agency,4069279000.0,peso,CLP,line_item,Forestry Institute,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0.0,"This institute is dedicated to forestry research, making it relevant to R&D."
+Chile,2020,Forestry Institute,science_agency,4552856000.0,peso,CLP,line_item,Forestry Institute,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0.0,"This institute is dedicated to forestry research, making it relevant to R&D."
+Chile,2021,Forestry Institute,science_agency,4422531000.0,peso,CLP,line_item,Forestry Institute,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0.0,"This institute is dedicated to forestry research, making it relevant to R&D."
+Chile,2022,Forestry Institute,science_agency,4617122000.0,peso,CLP,line_item,Forestry Institute,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0.0,"This institute is dedicated to forestry research, making it relevant to R&D."
+Chile,2023,Forestry Institute,science_agency,4967199000.0,peso,CLP,line_item,Forestry Institute,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0.0,"This institute is dedicated to forestry research, making it relevant to R&D."
+Chile,2024,Forestry Institute,science_agency,5346620000.0,peso,CLP,line_item,Forestry Institute,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0.0,"This institute is dedicated to forestry research, making it relevant to R&D."
+Chile,2025,Forestry Institute,science_agency,5571178000.0,peso,CLP,line_item,Forestry Institute,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0.0,"This institute is dedicated to forestry research, making it relevant to R&D."
+Chile,1999,Fund for the Promotion of Science and Technology,innovation_instruments,4565385000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_8636074d262c__1999_Ley_de_presupuestos.txt,0.0,
+Chile,2000,Fund for the Promotion of Science and Technology,innovation_instruments,8354926000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_ac8dfbecc451__2000_Ley_de_presupuestos.txt,0.0,
+Chile,2001,Fund for the Promotion of Science and Technology,innovation_instruments,8755987000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_4b53180aa4fb__2001_Ley_de_presupuestos.txt,0.0,
+Chile,2002,Fund for the Promotion of Science and Technology,innovation_instruments,9703810000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_1ceca0556d60__2002_Ley_de_presupuestos.txt,0.0,
+Chile,2003,Fund for the Promotion of Science and Technology,innovation_instruments,9713560000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_f3ec2daf2903__2003_Ley_de_presupuestos.txt,0.0,
+Chile,2004,Fund for the Promotion of Science and Technology,innovation_instruments,9900060000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_d20cea522b48__2004_Ley_de_presupuestos.txt,0.0,
+Chile,2005,Fund for the Promotion of Science and Technology,innovation_instruments,9496909000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_fd49be81e27e__2005_Ley_de_presupuestos.txt,0.0,
 Chile,2006,Fund for the Promotion of Science and Technology,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2007,Fund for the Promotion of Science and Technology,innovation_instruments,14208430000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0,
-Chile,2008,Fund for the Promotion of Science and Technology,innovation_instruments,13663246000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0,
-Chile,2009,Fund for the Promotion of Science and Technology,innovation_instruments,15217838000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0,
-Chile,2010,Fund for the Promotion of Science and Technology,innovation_instruments,22278079000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0,
-Chile,2011,Fund for the Promotion of Science and Technology,innovation_instruments,25540402000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0,
-Chile,2012,Fund for the Promotion of Science and Technology,innovation_instruments,24522935000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0,
-Chile,2013,Fund for the Promotion of Science and Technology,innovation_instruments,30085312000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0,
-Chile,2014,Fund for the Promotion of Science and Technology,innovation_instruments,32378050000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0,
-Chile,2015,Fund for the Promotion of Science and Technology,innovation_instruments,34457620000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0,
-Chile,2016,Fund for the Promotion of Science and Technology,innovation_instruments,38434887000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0,
-Chile,2017,Fund for the Promotion of Science and Technology,innovation_instruments,40053750000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,
-Chile,2018,Fund for the Promotion of Science and Technology,innovation_instruments,41442278000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,
-Chile,2019,Fund for the Promotion of Science and Technology,innovation_instruments,45558816000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0,
-Chile,2020,Fund for the Promotion of Science and Technology,innovation_instruments,22511539000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,
-Chile,2021,Fund for the Promotion of Science and Technology,innovation_instruments,22718356000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,
-Chile,2022,Fund for the Promotion of Science and Technology,innovation_instruments,27981002000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0,
-Chile,2023,Fund for the Promotion of Science and Technology,innovation_instruments,42009913000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0,
-Chile,2024,Fund for the Promotion of Science and Technology,innovation_instruments,43480260000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0,
-Chile,2025,Fund for the Promotion of Science and Technology,innovation_instruments,44826358000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0,
-Chile,2020,Funding Fund for Research Centers in Priority Areas (FONDAP),direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2021,Funding Fund for Research Centers in Priority Areas (FONDAP),direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2022,Funding Fund for Research Centers in Priority Areas (FONDAP),direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2023,Funding Fund for Research Centers in Priority Areas (FONDAP),direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2024,Funding Fund for Research Centers in Priority Areas (FONDAP),direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,1999,IFOP,science_agency,367971000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_8636074d262c__1999_Ley_de_presupuestos.txt,0,
-Chile,2000,IFOP,science_agency,379746000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_ac8dfbecc451__2000_Ley_de_presupuestos.txt,0,
-Chile,2001,IFOP,science_agency,389240000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_4b53180aa4fb__2001_Ley_de_presupuestos.txt,0,
-Chile,2002,IFOP,science_agency,401306000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_1ceca0556d60__2002_Ley_de_presupuestos.txt,0,
-Chile,2003,IFOP,science_agency,385234000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_f3ec2daf2903__2003_Ley_de_presupuestos.txt,0,
-Chile,2004,IFOP,science_agency,392630000.0,peso,CLP,line_item,Fisheries Development Institute,pdf_d20cea522b48__2004_Ley_de_presupuestos.txt,0,
-Chile,2005,IFOP,science_agency,396832000.0,peso,CLP,line_item,Fisheries Development Institute,pdf_fd49be81e27e__2005_Ley_de_presupuestos.txt,0,
-Chile,2006,IFOP,science_agency,815760000.0,peso,CLP,line_item,Fisheries Development Institute,pdf_cafaa6393595__2006_Ley_de_presupuestos.txt,0,
-Chile,2007,IFOP,science_agency,905313000.0,peso,CLP,line_item,Fisheries Development Institute,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0,
-Chile,2008,IFOP,science_agency,871585000.0,peso,CLP,line_item,Fisheries Development Institute,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0,
-Chile,2009,IFOP,science_agency,1016606000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0,
-Chile,2010,IFOP,science_agency,3603357000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0,
-Chile,2011,IFOP,science_agency,5376074000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0,
-Chile,2012,IFOP,science_agency,5526604000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0,
-Chile,2013,IFOP,science_agency,3894613000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0,
-Chile,2014,IFOP,science_agency,12935937000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0,
-Chile,2015,IFOP,science_agency,15439654000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0,
-Chile,2016,IFOP,science_agency,16026361000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0,
-Chile,2017,IFOP,science_agency,16507152000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,
-Chile,2018,IFOP,science_agency,17527860000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,
-Chile,2019,IFOP,science_agency,17965715000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0,
-Chile,2020,IFOP,science_agency,18432824000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,
-Chile,2021,IFOP,science_agency,17779291000.0,peso,CLP,line_item,Institute of Fishing Promotion,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,
-Chile,2022,IFOP,science_agency,18561580000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0,
-Chile,2023,IFOP,science_agency,591435000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0,
-Chile,2024,IFOP,science_agency,20421544000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0,
-Chile,2025,IFOP,science_agency,21279249000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0,
-Chile,1999,INACH (Instituto Antártico Chileno),science_agency,1441020000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_8636074d262c__1999_Ley_de_presupuestos.txt,0,
-Chile,2000,INACH (Instituto Antártico Chileno),science_agency,1397590000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_ac8dfbecc451__2000_Ley_de_presupuestos.txt,0,
-Chile,2001,INACH (Instituto Antártico Chileno),science_agency,1507811000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_4b53180aa4fb__2001_Ley_de_presupuestos.txt,0,
+Chile,2007,Fund for the Promotion of Science and Technology,innovation_instruments,14208430000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0.0,
+Chile,2008,Fund for the Promotion of Science and Technology,innovation_instruments,13663246000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0.0,
+Chile,2009,Fund for the Promotion of Science and Technology,innovation_instruments,15217838000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0.0,
+Chile,2010,Fund for the Promotion of Science and Technology,innovation_instruments,22278079000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0.0,
+Chile,2011,Fund for the Promotion of Science and Technology,innovation_instruments,25540402000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0.0,
+Chile,2012,Fund for the Promotion of Science and Technology,innovation_instruments,24522935000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0.0,
+Chile,2013,Fund for the Promotion of Science and Technology,innovation_instruments,30085312000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0.0,
+Chile,2014,Fund for the Promotion of Science and Technology,innovation_instruments,32378050000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0.0,
+Chile,2015,Fund for the Promotion of Science and Technology,innovation_instruments,34457620000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0.0,
+Chile,2016,Fund for the Promotion of Science and Technology,innovation_instruments,38434887000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0.0,
+Chile,2017,Fund for the Promotion of Science and Technology,innovation_instruments,40053750000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0.0,
+Chile,2018,Fund for the Promotion of Science and Technology,innovation_instruments,41442278000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0.0,
+Chile,2019,Fund for the Promotion of Science and Technology,innovation_instruments,45558816000.0,peso,CLP,line_item,Promotion of Science and Technology - CONICYT,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0.0,
+Chile,2020,Fund for the Promotion of Science and Technology,innovation_instruments,22511539000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0.0,
+Chile,2021,Fund for the Promotion of Science and Technology,innovation_instruments,22718356000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0.0,
+Chile,2022,Fund for the Promotion of Science and Technology,innovation_instruments,27981002000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0.0,
+Chile,2023,Fund for the Promotion of Science and Technology,innovation_instruments,42009913000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0.0,
+Chile,2024,Fund for the Promotion of Science and Technology,innovation_instruments,43480260000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0.0,
+Chile,2025,Fund for the Promotion of Science and Technology,innovation_instruments,44826358000.0,peso,CLP,line_item,Fund for the Promotion of Science and Technology (FONDEF),pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0.0,
+Chile,1999,IFOP,science_agency,367971000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_8636074d262c__1999_Ley_de_presupuestos.txt,0.0,
+Chile,2000,IFOP,science_agency,379746000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_ac8dfbecc451__2000_Ley_de_presupuestos.txt,0.0,
+Chile,2001,IFOP,science_agency,389240000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_4b53180aa4fb__2001_Ley_de_presupuestos.txt,0.0,
+Chile,2002,IFOP,science_agency,401306000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_1ceca0556d60__2002_Ley_de_presupuestos.txt,0.0,
+Chile,2003,IFOP,science_agency,385234000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_f3ec2daf2903__2003_Ley_de_presupuestos.txt,0.0,
+Chile,2004,IFOP,science_agency,392630000.0,peso,CLP,line_item,Fisheries Development Institute,pdf_d20cea522b48__2004_Ley_de_presupuestos.txt,0.0,
+Chile,2005,IFOP,science_agency,396832000.0,peso,CLP,line_item,Fisheries Development Institute,pdf_fd49be81e27e__2005_Ley_de_presupuestos.txt,0.0,
+Chile,2006,IFOP,science_agency,815760000.0,peso,CLP,line_item,Fisheries Development Institute,pdf_cafaa6393595__2006_Ley_de_presupuestos.txt,0.0,
+Chile,2007,IFOP,science_agency,905313000.0,peso,CLP,line_item,Fisheries Development Institute,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0.0,
+Chile,2008,IFOP,science_agency,871585000.0,peso,CLP,line_item,Fisheries Development Institute,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0.0,
+Chile,2009,IFOP,science_agency,1016606000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0.0,
+Chile,2010,IFOP,science_agency,3603357000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0.0,
+Chile,2011,IFOP,science_agency,5376074000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0.0,
+Chile,2012,IFOP,science_agency,5526604000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0.0,
+Chile,2013,IFOP,science_agency,3894613000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0.0,
+Chile,2014,IFOP,science_agency,12935937000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0.0,
+Chile,2015,IFOP,science_agency,15439654000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0.0,
+Chile,2016,IFOP,science_agency,16026361000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0.0,
+Chile,2017,IFOP,science_agency,16507152000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0.0,
+Chile,2018,IFOP,science_agency,17527860000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0.0,
+Chile,2019,IFOP,science_agency,17965715000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0.0,
+Chile,2020,IFOP,science_agency,18432824000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0.0,
+Chile,2021,IFOP,science_agency,17779291000.0,peso,CLP,line_item,Institute of Fishing Promotion,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0.0,
+Chile,2022,IFOP,science_agency,18561580000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0.0,
+Chile,2023,IFOP,science_agency,591435000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0.0,
+Chile,2024,IFOP,science_agency,20421544000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0.0,
+Chile,2025,IFOP,science_agency,21279249000.0,peso,CLP,line_item,Institute of Fisheries Development,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0.0,
+Chile,1999,INACH (Instituto Antártico Chileno),science_agency,1441020000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_8636074d262c__1999_Ley_de_presupuestos.txt,0.0,
+Chile,2000,INACH (Instituto Antártico Chileno),science_agency,1397590000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_ac8dfbecc451__2000_Ley_de_presupuestos.txt,0.0,
+Chile,2001,INACH (Instituto Antártico Chileno),science_agency,1507811000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_4b53180aa4fb__2001_Ley_de_presupuestos.txt,0.0,
 Chile,2002,INACH (Instituto Antártico Chileno),science_agency,,,,,,,,gap: no matching rows in this year
-Chile,2003,INACH (Instituto Antártico Chileno),science_agency,1665659000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_f3ec2daf2903__2003_Ley_de_presupuestos.txt,0,
-Chile,2004,INACH (Instituto Antártico Chileno),science_agency,1910930000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_d20cea522b48__2004_Ley_de_presupuestos.txt,0,
-Chile,2005,INACH (Instituto Antártico Chileno),science_agency,1835357000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_fd49be81e27e__2005_Ley_de_presupuestos.txt,0,
-Chile,2006,INACH (Instituto Antártico Chileno),science_agency,1934575000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_cafaa6393595__2006_Ley_de_presupuestos.txt,0,
-Chile,2007,INACH (Instituto Antártico Chileno),science_agency,2152774000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0,
-Chile,2008,INACH (Instituto Antártico Chileno),science_agency,2284200000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0,
-Chile,2009,INACH (Instituto Antártico Chileno),science_agency,2576460000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0,
-Chile,2010,INACH (Instituto Antártico Chileno),science_agency,2792047000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0,
-Chile,2011,INACH (Instituto Antártico Chileno),science_agency,2986857000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0,
-Chile,2012,INACH (Instituto Antártico Chileno),science_agency,3138832000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0,
-Chile,2013,INACH (Instituto Antártico Chileno),science_agency,3460582000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0,
-Chile,2014,INACH (Instituto Antártico Chileno),science_agency,3677752000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0,
-Chile,2015,INACH (Instituto Antártico Chileno),science_agency,4117886000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0,
-Chile,2016,INACH (Instituto Antártico Chileno),science_agency,3746166000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0,
-Chile,2017,INACH (Instituto Antártico Chileno),science_agency,4243874000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,
-Chile,2018,INACH (Instituto Antártico Chileno),science_agency,4661279000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,
-Chile,2019,INACH (Instituto Antártico Chileno),science_agency,5539745000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0,
-Chile,2020,INACH (Instituto Antártico Chileno),science_agency,6349307000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,
-Chile,2021,INACH (Instituto Antártico Chileno),science_agency,5163841000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,
-Chile,2022,INACH (Instituto Antártico Chileno),science_agency,5882923000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0,
-Chile,2023,INACH (Instituto Antártico Chileno),science_agency,6224780000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0,
-Chile,2024,INACH (Instituto Antártico Chileno),science_agency,7237694000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0,
-Chile,2025,INACH (Instituto Antártico Chileno),science_agency,7494857000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0,
-Chile,2010,INDAP Technology Transfer for Floriculture,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2011,INDAP Technology Transfer for Floriculture,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2012,INDAP Technology Transfer for Floriculture,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2013,INDAP Technology Transfer for Floriculture,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2014,INDAP Technology Transfer for Floriculture,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2018,INFOR - Development of Silvoagricultural Models: PFNM,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2019,INFOR - Prototype for Technological Transfer in Forestry,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2020,INFOR - Prototype for Technological Transfer in Forestry,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2012,INFOR - Research on New Species for Biomass and Dendroenergy Development,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2013,INFOR - Research on New Species for Biomass and Dendroenergy Development,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2012,INFOR - Research on New Technologies and Industrial Development of Ponderosa Pine,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,1999,INIA (Chile),science_agency,6377428000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_8636074d262c__1999_Ley_de_presupuestos.txt,0,
-Chile,2000,INIA (Chile),science_agency,6581506000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_ac8dfbecc451__2000_Ley_de_presupuestos.txt,0,
-Chile,2001,INIA (Chile),science_agency,6746044000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_4b53180aa4fb__2001_Ley_de_presupuestos.txt,0,
-Chile,2002,INIA (Chile),science_agency,6955171000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_1ceca0556d60__2002_Ley_de_presupuestos.txt,0,
-Chile,2003,INIA (Chile),science_agency,7255171000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_f3ec2daf2903__2003_Ley_de_presupuestos.txt,0,
-Chile,2004,INIA (Chile),science_agency,7190630000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_d20cea522b48__2004_Ley_de_presupuestos.txt,0,
-Chile,2005,INIA (Chile),science_agency,7421236000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_fd49be81e27e__2005_Ley_de_presupuestos.txt,0,
-Chile,2006,INIA (Chile),science_agency,7643873000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_cafaa6393595__2006_Ley_de_presupuestos.txt,0,
-Chile,2007,INIA (Chile),science_agency,8212594000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0,
-Chile,2008,INIA (Chile),science_agency,9049599000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0,
-Chile,2009,INIA (Chile),science_agency,9610674000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0,
-Chile,2010,INIA (Chile),science_agency,11313377000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0,
-Chile,2011,INIA (Chile),science_agency,12646184000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0,
-Chile,2012,INIA (Chile),science_agency,12977640000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0,
-Chile,2013,INIA (Chile),science_agency,13554647000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0,
-Chile,2014,INIA (Chile),science_agency,14170520000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0,
-Chile,2015,INIA (Chile),science_agency,15200429000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0,
-Chile,2016,INIA (Chile),science_agency,16556183000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0,
-Chile,2017,INIA (Chile),science_agency,16875557000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,
-Chile,2018,INIA (Chile),science_agency,17342185000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,
-Chile,2019,INIA (Chile),science_agency,17775401000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0,
-Chile,2020,INIA (Chile),science_agency,18352799000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,
-Chile,2021,INIA (Chile),science_agency,17107193000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,
-Chile,2022,INIA (Chile),science_agency,17859910000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0,
-Chile,2023,INIA (Chile),science_agency,20325290000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0,
-Chile,2024,INIA (Chile),science_agency,21420649000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0,
-Chile,2025,INIA (Chile),science_agency,22320316000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0,
-Chile,2011,INNOVA - Investment Initiatives 2009-2010,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2011,INNOVA - North Macrozone Call for Alternative Energy Projects,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2013,INNOVA-CORFO - Transfer of Public Goods for Competitiveness,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2018,INNOVACHILE - Human Capital Transfer for Innovation,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2017,INNOVACHILE - Hydrogeological and Geophysical Studies Transfer,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2017,INNOVACHILE - Technology Transfer Program for Agricultural Producers,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2017,INNOVACHILE - Technology Transfer Program for Agricultural Reconversion,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2017,INNOVACHILE - Transfer Evaluation of Jibia Behavior,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2020,Innova FOSIS - Country Commitment,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2021,Innova FOSIS - Country Commitment,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2022,Innova FOSIS - Country Commitment,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2023,Innova FOSIS - Country Commitment,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2024,Innova FOSIS - Country Commitment,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2025,Innova FOSIS - Country Commitment,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2018,Innovador Programme,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2019,Innovador Programme,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2020,Innovador Programme,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2023,Innovation Based on Science,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2014,Innovation Fund for Competitiveness,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2017,Innovation Survey - National Institute of Statistics,direct_rd,424875000.0,peso,CLP,line_item,Innovation Survey - National Institute of Statistics,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,The survey collects data relevant to R&D and innovation activities.
-Chile,2018,Innovation Survey - National Institute of Statistics,direct_rd,210330000.0,peso,CLP,line_item,Innovation Survey - National Institute of Statistics,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,The survey collects data relevant to R&D and innovation activities.
-Chile,2019,Innovation Survey - National Institute of Statistics,direct_rd,458350000.0,peso,CLP,line_item,Innovation Survey - National Institute of Statistics,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0,The survey collects data relevant to R&D and innovation activities.
-Chile,2011,"Innovation, Research and Development Survey",direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2016,Innovative Solutions for Water Supply,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2019,Innovative Technology Development for Mineral Concentration,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2023,Institute of Agricultural Research,science_agency,20325290000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0,"This institute is dedicated to agricultural research, making it highly relevant for R&D."
-Chile,2021,Inter-American Institute for Global Change Research,science_agency,5455000.0,peso,CLP,line_item,Inter-American Institute for Global Change Research,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,This institute focuses on research related to global change.
-Chile,2017,International Antarctic Center,science_agency,193640000.0,peso,CLP,line_item,International Antarctic Center,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,This center is dedicated to research in Antarctic studies.
-Chile,2018,International Antarctic Center,science_agency,278501000.0,peso,CLP,line_item,International Antarctic Center,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,This center is dedicated to research in Antarctic studies.
-Chile,2019,International Antarctic Center,science_agency,269214000.0,peso,CLP,line_item,International Antarctic Center,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0,This center is dedicated to research in Antarctic studies.
-Chile,2020,International Antarctic Center,science_agency,262403000.0,peso,CLP,line_item,International Antarctic Center,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,This center is dedicated to research in Antarctic studies.
-Chile,2021,International Antarctic Center,science_agency,189418000.0,peso,CLP,line_item,International Antarctic Center,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,This center is dedicated to research in Antarctic studies.
-Chile,2022,International Antarctic Center,science_agency,171713000.0,peso,CLP,line_item,International Antarctic Center,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0,This center is dedicated to research in Antarctic studies.
-Chile,2023,International Antarctic Center,science_agency,122711000.0,peso,CLP,line_item,International Antarctic Center,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0,This center is dedicated to research in Antarctic studies.
-Chile,2024,International Antarctic Center,science_agency,178363000.0,peso,CLP,line_item,International Antarctic Center,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0,This center is dedicated to research in Antarctic studies.
-Chile,2025,International Antarctic Center,science_agency,181208000.0,peso,CLP,line_item,International Antarctic Center,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0,This center is dedicated to research in Antarctic studies.
-Chile,2010,Internationalization of the Innovative Effort,innovation_instruments,247956000.0,peso,CLP,line_item,Internationalization of the Innovative Effort,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0,
-Chile,2011,Internationalization of the Innovative Effort,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2012,Internationalization of the Innovative Effort,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2013,Internationalization of the Innovative Effort,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2014,Internationalization of the Innovative Effort,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2015,Internationalization of the Innovative Effort,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2016,Internationalization of the Innovative Effort,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2017,Internationalization of the Innovative Effort,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2018,Internationalization of the Innovative Effort,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2019,Internationalization of the Innovative Effort,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2020,Internationalization of the Innovative Effort,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2021,Internationalization of the Innovative Effort,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2022,Internationalization of the Innovative Effort,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2023,Internationalization of the Innovative Effort,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2024,Internationalization of the Innovative Effort,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2025,Internationalization of the Innovative Effort,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2021,Knowledge and Innovation,innovation_instruments,287533769000.0,peso,CLP,line_item,National Agency for Research and Development,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,This program focuses on promoting knowledge and innovation.
-Chile,2016,MINVU - Wood Innovation Center Agreement,innovation_instruments,67854000.0,peso,CLP,line_item,MINVU Agreement - Wood Innovation Center,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0,This entity focuses on innovation in wood technology.
-Chile,2017,MINVU - Wood Innovation Center Agreement,innovation_instruments,76410000.0,peso,CLP,line_item,MINVU Agreement - Wood Innovation Center,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,This entity focuses on innovation in wood technology.
-Chile,2018,MINVU - Wood Innovation Center Agreement,innovation_instruments,78397000.0,peso,CLP,line_item,MINVU Agreement - Wood Innovation Center,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,This entity focuses on innovation in wood technology.
-Chile,2019,MINVU - Wood Innovation Center Agreement,innovation_instruments,80355000.0,peso,CLP,line_item,MINVU Agreement - Wood Innovation Center,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0,This entity focuses on innovation in wood technology.
-Chile,2020,MINVU - Wood Innovation Center Agreement,innovation_instruments,87210000.0,peso,CLP,line_item,MINVU Agreement - Wood Innovation Center,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,This entity focuses on innovation in wood technology.
-Chile,2021,MINVU - Wood Innovation Center Agreement,innovation_instruments,89172000.0,peso,CLP,line_item,050 MINVU Agreement - Wood Innovation Center,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,This entity focuses on innovation in wood technology.
-Chile,2022,MINVU - Wood Innovation Center Agreement,innovation_instruments,91047000.0,peso,CLP,line_item,MINVU Agreement - Wood Innovation Center,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0,This entity focuses on innovation in wood technology.
-Chile,2023,MINVU - Wood Innovation Center Agreement,innovation_instruments,96783000.0,peso,CLP,line_item,MINVU Agreement - Wood Innovation Center,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0,This entity focuses on innovation in wood technology.
-Chile,2024,MINVU - Wood Innovation Center Agreement,innovation_instruments,100395000.0,peso,CLP,line_item,MINVU Agreement - Wood Innovation Center,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0,This entity focuses on innovation in wood technology.
-Chile,2020,Metropolitan University of Educational Sciences - Development of Nanobiomaterials,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2001,Millennium Scientific Initiative Program,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2015,National Center for Innovation and Promotion of Sustainable Energies (CIFES),science_agency,2211518000.0,peso,CLP,line_item,National Center for Innovation and Promotion of Sustainable Energies,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0,This center is dedicated to R&D in sustainable energy technologies.
-Chile,2016,National Center for Innovation and Promotion of Sustainable Energies (CIFES),science_agency,1974814000.0,peso,CLP,line_item,National Center for Innovation and Promotion of Sustainable Energies,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0,This center is dedicated to R&D in sustainable energy technologies.
-Chile,2009,National Energy Efficiency Program,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2021,National Fund for Health Research and Development,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2015,National Innovation Survey,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2016,National Innovation Survey,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2017,National Innovation Survey,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2018,National Innovation Survey,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2018,National Institute for Agricultural Development - Technical Transfer in Wood Development and Non-Timber Forest Products,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2019,National Institute for Agricultural Development - Technical Transfer in Wood Development and Non-Timber Forest Products,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2010,PUCV - Establishment of the First Stage of the Biotechnology Core,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2016,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,431808000.0,peso,CLP,line_item,Patagonia Ecosystem Research Center Corporation (CIEP),pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0,This corporation is dedicated to ecosystem research in Patagonia.
-Chile,2017,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,772500000.0,peso,CLP,line_item,Patagonia Ecosystem Research Center Corporation (CIEP),pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,This corporation is dedicated to ecosystem research in Patagonia.
-Chile,2018,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,987012000.0,peso,CLP,line_item,Patagonia Ecosystem Research Center Corporation (CIEP),pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,This corporation is dedicated to ecosystem research in Patagonia.
-Chile,2019,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,1055523000.0,peso,CLP,line_item,Patagonia Ecosystem Research Center Corporation (CIEP),pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0,This corporation is dedicated to ecosystem research in Patagonia.
-Chile,2020,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,1082967000.0,peso,CLP,line_item,Patagonia Ecosystem Research Center Corporation (CIEP),pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,This corporation is dedicated to ecosystem research in Patagonia.
-Chile,2015,Polymers through the Advanced Polymer Research Center,science_agency,412000000.0,peso,CLP,line_item,Polymers through the Advanced Polymer Research Center,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0,This program focuses on research in advanced polymers.
-Chile,2017,"Pontifical Catholic University of Chile - Design and Crafts, Innovation Platform",higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2021,Pontifical Catholic University of Chile - Innovation and Training for Sustainable Irrigation,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2016,Pontifical Catholic University of Chile - Innovation in Beehive Sanitary Situation,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2015,"Pontifical Catholic University of Chile - Onion Transfer, Innovation for Sustainable Cultivation",higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2015,Pontifical Catholic University of Valparaíso - Transfer of Innovation Technologies for Dryland Quinoa,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2010,Promotion and Strengthening of the Energy Efficiency Market,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2020,Promotion of Science and Technology - Millennium Scientific Initiative,science_agency,8371852000.0,peso,CLP,line_item,Promotion of Science and Technology - Millennium Scientific Initiative,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,"This initiative promotes science and technology, making it highly relevant to R&D."
-Chile,2020,Promotion of Science and Technology - National Agency for R&D,science_agency,47205187000.0,peso,CLP,line_item,Promotion of Science and Technology - National Agency for R&D,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,This agency is dedicated to promoting R&D activities in Chile.
-Chile,2012,Promotion of Science and Technology - Undersecretariat of Agriculture Program 02,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2013,Promotion of Science and Technology - Undersecretariat of Agriculture Program 02,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2014,Promotion of Science and Technology - Undersecretariat of Agriculture Program 02,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2010,Public Innovation Committee,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2011,Public Innovation Committee,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2012,Public Innovation Committee,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2013,Public Innovation Committee,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2014,Public Innovation Committee,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2015,Public Innovation Committee,innovation_instruments,2822200000.0,peso,CLP,line_item,Public Innovation Committee,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0,
-Chile,2016,Public Innovation Committee,innovation_instruments,3072480000.0,peso,CLP,line_item,Public Innovation Committee,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0,
-Chile,2017,Public Innovation Committee,innovation_instruments,3164654000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0.0,gap: no matching rows in this year; manual override from original Chile budget file
-Chile,2018,Public Innovation Committee,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2019,Public Innovation Committee,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2020,Public Innovation Committee,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2021,Public Innovation Committee,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2022,Public Innovation Committee,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2023,Public Innovation Committee,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2024,Public Innovation Committee,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2025,Public Innovation Committee,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2016,Public Interest Innovation - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2017,Public Interest Innovation - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2018,Public Interest Innovation - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2019,Public Interest Innovation - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2020,Public Interest Innovation - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2025,Public Technological and Research Institute of Lithium and Salars,science_agency,625200000.0,peso,CLP,line_item,Public Technological and Research Institute of Lithium and Salars,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0,This institute is dedicated to research in lithium and salars.
-Chile,2018,Regional Ministerial Secretariat of Agriculture - Development of Silvoagropecuary Valuation,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2019,Regional Ministerial Secretariat of Agriculture - Development of Silvoagropecuary Valuation,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2020,Regional Ministerial Secretariat of Agriculture - Development of Silvoagropecuary Valuation,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2021,Regional Scientific and Technological Research Program,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2001,Research Programs,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2019,Santo Tomás University - Sustainable Aquaculture and Regional Oyster Industry,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2020,Science and Technology - CORFO Program 05,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2020,Solar and Energy Innovation Committee,innovation_instruments,720293000.0,peso,CLP,line_item,Solar and Energy Innovation Committee,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,"Focuses on solar energy innovation, relevant for R&D."
-Chile,2010,Strengthening Research and Development,direct_rd,21094000.0,peso,CLP,line_item,Strengthening Research and Development,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0,Directly aimed at strengthening R&D activities.
-Chile,2024,Support for Higher Education Innovation - INES,higher_education,8654669000.0,peso,CLP,line_item,Support for Higher Education Innovation - INES,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0,"This program supports innovation in higher education, which is relevant to R&D."
-Chile,2025,Support for Higher Education Innovation - INES,higher_education,8707040000.0,peso,CLP,line_item,Support for Higher Education Innovation - INES,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0,"This program supports innovation in higher education, which is relevant to R&D."
-Chile,2020,Support for Innovation in Higher Education - Private Institutions,higher_education,2346052000.0,peso,CLP,line_item,Support for Innovation in Higher Education - Private Institutions,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,"This program supports innovation in higher education, which is relevant to R&D."
-Chile,2021,Support for Innovation in Higher Education - Private Institutions,higher_education,2085900000.0,peso,CLP,line_item,Support for Innovation in Higher Education - Private Institutions,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,"This program supports innovation in higher education, which is relevant to R&D."
-Chile,2022,Support for Innovation in Higher Education - Private Institutions,higher_education,3284313000.0,peso,CLP,line_item,Support for Innovation in Higher Education - Private Institutions,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0,"This program supports innovation in higher education, which is relevant to R&D."
-Chile,2023,Support for Innovation in Higher Education - Private Institutions,higher_education,4011996000.0,peso,CLP,line_item,Support for Innovation in Higher Education - Private Institutions,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0,"This program supports innovation in higher education, which is relevant to R&D."
-Chile,2021,Support for Innovation in Higher Education - State Institutions,higher_education,3128850000.0,peso,CLP,line_item,Support for Innovation in Higher Education - State Institutions,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,"This program supports innovation in higher education, which is relevant to R&D."
-Chile,2020,Technological Consortia - INNOVA,innovation_instruments,450000000.0,peso,CLP,line_item,Technological Consortiums - INNOVA,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,This program promotes technological collaboration and innovation.
-Chile,2010,Technological Consortiums - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2011,Technological Consortiums - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2012,Technological Consortiums - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2013,Technological Consortiums - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2014,Technological Consortiums - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2015,Technological Consortiums - CORFO,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2016,Technological Consortiums - CORFO,innovation_instruments,3193420000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0.0,gap: no matching rows in this year; manual override from original Chile budget file
-Chile,2017,Technological Consortiums - CORFO,innovation_instruments,2958851000.0,peso,CLP,line_item,Technological Consortiums - CORFO,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,
-Chile,2018,Technological Consortiums - CORFO,innovation_instruments,2759704000.0,peso,CLP,line_item,Technological Consortiums - CORFO,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,
-Chile,2019,Technological Consortiums - CORFO,innovation_instruments,2408924000.0,peso,CLP,line_item,Technological Consortiums - CORFO,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0,
-Chile,2020,Technological Consortiums - CORFO,innovation_instruments,904000000.0,peso,CLP,line_item,Technological Consortiums - CORFO,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0,
-Chile,2021,Technological Consortiums - CORFO,innovation_instruments,9939882000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0.0,manual override from original Chile budget file
-Chile,2022,Technological Consortiums - CORFO,innovation_instruments,8969143000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0.0,gap: no matching rows in this year; manual override from original Chile budget file
-Chile,2023,Technological Consortiums - CORFO,innovation_instruments,9014891000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0.0,gap: no matching rows in this year; manual override from original Chile budget file
-Chile,2024,Technological Consortiums - CORFO,innovation_instruments,12305582000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0.0,gap: no matching rows in this year; manual override from original Chile budget file
-Chile,2025,Technological Consortiums - CORFO,innovation_instruments,12114163000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0.0,gap: no matching rows in this year; manual override from original Chile budget file
-Chile,2011,Technological Consortiums Biofuels,innovation_instruments,3762288000.0,peso,CLP,line_item,Technological Consortiums for Biofuels,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0,This consortium focuses on R&D in the biofuels sector.
-Chile,2012,Technological Consortiums Biofuels,innovation_instruments,1428861000.0,peso,CLP,line_item,Technological Consortiums for Biofuels,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0,This consortium focuses on R&D in the biofuels sector.
-Chile,2013,Technological Consortiums Biofuels,innovation_instruments,1393130000.0,peso,CLP,line_item,Technological Consortiums for Biofuels,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0,This consortium focuses on R&D in the biofuels sector.
-Chile,2014,Technological Consortiums Biofuels,innovation_instruments,1133887000.0,peso,CLP,line_item,Technological Consortiums for Biofuels,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0,This consortium focuses on R&D in the biofuels sector.
-Chile,2009,Technological Innovation,innovation_instruments,9610674000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0,"Focused on promoting technological innovation, relevant to R&D."
-Chile,2010,Technological Innovation,innovation_instruments,11313377000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0,"Focused on promoting technological innovation, relevant to R&D."
-Chile,2011,Technological Innovation,innovation_instruments,12646184000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0,"Focused on promoting technological innovation, relevant to R&D."
-Chile,2018,U. de Atacama Program on New Technology Development for Oyster Seed Cultivation,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2021,U. de Atacama Research Center for Cobalt and Rare Earths,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2012,U. de Los Lagos Innovative Technique for Genetic Parental Identification in Concholepas,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2012,UACH CIEP - Human Capital Research in Water Systems and Ice Fields,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2013,UACH CIEP Program on Human Capital Research in Water Systems and Ice Fields,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2014,"UACH CIEP Program on Research, Innovation, and Development at the Marine Edge",direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2021,UACH Program on Equity and Efficiency in Organ Transplantation,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2009,UAP Innovation and Strengthening of Regional Competitive Capacities,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2010,"UCV - Construction of Biotechnology Core, Curauma Scientific and Technological Park",higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2019,UMAG - Transfer of Technology for the Production of Highly Unsaturated Fatty Acids,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2009,Undersecretariat of Telecommunications - Digital Infrastructure for Innovation and Competitiveness,innovation_instruments,,,,,,,,gap: no matching rows in this year
-Chile,2021,Universidad Andrés Bello - Innovation in Marketing towards Gabriela Mistral,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2018,Universidad Arturo Prat - T-Logistic Logistics Innovation Center,higher_education,102600000.0,peso,CLP,line_item,Arturo Prat University - T-Logistic Logistics Innovation Center,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0,"This entity is involved in logistics innovation, which is relevant to R&D."
-Chile,2019,Universidad Arturo Prat - T-Logistic Logistics Innovation Center,higher_education,103000000.0,peso,CLP,line_item,Arturo Prat University - T-Logistic Logistics Innovation Center,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0,"This entity is involved in logistics innovation, which is relevant to R&D."
-Chile,2019,Universidad Arturo Prat - Tarapacá Extreme Environments Research,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2020,Universidad Arturo Prat - Tarapacá Extreme Environments Research,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2021,Universidad Arturo Prat - Technology for Plastic Degradation,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2020,Universidad Austral - Aysén Museums Network: Museological Research and Diagnosis,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2021,Universidad Austral - Development of the Culture of Innovation and Entrepreneurship,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2015,Universidad Católica del Norte - Regional Innovation Center in Strategic Resources,higher_education,59255000.0,peso,CLP,line_item,Catholic University of the North - Regional Innovation Center in Strategic Resources,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0,Promotes research and innovation in strategic resource management.
-Chile,2021,Universidad de Chile - Comprehensive Innovation in Evaluation/Exposure to Contaminants,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2017,University of Antofagasta - Education Innovation Observatory Transfer,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2018,University of Antofagasta - Education Innovation Observatory Transfer,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2018,University of Antofagasta - Transfer of Solar Technologies Laboratory Positioning,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2019,University of Antofagasta - Transfer of Solar Technologies Laboratory Positioning,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2020,"University of Atacama - Regional Educational Hubs in Science, Technology, and Society",higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2018,University of Atacama - Transfer Program for Small-Scale Oyster Aquaculture,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2021,"University of Aysén - Integrated Multitrophic Aquaculture, Aysén Region",higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2017,University of Chile - Applied Research Transfer for Table Grape Rootstock,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2016,University of Chile - Germplasm Prospecting and Technology for Early Fruit Harvest,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2018,University of Chile - Innovation and Optimization of Irrigation in Blueberries,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2016,University of Chile - Innovation for Frost Control,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2017,University of Chile - Innovation for Frost Control,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2020,University of Chile - Sustainable Pest Control Innovation,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2016,University of Chile - Technological Transfer and Innovation in Irrigation,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2015,University of Chile - Transfer of Innovation in Strawberry Management,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2016,University of La Serena - Research Implementation and Evaluation of FVH Production,direct_rd,,,,,,,,gap: no matching rows in this year
-Chile,2021,University of Magallanes - Open Laboratory Prototype for Sub-Antarctic Sciences,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2020,University of O'Higgins - Social Innovation in the Tourism Sector,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2020,University of Talca - O'Higgins Social Innovation Laboratory,higher_education,,,,,,,,gap: no matching rows in this year
-Chile,2015,University of Talca - Transfer of Employment of Rhizobacteria as Sustainable Technology,higher_education,,,,,,,,gap: no matching rows in this year
+Chile,2003,INACH (Instituto Antártico Chileno),science_agency,1665659000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_f3ec2daf2903__2003_Ley_de_presupuestos.txt,0.0,
+Chile,2004,INACH (Instituto Antártico Chileno),science_agency,1910930000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_d20cea522b48__2004_Ley_de_presupuestos.txt,0.0,
+Chile,2005,INACH (Instituto Antártico Chileno),science_agency,1835357000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_fd49be81e27e__2005_Ley_de_presupuestos.txt,0.0,
+Chile,2006,INACH (Instituto Antártico Chileno),science_agency,1934575000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_cafaa6393595__2006_Ley_de_presupuestos.txt,0.0,
+Chile,2007,INACH (Instituto Antártico Chileno),science_agency,2152774000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0.0,
+Chile,2008,INACH (Instituto Antártico Chileno),science_agency,2284200000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0.0,
+Chile,2009,INACH (Instituto Antártico Chileno),science_agency,2576460000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0.0,
+Chile,2010,INACH (Instituto Antártico Chileno),science_agency,2792047000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0.0,
+Chile,2011,INACH (Instituto Antártico Chileno),science_agency,2986857000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0.0,
+Chile,2012,INACH (Instituto Antártico Chileno),science_agency,3138832000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0.0,
+Chile,2013,INACH (Instituto Antártico Chileno),science_agency,3460582000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0.0,
+Chile,2014,INACH (Instituto Antártico Chileno),science_agency,3677752000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0.0,
+Chile,2015,INACH (Instituto Antártico Chileno),science_agency,4117886000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0.0,
+Chile,2016,INACH (Instituto Antártico Chileno),science_agency,3746166000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0.0,
+Chile,2017,INACH (Instituto Antártico Chileno),science_agency,4243874000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0.0,
+Chile,2018,INACH (Instituto Antártico Chileno),science_agency,4661279000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0.0,
+Chile,2019,INACH (Instituto Antártico Chileno),science_agency,5539745000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0.0,
+Chile,2020,INACH (Instituto Antártico Chileno),science_agency,6349307000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0.0,
+Chile,2021,INACH (Instituto Antártico Chileno),science_agency,5163841000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0.0,
+Chile,2022,INACH (Instituto Antártico Chileno),science_agency,5882923000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0.0,
+Chile,2023,INACH (Instituto Antártico Chileno),science_agency,6224780000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0.0,
+Chile,2024,INACH (Instituto Antártico Chileno),science_agency,7237694000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0.0,
+Chile,2025,INACH (Instituto Antártico Chileno),science_agency,7494857000.0,peso,CLP,line_item,Chilean Antarctic Institute,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0.0,
+Chile,1999,INIA (Chile),science_agency,6377428000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_8636074d262c__1999_Ley_de_presupuestos.txt,0.0,
+Chile,2000,INIA (Chile),science_agency,6581506000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_ac8dfbecc451__2000_Ley_de_presupuestos.txt,0.0,
+Chile,2001,INIA (Chile),science_agency,6746044000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_4b53180aa4fb__2001_Ley_de_presupuestos.txt,0.0,
+Chile,2002,INIA (Chile),science_agency,6955171000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_1ceca0556d60__2002_Ley_de_presupuestos.txt,0.0,
+Chile,2003,INIA (Chile),science_agency,7255171000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_f3ec2daf2903__2003_Ley_de_presupuestos.txt,0.0,
+Chile,2004,INIA (Chile),science_agency,7190630000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_d20cea522b48__2004_Ley_de_presupuestos.txt,0.0,
+Chile,2005,INIA (Chile),science_agency,7421236000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_fd49be81e27e__2005_Ley_de_presupuestos.txt,0.0,
+Chile,2006,INIA (Chile),science_agency,7643873000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_cafaa6393595__2006_Ley_de_presupuestos.txt,0.0,
+Chile,2007,INIA (Chile),science_agency,8212594000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_f0c27e2c7274__2007_Ley_de_presupuestos.txt,0.0,
+Chile,2008,INIA (Chile),science_agency,9049599000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_14906c623cc1__2008_Ley_de_presupuestos.txt,0.0,
+Chile,2009,INIA (Chile),science_agency,9610674000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_8821fb3074b8__2009_Ley_de_presupuestos.txt,0.0,
+Chile,2010,INIA (Chile),science_agency,11313377000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0.0,
+Chile,2011,INIA (Chile),science_agency,12646184000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_a85b725c78e7__2011_Ley_de_presupuestos.txt,0.0,
+Chile,2012,INIA (Chile),science_agency,12977640000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_39c52aaf0edb__2012_Ley_de_presupuestos.txt,0.0,
+Chile,2013,INIA (Chile),science_agency,13554647000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_5f573018bb6b__2013_Ley_de_presupuestos.txt,0.0,
+Chile,2014,INIA (Chile),science_agency,14170520000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_d5c7319e14a9__2014_Ley_de_presupuestos.txt,0.0,
+Chile,2015,INIA (Chile),science_agency,15200429000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0.0,
+Chile,2016,INIA (Chile),science_agency,16556183000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0.0,
+Chile,2017,INIA (Chile),science_agency,16875557000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0.0,
+Chile,2018,INIA (Chile),science_agency,17342185000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0.0,
+Chile,2019,INIA (Chile),science_agency,17775401000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0.0,
+Chile,2020,INIA (Chile),science_agency,18352799000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0.0,
+Chile,2021,INIA (Chile),science_agency,17107193000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0.0,
+Chile,2022,INIA (Chile),science_agency,17859910000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0.0,
+Chile,2023,INIA (Chile),science_agency,20325290000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0.0,
+Chile,2024,INIA (Chile),science_agency,21420649000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0.0,
+Chile,2025,INIA (Chile),science_agency,22320316000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0.0,
+Chile,2023,Institute of Agricultural Research,science_agency,20325290000.0,peso,CLP,line_item,Institute of Agricultural Research,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0.0,"This institute is dedicated to agricultural research, making it highly relevant for R&D."
+Chile,2021,Inter-American Institute for Global Change Research,science_agency,5455000.0,peso,CLP,line_item,Inter-American Institute for Global Change Research,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0.0,This institute focuses on research related to global change.
+Chile,2017,International Antarctic Center,science_agency,193640000.0,peso,CLP,line_item,International Antarctic Center,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0.0,This center is dedicated to research in Antarctic studies.
+Chile,2018,International Antarctic Center,science_agency,278501000.0,peso,CLP,line_item,International Antarctic Center,pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0.0,This center is dedicated to research in Antarctic studies.
+Chile,2019,International Antarctic Center,science_agency,269214000.0,peso,CLP,line_item,International Antarctic Center,pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0.0,This center is dedicated to research in Antarctic studies.
+Chile,2020,International Antarctic Center,science_agency,262403000.0,peso,CLP,line_item,International Antarctic Center,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0.0,This center is dedicated to research in Antarctic studies.
+Chile,2021,International Antarctic Center,science_agency,189418000.0,peso,CLP,line_item,International Antarctic Center,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0.0,This center is dedicated to research in Antarctic studies.
+Chile,2022,International Antarctic Center,science_agency,171713000.0,peso,CLP,line_item,International Antarctic Center,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0.0,This center is dedicated to research in Antarctic studies.
+Chile,2023,International Antarctic Center,science_agency,122711000.0,peso,CLP,line_item,International Antarctic Center,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0.0,This center is dedicated to research in Antarctic studies.
+Chile,2024,International Antarctic Center,science_agency,178363000.0,peso,CLP,line_item,International Antarctic Center,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0.0,This center is dedicated to research in Antarctic studies.
+Chile,2025,International Antarctic Center,science_agency,181208000.0,peso,CLP,line_item,International Antarctic Center,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0.0,This center is dedicated to research in Antarctic studies.
+Chile,2010,Internationalization of the Innovative Effort,innovation_instruments,247956000.0,peso,CLP,line_item,Internationalization of the Innovative Effort,pdf_d85f96298d52__2010_Ley_de_presupuestos.txt,0.0,
+Chile,2015,National Center for Innovation and Promotion of Sustainable Energies (CIFES),science_agency,2211518000.0,peso,CLP,line_item,National Center for Innovation and Promotion of Sustainable Energies,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0.0,This center is dedicated to R&D in sustainable energy technologies.
+Chile,2016,National Center for Innovation and Promotion of Sustainable Energies (CIFES),science_agency,1974814000.0,peso,CLP,line_item,National Center for Innovation and Promotion of Sustainable Energies,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0.0,This center is dedicated to R&D in sustainable energy technologies.
+Chile,2016,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,431808000.0,peso,CLP,line_item,Patagonia Ecosystem Research Center Corporation (CIEP),pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0.0,This corporation is dedicated to ecosystem research in Patagonia.
+Chile,2017,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,772500000.0,peso,CLP,line_item,Patagonia Ecosystem Research Center Corporation (CIEP),pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0.0,This corporation is dedicated to ecosystem research in Patagonia.
+Chile,2018,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,987012000.0,peso,CLP,line_item,Patagonia Ecosystem Research Center Corporation (CIEP),pdf_6e49442672ef__2018_Ley_de_presupuestos.txt,0.0,This corporation is dedicated to ecosystem research in Patagonia.
+Chile,2019,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,1055523000.0,peso,CLP,line_item,Patagonia Ecosystem Research Center Corporation (CIEP),pdf_7636fd0e73ad__2019_Ley_de_presupuestos.txt,0.0,This corporation is dedicated to ecosystem research in Patagonia.
+Chile,2020,Patagonia Ecosystem Research Center Corporation (CIEP),science_agency,1082967000.0,peso,CLP,line_item,Patagonia Ecosystem Research Center Corporation (CIEP),pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0.0,This corporation is dedicated to ecosystem research in Patagonia.
+Chile,2020,Promotion of Science and Technology - National Agency for R&D,science_agency,47205187000.0,peso,CLP,line_item,Promotion of Science and Technology - National Agency for R&D,pdf_b5f943facf39__2020_Ley_de_presupuestos.txt,0.0,This agency is dedicated to promoting R&D activities in Chile.
+Chile,2015,Public Innovation Committee,innovation_instruments,2822200000.0,peso,CLP,line_item,Public Innovation Committee,pdf_e095d57c1f56__2015_Ley_de_presupuestos.txt,0.0,
+Chile,2016,Public Innovation Committee,innovation_instruments,3072480000.0,peso,CLP,line_item,Public Innovation Committee,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0.0,
+Chile,2017,Public Innovation Committee,innovation_instruments,3164654000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_0be4f6acdb77__2017_Ley_de_presupuestos.txt,0,gap: no matching rows in this year; manual override from original Chile budget file
+Chile,2025,Public Technological and Research Institute of Lithium and Salars,science_agency,625200000.0,peso,CLP,line_item,Public Technological and Research Institute of Lithium and Salars,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0.0,This institute is dedicated to research in lithium and salars.
+Chile,2016,Technological Consortiums - CORFO,innovation_instruments,3193420000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_2a8a4335247c__2016_Ley_de_presupuestos.txt,0,gap: no matching rows in this year; manual override from original Chile budget file
+Chile,2021,Technological Consortiums - CORFO,innovation_instruments,9939882000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_a202d9a1404b__2021_Ley_de_presupuestos.txt,0,manual override from original Chile budget file
+Chile,2022,Technological Consortiums - CORFO,innovation_instruments,8969143000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_59f02122fee1__2022_Ley_de_presupuestos.txt,0,gap: no matching rows in this year; manual override from original Chile budget file
+Chile,2023,Technological Consortiums - CORFO,innovation_instruments,9014891000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_01662b31fcf6__2023_Ley_de_presupuestos.txt,0,gap: no matching rows in this year; manual override from original Chile budget file
+Chile,2024,Technological Consortiums - CORFO,innovation_instruments,12305582000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_74da6471bcd9__2024_Ley_de_presupuestos.txt,0,gap: no matching rows in this year; manual override from original Chile budget file
+Chile,2025,Technological Consortiums - CORFO,innovation_instruments,12114163000.0,peso,CLP,verified_override,Verified against original Chile budget file,pdf_e0cd9ea5ce26__2025_Ley_de_presupuestos.txt,0,gap: no matching rows in this year; manual override from original Chile budget file
