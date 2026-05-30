@@ -3,6 +3,7 @@ Innovation Policy Dataset — Research Dashboard
 Run:  streamlit run app/streamlit_app.py
 """
 
+import io
 import sys
 import textwrap
 from pathlib import Path
@@ -431,6 +432,13 @@ def caption_note(text):
     )
 
 
+def _df_to_excel_bytes(df: pd.DataFrame, sheet_name: str = "Sheet1") -> bytes:
+    buffer = io.BytesIO()
+    with pd.ExcelWriter(buffer, engine="openpyxl") as writer:
+        df.to_excel(writer, index=False, sheet_name=sheet_name)
+    return buffer.getvalue()
+
+
 def _clean_text(value) -> str:
     if value is None:
         return ""
@@ -586,6 +594,65 @@ def _gap_issue_label_for_ui(label: str) -> str:
     return mapping.get(label, label)
 
 
+def _short_series_name(label: str) -> str:
+    label = _clean_text(label)
+    if not label:
+        return ""
+    return label.split(" — ")[0].strip()
+
+
+def _diagnosis_claims_unparsed(text: str) -> bool:
+    text = _clean_text(text).lower()
+    if not text:
+        return False
+    needles = [
+        "year not in raw_rows",
+        "not in raw_rows",
+        "not parsed yet",
+        "may not be parsed yet",
+        "documents may not be parsed yet",
+        "probably not parsed yet",
+    ]
+    return any(needle in text for needle in needles)
+
+
+@st.cache_data
+def _load_budget_country_docx_series(country: str) -> pd.DataFrame:
+    root = Path(__file__).resolve().parent.parent / "Data" / "output" / "budget" / str(country)
+    path = root / f"{str(country).lower()}_docx_series.csv"
+    if not path.exists():
+        return pd.DataFrame()
+    try:
+        return pd.read_csv(path)
+    except Exception:
+        return pd.DataFrame()
+
+
+def _year_docx_series_fragments(country: str, year: int) -> list[str]:
+    df = _load_budget_country_docx_series(country)
+    if df.empty or "year" not in df.columns:
+        return []
+    year_df = df[df["year"] == year].copy()
+    if year_df.empty:
+        return []
+
+    fragments: list[str] = []
+    for _, row in year_df.iterrows():
+        note = _clean_text(row.get("series_notes"))
+        if not note:
+            continue
+        short_name = _short_series_name(row.get("canonical_name"))
+        tail = [part.strip() for part in note.split(";") if part.strip()]
+        detail = tail[-1] if tail else note
+        if detail.lower().startswith("gap:"):
+            detail = detail[4:].strip()
+        if short_name:
+            fragments.append(f"{short_name}: {detail}.")
+        else:
+            fragments.append(f"{detail}.")
+    return _uniq_keep_order(fragments)
+
+
 def _budget_gap_explorer_detail(
     country: str,
     year: int,
@@ -627,6 +694,21 @@ def _budget_gap_explorer_detail(
             return _issue, _analysis
         return _issue, "The source was reviewed manually, but no defendable final R&D line could be retained for this year."
 
+    _docx_fragments = _year_docx_series_fragments(country, year)
+    _ok_runs = (
+        year_run_log[year_run_log["status"].astype(str) == "ok"].copy()
+        if not year_run_log.empty and "status" in year_run_log.columns else pd.DataFrame()
+    )
+    _ok_rows = (
+        pd.to_numeric(_ok_runs.get("rows_extracted", pd.Series(dtype=float)), errors="coerce").fillna(0)
+        if not _ok_runs.empty else pd.Series(dtype=float)
+    )
+    _ok_rows_total = int(_ok_rows.sum()) if not _ok_rows.empty else 0
+    _ok_docs = (
+        _uniq_keep_order(_ok_runs.get("source_file", pd.Series(dtype=str)).dropna().astype(str).tolist())
+        if not _ok_runs.empty else []
+    )
+
     if not year_gap_report.empty:
         _diagnoses = _uniq_keep_order(year_gap_report.get("diagnosis", pd.Series(dtype=str)).astype(str).tolist())
         _actions = _uniq_keep_order(year_gap_report.get("action", pd.Series(dtype=str)).astype(str).tolist())
@@ -636,8 +718,66 @@ def _budget_gap_explorer_detail(
         elif "reextract" in _actions:
             _issue = "Processed source needs deeper manual review"
 
+        _primary_diag = _diagnoses[0] if _diagnoses else ""
+        _stale_unparsed = _diagnosis_claims_unparsed(_primary_diag)
+        if _stale_unparsed and (not _ok_runs.empty or _docx_fragments):
+            if not _ok_runs.empty and _ok_rows_total > 0:
+                _issue = "Processed source yielded no retained R&D line"
+                _analysis = (
+                    f"Run log evidence shows {country} {year} was processed successfully and extracted {_ok_rows_total} row(s)"
+                    f"{' from ' + _preview_list(_ok_docs, limit=2) if _ok_docs else ''}, so this is not an unparsed year."
+                )
+                if _docx_fragments:
+                    _analysis += " Country-series evidence: " + " ".join(
+                        textwrap.shorten(fragment, width=140, placeholder="…") for fragment in _docx_fragments[:3]
+                    )
+                else:
+                    _analysis += " The current gap means no defendable final R&D appropriation line survived into the audited panel."
+                return _issue, _analysis
+
+            if not _ok_runs.empty and _ok_rows_total == 0:
+                _issue = "Processed file yielded no usable R&D rows"
+                _analysis = (
+                    f"Run log evidence shows {country} {year} did run successfully"
+                    f"{' on ' + _preview_list(_ok_docs, limit=2) if _ok_docs else ''}, but it returned zero extracted rows."
+                )
+                if _docx_fragments:
+                    _analysis += " Country-series evidence: " + " ".join(
+                        textwrap.shorten(fragment, width=140, placeholder="…") for fragment in _docx_fragments[:3]
+                    )
+                return _issue, _analysis
+
+            _issue = "Processed source yielded no retained R&D line"
+            return (
+                _issue,
+                "Country-series evidence indicates the year was already processed in downstream budget outputs, but no defendable final R&D line survived into the audited panel. "
+                + " ".join(textwrap.shorten(fragment, width=140, placeholder="…") for fragment in _docx_fragments[:3]),
+            )
+
         if _diagnoses:
-            return _issue, textwrap.shorten(_diagnoses[0], width=240, placeholder="…")
+            return _issue, textwrap.shorten(_primary_diag, width=240, placeholder="…")
+
+    if not _ok_runs.empty:
+        if _ok_rows_total > 0:
+            _analysis = (
+                f"Run log evidence shows {country} {year} was processed successfully and extracted {_ok_rows_total} row(s)"
+                f"{' from ' + _preview_list(_ok_docs, limit=2) if _ok_docs else ''}, but no final audited R&D line appears in the current panel."
+            )
+            if _docx_fragments:
+                _analysis += " Country-series evidence: " + " ".join(
+                    textwrap.shorten(fragment, width=140, placeholder="…") for fragment in _docx_fragments[:3]
+                )
+            return "Processed source yielded no retained R&D line", _analysis
+
+        _analysis = (
+            f"Run log evidence shows {country} {year} did run successfully"
+            f"{' on ' + _preview_list(_ok_docs, limit=2) if _ok_docs else ''}, but it returned zero extracted rows."
+        )
+        if _docx_fragments:
+            _analysis += " Country-series evidence: " + " ".join(
+                textwrap.shorten(fragment, width=140, placeholder="…") for fragment in _docx_fragments[:3]
+            )
+        return "Processed file yielded no usable R&D rows", _analysis
 
     if not year_run_log.empty and "status" in year_run_log.columns:
         _statuses = year_run_log["status"].dropna().astype(str).unique().tolist()
@@ -1851,11 +1991,29 @@ with TAB_BUDGET:
                 else:
                     st.info("No missing years detected for the selected countries within their data ranges.")
             else:
+                _gap_df = pd.DataFrame(_gap_rows).sort_values(["Country", "Year"]).reset_index(drop=True)
                 render_table(
-                    pd.DataFrame(_gap_rows).sort_values(["Country", "Year"]).reset_index(drop=True),
+                    _gap_df,
                     wide_cols=["Documents", "Issue", "Analysis"],
                     max_rows=250,
                 )
+                _gap_dl_col1, _gap_dl_col2 = st.columns(2)
+                with _gap_dl_col1:
+                    st.download_button(
+                        "Download Gap Explorer (CSV)",
+                        _gap_df.to_csv(index=False).encode("utf-8"),
+                        "budget_gap_explorer.csv",
+                        "text/csv",
+                        key="budget_gap_explorer_csv",
+                    )
+                with _gap_dl_col2:
+                    st.download_button(
+                        "Download Gap Explorer (Excel)",
+                        _df_to_excel_bytes(_gap_df, sheet_name="Budget Gap Explorer"),
+                        "budget_gap_explorer.xlsx",
+                        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                        key="budget_gap_explorer_excel",
+                    )
 
     if _multi_currency:
         st.info("Some selected years mix currencies. Ministry totals, category shares, and year-over-year change are hidden because they would aggregate non-comparable currencies.")
