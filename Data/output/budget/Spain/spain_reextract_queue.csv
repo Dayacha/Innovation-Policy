@@ -1,7 +1,24 @@
 country,year,source_file,file_path,missing_agencies
-Spain,2022,BOE-A-2022-22128-consolidado para 2023.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2022-22128-consolidado para 2023.pdf,CIEMAT
-Spain,2004,BOE-A-2004-21688-consolidado para 2005.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2004-21688-consolidado para 2005.pdf,Plan Nacional I+D (total R&D appropriation)
-Spain,2005,BOE-A-2005-21525-consolidado para 2006.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2005-21525-consolidado para 2006.pdf,Plan Nacional I+D (total R&D appropriation)
-Spain,2007,BOE-A-2007-22295-consolidado para 2008.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2007-22295-consolidado para 2008.pdf,Plan Nacional I+D (total R&D appropriation)
-Spain,2010,BOE-A-2010-19703-consolidado para 2011.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2010-19703-consolidado para 2011.pdf,Plan Nacional I+D (total R&D appropriation)
-Spain,2011,2011 BOE-A-2010-19703-consolidado.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/2011 BOE-A-2010-19703-consolidado.pdf,Plan Nacional I+D (total R&D appropriation)
+Spain,1991,BOE-A-1991-30903-consolidado para 1992.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-1991-30903-consolidado para 1992.pdf,"Scientific, Technical and Applied Research"
+Spain,1994,BOE-A-1994-28967-consolidado para 1995.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-1994-28967-consolidado para 1995.pdf,Research and Technological Development
+Spain,1997,BOE-A-1997-28052-consolidado para 1998.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-1997-28052-consolidado para 1998.pdf,Research and Technological Development
+Spain,1998,BOE-A-1998-30154-consolidado para 1999.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-1998-30154-consolidado para 1999.pdf,Health Research
+Spain,1999,BOE-A-1999-24785-consolidado para 2000.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-1999-24785-consolidado para 2000.pdf,Health Research
+Spain,2000,BOE-A-2000-24265-consolidado para 2001.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2000-24265-consolidado para 2001.pdf,Health Research
+Spain,2002,BOE-A-2002-25411-consolidado para 2003.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2002-25411-consolidado para 2003.pdf,Health Research
+Spain,2004,BOE-A-2004-21688-consolidado para 2005.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2004-21688-consolidado para 2005.pdf,Health Research
+Spain,2005,BOE-A-2005-21525-consolidado para 2006.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2005-21525-consolidado para 2006.pdf,Health Research
+Spain,2007,BOE-A-2007-22295-consolidado para 2008.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2007-22295-consolidado para 2008.pdf,Health Research
+Spain,2010,BOE-A-2010-19703-consolidado para 2011.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2010-19703-consolidado para 2011.pdf,Health Research
+Spain,2011,2011 BOE-A-2010-19703-consolidado.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/2011 BOE-A-2010-19703-consolidado.pdf,Health Research
+Spain,2015,BOE-A-2015-11644-consolidado para 2016.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2015-11644-consolidado para 2016.pdf,Health Research
+Spain,2016,2016 BOE-A-2015-11644-consolidado.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/2016 BOE-A-2015-11644-consolidado.pdf,Health Research
+Spain,2008,BOE-A-2008-20744-consolidado para 2009.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2008-20744-consolidado para 2009.pdf,Oceanographic and Fisheries Research
+Spain,2009,BOE-A-2009-20765-consolidado para 2010.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2009-20765-consolidado para 2010.pdf,Oceanographic and Fisheries Research
+Spain,2018,BOE-A-2018-9268-consolidado para 2018.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2018-9268-consolidado para 2018.pdf,Oceanographic and Fisheries Research
+Spain,2022,BOE-A-2022-22128-consolidado para 2023.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2022-22128-consolidado para 2023.pdf,Research and Development in the Energy Sector
+Spain,2001,BOE-A-2001-24964-consolidado para 2002.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2001-24964-consolidado para 2002.pdf,Agricultural Research and Experimentation
+Spain,2014,BOE-A-2014-13612-consolidado para 2015.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2014-13612-consolidado para 2015.pdf,Agricultural Research and Experimentation
+Spain,2017,BOE-A-2017-7387-consolidado para 2017.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2017-7387-consolidado para 2017.pdf,Agricultural Research and Experimentation
+Spain,2021,BOE-A-2021-21653-consolidado para 2022.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2021-21653-consolidado para 2022.pdf,Scientific Research Grants
+Spain,2013,BOE-A-2013-13616-consolidado para 2014.pdf,/Users/danielm/Desktop/oecd-work/Innovation-Policy/Data/input/finance_bills/Spain/BOE-A-2013-13616-consolidado para 2014.pdf,Research and Development of the Information Society

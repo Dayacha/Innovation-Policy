@@ -1,109 +1,129 @@
 canonical_name,category,year,source_file,entity_raw,amount_current,section_name,table_index,row_index,in_series
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,1995,1995_Israel.pdf,סוכנות החלל הישראלית,4644.0,Ministry of Science and Technology,0,163,True
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2001,2001_Israel.pdf,סוכנות החלל הישראלית,466152.0,Ministry of Science,0,240,False
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2004,2004_Israel.pdf,סוכנות החלל הישראלית,405.0,Ministry of Science and Technology,0,261,True
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2005,2005_Israel.pdf,סוכנות החלל הישראלית,15.343,Ministry of Science,0,271,True
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2005,2005_Israel.pdf,פעולות סוכנות החלל הישראלית,15.343,Ministry of Science,0,272,True
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2007,2007_Israel.pdf,סוכנות החלל הישראלית,444934.0,Ministry of Science,0,278,True
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2009,2009-2010_Israel.pdf,סוכנות החלל הישראלית,8573117.0,Ministry of Science and Technology,0,304,False
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2011,2011-2012_Israel.pdf,סוכנות החלל הישראלית,271935.0,Ministry of Science and Technology,0,322,True
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2011,2011-2012_Israel.pdf,סוכנות החלל הישראלית,500000.0,Ministry of Science and Technology,0,333,True
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2011,2011-2012_Israel.pdf,סוכנות החלל הישראלית,300000.0,Ministry of Science and Technology,0,339,True
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2013,2013-2014_Israel.pdf,סוכנות החלל הישראלית,12348880.0,Ministry of Science and Technology,0,348,False
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2013,2013-2014_Israel.pdf,סוכנות החלל הישראלית,800000.0,Ministry of Science and Technology,0,367,False
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2015,2015-2016_Israel.pdf,סוכנות החלל הישראלית,,Ministry of Science and Technology,0,380,False
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2019,2019_Israel.pdf,סוכנות החלל הישראלית,627494.0,Ministry of Science and Technology,0,409,True
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2019,2019_Israel.pdf,תקציב לסוכנות החלל הישראלית,874951.0,Ministry of Science and Technology,0,415,True
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2021,2021_Israel.pdf,סוכנות החלל הישראלית,390000.0,Ministry of Science and Technology,0,422,True
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2021,2021_Israel.pdf,תקציב לסוכנות החלל הישראלית,561109.0,Ministry of Science and Technology,0,427,True
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2022,2022_Israel.pdf,סך הכל תקציב סוכנות החלל הישראלית,100000.0,Ministry of Science and Technology,0,435,True
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2022,2022_Israel.pdf,תקציב לסוכנות החלל הישראלית - מחקר ופיתוח,100000.0,Ministry of Science and Technology,0,436,True
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2023,2023_Israel.pdf,סוכנות החלל הישראלית,50000000.0,Ministry of Science and Technology,0,445,False
-Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2024,2024_Israel.pdf,תקציב סוכנות החלל הישראלית,653689095.0,Ministry of Science and Technology,0,451,False
-"KAMEA Fund (קרן קמ""ח)",innovation_instruments,1982,1982_Israel.pdf,"קמ""ח במימון מחקרים",60000000.0,National Council for Research and Development,0,65,False
-"KAMEA Fund (קרן קמ""ח)",innovation_instruments,1987,1987_Israel.pdf,"מחקרים במימון קמ""ח",3783.0,National Council for Research and Development,0,99,True
-"KAMEA Fund (קרן קמ""ח)",innovation_instruments,1991,1991_Israel.pdf,"מחקרים במימון קמ""ח",3300.0,Ministry of Agriculture,0,116,True
-"KAMEA Fund (קרן קמ""ח)",innovation_instruments,2001,2001_Israel.pdf,"קרן קמ""ח",78.0,Ministry of Economy,0,243,False
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,1995,1995_Israel.pdf,סוכנות החלל הישראלית,4644.0,Ministry of Science and Technology,0,171,True
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2001,2001_Israel.pdf,סוכנות החלל הישראלית,466152.0,Ministry of Science,0,249,False
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2004,2004_Israel.pdf,סוכנות החלל הישראלית,405.0,Ministry of Science and Technology,0,271,True
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2005,2005_Israel.pdf,סוכנות החלל הישראלית,15.343,Ministry of Science,0,281,True
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2005,2005_Israel.pdf,פעולות סוכנות החלל הישראלית,15.343,Ministry of Science,0,282,True
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2007,2007_Israel.pdf,סוכנות החלל הישראלית,444934.0,Ministry of Science,0,288,True
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2009,2009-2010_Israel.pdf,סוכנות החלל הישראלית,8573117.0,Ministry of Science and Technology,0,314,False
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2010,2009-2010_Israel.pdf,סוכנות החלל הישראלית,8573117.0,Ministry of Science and Technology,0,332,True
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2010,2009-2010_Israel.pdf,סך הכל סוכנות החלל הישראלית,100000.0,Ministry of Science and Technology,0,341,True
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2010,2009-2010_Israel.pdf,סוכנות החלל הישראלית,440500.0,Ministry of Science and Technology,0,347,True
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2011,2011-2012_Israel.pdf,סוכנות החלל הישראלית,21607.0,Ministry of Science and Technology,0,357,True
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2011,2011-2012_Israel.pdf,סוכנות החלל הישראלית,200000.0,Ministry of Science and Technology,0,365,True
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2012,2011-2012_Israel.pdf,סוכנות החלל הישראלית,500000.0,Ministry of Science and Technology,0,372,True
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2012,2011-2012_Israel.pdf,סוכנות החלל הישראלית,20857.0,Ministry of Science and Technology,0,379,True
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2013,2013-2014_Israel.pdf,סוכנות החלל הישראלית,12348880.0,Ministry of Science and Technology,0,387,False
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2018,2017-2018_Israel.pdf,סוכנות החלל הישראלית,17205834.0,Ministry of Science and Technology,0,469,True
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2019,2019_Israel.pdf,סוכנות החלל הישראלית,627494.0,Ministry of Science and Technology,0,478,True
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2019,2019_Israel.pdf,תקציב לסוכנות החלל הישראלית,874951.0,Ministry of Science and Technology,0,484,True
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2021,2021_Israel.pdf,סוכנות החלל הישראלית,390000.0,Ministry of Science and Technology,0,491,True
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2021,2021_Israel.pdf,תקציב לסוכנות החלל הישראלית,561109.0,Ministry of Science and Technology,0,496,True
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2022,2022_Israel.pdf,סך הכל תקציב סוכנות החלל הישראלית,100000.0,Ministry of Science and Technology,0,504,True
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2022,2022_Israel.pdf,תקציב לסוכנות החלל הישראלית - מחקר ופיתוח,100000.0,Ministry of Science and Technology,0,505,True
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2023,2023_Israel.pdf,סוכנות החלל הישראלית,50000000.0,Ministry of Science and Technology,0,515,False
+Israeli Space Agency (סוכנות החלל הישראלית),science_agency,2024,2024_Israel.pdf,תקציב סוכנות החלל הישראלית,653689095.0,Ministry of Science and Technology,0,521,False
+"KAMEA Fund (קרן קמ""ח)",innovation_instruments,1982,1982_Israel.pdf,"קמ""ח במימון מחקרים",60000000.0,National Council for Research and Development,0,69,False
+"KAMEA Fund (קרן קמ""ח)",innovation_instruments,1987,1987_Israel.pdf,"מחקרים במימון קמ""ח",3783.0,National Council for Research and Development,0,105,True
+"KAMEA Fund (קרן קמ""ח)",innovation_instruments,1991,1991_Israel.pdf,"מחקרים במימון קמ""ח",3300.0,Ministry of Agriculture,0,123,True
+"KAMEA Fund (קרן קמ""ח)",innovation_instruments,2001,2001_Israel.pdf,"קרן קמ""ח",78.0,Ministry of Economy,0,253,False
 Ministry of Science and Technology (Israel),rd_ministry,1975,1975_Israel.pdf,משרד המדע והטכנולוגיה,540714000.0,Ministry of Science and Technology,0,4,False
-Ministry of Science and Technology (Israel),rd_ministry,1977,1977_Israel.pdf,משרד המדע והטכנולוגיה,500000.0,Ministry of Science and Technology,0,28,False
-Ministry of Science and Technology (Israel),rd_ministry,1980,1980_Israel.pdf,משרד המדע והטכנולוגיה,0.0,Ministry of Science and Technology,0,51,False
-Ministry of Science and Technology (Israel),rd_ministry,1983,1983_Israel.pdf,משרד המדע,293700000.0,Ministry of Science,0,78,False
-Ministry of Science and Technology (Israel),rd_ministry,1984,1984_Israel.pdf,משרד המדע והטכנולוגיה,,Ministry of Science and Technology,0,90,False
-Ministry of Science and Technology (Israel),rd_ministry,1987,1987_Israel.pdf,תקציב משרד המדע והפיתוח,418.0,Ministry of Science and Development,0,100,False
-Ministry of Science and Technology (Israel),rd_ministry,1989,1989_Israel.pdf,משרד המדע והפיתות,7364.0,National Council for Research and Development,0,107,False
-Ministry of Science and Technology (Israel),rd_ministry,1992,1992_Israel.pdf,משרד המדע והטכנולוגיה,21708.0,Ministry of Science and Technology,0,126,True
-Ministry of Science and Technology (Israel),rd_ministry,1992,1992_Israel.pdf,משרד המדע והטכנולוגיה,0.0,Ministry of Science and Technology,0,132,True
-Ministry of Science and Technology (Israel),rd_ministry,1994,1994_Israel.pdf,משרד המדע והטכנולוגיה,56624.0,Ministry of Science and Technology,0,140,True
-Ministry of Science and Technology (Israel),rd_ministry,1994,1994_Israel.pdf,משרד המדע והפיתוח,0.0,Ministry of Science and Technology,0,149,True
-Ministry of Science and Technology (Israel),rd_ministry,1995,1995_Israel.pdf,משרד המדע והטכנולוגיה,152824.0,Ministry of Science and Technology,0,153,True
-Ministry of Science and Technology (Israel),rd_ministry,1995,1995_Israel.pdf,משרד המדע והטכנולוגיה,,Ministry of Science and Technology,0,164,True
-Ministry of Science and Technology (Israel),rd_ministry,1996,1996_Israel.pdf,משרד המדע,176579.0,Ministry of Science,0,169,True
-Ministry of Science and Technology (Israel),rd_ministry,1996,1996_Israel.pdf,משרד המדע והטכנולוגיה,0.0,Ministry of Science and Technology,0,177,True
-Ministry of Science and Technology (Israel),rd_ministry,1997,1997_Israel.pdf,משרד המדע,184250.0,Ministry of Science,0,182,True
-Ministry of Science and Technology (Israel),rd_ministry,1998,1998_Israel.pdf,משרד המדע,173415.0,Ministry of Science,0,194,True
-Ministry of Science and Technology (Israel),rd_ministry,1998,1998_Israel.pdf,משרד המדע והטכנולוגיה,825272.0,Ministry of Science and Technology,0,205,True
-Ministry of Science and Technology (Israel),rd_ministry,1999,1999_Israel.pdf,משרד המדע,172618.0,Ministry of Science,0,211,True
-Ministry of Science and Technology (Israel),rd_ministry,2000,2000_Israel.pdf,משרד המדע התרבות וספורט,636117.0,"Ministry of Science, Culture and Sport",0,224,True
-Ministry of Science and Technology (Israel),rd_ministry,2001,2001_Israel.pdf,משרד המדע,722050.0,Ministry of Science,0,234,True
-Ministry of Science and Technology (Israel),rd_ministry,2002,2002_Israel.pdf,משרד המדע התרבות והספורט,497804.0,"Ministry of Science, Culture and Sport",0,244,True
-Ministry of Science and Technology (Israel),rd_ministry,2005,2005_Israel.pdf,משרד המדע,118277.0,Ministry of Science,0,265,True
-Ministry of Science and Technology (Israel),rd_ministry,2007,2007_Israel.pdf,משרד המדע,700837.0,Ministry of Science,0,273,True
-Ministry of Science and Technology (Israel),rd_ministry,2008,2008_Israel.pdf,משרד המדע,709529.0,Ministry of Science,0,282,True
-Ministry of Science and Technology (Israel),rd_ministry,2009,2009-2010_Israel.pdf,משרד המדע והטכנולוגיה,316553346.0,Ministry of Science and Technology,0,297,True
-Ministry of Science and Technology (Israel),rd_ministry,2009,2009-2010_Israel.pdf,משרד המדע והטכנולוגיה,979860.0,Ministry of Science and Technology,0,306,True
-Ministry of Science and Technology (Israel),rd_ministry,2009,2009-2010_Israel.pdf,משרד המדע והטכנולוגיה,76768.0,Ministry of Science and Technology,0,311,True
-Ministry of Science and Technology (Israel),rd_ministry,2011,2011-2012_Israel.pdf,משרד המדע והטכנולוגיה,150000.0,Ministry of Science and Technology,0,315,True
-Ministry of Science and Technology (Israel),rd_ministry,2011,2011-2012_Israel.pdf,משרד המדע והטכנולוגיה,1400000.0,Ministry of Science and Technology,0,324,True
-Ministry of Science and Technology (Israel),rd_ministry,2011,2011-2012_Israel.pdf,משרד המדע והטכנולוגיה,5500000.0,Ministry of Science and Technology,0,335,True
-Ministry of Science and Technology (Israel),rd_ministry,2013,2013-2014_Israel.pdf,משרד המדע והטכנולוגיה,395032948.0,Ministry of Science and Technology,0,341,True
-Ministry of Science and Technology (Israel),rd_ministry,2013,2013-2014_Israel.pdf,משרד המדע והטכנולוגיה,358000.0,Ministry of Science and Technology,0,354,True
-Ministry of Science and Technology (Israel),rd_ministry,2013,2013-2014_Israel.pdf,משרד המדע והטכנולוגיה,3980000.0,Ministry of Science and Technology,0,360,True
-Ministry of Science and Technology (Israel),rd_ministry,2015,2015-2016_Israel.pdf,"משרד המדע הטכנולוגיה והחלל, משרד התרבות והספורט",1361253.0,"Ministry of Science and Technology, Ministry of Culture and Sport",0,369,True
-Ministry of Science and Technology (Israel),rd_ministry,2015,2015-2016_Israel.pdf,משרד המדע והטכנולוגיה,10016217.0,Ministry of Science and Technology,0,375,True
-Ministry of Science and Technology (Israel),rd_ministry,2017,2017-2018_Israel.pdf,"משרד המדע והחלל, התרבות",1500897.0,Ministry of Science and Technology,0,389,True
-Ministry of Science and Technology (Israel),rd_ministry,2017,2017-2018_Israel.pdf,משרד המדע והטכנולוגיה,1573033.0,Ministry of Science and Technology,0,395,True
-Ministry of Science and Technology (Israel),rd_ministry,2019,2019_Israel.pdf,משרד המדע והטכנולוגיה,9730000.0,Ministry of Science and Technology,0,402,False
-Ministry of Science and Technology (Israel),rd_ministry,2019,2019_Israel.pdf,משרד המדע והטכנולוגיה,11140502.0,Ministry of Science and Technology,0,411,False
-Ministry of Science and Technology (Israel),rd_ministry,2021,2021_Israel.pdf,משרד המדע והטכנולוגיה,500513603.0,Ministry of Science and Technology,0,416,True
-Ministry of Science and Technology (Israel),rd_ministry,2021,2021_Israel.pdf,משרד המדע והטכנולוגיה,12185618.0,Ministry of Science and Technology,0,423,True
-Ministry of Science and Technology (Israel),rd_ministry,2022,2022_Israel.pdf,משרד המדע והטכנולוגיה,462500134.0,Ministry of Science and Technology,0,428,True
-Ministry of Science and Technology (Israel),rd_ministry,2023,2023_Israel.pdf,משרד המדע והטכנולוגיה,110401623.0,Ministry of Science and Technology,0,437,True
-Ministry of Science and Technology (Israel),rd_ministry,2024,2024_Israel.pdf,משרד המדע והטכנולוגיה,139950259.0,Ministry of Science and Technology,0,447,True
-Ministry of Science and Technology (Israel),rd_ministry,2025,2025_Israel.pdf,משרד המדע החדשנות והטכנולוגיה,2807783.0,Ministry of Science and Technology,0,452,True
-Ministry of Science and Technology (Israel),rd_ministry,2025,2025_Israel.pdf,פעילות משרד המדע,365568.0,Ministry of Science and Technology,0,453,True
+Ministry of Science and Technology (Israel),rd_ministry,1976,1976_Israel.pdf,משרד המדע והטכנולוגיה,194100.0,Ministry of Science and Technology,0,19,False
+Ministry of Science and Technology (Israel),rd_ministry,1977,1977_Israel.pdf,משרד המדע והטכנולוגיה,500000.0,Ministry of Science and Technology,0,31,False
+Ministry of Science and Technology (Israel),rd_ministry,1980,1980_Israel.pdf,משרד המדע והטכנולוגיה,0.0,Ministry of Science and Technology,0,54,False
+Ministry of Science and Technology (Israel),rd_ministry,1981,1981_Israel.pdf,משרד המדע והטכנולוגיה,0.0,Ministry of Science and Technology,0,64,False
+Ministry of Science and Technology (Israel),rd_ministry,1983,1983_Israel.pdf,משרד המדע,293700000.0,Ministry of Science,0,83,False
+Ministry of Science and Technology (Israel),rd_ministry,1984,1984_Israel.pdf,משרד המדע והטכנולוגיה,,Ministry of Science and Technology,0,95,False
+Ministry of Science and Technology (Israel),rd_ministry,1986,1986_Israel.pdf,משרד המדע והטכנולוגיה,3708.0,Ministry of Science and Technology,0,102,False
+Ministry of Science and Technology (Israel),rd_ministry,1987,1987_Israel.pdf,תקציב משרד המדע והפיתוח,418.0,Ministry of Science and Development,0,106,False
+Ministry of Science and Technology (Israel),rd_ministry,1989,1989_Israel.pdf,משרד המדע והפיתות,7364.0,National Council for Research and Development,0,113,False
+Ministry of Science and Technology (Israel),rd_ministry,1989,1989_Israel.pdf,משרד המדע והפיתות,7364.0,Ministry of Science,0,116,False
+Ministry of Science and Technology (Israel),rd_ministry,1992,1992_Israel.pdf,משרד המדע והטכנולוגיה,21708.0,Ministry of Science and Technology,0,133,True
+Ministry of Science and Technology (Israel),rd_ministry,1992,1992_Israel.pdf,משרד המדע והטכנולוגיה,0.0,Ministry of Science and Technology,0,139,True
+Ministry of Science and Technology (Israel),rd_ministry,1994,1994_Israel.pdf,משרד המדע והטכנולוגיה,56624.0,Ministry of Science and Technology,0,147,True
+Ministry of Science and Technology (Israel),rd_ministry,1994,1994_Israel.pdf,משרד המדע והפיתוח,0.0,Ministry of Science and Technology,0,156,True
+Ministry of Science and Technology (Israel),rd_ministry,1995,1995_Israel.pdf,משרד המדע והטכנולוגיה,152824.0,Ministry of Science and Technology,0,161,True
+Ministry of Science and Technology (Israel),rd_ministry,1995,1995_Israel.pdf,משרד המדע והטכנולוגיה,,Ministry of Science and Technology,0,172,True
+Ministry of Science and Technology (Israel),rd_ministry,1996,1996_Israel.pdf,משרד המדע,176579.0,Ministry of Science,0,177,True
+Ministry of Science and Technology (Israel),rd_ministry,1996,1996_Israel.pdf,משרד המדע והטכנולוגיה,0.0,Ministry of Science and Technology,0,185,True
+Ministry of Science and Technology (Israel),rd_ministry,1997,1997_Israel.pdf,משרד המדע,184250.0,Ministry of Science,0,190,True
+Ministry of Science and Technology (Israel),rd_ministry,1998,1998_Israel.pdf,משרד המדע,173415.0,Ministry of Science,0,202,True
+Ministry of Science and Technology (Israel),rd_ministry,1998,1998_Israel.pdf,משרד המדע והטכנולוגיה,825272.0,Ministry of Science and Technology,0,213,True
+Ministry of Science and Technology (Israel),rd_ministry,1999,1999_Israel.pdf,משרד המדע,172618.0,Ministry of Science,0,219,True
+Ministry of Science and Technology (Israel),rd_ministry,2000,2000_Israel.pdf,משרד המדע התרבות וספורט,636117.0,"Ministry of Science, Culture and Sport",0,232,True
+Ministry of Science and Technology (Israel),rd_ministry,2001,2001_Israel.pdf,משרד המדע,722050.0,Ministry of Science,0,243,True
+Ministry of Science and Technology (Israel),rd_ministry,2002,2002_Israel.pdf,משרד המדע התרבות והספורט,497804.0,"Ministry of Science, Culture and Sport",0,254,True
+Ministry of Science and Technology (Israel),rd_ministry,2005,2005_Israel.pdf,משרד המדע,118277.0,Ministry of Science,0,275,True
+Ministry of Science and Technology (Israel),rd_ministry,2007,2007_Israel.pdf,משרד המדע,700837.0,Ministry of Science,0,283,True
+Ministry of Science and Technology (Israel),rd_ministry,2008,2008_Israel.pdf,משרד המדע,709529.0,Ministry of Science,0,292,True
+Ministry of Science and Technology (Israel),rd_ministry,2009,2009-2010_Israel.pdf,משרד המדע והטכנולוגיה,316553346.0,Ministry of Science and Technology,0,307,True
+Ministry of Science and Technology (Israel),rd_ministry,2009,2009-2010_Israel.pdf,משרד המדע והטכנולוגיה,979860.0,Ministry of Science and Technology,0,316,True
+Ministry of Science and Technology (Israel),rd_ministry,2009,2009-2010_Israel.pdf,משרד המדע והטכנולוגיה,76768.0,Ministry of Science and Technology,0,321,True
+Ministry of Science and Technology (Israel),rd_ministry,2010,2009-2010_Israel.pdf,משרד המדע והטכנולוגיה,798635.0,Ministry of Science and Technology,0,325,True
+Ministry of Science and Technology (Israel),rd_ministry,2010,2009-2010_Israel.pdf,משרד המדע והטכנולוגיה,787654.0,Ministry of Science and Technology,0,334,True
+Ministry of Science and Technology (Israel),rd_ministry,2010,2009-2010_Israel.pdf,משרד המדע והטכנולוגיה,979860.0,Ministry of Science and Technology,0,343,True
+Ministry of Science and Technology (Israel),rd_ministry,2011,2011-2012_Israel.pdf,משרד המדע והטכנולוגיה,2232000.0,Ministry of Science and Technology,0,348,True
+Ministry of Science and Technology (Israel),rd_ministry,2011,2011-2012_Israel.pdf,משרד המדע והטכנולוגיה,1317000.0,Ministry of Science and Technology,0,359,True
+Ministry of Science and Technology (Israel),rd_ministry,2012,2011-2012_Israel.pdf,משרד המדע והטכנולוגיה,14700000.0,Ministry of Science and Technology,0,366,True
+Ministry of Science and Technology (Israel),rd_ministry,2012,2011-2012_Israel.pdf,משרד המדע והטכנולוגיה,1385000.0,Ministry of Science and Technology,0,373,True
+Ministry of Science and Technology (Israel),rd_ministry,2013,2013-2014_Israel.pdf,משרד המדע והטכנולוגיה,395032948.0,Ministry of Science and Technology,0,380,True
+Ministry of Science and Technology (Israel),rd_ministry,2014,2013-2014_Israel.pdf,משרד המדע והטכנולוגיה,133990.0,Ministry of Science and Technology,0,392,True
+Ministry of Science and Technology (Israel),rd_ministry,2015,2015-2016_Israel.pdf,משרד המדע הטכנולוגיה והחלל,1361253.0,Ministry of Science and Technology,0,404,True
+Ministry of Science and Technology (Israel),rd_ministry,2015,2015-2016_Israel.pdf,משרד המדע הטכנולוגיה והחלל,1339314.0,Ministry of Science and Technology,0,414,True
+Ministry of Science and Technology (Israel),rd_ministry,2016,2015-2016_Israel.pdf,משרד המדע הטכנולוגיה והחלל,1361253.0,Ministry of Science and Technology,0,424,True
+Ministry of Science and Technology (Israel),rd_ministry,2016,2015-2016_Israel.pdf,"משרד המדע הטכנולוגיה והחלל, משרד התרבות והספורט",1339314.0,"Ministry of Science and Technology, Ministry of Culture and Sport",0,433,True
+Ministry of Science and Technology (Israel),rd_ministry,2017,2017-2018_Israel.pdf,"משרד המדע והחלל, התרבות",1500897.0,Ministry of Science and Technology,0,443,True
+Ministry of Science and Technology (Israel),rd_ministry,2018,2017-2018_Israel.pdf,משרד המדע והטכנולוגיה,1500897.0,Ministry of Science and Technology,0,456,True
+Ministry of Science and Technology (Israel),rd_ministry,2018,2017-2018_Israel.pdf,משרד המדע והטכנולוגיה,1573033.0,Ministry of Science and Technology,0,464,True
+Ministry of Science and Technology (Israel),rd_ministry,2019,2019_Israel.pdf,משרד המדע והטכנולוגיה,9730000.0,Ministry of Science and Technology,0,471,True
+Ministry of Science and Technology (Israel),rd_ministry,2019,2019_Israel.pdf,משרד המדע והטכנולוגיה,11140502.0,Ministry of Science and Technology,0,480,True
+Ministry of Science and Technology (Israel),rd_ministry,2021,2021_Israel.pdf,משרד המדע והטכנולוגיה,500513603.0,Ministry of Science and Technology,0,485,True
+Ministry of Science and Technology (Israel),rd_ministry,2021,2021_Israel.pdf,משרד המדע והטכנולוגיה,12185618.0,Ministry of Science and Technology,0,492,True
+Ministry of Science and Technology (Israel),rd_ministry,2022,2022_Israel.pdf,משרד המדע והטכנולוגיה,462500134.0,Ministry of Science and Technology,0,497,True
+Ministry of Science and Technology (Israel),rd_ministry,2023,2023_Israel.pdf,משרד המדע והטכנולוגיה,110401623.0,Ministry of Science and Technology,0,506,True
+Ministry of Science and Technology (Israel),rd_ministry,2024,2024_Israel.pdf,משרד המדע והטכנולוגיה,139950259.0,Ministry of Science and Technology,0,517,True
+Ministry of Science and Technology (Israel),rd_ministry,2025,2025_Israel.pdf,משרד המדע החדשנות והטכנולוגיה,2807783.0,Ministry of Science and Technology,0,522,True
+Ministry of Science and Technology (Israel),rd_ministry,2025,2025_Israel.pdf,פעילות משרד המדע,365568.0,Ministry of Science and Technology,0,523,True
 "National Council for R&D (Israel, pre-1992)",science_agency,1975,1975_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,115000000.0,National Council for Research and Development,0,0,True
 "National Council for R&D (Israel, pre-1992)",science_agency,1975,1975_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,3000000.0,National Council for Research and Development,0,12,True
 "National Council for R&D (Israel, pre-1992)",science_agency,1976,1976_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,194100.0,National Council for Research and Development,0,16,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1977,1977_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,1000000.0,National Council for Research and Development,0,20,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1977,1977_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,750000.0,National Council for Research and Development,0,25,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1978,1978_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,178500.0,National Council for Research and Development,0,32,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1978,1978_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,519286.0,National Council for Research and Development,0,36,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1979,1979_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,1764000.0,National Council for Research and Development,0,42,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1980,1980_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,604700000.0,National Council for Research and Development,0,47,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1981,1981_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,1000000000.0,National Council for Research and Development,0,52,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1981,1981_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,0.0,National Council for Research and Development,0,58,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1982,1982_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,407600000.0,National Council for Research and Development,0,63,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1982,1982_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,749000000.0,National Council for Research and Development,0,69,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1983,1983_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,156300000.0,National Council for Research and Development,0,75,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1983,1983_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,2280000000.0,National Council for Research and Development,0,82,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1984,1984_Israel.pdf,המועצה הלאומית למחקר,411000000.0,National Council for Research and Development,0,88,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1985,1985_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,2035000.0,National Council for Research and Development,0,91,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1986,1986_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,3708.0,National Council for Research and Development,0,94,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1987,1987_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,6400.0,National Council for Research and Development,0,98,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1988,1988_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,5741.0,National Council for Research and Development,0,102,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1989,1989_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,7364.0,National Council for Research and Development,0,106,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1990,1990_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,17199.0,National Council for Research and Development,0,110,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1990,1990_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,17199.0,National Council for Research and Development,0,111,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1991,1991_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,25791.0,National Council for Research and Development,0,114,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1991,1991_Israel.pdf,הוצאות המועצה הלאומית למחקר ולפיתוח,25791.0,National Council for Research and Development,0,115,True
-"National Council for R&D (Israel, pre-1992)",science_agency,1991,1991_Israel.pdf,המועצה הלאומית למחקר,39503.0,National Council for Research and Development,0,120,True
-"National Council for R&D (Israel, pre-1992)",science_agency,2015,2015-2016_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,4234.0,National Council for Research and Development,0,385,False
-"National Council for R&D (Israel, pre-1992)",science_agency,2017,2017-2018_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,1500.0,National Council for Research and Development,0,393,False
-"National Council for R&D (Israel, pre-1992)",science_agency,2017,2017-2018_Israel.pdf,המועצה הלאומית למחקר ולפיתוח אזרחי,4231.0,Ministry of Science and Technology,0,398,False
-"National Council for R&D (Israel, pre-1992)",science_agency,2019,2019_Israel.pdf,תקציב המועצה הלאומית למחקר ולפיתוח,1991794.0,Ministry of Science and Technology,0,412,False
-"National Council for R&D (Israel, pre-1992)",science_agency,2021,2021_Israel.pdf,תקציב המועצה הלאומית למחקר ולפיתוח,446287.0,Ministry of Science and Technology,0,424,False
-"National Council for R&D (Israel, pre-1992)",science_agency,2022,2022_Israel.pdf,סך הכל תקציב המועצה הלאומית למחקר ולפיתוח,195060.0,Ministry of Science and Technology,0,429,False
-"National Council for R&D (Israel, pre-1992)",science_agency,2022,2022_Israel.pdf,תקציב המועצה הלאומית למחקר ולפיתוח - מחקר ופיתוח,100000.0,Ministry of Science and Technology,0,430,False
-"National Council for R&D (Israel, pre-1992)",science_agency,2024,2024_Israel.pdf,תקציב המועצה הלאומית למחקר ולפיתוח,552008.0,Ministry of Science and Technology,0,448,False
-"Office of the Chief Scientist (Israel, pre-2016)",innovation_instruments,1986,1986_Israel.pdf,מדען ראשי,486.0,Ministry of Science and Technology,0,97,True
-"Office of the Chief Scientist (Israel, pre-2016)",innovation_instruments,2001,2001_Israel.pdf,מדען ראשי - מחקרים,78.0,Ministry of Economy,0,242,False
+"National Council for R&D (Israel, pre-1992)",science_agency,1977,1977_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,1000000.0,National Council for Research and Development,0,23,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1977,1977_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,750000.0,National Council for Research and Development,0,28,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1978,1978_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,178500.0,National Council for Research and Development,0,35,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1978,1978_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,519286.0,National Council for Research and Development,0,39,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1979,1979_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,1764000.0,National Council for Research and Development,0,45,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1980,1980_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,604700000.0,National Council for Research and Development,0,50,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1981,1981_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,1000000000.0,National Council for Research and Development,0,55,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1981,1981_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,0.0,National Council for Research and Development,0,61,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1982,1982_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,407600000.0,National Council for Research and Development,0,67,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1982,1982_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,749000000.0,National Council for Research and Development,0,73,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1983,1983_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,156300000.0,National Council for Research and Development,0,80,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1983,1983_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,2280000000.0,National Council for Research and Development,0,87,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1984,1984_Israel.pdf,המועצה הלאומית למחקר,411000000.0,National Council for Research and Development,0,93,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1985,1985_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,2035000.0,National Council for Research and Development,0,96,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1986,1986_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,3708.0,National Council for Research and Development,0,99,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1987,1987_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,6400.0,National Council for Research and Development,0,104,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1988,1988_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,5741.0,National Council for Research and Development,0,108,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1989,1989_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,7364.0,National Council for Research and Development,0,112,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1990,1990_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,17199.0,National Council for Research and Development,0,117,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1990,1990_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,17199.0,National Council for Research and Development,0,118,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1991,1991_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,25791.0,National Council for Research and Development,0,121,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1991,1991_Israel.pdf,הוצאות המועצה הלאומית למחקר ולפיתוח,25791.0,National Council for Research and Development,0,122,True
+"National Council for R&D (Israel, pre-1992)",science_agency,1991,1991_Israel.pdf,המועצה הלאומית למחקר,39503.0,National Council for Research and Development,0,127,True
+"National Council for R&D (Israel, pre-1992)",science_agency,2015,2015-2016_Israel.pdf,המועצה הלאומית למחקר ולפיתוח אזרחי,5281.0,Ministry of Science and Technology,0,409,False
+"National Council for R&D (Israel, pre-1992)",science_agency,2015,2015-2016_Israel.pdf,המועצה הלאומית למחקר ולפיתוח אזרחי,3234.0,Science Administration,0,418,False
+"National Council for R&D (Israel, pre-1992)",science_agency,2016,2015-2016_Israel.pdf,המועצה הלאומית למחקר ולפיתוח אזרחי,2900.0,Ministry of Science and Technology,0,430,False
+"National Council for R&D (Israel, pre-1992)",science_agency,2016,2015-2016_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,0.0,National Council for Research and Development,0,432,False
+"National Council for R&D (Israel, pre-1992)",science_agency,2016,2015-2016_Israel.pdf,המועצה הלאומית למחקר ולפיתוח אזרחי,4234.0,National Council for Research and Development,0,438,False
+"National Council for R&D (Israel, pre-1992)",science_agency,2017,2017-2018_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,1500.0,National Council for Research and Development,0,447,False
+"National Council for R&D (Israel, pre-1992)",science_agency,2017,2017-2018_Israel.pdf,המועצה הלאומית למחקר ולפיתוח אזרחי,4231.0,"Ministry of Science, Culture and Sport",0,452,False
+"National Council for R&D (Israel, pre-1992)",science_agency,2018,2017-2018_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,1500897.0,National Council for Research and Development,0,463,False
+"National Council for R&D (Israel, pre-1992)",science_agency,2018,2017-2018_Israel.pdf,המועצה הלאומית למחקר ולפיתוח אזרחי,4231.0,Ministry of Science and Technology,0,467,False
+"National Council for R&D (Israel, pre-1992)",science_agency,2018,2017-2018_Israel.pdf,המועצה הלאומית למחקר ולפיתוח,101646.0,National Council for Research and Development,0,468,False
+"National Council for R&D (Israel, pre-1992)",science_agency,2019,2019_Israel.pdf,תקציב המועצה הלאומית למחקר ולפיתוח,1991794.0,Ministry of Science and Technology,0,481,False
+"National Council for R&D (Israel, pre-1992)",science_agency,2021,2021_Israel.pdf,תקציב המועצה הלאומית למחקר ולפיתוח,446287.0,Ministry of Science and Technology,0,493,False
+"National Council for R&D (Israel, pre-1992)",science_agency,2022,2022_Israel.pdf,סך הכל תקציב המועצה הלאומית למחקר ולפיתוח,195060.0,Ministry of Science and Technology,0,498,False
+"National Council for R&D (Israel, pre-1992)",science_agency,2022,2022_Israel.pdf,תקציב המועצה הלאומית למחקר ולפיתוח - מחקר ופיתוח,100000.0,Ministry of Science and Technology,0,499,False
+"National Council for R&D (Israel, pre-1992)",science_agency,2024,2024_Israel.pdf,תקציב המועצה הלאומית למחקר ולפיתוח,552008.0,Ministry of Science and Technology,0,518,False
+"Office of the Chief Scientist (Israel, pre-2016)",innovation_instruments,1986,1986_Israel.pdf,מדען ראשי,486.0,Ministry of Science and Technology,0,103,True
+"Office of the Chief Scientist (Israel, pre-2016)",innovation_instruments,2001,2001_Israel.pdf,מדען ראשי - מחקרים,78.0,Ministry of Economy,0,252,False

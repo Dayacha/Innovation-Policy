@@ -232,6 +232,10 @@ COUNTRY_CONTEXT: dict[str, dict] = {
         "currency": "DKK",
         "currency_symbol": "kr",
         "language": "danish",
+        # 2018 Finance Bill (A20170000230.pdf) has garbled embedded font encoding on
+        # chapter-detail pages; OCR with Danish language yields correct text.
+        "force_ocr_years": [2018],
+        "ocr_langs": "dan+eng",
         "unit_hint": (
             "ERA-DEPENDENT units: "
             "(1) 1975–2000: amounts in THOUSANDS of DKK (1.000 kr.) — set unit='thousand'. "
@@ -1656,6 +1660,7 @@ COUNTRY_CONTEXT: dict[str, dict] = {
         "language": "italian",
         "ocr_langs": "ita+eng",
         "ocr_zoom": 2.5,
+        "force_ocr_years": [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2011, 2012],
         "unit_hint": (
             "CRITICAL — unit depends on year and document part: "
             "(1) 1986–2001: ITL (lire). Amounts usually in MILIONI (millions) of lire for programme/chapter totals. "

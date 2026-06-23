@@ -97,6 +97,28 @@ COUNTRY_PROFILES: dict[str, dict] = {
             "'Coal research' and 'Water resources research' — genuine applied R&D "
             "even when under a resources/energy department, include them.",
         ],
+        "year_notes": {
+            2000: (
+                "Australia 2000: OUTCOME-BASED BUDGETING TRANSITION. "
+                "The 1999-2000 and 2000-01 Appropriation Acts adopted outcome-based "
+                "structure. CSIRO appears as 'Commonwealth Scientific and Industrial "
+                "Research Organisation' in Schedule 1 text, often NOT inside a standard "
+                "table cell — it may appear in a prose section or outcome description. "
+                "Search body text for 'COMMONWEALTH SCIENTIFIC AND INDUSTRIAL RESEARCH' "
+                "and extract the Departmental outputs appropriation amount. "
+                "Also look for 'CSIRO' as a short-form. The annual appropriation is "
+                "typically the single largest figure associated with CSIRO in the document."
+            ),
+            2001: (
+                "Australia 2001: OUTCOME-BASED BUDGETING, first full year. "
+                "CSIRO may appear under 'Department of Industry, Science and Resources' "
+                "or similar in Schedule 1 as 'Commonwealth Scientific and Industrial "
+                "Research Organisation' — possibly in prose or outcome text rather than "
+                "a standard table cell. "
+                "Extract the Departmental outputs appropriation for CSIRO. "
+                "The figure should be in AUD thousands (multiply by 1,000 for full dollars)."
+            ),
+        },
     },
 
     # -----------------------------------------------------------------------
@@ -2014,7 +2036,20 @@ COUNTRY_PROFILES: dict[str, dict] = {
                 "Key functional codes: 07.10 (science/competition funds), 21.10 (university research). "
                 "Rannís administers competitive grants. Hafrannsóknastofnun under fisheries ministry. "
                 "ÍSOR (Iceland GeoSurvey) under energy/industry."
-            ) for y in range(2003, 2026)},
+            ) for y in range(2003, 2015)},
+            **{y: (
+                f"Iceland {y}: FUNCTIONAL CATEGORY ERA — the budget now groups spending by objective "
+                "rather than by institution. Rannís does NOT appear by name; instead look for these "
+                "functional category sections which correspond to Rannís-managed funds:\n"
+                "  • 'Samkeppnissjóðir í rannsóknum' (Competition funds in research) → Rannís\n"
+                "  • 'Vísindi og samkeppnissjóðir í rannsóknum' (Science and competition funds) → Rannís\n"
+                "  • 'Nýsköpun, rannsóknir og markaðsmál' (Innovation, research and market affairs) → may include Nýsköpunarmiðstöð\n"
+                "Extract the 'Heildargjöld' (total expenditure) row from each section. "
+                "Amounts are in MILLIONS of króna (m.kr.). Set unit='million', currency='ISK'. "
+                "Marine research: 'Rannsóknir og þróun í sjávarútvegi' → Hafrannsóknastofnun. "
+                "Agricultural research: 'Rannsóknir, þróun og nýsköpun í landbúnaðarmálum' → Landbúnaðarháskóli. "
+                "University research: 'Rannsóknastarfsemi á háskólastigi' → Háskóli Íslands."
+            ) for y in range(2015, 2026)},
         },
     },
     "Hungary": {
@@ -2039,6 +2074,22 @@ COUNTRY_PROFILES: dict[str, dict] = {
                 "Prefer only strong matches with kutatás / fejlesztés / innováció / MTA / Nemzeti Kutatási. "
                 "Use unit='million', currency='HUF' when the table says 'millió forint'."
             ) for y in range(1991, 2004)},
+            2001: (
+                "Hungary 2001: BIANNUAL BUDGET. This year's source file is '2001-2002  2000. évi CXXXIII. törvény' "
+                "which covers BOTH fiscal years 2001 AND 2002 in a single act. "
+                "The tables have two columns of amounts: one for 2001 and one for 2002. "
+                "Extract ONLY the 2001 column amounts (labelled '2001. év'). "
+                "Chapter 'XXXIII. Magyar Tudományos Akadémia' contains MTA. "
+                "Amounts in millió forint (million HUF). unit='million', currency='HUF'."
+            ),
+            2002: (
+                "Hungary 2002: BIANNUAL BUDGET (second year). The budget for 2002 was enacted together "
+                "with 2001 in Act CXXXIII of 2000. There is no separate source file for 2002 — "
+                "the data lives in the same '2001-2002  2000. évi CXXXIII. törvény' file as 2001. "
+                "If processing this file with year=2002 context, extract ONLY the 2002 column amounts. "
+                "Chapter 'XXXIII. Magyar Tudományos Akadémia' contains MTA. "
+                "Amounts in millió forint (million HUF). unit='million', currency='HUF'."
+            ),
             **{y: (
                 f"Hungary {y}: structured budget-law / annex era with named programme and institution rows. "
                 "Strong targets: MTA bodies, research institutes, innovation support, and National R&D fund lines. "
@@ -2530,6 +2581,32 @@ COUNTRY_PROFILES: dict[str, dict] = {
                 "Amounts in MIGLIAIA DI EURO. Companion SO_NNN+1 file has ALLEGATO A tables. "
                 "MIUR split: Ministero dell'Università e della Ricerca (MUR-like) is still MIUR at this stage."
             ),
+            2015: (
+                "Italy 2015: SOURCE LIMITATION — only one SO file available (20141229_300_SO_100.pdf). "
+                "This is a legal authorization text (collegato), NOT the main Stato di previsione "
+                "annex tables. FOE (Fondo Ordinario per gli Enti di ricerca) will NOT appear "
+                "as a clean budget line — only earmarks and legal clauses are present. "
+                "Extract any explicitly named R&D clauses with amounts, but expect very low yield. "
+                "The companion tabular file (SO_101 or SO_099) is missing from this dataset. "
+                "Amounts in full euros (euro interi). unit='unit', currency='EUR'."
+            ),
+            2016: (
+                "Italy 2016: SOURCE LIMITATION — only one SO file available (20151230_302_SO_071.pdf). "
+                "Same limitation as 2015: this is a legal authorization text (collegato legge di stabilità), "
+                "not the detailed budget annex tables. FOE will appear only as an earmark clause "
+                "(e.g. '2,582,284 euro a favore del CNR'), NOT as the full institutional appropriation. "
+                "The companion Stato di previsione tabular annex is missing from this dataset. "
+                "Amounts in full euros. unit='unit', currency='EUR'."
+            ),
+            2017: (
+                "Italy 2017: SOURCE LIMITATION — only one SO file available (20161221_297_SO_057.pdf). "
+                "This is a collegato / authorization law text, not the detailed Stato di previsione "
+                "budget tables. FOE does not appear; only multi-year authorization amounts (autorizzazioni "
+                "di spesa) are present. These are NOT the annual FOE appropriation — they are "
+                "multi-year project authorizations. "
+                "The companion annex file with FOE and CNR institutional appropriations is missing. "
+                "Amounts in full euros or millions depending on clause. unit='unit', currency='EUR'."
+            ),
             **{y: (
                 f"Italy {y}: modern era. Amounts in full EURO (euro interi) — BILANCIO PER AZIONI format. "
                 "Structure firmly: Ministry → Missione → Programma → Azione. "
@@ -2537,8 +2614,12 @@ COUNTRY_PROFILES: dict[str, dict] = {
                 "MUR (from 2020) / MIUR (until 2020) has stato di previsione with FOE, FIRST, PRIN, PhD grants. "
                 "COMPANION FILE: the -1 or second SO file contains multi-year BILANCIO PER AZIONI tables in full euros. "
                 "MIMIT (from 2022) / MISE handles industrial R&D (Fondo per l'Innovazione). "
-                "unit='unit', currency='EUR'."
-            ) for y in range(2017, 2026)},
+                "unit='unit', currency='EUR'. "
+                "COLUMN SELECTION: tables show multiple columns (Previsione assestata, Previsioni definitive, "
+                "Rendiconto). ALWAYS take the FIRST column which shows the CURRENT YEAR budget. "
+                "If FOE amount exceeds 5 billion EUR, it is likely the wrong column or row — typical FOE "
+                "is 1.5-2.5 billion EUR in this period."
+            ) for y in range(2018, 2026)},
             2020: (
                 "Italy 2020: MIUR renamed to MUR (Ministero dell'Università e della Ricerca) + "
                 "Ministero dell'Istruzione (MI) as separate ministries. "
@@ -2859,9 +2940,20 @@ COUNTRY_PROFILES: dict[str, dict] = {
             "1990 and 1991 files are byte-for-byte identical (one is mislabelled). "
             "If processing both years, extract ONLY the 1991 file; mark 1990 as duplicate.",
 
-            # 2001/2002 duplicate copies
-            "2001 UUID-named scanned file and '2001 ... (1).pdf' copy: process only the "
-            "'Kanun' text-layer file. Similarly for 2002 '(1)' copy.",
+            # 2001/2002 duplicate copies — but note ALL 2001-2004 files lack cetveller
+            "2001/2002 '(1).pdf' copies: skip duplicate. NOTE: ALL 2001-2004 files (UUID and "
+            "kanuntbmmc) contain only budget law articles — no appropriation tables exist "
+            "in the dataset for these years. Return empty for all 2001-2004 files.",
+
+            # 1984-1999 wrong gazette issues — verified non-budget content
+            "Files named '1984 18230.pdf' through '1999 23741.pdf' (64-96 page Resmi Gazete "
+            "issues): verified to contain health regulations, labor law, court notices — "
+            "NOT the budget cetveller. No TÜBİTAK data. Return empty for all 1984-1999 files.",
+
+            # 2010-2025 Ekonomik Kod İcmali — general budget only, no TÜBİTAK
+            "Files named '2-a-XXXX-Yılı-Genel-Bütçeli-İdareler-Ekonomik-Kod-İcmali' "
+            "(3-page aggregate tables): general budget only, TÜBİTAK is Özel Bütçeli and "
+            "absent. Return empty for all 2010-2025 Ekonomik Kod İcmali files.",
         ],
         "include_note": [
             # TÜBİTAK — primary R&D funder; ÖZEL BÜTÇELİ
@@ -2908,38 +3000,56 @@ COUNTRY_PROFILES: dict[str, dict] = {
         ],
         "year_notes": {
             **{y: (
-                "TRL ERA (1975-2004): amounts in full old Turkish lira (TRL), unit='unit'. "
-                "TÜBİTAK appears as a transfer payment from the General Budget: "
-                "'Bağımsız bütçeli idarelere yapılacak yardımlar (TÜBİTAK'a ödenecektir)'. "
-                "Large budget documents (400-1100+ pages) contain the full Bütçe Cetvelleri. "
+                "TRL ERA (1975-1983): amounts in full old Turkish lira (TRL), unit='unit'. "
+                "These years have the CORRECT Resmi Gazete issues containing the Bütçe Cetvelleri "
+                "(400-1100+ page files, e.g. '1981 17265.pdf'). "
+                "TÜBİTAK appears as a transfer: 'Bağımsız bütçeli idarelere yapılacak yardımlar "
+                "(TÜBİTAK'a ödenecektir)'. "
                 "OCR quality varies — spaced/garbled letters in some scanned pages is expected."
-            ) for y in range(1975, 1990)},
+            ) for y in range(1975, 1984)},
+            **{y: (
+                "DATASET GAP — WRONG DOCUMENTS: The Resmi Gazete file for this year "
+                f"(e.g. '{y} NNNNN.pdf', 64-96 pages) contains health regulations, labor laws, "
+                "court notices, and commercial announcements — NOT the budget appropriation schedule. "
+                "TÜBİTAK/TÜBA/TAEK do NOT appear. The correct gazette issue containing the budget "
+                "cetveller is not in the dataset. Return empty — mark ALL pages relevant=false."
+            ) for y in range(1984, 1990)},
             1990: (
                 "DUPLICATE YEAR: 1990 budget file is byte-for-byte identical to 1991. "
                 "Treat data extracted from this file as 1991 only. Mark year=1990 decision=exclude."
             ),
             **{y: (
-                "TRL ERA: amounts in full old Turkish lira (TRL), unit='unit'. "
-                "TÜBİTAK appears as a transfer in the general budget Cetvelleri. "
-                "Hyperinflation: by late 1990s, TÜBİTAK budget in tens of trillions TRL."
+                "DATASET GAP — WRONG DOCUMENTS: The Resmi Gazete file for this year "
+                "(64-96 pages) contains mixed legal content but NOT the budget appropriation cetveller. "
+                "TÜBİTAK/TÜBA/TAEK do not appear. The correct budget document is not in the dataset. "
+                "Return empty — mark ALL pages relevant=false. "
+                "Hyperinflation context: by late 1990s, TÜBİTAK budget would be in tens of trillions TRL."
             ) for y in range(1991, 2001)},
             2001: (
-                "TWO 2001 FILES: a UUID-named scanned PDF (garbled OCR) and a 'Kanun' text-layer file. "
-                "Use the Kanun text file. Amounts in old TRL — hyperinflation era."
+                "DATASET GAP — NO CETVEL: Both files available are budget LAW TEXT only "
+                "(fiscal policy clauses, procurement rules) — neither contains the appropriation "
+                "schedules (Cetveller) with TÜBİTAK/TÜBA/TAEK amounts. "
+                "UUID file (dfd35a0d) is OCR'd but verified to contain only kanun articles. "
+                "'Malî-Yılı-Bütçe-Kanunu-Kanun-No-4611.pdf' is also articles only. "
+                "Return empty — mark ALL pages relevant=false."
             ),
             2002: (
-                "TWO 2002 FILES: an original and a '(1)' duplicate copy. Process only one. "
-                "Hyperinflation era — amounts in old TRL."
+                "DATASET GAP — NO CETVEL: Both files ('Kanun-No-4726.pdf' and its '(1)' copy) "
+                "are budget law articles only — no appropriation tables, no TÜBİTAK amounts. "
+                "Return empty — mark ALL pages relevant=false."
             ),
-            **{y: (
-                "TRL ERA (late hyperinflation): amounts in old TRL, unit='unit'. "
-                "Multiple document types in collection — prioritise UUID-named or 'f8229ba6'-style files "
-                "which are the full Merkezi Yönetim Bütçe Kanunu with annexes."
-            ) for y in range(2003, 2005)},
+            2003: (
+                "DATASET GAP — NO CETVEL: UUID file (ffe059e8, 60p, OCR'd) contains only budget "
+                "law articles. 'kanuntbmmc08704833.pdf' also articles only. "
+                "Neither contains the Cetveller with TÜBİTAK/TÜBA/TAEK. "
+                "Return empty — mark ALL pages relevant=false."
+            ),
             2004: (
-                "LAST YEAR of old Turkish lira (TRL) era. "
-                "1 YTL = 1,000,000 TRL redenomination took effect 1 January 2005. "
-                "Multiple files in collection: use the large UUID-named file for full appropriation tables."
+                "DATASET GAP — NO CETVEL: UUID file (f8229ba6, 99p, OCR'd) verified to contain "
+                "only budget law articles (fiscal clauses, mobile phone tariff provisions, etc.) — "
+                "NOT the appropriation schedules. 'kanuntbmmc08805027.pdf' also articles only. "
+                "This is the LAST YEAR of old Turkish lira (TRL) — 1 YTL = 1,000,000 TRL from 2005. "
+                "Return empty — mark ALL pages relevant=false."
             ),
             2005: (
                 "REDENOMINATION YEAR: Turkey replaced old TRL with Yeni Türk Lirası (YTL) "

@@ -1299,7 +1299,8 @@ def search_raw_rows_for_gaps(
                 )
             gap_df.at[idx, "raw_row_match"] = "no"
             gap_df.at[idx, "diagnosis"] = (
-                specific_diag or "Year not in raw_rows — documents may not be parsed yet"
+                specific_diag
+                or "Year not in raw_rows — agency absent from extracted results; documents may not be parsed yet or this agency does not appear in the available source file for this year"
             )
             gap_df.at[idx, "action"] = specific_action or "reextract"
             if specific_file:

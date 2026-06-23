@@ -39,16 +39,42 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 
 _YEAR_PATTERN = re.compile(r"(?<![0-9])(1[89]\d{2}|20[012]\d)(?![0-9])")
+_YEAR_RANGE_PATTERN = re.compile(
+    r"(?<![0-9])(1[89]\d{2}|20[012]\d)[-–](1[89]\d{2}|20[012]\d)(?![0-9])"
+)
+
+
+def _infer_years(path: Path) -> list[int]:
+    """
+    Extract one or more budget years from a filename.
+
+    Handles:
+    - Single year:  "2001 Hungary ..." → [2001]
+    - Year range:   "2001-2002 Hungary ..." → [2001, 2002]  (biannual budgets)
+
+    Returns list of years (may be empty if no year found).
+    """
+    stem = path.stem
+    # Check for year range first (e.g. "2001-2002" or "2001–2002")
+    m_range = _YEAR_RANGE_PATTERN.search(stem)
+    if m_range:
+        y1, y2 = int(m_range.group(1)), int(m_range.group(2))
+        # Only treat as a range if both years are close (same decade)
+        if abs(y2 - y1) <= 4:
+            return list(range(y1, y2 + 1))
+    # Single year
+    m = _YEAR_PATTERN.search(stem)
+    if m:
+        return [int(m.group(1))]
+    # Try parent directory name
+    m = _YEAR_PATTERN.search(path.parent.name)
+    return [int(m.group(1))] if m else []
 
 
 def _infer_year(path: Path) -> Optional[int]:
-    """Extract the 4-digit year from a filename (first match)."""
-    m = _YEAR_PATTERN.search(path.stem)
-    if m:
-        return int(m.group(1))
-    # Try parent directory name too
-    m = _YEAR_PATTERN.search(path.parent.name)
-    return int(m.group(1)) if m else None
+    """Extract the primary (first) 4-digit year from a filename."""
+    years = _infer_years(path)
+    return years[0] if years else None
 
 
 def _discover_files(
@@ -58,6 +84,10 @@ def _discover_files(
 ) -> list[tuple[str, int, Path]]:
     """
     Walk pdf_root and return list of (country, year, path) tuples.
+
+    Files with year ranges in their names (e.g. "2001-2002 Hungary.pdf" for a
+    biannual budget) yield one entry per covered year so the pipeline processes
+    the file for each year independently.
 
     Args:
         pdf_root:    Root directory, e.g. data/input/finance_bills/
@@ -84,13 +114,14 @@ def _discover_files(
         for f in sorted(country_dir.iterdir()):
             if f.suffix.lower() not in (".pdf", ".docx", ".doc"):
                 continue
-            year = _infer_year(f)
-            if year is None:
+            years = _infer_years(f)
+            if not years:
                 logger.debug(f"Could not infer year from {f.name} — skipping")
                 continue
-            if year_range and not (year_range[0] <= year <= year_range[1]):
-                continue
-            results.append((country, year, f))
+            for year in years:
+                if year_range and not (year_range[0] <= year <= year_range[1]):
+                    continue
+                results.append((country, year, f))
 
     results.sort(key=lambda x: (x[0], x[1]))
     return results
@@ -106,8 +137,12 @@ def _append_run_log(log_file: Path, entry: dict) -> None:
         f.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
 
-def _already_processed(log_file: Path, source_file: str) -> bool:
-    """Return True if this source_file already has a successful entry in the run log."""
+def _already_processed(log_file: Path, source_file: str, year: Optional[int] = None) -> bool:
+    """Return True if this (source_file, year) already has a successful entry in the run log.
+
+    When year is given, both source_file AND year must match — this ensures biannual
+    budget files (e.g. "2001-2002 Hungary.pdf") are processed once per covered year.
+    """
     if not log_file.exists():
         return False
     try:
@@ -115,7 +150,8 @@ def _already_processed(log_file: Path, source_file: str) -> bool:
             for line in f:
                 entry = json.loads(line.strip())
                 if entry.get("source_file") == source_file and entry.get("status") == "ok":
-                    return True
+                    if year is None or entry.get("year") == year:
+                        return True
     except Exception:
         pass
     return False
@@ -129,6 +165,21 @@ def _row_source_file(row) -> str:
         except Exception:
             pass
     return str(getattr(row, "source_file", ""))
+
+
+def _row_year(row) -> Optional[int]:
+    """Return year for either dict-like rows or BudgetRow-like objects."""
+    if hasattr(row, "get"):
+        try:
+            v = row.get("year")
+            return int(v) if v is not None else None
+        except Exception:
+            pass
+    v = getattr(row, "year", None)
+    try:
+        return int(v) if v is not None else None
+    except Exception:
+        return None
 
 
 # ---------------------------------------------------------------------------
@@ -223,14 +274,21 @@ def _process_file(
     # Track the LLM call context for cost attribution
     client.set_current_survey(country_code=country, survey_year=year)
 
+    # Some files have garbled embedded font encoding for specific years;
+    # force_ocr_years triggers re-extraction via OCR for those files.
+    force_ocr_this_file = bool(country_ctx.get("force_ocr", False)) or (
+        year in country_ctx.get("force_ocr_years", [])
+    )
+    force_reextract_this_file = force_ocr_this_file  # also bust the text cache when forcing OCR
+
     # Extract text
     pages = extract_pages(
         path=path,
         cache_dir=pdf_text_cache_dir,
-        force_reextract=False,
+        force_reextract=force_reextract_this_file,
         ocr_zoom=float(country_ctx.get("ocr_zoom", blm_cfg.get("ocr_zoom", 2.0))),
         ocr_langs=str(country_ctx.get("ocr_langs", blm_cfg.get("ocr_langs", "eng"))),
-        force_ocr=bool(country_ctx.get("force_ocr", False)),
+        force_ocr=force_ocr_this_file,
     )
 
     if not pages:
@@ -238,6 +296,18 @@ def _process_file(
         return []
 
     logger.info(f"  {path.name}: {len(pages)} pages")
+
+    # For biannual files (e.g. "2009-2010_Israel.pdf"), add the full year range
+    # to the doc_hint so the scan pass does not reject pages just because the
+    # document header says a different year than the one we are currently extracting.
+    file_years = _infer_years(path)
+    country_ctx = dict(country_ctx)  # shallow copy — do not mutate the shared profile
+    if len(file_years) > 1:
+        range_str = f"{file_years[0]}-{file_years[-1]}"
+        existing_hint = country_ctx.get("doc_type_hint", "")
+        country_ctx["doc_type_hint"] = (
+            f"{existing_hint} [BIANNUAL DOCUMENT covering {range_str}; extracting year {year}]".strip()
+        )
 
     # LLM extraction — read scan_model from resolved llm config
     scan_model = blm_cfg.get("_resolved_llm", {}).get("scan_model") or None
@@ -417,9 +487,9 @@ def run_pipeline(
     for country, year, path in all_files:
         source_file = path.name
 
-        # Skip if already processed
-        if skip_cached and _already_processed(run_log, source_file):
-            logger.debug(f"Skipping cached: {source_file}")
+        # Skip if already processed (check year too so biannual files are processed once per year)
+        if skip_cached and _already_processed(run_log, source_file, year=year):
+            logger.debug(f"Skipping cached: {source_file} (year {year})")
             skipped += 1
             continue
 
@@ -441,13 +511,16 @@ def run_pipeline(
                 run_log=run_log,
             )
 
-            # Replace: drop any existing rows for this source file before adding new ones.
-            # This ensures re-running a file always produces a clean result regardless
-            # of whether it's a whole-country run, single-year run, or partial run.
+            # Replace: drop existing rows for this source file+year before adding new ones.
+            # Using (source_file, year) lets biannual files (e.g. "2001-2002 Hungary.pdf")
+            # hold separate row sets for each covered year without clobbering each other.
             before = len(all_rows)
-            all_rows = [r for r in all_rows if _row_source_file(r) != source_file]
+            all_rows = [
+                r for r in all_rows
+                if not (_row_source_file(r) == source_file and _row_year(r) == year)
+            ]
             if len(all_rows) < before:
-                logger.debug(f"Replaced {before - len(all_rows)} old rows for {source_file}")
+                logger.debug(f"Replaced {before - len(all_rows)} old rows for {source_file} year {year}")
             all_rows.extend(rows)
             processed += 1
             elapsed = round(time.time() - t0, 1)

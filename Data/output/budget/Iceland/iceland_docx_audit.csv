@@ -1,4 +1,417 @@
 canonical_name,category,year,source_file,entity_raw,amount_current,section_name,table_index,row_index,in_series
-Vísindasjóður (Science Fund),science_agency,1975,pdf_a1ce3fb3453c__1975_aa19751975n128203.txt,FIRST SCHEDULE ApPROPRIATIONS OUT OF CONSOUDATED REVENUE ACCOUNT FOR THE YEAR 1975-76,1231986.0,FIRST SCHEDULE ApPROPRIATIONS OUT OF CONSOUDATED REVENUE ACCOUNT FOR THE YEAR 1975-76,0,0,True
-Vísindasjóður (Science Fund),science_agency,1975,pdf_a1ce3fb3453c__1975_aa19751975n128203.txt,Apl'ROPRIATIONS OUT OF WORKS AND TRADING ACCOUNT FOR THE YEAR 1975-76,724077.0,Apl'ROPRIATIONS OUT OF WORKS AND TRADING ACCOUNT FOR THE YEAR 1975-76,0,0,True
-Vísindasjóður (Science Fund),science_agency,1975,pdf_a1ce3fb3453c__1975_aa19751975n128203.txt,TRANSFERS AUTHORISED FROM NATIONAL DEVELOPMENT LoANS ACCOUNT FOR THE YEAR 1975-76,537000.0,TRANSFERS AUTHORISED FROM NATIONAL DEVELOPMENT LoANS ACCOUNT FOR THE YEAR 1975-76,0,0,True
+Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,1989,1989 0430.pdf,Byggingarsjóður rannsókna í þágu atvinnuveganna,62300.0,Building Fund for Industry Research,0,345,True
+Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,2003,2003 0608.pdf,Byggingarsjóður rannsókna í þágu atvinnuveganna,0.0,Building Fund for Industry Research,0,867,True
+Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,2012,2012 0493.pdf,Byggingarsjóður rannsókna í þágu atvinnuveganna,,Building Fund for Industry Research,0,1293,True
+Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,2016,2016 0703.pdf,Byggingarsjóður rannsókna í þágu atvinnuveganna,,Building Fund for Industry Research,0,1427,True
+Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,2021,2021 s0726-f_I.pdf,Byggingarsjóður rannsókna í þágu atvinnuveganna,0.0,Building Fund for Industry Research,0,1726,True
+Byggingarsjóður rannsókna í þágu atvinnuveganna (Building Fund for Industry Research),innovation_instruments,2022,2022 0286.pdf,Byggingarsjóður rannsókna í þágu atvinnuveganna,0.0,Building Fund for Industry Research,0,1778,False
+Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries),science_agency,1985,1985 0001.pdf,Rannsóknastofnun fiskiðnaðarins. Fjárveiting til stofnunarinnar hækkar úr 15.033 þús. kr. í 17.664 Þús. kr.,17664.0,Ministry of Fisheries,0,249,False
+Fiskirannsóknastofnun / Rannsóknastofnun fiskiðnaðarins (Research Institute of Fisheries),science_agency,2006,2006 0540.pdf,1.01 Rannsóknastofnun fiskiðnaðarins,427700.0,Research Institute of Fisheries,0,1005,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,1985,1985 0001.pdf,Hafrannsóknastofnun. Framlag ríkissjóðs hækkar úr 91.027 þús. kr. í fjárlögum 1984 í 115.440 ÞÚS. kr.,115440.0,Ministry of Fisheries,0,248,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,1990,1990 0496.pdf,Hafrannsóknastofnun,388637.0,Marine Research Institute,0,387,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,1995,1995 0503.pdf,Hafrannsóknastofnun,634500.0,Marine Research Institute,0,551,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,2001,2001 0489.pdf,Hafrannsóknastofnunin,1065400.0,Marine Research Institute,0,755,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,2001,2001 0489.pdf,Veitt er 9 m.kr. fjarveiting til Hafrannséknastofnunarinnar til a0 styrkja utibé hennar 4 {safirdi og { Olafsvik.,9000.0,Marine Research Institute,0,771,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,2002,2002 0516.pdf,Hafrannsóknastofnun,1136600.0,Marine Research Institute,0,802,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,2003,2003 0608.pdf,"Að selja hlutafé Hafrannsóknastofnunar í Fiskeldi Eyjafjarðar og láta andvirðið renna í sjóð í vörslu sjávarútvegsráðuneytis sbr. 3. mgr. 1. gr. laga nr. 37/1992, um sérstakt gjald vegna ólögmæts sjávarafla, og skal því varið til eldis sjávardýra og hafrannsókna.",,Marine Research Institute,0,834,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,2006,2006 0540.pdf,1.01 Hafrannsóknastofnunin,1592800.0,Marine Research Institute,0,1004,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,2007,2007 0550.pdf,1.01 Hafrannsóknastofnunin,1711000.0,Marine Research Institute,0,1046,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,2008,2008 0507.pdf,Hafrannsóknastofnunin,1930200.0,Marine Research Institute,0,1101,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,2009,2009 0481.pdf,Almennur rekstur: Hafrannsóknastofnunin,2111900.0,Marine Research Institute,0,1150,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,2010,2010 0594.pdf,Hafrannsóknastofnunin,1989900.0,Ministry of Fisheries and Agriculture,0,1184,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,2011,2011 0556.pdf,Hafrannsóknastofnunin,2112100.0,Marine Research Institute,0,1233,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,2012,2012 0493.pdf,Hafrannsóknastofnunin,2253600.0,Marine Research Institute,0,1274,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,2013,2013 0801.pdf,Hafrannsóknastofnunin,2640000.0,Marine Research Institute,0,1308,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,2014,2014 0497.pdf,Hafrannsóknastofnunin,2709600.0,Hafrannsóknastofnun (Marine Research Institute),0,1367,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,2015,2015 0801.pdf,Hafrannsóknastofnunin,3087100.0,Hafrannsóknastofnun (Marine Research Institute),0,1410,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,2019,2019 s0632-f_I.pdf,Hafrannsóknastofnun,3871200.0,"Research, development and innovation in fisheries",0,1522,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,2020,2020 s0561-f_I.pdf,Hafrannsóknastofnun,4151600.0,Marine Research Institute,0,1619,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,2021,2021 s0726-f_I.pdf,Hafrannsóknastofnun,4379600.0,Marine Research Institute,0,1730,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,2022,2022 s0286-f_I.pdf,Hafrannsóknastofnun,4482700.0,Marine Research Institute,0,1797,True
+Hafrannsóknastofnun (Marine Research Institute),science_agency,2025,2025 s0411-f_I.pdf,Hafrannsóknastofnun,5417500.0,"Research, Development and Innovation in Fisheries",0,2080,True
+Háskóli Íslands (University of Iceland),higher_education,1981,1981 0382.pdf,Háskóli Íslands,61581190.0,University of Iceland,0,120,True
+Háskóli Íslands (University of Iceland),higher_education,1988,1988 0434.pdf,Háskóli Íslands,321381.0,University of Iceland,0,318,True
+Háskóli Íslands (University of Iceland),higher_education,1990,1990 0496.pdf,Háskóli Íslands,388637.0,University of Iceland,0,385,True
+Háskóli Íslands (University of Iceland),higher_education,1995,1995 0503.pdf,Háskóli Íslands,43900.0,University of Iceland,0,540,True
+Háskóli Íslands (University of Iceland),higher_education,1996,1996 0500.pdf,Háskóli Íslands,20000000.0,University of Iceland,0,599,True
+Háskóli Íslands (University of Iceland),higher_education,1997,1997 0509.pdf,Háskóli Íslands,123000.0,University of Iceland,0,637,True
+Háskóli Íslands (University of Iceland),higher_education,1998,1998 0706.pdf,Háskóli Íslands,84300.0,University of Iceland,0,660,True
+Háskóli Íslands (University of Iceland),higher_education,1999,1999 0631.pdf,Háskóli Íslands,46800.0,University of Iceland,0,684,True
+Háskóli Íslands (University of Iceland),higher_education,2000,2000 0455.pdf,Háskóli Íslands,658900.0,University of Iceland,0,712,True
+Háskóli Íslands (University of Iceland),higher_education,2001,2001 0489.pdf,Háskóli Íslands,290000.0,University of Iceland,0,759,True
+Háskóli Íslands (University of Iceland),higher_education,2002,2002 0516.pdf,Háskóli Íslands,1113600.0,University of Iceland,0,800,True
+Háskóli Íslands (University of Iceland),higher_education,2003,2003 0608.pdf,Háskóli Íslands,170000.0,University of Iceland,0,874,True
+Háskóli Íslands (University of Iceland),higher_education,2003,2003 0608.pdf,Háskóli Íslands,131200.0,University of Iceland,0,880,True
+Háskóli Íslands (University of Iceland),higher_education,2004,2004 0588.pdf,Háskóli Íslands,90200.0,University of Iceland,0,924,True
+Háskóli Íslands (University of Iceland),higher_education,2006,2006 0540.pdf,Háskóli Íslands,6470100.0,University of Iceland,0,992,True
+Háskóli Íslands (University of Iceland),higher_education,2006,2006 0540.pdf,Háskóli Íslands,108000.0,University of Iceland,0,1025,True
+Háskóli Íslands (University of Iceland),higher_education,2007,2007 0550.pdf,Háskóli Íslands,150000.0,University of Iceland,0,1066,True
+Háskóli Íslands (University of Iceland),higher_education,2008,2008 0507.pdf,Háskóli Íslands,0.0,University of Iceland,0,1131,True
+Háskóli Íslands (University of Iceland),higher_education,2009,2009 0481.pdf,Háskóli Íslands,28000.0,University of Iceland,0,1170,True
+Háskóli Íslands (University of Iceland),higher_education,2010,2010 0594.pdf,Háskóli Íslands,27199.0,University of Iceland,0,1201,True
+Háskóli Íslands (University of Iceland),higher_education,2011,2011 0556.pdf,1.01 Háskóli Íslands,12740100.0,University of Iceland,0,1219,True
+Háskóli Íslands (University of Iceland),higher_education,2011,2011 0556.pdf,Háskóli Íslands,520000.0,University of Iceland,0,1252,True
+Háskóli Íslands (University of Iceland),higher_education,2012,2012 0493.pdf,Háskóli Íslands,14199.8,University of Iceland,0,1265,True
+Háskóli Íslands (University of Iceland),higher_education,2012,2012 0493.pdf,Háskóli Íslands,727200.0,University of Iceland,0,1285,True
+Háskóli Íslands (University of Iceland),higher_education,2012,2012 0493.pdf,"Innritunargjöld, Háskóli Íslands",745000.0,University of Iceland,0,1287,True
+Háskóli Íslands (University of Iceland),higher_education,2013,2013 0801.pdf,Háskóli Íslands,7638000000.0,University of Iceland,0,1322,True
+Háskóli Íslands (University of Iceland),higher_education,2013,2013 0801.pdf,"Innritunargjöld, Háskóli Íslands",7638000000.0,University of Iceland,0,1324,True
+Háskóli Íslands (University of Iceland),higher_education,2013,2013 0801.pdf,"Innritunargjöld, Landbúnaðarháskóli Íslands",24200.0,Agricultural University of Iceland,0,1326,True
+Háskóli Íslands (University of Iceland),higher_education,2015,2015 0801.pdf,Háskóli Íslands,16378100.0,University of Iceland,0,1378,True
+Háskóli Íslands (University of Iceland),higher_education,2016,2016 0703.pdf,Háskóli Íslands,975000.0,University of Iceland,0,1440,True
+Háskóli Íslands (University of Iceland),higher_education,2019,2019 s0632-f_I.pdf,Landbúnaðarháskóli Íslands,1630100.0,Agricultural University of Iceland,0,1560,True
+Háskóli Íslands (University of Iceland),higher_education,2020,2020 s0561-f_I.pdf,Landbúnaðarháskóli Íslands,1613.0,Agricultural University of Iceland,0,1636,True
+Háskóli Íslands (University of Iceland),higher_education,2021,2021 0726.pdf,Háskóli Íslands,53000000.0,University of Iceland,0,1671,True
+Háskóli Íslands (University of Iceland),higher_education,2021,2021 s0726-f_I.pdf,Háskóli Íslands,26224000.0,University of Iceland,0,1723,True
+Háskóli Íslands (University of Iceland),higher_education,2022,2022 0286.pdf,Háskóli Íslands,50502.3,University of Iceland,0,1771,True
+Háskóli Íslands (University of Iceland),higher_education,2022,2022 s0286-f_I.pdf,Háskóli Íslands,28602700.0,University of Iceland,0,1801,True
+Háskóli Íslands (University of Iceland),higher_education,2022,2022 s0286-f_I.pdf,Háskóli Íslands,3831000.0,University of Iceland,0,1804,True
+Háskóli Íslands (University of Iceland),higher_education,2022,2022 s0286-f_I.pdf,Háskóli Íslands,29792000.0,University of Iceland,0,1828,True
+Háskóli Íslands (University of Iceland),higher_education,2022,2022 s0286-f_I.pdf,Landbúnaðarháskóli Íslands,2283400.0,Agricultural University of Iceland,0,1833,True
+Háskóli Íslands (University of Iceland),higher_education,2022,2022 s0286-f_I.pdf,Listaháskóli Íslands,1586300.0,Iceland Academy of the Arts,0,1837,True
+Háskóli Íslands (University of Iceland),higher_education,2022,2022 s0286-f_I.pdf,Listaháskóli Íslands,1586000.0,Universities and Research Activities,0,1858,True
+Háskóli Íslands (University of Iceland),higher_education,2023,2023 s0881-f_I.pdf,Háskóli Íslands,51687600.0,University of Iceland,0,1897,True
+Háskóli Íslands (University of Iceland),higher_education,2023,2023 s0881-f_I.pdf,Háskóli Íslands,32229700.0,University of Iceland,0,1899,True
+Háskóli Íslands (University of Iceland),higher_education,2023,2023 s0881-f_I.pdf,Háskóli Íslands,32396100.0,University of Iceland,0,1915,True
+Háskóli Íslands (University of Iceland),higher_education,2024,2024 s0854-f_I.pdf,Háskóli Íslands,53980.2,University of Iceland,0,1964,True
+Háskóli Íslands (University of Iceland),higher_education,2024,2024 s0854-f_I.pdf,Háskóli Íslands,35465.9,University of Iceland,0,1967,True
+Háskóli Íslands (University of Iceland),higher_education,2024,2024 s0854-f_I.pdf,Landbúnaðarháskóli Íslands,2360.9,Agricultural University of Iceland,0,1970,True
+Háskóli Íslands (University of Iceland),higher_education,2024,2024 s0854-f_I.pdf,Háskóli Íslands,32407300.0,University of Iceland,0,1981,True
+Háskóli Íslands (University of Iceland),higher_education,2024,2024 s0854-f_I.pdf,Landbúnaðarháskóli Íslands,2065900.0,Agricultural University of Iceland,0,1985,True
+Háskóli Íslands (University of Iceland),higher_education,2024,2024 s0854-f_I.pdf,Háskóli Íslands / Rannsóknarverkefni í hugverkarétti,1000.0,"Innovation, Competition and Knowledge Fields",0,2000,True
+Háskóli Íslands (University of Iceland),higher_education,2024,2024 s0854-f_I.pdf,Listaháskóli Íslands,1994.0,Universities and Research Activities,0,2007,True
+Háskóli Íslands (University of Iceland),higher_education,2024,2024 s0854-f_I.pdf,Háskóli Íslands - Rannsóknarinnviðir á Íslandi,54000.0,University Level,0,2013,True
+Háskóli Íslands (University of Iceland),higher_education,2024,2024 s0854-f_I.pdf,Háskóli Íslands - Meistaranám og rannsóknir netöryggi,90000.0,University Level,0,2014,True
+Háskóli Íslands (University of Iceland),higher_education,2025,2025 s0411-f_I.pdf,Háskóli Íslands,39340.2,University of Iceland,0,2083,True
+Háskóli Íslands (University of Iceland),higher_education,2025,2025 s0411-f_I.pdf,Háskóli Íslands,39340200.0,Universities and Research Activities,0,2105,True
+Háskóli Íslands (University of Iceland),higher_education,2025,2025 s0411-f_I.pdf,Háskóli Íslands,500000.0,University of Iceland,0,2113,True
+Háskólinn á Akureyri (University of Akureyri),higher_education,2003,2003 0608.pdf,"Háskólinn á Akureyri, rannsóknahús",10000.0,University of Iceland,0,876,True
+Háskólinn á Akureyri (University of Akureyri),higher_education,2003,2003 0608.pdf,Háskólinn á Akureyri,25800.0,University of Akureyri,0,882,True
+Háskólinn á Akureyri (University of Akureyri),higher_education,2007,2007 0550.pdf,"Innritunargjöld, Háskólinn á Akureyri",59700.0,University of Akureyri,0,1068,True
+Háskólinn á Akureyri (University of Akureyri),higher_education,2010,2010 0594.pdf,Háskólinn á Akureyri,1710500.0,Ministry of Education and Culture,0,1179,True
+Háskólinn á Akureyri (University of Akureyri),higher_education,2010,2010 0594.pdf,"Innritunargjöld, Háskólinn á Akureyri",63400.0,University of Akureyri,0,1205,True
+Háskólinn á Akureyri (University of Akureyri),higher_education,2011,2011 0556.pdf,"Innritunargjöld, Háskólinn á Akureyri",63400.0,University of Akureyri,0,1254,True
+Háskólinn á Akureyri (University of Akureyri),higher_education,2012,2012 0493.pdf,Háskólinn á Akureyri,85900.0,University of Akureyri,0,1288,True
+Háskólinn á Akureyri (University of Akureyri),higher_education,2012,2012 0493.pdf,"Innritunargjöld, Háskólinn á Akureyri",85900.0,University of Akureyri,0,1289,True
+Háskólinn á Akureyri (University of Akureyri),higher_education,2013,2013 0801.pdf,"Innritunargjöld, Háskólinn á Akureyri",87400.0,University of Akureyri,0,1325,True
+Háskólinn á Akureyri (University of Akureyri),higher_education,2019,2019 s0632-f_I.pdf,Háskólinn á Akureyri,2910200.0,University of Akureyri,0,1559,True
+Háskólinn á Akureyri (University of Akureyri),higher_education,2020,2020 s0561-f_I.pdf,Háskólinn á Akureyri,3378200.0,University of Akureyri,0,1614,True
+Háskólinn á Akureyri (University of Akureyri),higher_education,2020,2020 s0561-f_I.pdf,Háskólinn á Akureyri,3378.2,University of Akureyri,0,1635,True
+Háskólinn á Akureyri (University of Akureyri),higher_education,2021,2021 s0726-f_I.pdf,Háskólinn á Akureyri,3724300.0,University of Akureyri,0,1725,True
+Háskólinn á Akureyri (University of Akureyri),higher_education,2022,2022 s0286-f_I.pdf,Háskólinn á Akureyri,4091900.0,University of Akureyri,0,1832,True
+Háskólinn á Akureyri (University of Akureyri),higher_education,2024,2024 s0854-f_I.pdf,Háskólinn á Akureyri,4659.6,University of Akureyri,0,1969,True
+Háskólinn á Akureyri (University of Akureyri),higher_education,2024,2024 s0854-f_I.pdf,Háskólinn á Akureyri,4301500.0,University of Akureyri,0,1984,True
+Háskólinn á Akureyri (University of Akureyri),higher_education,2025,2025 s0411-f_I.pdf,Háskólinn á Akureyri,5847.5,University of Akureyri,0,2086,True
+Háskólinn á Bifröst (University of Bifröst),higher_education,2021,2021 s0726-f_I.pdf,Háskólinn á Bifröst,504000.0,Universities and Research Activities,0,1741,True
+Háskólinn á Bifröst (University of Bifröst),higher_education,2022,2022 s0286-f_I.pdf,Háskólinn á Bifröst,684500.0,University of Bifröst,0,1835,True
+Háskólinn á Bifröst (University of Bifröst),higher_education,2022,2022 s0286-f_I.pdf,Háskólinn á Bifröst,685000.0,Universities and Research Activities,0,1855,True
+Háskólinn á Bifröst (University of Bifröst),higher_education,2023,2023 s0881-f_I.pdf,"Háskólinn á Bifröst - rannsóknir, þróunarv. og ráðgjöf",223000.0,Universities and Research Activities,0,1919,True
+Háskólinn á Bifröst (University of Bifröst),higher_education,2023,2023 s0881-f_I.pdf,Háskólinn á Bifröst,685000.0,Universities and Research Activities,0,1920,True
+Háskólinn á Bifröst (University of Bifröst),higher_education,2024,2024 s0854-f_I.pdf,Háskólinn á Bifröst,750000.0,Universities and Research Activities,0,2004,True
+Háskólinn á Bifröst (University of Bifröst),higher_education,2025,2025 s0411-f_I.pdf,Háskólinn á Bifröst ses.,20000.0,"Innovation, Competition and Knowledge Fields",0,2128,True
+Háskólinn í Reykjavík (Reykjavik University),higher_education,2021,2021 s0726-f_I.pdf,Háskólinn í Reykjavík,3666000.0,Universities and Research Activities,0,1742,True
+Háskólinn í Reykjavík (Reykjavik University),higher_education,2022,2022 s0286-f_I.pdf,Háskólinn í Reykjavík,4507200.0,Reykjavik University,0,1836,True
+Háskólinn í Reykjavík (Reykjavik University),higher_education,2022,2022 s0286-f_I.pdf,Háskólinn í Reykjavík,4507000.0,Universities and Research Activities,0,1856,True
+Háskólinn í Reykjavík (Reykjavik University),higher_education,2023,2023 s0881-f_I.pdf,Háskólinn í Reykjavík,4507000.0,Universities and Research Activities,0,1921,True
+Háskólinn í Reykjavík (Reykjavik University),higher_education,2024,2024 s0854-f_I.pdf,Háskólinn í Reykjavík,5102.0,Universities and Research Activities,0,2005,True
+Landbúnaðarháskóli Íslands (Agricultural University of Iceland),higher_education,2013,2013 0801.pdf,"Innritunargjöld, Landbúnaðarháskóli Íslands",24200.0,Agricultural University of Iceland,0,1326,True
+Landbúnaðarháskóli Íslands (Agricultural University of Iceland),higher_education,2019,2019 s0632-f_I.pdf,Landbúnaðarháskóli Íslands,1630100.0,Agricultural University of Iceland,0,1560,True
+Landbúnaðarháskóli Íslands (Agricultural University of Iceland),higher_education,2020,2020 s0561-f_I.pdf,Landbúnaðarháskóli Íslands,1613.0,Agricultural University of Iceland,0,1636,True
+Landbúnaðarháskóli Íslands (Agricultural University of Iceland),higher_education,2022,2022 s0286-f_I.pdf,Landbúnaðarháskóli Íslands,2283400.0,Agricultural University of Iceland,0,1833,True
+Landbúnaðarháskóli Íslands (Agricultural University of Iceland),higher_education,2024,2024 s0854-f_I.pdf,Landbúnaðarháskóli Íslands,2360.9,Agricultural University of Iceland,0,1970,True
+Landbúnaðarháskóli Íslands (Agricultural University of Iceland),higher_education,2024,2024 s0854-f_I.pdf,Landbúnaðarháskóli Íslands,2065900.0,Agricultural University of Iceland,0,1985,True
+Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),science_agency,2020,2020 s0561-f_I.pdf,Náttúrufræðistofnun Íslands,742100.0,Natural History Institute of Iceland,0,1611,True
+Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),science_agency,2021,2021 s0726-f_I.pdf,Náttúrufræðistofnun Íslands,790700.0,University of Iceland,0,1720,True
+Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),science_agency,2023,2023 s0881-f_I.pdf,Náttúrufræðistofnun Íslands,904500.0,Icelandic Institute of Natural History,0,1902,True
+Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),science_agency,2024,2024 s0854-f_I.pdf,Náttúrufræðistofnun Íslands,891000.0,Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),0,2018,True
+Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),science_agency,2024,2024 s0854-f_I.pdf,Náttúrufræðistofnun Íslands,22900.0,Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),0,2019,True
+Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),science_agency,2024,2024 s0854-f_I.pdf,Náttúrufræðistofnun Íslands,940900.0,Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),0,2020,True
+Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),science_agency,2024,2024 s0854-f_I.pdf,Náttúrufræðistofnun Íslands,904500.0,Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),0,2021,True
+Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),science_agency,2024,2024 s0854-f_I.pdf,Náttúrufræðistofnun Íslands,891000.0,Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),0,2022,True
+Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),science_agency,2024,2024 s0854-f_I.pdf,Náttúrufræðistofnun Íslands,22900.0,Náttúrufræðistofnun Íslands (Icelandic Institute of Natural History),0,2023,True
+Nýsköpunarmiðstöð Íslands (Innovation Centre of Iceland),science_agency,2010,2010 0594.pdf,Nýsköpunarmiðstöð Íslands,1125700.0,Ministry of Industry,0,1190,False
+Nýsköpunarmiðstöð Íslands (Innovation Centre of Iceland),science_agency,2012,2012 0493.pdf,Nýsköpunarmiðstöð Íslands,1194000.0,Innovation Center of Iceland,0,1278,True
+Nýsköpunarmiðstöð Íslands (Innovation Centre of Iceland),science_agency,2013,2013 0801.pdf,Nýsköpunarmiðstöð Íslands,1256200.0,Icelandic Innovation Centre,0,1312,True
+Nýsköpunarmiðstöð Íslands (Innovation Centre of Iceland),science_agency,2014,2014 0497.pdf,Nýsköpunarmiðstöð Íslands,1283400.0,Innovation Centre of Iceland,0,1352,True
+Nýsköpunarmiðstöð Íslands (Innovation Centre of Iceland),science_agency,2016,2016 0703.pdf,Nýsköpunarmiðstöð Íslands,1000.0,Innovation Centre of Iceland,0,1431,True
+Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,1985,1985 0001.pdf,Orkustofnun,125651.0,Energy Agency,0,230,True
+Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,1989,1989 0430.pdf,Orkustofnun,281265.0,Energy Research Institute,0,355,True
+Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,1991,1991 0478.pdf,Orkustofnun,338240.0,National Energy Authority,0,431,True
+Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,1993,1993 0546.pdf,Orkustofnun,390300000.0,Energy Agency,0,489,True
+Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,1997,1997 0509.pdf,Orkustofnun,353400000.0,National Energy Authority,0,626,True
+Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,2001,2001 0489.pdf,Orkustofnun,400700.0,Energy Research Institute,0,757,True
+Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,2002,2002 0516.pdf,Orkustofnun,426500.0,Energy Authority,0,804,True
+Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,2006,2006 0540.pdf,Orkustofnun,660600.0,Building Fund for Industry Research,0,1016,True
+Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,2009,2009 0481.pdf,Orkustofnun,1132900.0,Orkustofnun / ÍSOR (Energy and Geothermal Research),0,1174,True
+Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,2012,2012 0493.pdf,Orkustofnun,479100.0,National Energy Authority,0,1281,True
+Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,2013,2013 0801.pdf,Orkustofnun,511100.0,Orkustofnun / ÍSOR (Energy and Geothermal Research),0,1333,True
+Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,2015,2015 0801.pdf,Orkustofnun,597200.0,Orkustofnun / ÍSOR (Energy and Geothermal Research),0,1412,True
+Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,2020,2020 s0561-f_I.pdf,Orkustofnun,744600.0,Energy Agency,0,1623,True
+Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,2021,2021 s0726-f_I.pdf,Orkustofnun,717800.0,Orkustofnun / ÍSOR (Energy and Geothermal Research),0,1758,True
+Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,2021,2021 s0726-f_I.pdf,Orkustofnun,722700.0,Orkustofnun / ÍSOR (Energy and Geothermal Research),0,1759,True
+Orkustofnun / ÍSOR (Energy and Geothermal Research),science_agency,2022,2022 s0286-f_I.pdf,Orkustofnun,834000.0,National Energy Authority,0,1798,True
+Rannsóknarnámssjóður (Research Scholarship Fund),innovation_instruments,2004,2004 0588.pdf,Rannsóknarnámssjóður,50000.0,Research Scholarship Fund,0,903,True
+Rannsóknarnámssjóður (Research Scholarship Fund),innovation_instruments,2005,2005 0536.pdf,Rannsóknarnámssjóður,60000.0,Research Scholarship Fund,0,949,True
+Rannsóknarnámssjóður (Research Scholarship Fund),innovation_instruments,2006,2006 0540.pdf,1.01 Rannsóknarnámssjóður,60000.0,Research Scholarship Fund,0,1002,True
+Rannsóknarnámssjóður (Research Scholarship Fund),innovation_instruments,2007,2007 0550.pdf,Rannsóknarnámssjóður,80000.0,Research Scholarship Fund,0,1042,True
+Rannsóknarnámssjóður (Research Scholarship Fund),innovation_instruments,2010,2010 0594.pdf,Rannsóknarnámssjóður,100000.0,Ministry of Education and Culture,0,1183,True
+Rannsóknarnámssjóður (Research Scholarship Fund),innovation_instruments,2012,2012 0493.pdf,Rannsóknarnámssjóður,96000.0,Research Scholarship Fund,0,1272,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,1981,1981 0382.pdf,Rannsóknaráð ríkisins,1542150.0,National Research Council of Iceland,0,116,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,1981,1981 0382.pdf,Rannsóknaráð ríkisins,13638320.0,National Research Council of Iceland,0,122,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,1984,1984 0305.pdf,Rannsóknaráð ríkisins,10700.0,National Research Council of Iceland,0,193,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,1987,1987 0499.pdf,Rannsóknaráð ríkisins,16589.0,National Research Council of Iceland,0,277,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,1987,1987 0499.pdf,Rannsóknaráð ríkisins,10000.0,National Research Council of Iceland,0,288,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,1988,1988 0434.pdf,Rannsóknaráð ríkisins,40261.0,National Research Council of Iceland,0,306,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,1988,1988 0434.pdf,Rannsóknaráð ríkisins,321381.0,National Research Council of Iceland,0,309,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,1989,1989 0430.pdf,Rannsóknaráð ríkisins,16096.0,National Research Council of Iceland,0,342,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,1990,1990 0496.pdf,Rannsóknaráð ríkisins,118639.0,National Research Council of Iceland,0,377,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,1990,1990 0496.pdf,Rannsóknaráð ríkisins,0.0,National Research Council of Iceland,0,400,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,1992,1992 0374.pdf,Rannsóknaráð ríkisins,110000.0,National Research Council of Iceland,0,454,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,1994,1994 0488.pdf,Rannsóknaráð ríkisins,200000000.0,National Research Council of Iceland,0,510,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,1995,1995 0503.pdf,Rannsóknaráð ríkisins,31600.0,National Research Council of Iceland,0,543,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,1996,1996 0500.pdf,Rannsóknaráð ríkisins,5000000.0,National Research Council of Iceland,0,584,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,1996,1996 0500.pdf,Rannsóknaráð ríkisins,20000000.0,National Research Council of Iceland,0,591,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,1997,1997 0509.pdf,Rannsóknaráð ríkisins,20000000.0,National Research Council of Iceland,0,629,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,1999,1999 0631.pdf,Rannsóknaráð ríkisins,46800.0,National Research Council of Iceland,0,686,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,2000,2000 0455.pdf,Rannsóknaráð ríkisins,280900.0,National Research Council of Iceland,0,717,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,2000,2000 0455.pdf,Rannsóknaráð ríkisins,0.0,National Research Council of Iceland,0,734,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,2001,2001 0489.pdf,Rannsóknaráð ríkisins,0.0,National Research Council of Iceland,0,775,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,2001,2001 0489.pdf,Rannsóknaráð ríkisins,174000.0,National Research Council of Iceland,0,780,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,2002,2002 0516.pdf,Rannsóknaráð ríkisins,,National Research Council of Iceland,0,806,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,2003,2003 0608.pdf,Rannsóknaráð ríkisins,0.0,National Research Council of Iceland,0,831,True
+Rannsóknaráð ríkisins (National Research Council),science_agency,2006,2006 0540.pdf,Rannsóknaráð ríkisins,,National Research Council of Iceland,0,1008,False
+Rannsóknaráð ríkisins (National Research Council),science_agency,2007,2007 0550.pdf,Rannsóknaráð ríkisins,0.0,National Research Council of Iceland,0,1059,False
+Rannsóknaráð ríkisins (National Research Council),science_agency,2008,2008 0507.pdf,Rannsóknaráð ríkisins,0.0,National Research Council of Iceland,0,1104,False
+Rannsóknaráð ríkisins (National Research Council),science_agency,2009,2009 0481.pdf,Rannsóknaráð ríkisins,0.0,National Research Council of Iceland,0,1156,False
+Rannsóknaráð ríkisins (National Research Council),science_agency,2010,2010 0594.pdf,Rannsóknaráð ríkisins,0.0,National Research Council of Iceland,0,1195,False
+Rannsóknaráð ríkisins (National Research Council),science_agency,2019,2019 s0632-f_I.pdf,Rannsóknaráð ríkisins,0.0,National Research Council of Iceland,0,1544,False
+Rannsóknaráð ríkisins (National Research Council),science_agency,2021,2021 0726.pdf,Rannsóknaráð ríkisins,10368100.0,National Research Council of Iceland,0,1674,False
+Rannsóknaráð ríkisins (National Research Council),science_agency,2021,2021 s0726-f_I.pdf,Rannsóknaráð ríkisins,0.0,National Research Council of Iceland,0,1695,False
+Rannsóknaráð ríkisins (National Research Council),science_agency,2021,2021 s0726-f_I.pdf,Rannsóknaráð ríkisins,300.0,National Research Council of Iceland,0,1709,False
+Rannsóknaráð ríkisins (National Research Council),science_agency,2021,2021 s0726-f_I.pdf,Rannsóknaráð ríkisins,0.0,National Research Council of Iceland,0,1715,False
+Rannsóknaráð ríkisins (National Research Council),science_agency,2022,2022 0286.pdf,Rannsóknaráð ríkisins,0.0,National Research Council of Iceland,0,1774,False
+Rannsóknaráð ríkisins (National Research Council),science_agency,2022,2022 s0286-f_I.pdf,Rannsóknaráð ríkisins,0.0,National Research Council of Iceland,0,1818,False
+Rannsóknaráð ríkisins (National Research Council),science_agency,2022,2022 s0286-f_I.pdf,Rannsóknaráð ríkisins,3805100.0,National Research Council of Iceland,0,1839,False
+Rannsóknaráð ríkisins (National Research Council),science_agency,2023,2023 s0881-f_I.pdf,Rannsóknaráð ríkisins,0.0,National Research Council of Iceland,0,1905,False
+Rannsóknaráð ríkisins (National Research Council),science_agency,2024,2024 s0854-f_I.pdf,Rannsóknaráð ríkisins,347600.0,National Research Council of Iceland,0,1948,False
+Rannsóknaráð ríkisins (National Research Council),science_agency,2025,2025 s0411-f_I.pdf,Rannsóknaráð ríkisins,839543300.0,National Research Council of Iceland,0,2108,False
+Rannsóknasjóður (Research Fund),science_agency,1981,1981 0382.pdf,Rannsóknasjóður,2100000.0,Research Fund,0,124,True
+Rannsóknasjóður (Research Fund),science_agency,1987,1987 0499.pdf,Rannsóknasjóður,60000.0,Research Fund,0,279,True
+Rannsóknasjóður (Research Fund),science_agency,1987,1987 0499.pdf,Rannsóknasjóður,6000.0,Research Fund,0,297,True
+Rannsóknasjóður (Research Fund),science_agency,1988,1988 0434.pdf,Rannsóknasjóður,1000.0,Research Fund,0,307,True
+Rannsóknasjóður (Research Fund),science_agency,1988,1988 0434.pdf,Rannsóknasjóður,321381.0,Research Fund,0,316,True
+Rannsóknasjóður (Research Fund),science_agency,1989,1989 0430.pdf,Rannsóknasjóður,80000.0,Research Fund,0,344,True
+Rannsóknasjóður (Research Fund),science_agency,1995,1995 0503.pdf,Rannsóknasjóður,31600.0,Research Fund,0,549,True
+Rannsóknasjóður (Research Fund),science_agency,1996,1996 0500.pdf,Rannsóknasjóður,20000000.0,Research Fund,0,597,True
+Rannsóknasjóður (Research Fund),science_agency,1997,1997 0509.pdf,Rannsóknasjóður,200000.0,Science Fund,0,620,True
+Rannsóknasjóður (Research Fund),science_agency,1997,1997 0509.pdf,Rannsóknasjóður,20000000.0,Research Fund,0,635,True
+Rannsóknasjóður (Research Fund),science_agency,1998,1998 0706.pdf,Rannsóknasjóður,140000.0,Research Fund,0,668,True
+Rannsóknasjóður (Research Fund),science_agency,1998,1998 0706.pdf,Framlag Sedlabanka fslands { Rannsóknasjóður,140000.0,Research Fund,0,669,True
+Rannsóknasjóður (Research Fund),science_agency,2001,2001 0489.pdf,Rannsóknasjóður,37000.0,Science Council,0,782,True
+Rannsóknasjóður (Research Fund),science_agency,2002,2002 0516.pdf,Ritlauna- og rannséknasjédur professora,99200.0,National Research Council of Iceland,0,798,True
+Rannsóknasjóður (Research Fund),science_agency,2002,2002 0516.pdf,Rannsóknasjóður,,Research Fund,0,809,True
+Rannsóknasjóður (Research Fund),science_agency,2003,2003 0608.pdf,Ritlauna- og rannsóknasjóður prófessora,109400.0,Professor's Grant and Research Fund,0,841,True
+Rannsóknasjóður (Research Fund),science_agency,2003,2003 0608.pdf,Rannsóknasjóður,0.0,Research Fund,0,866,True
+Rannsóknasjóður (Research Fund),science_agency,2004,2004 0588.pdf,Ritlauna- og rannsóknasjóður prófessora,112700.0,Professor's Salary and Research Fund,0,900,False
+Rannsóknasjóður (Research Fund),science_agency,2004,2004 0588.pdf,Rannsóknasjóður,415000.0,Research Fund,0,902,False
+Rannsóknasjóður (Research Fund),science_agency,2005,2005 0536.pdf,Ritlauna- og rannsóknasjóður prófessora,116100.0,Professor's Honorary and Research Fund,0,946,False
+Rannsóknasjóður (Research Fund),science_agency,2005,2005 0536.pdf,Rannsóknasjóður,500000.0,Research Fund,0,948,False
+Rannsóknasjóður (Research Fund),science_agency,2005,2005 0536.pdf,Rannsóknasjóður,0.0,Research Fund,0,967,False
+Rannsóknasjóður (Research Fund),science_agency,2006,2006 0540.pdf,Ritlauna- og rannsóknasjóður prófessora,126300.0,Professor's Grant and Research Fund,0,996,False
+Rannsóknasjóður (Research Fund),science_agency,2006,2006 0540.pdf,1.10 Rannsóknasjóður,550000.0,Research Fund,0,1000,False
+Rannsóknasjóður (Research Fund),science_agency,2006,2006 0540.pdf,1.10 Rannsóknasjóður til að auka verðmæti sjávarfangs,210000.0,Project Fund for Fisheries,0,1006,False
+Rannsóknasjóður (Research Fund),science_agency,2006,2006 0540.pdf,Rannsóknasjóður,,Research Fund,0,1014,False
+Rannsóknasjóður (Research Fund),science_agency,2007,2007 0550.pdf,Rannsóknasjóður,590000.0,Research Fund,0,1041,False
+Rannsóknasjóður (Research Fund),science_agency,2007,2007 0550.pdf,Rannsóknasjóður,,Research Fund,0,1070,False
+Rannsóknasjóður (Research Fund),science_agency,2008,2008 0507.pdf,Rannsóknasjóður til að auka verðmæti sjávarfangs,335000.0,Research Fund to Increase the Value of Marine Products,0,1102,False
+Rannsóknasjóður (Research Fund),science_agency,2008,2008 0507.pdf,Rannsóknasjóður,0.0,Research Fund,0,1107,False
+Rannsóknasjóður (Research Fund),science_agency,2009,2009 0481.pdf,Almennur rekstur: Rannsóknasjóður til að auka verðmæti sjávarfangs,335000.0,Research Fund to Increase the Value of Marine Products,0,1152,False
+Rannsóknasjóður (Research Fund),science_agency,2010,2010 0594.pdf,Ritlauna- og rannsóknasjóður prófessora,156100.0,Ministry of Education and Culture,0,1180,False
+Rannsóknasjóður (Research Fund),science_agency,2010,2010 0594.pdf,Rannsóknasjóður,834000.0,Ministry of Education and Culture,0,1182,False
+Rannsóknasjóður (Research Fund),science_agency,2011,2011 0556.pdf,1.11 Ritlauna- og rannsóknasjóður prófessora,150400.0,Professor's Honorarium and Research Fund,0,1225,False
+Rannsóknasjóður (Research Fund),science_agency,2011,2011 0556.pdf,1.10 Rannsóknasjóður,795000.0,Research Fund,0,1229,False
+Rannsóknasjóður (Research Fund),science_agency,2011,2011 0556.pdf,Rannsóknasjóður til að auka verðmæti sjávarfangs,265800.0,Research Fund to Increase the Value of Marine Products,0,1234,False
+Rannsóknasjóður (Research Fund),science_agency,2012,2012 0493.pdf,Rannsóknasjóður,795000.0,Research Fund,0,1271,False
+Rannsóknasjóður (Research Fund),science_agency,2012,2012 0493.pdf,Rannsóknasjóður,,Research Fund,0,1290,False
+Rannsóknasjóður (Research Fund),science_agency,2014,2014 0497.pdf,Rannsóknasjóður,1185.0,Research Fund,0,1346,False
+Rannsóknasjóður (Research Fund),science_agency,2015,2015 0801.pdf,Rannsóknasjóður,1580000.0,Research Fund,0,1382,False
+Rannsóknasjóður (Research Fund),science_agency,2016,2016 0703.pdf,Rannsóknasjóður,2505.0,Research Fund,0,1424,False
+Rannsóknasjóður (Research Fund),science_agency,2019,2019 s0632-f_I.pdf,Rannsóknasjóður,2550100.0,Research Fund,0,1535,False
+Rannsóknasjóður (Research Fund),science_agency,2019,2019 s0632-f_I.pdf,Rannsóknasjóður til að auka verðmæti sjávarfangs,238600.0,Research Fund to increase the value of marine catch,0,1539,False
+Rannsóknasjóður (Research Fund),science_agency,2020,2020 s0561-f_I.pdf,Rannsóknasjóður,2475600.0,Research Fund,0,1616,False
+Rannsóknasjóður (Research Fund),science_agency,2021,2021 s0726-f_I.pdf,Rannsóknasjóður,0.0,Research Fund,0,1727,False
+Rannsóknasjóður (Research Fund),science_agency,2021,2021 s0726-f_I.pdf,Rannsóknasjóður,3722500.0,Research Fund,0,1733,False
+Rannsóknasjóður (Research Fund),science_agency,2022,2022 0286.pdf,Rannsóknasjóður,0.0,Research Fund,0,1777,False
+Rannsóknasjóður (Research Fund),science_agency,2022,2022 s0286-f_I.pdf,Rannsóknasjóður,3785100.0,Research Fund,0,1794,False
+Rannsóknasjóður (Research Fund),science_agency,2022,2022 s0286-f_I.pdf,Rannsóknasjóður,3805100.0,Research Fund,0,1813,False
+Rannsóknasjóður (Research Fund),science_agency,2022,2022 s0286-f_I.pdf,Rannsóknasjóður,3805100.0,Research Fund,0,1840,False
+Rannsóknasjóður (Research Fund),science_agency,2023,2023 0881.pdf,Rannsóknasjóður,13556600.0,Science and Competition Funds in Research,0,1873,False
+Rannsóknasjóður (Research Fund),science_agency,2023,2023 s0881-f_I.pdf,Rannsóknasjóður,3388300.0,Research Fund,0,1912,False
+Rannsóknasjóður (Research Fund),science_agency,2025,2025 s0411-f_I.pdf,Rannsóknasjóður,3072600.0,Science and Competition Funds in Research,0,2074,False
+Rannsóknasjóður (Research Fund),science_agency,2025,2025 s0411-f_I.pdf,Rannsóknasjóður,3811600.0,Research Fund,0,2095,False
+Rannsóknasjóður (Research Fund),science_agency,2025,2025 s0411-f_I.pdf,Rannsóknasjóður,3738900.0,Research Fund,0,2097,False
+Rannsóknasjóður (Research Fund),science_agency,2025,2025 s0411-f_I.pdf,Rannsóknasjóður,3072600.0,Research Fund,0,2110,False
+Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,1986,1986 0430.pdf,Rannsóknastofnun byggingariðnaðarins,205137.0,Research Institute of the Construction Industry,0,269,True
+Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,2003,2003 0608.pdf,Rannsóknastofnun byggingariðnaðarins,224500.0,Ministry of Industry,0,870,True
+Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,2004,2004 0588.pdf,Rannsóknastofnun byggingariðnaðarins,267200.0,Research Institute of the Construction Industry,0,913,True
+Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,2005,2005 0536.pdf,Rannsóknastofnun byggingariðnaðarins,274600.0,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),0,983,True
+Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,2006,2006 0540.pdf,Rannsóknastofnun byggingariðnaðarins,296800.0,Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),0,1031,True
+Rannsóknastofnun byggingariðnaðarins (Research Institute of the Construction Industry),science_agency,2007,2007 0550.pdf,Rannsóknastofnun byggingariðnaðarins,312000.0,Research Institute of the Construction Industry,0,1053,True
+Rannís (Icelandic Centre for Research),science_agency,2004,2004 0588.pdf,Rannsóknamiðstöð Íslands,118900.0,Rannís (Icelandic Centre for Research),0,926,True
+Rannís (Icelandic Centre for Research),science_agency,2005,2005 0536.pdf,Rannsóknamiðstöð Íslands,121900.0,Rannís (Icelandic Centre for Research),0,980,True
+Rannís (Icelandic Centre for Research),science_agency,2006,2006 0540.pdf,Rannsóknamiðstöð Íslands,148900.0,Rannís (Icelandic Centre for Research),0,1028,True
+Rannís (Icelandic Centre for Research),science_agency,2007,2007 0550.pdf,Rannsóknamiðstöð Íslands,157800.0,Rannís (Icelandic Centre for Research),0,1071,True
+Rannís (Icelandic Centre for Research),science_agency,2008,2008 0507.pdf,Rannsóknamiðstöð Íslands,208500.0,Rannís (Icelandic Centre for Research),0,1135,True
+Rannís (Icelandic Centre for Research),science_agency,2009,2009 0481.pdf,Rannsóknamiðstöð Íslands,232300.0,Rannís (Icelandic Centre for Research),0,1173,True
+Rannís (Icelandic Centre for Research),science_agency,2010,2010 0594.pdf,Rannsóknamiðstöð Íslands,231800.0,Rannís (Icelandic Centre for Research),0,1210,True
+Rannís (Icelandic Centre for Research),science_agency,2011,2011 0556.pdf,Rannsóknamiðstöð Íslands,284600.0,Rannís (Icelandic Centre for Research),0,1258,True
+Rannís (Icelandic Centre for Research),science_agency,2012,2012 0493.pdf,Rannsóknamiðstöð Íslands,299700.0,Rannís (Icelandic Centre for Research),0,1294,True
+Rannís (Icelandic Centre for Research),science_agency,2013,2013 0801.pdf,Rannsóknamiðstöð Íslands,502800.0,Rannís (Icelandic Centre for Research),0,1327,True
+Rannís (Icelandic Centre for Research),science_agency,2014,2014 0497.pdf,Rannsóknamiðstöð Íslands,520200.0,Rannís (Icelandic Centre for Research),0,1361,True
+Rannís (Icelandic Centre for Research),science_agency,2015,2015 0801.pdf,Rannsóknamiðstöð Íslands,658.7,Rannís (Icelandic Centre for Research),0,1401,True
+Rannís (Icelandic Centre for Research),science_agency,2015,2015 0801.pdf,Rannís (Icelandic Centre for Research),692.1,Rannís (Icelandic Centre for Research),0,1404,True
+Rannís (Icelandic Centre for Research),science_agency,2016,2016 0703.pdf,Rannsóknamiðstöð Íslands,701300.0,Rannís (Icelandic Centre for Research),0,1445,True
+Rannís (Icelandic Centre for Research),science_agency,2019,2019 s0632-f_I.pdf,Rannís v/umsýslu Tækniþróunarsjóðs,58000.0,Science and competition funds in research,0,1574,True
+Rannís (Icelandic Centre for Research),science_agency,2021,2021 0726.pdf,Vísindi og samkeppnissjóðir í rannsóknum,10153.9,"Innovation, research and knowledge fields",0,1675,True
+Rannís (Icelandic Centre for Research),science_agency,2021,2021 s0726-f_I.pdf,Rannís v/umsýslu Tækniþróunarsjóðs,58000.0,Science and Competition Funds in Research,0,1736,True
+Rannís (Icelandic Centre for Research),science_agency,2022,2022 0286.pdf,Rannís,0.0,Icelandic Centre for Research,0,1779,True
+Rannís (Icelandic Centre for Research),science_agency,2022,2022 s0286-f_I.pdf,Rannsóknamiðstöð Íslands,88300.0,Icelandic Research Centre,0,1793,True
+Rannís (Icelandic Centre for Research),science_agency,2022,2022 s0286-f_I.pdf,Rannsóknamiðstöð Íslands,1070500.0,Icelandic Research Centre,0,1838,True
+Rannís (Icelandic Centre for Research),science_agency,2022,2022 s0286-f_I.pdf,Rannís v/umsýslu Tækniþróunarsjóðs,71000.0,Science and Competition Funds in Research,0,1845,True
+Rannís (Icelandic Centre for Research),science_agency,2023,2023 s0881-f_I.pdf,Vísindi og samkeppnissjóðir í rannsóknum,13490300.0,Science and Competition Funds in Research,0,1911,True
+Rannís (Icelandic Centre for Research),science_agency,2023,2023 s0881-f_I.pdf,Rannsóknamiðstöð Íslands,93500.0,Rannís (Icelandic Centre for Research),0,1928,True
+Rannís (Icelandic Centre for Research),science_agency,2023,2023 s0881-f_I.pdf,Rannsóknamiðstöð Íslands,1066.0,Rannís (Icelandic Centre for Research),0,1929,True
+Rannís (Icelandic Centre for Research),science_agency,2023,2023 s0881-f_I.pdf,Rannsóknamiðstöð Íslands,1059.0,Rannís (Icelandic Centre for Research),0,1930,True
+Rannís (Icelandic Centre for Research),science_agency,2024,2024 s0854-f_I.pdf,Rannsóknamiðstöð Íslands,90600.0,Research Center of Iceland,0,1974,True
+Rannís (Icelandic Centre for Research),science_agency,2024,2024 s0854-f_I.pdf,Rannsóknamiðstöð Íslands,99700.0,Research Center of Iceland,0,1975,True
+Rannís (Icelandic Centre for Research),science_agency,2024,2024 s0854-f_I.pdf,Rannsóknamiðstöð Íslands,1120900.0,Icelandic Research Centre,0,1989,True
+Rannís (Icelandic Centre for Research),science_agency,2025,2025 A_nr_141_2024.pdf,Vísindi og samkeppnissjóðir í rannsóknum,509600.0,Science and Competition Funds in Research,0,2047,True
+Rannís (Icelandic Centre for Research),science_agency,2025,2025 s0411-f_I.pdf,Vísindi og samkeppnissjóðir í rannsóknum,12891200.0,Science and Competition Funds in Research,0,2094,True
+Rannís (Icelandic Centre for Research),science_agency,2025,2025 s0411-f_I.pdf,Rannsóknamiðstöð Íslands,1341200.0,Icelandic Research Institute,0,2109,True
+Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,2006,2006 0540.pdf,Raunvísindastofnun Háskólans,498000.0,Science Institute of the University of Iceland,0,995,True
+Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,2010,2010 0594.pdf,Raunvísindastofnun Háskólans,864100.0,Ministry of Education and Culture,0,1178,True
+Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,2011,2011 0556.pdf,1.01 Raunvísindastofnun Háskólans,944400.0,Science Institute of the University of Iceland,0,1223,True
+Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,2012,2012 0493.pdf,Raunvísindastofnun Háskólans,1006.0,Science Institute of the University of Iceland,0,1268,True
+Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,2015,2015 0801.pdf,Raunvísindastofnun Háskólans,1263500.0,Science Institute of the University of Iceland,0,1379,True
+Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,2020,2020 s0561-f_I.pdf,Raunvísindastofnun Háskólans,1549400.0,Science Institute of the University of Iceland,0,1612,True
+Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,2020,2020 s0561-f_I.pdf,Raunvísindastofnun Háskólans,1647300.0,Science Institute of the University of Iceland,0,1630,True
+Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,2021,2021 s0726-f_I.pdf,Raunvísindastofnun Háskólans,1577500.0,Science Institute of the University of Iceland,0,1724,True
+Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,2022,2022 s0286-f_I.pdf,Raunvísindastofnun Háskólans,1696200.0,Science Institute of the University of Iceland,0,1830,True
+Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,2023,2023 s0881-f_I.pdf,Raunvísindastofnun Háskólans,1748.1,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),0,1931,True
+Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,2023,2023 s0881-f_I.pdf,Raunvísindastofnun Háskólans,1653.1,Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),0,1932,True
+Raunvísindastofnun Háskólans (Science Institute of the University of Iceland),science_agency,2024,2024 s0854-f_I.pdf,Raunvísindastofnun Háskólans,2442000.0,Science Institute of the University of Iceland,0,1983,True
+Sjóður til síldarrannsókna (Fund for Herring Research),innovation_instruments,2022,2022 s0286-f_I.pdf,Sjóður til síldarrannsókna,6000.0,Fund for herring research,0,1822,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,1977,1977 0282.pdf,Tilraunastöð háskólans á Keldum: Önnur rekstrargjöld,5000.0,University of Iceland,0,30,False
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,1979,1979 0313.pdf,Tilraunastöð háskólans á Keldum,231994.0,University of Iceland,0,68,False
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,1983,1983 0247.pdf,Tilraunastöð háskólans á Keldum,,University of Iceland,0,161,False
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,1993,1993 0546.pdf,Tilraunastöð Háskólans á Keldum,90900.0,University of Iceland,0,476,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,1994,1994 0488.pdf,Tilraunastöð Háskólans að Keldum,91100.0,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),0,519,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2001,2001 0489.pdf,"Tilraunastöð Háskólans að Keldum, vidhald",10000.0,University of Iceland,0,760,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2002,2002 0516.pdf,Tilraunastöð Háskólans á Keldum.,23000.0,University of Iceland,0,826,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2005,2005 0536.pdf,Tilraunastöð Háskólans að Keldum,0.0,Experimental Station of the University,0,973,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2006,2006 0540.pdf,Tilraunastöð Háskólans að Keldum,275300.0,University Experimental Station at Keldur,0,994,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2007,2007 0550.pdf,Tilraunastöð Háskólans að Keldum,291600.0,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),0,1074,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2007,2007 0550.pdf,Tilraunastöð Háskólans að Keldum,4700.0,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),0,1077,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2007,2007 0550.pdf,Tilraunastöð Háskólans að Keldum,1000.0,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),0,1078,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2010,2010 0594.pdf,Tilraunastöð Háskólans að Keldum,372800.0,Ministry of Education and Culture,0,1177,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2011,2011 0556.pdf,1.01 Tilraunastöð Háskólans að Keldum,360400.0,Experimental Station of the University of Iceland,0,1221,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2012,2012 0493.pdf,Tilraunastöð Háskólans að Keldum,382.8,Experimental Station of the University of Iceland at Keldur,0,1267,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2020,2020 s0561-f_I.pdf,Tilraunastöð Háskólans að Keldum,557.4,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),0,1656,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2020,2020 s0561-f_I.pdf,Tilraunastöð Háskólans að Keldum,552.3,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),0,1657,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2020,2020 s0561-f_I.pdf,Tilraunastöð Háskólans að Keldum,557.4,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),0,1658,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2021,2021 s0726-f_I.pdf,Tilraunastöð Háskólans að Keldum,637900.0,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),0,1755,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2021,2021 s0726-f_I.pdf,Tilraunastöð Háskólans að Keldum,599600.0,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),0,1756,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2021,2021 s0726-f_I.pdf,Tilraunastöð Háskólans að Keldum,637900.0,Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),0,1757,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2022,2022 s0286-f_I.pdf,Tilraunastöð Háskólans að Keldum,675200.0,University of Iceland,0,1805,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2022,2022 s0286-f_I.pdf,Tilraunastöð Háskólans að Keldum,691700.0,Experimental Station of the University of Iceland,0,1829,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2023,2023 s0881-f_I.pdf,Tilraunastöð Háskólans að Keldum,721000.0,Experimental Station of the University of Iceland at Keldur,0,1900,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2024,2024 s0854-f_I.pdf,Tilraunastöð Háskólans að Keldum,741.1,Experimental Station of the University of Iceland at Keldur,0,1968,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2024,2024 s0854-f_I.pdf,Tilraunastöð Háskólans að Keldum,774800.0,University Experimental Station at Keldur,0,1982,True
+Tilraunastöð Háskólans að Keldum (University Experimental Station at Keldur),science_agency,2025,2025 s0411-f_I.pdf,Tilraunastöð Háskólans að Keldum,804400.0,Universities and Research Activities,0,2106,True
+Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,2004,2004 0588.pdf,Tækniþróunarsjóður,200000.0,Technology Development Fund,0,911,True
+Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,2005,2005 0536.pdf,Tækniþróunarsjóður,340000.0,Ministry of Industry,0,961,True
+Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,2007,2007 0550.pdf,Tækniþróunarsjóður,500000.0,Technology Development Fund,0,1051,True
+Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,2010,2010 0594.pdf,Tækniþróunarsjóður,720000.0,Ministry of Industry,0,1192,True
+Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,2012,2012 0493.pdf,Tækniþróunarsjóður,725000.0,Technology Development Fund,0,1280,True
+Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,2013,2013 0801.pdf,Tækniþróunarsjóður,1270000.0,Technology Development Fund,0,1313,True
+Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,2014,2014 0497.pdf,Tækniþróunarsjóður,987500.0,Technology Development Fund,0,1353,True
+Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,2015,2015 0801.pdf,Tækniþróunarsjóður,1000.0,Technology Development Fund,0,1388,True
+Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,2016,2016 0703.pdf,Tækniþróunarsjóður,2000.0,Technology Development Fund,0,1433,True
+Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,2019,2019 s0632-f_I.pdf,Tækniþróunarsjóður,2230200.0,Technology Development Fund,0,1537,True
+Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,2021,2021 s0726-f_I.pdf,Tækniþróunarsjóður,3526100.0,Technology Development Fund,0,1731,True
+Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,2022,2022 s0286-f_I.pdf,Tækniþróunarsjóður,3580400.0,Technology Development Fund,0,1842,True
+Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,2023,2023 s0881-f_I.pdf,Tækniþróunarsjóður,3178200.0,Technology Development Fund,0,1913,True
+Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,2025,2025 s0411-f_I.pdf,Tækniþróunarsjóður,3270400.0,Technology Development Fund,0,2098,True
+Tækniþróunarsjóður (Technology Development Fund),innovation_instruments,2025,2025 s0411-f_I.pdf,Tækniþróunarsjóður,3198900.0,Technology Development Fund,0,2100,True
+Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,2006,2006 0540.pdf,1.10 Rannsóknasjóður til að auka verðmæti sjávarfangs,210000.0,Project Fund for Fisheries,0,1006,True
+Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,2008,2008 0507.pdf,Rannsóknasjóður til að auka verðmæti sjávarfangs,335000.0,Research Fund to Increase the Value of Marine Products,0,1102,True
+Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,2009,2009 0481.pdf,Almennur rekstur: Verkefnasjóður sjávarútvegsins,236000.0,Project Fund for Fisheries,0,1151,True
+Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,2009,2009 0481.pdf,Almennur rekstur: Rannsóknasjóður til að auka verðmæti sjávarfangs,335000.0,Research Fund to Increase the Value of Marine Products,0,1152,True
+Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,2011,2011 0556.pdf,Rannsóknasjóður til að auka verðmæti sjávarfangs,265800.0,Research Fund to Increase the Value of Marine Products,0,1234,True
+Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,2019,2019 s0632-f_I.pdf,Rannsóknasjóður til að auka verðmæti sjávarfangs,238600.0,Research Fund to increase the value of marine catch,0,1539,True
+Verkefnasjóður sjávarútvegsins (Project Fund for Fisheries),innovation_instruments,2020,2020 s0561-f_I.pdf,Verkefnasjóður sjávarútvegsins,264000.0,Fisheries Project Fund,0,1621,True
+Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,2023,2023 s0881-f_I.pdf,Veðurstofa Íslands,3073700.0,Icelandic Meteorological Office,0,1904,True
+Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,2024,2024 s0854-f_I.pdf,Veðurstofa Íslands,3483100.0,Veðurstofa Íslands (Icelandic Meteorological Office),0,2015,True
+Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,2024,2024 s0854-f_I.pdf,Veðurstofa Íslands,3702800.0,Veðurstofa Íslands (Icelandic Meteorological Office),0,2016,True
+Veðurstofa Íslands (Icelandic Meteorological Office),science_agency,2024,2024 s0854-f_I.pdf,Veðurstofa Íslands,3483100.0,Veðurstofa Íslands (Icelandic Meteorological Office),0,2017,True
+Vísindaráð (Science Council),science_agency,1981,1981 0382.pdf,Vísindaráð,11800000.0,Science Council,0,123,True
+Vísindaráð (Science Council),science_agency,1984,1984 0305.pdf,Vísindaráð,10700.0,Science Council,0,190,True
+Vísindaráð (Science Council),science_agency,1984,1984 0305.pdf,Vísindaráð,1800.0,Science Council,0,199,True
+Vísindaráð (Science Council),science_agency,1985,1985 0001.pdf,Fjárveiting til Vísindaráðs,0.0,Science Council,0,252,True
+Vísindaráð (Science Council),science_agency,1987,1987 0499.pdf,Vísindaráð,5000.0,Science Council,0,291,True
+Vísindaráð (Science Council),science_agency,1988,1988 0434.pdf,Vísindaráð,321381.0,Science Council,0,312,True
+Vísindaráð (Science Council),science_agency,1989,1989 0430.pdf,Vísindaráð,5950.0,Vísindaráð (Science Council),0,365,True
+Vísindaráð (Science Council),science_agency,1990,1990 0496.pdf,Vísindaráð,123289.0,Science Council,0,381,True
+Vísindaráð (Science Council),science_agency,1993,1993 0546.pdf,Vísindaráð,11300.0,Science Council,0,479,True
+Vísindaráð (Science Council),science_agency,1995,1995 0503.pdf,Vísindaráð,25000.0,Science Council,0,545,True
+Vísindaráð (Science Council),science_agency,1996,1996 0500.pdf,Vísindaráð,20000000.0,Science Council,0,593,True
+Vísindaráð (Science Council),science_agency,1997,1997 0509.pdf,Vísindaráð,60000000.0,Science Council,0,631,True
+Vísindaráð (Science Council),science_agency,1998,1998 0706.pdf,Vísindaráð,341600.0,Science Council,0,663,True
+Vísindaráð (Science Council),science_agency,1999,1999 0631.pdf,Vísindaráð,46800.0,Science Council,0,689,True
+Vísindaráð (Science Council),science_agency,2002,2002 0516.pdf,Vísindaráð,,Science Council,0,807,True
+Vísindaráð (Science Council),science_agency,2003,2003 0608.pdf,Vísindaráð,0.0,Science Council,0,864,True
+Vísindaráð (Science Council),science_agency,2005,2005 0536.pdf,Vísindaráð,0.0,Science Council,0,965,False
+Vísindaráð (Science Council),science_agency,2006,2006 0540.pdf,Vísindaráð,,Science Council,0,1011,False
+Vísindaráð (Science Council),science_agency,2008,2008 0507.pdf,Vísindaráð,0.0,Science Council,0,1105,False
+Vísindaráð (Science Council),science_agency,2012,2012 0493.pdf,Vísindaráð,,Science Council,0,1291,False
+Vísindaráð (Science Council),science_agency,2014,2014 0497.pdf,Vísindaráð,0.0,Science Council,0,1354,False
+Vísindaráð (Science Council),science_agency,2015,2015 0801.pdf,Vísindaráð,0.0,Science Council,0,1396,False
+Vísindaráð (Science Council),science_agency,2016,2016 0703.pdf,Vísindaráð,,Science Council,0,1426,False
+Vísindaráð (Science Council),science_agency,2021,2021 s0726-f_I.pdf,Vísindaráð,0.0,Science Council,0,1728,False
+Vísindaráð (Science Council),science_agency,2022,2022 0286.pdf,Vísindaráð,0.0,Science Council,0,1775,False
+Vísindaráð (Science Council),science_agency,2022,2022 s0286-f_I.pdf,Vísindaráð,0.0,Science Council,0,1823,False
+Vísindaráð (Science Council),science_agency,2024,2024 s0854-f_I.pdf,Vísindaráð,300.0,Science Council,0,1951,False
+Vísindaráð (Science Council),science_agency,2024,2024 s0854-f_I.pdf,Vísindaráð,4470.4,Science Council,0,1976,False
+Vísindaráð (Science Council),science_agency,2024,2024 s0854-f_I.pdf,Vísindaráð,4564.4,Science Council,0,1977,False
+Vísindaráð (Science Council),science_agency,2025,2025 s0411-f_I.pdf,Vísindaráð,1243.6,Science Council,0,2091,False
+Vísindaráð (Science Council),science_agency,2025,2025 s0411-f_I.pdf,Vísindaráð,0.0,Science Council,0,2118,False
+Vísindasjóður (Science Fund),science_agency,1981,1981 0382.pdf,Vísindasjóður,80000.0,Science Fund,0,119,True
+Vísindasjóður (Science Fund),science_agency,1985,1985 0001.pdf,Vísindasjóður,81338.0,Science Fund,0,231,True
+Vísindasjóður (Science Fund),science_agency,1987,1987 0499.pdf,Vísindasjóður,110400.0,Science Fund,0,280,True
+Vísindasjóður (Science Fund),science_agency,1987,1987 0499.pdf,Vísindasjóður,110400.0,Science Fund,0,281,True
+Vísindasjóður (Science Fund),science_agency,1987,1987 0499.pdf,Vísindasjóður,8000.0,Science Fund,0,294,True
+Vísindasjóður (Science Fund),science_agency,1988,1988 0434.pdf,"Vísindasjóður, framlag",55800.0,Science Fund,0,308,True
+Vísindasjóður (Science Fund),science_agency,1988,1988 0434.pdf,Vísindasjóður,321381.0,Science Fund,0,314,True
+Vísindasjóður (Science Fund),science_agency,1990,1990 0496.pdf,Vísindasjóður,129239.0,Science Fund,0,383,True
+Vísindasjóður (Science Fund),science_agency,1993,1993 0546.pdf,Vísindasjóður,25000.0,Science Fund,0,480,True
+Vísindasjóður (Science Fund),science_agency,1995,1995 0503.pdf,Vísindasjóður,25000.0,Science Council,0,546,True
+Vísindasjóður (Science Fund),science_agency,1995,1995 0503.pdf,Vísindasjóður,25000.0,Science Fund,0,547,True
+Vísindasjóður (Science Fund),science_agency,1996,1996 0500.pdf,Vísindasjóður,20000000.0,Science Fund,0,595,True
+Vísindasjóður (Science Fund),science_agency,1997,1997 0509.pdf,Vísindasjóður,25000.0,Science Council,0,619,True
+Vísindasjóður (Science Fund),science_agency,1997,1997 0509.pdf,Vísindasjóður,1600000000.0,Science Fund,0,633,True
+Vísindasjóður (Science Fund),science_agency,1998,1998 0706.pdf,Vísindasjóður,140000.0,Science Fund,0,666,True
+Vísindasjóður (Science Fund),science_agency,1998,1998 0706.pdf,Framlag Sedlabanka fslands { Visindasj66,140000.0,Science Fund,0,667,True
+Vísindasjóður (Science Fund),science_agency,1999,1999 0631.pdf,Visindasjodur,161500.0,Science Fund,0,682,True
+Vísindasjóður (Science Fund),science_agency,2001,2001 0489.pdf,Hluti Seðlabanka Íslands fyrir rekstri Vísindasjóðs.,145000.0,Science Fund,0,769,True
+Vísindasjóður (Science Fund),science_agency,2001,2001 0489.pdf,Vísindasjóður,33000.0,Science Fund,0,783,True
+Vísindasjóður (Science Fund),science_agency,2002,2002 0516.pdf,Vísindasjóður,,Science Fund,0,808,True
+Vísindasjóður (Science Fund),science_agency,2002,2002 0516.pdf,Framlag til Vísindasjóðs,80000.0,Science Fund,0,817,True
+Vísindasjóður (Science Fund),science_agency,2003,2003 0608.pdf,Vísindasjóður,0.0,Science Fund,0,865,True
+Vísindasjóður (Science Fund),science_agency,2003,2003 0608.pdf,Vísindasjóður,83600.0,Science Fund,0,883,True
+Vísindasjóður (Science Fund),science_agency,2005,2005 0536.pdf,Vísindasjóður,0.0,Science Fund,0,966,False
+Vísindasjóður (Science Fund),science_agency,2006,2006 0540.pdf,Vísindasjóður,1100.0,Science Fund,0,1012,False
+Vísindasjóður (Science Fund),science_agency,2008,2008 0507.pdf,Vísindasjóður,0.0,Science Fund,0,1106,False
+Vísindasjóður (Science Fund),science_agency,2012,2012 0493.pdf,Vísindasjóður,,Science Fund,0,1292,False
+Vísindasjóður (Science Fund),science_agency,2014,2014 0497.pdf,Vísindasjóður,0.0,Science Fund,0,1355,False
+Vísindasjóður (Science Fund),science_agency,2022,2022 0286.pdf,Vísindasjóður,0.0,Science Fund,0,1776,False
+Vísindasjóður (Science Fund),science_agency,2025,2025 s0411-f_I.pdf,Vísindasjóður,2594.2,Science Fund,0,2088,False

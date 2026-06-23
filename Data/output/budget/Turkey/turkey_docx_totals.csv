@@ -1,19 +1,9 @@
 country,canonical_name,year,amount_total,amount_primary,n_acts,acts,additive_flag,currency,unit,category
-Turkey,KOSGEB (Turkey),2006,209890000.0,209890000.0,1,2006 tbmm22103031ss1028.pdf,single,YTL,lira,innovation_instruments
-Turkey,KOSGEB (Turkey),2007,221968000.0,221968000.0,1,2009-ButceGerekcesi_2009.pdf,single,YTL,lira,innovation_instruments
 Turkey,KOSGEB (Turkey),2008,222368000.0,222368000.0,1,2009-ButceGerekcesi_2009.pdf,single,YTL,lira,innovation_instruments
 Turkey,KOSGEB (Turkey),2009,329330000.0,329330000.0,1,2009-ButceGerekcesi_2009.pdf,single,TRY,lira,innovation_instruments
-Turkey,TAEK — Türkiye Atom Enerjisi Kurumu (Turkey),1976,97971800.0,97971800.0,1,1976 15515.pdf,single,TRL,lira,science_agency
-Turkey,TAEK — Türkiye Atom Enerjisi Kurumu (Turkey),1977,143281500.0,143281500.0,1,1977 15865.pdf,single,TRL,lira,science_agency
-Turkey,TAEK — Türkiye Atom Enerjisi Kurumu (Turkey),2006,50050000.0,50050000.0,1,2006 tbmm22103031ss1028.pdf,single,YTL,lira,science_agency
-Turkey,TAEK — Türkiye Atom Enerjisi Kurumu (Turkey),2007,65075000.0,65075000.0,1,2009-ButceGerekcesi_2009.pdf,single,YTL,lira,science_agency
 Turkey,TAEK — Türkiye Atom Enerjisi Kurumu (Turkey),2008,65139000.0,65139000.0,1,2009-ButceGerekcesi_2009.pdf,single,YTL,lira,science_agency
 Turkey,TAEK — Türkiye Atom Enerjisi Kurumu (Turkey),2009,82169000.0,82169000.0,1,2009-ButceGerekcesi_2009.pdf,single,TRY,lira,science_agency
-Turkey,TÜBA (Turkey),2006,4641000.0,4641000.0,1,2006 tbmm22103031ss1028.pdf,single,YTL,lira,science_agency
-Turkey,TÜBA (Turkey),2007,6275000.0,6275000.0,1,2009-ButceGerekcesi_2009.pdf,single,YTL,lira,science_agency
 Turkey,TÜBA (Turkey),2008,6575000.0,6575000.0,1,2009-ButceGerekcesi_2009.pdf,single,YTL,lira,science_agency
 Turkey,TÜBA (Turkey),2009,7997000.0,7997000.0,1,2009-ButceGerekcesi_2009.pdf,single,TRY,lira,science_agency
-Turkey,TÜBİTAK (Turkey),2006,965158000.0,965158000.0,1,2006 tbmm22103031ss1028.pdf,single,YTL,lira,science_agency
-Turkey,TÜBİTAK (Turkey),2007,938335000.0,938335000.0,1,2009-ButceGerekcesi_2009.pdf,single,YTL,lira,science_agency
 Turkey,TÜBİTAK (Turkey),2008,1005923000.0,1005923000.0,1,2009-ButceGerekcesi_2009.pdf,single,YTL,lira,science_agency
 Turkey,TÜBİTAK (Turkey),2009,1127085000.0,1127085000.0,1,2009-ButceGerekcesi_2009.pdf,single,TRY,lira,science_agency

@@ -17373,6 +17373,366 @@
       "source_entity": "Research and development projects for the detection and combating of AIDS and other sexually transmitted diseases",
       "n_years_seen": 3,
       "avg_amount": 1559.0
+    },
+    {
+      "canonical_name": "Science, Research, Development Outside of Higher Education",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1992,
+        2025
+      ],
+      "notes": "This entity supports R&D activities outside of universities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Wissenschaft, Forschung, Entwicklung außerhalb der Hochschulen",
+      "n_years_seen": 5,
+      "avg_amount": 2518000.0
+    },
+    {
+      "canonical_name": "Excellence Initiative for Top-Level Support of Universities",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2005,
+        2007
+      ],
+      "notes": "This initiative supports excellence in research at universities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Exzellenzinitiative Spitzenförderung von Hochschulen",
+      "n_years_seen": 3,
+      "avg_amount": 109833.33333333333
+    },
+    {
+      "canonical_name": "683 21 Research and Development Projects: Renewable Energies",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2004,
+        2006
+      ],
+      "notes": "This entity is dedicated to R&D projects in renewable energy.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "683 21 Forschungs- und Entwicklungsvorhaben: Erneuerbare Energien",
+      "n_years_seen": 3,
+      "avg_amount": 26366.0
+    },
+    {
+      "canonical_name": "Fundamental Natural Science Research - Research and Development Projects",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2005,
+        2021
+      ],
+      "notes": "This entity focuses on fundamental research, which is inherently R&D relevant.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Naturwissenschaftliche Grundlagenforschung - Forschungs- und Entwicklungsvorhaben",
+      "n_years_seen": 3,
+      "avg_amount": 13633.4
+    },
+    {
+      "canonical_name": "Research and Development Projects for the Detection and Combat of AIDS and Other Sexually Transmitted Diseases",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2004,
+        2007
+      ],
+      "notes": "This initiative is directly focused on R&D for health-related issues.",
+      "agency_type": "rd_programme",
+      "confidence": 0.95,
+      "source_entity": "Forschungs- und Entwicklungsvorhaben zur Erkennung und Bekämpfung von AIDS und anderen sexuell übertragbaren Krankheiten",
+      "n_years_seen": 4,
+      "avg_amount": 1559.0
+    },
+    {
+      "canonical_name": "Allocations for Research and Development",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2021,
+        2023
+      ],
+      "notes": "This entity is directly related to funding for research and development activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Zuweisungen für Forschung und Entwicklung",
+      "n_years_seen": 3,
+      "avg_amount": 16594845.555555556
+    },
+    {
+      "canonical_name": "Research and Development",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1978,
+        2025
+      ],
+      "notes": "This entity encompasses a broad range of research and development initiatives.",
+      "agency_type": "rd_programme",
+      "confidence": 0.95,
+      "source_entity": "Forschung und Entwicklung",
+      "n_years_seen": 17,
+      "avg_amount": 13626977.83464567
+    },
+    {
+      "canonical_name": "Allocations and Grants for Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2010,
+        2025
+      ],
+      "notes": "This entity provides financial support specifically for research projects.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "Zuweisungen und Zuschüsse für Forschung",
+      "n_years_seen": 9,
+      "avg_amount": 12690734.6
+    },
+    {
+      "canonical_name": "Research and Development in Higher Education",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2010,
+        2024
+      ],
+      "notes": "This entity focuses on R&D activities within higher education institutions.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Forschung und Entwicklung in der Hochschulbildung",
+      "n_years_seen": 7,
+      "avg_amount": 3076002.052631579
+    },
+    {
+      "canonical_name": "Allocations for Research and Technology",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1975,
+        1985
+      ],
+      "notes": "This entity is dedicated to funding research and technology initiatives.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Zuweisungen für Forschung und Technologie",
+      "n_years_seen": 3,
+      "avg_amount": 2504495.0
+    },
+    {
+      "canonical_name": "Research and Experimental Development for Industrial Productivity and Technology",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2003,
+        2005
+      ],
+      "notes": "This entity focuses on R&D aimed at enhancing industrial productivity.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Forschung und experimentelle Entwicklung zur industriellen Produktivität und Technologie",
+      "n_years_seen": 3,
+      "avg_amount": 806760.3333333334
+    },
+    {
+      "canonical_name": "Grants for Research Projects on Detection and Combat of New Infectious Diseases",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2003,
+        2021
+      ],
+      "notes": "This entity provides funding for critical research on infectious diseases.",
+      "agency_type": "rd_fund",
+      "confidence": 0.95,
+      "source_entity": "Zuschüsse zu Forschungsvorhaben zur Erkennung und Bekämpfung neuer Infektionskrankheiten",
+      "n_years_seen": 6,
+      "avg_amount": 199599.125
+    },
+    {
+      "canonical_name": "Research and Experimental Development for the Protection and Promotion of Human Health",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2003,
+        2005
+      ],
+      "notes": "This entity is focused on health-related R&D initiatives.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Forschung und experimentelle Entwicklung zum Schutz und zur Förderung der menschlichen Gesundheit",
+      "n_years_seen": 3,
+      "avg_amount": 140742.66666666666
+    },
+    {
+      "canonical_name": "Promotion of Industrial Collaborative Research and Development",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2004,
+        2007
+      ],
+      "notes": "This entity promotes collaborative R&D efforts in the industrial sector.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Förderung der Industriellen Gemeinschaftsforschung und -entwicklung",
+      "n_years_seen": 4,
+      "avg_amount": 103610.0
+    },
+    {
+      "canonical_name": "Structural Innovations in Education and Research",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2004,
+        2007
+      ],
+      "notes": "This entity supports innovative approaches in education and research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Strukturelle Innovationen in Bildung und Forschung",
+      "n_years_seen": 4,
+      "avg_amount": 47165.0
+    },
+    {
+      "canonical_name": "Promotion of Innovative Networks (Innonet)",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2003,
+        2007
+      ],
+      "notes": "This program supports innovative networks, indicating a focus on R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Förderung von innovativen Netzwerken (Innonet)",
+      "n_years_seen": 4,
+      "avg_amount": 18500.0
+    },
+    {
+      "canonical_name": "Innovative Component Functions",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2004,
+        2007
+      ],
+      "notes": "This initiative is likely aimed at R&D in innovative building components.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Innovative Bauelementefunktionen",
+      "n_years_seen": 3,
+      "avg_amount": 15666.666666666666
+    },
+    {
+      "canonical_name": "Research for Climate Protection",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2003,
+        2007
+      ],
+      "notes": "This program is dedicated to research aimed at climate protection, indicating R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Forschung für den Klimaschutz",
+      "n_years_seen": 3,
+      "avg_amount": 11375.0
     }
   ],
   "Denmark": [
@@ -20329,6 +20689,1666 @@
       "source_entity": "Supporting activities in the space sector",
       "n_years_seen": 1,
       "avg_amount": 2100.0
+    },
+    {
+      "canonical_name": "Danish Council for Independent Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1995,
+        1995
+      ],
+      "notes": "This council funds independent research projects.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.85,
+      "source_entity": "Statens Forskningsråd 668,1 mill. kr.",
+      "n_years_seen": 1,
+      "avg_amount": 668100000.0
+    },
+    {
+      "canonical_name": "Danish Technical Research Council",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1989,
+        1990
+      ],
+      "notes": "This council funds technical research projects.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.85,
+      "source_entity": "52.06 Statens Teknisk-Videnskabelige Forskningsråd",
+      "n_years_seen": 2,
+      "avg_amount": 120995000.0
+    },
+    {
+      "canonical_name": "The Danish Council for Independent Research",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1990,
+        1990
+      ],
+      "notes": "This entity is a dedicated research council funding independent research.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "20.12. Det Frie Forskningsraad",
+      "n_years_seen": 1,
+      "avg_amount": 107800000.0
+    },
+    {
+      "canonical_name": "Research Programmes (The Danish Research Council)",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1995,
+        1995
+      ],
+      "notes": "This programme is part of the Danish Research Council's funding initiatives.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Forskningsprogrammer (Statens Forskningsråd) 105,0 mill. kr.",
+      "n_years_seen": 1,
+      "avg_amount": 105000000.0
+    },
+    {
+      "canonical_name": "New Basic Research Programmes",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1987,
+        1987
+      ],
+      "notes": "This programme supports basic research initiatives.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "53.03 Nye grundforskningsprogrammer",
+      "n_years_seen": 1,
+      "avg_amount": 104900000.0
+    },
+    {
+      "canonical_name": "Danish Council for Agricultural and Veterinary Research",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1989,
+        1990
+      ],
+      "notes": "This council is dedicated to funding agricultural and veterinary research.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.75,
+      "source_entity": "52.03 Statens Jordbrugs- og Veterinærvidenskabelige Forskningsråd",
+      "n_years_seen": 2,
+      "avg_amount": 46526150.0
+    },
+    {
+      "canonical_name": "The Independent Research Fund Denmark",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1985,
+        1985
+      ],
+      "notes": "This fund is dedicated to supporting independent research, making it highly relevant for R&D.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "19.06 Det Frie Forskningsraad",
+      "n_years_seen": 1,
+      "avg_amount": 30000000.0
+    },
+    {
+      "canonical_name": "Biotechnological Research Centers, etc.",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1987,
+        1987
+      ],
+      "notes": "This entity is related to biotechnological research, which is relevant for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "53.09 Bioteknologiske forskningscentre m.v.",
+      "n_years_seen": 1,
+      "avg_amount": 29300000.0
+    },
+    {
+      "canonical_name": "Danish Pharmaceutical University Operating Expenses",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1976,
+        1976
+      ],
+      "notes": "This entity is associated with a higher education institution focused on pharmaceutical research.",
+      "agency_type": "higher_education",
+      "confidence": 0.8,
+      "source_entity": "Danmarks farmaceutiske Højskole: Driftsudgifter",
+      "n_years_seen": 1,
+      "avg_amount": 23528000.0
+    },
+    {
+      "canonical_name": "Aalborg University Center",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1978,
+        1978
+      ],
+      "notes": "Aalborg University is known for its research activities.",
+      "agency_type": "higher_education",
+      "confidence": 0.9,
+      "source_entity": "70.05. Ålborg Universitetscenter",
+      "n_years_seen": 1,
+      "avg_amount": 23000000.0
+    },
+    {
+      "canonical_name": "Research and University Education 9,676.9 million DKK",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2003,
+        2003
+      ],
+      "notes": "This funding is directed towards research and education, indicating R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Forskning og universitetsuddannelser 9.676,9 mio. kr.",
+      "n_years_seen": 1,
+      "avg_amount": 9676900.0
+    },
+    {
+      "canonical_name": "Education and Research etc.",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1996
+      ],
+      "notes": "This entity supports education and research, indicating R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Uddannelse og forskning m.v",
+      "n_years_seen": 1,
+      "avg_amount": 8975300.0
+    },
+    {
+      "canonical_name": "Danish Polar Center",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1990,
+        1990
+      ],
+      "notes": "The Danish Polar Center is involved in research related to polar regions, indicating R&D relevance.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.8,
+      "source_entity": "09.24. Dansk Polarcenter",
+      "n_years_seen": 1,
+      "avg_amount": 7248300.0
+    },
+    {
+      "canonical_name": "Research in Biomolecular Technology",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1986,
+        1986
+      ],
+      "notes": "This entity is directly involved in research activities in biomolecular technology.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Forskning i biomolekylær teknik",
+      "n_years_seen": 1,
+      "avg_amount": 6800000.0
+    },
+    {
+      "canonical_name": "Biotechnology Information Company",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1989,
+        1989
+      ],
+      "notes": "This entity is involved in biotechnology, indicating R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "53.01 Bioteknologisk oplysningsvirksomhed",
+      "n_years_seen": 1,
+      "avg_amount": 6700000.0
+    },
+    {
+      "canonical_name": "Research Projects and Educational Policy Experimental Activities etc.",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1989,
+        1989
+      ],
+      "notes": "This entity supports research projects, indicating R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "53.02 Forskningsprojekter og uddannelsespolitisk forsøgsvirksomhed m.v.",
+      "n_years_seen": 1,
+      "avg_amount": 6355000.0
+    },
+    {
+      "canonical_name": "Research Projects and Educational Policy Experimental Activities",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1988,
+        1988
+      ],
+      "notes": "This entity supports research projects, indicating R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "53.02 Forskningsprojekter og uddannelsespolitisk forsøgsvirksomhed m.v",
+      "n_years_seen": 1,
+      "avg_amount": 6200000.0
+    },
+    {
+      "canonical_name": "Danish Space Research Institute: Operating Expenses",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1975,
+        1978
+      ],
+      "notes": "This institute focuses on space research.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.75,
+      "source_entity": "Dansk Rumforskningsinstitut: Driftsudgifter",
+      "n_years_seen": 3,
+      "avg_amount": 4102379.0
+    },
+    {
+      "canonical_name": "Support for International Collaboration Projects in Space Research",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1978,
+        1978
+      ],
+      "notes": "This program supports international collaboration in space research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Støtte til internationale samarbejdsprojekter inden for rumforskningen",
+      "n_years_seen": 1,
+      "avg_amount": 3100000.0
+    },
+    {
+      "canonical_name": "Training of Nuclear Scientists in Denmark",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1975,
+        1975
+      ],
+      "notes": "This program focuses on training in nuclear science.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Uddannelse af atomvidenskabsmænd i Danmark",
+      "n_years_seen": 1,
+      "avg_amount": 2600000.0
+    },
+    {
+      "canonical_name": "Research Council (text amendments 7 and 157)",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2015
+      ],
+      "notes": "This council funds various research initiatives.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Forskningsråd (tekstanm. 7 og 157)",
+      "n_years_seen": 7,
+      "avg_amount": 2125400.0
+    },
+    {
+      "canonical_name": "Research Academy and Education",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1987,
+        1988
+      ],
+      "notes": "This program supports research education and training.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "09.07. Forskerakademi og -uddannelse",
+      "n_years_seen": 2,
+      "avg_amount": 1564000.0
+    },
+    {
+      "canonical_name": "EURONET-DIANE Center",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1990,
+        1990
+      ],
+      "notes": "This center is involved in research activities related to EURONET.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "09.22. EURONET-DIANE Center",
+      "n_years_seen": 1,
+      "avg_amount": 1521600.0
+    },
+    {
+      "canonical_name": "Technology Assessment Projects",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1989,
+        1989
+      ],
+      "notes": "This program assesses technologies, contributing to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "52.01 Teknologivurderingsprojekter m.v.",
+      "n_years_seen": 1,
+      "avg_amount": 1400000.0
+    },
+    {
+      "canonical_name": "Research Council",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2004,
+        2005
+      ],
+      "notes": "This council funds various research projects.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Forskningsråd (tekstanm. 157)",
+      "n_years_seen": 2,
+      "avg_amount": 1239800.0
+    },
+    {
+      "canonical_name": "Research Forum and National Research Council",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2003,
+        2003
+      ],
+      "notes": "This forum supports collaborative research efforts.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Forskningsforum og statens forskningsråd 1.058,7 mio. kr.",
+      "n_years_seen": 1,
+      "avg_amount": 1058700.0
+    },
+    {
+      "canonical_name": "IT University of Copenhagen",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2014,
+        2014
+      ],
+      "notes": "This university conducts significant research in IT.",
+      "agency_type": "higher_education",
+      "confidence": 0.85,
+      "source_entity": "IT-Universitetet i Kobenhavn",
+      "n_years_seen": 1,
+      "avg_amount": 1000000.0
+    },
+    {
+      "canonical_name": "Royal Veterinary and Agricultural University",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1978,
+        1978
+      ],
+      "notes": "This institution is involved in agricultural and veterinary research.",
+      "agency_type": "higher_education",
+      "confidence": 0.8,
+      "source_entity": "70.16. Den kgl. Veterinær- og Landbohøjskole",
+      "n_years_seen": 1,
+      "avg_amount": 1000000.0
+    },
+    {
+      "canonical_name": "Research Funds for Universities",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2010,
+        2010
+      ],
+      "notes": "These funds are allocated to support university research.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Forskningsmidler til universiteter",
+      "n_years_seen": 1,
+      "avg_amount": 1000000.0
+    },
+    {
+      "canonical_name": "Research in the Food Sector",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2006,
+        2006
+      ],
+      "notes": "This is directly related to research in food science.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Forskning inden for fødevareområdet (tekstanm. 1, 3, 4 og 115)",
+      "n_years_seen": 1,
+      "avg_amount": 619400.0
+    },
+    {
+      "canonical_name": "Innovation Infrastructure and Special Research Activities",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2017,
+        2024
+      ],
+      "notes": "This supports innovation and research activities, making it relevant for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Innovationsinfrastruktur og særlige forskningsaktiviteter",
+      "n_years_seen": 5,
+      "avg_amount": 601666.6666666666
+    },
+    {
+      "canonical_name": "Knowledge-Based Innovation and Innovation Infrastructure",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2024,
+        2024
+      ],
+      "notes": "This program supports knowledge-based innovation, relevant for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Videnbaseret innovation og innovationsinfrastruktur",
+      "n_years_seen": 1,
+      "avg_amount": 519300.0
+    },
+    {
+      "canonical_name": "Royal Danish Academy of Sciences and Letters",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1981,
+        1981
+      ],
+      "notes": "This is a prominent scientific institution in Denmark, relevant for R&D.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.85,
+      "source_entity": "53.05. Det kongelige danske videnskabernes selskab",
+      "n_years_seen": 1,
+      "avg_amount": 400000.0
+    },
+    {
+      "canonical_name": "Development of COVID-19 Vaccine ABNCoV2",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "This program is directly related to R&D for vaccine development.",
+      "agency_type": "rd_programme",
+      "confidence": 0.95,
+      "source_entity": "Udvikling af COVID-19 vaccinen ABNCoV2",
+      "n_years_seen": 1,
+      "avg_amount": 400000.0
+    },
+    {
+      "canonical_name": "Experimental and Development Work Related to Higher Education",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2007,
+        2007
+      ],
+      "notes": "This program supports R&D in higher education contexts.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Forsøgs- og udviklingsarbejde m.v. uden tilsagnsordning i forbindelse med videregående uddannelser",
+      "n_years_seen": 1,
+      "avg_amount": 394500.0
+    },
+    {
+      "canonical_name": "Innovation Infrastructure",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2022
+      ],
+      "notes": "This entity supports innovation-related R&D infrastructure.",
+      "agency_type": "innovation_instruments",
+      "confidence": 0.85,
+      "source_entity": "Innovationsinfrastruktur (Reservationsbev.)",
+      "n_years_seen": 3,
+      "avg_amount": 393766.6666666667
+    },
+    {
+      "canonical_name": "Research and Development in the Food Sector",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2025,
+        2025
+      ],
+      "notes": "This program is focused on R&D in the food sector.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Forskning og udvikling inden for fødevareområdet mv.",
+      "n_years_seen": 1,
+      "avg_amount": 393500.0
+    },
+    {
+      "canonical_name": "Research and Development Related to Higher Education",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2012,
+        2012
+      ],
+      "notes": "This program supports R&D in higher education.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Forsøg og udvikling mv. i forbindelse med videregående uddannelser (tekstanm. 109, 179, 184, 185, 186)",
+      "n_years_seen": 1,
+      "avg_amount": 373000.0
+    },
+    {
+      "canonical_name": "Research Programs and Projects",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1991,
+        1993
+      ],
+      "notes": "This entity is directly involved in R&D through various programs and projects.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Forskningsprogrammer og -projekter",
+      "n_years_seen": 2,
+      "avg_amount": 372837.85
+    },
+    {
+      "canonical_name": "Testing and Development, etc.",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2019,
+        2022
+      ],
+      "notes": "This entity involves testing and development, which is relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Forsøg og udvikling mv.",
+      "n_years_seen": 2,
+      "avg_amount": 256450.0
+    },
+    {
+      "canonical_name": "Space Area",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2025
+      ],
+      "notes": "This entity relates to space research, which is relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Rumområdet",
+      "n_years_seen": 3,
+      "avg_amount": 248500.0
+    },
+    {
+      "canonical_name": "Mandatory International Research Infrastructures",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2019,
+        2025
+      ],
+      "notes": "This entity supports international research infrastructures, relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Obligatoriske internationale forskningsinfrastrukturer",
+      "n_years_seen": 5,
+      "avg_amount": 234320.0
+    },
+    {
+      "canonical_name": "Testing and Development, etc. in Connection with Higher Education",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2006,
+        2009
+      ],
+      "notes": "This entity involves R&D activities related to higher education.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Forsøg og udvikling m.v. i forbindelse med videregående uddannelser",
+      "n_years_seen": 3,
+      "avg_amount": 227572.63333333333
+    },
+    {
+      "canonical_name": "IT University of Copenhagen (Text Note 8, 107, 109, 150, 153, 185, 201, 203 and 206) (Self-Financed)",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2016,
+        2016
+      ],
+      "notes": "This university is involved in research and development activities in IT.",
+      "agency_type": "higher_education",
+      "confidence": 0.8,
+      "source_entity": "IT-Universitetet i København (tekstanm. 8, 107, 109, 150, 153, 185, 201, 203 og 206) (Selvejebev.)",
+      "n_years_seen": 1,
+      "avg_amount": 217900.0
+    },
+    {
+      "canonical_name": "Mandatory International Memberships",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2021
+      ],
+      "notes": "Memberships in international research organizations are relevant for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Obligatoriske internationale medlemsskaber (Lovbunden)",
+      "n_years_seen": 2,
+      "avg_amount": 209800.0
+    },
+    {
+      "canonical_name": "Research Infrastructure",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2017,
+        2025
+      ],
+      "notes": "Research infrastructure is essential for conducting R&D activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Forskningsinfrastruktur",
+      "n_years_seen": 6,
+      "avg_amount": 208677.77777777778
+    },
+    {
+      "canonical_name": "Mandatory International Research Memberships",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2017,
+        2017
+      ],
+      "notes": "Memberships in international research initiatives are relevant for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Obligatoriske internationale forskningsmedlemsskaber (tekstanm. 157)",
+      "n_years_seen": 1,
+      "avg_amount": 195300.0
+    },
+    {
+      "canonical_name": "Geological Research and Surveys",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1998,
+        2016
+      ],
+      "notes": "Geological research is a key area of R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Geologisk forskning og undersøgelser",
+      "n_years_seen": 8,
+      "avg_amount": 192545.7625
+    },
+    {
+      "canonical_name": "Danish Agency for Research and Innovation",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2009
+      ],
+      "notes": "This agency is dedicated to research and innovation, making it highly relevant for R&D.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.95,
+      "source_entity": "Forsknings- og Innovationsstyrelsen (Driftsbev.)",
+      "n_years_seen": 1,
+      "avg_amount": 192100.0
+    },
+    {
+      "canonical_name": "Contributions to Non-Mandatory Programs under the European Space Agency",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2021,
+        2024
+      ],
+      "notes": "Contributions to ESA programs support space-related R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Bidrag til ikke-obligatoriske programmer under Den Europæiske Rumorganisation (ESA)",
+      "n_years_seen": 4,
+      "avg_amount": 182425.0
+    },
+    {
+      "canonical_name": "R&D in Higher Education",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2008
+      ],
+      "notes": "This program supports R&D in higher education contexts.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Forsøg og udvikling m.v. i forbindelse med videregående uddannelser (tekstanm. 3, 139 og 144) (Reservationsbev.)",
+      "n_years_seen": 1,
+      "avg_amount": 181800.0
+    },
+    {
+      "canonical_name": "Mandatory International Programs",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1998,
+        1999
+      ],
+      "notes": "International programs are relevant for collaborative R&D efforts.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Obligatoriske internationale programmer",
+      "n_years_seen": 2,
+      "avg_amount": 173050.0
+    },
+    {
+      "canonical_name": "Danish Council for Technical and Scientific Research",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1996
+      ],
+      "notes": "This is a dedicated agency for technical and scientific research.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.95,
+      "source_entity": "Statens Teknisk-Videnskabelige Forskningsråd (Reservationsbev.)",
+      "n_years_seen": 1,
+      "avg_amount": 151700.0
+    },
+    {
+      "canonical_name": "Danish Council for Health Sciences Research",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1996
+      ],
+      "notes": "This is a dedicated agency for health sciences research.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "Statens Sundhedsvidenskabelige Forskningsråd (Reservationsbev.)",
+      "n_years_seen": 1,
+      "avg_amount": 127000.0
+    },
+    {
+      "canonical_name": "Reserve for Research and Innovation",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2005,
+        2005
+      ],
+      "notes": "This fund is allocated for research and innovation purposes.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Reserve til forskning og innovation",
+      "n_years_seen": 1,
+      "avg_amount": 125000.0
+    },
+    {
+      "canonical_name": "Fund for Research Infrastructure",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2013
+      ],
+      "notes": "This fund is aimed at enhancing research infrastructure, which is critical for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Pulje til forskningsinfrastruktur",
+      "n_years_seen": 3,
+      "avg_amount": 121133.33333333333
+    },
+    {
+      "canonical_name": "The Biotechnological Research Program",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1992,
+        1992
+      ],
+      "notes": "This program is dedicated to biotechnological research, which is a significant area of R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Det Bioteknologiske Forskningsprogram (tekstanm. 77) 105,1",
+      "n_years_seen": 1,
+      "avg_amount": 105100.0
+    },
+    {
+      "canonical_name": "Fund for Research Infrastructure (Reservation)",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2015
+      ],
+      "notes": "This is another fund aimed at improving research infrastructure.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Pulje til forskningsinfrastruktur (Reservationsbev.)",
+      "n_years_seen": 2,
+      "avg_amount": 100985.45
+    },
+    {
+      "canonical_name": "National Collaboration on Digital Research Infrastructure",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2024,
+        2024
+      ],
+      "notes": "This initiative focuses on digital research infrastructure, essential for modern R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Nationalt samarbejde om digital forskningsinfrastruktur",
+      "n_years_seen": 1,
+      "avg_amount": 93800.0
+    },
+    {
+      "canonical_name": "Danish Council for Health Research",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1991,
+        2000
+      ],
+      "notes": "This council is dedicated to health research funding, a critical area of R&D.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "Statens Sundhedsvidenskabelige Forskningsråd",
+      "n_years_seen": 5,
+      "avg_amount": 86321.1
+    },
+    {
+      "canonical_name": "Support for Arctic Research (Reservation)",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2008
+      ],
+      "notes": "This program supports research in the Arctic, which is an important area of R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Støtte til Arktisk forskning (Reservationsbev.)",
+      "n_years_seen": 1,
+      "avg_amount": 80100.0
+    },
+    {
+      "canonical_name": "Research Education",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1999,
+        2009
+      ],
+      "notes": "This program is aimed at fostering research education.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Forskeruddannelse",
+      "n_years_seen": 2,
+      "avg_amount": 62501.6
+    },
+    {
+      "canonical_name": "Biotechnology Research Program",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1991,
+        1995
+      ],
+      "notes": "This program is dedicated to biotechnology research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Det Bioteknologiske Forskningsprogram",
+      "n_years_seen": 2,
+      "avg_amount": 57036.95
+    },
+    {
+      "canonical_name": "Danish Participation in International Research and Innovation",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2025,
+        2025
+      ],
+      "notes": "This program promotes Danish involvement in international R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Dansk deltagelse i international forskning og innovation",
+      "n_years_seen": 1,
+      "avg_amount": 42800.0
+    },
+    {
+      "canonical_name": "Strategic Research Programs",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1998,
+        1998
+      ],
+      "notes": "These programs are focused on strategic research initiatives.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Strategiske forskningsprogrammer",
+      "n_years_seen": 1,
+      "avg_amount": 42400.0
+    },
+    {
+      "canonical_name": "Danish Space Center",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2006,
+        2007
+      ],
+      "notes": "This agency focuses on space research and technology.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "Danmarks Rumcenter",
+      "n_years_seen": 2,
+      "avg_amount": 37750.0
+    },
+    {
+      "canonical_name": "Research, Trials, and Analytical Activities",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2013,
+        2013
+      ],
+      "notes": "This program supports various research and analytical activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Forskning, forsøg og analysevirksomhed",
+      "n_years_seen": 1,
+      "avg_amount": 36300.0
+    },
+    {
+      "canonical_name": "High-Speed Research Network",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2009
+      ],
+      "notes": "This funding is for establishing a high-speed network for research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Forskningens Højhastighedsnet (Reservationsbev.)",
+      "n_years_seen": 1,
+      "avg_amount": 36100.0
+    },
+    {
+      "canonical_name": "Communication and Quality in Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2021,
+        2022
+      ],
+      "notes": "This program focuses on improving communication and quality in research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Formidling og kvalitet i forskning (Reservationsbev.)",
+      "n_years_seen": 2,
+      "avg_amount": 33400.0
+    },
+    {
+      "canonical_name": "Research and Development in Cross-Cutting and International Activities",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2006,
+        2009
+      ],
+      "notes": "This program supports R&D in international collaborative activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Forsøg og udvikling m.v. i forbindelse med tværgående og internationale aktiviteter",
+      "n_years_seen": 2,
+      "avg_amount": 28010.25
+    },
+    {
+      "canonical_name": "Membership Contributions to ESA Programs",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1981,
+        1981
+      ],
+      "notes": "This funding is for Denmark's contributions to ESA's mandatory programs.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Medlemsbidrag til de obligatoriske programmer under den europæiske rumorganisation ESA",
+      "n_years_seen": 1,
+      "avg_amount": 27200.0
+    },
+    {
+      "canonical_name": "National Clinical Study on COVID-19 Vaccine Efficacy and Safety",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2023,
+        2023
+      ],
+      "notes": "This study is directly related to R&D in public health.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Nationalt klinisk studie om effekt og sikkerhed af COVID-19-vacciner",
+      "n_years_seen": 1,
+      "avg_amount": 26000.0
+    },
+    {
+      "canonical_name": "Researcher Education",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2005,
+        2005
+      ],
+      "notes": "This program supports the education of researchers.",
+      "agency_type": "higher_education",
+      "confidence": 0.75,
+      "source_entity": "Forskeruddannelse (tekstanm. 157)",
+      "n_years_seen": 1,
+      "avg_amount": 23300.0
+    },
+    {
+      "canonical_name": "Research and Development Projects (Reservation)",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1996
+      ],
+      "notes": "This entity is directly involved in funding R&D projects.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Forsknings- og udviklingsprojekter (Reservationsbev.)",
+      "n_years_seen": 1,
+      "avg_amount": 19200.0
+    },
+    {
+      "canonical_name": "Food Technology Programme",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1991,
+        1995
+      ],
+      "notes": "This program supports research in food technology, which is R&D relevant.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Fødevareteknologiprogrammet",
+      "n_years_seen": 2,
+      "avg_amount": 17815.55
+    },
+    {
+      "canonical_name": "Experimental and Development Work in Primary Education (Reservation)",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2010,
+        2010
+      ],
+      "notes": "This entity supports R&D work related to primary education.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Forsøgs- og udviklingsarbejde mv. uden tilsagnsordning i forbindelse med grundskolen (Reservationsbev.)",
+      "n_years_seen": 1,
+      "avg_amount": 17300.0
+    },
+    {
+      "canonical_name": "Fund for Research in Immunotherapy (Reservation)",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2021,
+        2021
+      ],
+      "notes": "This fund is specifically aimed at R&D in immunotherapy.",
+      "agency_type": "rd_fund",
+      "confidence": 0.95,
+      "source_entity": "Pulje til forskning i immunterapi (tekstanm. 101) (Reservationsbev.)",
+      "n_years_seen": 1,
+      "avg_amount": 15500.0
+    },
+    {
+      "canonical_name": "Research Affiliation to CVUs and Professional Colleges",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2007,
+        2007
+      ],
+      "notes": "This entity supports research affiliations, which are relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Forskningstilknytning til CVU'er og professionshøjskoler",
+      "n_years_seen": 1,
+      "avg_amount": 13800.0
+    },
+    {
+      "canonical_name": "Experimental and Development Work in Higher Education",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2012,
+        2013
+      ],
+      "notes": "This entity supports R&D work related to higher education.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Forsøgs- og udviklingsarbejde mv. i forbindelse med videregående uddannelser",
+      "n_years_seen": 2,
+      "avg_amount": 12050.0
+    },
+    {
+      "canonical_name": "Danish Space Research Institute Operating Expenses",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1981,
+        1981
+      ],
+      "notes": "This institute is dedicated to space research, which is R&D relevant.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "Dansk Rumforskningsinstitut Driftsudgifter",
+      "n_years_seen": 1,
+      "avg_amount": 10690.0
+    },
+    {
+      "canonical_name": "Membership Contribution to the European Organization for Astronomical Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1981,
+        1981
+      ],
+      "notes": "Membership contributions to ESO support astronomical research activities.",
+      "agency_type": "rd_fund",
+      "confidence": 0.75,
+      "source_entity": "Medlemsbidrag til Den europæiske organisation for astronomisk forskning (ESO)",
+      "n_years_seen": 1,
+      "avg_amount": 4700.0
+    },
+    {
+      "canonical_name": "Research on Possible Side Effects of HPV Vaccination",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2017,
+        2017
+      ],
+      "notes": "This research program is directly related to health and vaccine safety.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Forskning i mulige bivirkninger ved HPV-vaccination",
+      "n_years_seen": 1,
+      "avg_amount": 3000.0
+    },
+    {
+      "canonical_name": "Supporting Activities in the Space Sector (Text Reference 7)",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2021,
+        2021
+      ],
+      "notes": "Similar to the previous entry, it supports space-related activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Understøttende aktiviteter på rumområdet (tekstanm. 7) (Reservationsbev.)",
+      "n_years_seen": 1,
+      "avg_amount": 1900.0
     }
   ],
   "Norway": [
@@ -31399,6 +33419,1606 @@
       "source_entity": "ORGANIZACIÓN NACIONAL DE TRASPLANTES",
       "n_years_seen": 1,
       "avg_amount": 24755.0
+    },
+    {
+      "canonical_name": "Scientific, Technical and Applied Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1987,
+        1992
+      ],
+      "notes": "This entity is directly involved in scientific and technical research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Investigación Científica, Técnica y Aplicada",
+      "n_years_seen": 2,
+      "avg_amount": 155883358500.0
+    },
+    {
+      "canonical_name": "Research and Technological Development",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1992,
+        2002
+      ],
+      "notes": "This entity focuses on research and technological development.",
+      "agency_type": "rd_programme",
+      "confidence": 0.95,
+      "source_entity": "Investigación y desarrollo tecnológico",
+      "n_years_seen": 8,
+      "avg_amount": 9668955631.338001
+    },
+    {
+      "canonical_name": "Technical Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1992,
+        2000
+      ],
+      "notes": "This entity is involved in technical research activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Investigación técnica",
+      "n_years_seen": 6,
+      "avg_amount": 9508593621.0
+    },
+    {
+      "canonical_name": "Health Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1993,
+        2022
+      ],
+      "notes": "This entity is focused on health-related research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Investigación sanitaria",
+      "n_years_seen": 12,
+      "avg_amount": 983198832.2033334
+    },
+    {
+      "canonical_name": "State Research Agency",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2021,
+        2022
+      ],
+      "notes": "This budget supports the operations of a dedicated research agency.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.95,
+      "source_entity": "Operating budget for the State Research Agency",
+      "n_years_seen": 2,
+      "avg_amount": 64854172.685
+    },
+    {
+      "canonical_name": "Carlos III Health Institute",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2021,
+        2021
+      ],
+      "notes": "This budget is for a health research institute, relevant to R&D.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "Operating budget for the Carlos III Health Institute",
+      "n_years_seen": 1,
+      "avg_amount": 41054860.0
+    },
+    {
+      "canonical_name": "State Research Agency Total Budget",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2022
+      ],
+      "notes": "This budget is for the total funding of a dedicated research agency.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.95,
+      "source_entity": "Total budget for the State Research Agency",
+      "n_years_seen": 3,
+      "avg_amount": 32437522.2025
+    },
+    {
+      "canonical_name": "Superior Council of Scientific Research",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2021,
+        2022
+      ],
+      "notes": "This budget supports the operations of a major scientific research council.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.95,
+      "source_entity": "Operating budget for the Superior Council of Scientific Research",
+      "n_years_seen": 2,
+      "avg_amount": 19699713.635
+    },
+    {
+      "canonical_name": "Total Budget for the Superior Council of Scientific Research",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2022
+      ],
+      "notes": "This budget is for the total funding of the Superior Council of Scientific Research.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.95,
+      "source_entity": "Total budget for the Superior Council of Scientific Research",
+      "n_years_seen": 3,
+      "avg_amount": 15041919.233333334
+    },
+    {
+      "canonical_name": "Research, Development, Innovation and Digitalization",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2023,
+        2023
+      ],
+      "notes": "This entity focuses on research and innovation funding.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "INVESTIGACIÓN, DESARROLLO, INNOVACIÓN Y DIGITALIZACIÓN",
+      "n_years_seen": 1,
+      "avg_amount": 6489874.081428572
+    },
+    {
+      "canonical_name": "Research, Development and Innovation",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "This entity is dedicated to research and innovation activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Investigación, desarrollo e innovación",
+      "n_years_seen": 1,
+      "avg_amount": 4750000.0
+    },
+    {
+      "canonical_name": "Oceanographic and Fisheries Research",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2001,
+        2020
+      ],
+      "notes": "This entity focuses on research in oceanography and fisheries.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Investigación oceanográfica y pesquera",
+      "n_years_seen": 8,
+      "avg_amount": 4531657.675
+    },
+    {
+      "canonical_name": "Research and Development in Renewable Energies",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "This entity is focused on renewable energy research and development.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Investigación y desarrollo en energías renovables",
+      "n_years_seen": 1,
+      "avg_amount": 4526063.33
+    },
+    {
+      "canonical_name": "Research and Development in the Energy Sector",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2021,
+        2023
+      ],
+      "notes": "This entity focuses on energy sector research and development.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Investigación y desarrollo en el ámbito de la energía",
+      "n_years_seen": 2,
+      "avg_amount": 3615992.24
+    },
+    {
+      "canonical_name": "Fishing Research and Experimentation",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1996
+      ],
+      "notes": "This entity is dedicated to research in fishing practices.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Investigación y experimentación pesquera",
+      "n_years_seen": 1,
+      "avg_amount": 3284433.0
+    },
+    {
+      "canonical_name": "Technological-Industrial Research and Development",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2023
+      ],
+      "notes": "This entity focuses on technological and industrial R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Investigación y desarrollo tecnológico-industrial.",
+      "n_years_seen": 4,
+      "avg_amount": 2376742.2600000002
+    },
+    {
+      "canonical_name": "Grants for Research",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2021,
+        2021
+      ],
+      "notes": "This entity provides grants specifically for research activities.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Subvenciones para la investigación",
+      "n_years_seen": 1,
+      "avg_amount": 1358164.02
+    },
+    {
+      "canonical_name": "Scientific Research",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2023
+      ],
+      "notes": "This entity is dedicated to scientific research funding.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Investigación científica.",
+      "n_years_seen": 3,
+      "avg_amount": 1082508.0666666667
+    },
+    {
+      "canonical_name": "University of Deusto Project for Technological Transfer and Innovation",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "This project focuses on technological transfer and innovation in various sectors.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "A la Universidad de Deusto Proyecto transferencia e innovación tecnológica en los ámbitos industrial y sociosanitario.",
+      "n_years_seen": 1,
+      "avg_amount": 1000000.0
+    },
+    {
+      "canonical_name": "CERCA Institution. Research Centers of Catalonia for Scientific-Technological Infrastructure",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "This entity supports research centers for scientific and technological infrastructure.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "A la Institució CERCA. Centres de Recerca de Catalunya para la infraestructura científico-tecnológica.",
+      "n_years_seen": 1,
+      "avg_amount": 1000000.0
+    },
+    {
+      "canonical_name": "National Renewable Energy Centre Foundation",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "This foundation focuses on renewable energy research and development.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.95,
+      "source_entity": "A la Fundación Centro Nacional de Energías Renovables (Fundación Cener).",
+      "n_years_seen": 1,
+      "avg_amount": 1000000.0
+    },
+    {
+      "canonical_name": "Agricultural Research and Experimentation",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        2020
+      ],
+      "notes": "This program supports agricultural research and experimentation.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Investigación y experimentación agraria",
+      "n_years_seen": 6,
+      "avg_amount": 871535.1766666666
+    },
+    {
+      "canonical_name": "Scientific Research Grants",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2022
+      ],
+      "notes": "This fund provides grants specifically for scientific research.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Grants for scientific research",
+      "n_years_seen": 2,
+      "avg_amount": 857065.04
+    },
+    {
+      "canonical_name": "Financial Support for SEMYS SA-SME",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2023,
+        2023
+      ],
+      "notes": "This support is aimed at microelectronics and semiconductor research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Apoyo financiero a la Sociedad Estatal de Microelectrónica y Semiconductores SA-SME (SEMYS SA-SME) para el PERTE Chip.",
+      "n_years_seen": 1,
+      "avg_amount": 800000.0
+    },
+    {
+      "canonical_name": "Technological Innovation in Telecommunications",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2006,
+        2022
+      ],
+      "notes": "This program focuses on R&D in telecommunications technology.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Innovación tecnológica de las telecomunicaciones",
+      "n_years_seen": 7,
+      "avg_amount": 626254.4485714285
+    },
+    {
+      "canonical_name": "Research and Development in Telecommunications Technology",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2018
+      ],
+      "notes": "This entity is dedicated to R&D in telecommunications.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Investigación y desarrollo de la tecnología de telecomunicaciones",
+      "n_years_seen": 1,
+      "avg_amount": 552954.44
+    },
+    {
+      "canonical_name": "Foundation for the Study of the Cosmos of Aragon",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "This foundation is involved in astrophysics research.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "A la Fundación Centro de Estudios de Física del Cosmos de Aragón.",
+      "n_years_seen": 1,
+      "avg_amount": 500000.0
+    },
+    {
+      "canonical_name": "CIC Energigune Advanced Electrolyzer Testing Laboratory",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "This laboratory is dedicated to testing advanced electrolyzers.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Al CIC Energigune para el laboratorio testeo de electrolizadores avanzados.",
+      "n_years_seen": 1,
+      "avg_amount": 400000.0
+    },
+    {
+      "canonical_name": "Research and Development of the Information Society",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2021
+      ],
+      "notes": "This program supports R&D in the information society.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Investigación y desarrollo de la Sociedad de la Información.",
+      "n_years_seen": 3,
+      "avg_amount": 371621.58666666667
+    },
+    {
+      "canonical_name": "Dinópolis Foundation for Paleontological Research",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "This foundation focuses on paleontological research.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.85,
+      "source_entity": "A la Fundación Conjunto Paleontológico de Teruel-Dinópolis, para la Unidad de Paleontología de Teruel.",
+      "n_years_seen": 1,
+      "avg_amount": 300000.0
+    },
+    {
+      "canonical_name": "Funding for Innovation Projects",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2022
+      ],
+      "notes": "This funding is aimed at supporting innovative projects.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "Funding for innovation projects",
+      "n_years_seen": 2,
+      "avg_amount": 264136.42000000004
+    },
+    {
+      "canonical_name": "Investments in the Institute of Natural Products and Agrobiology",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2023,
+        2023
+      ],
+      "notes": "This institute is dedicated to R&D in natural products and agrobiology.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.8,
+      "source_entity": "Inversiones en el Instituto de Productos Naturales y Agrobiología",
+      "n_years_seen": 1,
+      "avg_amount": 250000.0
+    },
+    {
+      "canonical_name": "Financial Support for Technology-Based Companies, Capitalization",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2016,
+        2016
+      ],
+      "notes": "This support is aimed at technology-based companies to enhance R&D.",
+      "agency_type": "rd_fund",
+      "confidence": 0.75,
+      "source_entity": "Apoyo financiero a empresas de base tecnológica, capitalización",
+      "n_years_seen": 1,
+      "avg_amount": 240500.0
+    },
+    {
+      "canonical_name": "Research and Development in the Health Sector",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2021,
+        2023
+      ],
+      "notes": "This program focuses on R&D activities in health.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Investigación y desarrollo en el ámbito de la salud",
+      "n_years_seen": 3,
+      "avg_amount": 198388.6775
+    },
+    {
+      "canonical_name": "Energy, Environmental and Technological Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2023
+      ],
+      "notes": "This program supports R&D in energy and environmental technologies.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Investigación energética, medioambiental y tecnológica.",
+      "n_years_seen": 4,
+      "avg_amount": 101751.305
+    },
+    {
+      "canonical_name": "Total Budget for the Carlos III Health Institute",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2020
+      ],
+      "notes": "The Carlos III Health Institute is a key player in health R&D.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "Total budget for the Carlos III Health Institute",
+      "n_years_seen": 1,
+      "avg_amount": 82545.56
+    },
+    {
+      "canonical_name": "Provision Fund for Cervera Network and R&D Projects",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2018
+      ],
+      "notes": "This fund supports various R&D projects under the Cervera Network.",
+      "agency_type": "rd_fund",
+      "confidence": 0.75,
+      "source_entity": "Dotación del Fondo de Provisiones Técnicas Red Cervera y proyectos de I+D+I.",
+      "n_years_seen": 1,
+      "avg_amount": 80000.0
+    },
+    {
+      "canonical_name": "Research in Renewable Energies",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2021,
+        2021
+      ],
+      "notes": "This program supports R&D in renewable energy technologies.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Investigación en energías renovables",
+      "n_years_seen": 1,
+      "avg_amount": 59677.91
+    },
+    {
+      "canonical_name": "Funding for Energy Research Projects",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2020
+      ],
+      "notes": "This funding is aimed at supporting energy-related research projects.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Funding for energy research projects",
+      "n_years_seen": 1,
+      "avg_amount": 58795.97
+    },
+    {
+      "canonical_name": "Research in Public Health",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2021,
+        2021
+      ],
+      "notes": "This program supports R&D in public health initiatives.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Investigación en salud pública",
+      "n_years_seen": 1,
+      "avg_amount": 44105.54
+    },
+    {
+      "canonical_name": "Funding for Health Research Projects",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2020
+      ],
+      "notes": "This funding is aimed at supporting health-related research projects.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Funding for health research projects",
+      "n_years_seen": 1,
+      "avg_amount": 42061.75
+    },
+    {
+      "canonical_name": "Research Funding for Energy and Environmental Technologies",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2020
+      ],
+      "notes": "This funding supports research in energy and environmental technologies.",
+      "agency_type": "rd_fund",
+      "confidence": 0.75,
+      "source_entity": "Research funding for energy and environmental technologies",
+      "n_years_seen": 1,
+      "avg_amount": 40586.32
+    },
+    {
+      "canonical_name": "Research Funding for Oceanographic Studies",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2020
+      ],
+      "notes": "This program directly funds research in oceanographic studies.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Research funding for oceanographic studies",
+      "n_years_seen": 1,
+      "avg_amount": 37001.24
+    },
+    {
+      "canonical_name": "Geological-Mining and Environmental Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2006,
+        2020
+      ],
+      "notes": "This program supports research in geological-mining and environmental fields.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Investigación geológico-minera y medioambiental",
+      "n_years_seen": 4,
+      "avg_amount": 35637.0325
+    },
+    {
+      "canonical_name": "Program 467C 'Research and Technological-Industrial Development'",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2016,
+        2016
+      ],
+      "notes": "This program is dedicated to technological and industrial R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.95,
+      "source_entity": "Programa 467C «Investigación y desarrollo tecnológico-industrial»",
+      "n_years_seen": 1,
+      "avg_amount": 30000.0
+    },
+    {
+      "canonical_name": "Research Funding for Health Studies",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2020
+      ],
+      "notes": "This program funds research specifically in health studies.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Research funding for health studies",
+      "n_years_seen": 1,
+      "avg_amount": 20514.67
+    },
+    {
+      "canonical_name": "Financial Support for Technology-Based Companies. Participative Loans.",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2023,
+        2023
+      ],
+      "notes": "This program provides financial support to technology-based companies.",
+      "agency_type": "innovation_instruments",
+      "confidence": 0.75,
+      "source_entity": "Apoyo financiero a empresas de base tecnológica. Préstamos participativos.",
+      "n_years_seen": 1,
+      "avg_amount": 20500.0
+    },
+    {
+      "canonical_name": "Loans and Advances for Research, Development and Innovation Policy",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2016,
+        2016
+      ],
+      "notes": "This fund supports various R&D initiatives through loans and advances.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Préstamos y anticipos de la política de investigación, desarrollo e innovación",
+      "n_years_seen": 1,
+      "avg_amount": 18579.76
+    },
+    {
+      "canonical_name": "Research Grants for Scientific Projects",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2020
+      ],
+      "notes": "This program provides grants for scientific research projects.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Research grants for scientific projects",
+      "n_years_seen": 1,
+      "avg_amount": 18311.58
+    },
+    {
+      "canonical_name": "Support for R&D+i of the CTE System (Science-Technology-Company)",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2009
+      ],
+      "notes": "This program supports R&D initiatives within the CTE system.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Apoyo a la I+D+i del sistema CTE (Ciencia-Tecnología.Empresa)",
+      "n_years_seen": 1,
+      "avg_amount": 17000.0
+    },
+    {
+      "canonical_name": "Research and Development",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2023
+      ],
+      "notes": "This program is focused on general research and development activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Investigación y Desarrollo",
+      "n_years_seen": 2,
+      "avg_amount": 15550.0
+    },
+    {
+      "canonical_name": "Financial Support for Technology-Based Companies",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2005,
+        2005
+      ],
+      "notes": "This program provides financial support to technology-based companies.",
+      "agency_type": "innovation_instruments",
+      "confidence": 0.75,
+      "source_entity": "Apoyo financiero a empresas de base tecnológica",
+      "n_years_seen": 1,
+      "avg_amount": 8193.253333333332
+    },
+    {
+      "canonical_name": "Research Funding for Geological Studies",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2020
+      ],
+      "notes": "This program funds research in geological studies.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Research funding for geological studies",
+      "n_years_seen": 1,
+      "avg_amount": 6787.13
+    },
+    {
+      "canonical_name": "CIDETEC Research Equipment for Electromobility and Energy Storage",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2018
+      ],
+      "notes": "This funding is aimed at research and testing in electromobility.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "A CIDETEC, para equipamiento de investigación y testeo para electromovilidad y almacenamiento eléctrico",
+      "n_years_seen": 1,
+      "avg_amount": 5500.0
+    },
+    {
+      "canonical_name": "Wind Tunnel Construction for R&D",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2008
+      ],
+      "notes": "This project involves the construction of a wind tunnel for research purposes.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Infraestructuras en I+D+i: Construcción de un túnel de viento",
+      "n_years_seen": 1,
+      "avg_amount": 5000.0
+    },
+    {
+      "canonical_name": "Barcelona Institute of Science and Technology for Precision Medicine Hub Development",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "This initiative focuses on developing a hub for precision medicine research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Barcelona Institute of Science and Technology para el desarrollo de un hub referente en medicina de precisión",
+      "n_years_seen": 1,
+      "avg_amount": 3500.0
+    },
+    {
+      "canonical_name": "Barcelona Scientific Park Infrastructure",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2008
+      ],
+      "notes": "This funding supports the infrastructure of a scientific park for research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Infraestructuras en I+D+i: Parque Científico de Barcelona (Universitat de Barcelona)",
+      "n_years_seen": 1,
+      "avg_amount": 3000.0
+    },
+    {
+      "canonical_name": "Biscay Marine Energy Platform Research Center",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2018
+      ],
+      "notes": "This project is focused on marine energy research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Al IDAE. Para centro de investigación Biscay Marine Energy Platform (BIMEP).",
+      "n_years_seen": 1,
+      "avg_amount": 3000.0
+    },
+    {
+      "canonical_name": "August Pi i Sunyer Biomedical Research Institute Infrastructure",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2008
+      ],
+      "notes": "This funding supports the infrastructure of a biomedical research institute.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Infraestructuras en I+D+i: Instituto de Investigaciones Biomédicas August Pi i Sunyer",
+      "n_years_seen": 1,
+      "avg_amount": 3000.0
+    },
+    {
+      "canonical_name": "Barcelona Biomedical Research Park Infrastructure",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2008
+      ],
+      "notes": "This project funds the infrastructure of a biomedical research park.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Infraestructuras en I+D+i: Parc de Recerca Biomèdica de Barcelona",
+      "n_years_seen": 1,
+      "avg_amount": 3000.0
+    },
+    {
+      "canonical_name": "Centralization of Scientific-Technological Infrastructure",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2020
+      ],
+      "notes": "This project aims to centralize scientific and technological infrastructure for research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Nuevo. Centralización infraestructura científico-tecnológica en los servicios generales de investigación, SGIker UPV.",
+      "n_years_seen": 1,
+      "avg_amount": 2600.0
+    },
+    {
+      "canonical_name": "Catalan Water Research Institute Infrastructure",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2008
+      ],
+      "notes": "This funding supports the infrastructure of a water research institute.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Infraestructuras en I+D+i: Institut Català de Recerca de l’aigua (ICRA)",
+      "n_years_seen": 1,
+      "avg_amount": 2000.0
+    },
+    {
+      "canonical_name": "Biomedical Research Institute Infrastructure",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2008
+      ],
+      "notes": "This project funds the infrastructure of a biomedical research institute.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Infraestructuras en I+D+i: Instituto de Recerca Biomédica",
+      "n_years_seen": 1,
+      "avg_amount": 2000.0
+    },
+    {
+      "canonical_name": "Catalonia Energy Research Institute Infrastructure",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2008
+      ],
+      "notes": "This funding supports the infrastructure of an energy research institute.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Infraestructuras en I+D+i: Institut de Recerca Energètica de Catalunya.",
+      "n_years_seen": 1,
+      "avg_amount": 2000.0
+    },
+    {
+      "canonical_name": "Agreement with University of Navarra for Research Center Creation",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2018
+      ],
+      "notes": "This agreement supports the creation of a research center.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Convenio con la Universidad de Navarra para creación de Centro de investigación",
+      "n_years_seen": 1,
+      "avg_amount": 2000.0
+    },
+    {
+      "canonical_name": "Biocat Infrastructure for Life Sciences Offices",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2008
+      ],
+      "notes": "This project funds infrastructure for life sciences research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Infraestructuras en I+D+i: Biocat para oficinas Ciencias de la Vida del Instituto Europeo Tecnología",
+      "n_years_seen": 1,
+      "avg_amount": 2000.0
+    },
+    {
+      "canonical_name": "Canary Islands Volcanological Institute Infrastructure",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2021,
+        2021
+      ],
+      "notes": "This funding supports the infrastructure of a volcanological research institute.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Nuevo. Al Instituto Volcanológico de Canarias (INVOLCAN) para Infraestructuras de I+D+i.",
+      "n_years_seen": 1,
+      "avg_amount": 1500.0
+    },
+    {
+      "canonical_name": "CERCA Institution for Scientific-Technological Infrastructure",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2020
+      ],
+      "notes": "This project funds scientific-technological infrastructure for research centers.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "A la Institució CERCA. Centres de Reserça de Catalunya para la infraestructura científico-tecnológica.",
+      "n_years_seen": 1,
+      "avg_amount": 1000.0
+    },
+    {
+      "canonical_name": "National Renewable Energy Center Foundation",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2023,
+        2023
+      ],
+      "notes": "This funding supports research in renewable energy.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "759 A la Fundación Centro Nacional de Energías Renovables (Fundación Cener)",
+      "n_years_seen": 1,
+      "avg_amount": 1000.0
+    },
+    {
+      "canonical_name": "Scientific Research Program",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2020
+      ],
+      "notes": "This program is dedicated to scientific research funding.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Programa 463A Investigación Científica",
+      "n_years_seen": 1,
+      "avg_amount": 1000.0
+    },
+    {
+      "canonical_name": "R&D Actions",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2018
+      ],
+      "notes": "This program is focused on promoting research and development activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Actuaciones I+D+I",
+      "n_years_seen": 1,
+      "avg_amount": 1000.0
+    },
+    {
+      "canonical_name": "Promotion of Research in Public Universities of the Canary Islands",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2023,
+        2023
+      ],
+      "notes": "This initiative supports research activities in public universities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Promoción de la investigación Universidades Públicas Canarias",
+      "n_years_seen": 1,
+      "avg_amount": 1000.0
+    },
+    {
+      "canonical_name": "Program 463A Scientific Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2023,
+        2023
+      ],
+      "notes": "This program is dedicated to scientific research funding.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Programa 463A Investigación científica",
+      "n_years_seen": 1,
+      "avg_amount": 1000.0
+    },
+    {
+      "canonical_name": "New Research and Cooperation Program for Universities in the Canary Islands",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2023,
+        2023
+      ],
+      "notes": "This program aims to enhance research cooperation among universities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Nuevo. Programa de investigación y cooperación para las universidades establecidas en Canarias.",
+      "n_years_seen": 1,
+      "avg_amount": 1000.0
+    },
+    {
+      "canonical_name": "New Project for Innovation and Transfer at the University of Deusto",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2021,
+        2021
+      ],
+      "notes": "This project promotes innovation and technology transfer in health and technology sectors.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Nueva. A La Universidad de Deusto. Proyecto de innovación y transferencia en el ámbito sociosanitario y tecnológico.",
+      "n_years_seen": 1,
+      "avg_amount": 1000.0
+    },
+    {
+      "canonical_name": "Infrastructure in R&D+i: Catalan Institute of Photonic Sciences",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2008
+      ],
+      "notes": "This institute is dedicated to research in photonics.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "Infraestructuras en I+D+i: Institut Català de Ciències Fotòniques",
+      "n_years_seen": 1,
+      "avg_amount": 1000.0
+    },
+    {
+      "canonical_name": "Infrastructure in R&D+i: Catalan Institute of Nanotechnology",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2008
+      ],
+      "notes": "This institute focuses on research in nanotechnology.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "Infraestructuras en I+D+i: Institut Català de Nanotecnologia",
+      "n_years_seen": 1,
+      "avg_amount": 1000.0
+    },
+    {
+      "canonical_name": "Research, Development and Experimentation in Transport and Infrastructure",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2020
+      ],
+      "notes": "This program supports R&D in transport and infrastructure sectors.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Investigación, desarrollo y experimentación en transporte e infraestructuras",
+      "n_years_seen": 1,
+      "avg_amount": 1000.0
+    },
+    {
+      "canonical_name": "Infrastructure in R&D+i: Catalan Institute of Chemical Research",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2008
+      ],
+      "notes": "This institute is dedicated to chemical research.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "Infraestructuras en I+D+i: Institut Català d’Investigació Química",
+      "n_years_seen": 1,
+      "avg_amount": 1000.0
+    },
+    {
+      "canonical_name": "463A Scientific Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "This program is focused on funding scientific research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "463A Investigación científica",
+      "n_years_seen": 1,
+      "avg_amount": 1000.0
     }
   ],
   "Finland": [
@@ -36349,6 +39969,866 @@
       "agency_type": "rd_programme",
       "confidence": 0.85,
       "source_entity": "Research expenses",
+      "n_years_seen": 1,
+      "avg_amount": 34917.0
+    },
+    {
+      "canonical_name": "Targeted Financing for Research and Development Institutions",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2005,
+        2007
+      ],
+      "notes": "This program directly funds R&D activities in institutions.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Teadus- ja arendusasutuste teadusteemade sihtfinantseerimine",
+      "n_years_seen": 3,
+      "avg_amount": 264266666.66666666
+    },
+    {
+      "canonical_name": "Targeted Financing for Science",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2004,
+        2004
+      ],
+      "notes": "This fund is specifically aimed at financing scientific research.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "teaduse sihtfinantseerimine",
+      "n_years_seen": 1,
+      "avg_amount": 254000000.0
+    },
+    {
+      "canonical_name": "Targeted Financing for Research Topics in Research and Development Institutions",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2010,
+        2011
+      ],
+      "notes": "This program funds specific research topics in R&D institutions.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "teadus- ja arendusasutuste teadusteemade sihtfinantseerimine",
+      "n_years_seen": 2,
+      "avg_amount": 191825398.0
+    },
+    {
+      "canonical_name": "Estonian Research Council Allocations",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1996
+      ],
+      "notes": "This entity provides funding specifically for research activities.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Eraldised Eesti Teaduse Sihtasutusele",
+      "n_years_seen": 1,
+      "avg_amount": 153890000.0
+    },
+    {
+      "canonical_name": "Allocations for Targeted Financing",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1998,
+        1999
+      ],
+      "notes": "This funding is aimed at specific research projects.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "Eraldised sihtfinantseerimiseks",
+      "n_years_seen": 2,
+      "avg_amount": 139885300.0
+    },
+    {
+      "canonical_name": "Targeted Financing Allocations",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1996
+      ],
+      "notes": "This funding is designated for specific research purposes.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "sihtotstarbelisteks finantseeringuteks",
+      "n_years_seen": 1,
+      "avg_amount": 93851000.0
+    },
+    {
+      "canonical_name": "Implementation of Doctoral Scheme",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2009
+      ],
+      "notes": "This supports doctoral research, which is relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "doktorandiskeemi rakendamine",
+      "n_years_seen": 1,
+      "avg_amount": 80682000.0
+    },
+    {
+      "canonical_name": "Development of Human Resources for Research and Higher Education",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2007,
+        2007
+      ],
+      "notes": "This focuses on developing human resources for R&D and education.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Teadus- ja arendustegevuse ning kõrghariduse inimressursi arendamine",
+      "n_years_seen": 1,
+      "avg_amount": 79226006.0
+    },
+    {
+      "canonical_name": "Research Grants",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2000,
+        2000
+      ],
+      "notes": "This is specifically for research grants.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "uurimistoetusteks (grantideks)",
+      "n_years_seen": 1,
+      "avg_amount": 71100000.0
+    },
+    {
+      "canonical_name": "Tiger Leap Foundation",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1998,
+        1998
+      ],
+      "notes": "A foundation dedicated to improving education and technology in Estonia.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.85,
+      "source_entity": "Tiigrihüppe Sihtasutus",
+      "n_years_seen": 1,
+      "avg_amount": 50000000.0
+    },
+    {
+      "canonical_name": "Public Research and Development Institutions",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2001,
+        2001
+      ],
+      "notes": "Funding directed towards public R&D institutions.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "avalik-õiguslikele teadus- ja arendusasutustele",
+      "n_years_seen": 1,
+      "avg_amount": 44458000.0
+    },
+    {
+      "canonical_name": "Allocations to Public Research and Development Institutions and Their Agencies",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1999,
+        1999
+      ],
+      "notes": "Allocations for public R&D institutions and their agencies.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Eraldised avalik-õiguslikele teadus- ja arendusasutustele ning nende asutustele",
+      "n_years_seen": 1,
+      "avg_amount": 44157000.0
+    },
+    {
+      "canonical_name": "To Public Research and Development Institutions and Their Agencies",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2000,
+        2000
+      ],
+      "notes": "Funding for public R&D institutions and their agencies.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "avalik-õiguslikele teadus- ja arendusasutustele ning nende asutustele",
+      "n_years_seen": 1,
+      "avg_amount": 42850000.0
+    },
+    {
+      "canonical_name": "National Program 'Science Excellence Centers Program'",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2005,
+        2006
+      ],
+      "notes": "A national program aimed at promoting excellence in science.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Riiklik programm «Teaduse tippkeskuste programm»",
+      "n_years_seen": 2,
+      "avg_amount": 32150000.0
+    },
+    {
+      "canonical_name": "Enhancing Research and Development Capacity",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2007,
+        2007
+      ],
+      "notes": "A program aimed at enhancing R&D capacity.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Teadus- ja arendustegevuse võimekuse suurendamine",
+      "n_years_seen": 1,
+      "avg_amount": 20545190.0
+    },
+    {
+      "canonical_name": "Operational Costs of Research and Development Institutions",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2004,
+        2004
+      ],
+      "notes": "Funding for operational costs of R&D institutions.",
+      "agency_type": "rd_fund",
+      "confidence": 0.75,
+      "source_entity": "teadus- ja arendusasutuste tegevuskulud",
+      "n_years_seen": 1,
+      "avg_amount": 19190700.0
+    },
+    {
+      "canonical_name": "Research Work Support",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1999,
+        1999
+      ],
+      "notes": "This is a direct support program for research activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.95,
+      "source_entity": "Teadustöö toetus",
+      "n_years_seen": 1,
+      "avg_amount": 14000000.0
+    },
+    {
+      "canonical_name": "Research Work Funding",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2000,
+        2000
+      ],
+      "notes": "This entity provides funding specifically for research work.",
+      "agency_type": "rd_programme",
+      "confidence": 0.95,
+      "source_entity": "Teadustöö toetuseks määratakse",
+      "n_years_seen": 1,
+      "avg_amount": 14000000.0
+    },
+    {
+      "canonical_name": "State Research and Development Institutions",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2003,
+        2003
+      ],
+      "notes": "This entity is dedicated to research and development activities.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "Riigi teadus- ja arendusasutused",
+      "n_years_seen": 1,
+      "avg_amount": 12710000.0
+    },
+    {
+      "canonical_name": "National Program 'Humanities and Natural Science Collections'",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2006,
+        2006
+      ],
+      "notes": "This program supports research in humanities and natural sciences.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Riiklik programm «Humanitaar- ja loodusteaduslikud kogud»",
+      "n_years_seen": 1,
+      "avg_amount": 12600000.0
+    },
+    {
+      "canonical_name": "Estonian Biocenter Projects",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2007,
+        2007
+      ],
+      "notes": "This entity is involved in biological research projects.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Eesti Biokeskuse projektid",
+      "n_years_seen": 1,
+      "avg_amount": 11525328.0
+    },
+    {
+      "canonical_name": "ESF Projects in Higher Education",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2008
+      ],
+      "notes": "These projects support research in higher education.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "kõrghariduse valdkonna ESFi projektid",
+      "n_years_seen": 1,
+      "avg_amount": 10864496.0
+    },
+    {
+      "canonical_name": "Commissioning Applied Research from Agricultural Ministry Research Institutions",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2005,
+        2005
+      ],
+      "notes": "This involves commissioning applied research in agriculture.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Sellest rakendusuuringute tellimine Põllumajandusministeeriumi valitsemisala teadus- ja arendusasutustelt",
+      "n_years_seen": 1,
+      "avg_amount": 10402759.0
+    },
+    {
+      "canonical_name": "National Program 'Technological Support for the Estonian Language'",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2006,
+        2006
+      ],
+      "notes": "This program supports research in language technology.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Riiklik programm «Eesti keele keeletehnoloogiline tugi»",
+      "n_years_seen": 1,
+      "avg_amount": 7450000.0
+    },
+    {
+      "canonical_name": "Development of Human Resources in Research and Higher Education",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2007,
+        2007
+      ],
+      "notes": "This program focuses on developing human resources for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Teaduse ja arendustegevuse ning kõrghariduse inimressursi arendamine",
+      "n_years_seen": 1,
+      "avg_amount": 6873064.0
+    },
+    {
+      "canonical_name": "Commissioned Research and Launching New National Programs",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2006,
+        2006
+      ],
+      "notes": "This involves commissioning research and launching new programs.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Tellitavad uurimistööd ja uute riiklike programmide käivitamine",
+      "n_years_seen": 1,
+      "avg_amount": 6240000.0
+    },
+    {
+      "canonical_name": "Allocations to State Research and Development Institutions",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1999,
+        1999
+      ],
+      "notes": "This fund provides allocations specifically for R&D institutions.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Eraldised riigi teadus- ja arendusasutustele",
+      "n_years_seen": 1,
+      "avg_amount": 6233000.0
+    },
+    {
+      "canonical_name": "Development of Human Resources for Research and Higher Education (ESF)",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2008
+      ],
+      "notes": "This program focuses on enhancing human resources in research and higher education.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "teadus- ja arendustegevuse ning kõrghariduse inimressursi arendamine (ESF)",
+      "n_years_seen": 1,
+      "avg_amount": 6164705.0
+    },
+    {
+      "canonical_name": "Funding for Research and Development Activities",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2010,
+        2010
+      ],
+      "notes": "This entity is specifically dedicated to funding R&D activities.",
+      "agency_type": "rd_fund",
+      "confidence": 0.95,
+      "source_entity": "Teadus- ja arendustegevuse rahastamine",
+      "n_years_seen": 1,
+      "avg_amount": 6000000.0
+    },
+    {
+      "canonical_name": "Targeted Allocations",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2009,
+        2009
+      ],
+      "notes": "This entity allocates funds for specific targeted research initiatives.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Sihtotstarbelised eraldised",
+      "n_years_seen": 1,
+      "avg_amount": 5900010.0
+    },
+    {
+      "canonical_name": "Targeted Financing for Excellence Centers",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2001,
+        2001
+      ],
+      "notes": "This fund is aimed at financing centers of excellence in research.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "tippkeskuste sihtfinantseerimiseks",
+      "n_years_seen": 1,
+      "avg_amount": 4000000.0
+    },
+    {
+      "canonical_name": "Commissioned Work and Activity Support in R&D Field",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2010,
+        2010
+      ],
+      "notes": "This entity supports commissioned work in the R&D field.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "teadus- ja arendustegevuse valdkonna tellitavad tööd ja tegevustoetused koostööpartneritele",
+      "n_years_seen": 1,
+      "avg_amount": 3127000.0
+    },
+    {
+      "canonical_name": "Estonian Information Technology Foundation",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2007,
+        2011
+      ],
+      "notes": "This foundation supports R&D in information technology.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "Eesti Infotehnoloogia Sihtasutus",
+      "n_years_seen": 3,
+      "avg_amount": 2493893.6666666665
+    },
+    {
+      "canonical_name": "Preparation of National Polar and Climate Research Program",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2010,
+        2010
+      ],
+      "notes": "This program focuses on polar and climate research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "riikliku polaar- ja kliimauuringute programmi ettevalmistamine",
+      "n_years_seen": 1,
+      "avg_amount": 2000000.0
+    },
+    {
+      "canonical_name": "National Research Competition Awards",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2009
+      ],
+      "notes": "Awards for national research competitions promote R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "teadustööde riiklike konkursside preemiad",
+      "n_years_seen": 2,
+      "avg_amount": 1901000.0
+    },
+    {
+      "canonical_name": "Research Awards",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1999,
+        2007
+      ],
+      "notes": "These awards support and recognize research efforts.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Teaduspreemiad",
+      "n_years_seen": 4,
+      "avg_amount": 1325000.0
+    },
+    {
+      "canonical_name": "State Research Awards",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2012,
+        2012
+      ],
+      "notes": "State awards for outstanding research contributions.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Riigi teaduspreemiad",
+      "n_years_seen": 1,
+      "avg_amount": 1283985.0
+    },
+    {
+      "canonical_name": "Operational Support for R&D Activities to Partners",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2009
+      ],
+      "notes": "This fund supports R&D activities in collaboration with partners.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "teadus- ja arendustegevuse valdkonna tegevustoetused koostööpartneritele",
+      "n_years_seen": 2,
+      "avg_amount": 1000000.0
+    },
+    {
+      "canonical_name": "Estonian Cardiology Institute",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2005,
+        2005
+      ],
+      "notes": "This institute is dedicated to research in cardiology.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "Eesti Kardioloogia Instituut",
+      "n_years_seen": 1,
+      "avg_amount": 145000.0
+    },
+    {
+      "canonical_name": "Research Project Grants",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2010,
+        2010
+      ],
+      "notes": "This fund supports research projects, making it directly relevant to R&D.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Teadusprojektide toetused",
+      "n_years_seen": 1,
+      "avg_amount": 120000.0
+    },
+    {
+      "canonical_name": "Project 'Regional Economic Analysis of Estonian Mineral Resources'",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1997,
+        1997
+      ],
+      "notes": "This project involves research on mineral resources, indicating R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Projekt \"Eesti maavarade regionaalmajanduslik analüüs\"",
+      "n_years_seen": 1,
+      "avg_amount": 50000.0
+    },
+    {
+      "canonical_name": "Research Project Funding",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2010,
+        2010
+      ],
+      "notes": "This entity provides funding specifically for research projects.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Teadusprojektide toetused",
+      "n_years_seen": 1,
+      "avg_amount": 120000.0
+    },
+    {
+      "canonical_name": "Research Costs",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1992,
+        1992
+      ],
+      "notes": "This entity pertains to costs associated with research activities.",
+      "agency_type": "rd_fund",
+      "confidence": 0.75,
+      "source_entity": "Teaduskulud",
       "n_years_seen": 1,
       "avg_amount": 34917.0
     }
@@ -42086,6 +46566,226 @@
       "source_entity": "Studies and research in public health",
       "n_years_seen": 1,
       "avg_amount": 1000.0
+    },
+    {
+      "canonical_name": "Government R&D Initiatives Expenditures",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1997
+      ],
+      "notes": "This entity directly relates to government initiatives for R&D funding.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Dépenses de toute nature relatives aux impulsions gouvernementales de R-D dans le cadre national.",
+      "n_years_seen": 2,
+      "avg_amount": 8178450.0
+    },
+    {
+      "canonical_name": "Belgian Participation in European Space Agency Activities",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1997,
+        2002
+      ],
+      "notes": "Involvement in ESA activities is relevant to R&D in space technology.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Participation belge aux activités de l'Agence Spatiale Européenne (ASE).",
+      "n_years_seen": 2,
+      "avg_amount": 2913768.0
+    },
+    {
+      "canonical_name": "Expenditures Related to National R&D Programs and Actions",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1999,
+        2004
+      ],
+      "notes": "This entity is directly involved in funding national R&D contracts.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Dépenses liées aux contrats, conventions et mandats relatifs aux programmes et actions de R-D dans le cadre national.",
+      "n_years_seen": 2,
+      "avg_amount": 485179.0
+    },
+    {
+      "canonical_name": "Medical Scientific Research Envelope",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1997,
+        2001
+      ],
+      "notes": "This funding envelope is specifically for medical research initiatives.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Envelope recherche scientifique médicale",
+      "n_years_seen": 2,
+      "avg_amount": 183500.0
+    },
+    {
+      "canonical_name": "Various Expenses for the Execution of Scientific Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1997
+      ],
+      "notes": "This entity directly relates to funding for scientific research activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Dépenses diverses pour l'exécution de la recherche scientifique.",
+      "n_years_seen": 2,
+      "avg_amount": 17300.0
+    },
+    {
+      "canonical_name": "Funding for Studies, Research, Publications, and Missions for Third Parties",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1997,
+        2004
+      ],
+      "notes": "This entity supports various research and study initiatives, indicating R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Financement d'études, de recherches, de publications et de missions pour compte de tiers.",
+      "n_years_seen": 2,
+      "avg_amount": 13174.5
+    },
+    {
+      "canonical_name": "Grants to Organizations, Groups, and International Research Centers",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1997,
+        2002
+      ],
+      "notes": "This entity provides grants to support international research collaborations.",
+      "agency_type": "rd_fund",
+      "confidence": 0.95,
+      "source_entity": "Subventions aux organisations, groupements et centres internationaux de recherche et de service public scientifique.",
+      "n_years_seen": 2,
+      "avg_amount": 9274.5
+    },
+    {
+      "canonical_name": "Funding for Studies, Research, Publications, and Assignments for Third Parties",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2001,
+        2002
+      ],
+      "notes": "This entity supports various research and study initiatives, indicating R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Financiering van studies, onderzoek, publicaties en opdrachten voor derden.",
+      "n_years_seen": 2,
+      "avg_amount": 8560.0
+    },
+    {
+      "canonical_name": "Contracts for Scientific Research on Socio-Political Purposes",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1997
+      ],
+      "notes": "This entity funds scientific research with a focus on socio-political issues.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Contracten wetenschappelijk onderzoek inzake sociaal-politieke doeleinden",
+      "n_years_seen": 2,
+      "avg_amount": 8350.0
+    },
+    {
+      "canonical_name": "Expenditures for International Cooperation",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2001,
+        2002
+      ],
+      "notes": "This entity supports international collaboration in research, indicating R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Uitgaven voor internationale samenwerking",
+      "n_years_seen": 2,
+      "avg_amount": 8010.0
+    },
+    {
+      "canonical_name": "Special Credits for Scientific Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1997
+      ],
+      "notes": "This entity provides special funding for scientific research projects.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Crédits spéciaux de recherche scientifique",
+      "n_years_seen": 2,
+      "avg_amount": 6000.0
     }
   ],
   "Colombia": [
@@ -46114,6 +50814,1294 @@
       "source_entity": "Tilraunastéd Háskélans ad Keldum",
       "n_years_seen": 1,
       "avg_amount": 105800.0
+    },
+    {
+      "canonical_name": "Research Institute of Fishery",
+      "category": "science_agency",
+      "name_variants": [
+        "Rannséknastofnun fiskidnadarins"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1997
+      ],
+      "notes": "Focuses on research in the fishery sector.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.85,
+      "source_entity": "Rannséknastofnun fiskidnadarins",
+      "n_years_seen": 2,
+      "avg_amount": 206050000.0
+    },
+    {
+      "canonical_name": "Contribution from the Lottery to the University of Iceland",
+      "category": "higher_education",
+      "name_variants": [
+        "Framlag Happdrættis HÍ til Háskóla Íslands"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2003,
+        2016
+      ],
+      "notes": "Supports research activities at the university.",
+      "agency_type": "rd_fund",
+      "confidence": 0.75,
+      "source_entity": "Framlag Happdrættis HÍ til Háskóla Íslands",
+      "n_years_seen": 7,
+      "avg_amount": 169167428.57142857
+    },
+    {
+      "canonical_name": "Funding for Research Activities at the University of Iceland",
+      "category": "higher_education",
+      "name_variants": [
+        "Framlög til rannsóknarstarfsemi Háskóla Íslands"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2025,
+        2025
+      ],
+      "notes": "Supports research activities at the university.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "Framlög til rannsóknarstarfsemi Háskóla Íslands",
+      "n_years_seen": 1,
+      "avg_amount": 59998100.0
+    },
+    {
+      "canonical_name": "Funding for Research Activities",
+      "category": "unclear",
+      "name_variants": [
+        "Framlög til rannsóknarstarfsemi"
+      ],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2024,
+        2024
+      ],
+      "notes": "Supports various research activities.",
+      "agency_type": "rd_fund",
+      "confidence": 0.75,
+      "source_entity": "Framlög til rannsóknarstarfsemi",
+      "n_years_seen": 1,
+      "avg_amount": 53765500.0
+    },
+    {
+      "canonical_name": "Fisheries Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1996,
+        1996
+      ],
+      "notes": "This entity is focused on research related to fisheries.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Fjélstofmarannsóknir",
+      "n_years_seen": 1,
+      "avg_amount": 50400000.0
+    },
+    {
+      "canonical_name": "University Level",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2017,
+        2025
+      ],
+      "notes": "This entity is related to higher education, which typically involves R&D.",
+      "agency_type": "higher_education",
+      "confidence": 0.85,
+      "source_entity": "Háskólastig",
+      "n_years_seen": 9,
+      "avg_amount": 38157019.57333334
+    },
+    {
+      "canonical_name": "Performance-Based Funding",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2025,
+        2025
+      ],
+      "notes": "This entity provides funding based on performance metrics, likely for R&D.",
+      "agency_type": "rd_fund",
+      "confidence": 0.75,
+      "source_entity": "Árangurstengd fjármögnun",
+      "n_years_seen": 1,
+      "avg_amount": 24878900.0
+    },
+    {
+      "canonical_name": "Universities and Research Activities",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2025
+      ],
+      "notes": "This entity is directly involved in research activities at universities.",
+      "agency_type": "higher_education",
+      "confidence": 0.9,
+      "source_entity": "Háskólar og rannsóknastarfsemi",
+      "n_years_seen": 6,
+      "avg_amount": 19676927.423076924
+    },
+    {
+      "canonical_name": "Innovation, Research and Knowledge Fields",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2025
+      ],
+      "notes": "This entity is focused on innovation and research activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Nýsköpun, rannsóknir og þekkingargreinar",
+      "n_years_seen": 8,
+      "avg_amount": 13465633.019444443
+    },
+    {
+      "canonical_name": "Research on Aquaculture in Patreksfjörður",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2009
+      ],
+      "notes": "This research project is directly related to aquaculture, indicating strong R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Rannsóknir vegna eldis sjávardýra á Patreksfirði",
+      "n_years_seen": 2,
+      "avg_amount": 11360000.0
+    },
+    {
+      "canonical_name": "Aquaculture Technology Center in Skagaströnd",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2011
+      ],
+      "notes": "This center is dedicated to aquaculture technology, indicating R&D relevance.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.8,
+      "source_entity": "Sjávarlíftæknisetur á Skagaströnd",
+      "n_years_seen": 4,
+      "avg_amount": 5693250.0
+    },
+    {
+      "canonical_name": "Innovation, Competition and Knowledge Sectors",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2024,
+        2025
+      ],
+      "notes": "This program focuses on innovation and knowledge sectors, indicating R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Nýsköpun, samkeppni og þekkingargreinar",
+      "n_years_seen": 2,
+      "avg_amount": 5301318.033333333
+    },
+    {
+      "canonical_name": "EU Framework Plans for Education, Research and Technology Development",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2019,
+        2025
+      ],
+      "notes": "This framework involves education and research, indicating R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Rammaáætlanir ESB um menntun, rannsóknir og tækniþróun",
+      "n_years_seen": 3,
+      "avg_amount": 4744066.666666667
+    },
+    {
+      "canonical_name": "Contributions to Science and Competitive Funds",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2018,
+        2023
+      ],
+      "notes": "This explicitly mentions contributions to science, indicating R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Framlög til vísinda og samkeppnissjóða",
+      "n_years_seen": 4,
+      "avg_amount": 3876927.225
+    },
+    {
+      "canonical_name": "Universities and Research",
+      "category": "higher_education",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1993,
+        1993
+      ],
+      "notes": "This refers to universities, which are typically involved in R&D activities.",
+      "agency_type": "higher_education",
+      "confidence": 0.8,
+      "source_entity": "Háskólar og rannsóknir",
+      "n_years_seen": 1,
+      "avg_amount": 2781000.0
+    },
+    {
+      "canonical_name": "Contributions to Scientific Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2019,
+        2025
+      ],
+      "notes": "This explicitly mentions contributions to scientific research, indicating R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Framlög til vísindarannsókna",
+      "n_years_seen": 4,
+      "avg_amount": 2435418.16
+    },
+    {
+      "canonical_name": "Research on the Nature of Iceland",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2019,
+        2022
+      ],
+      "notes": "This entity is dedicated to research on Iceland's natural environment.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Rannsóknir á náttúru Íslands",
+      "n_years_seen": 2,
+      "avg_amount": 793550.0
+    },
+    {
+      "canonical_name": "Food Fund",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2025,
+        2025
+      ],
+      "notes": "This fund is likely aimed at supporting research in food-related areas.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Matvælasjóður",
+      "n_years_seen": 1,
+      "avg_amount": 509600.0
+    },
+    {
+      "canonical_name": "Industrial Research Institute of Iceland",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2004,
+        2007
+      ],
+      "notes": "This institute is dedicated to industrial research and development.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "Iðntæknistofnun Íslands",
+      "n_years_seen": 2,
+      "avg_amount": 489650.0
+    },
+    {
+      "canonical_name": "Matís, Service Company for Food Research",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2023
+      ],
+      "notes": "This entity focuses on food research and innovation.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Matís, þjónustusamn. um matvælarannsóknir",
+      "n_years_seen": 2,
+      "avg_amount": 450500.0
+    },
+    {
+      "canonical_name": "Matís, Service for Food Research",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2021,
+        2021
+      ],
+      "notes": "This entity is involved in food research services.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Matís, þjónustus. um matvælarannsóknir",
+      "n_years_seen": 1,
+      "avg_amount": 433000.0
+    },
+    {
+      "canonical_name": "Research Vessel Programme",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2002,
+        2002
+      ],
+      "notes": "This entity is related to funding for research vessels, which are essential for scientific research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "1.30 Rannsoknaskip",
+      "n_years_seen": 1,
+      "avg_amount": 376800.0
+    },
+    {
+      "canonical_name": "Research Vessel",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1998,
+        2005
+      ],
+      "notes": "This entity is directly related to funding for a research vessel, supporting scientific research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "Rannsóknaskip",
+      "n_years_seen": 5,
+      "avg_amount": 346280.0
+    },
+    {
+      "canonical_name": "Icelandic Cancer Society, Cost of Cancer Screening",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2008
+      ],
+      "notes": "This funding is related to cancer research and screening initiatives.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Krabbameinsfélag Íslands, kostnaður við krabbameinsleit",
+      "n_years_seen": 1,
+      "avg_amount": 310000.0
+    },
+    {
+      "canonical_name": "Experimental Station of the University of Iceland",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2000,
+        2000
+      ],
+      "notes": "This is a dedicated research facility associated with the University of Iceland.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.8,
+      "source_entity": "Tilraunastöð Háskólans a Keldum",
+      "n_years_seen": 1,
+      "avg_amount": 305000.0
+    },
+    {
+      "canonical_name": "Science and Technology Strategy",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2011,
+        2011
+      ],
+      "notes": "This program outlines a strategy for funding science and technology initiatives.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "6.60 Markáætlun á sviði vísinda og tækni",
+      "n_years_seen": 1,
+      "avg_amount": 285000.0
+    },
+    {
+      "canonical_name": "Research Institutes",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1992,
+        2005
+      ],
+      "notes": "These institutes are dedicated to various research activities.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.75,
+      "source_entity": "Rannsóknastofur",
+      "n_years_seen": 8,
+      "avg_amount": 230762.5
+    },
+    {
+      "canonical_name": "Research Institutions",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1999,
+        1999
+      ],
+      "notes": "This entity is likely involved in research activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "RannsOknastofur",
+      "n_years_seen": 1,
+      "avg_amount": 223200.0
+    },
+    {
+      "canonical_name": "Salary Research",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1999,
+        1999
+      ],
+      "notes": "This entity is likely involved in research activities related to salaries.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Salarannsóknir",
+      "n_years_seen": 1,
+      "avg_amount": 180700.0
+    },
+    {
+      "canonical_name": "Research Fund",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1993,
+        1993
+      ],
+      "notes": "This fund supports various research initiatives.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Sjóður til rannsókna",
+      "n_years_seen": 1,
+      "avg_amount": 115000.0
+    },
+    {
+      "canonical_name": "Research Programme",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2004,
+        2007
+      ],
+      "notes": "This program is aimed at supporting research activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "1.21 Rannsóknir",
+      "n_years_seen": 3,
+      "avg_amount": 111333.33333333333
+    },
+    {
+      "canonical_name": "Contribution to Research Fund",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2002,
+        2002
+      ],
+      "notes": "This fund supports various research initiatives.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Framlag til Rannsóknasjóðs",
+      "n_years_seen": 1,
+      "avg_amount": 80000.0
+    },
+    {
+      "canonical_name": "Contributions to Competitive Funds",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2024,
+        2024
+      ],
+      "notes": "This fund supports competitive research initiatives.",
+      "agency_type": "rd_fund",
+      "confidence": 0.8,
+      "source_entity": "Framlög til samkeppnissjóða",
+      "n_years_seen": 1,
+      "avg_amount": 75000.0
+    },
+    {
+      "canonical_name": "Research Institute",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1985,
+        1995
+      ],
+      "notes": "This is a dedicated research institute, directly involved in R&D.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "Rannsóknarstofnun",
+      "n_years_seen": 2,
+      "avg_amount": 72334.0
+    },
+    {
+      "canonical_name": "Research on Utilization",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2003,
+        2003
+      ],
+      "notes": "This entity focuses on research related to utilization, indicating R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Virkjanarannsóknir",
+      "n_years_seen": 1,
+      "avg_amount": 50000.0
+    },
+    {
+      "canonical_name": "Research Field",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1985,
+        1989
+      ],
+      "notes": "This entity is likely involved in research activities.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Rannsóknasvið",
+      "n_years_seen": 4,
+      "avg_amount": 36743.75
+    },
+    {
+      "canonical_name": "Funding for Promotion, Research, Development, and Continuing Education Projects in Horticulture",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2016,
+        2016
+      ],
+      "notes": "This funding is specifically for research and development in horticulture.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "1.08 Framlög til kynninga-, rannsókna-, þróunar- og endurmenntunarverkefna í ylrækt",
+      "n_years_seen": 1,
+      "avg_amount": 35200.0
+    },
+    {
+      "canonical_name": "BioPol - Marine Biotechnology Center at Skagaströnd",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2024,
+        2024
+      ],
+      "notes": "Focuses on marine biotechnology research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "BioPol - Sjávarlíftæknisetur á Skagaströnd",
+      "n_years_seen": 1,
+      "avg_amount": 31000.0
+    },
+    {
+      "canonical_name": "Fisheries and Aquaculture",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2024
+      ],
+      "notes": "This entity focuses on research in fisheries and aquaculture, relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Sjávarútvegur og fiskeldi",
+      "n_years_seen": 2,
+      "avg_amount": 23423.25
+    },
+    {
+      "canonical_name": "Research Station at HÍ - Antibiotic Resistance",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2023,
+        2023
+      ],
+      "notes": "This research station focuses on antibiotic resistance, which is highly relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Tilraunastöð HÍ - varnir gegn sýklalyfjaónæmi",
+      "n_years_seen": 1,
+      "avg_amount": 21000.0
+    },
+    {
+      "canonical_name": "Research Station at HÍ - Antibiotic Resistance (variant)",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "This is a variant name for the previous entity, focusing on antibiotic resistance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Tilraunastöð HÍ / varnir gegn sýklalyfjaónæmi",
+      "n_years_seen": 1,
+      "avg_amount": 21000.0
+    },
+    {
+      "canonical_name": "Grant Allocation from AVS",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2019,
+        2019
+      ],
+      "notes": "This entity allocates grants, which supports R&D activities.",
+      "agency_type": "rd_fund",
+      "confidence": 0.75,
+      "source_entity": "Úthlutun styrkja úr AVS",
+      "n_years_seen": 1,
+      "avg_amount": 18000.0
+    },
+    {
+      "canonical_name": "Experimental Station of the University of Iceland - Reference Research Institute",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2023,
+        2023
+      ],
+      "notes": "This entity is dedicated to research activities, indicating strong R&D relevance.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.8,
+      "source_entity": "Tilraunastöð HÍ - tilvísunarrannsóknastofa",
+      "n_years_seen": 1,
+      "avg_amount": 17000.0
+    },
+    {
+      "canonical_name": "Research Center of the University of Iceland in Earthquake Projects",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1999,
+        1999
+      ],
+      "notes": "This entity is focused on research related to earthquakes.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Rannsóknamidstöð Háskóla Íslands í jarðskjálftaverkefni",
+      "n_years_seen": 1,
+      "avg_amount": 15000.0
+    },
+    {
+      "canonical_name": "Research Center of the University of Iceland in Earthquake Engineering",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2008,
+        2015
+      ],
+      "notes": "This entity focuses on earthquake engineering research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Rannsóknamiðstöð Háskóla Íslands í jarðskjálftaverkfræði",
+      "n_years_seen": 4,
+      "avg_amount": 13550.0
+    },
+    {
+      "canonical_name": "Industrial Research and Heavy Industry",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2005,
+        2012
+      ],
+      "notes": "This entity is involved in industrial research and development.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Iðnaðarrannsóknir og stóriðja",
+      "n_years_seen": 4,
+      "avg_amount": 13500.0
+    },
+    {
+      "canonical_name": "Research Center of the University of Iceland in Earthquake Sciences",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "This entity focuses on research in earthquake sciences.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Rannsóknarmiðstöð H.Í í jarðskjálftafræðum",
+      "n_years_seen": 1,
+      "avg_amount": 12000.0
+    },
+    {
+      "canonical_name": "Research Institute in Physics",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1976,
+        1976
+      ],
+      "notes": "This entity is focused on physics research.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Rannsóknastofa í eðlisfræði",
+      "n_years_seen": 1,
+      "avg_amount": 11050.0
+    },
+    {
+      "canonical_name": "Geological Research at Lake Mývatn",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1978,
+        1978
+      ],
+      "notes": "This research is focused on geology, which is R&D relevant.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Jarðfræðirannsóknir við Mývatn",
+      "n_years_seen": 1,
+      "avg_amount": 11000.0
+    },
+    {
+      "canonical_name": "Contribution to Scientific Research",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2000,
+        2000
+      ],
+      "notes": "This is a contribution specifically aimed at scientific research.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "Framlag til vísindarannsókna",
+      "n_years_seen": 1,
+      "avg_amount": 10000.0
+    },
+    {
+      "canonical_name": "Geothermal exploration",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2000,
+        2004
+      ],
+      "notes": "Geothermal exploration is a significant area of research in Iceland.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Jarðhitaleit",
+      "n_years_seen": 2,
+      "avg_amount": 8900.0
+    },
+    {
+      "canonical_name": "Preliminary studies on the utilization of natural resources",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1976,
+        1977
+      ],
+      "notes": "This involves research on natural resource management.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Til frumathugana á nýtingu náttúruauðæfa landsins",
+      "n_years_seen": 2,
+      "avg_amount": 7475.0
+    },
+    {
+      "canonical_name": "Settlement Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2001,
+        2001
+      ],
+      "notes": "This entity focuses on research related to settlements, indicating R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Byggðarannsóknir",
+      "n_years_seen": 1,
+      "avg_amount": 5500.0
+    },
+    {
+      "canonical_name": "Whale Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1988,
+        1988
+      ],
+      "notes": "This entity is dedicated to research on whales, which is a clear R&D activity.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Hvalarannsóknir",
+      "n_years_seen": 1,
+      "avg_amount": 5000.0
+    },
+    {
+      "canonical_name": "Establishment of an International Research Station for Climate Change and Earth Sciences",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2006,
+        2006
+      ],
+      "notes": "This entity is dedicated to climate change research, indicating strong R&D relevance.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.9,
+      "source_entity": "Stofnun alþjóðlegrar rannsóknarstöðvar á sviði loftslagsbreytinga og jarðkerfisfræða",
+      "n_years_seen": 1,
+      "avg_amount": 4000.0
+    },
+    {
+      "canonical_name": "Research at Kröfl",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1977,
+        1977
+      ],
+      "notes": "This entity is involved in research activities at Kröfl, indicating relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.75,
+      "source_entity": "Rannsóknir við Kröflu",
+      "n_years_seen": 1,
+      "avg_amount": 3656.0
+    },
+    {
+      "canonical_name": "Research on Reindeer",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2001,
+        2001
+      ],
+      "notes": "This entity is dedicated to research on reindeer, indicating strong R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Rannsóknir á hreindýrum",
+      "n_years_seen": 1,
+      "avg_amount": 3500.0
+    },
+    {
+      "canonical_name": "BioPol Ltd., Sea Urchin Research",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2011,
+        2011
+      ],
+      "notes": "This entity focuses on research related to sea urchins, indicating strong R&D relevance.",
+      "agency_type": "rd_programme",
+      "confidence": 0.85,
+      "source_entity": "BioPol ehf., hrognkelsarannsóknir",
+      "n_years_seen": 1,
+      "avg_amount": 3500.0
+    },
+    {
+      "canonical_name": "Research on Landscape Under Glaciers",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2005,
+        2006
+      ],
+      "notes": "This entity involves research on glacial landscapes, which is relevant for R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Rannsóknir á landslagi undir jökli",
+      "n_years_seen": 2,
+      "avg_amount": 3000.0
+    },
+    {
+      "canonical_name": "Research Institutions of Fisheries",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1985,
+        1985
+      ],
+      "notes": "This entity is dedicated to fisheries research, indicating strong R&D relevance.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.8,
+      "source_entity": "Rannsóknastofnanir sjávarútvegsins",
+      "n_years_seen": 1,
+      "avg_amount": 1690.0
+    },
+    {
+      "canonical_name": "Research and Development in Fisheries",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2017,
+        2020
+      ],
+      "notes": "This entity is directly related to R&D in the fisheries sector.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Rannsóknir og þróun í sjávarútvegi",
+      "n_years_seen": 3,
+      "avg_amount": 589696.5428571429
+    },
+    {
+      "canonical_name": "Research, Marketing, and Promotion in Tourism",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2020
+      ],
+      "notes": "This entity is focused on research in the tourism sector.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Rannsóknir, markaðs- og kynningarmál í ferðaþjónustu",
+      "n_years_seen": 1,
+      "avg_amount": 780000.0
+    },
+    {
+      "canonical_name": "University of Hólar - Breeding Improvements for Char Farming",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2020
+      ],
+      "notes": "This entity is focused on research related to aquaculture.",
+      "agency_type": "rd_programme",
+      "confidence": 0.9,
+      "source_entity": "Háskólinn á Hólum - Kynbætur fyrir bleikjueldi",
+      "n_years_seen": 1,
+      "avg_amount": 15000.0
+    },
+    {
+      "canonical_name": "Funding for Research, Development, and Innovation in Fisheries",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2020,
+        2020
+      ],
+      "notes": "This entity is dedicated to R&D in the fisheries sector.",
+      "agency_type": "rd_fund",
+      "confidence": 0.85,
+      "source_entity": "Framlög til rannsókna, þróunar og nýsköpunar í sjávarútvegi",
+      "n_years_seen": 1,
+      "avg_amount": 5829.9
     }
   ],
   "Costa Rica": [
@@ -76340,6 +82328,26 @@
       "source_entity": "Totale per la ricerca nel settore della sanità pubblica",
       "n_years_seen": 2,
       "avg_amount": 305304740500.0
+    },
+    {
+      "canonical_name": "Contribution for the Mediterranean Technopole Institute for Sustainable Development",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2024,
+        2024
+      ],
+      "notes": "This contribution supports a dedicated research institute, highlighting its R&D relevance.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.85,
+      "source_entity": "Contributo per l'Istituto di Ricerche Tecnopolo Mediterraneo per lo Sviluppo Sostenibile",
+      "n_years_seen": 1,
+      "avg_amount": 1000000000.0
     }
   ]
 }

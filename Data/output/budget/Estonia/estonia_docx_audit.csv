@@ -1,30 +1,80 @@
 canonical_name,category,year,source_file,entity_raw,amount_current,section_name,table_index,row_index,in_series
-Archimedes Foundation,science_agency,2003,pdf_c3df6d7eecd5__2003_608767.txt,Archimedes Foundation,224.0,Archimedes Foundation,-1,-1,True
-Archimedes Foundation,science_agency,2004,pdf_b75451d704ef__2004_822726.txt,Archimedes Foundation,4500.0,Archimedes Foundation,-1,-1,True
-Archimedes Foundation,science_agency,2005,pdf_ea6daaeffdbe__2005_960922.txt,Archimedes Foundation,200.0,Archimedes Foundation,-1,-1,True
-Archimedes Foundation,science_agency,2006,pdf_74b3bab6f099__2006_969308.txt,Archimedes Foundation,500.0,Archimedes Foundation,-1,-1,True
-Archimedes Foundation,science_agency,2007,pdf_137b17604716__2007_12768664.txt,Archimedes Foundation,500.0,Archimedes Foundation,-1,-1,True
-Archimedes Foundation,science_agency,2008,pdf_6524a2d326e0__2008_12901846.txt,Archimedes Foundation,427.0,Archimedes Foundation,-1,-1,True
-Archimedes Foundation,science_agency,2009,pdf_b4b37e172358__2009_13111066.txt,Archimedes Foundation,450.0,Archimedes Foundation,-1,-1,True
-Archimedes Foundation,science_agency,2010,pdf_18ce2fdf3bcf__2010_13252314.txt,Archimedes Foundation,916.0,Archimedes Foundation,-1,-1,True
-Archimedes Foundation,science_agency,2011,pdf_0d44906a5975__2011_Estonia.txt,Archimedes Foundation,258.0,Archimedes Foundation,-1,-1,True
-Archimedes Foundation,science_agency,2013,pdf_69ced9f3de7a__2013_128122012009-1.txt,Archimedes Foundation,2007.0,Archimedes Foundation,-1,-1,True
-Estonian Academy of Sciences,science_agency,1998,pdf_d351336818c2__1998_74471.txt,Estonian Academy of Sciences,500.0,Estonian Academy of Sciences,-1,-1,True
-Estonian Research Council / Science Foundation,science_agency,1992,pdf_1e999345e926__1992_13105790.txt,Estonian Research Council / Science Foundation,156.0,Estonian Research Council / Science Foundation,-1,-1,True
-Estonian Research Council / Science Foundation,science_agency,1998,pdf_d351336818c2__1998_74471.txt,Estonian Research Council / Science Foundation,500.0,Estonian Research Council / Science Foundation,-1,-1,True
-Estonian Research Council / Science Foundation,science_agency,2003,pdf_c3df6d7eecd5__2003_608767.txt,Estonian Research Council / Science Foundation,360.0,Estonian Research Council / Science Foundation,-1,-1,True
-Estonian Research Council / Science Foundation,science_agency,2004,pdf_b75451d704ef__2004_822726.txt,Estonian Research Council / Science Foundation,927.0,Estonian Research Council / Science Foundation,-1,-1,True
-Estonian Research Council / Science Foundation,science_agency,2005,pdf_ea6daaeffdbe__2005_960922.txt,Estonian Research Council / Science Foundation,620.0,Estonian Research Council / Science Foundation,-1,-1,True
-Estonian Research Council / Science Foundation,science_agency,2006,pdf_74b3bab6f099__2006_969308.txt,Estonian Research Council / Science Foundation,500.0,Estonian Research Council / Science Foundation,-1,-1,True
-Estonian Research Council / Science Foundation,science_agency,2007,pdf_137b17604716__2007_12768664.txt,Estonian Research Council / Science Foundation,878.0,Estonian Research Council / Science Foundation,-1,-1,True
-Estonian Research Council / Science Foundation,science_agency,2008,pdf_6524a2d326e0__2008_12901846.txt,Estonian Research Council / Science Foundation,864.0,Estonian Research Council / Science Foundation,-1,-1,True
-Estonian Research Council / Science Foundation,science_agency,2009,pdf_b4b37e172358__2009_13111066.txt,Estonian Research Council / Science Foundation,400.0,Estonian Research Council / Science Foundation,-1,-1,True
-Estonian Research Council / Science Foundation,science_agency,2010,pdf_18ce2fdf3bcf__2010_13252314.txt,Estonian Research Council / Science Foundation,751.0,Estonian Research Council / Science Foundation,-1,-1,True
-Estonian Research Council / Science Foundation,science_agency,2011,pdf_0d44906a5975__2011_Estonia.txt,Estonian Research Council / Science Foundation,108.0,Estonian Research Council / Science Foundation,-1,-1,True
-Tallinn University of Technology,higher_education,1998,pdf_d351336818c2__1998_74471.txt,Tallinn University of Technology,200.0,Tallinn University of Technology,-1,-1,True
-Tallinn University of Technology,higher_education,2011,pdf_0d44906a5975__2011_Estonia.txt,Tallinn University of Technology,869.0,Tallinn University of Technology,-1,-1,True
-University of Tartu,higher_education,1998,pdf_d351336818c2__1998_74471.txt,University of Tartu,930.0,University of Tartu,-1,-1,True
-University of Tartu,higher_education,2005,pdf_ea6daaeffdbe__2005_960922.txt,University of Tartu,4500.0,University of Tartu,-1,-1,True
-University of Tartu,higher_education,2011,pdf_0d44906a5975__2011_Estonia.txt,University of Tartu,319.0,University of Tartu,-1,-1,True
-University of Tartu,higher_education,2013,pdf_69ced9f3de7a__2013_128122012009-1.txt,University of Tartu,220.0,University of Tartu,-1,-1,True
-University of Tartu,higher_education,2019,pdf_611d8589ffbe__2019_128122018045-1.txt,University of Tartu,117.0,University of Tartu,-1,-1,True
+Archimedes Foundation,science_agency,2003,2003 608767.pdf,Archimedes Foundation,13596000.0,Archimedes Foundation,0,103,True
+Archimedes Foundation,science_agency,2004,2004 822726.pdf,SA Archimedes,40701400.0,Ministry of Education and Research,0,112,True
+Archimedes Foundation,science_agency,2005,2005 960922.pdf,Sihtasutus Archimedes,44671400.0,Archimedes Foundation,0,143,True
+Archimedes Foundation,science_agency,2006,2006 969308.pdf,Archimedes Foundation,46221403.0,Archimedes Foundation,0,158,True
+Archimedes Foundation,science_agency,2007,2007 12768664.pdf,Sihtasutus Archimedes,52273840.0,Archimedes Foundation,0,174,True
+Archimedes Foundation,science_agency,2008,2008 12901846.pdf,Sihtasutus Archimedes,34027056.0,Targeted allocations,0,187,True
+Archimedes Foundation,science_agency,2009,2009 13111066.pdf,Sihtasutus Archimedes,1425053475.0,Archimedes Foundation,0,206,True
+Archimedes Foundation,science_agency,2009,2009 13111066.pdf,Sihtasutus Archimedes,15479.0,Ministry of Education and Research,0,213,True
+Archimedes Foundation,science_agency,2010,2010 13252314.pdf,Sihtasutus Archimedes,2190157.0,Archimedes Foundation,0,240,True
+Archimedes Foundation,science_agency,2010,2010 13252314.pdf,Sihtasutus Archimedes,199036681.0,Archimedes Foundation,0,241,True
+Archimedes Foundation,science_agency,2010,2010 13252314.pdf,Sihtasutus Archimedes,277232235.0,Archimedes Foundation,0,242,True
+Archimedes Foundation,science_agency,2010,2010 13252314.pdf,Sihtasutus Archimedes,14669912.0,Archimedes Foundation,0,243,True
+Archimedes Foundation,science_agency,2011,2011_Estonia.pdf,Sihtasutus Archimedes,122463679.0,Ministry of Education and Research,0,252,True
+Archimedes Foundation,science_agency,2013,2013 128122012009-1.pdf,Sihtasutus Archimedes (valistoetuste vahendamine),,Ministry of Education and Research,0,267,False
+Estonia R&D / Innovation Programmes (post-2011),rd_programme,2017,2017 127122016021.pdf,Teadus- ja arendustegevuse ning innovatsiooni programm,,Ministry of Education and Research,0,270,False
+Estonia R&D / Innovation Programmes (post-2011),rd_programme,2018,2018 129122017031.pdf,Teadus- ja arendustegevuse ning innovatsiooni programm,20.0,Research and Development and Innovation Program,0,271,False
+Estonia R&D / Innovation Programmes (post-2011),rd_programme,2022,2022 125052022002.pdf,Teadusasutuste ja teadlaskonna arengu toetamine,,Ministry of Education and Research,0,273,True
+Estonian Academy of Sciences,science_agency,1995,1995 28719.pdf,Eesti Teaduste Akadeemia hoone,1200000.0,Estonian Academy of Sciences,0,22,True
+Estonian Academy of Sciences,science_agency,1996,1996 28475.pdf,Eraldised Eesti Teaduste Akadeemiale,6522000.0,Estonian Academy of Sciences,0,28,True
+Estonian Academy of Sciences,science_agency,1997,1997 28613.pdf,Eesti Teaduste Akadeemia,11435000.0,Ministry of Education and Research,0,33,True
+Estonian Academy of Sciences,science_agency,1999,1999.pdf,Eesti Teaduste Akadeemia,13310000.0,Estonian Academy of Sciences,0,65,True
+Estonian Academy of Sciences,science_agency,2000,2000 71664.pdf,Total for Estonian Academy of Sciences,12610000.0,Estonian Academy of Sciences,0,85,True
+Estonian Academy of Sciences,science_agency,2011,2011_Estonia.pdf,Eesti Teaduste Akadeemia,1208953.0,Ministry of Education and Research,0,250,True
+Estonian Biocenter Projects,direct_rd,2007,2007 12768664.pdf,Eesti Biokeskuse projektid,11525328.0,Ministry of Education and Research,0,169,True
+Estonian Cardiology Institute,science_agency,2005,2005 960922.pdf,Eesti Kardioloogia Instituut,145000.0,Estonian Cardiology Institute,0,140,True
+Estonian Information Technology Foundation,science_agency,2007,2007 12768664.pdf,Eesti Infotehnoloogia Sihtasutus,5151020.0,Ministry of Education and Research,0,172,True
+Estonian Information Technology Foundation,science_agency,2008,2008 12901846.pdf,Eesti Infotehnoloogia Sihtasutus,1420559.0,Targeted allocations,0,188,True
+Estonian Information Technology Foundation,science_agency,2011,2011_Estonia.pdf,Eesti Infotehnoloogia Sihtasutus,910102.0,Ministry of Education and Research,0,253,True
+Estonian Research Council / Science Foundation,science_agency,1991,1991 13111571.pdf,Teadusfond,28241200.0,Science Foundation,0,1,True
+Estonian Research Council / Science Foundation,science_agency,1991,1991 13111571.pdf,Teadusfond,5000000.0,Science Foundation,0,2,True
+Estonian Research Council / Science Foundation,science_agency,1994,1994 28618.pdf,Eesti Teadusfond,117162000.0,Estonian Science Foundation,0,13,True
+Estonian Research Council / Science Foundation,science_agency,1995,1995 28719.pdf,Eesti Teadusfond,166870000.0,Ministry of Culture and Education,0,17,True
+Estonian Research Council / Science Foundation,science_agency,1995,1995 28719.pdf,Eesti Teadusagentuur,,Estonian Research Council,0,21,True
+Estonian Research Council / Science Foundation,science_agency,1997,1997 28613.pdf,Teadusfond,185825000.0,Ministry of Education and Research,0,31,True
+Estonian Research Council / Science Foundation,science_agency,1997,1997 28613.pdf,Eraldised Teadusfondile,185425000.0,Ministry of Education and Research,0,32,True
+Estonian Research Council / Science Foundation,science_agency,1998,1998 74471.pdf,Teadusfond,74315700.0,Ministry of Education and Research,0,47,True
+Estonian Research Council / Science Foundation,science_agency,1999,1999.pdf,Sihtasutus Eesti Teadusfond,78500000.0,Estonian Science Foundation,0,62,True
+Estonian Research Council / Science Foundation,science_agency,2000,2000 71664.pdf,Eraldisteks Sihtasutusele Eesti Teadusfond määratakse,72600000.0,Estonian Science Foundation,0,77,True
+Estonian Research Council / Science Foundation,science_agency,2001,2001 72597.pdf,Sihtasutusele Eesti Teadusfond,72600000.0,Ministry of Education and Research,0,89,True
+Estonian Research Council / Science Foundation,science_agency,2002,2002 173848.pdf,Sihtasutusele Eesti Teadusfond,79600000.0,Ministry of Education and Research,0,94,True
+Estonian Research Council / Science Foundation,science_agency,2003,2003 608767.pdf,SihtasutusEesti Teadusfond,80000000.0,Allocations to foundations in the government sector,0,99,True
+Estonian Research Council / Science Foundation,science_agency,2004,2004 822726.pdf,Eesti Teadusfond,91000000.0,Ministry of Education and Research,0,111,True
+Estonian Research Council / Science Foundation,science_agency,2004,2004 822726.pdf,Eesti Teadusagentuur,0.0,Estonian Research Council,0,117,True
+Estonian Research Council / Science Foundation,science_agency,2005,2005 960922.pdf,Sihtasutus Eesti Teadusfond,94775000.0,Ministry of Education and Research,0,122,True
+Estonian Research Council / Science Foundation,science_agency,2007,2007 12768664.pdf,Eesti Teadusfond,45000.0,Ministry of Education and Research,0,170,True
+Estonian Research Council / Science Foundation,science_agency,2008,2008 12901846.pdf,Eesti Teadusfond,392000.0,Targeted allocations,0,186,True
+Estonian Research Council / Science Foundation,science_agency,2009,2009 13111066.pdf,Eesti Teadusfond,392000.0,Estonian Science Foundation,0,205,True
+Estonian Research Council / Science Foundation,science_agency,2010,2010 13252314.pdf,Eesti Teadusagentuur – teadusprojektide toetamine,0.0,Ministry of Education and Research,0,239,True
+Estonian Research Council / Science Foundation,science_agency,2011,2011_Estonia.pdf,Sihtasutus Eesti Teadusfond,8785390.0,Ministry of Education and Research,0,251,True
+Ministry of Education and Research (Estonia),rd_ministry,1992,1992 13105790.pdf,Haridus- ja Teadusministeerium,137942.0,Ministry of Education and Research,0,5,False
+Ministry of Education and Research (Estonia),rd_ministry,1995,1995 28719.pdf,Haridus- ja Teadusministeerium,1959315500.0,Ministry of Education and Research,0,18,False
+Ministry of Education and Research (Estonia),rd_ministry,2004,2004 822726.pdf,Haridus- ja Teadusministeerium,23901804.0,Ministry of Education and Research,0,114,False
+Ministry of Education and Research (Estonia),rd_ministry,2005,2005 960922.pdf,HARIDUS- JA TEADUSMINISTEERIUMI valitsemisala,139989560.0,Ministry of Education and Research,0,120,False
+Ministry of Education and Research (Estonia),rd_ministry,2006,2006 969308.pdf,HARIDUS- JA TEADUSMINISTEERIUMI valitsemisala,514264121.0,Ministry of Education and Research,0,144,False
+Ministry of Education and Research (Estonia),rd_ministry,2006,2006 969308.pdf,Haridus- ja Teadusministeerium,0.0,Ministry of Education and Research,0,153,False
+Ministry of Education and Research (Estonia),rd_ministry,2007,2007 12768664.pdf,HARIDUS- JA TEADUSMINISTEERIUMI valitsemisala,5194873106.0,Ministry of Education and Research,0,159,False
+Ministry of Education and Research (Estonia),rd_ministry,2007,2007 12768664.pdf,Haridus- ja Teadusministeerium,25880328.0,Ministry of Education and Research,0,168,False
+Ministry of Education and Research (Estonia),rd_ministry,2008,2008 12901846.pdf,Haridus- ja Teadusministeerium,4520726.0,Ministry of Education and Research,0,175,False
+Ministry of Education and Research (Estonia),rd_ministry,2008,2008 12901846.pdf,Haridus- ja Teadusministeerium,23264115.0,Ministry of Education and Research,0,183,False
+Ministry of Education and Research (Estonia),rd_ministry,2009,2009 13111066.pdf,Haridus- ja Teadusministeerium,5002267904.0,Ministry of Education and Research,0,196,False
+Ministry of Education and Research (Estonia),rd_ministry,2009,2009 13111066.pdf,Haridus- ja Teadusministeerium,39110420.0,Ministry of Education and Research,0,210,False
+Ministry of Education and Research (Estonia),rd_ministry,2010,2010 13252314.pdf,Haridus- ja Teadusministeerium,29581493.0,Ministry of Education and Research,0,224,False
+Ministry of Education and Research (Estonia),rd_ministry,2010,2010 13252314.pdf,Haridus- ja Teadusministeerium,44484061.0,Ministry of Education and Research,0,231,False
+Ministry of Education and Research (Estonia),rd_ministry,2010,2010 13252314.pdf,Haridus- ja Teadusministeerium,0.0,Ministry of Education and Research,0,238,False
+Ministry of Education and Research (Estonia),rd_ministry,2011,2011_Estonia.pdf,Haridus- ja Teadusministeerium,379948617.0,Ministry of Education and Research,0,244,False
+Ministry of Education and Research (Estonia),rd_ministry,2012,2012 114122012006.pdf,Haridus- ja Teadusministeerium,387139917.0,Ministry of Education and Research,0,264,False
+Ministry of Education and Research (Estonia),rd_ministry,2013,2013 128122012009-1.pdf,Haridus- ja Teadusministeerium,,Ministry of Education and Research,0,266,False
+Ministry of Education and Research (Estonia),rd_ministry,2017,2017 127122016021.pdf,HARIDUS- JA TEADUSMINISTEERIUM,,Ministry of Education and Research,0,269,False
+Ministry of Education and Research (Estonia),rd_ministry,2022,2022 125052022002.pdf,Haridus- ja Teadusministeerium,,Ministry of Education and Research,0,272,False
+Ministry of Education and Research (Estonia),rd_ministry,2025,2025 123122024014.pdf,Haridus- ja Teadusministeerium,135548.0,Ministry of Education and Research,0,276,False
+Tallinn University of Technology,higher_education,1994,1994 28618.pdf,Tallinna Tehnikaülikool,55478000.0,Ministry of Culture and Education,0,12,True
+Tallinn University of Technology,higher_education,2006,2006 969308.pdf,Research funding for Tallinn University of Technology,145000.0,Tallinn University of Technology,0,157,True
+Tallinn University of Technology,higher_education,2011,2011_Estonia.pdf,Tallinna Tehnikaülikooli IT kuritegude uurimise koolituskeskus,67010.0,Ministry of Education and Research,0,254,False
+Tiger Leap Foundation,innovation_instruments,1998,1998 74471.pdf,Tiigrihüppe Sihtasutus,50000000.0,Ministry of Education and Research,0,45,True
+University of Tartu,higher_education,1994,1994 28618.pdf,Tartu Ülikool,78312000.0,Ministry of Culture and Education,0,11,True
+University of Tartu,higher_education,2006,2006 969308.pdf,Research funding for the University of Tartu,196408.0,University of Tartu,0,156,True
+University of Tartu,higher_education,2010,2010 13252314.pdf,Tartu Ülikool – residentuurikulud,120000000.0,University of Tartu,0,236,False
+University of Tartu,higher_education,2010,2010 13252314.pdf,Tartu Ülikool – geenivaramu pidamine ja säilitamine,4550000.0,University of Tartu,0,237,False
+University of Tartu,higher_education,2011,2011_Estonia.pdf,Tartu Ülikooli Eesti Geenivaramu,559291.0,Ministry of Education and Research,0,255,False

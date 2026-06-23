@@ -1,39 +1,245 @@
-country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
-Spain,2018,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,630561860.0,,377255430.0
-Spain,2020,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,377255430.0,630561860.0,1121856670.0
-Spain,2021,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,1121856670.0,377255430.0,1213105230.0
-Spain,2022,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,1213105230.0,1121856670.0,1213105230.0
-Spain,2023,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,none,1213105230.0,1213105230.0,
-Spain,2018,AEI (Agencia Estatal de Investigación),science_agency,ok,,,,,none,640104990.0,,29804940.0
-Spain,2020,AEI (Agencia Estatal de Investigación),science_agency,ok,,,,,none,29804940.0,640104990.0,1358164020.0
-Spain,2021,AEI (Agencia Estatal de Investigación),science_agency,ok,,,,,none,1358164020.0,29804940.0,1419995610.0
-Spain,2022,AEI (Agencia Estatal de Investigación),science_agency,ok,,,,,none,1419995610.0,1358164020.0,1419995610.0
-Spain,2023,AEI (Agencia Estatal de Investigación),science_agency,ok,,,,,none,1419995610.0,1419995610.0,
-Spain,2020,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,none,10000000.0,,
-Spain,2020,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,82545560.0,,44105540.0
-Spain,2021,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,44105540.0,82545560.0,487532150.0
-Spain,2022,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,487532150.0,44105540.0,487532150.0
-Spain,2023,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,none,487532150.0,487532150.0,
-Spain,2020,CIEMAT,science_agency,ok,,,,,none,58795970.0,,59677910.0
-Spain,2021,CIEMAT,science_agency,ok,,,,,none,59677910.0,58795970.0,144707990.0
-Spain,2022,CIEMAT,science_agency,ok,,,,,none,144707990.0,59677910.0,59677910.0
-Spain,2023,CIEMAT,science_agency,ok,,,,,none,59677910.0,144707990.0,
-Spain,2002,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,364676480.0,,563045980.0
-Spain,2004,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,563045980.0,364676480.0,1008543870.0
-Spain,2005,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,1008543870.0,563045980.0,1456515020.0
-Spain,2006,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,1456515020.0,1008543870.0,1905919950.0
-Spain,2007,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,1905919950.0,1456515020.0,2069656160.0
-Spain,2008,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,2069656160.0,1905919950.0,2097057760.0
-Spain,2009,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,2097057760.0,2069656160.0,2139768610.0
-Spain,2010,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,2139768610.0,2097057760.0,2139768610.0
-Spain,2011,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,2139768610.0,2139768610.0,1411161290.0
-Spain,2012,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,1411161290.0,2139768610.0,1464723460.0
-Spain,2013,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,1464723460.0,1411161290.0,1443093130.0
-Spain,2014,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,1443093130.0,1464723460.0,170000000.0
-Spain,2015,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,170000000.0,1443093130.0,463000000.0
-Spain,2016,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,none,463000000.0,170000000.0,
-Spain,2022,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,none,196019400.0,,
-Spain,2022,Centre for Sociological Research,direct_rd,ok,,,,,none,12659110.0,,
-Spain,2022,Spanish Metrology Center,direct_rd,ok,,,,,none,17482090.0,,
-Spain,2022,National Transplant Organization,direct_rd,ok,,,,,none,6706760.0,,
-Spain,2020,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,none,1793200000.0,,
+country,year,canonical_name,category,gap_type,gap_subtype,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,series_currency,prev_amount,next_amount
+Spain,2018,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,,none,630561860.0,EUR,,377255430.0
+Spain,2020,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,,none,377255430.0,EUR,630561860.0,1121856670.0
+Spain,2021,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,,none,1121856670.0,EUR,377255430.0,1213105230.0
+Spain,2022,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,,none,1213105230.0,EUR,1121856670.0,1213105230.0
+Spain,2023,CSIC (Consejo Superior de Investigaciones Científicas),science_agency,ok,,,,,,none,1213105230.0,EUR,1213105230.0,
+Spain,2018,AEI (Agencia Estatal de Investigación),science_agency,ok,,,,,,none,640104990.0,EUR,,29804940.0
+Spain,2020,AEI (Agencia Estatal de Investigación),science_agency,ok,,,,,,none,29804940.0,EUR,640104990.0,1358164020.0
+Spain,2021,AEI (Agencia Estatal de Investigación),science_agency,ok,,,,,,none,1358164020.0,EUR,29804940.0,1419995610.0
+Spain,2022,AEI (Agencia Estatal de Investigación),science_agency,ok,,,,,,none,1419995610.0,EUR,1358164020.0,1419995610.0
+Spain,2023,AEI (Agencia Estatal de Investigación),science_agency,ok,,,,,,none,1419995610.0,EUR,1419995610.0,
+Spain,2020,CDTI (Centro para el Desarrollo Tecnológico e Industrial),innovation_instruments,ok,,,,,,none,10000000.0,EUR,,
+Spain,2020,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,,none,82545560.0,EUR,,44105540.0
+Spain,2021,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,,none,44105540.0,EUR,82545560.0,487532150.0
+Spain,2022,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,,none,487532150.0,EUR,44105540.0,487532150.0
+Spain,2023,ISCIII (Instituto de Salud Carlos III),science_agency,ok,,,,,,none,487532150.0,EUR,487532150.0,
+Spain,2020,CIEMAT,science_agency,ok,,,,,,none,58795970.0,EUR,,59677910.0
+Spain,2021,CIEMAT,science_agency,ok,,,,,,none,59677910.0,EUR,58795970.0,144707990.0
+Spain,2022,CIEMAT,science_agency,ok,,,,,,none,144707990.0,EUR,59677910.0,59677910.0
+Spain,2023,CIEMAT,science_agency,ok,,,,,,none,59677910.0,EUR,144707990.0,
+Spain,2002,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,,none,364676480.0,EUR,,563045980.0
+Spain,2004,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,,none,563045980.0,EUR,364676480.0,1008543870.0
+Spain,2005,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,,none,1008543870.0,EUR,563045980.0,1456515020.0
+Spain,2006,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,,none,1456515020.0,EUR,1008543870.0,1905919950.0
+Spain,2007,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,,none,1905919950.0,EUR,1456515020.0,2069656160.0
+Spain,2008,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,,none,2069656160.0,EUR,1905919950.0,2097057760.0
+Spain,2009,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,,none,2097057760.0,EUR,2069656160.0,2139768610.0
+Spain,2010,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,,none,2139768610.0,EUR,2097057760.0,2139768610.0
+Spain,2011,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,,none,2139768610.0,EUR,2139768610.0,1411161290.0
+Spain,2012,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,,none,1411161290.0,EUR,2139768610.0,1464723460.0
+Spain,2013,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,,none,1464723460.0,EUR,1411161290.0,1443093130.0
+Spain,2014,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,,none,1443093130.0,EUR,1464723460.0,170000000.0
+Spain,2015,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,,none,170000000.0,EUR,1443093130.0,463000000.0
+Spain,2016,Plan Nacional I+D (total R&D appropriation),direct_rd,ok,,,,,,none,463000000.0,EUR,170000000.0,
+Spain,2022,Esteban Terradas National Institute of Aerospace Technology,science_agency,ok,,,,,,none,196019400.0,EUR,,
+Spain,2022,Centre for Sociological Research,direct_rd,ok,,,,,,none,12659110.0,EUR,,
+Spain,2022,Spanish Metrology Center,direct_rd,ok,,,,,,none,17482090.0,EUR,,
+Spain,2022,National Transplant Organization,direct_rd,ok,,,,,,none,6706760.0,EUR,,
+Spain,2020,Recovery and Resilience Mechanism,innovation_instruments,ok,,,,,,none,1793200000.0,EUR,,
+Spain,1987,"Scientific, Technical and Applied Research",direct_rd,outlier,,"Amount 128,028,383,000,000 outside expected range [182,508,514,000,000 – 184,660,699,000,000] (IQR × 3.0) within ESP observations. Possible current/prior year confusion or unit error.",,,,verify,128028383000000.0,ESP,,183430879000000.0
+Spain,1988,"Scientific, Technical and Applied Research",direct_rd,ok,,,,,,none,183430879000000.0,ESP,128028383000000.0,183430879000000.0
+Spain,1989,"Scientific, Technical and Applied Research",direct_rd,ok,,,,,,none,183430879000000.0,ESP,183430879000000.0,208252972000000.0
+Spain,1990,"Scientific, Technical and Applied Research",direct_rd,outlier,,"Amount 208,252,972,000,000 outside expected range [182,508,514,000,000 – 184,660,699,000,000] (IQR × 3.0) within ESP observations. Possible current/prior year confusion or unit error.",,,,verify,208252972000000.0,ESP,183430879000000.0,183738334000000.0
+Spain,1991,"Scientific, Technical and Applied Research",direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,208252972000000.0,183738334000000.0
+Spain,1992,"Scientific, Technical and Applied Research",direct_rd,ok,,,,,,none,183738334000000.0,ESP,208252972000000.0,
+Spain,1992,Research and Technological Development,direct_rd,ok,,,,,,none,44798916000000.0,ESP,,47357565000000.0
+Spain,1993,Research and Technological Development,direct_rd,ok,,,,,,none,47357565000000.0,ESP,44798916000000.0,94538399000.0
+Spain,1994,Research and Technological Development,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,47357565000000.0,94538399000.0
+Spain,1996,Research and Technological Development,direct_rd,ok,,,,,,none,94538399000.0,ESP,47357565000000.0,289808212000.0
+Spain,1997,Research and Technological Development,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,94538399000.0,289808212000.0
+Spain,1998,Research and Technological Development,direct_rd,ok,,,,,,none,289808212000.0,ESP,94538399000.0,323807024000.0
+Spain,1999,Research and Technological Development,direct_rd,ok,,,,,,none,323807024000.0,ESP,289808212000.0,1815295780000.0
+Spain,2000,Research and Technological Development,direct_rd,ok,,,,,,none,1815295780000.0,ESP,323807024000.0,2005607080000.0
+Spain,2001,Research and Technological Development,direct_rd,ok,,,,,,none,2005607080000.0,ESP,1815295780000.0,2009409190.0
+Spain,2002,Research and Technological Development,direct_rd,ok,,,,,,none,2009409190.0,EUR,2005607080000.0,
+Spain,1993,Health Research,direct_rd,ok,,,,,,none,11662384000000.0,ESP,,12596147000.0
+Spain,1994,Health Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,11662384000000.0,12596147000.0
+Spain,1996,Health Research,direct_rd,ok,,,,,,none,12596147000.0,ESP,11662384000000.0,120649500000.0
+Spain,1997,Health Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,12596147000.0,120649500000.0
+Spain,1998,Health Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,12596147000.0,120649500000.0
+Spain,1999,Health Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,12596147000.0,120649500000.0
+Spain,2000,Health Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,12596147000.0,120649500000.0
+Spain,2001,Health Research,direct_rd,ok,,,,,,none,120649500000.0,ESP,12596147000.0,333804840.0
+Spain,2002,Health Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,120649500000.0,333804840.0
+Spain,2004,Health Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,120649500000.0,333804840.0
+Spain,2005,Health Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,120649500000.0,333804840.0
+Spain,2006,Health Research,direct_rd,ok,,,,,,none,333804840.0,EUR,120649500000.0,423704330.0
+Spain,2007,Health Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,333804840.0,423704330.0
+Spain,2008,Health Research,direct_rd,ok,,,,,,none,423704330.0,EUR,333804840.0,386412380.0
+Spain,2009,Health Research,direct_rd,ok,,,,,,none,386412380.0,EUR,423704330.0,281965920.0
+Spain,2010,Health Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,386412380.0,281965920.0
+Spain,2011,Health Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,386412380.0,281965920.0
+Spain,2012,Health Research,direct_rd,ok,,,,,,none,281965920.0,EUR,386412380.0,286762840.0
+Spain,2013,Health Research,direct_rd,ok,,,,,,none,286762840.0,EUR,281965920.0,273820830.0
+Spain,2014,Health Research,direct_rd,ok,,,,,,none,273820830.0,EUR,286762840.0,269957380.0
+Spain,2015,Health Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,273820830.0,269957380.0
+Spain,2016,Health Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,273820830.0,269957380.0
+Spain,2017,Health Research,direct_rd,ok,,,,,,none,269957380.0,EUR,273820830.0,270847130.0
+Spain,2018,Health Research,direct_rd,ok,,,,,,none,270847130.0,EUR,269957380.0,287428720.0
+Spain,2020,Health Research,direct_rd,ok,,,,,,none,287428720.0,EUR,270847130.0,288704420.0
+Spain,2021,Health Research,direct_rd,ok,,,,,,none,288704420.0,EUR,287428720.0,14061846000.0
+Spain,2022,Health Research,direct_rd,outlier,,"Amount 14,061,846,000 outside expected range [31,247,670 – 606,754,315] (IQR × 3.0) within EUR observations. Possible current/prior year confusion or unit error.",,,,verify,14061846000.0,EUR,288704420.0,
+Spain,2021,State Research Agency,science_agency,ok,,,,,,none,129696000000.0,EUR,,1419995610.0
+Spain,2022,State Research Agency,science_agency,ok,,,,,,none,1419995610.0,EUR,129696000000.0,
+Spain,2021,Carlos III Health Institute,science_agency,ok,,,,,,none,41054860000.0,EUR,,
+Spain,2021,Superior Council of Scientific Research,science_agency,ok,,,,,,none,44242306000.0,EUR,,1213105230.0
+Spain,2022,Superior Council of Scientific Research,science_agency,ok,,,,,,none,1213105230.0,EUR,44242306000.0,
+Spain,2023,"Research, Development, Innovation and Digitalization",innovation_instruments,ok,,,,,,none,17766985030.0,EUR,,
+Spain,2022,"Research, Development and Innovation",innovation_instruments,ok,,,,,,none,4750000000.0,EUR,,
+Spain,2001,Oceanographic and Fisheries Research,science_agency,ok,,,,,,none,35803640000.0,ESP,,52118320.0
+Spain,2002,Oceanographic and Fisheries Research,science_agency,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,35803640000.0,52118320.0
+Spain,2004,Oceanographic and Fisheries Research,science_agency,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,35803640000.0,52118320.0
+Spain,2005,Oceanographic and Fisheries Research,science_agency,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,35803640000.0,52118320.0
+Spain,2006,Oceanographic and Fisheries Research,science_agency,outlier,,"Amount 52,118,320 outside expected range [55,145,085 – 64,643,752] (IQR × 3.0) within EUR observations. Possible current/prior year confusion or unit error.",,,,verify,52118320.0,EUR,35803640000.0,60515000.0
+Spain,2007,Oceanographic and Fisheries Research,science_agency,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,52118320.0,60515000.0
+Spain,2008,Oceanographic and Fisheries Research,science_agency,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,52118320.0,60515000.0
+Spain,2009,Oceanographic and Fisheries Research,science_agency,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,52118320.0,60515000.0
+Spain,2010,Oceanographic and Fisheries Research,science_agency,ok,,,,,,none,60515000.0,EUR,52118320.0,60515000.0
+Spain,2011,Oceanographic and Fisheries Research,science_agency,ok,,,,,,none,60515000.0,EUR,60515000.0,56754750.0
+Spain,2012,Oceanographic and Fisheries Research,science_agency,ok,,,,,,none,56754750.0,EUR,60515000.0,60337710.0
+Spain,2013,Oceanographic and Fisheries Research,science_agency,ok,,,,,,none,60337710.0,EUR,56754750.0,60746580.0
+Spain,2014,Oceanographic and Fisheries Research,science_agency,ok,,,,,,none,60746580.0,EUR,60337710.0,60036340.0
+Spain,2015,Oceanographic and Fisheries Research,science_agency,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,60746580.0,60036340.0
+Spain,2016,Oceanographic and Fisheries Research,science_agency,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,60746580.0,60036340.0
+Spain,2017,Oceanographic and Fisheries Research,science_agency,ok,,,,,,none,60036340.0,EUR,60746580.0,99112700.0
+Spain,2018,Oceanographic and Fisheries Research,science_agency,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,60036340.0,99112700.0
+Spain,2020,Oceanographic and Fisheries Research,science_agency,outlier,,"Amount 99,112,700 outside expected range [55,145,085 – 64,643,752] (IQR × 3.0) within EUR observations. Possible current/prior year confusion or unit error.",,,,verify,99112700.0,EUR,60036340.0,
+Spain,2022,Research and Development in Renewable Energies,innovation_instruments,ok,,,,,,none,4526063330.0,EUR,,
+Spain,2021,Research and Development in the Energy Sector,innovation_instruments,ok,,,,,,none,3717842730.0,EUR,,3514141750.0
+Spain,2022,Research and Development in the Energy Sector,innovation_instruments,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,3717842730.0,3514141750.0
+Spain,2023,Research and Development in the Energy Sector,innovation_instruments,ok,,,,,,none,3514141750.0,EUR,3717842730.0,
+Spain,1996,Fishing Research and Experimentation,science_agency,ok,,,,,,none,3284433000.0,ESP,,
+Spain,2021,Grants for Research,innovation_instruments,ok,,,,,,none,1358164020.0,EUR,,
+Spain,2022,University of Deusto Project for Technological Transfer and Innovation,higher_education,ok,,,,,,none,1000000000.0,EUR,,
+Spain,2022,CERCA Institution. Research Centers of Catalonia for Scientific-Technological Infrastructure,higher_education,ok,,,,,,none,1000000000.0,EUR,,
+Spain,2022,National Renewable Energy Centre Foundation,direct_rd,ok,,,,,,none,1000000000.0,EUR,,
+Spain,1996,Agricultural Research and Experimentation,direct_rd,ok,,,,,,none,4870258000.0,ESP,,71160410.0
+Spain,1997,Agricultural Research and Experimentation,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,4870258000.0,71160410.0
+Spain,1998,Agricultural Research and Experimentation,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,4870258000.0,71160410.0
+Spain,1999,Agricultural Research and Experimentation,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,4870258000.0,71160410.0
+Spain,2000,Agricultural Research and Experimentation,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,4870258000.0,71160410.0
+Spain,2001,Agricultural Research and Experimentation,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,4870258000.0,71160410.0
+Spain,2002,Agricultural Research and Experimentation,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,4870258000.0,71160410.0
+Spain,2004,Agricultural Research and Experimentation,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,4870258000.0,71160410.0
+Spain,2005,Agricultural Research and Experimentation,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,4870258000.0,71160410.0
+Spain,2006,Agricultural Research and Experimentation,direct_rd,ok,,,,,,none,71160410.0,EUR,4870258000.0,81259440.0
+Spain,2007,Agricultural Research and Experimentation,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,71160410.0,81259440.0
+Spain,2008,Agricultural Research and Experimentation,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,71160410.0,81259440.0
+Spain,2009,Agricultural Research and Experimentation,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,71160410.0,81259440.0
+Spain,2010,Agricultural Research and Experimentation,direct_rd,ok,,,,,,none,81259440.0,EUR,71160410.0,81259440.0
+Spain,2011,Agricultural Research and Experimentation,direct_rd,ok,,,,,,none,81259440.0,EUR,81259440.0,69391980.0
+Spain,2012,Agricultural Research and Experimentation,direct_rd,ok,,,,,,none,69391980.0,EUR,81259440.0,78887930.0
+Spain,2013,Agricultural Research and Experimentation,direct_rd,ok,,,,,,none,78887930.0,EUR,69391980.0,58253300.0
+Spain,2014,Agricultural Research and Experimentation,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,78887930.0,58253300.0
+Spain,2015,Agricultural Research and Experimentation,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,78887930.0,58253300.0
+Spain,2016,Agricultural Research and Experimentation,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,78887930.0,58253300.0
+Spain,2017,Agricultural Research and Experimentation,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,78887930.0,58253300.0
+Spain,2018,Agricultural Research and Experimentation,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,78887930.0,58253300.0
+Spain,2020,Agricultural Research and Experimentation,direct_rd,ok,,,,,,none,58253300.0,EUR,78887930.0,
+Spain,2020,Scientific Research Grants,innovation_instruments,ok,,,,,,none,671532620.0,EUR,,1042597460.0
+Spain,2021,Scientific Research Grants,innovation_instruments,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,671532620.0,1042597460.0
+Spain,2022,Scientific Research Grants,innovation_instruments,ok,,,,,,none,1042597460.0,EUR,671532620.0,
+Spain,2023,Financial Support for SEMYS SA-SME,innovation_instruments,ok,,,,,,none,800000000.0,EUR,,
+Spain,2006,Technological Innovation in Telecommunications,direct_rd,ok,,,,,,none,819070000.0,EUR,,1102920560.0
+Spain,2007,Technological Innovation in Telecommunications,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,819070000.0,1102920560.0
+Spain,2008,Technological Innovation in Telecommunications,direct_rd,ok,,,,,,none,1102920560.0,EUR,819070000.0,1003166820.0
+Spain,2009,Technological Innovation in Telecommunications,direct_rd,ok,,,,,,none,1003166820.0,EUR,1102920560.0,721672880.0
+Spain,2010,Technological Innovation in Telecommunications,direct_rd,ok,,,,,,none,721672880.0,EUR,1003166820.0,721672880.0
+Spain,2011,Technological Innovation in Telecommunications,direct_rd,ok,,,,,,none,721672880.0,EUR,721672880.0,561293760.0
+Spain,2012,Technological Innovation in Telecommunications,direct_rd,ok,,,,,,none,561293760.0,EUR,721672880.0,582182950.0
+Spain,2013,Technological Innovation in Telecommunications,direct_rd,ok,,,,,,none,582182950.0,EUR,561293760.0,1793200000.0
+Spain,2014,Technological Innovation in Telecommunications,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,582182950.0,1793200000.0
+Spain,2015,Technological Innovation in Telecommunications,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,582182950.0,1793200000.0
+Spain,2016,Technological Innovation in Telecommunications,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,582182950.0,1793200000.0
+Spain,2017,Technological Innovation in Telecommunications,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,582182950.0,1793200000.0
+Spain,2018,Technological Innovation in Telecommunications,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,582182950.0,1793200000.0
+Spain,2020,Technological Innovation in Telecommunications,direct_rd,ok,,,,,,none,1793200000.0,EUR,582182950.0,277522880.0
+Spain,2021,Technological Innovation in Telecommunications,direct_rd,ok,,,,,,none,277522880.0,EUR,1793200000.0,204803490.0
+Spain,2022,Technological Innovation in Telecommunications,direct_rd,ok,,,,,,none,204803490.0,EUR,277522880.0,
+Spain,2018,Research and Development in Telecommunications Technology,direct_rd,ok,,,,,,none,552954440.0,EUR,,
+Spain,2022,Foundation for the Study of the Cosmos of Aragon,science_agency,ok,,,,,,none,500000000.0,EUR,,
+Spain,2022,CIC Energigune Advanced Electrolyzer Testing Laboratory,direct_rd,ok,,,,,,none,400000000.0,EUR,,
+Spain,2009,Research and Development of the Information Society,direct_rd,ok,,,,,,none,524549350.0,EUR,,418673080.0
+Spain,2010,Research and Development of the Information Society,direct_rd,ok,,,,,,none,418673080.0,EUR,524549350.0,418673080.0
+Spain,2011,Research and Development of the Information Society,direct_rd,ok,,,,,,none,418673080.0,EUR,418673080.0,106040200.0
+Spain,2012,Research and Development of the Information Society,direct_rd,ok,,,,,,none,106040200.0,EUR,418673080.0,130958390.0
+Spain,2013,Research and Development of the Information Society,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,106040200.0,130958390.0
+Spain,2014,Research and Development of the Information Society,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,106040200.0,130958390.0
+Spain,2015,Research and Development of the Information Society,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,106040200.0,130958390.0
+Spain,2016,Research and Development of the Information Society,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,106040200.0,130958390.0
+Spain,2017,Research and Development of the Information Society,direct_rd,ok,,,,,,none,130958390.0,EUR,106040200.0,140416010.0
+Spain,2018,Research and Development of the Information Society,direct_rd,ok,,,,,,none,140416010.0,EUR,130958390.0,336000000.0
+Spain,2020,Research and Development of the Information Society,direct_rd,ok,,,,,,none,336000000.0,EUR,140416010.0,171642330.0
+Spain,2021,Research and Development of the Information Society,direct_rd,ok,,,,,,none,171642330.0,EUR,336000000.0,
+Spain,2022,Dinópolis Foundation for Paleontological Research,science_agency,ok,,,,,,none,300000000.0,EUR,,
+Spain,2020,Funding for Innovation Projects,innovation_instruments,ok,,,,,,none,2041790.0,EUR,,526231050.00000006
+Spain,2021,Funding for Innovation Projects,innovation_instruments,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,2041790.0,526231050.00000006
+Spain,2022,Funding for Innovation Projects,innovation_instruments,ok,,,,,,none,526231050.00000006,EUR,2041790.0,
+Spain,2023,Investments in the Institute of Natural Products and Agrobiology,science_agency,ok,,,,,,none,250000000.0,EUR,,
+Spain,2016,"Financial Support for Technology-Based Companies, Capitalization",innovation_instruments,ok,,,,,,none,240500000.0,EUR,,
+Spain,2021,Research and Development in the Health Sector,direct_rd,ok,,,,,,none,171046830.0,EUR,,260508940.0
+Spain,2022,Research and Development in the Health Sector,direct_rd,ok,,,,,,none,260508940.0,EUR,171046830.0,260508940.0
+Spain,2023,Research and Development in the Health Sector,direct_rd,ok,,,,,,none,260508940.0,EUR,260508940.0,
+Spain,2009,"Energy, Environmental and Technological Research",direct_rd,ok,,,,,,none,91726570.0,EUR,,86723950.0
+Spain,2010,"Energy, Environmental and Technological Research",direct_rd,ok,,,,,,none,86723950.0,EUR,91726570.0,86723950.0
+Spain,2011,"Energy, Environmental and Technological Research",direct_rd,ok,,,,,,none,86723950.0,EUR,86723950.0,82664070.0
+Spain,2012,"Energy, Environmental and Technological Research",direct_rd,ok,,,,,,none,82664070.0,EUR,86723950.0,83424920.0
+Spain,2013,"Energy, Environmental and Technological Research",direct_rd,ok,,,,,,none,83424920.0,EUR,82664070.0,92855590.0
+Spain,2014,"Energy, Environmental and Technological Research",direct_rd,ok,,,,,,none,92855590.0,EUR,83424920.0,87304680.0
+Spain,2015,"Energy, Environmental and Technological Research",direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,92855590.0,87304680.0
+Spain,2016,"Energy, Environmental and Technological Research",direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,92855590.0,87304680.0
+Spain,2017,"Energy, Environmental and Technological Research",direct_rd,ok,,,,,,none,87304680.0,EUR,92855590.0,89479230.0
+Spain,2018,"Energy, Environmental and Technological Research",direct_rd,ok,,,,,,none,89479230.0,EUR,87304680.0,58795970.0
+Spain,2020,"Energy, Environmental and Technological Research",direct_rd,ok,,,,,,none,58795970.0,EUR,89479230.0,13673912000.0
+Spain,2021,"Energy, Environmental and Technological Research",direct_rd,outlier,,"Amount 13,673,912,000 outside expected range [48,201,020 – 136,163,422] (IQR × 3.0) within EUR observations. Possible current/prior year confusion or unit error.",,,,verify,13673912000.0,EUR,58795970.0,115294230.0
+Spain,2022,"Energy, Environmental and Technological Research",direct_rd,ok,,,,,,none,115294230.0,EUR,13673912000.0,6520800000.0
+Spain,2023,"Energy, Environmental and Technological Research",direct_rd,outlier,,"Amount 6,520,800,000 outside expected range [48,201,020 – 136,163,422] (IQR × 3.0) within EUR observations. Possible current/prior year confusion or unit error.",,,,verify,6520800000.0,EUR,115294230.0,
+Spain,2018,Provision Fund for Cervera Network and R&D Projects,innovation_instruments,ok,,,,,,none,80000000.0,EUR,,
+Spain,2021,Research in Renewable Energies,direct_rd,ok,,,,,,none,59677910.0,EUR,,
+Spain,2020,Funding for Energy Research Projects,innovation_instruments,ok,,,,,,none,58795970.0,EUR,,
+Spain,2021,Research in Public Health,direct_rd,ok,,,,,,none,44105540.0,EUR,,
+Spain,2020,Research Funding for Energy and Environmental Technologies,innovation_instruments,ok,,,,,,none,40586320.0,EUR,,
+Spain,2020,Research Funding for Oceanographic Studies,direct_rd,ok,,,,,,none,37001240.0,EUR,,
+Spain,2006,Geological-Mining and Environmental Research,direct_rd,outlier,,"Amount 66,523,140 outside expected range [19,463,890 – 31,598,495] (IQR × 3.0) within EUR observations. Possible current/prior year confusion or unit error.",,,,verify,66523140.0,EUR,,26397950.0
+Spain,2007,Geological-Mining and Environmental Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,66523140.0,26397950.0
+Spain,2008,Geological-Mining and Environmental Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,66523140.0,26397950.0
+Spain,2009,Geological-Mining and Environmental Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,66523140.0,26397950.0
+Spain,2010,Geological-Mining and Environmental Research,direct_rd,ok,,,,,,none,26397950.0,EUR,66523140.0,26397950.0
+Spain,2011,Geological-Mining and Environmental Research,direct_rd,ok,,,,,,none,26397950.0,EUR,26397950.0,25111690.0
+Spain,2012,Geological-Mining and Environmental Research,direct_rd,ok,,,,,,none,25111690.0,EUR,26397950.0,23592170.0
+Spain,2013,Geological-Mining and Environmental Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,25111690.0,23592170.0
+Spain,2014,Geological-Mining and Environmental Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,25111690.0,23592170.0
+Spain,2015,Geological-Mining and Environmental Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,25111690.0,23592170.0
+Spain,2016,Geological-Mining and Environmental Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,25111690.0,23592170.0
+Spain,2017,Geological-Mining and Environmental Research,direct_rd,ok,,,,,,none,23592170.0,EUR,25111690.0,24515350.0
+Spain,2018,Geological-Mining and Environmental Research,direct_rd,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,23592170.0,24515350.0
+Spain,2020,Geological-Mining and Environmental Research,direct_rd,ok,,,,,,none,24515350.0,EUR,23592170.0,
+Spain,2020,Research Funding for Health Studies,direct_rd,ok,,,,,,none,20514670.0,EUR,,
+Spain,2023,Financial Support for Technology-Based Companies. Participative Loans.,innovation_instruments,ok,,,,,,none,20500000.0,EUR,,
+Spain,2020,Research Grants for Scientific Projects,direct_rd,ok,,,,,,none,18311580.0,EUR,,
+Spain,2009,Support for R&D+i of the CTE System (Science-Technology-Company),innovation_instruments,ok,,,,,,none,17000000.0,EUR,,
+Spain,2020,Research Funding for Geological Studies,direct_rd,ok,,,,,,none,6787130.0,EUR,,
+Spain,2018,CIDETEC Research Equipment for Electromobility and Energy Storage,direct_rd,ok,,,,,,none,5500000.0,EUR,,
+Spain,2008,Wind Tunnel Construction for R&D,direct_rd,ok,,,,,,none,5000000.0,EUR,,
+Spain,2022,Barcelona Institute of Science and Technology for Precision Medicine Hub Development,direct_rd,ok,,,,,,none,3500000.0,EUR,,
+Spain,2008,Barcelona Scientific Park Infrastructure,direct_rd,ok,,,,,,none,3000000.0,EUR,,
+Spain,2018,Biscay Marine Energy Platform Research Center,direct_rd,ok,,,,,,none,3000000.0,EUR,,
+Spain,2008,August Pi i Sunyer Biomedical Research Institute Infrastructure,direct_rd,ok,,,,,,none,3000000.0,EUR,,
+Spain,2008,Barcelona Biomedical Research Park Infrastructure,direct_rd,ok,,,,,,none,3000000.0,EUR,,
+Spain,2020,Centralization of Scientific-Technological Infrastructure,innovation_instruments,ok,,,,,,none,2600000.0,EUR,,
+Spain,2008,Catalan Water Research Institute Infrastructure,direct_rd,ok,,,,,,none,2000000.0,EUR,,
+Spain,2008,Catalonia Energy Research Institute Infrastructure,direct_rd,ok,,,,,,none,2000000.0,EUR,,
+Spain,2018,Agreement with University of Navarra for Research Center Creation,direct_rd,ok,,,,,,none,2000000.0,EUR,,
+Spain,2008,Biocat Infrastructure for Life Sciences Offices,direct_rd,ok,,,,,,none,2000000.0,EUR,,
+Spain,2021,Canary Islands Volcanological Institute Infrastructure,direct_rd,ok,,,,,,none,1500000.0,EUR,,
+Spain,2020,CERCA Institution for Scientific-Technological Infrastructure,direct_rd,ok,,,,,,none,1000000.0,EUR,,
+Spain,2020,Scientific Research Program,direct_rd,ok,,,,,,none,1000000.0,EUR,,
+Spain,2018,R&D Actions,innovation_instruments,ok,,,,,,none,1000000.0,EUR,,
+Spain,2023,Promotion of Research in Public Universities of the Canary Islands,higher_education,ok,,,,,,none,1000000.0,EUR,,
+Spain,2023,New Research and Cooperation Program for Universities in the Canary Islands,higher_education,ok,,,,,,none,1000000.0,EUR,,
+Spain,2021,New Project for Innovation and Transfer at the University of Deusto,innovation_instruments,ok,,,,,,none,1000000.0,EUR,,
+Spain,2008,Infrastructure in R&D+i: Catalan Institute of Photonic Sciences,science_agency,ok,,,,,,none,1000000.0,EUR,,
+Spain,2008,Infrastructure in R&D+i: Catalan Institute of Nanotechnology,science_agency,ok,,,,,,none,1000000.0,EUR,,
+Spain,2020,"Research, Development and Experimentation in Transport and Infrastructure",direct_rd,ok,,,,,,none,1000000.0,EUR,,
+Spain,2008,Infrastructure in R&D+i: Catalan Institute of Chemical Research,science_agency,ok,,,,,,none,1000000.0,EUR,,

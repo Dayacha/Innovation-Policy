@@ -1,76 +1,76 @@
-country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
-Hungary,1991,Hungarian Academy of Sciences (MTA),science_agency,missing,"Original Hungary cached text for this year does not contain a detectable MTA / 'Magyar Tudományos Akadémia' chapter heading. The gap originates in the source text layer or pre-parser extraction, not in canonical matching.",no,,pdf_5257eef1ec35__1991_1990__évi_CIV__törvény.txt,reextract,,,6860900000.0
-Hungary,1992,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,6860900000.0,,6745600000.0
-Hungary,1993,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,6745600000.0,6860900000.0,6598300000.0
-Hungary,1994,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,6598300000.0,6745600000.0,10081500000.0
-Hungary,1995,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,10081500000.0,6598300000.0,10933700000.0
-Hungary,1996,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,10933700000.0,10081500000.0,13431600000.0
-Hungary,1997,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,13431600000.0,10933700000.0,16123600000.0
-Hungary,1998,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,16123600000.0,13431600000.0,26383000000.0
-Hungary,1999,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,26383000000.0,16123600000.0,33159400000.0
-Hungary,2000,Hungarian Academy of Sciences (MTA),science_agency,missing,"Original Hungary cached text contains the MTA chapter heading, but no MTA row reaches raw_rows. The loss occurs inside text-cache parsing: the multi-column chapter total is fragmented/truncated in the PDF text layer, so the parser cannot recover a defendable numeric annual total.",no,,pdf_71e5cc9d7382__2001-2002__2000__évi_CXXXIII__törvény.txt,reextract,,26383000000.0,33159400000.0
-Hungary,2001,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,33159400000.0,26383000000.0,47370000000.0
-Hungary,2003,Hungarian Academy of Sciences (MTA),science_agency,missing,"Original Hungary cached text contains the MTA chapter heading, but no MTA row reaches raw_rows. The loss occurs inside text-cache parsing: the multi-column chapter total is fragmented/truncated in the PDF text layer, so the parser cannot recover a defendable numeric annual total.",no,,pdf_d1111441768c__2003__2002___évi_LXII__törvény.txt,reextract,,33159400000.0,47370000000.0
-Hungary,2004,Hungarian Academy of Sciences (MTA),science_agency,missing,"Original Hungary cached text contains the MTA chapter heading, but no MTA row reaches raw_rows. The loss occurs inside text-cache parsing: the multi-column chapter total is fragmented/truncated in the PDF text layer, so the parser cannot recover a defendable numeric annual total.",no,,pdf_a34c9c5b7b2c__2004_2003__évi_CXVI__törvény.txt,reextract,,33159400000.0,47370000000.0
-Hungary,2005,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,47370000000.0,33159400000.0,50063000000.0
-Hungary,2006,Hungarian Academy of Sciences (MTA),science_agency,missing,"Original Hungary cached text contains the MTA chapter heading, but no MTA row reaches raw_rows. The loss occurs inside text-cache parsing: the multi-column chapter total is fragmented/truncated in the PDF text layer, so the parser cannot recover a defendable numeric annual total.",no,,pdf_7e07af75bcf8__2007__2006__évi_CXXVII__törvény.txt,reextract,,47370000000.0,50063000000.0
-Hungary,2007,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,50063000000.0,47370000000.0,48372800000.0
-Hungary,2008,Hungarian Academy of Sciences (MTA),science_agency,missing,"Original Hungary cached text contains the MTA chapter heading, but no MTA row reaches raw_rows. The loss occurs inside text-cache parsing: the multi-column chapter total is fragmented/truncated in the PDF text layer, so the parser cannot recover a defendable numeric annual total.",no,,pdf_25faad6beb49__2008_2007__évi_CLXIX__törvény.txt,reextract,,50063000000.0,48372800000.0
-Hungary,2009,Hungarian Academy of Sciences (MTA),science_agency,missing,"Original Hungary cached text contains the MTA chapter heading, but no MTA row reaches raw_rows. The loss occurs inside text-cache parsing: the multi-column chapter total is fragmented/truncated in the PDF text layer, so the parser cannot recover a defendable numeric annual total.",no,,pdf_5953b3435951__2009__2008__évi_CII__törvény.txt,reextract,,50063000000.0,48372800000.0
-Hungary,2010,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,48372800000.0,50063000000.0,51505800000.0
-Hungary,2011,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,51505800000.0,48372800000.0,57483100000.0
-Hungary,2012,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,57483100000.0,51505800000.0,59109500000.0
-Hungary,2013,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,59109500000.0,57483100000.0,63203500000.0
-Hungary,2014,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,63203500000.0,59109500000.0,56318100000.0
-Hungary,2015,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,56318100000.0,63203500000.0,56194800000.0
-Hungary,2016,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,56194800000.0,56318100000.0,68945500000.0
-Hungary,2017,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,68945500000.0,56194800000.0,62611700000.0
-Hungary,2018,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,62611700000.0,68945500000.0,56146500000.0
-Hungary,2019,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,56146500000.0,62611700000.0,17184900000.0
-Hungary,2020,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,17184900000.0,56146500000.0,17134400000.0
-Hungary,2021,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,17134400000.0,17184900000.0,28765700000.0
-Hungary,2022,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,28765700000.0,17134400000.0,30566400000.0
-Hungary,2023,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,30566400000.0,28765700000.0,30706800000.0
-Hungary,2024,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,30706800000.0,30566400000.0,37063700000.0
-Hungary,2025,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,none,37063700000.0,30706800000.0,
-Hungary,2013,MTA Library and Information Centre,science_agency,ok,,,,,none,1426000000.0,,1426000000.0
-Hungary,2014,MTA Library and Information Centre,science_agency,ok,,,,,none,1426000000.0,1426000000.0,1426000000.0
-Hungary,2015,MTA Library and Information Centre,science_agency,ok,,,,,none,1426000000.0,1426000000.0,1426000000.0
-Hungary,2016,MTA Library and Information Centre,science_agency,ok,,,,,none,1426000000.0,1426000000.0,1426000000.0
-Hungary,2017,MTA Library and Information Centre,science_agency,ok,,,,,none,1426000000.0,1426000000.0,1950000000.0
-Hungary,2018,MTA Library and Information Centre,science_agency,ok,,,,,none,1950000000.0,1426000000.0,1950000000.0
-Hungary,2019,MTA Library and Information Centre,science_agency,ok,,,,,none,1950000000.0,1950000000.0,1950000000.0
-Hungary,2020,MTA Library and Information Centre,science_agency,ok,,,,,none,1950000000.0,1950000000.0,1950000000.0
-Hungary,2021,MTA Library and Information Centre,science_agency,ok,,,,,none,1950000000.0,1950000000.0,1950000000.0
-Hungary,2022,MTA Library and Information Centre,science_agency,ok,,,,,none,1950000000.0,1950000000.0,1950000000.0
-Hungary,2023,MTA Library and Information Centre,science_agency,ok,,,,,none,1950000000.0,1950000000.0,1950000000.0
-Hungary,2024,MTA Library and Information Centre,science_agency,ok,,,,,none,1950000000.0,1950000000.0,1950000000.0
-Hungary,2025,MTA Library and Information Centre,science_agency,ok,,,,,none,1950000000.0,1950000000.0,
-Hungary,2010,Research and Technological Innovation Fund,innovation_instruments,ok,,,,,none,43695900000.0,,45977900000.0
-Hungary,2011,Research and Technological Innovation Fund,innovation_instruments,ok,,,,,none,45977900000.0,43695900000.0,45200000000.0
-Hungary,2012,Research and Technological Innovation Fund,innovation_instruments,ok,,,,,none,45200000000.0,45977900000.0,37664500000.0
-Hungary,2013,Research and Technological Innovation Fund,innovation_instruments,ok,,,,,none,37664500000.0,45200000000.0,35357600000.0
-Hungary,2014,Research and Technological Innovation Fund,innovation_instruments,ok,,,,,none,35357600000.0,37664500000.0,
-Hungary,2015,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,none,77951600000.0,,79451600000.0
-Hungary,2016,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,none,79451600000.0,77951600000.0,78915000000.0
-Hungary,2017,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,none,78915000000.0,79451600000.0,82073000000.0
-Hungary,2018,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,none,82073000000.0,78915000000.0,78587000000.0
-Hungary,2019,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,none,78587000000.0,82073000000.0,137812200000.0
-Hungary,2020,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,none,137812200000.0,78587000000.0,137812200000.0
-Hungary,2021,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,none,137812200000.0,137812200000.0,143946900000.0
-Hungary,2022,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,none,143946900000.0,137812200000.0,172762400000.0
-Hungary,2023,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,none,172762400000.0,143946900000.0,154118800000.0
-Hungary,2024,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,none,154118800000.0,172762400000.0,137127400000.0
-Hungary,2025,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,none,137127400000.0,154118800000.0,
-Hungary,2020,Eötvös Loránd Research Network,science_agency,ok,,,,,none,48228800000.0,,70666400000.0
-Hungary,2021,Eötvös Loránd Research Network,science_agency,ok,,,,,none,70666400000.0,48228800000.0,66122200000.0
-Hungary,2022,Eötvös Loránd Research Network,science_agency,ok,,,,,none,66122200000.0,70666400000.0,67001700000.0
-Hungary,2023,Eötvös Loránd Research Network,science_agency,ok,,,,,none,67001700000.0,66122200000.0,
-Hungary,2024,Hungarian Research Network,science_agency,ok,,,,,none,66091600000.0,,73579100000.0
-Hungary,2025,Hungarian Research Network,science_agency,ok,,,,,none,73579100000.0,66091600000.0,
-Hungary,2011,INTERREG IVC Programme,innovation_instruments,ok,,,,,none,2777000000.0,,1469000000.0
-Hungary,2012,INTERREG IVC Programme,innovation_instruments,ok,,,,,none,1469000000.0,2777000000.0,5417000000.0
-Hungary,2013,INTERREG IVC Programme,innovation_instruments,ok,,,,,none,5417000000.0,1469000000.0,1503000000.0
-Hungary,2014,INTERREG IVC Programme,innovation_instruments,ok,,,,,none,1503000000.0,5417000000.0,1357900000.0
-Hungary,2015,INTERREG IVC Programme,innovation_instruments,ok,,,,,none,1357900000.0,1503000000.0,
-Hungary,2025,"35th National Research, Development and Innovation Fund",direct_rd,ok,,,,,none,8676000000.0,,
+country,year,canonical_name,category,gap_type,gap_subtype,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,series_currency,prev_amount,next_amount
+Hungary,1991,Hungarian Academy of Sciences (MTA),science_agency,missing,,"Original Hungary cached text for this year does not contain a detectable MTA / 'Magyar Tudományos Akadémia' chapter heading. The gap originates in the source text layer or pre-parser extraction, not in canonical matching.",no,,pdf_5257eef1ec35__1991_1990__évi_CIV__törvény.txt,reextract,,,,6860900000.0
+Hungary,1992,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,6860900000.0,HUF,,6745600000.0
+Hungary,1993,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,6745600000.0,HUF,6860900000.0,6598300000.0
+Hungary,1994,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,6598300000.0,HUF,6745600000.0,10081500000.0
+Hungary,1995,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,10081500000.0,HUF,6598300000.0,10933700000.0
+Hungary,1996,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,10933700000.0,HUF,10081500000.0,13431600000.0
+Hungary,1997,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,13431600000.0,HUF,10933700000.0,16123600000.0
+Hungary,1998,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,16123600000.0,HUF,13431600000.0,26383000000.0
+Hungary,1999,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,26383000000.0,HUF,16123600000.0,33159400000.0
+Hungary,2000,Hungarian Academy of Sciences (MTA),science_agency,missing,,"Original Hungary cached text contains the MTA chapter heading, but no MTA row reaches raw_rows. The loss occurs inside text-cache parsing: the multi-column chapter total is fragmented/truncated in the PDF text layer, so the parser cannot recover a defendable numeric annual total.",no,,pdf_71e5cc9d7382__2001-2002__2000__évi_CXXXIII__törvény.txt,reextract,,,26383000000.0,33159400000.0
+Hungary,2001,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,33159400000.0,HUF,26383000000.0,47370000000.0
+Hungary,2003,Hungarian Academy of Sciences (MTA),science_agency,missing,,"Original Hungary cached text contains the MTA chapter heading, but no MTA row reaches raw_rows. The loss occurs inside text-cache parsing: the multi-column chapter total is fragmented/truncated in the PDF text layer, so the parser cannot recover a defendable numeric annual total.",no,,pdf_d1111441768c__2003__2002___évi_LXII__törvény.txt,reextract,,,33159400000.0,47370000000.0
+Hungary,2004,Hungarian Academy of Sciences (MTA),science_agency,missing,,"Original Hungary cached text contains the MTA chapter heading, but no MTA row reaches raw_rows. The loss occurs inside text-cache parsing: the multi-column chapter total is fragmented/truncated in the PDF text layer, so the parser cannot recover a defendable numeric annual total.",no,,pdf_a34c9c5b7b2c__2004_2003__évi_CXVI__törvény.txt,reextract,,,33159400000.0,47370000000.0
+Hungary,2005,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,47370000000.0,HUF,33159400000.0,50063000000.0
+Hungary,2006,Hungarian Academy of Sciences (MTA),science_agency,missing,,"Original Hungary cached text contains the MTA chapter heading, but no MTA row reaches raw_rows. The loss occurs inside text-cache parsing: the multi-column chapter total is fragmented/truncated in the PDF text layer, so the parser cannot recover a defendable numeric annual total.",no,,pdf_7e07af75bcf8__2007__2006__évi_CXXVII__törvény.txt,reextract,,,47370000000.0,50063000000.0
+Hungary,2007,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,50063000000.0,HUF,47370000000.0,48372800000.0
+Hungary,2008,Hungarian Academy of Sciences (MTA),science_agency,missing,,"Original Hungary cached text contains the MTA chapter heading, but no MTA row reaches raw_rows. The loss occurs inside text-cache parsing: the multi-column chapter total is fragmented/truncated in the PDF text layer, so the parser cannot recover a defendable numeric annual total.",no,,pdf_25faad6beb49__2008_2007__évi_CLXIX__törvény.txt,reextract,,,50063000000.0,48372800000.0
+Hungary,2009,Hungarian Academy of Sciences (MTA),science_agency,missing,,"Original Hungary cached text contains the MTA chapter heading, but no MTA row reaches raw_rows. The loss occurs inside text-cache parsing: the multi-column chapter total is fragmented/truncated in the PDF text layer, so the parser cannot recover a defendable numeric annual total.",no,,pdf_5953b3435951__2009__2008__évi_CII__törvény.txt,reextract,,,50063000000.0,48372800000.0
+Hungary,2010,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,48372800000.0,HUF,50063000000.0,51505800000.0
+Hungary,2011,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,51505800000.0,HUF,48372800000.0,57483100000.0
+Hungary,2012,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,57483100000.0,HUF,51505800000.0,59109500000.0
+Hungary,2013,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,59109500000.0,HUF,57483100000.0,63203500000.0
+Hungary,2014,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,63203500000.0,HUF,59109500000.0,56318100000.0
+Hungary,2015,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,56318100000.0,HUF,63203500000.0,56194800000.0
+Hungary,2016,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,56194800000.0,HUF,56318100000.0,68945500000.0
+Hungary,2017,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,68945500000.0,HUF,56194800000.0,62611700000.0
+Hungary,2018,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,62611700000.0,HUF,68945500000.0,56146500000.0
+Hungary,2019,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,56146500000.0,HUF,62611700000.0,17184900000.0
+Hungary,2020,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,17184900000.0,HUF,56146500000.0,17134400000.0
+Hungary,2021,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,17134400000.0,HUF,17184900000.0,28765700000.0
+Hungary,2022,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,28765700000.0,HUF,17134400000.0,30566400000.0
+Hungary,2023,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,30566400000.0,HUF,28765700000.0,30706800000.0
+Hungary,2024,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,30706800000.0,HUF,30566400000.0,37063700000.0
+Hungary,2025,Hungarian Academy of Sciences (MTA),science_agency,ok,,,,,,none,37063700000.0,HUF,30706800000.0,
+Hungary,2013,MTA Library and Information Centre,science_agency,ok,,,,,,none,1426000000.0,HUF,,1426000000.0
+Hungary,2014,MTA Library and Information Centre,science_agency,ok,,,,,,none,1426000000.0,HUF,1426000000.0,1426000000.0
+Hungary,2015,MTA Library and Information Centre,science_agency,ok,,,,,,none,1426000000.0,HUF,1426000000.0,1426000000.0
+Hungary,2016,MTA Library and Information Centre,science_agency,ok,,,,,,none,1426000000.0,HUF,1426000000.0,1426000000.0
+Hungary,2017,MTA Library and Information Centre,science_agency,ok,,,,,,none,1426000000.0,HUF,1426000000.0,1950000000.0
+Hungary,2018,MTA Library and Information Centre,science_agency,ok,,,,,,none,1950000000.0,HUF,1426000000.0,1950000000.0
+Hungary,2019,MTA Library and Information Centre,science_agency,ok,,,,,,none,1950000000.0,HUF,1950000000.0,1950000000.0
+Hungary,2020,MTA Library and Information Centre,science_agency,ok,,,,,,none,1950000000.0,HUF,1950000000.0,1950000000.0
+Hungary,2021,MTA Library and Information Centre,science_agency,ok,,,,,,none,1950000000.0,HUF,1950000000.0,1950000000.0
+Hungary,2022,MTA Library and Information Centre,science_agency,ok,,,,,,none,1950000000.0,HUF,1950000000.0,1950000000.0
+Hungary,2023,MTA Library and Information Centre,science_agency,ok,,,,,,none,1950000000.0,HUF,1950000000.0,1950000000.0
+Hungary,2024,MTA Library and Information Centre,science_agency,ok,,,,,,none,1950000000.0,HUF,1950000000.0,1950000000.0
+Hungary,2025,MTA Library and Information Centre,science_agency,ok,,,,,,none,1950000000.0,HUF,1950000000.0,
+Hungary,2010,Research and Technological Innovation Fund,innovation_instruments,ok,,,,,,none,43695900000.0,HUF,,45977900000.0
+Hungary,2011,Research and Technological Innovation Fund,innovation_instruments,ok,,,,,,none,45977900000.0,HUF,43695900000.0,45200000000.0
+Hungary,2012,Research and Technological Innovation Fund,innovation_instruments,ok,,,,,,none,45200000000.0,HUF,45977900000.0,37664500000.0
+Hungary,2013,Research and Technological Innovation Fund,innovation_instruments,ok,,,,,,none,37664500000.0,HUF,45200000000.0,35357600000.0
+Hungary,2014,Research and Technological Innovation Fund,innovation_instruments,ok,,,,,,none,35357600000.0,HUF,37664500000.0,
+Hungary,2015,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,,none,77951600000.0,HUF,,79451600000.0
+Hungary,2016,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,,none,79451600000.0,HUF,77951600000.0,78915000000.0
+Hungary,2017,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,,none,78915000000.0,HUF,79451600000.0,82073000000.0
+Hungary,2018,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,,none,82073000000.0,HUF,78915000000.0,78587000000.0
+Hungary,2019,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,,none,78587000000.0,HUF,82073000000.0,137812200000.0
+Hungary,2020,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,,none,137812200000.0,HUF,78587000000.0,137812200000.0
+Hungary,2021,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,,none,137812200000.0,HUF,137812200000.0,143946900000.0
+Hungary,2022,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,,none,143946900000.0,HUF,137812200000.0,172762400000.0
+Hungary,2023,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,,none,172762400000.0,HUF,143946900000.0,154118800000.0
+Hungary,2024,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,,none,154118800000.0,HUF,172762400000.0,137127400000.0
+Hungary,2025,"National Research, Development and Innovation Fund (Hungary)",innovation_instruments,ok,,,,,,none,137127400000.0,HUF,154118800000.0,
+Hungary,2020,Eötvös Loránd Research Network,science_agency,ok,,,,,,none,48228800000.0,HUF,,70666400000.0
+Hungary,2021,Eötvös Loránd Research Network,science_agency,ok,,,,,,none,70666400000.0,HUF,48228800000.0,66122200000.0
+Hungary,2022,Eötvös Loránd Research Network,science_agency,ok,,,,,,none,66122200000.0,HUF,70666400000.0,67001700000.0
+Hungary,2023,Eötvös Loránd Research Network,science_agency,ok,,,,,,none,67001700000.0,HUF,66122200000.0,
+Hungary,2024,Hungarian Research Network,science_agency,ok,,,,,,none,66091600000.0,HUF,,73579100000.0
+Hungary,2025,Hungarian Research Network,science_agency,ok,,,,,,none,73579100000.0,HUF,66091600000.0,
+Hungary,2011,INTERREG IVC Programme,innovation_instruments,ok,,,,,,none,2777000000.0,HUF,,1469000000.0
+Hungary,2012,INTERREG IVC Programme,innovation_instruments,ok,,,,,,none,1469000000.0,HUF,2777000000.0,5417000000.0
+Hungary,2013,INTERREG IVC Programme,innovation_instruments,ok,,,,,,none,5417000000.0,HUF,1469000000.0,1503000000.0
+Hungary,2014,INTERREG IVC Programme,innovation_instruments,ok,,,,,,none,1503000000.0,HUF,5417000000.0,1357900000.0
+Hungary,2015,INTERREG IVC Programme,innovation_instruments,ok,,,,,,none,1357900000.0,HUF,1503000000.0,
+Hungary,2025,"35th National Research, Development and Innovation Fund",direct_rd,ok,,,,,,none,8676000000.0,HUF,,

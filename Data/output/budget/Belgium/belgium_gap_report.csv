@@ -1,46 +1,46 @@
-country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
-Belgium,1994,BELSPO / Belgian Federal Science Policy,rd_ministry,ok,,,,,none,6121300000.0,,6288000000.0
-Belgium,1995,BELSPO / Belgian Federal Science Policy,rd_ministry,ok,,,,,none,6288000000.0,6121300000.0,1670000000.0
-Belgium,1996,BELSPO / Belgian Federal Science Policy,rd_ministry,ok,,,,,none,1670000000.0,6288000000.0,5835500000.0
-Belgium,1997,BELSPO / Belgian Federal Science Policy,rd_ministry,ok,,,,,none,5835500000.0,1670000000.0,5793800000.0
-Belgium,1998,BELSPO / Belgian Federal Science Policy,rd_ministry,ok,,,,,none,5793800000.0,5835500000.0,6803200000.0
-Belgium,1999,BELSPO / Belgian Federal Science Policy,rd_ministry,ok,,,,,none,6803200000.0,5793800000.0,6106700000.0
-Belgium,2000,BELSPO / Belgian Federal Science Policy,rd_ministry,ok,,,,,none,6106700000.0,6803200000.0,7110000000.0
-Belgium,2001,BELSPO / Belgian Federal Science Policy,rd_ministry,ok,,,,,none,7110000000.0,6106700000.0,156236000.0
-Belgium,2002,BELSPO / Belgian Federal Science Policy,rd_ministry,ok,,,,,none,156236000.0,7110000000.0,168972000.0
-Belgium,2004,BELSPO / Belgian Federal Science Policy,rd_ministry,ok,,,,,none,168972000.0,156236000.0,
-Belgium,2008,BELSPO / Belgian Federal Science Policy,rd_ministry,missing,"Science-policy section is present in pipeline output, but the extracted BELSPO rows are all narrative / `no_amount`. The current source behaves like legal text without a recoverable annual amount table.",no,,Loi de finances 2008.pdf,reextract,,168972000.0,
-Belgium,2022,BELSPO / Belgian Federal Science Policy,rd_ministry,missing,"Science-policy section is present in pipeline output, but the extracted BELSPO rows are all narrative / `no_amount`. The current source behaves like legal text without a recoverable annual amount table.",no,,Loi de finances 2022.pdf,reextract,,168972000.0,
-Belgium,2023,BELSPO / Belgian Federal Science Policy,rd_ministry,missing,"Belgium pipeline output exists for this year, but no usable BELSPO / science-policy rows were extracted. This points to wrong page/source selection or to a legal-text-only source file rather than a numeric budget annex.",no,,Loi de finances 2023 (p9).pdf,reextract,,168972000.0,
-Belgium,2024,BELSPO / Belgian Federal Science Policy,rd_ministry,missing,"Science-policy section is present in pipeline output, but the extracted BELSPO rows are all narrative / `no_amount`. The current source behaves like legal text without a recoverable annual amount table.",no,,Loi de finances 2024 - Politique scientifique (p513).pdf,reextract,,168972000.0,
-Belgium,1996,FNRS,science_agency,ok,,,,,none,2862000000.0,,275800000.0
-Belgium,1997,FNRS,science_agency,ok,,,,,none,275800000.0,2862000000.0,274600000.0
-Belgium,1999,FNRS,science_agency,ok,,,,,none,274600000.0,275800000.0,274600000.0
-Belgium,2001,FNRS,science_agency,ok,,,,,none,274600000.0,274600000.0,
-Belgium,1996,SCK CEN,science_agency,ok,,,,,none,1446900000.0,,1464000000.0
-Belgium,1997,SCK CEN,science_agency,ok,,,,,none,1464000000.0,1446900000.0,1482400000.0
-Belgium,2001,SCK CEN,science_agency,ok,,,,,none,1482400000.0,1464000000.0,36241000.0
-Belgium,2002,SCK CEN,science_agency,ok,,,,,none,36241000.0,1482400000.0,
-Belgium,2001,Royal Observatory of Belgium,science_agency,ok,,,,,none,37200000.0,,1028000.0
-Belgium,2002,Royal Observatory of Belgium,science_agency,ok,,,,,none,1028000.0,37200000.0,1051000.0
-Belgium,2004,Royal Observatory of Belgium,science_agency,ok,,,,,none,1051000.0,1028000.0,
-Belgium,2001,Royal Meteorological Institute of Belgium,science_agency,ok,,,,,none,107700000.0,,4076000.0
-Belgium,2002,Royal Meteorological Institute of Belgium,science_agency,ok,,,,,none,4076000.0,107700000.0,2815000.0
-Belgium,2004,Royal Meteorological Institute of Belgium,science_agency,ok,,,,,none,2815000.0,4076000.0,
-Belgium,2001,Belgian Institute for Space Aeronomy,science_agency,ok,,,,,none,41000000.0,,1036000.0
-Belgium,2002,Belgian Institute for Space Aeronomy,science_agency,ok,,,,,none,1036000.0,41000000.0,1059000.0
-Belgium,2004,Belgian Institute for Space Aeronomy,science_agency,ok,,,,,none,1059000.0,1036000.0,
-Belgium,2001,Royal Belgian Institute of Natural Sciences,science_agency,ok,,,,,none,222600000.0,,6083000.0
-Belgium,2002,Royal Belgian Institute of Natural Sciences,science_agency,ok,,,,,none,6083000.0,222600000.0,6269000.0
-Belgium,2004,Royal Belgian Institute of Natural Sciences,science_agency,ok,,,,,none,6269000.0,6083000.0,
-Belgium,1996,Institute of Radioelements (IRE),science_agency,ok,,,,,none,25300000.0,,25500000.0
-Belgium,1997,Institute of Radioelements (IRE),science_agency,ok,,,,,none,25500000.0,25300000.0,645000.0
-Belgium,2002,Institute of Radioelements (IRE),science_agency,ok,,,,,none,645000.0,25500000.0,
-Belgium,1995,Scientific Institute of Public Health / Louis Pasteur,science_agency,ok,,,,,none,333600000.0,,506300000.0
-Belgium,2001,Scientific Institute of Public Health / Louis Pasteur,science_agency,ok,,,,,none,506300000.0,333600000.0,
-Belgium,1997,Human Genetics Centers,science_agency,ok,,,,,none,39000000.0,,3900000.0
-Belgium,2001,Human Genetics Centers,science_agency,ok,,,,,none,3900000.0,39000000.0,
-Belgium,2002,Von Karman Institute,science_agency,ok,,,,,none,8724000.0,,2411000.0
-Belgium,2004,Von Karman Institute,science_agency,ok,,,,,none,2411000.0,8724000.0,
-Belgium,2001,Allocation to NIRAS for radioactive waste studies,direct_rd,ok,,,,,none,49800000.0,,
-Belgium,1997,Deep Geological Structure Research,direct_rd,ok,,,,,none,35000000.0,,
+country,year,canonical_name,category,gap_type,gap_subtype,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,series_currency,prev_amount,next_amount
+Belgium,1994,BELSPO / Belgian Federal Science Policy,rd_ministry,ok,,,,,,none,6121300000.0,BEF,,6288000000.0
+Belgium,1995,BELSPO / Belgian Federal Science Policy,rd_ministry,ok,,,,,,none,6288000000.0,BEF,6121300000.0,1670000000.0
+Belgium,1996,BELSPO / Belgian Federal Science Policy,rd_ministry,outlier,,"Amount 1,670,000,000 outside expected range [4,049,900,000 – 8,191,975,000] (IQR × 3.0) within BEF observations. Possible current/prior year confusion or unit error.",,,,verify,1670000000.0,BEF,6288000000.0,5835500000.0
+Belgium,1997,BELSPO / Belgian Federal Science Policy,rd_ministry,ok,,,,,,none,5835500000.0,BEF,1670000000.0,5793800000.0
+Belgium,1998,BELSPO / Belgian Federal Science Policy,rd_ministry,ok,,,,,,none,5793800000.0,BEF,5835500000.0,6803200000.0
+Belgium,1999,BELSPO / Belgian Federal Science Policy,rd_ministry,ok,,,,,,none,6803200000.0,BEF,5793800000.0,6106700000.0
+Belgium,2000,BELSPO / Belgian Federal Science Policy,rd_ministry,ok,,,,,,none,6106700000.0,BEF,6803200000.0,7110000000.0
+Belgium,2001,BELSPO / Belgian Federal Science Policy,rd_ministry,ok,,,,,,none,7110000000.0,BEF,6106700000.0,156236000.0
+Belgium,2002,BELSPO / Belgian Federal Science Policy,rd_ministry,ok,,,,,,none,156236000.0,EUR,7110000000.0,168972000.0
+Belgium,2004,BELSPO / Belgian Federal Science Policy,rd_ministry,ok,,,,,,none,168972000.0,EUR,156236000.0,
+Belgium,2008,BELSPO / Belgian Federal Science Policy,rd_ministry,missing,,"Science-policy section is present in pipeline output, but the extracted BELSPO rows are all narrative / `no_amount`. The current source behaves like legal text without a recoverable annual amount table.",no,,Loi de finances 2008.pdf,reextract,,,168972000.0,
+Belgium,2022,BELSPO / Belgian Federal Science Policy,rd_ministry,missing,,"Science-policy section is present in pipeline output, but the extracted BELSPO rows are all narrative / `no_amount`. The current source behaves like legal text without a recoverable annual amount table.",no,,Loi de finances 2022.pdf,reextract,,,168972000.0,
+Belgium,2023,BELSPO / Belgian Federal Science Policy,rd_ministry,missing,,"Belgium pipeline output exists for this year, but no usable BELSPO / science-policy rows were extracted. This points to wrong page/source selection or to a legal-text-only source file rather than a numeric budget annex.",no,,Loi de finances 2023 (p9).pdf,reextract,,,168972000.0,
+Belgium,2024,BELSPO / Belgian Federal Science Policy,rd_ministry,missing,,"Science-policy section is present in pipeline output, but the extracted BELSPO rows are all narrative / `no_amount`. The current source behaves like legal text without a recoverable annual amount table.",no,,Loi de finances 2024 - Politique scientifique (p513).pdf,reextract,,,168972000.0,
+Belgium,1996,FNRS,science_agency,ok,,,,,,none,2862000000.0,BEF,,275800000.0
+Belgium,1997,FNRS,science_agency,ok,,,,,,none,275800000.0,BEF,2862000000.0,274600000.0
+Belgium,1999,FNRS,science_agency,ok,,,,,,none,274600000.0,BEF,275800000.0,274600000.0
+Belgium,2001,FNRS,science_agency,ok,,,,,,none,274600000.0,BEF,274600000.0,
+Belgium,1996,SCK CEN,science_agency,ok,,,,,,none,1446900000.0,BEF,,1464000000.0
+Belgium,1997,SCK CEN,science_agency,ok,,,,,,none,1464000000.0,BEF,1446900000.0,1482400000.0
+Belgium,2001,SCK CEN,science_agency,ok,,,,,,none,1482400000.0,BEF,1464000000.0,36241000.0
+Belgium,2002,SCK CEN,science_agency,ok,,,,,,none,36241000.0,EUR,1482400000.0,
+Belgium,2001,Royal Observatory of Belgium,science_agency,ok,,,,,,none,37200000.0,BEF,,1028000.0
+Belgium,2002,Royal Observatory of Belgium,science_agency,ok,,,,,,none,1028000.0,EUR,37200000.0,1051000.0
+Belgium,2004,Royal Observatory of Belgium,science_agency,ok,,,,,,none,1051000.0,EUR,1028000.0,
+Belgium,2001,Royal Meteorological Institute of Belgium,science_agency,ok,,,,,,none,107700000.0,BEF,,4076000.0
+Belgium,2002,Royal Meteorological Institute of Belgium,science_agency,ok,,,,,,none,4076000.0,EUR,107700000.0,2815000.0
+Belgium,2004,Royal Meteorological Institute of Belgium,science_agency,ok,,,,,,none,2815000.0,EUR,4076000.0,
+Belgium,2001,Belgian Institute for Space Aeronomy,science_agency,ok,,,,,,none,41000000.0,BEF,,1036000.0
+Belgium,2002,Belgian Institute for Space Aeronomy,science_agency,ok,,,,,,none,1036000.0,EUR,41000000.0,1059000.0
+Belgium,2004,Belgian Institute for Space Aeronomy,science_agency,ok,,,,,,none,1059000.0,EUR,1036000.0,
+Belgium,2001,Royal Belgian Institute of Natural Sciences,science_agency,ok,,,,,,none,222600000.0,BEF,,6083000.0
+Belgium,2002,Royal Belgian Institute of Natural Sciences,science_agency,ok,,,,,,none,6083000.0,EUR,222600000.0,6269000.0
+Belgium,2004,Royal Belgian Institute of Natural Sciences,science_agency,ok,,,,,,none,6269000.0,EUR,6083000.0,
+Belgium,1996,Institute of Radioelements (IRE),science_agency,ok,,,,,,none,25300000.0,BEF,,25500000.0
+Belgium,1997,Institute of Radioelements (IRE),science_agency,ok,,,,,,none,25500000.0,BEF,25300000.0,645000.0
+Belgium,2002,Institute of Radioelements (IRE),science_agency,ok,,,,,,none,645000.0,EUR,25500000.0,
+Belgium,1995,Scientific Institute of Public Health / Louis Pasteur,science_agency,ok,,,,,,none,333600000.0,BEF,,506300000.0
+Belgium,2001,Scientific Institute of Public Health / Louis Pasteur,science_agency,ok,,,,,,none,506300000.0,BEF,333600000.0,
+Belgium,1997,Human Genetics Centers,science_agency,ok,,,,,,none,39000000.0,BEF,,3900000.0
+Belgium,2001,Human Genetics Centers,science_agency,ok,,,,,,none,3900000.0,BEF,39000000.0,
+Belgium,2002,Von Karman Institute,science_agency,ok,,,,,,none,8724000.0,EUR,,2411000.0
+Belgium,2004,Von Karman Institute,science_agency,ok,,,,,,none,2411000.0,EUR,8724000.0,
+Belgium,2001,Allocation to NIRAS for radioactive waste studies,direct_rd,ok,,,,,,none,49800000.0,BEF,,
+Belgium,1997,Deep Geological Structure Research,direct_rd,ok,,,,,,none,35000000.0,BEF,,

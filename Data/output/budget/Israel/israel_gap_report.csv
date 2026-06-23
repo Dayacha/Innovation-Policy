@@ -13,12 +13,18 @@ Israel,2004,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none
 Israel,2005,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,118277.0,ILS,118947.0,700837.0
 Israel,2007,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,700837.0,ILS,118277.0,709529.0
 Israel,2008,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,709529.0,ILS,700837.0,979860.0
-Israel,2009,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,979860.0,ILS,709529.0,1400000.0
-Israel,2011,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,1400000.0,ILS,979860.0,1117322.0
-Israel,2013,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,1117322.0,ILS,1400000.0,1361253.0
-Israel,2015,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,1361253.0,ILS,1117322.0,1573033.0
-Israel,2017,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,1573033.0,ILS,1361253.0,500513.603
-Israel,2021,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,500513.603,ILS,1573033.0,462500.134
+Israel,2009,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,979860.0,ILS,709529.0,979860000.0
+Israel,2010,Ministry of Science and Technology (Israel),rd_ministry,outlier,,"Amount 979,860,000 outside expected range [-6,870,916 – 9,591,138] (IQR × 3.0) within ILS observations. Possible current/prior year confusion or unit error.",,,,verify,979860000.0,ILS,979860.0,1400000.0
+Israel,2011,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,1400000.0,ILS,979860000.0,14700000000.0
+Israel,2012,Ministry of Science and Technology (Israel),rd_ministry,outlier,,"Amount 14,700,000,000 outside expected range [-6,870,916 – 9,591,138] (IQR × 3.0) within ILS observations. Possible current/prior year confusion or unit error.",,,,verify,14700000000.0,ILS,1400000.0,1117322.0
+Israel,2013,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,1117322.0,ILS,14700000000.0,133990000.0
+Israel,2014,Ministry of Science and Technology (Israel),rd_ministry,outlier,,"Amount 133,990,000 outside expected range [-6,870,916 – 9,591,138] (IQR × 3.0) within ILS observations. Possible current/prior year confusion or unit error.",,,,verify,133990000.0,ILS,1117322.0,1361253.0
+Israel,2015,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,1361253.0,ILS,133990000.0,1361253000.0
+Israel,2016,Ministry of Science and Technology (Israel),rd_ministry,outlier,,"Amount 1,361,253,000 outside expected range [-6,870,916 – 9,591,138] (IQR × 3.0) within ILS observations. Possible current/prior year confusion or unit error.",,,,verify,1361253000.0,ILS,1361253.0,1573033.0
+Israel,2017,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,1573033.0,ILS,1361253000.0,1573033000.0
+Israel,2018,Ministry of Science and Technology (Israel),rd_ministry,outlier,,"Amount 1,573,033,000 outside expected range [-6,870,916 – 9,591,138] (IQR × 3.0) within ILS observations. Possible current/prior year confusion or unit error.",,,,verify,1573033000.0,ILS,1573033.0,500513.603
+Israel,2019,Ministry of Science and Technology (Israel),rd_ministry,missing,,Year has 1 parsed files but agency not found. May be in a non-table section or different document.,no,,,reextract,,,1573033000.0,500513.603
+Israel,2021,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,500513.603,ILS,1573033000.0,462500.134
 Israel,2022,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,462500.134,ILS,500513.603,2535972.0
 Israel,2023,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,2535972.0,ILS,462500.134,2749765.0
 Israel,2024,Ministry of Science and Technology (Israel),rd_ministry,ok,,,,,,none,2749765.0,ILS,2535972.0,2807783.0
@@ -49,8 +55,13 @@ Israel,1991,"KAMEA Fund (קרן קמ""ח)",innovation_instruments,ok,,,,,,none,3
 Israel,1995,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,,none,4644.0,ILS,,405.0
 Israel,2004,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,,none,405.0,ILS,4644.0,15.343
 Israel,2005,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,,none,15.343,ILS,405.0,444934.0
-Israel,2007,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,,none,444934.0,ILS,15.343,271935.0
-Israel,2011,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,,none,271935.0,ILS,444934.0,874951.0
-Israel,2019,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,,none,874951.0,ILS,271935.0,561109.0
+Israel,2007,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,,none,444934.0,ILS,15.343,562417000.0
+Israel,2010,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,outlier,,"Amount 562,417,000 outside expected range [-2,275,540 – 3,100,513] (IQR × 3.0) within ILS observations. Possible current/prior year confusion or unit error.",,,,verify,562417000.0,ILS,444934.0,271935.0
+Israel,2011,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,,none,271935.0,ILS,562417000.0,500000000.0
+Israel,2012,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,outlier,,"Amount 500,000,000 outside expected range [-2,275,540 – 3,100,513] (IQR × 3.0) within ILS observations. Possible current/prior year confusion or unit error.",,,,verify,500000000.0,ILS,271935.0,874951.0
+Israel,2014,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,missing,,"Year absent from raw_rows, but israel_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2013-2014_Israel.pdf,reextract,,,500000000.0,874951.0
+Israel,2016,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,missing,,"Year absent from raw_rows, but israel_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2015-2016_Israel.pdf,reextract,,,500000000.0,874951.0
+Israel,2018,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,missing,,"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year (17,205,834 in 2017-2018_Israel.pdf). The gap is downstream of extraction.",no,,2017-2018_Israel.pdf,reclassify,,,500000000.0,874951.0
+Israel,2019,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,,none,874951.0,ILS,500000000.0,561109.0
 Israel,2021,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,,none,561109.0,ILS,874951.0,100000.0
 Israel,2022,Israeli Space Agency (סוכנות החלל הישראלית),science_agency,ok,,,,,,none,100000.0,ILS,561109.0,

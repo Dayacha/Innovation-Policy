@@ -346,7 +346,7 @@ def build_panel(
             row["amount_millions"] = None
 
     # Drop rows with no normalised amount
-    rows = [r for r in rows if row.get("amount_millions") is not None for row in [row]]
+    rows = [r for r in rows if r.get("amount_millions") is not None]
 
     # Series assignment (fuzzy name matching across years)
     rows = _assign_series(rows, similarity_threshold=similarity_threshold)

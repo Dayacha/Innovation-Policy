@@ -1,0 +1,70 @@
+year,source_file,rows_extracted,status,category,diagnosis
+1975,1975 15164.pdf,19,ok,ok_gazette,Resmi Gazete with budget cetveller
+1976,1976 15515.pdf,34,ok,ok_gazette,Resmi Gazete with budget cetveller
+1977,1977 15865.pdf,7,ok,ok_gazette,Resmi Gazete with budget cetveller
+1978,1978 16215.pdf,9,ok,ok_gazette,Resmi Gazete with budget cetveller
+1979,1979 16565.pdf,10,ok,ok_gazette,Resmi Gazete with budget cetveller
+1980,1980 16916.pdf,11,ok,ok_gazette,Resmi Gazete with budget cetveller
+1981,1981 17265.pdf,11,ok,ok_gazette,Resmi Gazete with budget cetveller
+1982,1982 17620.pdf,20,ok,ok_gazette,Resmi Gazete with budget cetveller
+1983,1983 17895.pdf,1,ok,ok_gazette,Resmi Gazete with budget cetveller
+1984,1984 18230.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+1985,1985 18622.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+1986,1986 18975.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+1987,1987 19237.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+1988,1988 19798.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+1989,1989 20044.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+1990,1990 20388.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+1991,1991 20388.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+1991,1991 20739.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+1992,1992 21186.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+1993,1993 21450.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+1994,1994 21803.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+1995,1995 22155.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+1996,1996 22622.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+1997,1997 22859.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+1998,1998 23213.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+1999,1999 23741.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+2000,2000 23922.pdf,1,ok,ok_gazette,Resmi Gazete with budget cetveller
+2001,2001 dfd35a0d-5187-41b4-a3ff-36c558adeca9.pdf,0,ok,zero_uuid_law_text,"UUID file — OCR verified: kanun articles only, no cetveller"
+2001,2001-Malî-Yılı-Bütçe-Kanunu-Kanun-No.-4611 (1).pdf,0,ok,zero_law_text_only,Budget law articles only — no cetveller/appropriation tables
+2001,2001-Malî-Yılı-Bütçe-Kanunu-Kanun-No.-4611.pdf,0,ok,zero_law_text_only,Budget law articles only — no cetveller/appropriation tables
+2002,2002-Malî-Yılı-Bütçe-Kanunu-Kanun-No.-4726 (1).pdf,0,ok,zero_law_text_only,Budget law articles only — no cetveller/appropriation tables
+2002,2002-Malî-Yılı-Bütçe-Kanunu-Kanun-No.-4726.pdf,0,ok,zero_law_text_only,Budget law articles only — no cetveller/appropriation tables
+2003,2003 ffe059e8-9257-4408-8799-52cb5b293286.pdf,0,ok,zero_uuid_law_text,"UUID file — OCR verified: kanun articles only, no cetveller"
+2003,2003 kanuntbmmc08704833.pdf,0,ok,zero_law_text_only,Budget law articles only — no cetveller/appropriation tables
+2004,2004 f8229ba6-c7fd-48b3-8877-9e716ba97e4d.pdf,0,ok,zero_uuid_law_text,"UUID file — OCR verified: kanun articles only, no cetveller"
+2004,2004 kanuntbmmc08805027.pdf,0,ok,zero_law_text_only,Budget law articles only — no cetveller/appropriation tables
+2005,2005 kanuntbmmc08905277.pdf,0,ok,zero_law_text_only,Budget law articles only — no cetveller/appropriation tables
+2005,2005 tbmm22140033ss1270.pdf,7,ok,ok_parliament_doc,Parliamentary committee document
+2005,2005 tbmm22140033ss1271.pdf,19,ok,ok_parliament_doc,Parliamentary committee document
+2006,2006 GenelFaaliyetRaporu_2006.pdf,9,ok,ok_activity_report,General activity report (not appropriation)
+2006,2006 kanuntbmmc09005437.pdf,8,ok,ok_parliament_doc,Parliamentary committee document
+2006,2006 tbmm22103031ss1028.pdf,19,ok,ok_parliament_doc,Parliamentary committee document
+2007,2007 GenelFaaliyetRaporu_2007.pdf,9,ok,ok_activity_report,General activity report (not appropriation)
+2007,2007 efe3d60d-c7c3-466e-be9f-bc02233d1f24.pdf,3,ok,ok_gazette,Resmi Gazete with budget cetveller
+2007,2007 kanuntbmmc09105565.pdf,3,ok,ok_parliament_doc,Parliamentary committee document
+2008,2008 2008-Merkezi-Yonetim-Kesin-Hesabi-.pdf,53,ok,ok_final_accounts,"Final accounts (outturn, not appropriation)"
+2008,2008 GenelFaaliyetRaporu_2008.pdf,12,ok,ok_activity_report,General activity report (not appropriation)
+2008,2008 kanuntbmmc09205724.pdf,4,ok,ok_parliament_doc,Parliamentary committee document
+2008,2008 tbmm230070290179.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+2009,2009 GenelFaaliyetRaporu_2009.pdf,16,ok,ok_activity_report,General activity report (not appropriation)
+2009,2009 kanuntbmmc09305828.pdf,0,ok,zero_law_text_only,Budget law articles only — no cetveller/appropriation tables
+2009,2009-ButceGerekcesi_2009.pdf,61,ok,ok_best_source,Budget justification document with cetveller
+2009,2009-Merkezi-Yönetim-Kesin-Hesabı-compressed.pdf,27,ok,ok_final_accounts,"Final accounts (outturn, not appropriation)"
+2010,2010 2-a-2010-Yılı-Genel-Bütçeli-İdareler-Ekonomik-Kod-İcmali-ile-2011-2012-....pdf,0,ok,zero_aggregate_only,"Ekonomik Kod İcmali — general budget only, TÜBİTAK absent (Özel Bütçeli)"
+2011,2011 2-a-2011-Yılı-Genel-Bütçeli-İdareler-Ekonomik-Kod-İcmali-ile-2012-2013-....pdf,0,ok,zero_aggregate_only,"Ekonomik Kod İcmali — general budget only, TÜBİTAK absent (Özel Bütçeli)"
+2012,2012 2-a-2012-Yılı-Genel-Bütçeli-İdareler-Ekonomik-Kod-İcmali-ile-2013-2014-....pdf,0,ok,zero_aggregate_only,"Ekonomik Kod İcmali — general budget only, TÜBİTAK absent (Özel Bütçeli)"
+2013,2013 2-a-2013-Yılı-Genel-Bütçeli-İdareler-Ekonomik-Kod-İcmali-ile-2014-2015-....pdf,0,ok,zero_aggregate_only,"Ekonomik Kod İcmali — general budget only, TÜBİTAK absent (Özel Bütçeli)"
+2014,2014 2-a-2014-Yılı-Genel-Bütçeli-İdareler-Ekonomik-Kod-İcmali-ile-2015-2016-....pdf,0,ok,zero_aggregate_only,"Ekonomik Kod İcmali — general budget only, TÜBİTAK absent (Özel Bütçeli)"
+2015,2015 2-a2015-Yılı-Genel-Bütçeli-İdareler-Ekonomik-Kod-İcmali-ile-2016-2017-G....pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+2016,2016 2-a-2016-Yılı-Genel-Bütçeli-İdareler-Ekonomik-Kod-İcmali-ile-2017-2018-G....pdf,0,ok,zero_aggregate_only,"Ekonomik Kod İcmali — general budget only, TÜBİTAK absent (Özel Bütçeli)"
+2017,2017 2-a-2017-Yılı-Genel-Bütçeli-İdareler-Ekonomik-Kod-İcmali-ile-2018-2019-....pdf,0,ok,zero_aggregate_only,"Ekonomik Kod İcmali — general budget only, TÜBİTAK absent (Özel Bütçeli)"
+2018,2018 2-a-2018-Yılı-Genel-Bütçeli-İdareler-Ekonomik-Kod-İcmali-ile-2019-2020-....pdf,0,ok,zero_aggregate_only,"Ekonomik Kod İcmali — general budget only, TÜBİTAK absent (Özel Bütçeli)"
+2019,2019 3-a1-2019-2021-DÖNEMİ-GENEL-BÜTÇE-EKONOMİK.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+2020,2020 2-a-2020-Yılı-Genel-Bütçeli-İdareler-Ekonomik-Kod-İcmali-ile-2021-2022-Gider-Tahminleri.pdf,0,ok,zero_aggregate_only,"Ekonomik Kod İcmali — general budget only, TÜBİTAK absent (Özel Bütçeli)"
+2021,2021 2a-2021-Yili-Genel-Butceli-idareler-Ekonomik-Kod-icmali-ile-2022_2023-Gider-Tahminleri.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+2022,2022 2a-2022-Yili-Genel-Butceli-Idareler-Ekonomik-Kod-Icmali-ile-2023-2024-Gider-Tahminleri.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+2023,2023 2a-2023-Yili-Genel-Butceli-Idareler-Ekonomik-Kod-Icmali-ile-2024-2025-Gider-Tahminleri.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+2024,2024 2a-2024-Yili-Genel-Butceli-Idareler-Ekonomik-Kod-Icmali-ile-2025-2026-Gider-Tahminleri.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content
+2025,2025 2a-2025-Yili-Genel-Butceli-Idareler-Ekonomik-Kod-Icmali-ile-2026-2027-Gider-Tahminleri.pdf,0,ok,zero_wrong_gazette,Wrong Resmi Gazete issue — non-budget content

@@ -2863,29 +2863,36 @@ _GERMANY_KEEP_LINE_PATTERNS = {
     "DFG (Deutsche Forschungsgemeinschaft)": [
         r"institutional funding",
         r"german research foundation$",
-        # Bundeshaushalt title-group prefix format (2003-2009 documents)
+        # Bundeshaushalt title-group prefix format (2003-2009 documents) — English
         r"tgr\.\s*\d+\s+german research foundation",
         r"group\s+\d+\s+german research foundation",
+        # Bundeshaushalt title-group prefix format (2003-2009 documents) — German
+        r"tgr\.\s*\d+\s+deutsche forschungsgemeinschaft",
         # Later explicit allocation descriptions (2022+)
         r"allocations for the german research foundation",
         r"zuwendungen.*deutsche forschungsgemeinschaft",
-        # Bare standalone name (2025)
+        # Bare standalone name or with legal suffix
         r"^german research foundation$",
-        r"^deutsche forschungsgemeinschaft$",
+        r"^deutsche forschungsgemeinschaft",
+        r"deutsche forschungsgemeinschaft e\.?\s*v",
     ],
     "Helmholtz-Gemeinschaft (HGF)": [
         r"institutional grants to the helmholtz association",
-        # Bundeshaushalt title-group format
+        # Bundeshaushalt title-group format — English
         r"helmholtz association$",
         r"tgr\.\s*\d+\s+helmholtz association",
         r"group\s+\d+\s+helmholtz association",
+        # Bundeshaushalt title-group format — German
+        r"tgr\.\s*\d+\s+helmholtz-gemeinschaft",
+        r"tgr\.\s*\d+\s+grossforschungseinrichtungen",
+        r"tgr\.\s*\d+\s+großforschungseinrichtungen",
         r"^helmholtz-gemeinschaft",
         r"centers of the hermann von helmholtz association",
         r"hgf\b",
     ],
     "Fraunhofer-Gesellschaft": [
         r"institutional grants to the fraunhofer society",
-        # Bundeshaushalt title-group format
+        # Bundeshaushalt title-group format — English
         r"fraunhofer society$",
         r"tgr\.\s*\d+\s+fraunhofer",
         r"group\s+\d+\s+fraunhofer",
@@ -2895,10 +2902,12 @@ _GERMANY_KEEP_LINE_PATTERNS = {
     ],
     "Leibniz-Gemeinschaft (WGL)": [
         r"grants to the leibniz association",
-        # Bundeshaushalt title-group format
+        # Bundeshaushalt title-group format — English
         r"leibniz association$",
         r"tgr\.\s*\d+\s+leibniz",
         r"group\s+\d+\s+leibniz",
+        # Bundeshaushalt title-group format — German
+        r"tgr\.\s*\d+\s+wissenschaftsgemeinschaft",
         r"^leibniz-gemeinschaft",
         r"blaue liste",
         r"gottfried wilhelm leibniz scientific community",
@@ -2906,10 +2915,12 @@ _GERMANY_KEEP_LINE_PATTERNS = {
     ],
     "Max-Planck-Gesellschaft (MPG)": [
         r"total amount for the max planck society",
-        # Bundeshaushalt title-group format
+        # Bundeshaushalt title-group format — English
         r"max planck society$",
         r"tgr\.\s*\d+\s+max planck",
         r"group\s+\d+\s+max planck",
+        # Bundeshaushalt title-group format — German
+        r"tgr\.\s*\d+\s+max-planck",
         r"^max-planck-gesellschaft",
         r"^max planck society",
         r"mpg\b",
@@ -9763,6 +9774,14 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "research centre of iceland",
                 "icelandic research centre",
                 "icelandic research center",
+                # Post-2015 functional category names (Iceland budget shifted from
+                # institutional to objective-based presentation; Rannís no longer
+                # labelled by name but appears under these headings):
+                "samkeppnissjóðir í rannsóknum",
+                "samkeppnissjodur i rannsoknum",
+                "vísindi og samkeppnissjóðir í rannsóknum",
+                "visindi og samkeppnissjodur i rannsoknum",
+                "samkeppnissjóðir",
             ],
             "preferred_item_type": ["program_total", "section_total", "line_item"],
             "preferred_match_groups": [
@@ -9771,12 +9790,16 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                     r"ranns[oó]knami[ðd]st[oö]?[ðd]\s+[ií]slands",
                     r"research cent(?:er|re) of iceland",
                     r"icelandic research cent(?:er|re)",
+                    # Functional category patterns for 2015+ budget format:
+                    r"samkeppnissjó[ðd]ir\s+[ií]\s+ranns[oó]knum",
+                    r"v[ií]sindi\s+og\s+samkeppnissjó[ðd]ir",
+                    r"samkeppnissjó[ðd]ir",
                 ],
             ],
             "enforce_preferred_match_groups": True,
             "active_years": (2003, 2099),
-            "max_amount_local": 2_000_000_000,
-            "notes": "Created 2003 merging Rannsóknaráð + Vísindaráð + Vísindasjóður + Rannsóknasjóður.",
+            "max_amount_local": 10_000_000_000,
+            "notes": "Created 2003 merging Rannsóknaráð + Vísindaráð + Vísindasjóður + Rannsóknasjóður. Post-2015 appears under functional category 'Samkeppnissjóðir í rannsóknum'.",
         },
         # ── Pre-2003 research governance ──────────────────────────────────────
         {
@@ -10806,8 +10829,10 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             "enforce_preferred_match_groups": True,
             "expected_years": [
                 1992, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002,
-                2004, 2005, 2007, 2008, 2009, 2011, 2013, 2015, 2017,
-                2021, 2022, 2023, 2024, 2025,
+                2004, 2005, 2007, 2008, 2009,
+                # Biannual budgets (2009-2010, 2011-2012, …, 2017-2018): both years are valid
+                2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018,
+                2019, 2020, 2021, 2022, 2023, 2024, 2025,
             ],
             "active_years": (1992, 2099),
             "max_amount_local": 20_000_000_000,
@@ -10922,7 +10947,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
                 "space agency",
             ],
             "preferred_item_type": ["line_item", "program_total"],
-            "expected_years": [1995, 2004, 2005, 2007, 2011, 2019, 2021, 2022],
+            "expected_years": [1995, 2004, 2005, 2007, 2010, 2011, 2012, 2014, 2016, 2018, 2019, 2021, 2022],
             "active_years": (1983, 2099),
             "max_amount_local": 5_000_000_000,
         },
@@ -12044,7 +12069,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1963, 2099),
-            "expected_years": [2006, 2007, 2008, 2009],
+            "expected_years": list(range(1975, 2010)),
             # Post-2005 (YTL/TL): TÜBİTAK budget ~3-8B TL in 2020s
             # Pre-2005 (TRL): amounts in quadrillions of old lira
             "max_amount_local": 50_000_000_000,
@@ -12066,7 +12091,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item"],
             "active_years": (1993, 2099),
-            "expected_years": [2006, 2007, 2008, 2009],
+            "expected_years": list(range(1993, 2010)),
             "max_amount_local": 500_000_000,
             "notes": "Özel Bütçeli — appears in (II) SAYILI CETVEL.",
         },
@@ -12084,7 +12109,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1956, 2099),
-            "expected_years": [1976, 1977, 2006, 2007, 2008, 2009],
+            "expected_years": list(range(1975, 2010)),
             "max_amount_local": 5_000_000_000,
             "notes": "Nuclear R&D authority. Özel Bütçeli — appears in (II) SAYILI CETVEL.",
         },
@@ -12124,7 +12149,7 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             ],
             "preferred_item_type": ["line_item", "program_total"],
             "active_years": (1990, 2099),
-            "expected_years": [2006, 2007, 2008, 2009],
+            "expected_years": list(range(1990, 2010)),
             "max_amount_local": 10_000_000_000,
             "notes": "Özel Bütçeli SME support agency with R&D/innovation mandate.",
         },
