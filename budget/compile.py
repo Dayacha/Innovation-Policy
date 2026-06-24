@@ -2736,6 +2736,8 @@ def compile_country(
         "Italy",                                       # cleaned pipeline rows are materially safer than legacy parser output for the mixed ITL/EUR budget corpus
         "Spain",                                       # pipeline output is materially richer than legacy text-cache parsing
         "Sweden", "Netherlands", "Switzerland",        # future: no text-cache expected
+        "Turkey",                                      # local DOCX parser only has 2008-2009; pipeline results.csv covers 1975-1983 historical TÜBİTAK/TAEK data
+        "Luxembourg",                                  # local DOCX parser misses 1975-2000; pipeline results.csv covers full range with clean LUF ministry totals
     }
 
     _use_pipeline = raw_df.empty or country in _PIPELINE_FIRST_COUNTRIES
