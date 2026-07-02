@@ -1,165 +1,76 @@
 country,year,canonical_name,category,gap_type,gap_subtype,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,series_currency,prev_amount,next_amount
-Italy,1990,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,ok,,,,,,none,10000000000.0,ITL,,80000000000.0
-Italy,1991,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000000.0,80000000000.0
-Italy,1993,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,10000000000.0,80000000000.0
-Italy,1994,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,ok,,,,,,none,80000000000.0,ITL,10000000000.0,15000000000.0
-Italy,1995,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,ok,,,,,,none,15000000000.0,ITL,80000000000.0,43150000000.0
-Italy,1996,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,ok,,,,,,none,43150000000.0,ITL,15000000000.0,
-Italy,1997,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,43150000000.0,
-Italy,1998,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,43150000000.0,
-Italy,1999,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,43150000000.0,
-Italy,2009,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,43150000000.0,
-Italy,2013,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,43150000000.0,
-Italy,2015,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,43150000000.0,
-Italy,2016,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,43150000000.0,
-Italy,2017,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,43150000000.0,
-Italy,2018,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,43150000000.0,
-Italy,2019,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,43150000000.0,
-Italy,2020,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,43150000000.0,
-Italy,2021,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,43150000000.0,
-Italy,2022,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,43150000000.0,
-Italy,2023,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,43150000000.0,
-Italy,2024,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,43150000000.0,
-Italy,1995,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,50000000000.0
-Italy,1996,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,ok,,,,,,none,50000000000.0,ITL,,
-Italy,1997,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000000.0,
-Italy,1998,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000000.0,
-Italy,1999,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000000.0,
-Italy,2009,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000000.0,
-Italy,2013,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000000.0,
-Italy,2015,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000000.0,
-Italy,2016,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000000.0,
-Italy,2017,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000000.0,
-Italy,2018,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000000.0,
-Italy,2019,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000000.0,
-Italy,2020,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000000.0,
-Italy,2021,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000000.0,
-Italy,2022,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000000.0,
-Italy,2023,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000000.0,
-Italy,2024,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000000.0,
-Italy,1999,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2009,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2010,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2013,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2015,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2016,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2017,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2018,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2019,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2020,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2021,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2022,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2023,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2024,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,1986,CNR — Consiglio Nazionale delle Ricerche,science_agency,ok,,,,,,none,698000000000.0,ITL,,400000000000.0
-Italy,1987,CNR — Consiglio Nazionale delle Ricerche,science_agency,ok,,,,,,none,400000000000.0,ITL,698000000000.0,380000000000.0
-Italy,1988,CNR — Consiglio Nazionale delle Ricerche,science_agency,ok,,,,,,none,380000000000.0,ITL,400000000000.0,200000000000.0
-Italy,1989,CNR — Consiglio Nazionale delle Ricerche,science_agency,ok,,,,,,none,200000000000.0,ITL,380000000000.0,550000000000.0
-Italy,1990,CNR — Consiglio Nazionale delle Ricerche,science_agency,ok,,,,,,none,550000000000.0,ITL,200000000000.0,1000000000000.0
-Italy,1991,CNR — Consiglio Nazionale delle Ricerche,science_agency,ok,,,,,,none,1000000000000.0,ITL,550000000000.0,1110000000000.0
-Italy,1992,CNR — Consiglio Nazionale delle Ricerche,science_agency,ok,,,,,,none,1110000000000.0,ITL,1000000000000.0,1090000000000.0
-Italy,1993,CNR — Consiglio Nazionale delle Ricerche,science_agency,ok,,,,,,none,1090000000000.0,ITL,1110000000000.0,1047000000000.0
-Italy,1994,CNR — Consiglio Nazionale delle Ricerche,science_agency,ok,,,,,,none,1047000000000.0,ITL,1090000000000.0,788000000000.0
-Italy,1995,CNR — Consiglio Nazionale delle Ricerche,science_agency,ok,,,,,,none,788000000000.0,ITL,1047000000000.0,1050000000000.0
-Italy,1996,CNR — Consiglio Nazionale delle Ricerche,science_agency,ok,,,,,,none,1050000000000.0,ITL,788000000000.0,1000000000000.0
-Italy,1997,CNR — Consiglio Nazionale delle Ricerche,science_agency,ok,,,,,,none,1000000000000.0,ITL,1050000000000.0,
-Italy,1998,CNR — Consiglio Nazionale delle Ricerche,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1000000000000.0,
-Italy,1999,CNR — Consiglio Nazionale delle Ricerche,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1000000000000.0,
-Italy,2010,CNR — Consiglio Nazionale delle Ricerche,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1000000000000.0,
-Italy,2013,CNR — Consiglio Nazionale delle Ricerche,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1000000000000.0,
-Italy,2015,CNR — Consiglio Nazionale delle Ricerche,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1000000000000.0,
-Italy,2017,CNR — Consiglio Nazionale delle Ricerche,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1000000000000.0,
-Italy,2018,CNR — Consiglio Nazionale delle Ricerche,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1000000000000.0,
-Italy,2019,CNR — Consiglio Nazionale delle Ricerche,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1000000000000.0,
-Italy,2021,CNR — Consiglio Nazionale delle Ricerche,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1000000000000.0,
-Italy,2022,CNR — Consiglio Nazionale delle Ricerche,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1000000000000.0,
-Italy,2023,CNR — Consiglio Nazionale delle Ricerche,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1000000000000.0,
-Italy,2024,CNR — Consiglio Nazionale delle Ricerche,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1000000000000.0,
-Italy,1986,ENEA,science_agency,ok,,,,,,none,23000000000.0,ITL,,590000000000.0
-Italy,1987,ENEA,science_agency,ok,,,,,,none,590000000000.0,ITL,23000000000.0,50000000000.0
-Italy,1988,ENEA,science_agency,ok,,,,,,none,50000000000.0,ITL,590000000000.0,700000000000.0
-Italy,1989,ENEA,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,50000000000.0,700000000000.0
-Italy,1990,ENEA,science_agency,ok,,,,,,none,700000000000.0,ITL,50000000000.0,500000000000.0
-Italy,1991,ENEA,science_agency,ok,,,,,,none,500000000000.0,ITL,700000000000.0,550000000000.0
-Italy,1992,ENEA,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,500000000000.0,550000000000.0
-Italy,1993,ENEA,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,500000000000.0,550000000000.0
-Italy,1994,ENEA,science_agency,ok,,,,,,none,550000000000.0,ITL,500000000000.0,475000000000.0
-Italy,1995,ENEA,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,550000000000.0,475000000000.0
-Italy,1996,ENEA,science_agency,ok,,,,,,none,475000000000.0,ITL,550000000000.0,20800000.0
-Italy,1997,ENEA,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,475000000000.0,20800000.0
-Italy,1998,ENEA,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,475000000000.0,20800000.0
-Italy,1999,ENEA,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,475000000000.0,20800000.0
-Italy,2009,ENEA,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,475000000000.0,20800000.0
-Italy,2010,ENEA,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,475000000000.0,20800000.0
-Italy,2013,ENEA,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,475000000000.0,20800000.0
-Italy,2015,ENEA,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,475000000000.0,20800000.0
-Italy,2016,ENEA,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,475000000000.0,20800000.0
-Italy,2017,ENEA,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,475000000000.0,20800000.0
-Italy,2018,ENEA,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,475000000000.0,20800000.0
-Italy,2019,ENEA,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,475000000000.0,20800000.0
-Italy,2020,ENEA,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,475000000000.0,20800000.0
-Italy,2021,ENEA,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,475000000000.0,20800000.0
-Italy,2022,ENEA,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,475000000000.0,20800000.0
-Italy,2023,ENEA,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,475000000000.0,20800000.0
-Italy,2024,ENEA,science_agency,ok,,,,,,none,20800000.0,EUR,475000000000.0,
-Italy,1988,ASI — Agenzia Spaziale Italiana,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,800000000000.0
-Italy,1989,ASI — Agenzia Spaziale Italiana,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,800000000000.0
-Italy,1990,ASI — Agenzia Spaziale Italiana,science_agency,ok,,,,,,none,800000000000.0,ITL,,800000000000.0
-Italy,1991,ASI — Agenzia Spaziale Italiana,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,800000000000.0,800000000000.0
-Italy,1992,ASI — Agenzia Spaziale Italiana,science_agency,ok,,,,,,none,800000000000.0,ITL,800000000000.0,900000000000.0
-Italy,1993,ASI — Agenzia Spaziale Italiana,science_agency,ok,,,,,,none,900000000000.0,ITL,800000000000.0,800000000000.0
-Italy,1994,ASI — Agenzia Spaziale Italiana,science_agency,ok,,,,,,none,800000000000.0,ITL,900000000000.0,850000000000.0
-Italy,1995,ASI — Agenzia Spaziale Italiana,science_agency,ok,,,,,,none,850000000000.0,ITL,800000000000.0,1168172000.0
-Italy,1997,ASI — Agenzia Spaziale Italiana,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,850000000000.0,1168172000.0
-Italy,1998,ASI — Agenzia Spaziale Italiana,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,850000000000.0,1168172000.0
-Italy,1999,ASI — Agenzia Spaziale Italiana,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,850000000000.0,1168172000.0
-Italy,2009,ASI — Agenzia Spaziale Italiana,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,850000000000.0,1168172000.0
-Italy,2010,ASI — Agenzia Spaziale Italiana,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,850000000000.0,1168172000.0
-Italy,2015,ASI — Agenzia Spaziale Italiana,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,850000000000.0,1168172000.0
-Italy,2016,ASI — Agenzia Spaziale Italiana,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,850000000000.0,1168172000.0
-Italy,2017,ASI — Agenzia Spaziale Italiana,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,850000000000.0,1168172000.0
-Italy,2018,ASI — Agenzia Spaziale Italiana,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,850000000000.0,1168172000.0
-Italy,2019,ASI — Agenzia Spaziale Italiana,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,850000000000.0,1168172000.0
-Italy,2020,ASI — Agenzia Spaziale Italiana,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,850000000000.0,1168172000.0
-Italy,2021,ASI — Agenzia Spaziale Italiana,science_agency,ok,,,,,,none,1168172000.0,EUR,850000000000.0,20800000.0
-Italy,2022,ASI — Agenzia Spaziale Italiana,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1168172000.0,20800000.0
-Italy,2023,ASI — Agenzia Spaziale Italiana,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,1168172000.0,20800000.0
-Italy,2024,ASI — Agenzia Spaziale Italiana,science_agency,ok,,,,,,none,20800000.0,EUR,1168172000.0,
-Italy,1986,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,400000000000.0
-Italy,1988,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,400000000000.0
-Italy,1989,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,400000000000.0
-Italy,1990,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,400000000000.0
-Italy,1991,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,400000000000.0
-Italy,1992,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,ok,,,,,,none,400000000000.0,ITL,,440000000000.0
-Italy,1993,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,ok,,,,,,none,440000000000.0,ITL,400000000000.0,400000000000.0
-Italy,1994,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,ok,,,,,,none,400000000000.0,ITL,440000000000.0,469000000000.0
-Italy,1995,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,ok,,,,,,none,469000000000.0,ITL,400000000000.0,
-Italy,1996,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,469000000000.0,
-Italy,1997,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,469000000000.0,
-Italy,1998,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,469000000000.0,
-Italy,1999,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,469000000000.0,
-Italy,2009,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,469000000000.0,
-Italy,2010,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,469000000000.0,
-Italy,2013,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,469000000000.0,
-Italy,2015,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,469000000000.0,
-Italy,2016,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,469000000000.0,
-Italy,2017,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,469000000000.0,
-Italy,2018,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,469000000000.0,
-Italy,2019,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,469000000000.0,
-Italy,2020,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,469000000000.0,
-Italy,2021,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,469000000000.0,
-Italy,2022,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,469000000000.0,
-Italy,2023,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,469000000000.0,
-Italy,2024,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,469000000000.0,
-Italy,2009,INAF — Istituto Nazionale di Astrofisica,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2010,INAF — Istituto Nazionale di Astrofisica,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2015,INAF — Istituto Nazionale di Astrofisica,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2016,INAF — Istituto Nazionale di Astrofisica,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2017,INAF — Istituto Nazionale di Astrofisica,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2018,INAF — Istituto Nazionale di Astrofisica,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2019,INAF — Istituto Nazionale di Astrofisica,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2020,INAF — Istituto Nazionale di Astrofisica,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2021,INAF — Istituto Nazionale di Astrofisica,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2022,INAF — Istituto Nazionale di Astrofisica,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2023,INAF — Istituto Nazionale di Astrofisica,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
-Italy,2024,INAF — Istituto Nazionale di Astrofisica,science_agency,missing,,Year not in raw_rows — documents may not be parsed yet,no,,,reextract,,,,
+Italy,1998,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,1998 19971230_302_SO_255.pdf,reextract,,,,5000000000000.0
+Italy,1999,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,1999 19981229_302_SO_210.pdf,reextract,,,,5000000000000.0
+Italy,2000,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2000 19991227_302_SO_227.pdf,reextract,,,,5000000000000.0
+Italy,2001,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,ok,,,,,,none,5000000000000.0,ITL,,
+Italy,2002,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,"Year absent from raw_rows, but extracted results contain a matching text row for this agency-year in 2002 20011229_301_SO_285.pdf without a defendable numeric total.",no,,2002 20011229_301_SO_285.pdf,reextract,,,5000000000000.0,
+Italy,2003,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year (3,693,407,000 in 2003 20021231_305_SO_241.pdf). The gap is downstream of extraction.",no,,2003 20021231_305_SO_241.pdf,reclassify,,,5000000000000.0,
+Italy,2004,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year (14,750,000,000 in 2004 20031227_299_SO_196-1.pdf). The gap is downstream of extraction.",no,,2004 20031227_299_SO_196-1.pdf,reclassify,,,5000000000000.0,
+Italy,2005,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year (0 in 2005 20041231_306_SO_193.pdf). The gap is downstream of extraction.",no,,2005 20041231_306_SO_193.pdf,reclassify,,,5000000000000.0,
+Italy,2006,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2006 20051229_302_SO_211.pdf,reextract,,,5000000000000.0,
+Italy,2007,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2007 20061227_299_SO_244.pdf,reextract,,,5000000000000.0,
+Italy,1998,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,ok,,,,,,none,140400000000.0,ITL,,500000000000.0
+Italy,1999,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,ok,,,,,,none,500000000000.0,ITL,140400000000.0,300000000000.0
+Italy,2000,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2000 19991227_302_SO_227.pdf,reextract,,,500000000000.0,300000000000.0
+Italy,2001,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,ok,,,,,,none,300000000000.0,ITL,500000000000.0,120012000.0
+Italy,2002,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year (20,000,000,000 in 2002 20011229_301_SO_286.pdf). The gap is downstream of extraction.",no,,2002 20011229_301_SO_286.pdf,reclassify,,,300000000000.0,120012000.0
+Italy,2003,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,ok,,,,,,none,120012000.0,EUR,300000000000.0,2000000.0
+Italy,2004,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,ok,,,,,,none,2000000.0,EUR,120012000.0,
+Italy,2005,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year (0 in 2005 20041231_306_SO_193.pdf). The gap is downstream of extraction.",no,,2005 20041231_306_SO_193.pdf,reclassify,,,2000000.0,
+Italy,2006,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year (10,000,000,000 in 2006 20051229_302_SO_211.pdf). The gap is downstream of extraction.",no,,2006 20051229_302_SO_211.pdf,reclassify,,,2000000.0,
+Italy,2007,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,missing,,"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year (300,000,000,000 in 2007 20061227_299_SO_244.pdf). The gap is downstream of extraction.",no,,2007 20061227_299_SO_244.pdf,reclassify,,,2000000.0,
+Italy,1999,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,ok,,,,,,none,500000000000.0,ITL,,1000000000000.0
+Italy,2000,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2000 19991227_302_SO_227.pdf,reextract,,,500000000000.0,1000000000000.0
+Italy,2001,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,ok,,,,,,none,1000000000000.0,ITL,500000000000.0,225448000.0
+Italy,2002,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year (15,000,000,000 in 2002 20011229_301_SO_286.pdf). The gap is downstream of extraction.",no,,2002 20011229_301_SO_286.pdf,reclassify,,,1000000000000.0,225448000.0
+Italy,2003,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,ok,,,,,,none,225448000.0,EUR,1000000000000.0,
+Italy,2004,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year (5,000,000,000 in 2004 20031227_299_SO_197.pdf). The gap is downstream of extraction.",no,,2004 20031227_299_SO_197.pdf,reclassify,,,225448000.0,
+Italy,2005,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year (0 in 2005 20041231_306_SO_193.pdf). The gap is downstream of extraction.",no,,2005 20041231_306_SO_193.pdf,reclassify,,,225448000.0,
+Italy,2006,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year (5,000,000,000 in 2006 20051229_302_SO_211.pdf). The gap is downstream of extraction.",no,,2006 20051229_302_SO_211.pdf,reclassify,,,225448000.0,
+Italy,2007,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,missing,,"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year (50,000,000,000 in 2007 20061227_299_SO_244.pdf). The gap is downstream of extraction.",no,,2007 20061227_299_SO_244.pdf,reclassify,,,225448000.0,
+Italy,1998,CNR — Consiglio Nazionale delle Ricerche,science_agency,ok,,,,,,none,1040000000000.0,ITL,,5000000000000.0
+Italy,1999,CNR — Consiglio Nazionale delle Ricerche,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,1999 19981229_302_SO_210.pdf,reextract,,,1040000000000.0,5000000000000.0
+Italy,2000,CNR — Consiglio Nazionale delle Ricerche,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2000 19991227_302_SO_227.pdf,reextract,,,1040000000000.0,5000000000000.0
+Italy,2001,CNR — Consiglio Nazionale delle Ricerche,science_agency,ok,,,,,,none,5000000000000.0,ITL,1040000000000.0,2582284000.0
+Italy,2002,CNR — Consiglio Nazionale delle Ricerche,science_agency,ok,,,,,,none,2582284000.0,EUR,5000000000000.0,1800000000.0
+Italy,2003,CNR — Consiglio Nazionale delle Ricerche,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2003 20021231_305_SO_240.pdf,reextract,,,2582284000.0,1800000000.0
+Italy,2004,CNR — Consiglio Nazionale delle Ricerche,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2004 20031227_299_SO_196-1.pdf,reextract,,,2582284000.0,1800000000.0
+Italy,2005,CNR — Consiglio Nazionale delle Ricerche,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2005 20041231_306_SO_192.pdf,reextract,,,2582284000.0,1800000000.0
+Italy,2006,CNR — Consiglio Nazionale delle Ricerche,science_agency,ok,,,,,,none,1800000000.0,EUR,2582284000.0,2582284000.0
+Italy,2007,CNR — Consiglio Nazionale delle Ricerche,science_agency,ok,,,,,,none,2582284000.0,EUR,1800000000.0,
+Italy,1998,ENEA,science_agency,missing,,"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year (460,000 in 1998 19971230_302_SO_255.pdf). The gap is downstream of extraction.",no,,1998 19971230_302_SO_255.pdf,reclassify,,,,40000000000.0
+Italy,1999,ENEA,science_agency,missing,,"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year (450,000 in 1999 19981229_302_SO_210.pdf). The gap is downstream of extraction.",no,,1999 19981229_302_SO_210.pdf,reclassify,,,,40000000000.0
+Italy,2000,ENEA,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2000 19991227_302_SO_227.pdf,reextract,,,,40000000000.0
+Italy,2001,ENEA,science_agency,ok,,,,,,none,40000000000.0,ITL,,201419000.0
+Italy,2002,ENEA,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2002 20011229_301_SO_285.pdf,reextract,,,40000000000.0,201419000.0
+Italy,2003,ENEA,science_agency,ok,,,,,,none,201419000.0,EUR,40000000000.0,201419000.0
+Italy,2004,ENEA,science_agency,ok,,,,,,none,201419000.0,EUR,201419000.0,199405000.0
+Italy,2005,ENEA,science_agency,ok,,,,,,none,199405000.0,EUR,201419000.0,196000000.0
+Italy,2006,ENEA,science_agency,ok,,,,,,none,196000000.0,EUR,199405000.0,
+Italy,2007,ENEA,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2007 20061227_299_SO_244.pdf,reextract,,,196000000.0,
+Italy,1998,ASI — Agenzia Spaziale Italiana,science_agency,missing,,"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year (16,414,471 in 1998 19971230_302_SO_255.pdf). The gap is downstream of extraction.",no,,1998 19971230_302_SO_255.pdf,reclassify,,,,
+Italy,1999,ASI — Agenzia Spaziale Italiana,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,1999 19981229_302_SO_210.pdf,reextract,,,,
+Italy,2000,ASI — Agenzia Spaziale Italiana,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2000 19991227_302_SO_227.pdf,reextract,,,,
+Italy,2001,ASI — Agenzia Spaziale Italiana,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2001 20001229_302_SO_219.pdf,reextract,,,,
+Italy,2002,ASI — Agenzia Spaziale Italiana,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2002 20011229_301_SO_285.pdf,reextract,,,,
+Italy,2003,ASI — Agenzia Spaziale Italiana,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2003 20021231_305_SO_240.pdf,reextract,,,,
+Italy,2004,ASI — Agenzia Spaziale Italiana,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2004 20031227_299_SO_196-1.pdf,reextract,,,,
+Italy,2005,ASI — Agenzia Spaziale Italiana,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2005 20041231_306_SO_192.pdf,reextract,,,,
+Italy,2006,ASI — Agenzia Spaziale Italiana,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2006 20051229_302_SO_211.pdf,reextract,,,,
+Italy,2007,ASI — Agenzia Spaziale Italiana,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2007 20061227_299_SO_244.pdf,reextract,,,,
+Italy,1998,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,1998 19971230_302_SO_255.pdf,reextract,,,,
+Italy,1999,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year (555,000 in 1999 19981229_302_SO_210.pdf). The gap is downstream of extraction.",no,,1999 19981229_302_SO_210.pdf,reclassify,,,,
+Italy,2000,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2000 19991227_302_SO_227.pdf,reextract,,,,
+Italy,2001,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2001 20001229_302_SO_219.pdf,reextract,,,,
+Italy,2002,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2002 20011229_301_SO_285.pdf,reextract,,,,
+Italy,2003,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2003 20021231_305_SO_240.pdf,reextract,,,,
+Italy,2004,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2004 20031227_299_SO_196-1.pdf,reextract,,,,
+Italy,2005,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2005 20041231_306_SO_192.pdf,reextract,,,,
+Italy,2006,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2006 20051229_302_SO_211.pdf,reextract,,,,
+Italy,2007,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2007 20061227_299_SO_244.pdf,reextract,,,,
+Italy,2002,INAF — Istituto Nazionale di Astrofisica,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2002 20011229_301_SO_285.pdf,reextract,,,,
+Italy,2003,INAF — Istituto Nazionale di Astrofisica,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2003 20021231_305_SO_240.pdf,reextract,,,,
+Italy,2004,INAF — Istituto Nazionale di Astrofisica,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2004 20031227_299_SO_196-1.pdf,reextract,,,,
+Italy,2005,INAF — Istituto Nazionale di Astrofisica,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2005 20041231_306_SO_192.pdf,reextract,,,,
+Italy,2006,INAF — Istituto Nazionale di Astrofisica,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2006 20051229_302_SO_211.pdf,reextract,,,,
+Italy,2007,INAF — Istituto Nazionale di Astrofisica,science_agency,missing,,"Year absent from raw_rows, but italy_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2007 20061227_299_SO_244.pdf,reextract,,,,

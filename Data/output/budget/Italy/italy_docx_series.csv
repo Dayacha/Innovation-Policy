@@ -11,6 +11,14 @@ Italy,1996,ASI — Agenzia Spaziale Italiana,science_agency,,,,,,,,"Italian Spac
 Italy,1997,ASI — Agenzia Spaziale Italiana,science_agency,,,,,,,,"Italian Space Agency, established 1988.; dropped after Italy audit: pre-2002 budget-law appropriations should be in lire, so this EUR-labelled survivor is treated as column leakage or unit confusion"
 Italy,1998,ASI — Agenzia Spaziale Italiana,science_agency,,,,,,,,"Italian Space Agency, established 1988.; dropped after Italy audit: pre-2002 budget-law appropriations should be in lire, so this EUR-labelled survivor is treated as column leakage or unit confusion"
 Italy,1999,ASI — Agenzia Spaziale Italiana,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2000,ASI — Agenzia Spaziale Italiana,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2001,ASI — Agenzia Spaziale Italiana,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2002,ASI — Agenzia Spaziale Italiana,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2003,ASI — Agenzia Spaziale Italiana,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2004,ASI — Agenzia Spaziale Italiana,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2005,ASI — Agenzia Spaziale Italiana,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2006,ASI — Agenzia Spaziale Italiana,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2007,ASI — Agenzia Spaziale Italiana,science_agency,,,,,,,,gap: no matching rows in this year
 Italy,2009,ASI — Agenzia Spaziale Italiana,science_agency,,,,,,,,gap: no matching rows in this year
 Italy,2010,ASI — Agenzia Spaziale Italiana,science_agency,,,,,,,,gap: no matching rows in this year
 Italy,2013,ASI — Agenzia Spaziale Italiana,science_agency,,,,,,,,"Italian Space Agency, established 1988.; dropped after original-file audit: modern survivor is a programme/reduction/legal-clause amount, not a clean institutional annual appropriation"
@@ -36,8 +44,16 @@ Italy,1994,CNR — Consiglio Nazionale delle Ricerche,science_agency,10470000000
 Italy,1995,CNR — Consiglio Nazionale delle Ricerche,science_agency,788000000000.0,lira,ITL,line_item,Contribution to the C.N.R. (National Research Council),1995 19941230_304_SO_174.pdf,90.0,Italy's main multidisciplinary research council. MUR-supervised.
 Italy,1996,CNR — Consiglio Nazionale delle Ricerche,science_agency,1050000000000.0,lira,ITL,line_item,Contribution to the National Research Council,1996 19951229_302_SO_154.pdf,739.0,Italy's main multidisciplinary research council. MUR-supervised.
 Italy,1997,CNR — Consiglio Nazionale delle Ricerche,science_agency,1000000000000.0,lira,ITL,line_item,Contribution to the C.N.R.,1997 19961228_303_SO_233.pdf,178.0,Italy's main multidisciplinary research council. MUR-supervised.
-Italy,1998,CNR — Consiglio Nazionale delle Ricerche,science_agency,,,,,,,,"Italy's main multidisciplinary research council. MUR-supervised.; dropped after Italy audit: pre-2002 budget-law appropriations should be in lire, so this EUR-labelled survivor is treated as column leakage or unit confusion"
+Italy,1998,CNR — Consiglio Nazionale delle Ricerche,science_agency,1040000000000.0,lira,ITL,line_item,Contribution to C.N.R. (4.2.1.1 - Scientific research - cap. 7502),1998 19971230_302_SO_255.pdf,151,Italy's main multidisciplinary research council. MUR-supervised.
 Italy,1999,CNR — Consiglio Nazionale delle Ricerche,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2000,CNR — Consiglio Nazionale delle Ricerche,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2001,CNR — Consiglio Nazionale delle Ricerche,science_agency,5000000000000.0,lira,ITL,line_item,Ordinary Fund for Research Entities,2001 20001229_302_SO_220.pdf,236,Italy's main multidisciplinary research council. MUR-supervised.
+Italy,2002,CNR — Consiglio Nazionale delle Ricerche,science_agency,2582284000.0,euro,EUR,line_item,Funding for Istituto di biologia cellulare,2002 20011229_301_SO_286.pdf,12,Italy's main multidisciplinary research council. MUR-supervised.
+Italy,2003,CNR — Consiglio Nazionale delle Ricerche,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2004,CNR — Consiglio Nazionale delle Ricerche,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2005,CNR — Consiglio Nazionale delle Ricerche,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2006,CNR — Consiglio Nazionale delle Ricerche,science_agency,1800000000.0,euro,EUR,line_item,Annual contribution for the CNR,2006 20051229_302_SO_211.pdf,103,Italy's main multidisciplinary research council. MUR-supervised.
+Italy,2007,CNR — Consiglio Nazionale delle Ricerche,science_agency,2582284000.0,euro,EUR,line_item,Funding for CNR programs,2007 20061228_300_SO_247.pdf,19,Italy's main multidisciplinary research council. MUR-supervised.
 Italy,2009,CNR — Consiglio Nazionale delle Ricerche,science_agency,,,,,,,,"Italy's main multidisciplinary research council. MUR-supervised.; dropped after original-file audit: modern survivor is a programme/reduction/legal-clause amount, not a clean institutional annual appropriation"
 Italy,2010,CNR — Consiglio Nazionale delle Ricerche,science_agency,,,,,,,,gap: no matching rows in this year
 Italy,2013,CNR — Consiglio Nazionale delle Ricerche,science_agency,,,,,,,,Italy's main multidisciplinary research council. MUR-supervised.; dropped after Italy audit: exceeds conservative EUR cap for this institutional series
@@ -65,6 +81,14 @@ Italy,1996,ENEA,science_agency,475000000000.0,lira,ITL,line_item,"Contribution t
 Italy,1997,ENEA,science_agency,,,,,,,,"Energy and environment research agency. MUR-supervised.; dropped after Italy audit: pre-2002 budget-law appropriations should be in lire, so this EUR-labelled survivor is treated as column leakage or unit confusion"
 Italy,1998,ENEA,science_agency,,,,,,,,"Energy and environment research agency. MUR-supervised.; dropped after Italy audit: pre-2002 budget-law appropriations should be in lire, so this EUR-labelled survivor is treated as column leakage or unit confusion"
 Italy,1999,ENEA,science_agency,,,,,,,,"Energy and environment research agency. MUR-supervised.; dropped after Italy audit: pre-2002 budget-law appropriations should be in lire, so this EUR-labelled survivor is treated as column leakage or unit confusion"
+Italy,2000,ENEA,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2001,ENEA,science_agency,40000000000.0,lira,ITL,line_item,Extraordinary contribution to ENEA for research and development programs,2001 20001229_302_SO_219.pdf,117,Energy and environment research agency. MUR-supervised.
+Italy,2002,ENEA,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2003,ENEA,science_agency,201419000.0,euro,EUR,line_item,Riforma dell’ENEA,2003 20021231_305_SO_240.pdf,160,Energy and environment research agency. MUR-supervised.
+Italy,2004,ENEA,science_agency,201419000.0,euro,EUR,line_item,Riforma del’ ENEA,2004 20031227_299_SO_196-1.pdf,116,Energy and environment research agency. MUR-supervised.
+Italy,2005,ENEA,science_agency,199405000.0,euro,EUR,line_item,Riforma dell’ENEA,2005 20041231_306_SO_192.pdf,148,Energy and environment research agency. MUR-supervised.
+Italy,2006,ENEA,science_agency,196000000.0,euro,EUR,line_item,Riforma dell’ENEA,2006 20051229_302_SO_211.pdf,167,Energy and environment research agency. MUR-supervised.
+Italy,2007,ENEA,science_agency,,,,,,,,gap: no matching rows in this year
 Italy,2009,ENEA,science_agency,,,,,,,,gap: no matching rows in this year
 Italy,2010,ENEA,science_agency,,,,,,,,gap: no matching rows in this year
 Italy,2013,ENEA,science_agency,,,,,,,,gap: no matching rows in this year
@@ -81,8 +105,16 @@ Italy,2024,ENEA,science_agency,20800000.0,euro,EUR,line_item,Valorizzazione del 
 Italy,1995,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,,,,,,,,Key competitive R&D fund (FIRST 2007+; FAR and FIRB pre-2007 predecessors).; dropped after Italy audit: weak FIRST/FAR/FIRB text match
 Italy,1996,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,50000000000.0,lira,ITL,line_item,Fund for Investments in Scientific and Technological Research,1996 19951229_302_SO_154.pdf,703.0,Key competitive R&D fund (FIRST 2007+; FAR and FIRB pre-2007 predecessors).
 Italy,1997,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,,,,,,,,gap: no matching rows in this year; dropped after Italy audit: weak FIRST/FAR/FIRB text match
-Italy,1998,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,,,,,,,,gap: no matching rows in this year; dropped after Italy audit: weak FIRST/FAR/FIRB text match
-Italy,1999,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,,,,,,,,gap: no matching rows in this year; dropped after Italy audit: weak FIRST/FAR/FIRB text match
+Italy,1998,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,140400000000.0,lira,ITL,program_total,Fund for Basic Research,1998 19971230_302_SO_255.pdf,131,Key competitive R&D fund (FIRST 2007+; FAR and FIRB pre-2007 predecessors).
+Italy,1999,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,500000000000.0,lira,ITL,line_item,Fund for Basic Research,1999 19981229_302_SO_210.pdf,138,Key competitive R&D fund (FIRST 2007+; FAR and FIRB pre-2007 predecessors).
+Italy,2000,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,,,,,,,,gap: no matching rows in this year; dropped after Italy audit: weak FIRST/FAR/FIRB text match
+Italy,2001,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,300000000000.0,lira,ITL,line_item,Fund for Basic Research,2001 20001229_302_SO_219.pdf,252,Key competitive R&D fund (FIRST 2007+; FAR and FIRB pre-2007 predecessors).
+Italy,2002,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,,,,,,,,Key competitive R&D fund (FIRST 2007+; FAR and FIRB pre-2007 predecessors).; dropped after Italy audit: exceeds conservative EUR cap for this institutional series
+Italy,2003,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,120012000.0,euro,EUR,line_item,Fund for Investments in Scientific and Technological Research,2003 20021231_305_SO_241.pdf,86,Key competitive R&D fund (FIRST 2007+; FAR and FIRB pre-2007 predecessors).
+Italy,2004,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,2000000.0,euro,EUR,line_item,Fund for Investments in Scientific and Technological Research - cap. 9015,2004 20031227_299_SO_196-1.pdf,147,Key competitive R&D fund (FIRST 2007+; FAR and FIRB pre-2007 predecessors).
+Italy,2005,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,,,,,,,,Key competitive R&D fund (FIRST 2007+; FAR and FIRB pre-2007 predecessors).; dropped after Italy audit: exceeds conservative EUR cap for this institutional series
+Italy,2006,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,,,,,,,,Key competitive R&D fund (FIRST 2007+; FAR and FIRB pre-2007 predecessors).; dropped after Italy audit: exceeds conservative EUR cap for this institutional series
+Italy,2007,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,,,,,,,,Key competitive R&D fund (FIRST 2007+; FAR and FIRB pre-2007 predecessors).; dropped after Italy audit: exceeds conservative EUR cap for this institutional series
 Italy,2009,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,,,,,,,,Key competitive R&D fund (FIRST 2007+; FAR and FIRB pre-2007 predecessors).; dropped after Italy audit: weak FIRST/FAR/FIRB text match
 Italy,2010,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,,,,,,,,"Key competitive R&D fund (FIRST 2007+; FAR and FIRB pre-2007 predecessors).; dropped after original-file audit: modern survivor is a programme/reduction/legal-clause amount, not a clean institutional annual appropriation"
 Italy,2013,FIRST / FAR / FIRB — Fondi per la ricerca,direct_rd,,,,,,,,gap: no matching rows in this year; dropped after Italy audit: weak FIRST/FAR/FIRB text match
@@ -106,6 +138,14 @@ Italy,1996,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,43150000000
 Italy,1997,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,,,,,,,,gap: no matching rows in this year
 Italy,1998,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,,,,,,,,gap: no matching rows in this year
 Italy,1999,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,,,,,,,,gap: no matching rows in this year
+Italy,2000,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,,,,,,,,gap: no matching rows in this year
+Italy,2001,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,5000000000000.0,lira,ITL,line_item,Ordinary Fund for Research Entities,2001 20001229_302_SO_220.pdf,236,"Main block grant to MUR-supervised research institutes (CNR, ENEA, ASI, INFN, INAF)."
+Italy,2002,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,,,,,,,,gap: no matching rows in this year
+Italy,2003,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,,,,,,,,"Main block grant to MUR-supervised research institutes (CNR, ENEA, ASI, INFN, INAF).; dropped after Italy audit: exceeds conservative EUR cap for this institutional series"
+Italy,2004,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,,,,,,,,"Main block grant to MUR-supervised research institutes (CNR, ENEA, ASI, INFN, INAF).; dropped after Italy audit: exceeds conservative EUR cap for this institutional series"
+Italy,2005,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,,,,,,,,"Main block grant to MUR-supervised research institutes (CNR, ENEA, ASI, INFN, INAF).; dropped after Italy audit: zero-value placeholder is not a transparent budget appropriation"
+Italy,2006,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,,,,,,,,gap: no matching rows in this year
+Italy,2007,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,,,,,,,,gap: no matching rows in this year
 Italy,2009,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,,,,,,,,gap: no matching rows in this year
 Italy,2010,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,,,,,,,,"Main block grant to MUR-supervised research institutes (CNR, ENEA, ASI, INFN, INAF).; dropped after original-file audit: modern survivor is a programme/reduction/legal-clause amount, not a clean institutional annual appropriation"
 Italy,2013,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,,,,,,,,gap: no matching rows in this year
@@ -119,6 +159,12 @@ Italy,2021,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,,,,,,,,"Mai
 Italy,2022,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,,,,,,,,"Main block grant to MUR-supervised research institutes (CNR, ENEA, ASI, INFN, INAF).; dropped after Italy audit: zero-value placeholder is not a transparent budget appropriation"
 Italy,2023,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,,,,,,,,"Main block grant to MUR-supervised research institutes (CNR, ENEA, ASI, INFN, INAF).; dropped after Italy audit: exceeds conservative EUR cap for this institutional series"
 Italy,2024,FOE — Fondo Ordinario per gli Enti di ricerca,direct_rd,,,,,,,,"Main block grant to MUR-supervised research institutes (CNR, ENEA, ASI, INFN, INAF).; dropped after Italy audit: exceeds conservative EUR cap for this institutional series"
+Italy,2002,INAF — Istituto Nazionale di Astrofisica,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2003,INAF — Istituto Nazionale di Astrofisica,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2004,INAF — Istituto Nazionale di Astrofisica,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2005,INAF — Istituto Nazionale di Astrofisica,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2006,INAF — Istituto Nazionale di Astrofisica,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2007,INAF — Istituto Nazionale di Astrofisica,science_agency,,,,,,,,gap: no matching rows in this year
 Italy,2009,INAF — Istituto Nazionale di Astrofisica,science_agency,,,,,,,,gap: no matching rows in this year
 Italy,2010,INAF — Istituto Nazionale di Astrofisica,science_agency,,,,,,,,gap: no matching rows in this year
 Italy,2013,INAF — Istituto Nazionale di Astrofisica,science_agency,,,,,,,,"National astrophysics institute, created 2002.; dropped after original-file audit: modern survivor is a programme/reduction/legal-clause amount, not a clean institutional annual appropriation"
@@ -146,6 +192,14 @@ Italy,1996,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,,,,,,,,
 Italy,1997,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,,,,,,,,"National nuclear physics institute. MUR-supervised.; dropped after Italy audit: pre-2002 budget-law appropriations should be in lire, so this EUR-labelled survivor is treated as column leakage or unit confusion"
 Italy,1998,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,,,,,,,,gap: no matching rows in this year
 Italy,1999,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,,,,,,,,"National nuclear physics institute. MUR-supervised.; dropped after Italy audit: pre-2002 budget-law appropriations should be in lire, so this EUR-labelled survivor is treated as column leakage or unit confusion"
+Italy,2000,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2001,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2002,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2003,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2004,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2005,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2006,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,,,,,,,,gap: no matching rows in this year
+Italy,2007,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,,,,,,,,gap: no matching rows in this year
 Italy,2009,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,,,,,,,,gap: no matching rows in this year
 Italy,2010,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,,,,,,,,gap: no matching rows in this year
 Italy,2013,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,,,,,,,,National nuclear physics institute. MUR-supervised.; dropped after Italy audit: exceeds conservative EUR cap for this institutional series
@@ -159,7 +213,15 @@ Italy,2021,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,,,,,,,,
 Italy,2022,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,,,,,,,,gap: no matching rows in this year
 Italy,2023,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,,,,,,,,gap: no matching rows in this year
 Italy,2024,INFN — Istituto Nazionale di Fisica Nucleare,science_agency,,,,,,,,gap: no matching rows in this year
-Italy,1999,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,,,,,,,,gap: no matching rows in this year
+Italy,1999,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,500000000000.0,lira,ITL,line_item,National Interest Research Programs,1999 19981229_302_SO_210.pdf,138,Competitive university research grants of national relevance.
+Italy,2000,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,,,,,,,,gap: no matching rows in this year
+Italy,2001,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,1000000000000.0,lira,ITL,line_item,Projects of Relevant National Interest,2001 20001229_302_SO_220.pdf,236,Competitive university research grants of national relevance.
+Italy,2002,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,,,,,,,,Competitive university research grants of national relevance.; dropped after Italy audit: exceeds conservative EUR cap for this institutional series
+Italy,2003,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,225448000.0,euro,EUR,line_item,Projects of Relevant National Interest,2003 20021231_305_SO_241.pdf,86,Competitive university research grants of national relevance.
+Italy,2004,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,,,,,,,,Competitive university research grants of national relevance.; dropped after Italy audit: exceeds conservative EUR cap for this institutional series
+Italy,2005,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,,,,,,,,Competitive university research grants of national relevance.; dropped after Italy audit: zero-value placeholder is not a transparent budget appropriation
+Italy,2006,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,,,,,,,,Competitive university research grants of national relevance.; dropped after Italy audit: exceeds conservative EUR cap for this institutional series
+Italy,2007,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,,,,,,,,Competitive university research grants of national relevance.; dropped after Italy audit: exceeds conservative EUR cap for this institutional series
 Italy,2009,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,,,,,,,,gap: no matching rows in this year
 Italy,2010,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,,,,,,,,gap: no matching rows in this year
 Italy,2013,PRIN — Progetti di Rilevante Interesse Nazionale,direct_rd,,,,,,,,gap: no matching rows in this year

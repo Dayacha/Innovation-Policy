@@ -653,6 +653,238 @@ def _year_docx_series_fragments(country: str, year: int) -> list[str]:
     return _uniq_keep_order(fragments)
 
 
+# ── Gap investigation knowledge base ─────────────────────────────────────────
+# For each (country, year) calendar gap: what was tried and what the conclusion is.
+_GAP_KB: dict[tuple[str, int], dict] = {}
+
+def _build_gap_kb() -> dict[tuple[str, int], dict]:
+    """Build the manual gap investigation knowledge base."""
+    def _expand(country, years_spec, entry):
+        out = {}
+        if isinstance(years_spec, range):
+            for y in years_spec:
+                out[(country, y)] = entry
+        elif isinstance(years_spec, (list, tuple)):
+            for y in years_spec:
+                out[(country, y)] = entry
+        else:
+            out[(country, years_spec)] = entry
+        return out
+
+    kb: dict[tuple[str, int], dict] = {}
+
+    def add(country, years_spec, tried, conclusion, fixable):
+        kb.update(_expand(country, years_spec, {"tried": tried, "conclusion": conclusion, "fixable": fixable}))
+
+    add("Italy", range(1998, 2009),
+        "Previous LLM extraction covered only 1986–1997 and 2009–2024. Source PDFs for 1998–2008 exist in corpus (Italian Finance Bills — Gazzetta Ufficiale, e.g. '1998 19971230_302_SO_255.pdf'). These years have not been attempted yet.",
+        "POTENTIALLY FIXABLE — Source PDFs exist for all years 1998–2008. Needs targeted re-extraction with prompts focusing on 'dotazione ordinaria' or annual institutional appropriation lines (not extraordinary contributions or multiyear authorizations).",
+        "Potentially")
+
+    add("Italy", range(2009, 2026),
+        "LLM extraction ran but amounts are 12–25× too large (e.g. CNR 2013 = 16.1B EUR vs. expected ~1B). Root cause: LLM reads extraordinary contributions, multiyear authorization totals, or mission-level aggregates instead of annual institutional appropriation lines. 'modern_caps' filter in canonical_series.py blocks these inflated values from rd_database.csv.",
+        "POTENTIALLY FIXABLE — Re-extract with prompt targeting annual 'dotazione ordinaria' or 'fondo ordinario' line items. Clean-factor scaling is not possible since the error ratio varies by year and agency.",
+        "Potentially")
+
+    add("Germany", range(2008, 2010),
+        "_GERMANY_MANUAL_DROP_ROWS in canonical_series.py drops DFG, HGF, Fraunhofer, MPG, WGL, DLR for 2003–2009 because the LLM misassigned the BMBF chapter total (~1.93B EUR constant) to every individual agency. All agencies show the same value confirming a single chapter-total repeated.",
+        "POTENTIALLY FIXABLE via re-extraction — Would require targeted re-extraction with prompts identifying individual Titel/Kapitel lines within Einzelplan 30 (BMBF chapter). Current extraction is correctly blocked.",
+        "Potentially")
+
+    add("Germany", range(2010, 2022),
+        "Bundesgesetzblatt PDFs exist for 2010–2020 but contain only the enacted budget law (article-level totals). The R&D agency-level breakdown requires Einzelplan 30 (BMBF Haushaltsplan) which is a separate document NOT in our corpus. VA-Band3 supplementary detail only available for 2021.",
+        "NOT FIXABLE without Einzelplan 30 PDFs — Bundesgesetzblatt files in corpus contain only enacted totals, not agency-level chapter breakdowns. Would need BMBF Haushaltsplan PDFs for 2010–2020 added to corpus.",
+        "No")
+
+    add("Germany", [2022, 2023, 2024],
+        "Same structural problem as 2010–2020: Bundesgesetzblatt contains only enacted totals. BMBF Haushaltsplan Einzelplan 30 PDFs needed for agency-level breakdowns.",
+        "NOT FIXABLE without Einzelplan 30 PDFs for 2022–2024.",
+        "No")
+
+    add("Portugal", range(1988, 1998),
+        "Portuguese Finance Bills (Lei do Orçamento) for 1988–1997 exist as PDFs in corpus (e.g. 'Lei orcamento para 1988.pdf'). Pipeline has not run extraction on these years. JNICT (Junta Nacional de Investigação Científica e Tecnológica) was main R&D funding agency 1967–1997.",
+        "POTENTIALLY FIXABLE — PDFs exist for all years. Could re-extract targeting JNICT annual appropriation lines. Note: 1987, 1992, 1994 already have verified overrides from known JNICT data.",
+        "Potentially")
+
+    add("Portugal", [2000, 2001],
+        "PDFs for 2000 ('Lei orcamento para 2000.pdf') and 2001 ('2001 8e5ae31a...pdf') exist in corpus. FCT was created in 1997. Pipeline may not have cleanly extracted MAPA VII annual appropriation values for these transition years.",
+        "POTENTIALLY FIXABLE — PDFs exist. Re-extract targeting FCT annual appropriation in MAPA VII autonomous services table.",
+        "Potentially")
+
+    add("Portugal", [2002, 2003, 2004, 2005],
+        "Results.csv has data for 2002–2005 but portugal_manual_drops blocks them. Extracted amounts (352–634M EUR, labeled 'unit EUR') come from plurianual commitment authorization tables rather than annual appropriations. MAPA VII methodology requires only annual dotation lines.",
+        "NOT FIXABLE from current source — extracted amounts represent cumulative authorizations not annual appropriations. A different table within the same PDF could theoretically have annual figures but was not identified.",
+        "No")
+
+    add("Portugal", [2008],
+        "No PDF for Portugal 2008 Finance Bill found in our corpus.",
+        "NOT FIXABLE — source document not available in corpus.",
+        "No")
+
+    add("Turkey", [1979, 1980, 1981],
+        "Turkey 1979–1981 rows in results.csv are transfer amounts paid to TÜBİTAK by other ministries ('tübitaka ödenecektir') — not TÜBİTAK's own institutional budget appropriation. Correctly excluded by turkey_drop_pairs in canonical_series.py.",
+        "POTENTIALLY FIXABLE via re-extraction — the correct TÜBİTAK budget line needs to be found in TÜBİTAK's own chapter, not as a transfer line in another ministry's section.",
+        "Potentially")
+
+    add("Turkey", [1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2001, 2002, 2003, 2004],
+        "Source PDFs (Turkish Budget Law Resmi Gazete) exist for these years (e.g. '1983 17895.pdf' through '1990 20388.pdf'). Turkey data successfully extracted for 1975–1983 and 2005–2009. The 1983–2004 period appears to have extraction gaps.",
+        "POTENTIALLY FIXABLE — PDFs exist for 1983–1990 at minimum. Turkish budget shows TÜBİTAK as a line item in Ministry of Education. Requires re-extraction with Turkish-language prompts targeting TÜBİTAK appropriation lines.",
+        "Potentially")
+
+    add("Turkey", [2000],
+        "Turkey 2000 appears in results.csv but was excluded via turkey_drop_pairs. Source PDF exists in corpus.",
+        "POTENTIALLY FIXABLE — Needs investigation of what the 2000 extraction found and why it was excluded. May be a transfer amount issue similar to 1979–1981.",
+        "Potentially")
+
+    add("Turkey", [2005],
+        "Turkey 2005 blocked by turkey_drop_pairs for TÜBİTAK and TAEK. The 2005 extraction was identified as problematic during audit (likely transfer amount or scale issue).",
+        "POTENTIALLY FIXABLE — if correct annual institutional budget lines can be identified in the 2005 PDF.",
+        "Potentially")
+
+    add("France", range(1966, 2025),
+        "France has 21 gaps at years 1971, 1975, 1976, 1980, 1989, 1991–1993, 1995–2004, 2006, 2018–2019. French Finance Bills (PLF/LFI) are well-structured with MIRES mission chapters. Source docs exist for most gap years (56 files in corpus). Some gaps reflect parsing failures or years where agency-level data wasn't cleanly separated.",
+        "POTENTIALLY FIXABLE — French budget structure is well-organized. Source docs available. Re-extraction for specific gap years (especially recent ones 2018–2019) should recover missing data.",
+        "Potentially")
+
+    add("Poland", range(1992, 2025),
+        "Poland has 18 gaps at years 1994–2009, 2012, 2018, 2021–2022. Polish Finance Bills (Ustawa budzetowa) available (37 files in corpus). KBN (1992–2005) and NCN/NCBiR (2011+) key agencies. Some gap years not attempted.",
+        "POTENTIALLY FIXABLE — Source docs likely available for most gaps. Systematic re-extraction for gap years should recover data.",
+        "Potentially")
+
+    add("UK", range(1998, 2025),
+        "UK has 12 gaps (2000–2003, 2008–2009, 2011–2012, 2014, 2016, 2019, 2022). UK Supply Estimates don't present R&D as institutional block grants in same way as continental systems. RCUK/UKRI receive block grants visible in BEIS/DfE Supply Estimates but structure is complex. 53 files in corpus.",
+        "HARD TO FIX — UK Supply Estimates have complex multi-document structure. Missing years reflect both extraction failures and structural format differences. UK R&D budget is distributed across multiple departmental estimates, not a single chapter.",
+        "Uncertain")
+
+    add("Estonia", range(1992, 2025),
+        "Estonia has 13 gaps (1993, 2012–2021, 2023–2024). 35 files in corpus. ETF (Eesti Teadusfond) and MKM (Ministry of Economic Affairs) key R&D agencies. Gap years not yet attempted for extraction.",
+        "POTENTIALLY FIXABLE — Source docs likely available for most gaps. Systematic re-extraction needed.",
+        "Potentially")
+
+    add("Latvia", range(1993, 2025),
+        "Latvia has 13 gaps (1994, 2002, 2004–2005, 2007–2008, 2010–2014, 2016–2017). 38 files in corpus. LZP (Latvian Council of Science) key R&D agency. Gap years appear not to have been attempted.",
+        "POTENTIALLY FIXABLE — Source docs likely available.",
+        "Potentially")
+
+    add("Sweden", range(1975, 2025),
+        "Sweden has 9 gaps (1976–1979, 1996, 2006, 2008, 2012, 2015). Swedish Finance Bills (Budgetproposition) are very large multi-volume PDFs. 49 files in corpus. Previous session noted files may be too large for LLM extraction context window.",
+        "UNCERTAIN — Large PDF file size may prevent extraction. Some gaps may be recoverable if specific VINNOVA/VR chapters can be isolated from multi-volume PDF.",
+        "Uncertain")
+
+    add("New Zealand", range(1970, 2010),
+        "New Zealand has 9 gaps (1977, 1984, 1988, 1991–1995, 2004). 52 files in corpus. FRST (Foundation for Research, Science and Technology) and MoRST key agencies. Source docs likely in corpus for covered period.",
+        "POTENTIALLY FIXABLE — Source docs likely available. NZ budget structure clearly identifies science funding agencies.",
+        "Potentially")
+
+    add("Colombia", range(2000, 2025),
+        "Colombia has 8 gaps (2003, 2006–2011, 2015). 41 files in corpus. Colciencias (now MinCiencias) key R&D agency. Source docs likely exist for gap years.",
+        "POTENTIALLY FIXABLE — Source docs likely available.",
+        "Potentially")
+
+    add("Costa Rica", range(2010, 2025),
+        "Costa Rica has 8 gaps (2012, 2014–2016, 2018–2019, 2022–2023). 25 files in corpus. CONICIT/MICITT key R&D agencies. Source docs likely available.",
+        "POTENTIALLY FIXABLE — Source docs likely available.",
+        "Potentially")
+
+    add("Switzerland", range(1975, 2025),
+        "Switzerland has 8 gaps (1979–1982, 1990, 1992–1993, 2002). 56 files in corpus. SNF (Swiss National Science Foundation) and ETH Domain key R&D agencies. Source docs likely available.",
+        "POTENTIALLY FIXABLE — Source docs likely available.",
+        "Potentially")
+
+    add("Hungary", range(1998, 2012),
+        "Hungary has 7 gaps (2000, 2002–2004, 2006, 2008–2009). 34 files in corpus. OTKA (Hungarian Scientific Research Fund) and NKTH key agencies. Source docs likely exist.",
+        "POTENTIALLY FIXABLE — Source docs likely available.",
+        "Potentially")
+
+    add("Spain", range(1988, 2025),
+        "Spain has 6 gaps (1991, 1994–1995, 1997, 2003, 2019). 45 files in corpus. CSIC and AEI (Agencia Estatal de Investigación) key R&D agencies. Source docs likely available.",
+        "POTENTIALLY FIXABLE — Source docs likely available.",
+        "Potentially")
+
+    add("Mexico", range(2000, 2025),
+        "Mexico has 5 gaps (2004–2005, 2019, 2022–2023). 68 files in corpus. CONACYT (now CONAHCYT) key R&D agency. Source docs likely exist.",
+        "POTENTIALLY FIXABLE — Source docs likely available.",
+        "Potentially")
+
+    add("Finland", [1990, 1991, 1994, 1995],
+        "Finland has 4 gaps. 39 files in corpus but no documents matching 1990, 1991, 1994, or 1995. Finnish Academy and TEKES (now Business Finland) key agencies.",
+        "NOT FIXABLE without source documents — files not in corpus for these years.",
+        "No")
+
+    add("Israel", [1993, 2003, 2006, 2020],
+        "Israel has 4 gaps. 57 files in corpus but no documents found matching 1993, 2003, 2006, or 2020.",
+        "NOT FIXABLE without source documents — files not in corpus for these specific years.",
+        "No")
+
+    add("Czech Republic", [1995, 2010, 2011],
+        "Czech Republic has 3 gaps. 33 files in corpus. GACR (Czech Science Foundation) key agency. Source docs likely available for 2010–2011.",
+        "POTENTIALLY FIXABLE — Source docs likely exist.",
+        "Potentially")
+
+    add("Australia", [2000, 2001],
+        "Australia has 2 gaps. 368 files in corpus. ARC (Australian Research Council) and NHMRC key agencies. Source docs exist in corpus.",
+        "POTENTIALLY FIXABLE — Source docs exist in corpus.",
+        "Potentially")
+
+    add("Canada", [2004, 2005],
+        "Canada has 2 gaps. 134 files in corpus but no documents found matching 2004 or 2005.",
+        "NOT FIXABLE without source documents.",
+        "No")
+
+    add("Lithuania", [1995, 2000],
+        "Lithuania has 2 gaps. 35 files in corpus. LMT (Research Council of Lithuania) key agency.",
+        "POTENTIALLY FIXABLE.",
+        "Potentially")
+
+    add("Slovakia", [2023, 2024],
+        "Slovakia has 2 recent gaps. 38 files in corpus. APVV (Slovak Research and Development Agency) key agency. Recent years — source docs may be available.",
+        "POTENTIALLY FIXABLE — Recent years, source docs may be available.",
+        "Potentially")
+
+    add("Austria", [1987],
+        "Austria has 1 gap (1987). 94 files in corpus. FWF and FFG key agencies. Source doc likely in corpus.",
+        "POTENTIALLY FIXABLE — Source doc likely in corpus, needs re-extraction.",
+        "Potentially")
+
+    add("Belgium", [2003],
+        "Belgium has 1 gap (2003). 34 files in corpus but no document found for 2003 specifically. Note: Belgium 2008 had separate issue where all extracted amounts were empty.",
+        "NOT FIXABLE — source document for 2003 not in corpus.",
+        "No")
+
+    add("Denmark", [2002],
+        "Denmark has 1 gap (2002). 50 files in corpus. Forskningsministeriet key agency. No 2002 source document found in corpus.",
+        "NOT FIXABLE — source document for 2002 not in corpus.",
+        "No")
+
+    add("Korea", [2020],
+        "Korea has 1 gap (2020). 21 files in corpus. NRF (National Research Foundation) key agency. No source document found matching 2020.",
+        "NOT FIXABLE — source document for 2020 not in corpus.",
+        "No")
+
+    add("Netherlands", [1996],
+        "Netherlands has 1 gap (1996). 170 files in corpus. NWO (Dutch Research Council) key agency. Source doc likely in corpus.",
+        "POTENTIALLY FIXABLE — Source doc likely available.",
+        "Potentially")
+
+    add("Slovenia", [2014],
+        "Slovenia has 1 gap (2014). 53 files in corpus. ARRS (Slovenian Research Agency) key agency. Source doc likely available.",
+        "POTENTIALLY FIXABLE — Source doc likely available.",
+        "Potentially")
+
+    return kb
+
+
+_GAP_KB = _build_gap_kb()
+
+
+def _gap_investigation_lookup(country: str, year: int) -> tuple[str, str, str]:
+    """Return (tried, conclusion, fixable) from knowledge base for a gap."""
+    entry = _GAP_KB.get((country, year))
+    if entry:
+        return entry["tried"], entry["conclusion"], entry["fixable"]
+    return "", "", ""
+
+
 def _budget_gap_explorer_detail(
     country: str,
     year: int,
@@ -1975,6 +2207,7 @@ with TAB_BUDGET:
                         _yr_log,
                     )
 
+                    _tried, _concl, _fixable = _gap_investigation_lookup(_gap_country, int(_gy))
                     _gap_rows.append(
                         {
                             "Country": _gap_country,
@@ -1982,6 +2215,8 @@ with TAB_BUDGET:
                             "Documents": _docs,
                             "Issue": _issue,
                             "Analysis": _analysis,
+                            "What Was Tried": _tried,
+                            "Conclusion / Fixable?": f"[{_fixable}] {_concl}" if _fixable else _concl,
                         }
                     )
 
@@ -1994,7 +2229,7 @@ with TAB_BUDGET:
                 _gap_df = pd.DataFrame(_gap_rows).sort_values(["Country", "Year"]).reset_index(drop=True)
                 render_table(
                     _gap_df,
-                    wide_cols=["Documents", "Issue", "Analysis"],
+                    wide_cols=["Documents", "Issue", "Analysis", "What Was Tried", "Conclusion / Fixable?"],
                     max_rows=250,
                 )
                 _gap_dl_col1, _gap_dl_col2 = st.columns(2)

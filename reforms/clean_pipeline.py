@@ -78,18 +78,22 @@ SUBTHEME_WEIGHTS: dict[str, float] = {
 def clean_view(df: pd.DataFrame) -> pd.DataFrame:
     """Return only rows that passed the cleaning pipeline.
 
-    Kept rows (score_band == "keep") and LLM-rescued borderline rows
-    (score_band == "borderline" AND llm_decision == "include").
-    Rows with score_band == "drop" or llm_decision == "exclude" are excluded.
+    Kept rows: score_band == "keep" AND llm_decision != "exclude".
+    Rescued rows: score_band == "borderline" AND llm_decision == "include".
+
+    The LLM exclude signal is honoured for keep-band rows as well as borderline
+    ones — the adjudicator correctly identifies false positives (e.g. health
+    funding, vocational training) that score high on taxonomy keywords but are
+    not genuine R&D/innovation policy reforms.
     """
     if "score_band" not in df.columns:
         return df  # not yet scored — return everything
 
-    keep_mask = df["score_band"] == "keep"
-
     if "llm_decision" in df.columns:
+        keep_mask = (df["score_band"] == "keep") & (df["llm_decision"] != "exclude")
         rescued_mask = (df["score_band"] == "borderline") & (df["llm_decision"] == "include")
     else:
+        keep_mask = df["score_band"] == "keep"
         rescued_mask = pd.Series(False, index=df.index)
 
     return df[keep_mask | rescued_mask].copy()
