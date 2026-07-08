@@ -1,0 +1,8 @@
+year,canonical_name,applied,amount_local,unit,currency,source_file,note
+2014,Research and Higher Education in Economic and Industrial Matters,True,984169961.0,euro,EUR,JORF_2014.pdf,"reclassify: docx_results row, unit-normalized x1000, confirmed vs. neighbours (2013 ~1.09B / 2015 ~878M)"
+2015,Research and Higher Education in Economic and Industrial Matters,True,877712013.0,euro,EUR,JORF_2015.pdf,"reclassify: docx_results row, unit-normalized x1000, confirmed vs. neighbours (2014 ~984M)"
+2017,Research and Higher Education in Economic and Industrial Matters,True,794609301.0,euro,EUR,JORF_2017.pdf,"reclassify: docx_results row, unit-normalized x1000, confirmed vs. neighbours (2015 ~878M)"
+2009,Higher Education and Agricultural Research,True,296732542.0,euro,EUR,JORF_2009.pdf,"reclassify: docx_results row, unit-normalized x1000, confirmed vs. neighbours (2014 ~312M)"
+2014,Higher Education and Agricultural Research,True,312006931.0,euro,EUR,JORF_2014.pdf,"reclassify: docx_results row, unit-normalized x1000, confirmed vs. neighbours (2009 ~297M / 2015 ~329M)"
+2015,Higher Education and Agricultural Research,True,329442176.0,euro,EUR,JORF_2015.pdf,"reclassify: docx_results row, unit-normalized x1000, confirmed vs. neighbours (2014 ~312M)"
+2017,Higher Education and Agricultural Research,True,339670121.0,euro,EUR,JORF_2017.pdf,"reclassify: docx_results row, unit-normalized x1000, confirmed vs. neighbours (2015 ~329M)"

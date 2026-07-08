@@ -1,0 +1,5 @@
+year,canonical_name,applied,amount_local,unit,currency,source_file,note
+2003,LIST / CRP Henri Tudor (Luxembourg),True,750000.0,euro,EUR,2003 eli-etat-leg-memorial-2002-a143-fr-pdf.pdf,"reclassify: docx_results.csv row, decision=include, clean single entity match"
+2006,LIST / CRP Henri Tudor (Luxembourg),True,15000000.0,euro,EUR,2006 eli-etat-leg-memorial-2005-a217-fr-pdf.pdf,"reclassify: docx_results.csv row, decision=include, clean single entity match"
+2006,CRP Gabriel Lippmann (Luxembourg),True,10000000.0,euro,EUR,2006 eli-etat-leg-memorial-2005-a217-fr-pdf.pdf,"reclassify: docx_results.csv row, decision=include, clean single entity match"
+2003,Université du Luxembourg,True,500000.0,euro,EUR,2003 eli-etat-leg-memorial-2002-a143-fr-pdf.pdf,"reclassify: docx_results.csv row, decision=include, clean single entity match"

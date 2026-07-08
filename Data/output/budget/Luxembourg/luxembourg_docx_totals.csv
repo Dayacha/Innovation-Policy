@@ -1,4 +1,5 @@
 country,canonical_name,year,amount_total,amount_primary,n_acts,acts,additive_flag,currency,unit,category
+Luxembourg,CRP Gabriel Lippmann (Luxembourg),2006,10000000.0,10000000.0,1,2006 eli-etat-leg-memorial-2005-a217-fr-pdf.pdf,single,EUR,euro,
 Luxembourg,CRP Gabriel Lippmann (Luxembourg),2008,15400000.0,15400000.0,1,2008 eli-etat-leg-memorial-2007-a236-fr-pdf.pdf,single,EUR,euro,research_institute
 Luxembourg,CRP Gabriel Lippmann (Luxembourg),2009,11300000.0,11300000.0,1,2009 eli-etat-leg-memorial-2008-a200-fr-pdf.pdf,single,EUR,euro,research_institute
 Luxembourg,CRP Gabriel Lippmann (Luxembourg),2010,13200000.0,13200000.0,1,budget-de-l-etat-2010.pdf,single,EUR,euro,research_institute
@@ -64,6 +65,8 @@ Luxembourg,LISER / CEPS-INSTEAD (Luxembourg),2022,14430000.0,14430000.0,1,budget
 Luxembourg,LISER / CEPS-INSTEAD (Luxembourg),2023,15210000.0,15210000.0,1,budget-de-l-etat-2023.pdf,single,EUR,euro,research_institute
 Luxembourg,LISER / CEPS-INSTEAD (Luxembourg),2024,15820000.0,15820000.0,1,budget-de-letat-2024.pdf,single,EUR,euro,research_institute
 Luxembourg,LISER / CEPS-INSTEAD (Luxembourg),2025,17190000.0,17190000.0,1,budget-de-letat-2025.pdf,single,EUR,euro,research_institute
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2003,750000.0,750000.0,1,2003 eli-etat-leg-memorial-2002-a143-fr-pdf.pdf,single,EUR,euro,
+Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2006,15000000.0,15000000.0,1,2006 eli-etat-leg-memorial-2005-a217-fr-pdf.pdf,single,EUR,euro,
 Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2008,17900000.0,17900000.0,1,2008 eli-etat-leg-memorial-2007-a236-fr-pdf.pdf,single,EUR,euro,research_institute
 Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2009,18900000.0,18900000.0,1,2009 eli-etat-leg-memorial-2008-a200-fr-pdf.pdf,single,EUR,euro,research_institute
 Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2010,20400000.0,20400000.0,1,budget-de-l-etat-2010.pdf,single,EUR,euro,research_institute
@@ -82,6 +85,7 @@ Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2022,52940000.0,52940000.0,1,budg
 Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2023,53970000.0,53970000.0,1,budget-de-l-etat-2023.pdf,single,EUR,euro,research_institute
 Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2024,55500000.0,55500000.0,1,budget-de-letat-2024.pdf,single,EUR,euro,research_institute
 Luxembourg,LIST / CRP Henri Tudor (Luxembourg),2025,57700000.0,57700000.0,1,budget-de-letat-2025.pdf,single,EUR,euro,research_institute
+Luxembourg,Université du Luxembourg,2003,500000.0,500000.0,1,2003 eli-etat-leg-memorial-2002-a143-fr-pdf.pdf,single,EUR,euro,
 Luxembourg,Université du Luxembourg,2004,20391507.0,20391507.0,1,2004 eli-etat-leg-memorial-2003-a184-fr-pdf.pdf,single,EUR,euro,higher_education
 Luxembourg,Université du Luxembourg,2005,31238340.0,31238340.0,1,2005 eli-etat-leg-memorial-2004-a204-fr-pdf.pdf,single,EUR,euro,higher_education
 Luxembourg,Université du Luxembourg,2006,44054340.0,44054340.0,1,2006 eli-etat-leg-memorial-2005-a217-fr-pdf.pdf,single,EUR,euro,higher_education

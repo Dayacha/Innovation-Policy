@@ -1,0 +1,94 @@
+PAGE 90
+1531
+07. Diverse tilskud 1,2
+20.53. Produktionsskoler, daghøjskoler og ungdomskostskoler
+01. Produktionsskoler (tekstanm. 74) 350,4
+02. Daghøjskoler (tekstanm. 74) 221,3
+03. Ungdomskostskoler (Reservationsbev.) 10,1
+20.54. Voksenuddannelsesstøtte
+01. Voksenuddannelsesstøtte (tekstanm. 74, 82) 215,3
+20.55. Aktivitetsforanstaltninger
+01. Refusion ved uddannelse og jobrotation for privatansat-
+te (Lovbunden)
+Videregående uddannelser (tekstanm. 65, 66, 79)
+20.61. Uddannelse og forskning m.v.
+01. Uddannelsestaxametre (tekstanm. 74, 81) (Driftsbev.) 4.752,8
+02. Forskningsaktiviteter m.v. (Driftsbev.) 2.984,9
+03. Kapitaludgifter (Driftsbev.) 541,3
+04. Særlige bevillinger (tekstanm. 3, 81) (Driftsbev.) 440,0
+32. VUE-Centret (Driftsbev.) 25,0
+33. Forskerakademi og -uddannelse (Driftsbev.) 87,2
+35. Evalueringscenter (Driftsbev.) 9,4
+36. Rektorkollegiets sekretariat (Driftsbev.) 5,3
+37. Studenterrådgivningen (Driftsbev.) 8,6
+52. Forskellige tilskud (Reservationsbev.) 8,0
+60. Danmarks edb-center for forskning og uddannelse
+(tekstanm. 70) (Statsvirksomhed) 27,6
+71. Fælles byggeprogram (tekstanm. 53) (Anlægsbev.) 85,2
+72. Apparaturanskaffelser (Anlægsbev.)
+20.62. Universiteter og universitetscentre
+01. Københavns Universitet (tekstanm. 68, 69, 70) (Net-
+tostyret virksomhed)
+02. Københavns Universitet (tekstanm. 53) (Anlægsbev.) 64,3
+05. Aarhus Universitet (tekstanm. 68, 69, 70) (Nettostyret
+virksomhed)
+06. Aarhus Universitet (tekstanm. 53) (Anlægsbev.) 74,2
+11. Odense Universitet (tekstanm. 68, 70) (Nettostyret virk-
+somhed)
+12. Odense Universitet (tekstanm. 53) (Anlægsbev.) 10,8
+13. Roskilde Universitetscenter (tekstanm. 68, 70) (Net-
+tostyret virksomhed)
+14. Roskilde Universitetscenter (tekstanm. 53) (Anlægsbev.) 27,9
+17. Aalborg Universitet (tekstanm. 68, 70) (Nettostyret
+virksomh
+----
+PAGE 91
+1532
+02. Danmarks Tekniske Universitet (tekstanm. 53) (Anlægs-
+bev.) 17,1
+11. Danmarks Ingeniørakademi (Driftsbev.)
+21. Ingeniørhøjskolerne (tekstanm. 68, 70, 71) (Nettostyret
+virksomhed)
+22. Teknika (tekstanm. 1, 53) (Anlægsbev.)
+20.64. Handelshøjskoler
+01. Handelshøjskolen i København (tekstanm. 68) (Net-
+tostyret virksomhed)
+02. Handelshøjskolen i København (tekstanm. 1, 53) (An-
+lægsbev.) .o.
+11. Handelshøjskolen i Århus (tekstanm. 68) (Nettostyret
+virksomhed) .o.
+12. Handelshøjskolen i Århus (tekstanm. 1, 53) (Anlægs-
+bev.) 9,6
+21. Handelshøjskole Syd (tekstanm. 68) (Nettostyret virk-
+somhed)
+31. Handelshøjskoleafdelinger (tekstanm. 68, 71) (Drifts-
+bev.)
+20.65. Social- og sundhedshøjskoler
+01. Danmarks Farmaceutiske Højskole (tekstanm. 68, 70)
+(Nettostyret virksomhed)
+02. Danmarks Farmaceutiske Højskole (tekstanm. 53) (An-
+lægsbev.) 9,4
+21. Hospitalslaborantskoler (Driftsbev.)
+23. Ergo- og fysioterapeutskoler (Nettostyret virksomhed) 0,8
+24. Ergo- og fysioterapeutskoler (teksanm. 53) (Anlægsbev.) ....
+25. Danmarks Jordemoderskole (tekstanm. 71) (Driftsbev.) 20,7
+27. De Sociale Højskoler (tekstanm. 71) (Nettostyret virk-
+somhed)
+28. De Sociale Højskoler (tekstanm. 53) (Anlægsbev.)
+20.66. Seminarier
+01. Lærerseminarier (Nettostyret virksomhed)
+02. Lærerseminarier (tekstanm. 1, 53) (Anlægsbev.) 48,5
+05. Den Frie Lærerskole, Ollerup
+11. Pædagogseminarier (Nettostyret virksomhed)
+12. Pædagogseminarier (tekstanm. 1, 53) (Anlægsbev.) 9,4
+31. Ernærings- og husholdningsseminarier (Driftsbev.)
+32. Ernærings- og husholdningsseminarier (tekstanm. 1, 53)
+(Anlægsbev.)
+33. Håndarbejdsseminarier (Driftsbev.)
+34. Håndarbejdsseminarier (tekstanm. 1, 53) (Anlægsbev.)
+20.67. Øvrige læreanstalter
+01. Den Kgl. Veterinær- og Landbohøjskole (tekstanm. 68,
+70) (Nettostyret virksomhed)
+02.
+----
+DONE elapsed=7.495781421661377

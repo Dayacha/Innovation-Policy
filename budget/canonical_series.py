@@ -13327,9 +13327,15 @@ def _best_amount_for_agency(
             + " "
             + matches.get("section_name", pd.Series("", index=matches.index)).fillna("").astype(str)
         )
+        # Accent-fold before matching: source text (esp. French/Spanish/Portuguese
+        # line items) often carries diacritics (é, è, ç, ã, ñ...) that literal
+        # regex terms in exclude_match_groups don't always account for. Folding
+        # both sides to ASCII avoids false negatives from accent mismatches.
+        combined_text = combined_text.map(_strip_accents)
         for group in exclude_groups:
+            folded_group = [_strip_accents(pattern) for pattern in group]
             exclude_mask = combined_text.apply(
-                lambda text: any(re.search(pattern, text, re.IGNORECASE) for pattern in group)
+                lambda text: any(re.search(pattern, text, re.IGNORECASE) for pattern in folded_group)
             )
             trimmed = matches[~exclude_mask].copy()
             if not trimmed.empty:
@@ -13897,10 +13903,17 @@ def _best_amount_for_agency(
             + " "
             + matches.get("section_name", pd.Series("", index=matches.index)).fillna("").astype(str)
         )
+        # Accent-fold both the searched text and the regex terms (see the
+        # exclude_match_groups accent-fold above for rationale). Several France
+        # programme-name patterns are written without diacritics (e.g.
+        # "superieur") while the extracted text keeps them ("supérieur"),
+        # so an un-folded comparison silently fails and drops a real match.
+        combined_text = combined_text.map(_strip_accents)
         narrowed = None
         for group in pattern_groups:
+            folded_group = [_strip_accents(pattern) for pattern in group]
             group_mask = combined_text.apply(
-                lambda text: any(re.search(pattern, text, re.IGNORECASE) for pattern in group)
+                lambda text: any(re.search(pattern, text, re.IGNORECASE) for pattern in folded_group)
             )
             if group_mask.any():
                 narrowed = matches[group_mask].copy()

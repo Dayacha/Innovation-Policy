@@ -1,0 +1,13 @@
+year,canonical_name,applied,amount_local,unit,currency,source_file,note
+1997,FCT — Fundação para a Ciência e a Tecnologia (Portugal),True,13495419.0,escudo,PTE,Lei orcamento para 1997.pdf,reclassify: raw_rows.csv entity_raw is literally 'FCT - Fundação para a Ciência e Tecnologia'
+2001,FCT — Fundação para a Ciência e a Tecnologia (Portugal),True,20000000.0,euro,EUR,2001 8e5ae31a-7057-4541-a78a-5e464e0fe30b.pdf,"reclassify: raw_rows.csv, corroborated by a second 'Cap. 50 - FN' line with the identical amount in the same document"
+2002,FCT — Fundação para a Ciência e a Tecnologia (Portugal),True,47048341.0,euro,EUR,Lei orcamento para 2002.pdf,"reclassify: raw_rows.csv, clean single entity match"
+2003,FCT — Fundação para a Ciência e a Tecnologia (Portugal),True,634907638.0,euro,EUR,Lei orcamento para 2003.pdf,"reclassify: raw_rows.csv; NOTE same amount also tagged 'Total for Capítulo 50' and 'Programa Investigação Científica e Tecnológica e Inovação' in the same document — plausible because Capítulo 50 is FCT's own budget chapter, but flagged here for visibility"
+2005,FCT — Fundação para a Ciência e a Tecnologia (Portugal),True,40000000.0,euro,EUR,Lei orcamento para 2005.pdf,"reclassify: raw_rows.csv, clean single entity match"
+2024,FCT — Fundação para a Ciência e a Tecnologia (Portugal),True,300000000.0,euro,EUR,Lei orcamento para 2024.pdf,"reclassify: raw_rows.csv, clean single entity match under Programa Investigação Científica e Tecnológica e Inovação"
+1991,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),True,497900.0,escudo,PTE,Lei orcamento para 1991.pdf,"reclassify: raw_rows.csv, clean single entity match"
+1993,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),True,200000.0,escudo,PTE,Lei orcamento para 1993.pdf,"reclassify: raw_rows.csv, clean single entity match"
+1995,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),True,9373000.0,escudo,PTE,Lei orcamento para 1995.pdf,"reclassify: raw_rows.csv, clean single entity match"
+2009,ANI — Agência Nacional de Inovação (Portugal),True,10000000.0,euro,EUR,Lei orcamento para 2009.pdf,"reclassify: raw_rows.csv, clean single entity match, consistent with 2016 (~9.4M)"
+2002,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),True,2819507.0,euro,EUR,Lei orcamento para 2002.pdf,"reclassify: raw_rows.csv, clean single entity match"
+2003,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),True,1352770.0,euro,EUR,Lei orcamento para 2003.pdf,"reclassify: raw_rows.csv, clean single entity match"

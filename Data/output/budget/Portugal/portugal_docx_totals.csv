@@ -1,5 +1,5 @@
 country,canonical_name,year,amount_total,amount_primary,n_acts,acts,additive_flag,currency,unit,category
-Portugal,ANI — Agência Nacional de Inovação (Portugal),2009,,,0,,gap,,,rd_agency
+Portugal,ANI — Agência Nacional de Inovação (Portugal),2009,10000000.0,10000000.0,1,Lei orcamento para 2009.pdf,single,EUR,euro,rd_agency
 Portugal,ANI — Agência Nacional de Inovação (Portugal),2010,,,0,,gap,,,rd_agency
 Portugal,ANI — Agência Nacional de Inovação (Portugal),2011,,,0,,gap,,,rd_agency
 Portugal,ANI — Agência Nacional de Inovação (Portugal),2012,,,0,,gap,,,rd_agency
@@ -16,15 +16,15 @@ Portugal,ANI — Agência Nacional de Inovação (Portugal),2022,,,0,,gap,,,rd_a
 Portugal,ANI — Agência Nacional de Inovação (Portugal),2023,,,0,,gap,,,rd_agency
 Portugal,ANI — Agência Nacional de Inovação (Portugal),2024,,,0,,gap,,,rd_agency
 Portugal,ANI — Agência Nacional de Inovação (Portugal),2025,,,0,,gap,,,rd_agency
-Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),1997,,,0,,gap,,,rd_agency
+Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),1997,13495419.0,13495419.0,1,Lei orcamento para 1997.pdf,single,PTE,escudo,rd_agency
 Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),1998,136759000.0,136759000.0,1,Lei orcamento para 1998.pdf,single,PTE,escudo,rd_agency
 Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),1999,14333071000.0,14333071000.0,1,Lei orcamento para 1999.pdf,single,PTE,escudo,rd_agency
 Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2000,,,0,,gap,,,rd_agency
-Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2001,,,0,,gap,,,rd_agency
-Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2002,,,0,,gap,,,rd_agency
-Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2003,,,0,,gap,,,rd_agency
+Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2001,20000000.0,20000000.0,1,2001 8e5ae31a-7057-4541-a78a-5e464e0fe30b.pdf,single,EUR,euro,rd_agency
+Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2002,47048341.0,47048341.0,1,Lei orcamento para 2002.pdf,single,EUR,euro,rd_agency
+Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2003,634907638.0,634907638.0,1,Lei orcamento para 2003.pdf,single,EUR,euro,rd_agency
 Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2004,,,0,,gap,,,rd_agency
-Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2005,,,0,,gap,,,rd_agency
+Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2005,40000000.0,40000000.0,1,Lei orcamento para 2005.pdf,single,EUR,euro,rd_agency
 Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2006,,,0,,gap,,,rd_agency
 Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2007,552084349.0,552084349.0,1,Lei orcamento para 2007.pdf,single,EUR,euro,rd_agency
 Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2009,654236704.0,654236704.0,1,Lei orcamento para 2009.pdf,single,EUR,euro,rd_agency
@@ -42,7 +42,7 @@ Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2020,55746
 Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2021,,,0,,gap,,,rd_agency
 Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2022,,,0,,gap,,,rd_agency
 Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2023,,,0,,gap,,,rd_agency
-Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2024,,,0,,gap,,,rd_agency
+Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2024,300000000.0,300000000.0,1,Lei orcamento para 2024.pdf,single,EUR,euro,rd_agency
 Portugal,FCT — Fundação para a Ciência e a Tecnologia (Portugal),2025,,,0,,gap,,,rd_agency
 Portugal,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),1977,,,0,,gap,,,rd_agency
 Portugal,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),1985,,,0,,gap,,,rd_agency
@@ -51,11 +51,11 @@ Portugal,JNICT — Junta Nacional de Investigação Científica e Tecnológica (
 Portugal,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),1988,,,0,,gap,,,rd_agency
 Portugal,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),1989,,,0,,gap,,,rd_agency
 Portugal,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),1990,,,0,,gap,,,rd_agency
-Portugal,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),1991,,,0,,gap,,,rd_agency
+Portugal,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),1991,497900.0,497900.0,1,Lei orcamento para 1991.pdf,single,PTE,escudo,rd_agency
 Portugal,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),1992,10000000.0,10000000.0,1,Lei orcamento para 1992.pdf,single,PTE,escudo,rd_agency
-Portugal,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),1993,,,0,,gap,,,rd_agency
+Portugal,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),1993,200000.0,200000.0,1,Lei orcamento para 1993.pdf,single,PTE,escudo,rd_agency
 Portugal,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),1994,13629276000.0,13629276000.0,1,Lei orcamento para 1994.pdf,single,PTE,escudo,rd_agency
-Portugal,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),1995,,,0,,gap,,,rd_agency
+Portugal,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),1995,9373000.0,9373000.0,1,Lei orcamento para 1995.pdf,single,PTE,escudo,rd_agency
 Portugal,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),1996,,,0,,gap,,,rd_agency
 Portugal,JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal),1997,,,0,,gap,,,rd_agency
 Portugal,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),1977,,,0,,gap,,,research_institute
@@ -76,8 +76,8 @@ Portugal,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),1998,,,0,
 Portugal,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),1999,,,0,,gap,,,research_institute
 Portugal,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),2000,,,0,,gap,,,research_institute
 Portugal,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),2001,,,0,,gap,,,research_institute
-Portugal,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),2002,,,0,,gap,,,research_institute
-Portugal,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),2003,,,0,,gap,,,research_institute
+Portugal,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),2002,2819507.0,2819507.0,1,Lei orcamento para 2002.pdf,single,EUR,euro,research_institute
+Portugal,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),2003,1352770.0,1352770.0,1,Lei orcamento para 2003.pdf,single,EUR,euro,research_institute
 Portugal,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),2004,,,0,,gap,,,research_institute
 Portugal,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),2005,,,0,,gap,,,research_institute
 Portugal,LNEC — Laboratório Nacional de Engenharia Civil (Portugal),2006,36747743.0,36747743.0,1,2006 00020361.pdf,single,EUR,euro,research_institute

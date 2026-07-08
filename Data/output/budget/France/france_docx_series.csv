@@ -290,15 +290,15 @@ France,2024,Grants to Research Organizations for Scientific and Technical Resear
 France,2025,Grants to Research Organizations for Scientific and Technical Research,direct_rd,,,,,,,,gap: no matching rows in this year
 France,2007,Higher Education and Agricultural Research,rd_programme,,,,,,,,gap: no matching rows in this year
 France,2008,Higher Education and Agricultural Research,rd_programme,,,,,,,,gap: no matching rows in this year
-France,2009,Higher Education and Agricultural Research,rd_programme,,,,,,,,gap: no matching rows in this year
+France,2009,Higher Education and Agricultural Research,rd_programme,296732542.0,euro,EUR,section_total,Enseignement supérieur et recherche agricoles,JORF_2009.pdf,117,"reclassify: docx_results row, unit-normalized x1000, confirmed vs. neighbours (2014 ~312M)"
 France,2010,Higher Education and Agricultural Research,rd_programme,,,,,,,,gap: no matching rows in this year
 France,2011,Higher Education and Agricultural Research,rd_programme,298000000.0,euro,EUR,program_total,Total for higher education and agricultural research,JORF_2011.pdf,154,
 France,2012,Higher Education and Agricultural Research,rd_programme,,,,,,,,gap: no matching rows in this year
 France,2013,Higher Education and Agricultural Research,rd_programme,,,,,,,,gap: no matching rows in this year
-France,2014,Higher Education and Agricultural Research,rd_programme,,,,,,,,gap: no matching rows in this year
-France,2015,Higher Education and Agricultural Research,rd_programme,,,,,,,,gap: no matching rows in this year
+France,2014,Higher Education and Agricultural Research,rd_programme,312006931.0,euro,EUR,section_total,Enseignement supérieur et recherche agricoles,JORF_2014.pdf,110,"reclassify: docx_results row, unit-normalized x1000, confirmed vs. neighbours (2009 ~297M / 2015 ~329M)"
+France,2015,Higher Education and Agricultural Research,rd_programme,329442176.0,euro,EUR,section_total,Enseignement supérieur et recherche agricoles,JORF_2015.pdf,88,"reclassify: docx_results row, unit-normalized x1000, confirmed vs. neighbours (2014 ~312M)"
 France,2016,Higher Education and Agricultural Research,rd_programme,330000000.0,euro,EUR,program_total,Payment credits for higher education and agricultural research,JORF_2016.pdf,113,
-France,2017,Higher Education and Agricultural Research,rd_programme,,,,,,,,gap: no matching rows in this year
+France,2017,Higher Education and Agricultural Research,rd_programme,339670121.0,euro,EUR,section_total,Enseignement supérieur et recherche agricoles,JORF_2017.pdf,109,"reclassify: docx_results row, unit-normalized x1000, confirmed vs. neighbours (2015 ~329M)"
 France,2018,Higher Education and Agricultural Research,rd_programme,,,,,,,,gap: no matching rows in this year
 France,2020,Higher Education and Agricultural Research,rd_programme,,,,,,,,gap: no matching rows in this year
 France,2021,Higher Education and Agricultural Research,rd_programme,,,,,,,,gap: no matching rows in this year
@@ -625,10 +625,10 @@ France,2010,Research and Higher Education in Economic and Industrial Matters,rd_
 France,2011,Research and Higher Education in Economic and Industrial Matters,rd_programme,1087000000.0,euro,EUR,program_total,Total for research and higher education in economic and industrial matters,JORF_2011.pdf,154,
 France,2012,Research and Higher Education in Economic and Industrial Matters,rd_programme,,,,,,,,gap: no matching rows in this year
 France,2013,Research and Higher Education in Economic and Industrial Matters,rd_programme,,,,,,,,gap: no matching rows in this year
-France,2014,Research and Higher Education in Economic and Industrial Matters,rd_programme,,,,,,,,gap: no matching rows in this year
-France,2015,Research and Higher Education in Economic and Industrial Matters,rd_programme,,,,,,,,gap: no matching rows in this year
+France,2014,Research and Higher Education in Economic and Industrial Matters,rd_programme,984169961.0,euro,EUR,section_total,Recherche et enseignement supérieur en matière économique et industrielle,JORF_2014.pdf,110,"reclassify: docx_results row, unit-normalized x1000, confirmed vs. neighbours (2013 ~1.09B / 2015 ~878M)"
+France,2015,Research and Higher Education in Economic and Industrial Matters,rd_programme,877712013.0,euro,EUR,section_total,Recherche et enseignement supérieur en matière économique et industrielle,JORF_2015.pdf,88,"reclassify: docx_results row, unit-normalized x1000, confirmed vs. neighbours (2014 ~984M)"
 France,2016,Research and Higher Education in Economic and Industrial Matters,rd_programme,831000000.0,euro,EUR,program_total,Payment credits for research and higher education in economic and industrial matters,JORF_2016.pdf,113,
-France,2017,Research and Higher Education in Economic and Industrial Matters,rd_programme,,,,,,,,gap: no matching rows in this year
+France,2017,Research and Higher Education in Economic and Industrial Matters,rd_programme,794609301.0,euro,EUR,section_total,Recherche et enseignement supérieur en matière économique et industrielle,JORF_2017.pdf,109,"reclassify: docx_results row, unit-normalized x1000, confirmed vs. neighbours (2015 ~878M)"
 France,2018,Research and Higher Education in Economic and Industrial Matters,rd_programme,,,,,,,,gap: no matching rows in this year
 France,2020,Research and Higher Education in Economic and Industrial Matters,rd_programme,,,,,,,,gap: no matching rows in this year
 France,2021,Research and Higher Education in Economic and Industrial Matters,rd_programme,,,,,,,,gap: no matching rows in this year

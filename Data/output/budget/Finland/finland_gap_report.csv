@@ -1,292 +1,292 @@
-country,year,canonical_name,category,gap_type,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,prev_amount,next_amount
-Finland,1985,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,242000000.0,,346000000.0
-Finland,1986,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,346000000.0,242000000.0,515657000.0
-Finland,1987,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,515657000.0,346000000.0,169941000.0
-Finland,1988,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,169941000.0,515657000.0,330300000.0
-Finland,1989,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,330300000.0,169941000.0,146310000.0
-Finland,1992,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,146310000.0,330300000.0,385150000.0
-Finland,1993,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,385150000.0,146310000.0,430211000.0
-Finland,1996,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,430211000.0,385150000.0,169941000.0
-Finland,1997,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,169941000.0,430211000.0,590000000.0
-Finland,1998,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,590000000.0,169941000.0,713380000.0
-Finland,1999,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,713380000.0,590000000.0,670000000.0
-Finland,2000,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,670000000.0,713380000.0,749360000.0
-Finland,2001,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,749360000.0,670000000.0,59701000.0
-Finland,2002,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,59701000.0,749360000.0,387000000.0
-Finland,2003,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,387000000.0,59701000.0,104184000.0
-Finland,2004,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,104184000.0,387000000.0,485000000.0
-Finland,2005,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,485000000.0,104184000.0,120132000.0
-Finland,2006,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,120132000.0,485000000.0,130011000.0
-Finland,2007,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,130011000.0,120132000.0,169941000.0
-Finland,2008,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,169941000.0,130011000.0,169941000.0
-Finland,2009,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,169941000.0,169941000.0,209099000.0
-Finland,2010,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,209099000.0,169941000.0,234711000.0
-Finland,2011,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,234711000.0,209099000.0,251526000.0
-Finland,2012,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,251526000.0,234711000.0,238592000.0
-Finland,2013,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,238592000.0,251526000.0,143809000.0
-Finland,2014,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,143809000.0,238592000.0,500000000.0
-Finland,2015,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,500000000.0,143809000.0,232133000.0
-Finland,2016,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,232133000.0,500000000.0,238331000.0
-Finland,2017,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,238331000.0,232133000.0,276665000.0
-Finland,2018,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,276665000.0,238331000.0,215000000.0
-Finland,2019,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,215000000.0,276665000.0,500000000.0
-Finland,2020,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,500000000.0,215000000.0,353744000.0
-Finland,2021,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,353744000.0,500000000.0,375896000.0
-Finland,2022,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,375896000.0,353744000.0,345575000.0
-Finland,2023,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,345575000.0,375896000.0,403137000.0
-Finland,2024,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,403137000.0,345575000.0,458186000.0
-Finland,2025,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,none,458186000.0,403137000.0,
-Finland,1985,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,0.0,,13220000.0
-Finland,1986,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,13220000.0,0.0,0.0
-Finland,1987,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,0.0,13220000.0,0.0
-Finland,1988,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,1989,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,1992,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,1993,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,0.0,0.0,124951000.0
-Finland,1996,Suomen Akatemia — toimintamenot (operating),science_agency,outlier,"Amount 124,951,000 outside expected range [-78,393,000 – 104,524,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,124951000.0,0.0,599000.0
-Finland,1997,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,599000.0,124951000.0,578000.0
-Finland,1998,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,578000.0,599000.0,63933000.0
-Finland,1999,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,63933000.0,578000.0,139800000.0
-Finland,2000,Suomen Akatemia — toimintamenot (operating),science_agency,outlier,"Amount 139,800,000 outside expected range [-78,393,000 – 104,524,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,139800000.0,63933000.0,143748000.0
-Finland,2001,Suomen Akatemia — toimintamenot (operating),science_agency,outlier,"Amount 143,748,000 outside expected range [-78,393,000 – 104,524,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,143748000.0,139800000.0,26131000.0
-Finland,2002,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,26131000.0,143748000.0,0.0
-Finland,2003,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,0.0,26131000.0,31333000.0
-Finland,2004,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,31333000.0,0.0,31440000.0
-Finland,2005,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,31440000.0,31333000.0,31827000.0
-Finland,2006,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,31827000.0,31440000.0,0.0
-Finland,2007,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,0.0,31827000.0,34079000.0
-Finland,2008,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,34079000.0,0.0,36171000.0
-Finland,2009,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,36171000.0,34079000.0,9333000.0
-Finland,2010,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,9333000.0,36171000.0,12969000.0
-Finland,2011,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,12969000.0,9333000.0,12806000.0
-Finland,2012,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,12806000.0,12969000.0,0.0
-Finland,2013,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,0.0,12806000.0,12332000.0
-Finland,2014,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,12332000.0,0.0,10423000.0
-Finland,2015,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,10423000.0,12332000.0,12871000.0
-Finland,2016,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,12871000.0,10423000.0,12081000.0
-Finland,2017,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,12081000.0,12871000.0,0.0
-Finland,2018,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,0.0,12081000.0,0.0
-Finland,2019,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2020,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2021,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2022,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,0.0,0.0,11988000.0
-Finland,2023,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,11988000.0,0.0,13539000.0
-Finland,2024,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,13539000.0,11988000.0,11947000.0
-Finland,2025,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,none,11947000.0,13539000.0,
-Finland,1985,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,20000000.0,,169941000.0
-Finland,1986,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,169941000.0,20000000.0,130000000.0
-Finland,1987,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,130000000.0,169941000.0,100000000.0
-Finland,1988,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,100000000.0,130000000.0,100000000.0
-Finland,1989,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,100000000.0,100000000.0,75000000.0
-Finland,1992,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,75000000.0,100000000.0,10000000.0
-Finland,1993,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,10000000.0,75000000.0,169941000.0
-Finland,1996,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,169941000.0,10000000.0,62300000.0
-Finland,1997,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,62300000.0,169941000.0,200000000.0
-Finland,1998,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,200000000.0,62300000.0,100000000.0
-Finland,1999,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,100000000.0,200000000.0,124000000.0
-Finland,2000,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,124000000.0,100000000.0,138000000.0
-Finland,2001,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,138000000.0,124000000.0,24051000.0
-Finland,2002,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,24051000.0,138000000.0,23983000.0
-Finland,2003,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,23983000.0,24051000.0,6214000.0
-Finland,2004,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,6214000.0,23983000.0,23027000.0
-Finland,2005,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,23027000.0,6214000.0,27991000.0
-Finland,2006,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,27991000.0,23027000.0,74016000.0
-Finland,2007,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,74016000.0,27991000.0,30490000.0
-Finland,2008,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,30490000.0,74016000.0,47602000.0
-Finland,2009,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,47602000.0,30490000.0,46347000.0
-Finland,2010,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,46347000.0,47602000.0,47686000.0
-Finland,2011,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,47686000.0,46347000.0,42322000.0
-Finland,2012,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,42322000.0,47686000.0,40704000.0
-Finland,2013,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,40704000.0,42322000.0,41284000.0
-Finland,2014,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,41284000.0,40704000.0,40372000.0
-Finland,2015,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,40372000.0,41284000.0,38448000.0
-Finland,2016,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,38448000.0,40372000.0,20000000.0
-Finland,2017,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,20000000.0,38448000.0,84021000.0
-Finland,2018,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,84021000.0,20000000.0,0.0
-Finland,2019,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,0.0,84021000.0,0.0
-Finland,2020,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,0.0,0.0,6291000.0
-Finland,2021,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,6291000.0,0.0,0.0
-Finland,2022,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,0.0,6291000.0,0.0
-Finland,2023,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,0.0,0.0,99326000.0
-Finland,2024,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,99326000.0,0.0,71708000.0
-Finland,2025,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,none,71708000.0,99326000.0,
-Finland,1985,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,382000000.0,,37000000.0
-Finland,1986,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,37000000.0,382000000.0,115000000.0
-Finland,1987,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,115000000.0,37000000.0,100000000.0
-Finland,1988,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,100000000.0,115000000.0,38000000.0
-Finland,1989,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,38000000.0,100000000.0,254225000.0
-Finland,1992,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,254225000.0,38000000.0,254000000.0
-Finland,1993,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,254000000.0,254225000.0,677000000.0
-Finland,1996,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,677000000.0,254000000.0,33000000.0
-Finland,1997,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,33000000.0,677000000.0,200000000.0
-Finland,1998,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,200000000.0,33000000.0,734000000.0
-Finland,1999,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,734000000.0,200000000.0,900000000.0
-Finland,2000,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,900000000.0,734000000.0,1000000000.0
-Finland,2001,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,1000000000.0,900000000.0,0.0
-Finland,2002,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,0.0,1000000000.0,130457000.0
-Finland,2003,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,130457000.0,0.0,67723000.0
-Finland,2004,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,67723000.0,130457000.0,145931000.0
-Finland,2005,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,145931000.0,67723000.0,158419000.0
-Finland,2006,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,158419000.0,145931000.0,161917000.0
-Finland,2007,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,161917000.0,158419000.0,171157000.0
-Finland,2008,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,171157000.0,161917000.0,194250000.0
-Finland,2009,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,194250000.0,171157000.0,409150000.0
-Finland,2010,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,409150000.0,194250000.0,430650000.0
-Finland,2011,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,430650000.0,409150000.0,431016000.0
-Finland,2012,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,431016000.0,430650000.0,431270000.0
-Finland,2013,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,431270000.0,431016000.0,405320000.0
-Finland,2014,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,405320000.0,431270000.0,367571000.0
-Finland,2015,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,367571000.0,405320000.0,330370000.0
-Finland,2016,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,330370000.0,367571000.0,274500000.0
-Finland,2017,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,274500000.0,330370000.0,250900000.0
-Finland,2018,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,250900000.0,274500000.0,0.0
-Finland,2019,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,0.0,250900000.0,200000000.0
-Finland,2020,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,200000000.0,0.0,516318000.0
-Finland,2021,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,516318000.0,200000000.0,475550000.0
-Finland,2022,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,475550000.0,516318000.0,465488000.0
-Finland,2023,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,465488000.0,475550000.0,543673000.0
-Finland,2024,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,543673000.0,465488000.0,538025000.0
-Finland,2025,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,none,538025000.0,543673000.0,
-Finland,1985,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,89226000.0,,169941000.0
-Finland,1986,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,169941000.0,89226000.0,567000000.0
-Finland,1987,VTT (Technical Research Centre of Finland),science_agency,outlier,"Amount 567,000,000 outside expected range [-230,895,000 – 470,568,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,567000000.0,169941000.0,383600000.0
-Finland,1988,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,383600000.0,567000000.0,358450000.0
-Finland,1989,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,358450000.0,383600000.0,570000000.0
-Finland,1992,VTT (Technical Research Centre of Finland),science_agency,outlier,"Amount 570,000,000 outside expected range [-230,895,000 – 470,568,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,570000000.0,358450000.0,531000000.0
-Finland,1993,VTT (Technical Research Centre of Finland),science_agency,outlier,"Amount 531,000,000 outside expected range [-230,895,000 – 470,568,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,531000000.0,570000000.0,169941000.0
-Finland,1996,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,169941000.0,531000000.0,39500000.0
-Finland,1997,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,39500000.0,169941000.0,329000000.0
-Finland,1998,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,329000000.0,39500000.0,358570000.0
-Finland,1999,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,358570000.0,329000000.0,357943000.0
-Finland,2000,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,357943000.0,358570000.0,365116000.0
-Finland,2001,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,365116000.0,357943000.0,0.0
-Finland,2002,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,0.0,365116000.0,63138000.0
-Finland,2003,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,63138000.0,0.0,68799000.0
-Finland,2004,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,68799000.0,63138000.0,68978000.0
-Finland,2005,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,68978000.0,68799000.0,69732000.0
-Finland,2006,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,69732000.0,68978000.0,74016000.0
-Finland,2007,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,74016000.0,69732000.0,80440000.0
-Finland,2008,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,80440000.0,74016000.0,0.0
-Finland,2009,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,0.0,80440000.0,0.0
-Finland,2010,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,0.0,0.0,120000000.0
-Finland,2011,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,120000000.0,0.0,93327000.0
-Finland,2012,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,93327000.0,120000000.0,91334000.0
-Finland,2013,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,91334000.0,93327000.0,91039000.0
-Finland,2014,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,91039000.0,91334000.0,111020000.0
-Finland,2015,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,111020000.0,91039000.0,91770000.0
-Finland,2016,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,91770000.0,111020000.0,87303000.0
-Finland,2017,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,87303000.0,91770000.0,89303000.0
-Finland,2018,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,89303000.0,87303000.0,0.0
-Finland,2019,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,0.0,89303000.0,40000000.0
-Finland,2020,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,40000000.0,0.0,109303000.0
-Finland,2021,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,109303000.0,40000000.0,101503000.0
-Finland,2022,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,101503000.0,109303000.0,100000000.0
-Finland,2023,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,100000000.0,101503000.0,118055000.0
-Finland,2024,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,118055000.0,100000000.0,131259000.0
-Finland,2025,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,none,131259000.0,118055000.0,
-Finland,1985,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,39000000.0,,50000000.0
-Finland,1986,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,50000000.0,39000000.0,49200000.0
-Finland,1987,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,49200000.0,50000000.0,15000000.0
-Finland,1988,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,15000000.0,49200000.0,169941000.0
-Finland,1989,GTK (Geological Survey of Finland),science_agency,outlier,"Amount 169,941,000 outside expected range [-16,040,000 – 98,130,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,169941000.0,15000000.0,124817000.0
-Finland,1992,GTK (Geological Survey of Finland),science_agency,outlier,"Amount 124,817,000 outside expected range [-16,040,000 – 98,130,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,124817000.0,169941000.0,183830000.0
-Finland,1993,GTK (Geological Survey of Finland),science_agency,outlier,"Amount 183,830,000 outside expected range [-16,040,000 – 98,130,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,183830000.0,124817000.0,223212000.0
-Finland,1996,GTK (Geological Survey of Finland),science_agency,outlier,"Amount 223,212,000 outside expected range [-16,040,000 – 98,130,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,223212000.0,183830000.0,25000000.0
-Finland,1997,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,25000000.0,223212000.0,20000000.0
-Finland,1998,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,20000000.0,25000000.0,210877000.0
-Finland,1999,GTK (Geological Survey of Finland),science_agency,outlier,"Amount 210,877,000 outside expected range [-16,040,000 – 98,130,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,210877000.0,20000000.0,212450000.0
-Finland,2000,GTK (Geological Survey of Finland),science_agency,outlier,"Amount 212,450,000 outside expected range [-16,040,000 – 98,130,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,212450000.0,210877000.0,215747000.0
-Finland,2001,GTK (Geological Survey of Finland),science_agency,outlier,"Amount 215,747,000 outside expected range [-16,040,000 – 98,130,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,215747000.0,212450000.0,37850000.0
-Finland,2002,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,37850000.0,215747000.0,37595000.0
-Finland,2003,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,37595000.0,37850000.0,41208000.0
-Finland,2004,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,41208000.0,37595000.0,40822000.0
-Finland,2005,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,40822000.0,41208000.0,40315000.0
-Finland,2006,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,40315000.0,40822000.0,40450000.0
-Finland,2007,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,40450000.0,40315000.0,40891000.0
-Finland,2008,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,40891000.0,40450000.0,42428000.0
-Finland,2009,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,42428000.0,40891000.0,40542000.0
-Finland,2010,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,40542000.0,42428000.0,41140000.0
-Finland,2011,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,41140000.0,40542000.0,40090000.0
-Finland,2012,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,40090000.0,41140000.0,39395000.0
-Finland,2013,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,39395000.0,40090000.0,37974000.0
-Finland,2014,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,37974000.0,39395000.0,36110000.0
-Finland,2015,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,36110000.0,37974000.0,32890000.0
-Finland,2016,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,32890000.0,36110000.0,31557000.0
-Finland,2017,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,31557000.0,32890000.0,30714000.0
-Finland,2018,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,30714000.0,31557000.0,0.0
-Finland,2019,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,0.0,30714000.0,30000000.0
-Finland,2020,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,30000000.0,0.0,0.0
-Finland,2021,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,0.0,30000000.0,0.0
-Finland,2022,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,0.0,0.0,50000000.0
-Finland,2023,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,50000000.0,0.0,33578000.0
-Finland,2024,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,33578000.0,50000000.0,37997000.0
-Finland,2025,GTK (Geological Survey of Finland),science_agency,ok,,,,,none,37997000.0,33578000.0,
-Finland,1985,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,100312.0,,297055.0
-Finland,1986,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,297055.0,100312.0,105358000.0
-Finland,1987,Luke / MTT / Metla / RKTL (natural resources research),science_agency,outlier,"Amount 105,358,000 outside expected range [-575,970 – 767,960] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,105358000.0,297055.0,0.0
-Finland,1988,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,105358000.0,69768000.0
-Finland,1989,Luke / MTT / Metla / RKTL (natural resources research),science_agency,outlier,"Amount 69,768,000 outside expected range [-575,970 – 767,960] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,69768000.0,0.0,103837000.0
-Finland,1992,Luke / MTT / Metla / RKTL (natural resources research),science_agency,outlier,"Amount 103,837,000 outside expected range [-575,970 – 767,960] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,103837000.0,69768000.0,191990.0
-Finland,1993,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,191990.0,103837000.0,176831.0
-Finland,1996,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,176831.0,191990.0,169300000.0
-Finland,1997,Luke / MTT / Metla / RKTL (natural resources research),science_agency,outlier,"Amount 169,300,000 outside expected range [-575,970 – 767,960] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,169300000.0,176831.0,660.0
-Finland,1998,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,660.0,169300000.0,555573.0
-Finland,1999,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,555573.0,660.0,235000000.0
-Finland,2000,Luke / MTT / Metla / RKTL (natural resources research),science_agency,outlier,"Amount 235,000,000 outside expected range [-575,970 – 767,960] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,235000000.0,555573.0,89837.0
-Finland,2001,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,89837.0,235000000.0,36895.0
-Finland,2002,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,36895.0,89837.0,36995000.0
-Finland,2003,Luke / MTT / Metla / RKTL (natural resources research),science_agency,outlier,"Amount 36,995,000 outside expected range [-575,970 – 767,960] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,36995000.0,36895.0,38367000.0
-Finland,2004,Luke / MTT / Metla / RKTL (natural resources research),science_agency,outlier,"Amount 38,367,000 outside expected range [-575,970 – 767,960] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,38367000.0,36995000.0,0.0
-Finland,2005,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,38367000.0,0.0
-Finland,2006,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2007,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2008,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2009,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2010,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2011,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2012,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2013,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2014,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2015,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2016,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2017,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2018,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2019,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2020,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2021,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2022,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2023,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2024,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2025,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,none,0.0,0.0,
-Finland,1992,VATT (Government Institute for Economic Research),science_agency,outlier,"Amount 19,645,224 outside expected range [-12,732,000 – 16,976,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,19645224.0,,104833510.0
-Finland,1993,VATT (Government Institute for Economic Research),science_agency,outlier,"Amount 104,833,510 outside expected range [-12,732,000 – 16,976,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,104833510.0,19645224.0,105000000.0
-Finland,1996,VATT (Government Institute for Economic Research),science_agency,outlier,"Amount 105,000,000 outside expected range [-12,732,000 – 16,976,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,105000000.0,104833510.0,113000000.0
-Finland,1997,VATT (Government Institute for Economic Research),science_agency,outlier,"Amount 113,000,000 outside expected range [-12,732,000 – 16,976,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,113000000.0,105000000.0,125000000.0
-Finland,1998,VATT (Government Institute for Economic Research),science_agency,outlier,"Amount 125,000,000 outside expected range [-12,732,000 – 16,976,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,125000000.0,113000000.0,0.0
-Finland,1999,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,0.0,125000000.0,168000.0
-Finland,2000,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,168000.0,0.0,0.0
-Finland,2001,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,0.0,168000.0,20620000.0
-Finland,2002,VATT (Government Institute for Economic Research),science_agency,outlier,"Amount 20,620,000 outside expected range [-12,732,000 – 16,976,000] (IQR × 3.0). Possible current/prior year confusion or unit error.",,,,verify,20620000.0,0.0,3702000.0
-Finland,2003,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,3702000.0,20620000.0,3695000.0
-Finland,2004,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,3695000.0,3702000.0,3702000.0
-Finland,2005,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,3702000.0,3695000.0,3762000.0
-Finland,2006,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,3762000.0,3702000.0,3814000.0
-Finland,2007,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,3814000.0,3762000.0,3997000.0
-Finland,2008,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,3997000.0,3814000.0,0.0
-Finland,2009,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,0.0,3997000.0,0.0
-Finland,2010,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2011,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,0.0,0.0,4132000.0
-Finland,2012,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,4132000.0,0.0,0.0
-Finland,2013,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,0.0,4132000.0,4191000.0
-Finland,2014,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,4191000.0,0.0,0.0
-Finland,2015,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,0.0,4191000.0,3740000.0
-Finland,2016,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,3740000.0,0.0,3382000.0
-Finland,2017,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,3382000.0,3740000.0,0.0
-Finland,2018,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,0.0,3382000.0,0.0
-Finland,2019,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2020,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2021,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,0.0,0.0,0.0
-Finland,2022,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,0.0,0.0,4403000.0
-Finland,2023,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,4403000.0,0.0,0.0
-Finland,2024,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,0.0,4403000.0,5187000.0
-Finland,2025,VATT (Government Institute for Economic Research),science_agency,ok,,,,,none,5187000.0,0.0,
+country,year,canonical_name,category,gap_type,gap_subtype,diagnosis,raw_row_match,raw_row_amount,raw_row_file,action,series_amount,series_currency,prev_amount,next_amount
+Finland,1985,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,242000000.0,FIM,,346000000.0
+Finland,1986,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,346000000.0,FIM,242000000.0,515657000.0
+Finland,1987,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,515657000.0,FIM,346000000.0,169941000.0
+Finland,1988,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,169941000.0,FIM,515657000.0,330300000.0
+Finland,1989,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,330300000.0,FIM,169941000.0,146310000.0
+Finland,1992,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,146310000.0,FIM,330300000.0,385150000.0
+Finland,1993,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,385150000.0,FIM,146310000.0,430211000.0
+Finland,1996,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,430211000.0,FIM,385150000.0,169941000.0
+Finland,1997,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,169941000.0,FIM,430211000.0,590000000.0
+Finland,1998,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,590000000.0,FIM,169941000.0,713380000.0
+Finland,1999,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,713380000.0,FIM,590000000.0,670000000.0
+Finland,2000,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,670000000.0,FIM,713380000.0,749360000.0
+Finland,2001,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,749360000.0,FIM,670000000.0,59701000.0
+Finland,2002,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,59701000.0,EUR,749360000.0,387000000.0
+Finland,2003,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,387000000.0,EUR,59701000.0,104184000.0
+Finland,2004,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,104184000.0,EUR,387000000.0,485000000.0
+Finland,2005,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,485000000.0,EUR,104184000.0,120132000.0
+Finland,2006,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,120132000.0,EUR,485000000.0,130011000.0
+Finland,2007,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,130011000.0,EUR,120132000.0,169941000.0
+Finland,2008,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,169941000.0,EUR,130011000.0,169941000.0
+Finland,2009,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,169941000.0,EUR,169941000.0,209099000.0
+Finland,2010,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,209099000.0,EUR,169941000.0,234711000.0
+Finland,2011,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,234711000.0,EUR,209099000.0,251526000.0
+Finland,2012,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,251526000.0,EUR,234711000.0,238592000.0
+Finland,2013,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,238592000.0,EUR,251526000.0,143809000.0
+Finland,2014,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,143809000.0,EUR,238592000.0,500000000.0
+Finland,2015,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,500000000.0,EUR,143809000.0,232133000.0
+Finland,2016,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,232133000.0,EUR,500000000.0,238331000.0
+Finland,2017,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,238331000.0,EUR,232133000.0,276665000.0
+Finland,2018,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,276665000.0,EUR,238331000.0,215000000.0
+Finland,2019,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,215000000.0,EUR,276665000.0,500000000.0
+Finland,2020,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,500000000.0,EUR,215000000.0,353744000.0
+Finland,2021,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,353744000.0,EUR,500000000.0,375896000.0
+Finland,2022,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,375896000.0,EUR,353744000.0,345575000.0
+Finland,2023,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,345575000.0,EUR,375896000.0,403137000.0
+Finland,2024,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,403137000.0,EUR,345575000.0,458186000.0
+Finland,2025,Suomen Akatemia — tutkimusmäärärahat (research grants),science_agency,ok,,,,,,none,458186000.0,EUR,403137000.0,
+Finland,1985,Suomen Akatemia — toimintamenot (operating),science_agency,missing,,"Year absent from raw_rows, but extracted results contain a matching text row for this agency-year in 1985 proposal fi19840128.pdf without a defendable numeric total.",no,,1985 proposal fi19840128.pdf,reextract,,,,13220000.0
+Finland,1986,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,13220000.0,FIM,,0.0
+Finland,1987,Suomen Akatemia — toimintamenot (operating),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,1987 proposal fi19860110.pdf,reextract,,,13220000.0,0.0
+Finland,1988,Suomen Akatemia — toimintamenot (operating),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,1988 proposal fi19870050.pdf,reextract,,,13220000.0,0.0
+Finland,1989,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,0.0,FIM,13220000.0,124951000.0
+Finland,1992,Suomen Akatemia — toimintamenot (operating),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,1992 budget act Valtion tulo- ja menoarvio vuodelle 1992 _ 35_1992 _ Suomen säädöskokoelma _ Finlex.pdf,reextract,,,0.0,124951000.0
+Finland,1993,Suomen Akatemia — toimintamenot (operating),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,1993 proposal fi19920122.pdf,reextract,,,0.0,124951000.0
+Finland,1996,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,124951000.0,FIM,0.0,599000.0
+Finland,1997,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,599000.0,FIM,124951000.0,578000.0
+Finland,1998,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,578000.0,FIM,599000.0,63933000.0
+Finland,1999,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,63933000.0,FIM,578000.0,139800000.0
+Finland,2000,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,139800000.0,FIM,63933000.0,143748000.0
+Finland,2001,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,143748000.0,FIM,139800000.0,26131000.0
+Finland,2002,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,26131000.0,EUR,143748000.0,0.0
+Finland,2003,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,0.0,EUR,26131000.0,31333000.0
+Finland,2004,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,31333000.0,EUR,0.0,31440000.0
+Finland,2005,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,31440000.0,EUR,31333000.0,31827000.0
+Finland,2006,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,31827000.0,EUR,31440000.0,0.0
+Finland,2007,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,0.0,EUR,31827000.0,34079000.0
+Finland,2008,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,34079000.0,EUR,0.0,36171000.0
+Finland,2009,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,36171000.0,EUR,34079000.0,9333000.0
+Finland,2010,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,9333000.0,EUR,36171000.0,12969000.0
+Finland,2011,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,12969000.0,EUR,9333000.0,12806000.0
+Finland,2012,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,12806000.0,EUR,12969000.0,0.0
+Finland,2013,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,0.0,EUR,12806000.0,12332000.0
+Finland,2014,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,12332000.0,EUR,0.0,10423000.0
+Finland,2015,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,10423000.0,EUR,12332000.0,12871000.0
+Finland,2016,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,12871000.0,EUR,10423000.0,12081000.0
+Finland,2017,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,12081000.0,EUR,12871000.0,0.0
+Finland,2018,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,0.0,EUR,12081000.0,0.0
+Finland,2019,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,0.0,EUR,0.0,0.0
+Finland,2020,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,0.0,EUR,0.0,0.0
+Finland,2021,Suomen Akatemia — toimintamenot (operating),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2021.pdf,reextract,,,0.0,0.0
+Finland,2022,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,0.0,EUR,0.0,11988000.0
+Finland,2023,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,11988000.0,EUR,0.0,13539000.0
+Finland,2024,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,13539000.0,EUR,11988000.0,11947000.0
+Finland,2025,Suomen Akatemia — toimintamenot (operating),science_agency,ok,,,,,,none,11947000.0,EUR,13539000.0,
+Finland,1985,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,20000000.0,FIM,,169941000.0
+Finland,1986,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,169941000.0,FIM,20000000.0,130000000.0
+Finland,1987,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,130000000.0,FIM,169941000.0,100000000.0
+Finland,1988,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,100000000.0,FIM,130000000.0,100000000.0
+Finland,1989,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,100000000.0,FIM,100000000.0,75000000.0
+Finland,1992,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,75000000.0,FIM,100000000.0,10000000.0
+Finland,1993,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,10000000.0,FIM,75000000.0,169941000.0
+Finland,1996,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,169941000.0,FIM,10000000.0,62300000.0
+Finland,1997,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,62300000.0,FIM,169941000.0,200000000.0
+Finland,1998,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,200000000.0,FIM,62300000.0,100000000.0
+Finland,1999,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,100000000.0,FIM,200000000.0,124000000.0
+Finland,2000,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,124000000.0,FIM,100000000.0,138000000.0
+Finland,2001,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,138000000.0,FIM,124000000.0,24051000.0
+Finland,2002,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,24051000.0,EUR,138000000.0,23983000.0
+Finland,2003,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,23983000.0,EUR,24051000.0,6214000.0
+Finland,2004,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,6214000.0,EUR,23983000.0,23027000.0
+Finland,2005,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,23027000.0,EUR,6214000.0,27991000.0
+Finland,2006,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,27991000.0,EUR,23027000.0,74016000.0
+Finland,2007,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,74016000.0,EUR,27991000.0,30490000.0
+Finland,2008,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,30490000.0,EUR,74016000.0,47602000.0
+Finland,2009,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,47602000.0,EUR,30490000.0,46347000.0
+Finland,2010,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,46347000.0,EUR,47602000.0,47686000.0
+Finland,2011,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,47686000.0,EUR,46347000.0,42322000.0
+Finland,2012,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,42322000.0,EUR,47686000.0,40704000.0
+Finland,2013,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,40704000.0,EUR,42322000.0,41284000.0
+Finland,2014,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,41284000.0,EUR,40704000.0,40372000.0
+Finland,2015,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,40372000.0,EUR,41284000.0,38448000.0
+Finland,2016,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,38448000.0,EUR,40372000.0,20000000.0
+Finland,2017,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,20000000.0,EUR,38448000.0,84021000.0
+Finland,2018,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,84021000.0,EUR,20000000.0,0.0
+Finland,2019,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,0.0,EUR,84021000.0,0.0
+Finland,2020,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,0.0,EUR,0.0,6291000.0
+Finland,2021,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,6291000.0,EUR,0.0,0.0
+Finland,2022,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,0.0,EUR,6291000.0,0.0
+Finland,2023,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,0.0,EUR,0.0,99326000.0
+Finland,2024,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,99326000.0,EUR,0.0,71708000.0
+Finland,2025,Business Finland / Tekes (innovation agency),innovation_instruments,ok,,,,,,none,71708000.0,EUR,99326000.0,
+Finland,1985,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,382000000.0,FIM,,37000000.0
+Finland,1986,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,37000000.0,FIM,382000000.0,115000000.0
+Finland,1987,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,115000000.0,FIM,37000000.0,100000000.0
+Finland,1988,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,100000000.0,FIM,115000000.0,38000000.0
+Finland,1989,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,38000000.0,FIM,100000000.0,254225000.0
+Finland,1992,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,254225000.0,FIM,38000000.0,254000000.0
+Finland,1993,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,254000000.0,FIM,254225000.0,677000000.0
+Finland,1996,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,677000000.0,FIM,254000000.0,33000000.0
+Finland,1997,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,33000000.0,FIM,677000000.0,200000000.0
+Finland,1998,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,200000000.0,FIM,33000000.0,734000000.0
+Finland,1999,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,734000000.0,FIM,200000000.0,900000000.0
+Finland,2000,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,900000000.0,FIM,734000000.0,1000000000.0
+Finland,2001,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,1000000000.0,FIM,900000000.0,0.0
+Finland,2002,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,0.0,EUR,1000000000.0,130457000.0
+Finland,2003,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,130457000.0,EUR,0.0,67723000.0
+Finland,2004,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,67723000.0,EUR,130457000.0,145931000.0
+Finland,2005,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,145931000.0,EUR,67723000.0,158419000.0
+Finland,2006,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,158419000.0,EUR,145931000.0,161917000.0
+Finland,2007,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,161917000.0,EUR,158419000.0,171157000.0
+Finland,2008,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,171157000.0,EUR,161917000.0,194250000.0
+Finland,2009,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,194250000.0,EUR,171157000.0,409150000.0
+Finland,2010,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,409150000.0,EUR,194250000.0,430650000.0
+Finland,2011,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,430650000.0,EUR,409150000.0,431016000.0
+Finland,2012,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,431016000.0,EUR,430650000.0,431270000.0
+Finland,2013,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,431270000.0,EUR,431016000.0,405320000.0
+Finland,2014,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,405320000.0,EUR,431270000.0,367571000.0
+Finland,2015,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,367571000.0,EUR,405320000.0,330370000.0
+Finland,2016,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,330370000.0,EUR,367571000.0,274500000.0
+Finland,2017,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,274500000.0,EUR,330370000.0,250900000.0
+Finland,2018,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,250900000.0,EUR,274500000.0,0.0
+Finland,2019,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,0.0,EUR,250900000.0,200000000.0
+Finland,2020,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,200000000.0,EUR,0.0,516318000.0
+Finland,2021,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,516318000.0,EUR,200000000.0,475550000.0
+Finland,2022,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,475550000.0,EUR,516318000.0,465488000.0
+Finland,2023,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,465488000.0,EUR,475550000.0,543673000.0
+Finland,2024,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,543673000.0,EUR,465488000.0,538025000.0
+Finland,2025,Business Finland / Tekes — public R&D grants,innovation_instruments,ok,,,,,,none,538025000.0,EUR,543673000.0,
+Finland,1985,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,89226000.0,FIM,,169941000.0
+Finland,1986,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,169941000.0,FIM,89226000.0,567000000.0
+Finland,1987,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,567000000.0,FIM,169941000.0,383600000.0
+Finland,1988,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,383600000.0,FIM,567000000.0,358450000.0
+Finland,1989,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,358450000.0,FIM,383600000.0,570000000.0
+Finland,1992,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,570000000.0,FIM,358450000.0,531000000.0
+Finland,1993,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,531000000.0,FIM,570000000.0,169941000.0
+Finland,1996,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,169941000.0,FIM,531000000.0,39500000.0
+Finland,1997,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,39500000.0,FIM,169941000.0,329000000.0
+Finland,1998,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,329000000.0,FIM,39500000.0,358570000.0
+Finland,1999,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,358570000.0,FIM,329000000.0,357943000.0
+Finland,2000,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,357943000.0,FIM,358570000.0,365116000.0
+Finland,2001,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,365116000.0,FIM,357943000.0,63138000.0
+Finland,2002,VTT (Technical Research Centre of Finland),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,2002 Finland budget download.jsp.pdf,reextract,,,365116000.0,63138000.0
+Finland,2003,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,63138000.0,EUR,365116000.0,68799000.0
+Finland,2004,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,68799000.0,EUR,63138000.0,68978000.0
+Finland,2005,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,68978000.0,EUR,68799000.0,69732000.0
+Finland,2006,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,69732000.0,EUR,68978000.0,74016000.0
+Finland,2007,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,74016000.0,EUR,69732000.0,80440000.0
+Finland,2008,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,80440000.0,EUR,74016000.0,0.0
+Finland,2009,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,0.0,EUR,80440000.0,120000000.0
+Finland,2010,VTT (Technical Research Centre of Finland),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2010.pdf,reextract,,,0.0,120000000.0
+Finland,2011,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,120000000.0,EUR,0.0,93327000.0
+Finland,2012,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,93327000.0,EUR,120000000.0,91334000.0
+Finland,2013,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,91334000.0,EUR,93327000.0,91039000.0
+Finland,2014,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,91039000.0,EUR,91334000.0,111020000.0
+Finland,2015,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,111020000.0,EUR,91039000.0,91770000.0
+Finland,2016,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,91770000.0,EUR,111020000.0,87303000.0
+Finland,2017,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,87303000.0,EUR,91770000.0,89303000.0
+Finland,2018,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,89303000.0,EUR,87303000.0,0.0
+Finland,2019,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,0.0,EUR,89303000.0,40000000.0
+Finland,2020,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,40000000.0,EUR,0.0,109303000.0
+Finland,2021,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,109303000.0,EUR,40000000.0,101503000.0
+Finland,2022,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,101503000.0,EUR,109303000.0,100000000.0
+Finland,2023,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,100000000.0,EUR,101503000.0,118055000.0
+Finland,2024,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,118055000.0,EUR,100000000.0,131259000.0
+Finland,2025,VTT (Technical Research Centre of Finland),science_agency,ok,,,,,,none,131259000.0,EUR,118055000.0,
+Finland,1985,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,39000000.0,FIM,,50000000.0
+Finland,1986,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,50000000.0,FIM,39000000.0,49200000.0
+Finland,1987,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,49200000.0,FIM,50000000.0,15000000.0
+Finland,1988,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,15000000.0,FIM,49200000.0,169941000.0
+Finland,1989,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,169941000.0,FIM,15000000.0,124817000.0
+Finland,1992,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,124817000.0,FIM,169941000.0,183830000.0
+Finland,1993,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,183830000.0,FIM,124817000.0,223212000.0
+Finland,1996,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,223212000.0,FIM,183830000.0,25000000.0
+Finland,1997,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,25000000.0,FIM,223212000.0,20000000.0
+Finland,1998,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,20000000.0,FIM,25000000.0,210877000.0
+Finland,1999,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,210877000.0,FIM,20000000.0,212450000.0
+Finland,2000,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,212450000.0,FIM,210877000.0,215747000.0
+Finland,2001,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,215747000.0,FIM,212450000.0,37850000.0
+Finland,2002,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,37850000.0,EUR,215747000.0,37595000.0
+Finland,2003,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,37595000.0,EUR,37850000.0,41208000.0
+Finland,2004,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,41208000.0,EUR,37595000.0,40822000.0
+Finland,2005,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,40822000.0,EUR,41208000.0,40315000.0
+Finland,2006,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,40315000.0,EUR,40822000.0,40450000.0
+Finland,2007,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,40450000.0,EUR,40315000.0,40891000.0
+Finland,2008,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,40891000.0,EUR,40450000.0,42428000.0
+Finland,2009,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,42428000.0,EUR,40891000.0,40542000.0
+Finland,2010,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,40542000.0,EUR,42428000.0,41140000.0
+Finland,2011,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,41140000.0,EUR,40542000.0,40090000.0
+Finland,2012,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,40090000.0,EUR,41140000.0,39395000.0
+Finland,2013,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,39395000.0,EUR,40090000.0,37974000.0
+Finland,2014,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,37974000.0,EUR,39395000.0,36110000.0
+Finland,2015,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,36110000.0,EUR,37974000.0,32890000.0
+Finland,2016,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,32890000.0,EUR,36110000.0,31557000.0
+Finland,2017,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,31557000.0,EUR,32890000.0,30714000.0
+Finland,2018,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,30714000.0,EUR,31557000.0,0.0
+Finland,2019,GTK (Geological Survey of Finland),science_agency,outlier,,"Amount 0 outside expected range [8,391,000 – 64,777,750] (IQR × 3.0) within EUR observations. Possible current/prior year confusion or unit error.",,,,verify,0.0,EUR,30714000.0,30000000.0
+Finland,2020,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,30000000.0,EUR,0.0,0.0
+Finland,2021,GTK (Geological Survey of Finland),science_agency,outlier,,"Amount 0 outside expected range [8,391,000 – 64,777,750] (IQR × 3.0) within EUR observations. Possible current/prior year confusion or unit error.",,,,verify,0.0,EUR,30000000.0,0.0
+Finland,2022,GTK (Geological Survey of Finland),science_agency,outlier,,"Amount 0 outside expected range [8,391,000 – 64,777,750] (IQR × 3.0) within EUR observations. Possible current/prior year confusion or unit error.",,,,verify,0.0,EUR,0.0,50000000.0
+Finland,2023,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,50000000.0,EUR,0.0,33578000.0
+Finland,2024,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,33578000.0,EUR,50000000.0,37997000.0
+Finland,2025,GTK (Geological Survey of Finland),science_agency,ok,,,,,,none,37997000.0,EUR,33578000.0,
+Finland,1985,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,,none,100312.0,FIM,,297055.0
+Finland,1986,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,,none,297055.0,FIM,100312.0,105358000.0
+Finland,1987,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,,none,105358000.0,FIM,297055.0,69768000.0
+Finland,1988,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,1988 proposal fi19870050.pdf,reextract,,,105358000.0,69768000.0
+Finland,1989,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,,none,69768000.0,FIM,105358000.0,103837000.0
+Finland,1992,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,,none,103837000.0,FIM,69768000.0,191990.0
+Finland,1993,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,,none,191990.0,FIM,103837000.0,176831.0
+Finland,1996,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,,none,176831.0,FIM,191990.0,169300000.0
+Finland,1997,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,,none,169300000.0,FIM,176831.0,660.0
+Finland,1998,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,,none,660.0,FIM,169300000.0,555573.0
+Finland,1999,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,,none,555573.0,FIM,660.0,235000000.0
+Finland,2000,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,,none,235000000.0,FIM,555573.0,89837.0
+Finland,2001,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,,none,89837.0,FIM,235000000.0,36895.0
+Finland,2002,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,,none,36895.0,EUR,89837.0,36995000.0
+Finland,2003,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,,none,36995000.0,EUR,36895.0,38367000.0
+Finland,2004,Luke / MTT / Metla / RKTL (natural resources research),science_agency,ok,,,,,,none,38367000.0,EUR,36995000.0,
+Finland,2005,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2005.pdf,reextract,,,38367000.0,
+Finland,2006,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2006.pdf,reextract,,,38367000.0,
+Finland,2007,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2007.pdf,reextract,,,38367000.0,
+Finland,2008,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2008.pdf,reextract,,,38367000.0,
+Finland,2009,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2009.pdf,reextract,,,38367000.0,
+Finland,2010,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2010.pdf,reextract,,,38367000.0,
+Finland,2011,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2011.pdf,reextract,,,38367000.0,
+Finland,2012,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2012.pdf,reextract,,,38367000.0,
+Finland,2013,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2013.pdf,reextract,,,38367000.0,
+Finland,2014,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2014.pdf,reextract,,,38367000.0,
+Finland,2015,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2015.pdf,reextract,,,38367000.0,
+Finland,2016,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2016.pdf,reextract,,,38367000.0,
+Finland,2017,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2017.pdf,reextract,,,38367000.0,
+Finland,2018,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2018.pdf,reextract,,,38367000.0,
+Finland,2019,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2019.pdf,reextract,,,38367000.0,
+Finland,2020,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2020.pdf,reextract,,,38367000.0,
+Finland,2021,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2021.pdf,reextract,,,38367000.0,
+Finland,2022,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2022.pdf,reextract,,,38367000.0,
+Finland,2023,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2023.pdf,reextract,,,38367000.0,
+Finland,2024,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2024.pdf,reextract,,,38367000.0,
+Finland,2025,Luke / MTT / Metla / RKTL (natural resources research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2025.pdf,reextract,,,38367000.0,
+Finland,1992,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,19633000.0,FIM,,104833510.0
+Finland,1993,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,104833510.0,FIM,19633000.0,105000000.0
+Finland,1996,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,105000000.0,FIM,104833510.0,113000000.0
+Finland,1997,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,113000000.0,FIM,105000000.0,125000000.0
+Finland,1998,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,125000000.0,FIM,113000000.0,168000.0
+Finland,1999,VATT (Government Institute for Economic Research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,1999 proposal fi19980105.pdf,reextract,,,125000000.0,168000.0
+Finland,2000,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,168000.0,FIM,125000000.0,0.0
+Finland,2001,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,0.0,FIM,168000.0,20620000.0
+Finland,2002,VATT (Government Institute for Economic Research),science_agency,outlier,,"Amount 20,620,000 outside expected range [-11,991,000 – 15,988,000] (IQR × 3.0) within EUR observations. Possible current/prior year confusion or unit error.",,,,verify,20620000.0,EUR,0.0,3702000.0
+Finland,2003,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,3702000.0,EUR,20620000.0,3695000.0
+Finland,2004,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,3695000.0,EUR,3702000.0,3702000.0
+Finland,2005,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,3702000.0,EUR,3695000.0,3762000.0
+Finland,2006,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,3762000.0,EUR,3702000.0,3814000.0
+Finland,2007,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,3814000.0,EUR,3762000.0,3997000.0
+Finland,2008,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,3997000.0,EUR,3814000.0,0.0
+Finland,2009,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,0.0,EUR,3997000.0,0.0
+Finland,2010,VATT (Government Institute for Economic Research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2010.pdf,reextract,,,0.0,0.0
+Finland,2011,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,0.0,EUR,0.0,4132000.0
+Finland,2012,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,4132000.0,EUR,0.0,0.0
+Finland,2013,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,0.0,EUR,4132000.0,4191000.0
+Finland,2014,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,4191000.0,EUR,0.0,0.0
+Finland,2015,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,0.0,EUR,4191000.0,3740000.0
+Finland,2016,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,3740000.0,EUR,0.0,3382000.0
+Finland,2017,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,3382000.0,EUR,3740000.0,0.0
+Finland,2018,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,0.0,EUR,3382000.0,0.0
+Finland,2019,VATT (Government Institute for Economic Research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2019.pdf,reextract,,,0.0,0.0
+Finland,2020,VATT (Government Institute for Economic Research),science_agency,missing,,"Year absent from raw_rows, but finland_docx_results.csv already has extracted rows for this year. The missing agency likely reflects coverage/matching limits in the extracted results rather than an unparsed document.",no,,State budget for 2020.pdf,reextract,,,0.0,0.0
+Finland,2021,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,0.0,EUR,0.0,0.0
+Finland,2022,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,0.0,EUR,0.0,4403000.0
+Finland,2023,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,4403000.0,EUR,0.0,0.0
+Finland,2024,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,0.0,EUR,4403000.0,5187000.0
+Finland,2025,VATT (Government Institute for Economic Research),science_agency,ok,,,,,,none,5187000.0,EUR,0.0,

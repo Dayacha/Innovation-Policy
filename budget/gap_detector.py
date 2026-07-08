@@ -1267,9 +1267,40 @@ def _results_gap_diagnosis_from_country_results(
             str(row.get(col, "") or "")
             for col in ("section_name", "section_name_en", "line_description", "line_description_en")
         ).lower()
+        # Respect the same exclude_match_groups the real canonical_series.py
+        # matcher enforces (e.g. France's "Universities and Higher Education"
+        # canonical explicitly excludes rows that mention "recherche" so it
+        # doesn't absorb Research-chapter appropriations). Without this check,
+        # this fallback diagnosis can report a "reclassify"-ready match that
+        # canonical_series.py's own stricter matcher would never have accepted
+        # — a false positive rather than a genuine downstream-of-extraction gap.
+        if agency.get("strict_exclude_match_groups"):
+            for group in agency.get("exclude_match_groups", []) or []:
+                for pattern in group:
+                    try:
+                        if re.search(pattern, blob, re.IGNORECASE):
+                            return False
+                    except re.error:
+                        continue
         if len(v) <= 4:
             return bool(re.search(r"(?<![a-z])" + re.escape(v) + r"(?![a-z])", blob))
         return v in blob
+
+    # Amounts in docx_results.csv are frequently reported in thousands of the
+    # local currency (unit == "thousand"); the raw_rows.csv path this function
+    # backstops always deals in base units. Without normalizing here, a
+    # genuine match gets reported (and, if ever auto-applied downstream) at
+    # 1/1000th of its real value.
+    def _normalized_amount(row: pd.Series) -> Optional[float]:
+        val = pd.to_numeric(row.get("amount_local"), errors="coerce")
+        if pd.isna(val):
+            return None
+        unit = str(row.get("unit", "") or "").strip().lower()
+        if unit in {"thousand", "thousands", "000s", "k"}:
+            return float(val) * 1000.0
+        if unit in {"million", "millions", "m"}:
+            return float(val) * 1_000_000.0
+        return float(val)
 
     match = None
     for variant in agency.get("name_variants", []):
@@ -1279,12 +1310,14 @@ def _results_gap_diagnosis_from_country_results(
             break
 
     if match is not None and not match.empty:
-        amount_series = pd.to_numeric(match.get("amount_local"), errors="coerce").dropna()
+        match = match.copy()
+        match["_normalized_amount"] = match.apply(_normalized_amount, axis=1)
+        amount_series = match["_normalized_amount"].dropna()
         source_file = str(match.iloc[0].get("source_file", ""))
         if not amount_series.empty:
             best_amount = float(amount_series.max())
             return (
-                f"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year ({best_amount:,.0f} in {source_file}). The gap is downstream of extraction.",
+                f"Year absent from raw_rows, but extracted results already contain a matching row for this agency-year ({best_amount:,.0f} in {source_file}, unit-normalized). The gap is downstream of extraction.",
                 "reclassify",
                 source_file,
             )
@@ -1473,6 +1506,26 @@ def search_raw_rows_for_gaps(
             return bool(re.search(r"(?<![a-z])" + re.escape(v) + r"(?![a-z])", combined))
         return v in combined
 
+    def _extract_amount_from_diagnosis(text: Optional[str]) -> Optional[float]:
+        """
+        The specific-country diagnosis helpers (Belgium, Colombia, Hungary,
+        Iceland, and the generic docx_results fallback) embed a formatted
+        amount directly in their diagnosis text rather than returning it as a
+        structured value. Recover it here so gap_df's raw_row_amount column
+        is populated for "reclassify" rows too, instead of only for rows that
+        matched directly against raw_rows.csv — otherwise any downstream
+        consumer of raw_row_amount silently sees NaN for this whole path.
+        """
+        if not text:
+            return None
+        m = re.search(r"\(([\d,]+)\s+in\s", text)
+        if not m:
+            return None
+        try:
+            return float(m.group(1).replace(",", ""))
+        except ValueError:
+            return None
+
     for idx, gap_row in gap_df[gap_df["gap_type"] == "missing"].iterrows():
         year = gap_row["year"]
         canonical = gap_row["canonical_name"]
@@ -1522,6 +1575,8 @@ def search_raw_rows_for_gaps(
             gap_df.at[idx, "action"] = specific_action or "reextract"
             if specific_file:
                 gap_df.at[idx, "raw_row_file"] = specific_file
+            if specific_action == "reclassify":
+                gap_df.at[idx, "raw_row_amount"] = _extract_amount_from_diagnosis(specific_diag)
             continue
 
         # Try matching name variants
