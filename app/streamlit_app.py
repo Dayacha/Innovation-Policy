@@ -756,6 +756,11 @@ def _build_gap_kb() -> dict[tuple[str, int], dict]:
         "HARD TO FIX — UK Supply Estimates have complex multi-document structure. Missing years reflect both extraction failures and structural format differences. UK R&D budget is distributed across multiple departmental estimates, not a single chapter.",
         "Uncertain")
 
+    add("UK", [2000, 2001, 2002],
+        "Manual UK Red Book audit found 2000 and 2001 are genuine methodology/content gaps: the documents contain tax-policy or broad fund discussion but no defendable single-year R&D appropriation to retain. The same audit confirmed 2002 is missing from the local source corpus.",
+        "NOT FIXABLE with the current archive/methodology — 2000 and 2001 lack a qualifying single-year R&D appropriation in the audited source, and 2002 needs a missing source document added to the corpus.",
+        "No")
+
     add("Estonia", range(1992, 2025),
         "Estonia has 13 gaps (1993, 2012–2021, 2023–2024). 35 files in corpus. ETF (Eesti Teadusfond) and MKM (Ministry of Economic Affairs) key R&D agencies. Gap years not yet attempted for extraction.",
         "POTENTIALLY FIXABLE — Source docs likely available for most gaps. Systematic re-extraction needed.",
@@ -776,10 +781,20 @@ def _build_gap_kb() -> dict[tuple[str, int], dict]:
         "POTENTIALLY FIXABLE — Source docs likely available. NZ budget structure clearly identifies science funding agencies.",
         "Potentially")
 
+    add("New Zealand", [1977, 1984, 1995],
+        "Later New Zealand audit locked these years as conservative holds after source review. The remaining evidence for 1977 DSIR, 1984 DSIR, and 1995 Research, Science and Technology Vote was absent, ambiguous, or not clean enough to defend as a reproducible institutional series observation.",
+        "NOT FIXABLE with current evidence — these are intentional conservative gaps unless stronger documentary support is added.",
+        "No")
+
     add("Colombia", range(2000, 2025),
         "Colombia has 8 gaps (2003, 2006–2011, 2015). 41 files in corpus. Colciencias (now MinCiencias) key R&D agency. Source docs likely exist for gap years.",
         "POTENTIALLY FIXABLE — Source docs likely available.",
         "Potentially")
+
+    add("Colombia", [2003, 2007],
+        "Manual Colombia source review and direct PDF inspection show these are weak-source years, not ordinary extraction misses. The 2003 `Ley 780 de 2002` file behaves like wrapper/legal text and does not preserve a usable institutional annex. The 2007 `Ley 1110 de 2006` source mentions SENA-to-COLCIENCIAS transfer language but does not provide a traceable institutional appropriation amount.",
+        "NOT FIXABLE with the current files — 2003 lacks recoverable institutional budget detail and 2007 only preserves transfer language without a defendable institutional amount.",
+        "No")
 
     add("Costa Rica", range(2010, 2025),
         "Costa Rica has 8 gaps (2012, 2014–2016, 2018–2019, 2022–2023). 25 files in corpus. CONICIT/MICITT key R&D agencies. Source docs likely available.",
@@ -822,9 +837,9 @@ def _build_gap_kb() -> dict[tuple[str, int], dict]:
         "Potentially")
 
     add("Australia", [2000, 2001],
-        "Australia has 2 gaps. 368 files in corpus. ARC (Australian Research Council) and NHMRC key agencies. Source docs exist in corpus.",
-        "POTENTIALLY FIXABLE — Source docs exist in corpus.",
-        "Potentially")
+        "The local 2000–2001 Australia files are appropriation acts / supplementary volumes, but direct document inspection found no CSIRO, ARC, NHMRC, ANSTO, or AIMS references in the available `.docx` texts. The country gap report also flags 2000–2001 CSIRO as a document limitation after checking the source files directly.",
+        "NOT FIXABLE with the current corpus — the available 2000–2001 source files do not expose the expected science-agency rows, so closing these years would require different source documents rather than another parser pass.",
+        "No")
 
     add("Canada", [2004, 2005],
         "Canada has 2 gaps. 134 files in corpus but no documents found matching 2004 or 2005.",
@@ -862,14 +877,14 @@ def _build_gap_kb() -> dict[tuple[str, int], dict]:
         "No")
 
     add("Netherlands", [1996],
-        "Netherlands has 1 gap (1996). 170 files in corpus. NWO (Dutch Research Council) key agency. Source doc likely in corpus.",
-        "POTENTIALLY FIXABLE — Source doc likely available.",
-        "Potentially")
+        "Netherlands review for 1996 shows the source file runs with rows, but only exposes aggregate `OCW Art. 16 Onderzoek en wetenschapsbeleid` evidence. The review table and quality note both say this source family bundles NWO/KNAW and related appropriations into an aggregate policy block rather than a clean agency split.",
+        "NOT FIXABLE with the current file — 1996 is an aggregate/comparability case, not a simple extraction miss. A defensible NWO/KNAW split is not present in the available source.",
+        "No")
 
     add("Slovenia", [2014],
-        "Slovenia has 1 gap (2014). 53 files in corpus. ARRS (Slovenian Research Agency) key agency. Source doc likely available.",
-        "POTENTIALLY FIXABLE — Source doc likely available.",
-        "Potentially")
+        "Manual Slovenia gap review concluded the remaining 2001 and 2003–2015 `Programme 0503` gaps are mostly comparability/audit rejections, not simple extraction misses. The reviewed note specifically says to keep those gaps unless a true annual budget source or a defendable `050302` line is manually verified from the original PDF.",
+        "NOT FIXABLE with the current reviewed evidence — 2014 should remain a gap unless a manual source audit finds a defendable comparable `050302` annual amount in the original budget tables.",
+        "No")
 
     return kb
 
