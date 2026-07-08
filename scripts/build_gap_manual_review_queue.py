@@ -71,6 +71,62 @@ MANUAL_OVERRIDES: dict[tuple[str, int], NoteOverride] = {
         "No",
         "UK audit confirms 2002 is a source-corpus gap: the Budget 2002 document is not present in the local archive.",
     ),
+    ("France", 2018): NoteOverride(
+        "No",
+        "France 2018 JORF programme totals have already been manually recovered from the original budget law; the remaining year-level gaps are agency rows that do not appear in the local JORF corpus and would require PAP annexes or companion budget documents.",
+    ),
+    ("France", 2019): NoteOverride(
+        "No",
+        "France 2019 JORF programme totals have already been manually recovered from the original budget law; the remaining year-level gaps are agency rows that do not appear in the local JORF corpus and would require PAP annexes or companion budget documents.",
+    ),
+    ("France", 2020): NoteOverride(
+        "No",
+        "France 2020 JORF programme totals have already been manually recovered from the original budget law; the remaining year-level gaps are agency rows that do not appear in the local JORF corpus and would require PAP annexes or companion budget documents.",
+    ),
+    ("France", 2021): NoteOverride(
+        "No",
+        "France 2021 direct JORF review still leaves the remaining canonicals blocked by missing annex-dependent agency rows; even the last checked programme line (`Cultural Research and Scientific Culture`) does not surface as a defendable row in the local source set.",
+    ),
+    ("France", 2022): NoteOverride(
+        "No",
+        "France 2022 direct JORF review still leaves the remaining canonicals blocked by missing annex-dependent agency rows; even the last checked programme line (`Cultural Research and Scientific Culture`) does not surface as a defendable row in the local source set.",
+    ),
+    ("France", 2023): NoteOverride(
+        "No",
+        "France 2023 current JORF-only review still leaves a large block of missing agency canonicals, indicating the unresolved rows depend on PAP annexes or companion budget documents rather than recoverable JORF mission lines.",
+    ),
+    ("France", 2024): NoteOverride(
+        "No",
+        "France 2024 current JORF-only review still leaves a large block of missing agency canonicals, indicating the unresolved rows depend on PAP annexes or companion budget documents rather than recoverable JORF mission lines.",
+    ),
+    ("France", 2025): NoteOverride(
+        "No",
+        "France 2025 current JORF-only review still leaves a large block of missing agency canonicals; unresolved rows are annex-dependent and the one remaining outlier/reclassify issue does not change the year-level conclusion.",
+    ),
+    ("Hungary", 2000): NoteOverride(
+        "No",
+        "Original Hungary PDF review confirms the MTA chapter heading is present but the chapter-total amount is truncated in the text layer; candidate snippets are inconsistent sub-lines rather than a defendable annual institutional total.",
+    ),
+    ("Hungary", 2003): NoteOverride(
+        "No",
+        "Original Hungary PDF review confirms the MTA chapter total is only preserved as a truncated layout fragment ('XXXIII. fejezet osszesen: 50 8'), while candidate extracted rows are inconsistent and not comparable to the audited chapter-total series.",
+    ),
+    ("Hungary", 2004): NoteOverride(
+        "No",
+        "Original Hungary PDF review shows the MTA chapter is present but the chapter-total amount is not recoverable from the current text layer; the surviving 'MTA mukodesi koltsegvetese' snippet is a partial operating-budget line, not a defendable replacement for the institutional chapter total used elsewhere in the series.",
+    ),
+    ("Hungary", 2006): NoteOverride(
+        "No",
+        "Original Hungary PDF review confirms the MTA chapter total is truncated to a partial '48' in the layout text, and the surviving candidate row is only a sub-line for the Office of Supported Research Places, not the audited MTA chapter total.",
+    ),
+    ("Hungary", 2008): NoteOverride(
+        "No",
+        "Original Hungary PDF review confirms the MTA chapter total is truncated to a partial '50' in the layout text; no exact institutional total is recoverable from the current source text layer.",
+    ),
+    ("Hungary", 2009): NoteOverride(
+        "No",
+        "Original Hungary PDF review confirms the MTA chapter total is truncated to a partial '49' in the layout text; the current source only supports a rounded chapter-level reading, not a reproducible exact annual institutional total.",
+    ),
 }
 
 

@@ -4,11 +4,11 @@ Generated from the static HTML gap report, the current country gap reports, and 
 
 ## Status counts
 
-- `No`: 16
+- `No`: 24
 - `No (missing Einzelplan 30 docs)`: 14
-- `Potentially`: 49
+- `Potentially`: 42
 - `Potentially (re-extraction)`: 2
-- `Resolved/Stale`: 152
+- `Resolved/Stale`: 151
 - `Uncertain`: 11
 
 ## Sample rows

@@ -47,6 +47,7 @@ from budget.entity_dedup import apply_entity_dedup
 from budget.gap_detector import build_gap_report
 from budget.agency_discovery import discover_agencies
 from budget.gap_filler import fill_gaps
+from budget.llm_review import load_accepted_review_rows, write_applied_audit
 from budget.text_cache_parser import parse_text_cache, TEXT_CACHE_DIR
 
 logger = logging.getLogger(__name__)
@@ -3342,9 +3343,50 @@ def build_combined_database(output_dir: Path = cfg.OUTPUT_DIR) -> pd.DataFrame:
 
     combined = pd.concat(all_series, ignore_index=True)
 
+    accepted_review_rows = load_accepted_review_rows(output_dir=output_dir)
+    if not accepted_review_rows.empty:
+        combined = pd.concat([combined, accepted_review_rows], ignore_index=True, sort=False)
+        review_audit = accepted_review_rows.copy()
+        review_audit["applied_to_combined_database"] = True
+        write_applied_audit(review_audit)
+    else:
+        write_applied_audit(
+            pd.DataFrame(
+                columns=[
+                    "country",
+                    "year",
+                    "canonical_name",
+                    "amount_local",
+                    "source_file",
+                    "page_number",
+                    "review_row_id",
+                    "applied_to_combined_database",
+                ]
+            )
+        )
+
     # Drop gap rows (no amount) — keep all source-file rows that have a value
     combined = combined.dropna(subset=["amount_local"])
     combined = combined[combined["amount_local"].notna() & (combined["amount_local"] != 0)]
+
+    # Prefer reviewed source-verified rows over older extracted rows when they
+    # describe the same country / year / canonical series.
+    if "item_type" in combined.columns:
+        combined["_review_priority"] = combined["item_type"].fillna("").astype(str).eq("verified_override").astype(int)
+        combined = combined.sort_values(
+            ["country", "canonical_name", "year", "_review_priority", "source_file"],
+            ascending=[True, True, True, False, True],
+            kind="stable",
+        )
+        combined = combined.drop_duplicates(
+            subset=[col for col in ["country", "year", "canonical_name"] if col in combined.columns],
+            keep="first",
+        )
+        combined = combined.drop(columns=["_review_priority"])
+
+    dedupe_cols = [col for col in ["country", "year", "canonical_name", "source_file", "page_number", "amount_local"] if col in combined.columns]
+    if dedupe_cols:
+        combined = combined.drop_duplicates(subset=dedupe_cols, keep="first")
 
     combined = combined.sort_values(["country", "canonical_name", "year", "source_file"]).reset_index(drop=True)
 

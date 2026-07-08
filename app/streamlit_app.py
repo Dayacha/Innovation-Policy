@@ -620,12 +620,70 @@ def _diagnosis_claims_unparsed(text: str) -> bool:
 def _load_budget_country_docx_series(country: str) -> pd.DataFrame:
     root = Path(__file__).resolve().parent.parent / "Data" / "output" / "budget" / str(country)
     path = root / f"{str(country).lower()}_docx_series.csv"
-    if not path.exists():
-        return pd.DataFrame()
-    try:
-        return pd.read_csv(path)
-    except Exception:
-        return pd.DataFrame()
+    review_path = root.parent / "llm_budget_review_applied.csv"
+
+    base_df = pd.DataFrame()
+    if path.exists():
+        try:
+            base_df = pd.read_csv(path)
+        except Exception:
+            base_df = pd.DataFrame()
+
+    review_df = pd.DataFrame()
+    if review_path.exists():
+        try:
+            review_df = pd.read_csv(review_path)
+        except Exception:
+            review_df = pd.DataFrame()
+
+    if not review_df.empty and "country" in review_df.columns:
+        review_df = review_df[review_df["country"].astype(str) == str(country)].copy()
+        if not review_df.empty:
+            preferred_cols = [
+                "country",
+                "year",
+                "canonical_name",
+                "category",
+                "amount_local",
+                "unit",
+                "currency",
+                "item_type",
+                "line_description_en",
+                "source_file",
+                "page_number",
+                "series_notes",
+            ]
+            for col in preferred_cols:
+                if col not in review_df.columns:
+                    review_df[col] = None
+            review_df = review_df[preferred_cols]
+
+    if base_df.empty:
+        return review_df.reset_index(drop=True)
+    if review_df.empty:
+        return base_df
+
+    for col in review_df.columns:
+        if col not in base_df.columns:
+            base_df[col] = None
+    for col in base_df.columns:
+        if col not in review_df.columns:
+            review_df[col] = None
+
+    combined = pd.concat([base_df, review_df[base_df.columns]], ignore_index=True, sort=False)
+    if {"country", "year", "canonical_name", "item_type"}.issubset(combined.columns):
+        combined["_review_priority"] = combined["item_type"].fillna("").astype(str).eq("verified_override").astype(int)
+        combined = combined.sort_values(
+            ["country", "canonical_name", "year", "_review_priority", "source_file"],
+            ascending=[True, True, True, False, True],
+            kind="stable",
+        )
+        combined = combined.drop_duplicates(
+            subset=["country", "year", "canonical_name"],
+            keep="first",
+        ).drop(columns=["_review_priority"])
+
+    return combined.reset_index(drop=True)
 
 
 def _year_docx_series_fragments(country: str, year: int) -> list[str]:
@@ -741,10 +799,20 @@ def _build_gap_kb() -> dict[tuple[str, int], dict]:
         "POTENTIALLY FIXABLE — if correct annual institutional budget lines can be identified in the 2005 PDF.",
         "Potentially")
 
-    add("France", range(1966, 2025),
-        "France has 21 gaps at years 1971, 1975, 1976, 1980, 1989, 1991–1993, 1995–2004, 2006, 2018–2019. French Finance Bills (PLF/LFI) are well-structured with MIRES mission chapters. Source docs exist for most gap years (56 files in corpus). Some gaps reflect parsing failures or years where agency-level data wasn't cleanly separated.",
-        "POTENTIALLY FIXABLE — French budget structure is well-organized. Source docs available. Re-extraction for specific gap years (especially recent ones 2018–2019) should recover missing data.",
+    add("France", range(1966, 2026),
+        "France gaps are now split between two different cases. Recent LOLF programme totals in JORF have been manually recovered for 2018–2022 where the mission/programme appropriations are visible in the original budget law, but many remaining France gaps are agency-level rows (ANR, CNRS, CEA, INSERM, INRIA, CNES, IFREMER, BRGM, ONERA, etc.) that do not appear as explicit grants in JORF and usually require PAP annexes or companion budget documents instead. Direct review of the local JORF-only corpus shows that the remaining recent France gaps are dominated by these annex-dependent agency rows; 2021–2025 still leave large blocks of missing canonicals even after the recoverable programme totals were added. Older pre-2006 gaps still mix real extraction misses with structural chapter/agency-separation issues.",
+        "MIXED — some recent programme-level gaps can be fixed directly from JORF mission tables, but many remaining France agency-level gaps are not fixable from the current JORF-only corpus and would need PAP annexes or companion budget documents.",
         "Potentially")
+
+    add("France", [2018, 2019, 2020],
+        "Manual France review recovered the JORF programme-level totals for 2018 directly from the original budget law. The remaining 2018 France gaps are agency-level rows such as ANR, CNRS, CEA, INSERM, INRIA, CNES, IFREMER, BRGM, and ONERA that do not appear as explicit grants in the local JORF corpus and would require PAP annexes or companion budget documents.",
+        "NOT FIXABLE with the current JORF-only France corpus — the recoverable programme-level totals for these years have already been added, and the remaining year-level gaps are annex-dependent agency rows rather than recoverable JORF mission lines.",
+        "No")
+
+    add("France", [2021, 2022, 2023, 2024, 2025],
+        "Direct review of the local France JORF budget-law files and current France outputs found that the remaining recent gaps are still dominated by missing agency-level rows that do not surface as defendable lines in the local JORF-only corpus. For 2021–2022, the last unresolved recent programme example was `Cultural Research and Scientific Culture`; for 2023–2025, the current gap report still shows large blocks of missing agency canonicals despite the checked JORF source.",
+        "NOT FIXABLE with the current local France source set — these checked JORF-only years still do not expose recoverable rows for the remaining canonicals, and the unresolved France agency series are annex-dependent.",
+        "No")
 
     add("Poland", range(1992, 2025),
         "Poland has 18 gaps at years 1994–2009, 2012, 2018, 2021–2022. Polish Finance Bills (Ustawa budzetowa) available (37 files in corpus). KBN (1992–2005) and NCN/NCBiR (2011+) key agencies. Some gap years not attempted.",
@@ -810,6 +878,11 @@ def _build_gap_kb() -> dict[tuple[str, int], dict]:
         "Hungary has 7 gaps (2000, 2002–2004, 2006, 2008–2009). 34 files in corpus. OTKA (Hungarian Scientific Research Fund) and NKTH key agencies. Source docs likely exist.",
         "POTENTIALLY FIXABLE — Source docs likely available.",
         "Potentially")
+
+    add("Hungary", [2000, 2003, 2004, 2006, 2008, 2009],
+        "Manual review of the original Hungary budget PDFs and cached text confirms the MTA chapter heading is present, but the chapter-total amount is truncated in the PDF text layer. Candidate LLM rows exist for some years, but they are partial sub-lines or inconsistent-scale snippets rather than a defendable institutional annual total comparable to the audited override series.",
+        "NOT FIXABLE with the current source text layer — these years should remain explicit conservative MTA gaps unless stronger originals or a better extraction path recover the full chapter total.",
+        "No")
 
     add("Spain", range(1988, 2025),
         "Spain has 6 gaps (1991, 1994–1995, 1997, 2003, 2019). 45 files in corpus. CSIC and AEI (Agencia Estatal de Investigación) key R&D agencies. Source docs likely available.",

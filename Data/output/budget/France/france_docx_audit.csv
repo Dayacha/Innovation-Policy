@@ -1,328 +1,457 @@
 canonical_name,category,year,source_file,entity_raw,amount_current,section_name,table_index,row_index,in_series
-ANR (Agence Nationale de la Recherche),science_agency,2007,JORF_2007.pdf,"produit de la contribution mentionnée à l'article 235 ter ZC du code général des impôts perçu en 2007 est affecté, dans la limite de 955 millions d'euros, à l'Agence nationale de la recherche à hauteur de 86,4 %",826320.0,National Research Agency,0,3,True
-Agricultural research and higher education,higher_education,2008,JORF_2008.pdf,Agricultural research and higher education,278000.0,Multidisciplinary Scientific and Technological Research,0,14,True
-BRGM (Bureau de Recherches Géologiques et Minières),science_agency,1978,JORF_1978.pdf,BRGM appropriation,15800.0,BRGM (Bureau de Recherches Géologiques et Minières),0,10,True
-BRGM (Bureau de Recherches Géologiques et Minières),science_agency,1978,JORF_1978.pdf,BRGM evaluation,12500.0,BRGM (Bureau de Recherches Géologiques et Minières),0,11,True
-BRGM (Bureau de Recherches Géologiques et Minières),science_agency,1978,JORF_1978.pdf,BRGM total,435300.0,BRGM (Bureau de Recherches Géologiques et Minières),0,12,True
-CEA (Commissariat à l'Énergie Atomique),science_agency,1984,JORF_1984.pdf,Crédits de paiement pour le CEA,4000.0,Atomic Energy Commission,0,30,True
-CEA (Commissariat à l'Énergie Atomique),science_agency,1987,JORF_1987.pdf,Commissariat à l'énergie atomique,1628000.0,Atomic Energy Commission,0,91,True
-CEA (Commissariat à l'Énergie Atomique),science_agency,1988,JORF_1988.pdf,Commissariat à l'énergie atomique,1633780.0,RESEARCH AND HIGHER EDUCATION,0,116,True
-CEA (Commissariat à l'Énergie Atomique),science_agency,1988,JORF_1988.pdf,Commissariat à l'énergie atomique,3022000.0,Atomic Energy Commission,0,128,True
-CEA (Commissariat à l'Énergie Atomique),science_agency,1988,JORF_1988.pdf,Commissariat à l'énergie atomique,561000.0,Atomic Energy Commission,0,129,True
-CEA (Commissariat à l'Énergie Atomique),science_agency,1994,JORF_1994.pdf,Commissariat à l'énergie atomique,3512532.433,Atomic Energy Commission,0,163,True
-CEA (Commissariat à l'Énergie Atomique),science_agency,1994,JORF_1994.pdf,Commissariat à l'énergie atomique,3477513.6,Atomic Energy Commission,0,164,True
-CNES (Centre National d'Études Spatiales),science_agency,1986,JORF_1986.pdf,Centre national d'études spatiales,637524.095,CNES (Centre National d'Études Spatiales),0,79,True
-CNES (Centre National d'Études Spatiales),science_agency,1987,JORF_1987.pdf,Centre national d'études spatiales,646170.095,National Center for Space Studies,0,92,True
-CNES (Centre National d'Études Spatiales),science_agency,1988,JORF_1988.pdf,Centre national d'études spatiales,261000.0,CNES (Centre National d'Études Spatiales),0,136,True
-CNES (Centre National d'Études Spatiales),science_agency,1994,JORF_1994.pdf,Centre national d'études spatiales,850374.925,National Center for Space Studies,0,159,True
-CNRS (Centre National de la Recherche Scientifique),science_agency,1984,JORF_1984.pdf,Crédits de paiement pour le CNRS,5000.0,National Center for Scientific Research,0,28,False
-CNRS (Centre National de la Recherche Scientifique),science_agency,1986,JORF_1986.pdf,Centre national de la recherche scientifique et instituts nationaux,2020165.0,National Center for Scientific Research and National Institutes,0,61,False
-CNRS (Centre National de la Recherche Scientifique),science_agency,1987,JORF_1987.pdf,Centre national de la recherche scientifique et instituts nationaux,104248.913,National Center for Scientific Research,0,93,False
-CNRS (Centre National de la Recherche Scientifique),science_agency,1987,JORF_1987.pdf,Centre national de la recherche scientifique et instituts nationaux,2070000.0,National Center for Scientific Research and National Institutes,0,98,False
-CNRS (Centre National de la Recherche Scientifique),science_agency,1988,JORF_1988.pdf,Centre national de la recherche scientifique et instituts nationaux,6753542.773,RESEARCH AND HIGHER EDUCATION,0,114,False
-CNRS (Centre National de la Recherche Scientifique),science_agency,1988,JORF_1988.pdf,Centre national de la recherche scientifique et instituts nationaux,2131000.0,National Center for Scientific Research and National Institutes,0,123,False
-CNRS (Centre National de la Recherche Scientifique),science_agency,1994,JORF_1994.pdf,Centre national de la recherche scientifique et instituts nationaux,9625687.454,National Center for Scientific Research and National Institutes,0,155,False
-Cultural Research and Scientific Culture,rd_programme,2008,JORF_2008.pdf,Cultural research and scientific culture,159000.0,Multidisciplinary Scientific and Technological Research,0,13,True
-Cultural Research and Scientific Culture,rd_programme,2009,JORF_2009.pdf,Cultural research and scientific culture,159805.909,Cultural Research and Scientific Culture,0,24,True
-Cultural Research and Scientific Culture,rd_programme,2009,JORF_2009.pdf,Recherche culturelle et culture scientifique,157255.909,Research and Higher Education,0,87,True
-Cultural Research and Scientific Culture,rd_programme,2011,JORF_2011.pdf,Total for cultural research and scientific culture,125000.0,Cultural Research and Scientific Culture,0,37,True
-Cultural Research and Scientific Culture,rd_programme,2014,JORF_2014.pdf,Recherche culturelle et culture scientifique,114539.698,Research and Higher Education,0,96,True
-Cultural Research and Scientific Culture,rd_programme,2015,JORF_2015.pdf,Recherche culturelle et culture scientifique,117233.198,Research and Higher Education,0,101,True
-Cultural Research and Scientific Culture,rd_programme,2016,JORF_2016.pdf,Recherche culturelle et culture scientifique,122147.698,Research and Higher Education,0,108,True
-Cultural Research and Scientific Culture,rd_programme,2017,JORF_2017.pdf,Recherche culturelle et culture scientifique,116570.698,Research and Higher Education,0,115,True
-French Agency for Energy Management,science_agency,1988,JORF_1988.pdf,Agence française pour la maîtrise de l'énergie,248750.0,French Agency for Energy Management,0,130,True
-Higher Education and Agricultural Research,rd_programme,2009,JORF_2009.pdf,Enseignement supérieur et recherche agricoles,296732.542,Research and Higher Education,0,88,True
-Higher Education and Agricultural Research,rd_programme,2011,JORF_2011.pdf,Total for higher education and agricultural research,298000.0,Higher Education and Agricultural Research,0,38,True
-Higher Education and Agricultural Research,rd_programme,2014,JORF_2014.pdf,Enseignement supérieur et recherche agricoles,312006.931,Research and Higher Education,0,97,True
-Higher Education and Agricultural Research,rd_programme,2015,JORF_2015.pdf,Enseignement supérieur et recherche agricoles,329442.176,Research and Higher Education,0,102,True
-Higher Education and Agricultural Research,rd_programme,2016,JORF_2016.pdf,Enseignement supérieur et recherche agricoles,330927.317,Research and Higher Education,0,109,True
-Higher Education and Agricultural Research,rd_programme,2017,JORF_2017.pdf,Enseignement supérieur et recherche agricoles,339670.121,Research and Higher Education,0,116,True
-IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,1986,JORF_1986.pdf,"Taxe perçue pour financer la participation de l'IFREMER aux études, analyses et contrôles de qualité sur les fabrications des conserves et semi-conserves de poissons",498000.0,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),0,80,True
-IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,1987,JORF_1987.pdf,Institut français de recherche pour l'exploitation de la mer,506000.0,French Institute for Research in Exploitation of the Sea,0,97,True
-IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,1988,JORF_1988.pdf,Institut français de recherche pour l'exploitation de la mer,325677.429,RESEARCH AND HIGHER EDUCATION,0,113,True
-IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,1988,JORF_1988.pdf,Institut français de recherche pour l'exploitation de la mer,470000.0,French Institute for Research in Exploitation of the Sea,0,122,True
-IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,1990,JORF_1990.pdf,"Taxe perçue pour financer la participation de l'IFREMER aux études, analyses et contrôles de qualité sur les fabrications des conserves et semi-conserves de poissons",5000.0,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),0,142,True
-IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,1990,JORF_1990.pdf,"Taxe perçue pour financer la participation de l'Institut français de recherche pour l'exploitation de la mer aux études, analyses et contrôles de qualité des coquillages",9875.0,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),0,143,True
-IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,1994,JORF_1994.pdf,Institut français de recherche pour l'exploitation de la mer,424953.866,French Institute for Research and Exploitation of the Sea,0,161,True
-INRAE (Institut National de Recherche pour l'Agriculture),science_agency,1987,JORF_1987.pdf,Institut national de la recherche agronomique,437560.0,INRAE (Institut National de Recherche pour l'Agriculture),0,108,True
-INRAE (Institut National de Recherche pour l'Agriculture),science_agency,1988,JORF_1988.pdf,Institut national de la recherche agronomique,437500.0,INRAE (Institut National de Recherche pour l'Agriculture),0,135,True
-INRAE (Institut National de Recherche pour l'Agriculture),science_agency,1994,JORF_1994.pdf,Institut national de la recherche agronomique,237489.193,INRAE (Institut National de Recherche pour l'Agriculture),0,168,True
-INRAE (Institut National de Recherche pour l'Agriculture),science_agency,1994,JORF_1994.pdf,Institut national de la recherche agronomique,451480.0,INRAE (Institut National de Recherche pour l'Agriculture),0,169,True
-INRIA (Institut National de Recherche en Informatique),science_agency,1984,JORF_1984.pdf,Crédits de paiement pour l'INRIA,2000.0,National Institute for Research in Computer Science and Automation,0,31,True
-INRIA (Institut National de Recherche en Informatique),science_agency,1984,JORF_1984.pdf,Institut national de recherche en informatique et en automatique,6025.0,Research and Industry,0,37,True
-INRIA (Institut National de Recherche en Informatique),science_agency,1994,JORF_1994.pdf,Institut national de recherche en informatique et en automatique,267799.773,National Institute for Research in Computer Science and Automation,0,157,True
-INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,1984,JORF_1984.pdf,Crédits de paiement pour l'INSERM,3000.0,National Institute of Health and Medical Research,0,29,True
-INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,1986,JORF_1986.pdf,Institut national de la santé et de la recherche médicale,533550.0,National Institute of Health and Medical Research,0,62,True
-INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,1987,JORF_1987.pdf,Institut national de la santé et de la recherche médicale,1051763.872,National Institute of Health and Medical Research,0,90,True
-INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,1987,JORF_1987.pdf,Institut national de la santé et de la recherche médicale,504400.0,National Institute of Health and Medical Research,0,99,True
-INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,1988,JORF_1988.pdf,Institut national de la santé et de la recherche médicale,1067542.128,RESEARCH AND HIGHER EDUCATION,0,115,True
-INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,1988,JORF_1988.pdf,Institut national de la santé et de la recherche médicale,76000.0,National Institute of Health and Medical Research,0,124,True
-INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,1994,JORF_1994.pdf,Institut national de la santé et de la recherche médicale,1671044.181,National Institute of Health and Medical Research,0,156,True
-INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,1994,JORF_1994.pdf,Institut national de la santé et de la recherche médicale,13880.0,National Institute of Health and Medical Research,0,166,True
-Multidisciplinary Scientific and Technological Research,rd_programme,2008,JORF_2008.pdf,Total for Multidisciplinary Scientific and Technological Research,4982000.0,Multidisciplinary Scientific and Technological Research,0,6,True
-Multidisciplinary Scientific and Technological Research,rd_programme,2009,JORF_2009.pdf,Total for multidisciplinary scientific and technological research,5082181.762,Multidisciplinary Scientific and Technological Research,0,17,True
-Multidisciplinary Scientific and Technological Research,rd_programme,2009,JORF_2009.pdf,Recherches scientifiques et technologiques pluridisciplinaires,5050181.762,Research and Higher Education,0,84,True
-Multidisciplinary Scientific and Technological Research,rd_programme,2010,JORF_2010.pdf,Total pour les recherches scientifiques et technologiques pluridisciplinaires,5198000.0,Multidisciplinary Scientific and Technological Research,0,26,True
-Multidisciplinary Scientific and Technological Research,rd_programme,2011,JORF_2011.pdf,Total for multidisciplinary scientific and technological research,5124000.0,Multidisciplinary Scientific and Technological Research,0,32,True
-Multidisciplinary Scientific and Technological Research,rd_programme,2013,JORF_2013.pdf,Total pour les recherches scientifiques et technologiques pluridisciplinaires,5158000.0,Multidisciplinary Scientific and Technological Research,0,54,True
-Multidisciplinary Scientific and Technological Research,rd_programme,2013,JORF_2013.pdf,Recherches scientifiques et technologiques pluridisciplinaires,5158000.0,Multidisciplinary Scientific and Technological Research,0,55,True
-Multidisciplinary Scientific and Technological Research,rd_programme,2014,JORF_2014.pdf,Recherches scientifiques et technologiques pluridisciplinaires,5053673.242,Research and Higher Education,0,92,True
-Multidisciplinary Scientific and Technological Research,rd_programme,2015,JORF_2015.pdf,Recherches scientifiques et technologiques pluridisciplinaires,6270005.79,Multidisciplinary Scientific and Technological Research,0,60,True
-Multidisciplinary Scientific and Technological Research,rd_programme,2016,JORF_2016.pdf,Crédits de paiement pour les recherches scientifiques et technologiques pluridisciplinaires,70522000.0,Scientific Research,0,63,True
-Multidisciplinary Scientific and Technological Research,rd_programme,2016,JORF_2016.pdf,Crédits de paiement pour les recherches scientifiques et technologiques pluridisciplinaires,6248000.0,Multidisciplinary Scientific and Technological Research,0,70,True
-Multidisciplinary Scientific and Technological Research,rd_programme,2016,JORF_2016.pdf,Recherches scientifiques et technologiques pluridisciplinaires,6248944.468,Research and Higher Education,0,104,True
-Multidisciplinary Scientific and Technological Research,rd_programme,2017,JORF_2017.pdf,Total pour les recherches scientifiques et technologiques pluridisciplinaires,6513000.0,Multidisciplinary Scientific and Technological Research,0,79,True
-Multidisciplinary Scientific and Technological Research,rd_programme,2017,JORF_2017.pdf,Crédits de paiement pour les recherches scientifiques et technologiques pluridisciplinaires,6423000.0,Multidisciplinary Scientific and Technological Research,0,81,True
-Multidisciplinary Scientific and Technological Research,rd_programme,2017,JORF_2017.pdf,Recherches scientifiques et technologiques pluridisciplinaires,6423915.122,Research and Higher Education,0,111,True
-Pasteur Institute of Paris,science_agency,1986,JORF_1986.pdf,Institut Pasteur de Paris,115130.0,Pasteur Institute of Paris,0,63,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1972,JORF_1972.pdf,Subvention pour la recherche en socio-économie,0.0,Research,0,1,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1977,JORF_1977.pdf,Industrie et recherche,22238.0,Ministry of Research,0,4,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1977,JORF_1977.pdf,Crédits de paiement pour la recherche,22338.0,Ministry of Research,0,5,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1978,JORF_1978.pdf,Crédits de paiement pour la recherche,298475.0,Research,0,7,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1978,JORF_1978.pdf,Recherche,1020.0,Research,0,8,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1979,JORF_1979.pdf,Subventions de fonctionnement pour la recherche scientifique,270000.0,Universities,0,13,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1979,JORF_1979.pdf,Subventions de recherche scientifique,3755.0,Universities,0,14,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1979,JORF_1979.pdf,Subventions d’équipement à la recherche médicale.,5000.0,Universities,0,16,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1981,JORF_1981.pdf,Services du Premier Ministre. — Recherche,18930.89,Prime Minister's Services — Research,0,17,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1981,JORF_1981.pdf,Services du Premier ministre. — Recherche,120093.0,Prime Minister's Office. — Research,0,20,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1982,JORF_1982.pdf,Crédits de paiement pour la recherche et technologie,5611.994,Research and Technology,0,22,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1982,JORF_1982.pdf,Crédits de paiement pour la recherche et technologie,5600.244,Research and Technology,0,23,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1983,JORF_1983.pdf,Recherche et Industrie,2111643.81,Research and Industry,0,24,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1983,JORF_1983.pdf,Crédits de paiement pour la recherche scientifique et technique,2012990.279,Research,0,26,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1984,JORF_1984.pdf,Crédits de paiement pour la recherche,11000.0,Research,0,27,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1984,JORF_1984.pdf,Recherche,183805.0,Research,0,32,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1984,JORF_1984.pdf,Favoriser la recherche et l’innovation,60342.0,Research,0,33,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1984,JORF_1984.pdf,Dépenses ordinaires pour la recherche et l’innovation,519000.0,Research,0,34,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1984,JORF_1984.pdf,Autorisation de programme pour la recherche et l’innovation,10164.0,Research,0,35,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1984,JORF_1984.pdf,Recherche et industrie,48085.0,Research and Industry,0,36,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1984,JORF_1984.pdf,Institut national de recherche en informatique et en automatique,6025.0,Research and Industry,0,37,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1984,JORF_1984.pdf,Recherche scientifique et technique. — Subventions aux organismes de recherche.,12800.0,Research and Industry,0,39,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1985,JORF_1985.pdf,Recherche,5401.0,Research,0,41,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1985,JORF_1985.pdf,Fonds de la recherche et de la technologie,50076.0,Research,0,43,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Recherche et technologie,3000.0,Research and Technology,0,49,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Budget civil de recherche et de développement,1500.0,Civil research and development budget,0,50,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Enveloppe recherche,49000.0,Research envelope,0,51,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Enveloppe recherche,8000.0,Research envelope,0,52,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Enveloppe recherche,32000.0,Research envelope,0,53,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Fonds de la recherche et de la technologie,1003000.0,Research and Technology Fund,0,60,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Centre national de la recherche scientifique et instituts nationaux,2020165.0,National Center for Scientific Research and National Institutes,0,61,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Institut national de la santé et de la recherche médicale,533550.0,National Institute of Health and Medical Research,0,62,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Recherche scientifique et technique. - Subventions d'équipement.,76700.0,Economic Action,0,66,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Recherche scientifique et technique. Subventions aux organismes de recherche.,62000.0,Administrative and various equipment,0,67,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Actions de recherche sur programme.,54300.0,"Transport, communications and telecommunications",0,68,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Recherches et développements,2640600.0,General Delegation for Armament,0,69,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Institut de recherche des transports,3000.0,RESEARCH AND TECHNOLOGY,0,73,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,RECHERCHE ET TECHNOLOGIE,23500.0,Research and Technology,0,74,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Institut français de recherche pour l'exploitation des mers,20000.0,Research and Technology,0,75,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Subventions d'équipement à la recherche universitaire,2631.8,University Education,0,78,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,"Taxe perçue pour financer la participation de l'Institut français de recherche pour l’exploitation de la mer aux études, analyses et contrôles de qualité des coquillages",8375.0,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),0,82,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Crédits de paiement pour la recherche,142281.528,Research,0,83,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Crédits de paiement pour la recherche,960064.0,Research and Higher Education,0,84,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Recherche scientifique dans les territoires d'outre-mer,14000.0,Investment Grants Granted by the State,0,85,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Recherche,33790.0,Investment Grants Granted by the State,0,86,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,RECHERCHE ET ENSEIGNEMENT SUPERIEUR,14173240.768,RESEARCH AND HIGHER EDUCATION,0,87,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Etudes dans le domaine de la recherche scientifique et technique,3500.0,RESEARCH AND HIGHER EDUCATION,0,88,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Institut national de la santé et de la recherche médicale,1051763.872,National Institute of Health and Medical Research,0,90,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Centre national de la recherche scientifique et instituts nationaux,104248.913,National Center for Scientific Research,0,93,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Recherche,6743785.0,Research,0,94,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Enseignements supérieurs. - Recherche,99000.0,Higher education. - Research,0,95,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Fonds de la recherche et de la technologie,655000.0,Research and Technology Fund,0,96,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Institut français de recherche pour l'exploitation de la mer,506000.0,French Institute for Research in Exploitation of the Sea,0,97,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Centre national de la recherche scientifique et instituts nationaux,2070000.0,National Center for Scientific Research and National Institutes,0,98,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Institut national de la santé et de la recherche médicale,504400.0,National Institute of Health and Medical Research,0,99,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Fondations de recherche en biologie et en médecine,136680.0,Research Foundations in Biology and Medicine,0,100,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Institut français de recherche scientifique pour le développement en coopération (O.R.S.T.O.M.),172860.0,French Institute for Scientific Research for Development in Cooperation,0,101,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Recherche scientifique et technique. - Subventions aux organismes de recherche,10000.0,Investment Grants Granted by the State,0,103,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Développement de la recherche industrielle et innovation,425000.0,Cultural and Social Equipment,0,104,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Subventions d'équipement à la recherche universitaire,1991.0,Higher Education,0,106,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Subventions d'équipement à la recherche universitaire,500000.0,Higher Education,0,107,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Institut national de la recherche agronomique,437560.0,INRAE (Institut National de Recherche pour l'Agriculture),0,108,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Crédits de paiement pour la recherche,7028600.0,Research,0,109,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Autorisations de programme pour la recherche,21500.0,Research,0,110,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Recherche.,34910.636,Research,0,111,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Recherche.,40000000.0,Research,0,112,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Institut français de recherche pour l'exploitation de la mer,325677.429,RESEARCH AND HIGHER EDUCATION,0,113,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Centre national de la recherche scientifique et instituts nationaux,6753542.773,RESEARCH AND HIGHER EDUCATION,0,114,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Institut national de la santé et de la recherche médicale,1067542.128,RESEARCH AND HIGHER EDUCATION,0,115,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Etudes dans le domaine de la recherche scientifique et technique,2500.0,RESEARCH AND HIGHER EDUCATION,0,117,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Recherche,7050100.0,Research,0,119,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Enseignements supérieurs. - Recherche,132600.0,Higher education. - Research,0,120,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Fonds de la recherche et de la technologie,930000.0,Research and Technology Fund,0,121,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Institut français de recherche pour l'exploitation de la mer,470000.0,French Institute for Research in Exploitation of the Sea,0,122,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Centre national de la recherche scientifique et instituts nationaux,2131000.0,National Center for Scientific Research and National Institutes,0,123,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Institut national de la santé et de la recherche médicale,76000.0,National Institute of Health and Medical Research,0,124,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Fondations de recherche en biologie et en médecine,137700.0,Foundations for Research in Biology and Medicine,0,125,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Subventions d'équipement à la recherche universitaire,1310000.0,Grants for Equipment in University Research,0,127,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Etudes dans le domaine de la recherche scientifique et technique,6367.0,Studies in the field of scientific and technical research,0,131,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Recherche scientifique et technique,9000.0,Scientific and Technical Research,0,132,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Recherche en socio-économie,9500.0,Investment Subsidies Granted by the State,0,133,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Recherche et développement dans le domaine de la consommation,350000.0,Financial Services,0,134,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Institut national de la recherche agronomique,437500.0,INRAE (Institut National de Recherche pour l'Agriculture),0,135,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1990,JORF_1990.pdf,Recherche et technologie,21500.0,Research and Technology,0,137,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1990,JORF_1990.pdf,Services du Premier ministre : 1. - Services généraux,56218.0,Research and Technology,0,138,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1990,JORF_1990.pdf,"Taxe perçue pour financer la participation de l'Institut français de recherche pour l'exploitation de la mer aux études, analyses et contrôles de qualité des coquillages",9875.0,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),0,143,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Enseignement supérieur et recherche,6969678.747,Higher Education and Research,0,144,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,I - Recherche,152443.964,Higher Education and Research,0,145,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,II - Recherche,585488.848,Higher Education and Research,0,146,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Recherche et espace,13000.0,Research and Space,0,148,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Crédits de paiement pour la recherche,12000.0,Research and Space,0,149,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Autres crédits de paiement pour la recherche,1000.0,Research and Space,0,150,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Investissements. - Recherche,9000.0,Investments. - Research,0,152,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Subventions de recherche scientifique,73237.172,Universities and major higher education institutions. - Scientific research grants,0,153,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Subventions d'équipement à la recherche universitaire,1502845.0,Grants for university research equipment,0,154,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Centre national de la recherche scientifique et instituts nationaux,9625687.454,National Center for Scientific Research and National Institutes,0,155,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Institut national de la santé et de la recherche médicale,1671044.181,National Institute of Health and Medical Research,0,156,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Institut national de recherche en informatique et en automatique,267799.773,National Institute for Research in Computer Science and Automation,0,157,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Institut national de recherche agronomique,2546534.794,National Institute for Agronomic Research,0,158,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Centre de coopération internationale en recherche agronomique pour le développement,511723.439,International Center for Agronomic Research for Development,0,160,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Institut français de recherche pour l'exploitation de la mer,424953.866,French Institute for Research and Exploitation of the Sea,0,161,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Institut national de recherche sur les transports et leur sécurité,155574.359,National Institute for Research on Transport and its Safety,0,162,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Recherche scientifique et technique,52980.0,Scientific and Technical Research,0,165,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Institut national de la santé et de la recherche médicale,13880.0,National Institute of Health and Medical Research,0,166,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Subventions en matière de recherche,30300.0,Research Grants,0,167,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Institut national de la recherche agronomique,237489.193,INRAE (Institut National de Recherche pour l'Agriculture),0,168,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Institut national de la recherche agronomique,451480.0,INRAE (Institut National de Recherche pour l'Agriculture),0,169,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2005,JORF_2005.pdf,Recherche,2216963.0,"National Education, Higher Education and Research",0,0,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2005,JORF_2005.pdf,Recherche,1849546.0,"National Education, Higher Education and Research",0,1,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2005,JORF_2005.pdf,Recherche,2082020.0,"National Education, Higher Education and Research",0,2,True
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2007,JORF_2007.pdf,"produit de la contribution mentionnée à l'article 235 ter ZC du code général des impôts perçu en 2007 est affecté, dans la limite de 955 millions d'euros, à l'Agence nationale de la recherche à hauteur de 86,4 %",826320.0,National Research Agency,0,3,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2009,JORF_2009.pdf,Recherche et enseignement supérieur,24507692.154,Research and Higher Education,0,15,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2009,JORF_2009.pdf,Recherches scientifiques et technologiques pluridisciplinaires,5050181.762,Research and Higher Education,0,84,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2009,JORF_2009.pdf,Recherche spatiale,1280247.629,Research and Higher Education,0,85,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2009,JORF_2009.pdf,Recherche et enseignement supérieur en matière économique et industrielle,869305.126,Research and Higher Education,0,86,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2009,JORF_2009.pdf,Recherche culturelle et culture scientifique,157255.909,Research and Higher Education,0,87,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2009,JORF_2009.pdf,Enseignement supérieur et recherche agricoles,296732.542,Research and Higher Education,0,88,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2009,JORF_2009.pdf,Recherche appliquée et innovation en agriculture,63900.0,Research and Higher Education,0,89,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2010,JORF_2010.pdf,Recherche et enseignement supérieur,25357000.0,Research and Higher Education,0,25,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2010,JORF_2010.pdf,Total pour les recherches scientifiques et technologiques pluridisciplinaires,5198000.0,Multidisciplinary Scientific and Technological Research,0,26,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2010,JORF_2010.pdf,Recherche dans le domaine de la gestion des milieux et des ressources,1238000.0,Multidisciplinary Scientific and Technological Research,0,27,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2010,JORF_2010.pdf,Recherche spatiale,1302000.0,Space Research,0,28,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2010,JORF_2010.pdf,Total pour les formations supérieures et recherche universitaire,12500000.0,Higher Education and University Research,0,29,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2011,JORF_2011.pdf,Recherche et enseignement supérieur,25359000.0,Research and Higher Education,0,30,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2012,JORF_2012.pdf,Recherche et enseignement supérieur,240656000.0,Research and Higher Education,0,39,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2012,JORF_2012.pdf,Formations supérieures et recherche universitaire,150239000.0,Higher Education and University Research,0,40,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2012,JORF_2012.pdf,Recherche dans le domaine de la gestion des milieux et des ressources,17199000.0,Multidisciplinary Scientific and Technological Research,0,41,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2012,JORF_2012.pdf,"Recherche dans les domaines de l’énergie, du développement et de l’aménagement durables",4846000.0,Multidisciplinary Scientific and Technological Research,0,42,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2012,JORF_2012.pdf,Mission Recherche et enseignement supérieur,24000000.0,Mission Research and Higher Education,0,43,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2012,JORF_2012.pdf,Crédits de paiement pour la recherche scientifique,5000000.0,Scientific Research,0,46,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2012,JORF_2012.pdf,Crédits de paiement pour la recherche spatiale,1300000.0,Space Research,0,47,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2012,JORF_2012.pdf,Recherche appliquée et innovation en agriculture,55546.75,Research and Higher Education,0,90,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Recherche et enseignement supérieur,247565000.0,Research and Higher Education,0,48,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Formations supérieures et recherche universitaire,157297000.0,Higher Education and University Research,0,49,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Recherche dans le domaine de la gestion des milieux et des ressources,17200000.0,Multidisciplinary Scientific and Technological Research,0,50,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,"Recherche dans les domaines de l’énergie, du développement et de l’aménagement durables",4753000.0,Multidisciplinary Scientific and Technological Research,0,51,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Recherche et enseignement supérieur,25943000.0,Research and Higher Education,0,52,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Total pour les formations supérieures et recherche universitaire,12753000.0,Higher Education and University Research,0,53,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Total pour les recherches scientifiques et technologiques pluridisciplinaires,5158000.0,Multidisciplinary Scientific and Technological Research,0,54,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Recherches scientifiques et technologiques pluridisciplinaires,5158000.0,Multidisciplinary Scientific and Technological Research,0,55,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Total pour la recherche spatiale,1413000.0,Space Research,0,56,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Recherche spatiale,1413000.0,Space Research,0,57,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Recherche appliquée et innovation en agriculture,55546.75,Research and Higher Education,0,91,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2014,JORF_2014.pdf,Recherche et enseignement supérieur,31337733.367,Research and Higher Education,0,58,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2014,JORF_2014.pdf,Recherches scientifiques et technologiques pluridisciplinaires,5053673.242,Research and Higher Education,0,92,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2014,JORF_2014.pdf,Recherche spatiale,1429108.56,Research and Higher Education,0,93,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2014,JORF_2014.pdf,"Recherche dans les domaines de l’énergie, du développement et de la mobilité durables",1390719.166,Research and Higher Education,0,94,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2014,JORF_2014.pdf,Recherche et enseignement supérieur en matière économique et industrielle,984169.961,Research and Higher Education,0,95,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2014,JORF_2014.pdf,Recherche culturelle et culture scientifique,114539.698,Research and Higher Education,0,96,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2014,JORF_2014.pdf,Enseignement supérieur et recherche agricoles,312006.931,Research and Higher Education,0,97,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2014,JORF_2014.pdf,Recherche appliquée et innovation en agriculture,68046.75,Research and Higher Education,0,98,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2015,JORF_2015.pdf,Recherche et enseignement supérieur,25892775.731,Research and Higher Education,0,59,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2015,JORF_2015.pdf,Recherches scientifiques et technologiques pluridisciplinaires,6270005.79,Multidisciplinary Scientific and Technological Research,0,60,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2015,JORF_2015.pdf,Recherche spatiale,1434501.498,Space Research,0,61,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2015,JORF_2015.pdf,"Recherche dans les domaines de l’énergie, du développement et de la mobilité durables",1385813.162,Research and Higher Education,0,99,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2015,JORF_2015.pdf,Recherche et enseignement supérieur en matière économique et industrielle,877712.013,Research and Higher Education,0,100,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2015,JORF_2015.pdf,Recherche culturelle et culture scientifique,117233.198,Research and Higher Education,0,101,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2015,JORF_2015.pdf,Enseignement supérieur et recherche agricoles,329442.176,Research and Higher Education,0,102,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2015,JORF_2015.pdf,Recherche appliquée et innovation en agriculture,76946.75,Research and Higher Education,0,103,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour les recherches scientifiques et technologiques pluridisciplinaires,70522000.0,Scientific Research,0,63,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour la recherche spatiale,2417000.0,Space Research,0,64,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,"Crédits de paiement pour la recherche dans les domaines de l’énergie, du développement et de la mobilité durables",4486000.0,"Research in the fields of energy, development, and sustainable mobility",0,65,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour la recherche et l'enseignement supérieur en matière économique et industrielle,2243000.0,Research and higher education in economic and industrial matters,0,66,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour la recherche culturelle et la culture scientifique,1061000.0,Cultural research and scientific culture,0,67,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour l'enseignement supérieur et la recherche agricoles,1215000.0,Higher education and agricultural research,0,68,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Recherche et enseignement supérieur,24000000.0,Research and Higher Education,0,69,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour les recherches scientifiques et technologiques pluridisciplinaires,6248000.0,Multidisciplinary Scientific and Technological Research,0,70,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour la recherche spatiale,1371000.0,Space Research,0,71,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,"Crédits de paiement pour la recherche dans les domaines de l’énergie, du développement et de la mobilité durables",1724000.0,"Research in the fields of energy, development, and sustainable mobility",0,72,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour la recherche et l'enseignement supérieur en matière économique et industrielle,831000.0,Research and Higher Education in Economic and Industrial Matters,0,73,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour la recherche culturelle et la culture scientifique,122000.0,Cultural Research and Scientific Culture,0,74,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour l'enseignement supérieur et la recherche agricoles,330000.0,Higher Education and Agricultural Research,0,75,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour la recherche appliquée et l'innovation en agriculture,76000.0,Applied Research and Innovation in Agriculture,0,76,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Recherches scientifiques et technologiques pluridisciplinaires,6248944.468,Research and Higher Education,0,104,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Recherche spatiale,1371719.89,Research and Higher Education,0,105,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,"Recherche dans les domaines de l’énergie, du développement et de la mobilité durables",1724069.888,Research and Higher Education,0,106,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Recherche et enseignement supérieur en matière économique et industrielle,831568.057,Research and Higher Education,0,107,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Recherche culturelle et culture scientifique,122147.698,Research and Higher Education,0,108,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Enseignement supérieur et recherche agricoles,330927.317,Research and Higher Education,0,109,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Recherche appliquée et innovation en agriculture,76946.75,Research and Higher Education,0,110,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Recherche et enseignement supérieur,27048000.0,Research and Higher Education,0,77,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Total pour les formations supérieures et recherche universitaire,13264000.0,Higher Education and University Research,0,78,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Total pour les recherches scientifiques et technologiques pluridisciplinaires,6513000.0,Multidisciplinary Scientific and Technological Research,0,79,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Total pour la recherche spatiale,1466000.0,Space Research,0,80,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Crédits de paiement pour les recherches scientifiques et technologiques pluridisciplinaires,6423000.0,Multidisciplinary Scientific and Technological Research,0,81,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Crédits de paiement pour la recherche spatiale,1466000.0,Space Research,0,82,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Recherches scientifiques et technologiques pluridisciplinaires,6423915.122,Research and Higher Education,0,111,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Recherche spatiale,1466584.352,Research and Higher Education,0,112,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,"Recherche dans les domaines de l’énergie, du développement et de la mobilité durables",1712980.867,Research and Higher Education,0,113,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Recherche et enseignement supérieur en matière économique et industrielle,794609.301,Research and Higher Education,0,114,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Recherche culturelle et culture scientifique,116570.698,Research and Higher Education,0,115,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Enseignement supérieur et recherche agricoles,339670.121,Research and Higher Education,0,116,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Recherche appliquée et innovation en agriculture,76946.75,Research and Higher Education,0,117,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2018,JORF_2018.pdf,Formations supérieures et recherche universitaire,164776000.0,Higher Education and University Research,0,83,False
-Research (Pre-LOLF Ministry Chapter),rd_ministry,2018,JORF_2018.pdf,Recherche appliquée et innovation en agriculture,71000.0,Research and Higher Education,0,118,False
-Research and Higher Education in Economic and Industrial Matters,rd_programme,2009,JORF_2009.pdf,Research and higher education in economic and industrial matters,999905.126,Research and Higher Education in Economic and Industrial Matters,0,22,True
-Research and Higher Education in Economic and Industrial Matters,rd_programme,2009,JORF_2009.pdf,Recherche et enseignement supérieur en matière économique et industrielle,869305.126,Research and Higher Education,0,86,True
-Research and Higher Education in Economic and Industrial Matters,rd_programme,2011,JORF_2011.pdf,Total for research and higher education in economic and industrial matters,1087000.0,Research and Higher Education in Economic and Industrial Matters,0,36,True
-Research and Higher Education in Economic and Industrial Matters,rd_programme,2014,JORF_2014.pdf,Recherche et enseignement supérieur en matière économique et industrielle,984169.961,Research and Higher Education,0,95,True
-Research and Higher Education in Economic and Industrial Matters,rd_programme,2015,JORF_2015.pdf,Recherche et enseignement supérieur en matière économique et industrielle,877712.013,Research and Higher Education,0,100,True
-Research and Higher Education in Economic and Industrial Matters,rd_programme,2016,JORF_2016.pdf,Recherche et enseignement supérieur en matière économique et industrielle,831568.057,Research and Higher Education,0,107,True
-Research and Higher Education in Economic and Industrial Matters,rd_programme,2017,JORF_2017.pdf,Recherche et enseignement supérieur en matière économique et industrielle,794609.301,Research and Higher Education,0,114,True
-Space Research,rd_programme,2008,JORF_2008.pdf,Total for Space Research,1277000.0,Space Research,0,7,True
-Space Research,rd_programme,2009,JORF_2009.pdf,Space research,1280247.629,Space Research,0,19,True
-Space Research,rd_programme,2009,JORF_2009.pdf,Recherche spatiale,1280247.629,Research and Higher Education,0,85,True
-Space Research,rd_programme,2010,JORF_2010.pdf,Recherche spatiale,1302000.0,Space Research,0,28,True
-Space Research,rd_programme,2011,JORF_2011.pdf,Total for space research,1392000.0,Space Research,0,34,True
-Space Research,rd_programme,2012,JORF_2012.pdf,Crédits de paiement pour la recherche spatiale,1300000.0,Space Research,0,47,True
-Space Research,rd_programme,2013,JORF_2013.pdf,Total pour la recherche spatiale,1413000.0,Space Research,0,56,True
-Space Research,rd_programme,2013,JORF_2013.pdf,Recherche spatiale,1413000.0,Space Research,0,57,True
-Space Research,rd_programme,2014,JORF_2014.pdf,Recherche spatiale,1429108.56,Research and Higher Education,0,93,True
-Space Research,rd_programme,2015,JORF_2015.pdf,Recherche spatiale,1434501.498,Space Research,0,61,True
-Space Research,rd_programme,2016,JORF_2016.pdf,Crédits de paiement pour la recherche spatiale,2417000.0,Space Research,0,64,True
-Space Research,rd_programme,2016,JORF_2016.pdf,Crédits de paiement pour la recherche spatiale,1371000.0,Space Research,0,71,True
-Space Research,rd_programme,2016,JORF_2016.pdf,Recherche spatiale,1371719.89,Research and Higher Education,0,105,True
-Space Research,rd_programme,2017,JORF_2017.pdf,Total pour la recherche spatiale,1466000.0,Space Research,0,80,True
-Space Research,rd_programme,2017,JORF_2017.pdf,Crédits de paiement pour la recherche spatiale,1466000.0,Space Research,0,82,True
-Space Research,rd_programme,2017,JORF_2017.pdf,Recherche spatiale,1466584.352,Research and Higher Education,0,112,True
-Strategic and Pre-Strategic Engines,direct_rd,1986,JORF_1986.pdf,Engins stratégiques et préstratégiques,7242000.0,General Delegation for Armament,0,71,True
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,1977,JORF_1977.pdf,Crédits de paiement pour les universités,895448.0,Universities,0,6,True
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,1978,JORF_1978.pdf,Crédits de paiement pour les Universités,845351.0,Universities,0,9,True
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,1979,JORF_1979.pdf,Universités,204620.0,Universities,0,15,True
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,1987,JORF_1987.pdf,RECHERCHE ET ENSEIGNEMENT SUPERIEUR,14173240.768,RESEARCH AND HIGHER EDUCATION,0,87,True
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,1994,JORF_1994.pdf,Enseignement supérieur et recherche,6969678.747,Higher Education and Research,0,144,True
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,1994,JORF_1994.pdf,I - Enseignement supérieur,610571.757,Higher Education and Research,0,147,True
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,1994,JORF_1994.pdf,Universités,0.0,Universities,0,151,True
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2009,JORF_2009.pdf,Recherche et enseignement supérieur,24507692.154,Research and Higher Education,0,15,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2009,JORF_2009.pdf,Recherche et enseignement supérieur en matière économique et industrielle,869305.126,Research and Higher Education,0,86,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2009,JORF_2009.pdf,Enseignement supérieur et recherche agricoles,296732.542,Research and Higher Education,0,88,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2010,JORF_2010.pdf,Recherche et enseignement supérieur,25357000.0,Research and Higher Education,0,25,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2011,JORF_2011.pdf,Recherche et enseignement supérieur,25359000.0,Research and Higher Education,0,30,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2012,JORF_2012.pdf,Recherche et enseignement supérieur,240656000.0,Research and Higher Education,0,39,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2012,JORF_2012.pdf,Mission Recherche et enseignement supérieur,24000000.0,Mission Research and Higher Education,0,43,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2013,JORF_2013.pdf,Recherche et enseignement supérieur,247565000.0,Research and Higher Education,0,48,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2013,JORF_2013.pdf,Recherche et enseignement supérieur,25943000.0,Research and Higher Education,0,52,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2014,JORF_2014.pdf,Recherche et enseignement supérieur,31337733.367,Research and Higher Education,0,58,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2014,JORF_2014.pdf,Recherche et enseignement supérieur en matière économique et industrielle,984169.961,Research and Higher Education,0,95,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2014,JORF_2014.pdf,Enseignement supérieur et recherche agricoles,312006.931,Research and Higher Education,0,97,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2015,JORF_2015.pdf,Recherche et enseignement supérieur,25892775.731,Research and Higher Education,0,59,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2015,JORF_2015.pdf,Recherche et enseignement supérieur en matière économique et industrielle,877712.013,Research and Higher Education,0,100,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2015,JORF_2015.pdf,Enseignement supérieur et recherche agricoles,329442.176,Research and Higher Education,0,102,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2016,JORF_2016.pdf,Crédits de paiement pour la recherche et l'enseignement supérieur en matière économique et industrielle,2243000.0,Research and higher education in economic and industrial matters,0,66,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2016,JORF_2016.pdf,Crédits de paiement pour l'enseignement supérieur et la recherche agricoles,1215000.0,Higher education and agricultural research,0,68,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2016,JORF_2016.pdf,Recherche et enseignement supérieur,24000000.0,Research and Higher Education,0,69,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2016,JORF_2016.pdf,Crédits de paiement pour la recherche et l'enseignement supérieur en matière économique et industrielle,831000.0,Research and Higher Education in Economic and Industrial Matters,0,73,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2016,JORF_2016.pdf,Crédits de paiement pour l'enseignement supérieur et la recherche agricoles,330000.0,Higher Education and Agricultural Research,0,75,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2016,JORF_2016.pdf,Recherche et enseignement supérieur en matière économique et industrielle,831568.057,Research and Higher Education,0,107,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2016,JORF_2016.pdf,Enseignement supérieur et recherche agricoles,330927.317,Research and Higher Education,0,109,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2017,JORF_2017.pdf,Recherche et enseignement supérieur,27048000.0,Research and Higher Education,0,77,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2017,JORF_2017.pdf,Recherche et enseignement supérieur en matière économique et industrielle,794609.301,Research and Higher Education,0,114,False
-Universities and Higher Education (Pre-LOLF Chapter),higher_education,2017,JORF_2017.pdf,Enseignement supérieur et recherche agricoles,339670.121,Research and Higher Education,0,116,False
+ANR (Agence Nationale de la Recherche),science_agency,2007,JORF_2007.pdf,"produit de la contribution mentionnée à l'article 235 ter ZC du code général des impôts perçu en 2007 est affecté, dans la limite de 955 millions d'euros, à l'Agence nationale de la recherche à hauteur de 86,4 %",826320.0,National Research Agency,0,177,True
+Agricultural research and higher education,higher_education,2008,JORF_2008.pdf,Agricultural research and higher education,278000.0,Multidisciplinary Scientific and Technological Research,0,188,True
+BRGM (Bureau de Recherches Géologiques et Minières),science_agency,1978,JORF_1978.pdf,BRGM appropriation,15800.0,BRGM (Bureau de Recherches Géologiques et Minières),0,13,True
+BRGM (Bureau de Recherches Géologiques et Minières),science_agency,1978,JORF_1978.pdf,BRGM evaluation,12500.0,BRGM (Bureau de Recherches Géologiques et Minières),0,14,True
+BRGM (Bureau de Recherches Géologiques et Minières),science_agency,1978,JORF_1978.pdf,BRGM total,435300.0,BRGM (Bureau de Recherches Géologiques et Minières),0,15,True
+CEA (Commissariat à l'Énergie Atomique),science_agency,1984,JORF_1984.pdf,Crédits de paiement pour le CEA,4000.0,Atomic Energy Commission,0,33,True
+CEA (Commissariat à l'Énergie Atomique),science_agency,1987,JORF_1987.pdf,Commissariat à l'énergie atomique,1628000.0,Atomic Energy Commission,0,94,True
+CEA (Commissariat à l'Énergie Atomique),science_agency,1988,JORF_1988.pdf,Commissariat à l'énergie atomique,1633780.0,RESEARCH AND HIGHER EDUCATION,0,119,True
+CEA (Commissariat à l'Énergie Atomique),science_agency,1988,JORF_1988.pdf,Commissariat à l'énergie atomique,3022000.0,Atomic Energy Commission,0,131,True
+CEA (Commissariat à l'Énergie Atomique),science_agency,1988,JORF_1988.pdf,Commissariat à l'énergie atomique,561000.0,Atomic Energy Commission,0,132,True
+CEA (Commissariat à l'Énergie Atomique),science_agency,1994,JORF_1994.pdf,Commissariat à l'énergie atomique,3512532.433,Atomic Energy Commission,0,166,True
+CEA (Commissariat à l'Énergie Atomique),science_agency,1994,JORF_1994.pdf,Commissariat à l'énergie atomique,3477513.6,Atomic Energy Commission,0,167,True
+CEA (Commissariat à l'Énergie Atomique),science_agency,2025,JORF_2025.pdf,Gies alternatives (CEA),875000000.0,CEA (Commissariat à l'Énergie Atomique),0,310,True
+CEA (Commissariat à l'Énergie Atomique),science_agency,2025,JORF_2025.pdf,Gies alternatives (CEA),240000000.0,CEA (Commissariat à l'Énergie Atomique),0,311,True
+CNES (Centre National d'Études Spatiales),science_agency,1986,JORF_1986.pdf,Centre national d'études spatiales,637524.095,CNES (Centre National d'Études Spatiales),0,82,True
+CNES (Centre National d'Études Spatiales),science_agency,1987,JORF_1987.pdf,Centre national d'études spatiales,646170.095,National Center for Space Studies,0,95,True
+CNES (Centre National d'Études Spatiales),science_agency,1988,JORF_1988.pdf,Centre national d'études spatiales,261000.0,CNES (Centre National d'Études Spatiales),0,139,True
+CNES (Centre National d'Études Spatiales),science_agency,1994,JORF_1994.pdf,Centre national d'études spatiales,850374.925,National Center for Space Studies,0,162,True
+CNRS (Centre National de la Recherche Scientifique),science_agency,1984,JORF_1984.pdf,Crédits de paiement pour le CNRS,5000.0,National Center for Scientific Research,0,31,False
+CNRS (Centre National de la Recherche Scientifique),science_agency,1986,JORF_1986.pdf,Centre national de la recherche scientifique et instituts nationaux,2020165.0,National Center for Scientific Research and National Institutes,0,64,False
+CNRS (Centre National de la Recherche Scientifique),science_agency,1987,JORF_1987.pdf,Centre national de la recherche scientifique et instituts nationaux,104248.913,National Center for Scientific Research,0,96,False
+CNRS (Centre National de la Recherche Scientifique),science_agency,1987,JORF_1987.pdf,Centre national de la recherche scientifique et instituts nationaux,2070000.0,National Center for Scientific Research and National Institutes,0,101,False
+CNRS (Centre National de la Recherche Scientifique),science_agency,1988,JORF_1988.pdf,Centre national de la recherche scientifique et instituts nationaux,6753542.773,RESEARCH AND HIGHER EDUCATION,0,117,False
+CNRS (Centre National de la Recherche Scientifique),science_agency,1988,JORF_1988.pdf,Centre national de la recherche scientifique et instituts nationaux,2131000.0,National Center for Scientific Research and National Institutes,0,126,False
+CNRS (Centre National de la Recherche Scientifique),science_agency,1994,JORF_1994.pdf,Centre national de la recherche scientifique et instituts nationaux,9625687.454,National Center for Scientific Research and National Institutes,0,158,False
+Cultural Research and Scientific Culture,rd_programme,2008,JORF_2008.pdf,Cultural research and scientific culture,159000.0,Multidisciplinary Scientific and Technological Research,0,187,True
+Cultural Research and Scientific Culture,rd_programme,2009,JORF_2009.pdf,Cultural research and scientific culture,159805.909,Cultural Research and Scientific Culture,0,198,True
+Cultural Research and Scientific Culture,rd_programme,2009,JORF_2009.pdf,Recherche culturelle et culture scientifique,157255.909,Research and Higher Education,0,315,True
+Cultural Research and Scientific Culture,rd_programme,2011,JORF_2011.pdf,Total for cultural research and scientific culture,125000.0,Cultural Research and Scientific Culture,0,211,True
+Cultural Research and Scientific Culture,rd_programme,2014,JORF_2014.pdf,Recherche culturelle et culture scientifique,114539.698,Research and Higher Education,0,324,True
+Cultural Research and Scientific Culture,rd_programme,2015,JORF_2015.pdf,Recherche culturelle et culture scientifique,117233.198,Research and Higher Education,0,329,True
+Cultural Research and Scientific Culture,rd_programme,2016,JORF_2016.pdf,Recherche culturelle et culture scientifique,122147.698,Research and Higher Education,0,336,True
+Cultural Research and Scientific Culture,rd_programme,2017,JORF_2017.pdf,Recherche culturelle et culture scientifique,116570.698,Research and Higher Education,0,343,True
+Cultural Research and Scientific Culture,rd_programme,2020,JORF_2020.pdf,Recherche culturelle et culture scientifique,109883.828,Research and Higher Education,0,351,True
+French Agency for Energy Management,science_agency,1988,JORF_1988.pdf,Agence française pour la maîtrise de l'énergie,248750.0,French Agency for Energy Management,0,133,True
+Higher Education and Agricultural Research,rd_programme,2009,JORF_2009.pdf,Enseignement supérieur et recherche agricoles,296732.542,Research and Higher Education,0,316,True
+Higher Education and Agricultural Research,rd_programme,2011,JORF_2011.pdf,Total for higher education and agricultural research,298000.0,Higher Education and Agricultural Research,0,212,True
+Higher Education and Agricultural Research,rd_programme,2014,JORF_2014.pdf,Enseignement supérieur et recherche agricoles,312006.931,Research and Higher Education,0,325,True
+Higher Education and Agricultural Research,rd_programme,2015,JORF_2015.pdf,Enseignement supérieur et recherche agricoles,329442.176,Research and Higher Education,0,330,True
+Higher Education and Agricultural Research,rd_programme,2016,JORF_2016.pdf,Enseignement supérieur et recherche agricoles,330927.317,Research and Higher Education,0,337,True
+Higher Education and Agricultural Research,rd_programme,2017,JORF_2017.pdf,Enseignement supérieur et recherche agricoles,339670.121,Research and Higher Education,0,344,True
+Higher Education and Agricultural Research,rd_programme,2020,JORF_2020.pdf,Enseignement supérieur et recherche agricoles,356736.16,Research and Higher Education,0,352,True
+Higher Education and Agricultural Research,rd_programme,2021,JORF_2021.pdf,Enseignement supérieur et recherche agricoles,363112.976,Research and Higher Education,0,358,True
+Higher Education and Agricultural Research,rd_programme,2022,JORF_2022.pdf,Enseignement supérieur et recherche agricoles,377978.973,Higher Education and Agricultural Research,0,283,True
+Higher Education and Agricultural Research,rd_programme,2023,JORF_2023.pdf,Enseignement supérieur et recherche agricoles,424396.462,Research and Higher Education,0,363,True
+Higher Education and Agricultural Research,rd_programme,2024,JORF_2024.pdf,Enseignement supérieur et recherche agricoles,443008.004,Research and Higher Education,0,369,True
+Higher Education and Agricultural Research,rd_programme,2025,JORF_2025.pdf,Enseignement supérieur et recherche agricoles,421859.182,Research and Higher Education,0,371,True
+IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,1986,JORF_1986.pdf,"Taxe perçue pour financer la participation de l'IFREMER aux études, analyses et contrôles de qualité sur les fabrications des conserves et semi-conserves de poissons",498000.0,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),0,83,True
+IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,1987,JORF_1987.pdf,Institut français de recherche pour l'exploitation de la mer,506000.0,French Institute for Research in Exploitation of the Sea,0,100,True
+IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,1988,JORF_1988.pdf,Institut français de recherche pour l'exploitation de la mer,325677.429,RESEARCH AND HIGHER EDUCATION,0,116,True
+IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,1988,JORF_1988.pdf,Institut français de recherche pour l'exploitation de la mer,470000.0,French Institute for Research in Exploitation of the Sea,0,125,True
+IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,1990,JORF_1990.pdf,"Taxe perçue pour financer la participation de l'IFREMER aux études, analyses et contrôles de qualité sur les fabrications des conserves et semi-conserves de poissons",5000.0,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),0,145,True
+IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,1990,JORF_1990.pdf,"Taxe perçue pour financer la participation de l'Institut français de recherche pour l'exploitation de la mer aux études, analyses et contrôles de qualité des coquillages",9875.0,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),0,146,True
+IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),science_agency,1994,JORF_1994.pdf,Institut français de recherche pour l'exploitation de la mer,424953.866,French Institute for Research and Exploitation of the Sea,0,164,True
+INRAE (Institut National de Recherche pour l'Agriculture),science_agency,1987,JORF_1987.pdf,Institut national de la recherche agronomique,437560.0,INRAE (Institut National de Recherche pour l'Agriculture),0,111,True
+INRAE (Institut National de Recherche pour l'Agriculture),science_agency,1988,JORF_1988.pdf,Institut national de la recherche agronomique,437500.0,INRAE (Institut National de Recherche pour l'Agriculture),0,138,True
+INRAE (Institut National de Recherche pour l'Agriculture),science_agency,1994,JORF_1994.pdf,Institut national de la recherche agronomique,237489.193,INRAE (Institut National de Recherche pour l'Agriculture),0,171,True
+INRAE (Institut National de Recherche pour l'Agriculture),science_agency,1994,JORF_1994.pdf,Institut national de la recherche agronomique,451480.0,INRAE (Institut National de Recherche pour l'Agriculture),0,172,True
+INRIA (Institut National de Recherche en Informatique),science_agency,1984,JORF_1984.pdf,Crédits de paiement pour l'INRIA,2000.0,National Institute for Research in Computer Science and Automation,0,34,True
+INRIA (Institut National de Recherche en Informatique),science_agency,1984,JORF_1984.pdf,Institut national de recherche en informatique et en automatique,6025.0,Research and Industry,0,40,True
+INRIA (Institut National de Recherche en Informatique),science_agency,1994,JORF_1994.pdf,Institut national de recherche en informatique et en automatique,267799.773,National Institute for Research in Computer Science and Automation,0,160,True
+INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,1984,JORF_1984.pdf,Crédits de paiement pour l'INSERM,3000.0,National Institute of Health and Medical Research,0,32,True
+INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,1986,JORF_1986.pdf,Institut national de la santé et de la recherche médicale,533550.0,National Institute of Health and Medical Research,0,65,True
+INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,1987,JORF_1987.pdf,Institut national de la santé et de la recherche médicale,1051763.872,National Institute of Health and Medical Research,0,93,True
+INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,1987,JORF_1987.pdf,Institut national de la santé et de la recherche médicale,504400.0,National Institute of Health and Medical Research,0,102,True
+INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,1988,JORF_1988.pdf,Institut national de la santé et de la recherche médicale,1067542.128,RESEARCH AND HIGHER EDUCATION,0,118,True
+INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,1988,JORF_1988.pdf,Institut national de la santé et de la recherche médicale,76000.0,National Institute of Health and Medical Research,0,127,True
+INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,1994,JORF_1994.pdf,Institut national de la santé et de la recherche médicale,1671044.181,National Institute of Health and Medical Research,0,159,True
+INSERM (Institut National de la Santé et de la Recherche Médicale),science_agency,1994,JORF_1994.pdf,Institut national de la santé et de la recherche médicale,13880.0,National Institute of Health and Medical Research,0,169,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2008,JORF_2008.pdf,Total for Multidisciplinary Scientific and Technological Research,4982000.0,Multidisciplinary Scientific and Technological Research,0,180,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2009,JORF_2009.pdf,Total for multidisciplinary scientific and technological research,5082181.762,Multidisciplinary Scientific and Technological Research,0,191,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2009,JORF_2009.pdf,Recherches scientifiques et technologiques pluridisciplinaires,5050181.762,Research and Higher Education,0,312,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2010,JORF_2010.pdf,Total pour les recherches scientifiques et technologiques pluridisciplinaires,5198000.0,Multidisciplinary Scientific and Technological Research,0,200,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2011,JORF_2011.pdf,Total for multidisciplinary scientific and technological research,5124000.0,Multidisciplinary Scientific and Technological Research,0,206,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2013,JORF_2013.pdf,Total pour les recherches scientifiques et technologiques pluridisciplinaires,5158000.0,Multidisciplinary Scientific and Technological Research,0,228,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2013,JORF_2013.pdf,Recherches scientifiques et technologiques pluridisciplinaires,5158000.0,Multidisciplinary Scientific and Technological Research,0,229,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2014,JORF_2014.pdf,Recherches scientifiques et technologiques pluridisciplinaires,5053673.242,Research and Higher Education,0,320,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2015,JORF_2015.pdf,Recherches scientifiques et technologiques pluridisciplinaires,6270005.79,Multidisciplinary Scientific and Technological Research,0,234,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2016,JORF_2016.pdf,Crédits de paiement pour les recherches scientifiques et technologiques pluridisciplinaires,70522000.0,Scientific Research,0,237,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2016,JORF_2016.pdf,Crédits de paiement pour les recherches scientifiques et technologiques pluridisciplinaires,6248000.0,Multidisciplinary Scientific and Technological Research,0,244,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2016,JORF_2016.pdf,Recherches scientifiques et technologiques pluridisciplinaires,6248944.468,Research and Higher Education,0,332,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2017,JORF_2017.pdf,Total pour les recherches scientifiques et technologiques pluridisciplinaires,6513000.0,Multidisciplinary Scientific and Technological Research,0,253,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2017,JORF_2017.pdf,Crédits de paiement pour les recherches scientifiques et technologiques pluridisciplinaires,6423000.0,Multidisciplinary Scientific and Technological Research,0,255,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2017,JORF_2017.pdf,Recherches scientifiques et technologiques pluridisciplinaires,6423915.122,Research and Higher Education,0,339,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2020,JORF_2020.pdf,Recherches scientifiques et technologiques pluridisciplinaires,6941119.469,Research and Higher Education,0,347,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2021,JORF_2021.pdf,Total pour les recherches scientifiques et technologiques pluridisciplinaires,7315288.458,Multidisciplinary Scientific and Technological Research,0,264,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2021,JORF_2021.pdf,Crédits de paiement pour les recherches scientifiques et technologiques pluridisciplinaires,7163123.272,Multidisciplinary Scientific and Technological Research,0,266,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2021,JORF_2021.pdf,Recherches scientifiques et technologiques pluridisciplinaires,7163123.272,Research and Higher Education,0,354,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2022,JORF_2022.pdf,Total for Multidisciplinary Scientific and Technological Research,65976000.0,Multidisciplinary Scientific and Technological Research,0,269,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2022,JORF_2022.pdf,Recherches scientifiques et technologiques pluridisciplinaires,7503175.364,Multidisciplinary Scientific and Technological Research,0,279,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2023,JORF_2023.pdf,Total for Multidisciplinary Scientific and Technological Research,7833527.751,Multidisciplinary Scientific and Technological Research,0,286,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2023,JORF_2023.pdf,Recherches scientifiques et technologiques pluridisciplinaires,7833527.751,Multidisciplinary Scientific and Technological Research,0,287,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2024,JORF_2024.pdf,Total for multidisciplinary scientific and technological research,62785000.0,Multidisciplinary Scientific and Technological Research,0,293,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2024,JORF_2024.pdf,Crédits de paiement pour les recherches scientifiques et technologiques pluridisciplinaires,5000000.0,Multidisciplinary Scientific and Technological Research,0,295,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2024,JORF_2024.pdf,Recherches scientifiques et technologiques pluridisciplinaires,8201401.634,Research and Higher Education,0,365,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2025,JORF_2025.pdf,Total for Multidisciplinary Scientific and Technological Research,8168000.0,Multidisciplinary Scientific and Technological Research,0,299,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2025,JORF_2025.pdf,Recherches scientifiques et technologiques pluridisciplinaires,8609000.0,Multidisciplinary Scientific and Technological Research,0,301,True
+Multidisciplinary Scientific and Technological Research,rd_programme,2025,JORF_2025.pdf,Crédits de paiement pour les recherches scientifiques et technologiques pluridisciplinaires,5000000.0,Multidisciplinary Scientific and Technological Research,0,309,True
+Pasteur Institute of Paris,science_agency,1986,JORF_1986.pdf,Institut Pasteur de Paris,115130.0,Pasteur Institute of Paris,0,66,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1970,JORF_1970.pdf,Contrats pour le développement des résultats de la recherche,12000.0,Prime Minister's Services,0,1,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1972,JORF_1972.pdf,Subvention pour la recherche en socio-économie,0.0,Research,0,4,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1977,JORF_1977.pdf,Industrie et recherche,22238.0,Ministry of Research,0,7,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1977,JORF_1977.pdf,Crédits de paiement pour la recherche,22338.0,Ministry of Research,0,8,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1978,JORF_1978.pdf,Crédits de paiement pour la recherche,298475.0,Research,0,10,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1978,JORF_1978.pdf,Recherche,1020.0,Research,0,11,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1979,JORF_1979.pdf,Subventions de fonctionnement pour la recherche scientifique,270000.0,Universities,0,16,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1979,JORF_1979.pdf,Subventions de recherche scientifique,3755.0,Universities,0,17,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1979,JORF_1979.pdf,Subventions d’équipement à la recherche médicale.,5000.0,Universities,0,19,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1981,JORF_1981.pdf,Services du Premier Ministre. — Recherche,18930.89,Prime Minister's Services — Research,0,20,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1981,JORF_1981.pdf,Services du Premier ministre. — Recherche,120093.0,Prime Minister's Office. — Research,0,23,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1982,JORF_1982.pdf,Crédits de paiement pour la recherche et technologie,5611.994,Research and Technology,0,25,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1982,JORF_1982.pdf,Crédits de paiement pour la recherche et technologie,5600.244,Research and Technology,0,26,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1983,JORF_1983.pdf,Recherche et Industrie,2111643.81,Research and Industry,0,27,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1983,JORF_1983.pdf,Crédits de paiement pour la recherche scientifique et technique,2012990.279,Research,0,29,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1984,JORF_1984.pdf,Crédits de paiement pour la recherche,11000.0,Research,0,30,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1984,JORF_1984.pdf,Recherche,183805.0,Research,0,35,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1984,JORF_1984.pdf,Favoriser la recherche et l’innovation,60342.0,Research,0,36,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1984,JORF_1984.pdf,Dépenses ordinaires pour la recherche et l’innovation,519000.0,Research,0,37,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1984,JORF_1984.pdf,Autorisation de programme pour la recherche et l’innovation,10164.0,Research,0,38,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1984,JORF_1984.pdf,Recherche et industrie,48085.0,Research and Industry,0,39,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1984,JORF_1984.pdf,Institut national de recherche en informatique et en automatique,6025.0,Research and Industry,0,40,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1984,JORF_1984.pdf,Recherche scientifique et technique. — Subventions aux organismes de recherche.,12800.0,Research and Industry,0,42,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1985,JORF_1985.pdf,Recherche,5401.0,Research,0,44,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1985,JORF_1985.pdf,Fonds de la recherche et de la technologie,50076.0,Research,0,46,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Recherche et technologie,3000.0,Research and Technology,0,52,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Budget civil de recherche et de développement,1500.0,Civil research and development budget,0,53,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Enveloppe recherche,49000.0,Research envelope,0,54,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Enveloppe recherche,8000.0,Research envelope,0,55,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Enveloppe recherche,32000.0,Research envelope,0,56,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Fonds de la recherche et de la technologie,1003000.0,Research and Technology Fund,0,63,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Centre national de la recherche scientifique et instituts nationaux,2020165.0,National Center for Scientific Research and National Institutes,0,64,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Institut national de la santé et de la recherche médicale,533550.0,National Institute of Health and Medical Research,0,65,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Recherche scientifique et technique. - Subventions d'équipement.,76700.0,Economic Action,0,69,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Recherche scientifique et technique. Subventions aux organismes de recherche.,62000.0,Administrative and various equipment,0,70,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Actions de recherche sur programme.,54300.0,"Transport, communications and telecommunications",0,71,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Recherches et développements,2640600.0,General Delegation for Armament,0,72,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Institut de recherche des transports,3000.0,RESEARCH AND TECHNOLOGY,0,76,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,RECHERCHE ET TECHNOLOGIE,23500.0,Research and Technology,0,77,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Institut français de recherche pour l'exploitation des mers,20000.0,Research and Technology,0,78,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,Subventions d'équipement à la recherche universitaire,2631.8,University Education,0,81,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1986,JORF_1986.pdf,"Taxe perçue pour financer la participation de l'Institut français de recherche pour l’exploitation de la mer aux études, analyses et contrôles de qualité des coquillages",8375.0,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),0,85,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Crédits de paiement pour la recherche,142281.528,Research,0,86,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Crédits de paiement pour la recherche,960064.0,Research and Higher Education,0,87,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Recherche scientifique dans les territoires d'outre-mer,14000.0,Investment Grants Granted by the State,0,88,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Recherche,33790.0,Investment Grants Granted by the State,0,89,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,RECHERCHE ET ENSEIGNEMENT SUPERIEUR,14173240.768,RESEARCH AND HIGHER EDUCATION,0,90,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Etudes dans le domaine de la recherche scientifique et technique,3500.0,RESEARCH AND HIGHER EDUCATION,0,91,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Institut national de la santé et de la recherche médicale,1051763.872,National Institute of Health and Medical Research,0,93,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Centre national de la recherche scientifique et instituts nationaux,104248.913,National Center for Scientific Research,0,96,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Recherche,6743785.0,Research,0,97,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Enseignements supérieurs. - Recherche,99000.0,Higher education. - Research,0,98,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Fonds de la recherche et de la technologie,655000.0,Research and Technology Fund,0,99,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Institut français de recherche pour l'exploitation de la mer,506000.0,French Institute for Research in Exploitation of the Sea,0,100,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Centre national de la recherche scientifique et instituts nationaux,2070000.0,National Center for Scientific Research and National Institutes,0,101,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Institut national de la santé et de la recherche médicale,504400.0,National Institute of Health and Medical Research,0,102,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Fondations de recherche en biologie et en médecine,136680.0,Research Foundations in Biology and Medicine,0,103,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Institut français de recherche scientifique pour le développement en coopération (O.R.S.T.O.M.),172860.0,French Institute for Scientific Research for Development in Cooperation,0,104,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Recherche scientifique et technique. - Subventions aux organismes de recherche,10000.0,Investment Grants Granted by the State,0,106,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Développement de la recherche industrielle et innovation,425000.0,Cultural and Social Equipment,0,107,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Subventions d'équipement à la recherche universitaire,1991.0,Higher Education,0,109,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Subventions d'équipement à la recherche universitaire,500000.0,Higher Education,0,110,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1987,JORF_1987.pdf,Institut national de la recherche agronomique,437560.0,INRAE (Institut National de Recherche pour l'Agriculture),0,111,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Crédits de paiement pour la recherche,7028600.0,Research,0,112,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Autorisations de programme pour la recherche,21500.0,Research,0,113,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Recherche.,34910.636,Research,0,114,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Recherche.,40000000.0,Research,0,115,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Institut français de recherche pour l'exploitation de la mer,325677.429,RESEARCH AND HIGHER EDUCATION,0,116,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Centre national de la recherche scientifique et instituts nationaux,6753542.773,RESEARCH AND HIGHER EDUCATION,0,117,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Institut national de la santé et de la recherche médicale,1067542.128,RESEARCH AND HIGHER EDUCATION,0,118,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Etudes dans le domaine de la recherche scientifique et technique,2500.0,RESEARCH AND HIGHER EDUCATION,0,120,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Recherche,7050100.0,Research,0,122,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Enseignements supérieurs. - Recherche,132600.0,Higher education. - Research,0,123,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Fonds de la recherche et de la technologie,930000.0,Research and Technology Fund,0,124,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Institut français de recherche pour l'exploitation de la mer,470000.0,French Institute for Research in Exploitation of the Sea,0,125,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Centre national de la recherche scientifique et instituts nationaux,2131000.0,National Center for Scientific Research and National Institutes,0,126,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Institut national de la santé et de la recherche médicale,76000.0,National Institute of Health and Medical Research,0,127,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Fondations de recherche en biologie et en médecine,137700.0,Foundations for Research in Biology and Medicine,0,128,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Subventions d'équipement à la recherche universitaire,1310000.0,Grants for Equipment in University Research,0,130,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Etudes dans le domaine de la recherche scientifique et technique,6367.0,Studies in the field of scientific and technical research,0,134,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Recherche scientifique et technique,9000.0,Scientific and Technical Research,0,135,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Recherche en socio-économie,9500.0,Investment Subsidies Granted by the State,0,136,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Recherche et développement dans le domaine de la consommation,350000.0,Financial Services,0,137,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1988,JORF_1988.pdf,Institut national de la recherche agronomique,437500.0,INRAE (Institut National de Recherche pour l'Agriculture),0,138,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1990,JORF_1990.pdf,Recherche et technologie,21500.0,Research and Technology,0,140,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1990,JORF_1990.pdf,Services du Premier ministre : 1. - Services généraux,56218.0,Research and Technology,0,141,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1990,JORF_1990.pdf,"Taxe perçue pour financer la participation de l'Institut français de recherche pour l'exploitation de la mer aux études, analyses et contrôles de qualité des coquillages",9875.0,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),0,146,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Enseignement supérieur et recherche,6969678.747,Higher Education and Research,0,147,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,I - Recherche,152443.964,Higher Education and Research,0,148,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,II - Recherche,585488.848,Higher Education and Research,0,149,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Recherche et espace,13000.0,Research and Space,0,151,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Crédits de paiement pour la recherche,12000.0,Research and Space,0,152,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Autres crédits de paiement pour la recherche,1000.0,Research and Space,0,153,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Investissements. - Recherche,9000.0,Investments. - Research,0,155,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Subventions de recherche scientifique,73237.172,Universities and major higher education institutions. - Scientific research grants,0,156,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Subventions d'équipement à la recherche universitaire,1502845.0,Grants for university research equipment,0,157,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Centre national de la recherche scientifique et instituts nationaux,9625687.454,National Center for Scientific Research and National Institutes,0,158,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Institut national de la santé et de la recherche médicale,1671044.181,National Institute of Health and Medical Research,0,159,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Institut national de recherche en informatique et en automatique,267799.773,National Institute for Research in Computer Science and Automation,0,160,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Institut national de recherche agronomique,2546534.794,National Institute for Agronomic Research,0,161,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Centre de coopération internationale en recherche agronomique pour le développement,511723.439,International Center for Agronomic Research for Development,0,163,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Institut français de recherche pour l'exploitation de la mer,424953.866,French Institute for Research and Exploitation of the Sea,0,164,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Institut national de recherche sur les transports et leur sécurité,155574.359,National Institute for Research on Transport and its Safety,0,165,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Recherche scientifique et technique,52980.0,Scientific and Technical Research,0,168,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Institut national de la santé et de la recherche médicale,13880.0,National Institute of Health and Medical Research,0,169,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Subventions en matière de recherche,30300.0,Research Grants,0,170,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Institut national de la recherche agronomique,237489.193,INRAE (Institut National de Recherche pour l'Agriculture),0,171,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,1994,JORF_1994.pdf,Institut national de la recherche agronomique,451480.0,INRAE (Institut National de Recherche pour l'Agriculture),0,172,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2005,JORF_2005.pdf,Recherche,2216963.0,"National Education, Higher Education and Research",0,174,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2005,JORF_2005.pdf,Recherche,1849546.0,"National Education, Higher Education and Research",0,175,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2005,JORF_2005.pdf,Recherche,2082020.0,"National Education, Higher Education and Research",0,176,True
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2007,JORF_2007.pdf,"produit de la contribution mentionnée à l'article 235 ter ZC du code général des impôts perçu en 2007 est affecté, dans la limite de 955 millions d'euros, à l'Agence nationale de la recherche à hauteur de 86,4 %",826320.0,National Research Agency,0,177,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2009,JORF_2009.pdf,Recherche et enseignement supérieur,24507692.154,Research and Higher Education,0,189,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2009,JORF_2009.pdf,Recherches scientifiques et technologiques pluridisciplinaires,5050181.762,Research and Higher Education,0,312,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2009,JORF_2009.pdf,Recherche spatiale,1280247.629,Research and Higher Education,0,313,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2009,JORF_2009.pdf,Recherche et enseignement supérieur en matière économique et industrielle,869305.126,Research and Higher Education,0,314,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2009,JORF_2009.pdf,Recherche culturelle et culture scientifique,157255.909,Research and Higher Education,0,315,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2009,JORF_2009.pdf,Enseignement supérieur et recherche agricoles,296732.542,Research and Higher Education,0,316,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2009,JORF_2009.pdf,Recherche appliquée et innovation en agriculture,63900.0,Research and Higher Education,0,317,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2010,JORF_2010.pdf,Recherche et enseignement supérieur,25357000.0,Research and Higher Education,0,199,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2010,JORF_2010.pdf,Total pour les recherches scientifiques et technologiques pluridisciplinaires,5198000.0,Multidisciplinary Scientific and Technological Research,0,200,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2010,JORF_2010.pdf,Recherche dans le domaine de la gestion des milieux et des ressources,1238000.0,Multidisciplinary Scientific and Technological Research,0,201,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2010,JORF_2010.pdf,Recherche spatiale,1302000.0,Space Research,0,202,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2010,JORF_2010.pdf,Total pour les formations supérieures et recherche universitaire,12500000.0,Higher Education and University Research,0,203,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2011,JORF_2011.pdf,Recherche et enseignement supérieur,25359000.0,Research and Higher Education,0,204,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2012,JORF_2012.pdf,Recherche et enseignement supérieur,240656000.0,Research and Higher Education,0,213,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2012,JORF_2012.pdf,Formations supérieures et recherche universitaire,150239000.0,Higher Education and University Research,0,214,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2012,JORF_2012.pdf,Recherche dans le domaine de la gestion des milieux et des ressources,17199000.0,Multidisciplinary Scientific and Technological Research,0,215,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2012,JORF_2012.pdf,"Recherche dans les domaines de l’énergie, du développement et de l’aménagement durables",4846000.0,Multidisciplinary Scientific and Technological Research,0,216,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2012,JORF_2012.pdf,Mission Recherche et enseignement supérieur,24000000.0,Mission Research and Higher Education,0,217,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2012,JORF_2012.pdf,Crédits de paiement pour la recherche scientifique,5000000.0,Scientific Research,0,220,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2012,JORF_2012.pdf,Crédits de paiement pour la recherche spatiale,1300000.0,Space Research,0,221,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2012,JORF_2012.pdf,Recherche appliquée et innovation en agriculture,55546.75,Research and Higher Education,0,318,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Recherche et enseignement supérieur,247565000.0,Research and Higher Education,0,222,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Formations supérieures et recherche universitaire,157297000.0,Higher Education and University Research,0,223,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Recherche dans le domaine de la gestion des milieux et des ressources,17200000.0,Multidisciplinary Scientific and Technological Research,0,224,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,"Recherche dans les domaines de l’énergie, du développement et de l’aménagement durables",4753000.0,Multidisciplinary Scientific and Technological Research,0,225,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Recherche et enseignement supérieur,25943000.0,Research and Higher Education,0,226,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Total pour les formations supérieures et recherche universitaire,12753000.0,Higher Education and University Research,0,227,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Total pour les recherches scientifiques et technologiques pluridisciplinaires,5158000.0,Multidisciplinary Scientific and Technological Research,0,228,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Recherches scientifiques et technologiques pluridisciplinaires,5158000.0,Multidisciplinary Scientific and Technological Research,0,229,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Total pour la recherche spatiale,1413000.0,Space Research,0,230,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Recherche spatiale,1413000.0,Space Research,0,231,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2013,JORF_2013.pdf,Recherche appliquée et innovation en agriculture,55546.75,Research and Higher Education,0,319,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2014,JORF_2014.pdf,Recherche et enseignement supérieur,31337733.367,Research and Higher Education,0,232,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2014,JORF_2014.pdf,Recherches scientifiques et technologiques pluridisciplinaires,5053673.242,Research and Higher Education,0,320,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2014,JORF_2014.pdf,Recherche spatiale,1429108.56,Research and Higher Education,0,321,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2014,JORF_2014.pdf,"Recherche dans les domaines de l’énergie, du développement et de la mobilité durables",1390719.166,Research and Higher Education,0,322,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2014,JORF_2014.pdf,Recherche et enseignement supérieur en matière économique et industrielle,984169.961,Research and Higher Education,0,323,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2014,JORF_2014.pdf,Recherche culturelle et culture scientifique,114539.698,Research and Higher Education,0,324,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2014,JORF_2014.pdf,Enseignement supérieur et recherche agricoles,312006.931,Research and Higher Education,0,325,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2014,JORF_2014.pdf,Recherche appliquée et innovation en agriculture,68046.75,Research and Higher Education,0,326,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2015,JORF_2015.pdf,Recherche et enseignement supérieur,25892775.731,Research and Higher Education,0,233,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2015,JORF_2015.pdf,Recherches scientifiques et technologiques pluridisciplinaires,6270005.79,Multidisciplinary Scientific and Technological Research,0,234,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2015,JORF_2015.pdf,Recherche spatiale,1434501.498,Space Research,0,235,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2015,JORF_2015.pdf,"Recherche dans les domaines de l’énergie, du développement et de la mobilité durables",1385813.162,Research and Higher Education,0,327,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2015,JORF_2015.pdf,Recherche et enseignement supérieur en matière économique et industrielle,877712.013,Research and Higher Education,0,328,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2015,JORF_2015.pdf,Recherche culturelle et culture scientifique,117233.198,Research and Higher Education,0,329,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2015,JORF_2015.pdf,Enseignement supérieur et recherche agricoles,329442.176,Research and Higher Education,0,330,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2015,JORF_2015.pdf,Recherche appliquée et innovation en agriculture,76946.75,Research and Higher Education,0,331,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour les recherches scientifiques et technologiques pluridisciplinaires,70522000.0,Scientific Research,0,237,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour la recherche spatiale,2417000.0,Space Research,0,238,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,"Crédits de paiement pour la recherche dans les domaines de l’énergie, du développement et de la mobilité durables",4486000.0,"Research in the fields of energy, development, and sustainable mobility",0,239,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour la recherche et l'enseignement supérieur en matière économique et industrielle,2243000.0,Research and higher education in economic and industrial matters,0,240,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour la recherche culturelle et la culture scientifique,1061000.0,Cultural research and scientific culture,0,241,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour l'enseignement supérieur et la recherche agricoles,1215000.0,Higher education and agricultural research,0,242,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Recherche et enseignement supérieur,24000000.0,Research and Higher Education,0,243,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour les recherches scientifiques et technologiques pluridisciplinaires,6248000.0,Multidisciplinary Scientific and Technological Research,0,244,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour la recherche spatiale,1371000.0,Space Research,0,245,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,"Crédits de paiement pour la recherche dans les domaines de l’énergie, du développement et de la mobilité durables",1724000.0,"Research in the fields of energy, development, and sustainable mobility",0,246,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour la recherche et l'enseignement supérieur en matière économique et industrielle,831000.0,Research and Higher Education in Economic and Industrial Matters,0,247,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour la recherche culturelle et la culture scientifique,122000.0,Cultural Research and Scientific Culture,0,248,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour l'enseignement supérieur et la recherche agricoles,330000.0,Higher Education and Agricultural Research,0,249,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Crédits de paiement pour la recherche appliquée et l'innovation en agriculture,76000.0,Applied Research and Innovation in Agriculture,0,250,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Recherches scientifiques et technologiques pluridisciplinaires,6248944.468,Research and Higher Education,0,332,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Recherche spatiale,1371719.89,Research and Higher Education,0,333,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,"Recherche dans les domaines de l’énergie, du développement et de la mobilité durables",1724069.888,Research and Higher Education,0,334,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Recherche et enseignement supérieur en matière économique et industrielle,831568.057,Research and Higher Education,0,335,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Recherche culturelle et culture scientifique,122147.698,Research and Higher Education,0,336,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Enseignement supérieur et recherche agricoles,330927.317,Research and Higher Education,0,337,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2016,JORF_2016.pdf,Recherche appliquée et innovation en agriculture,76946.75,Research and Higher Education,0,338,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Recherche et enseignement supérieur,27048000.0,Research and Higher Education,0,251,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Total pour les formations supérieures et recherche universitaire,13264000.0,Higher Education and University Research,0,252,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Total pour les recherches scientifiques et technologiques pluridisciplinaires,6513000.0,Multidisciplinary Scientific and Technological Research,0,253,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Total pour la recherche spatiale,1466000.0,Space Research,0,254,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Crédits de paiement pour les recherches scientifiques et technologiques pluridisciplinaires,6423000.0,Multidisciplinary Scientific and Technological Research,0,255,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Crédits de paiement pour la recherche spatiale,1466000.0,Space Research,0,256,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Recherches scientifiques et technologiques pluridisciplinaires,6423915.122,Research and Higher Education,0,339,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Recherche spatiale,1466584.352,Research and Higher Education,0,340,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,"Recherche dans les domaines de l’énergie, du développement et de la mobilité durables",1712980.867,Research and Higher Education,0,341,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Recherche et enseignement supérieur en matière économique et industrielle,794609.301,Research and Higher Education,0,342,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Recherche culturelle et culture scientifique,116570.698,Research and Higher Education,0,343,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Enseignement supérieur et recherche agricoles,339670.121,Research and Higher Education,0,344,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2017,JORF_2017.pdf,Recherche appliquée et innovation en agriculture,76946.75,Research and Higher Education,0,345,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2018,JORF_2018.pdf,Formations supérieures et recherche universitaire,164776000.0,Higher Education and University Research,0,257,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2018,JORF_2018.pdf,Recherche appliquée et innovation en agriculture,71000.0,Research and Higher Education,0,346,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2020,JORF_2020.pdf,Recherche et enseignement supérieur,24000000.0,Research and Higher Education,0,258,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2020,JORF_2020.pdf,Crédits de paiement pour le programme Recherches scientifiques,5000000.0,Scientific Research,0,259,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2020,JORF_2020.pdf,Crédits de paiement pour le programme Recherche spatiale,1300000.0,Space Research,0,260,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2020,JORF_2020.pdf,Recherches scientifiques et technologiques pluridisciplinaires,6941119.469,Research and Higher Education,0,347,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2020,JORF_2020.pdf,Recherche spatiale,2021625.716,Research and Higher Education,0,348,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2020,JORF_2020.pdf,"Recherche dans les domaines de l’énergie, du développement et de la mobilité durables",1761730.045,Research and Higher Education,0,349,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2020,JORF_2020.pdf,Recherche et enseignement supérieur en matière économique et industrielle,782350.68,Research and Higher Education,0,350,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2020,JORF_2020.pdf,Recherche culturelle et culture scientifique,109883.828,Research and Higher Education,0,351,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2020,JORF_2020.pdf,Enseignement supérieur et recherche agricoles,356736.16,Research and Higher Education,0,352,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2020,JORF_2020.pdf,Recherche appliquée et innovation en agriculture,71000.0,Research and Higher Education,0,353,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2021,JORF_2021.pdf,Recherche et enseignement supérieur,28606736.805,Research and Higher Education,0,262,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2021,JORF_2021.pdf,Total pour les formations supérieures et recherche universitaire,13904787.316,Higher Education and University Research,0,263,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2021,JORF_2021.pdf,Total pour les recherches scientifiques et technologiques pluridisciplinaires,7315288.458,Multidisciplinary Scientific and Technological Research,0,264,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2021,JORF_2021.pdf,Total pour la recherche spatiale,1635886.109,Space Research,0,265,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2021,JORF_2021.pdf,Crédits de paiement pour les recherches scientifiques et technologiques pluridisciplinaires,7163123.272,Multidisciplinary Scientific and Technological Research,0,266,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2021,JORF_2021.pdf,Crédits de paiement pour la recherche spatiale,1635886.109,Space Research,0,267,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2021,JORF_2021.pdf,Recherches scientifiques et technologiques pluridisciplinaires,7163123.272,Research and Higher Education,0,354,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2021,JORF_2021.pdf,Recherche spatiale,1635886.109,Research and Higher Education,0,355,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2021,JORF_2021.pdf,"Recherche dans les domaines de l’énergie, du développement et de la mobilité durables",1755420.951,Research and Higher Education,0,356,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2021,JORF_2021.pdf,Recherche et enseignement supérieur en matière économique et industrielle,653995.57,Research and Higher Education,0,357,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2021,JORF_2021.pdf,Enseignement supérieur et recherche agricoles,363112.976,Research and Higher Education,0,358,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2021,JORF_2021.pdf,Recherche appliquée et innovation en agriculture,65934.6,Research and Higher Education,0,359,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2022,JORF_2022.pdf,Soutien des progrès de l’enseignement et de la recherche,245000.0,Research and Higher Education,0,274,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2022,JORF_2022.pdf,Valorisation de la recherche,846000.0,Research and Higher Education,0,275,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2022,JORF_2022.pdf,RECHERCHE ET ENSEIGNEMENT SUPÉRIEUR,29237843.107,Research and Higher Education,0,277,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2022,JORF_2022.pdf,Formations supérieures et recherche universitaire,14212837.812,Higher Education and University Research,0,278,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2022,JORF_2022.pdf,Recherches scientifiques et technologiques pluridisciplinaires,7503175.364,Multidisciplinary Scientific and Technological Research,0,279,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2022,JORF_2022.pdf,Recherche spatiale,1642286.109,Space Research,0,280,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2022,JORF_2022.pdf,"Recherche dans les domaines de l’énergie, du développement et de la mobilité durables",1729120.775,"Research in the Fields of Energy, Development, and Sustainable Mobility",0,281,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2022,JORF_2022.pdf,Recherche et enseignement supérieur en matière économique et industrielle,692485.405,Economic and Industrial Research and Higher Education,0,282,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2022,JORF_2022.pdf,Enseignement supérieur et recherche agricoles,377978.973,Higher Education and Agricultural Research,0,283,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2022,JORF_2022.pdf,Recherche appliquée et innovation en agriculture,65520.0,Research and Higher Education,0,360,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2023,JORF_2023.pdf,Recherche et enseignement supérieur,30806185.909,Research and Higher Education,0,284,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2023,JORF_2023.pdf,Recherches scientifiques et technologiques pluridisciplinaires,7833527.751,Multidisciplinary Scientific and Technological Research,0,287,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2023,JORF_2023.pdf,Recherche spatiale,1865683.825,Space Research,0,289,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2023,JORF_2023.pdf,Recherche et enseignement supérieur,24000000.0,Research and Higher Education,0,290,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2023,JORF_2023.pdf,"Recherche dans les domaines de l’énergie, du développement et de la mobilité durables",1800829.878,Research and Higher Education,0,361,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2023,JORF_2023.pdf,Recherche et enseignement supérieur en matière économique et industrielle,693736.238,Research and Higher Education,0,362,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2023,JORF_2023.pdf,Enseignement supérieur et recherche agricoles,424396.462,Research and Higher Education,0,363,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2023,JORF_2023.pdf,Recherche appliquée et innovation en agriculture,65520.0,Research and Higher Education,0,364,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2024,JORF_2024.pdf,Recherche et enseignement supérieur,253499000.0,Research and Higher Education,0,291,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2024,JORF_2024.pdf,Crédits de paiement pour les recherches scientifiques et technologiques pluridisciplinaires,5000000.0,Multidisciplinary Scientific and Technological Research,0,295,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2024,JORF_2024.pdf,Crédits de paiement pour la recherche spatiale,1300000.0,Space Research,0,296,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2024,JORF_2024.pdf,Recherches scientifiques et technologiques pluridisciplinaires,8201401.634,Research and Higher Education,0,365,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2024,JORF_2024.pdf,Recherche spatiale,1900179.541,Research and Higher Education,0,366,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2024,JORF_2024.pdf,"Recherche dans les domaines de l’énergie, du développement et de la mobilité durables",1948483.219,Research and Higher Education,0,367,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2024,JORF_2024.pdf,Recherche et enseignement supérieur en matière économique et industrielle,688636.541,Research and Higher Education,0,368,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2024,JORF_2024.pdf,Enseignement supérieur et recherche agricoles,443008.004,Research and Higher Education,0,369,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2024,JORF_2024.pdf,Recherche appliquée et innovation en agriculture,78070.0,Research and Higher Education,0,370,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2025,JORF_2025.pdf,Recherche et enseignement supérieur,30909000.0,Research and Higher Education,0,297,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2025,JORF_2025.pdf,Recherches scientifiques et technologiques pluridisciplinaires,8609000.0,Multidisciplinary Scientific and Technological Research,0,301,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2025,JORF_2025.pdf,Recherche spatiale,1809000.0,Space Research,0,302,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2025,JORF_2025.pdf,"Recherche dans les domaines de l’énergie, du développement et de la mobilité durables",1408000.0,Multidisciplinary Scientific and Technological Research,0,303,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2025,JORF_2025.pdf,Recherche et enseignement supérieur en matière économique et industrielle,350000.0,Multidisciplinary Scientific and Technological Research,0,304,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2025,JORF_2025.pdf,Recherche et enseignement supérieur,24000000.0,Research and Higher Education,0,305,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2025,JORF_2025.pdf,Crédits de paiement pour les recherches scientifiques,5000000.0,Scientific Research,0,306,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2025,JORF_2025.pdf,Crédits de paiement pour les formations supérieures et la recherche universitaire,12000000.0,Higher Education and University Research,0,307,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2025,JORF_2025.pdf,Crédits de paiement pour la recherche spatiale,1300000.0,Space Research,0,308,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2025,JORF_2025.pdf,Crédits de paiement pour les recherches scientifiques et technologiques pluridisciplinaires,5000000.0,Multidisciplinary Scientific and Technological Research,0,309,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2025,JORF_2025.pdf,Enseignement supérieur et recherche agricoles,421859.182,Research and Higher Education,0,371,False
+Research (Pre-LOLF Ministry Chapter),rd_ministry,2025,JORF_2025.pdf,Recherche appliquée et innovation en agriculture,78070.0,Research and Higher Education,0,372,False
+Research and Higher Education in Economic and Industrial Matters,rd_programme,2009,JORF_2009.pdf,Research and higher education in economic and industrial matters,999905.126,Research and Higher Education in Economic and Industrial Matters,0,196,True
+Research and Higher Education in Economic and Industrial Matters,rd_programme,2009,JORF_2009.pdf,Recherche et enseignement supérieur en matière économique et industrielle,869305.126,Research and Higher Education,0,314,True
+Research and Higher Education in Economic and Industrial Matters,rd_programme,2011,JORF_2011.pdf,Total for research and higher education in economic and industrial matters,1087000.0,Research and Higher Education in Economic and Industrial Matters,0,210,True
+Research and Higher Education in Economic and Industrial Matters,rd_programme,2014,JORF_2014.pdf,Recherche et enseignement supérieur en matière économique et industrielle,984169.961,Research and Higher Education,0,323,True
+Research and Higher Education in Economic and Industrial Matters,rd_programme,2015,JORF_2015.pdf,Recherche et enseignement supérieur en matière économique et industrielle,877712.013,Research and Higher Education,0,328,True
+Research and Higher Education in Economic and Industrial Matters,rd_programme,2016,JORF_2016.pdf,Recherche et enseignement supérieur en matière économique et industrielle,831568.057,Research and Higher Education,0,335,True
+Research and Higher Education in Economic and Industrial Matters,rd_programme,2017,JORF_2017.pdf,Recherche et enseignement supérieur en matière économique et industrielle,794609.301,Research and Higher Education,0,342,True
+Research and Higher Education in Economic and Industrial Matters,rd_programme,2020,JORF_2020.pdf,Recherche et enseignement supérieur en matière économique et industrielle,782350.68,Research and Higher Education,0,350,True
+Research and Higher Education in Economic and Industrial Matters,rd_programme,2021,JORF_2021.pdf,Recherche et enseignement supérieur en matière économique et industrielle,653995.57,Research and Higher Education,0,357,True
+Research and Higher Education in Economic and Industrial Matters,rd_programme,2022,JORF_2022.pdf,Research and higher education in economic and industrial matters,3319000.0,Multidisciplinary Scientific and Technological Research,0,272,True
+Research and Higher Education in Economic and Industrial Matters,rd_programme,2022,JORF_2022.pdf,Recherche et enseignement supérieur en matière économique et industrielle,692485.405,Economic and Industrial Research and Higher Education,0,282,True
+Research and Higher Education in Economic and Industrial Matters,rd_programme,2023,JORF_2023.pdf,Recherche et enseignement supérieur en matière économique et industrielle,693736.238,Research and Higher Education,0,362,True
+Research and Higher Education in Economic and Industrial Matters,rd_programme,2024,JORF_2024.pdf,Recherche et enseignement supérieur en matière économique et industrielle,688636.541,Research and Higher Education,0,368,True
+Research and Higher Education in Economic and Industrial Matters,rd_programme,2025,JORF_2025.pdf,Recherche et enseignement supérieur en matière économique et industrielle,350000.0,Multidisciplinary Scientific and Technological Research,0,304,True
+"Research in the Fields of Energy, Development, and Sustainable Mobility",rd_programme,2022,JORF_2022.pdf,"Research in the fields of energy, development, and sustainable mobility",3347000.0,Multidisciplinary Scientific and Technological Research,0,271,True
+Space Research,rd_programme,2008,JORF_2008.pdf,Total for Space Research,1277000.0,Space Research,0,181,True
+Space Research,rd_programme,2009,JORF_2009.pdf,Space research,1280247.629,Space Research,0,193,True
+Space Research,rd_programme,2009,JORF_2009.pdf,Recherche spatiale,1280247.629,Research and Higher Education,0,313,True
+Space Research,rd_programme,2010,JORF_2010.pdf,Recherche spatiale,1302000.0,Space Research,0,202,True
+Space Research,rd_programme,2011,JORF_2011.pdf,Total for space research,1392000.0,Space Research,0,208,True
+Space Research,rd_programme,2012,JORF_2012.pdf,Crédits de paiement pour la recherche spatiale,1300000.0,Space Research,0,221,True
+Space Research,rd_programme,2013,JORF_2013.pdf,Total pour la recherche spatiale,1413000.0,Space Research,0,230,True
+Space Research,rd_programme,2013,JORF_2013.pdf,Recherche spatiale,1413000.0,Space Research,0,231,True
+Space Research,rd_programme,2014,JORF_2014.pdf,Recherche spatiale,1429108.56,Research and Higher Education,0,321,True
+Space Research,rd_programme,2015,JORF_2015.pdf,Recherche spatiale,1434501.498,Space Research,0,235,True
+Space Research,rd_programme,2016,JORF_2016.pdf,Crédits de paiement pour la recherche spatiale,2417000.0,Space Research,0,238,True
+Space Research,rd_programme,2016,JORF_2016.pdf,Crédits de paiement pour la recherche spatiale,1371000.0,Space Research,0,245,True
+Space Research,rd_programme,2016,JORF_2016.pdf,Recherche spatiale,1371719.89,Research and Higher Education,0,333,True
+Space Research,rd_programme,2017,JORF_2017.pdf,Total pour la recherche spatiale,1466000.0,Space Research,0,254,True
+Space Research,rd_programme,2017,JORF_2017.pdf,Crédits de paiement pour la recherche spatiale,1466000.0,Space Research,0,256,True
+Space Research,rd_programme,2017,JORF_2017.pdf,Recherche spatiale,1466584.352,Research and Higher Education,0,340,True
+Space Research,rd_programme,2020,JORF_2020.pdf,Crédits de paiement pour le programme Recherche spatiale,1300000.0,Space Research,0,260,True
+Space Research,rd_programme,2020,JORF_2020.pdf,Recherche spatiale,2021625.716,Research and Higher Education,0,348,True
+Space Research,rd_programme,2021,JORF_2021.pdf,Total pour la recherche spatiale,1635886.109,Space Research,0,265,True
+Space Research,rd_programme,2021,JORF_2021.pdf,Crédits de paiement pour la recherche spatiale,1635886.109,Space Research,0,267,True
+Space Research,rd_programme,2021,JORF_2021.pdf,Recherche spatiale,1635886.109,Research and Higher Education,0,355,True
+Space Research,rd_programme,2022,JORF_2022.pdf,Total for Space Research,2417000.0,Space Research,0,270,True
+Space Research,rd_programme,2022,JORF_2022.pdf,Recherche spatiale,1642286.109,Space Research,0,280,True
+Space Research,rd_programme,2023,JORF_2023.pdf,Total for Space Research,1865683.825,Space Research,0,288,True
+Space Research,rd_programme,2023,JORF_2023.pdf,Recherche spatiale,1865683.825,Space Research,0,289,True
+Space Research,rd_programme,2024,JORF_2024.pdf,Total for space research,2404000.0,Space Research,0,294,True
+Space Research,rd_programme,2024,JORF_2024.pdf,Crédits de paiement pour la recherche spatiale,1300000.0,Space Research,0,296,True
+Space Research,rd_programme,2024,JORF_2024.pdf,Recherche spatiale,1900179.541,Research and Higher Education,0,366,True
+Space Research,rd_programme,2025,JORF_2025.pdf,Total for Space Research,1809000.0,Space Research,0,300,True
+Space Research,rd_programme,2025,JORF_2025.pdf,Recherche spatiale,1809000.0,Space Research,0,302,True
+Space Research,rd_programme,2025,JORF_2025.pdf,Crédits de paiement pour la recherche spatiale,1300000.0,Space Research,0,308,True
+Strategic and Pre-Strategic Engines,direct_rd,1986,JORF_1986.pdf,Engins stratégiques et préstratégiques,7242000.0,General Delegation for Armament,0,74,True
+Structural Funding for Innovation Ecosystems,innovation_instruments,2022,JORF_2022.pdf,Financement structurel des écosystèmes d’innovation,1415821.0,Research and Higher Education,0,276,True
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,1977,JORF_1977.pdf,Crédits de paiement pour les universités,895448.0,Universities,0,9,True
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,1978,JORF_1978.pdf,Crédits de paiement pour les Universités,845351.0,Universities,0,12,True
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,1979,JORF_1979.pdf,Universités,204620.0,Universities,0,18,True
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,1987,JORF_1987.pdf,RECHERCHE ET ENSEIGNEMENT SUPERIEUR,14173240.768,RESEARCH AND HIGHER EDUCATION,0,90,True
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,1994,JORF_1994.pdf,Enseignement supérieur et recherche,6969678.747,Higher Education and Research,0,147,True
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,1994,JORF_1994.pdf,I - Enseignement supérieur,610571.757,Higher Education and Research,0,150,True
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,1994,JORF_1994.pdf,Universités,0.0,Universities,0,154,True
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2009,JORF_2009.pdf,Recherche et enseignement supérieur,24507692.154,Research and Higher Education,0,189,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2009,JORF_2009.pdf,Recherche et enseignement supérieur en matière économique et industrielle,869305.126,Research and Higher Education,0,314,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2009,JORF_2009.pdf,Enseignement supérieur et recherche agricoles,296732.542,Research and Higher Education,0,316,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2010,JORF_2010.pdf,Recherche et enseignement supérieur,25357000.0,Research and Higher Education,0,199,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2011,JORF_2011.pdf,Recherche et enseignement supérieur,25359000.0,Research and Higher Education,0,204,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2012,JORF_2012.pdf,Recherche et enseignement supérieur,240656000.0,Research and Higher Education,0,213,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2012,JORF_2012.pdf,Mission Recherche et enseignement supérieur,24000000.0,Mission Research and Higher Education,0,217,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2013,JORF_2013.pdf,Recherche et enseignement supérieur,247565000.0,Research and Higher Education,0,222,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2013,JORF_2013.pdf,Recherche et enseignement supérieur,25943000.0,Research and Higher Education,0,226,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2014,JORF_2014.pdf,Recherche et enseignement supérieur,31337733.367,Research and Higher Education,0,232,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2014,JORF_2014.pdf,Recherche et enseignement supérieur en matière économique et industrielle,984169.961,Research and Higher Education,0,323,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2014,JORF_2014.pdf,Enseignement supérieur et recherche agricoles,312006.931,Research and Higher Education,0,325,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2015,JORF_2015.pdf,Recherche et enseignement supérieur,25892775.731,Research and Higher Education,0,233,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2015,JORF_2015.pdf,Recherche et enseignement supérieur en matière économique et industrielle,877712.013,Research and Higher Education,0,328,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2015,JORF_2015.pdf,Enseignement supérieur et recherche agricoles,329442.176,Research and Higher Education,0,330,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2016,JORF_2016.pdf,Crédits de paiement pour la recherche et l'enseignement supérieur en matière économique et industrielle,2243000.0,Research and higher education in economic and industrial matters,0,240,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2016,JORF_2016.pdf,Crédits de paiement pour l'enseignement supérieur et la recherche agricoles,1215000.0,Higher education and agricultural research,0,242,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2016,JORF_2016.pdf,Recherche et enseignement supérieur,24000000.0,Research and Higher Education,0,243,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2016,JORF_2016.pdf,Crédits de paiement pour la recherche et l'enseignement supérieur en matière économique et industrielle,831000.0,Research and Higher Education in Economic and Industrial Matters,0,247,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2016,JORF_2016.pdf,Crédits de paiement pour l'enseignement supérieur et la recherche agricoles,330000.0,Higher Education and Agricultural Research,0,249,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2016,JORF_2016.pdf,Recherche et enseignement supérieur en matière économique et industrielle,831568.057,Research and Higher Education,0,335,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2016,JORF_2016.pdf,Enseignement supérieur et recherche agricoles,330927.317,Research and Higher Education,0,337,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2017,JORF_2017.pdf,Recherche et enseignement supérieur,27048000.0,Research and Higher Education,0,251,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2017,JORF_2017.pdf,Recherche et enseignement supérieur en matière économique et industrielle,794609.301,Research and Higher Education,0,342,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2017,JORF_2017.pdf,Enseignement supérieur et recherche agricoles,339670.121,Research and Higher Education,0,344,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2020,JORF_2020.pdf,Recherche et enseignement supérieur,24000000.0,Research and Higher Education,0,258,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2020,JORF_2020.pdf,Recherche et enseignement supérieur en matière économique et industrielle,782350.68,Research and Higher Education,0,350,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2020,JORF_2020.pdf,Enseignement supérieur et recherche agricoles,356736.16,Research and Higher Education,0,352,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2021,JORF_2021.pdf,Recherche et enseignement supérieur,28606736.805,Research and Higher Education,0,262,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2021,JORF_2021.pdf,Recherche et enseignement supérieur en matière économique et industrielle,653995.57,Research and Higher Education,0,357,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2021,JORF_2021.pdf,Enseignement supérieur et recherche agricoles,363112.976,Research and Higher Education,0,358,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2022,JORF_2022.pdf,RECHERCHE ET ENSEIGNEMENT SUPÉRIEUR,29237843.107,Research and Higher Education,0,277,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2022,JORF_2022.pdf,Recherche et enseignement supérieur en matière économique et industrielle,692485.405,Economic and Industrial Research and Higher Education,0,282,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2022,JORF_2022.pdf,Enseignement supérieur et recherche agricoles,377978.973,Higher Education and Agricultural Research,0,283,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2023,JORF_2023.pdf,Recherche et enseignement supérieur,30806185.909,Research and Higher Education,0,284,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2023,JORF_2023.pdf,Recherche et enseignement supérieur,24000000.0,Research and Higher Education,0,290,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2023,JORF_2023.pdf,Recherche et enseignement supérieur en matière économique et industrielle,693736.238,Research and Higher Education,0,362,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2023,JORF_2023.pdf,Enseignement supérieur et recherche agricoles,424396.462,Research and Higher Education,0,363,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2024,JORF_2024.pdf,Recherche et enseignement supérieur,253499000.0,Research and Higher Education,0,291,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2024,JORF_2024.pdf,Recherche et enseignement supérieur en matière économique et industrielle,688636.541,Research and Higher Education,0,368,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2024,JORF_2024.pdf,Enseignement supérieur et recherche agricoles,443008.004,Research and Higher Education,0,369,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2025,JORF_2025.pdf,Recherche et enseignement supérieur,30909000.0,Research and Higher Education,0,297,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2025,JORF_2025.pdf,Recherche et enseignement supérieur en matière économique et industrielle,350000.0,Multidisciplinary Scientific and Technological Research,0,304,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2025,JORF_2025.pdf,Recherche et enseignement supérieur,24000000.0,Research and Higher Education,0,305,False
+Universities and Higher Education (Pre-LOLF Chapter),higher_education,2025,JORF_2025.pdf,Enseignement supérieur et recherche agricoles,421859.182,Research and Higher Education,0,371,False

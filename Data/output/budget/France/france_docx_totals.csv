@@ -18,21 +18,15 @@ France,ANR (Agence Nationale de la Recherche),2022,,,0,,gap,,,science_agency
 France,ANR (Agence Nationale de la Recherche),2023,,,0,,gap,,,science_agency
 France,ANR (Agence Nationale de la Recherche),2024,,,0,,gap,,,science_agency
 France,ANR (Agence Nationale de la Recherche),2025,,,0,,gap,,,science_agency
-France,Agricultural research and higher education,1970,,,0,,gap,,,higher_education
 France,Agricultural research and higher education,2008,278000000.0,278000000.0,1,JORF_2008.pdf,single,EUR,euro,higher_education
-France,Agricultural research and higher education,2020,,,0,,gap,,,higher_education
-France,Agricultural research and higher education,2021,,,0,,gap,,,higher_education
-France,Agricultural research and higher education,2022,,,0,,gap,,,higher_education
-France,Agricultural research and higher education,2023,,,0,,gap,,,higher_education
-France,Agricultural research and higher education,2024,,,0,,gap,,,higher_education
-France,Agricultural research and higher education,2025,,,0,,gap,,,higher_education
 France,Applied Research and Innovation in Agriculture,2015,,,0,,gap,,,rd_programme
 France,Applied Research and Innovation in Agriculture,2016,76000000.0,76000000.0,1,JORF_2016.pdf,single,EUR,euro,rd_programme
 France,Applied Research and Innovation in Agriculture,2017,,,0,,gap,,,rd_programme
-France,Applied Research and Innovation in Agriculture,2018,,,0,,gap,,,rd_programme
-France,Applied Research and Innovation in Agriculture,2020,,,0,,gap,,,rd_programme
-France,Applied Research and Innovation in Agriculture,2021,,,0,,gap,,,rd_programme
-France,Applied Research and Innovation in Agriculture,2022,,,0,,gap,,,rd_programme
+France,Applied Research and Innovation in Agriculture,2018,71000000.0,71000000.0,1,JORF_2018.pdf,single,EUR,euro,rd_programme
+France,Applied Research and Innovation in Agriculture,2019,71000000.0,71000000.0,1,JORF_2019.pdf,single,EUR,euro,rd_programme
+France,Applied Research and Innovation in Agriculture,2020,71000000.0,71000000.0,1,JORF_2020.pdf,single,EUR,euro,rd_programme
+France,Applied Research and Innovation in Agriculture,2021,65934600.0,65934600.0,1,JORF_2021.pdf,single,EUR,euro,rd_programme
+France,Applied Research and Innovation in Agriculture,2022,65520000.0,65520000.0,1,JORF_2022.pdf,single,EUR,euro,rd_programme
 France,Applied Research and Innovation in Agriculture,2023,,,0,,gap,,,rd_programme
 France,Applied Research and Innovation in Agriculture,2024,,,0,,gap,,,rd_programme
 France,Applied Research and Innovation in Agriculture,2025,,,0,,gap,,,rd_programme
@@ -72,7 +66,7 @@ France,BRGM (Bureau de Recherches Géologiques et Minières),2022,,,0,,gap,,,sci
 France,BRGM (Bureau de Recherches Géologiques et Minières),2023,,,0,,gap,,,science_agency
 France,BRGM (Bureau de Recherches Géologiques et Minières),2024,,,0,,gap,,,science_agency
 France,BRGM (Bureau de Recherches Géologiques et Minières),2025,,,0,,gap,,,science_agency
-France,CEA (Commissariat à l'Énergie Atomique),1970,,,0,,gap,,,science_agency
+France,CEA (Commissariat à l'Énergie Atomique),1970,30000000.0,30000000.0,1,JORF_1970.pdf,single,FRF,franc,science_agency
 France,CEA (Commissariat à l'Énergie Atomique),1972,,,0,,gap,,,science_agency
 France,CEA (Commissariat à l'Énergie Atomique),1973,,,0,,gap,,,science_agency
 France,CEA (Commissariat à l'Énergie Atomique),1974,,,0,,gap,,,science_agency
@@ -144,7 +138,6 @@ France,CNES (Centre National d'Études Spatiales),2022,,,0,,gap,,,science_agency
 France,CNES (Centre National d'Études Spatiales),2023,,,0,,gap,,,science_agency
 France,CNES (Centre National d'Études Spatiales),2024,,,0,,gap,,,science_agency
 France,CNES (Centre National d'Études Spatiales),2025,,,0,,gap,,,science_agency
-France,CNRS (Centre National de la Recherche Scientifique),1970,,,0,,gap,,,science_agency
 France,CNRS (Centre National de la Recherche Scientifique),2018,,,0,,gap,,,science_agency
 France,CNRS (Centre National de la Recherche Scientifique),2020,,,0,,gap,,,science_agency
 France,CNRS (Centre National de la Recherche Scientifique),2021,,,0,,gap,,,science_agency
@@ -152,29 +145,9 @@ France,CNRS (Centre National de la Recherche Scientifique),2022,,,0,,gap,,,scien
 France,CNRS (Centre National de la Recherche Scientifique),2023,,,0,,gap,,,science_agency
 France,CNRS (Centre National de la Recherche Scientifique),2024,,,0,,gap,,,science_agency
 France,CNRS (Centre National de la Recherche Scientifique),2025,,,0,,gap,,,science_agency
-France,Civil Research and Development Budget,1970,,,0,,gap,,,direct_rd
 France,Civil Research and Development Budget,1986,,,0,,gap,,,direct_rd
-France,Civil Research and Development Budget,2020,,,0,,gap,,,direct_rd
-France,Civil Research and Development Budget,2021,,,0,,gap,,,direct_rd
-France,Civil Research and Development Budget,2022,,,0,,gap,,,direct_rd
-France,Civil Research and Development Budget,2023,,,0,,gap,,,direct_rd
-France,Civil Research and Development Budget,2024,,,0,,gap,,,direct_rd
-France,Civil Research and Development Budget,2025,,,0,,gap,,,direct_rd
 France,Contracts for the development of research results,1970,,,0,,gap,,,direct_rd
-France,Contracts for the development of research results,2020,,,0,,gap,,,direct_rd
-France,Contracts for the development of research results,2021,,,0,,gap,,,direct_rd
-France,Contracts for the development of research results,2022,,,0,,gap,,,direct_rd
-France,Contracts for the development of research results,2023,,,0,,gap,,,direct_rd
-France,Contracts for the development of research results,2024,,,0,,gap,,,direct_rd
-France,Contracts for the development of research results,2025,,,0,,gap,,,direct_rd
-France,Contribution to the National Center for Space Studies,1970,,,0,,gap,,,direct_rd
 France,Contribution to the National Center for Space Studies,1987,,,0,,gap,,,direct_rd
-France,Contribution to the National Center for Space Studies,2020,,,0,,gap,,,direct_rd
-France,Contribution to the National Center for Space Studies,2021,,,0,,gap,,,direct_rd
-France,Contribution to the National Center for Space Studies,2022,,,0,,gap,,,direct_rd
-France,Contribution to the National Center for Space Studies,2023,,,0,,gap,,,direct_rd
-France,Contribution to the National Center for Space Studies,2024,,,0,,gap,,,direct_rd
-France,Contribution to the National Center for Space Studies,2025,,,0,,gap,,,direct_rd
 France,Cultural Research and Scientific Culture,2007,,,0,,gap,,,rd_programme
 France,Cultural Research and Scientific Culture,2008,159000000.0,159000000.0,1,JORF_2008.pdf,single,EUR,euro,rd_programme
 France,Cultural Research and Scientific Culture,2009,159805909.0,159805909.0,1,JORF_2009.pdf,single,EUR,euro,rd_programme
@@ -186,108 +159,32 @@ France,Cultural Research and Scientific Culture,2014,114539698.0,114539698.0,1,J
 France,Cultural Research and Scientific Culture,2015,117233198.0,117233198.0,1,JORF_2015.pdf,single,EUR,euro,rd_programme
 France,Cultural Research and Scientific Culture,2016,122000000.0,122000000.0,1,JORF_2016.pdf,single,EUR,euro,rd_programme
 France,Cultural Research and Scientific Culture,2017,116570698.0,116570698.0,1,JORF_2017.pdf,single,EUR,euro,rd_programme
-France,Cultural Research and Scientific Culture,2018,,,0,,gap,,,rd_programme
+France,Cultural Research and Scientific Culture,2018,111881973.0,111881973.0,1,JORF_2018.pdf,single,EUR,euro,rd_programme
+France,Cultural Research and Scientific Culture,2019,109981973.0,109981973.0,1,JORF_2019.pdf,single,EUR,euro,rd_programme
 France,Cultural Research and Scientific Culture,2020,109883828.0,109883828.0,1,JORF_2020.pdf,single,EUR,euro,rd_programme
 France,Cultural Research and Scientific Culture,2021,,,0,,gap,,,rd_programme
 France,Cultural Research and Scientific Culture,2022,,,0,,gap,,,rd_programme
 France,Cultural Research and Scientific Culture,2023,,,0,,gap,,,rd_programme
 France,Cultural Research and Scientific Culture,2024,,,0,,gap,,,rd_programme
 France,Cultural Research and Scientific Culture,2025,,,0,,gap,,,rd_programme
-France,Curie Institute - Biology Section,1970,,,0,,gap,,,science_agency
 France,Curie Institute - Biology Section,1986,,,0,,gap,,,science_agency
-France,Curie Institute - Biology Section,2020,,,0,,gap,,,science_agency
-France,Curie Institute - Biology Section,2021,,,0,,gap,,,science_agency
-France,Curie Institute - Biology Section,2022,,,0,,gap,,,science_agency
-France,Curie Institute - Biology Section,2023,,,0,,gap,,,science_agency
-France,Curie Institute - Biology Section,2024,,,0,,gap,,,science_agency
-France,Curie Institute - Biology Section,2025,,,0,,gap,,,science_agency
-France,Current Expenditures for Research and Innovation,1970,,,0,,gap,,,direct_rd
 France,Current Expenditures for Research and Innovation,1984,,,0,,gap,,,direct_rd
-France,Current Expenditures for Research and Innovation,2020,,,0,,gap,,,direct_rd
-France,Current Expenditures for Research and Innovation,2021,,,0,,gap,,,direct_rd
-France,Current Expenditures for Research and Innovation,2022,,,0,,gap,,,direct_rd
-France,Current Expenditures for Research and Innovation,2023,,,0,,gap,,,direct_rd
-France,Current Expenditures for Research and Innovation,2024,,,0,,gap,,,direct_rd
-France,Current Expenditures for Research and Innovation,2025,,,0,,gap,,,direct_rd
-France,Development of Industrial Research and Innovation,1970,,,0,,gap,,,innovation_instruments
 France,Development of Industrial Research and Innovation,1987,,,0,,gap,,,innovation_instruments
-France,Development of Industrial Research and Innovation,2020,,,0,,gap,,,innovation_instruments
-France,Development of Industrial Research and Innovation,2021,,,0,,gap,,,innovation_instruments
-France,Development of Industrial Research and Innovation,2022,,,0,,gap,,,innovation_instruments
-France,Development of Industrial Research and Innovation,2023,,,0,,gap,,,innovation_instruments
-France,Development of Industrial Research and Innovation,2024,,,0,,gap,,,innovation_instruments
-France,Development of Industrial Research and Innovation,2025,,,0,,gap,,,innovation_instruments
-France,Direction of Nuclear Experimentation Centers,1970,,,0,,gap,,,direct_rd
 France,Direction of Nuclear Experimentation Centers,1986,,,0,,gap,,,direct_rd
-France,Direction of Nuclear Experimentation Centers,2020,,,0,,gap,,,direct_rd
-France,Direction of Nuclear Experimentation Centers,2021,,,0,,gap,,,direct_rd
-France,Direction of Nuclear Experimentation Centers,2022,,,0,,gap,,,direct_rd
-France,Direction of Nuclear Experimentation Centers,2023,,,0,,gap,,,direct_rd
-France,Direction of Nuclear Experimentation Centers,2024,,,0,,gap,,,direct_rd
-France,Direction of Nuclear Experimentation Centers,2025,,,0,,gap,,,direct_rd
-France,Equipment Grants for Scientific and Technical Research,1970,,,0,,gap,,,direct_rd
 France,Equipment Grants for Scientific and Technical Research,1986,,,0,,gap,,,direct_rd
-France,Equipment Grants for Scientific and Technical Research,2020,,,0,,gap,,,direct_rd
-France,Equipment Grants for Scientific and Technical Research,2021,,,0,,gap,,,direct_rd
-France,Equipment Grants for Scientific and Technical Research,2022,,,0,,gap,,,direct_rd
-France,Equipment Grants for Scientific and Technical Research,2023,,,0,,gap,,,direct_rd
-France,Equipment Grants for Scientific and Technical Research,2024,,,0,,gap,,,direct_rd
-France,Equipment Grants for Scientific and Technical Research,2025,,,0,,gap,,,direct_rd
-France,Foundations for Research in Biology and Medicine,1970,,,0,,gap,,,higher_education
 France,Foundations for Research in Biology and Medicine,1988,,,0,,gap,,,higher_education
-France,Foundations for Research in Biology and Medicine,2020,,,0,,gap,,,higher_education
-France,Foundations for Research in Biology and Medicine,2021,,,0,,gap,,,higher_education
-France,Foundations for Research in Biology and Medicine,2022,,,0,,gap,,,higher_education
-France,Foundations for Research in Biology and Medicine,2023,,,0,,gap,,,higher_education
-France,Foundations for Research in Biology and Medicine,2024,,,0,,gap,,,higher_education
-France,Foundations for Research in Biology and Medicine,2025,,,0,,gap,,,higher_education
 France,French Agency for Energy Management,1988,,,0,,gap,,,science_agency
-France,Grants for Equipment for University Research,1970,,,0,,gap,,,direct_rd
 France,Grants for Equipment for University Research,1986,,,0,,gap,,,direct_rd
-France,Grants for Equipment for University Research,2020,,,0,,gap,,,direct_rd
-France,Grants for Equipment for University Research,2021,,,0,,gap,,,direct_rd
-France,Grants for Equipment for University Research,2022,,,0,,gap,,,direct_rd
-France,Grants for Equipment for University Research,2023,,,0,,gap,,,direct_rd
-France,Grants for Equipment for University Research,2024,,,0,,gap,,,direct_rd
-France,Grants for Equipment for University Research,2025,,,0,,gap,,,direct_rd
-France,Grants for Equipment in University Research,1970,,,0,,gap,,,higher_education
 France,Grants for Equipment in University Research,1988,,,0,,gap,,,higher_education
-France,Grants for Equipment in University Research,2020,,,0,,gap,,,higher_education
-France,Grants for Equipment in University Research,2021,,,0,,gap,,,higher_education
-France,Grants for Equipment in University Research,2022,,,0,,gap,,,higher_education
-France,Grants for Equipment in University Research,2023,,,0,,gap,,,higher_education
-France,Grants for Equipment in University Research,2024,,,0,,gap,,,higher_education
-France,Grants for Equipment in University Research,2025,,,0,,gap,,,higher_education
-France,Grants for Scientific Research,1970,,,0,,gap,,,direct_rd
 France,Grants for Scientific Research,1979,,,0,,gap,,,direct_rd
-France,Grants for Scientific Research,2020,,,0,,gap,,,direct_rd
-France,Grants for Scientific Research,2021,,,0,,gap,,,direct_rd
-France,Grants for Scientific Research,2022,,,0,,gap,,,direct_rd
-France,Grants for Scientific Research,2023,,,0,,gap,,,direct_rd
-France,Grants for Scientific Research,2024,,,0,,gap,,,direct_rd
-France,Grants for Scientific Research,2025,,,0,,gap,,,direct_rd
-France,Grants for University Research Equipment,1970,,,0,,gap,,,higher_education
 France,Grants for University Research Equipment,1987,,,0,,gap,,,higher_education
 France,Grants for University Research Equipment,1988,,,0,,gap,,,higher_education
 France,Grants for University Research Equipment,1990,,,0,,gap,,,higher_education
 France,Grants for University Research Equipment,1994,,,0,,gap,,,higher_education
-France,Grants for University Research Equipment,2020,,,0,,gap,,,higher_education
-France,Grants for University Research Equipment,2021,,,0,,gap,,,higher_education
-France,Grants for University Research Equipment,2022,,,0,,gap,,,higher_education
-France,Grants for University Research Equipment,2023,,,0,,gap,,,higher_education
-France,Grants for University Research Equipment,2024,,,0,,gap,,,higher_education
-France,Grants for University Research Equipment,2025,,,0,,gap,,,higher_education
-France,Grants to Research Organizations for Scientific and Technical Research,1970,,,0,,gap,,,direct_rd
 France,Grants to Research Organizations for Scientific and Technical Research,1984,,,0,,gap,,,direct_rd
 France,Grants to Research Organizations for Scientific and Technical Research,1985,,,0,,gap,,,direct_rd
 France,Grants to Research Organizations for Scientific and Technical Research,1986,,,0,,gap,,,direct_rd
 France,Grants to Research Organizations for Scientific and Technical Research,1987,,,0,,gap,,,direct_rd
-France,Grants to Research Organizations for Scientific and Technical Research,2020,,,0,,gap,,,direct_rd
-France,Grants to Research Organizations for Scientific and Technical Research,2021,,,0,,gap,,,direct_rd
-France,Grants to Research Organizations for Scientific and Technical Research,2022,,,0,,gap,,,direct_rd
-France,Grants to Research Organizations for Scientific and Technical Research,2023,,,0,,gap,,,direct_rd
-France,Grants to Research Organizations for Scientific and Technical Research,2024,,,0,,gap,,,direct_rd
-France,Grants to Research Organizations for Scientific and Technical Research,2025,,,0,,gap,,,direct_rd
 France,Higher Education and Agricultural Research,2007,,,0,,gap,,,rd_programme
 France,Higher Education and Agricultural Research,2008,,,0,,gap,,,rd_programme
 France,Higher Education and Agricultural Research,2009,296732542.0,296732542.0,1,JORF_2009.pdf,single,EUR,euro,rd_programme
@@ -299,13 +196,14 @@ France,Higher Education and Agricultural Research,2014,312006931.0,312006931.0,1
 France,Higher Education and Agricultural Research,2015,329442176.0,329442176.0,1,JORF_2015.pdf,single,EUR,euro,rd_programme
 France,Higher Education and Agricultural Research,2016,330000000.0,330000000.0,1,JORF_2016.pdf,single,EUR,euro,rd_programme
 France,Higher Education and Agricultural Research,2017,339670121.0,339670121.0,1,JORF_2017.pdf,single,EUR,euro,rd_programme
-France,Higher Education and Agricultural Research,2018,,,0,,gap,,,rd_programme
-France,Higher Education and Agricultural Research,2020,,,0,,gap,,,rd_programme
-France,Higher Education and Agricultural Research,2021,,,0,,gap,,,rd_programme
+France,Higher Education and Agricultural Research,2018,345984489.0,345984489.0,1,JORF_2018.pdf,single,EUR,euro,rd_programme
+France,Higher Education and Agricultural Research,2019,352815958.0,352815958.0,1,JORF_2019.pdf,single,EUR,euro,rd_programme
+France,Higher Education and Agricultural Research,2020,356736160.0,356736160.0,1,JORF_2020.pdf,single,EUR,euro,rd_programme
+France,Higher Education and Agricultural Research,2021,363112976.0,363112976.0,1,JORF_2021.pdf,single,EUR,euro,rd_programme
 France,Higher Education and Agricultural Research,2022,377978973.0,377978973.0,1,JORF_2022.pdf,single,EUR,euro,rd_programme
-France,Higher Education and Agricultural Research,2023,,,0,,gap,,,rd_programme
-France,Higher Education and Agricultural Research,2024,,,0,,gap,,,rd_programme
-France,Higher Education and Agricultural Research,2025,,,0,,gap,,,rd_programme
+France,Higher Education and Agricultural Research,2023,424396462.0,424396462.0,1,JORF_2023.pdf,single,EUR,euro,rd_programme
+France,Higher Education and Agricultural Research,2024,443008004.0,443008004.0,1,JORF_2024.pdf,single,EUR,euro,rd_programme
+France,Higher Education and Agricultural Research,2025,421859182.0,421859182.0,1,JORF_2025.pdf,single,EUR,euro,rd_programme
 France,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),1984,,,0,,gap,,,science_agency
 France,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),1985,,,0,,gap,,,science_agency
 France,IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer),1986,498000000.0,498000000.0,1,JORF_1986.pdf,single,FRF,franc,science_agency
@@ -444,28 +342,8 @@ France,Industrial and Scientific Development,1970,204150000.0,204150000.0,1,JORF
 France,Industrial and Scientific Development,1972,210590000.0,210590000.0,1,JORF_1972.pdf,single,FRF,franc,innovation_instruments
 France,Industrial and Scientific Development,1973,366947808.0,366947808.0,1,JORF_1973.pdf,single,FRF,franc,innovation_instruments
 France,Industrial and Scientific Development,1974,3178330000.0,3178330000.0,1,JORF_1974.pdf,single,FRF,franc,innovation_instruments
-France,Industrial and Scientific Development,2020,,,0,,gap,,,innovation_instruments
-France,Industrial and Scientific Development,2021,,,0,,gap,,,innovation_instruments
-France,Industrial and Scientific Development,2022,,,0,,gap,,,innovation_instruments
-France,Industrial and Scientific Development,2023,,,0,,gap,,,innovation_instruments
-France,Industrial and Scientific Development,2024,,,0,,gap,,,innovation_instruments
-France,Industrial and Scientific Development,2025,,,0,,gap,,,innovation_instruments
-France,International Center for Agronomic Research for Development,1970,,,0,,gap,,,science_agency
 France,International Center for Agronomic Research for Development,1994,,,0,,gap,,,science_agency
-France,International Center for Agronomic Research for Development,2020,,,0,,gap,,,science_agency
-France,International Center for Agronomic Research for Development,2021,,,0,,gap,,,science_agency
-France,International Center for Agronomic Research for Development,2022,,,0,,gap,,,science_agency
-France,International Center for Agronomic Research for Development,2023,,,0,,gap,,,science_agency
-France,International Center for Agronomic Research for Development,2024,,,0,,gap,,,science_agency
-France,International Center for Agronomic Research for Development,2025,,,0,,gap,,,science_agency
-France,Investments in Research,1970,,,0,,gap,,,direct_rd
 France,Investments in Research,1994,,,0,,gap,,,direct_rd
-France,Investments in Research,2020,,,0,,gap,,,direct_rd
-France,Investments in Research,2021,,,0,,gap,,,direct_rd
-France,Investments in Research,2022,,,0,,gap,,,direct_rd
-France,Investments in Research,2023,,,0,,gap,,,direct_rd
-France,Investments in Research,2024,,,0,,gap,,,direct_rd
-France,Investments in Research,2025,,,0,,gap,,,direct_rd
 France,Multidisciplinary Scientific and Technological Research,2007,,,0,,gap,,,rd_programme
 France,Multidisciplinary Scientific and Technological Research,2008,4982000000.0,4982000000.0,1,JORF_2008.pdf,single,EUR,euro,rd_programme
 France,Multidisciplinary Scientific and Technological Research,2009,5082181762.0,5082181762.0,1,JORF_2009.pdf,single,EUR,euro,rd_programme
@@ -477,21 +355,15 @@ France,Multidisciplinary Scientific and Technological Research,2014,5053673242.0
 France,Multidisciplinary Scientific and Technological Research,2015,6270005790.0,6270005790.0,1,JORF_2015.pdf,single,EUR,euro,rd_programme
 France,Multidisciplinary Scientific and Technological Research,2016,6248944468.0,6248944468.0,1,JORF_2016.pdf,single,EUR,euro,rd_programme
 France,Multidisciplinary Scientific and Technological Research,2017,6423915122.0,6423915122.0,1,JORF_2017.pdf,single,EUR,euro,rd_programme
-France,Multidisciplinary Scientific and Technological Research,2018,,,0,,gap,,,rd_programme
+France,Multidisciplinary Scientific and Technological Research,2018,6766603666.0,6766603666.0,1,JORF_2018.pdf,single,EUR,euro,rd_programme
+France,Multidisciplinary Scientific and Technological Research,2019,6941078490.0,6941078490.0,1,JORF_2019.pdf,single,EUR,euro,rd_programme
 France,Multidisciplinary Scientific and Technological Research,2020,6941119469.0,6941119469.0,1,JORF_2020.pdf,single,EUR,euro,rd_programme
 France,Multidisciplinary Scientific and Technological Research,2021,7163123272.0,7163123272.0,1,JORF_2021.pdf,single,EUR,euro,rd_programme
 France,Multidisciplinary Scientific and Technological Research,2022,7503175364.0,7503175364.0,1,JORF_2022.pdf,single,EUR,euro,rd_programme
 France,Multidisciplinary Scientific and Technological Research,2023,7833527751.0,7833527751.0,1,JORF_2023.pdf,single,EUR,euro,rd_programme
 France,Multidisciplinary Scientific and Technological Research,2024,5000000000.0,5000000000.0,1,JORF_2024.pdf,single,EUR,euro,rd_programme
 France,Multidisciplinary Scientific and Technological Research,2025,5000000000.0,5000000000.0,1,JORF_2025.pdf,single,EUR,euro,rd_programme
-France,National Institute for Research on Transport and its Safety,1970,,,0,,gap,,,science_agency
 France,National Institute for Research on Transport and its Safety,1994,,,0,,gap,,,science_agency
-France,National Institute for Research on Transport and its Safety,2020,,,0,,gap,,,science_agency
-France,National Institute for Research on Transport and its Safety,2021,,,0,,gap,,,science_agency
-France,National Institute for Research on Transport and its Safety,2022,,,0,,gap,,,science_agency
-France,National Institute for Research on Transport and its Safety,2023,,,0,,gap,,,science_agency
-France,National Institute for Research on Transport and its Safety,2024,,,0,,gap,,,science_agency
-France,National Institute for Research on Transport and its Safety,2025,,,0,,gap,,,science_agency
 France,ONERA (Office National d'Études et de Recherches Aérospatiales),1970,,,0,,gap,,,science_agency
 France,ONERA (Office National d'Études et de Recherches Aérospatiales),1972,,,0,,gap,,,science_agency
 France,ONERA (Office National d'Études et de Recherches Aérospatiales),1973,,,0,,gap,,,science_agency
@@ -528,54 +400,12 @@ France,ONERA (Office National d'Études et de Recherches Aérospatiales),2022,,,
 France,ONERA (Office National d'Études et de Recherches Aérospatiales),2023,,,0,,gap,,,science_agency
 France,ONERA (Office National d'Études et de Recherches Aérospatiales),2024,,,0,,gap,,,science_agency
 France,ONERA (Office National d'Études et de Recherches Aérospatiales),2025,,,0,,gap,,,science_agency
-France,Operating Grants for Scientific and Technical Research,1970,,,0,,gap,,,direct_rd
 France,Operating Grants for Scientific and Technical Research,1986,,,0,,gap,,,direct_rd
-France,Operating Grants for Scientific and Technical Research,2020,,,0,,gap,,,direct_rd
-France,Operating Grants for Scientific and Technical Research,2021,,,0,,gap,,,direct_rd
-France,Operating Grants for Scientific and Technical Research,2022,,,0,,gap,,,direct_rd
-France,Operating Grants for Scientific and Technical Research,2023,,,0,,gap,,,direct_rd
-France,Operating Grants for Scientific and Technical Research,2024,,,0,,gap,,,direct_rd
-France,Operating Grants for Scientific and Technical Research,2025,,,0,,gap,,,direct_rd
-France,Other Payment Credits for Research,1970,,,0,,gap,,,direct_rd
 France,Other Payment Credits for Research,1994,,,0,,gap,,,direct_rd
-France,Other Payment Credits for Research,2020,,,0,,gap,,,direct_rd
-France,Other Payment Credits for Research,2021,,,0,,gap,,,direct_rd
-France,Other Payment Credits for Research,2022,,,0,,gap,,,direct_rd
-France,Other Payment Credits for Research,2023,,,0,,gap,,,direct_rd
-France,Other Payment Credits for Research,2024,,,0,,gap,,,direct_rd
-France,Other Payment Credits for Research,2025,,,0,,gap,,,direct_rd
-France,Pasteur Institute of Paris,1970,,,0,,gap,,,science_agency
 France,Pasteur Institute of Paris,1986,,,0,,gap,,,science_agency
-France,Pasteur Institute of Paris,2020,,,0,,gap,,,science_agency
-France,Pasteur Institute of Paris,2021,,,0,,gap,,,science_agency
-France,Pasteur Institute of Paris,2022,,,0,,gap,,,science_agency
-France,Pasteur Institute of Paris,2023,,,0,,gap,,,science_agency
-France,Pasteur Institute of Paris,2024,,,0,,gap,,,science_agency
-France,Pasteur Institute of Paris,2025,,,0,,gap,,,science_agency
-France,Program Authorization for Research and Innovation,1970,,,0,,gap,,,innovation_instruments
 France,Program Authorization for Research and Innovation,1984,,,0,,gap,,,innovation_instruments
-France,Program Authorization for Research and Innovation,2020,,,0,,gap,,,innovation_instruments
-France,Program Authorization for Research and Innovation,2021,,,0,,gap,,,innovation_instruments
-France,Program Authorization for Research and Innovation,2022,,,0,,gap,,,innovation_instruments
-France,Program Authorization for Research and Innovation,2023,,,0,,gap,,,innovation_instruments
-France,Program Authorization for Research and Innovation,2024,,,0,,gap,,,innovation_instruments
-France,Program Authorization for Research and Innovation,2025,,,0,,gap,,,innovation_instruments
-France,Program authorizations for research,1970,,,0,,gap,,,direct_rd
 France,Program authorizations for research,1988,,,0,,gap,,,direct_rd
-France,Program authorizations for research,2020,,,0,,gap,,,direct_rd
-France,Program authorizations for research,2021,,,0,,gap,,,direct_rd
-France,Program authorizations for research,2022,,,0,,gap,,,direct_rd
-France,Program authorizations for research,2023,,,0,,gap,,,direct_rd
-France,Program authorizations for research,2024,,,0,,gap,,,direct_rd
-France,Program authorizations for research,2025,,,0,,gap,,,direct_rd
-France,Program to Promote Research and Innovation,1970,,,0,,gap,,,innovation_instruments
 France,Program to Promote Research and Innovation,1984,,,0,,gap,,,innovation_instruments
-France,Program to Promote Research and Innovation,2020,,,0,,gap,,,innovation_instruments
-France,Program to Promote Research and Innovation,2021,,,0,,gap,,,innovation_instruments
-France,Program to Promote Research and Innovation,2022,,,0,,gap,,,innovation_instruments
-France,Program to Promote Research and Innovation,2023,,,0,,gap,,,innovation_instruments
-France,Program to Promote Research and Innovation,2024,,,0,,gap,,,innovation_instruments
-France,Program to Promote Research and Innovation,2025,,,0,,gap,,,innovation_instruments
 France,Research (Pre-LOLF Ministry Chapter),1970,,,0,,gap,,,rd_ministry
 France,Research (Pre-LOLF Ministry Chapter),1972,,,0,,gap,,,rd_ministry
 France,Research (Pre-LOLF Ministry Chapter),1973,,,0,,gap,,,rd_ministry
@@ -594,30 +424,9 @@ France,Research (Pre-LOLF Ministry Chapter),1988,,,0,,gap,,,rd_ministry
 France,Research (Pre-LOLF Ministry Chapter),1990,,,0,,gap,,,rd_ministry
 France,Research (Pre-LOLF Ministry Chapter),1994,,,0,,gap,,,rd_ministry
 France,Research (Pre-LOLF Ministry Chapter),2005,2216963000.0,2216963000.0,1,JORF_2005.pdf,single,EUR,euro,rd_ministry
-France,Research Actions on Program,1970,,,0,,gap,,,direct_rd
 France,Research Actions on Program,1986,,,0,,gap,,,direct_rd
-France,Research Actions on Program,2020,,,0,,gap,,,direct_rd
-France,Research Actions on Program,2021,,,0,,gap,,,direct_rd
-France,Research Actions on Program,2022,,,0,,gap,,,direct_rd
-France,Research Actions on Program,2023,,,0,,gap,,,direct_rd
-France,Research Actions on Program,2024,,,0,,gap,,,direct_rd
-France,Research Actions on Program,2025,,,0,,gap,,,direct_rd
-France,Research Foundations in Biology and Medicine,1970,,,0,,gap,,,higher_education
 France,Research Foundations in Biology and Medicine,1987,,,0,,gap,,,higher_education
-France,Research Foundations in Biology and Medicine,2020,,,0,,gap,,,higher_education
-France,Research Foundations in Biology and Medicine,2021,,,0,,gap,,,higher_education
-France,Research Foundations in Biology and Medicine,2022,,,0,,gap,,,higher_education
-France,Research Foundations in Biology and Medicine,2023,,,0,,gap,,,higher_education
-France,Research Foundations in Biology and Medicine,2024,,,0,,gap,,,higher_education
-France,Research Foundations in Biology and Medicine,2025,,,0,,gap,,,higher_education
-France,Research and Developments,1970,,,0,,gap,,,direct_rd
 France,Research and Developments,1986,,,0,,gap,,,direct_rd
-France,Research and Developments,2020,,,0,,gap,,,direct_rd
-France,Research and Developments,2021,,,0,,gap,,,direct_rd
-France,Research and Developments,2022,,,0,,gap,,,direct_rd
-France,Research and Developments,2023,,,0,,gap,,,direct_rd
-France,Research and Developments,2024,,,0,,gap,,,direct_rd
-France,Research and Developments,2025,,,0,,gap,,,direct_rd
 France,Research and Higher Education in Economic and Industrial Matters,2007,,,0,,gap,,,rd_programme
 France,Research and Higher Education in Economic and Industrial Matters,2008,,,0,,gap,,,rd_programme
 France,Research and Higher Education in Economic and Industrial Matters,2009,999905126.0,999905126.0,1,JORF_2009.pdf,single,EUR,euro,rd_programme
@@ -629,33 +438,19 @@ France,Research and Higher Education in Economic and Industrial Matters,2014,984
 France,Research and Higher Education in Economic and Industrial Matters,2015,877712013.0,877712013.0,1,JORF_2015.pdf,single,EUR,euro,rd_programme
 France,Research and Higher Education in Economic and Industrial Matters,2016,831000000.0,831000000.0,1,JORF_2016.pdf,single,EUR,euro,rd_programme
 France,Research and Higher Education in Economic and Industrial Matters,2017,794609301.0,794609301.0,1,JORF_2017.pdf,single,EUR,euro,rd_programme
-France,Research and Higher Education in Economic and Industrial Matters,2018,,,0,,gap,,,rd_programme
-France,Research and Higher Education in Economic and Industrial Matters,2020,,,0,,gap,,,rd_programme
-France,Research and Higher Education in Economic and Industrial Matters,2021,,,0,,gap,,,rd_programme
+France,Research and Higher Education in Economic and Industrial Matters,2018,778677598.0,778677598.0,1,JORF_2018.pdf,single,EUR,euro,rd_programme
+France,Research and Higher Education in Economic and Industrial Matters,2019,728818603.0,728818603.0,1,JORF_2019.pdf,single,EUR,euro,rd_programme
+France,Research and Higher Education in Economic and Industrial Matters,2020,782350680.0,782350680.0,1,JORF_2020.pdf,single,EUR,euro,rd_programme
+France,Research and Higher Education in Economic and Industrial Matters,2021,653995570.0,653995570.0,1,JORF_2021.pdf,single,EUR,euro,rd_programme
 France,Research and Higher Education in Economic and Industrial Matters,2022,692485405.0,692485405.0,1,JORF_2022.pdf,single,EUR,euro,rd_programme
-France,Research and Higher Education in Economic and Industrial Matters,2023,,,0,,gap,,,rd_programme
-France,Research and Higher Education in Economic and Industrial Matters,2024,,,0,,gap,,,rd_programme
+France,Research and Higher Education in Economic and Industrial Matters,2023,693736238.0,693736238.0,1,JORF_2023.pdf,single,EUR,euro,rd_programme
+France,Research and Higher Education in Economic and Industrial Matters,2024,688636541.0,688636541.0,1,JORF_2024.pdf,single,EUR,euro,rd_programme
 France,Research and Higher Education in Economic and Industrial Matters,2025,350000000.0,350000000.0,1,JORF_2025.pdf,single,EUR,euro,rd_programme
-France,Research and Technology Fund,1970,,,0,,gap,,,innovation_instruments
 France,Research and Technology Fund,1985,,,0,,gap,,,innovation_instruments
 France,Research and Technology Fund,1986,,,0,,gap,,,innovation_instruments
 France,Research and Technology Fund,1987,,,0,,gap,,,innovation_instruments
 France,Research and Technology Fund,1988,,,0,,gap,,,innovation_instruments
-France,Research and Technology Fund,2020,,,0,,gap,,,innovation_instruments
-France,Research and Technology Fund,2021,,,0,,gap,,,innovation_instruments
-France,Research and Technology Fund,2022,,,0,,gap,,,innovation_instruments
-France,Research and Technology Fund,2023,,,0,,gap,,,innovation_instruments
-France,Research and Technology Fund,2024,,,0,,gap,,,innovation_instruments
-France,Research and Technology Fund,2025,,,0,,gap,,,innovation_instruments
-France,Research envelope,1970,,,0,,gap,,,direct_rd
 France,Research envelope,1986,,,0,,gap,,,direct_rd
-France,Research envelope,2020,,,0,,gap,,,direct_rd
-France,Research envelope,2021,,,0,,gap,,,direct_rd
-France,Research envelope,2022,,,0,,gap,,,direct_rd
-France,Research envelope,2023,,,0,,gap,,,direct_rd
-France,Research envelope,2024,,,0,,gap,,,direct_rd
-France,Research envelope,2025,,,0,,gap,,,direct_rd
-France,Research in Socio-Economics,1970,,,0,,gap,,,direct_rd
 France,Research in Socio-Economics,1972,,,0,,gap,,,direct_rd
 France,Research in Socio-Economics,1973,,,0,,gap,,,direct_rd
 France,Research in Socio-Economics,1974,,,0,,gap,,,direct_rd
@@ -670,12 +465,6 @@ France,Research in Socio-Economics,1985,,,0,,gap,,,direct_rd
 France,Research in Socio-Economics,1986,,,0,,gap,,,direct_rd
 France,Research in Socio-Economics,1987,,,0,,gap,,,direct_rd
 France,Research in Socio-Economics,1988,,,0,,gap,,,direct_rd
-France,Research in Socio-Economics,2020,,,0,,gap,,,direct_rd
-France,Research in Socio-Economics,2021,,,0,,gap,,,direct_rd
-France,Research in Socio-Economics,2022,,,0,,gap,,,direct_rd
-France,Research in Socio-Economics,2023,,,0,,gap,,,direct_rd
-France,Research in Socio-Economics,2024,,,0,,gap,,,direct_rd
-France,Research in Socio-Economics,2025,,,0,,gap,,,direct_rd
 France,"Research in the Fields of Energy, Development, and Sustainable Mobility",2007,,,0,,gap,,,rd_programme
 France,"Research in the Fields of Energy, Development, and Sustainable Mobility",2008,,,0,,gap,,,rd_programme
 France,"Research in the Fields of Energy, Development, and Sustainable Mobility",2009,,,0,,gap,,,rd_programme
@@ -687,29 +476,16 @@ France,"Research in the Fields of Energy, Development, and Sustainable Mobility"
 France,"Research in the Fields of Energy, Development, and Sustainable Mobility",2015,,,0,,gap,,,rd_programme
 France,"Research in the Fields of Energy, Development, and Sustainable Mobility",2016,1724069888.0,1724069888.0,1,JORF_2016.pdf,single,EUR,euro,rd_programme
 France,"Research in the Fields of Energy, Development, and Sustainable Mobility",2017,,,0,,gap,,,rd_programme
-France,"Research in the Fields of Energy, Development, and Sustainable Mobility",2018,,,0,,gap,,,rd_programme
-France,"Research in the Fields of Energy, Development, and Sustainable Mobility",2020,,,0,,gap,,,rd_programme
-France,"Research in the Fields of Energy, Development, and Sustainable Mobility",2021,,,0,,gap,,,rd_programme
+France,"Research in the Fields of Energy, Development, and Sustainable Mobility",2018,1734154531.0,1734154531.0,1,JORF_2018.pdf,single,EUR,euro,rd_programme
+France,"Research in the Fields of Energy, Development, and Sustainable Mobility",2019,1722927442.0,1722927442.0,1,JORF_2019.pdf,single,EUR,euro,rd_programme
+France,"Research in the Fields of Energy, Development, and Sustainable Mobility",2020,1761730045.0,1761730045.0,1,JORF_2020.pdf,single,EUR,euro,rd_programme
+France,"Research in the Fields of Energy, Development, and Sustainable Mobility",2021,1755420951.0,1755420951.0,1,JORF_2021.pdf,single,EUR,euro,rd_programme
 France,"Research in the Fields of Energy, Development, and Sustainable Mobility",2022,1729120775.0,1729120775.0,1,JORF_2022.pdf,single,EUR,euro,rd_programme
 France,"Research in the Fields of Energy, Development, and Sustainable Mobility",2023,,,0,,gap,,,rd_programme
 France,"Research in the Fields of Energy, Development, and Sustainable Mobility",2024,,,0,,gap,,,rd_programme
 France,"Research in the Fields of Energy, Development, and Sustainable Mobility",2025,1408000000.0,1408000000.0,1,JORF_2025.pdf,single,EUR,euro,rd_programme
-France,Scientific Research Grants,1970,,,0,,gap,,,direct_rd
 France,Scientific Research Grants,1994,,,0,,gap,,,direct_rd
-France,Scientific Research Grants,2020,,,0,,gap,,,direct_rd
-France,Scientific Research Grants,2021,,,0,,gap,,,direct_rd
-France,Scientific Research Grants,2022,,,0,,gap,,,direct_rd
-France,Scientific Research Grants,2023,,,0,,gap,,,direct_rd
-France,Scientific Research Grants,2024,,,0,,gap,,,direct_rd
-France,Scientific Research Grants,2025,,,0,,gap,,,direct_rd
-France,Scientific Research in Overseas Territories,1970,,,0,,gap,,,direct_rd
 France,Scientific Research in Overseas Territories,1987,,,0,,gap,,,direct_rd
-France,Scientific Research in Overseas Territories,2020,,,0,,gap,,,direct_rd
-France,Scientific Research in Overseas Territories,2021,,,0,,gap,,,direct_rd
-France,Scientific Research in Overseas Territories,2022,,,0,,gap,,,direct_rd
-France,Scientific Research in Overseas Territories,2023,,,0,,gap,,,direct_rd
-France,Scientific Research in Overseas Territories,2024,,,0,,gap,,,direct_rd
-France,Scientific Research in Overseas Territories,2025,,,0,,gap,,,direct_rd
 France,Space Research,2007,,,0,,gap,,,rd_programme
 France,Space Research,2008,1277000000.0,1277000000.0,1,JORF_2008.pdf,single,EUR,euro,rd_programme
 France,Space Research,2009,1280247629.0,1280247629.0,1,JORF_2009.pdf,single,EUR,euro,rd_programme
@@ -721,96 +497,30 @@ France,Space Research,2014,1429108560.0,1429108560.0,1,JORF_2014.pdf,single,EUR,
 France,Space Research,2015,1434501498.0,1434501498.0,1,JORF_2015.pdf,single,EUR,euro,rd_programme
 France,Space Research,2016,1371719890.0,1371719890.0,1,JORF_2016.pdf,single,EUR,euro,rd_programme
 France,Space Research,2017,1466584352.0,1466584352.0,1,JORF_2017.pdf,single,EUR,euro,rd_programme
-France,Space Research,2018,,,0,,gap,,,rd_programme
+France,Space Research,2018,1618103753.0,1618103753.0,1,JORF_2018.pdf,single,EUR,euro,rd_programme
+France,Space Research,2019,1820012789.0,1820012789.0,1,JORF_2019.pdf,single,EUR,euro,rd_programme
 France,Space Research,2020,2021625716.0,2021625716.0,1,JORF_2020.pdf,single,EUR,euro,rd_programme
 France,Space Research,2021,1635886109.0,1635886109.0,1,JORF_2021.pdf,single,EUR,euro,rd_programme
 France,Space Research,2022,1642286109.0,1642286109.0,1,JORF_2022.pdf,single,EUR,euro,rd_programme
 France,Space Research,2023,1865683825.0,1865683825.0,1,JORF_2023.pdf,single,EUR,euro,rd_programme
 France,Space Research,2024,1300000000.0,1300000000.0,1,JORF_2024.pdf,single,EUR,euro,rd_programme
 France,Space Research,2025,1300000000.0,1300000000.0,1,JORF_2025.pdf,single,EUR,euro,rd_programme
-France,Strategic and Pre-Strategic Atom,1970,,,0,,gap,,,direct_rd
 France,Strategic and Pre-Strategic Atom,1986,,,0,,gap,,,direct_rd
-France,Strategic and Pre-Strategic Atom,2020,,,0,,gap,,,direct_rd
-France,Strategic and Pre-Strategic Atom,2021,,,0,,gap,,,direct_rd
-France,Strategic and Pre-Strategic Atom,2022,,,0,,gap,,,direct_rd
-France,Strategic and Pre-Strategic Atom,2023,,,0,,gap,,,direct_rd
-France,Strategic and Pre-Strategic Atom,2024,,,0,,gap,,,direct_rd
-France,Strategic and Pre-Strategic Atom,2025,,,0,,gap,,,direct_rd
 France,Strategic and Pre-Strategic Engines,1986,,,0,,gap,,,direct_rd
-France,Strategic and Pre-Strategic Vehicles,1970,,,0,,gap,,,direct_rd
 France,Strategic and Pre-Strategic Vehicles,1986,,,0,,gap,,,direct_rd
-France,Strategic and Pre-Strategic Vehicles,2020,,,0,,gap,,,direct_rd
-France,Strategic and Pre-Strategic Vehicles,2021,,,0,,gap,,,direct_rd
-France,Strategic and Pre-Strategic Vehicles,2022,,,0,,gap,,,direct_rd
-France,Strategic and Pre-Strategic Vehicles,2023,,,0,,gap,,,direct_rd
-France,Strategic and Pre-Strategic Vehicles,2024,,,0,,gap,,,direct_rd
-France,Strategic and Pre-Strategic Vehicles,2025,,,0,,gap,,,direct_rd
-France,Structural Financing of Innovation Ecosystems,1970,,,0,,gap,,,innovation_instruments
-France,Structural Financing of Innovation Ecosystems,2020,,,0,,gap,,,innovation_instruments
-France,Structural Financing of Innovation Ecosystems,2021,,,0,,gap,,,innovation_instruments
 France,Structural Financing of Innovation Ecosystems,2022,1415821000.0,1415821000.0,1,JORF_2022.pdf,single,EUR,euro,innovation_instruments
-France,Structural Financing of Innovation Ecosystems,2023,,,0,,gap,,,innovation_instruments
-France,Structural Financing of Innovation Ecosystems,2024,,,0,,gap,,,innovation_instruments
-France,Structural Financing of Innovation Ecosystems,2025,,,0,,gap,,,innovation_instruments
-France,Studies in Scientific and Technical Research,1970,,,0,,gap,,,direct_rd
+France,Structural Funding for Innovation Ecosystems,2022,1415821000.0,1415821000.0,1,JORF_2022.pdf,single,EUR,euro,innovation_instruments
 France,Studies in Scientific and Technical Research,1987,,,0,,gap,,,direct_rd
 France,Studies in Scientific and Technical Research,1988,,,0,,gap,,,direct_rd
-France,Studies in Scientific and Technical Research,2020,,,0,,gap,,,direct_rd
-France,Studies in Scientific and Technical Research,2021,,,0,,gap,,,direct_rd
-France,Studies in Scientific and Technical Research,2022,,,0,,gap,,,direct_rd
-France,Studies in Scientific and Technical Research,2023,,,0,,gap,,,direct_rd
-France,Studies in Scientific and Technical Research,2024,,,0,,gap,,,direct_rd
-France,Studies in Scientific and Technical Research,2025,,,0,,gap,,,direct_rd
-France,Subsidies for Medical Research Equipment,1970,,,0,,gap,,,direct_rd
 France,Subsidies for Medical Research Equipment,1979,,,0,,gap,,,direct_rd
-France,Subsidies for Medical Research Equipment,2020,,,0,,gap,,,direct_rd
-France,Subsidies for Medical Research Equipment,2021,,,0,,gap,,,direct_rd
-France,Subsidies for Medical Research Equipment,2022,,,0,,gap,,,direct_rd
-France,Subsidies for Medical Research Equipment,2023,,,0,,gap,,,direct_rd
-France,Subsidies for Medical Research Equipment,2024,,,0,,gap,,,direct_rd
-France,Subsidies for Medical Research Equipment,2025,,,0,,gap,,,direct_rd
-France,Subsidies to Research Organizations,1970,,,0,,gap,,,direct_rd
 France,Subsidies to Research Organizations,1988,,,0,,gap,,,direct_rd
-France,Subsidies to Research Organizations,2020,,,0,,gap,,,direct_rd
-France,Subsidies to Research Organizations,2021,,,0,,gap,,,direct_rd
-France,Subsidies to Research Organizations,2022,,,0,,gap,,,direct_rd
-France,Subsidies to Research Organizations,2023,,,0,,gap,,,direct_rd
-France,Subsidies to Research Organizations,2024,,,0,,gap,,,direct_rd
-France,Subsidies to Research Organizations,2025,,,0,,gap,,,direct_rd
 France,Subsidy to the Atomic Energy Commission,1970,,,0,,gap,,,direct_rd
-France,Subsidy to the Atomic Energy Commission,2020,,,0,,gap,,,direct_rd
-France,Subsidy to the Atomic Energy Commission,2021,,,0,,gap,,,direct_rd
-France,Subsidy to the Atomic Energy Commission,2022,,,0,,gap,,,direct_rd
-France,Subsidy to the Atomic Energy Commission,2023,,,0,,gap,,,direct_rd
-France,Subsidy to the Atomic Energy Commission,2024,,,0,,gap,,,direct_rd
-France,Subsidy to the Atomic Energy Commission,2025,,,0,,gap,,,direct_rd
-France,Total Payment Credits for Research,1970,,,0,,gap,,,direct_rd
-France,Total Payment Credits for Research,2020,,,0,,gap,,,direct_rd
-France,Total Payment Credits for Research,2021,,,0,,gap,,,direct_rd
-France,Total Payment Credits for Research,2022,,,0,,gap,,,direct_rd
-France,Total Payment Credits for Research,2023,,,0,,gap,,,direct_rd
-France,Total Payment Credits for Research,2024,,,0,,gap,,,direct_rd
-France,Total Payment Credits for Research,2025,,,0,,gap,,,direct_rd
-France,Totals for Research,1970,,,0,,gap,,,direct_rd
 France,Totals for Research,1984,,,0,,gap,,,direct_rd
 France,Totals for Research,1985,,,0,,gap,,,direct_rd
 France,Totals for Research,1986,,,0,,gap,,,direct_rd
 France,Totals for Research,1987,,,0,,gap,,,direct_rd
 France,Totals for Research,1988,,,0,,gap,,,direct_rd
-France,Totals for Research,2020,,,0,,gap,,,direct_rd
-France,Totals for Research,2021,,,0,,gap,,,direct_rd
-France,Totals for Research,2022,,,0,,gap,,,direct_rd
-France,Totals for Research,2023,,,0,,gap,,,direct_rd
-France,Totals for Research,2024,,,0,,gap,,,direct_rd
-France,Totals for Research,2025,,,0,,gap,,,direct_rd
-France,Transport Research Institute,1970,,,0,,gap,,,science_agency
 France,Transport Research Institute,1986,,,0,,gap,,,science_agency
-France,Transport Research Institute,2020,,,0,,gap,,,science_agency
-France,Transport Research Institute,2021,,,0,,gap,,,science_agency
-France,Transport Research Institute,2022,,,0,,gap,,,science_agency
-France,Transport Research Institute,2023,,,0,,gap,,,science_agency
-France,Transport Research Institute,2024,,,0,,gap,,,science_agency
-France,Transport Research Institute,2025,,,0,,gap,,,science_agency
 France,Universities and Higher Education (Pre-LOLF Chapter),1970,,,0,,gap,,,higher_education
 France,Universities and Higher Education (Pre-LOLF Chapter),1972,,,0,,gap,,,higher_education
 France,Universities and Higher Education (Pre-LOLF Chapter),1973,,,0,,gap,,,higher_education
@@ -829,10 +539,4 @@ France,Universities and Higher Education (Pre-LOLF Chapter),1988,,,0,,gap,,,high
 France,Universities and Higher Education (Pre-LOLF Chapter),1990,,,0,,gap,,,higher_education
 France,Universities and Higher Education (Pre-LOLF Chapter),1994,,,0,,gap,,,higher_education
 France,Universities and Higher Education (Pre-LOLF Chapter),2005,,,0,,gap,,,higher_education
-France,Valorization of Research,1970,,,0,,gap,,,direct_rd
-France,Valorization of Research,2020,,,0,,gap,,,direct_rd
-France,Valorization of Research,2021,,,0,,gap,,,direct_rd
 France,Valorization of Research,2022,846000000.0,846000000.0,1,JORF_2022.pdf,single,EUR,euro,direct_rd
-France,Valorization of Research,2023,,,0,,gap,,,direct_rd
-France,Valorization of Research,2024,,,0,,gap,,,direct_rd
-France,Valorization of Research,2025,,,0,,gap,,,direct_rd

@@ -12866,6 +12866,66 @@
       "source_entity": "Agence française pour la maîtrise de l'énergie",
       "n_years_seen": 1,
       "avg_amount": 248750.0
+    },
+    {
+      "canonical_name": "Structural Funding for Innovation Ecosystems",
+      "category": "innovation_instruments",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        2022,
+        2022
+      ],
+      "notes": "This funding supports innovation ecosystems, which are relevant to R&D.",
+      "agency_type": "rd_programme",
+      "confidence": 0.8,
+      "source_entity": "Financement structurel des écosystèmes d’innovation",
+      "n_years_seen": 1,
+      "avg_amount": 1415821.0
+    },
+    {
+      "canonical_name": "Payments for Industrial and Scientific Development",
+      "category": "direct_rd",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1970,
+        1970
+      ],
+      "notes": "This fund is directly aimed at supporting industrial and scientific development.",
+      "agency_type": "rd_fund",
+      "confidence": 0.9,
+      "source_entity": "Crédits de paiement pour le développement industriel et scientifique",
+      "n_years_seen": 1,
+      "avg_amount": 204150.0
+    },
+    {
+      "canonical_name": "Grant to the Atomic Energy Commission",
+      "category": "science_agency",
+      "name_variants": [],
+      "preferred_item_type": [
+        "section_total",
+        "program_total",
+        "line_item"
+      ],
+      "active_years": [
+        1970,
+        1970
+      ],
+      "notes": "This grant is directed towards a key agency involved in scientific research.",
+      "agency_type": "dedicated_rd_agency",
+      "confidence": 0.85,
+      "source_entity": "Subvention au commissariat à l’énergie atomique",
+      "n_years_seen": 1,
+      "avg_amount": 30000.0
     }
   ],
   "Germany": [

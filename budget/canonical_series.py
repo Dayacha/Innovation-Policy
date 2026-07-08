@@ -4331,6 +4331,152 @@ _FRANCE_VERIFIED_OVERRIDES = {
     },
 }
 
+_FRANCE_VERIFIED_OVERRIDES_MODERN: dict[int, dict[str, tuple[float, int, str, str, str]]] = {
+    2018: {
+        "Multidisciplinary Scientific and Technological Research": (
+            6_766_603_666.0,
+            112,
+            "EUR",
+            "JORF_2018.pdf",
+            "Recherches scientifiques et technologiques pluridisciplinaires",
+        ),
+        "Space Research": (
+            1_618_103_753.0,
+            112,
+            "EUR",
+            "JORF_2018.pdf",
+            "Recherche spatiale",
+        ),
+        "Research in the Fields of Energy, Development, and Sustainable Mobility": (
+            1_734_154_531.0,
+            112,
+            "EUR",
+            "JORF_2018.pdf",
+            "Recherche dans les domaines de l’énergie, du développement et de la mobilité durables",
+        ),
+        "Research and Higher Education in Economic and Industrial Matters": (
+            778_677_598.0,
+            112,
+            "EUR",
+            "JORF_2018.pdf",
+            "Recherche et enseignement supérieur en matière économique et industrielle",
+        ),
+        "Cultural Research and Scientific Culture": (
+            111_881_973.0,
+            112,
+            "EUR",
+            "JORF_2018.pdf",
+            "Recherche culturelle et culture scientifique",
+        ),
+        "Higher Education and Agricultural Research": (
+            345_984_489.0,
+            112,
+            "EUR",
+            "JORF_2018.pdf",
+            "Enseignement supérieur et recherche agricoles",
+        ),
+        "Applied Research and Innovation in Agriculture": (
+            71_000_000.0,
+            114,
+            "EUR",
+            "JORF_2018.pdf",
+            "Recherche appliquée et innovation en agriculture",
+        ),
+    },
+    2019: {
+        "Multidisciplinary Scientific and Technological Research": (
+            6_941_078_490.0,
+            183,
+            "EUR",
+            "JORF_2019.pdf",
+            "Recherches scientifiques et technologiques pluridisciplinaires",
+        ),
+        "Space Research": (
+            1_820_012_789.0,
+            183,
+            "EUR",
+            "JORF_2019.pdf",
+            "Recherche spatiale",
+        ),
+        "Research in the Fields of Energy, Development, and Sustainable Mobility": (
+            1_722_927_442.0,
+            183,
+            "EUR",
+            "JORF_2019.pdf",
+            "Recherche dans les domaines de l’énergie, du développement et de la mobilité durables",
+        ),
+        "Research and Higher Education in Economic and Industrial Matters": (
+            728_818_603.0,
+            183,
+            "EUR",
+            "JORF_2019.pdf",
+            "Recherche et enseignement supérieur en matière économique et industrielle",
+        ),
+        "Cultural Research and Scientific Culture": (
+            109_981_973.0,
+            183,
+            "EUR",
+            "JORF_2019.pdf",
+            "Recherche culturelle et culture scientifique",
+        ),
+        "Higher Education and Agricultural Research": (
+            352_815_958.0,
+            183,
+            "EUR",
+            "JORF_2019.pdf",
+            "Enseignement supérieur et recherche agricoles",
+        ),
+        "Applied Research and Innovation in Agriculture": (
+            71_000_000.0,
+            185,
+            "EUR",
+            "JORF_2019.pdf",
+            "Recherche appliquée et innovation en agriculture",
+        ),
+    },
+    2020: {
+        "Research in the Fields of Energy, Development, and Sustainable Mobility": (
+            1_761_730_045.0,
+            214,
+            "EUR",
+            "JORF_2020.pdf",
+            "Recherche dans les domaines de l’énergie, du développement et de la mobilité durables",
+        ),
+        "Applied Research and Innovation in Agriculture": (
+            71_000_000.0,
+            216,
+            "EUR",
+            "JORF_2020.pdf",
+            "Recherche appliquée et innovation en agriculture",
+        ),
+    },
+    2021: {
+        "Research in the Fields of Energy, Development, and Sustainable Mobility": (
+            1_755_420_951.0,
+            173,
+            "EUR",
+            "JORF_2021.pdf",
+            "Recherche dans les domaines de l’énergie, du développement et de la mobilité durables",
+        ),
+        "Applied Research and Innovation in Agriculture": (
+            65_934_600.0,
+            175,
+            "EUR",
+            "JORF_2021.pdf",
+            "Recherche appliquée et innovation en agriculture",
+        ),
+    },
+    2022: {
+        "Applied Research and Innovation in Agriculture": (
+            65_520_000.0,
+            694,
+            "EUR",
+            "JORF_2022.pdf",
+            "Recherche appliquée et innovation en agriculture",
+        ),
+    },
+}
+
 
 def _uk_exactish_match_group(*terms: str) -> list[str]:
     out: list[str] = []
@@ -16082,6 +16228,48 @@ def build_canonical_series(
                     out.at[target_idx, "item_type"] = "verified_override"
                     out.at[target_idx, "line_description_en"] = "Verified against original France budget file"
                     out.at[target_idx, "source_file"] = year_source_map.get(year)
+                    notes = str(out.at[target_idx, "series_notes"] or "").strip()
+                    note = "manual override from original France budget file"
+                    out.at[target_idx, "series_notes"] = f"{notes}; {note}".strip("; ").strip()
+
+            for year, overrides in _FRANCE_VERIFIED_OVERRIDES_MODERN.items():
+                for canonical_name, (amount_local, page_number, currency, source_file, line_desc) in overrides.items():
+                    mask = (out["year"] == year) & (out["canonical_name"] == canonical_name)
+                    if not mask.any():
+                        ref_row = out[out["canonical_name"] == canonical_name]
+                        if ref_row.empty:
+                            continue
+                        new_row = ref_row.iloc[0].copy()
+                        new_row["year"] = year
+                        new_row["amount_local"] = float(amount_local)
+                        new_row["unit"] = "euro"
+                        new_row["currency"] = currency
+                        new_row["item_type"] = "verified_override"
+                        new_row["line_description_en"] = line_desc
+                        new_row["source_file"] = source_file
+                        new_row["page_number"] = str(page_number)
+                        notes = str(new_row.get("series_notes") or "").strip()
+                        note = "manual override from original France budget file"
+                        new_row["series_notes"] = f"{notes}; {note}".strip("; ").strip()
+                        out = pd.concat([out, new_row.to_frame().T], ignore_index=True)
+                        continue
+
+                    target_idx = out.index[mask][0]
+                    out.loc[mask, "amount_local"] = None
+                    out.loc[mask, "unit"] = None
+                    out.loc[mask, "currency"] = None
+                    out.loc[mask, "item_type"] = None
+                    out.loc[mask, "line_description_en"] = None
+                    out.loc[mask, "source_file"] = None
+                    out.loc[mask, "page_number"] = None
+
+                    out.at[target_idx, "amount_local"] = float(amount_local)
+                    out.at[target_idx, "unit"] = "euro"
+                    out.at[target_idx, "currency"] = currency
+                    out.at[target_idx, "item_type"] = "verified_override"
+                    out.at[target_idx, "line_description_en"] = line_desc
+                    out.at[target_idx, "source_file"] = source_file
+                    out.at[target_idx, "page_number"] = str(page_number)
                     notes = str(out.at[target_idx, "series_notes"] or "").strip()
                     note = "manual override from original France budget file"
                     out.at[target_idx, "series_notes"] = f"{notes}; {note}".strip("; ").strip()
