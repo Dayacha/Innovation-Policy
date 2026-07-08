@@ -48,6 +48,25 @@ GAP_REPORT_CSV = cfg.OUTPUT_DIR / "gap_report.csv"
 REEXTRACT_QUEUE_CSV = cfg.OUTPUT_DIR / "reextract_queue.csv"
 _COLOMBIA_FULL_TEXT_DIR = cfg.OUTPUT_DIR / "full_text" / "Colombia"
 _HUNGARY_FULL_TEXT_DIR = cfg.OUTPUT_DIR / "full_text" / "Hungary"
+_ICELAND_FULL_TEXT_DIR = cfg.OUTPUT_DIR / "full_text" / "Iceland"
+
+# Iceland: some agencies are only ever itemized inside a broader ministry/chapter
+# rollup line in the Fjárlagafrumvarp summary volume (e.g. "07.10 Samkeppnissjóðir
+# í rannsóknum" bundles several competition research funds, including Tækniþróunarsjóður,
+# under one Heildargjöld total). When the source document for a given year does not
+# also include the itemized annex, the fund-level figure is genuinely not recoverable —
+# no amount of re-extraction or better matching will produce it. This maps each affected
+# canonical agency to the broader heading(s) that may cover it.
+_ICELAND_CATEGORY_ROLLUP_HEADINGS: dict[str, list[str]] = {
+    "Tækniþróunarsjóður (Technology Development Fund)": ["samkeppnissjóðir í rannsóknum", "07.10"],
+    "Rannsóknarnámssjóður (Research Scholarship Fund)": ["samkeppnissjóðir í rannsóknum", "07.10"],
+}
+
+# Per-process cache + call budget for _check_source_narrative_text(), which opens
+# source .docx/.doc files directly (can shell out to soffice for legacy .doc —
+# slow). See that function's docstring for why this exists.
+_NARRATIVE_TEXT_CACHE: dict[str, str] = {}
+_NARRATIVE_TEXT_CHECK_BUDGET = 60
 
 _VERIFIED_TEMPORAL_OUTLIERS = {
     ("Costa Rica", "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)", 2011),
@@ -1002,11 +1021,203 @@ def _hungary_gap_diagnosis_from_full_text(
             path.stem,
         )
 
+    base_diagnosis = (
+        "Original Hungary cached text contains the MTA chapter heading, but no MTA row reaches raw_rows. The loss occurs inside text-cache parsing: the multi-column chapter total is fragmented/truncated in the PDF text layer, so the parser cannot recover a defendable numeric annual total."
+    )
+
+    # The LLM extraction pipeline (results.csv) sometimes recovers MTA-related line
+    # items for the same year even when the deterministic text-cache parser cannot.
+    # Surface those as candidates for MANUAL verification rather than auto-inserting
+    # them: a first attempt at this showed results.csv's amount_local/unit values for
+    # these specific rows are not consistently scaled (mixing "thousand HUF" and
+    # "already full HUF" style rows), which produced 1,000x-scale errors when merged
+    # automatically. A human checking the original PDF page can resolve that; blindly
+    # trusting the unit field cannot.
+    results_csv = cfg.OUTPUT_DIR / "results.csv"
+    if results_csv.exists():
+        try:
+            results_df = pd.read_csv(results_csv, low_memory=False)
+        except Exception:
+            results_df = pd.DataFrame()
+        if not results_df.empty and "country" in results_df.columns:
+            hu = results_df[
+                (results_df["country"] == "Hungary")
+                & (pd.to_numeric(results_df["year"], errors="coerce") == year)
+            ]
+            mta_mask = hu.get("section_name", pd.Series("", index=hu.index)).astype(str).str.contains(
+                r"akad[eé]mia|\bmta\b", case=False, regex=True, na=False
+            )
+            candidates_df = hu[mta_mask]
+            if not candidates_df.empty:
+                sample = candidates_df.iloc[0]
+                n = len(candidates_df)
+                return (
+                    base_diagnosis + (
+                        f" NOTE: results.csv (LLM pipeline output) has {n} MTA-related row(s) for {year} not yet "
+                        f"merged into the series (e.g. '{str(sample.get('line_description',''))[:60]}' = "
+                        f"{sample.get('amount_local')} {sample.get('unit','')} {sample.get('currency','')} in "
+                        f"{sample.get('source_file','')}) — candidate data exists but needs manual verification "
+                        f"against the original PDF page before being trusted (unit/scale was inconsistent across "
+                        f"these rows when checked)."
+                    ),
+                    "verify",
+                    path.stem,
+                )
+
     return (
-        "Original Hungary cached text contains the MTA chapter heading, but no MTA row reaches raw_rows. The loss occurs inside text-cache parsing: the multi-column chapter total is fragmented/truncated in the PDF text layer, so the parser cannot recover a defendable numeric annual total.",
+        base_diagnosis,
         "reextract",
         path.stem,
     )
+
+
+def _check_source_narrative_text(
+    country: str,
+    year: int,
+    agency: dict,
+    source_files: list,
+) -> tuple[Optional[str], Optional[str]]:
+    """
+    docx_table_parser.py only reads doc.tables — it never looks at doc.paragraphs,
+    so an agency mentioned only in narrative/body text (outside a Word table) is
+    structurally invisible to the deterministic parser, and previously just showed
+    up as a generic "may be in a non-table section" guess with no way to check it.
+
+    This actually opens the source .docx/.doc file(s) for the year and searches
+    BOTH paragraphs and table cells for the agency's name_variants, so the
+    diagnosis reflects what is actually in the document instead of a guess.
+    Read-only — never inserts data, only reports what it finds.
+
+    Cost guard: opening a legacy .doc file can shell out to soffice (slow, ~1-3s
+    each), and a country like Australia can have 1000+ (agency, year) gap rows.
+    A global per-process call budget keeps a single gap_detector run bounded
+    even if every gap row would otherwise trigger a fresh file open.
+    """
+    global _NARRATIVE_TEXT_CHECK_BUDGET
+    if _NARRATIVE_TEXT_CHECK_BUDGET <= 0:
+        return None, None
+
+    variants = [v for v in agency.get("name_variants", []) if len(str(v)) > 4]
+    if not variants:
+        return None, None
+
+    input_dir = cfg.PDF_ROOT / country if hasattr(cfg, "PDF_ROOT") else None
+    if input_dir is None or not input_dir.exists():
+        return None, None
+
+    checked_any = False
+    for source_file in source_files:
+        candidates = list(input_dir.glob(f"*{Path(str(source_file)).stem}*"))
+        for path in candidates:
+            if path.suffix.lower() not in (".docx", ".doc"):
+                continue
+            # Cache per source file within this process: this function is called
+            # once per (missing agency, year), and the same handful of source files
+            # repeat across many agencies for a given year — without caching, each
+            # file gets re-extracted (including a slow soffice subprocess call for
+            # legacy .doc) once per missing agency, which is what made an earlier
+            # version of this check time out on large countries.
+            cache_key = str(path)
+            if cache_key in _NARRATIVE_TEXT_CACHE:
+                full_text = _NARRATIVE_TEXT_CACHE[cache_key]
+            else:
+                _NARRATIVE_TEXT_CHECK_BUDGET -= 1
+                try:
+                    from budget.pdf_reader import extract_pages
+                    pages = extract_pages(path, cache_dir=None)
+                    full_text = "\n".join(pg.text for pg in pages)
+                except Exception:
+                    full_text = ""
+                _NARRATIVE_TEXT_CACHE[cache_key] = full_text
+                if len(_NARRATIVE_TEXT_CACHE) > 500:
+                    _NARRATIVE_TEXT_CACHE.clear()  # simple unbounded-growth guard
+            if not full_text:
+                continue
+            checked_any = True
+            for variant in variants:
+                if re.search(re.escape(str(variant)), full_text, re.IGNORECASE):
+                    idx = full_text.lower().find(str(variant).lower())
+                    snippet = full_text[max(0, idx - 60):idx + 100].replace("\n", " ")
+                    return (
+                        f"Found '{variant}' in the narrative/paragraph text of {path.name} (not in a table cell, "
+                        f"which is why the deterministic table parser missed it): \"...{snippet}...\". This "
+                        f"confirms the text exists in the source but needs paragraph-level (not table-only) "
+                        f"extraction — a genuine parser gap, not a missing-document issue.",
+                        "reextract",
+                    )
+
+    if checked_any:
+        return (
+            f"Checked all {year} source file(s) for {country} directly — both table cells AND narrative/paragraph "
+            f"text — and '{agency['canonical_name']}' does not appear anywhere in the available document(s) for "
+            f"this year (source: {', '.join(sorted(set(str(f) for f in source_files)))}). This is not a table-"
+            f"vs-narrative parsing gap; the agency-level detail likely isn't in this document type at all (e.g. "
+            f"it may only exist in a companion Portfolio Budget Statement or annex not present in this corpus).",
+            "document_limitation",
+        )
+    return None, None
+
+
+def _iceland_category_rollup_diagnosis(
+    country: str,
+    year: int,
+    canonical: str,
+) -> tuple[Optional[str], Optional[str], Optional[str]]:
+    """
+    Distinguish "agency genuinely absent" from "agency is only reported inside a
+    broader ministry/chapter rollup line" for Iceland funds that share a chapter
+    with other competition-research funds (e.g. Tækniþróunarsjóður under
+    "07.10 Samkeppnissjóðir í rannsóknum"). If the source document for this year
+    is only the summary Fjárlagafrumvarp volume (no itemized annex), the rollup
+    total is the finest granularity actually available — re-extraction will not
+    recover a fund-specific figure, so we say so explicitly instead of returning
+    a generic "no matching rows" / "may be in a non-table section" message.
+    """
+    if country != "Iceland":
+        return None, None, None
+    headings = _ICELAND_CATEGORY_ROLLUP_HEADINGS.get(canonical)
+    if not headings:
+        return None, None, None
+
+    candidates = sorted(_ICELAND_FULL_TEXT_DIR.glob(f"*__{year}_*.txt.gz"))
+    if not candidates:
+        return None, None, None
+
+    path = candidates[0]
+    try:
+        with gzip.open(path, "rt", encoding="utf-8", errors="ignore") as fh:
+            text = fh.read()
+    except OSError:
+        return None, None, None
+
+    # Already itemized under its own name/code? Then this diagnosis doesn't apply —
+    # let the normal name-variant matcher handle it.
+    agencies = {a["canonical_name"]: a for a in _get_agencies_for_country(country)}
+    agency = agencies.get(canonical, {})
+    for variant in agency.get("name_variants", []):
+        if len(str(variant)) > 4 and re.search(re.escape(str(variant)), text, re.IGNORECASE):
+            return None, None, None
+
+    for heading in headings:
+        m = re.search(re.escape(heading) + r".{0,600}?Heildargjöld[^\d]{0,200}(\d[\d.,]*)", text, re.IGNORECASE | re.DOTALL)
+        if m:
+            amount_text = m.group(1)
+            return (
+                f"Source document only reports the aggregated chapter total ('{heading}' = {amount_text} m.kr. in "
+                f"{path.stem}) that bundles this fund with others under the same ministry heading; this document "
+                f"does not contain an itemized fund-level breakdown for {canonical} in {year}. Re-extraction will "
+                f"not recover a fund-specific figure — a different source document (itemized annex) would be needed.",
+                "document_limitation",
+                path.stem,
+            )
+        if re.search(re.escape(heading), text, re.IGNORECASE):
+            return (
+                f"Source document mentions the chapter heading '{heading}' but no parseable total was found nearby; "
+                f"this document likely does not itemize {canonical} separately for {year}.",
+                "document_limitation",
+                path.stem,
+            )
+    return None, None, None
 
 
 def _results_gap_diagnosis_from_country_results(
@@ -1292,6 +1503,12 @@ def search_raw_rows_for_gaps(
                     canonical=canonical,
                 )
             if not specific_diag:
+                specific_diag, specific_action, specific_file = _iceland_category_rollup_diagnosis(
+                    country=country,
+                    year=int(year),
+                    canonical=canonical,
+                )
+            if not specific_diag:
                 specific_diag, specific_action, specific_file = _results_gap_diagnosis_from_country_results(
                     country=country,
                     year=int(year),
@@ -1355,6 +1572,12 @@ def search_raw_rows_for_gaps(
                     year=int(year),
                     canonical=canonical,
                 )
+            if not specific_diag:
+                specific_diag, specific_action, specific_file = _iceland_category_rollup_diagnosis(
+                    country=country,
+                    year=int(year),
+                    canonical=canonical,
+                )
             if specific_diag:
                 gap_df.at[idx, "raw_row_match"] = "no"
                 gap_df.at[idx, "diagnosis"] = specific_diag
@@ -1362,19 +1585,158 @@ def search_raw_rows_for_gaps(
                 if specific_file:
                     gap_df.at[idx, "raw_row_file"] = specific_file
                 continue
-            if len(year_files) > 0:
-                gap_df.at[idx, "raw_row_match"] = "no"
+
+            # Before giving up: try a fuzzy/partial match. Exact substring matching
+            # (above) misses cases where the source document uses a broader or
+            # reworded category label instead of the exact agency name (e.g. a
+            # ministry rollup heading like "Research and inspection in agricultural
+            # affairs" standing in for a specific named agency). A near-miss here is
+            # far more actionable for a human reviewer than a bare "not found".
+            fuzzy_match, fuzzy_score, fuzzy_variant = _fuzzy_best_match(
+                year_raw, agency.get("name_variants", [])
+            )
+            if fuzzy_match is not None:
+                gap_df.at[idx, "raw_row_match"] = "partial"
+                gap_df.at[idx, "raw_row_amount"] = float(fuzzy_match["amount_current"])
+                gap_df.at[idx, "raw_row_file"] = str(fuzzy_match.get("source_file", ""))
                 gap_df.at[idx, "diagnosis"] = (
-                    f"Year has {len(year_files)} parsed files but agency not found. "
-                    f"May be in a non-table section or different document."
+                    f"No exact name match for '{canonical}', but a similar/broader category was found "
+                    f"(matched '{fuzzy_match.get('entity_raw', '')[:60]}' against variant '{fuzzy_variant}', "
+                    f"similarity={fuzzy_score:.2f}) = {float(fuzzy_match['amount_current']):,.0f} in "
+                    f"{fuzzy_match.get('source_file', '?')}. Verify manually whether this broader category "
+                    f"line actually covers this agency before accepting the amount."
                 )
-                gap_df.at[idx, "action"] = "reextract"
+                gap_df.at[idx, "action"] = "verify"
+                continue
+
+            if len(year_files) > 0:
+                narrative_diag, narrative_action = _check_source_narrative_text(
+                    country=country,
+                    year=int(year),
+                    agency=agency,
+                    source_files=year_files,
+                )
+                if narrative_diag:
+                    gap_df.at[idx, "raw_row_match"] = "no"
+                    gap_df.at[idx, "diagnosis"] = narrative_diag
+                    gap_df.at[idx, "action"] = narrative_action
+                else:
+                    gap_df.at[idx, "raw_row_match"] = "no"
+                    gap_df.at[idx, "diagnosis"] = (
+                        f"Year has {len(year_files)} parsed files but agency not found, including under a fuzzy/"
+                        f"broader-category match. May be in a non-table section or a different companion document."
+                    )
+                    gap_df.at[idx, "action"] = "reextract"
             else:
                 gap_df.at[idx, "raw_row_match"] = "no"
                 gap_df.at[idx, "diagnosis"] = "No parsed documents for this year"
                 gap_df.at[idx, "action"] = "reextract"
 
     return gap_df
+
+
+### Words too generic to count as evidence of a match on their own. Institutional
+# names across this multi-country, multi-language corpus share a lot of
+# bureaucratic vocabulary ("national", "council", "research", "ministry"...) —
+# without filtering these out, two *unrelated* agencies that both happen to be
+# e.g. "Australian ... Council" score as near-identical. Kept deliberately short
+# and generic (English + a handful of Spanish/Icelandic equivalents) rather than
+# trying to be an exhaustive per-language stopword list.
+_FUZZY_MATCH_STOPWORDS = {
+    "the", "and", "for", "of", "in", "on", "de", "la", "el", "y", "og", "for",
+    "national", "nacional", "council", "consejo", "research", "investigacion",
+    "investigación", "rannsókna", "institute", "instituto", "agency", "agencia",
+    "department", "departamento", "ministry", "ministerio", "office", "oficina",
+    "fund", "fondo", "sjóður", "development", "desarrollo", "þróunar", "science",
+    "ciencia", "vísinda", "technology", "tecnologia", "tecnología", "tækni",
+    "centre", "center", "centro", "government", "gobierno", "federal", "state",
+    "estado", "university", "universidad", "háskóli", "program", "programme",
+    "programa", "service", "services", "servicio", "servicios", "authority",
+    "board", "commission", "comision", "comisión", "administration",
+    "administracion", "administración", "public", "publico", "público",
+    "grant", "grants", "support", "general", "expenditure", "total", "totals",
+    "funding", "million", "thousand", "current", "prior", "outcome", "provide",
+    "expert", "advice", "australian", "assistance", "scheme", "schemes",
+}
+
+
+def _fuzzy_best_match(
+    year_raw: pd.DataFrame,
+    name_variants: list[str],
+    threshold: float = 0.55,
+) -> tuple[Optional[pd.Series], float, Optional[str]]:
+    """
+    Fall back to approximate string matching between each agency name_variant and
+    the raw rows' entity/section text, for the case where exact substring matching
+    (_raw_row_matches_variant) fails because the source uses a reworded or broader
+    category label instead of the exact agency name. Returns the best-scoring row
+    above `threshold`, its score, and the variant it matched, or (None, 0.0, None)
+    if nothing clears the bar.
+
+    Deliberately conservative on two axes:
+      1. Performance — countries like Australia have thousands of raw rows per
+         year, so this avoids O(variants × rows) Python-level string work via a
+         vectorized pandas prefilter before any per-row scoring.
+      2. Precision — word-overlap on short institutional names is unstable if
+         common bureaucratic words ("national", "council", "research"...) count
+         as evidence, so those are excluded via _FUZZY_MATCH_STOPWORDS and at
+         least 2 distinctive (non-stopword) words must overlap.
+
+    Always reported as a "partial"/"verify" match rather than silently accepted —
+    a human should confirm the broader category line really does cover the agency.
+    """
+    if year_raw.empty:
+        return None, 0.0, None
+
+    blobs = (
+        year_raw.get("entity_raw", "").fillna("").astype(str)
+        + " "
+        + year_raw.get("section_name", "").fillna("").astype(str)
+    ).str.lower()
+
+    def _sig_words(text: str) -> set[str]:
+        words = re.findall(r"[a-záéíóúýþðæö]+", text)
+        return {w for w in words if len(w) >= 5 and w not in _FUZZY_MATCH_STOPWORDS}
+
+    best_row = None
+    best_score = 0.0
+    best_variant = None
+    for variant in name_variants:
+        v = str(variant or "").strip().lower()
+        if len(v) < 5:
+            continue  # too short for fuzzy matching to be meaningful
+        v_sig = _sig_words(v)
+        if len(v_sig) < 3:
+            continue  # need at least 3 distinctive words for a stable fuzzy signal
+
+        # Cheap vectorized prefilter over all rows in one pandas string op.
+        pattern = "|".join(re.escape(w) for w in v_sig)
+        candidate_mask = blobs.str.contains(pattern, regex=True, na=False)
+        n_candidates = int(candidate_mask.sum())
+        if n_candidates == 0:
+            continue
+        candidate_idx = year_raw.index[candidate_mask][:50]
+
+        for i in candidate_idx:
+            blob = blobs.loc[i]
+            blob_sig = _sig_words(blob)
+            shared = v_sig & blob_sig
+            if len(shared) < 2:
+                continue  # require at least 2 distinctive shared words
+            # Jaccard, not recall-over-variant: a blob padded with lots of its own
+            # unrelated words should score lower, not the same 1.0 a 2-word
+            # variant would get just from matching both of its words.
+            union = v_sig | blob_sig
+            jaccard = len(shared) / len(union) if union else 0.0
+            if jaccard <= best_score:
+                continue
+            best_score = jaccard
+            best_row = year_raw.loc[i]
+            best_variant = variant
+
+    if best_row is not None and best_score >= threshold:
+        return best_row, best_score, best_variant
+    return None, 0.0, None
 
 
 # ---------------------------------------------------------------------------

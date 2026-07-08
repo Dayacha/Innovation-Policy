@@ -258,6 +258,7 @@ RD_CATEGORY_COLORS = {
     "institution_funding":     "#E86B33",   # orange (legacy)
     "unclear":                 "#9B9B9B",   # grey
     "other":                   "#9B9B9B",   # grey
+    "national_total":          "#5A5A5A",   # dark grey — top-line aggregate, not additive
 }
 
 RD_CATEGORY_LABELS = {
@@ -271,6 +272,7 @@ RD_CATEGORY_LABELS = {
     "institution_funding":     "Institutional Funding",
     "unclear":                 "Unclassified",
     "other":                   "Other",
+    "national_total":          "National Total (headline, not additive)",
 }
 
 # Growth orientation — semantic colors, dark enough for chart labels

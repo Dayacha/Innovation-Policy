@@ -2279,6 +2279,830 @@ LOCKED_SERIES_OBSERVATIONS: dict[str, list[tuple]] = {
             "Verified 2025 core University of Luxembourg state contribution from section 16.02 in the original budget page",
         ),
     ],
+    "UK": [
+        (
+            2024,
+            "Public R&D Investment",
+            20_000_000_000.0,
+            "pound",
+            "GBP",
+            "2021_10_UK.pdf",
+            86.0,
+            "verified_override",
+            "Verified against original 2021_10_UK.pdf (Autumn Budget and Spending "
+            "Review 2021), p.86 para 3.7: 'SR21 invests a record £20 billion by "
+            "2024-25 in Research and Development (R&D)', repeated at paras 2.163 "
+            "and 4.71 (£20 billion by 2024-25, including funding for EU "
+            "programmes). This is the government's own headline total R&D "
+            "investment figure (not a sub-programme total); the existing "
+            "'Public R&D Investment' canonical had zero populated years before "
+            "this fix despite matching a real, repeated headline claim.",
+        ),
+        (
+            2025,
+            "Public R&D Investment",
+            20_400_000_000.0,
+            "pound",
+            "GBP",
+            "2024_10_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against original 2024_10_UK.pdf (Autumn Budget 2024): "
+            "'the Budget protects record levels of government R&D investment "
+            "with £20.4 billion allocated in 2025-26.' Government's own headline "
+            "total R&D investment figure for FY2025-26.",
+        ),
+        (
+            2014,
+            "Alan Turing Institute",
+            42_000_000.0,
+            "pound",
+            "GBP",
+            "2014_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against original 2014_UK.pdf (Budget 2014): 'provide £42 "
+            "million over 5 years for the Alan Turing Institute — this will be a "
+            "national institute which will undertake new research in ways of "
+            "collecting, organising and analysing large sets of data (Big "
+            "Data).' Recorded as a 5-year commitment announced in 2014, not an "
+            "annual figure — flagged accordingly; treat as a one-off founding "
+            "grant, not a recurring annual appropriation.",
+        ),
+        (
+            2017,
+            "GovTech Fund",
+            20_000_000.0,
+            "pound",
+            "GBP",
+            "2017_11_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against original 2017_11_UK.pdf (Autumn Budget 2017), "
+            "para 6.23: 'GovTech Fund — The Budget commits up to £20 million "
+            "over 3 years, starting in 2018-19, of R&D NPIF funding for a "
+            "GovTech Fund.' 3-year commitment announced in the 2017 Autumn "
+            "Budget — flagged as a one-off fund launch, not an annual figure.",
+        ),
+        (
+            2025,
+            "DSIT R&D Budget",
+            13_900_000_000.0,
+            "pound",
+            "GBP",
+            "2024_10_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against original 2024_10_UK.pdf (Autumn Budget 2024): "
+            "'providing: £13.9 billion for DSIT to invest in R&D in 2025-26.' "
+            "This is the Department for Science, Innovation and Technology's "
+            "own R&D envelope — a large component of, but NOT equal to, the "
+            "whole-of-government 'Public R&D Investment' total for the same "
+            "year (£20.4 billion) — do not sum these two series together.",
+        ),
+        (
+            1999,
+            "Venture Capital Challenge Competition",
+            20_000_000.0,
+            "pound",
+            "GBP",
+            "1999_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 1999_UK.pdf (Budget 99): creating a Venture Capital "
+            "Challenge Competition of £20 million from the Capital Modernisation "
+            "Fund, invested in new funds for early-stage high-technology "
+            "businesses.",
+        ),
+        (
+            2006,
+            "UKTI International R&D Strategy",
+            9_000_000.0,
+            "pound",
+            "GBP",
+            "2006_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2006_UK.pdf: UKTI will implement an international "
+            "R&D strategy with funding of £9 million to attract more business "
+            "R&D to the UK and promote UK innovative firms abroad.",
+        ),
+        (
+            2007,
+            "Climate Change Research Capacity Programme",
+            30_000_000.0,
+            "pound",
+            "GBP",
+            "2007_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2007_UK.pdf: £30 million programme (with the "
+            "Canadian International Development Research Centre) to build and "
+            "maintain the capacity and knowledge of African climate researchers.",
+        ),
+        (
+            2010,
+            "University Enterprise Capital Fund",
+            25_000_000.0,
+            "pound",
+            "GBP",
+            "2010_03_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2010_03_UK.pdf: government will invest up to £25 "
+            "million in a University Enterprise Capital Fund, through UK Finance "
+            "for Growth, for early-stage funding of university innovation "
+            "commercialisation.",
+        ),
+        (
+            2012,
+            "UK Centre for Aerodynamics",
+            60_000_000.0,
+            "pound",
+            "GBP",
+            "2012_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2012_UK.pdf: government will invest £60 million to "
+            "establish a UK centre for aerodynamics, opening 2012-13, to support "
+            "innovation in aerospace technology.",
+        ),
+        (
+            2013,
+            "TSB Digital Content Production Fund",
+            15_000_000.0,
+            "pound",
+            "GBP",
+            "2013_UK.pdf",
+            52.0,
+            "verified_override",
+            "Verified against 2013_UK.pdf, p.52: Technology Strategy Board will "
+            "launch a new competitive fund of up to £15 million to support the "
+            "digital content production industry.",
+        ),
+        (
+            2015,
+            "Centre for Process Innovation Chemical Innovation Fund",
+            1_000_000.0,
+            "pound",
+            "GBP",
+            "2015_03_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2015_03_UK.pdf: government will provide £1 million "
+            "to the Centre for Process Innovation to support innovation and "
+            "knowledge transfer in the North East's chemicals sector.",
+        ),
+        (
+            2015,
+            "Northern Tech Incubator Investment",
+            11_000_000.0,
+            "pound",
+            "GBP",
+            "2015_03_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2015_03_UK.pdf: £11 million investment in tech "
+            "incubation to accelerate development of innovative businesses "
+            "across the North.",
+        ),
+        (
+            2015,
+            "Francis Crick Institute (MRC asset reinvestment)",
+            30_000_000.0,
+            "pound",
+            "GBP",
+            "2015_03_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2015_03_UK.pdf: government will reinvest up to £30 "
+            "million from the sale of Medical Research Council assets to "
+            "support research at the Francis Crick Institute.",
+        ),
+        (
+            2015,
+            "Digital Currency Technology Research",
+            10_000_000.0,
+            "pound",
+            "GBP",
+            "2015_03_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2015_03_UK.pdf: new research initiative bringing "
+            "together research councils, Alan Turing Institute and Digital "
+            "Catapult on digital currency technology, with £10 million "
+            "increased research funding.",
+        ),
+        (
+            2015,
+            "Internet of Things Research Programme",
+            40_000_000.0,
+            "pound",
+            "GBP",
+            "2015_03_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2015_03_UK.pdf: government will invest £40 million "
+            "to develop Internet of Things technologies through large-scale "
+            "demonstrator programmes, business incubator space and a research "
+            "centre.",
+        ),
+        (
+            2016,
+            "SMR-Enabling Advanced Manufacturing R&D Programme",
+            30_000_000.0,
+            "pound",
+            "GBP",
+            "2016_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2016_UK.pdf: government will allocate at least £30 "
+            "million for an SMR-enabling advanced manufacturing R&D programme "
+            "to develop nuclear skills capacity.",
+        ),
+        (
+            2016,
+            "ONS Data Science Hub",
+            10_000_000.0,
+            "pound",
+            "GBP",
+            "2016_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2016_UK.pdf: government will invest over £10 "
+            "million in a new hub for data science and centre for excellence in "
+            "economic measurement at the ONS.",
+        ),
+        (
+            2017,
+            "5G Research Facility",
+            16_000_000.0,
+            "pound",
+            "GBP",
+            "2017_03_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2017_03_UK.pdf (Spring Budget 2017): first phase "
+            "will invest up to £16 million in a cutting-edge 5G facility, "
+            "delivered through cooperation between leading 5G research "
+            "institutions.",
+        ),
+        (
+            2017,
+            "NPIF Disruptive Technologies Initial Investment",
+            270_000_000.0,
+            "pound",
+            "GBP",
+            "2017_03_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2017_03_UK.pdf (Spring Budget 2017): an initial "
+            "investment of £270 million in 2017-18 will kick-start the "
+            "development of disruptive technologies.",
+        ),
+        (
+            2018,
+            "Turing AI Fellowships",
+            50_000_000.0,
+            "pound",
+            "GBP",
+            "2018_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2018_UK.pdf: government will invest up to £50 "
+            "million in new Turing AI Fellowships to attract world-leading AI "
+            "research talent to the UK.",
+        ),
+        (
+            2020,
+            "Regulators' Pioneer Fund",
+            10_000_000.0,
+            "pound",
+            "GBP",
+            "2020_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2020_UK.pdf: Budget announces the government will "
+            "invest £10 million in a second round of the Regulators' Pioneer "
+            "Fund.",
+        ),
+        (
+            2020,
+            "National Institute for Health Research (uplift)",
+            12_000_000.0,
+            "pound",
+            "GBP",
+            "2020_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2020_UK.pdf: government is committing an extra £12 "
+            "million for the National Institute for Health Research in 2020-21.",
+        ),
+        (
+            2020,
+            "Government Chief Scientific Adviser / GO-Science",
+            2_000_000.0,
+            "pound",
+            "GBP",
+            "2020_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2020_UK.pdf: government will provide an additional "
+            "£2 million in 2020-21 to expand strategic science and resilience "
+            "capabilities at the Government Chief Scientific Adviser and "
+            "Government Office for Science.",
+        ),
+        (
+            2020,
+            "Specialist Research Institutions Funding",
+            80_000_000.0,
+            "pound",
+            "GBP",
+            "2020_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2020_UK.pdf: government will invest £80 million to "
+            "support the UK's foremost specialist institutions (increasing "
+            "funding for new PhDs, fellowships and research projects).",
+        ),
+        (
+            2021,
+            "Vaccines R&D and Manufacturing",
+            128_000_000.0,
+            "pound",
+            "GBP",
+            "2021_03_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2021_03_UK.pdf: of the £733 million pledged for "
+            "the UK Vaccines Taskforce in 2021-22, £128 million is for research "
+            "and development (R&D) and vaccines manufacturing.",
+        ),
+        (
+            2023,
+            "Innovation Accelerators Programme",
+            100_000_000.0,
+            "pound",
+            "GBP",
+            "2023_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2023_UK.pdf (Spring Budget 2023), §4.106: "
+            "government has allocated £100 million funding for the Innovation "
+            "Accelerators programme (Glasgow City Region, Greater Manchester, "
+            "West Midlands).",
+        ),
+        (
+            2024,
+            "Cambridge Biomedical Campus",
+            10_200_000.0,
+            "pound",
+            "GBP",
+            "2024_03_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2024_03_UK.pdf (Spring Budget 2024), §3.26: £10.2 "
+            "million invested to support development of the Cambridge "
+            "Biomedical Campus.",
+        ),
+        (
+            2024,
+            "Cancer Research UK Funding",
+            3_000_000.0,
+            "pound",
+            "GBP",
+            "2024_03_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2024_03_UK.pdf (Spring Budget 2024): funding of £3 "
+            "million for Cancer Research UK.",
+        ),
+        (
+            2024,
+            "Medical Research Charities Early Career Researchers Fund",
+            45_000_000.0,
+            "pound",
+            "GBP",
+            "2024_03_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2024_03_UK.pdf (Spring Budget 2024), §5.129: £45 "
+            "million through the Medical Research Charities Early Career "
+            "Researchers Support Fund.",
+        ),
+        (
+            2025,
+            "UKRI R&D Missions Accelerator",
+            500_000_000.0,
+            "pound",
+            "GBP",
+            "2025_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2025_UK.pdf: UKRI's £500 million R&D Missions "
+            "Accelerator programme.",
+        ),
+        (
+            2025,
+            "Entrepreneurship-Focused Doctoral Training",
+            25_000_000.0,
+            "pound",
+            "GBP",
+            "2025_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2025_UK.pdf, §3.72: UKRI will invest up to £25 "
+            "million for new entrepreneurship-focused doctoral training "
+            "schemes.",
+        ),
+        (
+            2025,
+            "Women in Innovation Awards",
+            4_500_000.0,
+            "pound",
+            "GBP",
+            "2025_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2025_UK.pdf, §3.72: UKRI will launch a new £4.5 "
+            "million round of the Women in Innovation Awards.",
+        ),
+        (
+            2025,
+            "Studio Ulster (virtual production R&D studio)",
+            25_200_000.0,
+            "pound",
+            "GBP",
+            "2025_UK.pdf",
+            None,
+            "verified_override",
+            "Verified against 2025_UK.pdf: Studio Ulster, a £25.2 million "
+            "government investment in a state-of-the-art virtual production "
+            "R&D studio.",
+        ),
+        (
+            1999,
+            "Joint Infrastructure Fund",
+            700_000_000.0,
+            "pound",
+            "GBP",
+            "1999_UK.pdf",
+            None,
+            "verified_override",
+            "Corrected from £600 million. Verified against original 1999_UK.pdf "
+            "(Budget 99): the Fund is announced at £600 million early in the "
+            "document, then later, para 3.58: 'the Higher Education Funding "
+            "Council for England will add £100 million to the Joint "
+            "Infrastructure Fund making a total Fund of £700 million.' £700m is "
+            "the final, government-stated total for the same fund in the same "
+            "document — using it avoids understating the actual 1999 figure.",
+        ),
+        (
+            1995,
+            "Total UK Science & Technology Spending (headline, HMT Budget)",
+            6_000_000_000.0,
+            "pound",
+            "GBP",
+            "1995_UK.pdf",
+            129.0,
+            "verified_override",
+            "Verified against original 1995_UK.pdf (Financial Statement and Budget "
+            "Report 1996-97), page 129, para 6.42: 'Total central government "
+            "spending on science and technology in 1996-97 is expected to be "
+            "about £6 billion, broadly the same as in 1995-96.' Extraction Pass 1 "
+            "missed this entirely (0 rows extracted for 1995) despite the "
+            "near-identical sentence being correctly picked up in the "
+            "surrounding years (1994 p.128, 1996 p.114) — same document series, "
+            "inconsistent extraction. Added via manual verification rather than "
+            "re-running LLM extraction.",
+        ),
+        # -----------------------------------------------------------
+        # Round 4 (audit 2026-07): 2019 and 2022 have no cached source PDF
+        # in Data/input/finance_bills/UK. Confirmed via gov.uk that 2019's
+        # Autumn Budget was cancelled (general election) — only a Spring
+        # Statement Written Ministerial Statement was published — and that
+        # 2022 had two separate fiscal events never added to the local
+        # corpus (September "Growth Plan" mini-Budget, November Autumn
+        # Statement). Source PDFs fetched directly from gov.uk and reviewed
+        # manually; see canonical_series.py Round-4 block for full notes.
+        # -----------------------------------------------------------
+        (
+            2019,
+            "Extreme Photonics Application Centre",
+            81_000_000.0,
+            "pound",
+            "GBP",
+            "2019_UK.pdf",
+            3.0,
+            "verified_override",
+            "Verified against Spring Statement 2019 Written Ministerial "
+            "Statement (gov.uk assets/.../785618/WMS_final_Commons.pdf), "
+            "'Science and Technology' section, p.3: 'Allocating £81 million to "
+            "a national Extreme Photonics Application Centre in Oxfordshire.' "
+            "No source PDF was previously downloaded for 2019 in this corpus.",
+        ),
+        (
+            2019,
+            "European Bioinformatics Institute Infrastructure Upgrade",
+            45_000_000.0,
+            "pound",
+            "GBP",
+            "2019_UK.pdf",
+            4.0,
+            "verified_override",
+            "Verified against Spring Statement 2019 WMS, p.4: 'Investing £45 "
+            "million in a critical upgrade to data storage cloud computing "
+            "infrastructure at the European Bioinformatics Institute in "
+            "Cambridgeshire.'",
+        ),
+        (
+            2019,
+            "ARCHER 2 Supercomputer",
+            79_000_000.0,
+            "pound",
+            "GBP",
+            "2019_UK.pdf",
+            4.0,
+            "verified_override",
+            "Verified against Spring Statement 2019 WMS, p.4: 'Allocating £79 "
+            "million to a new UK supercomputer (ARCHER 2) which will replace "
+            "the current national high-performance computing platform "
+            "(ARCHER), providing researchers with a fivefold increase in "
+            "computing capacity.'",
+        ),
+        (
+            2019,
+            "Joint European Torus (JET) Fusion Funding",
+            60_000_000.0,
+            "pound",
+            "GBP",
+            "2019_UK.pdf",
+            4.0,
+            "verified_override",
+            "Verified against Spring Statement 2019 WMS, p.4: 'Setting aside up "
+            "to £60 million to confirm funding is guaranteed for the [Joint "
+            "European Torus] facility over 2019/20.' Explicitly a single "
+            "fiscal-year (2019/20) commitment, not multi-year.",
+        ),
+        (
+            2022,
+            "Long-Term Investment for Technology & Science (LIFTS)",
+            500_000_000.0,
+            "pound",
+            "GBP",
+            "2022_09_UK.pdf",
+            21.0,
+            "verified_override",
+            "Verified against The Growth Plan 2022 (gov.uk, CP 743, 23 "
+            "September 2022), para 3.14: 'introducing the Long-Term Investment "
+            "for Technology & Science (LIFTS) competition, providing up to "
+            "£500 million to support new funds designed to catalyse investment "
+            "from pensions schemes and other investors into the UK's "
+            "pioneering science and technology businesses.' No source PDF was "
+            "previously downloaded for 2022 in this corpus. The companion "
+            "November 2022 Autumn Statement (CP 751) was also reviewed in "
+            "full for chapters 1-4 (its Chapter 5 policy-decision tables did "
+            "not survive text extraction and were not reviewed) — its only "
+            "R&D content is multi-year/cumulative figures (Innovate UK £2.6bn "
+            "over the Spending Review period; Catapults £1.6bn over a 5-year "
+            "funding cycle) or duplicates the existing 2024 'Public R&D "
+            "Investment' £20bn entry, so nothing further was added from it.",
+        ),
+        # -----------------------------------------------------------
+        # Round 5 (audit 2026-07): recovered 34 items that were already
+        # sitting as decision='include' in uk_docx_results.csv but never
+        # matched any canonical pattern, so were silently dropped from
+        # the final series. See canonical_series.py Round-5 block and
+        # uk_audit_summary.md §10 for full context and the disposition
+        # of the ~57 orphans that were reviewed and NOT added.
+        # -----------------------------------------------------------
+        (
+            1982, "Industrial Innovation Support Measures (1982 package)",
+            20_000_000.0, "pound", "GBP", "1982_UK.pdf", None, "verified_override",
+            "Budget 1982: 'New measures to promote research and innovation in "
+            "industry will involve additional expenditure of £20 million in "
+            "1982-83.' Earliest confirmed genuine R&D appropriation in the UK "
+            "corpus.",
+        ),
+        (
+            1983, "Industrial Innovation Support Measures (1982 package)",
+            39_000_000.0, "pound", "GBP", "1983_UK.pdf", None, "verified_override",
+            "Budget 1983: 'the cost is £39 million in 1983-84', updating the "
+            "£35 million forecast given a year earlier in Budget 1982 for the "
+            "same industrial-innovation measure. Using the more contemporaneous "
+            "figure.",
+        ),
+        (
+            1984, "Industrial Innovation Support Measures (1982 package)",
+            45_000_000.0, "pound", "GBP", "1982_UK.pdf", None, "verified_override",
+            "Budget 1982's forecast of '£45 million in 1984-85' for the same "
+            "industrial-innovation measure. Not independently re-confirmed in "
+            "the 1984 document itself (no matching mention found) — "
+            "lower-confidence than the 1982/1983 figures, included as the best "
+            "available number rather than left blank.",
+        ),
+        (
+            1996, "Scientific Equipment Challenge Fund",
+            20_000_000.0, "pound", "GBP", "1996_UK.pdf", 114.0, "verified_override",
+            "Budget 1996, p.114: '£20 million in 1997-98 for a challenge fund "
+            "to finance scientific equipment.'",
+        ),
+        (
+            2003, "Higher Education Innovation Fund (HEIF)",
+            187_000_000.0, "pound", "GBP", "2003_UK.pdf", 62.0, "verified_override",
+            "Budget 2003, p.62: '£187 million Higher Education Innovation Fund "
+            "(HEIF).'",
+        ),
+        (
+            2003, "PSRE/NHS Science Commercialisation Support",
+            15_000_000.0, "pound", "GBP", "2003_UK.pdf", 62.0, "verified_override",
+            "Budget 2003, p.62: '£15 million allocated this year to help "
+            "catalyse commercialisation of science and technology from Public "
+            "Sector Research Establishments and NHS Trusts.'",
+        ),
+        (
+            2004, "National Technology Strategy",
+            150_000_000.0, "pound", "GBP", "2004_UK.pdf", 69.0, "verified_override",
+            "Budget 2004, p.69: £150 million National Technology Strategy.",
+        ),
+        (
+            2005, "Additional Clinical Research Funding (2005)",
+            25_000_000.0, "pound", "GBP", "2005_UK.pdf", 71.0, "verified_override",
+            "Budget 2005, p.71: £25 million additional funding for clinical "
+            "research.",
+        ),
+        (
+            2005, "Science Research Infrastructure Fund (SRIF)",
+            500_000_000.0, "pound", "GBP", "2005_UK.pdf", 72.0, "verified_override",
+            "Budget 2005, p.72: 'Science Research Infrastructure Fund, which "
+            "provides capital funding of £500 million per annum to renew "
+            "university infrastructure.'",
+        ),
+        (
+            2007, "DfES Research and Knowledge Transfer Funding (English Universities)",
+            1_655_000.0, "pound", "GBP", "2007_UK.pdf", 183.0, "verified_override",
+            "Budget 2007, p.183: DfES funding for research and knowledge "
+            "transfer in English Universities, £1.655 million.",
+        ),
+        (
+            2007, "Research Councils Co-Investment in TSB Collaborative R&D",
+            25_000_000.0, "pound", "GBP", "2007_UK.pdf", 70.0, "verified_override",
+            "Budget 2007, p.70: 'Investment by Research Councils in TSB "
+            "programmes to support collaborative R&D projects', £25 million.",
+        ),
+        (
+            2008, "Low-Carbon Vehicle RD&D Programme",
+            40_000_000.0, "pound", "GBP", "2008_UK.pdf", 102.0, "verified_override",
+            "Budget 2008 (King Review), p.102/106: £40 million research, "
+            "development and demonstration programme for low-carbon vehicles.",
+        ),
+        (
+            2009, "TSB Creative Industries R&D Programme",
+            10_000_000.0, "pound", "GBP", "2009_UK.pdf", 89.0, "verified_override",
+            "Budget 2009, p.89: '£10 million programme of research and "
+            "development for the creative industries, led by the TSB.'",
+        ),
+        (
+            2010, "Low-Carbon Aircraft Engine R&D",
+            45_000_000.0, "pound", "GBP", "2010_03_UK.pdf", 118.0, "verified_override",
+            "Budget March 2010, p.118: £45 million for research and technology "
+            "critical to the development of low-carbon aircraft engines.",
+        ),
+        (
+            2011, "Science and Innovation Campuses Capital Funding",
+            100_000_000.0, "pound", "GBP", "2011_UK.pdf", 56.0, "verified_override",
+            "Budget 2011, p.56: 'provide £100 million of new capital funding "
+            "in 2011-12 for science and innovation campuses.'",
+        ),
+        (
+            2012, "University Research Facilities Capital Funding (2012)",
+            100_000_000.0, "pound", "GBP", "2012_UK.pdf", 43.0, "verified_override",
+            "Budget 2012, p.43: £100 million fund to support investment in "
+            "major new university research facilities.",
+        ),
+        (
+            2015, "Digital Economy Centres",
+            23_000_000.0, "pound", "GBP", "2015_07_UK.pdf", 68.0, "verified_override",
+            "Summer Budget 2015, p.68/102: investment in 6 Next Generation "
+            "Digital Economy Centres, £23 million.",
+        ),
+        (
+            2015, "Centre for Agricultural Informatics and Sustainability Metrics",
+            11_800_000.0, "pound", "GBP", "2015_03_UK.pdf", 78.0, "verified_override",
+            "Budget March 2015, p.78: Centre for Agricultural Informatics and "
+            "Sustainability Metrics, £11.8 million.",
+        ),
+        (
+            2015, "Advanced Wellbeing Research Centre",
+            14_000_000.0, "pound", "GBP", "2015_03_UK.pdf", 77.0, "verified_override",
+            "Budget March 2015, p.77: Advanced Wellbeing Research Centre, £14 "
+            "million.",
+        ),
+        (
+            2016, "Birmingham STEAMhouse",
+            14_000_000.0, "pound", "GBP", "2016_UK.pdf", 130.0, "verified_override",
+            "Budget 2016, p.130: Birmingham STEAMhouse innovation hub, £14 "
+            "million.",
+        ),
+        (
+            2016, "Battery Technology R&D Support (Dyson)",
+            16_000_000.0, "pound", "GBP", "2016_UK.pdf", 130.0, "verified_override",
+            "Budget 2016, p.130: government support for Dyson battery "
+            "technology R&D, £16 million.",
+        ),
+        (
+            2016, "National Institute for Smart Data Innovation",
+            15_000_000.0, "pound", "GBP", "2016_UK.pdf", 78.0, "verified_override",
+            "Budget 2016, p.78/130: 'The government will invest £15 million in "
+            "the National Institute for Smart Data Innovation.'",
+        ),
+        (
+            2017, "Jodrell Bank Discovery Centre",
+            4_000_000.0, "pound", "GBP", "2017_11_UK.pdf", 56.0, "verified_override",
+            "Autumn Budget 2017, p.56: £4 million government contribution to "
+            "Jodrell Bank's £20.5 million project.",
+        ),
+        (
+            2017, "5G Testbeds and Trials Programme",
+            5_000_000.0, "pound", "GBP", "2017_11_UK.pdf", 54.0, "verified_override",
+            "Autumn Budget 2017, p.54: £5 million for an initial trial to test "
+            "5G applications and deployment on roads.",
+        ),
+        (
+            2017, "5G Security Testbed Facility",
+            10_000_000.0, "pound", "GBP", "2017_11_UK.pdf", 54.0, "verified_override",
+            "Autumn Budget 2017, p.54: £10 million to create facilities where "
+            "the security of 5G networks can be tested.",
+        ),
+        (
+            2017, "NPIF Fellowship Programmes",
+            50_000_000.0, "pound", "GBP", "2017_03_UK.pdf", 48.0, "verified_override",
+            "Spring Budget 2017, p.48: NPIF funding for fellowship programmes, "
+            "£50 million.",
+        ),
+        (
+            2018, "Quantum Technology R&D Programme (2018)",
+            5_000_000.0, "pound", "GBP", "2018_UK.pdf", 40.0, "verified_override",
+            "Budget 2018, p.40: Quantum Technology research and development, "
+            "£5 million.",
+        ),
+        (
+            2018, "UK Nuclear Fusion R&D Support",
+            20_000_000.0, "pound", "GBP", "2018_UK.pdf", 40.0, "verified_override",
+            "Budget 2018, p.40: support for UK nuclear fusion, £20 million.",
+        ),
+        (
+            2018, "International Research Fellowship Scheme (2018)",
+            100_000_000.0, "pound", "GBP", "2018_UK.pdf", 60.0, "verified_override",
+            "Budget 2018, p.60: £100 million in an international fellowship "
+            "scheme.",
+        ),
+        (
+            2020, "Life Sciences Investment Programme",
+            200_000_000.0, "pound", "GBP", "2020_UK.pdf", 88.0, "verified_override",
+            "Budget 2020, p.88: Life Sciences Investment Programme, £200 "
+            "million.",
+        ),
+        (
+            2020, "Animal Health Science Estate",
+            1_400_000.0, "pound", "GBP", "2020_UK.pdf", 88.0, "verified_override",
+            "Budget 2020, p.88: Animal health science estate, £1.4 million.",
+        ),
+        (
+            2021, "Future Fund: Breakthrough",
+            375_000_000.0, "pound", "GBP", "2021_03_UK.pdf", 70.0, "verified_override",
+            "Budget March 2021, p.70: 'Future Fund: Breakthrough — Building on "
+            "the government's Future Fund', £375 million co-investment vehicle "
+            "for R&D-intensive, high-growth companies.",
+        ),
+        (
+            2021, "Global Underwater Hub",
+            5_000_000.0, "pound", "GBP", "2021_03_UK.pdf", 68.0, "verified_override",
+            "Budget March 2021, p.68: support for the Global Underwater Hub, "
+            "£5 million.",
+        ),
+        (
+            2024, "Quantum Computing Mission (initial funding)",
+            1_600_000.0, "pound", "GBP", "2024_03_UK.pdf", 59.0, "verified_override",
+            "Budget March 2024, p.59: £1.6 million to progress the quantum "
+            "computing mission.",
+        ),
+        (
+            2024, "Faraday Discovery Fellowships and Green Future Fellowships Endowments",
+            400_000_000.0, "pound", "GBP", "2024_03_UK.pdf", 82.0, "verified_override",
+            "Budget March 2024, p.82: 'The £250 million Faraday Discovery "
+            "Fellowships and £150 million Green Future Fellowships will be "
+            "funded through endowments to the Royal Society and the Royal "
+            "Academy of Engineering' — one-off endowment capital transfers "
+            "(£400 million combined).",
+        ),
+        (
+            2025, "South Wales Semiconductor Technologies Cluster",
+            10_000_000.0, "pound", "GBP", "2025_UK.pdf", 110.0, "verified_override",
+            "Budget 2025, p.110: £10 million invested in the South Wales "
+            "world-leading semiconductor technologies cluster.",
+        ),
+    ],
 }
 
 

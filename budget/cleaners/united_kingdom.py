@@ -50,14 +50,42 @@ __all__ = ["clean"]
 # Lines containing these patterns are MULTI-YEAR TOTALS, not annual amounts.
 # ---------------------------------------------------------------------------
 _MULTI_YEAR_PATTERNS: list[re.Pattern] = [
-    re.compile(r"\bover\s+(the\s+)?(next\s+)?(\d+|two|three|four|five|six|seven|eight|nine|ten)\s+years?\b", re.IGNORECASE),
+    # "over/for/a further N years" — broadened (2026-07 audit) from "over N years"
+    # only, which missed real multi-year phrasing like "a further 10 years".
+    re.compile(
+        r"\b(over|for|a\s+further|the\s+next)\s+(the\s+)?(\d+|two|three|four|five|six|seven|eight|nine|ten)\s+years?\b",
+        re.IGNORECASE,
+    ),
     re.compile(r"\bfrom\s+\d{4}\s+to\s+\d{4}\b", re.IGNORECASE),
-    re.compile(r"\b\d{4}[–-]\d{2,4}\b"),            # "2022-25", "2022–2025" etc.
     re.compile(r"\bover\s+the\s+(spending\s+review|SR)\s+period\b", re.IGNORECASE),
     re.compile(r"\bper\s+year\b", re.IGNORECASE),    # "£X million per year" — keep but flag
     re.compile(r"\bby\s+\d{4}\b", re.IGNORECASE),   # "by 2030" — future pledge, not annual
     re.compile(r"\bmulti[\s\-]year\b", re.IGNORECASE),  # "multi-year programme"
 ]
+
+# "YYYY-YY" / "YYYY–YYYY" year-range matcher, used to detect GENUINE multi-year
+# spans (e.g. "2022-25", "2021-2025") while excluding UK's standard single
+# fiscal-year notation (e.g. "2011-12" = FY2011/12, one year, not a range).
+# AUDIT FINDING (2026-07): the previous blanket `\b\d{4}[–-]\d{2,4}\b` pattern
+# flagged BOTH forms identically, silently demoting genuine single-year
+# appropriations whose description happened to state their own fiscal year
+# (e.g. 1982 "£20 million in 1982-83", 2011 "£100 million... in 2011-12 for
+# science and innovation campuses", 2018 "£20 million in 2019-20 for the UK
+# Atomic Energy Agency").
+_YEAR_RANGE_RE = re.compile(r"\b(\d{4})[–-](\d{2,4})\b")
+
+
+def _has_real_year_span(desc: str) -> bool:
+    if not isinstance(desc, str):
+        return False
+    for m in _YEAR_RANGE_RE.finditer(desc):
+        start, end = m.group(1), m.group(2)
+        if len(end) == 4:
+            return True  # explicit 4-digit end year, e.g. "2021-2025"
+        end_full = int(start[:2] + end)
+        if end_full - int(start) != 1:
+            return True  # gap > 1 fiscal year, e.g. "2022-25"
+    return False
 
 # Descriptions that START with "£X" are usually spending-review narratives
 _STARTS_WITH_AMOUNT = re.compile(r"^\s*£\s*[\d,\.]+\s*(billion|million|bn|m)\b", re.IGNORECASE)
@@ -228,8 +256,26 @@ def _is_multi_year(desc: str) -> bool:
     for pat in _MULTI_YEAR_PATTERNS:
         if pat.search(desc):
             return True
-    if _STARTS_WITH_AMOUNT.match(desc):
+    if _has_real_year_span(desc):
         return True
+    # NOTE (audit 2026-07): previously also flagged any description starting
+    # with "£X million/billion" via _STARTS_WITH_AMOUNT, on the theory that
+    # such sentences are "usually" spending-review narratives. In practice
+    # this blanket rule was suppressing dozens of genuine single-year, named
+    # line items across nearly every year 1999-2025 (e.g. 1999 "£100 million
+    # for basic science infrastructure", "£50 million University Challenge
+    # scheme", "£600 million Joint Infrastructure Fund"; 2010 "£30 million
+    # funding for the Institute of Web Science"; 2015 "£400 million round of
+    # the Research Partnership Investment Fund"; 2018 "£115 million to extend
+    # funding for the Digital Catapult" — all verified against source text as
+    # real, specific, single-year Budget announcements, not multi-year
+    # narrative). The genuine multi-year signals ("over N years", explicit
+    # year ranges, "by <year>", "per year", "multi-year") are already covered
+    # by _MULTI_YEAR_PATTERNS above, so the "starts with a £ figure" heuristic
+    # was redundant on real multi-year prose and net-harmful on everything
+    # else. Removed; duplicate/near-duplicate phrasings of the same
+    # announcement are still caught by the within-file and repeated-label
+    # dedup steps further down.
     return False
 
 
@@ -243,6 +289,13 @@ def _is_non_rd(desc: str) -> tuple[bool, str]:
     return False, ""
 
 
+_HEADLINE_TOTAL_RE = re.compile(
+    r"total uk science spending"
+    r"|total (planned )?central government spending on (civil )?science and technology",
+    re.IGNORECASE,
+)
+
+
 def clean(df: pd.DataFrame) -> pd.DataFrame:
     """Apply UK-specific corrections. Returns cleaned copy."""
     df = df.copy()
@@ -253,14 +306,118 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
         df["aggregation_role"] = ""
 
     # ------------------------------------------------------------------
+    # 0. Headline "Total UK science / S&T spending" pattern.
+    #
+    #    AUDIT FINDING (2026-07): the source document (Financial Statement
+    #    and Budget Report — "the Red Book") is the SAME document series
+    #    every year 1975-2025 (confirmed from page-1 headers of all 55
+    #    source files) — consistent with a peer's observation that the
+    #    documents themselves don't change format year to year. From 1994
+    #    onward it periodically states one headline total, e.g.:
+    #      1994: "Total central government spending on science and
+    #             technology ... 1995-96 will be about £6.1 billion" (p.128)
+    #      1995: "Total central government spending on science and
+    #             technology in 1996-97 is expected to be about £6 billion"
+    #             (p.129) — MISSED ENTIRELY by extraction (0 rows that year)
+    #      1996: same phrasing, "...1997-98... about £6 billion" (p.114)
+    #      2006/2007: "total UK science spending will be £5.4 billion"
+    #             (2007 table, p.168: "5,397 5,608 5,903 6,287" in £m)
+    #
+    #    Despite near-identical phrasing, extraction was inconsistent:
+    #    identical sentences got different item_type (section_total vs
+    #    line_item) from the LLM, and the item_type=='section_total' blanket
+    #    rule (step 2 below) then silently dropped some years (e.g. 2006)
+    #    while an item_type='line_item' twin (2007) survived. Rows are also
+    #    consistently mislabeled unit='thousand' when the true value is in
+    #    £ million (verified against source narrative — e.g. 5400 = £5.4bn,
+    #    not £5.4m).
+    #
+    #    This is a TOP-LINE AGGREGATE, not additive with the individual
+    #    research-council / UKRI / fund canonical series — see notes on the
+    #    "Total UK Science & Technology Spending (headline...)" canonical
+    #    entry in canonical_series.py.
+    # ------------------------------------------------------------------
+    headline_mask = (
+        df["line_description"].apply(lambda d: bool(isinstance(d, str) and _HEADLINE_TOTAL_RE.search(d)))
+        | df["line_description_en"].apply(lambda d: bool(isinstance(d, str) and _HEADLINE_TOTAL_RE.search(d)))
+    )
+
+    if headline_mask.any():
+        # 0a. Known-unreliable instance: 1993 (Nov) "Total planned central
+        #     government spending on civil science and technology". Source
+        #     page (1993_11_UK.pdf, p.107/p.115) has OCR-corrupted text —
+        #     the £ figure is missing entirely ("...will be about  billion,
+        #     broadly in line..."). The LLM's stored amount (2300) is
+        #     suspiciously identical to the adjacent, separately-verified
+        #     "science base" line and cannot be confirmed against source
+        #     text. Drop rather than promote — do not harden an unverifiable
+        #     number into the series.
+        unreliable_1993_mask = (
+            headline_mask
+            & (pd.to_numeric(df["year"], errors="coerce") == 1993)
+            & (df["source_file"].astype(str) == "1993_11_UK.pdf")
+        )
+        if unreliable_1993_mask.any():
+            df.loc[unreliable_1993_mask, "amount_local"] = pd.NA
+            df.loc[unreliable_1993_mask, "decision"] = "review"
+            df.loc[unreliable_1993_mask, "cleaning_notes"] += (
+                "[headline_total_unverifiable: source OCR lost the £ figure on "
+                "this page (1993_11_UK.pdf p.107/115) — amount cannot be "
+                "confirmed against original text and duplicates an adjacent "
+                "'science base' figure; amount dropped, not promoted]"
+            )
+            headline_mask = headline_mask & ~unreliable_1993_mask
+
+        # 0b. Unit check, re-verified 2026-07 (Round 4) against source
+        #     narrative for every remaining matched (year, source_file).
+        #     NOTE: this used to relabel unit 'thousand'->'million' here,
+        #     on the assumption the LLM extraction stored a small
+        #     million-scale number (e.g. amount_local=6100) mislabeled as
+        #     'thousand'. Re-checked against current results.csv: the raw
+        #     extracted amount_local for these rows is now already at
+        #     thousand-scale (e.g. 6,100,000 for the 1994 £6.1bn figure —
+        #     6,100,000 * 1,000 = £6.1bn, matches the verified citation
+        #     exactly). Relabeling to 'million' without also dividing
+        #     amount_local by 1000 was inflating these rows by 1000x
+        #     (£6.1bn -> £6.1 trillion) once the canonical-series builder's
+        #     own unit->pound multiplier ran. Fix: do NOT relabel; leave
+        #     unit='thousand' as extracted, since it already produces the
+        #     correct, citation-matched value. If a future extraction
+        #     rerun changes the raw amount_local scale again, re-verify
+        #     against the citations in uk_audit_summary.md §2(a) before
+        #     touching this block.
+
+        # 0c. Promote to include and shield from the generic aggregate
+        #     filters below (section_total blanket rule etc.) — every
+        #     remaining match has been checked against the original
+        #     document text.
+        df.loc[headline_mask, "decision"] = "include"
+        df.loc[headline_mask, "aggregation_role"] = ""
+        df.loc[headline_mask, "cleaning_notes"] += (
+            "[headline_total_promoted: recurring 'Total UK science/S&T "
+            "spending' headline figure — verified against source text, "
+            "promoted to include]"
+        )
+
+    # ------------------------------------------------------------------
     # 1. Unit correction: amounts stored as raw GBP labeled 'thousand'.
     #    Divide by 1e6 to get millions GBP.
+    #    Excludes headline_mask rows (2026-07, Round 4 fix): this
+    #    heuristic assumes any 'thousand'-labeled amount >= 1,000,000 is
+    #    actually raw GBP mislabeled as thousands. That's wrong for the
+    #    headline S&T total rows, whose amount_local genuinely IS
+    #    expressed in thousands of GBP (e.g. 6,100,000 thousand = £6.1bn,
+    #    verified against source citations in uk_audit_summary.md §2(a)).
+    #    Applying this heuristic to those rows was silently dividing them
+    #    by an extra 1e6 and corrupting the headline series — caught
+    #    2026-07 while re-verifying the chart data.
     # ------------------------------------------------------------------
     needs_fix = (
         (df["currency"].str.upper().str.strip() == "GBP")
         & (df["unit"].str.lower().str.strip() == "thousand")
         & df["amount_local"].notna()
         & (df["amount_local"] >= 1_000_000)
+        & ~headline_mask
     )
     if needs_fix.any():
         df.loc[needs_fix, "amount_local"] = df.loc[needs_fix, "amount_local"] / _GBP_TO_MILLION
@@ -269,9 +426,10 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
 
     # ------------------------------------------------------------------
     # 2. Force section_total item_type rows to review/redundant.
+    #    (Verified headline totals from step 0 are shielded.)
     # ------------------------------------------------------------------
     if "item_type" in df.columns:
-        st_mask = df["item_type"] == "section_total"
+        st_mask = (df["item_type"] == "section_total") & ~headline_mask
         if st_mask.any():
             df.loc[st_mask, "aggregation_role"] = "redundant"
             df.loc[st_mask, "decision"] = "review"
@@ -280,7 +438,7 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
     # ------------------------------------------------------------------
     # 3. Mark broad department / DEL totals as redundant.
     # ------------------------------------------------------------------
-    dept_mask = df["line_description"].apply(_is_dept_total)
+    dept_mask = df["line_description"].apply(_is_dept_total) & ~headline_mask
     if dept_mask.any():
         df.loc[dept_mask, "aggregation_role"] = "redundant"
         df.loc[dept_mask, "decision"] = "review"
@@ -304,7 +462,7 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
     #    These are policy announcements (total over multiple years),
     #    not single-year budget appropriations.
     # ------------------------------------------------------------------
-    multi_mask = df["line_description"].apply(_is_multi_year)
+    multi_mask = df["line_description"].apply(_is_multi_year) & ~headline_mask
     if multi_mask.any():
         df.loc[multi_mask, "aggregation_role"] = "redundant"
         df.loc[multi_mask, "decision"] = "review"
@@ -324,7 +482,7 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
                 return True
         return False
 
-    narr_mask = df["line_description"].apply(_is_narrative)
+    narr_mask = df["line_description"].apply(_is_narrative) & ~headline_mask
     if narr_mask.any():
         df.loc[narr_mask, "aggregation_role"] = "redundant"
         df.loc[narr_mask, "decision"] = "review"
@@ -469,5 +627,52 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
                 df.loc[rep_mask, "cleaning_notes"] += (
                     "[repeated_generic_label: same description ≥3× in same doc — ambiguous]"
                 )
+
+    # ------------------------------------------------------------------
+    # 11. Conservative promotion: 'review' rows with a concrete amount that
+    #     survived every filter above (steps 0-10) and were not flagged by
+    #     the LLM extractor itself (no plausibility/no-amount warning in the
+    #     original `notes` column) are promoted to include.
+    #
+    #     AUDIT FINDING (2026-07): many years have most of their content
+    #     stuck in decision=review straight out of Phase-1 LLM extraction,
+    #     with no compile-side reason attached (cleaning_notes empty) — e.g.
+    #     1999's "£50 million University Challenge scheme", "£600 million
+    #     Joint Infrastructure Fund" and "£100 million for basic science
+    #     infrastructure" all have real amounts, real programme names, and
+    #     no disqualifying flag, yet were left in review. Every specific
+    #     known problem pattern (dept totals, multi-year prose, narrative
+    #     announcements, tax credits, anachronisms, duplicates) is already
+    #     filtered above, so a review row that cleared all of them with a
+    #     plausible amount is very likely a genuine, single-year, named line
+    #     item the extractor was simply too conservative about. Promote —
+    #     but tag it clearly so it can be spot-checked against source later.
+    # ------------------------------------------------------------------
+    if "notes" in df.columns:
+        extractor_flagged = df["notes"].apply(
+            lambda n: bool(isinstance(n, str) and re.search(r"out of plausible range|no_amount", n, re.IGNORECASE))
+        )
+    else:
+        extractor_flagged = pd.Series(False, index=df.index)
+
+    amt_num = pd.to_numeric(df["amount_local"], errors="coerce")
+    clean_notes_empty = df["cleaning_notes"].fillna("").astype(str).str.strip() == ""
+    conf_num = pd.to_numeric(df.get("confidence", pd.Series(1.0, index=df.index)), errors="coerce")
+
+    promote_mask = (
+        (df["decision"] == "review")
+        & clean_notes_empty
+        & ~extractor_flagged
+        & amt_num.notna()
+        & (amt_num > 0)
+        & (conf_num.fillna(1.0) >= 0.5)
+    )
+    if promote_mask.any():
+        df.loc[promote_mask, "decision"] = "include"
+        df.loc[promote_mask, "cleaning_notes"] += (
+            "[review_promoted: no compile-side disqualifying flag, real amount, "
+            "cleared all UK-specific filters — promoted from review to include; "
+            "spot-check against source recommended]"
+        )
 
     return df.reset_index(drop=True)

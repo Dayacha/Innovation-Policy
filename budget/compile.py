@@ -1795,6 +1795,88 @@ def parse_to_raw_rows(
             )
             rows = rows + new_rows
 
+    # Supplement with LLM pipeline output (results.csv) for years still missing
+    # after DOCX + text-cache parsing. This matters most for true biannual/biennial
+    # source documents (e.g. Hungary's "2001-2002 ... törvény.pdf"), where
+    # _parse_fiscal_year()/text_cache_parser assign the ENTIRE file to a single
+    # fiscal year — the deterministic regex parser has no way to split a
+    # multi-year law into per-year appropriation columns. The LLM extraction
+    # pipeline (budget/pipeline.py) already re-processes such files once per
+    # covered year via its own biannual-aware doc_hint tagging, so its output
+    # legitimately has rows for the "second" year the deterministic parser can
+    # never produce. Only years with ZERO rows from DOCX/text-cache are filled
+    # this way — this never overwrites or competes with existing data.
+    covered_years = {r.year for r in rows if r.amount_current is not None}
+    results_csv = cfg.OUTPUT_DIR / "results.csv"
+    if results_csv.exists():
+        try:
+            pipeline_df = pd.read_csv(results_csv, low_memory=False)
+        except Exception as exc:
+            pipeline_df = pd.DataFrame()
+            logger.warning(f"[{country}] Could not read {results_csv} for gap-year supplement: {exc}")
+        if not pipeline_df.empty and "country" in pipeline_df.columns:
+            pdf_country = pipeline_df[pipeline_df["country"] == country].copy()
+            if not pdf_country.empty:
+                pdf_country["year"] = pd.to_numeric(pdf_country["year"], errors="coerce")
+                pdf_country = pdf_country.dropna(subset=["year"])
+                pdf_country["year"] = pdf_country["year"].astype(int)
+                if year_range:
+                    pdf_country = pdf_country[
+                        (pdf_country["year"] >= year_range[0]) & (pdf_country["year"] <= year_range[1])
+                    ]
+                if "decision" in pdf_country.columns:
+                    pdf_country = pdf_country[pdf_country["decision"].isin(["include", "review"])]
+                missing_years = sorted(set(pdf_country["year"].unique()) - covered_years)
+                if missing_years:
+                    supplement = pdf_country[pdf_country["year"].isin(missing_years)]
+                    supplement_rows = []
+                    for _, r in supplement.iterrows():
+                        amount = pd.to_numeric(r.get("amount_local"), errors="coerce")
+                        if pd.isna(amount):
+                            continue
+                        # NOTE: deliberately NOT applying a unit-scale multiplier here.
+                        # results.csv's 'unit' field (thousand/million/...) was tried and
+                        # made things worse for Hungary — the raw_rows/canonical_series
+                        # pipeline downstream evidently expects amount_local as printed,
+                        # not pre-scaled. Verified this is correct for Hungary 2002 (the
+                        # only year this path currently fires for); if this supplement is
+                        # ever extended to other countries, re-check unit handling first.
+                        entity = str(r.get("line_description") or r.get("line_description_en") or "").strip()
+                        if not entity:
+                            entity = str(r.get("section_name") or r.get("section_name_en") or "").strip()
+                        if not entity:
+                            continue
+                        supplement_rows.append(RawRow(
+                            source_file=str(r.get("source_file", "")),
+                            country=country,
+                            year=int(r["year"]),
+                            section_name=str(r.get("section_name") or r.get("section_name_en") or ""),
+                            entity_raw=entity,
+                            amount_current=float(amount),
+                            is_total_row=str(r.get("item_type", "")) == "section_total",
+                            cells_raw=[],
+                        ))
+                    if supplement_rows:
+                        logger.info(
+                            f"[{country}] LLM pipeline output (results.csv) added {len(supplement_rows)} rows "
+                            f"for year(s) entirely missing from DOCX/text-cache parsing: {missing_years} "
+                            f"(e.g. biannual source documents the deterministic parser cannot split by year)"
+                        )
+                        rows = rows + supplement_rows
+
+                # NOTE: an earlier version of this function also auto-inserted Hungary
+                # MTA (Hungarian Academy of Sciences) rows recovered from results.csv
+                # for years where text_cache_parser loses the chapter total to
+                # multi-column fragmentation (2000, 2003, 2004, 2006, 2008, 2009).
+                # That was reverted: results.csv's amount_local/unit combination for
+                # these specific rows produces internally inconsistent scale (some
+                # rows read as thousands, others as if already in full HUF, and mixing
+                # them created outliers off by up to 1000x). Silently inserting
+                # unverified numbers into a research series is worse than leaving the
+                # gap — see gap_detector._hungary_gap_diagnosis_from_full_text, which
+                # now points at the same candidate rows for manual verification
+                # against the original PDF instead.
+
     # Filter: only rows with a current-year amount and a non-empty entity
     data_rows = [
         r for r in rows
@@ -2754,6 +2836,7 @@ def compile_country(
             if italy_clean_csv.exists():
                 pipeline_csv = italy_clean_csv
         pipeline_df = _load_pipeline_results(pipeline_csv, country, year_range)
+        _fresh_pipeline_df = pipeline_df  # keep a handle to the un-swapped fresh pull, see backfill guard below
 
         if not pipeline_df.empty:
             logger.info(
@@ -2789,6 +2872,29 @@ def compile_country(
                         f"[{country}] Ignoring stale country-local results snapshot "
                         f"({country_results_csv.name}); shared results.csv is newer"
                     )
+
+                # Guard against a "richer by row count" snapshot silently hiding a
+                # regression in *year coverage*. A stale country-local CSV can have
+                # more total rows than a fresh pipeline pull (e.g. accumulated
+                # manual curation) while still being missing whole years the fresh
+                # pull now has — this happened for Hungary's biannual 2001-2002
+                # source file, where a re-extraction added a real 2002 row set that
+                # kept losing to the older, larger-by-count snapshot every compile.
+                # If the side we did NOT choose covers years the chosen side lacks
+                # entirely, backfill those years' rows rather than losing them.
+                chosen_years = set(pd.to_numeric(pipeline_df["year"], errors="coerce").dropna().astype(int))
+                other_df = existing_country_df if chosen_label == pipeline_csv.name else _fresh_pipeline_df
+                if not other_df.empty:
+                    other_years = set(pd.to_numeric(other_df["year"], errors="coerce").dropna().astype(int))
+                    missing_years = other_years - chosen_years
+                    if missing_years:
+                        backfill = other_df[pd.to_numeric(other_df["year"], errors="coerce").astype("Int64").isin(missing_years)]
+                        logger.info(
+                            f"[{country}] Backfilling {len(backfill)} rows for year(s) {sorted(missing_years)} "
+                            f"present in the non-chosen source but entirely absent from the chosen snapshot "
+                            f"({chosen_label})"
+                        )
+                        pipeline_df = pd.concat([pipeline_df, backfill], ignore_index=True, sort=False)
 
             results_df = pipeline_df
             results_df = _materialize_country_output_units(results_df, country)

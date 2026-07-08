@@ -1,4 +1,62 @@
 country,canonical_name,year,amount_total,amount_primary,n_acts,acts,additive_flag,currency,unit,category
+UK,5G Research Facility,2017,16000000.0,16000000.0,1,2017_03_UK.pdf,single,GBP,pound,research_infrastructure
+UK,5G Research Facility,2018,,,0,,gap,,,research_infrastructure
+UK,5G Research Facility,2020,,,0,,gap,,,research_infrastructure
+UK,5G Research Facility,2021,,,0,,gap,,,research_infrastructure
+UK,5G Research Facility,2023,,,0,,gap,,,research_infrastructure
+UK,5G Research Facility,2024,,,0,,gap,,,research_infrastructure
+UK,5G Research Facility,2025,,,0,,gap,,,research_infrastructure
+UK,5G Security Testbed Facility,2017,10000000.0,10000000.0,1,2017_11_UK.pdf,single,GBP,pound,research_infrastructure
+UK,5G Security Testbed Facility,2018,,,0,,gap,,,research_infrastructure
+UK,5G Security Testbed Facility,2020,,,0,,gap,,,research_infrastructure
+UK,5G Security Testbed Facility,2021,,,0,,gap,,,research_infrastructure
+UK,5G Security Testbed Facility,2023,,,0,,gap,,,research_infrastructure
+UK,5G Security Testbed Facility,2024,,,0,,gap,,,research_infrastructure
+UK,5G Security Testbed Facility,2025,,,0,,gap,,,research_infrastructure
+UK,5G Testbeds and Trials Programme,2017,5000000.0,5000000.0,1,2017_11_UK.pdf,single,GBP,pound,rd_programme
+UK,5G Testbeds and Trials Programme,2018,,,0,,gap,,,rd_programme
+UK,5G Testbeds and Trials Programme,2020,,,0,,gap,,,rd_programme
+UK,5G Testbeds and Trials Programme,2021,,,0,,gap,,,rd_programme
+UK,5G Testbeds and Trials Programme,2023,,,0,,gap,,,rd_programme
+UK,5G Testbeds and Trials Programme,2024,,,0,,gap,,,rd_programme
+UK,5G Testbeds and Trials Programme,2025,,,0,,gap,,,rd_programme
+UK,ARCHER 2 Supercomputer,2019,79000000.0,79000000.0,1,2019_UK.pdf,single,GBP,pound,research_infrastructure
+UK,ARCHER 2 Supercomputer,2020,,,0,,gap,,,research_infrastructure
+UK,ARCHER 2 Supercomputer,2021,,,0,,gap,,,research_infrastructure
+UK,ARCHER 2 Supercomputer,2023,,,0,,gap,,,research_infrastructure
+UK,ARCHER 2 Supercomputer,2024,,,0,,gap,,,research_infrastructure
+UK,ARCHER 2 Supercomputer,2025,,,0,,gap,,,research_infrastructure
+UK,Additional Clinical Research Funding (2005),2005,25000000.0,25000000.0,1,2005_UK.pdf,single,GBP,pound,rd_programme
+UK,Additional Clinical Research Funding (2005),2006,,,0,,gap,,,rd_programme
+UK,Additional Clinical Research Funding (2005),2007,,,0,,gap,,,rd_programme
+UK,Additional Clinical Research Funding (2005),2008,,,0,,gap,,,rd_programme
+UK,Additional Clinical Research Funding (2005),2009,,,0,,gap,,,rd_programme
+UK,Additional Clinical Research Funding (2005),2010,,,0,,gap,,,rd_programme
+UK,Additional Clinical Research Funding (2005),2011,,,0,,gap,,,rd_programme
+UK,Additional Clinical Research Funding (2005),2012,,,0,,gap,,,rd_programme
+UK,Additional Clinical Research Funding (2005),2013,,,0,,gap,,,rd_programme
+UK,Additional Clinical Research Funding (2005),2014,,,0,,gap,,,rd_programme
+UK,Additional Clinical Research Funding (2005),2015,,,0,,gap,,,rd_programme
+UK,Additional Clinical Research Funding (2005),2016,,,0,,gap,,,rd_programme
+UK,Additional Clinical Research Funding (2005),2017,,,0,,gap,,,rd_programme
+UK,Additional Clinical Research Funding (2005),2018,,,0,,gap,,,rd_programme
+UK,Additional Clinical Research Funding (2005),2020,,,0,,gap,,,rd_programme
+UK,Additional Clinical Research Funding (2005),2021,,,0,,gap,,,rd_programme
+UK,Additional Clinical Research Funding (2005),2023,,,0,,gap,,,rd_programme
+UK,Additional Clinical Research Funding (2005),2024,,,0,,gap,,,rd_programme
+UK,Additional Clinical Research Funding (2005),2025,,,0,,gap,,,rd_programme
+UK,Advanced Manufacturing Supply Chain Initiative,2012,125000000.0,125000000.0,1,2012_UK.pdf,single,GBP,pound,innovation_instruments
+UK,Advanced Manufacturing Supply Chain Initiative,2013,,,0,,gap,,,innovation_instruments
+UK,Advanced Manufacturing Supply Chain Initiative,2014,,,0,,gap,,,innovation_instruments
+UK,Advanced Manufacturing Supply Chain Initiative,2015,,,0,,gap,,,innovation_instruments
+UK,Advanced Manufacturing Supply Chain Initiative,2016,,,0,,gap,,,innovation_instruments
+UK,Advanced Manufacturing Supply Chain Initiative,2017,,,0,,gap,,,innovation_instruments
+UK,Advanced Manufacturing Supply Chain Initiative,2018,,,0,,gap,,,innovation_instruments
+UK,Advanced Manufacturing Supply Chain Initiative,2020,,,0,,gap,,,innovation_instruments
+UK,Advanced Manufacturing Supply Chain Initiative,2021,,,0,,gap,,,innovation_instruments
+UK,Advanced Manufacturing Supply Chain Initiative,2023,,,0,,gap,,,innovation_instruments
+UK,Advanced Manufacturing Supply Chain Initiative,2024,,,0,,gap,,,innovation_instruments
+UK,Advanced Manufacturing Supply Chain Initiative,2025,,,0,,gap,,,innovation_instruments
 UK,Advanced Nuclear Fund,2021,385000000.0,385000000.0,1,2021_10_UK.pdf,single,GBP,pound,innovation_instruments
 UK,Advanced Nuclear Fund,2023,,,0,,gap,,,innovation_instruments
 UK,Advanced Nuclear Fund,2024,,,0,,gap,,,innovation_instruments
@@ -7,6 +65,30 @@ UK,Advanced Research and Invention Agency,2021,800000000.0,800000000.0,1,2021_10
 UK,Advanced Research and Invention Agency,2023,,,0,,gap,,,innovation_instruments
 UK,Advanced Research and Invention Agency,2024,,,0,,gap,,,innovation_instruments
 UK,Advanced Research and Invention Agency,2025,,,0,,gap,,,innovation_instruments
+UK,Advanced Wellbeing Research Centre,2015,14000000.0,14000000.0,1,2015_03_UK.pdf,single,GBP,pound,research_institute
+UK,Advanced Wellbeing Research Centre,2016,,,0,,gap,,,research_institute
+UK,Advanced Wellbeing Research Centre,2017,,,0,,gap,,,research_institute
+UK,Advanced Wellbeing Research Centre,2018,,,0,,gap,,,research_institute
+UK,Advanced Wellbeing Research Centre,2020,,,0,,gap,,,research_institute
+UK,Advanced Wellbeing Research Centre,2021,,,0,,gap,,,research_institute
+UK,Advanced Wellbeing Research Centre,2023,,,0,,gap,,,research_institute
+UK,Advanced Wellbeing Research Centre,2024,,,0,,gap,,,research_institute
+UK,Advanced Wellbeing Research Centre,2025,,,0,,gap,,,research_institute
+UK,Alan Turing Institute,2014,42000000.0,42000000.0,1,2014_UK.pdf,single,GBP,pound,research_institute
+UK,Alan Turing Institute,2015,,,0,,gap,,,research_institute
+UK,Alan Turing Institute,2016,,,0,,gap,,,research_institute
+UK,Alan Turing Institute,2017,,,0,,gap,,,research_institute
+UK,Alan Turing Institute,2018,,,0,,gap,,,research_institute
+UK,Alan Turing Institute,2020,,,0,,gap,,,research_institute
+UK,Alan Turing Institute,2021,,,0,,gap,,,research_institute
+UK,Alan Turing Institute,2023,,,0,,gap,,,research_institute
+UK,Alan Turing Institute,2024,100000000.0,100000000.0,1,2024_03_UK.pdf,single,GBP,pound,research_institute
+UK,Alan Turing Institute,2025,,,0,,gap,,,research_institute
+UK,Animal Health Science Estate,2020,1400000.0,1400000.0,1,2020_UK.pdf,single,GBP,pound,research_infrastructure
+UK,Animal Health Science Estate,2021,,,0,,gap,,,research_infrastructure
+UK,Animal Health Science Estate,2023,,,0,,gap,,,research_infrastructure
+UK,Animal Health Science Estate,2024,,,0,,gap,,,research_infrastructure
+UK,Animal Health Science Estate,2025,,,0,,gap,,,research_infrastructure
 UK,Arts and Humanities Research Council (AHRC),1998,,,0,,gap,,,science_agency
 UK,Arts and Humanities Research Council (AHRC),1999,,,0,,gap,,,science_agency
 UK,Arts and Humanities Research Council (AHRC),2003,,,0,,gap,,,science_agency
@@ -30,6 +112,14 @@ UK,Arts and Humanities Research Council (AHRC),2021,,,0,,gap,,,science_agency
 UK,Arts and Humanities Research Council (AHRC),2023,,,0,,gap,,,science_agency
 UK,Arts and Humanities Research Council (AHRC),2024,,,0,,gap,,,science_agency
 UK,Arts and Humanities Research Council (AHRC),2025,,,0,,gap,,,science_agency
+UK,Battery Technology R&D Support (Dyson),2016,16000000.0,16000000.0,1,2016_UK.pdf,single,GBP,pound,rd_programme
+UK,Battery Technology R&D Support (Dyson),2017,,,0,,gap,,,rd_programme
+UK,Battery Technology R&D Support (Dyson),2018,,,0,,gap,,,rd_programme
+UK,Battery Technology R&D Support (Dyson),2020,,,0,,gap,,,rd_programme
+UK,Battery Technology R&D Support (Dyson),2021,,,0,,gap,,,rd_programme
+UK,Battery Technology R&D Support (Dyson),2023,,,0,,gap,,,rd_programme
+UK,Battery Technology R&D Support (Dyson),2024,,,0,,gap,,,rd_programme
+UK,Battery Technology R&D Support (Dyson),2025,,,0,,gap,,,rd_programme
 UK,Biotechnology and Biological Sciences Research Council (BBSRC),1994,,,0,,gap,,,science_agency
 UK,Biotechnology and Biological Sciences Research Council (BBSRC),1996,,,0,,gap,,,science_agency
 UK,Biotechnology and Biological Sciences Research Council (BBSRC),1998,,,0,,gap,,,science_agency
@@ -55,10 +145,109 @@ UK,Biotechnology and Biological Sciences Research Council (BBSRC),2021,,,0,,gap,
 UK,Biotechnology and Biological Sciences Research Council (BBSRC),2023,,,0,,gap,,,science_agency
 UK,Biotechnology and Biological Sciences Research Council (BBSRC),2024,,,0,,gap,,,science_agency
 UK,Biotechnology and Biological Sciences Research Council (BBSRC),2025,,,0,,gap,,,science_agency
+UK,Birmingham STEAMhouse,2016,14000000.0,14000000.0,1,2016_UK.pdf,single,GBP,pound,innovation_instruments
+UK,Birmingham STEAMhouse,2017,,,0,,gap,,,innovation_instruments
+UK,Birmingham STEAMhouse,2018,,,0,,gap,,,innovation_instruments
+UK,Birmingham STEAMhouse,2020,,,0,,gap,,,innovation_instruments
+UK,Birmingham STEAMhouse,2021,,,0,,gap,,,innovation_instruments
+UK,Birmingham STEAMhouse,2023,,,0,,gap,,,innovation_instruments
+UK,Birmingham STEAMhouse,2024,,,0,,gap,,,innovation_instruments
+UK,Birmingham STEAMhouse,2025,,,0,,gap,,,innovation_instruments
+UK,Cambridge Biomedical Campus,2024,10200000.0,10200000.0,1,2024_03_UK.pdf,single,GBP,pound,research_infrastructure
+UK,Cambridge Biomedical Campus,2025,,,0,,gap,,,research_infrastructure
+UK,Cancer Research UK Funding,2024,3000000.0,3000000.0,1,2024_03_UK.pdf,single,GBP,pound,research_institute
+UK,Cancer Research UK Funding,2025,,,0,,gap,,,research_institute
+UK,Centre for Agricultural Informatics and Sustainability Metrics,2015,11800000.0,11800000.0,1,2015_03_UK.pdf,single,GBP,pound,research_institute
+UK,Centre for Agricultural Informatics and Sustainability Metrics,2016,,,0,,gap,,,research_institute
+UK,Centre for Agricultural Informatics and Sustainability Metrics,2017,,,0,,gap,,,research_institute
+UK,Centre for Agricultural Informatics and Sustainability Metrics,2018,,,0,,gap,,,research_institute
+UK,Centre for Agricultural Informatics and Sustainability Metrics,2020,,,0,,gap,,,research_institute
+UK,Centre for Agricultural Informatics and Sustainability Metrics,2021,,,0,,gap,,,research_institute
+UK,Centre for Agricultural Informatics and Sustainability Metrics,2023,,,0,,gap,,,research_institute
+UK,Centre for Agricultural Informatics and Sustainability Metrics,2024,,,0,,gap,,,research_institute
+UK,Centre for Agricultural Informatics and Sustainability Metrics,2025,,,0,,gap,,,research_institute
+UK,Centre for Process Innovation Chemical Innovation Fund,2015,1000000.0,1000000.0,1,2015_03_UK.pdf,single,GBP,pound,innovation_instruments
+UK,Centre for Process Innovation Chemical Innovation Fund,2016,,,0,,gap,,,innovation_instruments
+UK,Centre for Process Innovation Chemical Innovation Fund,2017,,,0,,gap,,,innovation_instruments
+UK,Centre for Process Innovation Chemical Innovation Fund,2018,,,0,,gap,,,innovation_instruments
+UK,Centre for Process Innovation Chemical Innovation Fund,2020,,,0,,gap,,,innovation_instruments
+UK,Centre for Process Innovation Chemical Innovation Fund,2021,,,0,,gap,,,innovation_instruments
+UK,Centre for Process Innovation Chemical Innovation Fund,2023,,,0,,gap,,,innovation_instruments
+UK,Centre for Process Innovation Chemical Innovation Fund,2024,,,0,,gap,,,innovation_instruments
+UK,Centre for Process Innovation Chemical Innovation Fund,2025,,,0,,gap,,,innovation_instruments
+UK,Climate Change Research Capacity Programme,2007,30000000.0,30000000.0,1,2007_UK.pdf,single,GBP,pound,rd_programme
+UK,Climate Change Research Capacity Programme,2008,,,0,,gap,,,rd_programme
+UK,Climate Change Research Capacity Programme,2009,,,0,,gap,,,rd_programme
+UK,Climate Change Research Capacity Programme,2010,,,0,,gap,,,rd_programme
+UK,Climate Change Research Capacity Programme,2011,,,0,,gap,,,rd_programme
+UK,Climate Change Research Capacity Programme,2012,,,0,,gap,,,rd_programme
+UK,Climate Change Research Capacity Programme,2013,,,0,,gap,,,rd_programme
+UK,Climate Change Research Capacity Programme,2014,,,0,,gap,,,rd_programme
+UK,Climate Change Research Capacity Programme,2015,,,0,,gap,,,rd_programme
+UK,Climate Change Research Capacity Programme,2016,,,0,,gap,,,rd_programme
+UK,Climate Change Research Capacity Programme,2017,,,0,,gap,,,rd_programme
+UK,Climate Change Research Capacity Programme,2018,,,0,,gap,,,rd_programme
+UK,Climate Change Research Capacity Programme,2020,,,0,,gap,,,rd_programme
+UK,Climate Change Research Capacity Programme,2021,,,0,,gap,,,rd_programme
+UK,Climate Change Research Capacity Programme,2023,,,0,,gap,,,rd_programme
+UK,Climate Change Research Capacity Programme,2024,,,0,,gap,,,rd_programme
+UK,Climate Change Research Capacity Programme,2025,,,0,,gap,,,rd_programme
+UK,Compound Semiconductor Catapult,2016,50000000.0,50000000.0,1,2016_UK.pdf,single,GBP,pound,innovation_instruments
+UK,Compound Semiconductor Catapult,2017,,,0,,gap,,,innovation_instruments
+UK,Compound Semiconductor Catapult,2018,,,0,,gap,,,innovation_instruments
+UK,Compound Semiconductor Catapult,2020,,,0,,gap,,,innovation_instruments
+UK,Compound Semiconductor Catapult,2021,,,0,,gap,,,innovation_instruments
+UK,Compound Semiconductor Catapult,2023,,,0,,gap,,,innovation_instruments
+UK,Compound Semiconductor Catapult,2024,,,0,,gap,,,innovation_instruments
+UK,Compound Semiconductor Catapult,2025,,,0,,gap,,,innovation_instruments
 UK,Core Research,2021,,,0,,gap,,,rd_programme
 UK,Core Research,2023,,,0,,gap,,,rd_programme
 UK,Core Research,2024,,,0,,gap,,,rd_programme
 UK,Core Research,2025,,,0,,gap,,,rd_programme
+UK,DSIT R&D Budget,2023,,,0,,gap,,,rd_ministry
+UK,DSIT R&D Budget,2024,,,0,,gap,,,rd_ministry
+UK,DSIT R&D Budget,2025,13900000000.0,13900000000.0,1,2024_10_UK.pdf,single,GBP,pound,rd_ministry
+UK,DfES Research and Knowledge Transfer Funding (English Universities),2007,1655000.0,1655000.0,1,2007_UK.pdf,single,GBP,pound,rd_programme
+UK,DfES Research and Knowledge Transfer Funding (English Universities),2008,,,0,,gap,,,rd_programme
+UK,DfES Research and Knowledge Transfer Funding (English Universities),2009,,,0,,gap,,,rd_programme
+UK,DfES Research and Knowledge Transfer Funding (English Universities),2010,,,0,,gap,,,rd_programme
+UK,DfES Research and Knowledge Transfer Funding (English Universities),2011,,,0,,gap,,,rd_programme
+UK,DfES Research and Knowledge Transfer Funding (English Universities),2012,,,0,,gap,,,rd_programme
+UK,DfES Research and Knowledge Transfer Funding (English Universities),2013,,,0,,gap,,,rd_programme
+UK,DfES Research and Knowledge Transfer Funding (English Universities),2014,,,0,,gap,,,rd_programme
+UK,DfES Research and Knowledge Transfer Funding (English Universities),2015,,,0,,gap,,,rd_programme
+UK,DfES Research and Knowledge Transfer Funding (English Universities),2016,,,0,,gap,,,rd_programme
+UK,DfES Research and Knowledge Transfer Funding (English Universities),2017,,,0,,gap,,,rd_programme
+UK,DfES Research and Knowledge Transfer Funding (English Universities),2018,,,0,,gap,,,rd_programme
+UK,DfES Research and Knowledge Transfer Funding (English Universities),2020,,,0,,gap,,,rd_programme
+UK,DfES Research and Knowledge Transfer Funding (English Universities),2021,,,0,,gap,,,rd_programme
+UK,DfES Research and Knowledge Transfer Funding (English Universities),2023,,,0,,gap,,,rd_programme
+UK,DfES Research and Knowledge Transfer Funding (English Universities),2024,,,0,,gap,,,rd_programme
+UK,DfES Research and Knowledge Transfer Funding (English Universities),2025,,,0,,gap,,,rd_programme
+UK,Digital Catapult,2018,115000000.0,115000000.0,1,2018_UK.pdf,single,GBP,pound,innovation_instruments
+UK,Digital Catapult,2020,,,0,,gap,,,innovation_instruments
+UK,Digital Catapult,2021,,,0,,gap,,,innovation_instruments
+UK,Digital Catapult,2023,,,0,,gap,,,innovation_instruments
+UK,Digital Catapult,2024,,,0,,gap,,,innovation_instruments
+UK,Digital Catapult,2025,,,0,,gap,,,innovation_instruments
+UK,Digital Currency Technology Research,2015,10000000.0,10000000.0,1,2015_03_UK.pdf,single,GBP,pound,rd_programme
+UK,Digital Currency Technology Research,2016,,,0,,gap,,,rd_programme
+UK,Digital Currency Technology Research,2017,,,0,,gap,,,rd_programme
+UK,Digital Currency Technology Research,2018,,,0,,gap,,,rd_programme
+UK,Digital Currency Technology Research,2020,,,0,,gap,,,rd_programme
+UK,Digital Currency Technology Research,2021,,,0,,gap,,,rd_programme
+UK,Digital Currency Technology Research,2023,,,0,,gap,,,rd_programme
+UK,Digital Currency Technology Research,2024,,,0,,gap,,,rd_programme
+UK,Digital Currency Technology Research,2025,,,0,,gap,,,rd_programme
+UK,Digital Economy Centres,2015,23000000.0,23000000.0,1,2015_07_UK.pdf,single,GBP,pound,research_infrastructure
+UK,Digital Economy Centres,2016,,,0,,gap,,,research_infrastructure
+UK,Digital Economy Centres,2017,,,0,,gap,,,research_infrastructure
+UK,Digital Economy Centres,2018,,,0,,gap,,,research_infrastructure
+UK,Digital Economy Centres,2020,,,0,,gap,,,research_infrastructure
+UK,Digital Economy Centres,2021,,,0,,gap,,,research_infrastructure
+UK,Digital Economy Centres,2023,,,0,,gap,,,research_infrastructure
+UK,Digital Economy Centres,2024,,,0,,gap,,,research_infrastructure
+UK,Digital Economy Centres,2025,,,0,,gap,,,research_infrastructure
 UK,Economic and Social Research Council (ESRC),1982,,,0,,gap,,,science_agency
 UK,Economic and Social Research Council (ESRC),1987,,,0,,gap,,,science_agency
 UK,Economic and Social Research Council (ESRC),1989,,,0,,gap,,,science_agency
@@ -88,6 +277,15 @@ UK,Economic and Social Research Council (ESRC),2021,,,0,,gap,,,science_agency
 UK,Economic and Social Research Council (ESRC),2023,,,0,,gap,,,science_agency
 UK,Economic and Social Research Council (ESRC),2024,,,0,,gap,,,science_agency
 UK,Economic and Social Research Council (ESRC),2025,,,0,,gap,,,science_agency
+UK,Energy Research Accelerator,2015,60000000.0,60000000.0,1,2015_03_UK.pdf,single,GBP,pound,research_infrastructure
+UK,Energy Research Accelerator,2016,,,0,,gap,,,research_infrastructure
+UK,Energy Research Accelerator,2017,,,0,,gap,,,research_infrastructure
+UK,Energy Research Accelerator,2018,,,0,,gap,,,research_infrastructure
+UK,Energy Research Accelerator,2020,,,0,,gap,,,research_infrastructure
+UK,Energy Research Accelerator,2021,,,0,,gap,,,research_infrastructure
+UK,Energy Research Accelerator,2023,,,0,,gap,,,research_infrastructure
+UK,Energy Research Accelerator,2024,,,0,,gap,,,research_infrastructure
+UK,Energy Research Accelerator,2025,,,0,,gap,,,research_infrastructure
 UK,Engineering and Physical Sciences Research Council (EPSRC),1994,,,0,,gap,,,science_agency
 UK,Engineering and Physical Sciences Research Council (EPSRC),1996,,,0,,gap,,,science_agency
 UK,Engineering and Physical Sciences Research Council (EPSRC),1998,,,0,,gap,,,science_agency
@@ -113,18 +311,77 @@ UK,Engineering and Physical Sciences Research Council (EPSRC),2021,,,0,,gap,,,sc
 UK,Engineering and Physical Sciences Research Council (EPSRC),2023,,,0,,gap,,,science_agency
 UK,Engineering and Physical Sciences Research Council (EPSRC),2024,,,0,,gap,,,science_agency
 UK,Engineering and Physical Sciences Research Council (EPSRC),2025,,,0,,gap,,,science_agency
+UK,Entrepreneurship-Focused Doctoral Training,2025,25000000.0,25000000.0,1,2025_UK.pdf,single,GBP,pound,rd_programme
+UK,European Bioinformatics Institute Infrastructure Upgrade,2019,45000000.0,45000000.0,1,2019_UK.pdf,single,GBP,pound,research_infrastructure
+UK,European Bioinformatics Institute Infrastructure Upgrade,2020,,,0,,gap,,,research_infrastructure
+UK,European Bioinformatics Institute Infrastructure Upgrade,2021,,,0,,gap,,,research_infrastructure
+UK,European Bioinformatics Institute Infrastructure Upgrade,2023,,,0,,gap,,,research_infrastructure
+UK,European Bioinformatics Institute Infrastructure Upgrade,2024,,,0,,gap,,,research_infrastructure
+UK,European Bioinformatics Institute Infrastructure Upgrade,2025,,,0,,gap,,,research_infrastructure
 UK,Exascale supercomputer and Artificial Intelligence Research Resource,2023,900000000.0,900000000.0,1,2023_UK.pdf,single,GBP,pound,innovation_instruments
 UK,Exascale supercomputer and Artificial Intelligence Research Resource,2024,,,0,,gap,,,innovation_instruments
 UK,Exascale supercomputer and Artificial Intelligence Research Resource,2025,,,0,,gap,,,innovation_instruments
-UK,Industrial Strategy Challenge Fund,1982,,,0,,gap,,,innovation_instruments
-UK,Industrial Strategy Challenge Fund,1987,,,0,,gap,,,innovation_instruments
-UK,Industrial Strategy Challenge Fund,1989,,,0,,gap,,,innovation_instruments
-UK,Industrial Strategy Challenge Fund,1993,,,0,,gap,,,innovation_instruments
-UK,Industrial Strategy Challenge Fund,1994,,,0,,gap,,,innovation_instruments
-UK,Industrial Strategy Challenge Fund,1996,,,0,,gap,,,innovation_instruments
-UK,Industrial Strategy Challenge Fund,1998,,,0,,gap,,,innovation_instruments
-UK,Industrial Strategy Challenge Fund,1999,,,0,,gap,,,innovation_instruments
-UK,Industrial Strategy Challenge Fund,2003,,,0,,gap,,,innovation_instruments
+UK,Extreme Photonics Application Centre,2019,81000000.0,81000000.0,1,2019_UK.pdf,single,GBP,pound,research_infrastructure
+UK,Extreme Photonics Application Centre,2020,,,0,,gap,,,research_infrastructure
+UK,Extreme Photonics Application Centre,2021,,,0,,gap,,,research_infrastructure
+UK,Extreme Photonics Application Centre,2023,,,0,,gap,,,research_infrastructure
+UK,Extreme Photonics Application Centre,2024,,,0,,gap,,,research_infrastructure
+UK,Extreme Photonics Application Centre,2025,,,0,,gap,,,research_infrastructure
+UK,Faraday Discovery Fellowships and Green Future Fellowships Endowments,2024,400000000.0,400000000.0,1,2024_03_UK.pdf,single,GBP,pound,rd_programme
+UK,Faraday Discovery Fellowships and Green Future Fellowships Endowments,2025,,,0,,gap,,,rd_programme
+UK,Francis Crick Institute (MRC asset reinvestment),2015,30000000.0,30000000.0,1,2015_03_UK.pdf,single,GBP,pound,research_institute
+UK,Francis Crick Institute (MRC asset reinvestment),2016,,,0,,gap,,,research_institute
+UK,Francis Crick Institute (MRC asset reinvestment),2017,,,0,,gap,,,research_institute
+UK,Francis Crick Institute (MRC asset reinvestment),2018,,,0,,gap,,,research_institute
+UK,Francis Crick Institute (MRC asset reinvestment),2020,,,0,,gap,,,research_institute
+UK,Francis Crick Institute (MRC asset reinvestment),2021,,,0,,gap,,,research_institute
+UK,Francis Crick Institute (MRC asset reinvestment),2023,,,0,,gap,,,research_institute
+UK,Francis Crick Institute (MRC asset reinvestment),2024,,,0,,gap,,,research_institute
+UK,Francis Crick Institute (MRC asset reinvestment),2025,,,0,,gap,,,research_institute
+UK,Future Fund: Breakthrough,2021,375000000.0,375000000.0,1,2021_03_UK.pdf,single,GBP,pound,innovation_instruments
+UK,Future Fund: Breakthrough,2023,,,0,,gap,,,innovation_instruments
+UK,Future Fund: Breakthrough,2024,,,0,,gap,,,innovation_instruments
+UK,Future Fund: Breakthrough,2025,,,0,,gap,,,innovation_instruments
+UK,Global Underwater Hub,2021,5000000.0,5000000.0,1,2021_03_UK.pdf,single,GBP,pound,innovation_instruments
+UK,Global Underwater Hub,2023,,,0,,gap,,,innovation_instruments
+UK,Global Underwater Hub,2024,,,0,,gap,,,innovation_instruments
+UK,Global Underwater Hub,2025,,,0,,gap,,,innovation_instruments
+UK,GovTech Fund,2017,20000000.0,20000000.0,1,2017_11_UK.pdf,single,GBP,pound,innovation_instruments
+UK,GovTech Fund,2018,,,0,,gap,,,innovation_instruments
+UK,GovTech Fund,2020,,,0,,gap,,,innovation_instruments
+UK,GovTech Fund,2021,,,0,,gap,,,innovation_instruments
+UK,GovTech Fund,2023,,,0,,gap,,,innovation_instruments
+UK,GovTech Fund,2024,,,0,,gap,,,innovation_instruments
+UK,GovTech Fund,2025,,,0,,gap,,,innovation_instruments
+UK,Government Chief Scientific Adviser / GO-Science,2020,2000000.0,2000000.0,1,2020_UK.pdf,single,GBP,pound,rd_ministry
+UK,Government Chief Scientific Adviser / GO-Science,2021,,,0,,gap,,,rd_ministry
+UK,Government Chief Scientific Adviser / GO-Science,2023,,,0,,gap,,,rd_ministry
+UK,Government Chief Scientific Adviser / GO-Science,2024,,,0,,gap,,,rd_ministry
+UK,Government Chief Scientific Adviser / GO-Science,2025,,,0,,gap,,,rd_ministry
+UK,Higher Education Innovation Fund (HEIF),2003,187000000.0,187000000.0,1,2003_UK.pdf,single,GBP,pound,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2004,,,0,,gap,,,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2005,,,0,,gap,,,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2006,,,0,,gap,,,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2007,,,0,,gap,,,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2008,,,0,,gap,,,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2009,,,0,,gap,,,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2010,,,0,,gap,,,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2011,,,0,,gap,,,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2012,,,0,,gap,,,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2013,,,0,,gap,,,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2014,,,0,,gap,,,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2015,,,0,,gap,,,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2016,,,0,,gap,,,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2017,,,0,,gap,,,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2018,,,0,,gap,,,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2020,,,0,,gap,,,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2021,,,0,,gap,,,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2023,,,0,,gap,,,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2024,,,0,,gap,,,innovation_instruments
+UK,Higher Education Innovation Fund (HEIF),2025,,,0,,gap,,,innovation_instruments
+UK,Industrial Innovation Support Measures (1982 package),1982,20000000.0,20000000.0,1,1982_UK.pdf,single,GBP,pound,rd_programme
+UK,Industrial Innovation Support Measures (1982 package),1983,39000000.0,39000000.0,1,1983_UK.pdf,single,GBP,pound,rd_programme
+UK,Industrial Innovation Support Measures (1982 package),1984,45000000.0,45000000.0,1,1982_UK.pdf,single,GBP,pound,rd_programme
 UK,Industrial Strategy Challenge Fund,2004,,,0,,gap,,,innovation_instruments
 UK,Industrial Strategy Challenge Fund,2005,,,0,,gap,,,innovation_instruments
 UK,Industrial Strategy Challenge Fund,2006,,,0,,gap,,,innovation_instruments
@@ -139,7 +396,6 @@ UK,Industrial Strategy Challenge Fund,2014,,,0,,gap,,,innovation_instruments
 UK,Industrial Strategy Challenge Fund,2015,,,0,,gap,,,innovation_instruments
 UK,Industrial Strategy Challenge Fund,2016,,,0,,gap,,,innovation_instruments
 UK,Industrial Strategy Challenge Fund,2017,270000000.0,270000000.0,1,2017_03_UK.pdf,single,GBP,pound,innovation_instruments
-UK,Industrial Strategy Challenge Fund,2017,,,0,,gap,,,innovation_instruments
 UK,Industrial Strategy Challenge Fund,2018,,,0,,gap,,,innovation_instruments
 UK,Industrial Strategy Challenge Fund,2020,,,0,,gap,,,innovation_instruments
 UK,Industrial Strategy Challenge Fund,2021,200000000.0,200000000.0,1,2021_03_UK.pdf,single,GBP,pound,innovation_instruments
@@ -166,8 +422,121 @@ UK,Innovate UK,2021,700000000.0,700000000.0,1,2021_10_UK.pdf,single,GBP,pound,in
 UK,Innovate UK,2023,,,0,,gap,,,innovation_instruments
 UK,Innovate UK,2024,,,0,,gap,,,innovation_instruments
 UK,Innovate UK,2025,,,0,,gap,,,innovation_instruments
+UK,Innovation Accelerators Programme,2023,100000000.0,100000000.0,1,2023_UK.pdf,single,GBP,pound,innovation_instruments
+UK,Innovation Accelerators Programme,2024,,,0,,gap,,,innovation_instruments
+UK,Innovation Accelerators Programme,2025,,,0,,gap,,,innovation_instruments
+UK,Institute of Web Science,2010,30000000.0,30000000.0,1,2010_03_UK.pdf,single,GBP,pound,research_institute
+UK,Institute of Web Science,2011,,,0,,gap,,,research_institute
+UK,Institute of Web Science,2012,,,0,,gap,,,research_institute
+UK,Institute of Web Science,2013,,,0,,gap,,,research_institute
+UK,Institute of Web Science,2014,,,0,,gap,,,research_institute
+UK,Institute of Web Science,2015,,,0,,gap,,,research_institute
+UK,Institute of Web Science,2016,,,0,,gap,,,research_institute
+UK,Institute of Web Science,2017,,,0,,gap,,,research_institute
+UK,Institute of Web Science,2018,,,0,,gap,,,research_institute
+UK,Institute of Web Science,2020,,,0,,gap,,,research_institute
+UK,Institute of Web Science,2021,,,0,,gap,,,research_institute
+UK,Institute of Web Science,2023,,,0,,gap,,,research_institute
+UK,Institute of Web Science,2024,,,0,,gap,,,research_institute
+UK,Institute of Web Science,2025,,,0,,gap,,,research_institute
+UK,International Research Fellowship Scheme (2018),2018,100000000.0,100000000.0,1,2018_UK.pdf,single,GBP,pound,rd_programme
+UK,International Research Fellowship Scheme (2018),2020,,,0,,gap,,,rd_programme
+UK,International Research Fellowship Scheme (2018),2021,,,0,,gap,,,rd_programme
+UK,International Research Fellowship Scheme (2018),2023,,,0,,gap,,,rd_programme
+UK,International Research Fellowship Scheme (2018),2024,,,0,,gap,,,rd_programme
+UK,International Research Fellowship Scheme (2018),2025,,,0,,gap,,,rd_programme
+UK,Internet of Things Research Programme,2015,40000000.0,40000000.0,1,2015_03_UK.pdf,single,GBP,pound,rd_programme
+UK,Internet of Things Research Programme,2016,,,0,,gap,,,rd_programme
+UK,Internet of Things Research Programme,2017,,,0,,gap,,,rd_programme
+UK,Internet of Things Research Programme,2018,,,0,,gap,,,rd_programme
+UK,Internet of Things Research Programme,2020,,,0,,gap,,,rd_programme
+UK,Internet of Things Research Programme,2021,,,0,,gap,,,rd_programme
+UK,Internet of Things Research Programme,2023,,,0,,gap,,,rd_programme
+UK,Internet of Things Research Programme,2024,,,0,,gap,,,rd_programme
+UK,Internet of Things Research Programme,2025,,,0,,gap,,,rd_programme
+UK,Jodrell Bank Discovery Centre,2017,4000000.0,4000000.0,1,2017_11_UK.pdf,single,GBP,pound,research_infrastructure
+UK,Jodrell Bank Discovery Centre,2018,,,0,,gap,,,research_infrastructure
+UK,Jodrell Bank Discovery Centre,2020,,,0,,gap,,,research_infrastructure
+UK,Jodrell Bank Discovery Centre,2021,,,0,,gap,,,research_infrastructure
+UK,Jodrell Bank Discovery Centre,2023,,,0,,gap,,,research_infrastructure
+UK,Jodrell Bank Discovery Centre,2024,,,0,,gap,,,research_infrastructure
+UK,Jodrell Bank Discovery Centre,2025,,,0,,gap,,,research_infrastructure
+UK,Joint European Torus (JET) Fusion Funding,2019,60000000.0,60000000.0,1,2019_UK.pdf,single,GBP,pound,research_infrastructure
+UK,Joint European Torus (JET) Fusion Funding,2020,,,0,,gap,,,research_infrastructure
+UK,Joint European Torus (JET) Fusion Funding,2021,,,0,,gap,,,research_infrastructure
+UK,Joint European Torus (JET) Fusion Funding,2023,,,0,,gap,,,research_infrastructure
+UK,Joint European Torus (JET) Fusion Funding,2024,,,0,,gap,,,research_infrastructure
+UK,Joint European Torus (JET) Fusion Funding,2025,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,1999,700000000.0,700000000.0,1,1999_UK.pdf,single,GBP,pound,research_infrastructure
+UK,Joint Infrastructure Fund,2003,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2004,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2005,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2006,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2007,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2008,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2009,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2010,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2011,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2012,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2013,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2014,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2015,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2016,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2017,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2018,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2020,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2021,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2023,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2024,,,0,,gap,,,research_infrastructure
+UK,Joint Infrastructure Fund,2025,,,0,,gap,,,research_infrastructure
+UK,Life Sciences Investment Programme,2020,200000000.0,200000000.0,1,2020_UK.pdf,single,GBP,pound,innovation_instruments
+UK,Life Sciences Investment Programme,2021,,,0,,gap,,,innovation_instruments
+UK,Life Sciences Investment Programme,2023,,,0,,gap,,,innovation_instruments
+UK,Life Sciences Investment Programme,2024,,,0,,gap,,,innovation_instruments
+UK,Life Sciences Investment Programme,2025,,,0,,gap,,,innovation_instruments
 UK,Life Sciences Manufacturing Funding,2024,70000000.0,70000000.0,1,2024_10_UK.pdf,single,GBP,pound,innovation_instruments
 UK,Life Sciences Manufacturing Funding,2025,,,0,,gap,,,innovation_instruments
+UK,Long-Term Investment for Technology & Science (LIFTS),2022,500000000.0,500000000.0,1,2022_09_UK.pdf,single,GBP,pound,innovation_instruments
+UK,Long-Term Investment for Technology & Science (LIFTS),2023,,,0,,gap,,,innovation_instruments
+UK,Long-Term Investment for Technology & Science (LIFTS),2024,,,0,,gap,,,innovation_instruments
+UK,Long-Term Investment for Technology & Science (LIFTS),2025,,,0,,gap,,,innovation_instruments
+UK,Low-Carbon Aircraft Engine R&D,2010,45000000.0,45000000.0,1,2010_03_UK.pdf,single,GBP,pound,rd_programme
+UK,Low-Carbon Aircraft Engine R&D,2011,,,0,,gap,,,rd_programme
+UK,Low-Carbon Aircraft Engine R&D,2012,,,0,,gap,,,rd_programme
+UK,Low-Carbon Aircraft Engine R&D,2013,,,0,,gap,,,rd_programme
+UK,Low-Carbon Aircraft Engine R&D,2014,,,0,,gap,,,rd_programme
+UK,Low-Carbon Aircraft Engine R&D,2015,,,0,,gap,,,rd_programme
+UK,Low-Carbon Aircraft Engine R&D,2016,,,0,,gap,,,rd_programme
+UK,Low-Carbon Aircraft Engine R&D,2017,,,0,,gap,,,rd_programme
+UK,Low-Carbon Aircraft Engine R&D,2018,,,0,,gap,,,rd_programme
+UK,Low-Carbon Aircraft Engine R&D,2020,,,0,,gap,,,rd_programme
+UK,Low-Carbon Aircraft Engine R&D,2021,,,0,,gap,,,rd_programme
+UK,Low-Carbon Aircraft Engine R&D,2023,,,0,,gap,,,rd_programme
+UK,Low-Carbon Aircraft Engine R&D,2024,,,0,,gap,,,rd_programme
+UK,Low-Carbon Aircraft Engine R&D,2025,,,0,,gap,,,rd_programme
+UK,Low-Carbon Vehicle RD&D Programme,2008,40000000.0,40000000.0,1,2008_UK.pdf,single,GBP,pound,rd_programme
+UK,Low-Carbon Vehicle RD&D Programme,2009,,,0,,gap,,,rd_programme
+UK,Low-Carbon Vehicle RD&D Programme,2010,,,0,,gap,,,rd_programme
+UK,Low-Carbon Vehicle RD&D Programme,2011,,,0,,gap,,,rd_programme
+UK,Low-Carbon Vehicle RD&D Programme,2012,,,0,,gap,,,rd_programme
+UK,Low-Carbon Vehicle RD&D Programme,2013,,,0,,gap,,,rd_programme
+UK,Low-Carbon Vehicle RD&D Programme,2014,,,0,,gap,,,rd_programme
+UK,Low-Carbon Vehicle RD&D Programme,2015,,,0,,gap,,,rd_programme
+UK,Low-Carbon Vehicle RD&D Programme,2016,,,0,,gap,,,rd_programme
+UK,Low-Carbon Vehicle RD&D Programme,2017,,,0,,gap,,,rd_programme
+UK,Low-Carbon Vehicle RD&D Programme,2018,,,0,,gap,,,rd_programme
+UK,Low-Carbon Vehicle RD&D Programme,2020,,,0,,gap,,,rd_programme
+UK,Low-Carbon Vehicle RD&D Programme,2021,,,0,,gap,,,rd_programme
+UK,Low-Carbon Vehicle RD&D Programme,2023,,,0,,gap,,,rd_programme
+UK,Low-Carbon Vehicle RD&D Programme,2024,,,0,,gap,,,rd_programme
+UK,Low-Carbon Vehicle RD&D Programme,2025,,,0,,gap,,,rd_programme
+UK,Materials Processing Institute,2020,22000000.0,22000000.0,1,2020_UK.pdf,single,GBP,pound,research_institute
+UK,Materials Processing Institute,2021,,,0,,gap,,,research_institute
+UK,Materials Processing Institute,2023,,,0,,gap,,,research_institute
+UK,Materials Processing Institute,2024,,,0,,gap,,,research_institute
+UK,Materials Processing Institute,2025,,,0,,gap,,,research_institute
+UK,Medical Research Charities Early Career Researchers Fund,2024,45000000.0,45000000.0,1,2024_03_UK.pdf,single,GBP,pound,rd_programme
+UK,Medical Research Charities Early Career Researchers Fund,2025,,,0,,gap,,,rd_programme
 UK,Medical Research Council (MRC),1982,,,0,,gap,,,science_agency
 UK,Medical Research Council (MRC),1987,,,0,,gap,,,science_agency
 UK,Medical Research Council (MRC),1989,,,0,,gap,,,science_agency
@@ -197,14 +566,59 @@ UK,Medical Research Council (MRC),2021,,,0,,gap,,,science_agency
 UK,Medical Research Council (MRC),2023,,,0,,gap,,,science_agency
 UK,Medical Research Council (MRC),2024,,,0,,gap,,,science_agency
 UK,Medical Research Council (MRC),2025,,,0,,gap,,,science_agency
-UK,National Productivity Investment Fund,2017,425000000.0,425000000.0,1,2017_11_UK.pdf,single,GBP,pound,rd_programme
-UK,National Productivity Investment Fund,2017,,,0,,gap,,,rd_programme
+UK,NPIF Disruptive Technologies Initial Investment,2017,270000000.0,270000000.0,1,2017_03_UK.pdf,single,GBP,pound,rd_programme
+UK,NPIF Disruptive Technologies Initial Investment,2018,,,0,,gap,,,rd_programme
+UK,NPIF Disruptive Technologies Initial Investment,2020,,,0,,gap,,,rd_programme
+UK,NPIF Disruptive Technologies Initial Investment,2021,,,0,,gap,,,rd_programme
+UK,NPIF Disruptive Technologies Initial Investment,2023,,,0,,gap,,,rd_programme
+UK,NPIF Disruptive Technologies Initial Investment,2024,,,0,,gap,,,rd_programme
+UK,NPIF Disruptive Technologies Initial Investment,2025,,,0,,gap,,,rd_programme
+UK,NPIF Fellowship Programmes,2017,50000000.0,50000000.0,1,2017_03_UK.pdf,single,GBP,pound,rd_programme
+UK,NPIF Fellowship Programmes,2018,,,0,,gap,,,rd_programme
+UK,NPIF Fellowship Programmes,2020,,,0,,gap,,,rd_programme
+UK,NPIF Fellowship Programmes,2021,,,0,,gap,,,rd_programme
+UK,NPIF Fellowship Programmes,2023,,,0,,gap,,,rd_programme
+UK,NPIF Fellowship Programmes,2024,,,0,,gap,,,rd_programme
+UK,NPIF Fellowship Programmes,2025,,,0,,gap,,,rd_programme
+UK,National Institute for Health Research (uplift),2020,12000000.0,12000000.0,1,2020_UK.pdf,single,GBP,pound,research_infrastructure
+UK,National Institute for Health Research (uplift),2021,,,0,,gap,,,research_infrastructure
+UK,National Institute for Health Research (uplift),2023,,,0,,gap,,,research_infrastructure
+UK,National Institute for Health Research (uplift),2024,,,0,,gap,,,research_infrastructure
+UK,National Institute for Health Research (uplift),2025,,,0,,gap,,,research_infrastructure
+UK,National Institute for Smart Data Innovation,2016,15000000.0,15000000.0,1,2016_UK.pdf,single,GBP,pound,research_institute
+UK,National Institute for Smart Data Innovation,2017,,,0,,gap,,,research_institute
+UK,National Institute for Smart Data Innovation,2018,,,0,,gap,,,research_institute
+UK,National Institute for Smart Data Innovation,2020,,,0,,gap,,,research_institute
+UK,National Institute for Smart Data Innovation,2021,,,0,,gap,,,research_institute
+UK,National Institute for Smart Data Innovation,2023,,,0,,gap,,,research_institute
+UK,National Institute for Smart Data Innovation,2024,,,0,,gap,,,research_institute
+UK,National Institute for Smart Data Innovation,2025,,,0,,gap,,,research_institute
 UK,National Productivity Investment Fund,2018,820000000.0,820000000.0,1,2018_UK.pdf,single,GBP,pound,rd_programme
 UK,National Productivity Investment Fund,2020,,,0,,gap,,,rd_programme
 UK,National Productivity Investment Fund,2021,,,0,,gap,,,rd_programme
 UK,National Productivity Investment Fund,2023,,,0,,gap,,,rd_programme
 UK,National Productivity Investment Fund,2024,,,0,,gap,,,rd_programme
 UK,National Productivity Investment Fund,2025,,,0,,gap,,,rd_programme
+UK,National Technology Strategy,2004,150000000.0,150000000.0,1,2004_UK.pdf,single,GBP,pound,rd_programme
+UK,National Technology Strategy,2005,,,0,,gap,,,rd_programme
+UK,National Technology Strategy,2006,,,0,,gap,,,rd_programme
+UK,National Technology Strategy,2007,,,0,,gap,,,rd_programme
+UK,National Technology Strategy,2008,,,0,,gap,,,rd_programme
+UK,National Technology Strategy,2009,,,0,,gap,,,rd_programme
+UK,National Technology Strategy,2010,,,0,,gap,,,rd_programme
+UK,National Technology Strategy,2011,,,0,,gap,,,rd_programme
+UK,National Technology Strategy,2012,,,0,,gap,,,rd_programme
+UK,National Technology Strategy,2013,,,0,,gap,,,rd_programme
+UK,National Technology Strategy,2014,,,0,,gap,,,rd_programme
+UK,National Technology Strategy,2015,,,0,,gap,,,rd_programme
+UK,National Technology Strategy,2016,,,0,,gap,,,rd_programme
+UK,National Technology Strategy,2017,,,0,,gap,,,rd_programme
+UK,National Technology Strategy,2018,,,0,,gap,,,rd_programme
+UK,National Technology Strategy,2020,,,0,,gap,,,rd_programme
+UK,National Technology Strategy,2021,,,0,,gap,,,rd_programme
+UK,National Technology Strategy,2023,,,0,,gap,,,rd_programme
+UK,National Technology Strategy,2024,,,0,,gap,,,rd_programme
+UK,National Technology Strategy,2025,,,0,,gap,,,rd_programme
 UK,Natural Environment Research Council (NERC),1982,,,0,,gap,,,science_agency
 UK,Natural Environment Research Council (NERC),1987,,,0,,gap,,,science_agency
 UK,Natural Environment Research Council (NERC),1989,,,0,,gap,,,science_agency
@@ -234,46 +648,69 @@ UK,Natural Environment Research Council (NERC),2021,,,0,,gap,,,science_agency
 UK,Natural Environment Research Council (NERC),2023,,,0,,gap,,,science_agency
 UK,Natural Environment Research Council (NERC),2024,,,0,,gap,,,science_agency
 UK,Natural Environment Research Council (NERC),2025,,,0,,gap,,,science_agency
+UK,Northern Tech Incubator Investment,2015,11000000.0,11000000.0,1,2015_03_UK.pdf,single,GBP,pound,innovation_instruments
+UK,Northern Tech Incubator Investment,2016,,,0,,gap,,,innovation_instruments
+UK,Northern Tech Incubator Investment,2017,,,0,,gap,,,innovation_instruments
+UK,Northern Tech Incubator Investment,2018,,,0,,gap,,,innovation_instruments
+UK,Northern Tech Incubator Investment,2020,,,0,,gap,,,innovation_instruments
+UK,Northern Tech Incubator Investment,2021,,,0,,gap,,,innovation_instruments
+UK,Northern Tech Incubator Investment,2023,,,0,,gap,,,innovation_instruments
+UK,Northern Tech Incubator Investment,2024,,,0,,gap,,,innovation_instruments
+UK,Northern Tech Incubator Investment,2025,,,0,,gap,,,innovation_instruments
+UK,ONS Data Science Hub,2016,10000000.0,10000000.0,1,2016_UK.pdf,single,GBP,pound,research_infrastructure
+UK,ONS Data Science Hub,2017,,,0,,gap,,,research_infrastructure
+UK,ONS Data Science Hub,2018,,,0,,gap,,,research_infrastructure
+UK,ONS Data Science Hub,2020,,,0,,gap,,,research_infrastructure
+UK,ONS Data Science Hub,2021,,,0,,gap,,,research_infrastructure
+UK,ONS Data Science Hub,2023,,,0,,gap,,,research_infrastructure
+UK,ONS Data Science Hub,2024,,,0,,gap,,,research_infrastructure
+UK,ONS Data Science Hub,2025,,,0,,gap,,,research_infrastructure
+UK,PSRE/NHS Science Commercialisation Support,2003,15000000.0,15000000.0,1,2003_UK.pdf,single,GBP,pound,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2004,,,0,,gap,,,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2005,,,0,,gap,,,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2006,,,0,,gap,,,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2007,,,0,,gap,,,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2008,,,0,,gap,,,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2009,,,0,,gap,,,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2010,,,0,,gap,,,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2011,,,0,,gap,,,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2012,,,0,,gap,,,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2013,,,0,,gap,,,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2014,,,0,,gap,,,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2015,,,0,,gap,,,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2016,,,0,,gap,,,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2017,,,0,,gap,,,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2018,,,0,,gap,,,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2020,,,0,,gap,,,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2021,,,0,,gap,,,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2023,,,0,,gap,,,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2024,,,0,,gap,,,innovation_instruments
+UK,PSRE/NHS Science Commercialisation Support,2025,,,0,,gap,,,innovation_instruments
 UK,Public R&D Investment,2020,,,0,,gap,,,rd_programme
 UK,Public R&D Investment,2021,,,0,,gap,,,rd_programme
 UK,Public R&D Investment,2023,,,0,,gap,,,rd_programme
-UK,Public R&D Investment,2024,,,0,,gap,,,rd_programme
-UK,Public R&D Investment,2025,,,0,,gap,,,rd_programme
+UK,Public R&D Investment,2024,20000000000.0,20000000000.0,1,2021_10_UK.pdf,single,GBP,pound,rd_programme
+UK,Public R&D Investment,2025,20400000000.0,20400000000.0,1,2024_10_UK.pdf,single,GBP,pound,rd_programme
+UK,Quantum Computing Mission (initial funding),2024,1600000.0,1600000.0,1,2024_03_UK.pdf,single,GBP,pound,rd_programme
+UK,Quantum Computing Mission (initial funding),2025,,,0,,gap,,,rd_programme
 UK,Quantum Technologies Development and Commercialisation Fund,2018,235000000.0,235000000.0,1,2018_UK.pdf,single,GBP,pound,innovation_instruments
 UK,Quantum Technologies Development and Commercialisation Fund,2020,,,0,,gap,,,innovation_instruments
 UK,Quantum Technologies Development and Commercialisation Fund,2021,,,0,,gap,,,innovation_instruments
 UK,Quantum Technologies Development and Commercialisation Fund,2023,,,0,,gap,,,innovation_instruments
 UK,Quantum Technologies Development and Commercialisation Fund,2024,,,0,,gap,,,innovation_instruments
 UK,Quantum Technologies Development and Commercialisation Fund,2025,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,1982,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,1987,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,1989,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,1993,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,1994,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,1996,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,1998,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,1999,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,2003,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,2004,35000000.0,35000000.0,1,2004_UK.pdf,single,GBP,pound,innovation_instruments
-UK,R&D Expenditure Credit,2005,450000000.0,450000000.0,1,2005_UK.pdf,single,GBP,pound,innovation_instruments
-UK,R&D Expenditure Credit,2006,480000000.0,480000000.0,1,2006_UK.pdf,single,GBP,pound,innovation_instruments
-UK,R&D Expenditure Credit,2007,450000000.0,450000000.0,1,2007_UK.pdf,single,GBP,pound,innovation_instruments
-UK,R&D Expenditure Credit,2008,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,2009,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,2010,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,2011,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,2012,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,2013,45000000.0,45000000.0,1,2013_UK.pdf,single,GBP,pound,innovation_instruments
-UK,R&D Expenditure Credit,2014,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,2015,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,2016,,,0,,gap,,,innovation_instruments
+UK,Quantum Technology R&D Programme (2018),2018,5000000.0,5000000.0,1,2018_UK.pdf,single,GBP,pound,rd_programme
+UK,Quantum Technology R&D Programme (2018),2020,,,0,,gap,,,rd_programme
+UK,Quantum Technology R&D Programme (2018),2021,,,0,,gap,,,rd_programme
+UK,Quantum Technology R&D Programme (2018),2023,,,0,,gap,,,rd_programme
+UK,Quantum Technology R&D Programme (2018),2024,,,0,,gap,,,rd_programme
+UK,Quantum Technology R&D Programme (2018),2025,,,0,,gap,,,rd_programme
 UK,R&D Expenditure Credit,2017,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,2018,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,2020,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,2021,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,2023,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,2024,,,0,,gap,,,innovation_instruments
-UK,R&D Expenditure Credit,2025,,,0,,gap,,,innovation_instruments
+UK,Regulators' Pioneer Fund,2020,10000000.0,10000000.0,1,2020_UK.pdf,single,GBP,pound,innovation_instruments
+UK,Regulators' Pioneer Fund,2021,,,0,,gap,,,innovation_instruments
+UK,Regulators' Pioneer Fund,2023,,,0,,gap,,,innovation_instruments
+UK,Regulators' Pioneer Fund,2024,,,0,,gap,,,innovation_instruments
+UK,Regulators' Pioneer Fund,2025,,,0,,gap,,,innovation_instruments
 UK,Research Councils (pre-UKRI),1982,,,0,,gap,,,science_agency
 UK,Research Councils (pre-UKRI),1987,,,0,,gap,,,science_agency
 UK,Research Councils (pre-UKRI),1989,,,0,,gap,,,science_agency
@@ -298,6 +735,23 @@ UK,Research Councils (pre-UKRI),2015,,,0,,gap,,,science_agency
 UK,Research Councils (pre-UKRI),2016,,,0,,gap,,,science_agency
 UK,Research Councils (pre-UKRI),2017,,,0,,gap,,,science_agency
 UK,Research Councils (pre-UKRI),2018,,,0,,gap,,,science_agency
+UK,Research Councils Co-Investment in TSB Collaborative R&D,2007,25000000.0,25000000.0,1,2007_UK.pdf,single,GBP,pound,rd_programme
+UK,Research Councils Co-Investment in TSB Collaborative R&D,2008,,,0,,gap,,,rd_programme
+UK,Research Councils Co-Investment in TSB Collaborative R&D,2009,,,0,,gap,,,rd_programme
+UK,Research Councils Co-Investment in TSB Collaborative R&D,2010,,,0,,gap,,,rd_programme
+UK,Research Councils Co-Investment in TSB Collaborative R&D,2011,,,0,,gap,,,rd_programme
+UK,Research Councils Co-Investment in TSB Collaborative R&D,2012,,,0,,gap,,,rd_programme
+UK,Research Councils Co-Investment in TSB Collaborative R&D,2013,,,0,,gap,,,rd_programme
+UK,Research Councils Co-Investment in TSB Collaborative R&D,2014,,,0,,gap,,,rd_programme
+UK,Research Councils Co-Investment in TSB Collaborative R&D,2015,,,0,,gap,,,rd_programme
+UK,Research Councils Co-Investment in TSB Collaborative R&D,2016,,,0,,gap,,,rd_programme
+UK,Research Councils Co-Investment in TSB Collaborative R&D,2017,,,0,,gap,,,rd_programme
+UK,Research Councils Co-Investment in TSB Collaborative R&D,2018,,,0,,gap,,,rd_programme
+UK,Research Councils Co-Investment in TSB Collaborative R&D,2020,,,0,,gap,,,rd_programme
+UK,Research Councils Co-Investment in TSB Collaborative R&D,2021,,,0,,gap,,,rd_programme
+UK,Research Councils Co-Investment in TSB Collaborative R&D,2023,,,0,,gap,,,rd_programme
+UK,Research Councils Co-Investment in TSB Collaborative R&D,2024,,,0,,gap,,,rd_programme
+UK,Research Councils Co-Investment in TSB Collaborative R&D,2025,,,0,,gap,,,rd_programme
 UK,Research England (RE),1993,,,0,,gap,,,higher_education
 UK,Research England (RE),1994,,,0,,gap,,,higher_education
 UK,Research England (RE),1996,,,0,,gap,,,higher_education
@@ -324,40 +778,10 @@ UK,Research England (RE),2021,,,0,,gap,,,higher_education
 UK,Research England (RE),2023,,,0,,gap,,,higher_education
 UK,Research England (RE),2024,,,0,,gap,,,higher_education
 UK,Research England (RE),2025,,,0,,gap,,,higher_education
-UK,Research Infrastructure Projects,1982,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,1987,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,1989,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,1993,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,1994,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,1996,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,1998,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,1999,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2003,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2004,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2005,500000000.0,500000000.0,1,2005_UK.pdf,single,GBP,pound,innovation_instruments
-UK,Research Infrastructure Projects,2006,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2007,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2008,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2009,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2010,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2011,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2012,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2013,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2014,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2015,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2016,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2017,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2018,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2020,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2021,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2023,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2024,,,0,,gap,,,innovation_instruments
-UK,Research Infrastructure Projects,2025,,,0,,gap,,,innovation_instruments
 UK,Research Partnership Investment Fund,2012,,,0,,gap,,,innovation_instruments
 UK,Research Partnership Investment Fund,2013,,,0,,gap,,,innovation_instruments
 UK,Research Partnership Investment Fund,2014,,,0,,gap,,,innovation_instruments
 UK,Research Partnership Investment Fund,2015,400000000.0,400000000.0,1,2015_07_UK.pdf,single,GBP,pound,innovation_instruments
-UK,Research Partnership Investment Fund,2015,,,0,,gap,,,innovation_instruments
 UK,Research Partnership Investment Fund,2016,,,0,,gap,,,innovation_instruments
 UK,Research Partnership Investment Fund,2017,,,0,,gap,,,innovation_instruments
 UK,Research Partnership Investment Fund,2018,,,0,,gap,,,innovation_instruments
@@ -366,6 +790,14 @@ UK,Research Partnership Investment Fund,2021,,,0,,gap,,,innovation_instruments
 UK,Research Partnership Investment Fund,2023,,,0,,gap,,,innovation_instruments
 UK,Research Partnership Investment Fund,2024,,,0,,gap,,,innovation_instruments
 UK,Research Partnership Investment Fund,2025,,,0,,gap,,,innovation_instruments
+UK,SMR-Enabling Advanced Manufacturing R&D Programme,2016,30000000.0,30000000.0,1,2016_UK.pdf,single,GBP,pound,rd_programme
+UK,SMR-Enabling Advanced Manufacturing R&D Programme,2017,,,0,,gap,,,rd_programme
+UK,SMR-Enabling Advanced Manufacturing R&D Programme,2018,,,0,,gap,,,rd_programme
+UK,SMR-Enabling Advanced Manufacturing R&D Programme,2020,,,0,,gap,,,rd_programme
+UK,SMR-Enabling Advanced Manufacturing R&D Programme,2021,,,0,,gap,,,rd_programme
+UK,SMR-Enabling Advanced Manufacturing R&D Programme,2023,,,0,,gap,,,rd_programme
+UK,SMR-Enabling Advanced Manufacturing R&D Programme,2024,,,0,,gap,,,rd_programme
+UK,SMR-Enabling Advanced Manufacturing R&D Programme,2025,,,0,,gap,,,rd_programme
 UK,Science Budget,1999,,,0,,gap,,,rd_programme
 UK,Science Budget,2003,,,0,,gap,,,rd_programme
 UK,Science Budget,2004,500000000.0,500000000.0,1,2004_UK.pdf,single,GBP,pound,rd_programme
@@ -380,7 +812,6 @@ UK,Science Budget,2012,,,0,,gap,,,rd_programme
 UK,Science Budget,2013,400000000.0,400000000.0,1,2013_UK.pdf,single,GBP,pound,rd_programme
 UK,Science Budget,2014,,,0,,gap,,,rd_programme
 UK,Science Budget,2015,,,0,,gap,,,rd_programme
-UK,Science Budget,2015,,,0,,gap,,,rd_programme
 UK,Science Budget,2016,,,0,,gap,,,rd_programme
 UK,Science Budget,2017,,,0,,gap,,,rd_programme
 UK,Science Budget,2018,,,0,,gap,,,rd_programme
@@ -389,6 +820,60 @@ UK,Science Budget,2021,,,0,,gap,,,rd_programme
 UK,Science Budget,2023,,,0,,gap,,,rd_programme
 UK,Science Budget,2024,,,0,,gap,,,rd_programme
 UK,Science Budget,2025,,,0,,gap,,,rd_programme
+UK,Science Enterprise Challenge,1999,25000000.0,25000000.0,1,1999_UK.pdf,single,GBP,pound,innovation_instruments
+UK,Science Enterprise Challenge,2003,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2004,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2005,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2006,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2007,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2008,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2009,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2010,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2011,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2012,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2013,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2014,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2015,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2016,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2017,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2018,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2020,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2021,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2023,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2024,,,0,,gap,,,innovation_instruments
+UK,Science Enterprise Challenge,2025,,,0,,gap,,,innovation_instruments
+UK,Science Research Infrastructure Fund (SRIF),2005,500000000.0,500000000.0,1,2005_UK.pdf,single,GBP,pound,research_infrastructure
+UK,Science Research Infrastructure Fund (SRIF),2006,,,0,,gap,,,research_infrastructure
+UK,Science Research Infrastructure Fund (SRIF),2007,,,0,,gap,,,research_infrastructure
+UK,Science Research Infrastructure Fund (SRIF),2008,,,0,,gap,,,research_infrastructure
+UK,Science Research Infrastructure Fund (SRIF),2009,,,0,,gap,,,research_infrastructure
+UK,Science Research Infrastructure Fund (SRIF),2010,,,0,,gap,,,research_infrastructure
+UK,Science Research Infrastructure Fund (SRIF),2011,,,0,,gap,,,research_infrastructure
+UK,Science Research Infrastructure Fund (SRIF),2012,,,0,,gap,,,research_infrastructure
+UK,Science Research Infrastructure Fund (SRIF),2013,,,0,,gap,,,research_infrastructure
+UK,Science Research Infrastructure Fund (SRIF),2014,,,0,,gap,,,research_infrastructure
+UK,Science Research Infrastructure Fund (SRIF),2015,,,0,,gap,,,research_infrastructure
+UK,Science Research Infrastructure Fund (SRIF),2016,,,0,,gap,,,research_infrastructure
+UK,Science Research Infrastructure Fund (SRIF),2017,,,0,,gap,,,research_infrastructure
+UK,Science Research Infrastructure Fund (SRIF),2018,,,0,,gap,,,research_infrastructure
+UK,Science Research Infrastructure Fund (SRIF),2020,,,0,,gap,,,research_infrastructure
+UK,Science Research Infrastructure Fund (SRIF),2021,,,0,,gap,,,research_infrastructure
+UK,Science Research Infrastructure Fund (SRIF),2023,,,0,,gap,,,research_infrastructure
+UK,Science Research Infrastructure Fund (SRIF),2024,,,0,,gap,,,research_infrastructure
+UK,Science Research Infrastructure Fund (SRIF),2025,,,0,,gap,,,research_infrastructure
+UK,Science and Innovation Campuses Capital Funding,2011,100000000.0,100000000.0,1,2011_UK.pdf,single,GBP,pound,research_infrastructure
+UK,Science and Innovation Campuses Capital Funding,2012,,,0,,gap,,,research_infrastructure
+UK,Science and Innovation Campuses Capital Funding,2013,,,0,,gap,,,research_infrastructure
+UK,Science and Innovation Campuses Capital Funding,2014,,,0,,gap,,,research_infrastructure
+UK,Science and Innovation Campuses Capital Funding,2015,,,0,,gap,,,research_infrastructure
+UK,Science and Innovation Campuses Capital Funding,2016,,,0,,gap,,,research_infrastructure
+UK,Science and Innovation Campuses Capital Funding,2017,,,0,,gap,,,research_infrastructure
+UK,Science and Innovation Campuses Capital Funding,2018,,,0,,gap,,,research_infrastructure
+UK,Science and Innovation Campuses Capital Funding,2020,,,0,,gap,,,research_infrastructure
+UK,Science and Innovation Campuses Capital Funding,2021,,,0,,gap,,,research_infrastructure
+UK,Science and Innovation Campuses Capital Funding,2023,,,0,,gap,,,research_infrastructure
+UK,Science and Innovation Campuses Capital Funding,2024,,,0,,gap,,,research_infrastructure
+UK,Science and Innovation Campuses Capital Funding,2025,,,0,,gap,,,research_infrastructure
 UK,Science and Technology Facilities Council (STFC),1994,,,0,,gap,,,science_agency
 UK,Science and Technology Facilities Council (STFC),1996,,,0,,gap,,,science_agency
 UK,Science and Technology Facilities Council (STFC),1998,,,0,,gap,,,science_agency
@@ -414,27 +899,36 @@ UK,Science and Technology Facilities Council (STFC),2021,,,0,,gap,,,science_agen
 UK,Science and Technology Facilities Council (STFC),2023,,,0,,gap,,,science_agency
 UK,Science and Technology Facilities Council (STFC),2024,,,0,,gap,,,science_agency
 UK,Science and Technology Facilities Council (STFC),2025,,,0,,gap,,,science_agency
-UK,Strength in Places Fund,1982,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,1987,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,1989,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,1993,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,1994,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,1996,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,1998,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,1999,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,2003,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,2004,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,2005,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,2006,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,2007,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,2008,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,2009,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,2010,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,2011,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,2012,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,2013,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,2014,,,0,,gap,,,innovation_instruments
-UK,Strength in Places Fund,2015,,,0,,gap,,,innovation_instruments
+UK,Scientific Equipment Challenge Fund,1996,20000000.0,20000000.0,1,1996_UK.pdf,single,GBP,pound,research_infrastructure
+UK,Scientific Equipment Challenge Fund,1998,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,1999,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2003,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2004,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2005,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2006,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2007,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2008,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2009,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2010,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2011,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2012,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2013,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2014,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2015,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2016,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2017,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2018,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2020,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2021,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2023,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2024,,,0,,gap,,,research_infrastructure
+UK,Scientific Equipment Challenge Fund,2025,,,0,,gap,,,research_infrastructure
+UK,South Wales Semiconductor Technologies Cluster,2025,10000000.0,10000000.0,1,2025_UK.pdf,single,GBP,pound,research_infrastructure
+UK,Specialist Research Institutions Funding,2020,80000000.0,80000000.0,1,2020_UK.pdf,single,GBP,pound,research_institute
+UK,Specialist Research Institutions Funding,2021,,,0,,gap,,,research_institute
+UK,Specialist Research Institutions Funding,2023,,,0,,gap,,,research_institute
+UK,Specialist Research Institutions Funding,2024,,,0,,gap,,,research_institute
+UK,Specialist Research Institutions Funding,2025,,,0,,gap,,,research_institute
 UK,Strength in Places Fund,2016,,,0,,gap,,,innovation_instruments
 UK,Strength in Places Fund,2017,,,0,,gap,,,innovation_instruments
 UK,Strength in Places Fund,2018,120000000.0,120000000.0,1,2018_UK.pdf,single,GBP,pound,innovation_instruments
@@ -443,6 +937,96 @@ UK,Strength in Places Fund,2021,100000000.0,100000000.0,1,2021_03_UK.pdf,single,
 UK,Strength in Places Fund,2023,,,0,,gap,,,innovation_instruments
 UK,Strength in Places Fund,2024,,,0,,gap,,,innovation_instruments
 UK,Strength in Places Fund,2025,500000000.0,500000000.0,1,2025_UK.pdf,single,GBP,pound,innovation_instruments
+UK,Studio Ulster (virtual production R&D studio),2025,25200000.0,25200000.0,1,2025_UK.pdf,single,GBP,pound,research_infrastructure
+UK,TSB Creative Industries R&D Programme,2009,10000000.0,10000000.0,1,2009_UK.pdf,single,GBP,pound,rd_programme
+UK,TSB Creative Industries R&D Programme,2010,,,0,,gap,,,rd_programme
+UK,TSB Creative Industries R&D Programme,2011,,,0,,gap,,,rd_programme
+UK,TSB Creative Industries R&D Programme,2012,,,0,,gap,,,rd_programme
+UK,TSB Creative Industries R&D Programme,2013,,,0,,gap,,,rd_programme
+UK,TSB Creative Industries R&D Programme,2014,,,0,,gap,,,rd_programme
+UK,TSB Creative Industries R&D Programme,2015,,,0,,gap,,,rd_programme
+UK,TSB Creative Industries R&D Programme,2016,,,0,,gap,,,rd_programme
+UK,TSB Creative Industries R&D Programme,2017,,,0,,gap,,,rd_programme
+UK,TSB Creative Industries R&D Programme,2018,,,0,,gap,,,rd_programme
+UK,TSB Creative Industries R&D Programme,2020,,,0,,gap,,,rd_programme
+UK,TSB Creative Industries R&D Programme,2021,,,0,,gap,,,rd_programme
+UK,TSB Creative Industries R&D Programme,2023,,,0,,gap,,,rd_programme
+UK,TSB Creative Industries R&D Programme,2024,,,0,,gap,,,rd_programme
+UK,TSB Creative Industries R&D Programme,2025,,,0,,gap,,,rd_programme
+UK,TSB Digital Content Production Fund,2013,15000000.0,15000000.0,1,2013_UK.pdf,single,GBP,pound,innovation_instruments
+UK,TSB Digital Content Production Fund,2014,,,0,,gap,,,innovation_instruments
+UK,TSB Digital Content Production Fund,2015,,,0,,gap,,,innovation_instruments
+UK,TSB Digital Content Production Fund,2016,,,0,,gap,,,innovation_instruments
+UK,TSB Digital Content Production Fund,2017,,,0,,gap,,,innovation_instruments
+UK,TSB Digital Content Production Fund,2018,,,0,,gap,,,innovation_instruments
+UK,TSB Digital Content Production Fund,2020,,,0,,gap,,,innovation_instruments
+UK,TSB Digital Content Production Fund,2021,,,0,,gap,,,innovation_instruments
+UK,TSB Digital Content Production Fund,2023,,,0,,gap,,,innovation_instruments
+UK,TSB Digital Content Production Fund,2024,,,0,,gap,,,innovation_instruments
+UK,TSB Digital Content Production Fund,2025,,,0,,gap,,,innovation_instruments
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",1982,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",1987,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",1989,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",1993,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",1994,6100000000.0,6100000000.0,1,1994_UK.pdf,single,GBP,pound,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",1995,6000000000.0,6000000000.0,1,1995_UK.pdf,single,GBP,pound,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",1996,6000000000.0,6000000000.0,1,1996_UK.pdf,single,GBP,pound,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",1998,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",1999,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2003,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2004,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2005,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2006,5400000000.0,5400000000.0,1,2006_UK.pdf,single,GBP,pound,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2007,5397000000.0,5397000000.0,1,2007_UK.pdf,single,GBP,pound,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2008,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2009,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2010,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2011,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2012,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2013,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2014,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2015,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2016,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2017,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2018,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2020,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2021,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2023,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2024,,,0,,gap,,,national_total
+UK,"Total UK Science & Technology Spending (headline, HMT Budget)",2025,,,0,,gap,,,national_total
+UK,Turing AI Fellowships,2018,50000000.0,50000000.0,1,2018_UK.pdf,single,GBP,pound,rd_programme
+UK,Turing AI Fellowships,2020,,,0,,gap,,,rd_programme
+UK,Turing AI Fellowships,2021,,,0,,gap,,,rd_programme
+UK,Turing AI Fellowships,2023,,,0,,gap,,,rd_programme
+UK,Turing AI Fellowships,2024,,,0,,gap,,,rd_programme
+UK,Turing AI Fellowships,2025,,,0,,gap,,,rd_programme
+UK,UK Centre for Aerodynamics,2012,60000000.0,60000000.0,1,2012_UK.pdf,single,GBP,pound,research_infrastructure
+UK,UK Centre for Aerodynamics,2013,,,0,,gap,,,research_infrastructure
+UK,UK Centre for Aerodynamics,2014,,,0,,gap,,,research_infrastructure
+UK,UK Centre for Aerodynamics,2015,,,0,,gap,,,research_infrastructure
+UK,UK Centre for Aerodynamics,2016,,,0,,gap,,,research_infrastructure
+UK,UK Centre for Aerodynamics,2017,,,0,,gap,,,research_infrastructure
+UK,UK Centre for Aerodynamics,2018,,,0,,gap,,,research_infrastructure
+UK,UK Centre for Aerodynamics,2020,,,0,,gap,,,research_infrastructure
+UK,UK Centre for Aerodynamics,2021,,,0,,gap,,,research_infrastructure
+UK,UK Centre for Aerodynamics,2023,,,0,,gap,,,research_infrastructure
+UK,UK Centre for Aerodynamics,2024,,,0,,gap,,,research_infrastructure
+UK,UK Centre for Aerodynamics,2025,,,0,,gap,,,research_infrastructure
+UK,UK Collaboration for Research in Infrastructure and Cities (UKCRIC),2015,138000000.0,138000000.0,1,2015_03_UK.pdf,single,GBP,pound,research_infrastructure
+UK,UK Collaboration for Research in Infrastructure and Cities (UKCRIC),2016,,,0,,gap,,,research_infrastructure
+UK,UK Collaboration for Research in Infrastructure and Cities (UKCRIC),2017,,,0,,gap,,,research_infrastructure
+UK,UK Collaboration for Research in Infrastructure and Cities (UKCRIC),2018,,,0,,gap,,,research_infrastructure
+UK,UK Collaboration for Research in Infrastructure and Cities (UKCRIC),2020,,,0,,gap,,,research_infrastructure
+UK,UK Collaboration for Research in Infrastructure and Cities (UKCRIC),2021,,,0,,gap,,,research_infrastructure
+UK,UK Collaboration for Research in Infrastructure and Cities (UKCRIC),2023,,,0,,gap,,,research_infrastructure
+UK,UK Collaboration for Research in Infrastructure and Cities (UKCRIC),2024,,,0,,gap,,,research_infrastructure
+UK,UK Collaboration for Research in Infrastructure and Cities (UKCRIC),2025,,,0,,gap,,,research_infrastructure
+UK,UK Nuclear Fusion R&D Support,2018,20000000.0,20000000.0,1,2018_UK.pdf,single,GBP,pound,rd_programme
+UK,UK Nuclear Fusion R&D Support,2020,,,0,,gap,,,rd_programme
+UK,UK Nuclear Fusion R&D Support,2021,,,0,,gap,,,rd_programme
+UK,UK Nuclear Fusion R&D Support,2023,,,0,,gap,,,rd_programme
+UK,UK Nuclear Fusion R&D Support,2024,,,0,,gap,,,rd_programme
+UK,UK Nuclear Fusion R&D Support,2025,,,0,,gap,,,rd_programme
 UK,UK-wide R&D Funding for Low and Zero Emission Transport Technologies,2021,416000000.0,416000000.0,1,2021_10_UK.pdf,single,GBP,pound,innovation_instruments
 UK,UK-wide R&D Funding for Low and Zero Emission Transport Technologies,2023,,,0,,gap,,,innovation_instruments
 UK,UK-wide R&D Funding for Low and Zero Emission Transport Technologies,2024,,,0,,gap,,,innovation_instruments
@@ -453,6 +1037,25 @@ UK,UKRI (UK Research and Innovation),2021,,,0,,gap,,,science_agency
 UK,UKRI (UK Research and Innovation),2023,,,0,,gap,,,science_agency
 UK,UKRI (UK Research and Innovation),2024,,,0,,gap,,,science_agency
 UK,UKRI (UK Research and Innovation),2025,,,0,,gap,,,science_agency
+UK,UKRI R&D Missions Accelerator,2025,500000000.0,500000000.0,1,2025_UK.pdf,single,GBP,pound,rd_programme
+UK,UKTI International R&D Strategy,2006,9000000.0,9000000.0,1,2006_UK.pdf,single,GBP,pound,rd_programme
+UK,UKTI International R&D Strategy,2007,,,0,,gap,,,rd_programme
+UK,UKTI International R&D Strategy,2008,,,0,,gap,,,rd_programme
+UK,UKTI International R&D Strategy,2009,,,0,,gap,,,rd_programme
+UK,UKTI International R&D Strategy,2010,,,0,,gap,,,rd_programme
+UK,UKTI International R&D Strategy,2011,,,0,,gap,,,rd_programme
+UK,UKTI International R&D Strategy,2012,,,0,,gap,,,rd_programme
+UK,UKTI International R&D Strategy,2013,,,0,,gap,,,rd_programme
+UK,UKTI International R&D Strategy,2014,,,0,,gap,,,rd_programme
+UK,UKTI International R&D Strategy,2015,,,0,,gap,,,rd_programme
+UK,UKTI International R&D Strategy,2016,,,0,,gap,,,rd_programme
+UK,UKTI International R&D Strategy,2017,,,0,,gap,,,rd_programme
+UK,UKTI International R&D Strategy,2018,,,0,,gap,,,rd_programme
+UK,UKTI International R&D Strategy,2020,,,0,,gap,,,rd_programme
+UK,UKTI International R&D Strategy,2021,,,0,,gap,,,rd_programme
+UK,UKTI International R&D Strategy,2023,,,0,,gap,,,rd_programme
+UK,UKTI International R&D Strategy,2024,,,0,,gap,,,rd_programme
+UK,UKTI International R&D Strategy,2025,,,0,,gap,,,rd_programme
 UK,University Challenge scheme,1998,20000000.0,20000000.0,1,1998_UK.pdf,single,GBP,pound,innovation_instruments
 UK,University Challenge scheme,1999,50000000.0,50000000.0,1,1999_UK.pdf,single,GBP,pound,innovation_instruments
 UK,University Challenge scheme,2003,,,0,,gap,,,innovation_instruments
@@ -476,3 +1079,56 @@ UK,University Challenge scheme,2021,,,0,,gap,,,innovation_instruments
 UK,University Challenge scheme,2023,,,0,,gap,,,innovation_instruments
 UK,University Challenge scheme,2024,,,0,,gap,,,innovation_instruments
 UK,University Challenge scheme,2025,,,0,,gap,,,innovation_instruments
+UK,University Enterprise Capital Fund,2010,25000000.0,25000000.0,1,2010_03_UK.pdf,single,GBP,pound,innovation_instruments
+UK,University Enterprise Capital Fund,2011,,,0,,gap,,,innovation_instruments
+UK,University Enterprise Capital Fund,2012,,,0,,gap,,,innovation_instruments
+UK,University Enterprise Capital Fund,2013,,,0,,gap,,,innovation_instruments
+UK,University Enterprise Capital Fund,2014,,,0,,gap,,,innovation_instruments
+UK,University Enterprise Capital Fund,2015,,,0,,gap,,,innovation_instruments
+UK,University Enterprise Capital Fund,2016,,,0,,gap,,,innovation_instruments
+UK,University Enterprise Capital Fund,2017,,,0,,gap,,,innovation_instruments
+UK,University Enterprise Capital Fund,2018,,,0,,gap,,,innovation_instruments
+UK,University Enterprise Capital Fund,2020,,,0,,gap,,,innovation_instruments
+UK,University Enterprise Capital Fund,2021,,,0,,gap,,,innovation_instruments
+UK,University Enterprise Capital Fund,2023,,,0,,gap,,,innovation_instruments
+UK,University Enterprise Capital Fund,2024,,,0,,gap,,,innovation_instruments
+UK,University Enterprise Capital Fund,2025,,,0,,gap,,,innovation_instruments
+UK,University Research Facilities Capital Funding (2012),2012,100000000.0,100000000.0,1,2012_UK.pdf,single,GBP,pound,research_infrastructure
+UK,University Research Facilities Capital Funding (2012),2013,,,0,,gap,,,research_infrastructure
+UK,University Research Facilities Capital Funding (2012),2014,,,0,,gap,,,research_infrastructure
+UK,University Research Facilities Capital Funding (2012),2015,,,0,,gap,,,research_infrastructure
+UK,University Research Facilities Capital Funding (2012),2016,,,0,,gap,,,research_infrastructure
+UK,University Research Facilities Capital Funding (2012),2017,,,0,,gap,,,research_infrastructure
+UK,University Research Facilities Capital Funding (2012),2018,,,0,,gap,,,research_infrastructure
+UK,University Research Facilities Capital Funding (2012),2020,,,0,,gap,,,research_infrastructure
+UK,University Research Facilities Capital Funding (2012),2021,,,0,,gap,,,research_infrastructure
+UK,University Research Facilities Capital Funding (2012),2023,,,0,,gap,,,research_infrastructure
+UK,University Research Facilities Capital Funding (2012),2024,,,0,,gap,,,research_infrastructure
+UK,University Research Facilities Capital Funding (2012),2025,,,0,,gap,,,research_infrastructure
+UK,Vaccines R&D and Manufacturing,2021,128000000.0,128000000.0,1,2021_03_UK.pdf,single,GBP,pound,rd_programme
+UK,Vaccines R&D and Manufacturing,2023,,,0,,gap,,,rd_programme
+UK,Vaccines R&D and Manufacturing,2024,,,0,,gap,,,rd_programme
+UK,Vaccines R&D and Manufacturing,2025,,,0,,gap,,,rd_programme
+UK,Venture Capital Challenge Competition,1999,20000000.0,20000000.0,1,1999_UK.pdf,single,GBP,pound,innovation_instruments
+UK,Venture Capital Challenge Competition,2003,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2004,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2005,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2006,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2007,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2008,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2009,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2010,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2011,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2012,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2013,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2014,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2015,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2016,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2017,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2018,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2020,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2021,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2023,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2024,,,0,,gap,,,innovation_instruments
+UK,Venture Capital Challenge Competition,2025,,,0,,gap,,,innovation_instruments
+UK,Women in Innovation Awards,2025,4500000.0,4500000.0,1,2025_UK.pdf,single,GBP,pound,innovation_instruments

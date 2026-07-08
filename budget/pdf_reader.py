@@ -287,6 +287,21 @@ def _ocr_page(page_obj, zoom: float, langs: str, use_osd: bool = False) -> str:
         pix = page_obj.get_pixmap(matrix=mat, alpha=False)
         img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
 
+        # Autocontrast pass for low-quality/blurry scans (e.g. Portugal's 1977-2000
+        # PIDDAC-era pages). Tested against a genuinely blurry Portugal 2008 page:
+        # autocontrast alone gave a small but real accuracy improvement (avg OCR
+        # confidence 55.7 -> 56.7, no loss of recall) with no observed downside.
+        # Sharpening and naive binarization were also tried and made things WORSE
+        # on this kind of page (more garbled words at lower confidence) — a
+        # genuinely blurry source scan has a real quality ceiling that no amount of
+        # image preprocessing fully overcomes, so only the safe, tested step is
+        # applied here rather than a more aggressive pipeline.
+        try:
+            from PIL import ImageOps
+            img = ImageOps.autocontrast(img, cutoff=1)
+        except Exception:
+            pass
+
         if use_osd:
             try:
                 # psm 1: automatic page segmentation with OSD — handles rotation
@@ -347,14 +362,66 @@ def _extract_docx(path: Path) -> list[PageText]:
     return pages
 
 
+def _sniff_html(path: Path) -> Optional[str]:
+    """
+    Some ".doc" files in this corpus are actually saved-as-HTML pages scraped from
+    government legal portals (e.g. Colombia's secretariasenado.gov.co), not real
+    Word 97-2003 binaries. Detect that here by sniffing the first few KB of the
+    file as UTF-8 text and checking for an HTML doctype/tag. Returns the decoded
+    text if it looks like HTML, else None.
+    """
+    try:
+        with open(path, "r", encoding="utf-8", errors="ignore") as f:
+            head = f.read(4096)
+    except Exception:
+        return None
+    if re.search(r"<!doctype\s+html|<html[\s>]", head, re.IGNORECASE):
+        with open(path, "r", encoding="utf-8", errors="ignore") as f:
+            return f.read()
+    return None
+
+
+def _extract_html_doc(path: Path, html_text: str) -> list[PageText]:
+    """Extract text from a ".doc" file that is actually an HTML page (mislabeled
+    extension). Strips script/style/nav chrome and returns the visible text."""
+    from bs4 import BeautifulSoup
+
+    soup = BeautifulSoup(html_text, "lxml")
+    for tag in soup(["script", "style", "nav", "header", "footer"]):
+        tag.decompose()
+    text = soup.get_text(separator="\n")
+    lines = [ln.strip() for ln in text.split("\n") if ln.strip()]
+    clean_text = "\n".join(lines)
+
+    if not clean_text.strip():
+        raise RuntimeError(f"Could not extract any visible text from HTML-mislabeled .doc {path.name}")
+
+    chunk_size = 3000
+    chunks = [clean_text[i : i + chunk_size] for i in range(0, len(clean_text), chunk_size)]
+    pages: list[PageText] = []
+    for i, chunk in enumerate(chunks):
+        pages.append(PageText(page_num=i + 1, text=chunk.strip(), method="html"))
+    return pages
+
+
 def _extract_doc(path: Path) -> list[PageText]:
-    """Extract text from a legacy .doc file using platform tools."""
+    """Extract text from a legacy .doc file using platform tools.
+
+    Some files with a .doc extension in this corpus are not real Word 97-2003
+    binaries but HTML pages saved with the wrong extension (seen in Colombia's
+    Ley files scraped from secretariasenado.gov.co) — those are routed to
+    _extract_html_doc() instead.
+    """
     import subprocess
+
+    html_text = _sniff_html(path)
+    if html_text is not None:
+        return _extract_html_doc(path, html_text)
 
     text = ""
     last_error: Exception | None = None
 
-    # macOS textutil handles legacy .doc reasonably well and is available in this environment.
+    # macOS textutil handles legacy .doc reasonably well when available.
     try:
         proc = subprocess.run(
             ["textutil", "-convert", "txt", "-stdout", str(path)],
@@ -365,6 +432,27 @@ def _extract_doc(path: Path) -> list[PageText]:
         text = proc.stdout
     except Exception as e:
         last_error = e
+
+    # Cross-platform fallback (e.g. Linux, or macOS without textutil available):
+    # convert via headless LibreOffice, which is present on both platforms.
+    if not text.strip():
+        try:
+            import tempfile
+
+            with tempfile.TemporaryDirectory() as tmpdir:
+                proc = subprocess.run(
+                    ["soffice", "--headless", "--convert-to", "txt:Text", "--outdir", tmpdir, str(path)],
+                    capture_output=True,
+                    text=True,
+                    timeout=120,
+                )
+                out_path = Path(tmpdir) / (path.stem + ".txt")
+                if out_path.exists():
+                    text = out_path.read_text(encoding="utf-8", errors="ignore")
+                elif proc.returncode != 0:
+                    last_error = RuntimeError(proc.stderr.strip() or proc.stdout.strip())
+        except Exception as e:
+            last_error = last_error or e
 
     if not text.strip():
         if last_error:

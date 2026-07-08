@@ -23,7 +23,8 @@ Extracted from OECD Economic Survey narratives. Measures the *stated intent*: re
 
 ### Pipeline 1b — R&D Budget Extraction from Finance Bills (Structured Documents)
 
-> **Used for countries that publish Finance Bills as Word documents (.docx): Australia, Canada, UK, New Zealand.**
+> **Used for countries that publish Finance Bills as Word documents (.docx): Australia, Canada, New Zealand.**
+> UK is *not* a structured-DOCX country — its source documents are narrative PDF Budget Reports (the HM Treasury "Red Book"), handled by the LLM narrative-extraction pipeline alongside France, Germany, and Japan (see `python main.py --budget --country UK --llm-pipeline` in the Key Files / Running section below). This line previously misclassified it; corrected 2026-07 during the UK budget audit — see `Data/output/budget/UK/uk_audit_summary.md`.
 
 ---
 

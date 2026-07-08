@@ -11638,52 +11638,6 @@
       "source_entity": "Budget announces £16 million in R&D funding, matched by industry, to support aerospace firms in the East Midlands.",
       "n_years_seen": 1,
       "avg_amount": 16000.0
-    },
-    {
-      "canonical_name": "Basic Science Infrastructure Fund",
-      "category": "direct_rd",
-      "name_variants": [
-        "Basic Science Infrastructure",
-        "£100 million for basic science infrastructure"
-      ],
-      "preferred_item_type": [
-        "section_total",
-        "program_total",
-        "line_item"
-      ],
-      "active_years": [
-        1900,
-        2099
-      ],
-      "notes": "The entry specifies funding for basic science infrastructure, indicating a clear R&D focus.",
-      "agency_type": "rd_programme",
-      "confidence": 0.75,
-      "source_entity": "£100 million for basic science infrastructure",
-      "n_years_seen": 1,
-      "avg_amount": 100000.0
-    },
-    {
-      "canonical_name": "Funding for medical charities' research",
-      "category": "direct_rd",
-      "name_variants": [
-        "medical charities research funding",
-        "funding for life-saving research"
-      ],
-      "preferred_item_type": [
-        "section_total",
-        "program_total",
-        "line_item"
-      ],
-      "active_years": [
-        1900,
-        2099
-      ],
-      "notes": "The entry specifies funding directed towards research agendas of medical charities.",
-      "agency_type": "rd_fund",
-      "confidence": 0.8,
-      "source_entity": "£45 million of additional funding to bolster medical charities’ life-saving research agendas",
-      "n_years_seen": 1,
-      "avg_amount": 45000.0
     }
   ],
   "France": [

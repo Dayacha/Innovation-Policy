@@ -1,0 +1,180 @@
+canonical_name,category,year,source_file,entity_raw,amount_current,section_name,table_index,row_index,in_series
+5G Research Facility,research_infrastructure,2017,2017_03_UK.pdf,Investment in 5G facility,16000.0,National Productivity Investment Fund,0,212,True
+5G Security Testbed Facility,research_infrastructure,2017,2017_11_UK.pdf,£10 million to create facilities where the security of 5G networks can be tested,10000.0,5G Test Facilities,0,240,True
+5G Testbeds and Trials Programme,rd_programme,2017,2017_11_UK.pdf,£5 million for an initial trial to test 5G applications and deployment on roads,5000.0,5G Applications Trial,0,241,True
+Additional Clinical Research Funding (2005),rd_programme,2005,2005_UK.pdf,Additional funding for clinical research,25000.0,Research Councils (pre-UKRI),0,62,True
+Advanced Manufacturing Supply Chain Initiative,innovation_instruments,2012,2012_UK.pdf,£125 million Advanced Manufacturing Supply Chain Initiative,125000.0,"Department for Business, Innovation and Skills",0,127,True
+Advanced Nuclear Fund,innovation_instruments,2021,2021_10_UK.pdf,£385 million for the Advanced Nuclear Fund,385000.0,"Department for Business, Energy and Industrial Strategy",0,359,True
+Advanced Research and Invention Agency,innovation_instruments,2021,2021_10_UK.pdf,establish the new Advanced Research and Invention Agency (ARIA),800000.0,"Department for Business, Energy and Industrial Strategy",0,352,True
+Advanced Research and Invention Agency,innovation_instruments,2021,2021_10_UK.pdf,£800 million for the Advanced Research and Invention Agency,800000.0,"Department for Business, Energy and Industrial Strategy",0,377,True
+Advanced Wellbeing Research Centre,research_institute,2015,2015_03_UK.pdf,Advanced wellbeing research centre,14000.0,"Department for Business, Innovation and Skills",0,174,True
+Alan Turing Institute,research_institute,2014,2014_UK.pdf,Alan Turing Institute for Big Data,,"Department for Business, Innovation and Skills",0,149,True
+Alan Turing Institute,research_institute,2014,2014_UK.pdf,"Alan Turing Institute – The government will provide £42 million over 5 years for the Alan Turing Institute – a national institute which will enable the UK to lead the way in, and reap the benefits from, Big Data science.",42000.0,"Department for Business, Innovation and Skills",0,157,True
+Alan Turing Institute,research_institute,2024,2024_03_UK.pdf,Investment of up to £100 million in the Alan Turing Institute over the next five years,100000.0,"Department for Science, Innovation and Technology",0,412,True
+Animal Health Science Estate,research_infrastructure,2020,2020_UK.pdf,Animal health science estate,1400.0,"Department for Business, Energy and Industrial Strategy",0,303,True
+Battery Technology R&D Support (Dyson),rd_programme,2016,2016_UK.pdf,Dyson batteries,16000.0,"Department for Business, Energy and Industrial Strategy",0,190,True
+Birmingham STEAMhouse,innovation_instruments,2016,2016_UK.pdf,Birmingham STEAMhouse,14000.0,"Department for Business, Energy and Industrial Strategy",0,187,True
+Centre for Agricultural Informatics and Sustainability Metrics,research_institute,2015,2015_03_UK.pdf,Centre for Agricultural Informatics and Sustainability Metrics,11800.0,"Department for Business, Innovation and Skills",0,172,True
+Centre for Process Innovation Chemical Innovation Fund,innovation_instruments,2021,2021_03_UK.pdf,further investment in clinical-scale mRNA vaccine manufacturing to the Centre for Process Innovation,5000.0,"Department for Business, Energy and Industrial Strategy",0,329,True
+Compound Semiconductor Catapult,innovation_instruments,2016,2016_UK.pdf,Compound Semiconductor Catapult,50000.0,"Department for Business, Energy and Industrial Strategy",0,189,True
+Core Research,rd_programme,2021,2021_10_UK.pdf,of which: Core Research,4800.0,"Department for Business, Energy and Industrial Strategy",0,348,True
+Core Research,rd_programme,2021,2021_10_UK.pdf,fund an increase to core funding for the UK’s world-leading universities and research institutions,1100.0,"Department for Business, Energy and Industrial Strategy",0,351,True
+Core Research,rd_programme,2024,2024_10_UK.pdf,Support for core research,6100.0,"Department for Science, Innovation and Technology",0,426,True
+DfES Research and Knowledge Transfer Funding (English Universities),rd_programme,2007,2007_UK.pdf,DfES funding for research and knowledge transfer in English Universities,1655.0,Department for Education and Skills,0,89,True
+Digital Catapult,innovation_instruments,2018,2018_UK.pdf,£115 million to extend funding for the Digital Catapult,115000.0,"Department for Business, Energy and Industrial Strategy",0,253,True
+Digital Economy Centres,research_infrastructure,2015,2015_07_UK.pdf,Investment in 6 Next Generation Digital Economy Centres,23000.0,"Department for Business, Innovation and Skills",0,177,True
+Digital Economy Centres,research_infrastructure,2015,2015_07_UK.pdf,Digital Economy Centres,23000.0,"Department for Business, Innovation and Skills",0,180,True
+Energy Research Accelerator,research_infrastructure,2015,2015_03_UK.pdf,"£60m investment in a new Energy Research Accelerator, to develop the energy technologies of the future",60000.0,"Department for Business, Innovation and Skills",0,166,True
+Energy Research Accelerator,research_infrastructure,2015,2015_03_UK.pdf,Energy research accelerator,60000.0,"Department for Business, Innovation and Skills",0,171,True
+Faraday Discovery Fellowships and Green Future Fellowships Endowments,rd_programme,2024,2024_03_UK.pdf,Fellowships – The £250 million Faraday Discovery Fellowships and £150 million Green Future Fellowships will be funded through endowments to the Royal Society and the Royal Academy of Engineering.,400000.0,"Department for Business, Innovation and Skills",0,413,True
+Francis Crick Institute (MRC asset reinvestment),research_institute,2015,2015_03_UK.pdf,Reinvesting up to £30m from the sale of Medical Research Council assets to support research at the Francis Crick Institute,30000.0,"Department for Business, Innovation and Skills",0,167,True
+Future Fund: Breakthrough,innovation_instruments,2021,2021_03_UK.pdf,"Future Fund: Breakthrough – Building on the government’s Future Fund, the government will commit £375 million to introduce Future Fund: Breakthrough, a new direct co-investment product to support the scale up of the most innovative, R&D-intensive businesses.",375000.0,"Department for Business, Energy and Industrial Strategy",0,335,True
+Future Fund: Breakthrough,innovation_instruments,2021,2021_10_UK.pdf,Future Fund: Breakthrough,375000.0,"Department for Business, Energy and Industrial Strategy",0,340,True
+Global Underwater Hub,innovation_instruments,2021,2021_03_UK.pdf,support for the Global Underwater Hub,5000.0,"Department for Business, Energy and Industrial Strategy",0,332,True
+Higher Education Innovation Fund (HEIF),innovation_instruments,2003,2003_UK.pdf,Higher Education Innovation Fund (HEIF),187000.0,"Department for Business, Innovation and Skills",0,26,True
+Industrial Innovation Support Measures (1982 package),rd_programme,1982,1982_UK.pdf,New measures to promote research and innovation in industry will involve additional expenditure of £20 million in 1982-83,20000.0,"Department for Business, Innovation and Skills",0,0,True
+Industrial Strategy Challenge Fund,innovation_instruments,2003,2003_UK.pdf,Industrial Strategy Challenge Fund,,"Department for Business, Innovation and Skills",0,34,False
+Industrial Strategy Challenge Fund,innovation_instruments,2004,2004_UK.pdf,Industrial Strategy Challenge Fund,400000.0,UK Research and Innovation,0,41,True
+Industrial Strategy Challenge Fund,innovation_instruments,2006,2006_UK.pdf,Funding for the Industrial Strategy Challenge Fund,,UK Research and Innovation,0,67,True
+Industrial Strategy Challenge Fund,innovation_instruments,2013,2013_UK.pdf,Industrial Strategy Challenge Fund,300000.0,"Department for Business, Energy and Industrial Strategy",0,143,True
+Industrial Strategy Challenge Fund,innovation_instruments,2014,2014_UK.pdf,Industrial Strategy Challenge Fund,,"Department for Business, Innovation and Skills",0,154,True
+Industrial Strategy Challenge Fund,innovation_instruments,2016,2016_UK.pdf,Investment in the Industrial Strategy Challenge Fund,1000.0,"Department for Business, Innovation and Skills",0,201,True
+Industrial Strategy Challenge Fund,innovation_instruments,2017,2017_03_UK.pdf,Investment in the Industrial Strategy Challenge Fund,,UK Research and Innovation,0,209,True
+Industrial Strategy Challenge Fund,innovation_instruments,2017,2017_03_UK.pdf,Initial investment in the Industrial Strategy Challenge Fund,270000.0,Industrial Strategy Challenge Fund,0,226,True
+Industrial Strategy Challenge Fund,innovation_instruments,2018,2018_UK.pdf,Industrial Strategy Challenge Fund,1100.0,"Department for Business, Energy and Industrial Strategy",0,246,True
+Industrial Strategy Challenge Fund,innovation_instruments,2018,2018_UK.pdf,Increase in Industrial Strategy Challenge Fund,1100.0,Industrial Strategy Challenge Fund,0,267,True
+Industrial Strategy Challenge Fund,innovation_instruments,2020,2020_UK.pdf,Industrial Strategy Challenge Fund,1000.0,"Department for Business, Energy and Industrial Strategy",0,295,True
+Industrial Strategy Challenge Fund,innovation_instruments,2021,2021_03_UK.pdf,Industrial Strategy Challenge Fund,25300.0,"Business, Energy and Industrial Strategy",0,322,True
+Industrial Strategy Challenge Fund,innovation_instruments,2021,2021_03_UK.pdf,Industrial Strategy Challenge Fund,200000.0,"Department for Business, Innovation and Skills",0,326,True
+Industrial Strategy Challenge Fund,innovation_instruments,2021,2021_10_UK.pdf,Industrial Strategy Challenge Fund,,"Business, Energy and Industrial Strategy",0,382,True
+Industrial Strategy Challenge Fund,innovation_instruments,2023,2023_UK.pdf,Industrial Strategy Challenge Fund,,"Science, Innovation and Technology",0,387,True
+Industrial Strategy Challenge Fund,innovation_instruments,2025,2025_UK.pdf,Industrial Strategy Challenge Fund,2000.0,"Department for Business, Energy and Industrial Strategy",0,442,True
+Industrial Strategy Challenge Fund,innovation_instruments,2025,2025_UK.pdf,Industrial Strategy Challenge Fund,300000.0,"Department for Business, Innovation and Skills",0,454,True
+Industrial Strategy Challenge Fund,innovation_instruments,2025,2025_UK.pdf,Funding for the Industrial Strategy Challenge Fund,,"Department for Business, Innovation and Skills",0,457,True
+Innovate UK,innovation_instruments,2007,2007_UK.pdf,Collaborative R&D funding allocated by the Technology Strategy Board,100000.0,"Department for Business, Innovation and Skills",0,82,True
+Innovate UK,innovation_instruments,2007,2007_UK.pdf,Investment by Research Councils in TSB programmes to support collaborative R&D projects,25000.0,"Department for Business, Innovation and Skills",0,83,True
+Innovate UK,innovation_instruments,2009,2009_UK.pdf,"£10 million programme of research and development for the creative industries, led by the TSB, which is awarding grants to almost 300 UK-based companies and academic institutions.",10000.0,"Department for Business, Innovation and Skills",0,101,True
+Innovate UK,innovation_instruments,2021,2021_10_UK.pdf,of which: Innovate UK,700000.0,"Department for Business, Energy and Industrial Strategy",0,349,True
+Innovate UK,innovation_instruments,2021,2021_10_UK.pdf,Funding for core Innovate UK programmes increasing to around £1 billion per year by 2024-25,1000.0,"Department for Business, Energy and Industrial Strategy",0,370,True
+Innovate UK,innovation_instruments,2025,2025_UK.pdf,Innovate UK will launch a new Growth Catalyst programme worth £130 million,130000.0,Innovate UK,0,447,True
+Innovation Accelerators Programme,innovation_instruments,2023,2023_UK.pdf,The government has allocated £100 million funding for the Innovation Accelerators programme to 26 transformative R&D projects.,100000.0,"Department for Business, Energy and Industrial Strategy",0,390,True
+Innovation Accelerators Programme,innovation_instruments,2023,2023_UK.pdf,Innovation Accelerators: funding for transformative R&D projects,100000.0,"Department for Business, Energy and Industrial Strategy",0,395,True
+Institute of Web Science,research_institute,2010,2010_03_UK.pdf,£30 million funding for the Institute of Web Science,30000.0,"Department for Business, Innovation and Skills",0,110,True
+International Research Fellowship Scheme (2018),rd_programme,2018,2018_UK.pdf,£100 million in an international fellowship scheme,100000.0,"Department for Business, Energy and Industrial Strategy",0,252,True
+Jodrell Bank Discovery Centre,research_infrastructure,2017,2017_11_UK.pdf,Funding for Jodrell Bank project,4000.0,Medical Research Council,0,223,True
+Jodrell Bank Discovery Centre,research_infrastructure,2017,2017_11_UK.pdf,£4 million to Jodrell Bank as part of their £20.5 million project,4000.0,Jodrell Bank Project,0,242,True
+Joint Infrastructure Fund,research_infrastructure,1999,1999_UK.pdf,£600 million Joint Infrastructure Fund,600000.0,"Department for Business, Innovation and Skills",0,13,True
+Life Sciences Investment Programme,innovation_instruments,2020,2020_UK.pdf,Life Sciences Investment Programme,200000.0,"Department for Business, Energy and Industrial Strategy",0,306,True
+Life Sciences Manufacturing Funding,innovation_instruments,2024,2024_10_UK.pdf,Life Sciences Innovative Manufacturing Fund,70000.0,"Department for Science, Innovation and Technology",0,431,True
+Low-Carbon Aircraft Engine R&D,rd_programme,2010,2010_03_UK.pdf,£45 million for research and technology critical to the development of low-carbon aircraft engines,45000.0,"Department for Business, Innovation and Skills",0,115,True
+Low-Carbon Vehicle RD&D Programme,rd_programme,2008,2008_UK.pdf,"£40 million research, development and demonstration programme for low-carbon vehicles",40000.0,"Department for Business, Innovation and Skills",0,95,True
+Materials Processing Institute,research_institute,2020,2020_UK.pdf,Materials Processing Institute,22000.0,"Department for Business, Energy and Industrial Strategy",0,305,True
+Medical Research Council (MRC),science_agency,2005,2005_UK.pdf,"Additional funding of £25 million for clinical research, as part of the Medical Research Council’s £1.5 billion budget allocation over the period",25000.0,Medical Research Council,0,54,True
+Medical Research Council (MRC),science_agency,2015,2015_03_UK.pdf,Reinvesting up to £30m from the sale of Medical Research Council assets to support research at the Francis Crick Institute,30000.0,"Department for Business, Innovation and Skills",0,167,True
+NPIF Fellowship Programmes,rd_programme,2017,2017_03_UK.pdf,NPIF funding for fellowship programmes,50000.0,Global research talent,0,215,True
+National Institute for Health Research (uplift),research_infrastructure,2020,2020_UK.pdf,Investment for the National Institute for Health Research,12000.0,"Department for Business, Energy and Industrial Strategy",0,279,True
+National Institute for Smart Data Innovation,research_institute,2016,2016_UK.pdf,Investment in the National Institute for Smart Data Innovation,15000.0,"Department for Business, Energy and Industrial Strategy",0,184,True
+National Institute for Smart Data Innovation,research_institute,2016,2016_UK.pdf,National Institute for Smart Data Innovation,15000.0,"Department for Business, Energy and Industrial Strategy",0,193,True
+National Institute for Smart Data Innovation,research_institute,2016,2016_UK.pdf,"The government will invest £15 million in the National Institute for Smart Data Innovation in Newcastle, subject to approved business case.",15000.0,"Department for Business, Innovation and Skills",0,194,True
+National Productivity Investment Fund,rd_programme,2017,2017_03_UK.pdf,NPIF funding for fellowship programmes,50000.0,Global research talent,0,215,False
+National Productivity Investment Fund,rd_programme,2017,2017_03_UK.pdf,National Productivity Investment Fund,4700.0,National Productivity Investment Fund,0,225,False
+National Productivity Investment Fund,rd_programme,2017,2017_11_UK.pdf,Research and Development: NPIF investment,2300.0,National Productivity Investment Fund,0,230,False
+National Productivity Investment Fund,rd_programme,2017,2017_11_UK.pdf,£4.7 billion NPIF investment in science and innovation,4700.0,National Productivity Investment Fund,0,235,False
+National Productivity Investment Fund,rd_programme,2017,2017_11_UK.pdf,£160 million from the NPIF in new 5G infrastructure,160000.0,5G Infrastructure,0,239,False
+National Technology Strategy,rd_programme,2004,2004_UK.pdf,National Technology Strategy,150000.0,"Department for Business, Innovation and Skills",0,42,True
+Public R&D Investment,rd_programme,2020,2020_UK.pdf,Public R&D investment,22000.0,UK Research and Innovation,0,312,True
+Quantum Computing Mission (initial funding),rd_programme,2024,2024_03_UK.pdf,£1.6 million to progress the quantum computing mission,1600.0,"Department for Business, Energy and Industrial Strategy",0,405,True
+Quantum Technologies Development and Commercialisation Fund,innovation_instruments,2018,2018_UK.pdf,Investment for quantum technologies,235000.0,Quantum Technologies,0,268,True
+Quantum Technology R&D Programme (2018),rd_programme,2018,2018_UK.pdf,Quantum Technology: research and development,5000.0,"Department for Business, Energy and Industrial Strategy",0,260,True
+R&D Expenditure Credit,innovation_instruments,2000,2000_UK.pdf,R&D tax credit for small and medium-sized enterprises,,"Department for Business, Innovation and Skills",0,20,False
+R&D Expenditure Credit,innovation_instruments,2003,2003_UK.pdf,Support for R&D tax credits,,"Department for Business, Innovation and Skills",0,28,False
+R&D Expenditure Credit,innovation_instruments,2004,2004_UK.pdf,R&D tax credits,35000.0,"Department for Business, Innovation and Skills",0,44,False
+R&D Expenditure Credit,innovation_instruments,2004,2004_UK.pdf,Improvements to R&D tax credit schemes,-15000.0,"Department for Business, Innovation and Skills",0,45,False
+R&D Expenditure Credit,innovation_instruments,2004,2004_UK.pdf,Improvements to R&D tax credit schemes,-25000.0,"Department for Business, Innovation and Skills",0,46,False
+R&D Expenditure Credit,innovation_instruments,2005,2005_UK.pdf,R&D Tax Credits,450000.0,Trade and Industry,0,58,False
+R&D Expenditure Credit,innovation_instruments,2006,2006_UK.pdf,R&D tax credits support for companies,,"Department for Business, Innovation and Skills",0,70,False
+R&D Expenditure Credit,innovation_instruments,2006,2006_UK.pdf,Extending the scope of R&D tax credits,0.0,"Department for Business, Innovation and Skills",0,72,False
+R&D Expenditure Credit,innovation_instruments,2006,2006_UK.pdf,R&D tax credits,480000.0,"Department for Business, Innovation and Skills",0,73,False
+R&D Expenditure Credit,innovation_instruments,2007,2007_UK.pdf,R&D tax credit increase to 130%,0.0,"Department for Business, Innovation and Skills",0,75,False
+R&D Expenditure Credit,innovation_instruments,2007,2007_UK.pdf,SME R&D tax credit increase to 175%,0.0,"Department for Business, Innovation and Skills",0,76,False
+R&D Expenditure Credit,innovation_instruments,2007,2007_UK.pdf,Further enhancements to the SME and large company R&D tax credit schemes,,"Department for Business, Energy and Industrial Strategy",0,78,False
+R&D Expenditure Credit,innovation_instruments,2007,2007_UK.pdf,Increase in the large company R&D tax credit from 125 per cent to 130 per cent from April 2008,,"Department for Business, Innovation and Skills",0,80,False
+R&D Expenditure Credit,innovation_instruments,2007,2007_UK.pdf,Increase in the enhanced deduction element of the SME and mid-sized R&D tax credit from 150 per cent to 175 per cent from April 2008 subject to state aid clearance,,"Department for Business, Innovation and Skills",0,81,False
+R&D Expenditure Credit,innovation_instruments,2007,2007_UK.pdf,R&D tax credits,450000.0,"Department for Business, Innovation and Skills",0,92,False
+R&D Expenditure Credit,innovation_instruments,2011,2011_UK.pdf,increase the SME rate of R&D tax credit to 200 per cent from April 2011 and 225 per cent from April 2012,0.0,"Department for Business, Innovation and Skills",0,120,False
+R&D Expenditure Credit,innovation_instruments,2012,2012_UK.pdf,R&D tax credits: above the line,,"Department for Business, Innovation and Skills",0,129,False
+R&D Expenditure Credit,innovation_instruments,2013,2013_UK.pdf,R&D Tax Credits: increase Above the Line credit to 10%,45000.0,"Department for Business, Innovation and Skills",0,140,False
+R&D Expenditure Credit,innovation_instruments,2014,2014_UK.pdf,R&D tax credits: increase payable element for SMEs,-5000.0,"Department for Business, Innovation and Skills",0,148,False
+R&D Expenditure Credit,innovation_instruments,2015,2015_03_UK.pdf,"Government has introduced a new ‘above the line’ R&D expenditure credit and increased the rate of SME R&D tax credits, benefiting over 15,000 innovative businesses",,"Department for Business, Innovation and Skills",0,164,False
+R&D Expenditure Credit,innovation_instruments,2015,2015_03_UK.pdf,R&D tax credits for small businesses,0.0,"Department for Business, Innovation and Skills",0,165,False
+R&D Expenditure Credit,innovation_instruments,2017,2017_11_UK.pdf,Research and Development: increase R&D expenditure credit to 12%,5000.0,Research and Development,0,231,True
+Research Councils (pre-UKRI),science_agency,1993,1993_11_UK.pdf,"Spending on the science base (basic research in science, engineering and technology funded through the Research Councils)",2300.0,Research Councils UK,0,4,True
+Research Councils (pre-UKRI),science_agency,2007,2007_UK.pdf,Investment by Research Councils in TSB programmes to support collaborative R&D projects,25000.0,"Department for Business, Innovation and Skills",0,83,True
+Research Councils (pre-UKRI),science_agency,2014,2014_UK.pdf,Research Councils have invested in research capital,1690.0,"Department for Business, Innovation and Skills",0,145,True
+Research Councils (pre-UKRI),science_agency,2016,2016_UK.pdf,Funding for research councils,4500.0,UK Research and Innovation,0,204,True
+Research Councils (pre-UKRI),science_agency,2020,2020_UK.pdf,Funding for research councils,1000.0,UK Research and Innovation,0,297,False
+Research Councils Co-Investment in TSB Collaborative R&D,rd_programme,2007,2007_UK.pdf,Investment by Research Councils in TSB programmes to support collaborative R&D projects,25000.0,"Department for Business, Innovation and Skills",0,83,True
+Research England (RE),higher_education,2003,2003_UK.pdf,Higher Education Innovation Fund (HEIF),187000.0,"Department for Business, Innovation and Skills",0,26,True
+Research Partnership Investment Fund,innovation_instruments,2015,2015_03_UK.pdf,Over £1.4bn of public and private investment in 27 research infrastructure projects through the Research Partnership Investment Fund,1400.0,"Department for Business, Innovation and Skills",0,162,True
+Research Partnership Investment Fund,innovation_instruments,2015,2015_07_UK.pdf,£400 million round of the Research Partnership Investment Fund,400000.0,"Department for Business, Innovation and Skills",0,178,True
+Science Budget,rd_programme,2000,2000_UK.pdf,Science budget allocation,,UK Research and Innovation,0,22,False
+Science Budget,rd_programme,2003,2003_UK.pdf,Science budget,,"Department for Business, Innovation and Skills",0,33,True
+Science Budget,rd_programme,2004,2004_UK.pdf,Science budget allocation,500000.0,UK Research and Innovation,0,40,True
+Science Budget,rd_programme,2005,2005_UK.pdf,Funding for energy R&D from the Science Budget will rise from £40 million per year to £70 million per year by 2007-08,70000.0,"Department for Business, Innovation and Skills",0,55,True
+Science Budget,rd_programme,2013,2013_UK.pdf,Science budget allocation,400000.0,"Department for Business, Energy and Industrial Strategy",0,142,True
+Science Budget,rd_programme,2014,2014_UK.pdf,Science budget,,"Department for Business, Innovation and Skills",0,153,True
+Science Budget,rd_programme,2016,2016_UK.pdf,Science budget,1700.0,"Department for Business, Energy and Industrial Strategy",0,183,True
+Science Budget,rd_programme,2020,2020_UK.pdf,Science budget,1000.0,"Department for Business, Energy and Industrial Strategy",0,294,True
+Science Budget,rd_programme,2021,2021_03_UK.pdf,Science budget,400000.0,"Department for Business, Innovation and Skills",0,325,True
+Science Budget,rd_programme,2021,2021_10_UK.pdf,Science budget,,"Business, Energy and Industrial Strategy",0,381,True
+Science Budget,rd_programme,2023,2023_UK.pdf,Science budget,,"Science, Innovation and Technology",0,386,True
+Science Budget,rd_programme,2025,2025_UK.pdf,Science budget,1000.0,UK Research and Innovation,0,444,True
+Science Budget,rd_programme,2025,2025_UK.pdf,Science budget,500000.0,"Department for Business, Innovation and Skills",0,453,True
+Science Enterprise Challenge,innovation_instruments,1999,1999_UK.pdf,£25 million Science Enterprise Challenge,25000.0,"Department for Business, Innovation and Skills",0,15,True
+Science Research Infrastructure Fund (SRIF),research_infrastructure,2005,2005_UK.pdf,"Science Research Infrastructure Fund, which provides capital funding of £500 million per annum to renew university infrastructure",500000.0,"Department for Business, Innovation and Skills",0,56,True
+Science and Innovation Campuses Capital Funding,research_infrastructure,2011,2011_UK.pdf,provide £100 million of new capital funding in 2011-12 for science and innovation campuses,100000.0,"Department for Business, Innovation and Skills",0,123,True
+Scientific Equipment Challenge Fund,research_infrastructure,1996,1996_UK.pdf,Increase for further and higher education including £20 million in 1997-98 for a challenge fund to finance scientific equipment,20000.0,Department of Trade and Industry,0,7,True
+South Wales Semiconductor Technologies Cluster,research_infrastructure,2025,2025_UK.pdf,£10 million will be invested in the South Wales world-leading semiconductor technologies cluster,10000.0,"Department for Science, Innovation and Technology",0,448,True
+Specialist Research Institutions Funding,research_institute,2020,2020_UK.pdf,Increase funding for the UK’s foremost specialist institutions,80000.0,"Department for Business, Energy and Industrial Strategy",0,277,True
+Strength in Places Fund,innovation_instruments,2003,2003_UK.pdf,Strength in Places Fund,,"Department for Business, Innovation and Skills",0,35,False
+Strength in Places Fund,innovation_instruments,2012,2012_UK.pdf,Strength in Places Fund,,UK Research and Innovation,0,132,False
+Strength in Places Fund,innovation_instruments,2014,2014_UK.pdf,Strength in Places Fund,,"Department for Business, Innovation and Skills",0,155,False
+Strength in Places Fund,innovation_instruments,2016,2016_UK.pdf,Funding for the Strength in Places Fund,500000.0,"Department for Business, Innovation and Skills",0,202,True
+Strength in Places Fund,innovation_instruments,2018,2018_UK.pdf,Strength in Places Fund,120000.0,"Department for Business, Energy and Industrial Strategy",0,256,True
+Strength in Places Fund,innovation_instruments,2018,2018_UK.pdf,Funding for the Strength in Places Fund to support areas of R&D excellence across the UK.,120000.0,Strength in Places Fund,0,271,True
+Strength in Places Fund,innovation_instruments,2020,2020_UK.pdf,Strength in Places Fund,500000.0,"Department for Business, Energy and Industrial Strategy",0,296,True
+Strength in Places Fund,innovation_instruments,2021,2021_03_UK.pdf,Strength in Places Fund,5500.0,"Business, Energy and Industrial Strategy",0,323,True
+Strength in Places Fund,innovation_instruments,2021,2021_03_UK.pdf,Strength in Places Fund,100000.0,"Department for Business, Innovation and Skills",0,327,True
+Strength in Places Fund,innovation_instruments,2021,2021_10_UK.pdf,Strength in Places Fund,,"Department for Business, Innovation and Skills",0,361,True
+Strength in Places Fund,innovation_instruments,2021,2021_10_UK.pdf,Strength in Places Fund,,"Business, Energy and Industrial Strategy",0,383,True
+Strength in Places Fund,innovation_instruments,2023,2023_UK.pdf,Strength in Places Fund,,"Science, Innovation and Technology",0,388,True
+Strength in Places Fund,innovation_instruments,2025,2025_UK.pdf,Strength in Places Fund,500000.0,UK Research and Innovation,0,445,True
+Strength in Places Fund,innovation_instruments,2025,2025_UK.pdf,Strength in Places Fund,200000.0,"Department for Business, Innovation and Skills",0,455,True
+Strength in Places Fund,innovation_instruments,2025,2025_UK.pdf,Funding for the Strength in Places Fund,,"Department for Business, Innovation and Skills",0,458,True
+Studio Ulster (virtual production R&D studio),research_infrastructure,2025,2025_UK.pdf,"Funding for Studio Ulster, a virtual production R&D studio",25200.0,"Science, Innovation and Technology",0,469,True
+TSB Creative Industries R&D Programme,rd_programme,2009,2009_UK.pdf,"£10 million programme of research and development for the creative industries, led by the TSB, which is awarding grants to almost 300 UK-based companies and academic institutions.",10000.0,"Department for Business, Innovation and Skills",0,101,True
+"Total UK Science & Technology Spending (headline, HMT Budget)",national_total,2007,2007_UK.pdf,Total UK science spending,5397000.0,Department of Trade and Industry,0,88,True
+Turing AI Fellowships,rd_programme,2018,2018_UK.pdf,Investment of up to £50 million in new Turing AI Fellowships to bring the best global researchers in AI to the UK,50000.0,"Department for Business, Energy and Industrial Strategy",0,251,True
+UK Collaboration for Research in Infrastructure and Cities (UKCRIC),research_infrastructure,2015,2015_03_UK.pdf,Investment towards UKCRIC,138000.0,Engineering and Physical Sciences Research Council (EPSRC),0,182,True
+UK Collaboration for Research in Infrastructure and Cities (UKCRIC),research_infrastructure,2015,2015_07_UK.pdf,£128 million in the UK Collaboration for Research in Infrastructure and Cities (UKCRIC),128000.0,"Department for Business, Innovation and Skills",0,179,True
+UK Nuclear Fusion R&D Support,rd_programme,2018,2018_UK.pdf,support for UK nuclear fusion,20000.0,"Department for Business, Energy and Industrial Strategy",0,259,True
+UKRI (UK Research and Innovation),science_agency,2000,2000_UK.pdf,UK Research and Innovation,,UK Research and Innovation,0,21,False
+UKRI (UK Research and Innovation),science_agency,2004,2004_UK.pdf,UK Research and Innovation,1200.0,UK Research and Innovation,0,39,False
+UKRI (UK Research and Innovation),science_agency,2006,2006_UK.pdf,UK Research and Innovation,1600.0,UK Research and Innovation,0,66,False
+UKRI (UK Research and Innovation),science_agency,2007,2007_UK.pdf,UK Research and Innovation,,UK Research and Innovation,0,84,False
+UKRI (UK Research and Innovation),science_agency,2010,2010_03_UK.pdf,UK Research and Innovation,1600.0,UK Research and Innovation,0,116,False
+UKRI (UK Research and Innovation),science_agency,2012,2012_UK.pdf,UK Research and Innovation,,UK Research and Innovation,0,131,False
+UKRI (UK Research and Innovation),science_agency,2014,2014_UK.pdf,UK Research and Innovation,,UK Research and Innovation,0,156,False
+UKRI (UK Research and Innovation),science_agency,2016,2016_UK.pdf,UK Research and Innovation,6000.0,UK Research and Innovation,0,203,False
+UKRI (UK Research and Innovation),science_agency,2017,2017_03_UK.pdf,Total funding for UK Research and Innovation,,UK Research and Innovation,0,208,False
+UKRI (UK Research and Innovation),science_agency,2018,2018_UK.pdf,£10 million from UK Research and Innovation to establish an innovation fund for the fishing industry,10000.0,UK Research and Innovation,0,255,True
+UKRI (UK Research and Innovation),science_agency,2018,2018_UK.pdf,Investment from UK Research and Innovation to establish an innovation fund to help transform the fishing industry.,10000.0,UK Research and Innovation,0,270,True
+UKRI (UK Research and Innovation),science_agency,2025,2025_UK.pdf,UK Research and Innovation (UKRI) directing £9 billion over four years to IS-8 sectors,9000.0,UK Research and Innovation,0,446,True
+UKRI (UK Research and Innovation),science_agency,2025,2025_UK.pdf,UK Research and Innovation,,UK Research and Innovation,0,459,True
+UKRI (UK Research and Innovation),science_agency,2025,2025_UK.pdf,£4 million per year that UKRI will invest in new fellowship funding,4000.0,"Science, Innovation and Technology",0,462,True
+University Challenge scheme,innovation_instruments,1998,1998_UK.pdf,University Challenge Fund,50000.0,"Department for Business, Innovation and Skills",0,9,True
+University Challenge scheme,innovation_instruments,1998,1998_UK.pdf,University Challenge Fund contribution,20000.0,"Department for Business, Innovation and Skills",0,10,True
+University Challenge scheme,innovation_instruments,1999,1999_UK.pdf,£50 million University Challenge scheme,50000.0,"Department for Business, Innovation and Skills",0,14,True
+University Challenge scheme,innovation_instruments,1999,1999_UK.pdf,University Challenge funding,15000.0,"Department for Business, Innovation and Skills",0,17,True
+University Research Facilities Capital Funding (2012),research_infrastructure,2012,2012_UK.pdf,£100 million fund to support investment in major new university research facilities,100000.0,"Department for Business, Innovation and Skills",0,126,True
+Venture Capital Challenge Competition,innovation_instruments,1999,1999_UK.pdf,Venture Capital Challenge funding,20000.0,"Department for Business, Innovation and Skills",0,16,True

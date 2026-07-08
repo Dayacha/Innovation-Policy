@@ -2,6 +2,8 @@ country,year,canonical_name,category,amount_local,unit,currency,item_type,line_d
 Colombia,1996,AGROSAVIA / CORPOICA (agricultural research),science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,1997,AGROSAVIA / CORPOICA (agricultural research),science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,1998,AGROSAVIA / CORPOICA (agricultural research),science_agency,,,,,,,,gap: no matching rows in this year
+Colombia,1999,AGROSAVIA / CORPOICA (agricultural research),science_agency,,,,,,,,gap: no matching rows in this year
+Colombia,2000,AGROSAVIA / CORPOICA (agricultural research),science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,2002,AGROSAVIA / CORPOICA (agricultural research),science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,2003,AGROSAVIA / CORPOICA (agricultural research),science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,2004,AGROSAVIA / CORPOICA (agricultural research),science_agency,,,,,,,,gap: no matching rows in this year
@@ -23,9 +25,11 @@ Colombia,2025,AGROSAVIA / CORPOICA (agricultural research),science_agency,,,,,,,
 Colombia,1996,"COLCIENCIAS (Departamento Administrativo de Ciencia, Tecnología e Innovación)",science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,1997,"COLCIENCIAS (Departamento Administrativo de Ciencia, Tecnología e Innovación)",science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,1998,"COLCIENCIAS (Departamento Administrativo de Ciencia, Tecnología e Innovación)",science_agency,,,,,,,,gap: no matching rows in this year
-Colombia,2002,"COLCIENCIAS (Departamento Administrativo de Ciencia, Tecnología e Innovación)",science_agency,4226203542.0,unit,COP,section_total,DE LA CIENCIA Y LA TECNOLOGIA “FRANCISCO JOSE DE CALDAS” (COLCIENCIAS) A- INGRESOS CORRIENTES,pdf_85625e3f7481__2002_1455638231019_44655.txt,0,Main Colombian science agency. Budget SECCIÓN ~1114. Replaced by MinCiencias in 2019.
+Colombia,1999,"COLCIENCIAS (Departamento Administrativo de Ciencia, Tecnología e Innovación)",science_agency,,,,,,,,gap: no matching rows in this year
+Colombia,2000,"COLCIENCIAS (Departamento Administrativo de Ciencia, Tecnología e Innovación)",science_agency,,,,,,,,gap: no matching rows in this year
+Colombia,2002,"COLCIENCIAS (Departamento Administrativo de Ciencia, Tecnología e Innovación)",science_agency,4226203542.0,unit,COP,section_total,DE LA CIENCIA Y LA TECNOLOGIA “FRANCISCO JOSE DE CALDAS” (COLCIENCIAS) A- INGRESOS CORRIENTES,pdf_85625e3f7481__2002_1455638231019_44655.txt,0.0,Main Colombian science agency. Budget SECCIÓN ~1114. Replaced by MinCiencias in 2019.
 Colombia,2003,"COLCIENCIAS (Departamento Administrativo de Ciencia, Tecnología e Innovación)",science_agency,,,,,,,,gap: no matching rows in this year
-Colombia,2004,"COLCIENCIAS (Departamento Administrativo de Ciencia, Tecnología e Innovación)",science_agency,6163171417.0,unit,COP,section_total,"SECCION: 0320 INSTITUTO COLOMBIANO PARA EL DESARROLLO DE LA CIENCIA Y LA TECNOLOGÍA ""FRANCISCO JOSE DE CALDAS”- (COLCIENCIAS) A. PRESUPUESTO DE FUNCIONAMIENTO",pdf_70cd4b33da92__2004_Ley_848_de_2003.txt,0,Main Colombian science agency. Budget SECCIÓN ~1114. Replaced by MinCiencias in 2019.
+Colombia,2004,"COLCIENCIAS (Departamento Administrativo de Ciencia, Tecnología e Innovación)",science_agency,6163171417.0,unit,COP,section_total,"SECCION: 0320 INSTITUTO COLOMBIANO PARA EL DESARROLLO DE LA CIENCIA Y LA TECNOLOGÍA ""FRANCISCO JOSE DE CALDAS”- (COLCIENCIAS) A. PRESUPUESTO DE FUNCIONAMIENTO",pdf_70cd4b33da92__2004_Ley_848_de_2003.txt,0.0,Main Colombian science agency. Budget SECCIÓN ~1114. Replaced by MinCiencias in 2019.
 Colombia,2005,"COLCIENCIAS (Departamento Administrativo de Ciencia, Tecnología e Innovación)",science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,2007,"COLCIENCIAS (Departamento Administrativo de Ciencia, Tecnología e Innovación)",science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,2012,"COLCIENCIAS (Departamento Administrativo de Ciencia, Tecnología e Innovación)",science_agency,,,,,,,,gap: no matching rows in this year
@@ -34,10 +38,12 @@ Colombia,2014,"COLCIENCIAS (Departamento Administrativo de Ciencia, Tecnología 
 Colombia,2016,"COLCIENCIAS (Departamento Administrativo de Ciencia, Tecnología e Innovación)",science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,2017,"COLCIENCIAS (Departamento Administrativo de Ciencia, Tecnología e Innovación)",science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,2018,"COLCIENCIAS (Departamento Administrativo de Ciencia, Tecnología e Innovación)",science_agency,,,,,,,,gap: no matching rows in this year
-Colombia,2012,Colombian Institute of Geology and Mining,science_agency,168092662000.0,unit,COP,section_total,INSTITUTO COLOMBIANO DE GEOLOGÍA Y MINERÍA – INGEOMINAS A-INGRESOS CORRIENTES,pdf_a443d53f4799__2012_Ley_1485_de_2011.txt,0,This institute is dedicated to geological and mining research.
+Colombia,2012,Colombian Institute of Geology and Mining,science_agency,168092662000.0,unit,COP,section_total,INSTITUTO COLOMBIANO DE GEOLOGÍA Y MINERÍA – INGEOMINAS A-INGRESOS CORRIENTES,pdf_a443d53f4799__2012_Ley_1485_de_2011.txt,0.0,This institute is dedicated to geological and mining research.
 Colombia,1996,Fondo Francisco José de Caldas,science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,1997,Fondo Francisco José de Caldas,science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,1998,Fondo Francisco José de Caldas,science_agency,,,,,,,,gap: no matching rows in this year
+Colombia,1999,Fondo Francisco José de Caldas,science_agency,,,,,,,,gap: no matching rows in this year
+Colombia,2000,Fondo Francisco José de Caldas,science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,2002,Fondo Francisco José de Caldas,science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,2003,Fondo Francisco José de Caldas,science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,2004,Fondo Francisco José de Caldas,science_agency,,,,,,,,gap: no matching rows in this year
@@ -59,17 +65,19 @@ Colombia,2025,Fondo Francisco José de Caldas,science_agency,,,,,,,,gap: no matc
 Colombia,1996,ICA (Instituto Colombiano Agropecuario),science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,1997,ICA (Instituto Colombiano Agropecuario),science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,1998,ICA (Instituto Colombiano Agropecuario),science_agency,,,,,,,,gap: no matching rows in this year
+Colombia,1999,ICA (Instituto Colombiano Agropecuario),science_agency,15402669.75,unit,COP,line_item,Current Revenues,1999 LEY 547 DE 1999.doc,0.0,
+Colombia,2000,ICA (Instituto Colombiano Agropecuario),science_agency,15402669.75,unit,COP,line_item,Current Revenues,2000 LEY 547 DE 1999.doc,0.0,
 Colombia,2002,ICA (Instituto Colombiano Agropecuario),science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,2003,ICA (Instituto Colombiano Agropecuario),science_agency,,,,,,,,gap: no matching rows in this year
-Colombia,2004,ICA (Instituto Colombiano Agropecuario),science_agency,48644800000.0,unit,COP,section_total,SECCION: 1702 INSTITUTO COLOMBIANO AGROPECUARIO. (ICA) A. PRESUPUESTO DE FUNCIONAMIENTO,pdf_70cd4b33da92__2004_Ley_848_de_2003.txt,0,
-Colombia,2005,ICA (Instituto Colombiano Agropecuario),science_agency,51221600000.0,unit,COP,section_total,SECCION: 1702 INSTITUTO COLOMBIANO AGROPECUARIO (ICA) A. PRESUPUESTO DE FUNCIONAMIENTO.,pdf_99bcb6e78208__2005_Ley_921_de_2004.txt,0,
+Colombia,2004,ICA (Instituto Colombiano Agropecuario),science_agency,48644800000.0,unit,COP,section_total,SECCION: 1702 INSTITUTO COLOMBIANO AGROPECUARIO. (ICA) A. PRESUPUESTO DE FUNCIONAMIENTO,pdf_70cd4b33da92__2004_Ley_848_de_2003.txt,0.0,
+Colombia,2005,ICA (Instituto Colombiano Agropecuario),science_agency,51221600000.0,unit,COP,section_total,SECCION: 1702 INSTITUTO COLOMBIANO AGROPECUARIO (ICA) A. PRESUPUESTO DE FUNCIONAMIENTO.,pdf_99bcb6e78208__2005_Ley_921_de_2004.txt,0.0,
 Colombia,2007,ICA (Instituto Colombiano Agropecuario),science_agency,,,,,,,,gap: no matching rows in this year
-Colombia,2012,ICA (Instituto Colombiano Agropecuario),science_agency,31462186000.0,unit,COP,section_total,INSTITUTO COLOMBIANO AGROPECUARIO (ICA) A-INGRESOS CORRIENTES,pdf_a443d53f4799__2012_Ley_1485_de_2011.txt,0,
-Colombia,2013,ICA (Instituto Colombiano Agropecuario),science_agency,33007894000.0,unit,COP,section_total,BIANO AGROPECUARIO (ICA),pdf_cc143adb1f77__2013_Ley_1593_de_2012.txt,0,
-Colombia,2014,ICA (Instituto Colombiano Agropecuario),science_agency,70533300000.0,unit,COP,section_total,INSTITUTO COLOMBIANO AGROPECUARIO (ICA),pdf_67c36bc2d740__2014_Ley_1687_de_2013.txt,-1,
-Colombia,2016,ICA (Instituto Colombiano Agropecuario),science_agency,44886561958.0,unit,COP,section_total,INSTITUTO COLOMBIANO AGROPECUARIO (ICA),pdf_bedb3db21394__2016_Decreto_2550.txt,-1,
+Colombia,2012,ICA (Instituto Colombiano Agropecuario),science_agency,31462186000.0,unit,COP,section_total,INSTITUTO COLOMBIANO AGROPECUARIO (ICA) A-INGRESOS CORRIENTES,pdf_a443d53f4799__2012_Ley_1485_de_2011.txt,0.0,
+Colombia,2013,ICA (Instituto Colombiano Agropecuario),science_agency,33007894000.0,unit,COP,section_total,BIANO AGROPECUARIO (ICA),pdf_cc143adb1f77__2013_Ley_1593_de_2012.txt,0.0,
+Colombia,2014,ICA (Instituto Colombiano Agropecuario),science_agency,70533300000.0,unit,COP,section_total,INSTITUTO COLOMBIANO AGROPECUARIO (ICA),pdf_67c36bc2d740__2014_Ley_1687_de_2013.txt,-1.0,
+Colombia,2016,ICA (Instituto Colombiano Agropecuario),science_agency,44886561958.0,unit,COP,section_total,INSTITUTO COLOMBIANO AGROPECUARIO (ICA),pdf_bedb3db21394__2016_Decreto_2550.txt,-1.0,
 Colombia,2017,ICA (Instituto Colombiano Agropecuario),science_agency,,,,,,,,gap: no matching rows in this year
-Colombia,2018,ICA (Instituto Colombiano Agropecuario),science_agency,104912194555.0,unit,COP,section_total,SECCION: 1702 INSTITUTO COLOMBIANO AGROPECUARIO (ICA) A. PRESUPUESTO DE FUNCIONAMIENTO,pdf_13b9ce28bd17__2018_Ley_1873_de_2017.txt,0,
+Colombia,2018,ICA (Instituto Colombiano Agropecuario),science_agency,104912194555.0,unit,COP,section_total,SECCION: 1702 INSTITUTO COLOMBIANO AGROPECUARIO (ICA) A. PRESUPUESTO DE FUNCIONAMIENTO,pdf_13b9ce28bd17__2018_Ley_1873_de_2017.txt,0.0,
 Colombia,2019,ICA (Instituto Colombiano Agropecuario),science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,2020,ICA (Instituto Colombiano Agropecuario),science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,2021,ICA (Instituto Colombiano Agropecuario),science_agency,,,,,,,,gap: no matching rows in this year
@@ -80,17 +88,19 @@ Colombia,2025,ICA (Instituto Colombiano Agropecuario),science_agency,,,,,,,,gap:
 Colombia,1996,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,1997,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,1998,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,,,,,,,,gap: no matching rows in this year
-Colombia,2002,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,2000000000.0,unit,COP,section_total,AMBIENTALES- IDEAM A- INGRESOS CORRIENTES,pdf_85625e3f7481__2002_1455638231019_44655.txt,0,
+Colombia,1999,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,,,,,,,,gap: no matching rows in this year
+Colombia,2000,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,,,,,,,,gap: no matching rows in this year
+Colombia,2002,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,2000000000.0,unit,COP,section_total,AMBIENTALES- IDEAM A- INGRESOS CORRIENTES,pdf_85625e3f7481__2002_1455638231019_44655.txt,0.0,
 Colombia,2003,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,,,,,,,,gap: no matching rows in this year
-Colombia,2004,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,21057246156.0,unit,COP,section_total,SECCION: 3202 INSTITUTO DE HIDROLOGIA. METEOROLOGIA Y ESTUDIOS AMBIENTALES-IDEAM A. PRESUPUESTO DE FUNCIONAMIENTO,pdf_70cd4b33da92__2004_Ley_848_de_2003.txt,0,
-Colombia,2005,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,22517146961.0,unit,COP,section_total,"SECCION: 3202 INSTITUTO DE HIDROLOGIA, METEOROLOGIA Y ESTUDIOS AMBIENTALES- IDEAM A. PRESUPUESTO DE FUNCIONAMIENTO.",pdf_99bcb6e78208__2005_Ley_921_de_2004.txt,0,
+Colombia,2004,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,21057246156.0,unit,COP,section_total,SECCION: 3202 INSTITUTO DE HIDROLOGIA. METEOROLOGIA Y ESTUDIOS AMBIENTALES-IDEAM A. PRESUPUESTO DE FUNCIONAMIENTO,pdf_70cd4b33da92__2004_Ley_848_de_2003.txt,0.0,
+Colombia,2005,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,22517146961.0,unit,COP,section_total,"SECCION: 3202 INSTITUTO DE HIDROLOGIA, METEOROLOGIA Y ESTUDIOS AMBIENTALES- IDEAM A. PRESUPUESTO DE FUNCIONAMIENTO.",pdf_99bcb6e78208__2005_Ley_921_de_2004.txt,0.0,
 Colombia,2007,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,,,,,,,,gap: no matching rows in this year
-Colombia,2012,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,3400000000.0,unit,COP,section_total,"INSTITUTO DE HIDROLOGÍA, METEOROLOGÍA Y ESTUDIOS AMBIENTALES - IDEAM A-INGRESOS CORRIENTES",pdf_a443d53f4799__2012_Ley_1485_de_2011.txt,0,
-Colombia,2013,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,41226290000.0,unit,COP,section_total,"ROLOGÍA, METEOROLOGÍA Y ESTUDIOS AMBIENTALES - IDEAM",pdf_cc143adb1f77__2013_Ley_1593_de_2012.txt,0,
-Colombia,2014,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,8900415000.0,unit,COP,section_total,IDEAM,pdf_67c36bc2d740__2014_Ley_1687_de_2013.txt,-1,
-Colombia,2016,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,6561994255.0,unit,COP,section_total,IDEAM,pdf_bedb3db21394__2016_Decreto_2550.txt,-1,
-Colombia,2017,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,9695980000.0,unit,COP,section_total,IDEAM,pdf_76d96b1db776__2017_LEY_1815_DE_2016.txt,-1,
-Colombia,2018,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,44340876000.0,unit,COP,section_total,"INSTITUTO DE HIDROLOGÍA, METEOROLOGÍA Y ESTUDIOS AMBIENTALES - IDEAM A. PRESUPUESTO DE FUNCIONAMIENTO",pdf_13b9ce28bd17__2018_Ley_1873_de_2017.txt,0,
+Colombia,2012,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,3400000000.0,unit,COP,section_total,"INSTITUTO DE HIDROLOGÍA, METEOROLOGÍA Y ESTUDIOS AMBIENTALES - IDEAM A-INGRESOS CORRIENTES",pdf_a443d53f4799__2012_Ley_1485_de_2011.txt,0.0,
+Colombia,2013,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,41226290000.0,unit,COP,section_total,"ROLOGÍA, METEOROLOGÍA Y ESTUDIOS AMBIENTALES - IDEAM",pdf_cc143adb1f77__2013_Ley_1593_de_2012.txt,0.0,
+Colombia,2014,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,8900415000.0,unit,COP,section_total,IDEAM,pdf_67c36bc2d740__2014_Ley_1687_de_2013.txt,-1.0,
+Colombia,2016,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,6561994255.0,unit,COP,section_total,IDEAM,pdf_bedb3db21394__2016_Decreto_2550.txt,-1.0,
+Colombia,2017,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,9695980000.0,unit,COP,section_total,IDEAM,pdf_76d96b1db776__2017_LEY_1815_DE_2016.txt,-1.0,
+Colombia,2018,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,44340876000.0,unit,COP,section_total,"INSTITUTO DE HIDROLOGÍA, METEOROLOGÍA Y ESTUDIOS AMBIENTALES - IDEAM A. PRESUPUESTO DE FUNCIONAMIENTO",pdf_13b9ce28bd17__2018_Ley_1873_de_2017.txt,0.0,
 Colombia,2019,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,2020,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,2021,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,,,,,,,,gap: no matching rows in this year
@@ -99,50 +109,54 @@ Colombia,2023,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambient
 Colombia,2024,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,2025,"IDEAM (Instituto de Hidrología, Meteorología y Estudios Ambientales)",science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,2012,INM (Instituto Nacional de Metrología),science_agency,,,,,,,,gap: no matching rows in this year
-Colombia,2013,INM (Instituto Nacional de Metrología),science_agency,807277000.0,unit,COP,section_total,NAL DE METROLOGÍA - INM,pdf_cc143adb1f77__2013_Ley_1593_de_2012.txt,0,
-Colombia,2014,INM (Instituto Nacional de Metrología),science_agency,1200000000.0,unit,COP,section_total,INSTITUTO NACIONAL DE METROLOGIA - INM,pdf_67c36bc2d740__2014_Ley_1687_de_2013.txt,-1,
-Colombia,2016,INM (Instituto Nacional de Metrología),science_agency,2398740886.0,unit,COP,section_total,INSTITUTO NACIONAL DE METROLOGIA - INM,pdf_bedb3db21394__2016_Decreto_2550.txt,-1,
-Colombia,2017,INM (Instituto Nacional de Metrología),science_agency,1603000000.0,unit,COP,section_total,INSTITUTO NACIONAL DE METROLOGIA - INM,pdf_76d96b1db776__2017_LEY_1815_DE_2016.txt,-1,
-Colombia,2018,INM (Instituto Nacional de Metrología),science_agency,12244605034.0,unit,COP,section_total,SECCION: 3505 INSTITUTO NACIONAL DE METROLOGÍA - INM A. PRESUPUESTO DE FUNCIONAMIENTO,pdf_13b9ce28bd17__2018_Ley_1873_de_2017.txt,0,
-Colombia,2019,INM (Instituto Nacional de Metrología),science_agency,26498854982.0,unit,COP,section_total,INSTITUTO NACIONAL DE METROLOGIA - INM,pdf_35ed8a7d97b1__2019_Decreto_2467_Anexo.txt,-1,
-Colombia,2020,INM (Instituto Nacional de Metrología),science_agency,31025897915.0,unit,COP,section_total,INSTITUTO NACIONAL DE METROLOGIA - INM,pdf_d0ec99f3fab8__2020_Decreto_2411_Anexo.txt,-1,
-Colombia,2021,INM (Instituto Nacional de Metrología),science_agency,17523459000.0,unit,COP,section_total,INSTITUTO NACIONAL DE METROLOGIA - INM,pdf_a8096ec407ac__2021_Decreto_1805.txt,-1,
-Colombia,2022,INM (Instituto Nacional de Metrología),science_agency,36532440712.0,unit,COP,section_total,INSTITUTO NACIONAL DE METROLOGIA - INM,pdf_7bed68a91292__2022_Decreto_1793.txt,-1,
-Colombia,2023,INM (Instituto Nacional de Metrología),science_agency,38891426173.0,unit,COP,section_total,INSTITUTO NACIONAL DE METROLOGIA - INM,pdf_762d2b56700a__2023_Decreto_2590.txt,-1,
-Colombia,2024,INM (Instituto Nacional de Metrología),science_agency,41201998865.0,unit,COP,section_total,INSTITUTO NACIONAL DE METROLOGIA - INM,pdf_2f2a18b50fc2__2024_Decreto_2295.txt,-1,
+Colombia,2013,INM (Instituto Nacional de Metrología),science_agency,807277000.0,unit,COP,section_total,NAL DE METROLOGÍA - INM,pdf_cc143adb1f77__2013_Ley_1593_de_2012.txt,0.0,
+Colombia,2014,INM (Instituto Nacional de Metrología),science_agency,1200000000.0,unit,COP,section_total,INSTITUTO NACIONAL DE METROLOGIA - INM,pdf_67c36bc2d740__2014_Ley_1687_de_2013.txt,-1.0,
+Colombia,2016,INM (Instituto Nacional de Metrología),science_agency,2398740886.0,unit,COP,section_total,INSTITUTO NACIONAL DE METROLOGIA - INM,pdf_bedb3db21394__2016_Decreto_2550.txt,-1.0,
+Colombia,2017,INM (Instituto Nacional de Metrología),science_agency,1603000000.0,unit,COP,section_total,INSTITUTO NACIONAL DE METROLOGIA - INM,pdf_76d96b1db776__2017_LEY_1815_DE_2016.txt,-1.0,
+Colombia,2018,INM (Instituto Nacional de Metrología),science_agency,12244605034.0,unit,COP,section_total,SECCION: 3505 INSTITUTO NACIONAL DE METROLOGÍA - INM A. PRESUPUESTO DE FUNCIONAMIENTO,pdf_13b9ce28bd17__2018_Ley_1873_de_2017.txt,0.0,
+Colombia,2019,INM (Instituto Nacional de Metrología),science_agency,26498854982.0,unit,COP,section_total,INSTITUTO NACIONAL DE METROLOGIA - INM,pdf_35ed8a7d97b1__2019_Decreto_2467_Anexo.txt,-1.0,
+Colombia,2020,INM (Instituto Nacional de Metrología),science_agency,31025897915.0,unit,COP,section_total,INSTITUTO NACIONAL DE METROLOGIA - INM,pdf_d0ec99f3fab8__2020_Decreto_2411_Anexo.txt,-1.0,
+Colombia,2021,INM (Instituto Nacional de Metrología),science_agency,17523459000.0,unit,COP,section_total,INSTITUTO NACIONAL DE METROLOGIA - INM,pdf_a8096ec407ac__2021_Decreto_1805.txt,-1.0,
+Colombia,2022,INM (Instituto Nacional de Metrología),science_agency,36532440712.0,unit,COP,section_total,INSTITUTO NACIONAL DE METROLOGIA - INM,pdf_7bed68a91292__2022_Decreto_1793.txt,-1.0,
+Colombia,2023,INM (Instituto Nacional de Metrología),science_agency,38891426173.0,unit,COP,section_total,INSTITUTO NACIONAL DE METROLOGIA - INM,pdf_762d2b56700a__2023_Decreto_2590.txt,-1.0,
+Colombia,2024,INM (Instituto Nacional de Metrología),science_agency,41201998865.0,unit,COP,section_total,INSTITUTO NACIONAL DE METROLOGIA - INM,pdf_2f2a18b50fc2__2024_Decreto_2295.txt,-1.0,
 Colombia,2025,INM (Instituto Nacional de Metrología),science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,1996,Instituto Nacional de Salud (Colombia),science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,1997,Instituto Nacional de Salud (Colombia),science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,1998,Instituto Nacional de Salud (Colombia),science_agency,,,,,,,,gap: no matching rows in this year
+Colombia,1999,Instituto Nacional de Salud (Colombia),science_agency,,,,,,,,gap: no matching rows in this year
+Colombia,2000,Instituto Nacional de Salud (Colombia),science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,2002,Instituto Nacional de Salud (Colombia),science_agency,,,,,,,,gap: no matching rows in this year
 Colombia,2003,Instituto Nacional de Salud (Colombia),science_agency,,,,,,,,gap: no matching rows in this year
-Colombia,2004,Instituto Nacional de Salud (Colombia),science_agency,8907500000.0,unit,COP,section_total,SECCION: 3606 INSTITUTO NACIONAL DE SALUD (INS) A. PRESUPUESTO DE FUNCIONAMIENTO,pdf_70cd4b33da92__2004_Ley_848_de_2003.txt,0,
-Colombia,2005,Instituto Nacional de Salud (Colombia),science_agency,10534000000.0,unit,COP,section_total,SECCION: 3606 INSTITUTO NACIONAL DE SALUD (INS) A. PRESUPUESTO DE FUNCIONAMIENTO.,pdf_99bcb6e78208__2005_Ley_921_de_2004.txt,0,
+Colombia,2004,Instituto Nacional de Salud (Colombia),science_agency,8907500000.0,unit,COP,section_total,SECCION: 3606 INSTITUTO NACIONAL DE SALUD (INS) A. PRESUPUESTO DE FUNCIONAMIENTO,pdf_70cd4b33da92__2004_Ley_848_de_2003.txt,0.0,
+Colombia,2005,Instituto Nacional de Salud (Colombia),science_agency,10534000000.0,unit,COP,section_total,SECCION: 3606 INSTITUTO NACIONAL DE SALUD (INS) A. PRESUPUESTO DE FUNCIONAMIENTO.,pdf_99bcb6e78208__2005_Ley_921_de_2004.txt,0.0,
 Colombia,2007,Instituto Nacional de Salud (Colombia),science_agency,,,,,,,,gap: no matching rows in this year
-Colombia,2012,Instituto Nacional de Salud (Colombia),science_agency,2288700000.0,unit,COP,section_total,INSTITUTO NACIONAL DE SALUD (INS) A-INGRESOS CORRIENTES,pdf_a443d53f4799__2012_Ley_1485_de_2011.txt,0,
+Colombia,2012,Instituto Nacional de Salud (Colombia),science_agency,2288700000.0,unit,COP,section_total,INSTITUTO NACIONAL DE SALUD (INS) A-INGRESOS CORRIENTES,pdf_a443d53f4799__2012_Ley_1485_de_2011.txt,0.0,
 Colombia,2013,Instituto Nacional de Salud (Colombia),science_agency,,,,,,,,gap: no matching rows in this year
-Colombia,2014,Instituto Nacional de Salud (Colombia),science_agency,3990724000.0,unit,COP,section_total,INSTITUTO NACIONAL DE SALUD (INS),pdf_67c36bc2d740__2014_Ley_1687_de_2013.txt,-1,
-Colombia,2016,Instituto Nacional de Salud (Colombia),science_agency,4290271000.0,unit,COP,section_total,INSTITUTO NACIONAL DE SALUD (INS),pdf_bedb3db21394__2016_Decreto_2550.txt,-1,
-Colombia,2017,Instituto Nacional de Salud (Colombia),science_agency,4725627850.0,unit,COP,section_total,INSTITUTO NACIONAL DE SALUD (INS),pdf_06b0f6e19814__2017_Decreto_2170.txt,-1,
-Colombia,2018,Instituto Nacional de Salud (Colombia),science_agency,33804038000.0,unit,COP,section_total,SECCION: 1903 INSTITUTO NACIONAL DE SALUD (INS) A. PRESUPUESTO DE FUNCIONAMIENTO,pdf_13b9ce28bd17__2018_Ley_1873_de_2017.txt,0,
-Colombia,2019,Instituto Nacional de Salud (Colombia),science_agency,63433976618.0,unit,COP,section_total,INSTITUTO NACIONAL DE SALUD (INS),pdf_35ed8a7d97b1__2019_Decreto_2467_Anexo.txt,-1,
-Colombia,2020,Instituto Nacional de Salud (Colombia),science_agency,63162530669.0,unit,COP,section_total,INSTITUTO NACIONAL DE SALUD (INS),pdf_d0ec99f3fab8__2020_Decreto_2411_Anexo.txt,-1,
-Colombia,2021,Instituto Nacional de Salud (Colombia),science_agency,40626242000.0,unit,COP,section_total,INSTITUTO NACIONAL DE SALUD (INS),pdf_a8096ec407ac__2021_Decreto_1805.txt,-1,
+Colombia,2014,Instituto Nacional de Salud (Colombia),science_agency,3990724000.0,unit,COP,section_total,INSTITUTO NACIONAL DE SALUD (INS),pdf_67c36bc2d740__2014_Ley_1687_de_2013.txt,-1.0,
+Colombia,2016,Instituto Nacional de Salud (Colombia),science_agency,4290271000.0,unit,COP,section_total,INSTITUTO NACIONAL DE SALUD (INS),pdf_bedb3db21394__2016_Decreto_2550.txt,-1.0,
+Colombia,2017,Instituto Nacional de Salud (Colombia),science_agency,4725627850.0,unit,COP,section_total,INSTITUTO NACIONAL DE SALUD (INS),pdf_06b0f6e19814__2017_Decreto_2170.txt,-1.0,
+Colombia,2018,Instituto Nacional de Salud (Colombia),science_agency,33804038000.0,unit,COP,section_total,SECCION: 1903 INSTITUTO NACIONAL DE SALUD (INS) A. PRESUPUESTO DE FUNCIONAMIENTO,pdf_13b9ce28bd17__2018_Ley_1873_de_2017.txt,0.0,
+Colombia,2019,Instituto Nacional de Salud (Colombia),science_agency,63433976618.0,unit,COP,section_total,INSTITUTO NACIONAL DE SALUD (INS),pdf_35ed8a7d97b1__2019_Decreto_2467_Anexo.txt,-1.0,
+Colombia,2020,Instituto Nacional de Salud (Colombia),science_agency,63162530669.0,unit,COP,section_total,INSTITUTO NACIONAL DE SALUD (INS),pdf_d0ec99f3fab8__2020_Decreto_2411_Anexo.txt,-1.0,
+Colombia,2021,Instituto Nacional de Salud (Colombia),science_agency,40626242000.0,unit,COP,section_total,INSTITUTO NACIONAL DE SALUD (INS),pdf_a8096ec407ac__2021_Decreto_1805.txt,-1.0,
 Colombia,2022,Instituto Nacional de Salud (Colombia),science_agency,,,,,,,,gap: no matching rows in this year
-Colombia,2023,Instituto Nacional de Salud (Colombia),science_agency,108135365626.0,unit,COP,section_total,INSTITUTO NACIONAL DE SALUD (INS),pdf_762d2b56700a__2023_Decreto_2590.txt,-1,
-Colombia,2024,Instituto Nacional de Salud (Colombia),science_agency,119702741897.0,unit,COP,section_total,INSTITUTO NACIONAL DE SALUD (INS),pdf_2f2a18b50fc2__2024_Decreto_2295.txt,-1,
+Colombia,2023,Instituto Nacional de Salud (Colombia),science_agency,108135365626.0,unit,COP,section_total,INSTITUTO NACIONAL DE SALUD (INS),pdf_762d2b56700a__2023_Decreto_2590.txt,-1.0,
+Colombia,2024,Instituto Nacional de Salud (Colombia),science_agency,119702741897.0,unit,COP,section_total,INSTITUTO NACIONAL DE SALUD (INS),pdf_2f2a18b50fc2__2024_Decreto_2295.txt,-1.0,
 Colombia,2025,Instituto Nacional de Salud (Colombia),science_agency,,,,,,,,gap: no matching rows in this year
-Colombia,2019,"MinCiencias (Ministerio de Ciencia, Tecnología e Innovación)",science_agency,356680983876.0,unit,COP,section_total,"MINISTERIO DE CIENCIA, TECNOLOGIA E INNOVACION",pdf_35ed8a7d97b1__2019_Decreto_2467_Anexo.txt,-1,Replaced COLCIENCIAS from 2019. Created by Ley 1951 de 2019.
-Colombia,2020,"MinCiencias (Ministerio de Ciencia, Tecnología e Innovación)",science_agency,392362614395.0,unit,COP,section_total,"MINISTERIO DE CIENCIA, TECNOLOGIA E INNOVACION",pdf_d0ec99f3fab8__2020_Decreto_2411_Anexo.txt,-1,Replaced COLCIENCIAS from 2019. Created by Ley 1951 de 2019.
-Colombia,2021,"MinCiencias (Ministerio de Ciencia, Tecnología e Innovación)",science_agency,410851071887.0,unit,COP,section_total,"MINISTERIO DE CIENCIA, TECNOLOGIA E INNOVACION",pdf_a8096ec407ac__2021_Decreto_1805.txt,-1,Replaced COLCIENCIAS from 2019. Created by Ley 1951 de 2019.
-Colombia,2022,"MinCiencias (Ministerio de Ciencia, Tecnología e Innovación)",science_agency,330519243272.0,unit,COP,section_total,"MINISTERIO DE CIENCIA, TECNOLOGIA E INNOVACION",pdf_7bed68a91292__2022_Decreto_1793.txt,-1,Replaced COLCIENCIAS from 2019. Created by Ley 1951 de 2019.
-Colombia,2023,"MinCiencias (Ministerio de Ciencia, Tecnología e Innovación)",science_agency,399960584962.0,unit,COP,section_total,"MINISTERIO DE CIENCIA, TECNOLOGIA E INNOVACION",pdf_762d2b56700a__2023_Decreto_2590.txt,-1,Replaced COLCIENCIAS from 2019. Created by Ley 1951 de 2019.
-Colombia,2024,"MinCiencias (Ministerio de Ciencia, Tecnología e Innovación)",science_agency,397675451073.0,unit,COP,section_total,"MINISTERIO DE CIENCIA, TECNOLOGIA E INNOVACION",pdf_2f2a18b50fc2__2024_Decreto_2295.txt,-1,Replaced COLCIENCIAS from 2019. Created by Ley 1951 de 2019.
-Colombia,2025,"MinCiencias (Ministerio de Ciencia, Tecnología e Innovación)",science_agency,266987639124.0,unit,COP,section_total,"MINISTERIO DE CIENCIA, TECNOLOGIA E INNOVACION",pdf_722896feb631__2025_Decreto_1523.txt,-1,Replaced COLCIENCIAS from 2019. Created by Ley 1951 de 2019.
+Colombia,2019,"MinCiencias (Ministerio de Ciencia, Tecnología e Innovación)",science_agency,356680983876.0,unit,COP,section_total,"MINISTERIO DE CIENCIA, TECNOLOGIA E INNOVACION",pdf_35ed8a7d97b1__2019_Decreto_2467_Anexo.txt,-1.0,Replaced COLCIENCIAS from 2019. Created by Ley 1951 de 2019.
+Colombia,2020,"MinCiencias (Ministerio de Ciencia, Tecnología e Innovación)",science_agency,392362614395.0,unit,COP,section_total,"MINISTERIO DE CIENCIA, TECNOLOGIA E INNOVACION",pdf_d0ec99f3fab8__2020_Decreto_2411_Anexo.txt,-1.0,Replaced COLCIENCIAS from 2019. Created by Ley 1951 de 2019.
+Colombia,2021,"MinCiencias (Ministerio de Ciencia, Tecnología e Innovación)",science_agency,410851071887.0,unit,COP,section_total,"MINISTERIO DE CIENCIA, TECNOLOGIA E INNOVACION",pdf_a8096ec407ac__2021_Decreto_1805.txt,-1.0,Replaced COLCIENCIAS from 2019. Created by Ley 1951 de 2019.
+Colombia,2022,"MinCiencias (Ministerio de Ciencia, Tecnología e Innovación)",science_agency,330519243272.0,unit,COP,section_total,"MINISTERIO DE CIENCIA, TECNOLOGIA E INNOVACION",pdf_7bed68a91292__2022_Decreto_1793.txt,-1.0,Replaced COLCIENCIAS from 2019. Created by Ley 1951 de 2019.
+Colombia,2023,"MinCiencias (Ministerio de Ciencia, Tecnología e Innovación)",science_agency,399960584962.0,unit,COP,section_total,"MINISTERIO DE CIENCIA, TECNOLOGIA E INNOVACION",pdf_762d2b56700a__2023_Decreto_2590.txt,-1.0,Replaced COLCIENCIAS from 2019. Created by Ley 1951 de 2019.
+Colombia,2024,"MinCiencias (Ministerio de Ciencia, Tecnología e Innovación)",science_agency,397675451073.0,unit,COP,section_total,"MINISTERIO DE CIENCIA, TECNOLOGIA E INNOVACION",pdf_2f2a18b50fc2__2024_Decreto_2295.txt,-1.0,Replaced COLCIENCIAS from 2019. Created by Ley 1951 de 2019.
+Colombia,2025,"MinCiencias (Ministerio de Ciencia, Tecnología e Innovación)",science_agency,266987639124.0,unit,COP,section_total,"MINISTERIO DE CIENCIA, TECNOLOGIA E INNOVACION",pdf_722896feb631__2025_Decreto_1523.txt,-1.0,Replaced COLCIENCIAS from 2019. Created by Ley 1951 de 2019.
 Colombia,2005,National Environmental Fund,innovation_instruments,,,,,,,,This fund is likely to support environmental research and development initiatives.; dropped after source audit: traceable but not a defensible final R&D appropriation
 Colombia,1996,SENA — R&D and Innovation (Servicio Nacional de Aprendizaje),innovation_instruments,,,,,,,,gap: no matching rows in this year; dropped after source audit: traceable but not a defensible final R&D appropriation
 Colombia,1997,SENA — R&D and Innovation (Servicio Nacional de Aprendizaje),innovation_instruments,,,,,,,,gap: no matching rows in this year; dropped after source audit: traceable but not a defensible final R&D appropriation
 Colombia,1998,SENA — R&D and Innovation (Servicio Nacional de Aprendizaje),innovation_instruments,,,,,,,,gap: no matching rows in this year; dropped after source audit: traceable but not a defensible final R&D appropriation
+Colombia,1999,SENA — R&D and Innovation (Servicio Nacional de Aprendizaje),innovation_instruments,,,,,,,,gap: no matching rows in this year; dropped after source audit: traceable but not a defensible final R&D appropriation
+Colombia,2000,SENA — R&D and Innovation (Servicio Nacional de Aprendizaje),innovation_instruments,,,,,,,,gap: no matching rows in this year; dropped after source audit: traceable but not a defensible final R&D appropriation
 Colombia,2002,SENA — R&D and Innovation (Servicio Nacional de Aprendizaje),innovation_instruments,,,,,,,,gap: no matching rows in this year; dropped after source audit: traceable but not a defensible final R&D appropriation
 Colombia,2003,SENA — R&D and Innovation (Servicio Nacional de Aprendizaje),innovation_instruments,,,,,,,,gap: no matching rows in this year; dropped after source audit: traceable but not a defensible final R&D appropriation
 Colombia,2004,SENA — R&D and Innovation (Servicio Nacional de Aprendizaje),innovation_instruments,,,,,,,,"SECCIÓN 3602. Include only R&D/innovation investment sub-programmes, not pure vocational training.; dropped after source audit: traceable but not a defensible final R&D appropriation"
@@ -153,7 +167,7 @@ Colombia,2013,SENA — R&D and Innovation (Servicio Nacional de Aprendizaje),inn
 Colombia,2014,SENA — R&D and Innovation (Servicio Nacional de Aprendizaje),innovation_instruments,,,,,,,,"SECCIÓN 3602. Include only R&D/innovation investment sub-programmes, not pure vocational training.; dropped after source audit: traceable but not a defensible final R&D appropriation"
 Colombia,2016,SENA — R&D and Innovation (Servicio Nacional de Aprendizaje),innovation_instruments,,,,,,,,"SECCIÓN 3602. Include only R&D/innovation investment sub-programmes, not pure vocational training.; dropped after source audit: traceable but not a defensible final R&D appropriation"
 Colombia,2017,SENA — R&D and Innovation (Servicio Nacional de Aprendizaje),innovation_instruments,,,,,,,,"SECCIÓN 3602. Include only R&D/innovation investment sub-programmes, not pure vocational training.; dropped after source audit: traceable but not a defensible final R&D appropriation"
-Colombia,2018,SENA — R&D and Innovation (Servicio Nacional de Aprendizaje),innovation_instruments,203000000000.0,unit,COP,section_total,"FOMENTO DE LA INVESTIGACIÓN, DESARROLLO TECNOLÓGICO E INNOVACIÓN DEL SECTOR TRABAJO",pdf_13b9ce28bd17__2018_Ley_1873_de_2017.txt,0,"SECCIÓN 3602. Include only R&D/innovation investment sub-programmes, not pure vocational training."
+Colombia,2018,SENA — R&D and Innovation (Servicio Nacional de Aprendizaje),innovation_instruments,203000000000.0,unit,COP,section_total,"FOMENTO DE LA INVESTIGACIÓN, DESARROLLO TECNOLÓGICO E INNOVACIÓN DEL SECTOR TRABAJO",pdf_13b9ce28bd17__2018_Ley_1873_de_2017.txt,0.0,"SECCIÓN 3602. Include only R&D/innovation investment sub-programmes, not pure vocational training."
 Colombia,2019,SENA — R&D and Innovation (Servicio Nacional de Aprendizaje),innovation_instruments,,,,,,,,gap: no matching rows in this year; dropped after source audit: traceable but not a defensible final R&D appropriation
 Colombia,2020,SENA — R&D and Innovation (Servicio Nacional de Aprendizaje),innovation_instruments,,,,,,,,gap: no matching rows in this year; dropped after source audit: traceable but not a defensible final R&D appropriation
 Colombia,2021,SENA — R&D and Innovation (Servicio Nacional de Aprendizaje),innovation_instruments,,,,,,,,gap: no matching rows in this year; dropped after source audit: traceable but not a defensible final R&D appropriation

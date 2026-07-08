@@ -1,274 +1,306 @@
 canonical_name,category,year,source_file,entity_raw,amount_current,section_name,table_index,row_index,in_series
-Centre for Physical Sciences and Technology (Lithuania),science_agency,2011,2011 TAR.FE51590E2B56.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,3375.0,iš jų:,2,107,True
-Centre for Physical Sciences and Technology (Lithuania),science_agency,2017,2017 XIII-177.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,5080.0,iš jų:,2,102,True
-Centre for Physical Sciences and Technology (Lithuania),science_agency,2018,2018 XIII-868.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,4000.0,iš jų:,2,81,True
+Centre for Physical Sciences and Technology (Lithuania),science_agency,2011,2011 TAR.FE51590E2B56.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,3375.0,iš jų:,2.0,107.0,True
+Centre for Physical Sciences and Technology (Lithuania),science_agency,2012,2012 TAR.B75745DE003E.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,18577.0,"Švietimo, mokslo ir sporto ministerija",0.0,0.0,True
+Centre for Physical Sciences and Technology (Lithuania),science_agency,2013,2013 TAR.CABB5B7DAFB1.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,20344.0,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,0.0,0.0,True
+Centre for Physical Sciences and Technology (Lithuania),science_agency,2015,2015 12-1408.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,7145012.0,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,0.0,0.0,True
+Centre for Physical Sciences and Technology (Lithuania),science_agency,2017,2017 XIII-177.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,5080.0,iš jų:,2.0,102.0,True
+Centre for Physical Sciences and Technology (Lithuania),science_agency,2018,2018 XIII-868.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,4000.0,iš jų:,2.0,81.0,True
 Centre for Physical Sciences and Technology (Lithuania),science_agency,2019,2019 XIII-1710.docx,"Valstybinis mokslinių tyrimų institutas
-Fizinių ir technologijos mokslų centras",1800.0,iš jų:,2,79,True
-Centre for Physical Sciences and Technology (Lithuania),science_agency,2019,2019 XIII-1710.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,100.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,112,True
-Centre for Physical Sciences and Technology (Lithuania),science_agency,2020,2020 XIII-2695.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,2000.0,iš jų:,2,75,True
-Centre for Physical Sciences and Technology (Lithuania),science_agency,2022,2022 XIV-745.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,9899.0,iš jų:,1,98,True
-Centre for Physical Sciences and Technology (Lithuania),science_agency,2023,2023 XIV-1556.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,11626.0,iš jų:,1,97,True
-Centre for Physical Sciences and Technology (Lithuania),science_agency,2024,2024 XIV-2297.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,18909.0,iš jų:,1,99,True
-Centre for Physical Sciences and Technology (Lithuania),science_agency,2025,2025 XV-89.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,23081.0,iš jų:,2,99,True
-Chemistry Institute,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Chemijos institutas,1630.0,iš jų:,2,115,True
-Chemistry Institute,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Biochemijos institutas,1350.0,iš jų:,2,116,True
-Chemistry Institute,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Chemijos institutas,1610.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2,107,True
-Chemistry Institute,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Biochemijos institutas,820.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2,108,True
-Fundamental Scientific Research,science_agency,1999,1999 TAIS_102336.docx,Fundamentalūs moksliniai tyrimai,3390.0,iš jų:,5,7,True
-Fundamental Scientific Research,science_agency,2001,2001 TAIS_156412.docx,fundamentalūs moksliniai tyrimai,8500.0,iš jų:,2,7,False
-Institute of Geology and Geography,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Geologijos ir geografijos institutas,1200.0,iš jų:,2,122,True
-Institute of Geology and Geography,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Geologijos ir geografijos institutas,1207.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2,114,True
-Institute of Lithuanian Literature and Folklore,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvių literatūros ir tautosakos institutas,50.0,iš jų:,2,125,True
-Institute of Lithuanian Literature and Folklore,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvių literatūros ir tautosakos institutas,50.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2,117,True
-Institute of Lithuanian Literature and Folklore,science_agency,2011,2011 TAR.FE51590E2B56.docx,Lietuvių literatūros ir tautosakos institutas,90.0,iš jų:,2,100,True
-Institute of Lithuanian Literature and Folklore,science_agency,2017,2017 XIII-177.docx,Lietuvių literatūros ir tautosakos institutas,30.0,iš jų:,2,94,True
-Institute of Lithuanian Literature and Folklore,science_agency,2018,2018 XIII-868.docx,Lietuvių literatūros ir tautosakos institutas,30.0,iš jų:,2,73,True
-Institute of Lithuanian Literature and Folklore,science_agency,2019,2019 XIII-1710.docx,Lietuvių literatūros ir tautosakos institutas,30.0,iš jų:,2,71,True
-Institute of Lithuanian Literature and Folklore,science_agency,2020,2020 XIII-2695.docx,Lietuvių literatūros ir tautosakos institutas,30.0,iš jų:,2,67,True
-Institute of Lithuanian Literature and Folklore,science_agency,2022,2022 XIV-745.docx,Lietuvių literatūros ir tautosakos institutas,2184.0,iš jų:,1,92,True
-Institute of Lithuanian Literature and Folklore,science_agency,2023,2023 XIV-1556.docx,Lietuvių literatūros ir tautosakos institutas,2634.0,iš jų:,1,91,True
-Institute of Lithuanian Literature and Folklore,science_agency,2024,2024 XIV-2297.docx,Lietuvių literatūros ir tautosakos institutas,3765.0,iš jų:,1,93,True
-Institute of Lithuanian Literature and Folklore,science_agency,2025,2025 XV-89.docx,Lietuvių literatūros ir tautosakos institutas,4787.0,iš jų:,2,93,True
-Institute of Semiconductor Physics,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Puslaidininkių fizikos institutas,1300.0,iš jų:,2,113,True
-Institute of Semiconductor Physics,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Puslaidininkių fizikos institutas,1000.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2,105,True
-Institute of the Lithuanian Language,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvių kalbos institutas,250.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,193,True
-Institute of the Lithuanian Language,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvių kalbos institutas,125.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,163,True
-Institute of the Lithuanian Language,science_agency,2011,2011 TAR.FE51590E2B56.docx,Lietuvių kalbos institutas,130.0,iš jų:,2,101,True
-Institute of the Lithuanian Language,science_agency,2017,2017 XIII-177.docx,Lietuvių kalbos institutas,29.0,iš jų:,2,95,True
-Institute of the Lithuanian Language,science_agency,2018,2018 XIII-868.docx,Lietuvių kalbos institutas,29.0,iš jų:,2,74,True
-Institute of the Lithuanian Language,science_agency,2019,2019 XIII-1710.docx,Lietuvių kalbos institutas,29.0,iš jų:,2,72,True
-Institute of the Lithuanian Language,science_agency,2020,2020 XIII-2695.docx,Lietuvių kalbos institutas,29.0,iš jų:,2,68,True
-Institute of the Lithuanian Language,science_agency,2022,2022 XIV-745.docx,Lietuvių kalbos institutas,1732.0,iš jų:,1,93,True
-Institute of the Lithuanian Language,science_agency,2023,2023 XIV-1556.docx,Lietuvių kalbos institutas,2108.0,iš jų:,1,92,True
-Institute of the Lithuanian Language,science_agency,2024,2024 XIV-2297.docx,Lietuvių kalbos institutas,2960.0,iš jų:,1,94,True
-Institute of the Lithuanian Language,science_agency,2025,2025 XV-89.docx,Lietuvių kalbos institutas,3805.0,iš jų:,2,94,True
-Kaunas University of Medicine,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Kauno medicinos universitetas,30000.0,iš jų:,2,92,False
-Kaunas University of Medicine,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Kauno medicinos universitetas,32630.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2,92,False
-Kaunas University of Technology,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Kauno technologijos universitetas,35000.0,iš jų:,2,86,False
-Kaunas University of Technology,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Kauno technologijos universitetas,37730.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2,86,False
-Kaunas University of Technology,higher_education,2011,2011 TAR.FE51590E2B56.docx,Kauno technologijos universitetas,42000.0,iš jų:,2,87,False
-Kaunas University of Technology,higher_education,2017,2017 XIII-177.docx,Kauno technologijos universitetas,300.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,97,False
+Fizinių ir technologijos mokslų centras",1800.0,iš jų:,2.0,79.0,True
+Centre for Physical Sciences and Technology (Lithuania),science_agency,2019,2019 XIII-1710.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,100.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,112.0,True
+Centre for Physical Sciences and Technology (Lithuania),science_agency,2020,2020 XIII-2695.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,2000.0,iš jų:,2.0,75.0,True
+Centre for Physical Sciences and Technology (Lithuania),science_agency,2022,2022 XIV-745.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,9899.0,iš jų:,1.0,98.0,True
+Centre for Physical Sciences and Technology (Lithuania),science_agency,2023,2023 XIV-1556.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,11626.0,iš jų:,1.0,97.0,True
+Centre for Physical Sciences and Technology (Lithuania),science_agency,2024,2024 XIV-2297.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,18909.0,iš jų:,1.0,99.0,True
+Centre for Physical Sciences and Technology (Lithuania),science_agency,2025,2025 XV-89.docx,Valstybinis mokslinių tyrimų institutas Fizinių ir technologijos mokslų centras,23081.0,iš jų:,2.0,99.0,True
+Chemistry Institute,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Chemijos institutas,1630.0,iš jų:,2.0,115.0,True
+Chemistry Institute,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Biochemijos institutas,1350.0,iš jų:,2.0,116.0,True
+Chemistry Institute,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Chemijos institutas,1610.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2.0,107.0,True
+Chemistry Institute,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Biochemijos institutas,820.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2.0,108.0,True
+Fundamental Scientific Research,science_agency,1999,1999 TAIS_102336.docx,Fundamentalūs moksliniai tyrimai,3390.0,iš jų:,5.0,7.0,True
+Fundamental Scientific Research,science_agency,2001,2001 TAIS_156412.docx,fundamentalūs moksliniai tyrimai,8500.0,iš jų:,2.0,7.0,False
+Fundamental Scientific Research,science_agency,2002,2002 TAR.E8D4F01C9643.docx,fundamentalūs moksliniai tyrimai,173031.0,fundamentalūs moksliniai tyrimai,0.0,0.0,False
+Institute of Geology and Geography,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Geologijos ir geografijos institutas,1200.0,iš jų:,2.0,122.0,True
+Institute of Geology and Geography,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Geologijos ir geografijos institutas,1207.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2.0,114.0,True
+Institute of Lithuanian Literature and Folklore,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvių literatūros ir tautosakos institutas,50.0,iš jų:,2.0,125.0,True
+Institute of Lithuanian Literature and Folklore,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvių literatūros ir tautosakos institutas,50.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2.0,117.0,True
+Institute of Lithuanian Literature and Folklore,science_agency,2011,2011 TAR.FE51590E2B56.docx,Lietuvių literatūros ir tautosakos institutas,90.0,iš jų:,2.0,100.0,True
+Institute of Lithuanian Literature and Folklore,science_agency,2017,2017 XIII-177.docx,Lietuvių literatūros ir tautosakos institutas,30.0,iš jų:,2.0,94.0,True
+Institute of Lithuanian Literature and Folklore,science_agency,2018,2018 XIII-868.docx,Lietuvių literatūros ir tautosakos institutas,30.0,iš jų:,2.0,73.0,True
+Institute of Lithuanian Literature and Folklore,science_agency,2019,2019 XIII-1710.docx,Lietuvių literatūros ir tautosakos institutas,30.0,iš jų:,2.0,71.0,True
+Institute of Lithuanian Literature and Folklore,science_agency,2020,2020 XIII-2695.docx,Lietuvių literatūros ir tautosakos institutas,30.0,iš jų:,2.0,67.0,True
+Institute of Lithuanian Literature and Folklore,science_agency,2022,2022 XIV-745.docx,Lietuvių literatūros ir tautosakos institutas,2184.0,iš jų:,1.0,92.0,True
+Institute of Lithuanian Literature and Folklore,science_agency,2023,2023 XIV-1556.docx,Lietuvių literatūros ir tautosakos institutas,2634.0,iš jų:,1.0,91.0,True
+Institute of Lithuanian Literature and Folklore,science_agency,2024,2024 XIV-2297.docx,Lietuvių literatūros ir tautosakos institutas,3765.0,iš jų:,1.0,93.0,True
+Institute of Lithuanian Literature and Folklore,science_agency,2025,2025 XV-89.docx,Lietuvių literatūros ir tautosakos institutas,4787.0,iš jų:,2.0,93.0,True
+Institute of Semiconductor Physics,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Puslaidininkių fizikos institutas,1300.0,iš jų:,2.0,113.0,True
+Institute of Semiconductor Physics,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Puslaidininkių fizikos institutas,1000.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2.0,105.0,True
+Institute of the Lithuanian Language,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvių kalbos institutas,250.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,193.0,True
+Institute of the Lithuanian Language,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvių kalbos institutas,125.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,163.0,True
+Institute of the Lithuanian Language,science_agency,2011,2011 TAR.FE51590E2B56.docx,Lietuvių kalbos institutas,130.0,iš jų:,2.0,101.0,True
+Institute of the Lithuanian Language,science_agency,2017,2017 XIII-177.docx,Lietuvių kalbos institutas,29.0,iš jų:,2.0,95.0,True
+Institute of the Lithuanian Language,science_agency,2018,2018 XIII-868.docx,Lietuvių kalbos institutas,29.0,iš jų:,2.0,74.0,True
+Institute of the Lithuanian Language,science_agency,2019,2019 XIII-1710.docx,Lietuvių kalbos institutas,29.0,iš jų:,2.0,72.0,True
+Institute of the Lithuanian Language,science_agency,2020,2020 XIII-2695.docx,Lietuvių kalbos institutas,29.0,iš jų:,2.0,68.0,True
+Institute of the Lithuanian Language,science_agency,2022,2022 XIV-745.docx,Lietuvių kalbos institutas,1732.0,iš jų:,1.0,93.0,True
+Institute of the Lithuanian Language,science_agency,2023,2023 XIV-1556.docx,Lietuvių kalbos institutas,2108.0,iš jų:,1.0,92.0,True
+Institute of the Lithuanian Language,science_agency,2024,2024 XIV-2297.docx,Lietuvių kalbos institutas,2960.0,iš jų:,1.0,94.0,True
+Institute of the Lithuanian Language,science_agency,2025,2025 XV-89.docx,Lietuvių kalbos institutas,3805.0,iš jų:,2.0,94.0,True
+Kaunas University of Medicine,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Kauno medicinos universitetas,30000.0,iš jų:,2.0,92.0,False
+Kaunas University of Medicine,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Kauno medicinos universitetas,32630.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2.0,92.0,False
+Kaunas University of Technology,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Kauno technologijos universitetas,35000.0,iš jų:,2.0,86.0,False
+Kaunas University of Technology,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Kauno technologijos universitetas,37730.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2.0,86.0,False
+Kaunas University of Technology,higher_education,2011,2011 TAR.FE51590E2B56.docx,Kauno technologijos universitetas,42000.0,iš jų:,2.0,87.0,False
+Kaunas University of Technology,higher_education,2017,2017 XIII-177.docx,Kauno technologijos universitetas,300.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,97.0,False
 Kaunas University of Technology,higher_education,2018,2018 XIII-868.docx,Kauno technologijos universitetas,341.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
-ORGANIZACIJOS (INSTITUTAI)",1,90,False
-Kaunas University of Technology,higher_education,2019,2019 XIII-1710.docx,Kauno technologijos universitetas,179.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,91,False
-Kaunas University of Technology,higher_education,2020,2020 XIII-2695.docx,Kauno technologijos universitetas,31.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,87,False
-Kaunas University of Technology,higher_education,2022,2022 XIV-745.docx,Kauno technologijos universitetas,42636.0,iš jų:,1,80,False
-Kaunas University of Technology,higher_education,2023,2023 XIV-1556.docx,Kauno technologijos universitetas,51594.0,iš jų:,1,79,False
-Kaunas University of Technology,higher_education,2024,2024 XIV-2297.docx,Kauno technologijos universitetas,62901.0,iš jų:,1,81,False
-Kaunas University of Technology,higher_education,2025,2025 XV-89.docx,Kauno technologijos universitetas,79584.0,iš jų:,2,81,False
-Klaipeda University,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Klaipėdos universitetas,15000.0,iš jų:,2,88,False
-Klaipeda University,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Klaipėdos universitetas,15150.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2,88,False
-Klaipeda University,higher_education,2011,2011 TAR.FE51590E2B56.docx,Klaipėdos universitetas,18000.0,iš jų:,2,89,False
-Klaipeda University,higher_education,2017,2017 XIII-177.docx,Klaipėdos universitetas,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,99,False
+ORGANIZACIJOS (INSTITUTAI)",1.0,90.0,False
+Kaunas University of Technology,higher_education,2019,2019 XIII-1710.docx,Kauno technologijos universitetas,179.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,91.0,False
+Kaunas University of Technology,higher_education,2020,2020 XIII-2695.docx,Kauno technologijos universitetas,31.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,87.0,False
+Kaunas University of Technology,higher_education,2022,2022 XIV-745.docx,Kauno technologijos universitetas,42636.0,iš jų:,1.0,80.0,False
+Kaunas University of Technology,higher_education,2023,2023 XIV-1556.docx,Kauno technologijos universitetas,51594.0,iš jų:,1.0,79.0,False
+Kaunas University of Technology,higher_education,2024,2024 XIV-2297.docx,Kauno technologijos universitetas,62901.0,iš jų:,1.0,81.0,False
+Kaunas University of Technology,higher_education,2025,2025 XV-89.docx,Kauno technologijos universitetas,79584.0,iš jų:,2.0,81.0,False
+Klaipeda University,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Klaipėdos universitetas,15000.0,iš jų:,2.0,88.0,False
+Klaipeda University,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Klaipėdos universitetas,15150.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2.0,88.0,False
+Klaipeda University,higher_education,2011,2011 TAR.FE51590E2B56.docx,Klaipėdos universitetas,18000.0,iš jų:,2.0,89.0,False
+Klaipeda University,higher_education,2017,2017 XIII-177.docx,Klaipėdos universitetas,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,99.0,False
 Klaipeda University,higher_education,2018,2018 XIII-868.docx,Klaipėdos universitetas,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
-ORGANIZACIJOS (INSTITUTAI)",1,92,False
-Klaipeda University,higher_education,2019,2019 XIII-1710.docx,Klaipėdos universitetas,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,93,False
-Klaipeda University,higher_education,2020,2020 XIII-2695.docx,Klaipėdos universitetas,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,89,False
-Klaipeda University,higher_education,2022,2022 XIV-745.docx,Klaipėdos universitetas,9368.0,iš jų:,1,82,False
-Klaipeda University,higher_education,2023,2023 XIV-1556.docx,Klaipėdos universitetas,12180.0,iš jų:,1,81,False
-Klaipeda University,higher_education,2024,2024 XIV-2297.docx,Klaipėdos universitetas,15469.0,iš jų:,1,83,False
-Klaipeda University,higher_education,2025,2025 XV-89.docx,Klaipėdos universitetas,20266.0,iš jų:,2,83,False
-Lithuanian Academy of Music and Theatre,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvos muzikos ir teatro akademija,2100.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,163,False
-Lithuanian Academy of Music and Theatre,higher_education,2011,2011 TAR.FE51590E2B56.docx,Lietuvos muzikos ir teatro akademija,1400.0,iš jų:,2,95,False
-Lithuanian Academy of Music and Theatre,higher_education,2019,2019 XIII-1710.docx,Lietuvos muzikos ir teatro akademija,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,99,False
-Lithuanian Academy of Music and Theatre,higher_education,2020,2020 XIII-2695.docx,Lietuvos muzikos ir teatro akademija,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,95,False
-Lithuanian Academy of Music and Theatre,higher_education,2022,2022 XIV-745.docx,Lietuvos muzikos ir teatro akademija,10827.0,iš jų:,1,87,False
-Lithuanian Academy of Music and Theatre,higher_education,2023,2023 XIV-1556.docx,Lietuvos muzikos ir teatro akademija,13193.0,iš jų:,1,86,False
-Lithuanian Academy of Music and Theatre,higher_education,2024,2024 XIV-2297.docx,Lietuvos muzikos ir teatro akademija,15371.0,iš jų:,1,88,False
-Lithuanian Academy of Music and Theatre,higher_education,2025,2025 XV-89.docx,Lietuvos muzikos ir teatro akademija,19461.0,iš jų:,2,88,False
-Lithuanian Academy of Sciences,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvos mokslų akademija,1610.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,164,True
-Lithuanian Academy of Sciences,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvos mokslų akademija,230.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,142,True
-Lithuanian Academy of Sciences,science_agency,2011,2011 TAR.FE51590E2B56.docx,Lietuvos mokslų akademija,215.0,iš jų:,2,108,True
-Lithuanian Academy of Sciences,science_agency,2017,2017 XIII-177.docx,Lietuvos mokslų akademija,1500.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,121,True
+ORGANIZACIJOS (INSTITUTAI)",1.0,92.0,False
+Klaipeda University,higher_education,2019,2019 XIII-1710.docx,Klaipėdos universitetas,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,93.0,False
+Klaipeda University,higher_education,2020,2020 XIII-2695.docx,Klaipėdos universitetas,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,89.0,False
+Klaipeda University,higher_education,2022,2022 XIV-745.docx,Klaipėdos universitetas,9368.0,iš jų:,1.0,82.0,False
+Klaipeda University,higher_education,2023,2023 XIV-1556.docx,Klaipėdos universitetas,12180.0,iš jų:,1.0,81.0,False
+Klaipeda University,higher_education,2024,2024 XIV-2297.docx,Klaipėdos universitetas,15469.0,iš jų:,1.0,83.0,False
+Klaipeda University,higher_education,2025,2025 XV-89.docx,Klaipėdos universitetas,20266.0,iš jų:,2.0,83.0,False
+Lithuanian Academy of Music and Theatre,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvos muzikos ir teatro akademija,2100.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,163.0,False
+Lithuanian Academy of Music and Theatre,higher_education,2011,2011 TAR.FE51590E2B56.docx,Lietuvos muzikos ir teatro akademija,1400.0,iš jų:,2.0,95.0,False
+Lithuanian Academy of Music and Theatre,higher_education,2019,2019 XIII-1710.docx,Lietuvos muzikos ir teatro akademija,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,99.0,False
+Lithuanian Academy of Music and Theatre,higher_education,2020,2020 XIII-2695.docx,Lietuvos muzikos ir teatro akademija,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,95.0,False
+Lithuanian Academy of Music and Theatre,higher_education,2022,2022 XIV-745.docx,Lietuvos muzikos ir teatro akademija,10827.0,iš jų:,1.0,87.0,False
+Lithuanian Academy of Music and Theatre,higher_education,2023,2023 XIV-1556.docx,Lietuvos muzikos ir teatro akademija,13193.0,iš jų:,1.0,86.0,False
+Lithuanian Academy of Music and Theatre,higher_education,2024,2024 XIV-2297.docx,Lietuvos muzikos ir teatro akademija,15371.0,iš jų:,1.0,88.0,False
+Lithuanian Academy of Music and Theatre,higher_education,2025,2025 XV-89.docx,Lietuvos muzikos ir teatro akademija,19461.0,iš jų:,2.0,88.0,False
+Lithuanian Academy of Sciences,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvos mokslų akademija,1610.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,164.0,True
+Lithuanian Academy of Sciences,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvos mokslų akademija,230.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,142.0,True
+Lithuanian Academy of Sciences,science_agency,2011,2011 TAR.FE51590E2B56.docx,Lietuvos mokslų akademija,215.0,iš jų:,2.0,108.0,True
+Lithuanian Academy of Sciences,science_agency,2017,2017 XIII-177.docx,Lietuvos mokslų akademija,1500.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,121.0,True
 Lithuanian Academy of Sciences,science_agency,2018,2018 XIII-868.docx,Lietuvos mokslų akademija,1204.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
-ORGANIZACIJOS (INSTITUTAI)",1,114,True
-Lithuanian Academy of Sciences,science_agency,2019,2019 XIII-1710.docx,Lietuvos mokslų akademija,1316.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,113,True
-Lithuanian Academy of Sciences,science_agency,2020,2020 XIII-2695.docx,Lietuvos mokslų akademija,1158.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,109,True
-Lithuanian Academy of Sciences,science_agency,2022,2022 XIV-745.docx,Lietuvos mokslų akademija,3420.0,iš jų:,1,75,True
-Lithuanian Academy of Sciences,science_agency,2023,2023 XIV-1556.docx,Lietuvos mokslų akademija,4102.0,iš jų:,1,75,True
-Lithuanian Academy of Sciences,science_agency,2024,2024 XIV-2297.docx,Lietuvos mokslų akademija,10992.0,iš jų:,1,76,True
-Lithuanian Academy of Sciences,science_agency,2025,2025 XV-89.docx,Lietuvos mokslų akademija,7216.0,iš jų:,2,75,True
-Lithuanian Culture Research Institute,science_agency,2011,2011 TAR.FE51590E2B56.docx,Lietuvos kultūros tyrimų institutas,40.0,iš jų:,2,98,True
-Lithuanian Culture Research Institute,science_agency,2017,2017 XIII-177.docx,Lietuvos kultūros tyrimų institutas,15.0,iš jų:,2,92,True
-Lithuanian Culture Research Institute,science_agency,2018,2018 XIII-868.docx,Lietuvos kultūros tyrimų institutas,15.0,iš jų:,2,71,True
-Lithuanian Culture Research Institute,science_agency,2019,2019 XIII-1710.docx,Lietuvos kultūros tyrimų institutas,25.0,iš jų:,2,69,True
-Lithuanian Culture Research Institute,science_agency,2020,2020 XIII-2695.docx,Lietuvos kultūros tyrimų institutas,25.0,iš jų:,2,65,True
-Lithuanian Culture Research Institute,science_agency,2022,2022 XIV-745.docx,Lietuvos kultūros tyrimų institutas,2020.0,iš jų:,1,90,True
-Lithuanian Culture Research Institute,science_agency,2023,2023 XIV-1556.docx,Lietuvos kultūros tyrimų institutas,2286.0,iš jų:,1,89,True
-Lithuanian Culture Research Institute,science_agency,2024,2024 XIV-2297.docx,Lietuvos kultūros tyrimų institutas,3222.0,iš jų:,1,91,True
-Lithuanian Culture Research Institute,science_agency,2025,2025 XV-89.docx,Lietuvos kultūros tyrimų institutas,4114.0,iš jų:,2,91,True
-Lithuanian Energy Institute,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvos energetikos institutas,7350.0,iš jų:,2,114,True
-Lithuanian Energy Institute,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvos energetikos institutas,6097.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2,106,True
-Lithuanian Energy Institute,science_agency,2011,2011 TAR.FE51590E2B56.docx,Lietuvos energetikos institutas,6230.0,iš jų:,2,96,True
-Lithuanian Energy Institute,science_agency,2017,2017 XIII-177.docx,Lietuvos energetikos institutas,1100.0,iš jų:,2,90,True
-Lithuanian Energy Institute,science_agency,2018,2018 XIII-868.docx,Lietuvos energetikos institutas,1150.0,iš jų:,2,69,True
-Lithuanian Energy Institute,science_agency,2019,2019 XIII-1710.docx,Lietuvos energetikos institutas,1150.0,iš jų:,2,67,True
-Lithuanian Energy Institute,science_agency,2020,2020 XIII-2695.docx,Lietuvos energetikos institutas,1150.0,iš jų:,2,63,True
-Lithuanian Energy Institute,science_agency,2022,2022 XIV-745.docx,Lietuvos energetikos institutas,4696.0,iš jų:,1,88,True
-Lithuanian Energy Institute,science_agency,2023,2023 XIV-1556.docx,Lietuvos energetikos institutas,5210.0,iš jų:,1,87,True
-Lithuanian Energy Institute,science_agency,2024,2024 XIV-2297.docx,Lietuvos energetikos institutas,7821.0,iš jų:,1,89,True
-Lithuanian Energy Institute,science_agency,2025,2025 XV-89.docx,Lietuvos energetikos institutas,9315.0,iš jų:,2,89,True
-Lithuanian Genocide and Resistance Research Centre,science_agency,1997,1997 TAIS_41654.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,100.0,,13,42,True
-Lithuanian Genocide and Resistance Research Centre,science_agency,1998,1998 TAR.A94C9B003D30.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,2666.0,"VI. Švietimo, kultūros ir kitos įstaigos bei organizacijos",0,185,True
-Lithuanian Genocide and Resistance Research Centre,science_agency,2001,2001 TAIS_156412.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,2118.0,"VI. Švietimo, kultūros ir kitos įstaigos bei organizacijos",1,178,True
-Lithuanian Genocide and Resistance Research Centre,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,235.0,iš jų:,2,82,True
-Lithuanian Genocide and Resistance Research Centre,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,333.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,123,True
+ORGANIZACIJOS (INSTITUTAI)",1.0,114.0,True
+Lithuanian Academy of Sciences,science_agency,2019,2019 XIII-1710.docx,Lietuvos mokslų akademija,1316.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,113.0,True
+Lithuanian Academy of Sciences,science_agency,2020,2020 XIII-2695.docx,Lietuvos mokslų akademija,1158.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,109.0,True
+Lithuanian Academy of Sciences,science_agency,2022,2022 XIV-745.docx,Lietuvos mokslų akademija,3420.0,iš jų:,1.0,75.0,True
+Lithuanian Academy of Sciences,science_agency,2023,2023 XIV-1556.docx,Lietuvos mokslų akademija,4102.0,iš jų:,1.0,75.0,True
+Lithuanian Academy of Sciences,science_agency,2024,2024 XIV-2297.docx,Lietuvos mokslų akademija,10992.0,iš jų:,1.0,76.0,True
+Lithuanian Academy of Sciences,science_agency,2025,2025 XV-89.docx,Lietuvos mokslų akademija,7216.0,iš jų:,2.0,75.0,True
+Lithuanian Culture Research Institute,science_agency,2011,2011 TAR.FE51590E2B56.docx,Lietuvos kultūros tyrimų institutas,40.0,iš jų:,2.0,98.0,True
+Lithuanian Culture Research Institute,science_agency,2017,2017 XIII-177.docx,Lietuvos kultūros tyrimų institutas,15.0,iš jų:,2.0,92.0,True
+Lithuanian Culture Research Institute,science_agency,2018,2018 XIII-868.docx,Lietuvos kultūros tyrimų institutas,15.0,iš jų:,2.0,71.0,True
+Lithuanian Culture Research Institute,science_agency,2019,2019 XIII-1710.docx,Lietuvos kultūros tyrimų institutas,25.0,iš jų:,2.0,69.0,True
+Lithuanian Culture Research Institute,science_agency,2020,2020 XIII-2695.docx,Lietuvos kultūros tyrimų institutas,25.0,iš jų:,2.0,65.0,True
+Lithuanian Culture Research Institute,science_agency,2022,2022 XIV-745.docx,Lietuvos kultūros tyrimų institutas,2020.0,iš jų:,1.0,90.0,True
+Lithuanian Culture Research Institute,science_agency,2023,2023 XIV-1556.docx,Lietuvos kultūros tyrimų institutas,2286.0,iš jų:,1.0,89.0,True
+Lithuanian Culture Research Institute,science_agency,2024,2024 XIV-2297.docx,Lietuvos kultūros tyrimų institutas,3222.0,iš jų:,1.0,91.0,True
+Lithuanian Culture Research Institute,science_agency,2025,2025 XV-89.docx,Lietuvos kultūros tyrimų institutas,4114.0,iš jų:,2.0,91.0,True
+Lithuanian Energy Institute,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvos energetikos institutas,7350.0,iš jų:,2.0,114.0,True
+Lithuanian Energy Institute,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvos energetikos institutas,6097.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2.0,106.0,True
+Lithuanian Energy Institute,science_agency,2011,2011 TAR.FE51590E2B56.docx,Lietuvos energetikos institutas,6230.0,iš jų:,2.0,96.0,True
+Lithuanian Energy Institute,science_agency,2013,2013 TAR.CABB5B7DAFB1.docx,Lietuvos energetikos institutas,12168.0,Lietuvos energetikos institutas,0.0,0.0,True
+Lithuanian Energy Institute,science_agency,2017,2017 XIII-177.docx,Lietuvos energetikos institutas,1100.0,iš jų:,2.0,90.0,True
+Lithuanian Energy Institute,science_agency,2018,2018 XIII-868.docx,Lietuvos energetikos institutas,1150.0,iš jų:,2.0,69.0,True
+Lithuanian Energy Institute,science_agency,2019,2019 XIII-1710.docx,Lietuvos energetikos institutas,1150.0,iš jų:,2.0,67.0,True
+Lithuanian Energy Institute,science_agency,2020,2020 XIII-2695.docx,Lietuvos energetikos institutas,1150.0,iš jų:,2.0,63.0,True
+Lithuanian Energy Institute,science_agency,2022,2022 XIV-745.docx,Lietuvos energetikos institutas,4696.0,iš jų:,1.0,88.0,True
+Lithuanian Energy Institute,science_agency,2023,2023 XIV-1556.docx,Lietuvos energetikos institutas,5210.0,iš jų:,1.0,87.0,True
+Lithuanian Energy Institute,science_agency,2024,2024 XIV-2297.docx,Lietuvos energetikos institutas,7821.0,iš jų:,1.0,89.0,True
+Lithuanian Energy Institute,science_agency,2025,2025 XV-89.docx,Lietuvos energetikos institutas,9315.0,iš jų:,2.0,89.0,True
+Lithuanian Genocide and Resistance Research Centre,science_agency,1997,1997 TAIS_41654.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,100.0,,13.0,42.0,True
+Lithuanian Genocide and Resistance Research Centre,science_agency,1998,1998 TAR.A94C9B003D30.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,2666.0,"VI. Švietimo, kultūros ir kitos įstaigos bei organizacijos",0.0,185.0,True
+Lithuanian Genocide and Resistance Research Centre,science_agency,2001,2001 TAIS_156412.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,2118.0,"VI. Švietimo, kultūros ir kitos įstaigos bei organizacijos",1.0,178.0,True
+Lithuanian Genocide and Resistance Research Centre,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,235.0,iš jų:,2.0,82.0,True
+Lithuanian Genocide and Resistance Research Centre,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,333.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,123.0,True
 Lithuanian Genocide and Resistance Research Centre,science_agency,2011,2011 TAR.FE51590E2B56.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,378.0,"IV. KITOS VALSTYBĖS INSTITUCIJOS
 IR ĮSTAIGOS IV. KITOS VALSTYBĖS INSTITUCIJOS
 IR ĮSTAIGOS IV. KITOS VALSTYBĖS INSTITUCIJOS
 IR ĮSTAIGOS IV. KITOS VALSTYBĖS INSTITUCIJOS
 IR ĮSTAIGOS IV. KITOS VALSTYBĖS INSTITUCIJOS
-IR ĮSTAIGOS",1,92,True
-Lithuanian Genocide and Resistance Research Centre,science_agency,2017,2017 XIII-177.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,226.0,IV. KITOS VALSTYBĖS INSTITUCIJOS IR ĮSTAIGOS IV. KITOS VALSTYBĖS INSTITUCIJOS IR ĮSTAIGOS IV. KITOS VALSTYBĖS INSTITUCIJOS IR ĮSTAIGOS IV. KITOS VALSTYBĖS INSTITUCIJOS IR ĮSTAIGOS IV. KITOS VALSTYBĖS INSTITUCIJOS IR ĮSTAIGOS,1,88,True
+IR ĮSTAIGOS",1.0,92.0,True
+Lithuanian Genocide and Resistance Research Centre,science_agency,2017,2017 XIII-177.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,226.0,IV. KITOS VALSTYBĖS INSTITUCIJOS IR ĮSTAIGOS IV. KITOS VALSTYBĖS INSTITUCIJOS IR ĮSTAIGOS IV. KITOS VALSTYBĖS INSTITUCIJOS IR ĮSTAIGOS IV. KITOS VALSTYBĖS INSTITUCIJOS IR ĮSTAIGOS IV. KITOS VALSTYBĖS INSTITUCIJOS IR ĮSTAIGOS,1.0,88.0,True
 Lithuanian Genocide and Resistance Research Centre,science_agency,2018,2018 XIII-868.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,226.0,"IV. KITOS VALSTYBĖS INSTITUCIJOS 
 IR ĮSTAIGOS IV. KITOS VALSTYBĖS INSTITUCIJOS 
 IR ĮSTAIGOS IV. KITOS VALSTYBĖS INSTITUCIJOS 
 IR ĮSTAIGOS IV. KITOS VALSTYBĖS INSTITUCIJOS 
 IR ĮSTAIGOS IV. KITOS VALSTYBĖS INSTITUCIJOS 
-IR ĮSTAIGOS",1,81,True
-Lithuanian Genocide and Resistance Research Centre,science_agency,2019,2019 XIII-1710.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,200.0,iš jų:,2,65,True
-Lithuanian Genocide and Resistance Research Centre,science_agency,2020,2020 XIII-2695.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,200.0,iš jų:,2,61,True
-Lithuanian Genocide and Resistance Research Centre,science_agency,2022,2022 XIV-745.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,2571.0,iš jų:,1,44,True
-Lithuanian Genocide and Resistance Research Centre,science_agency,2023,2023 XIV-1556.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,2737.0,iš jų:,1,44,True
-Lithuanian Genocide and Resistance Research Centre,science_agency,2024,2024 XIV-2297.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,4734.0,iš jų:,1,45,True
-Lithuanian Genocide and Resistance Research Centre,science_agency,2025,2025 XV-89.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,4805.0,iš jų:,2,44,True
-Lithuanian Geological Survey under the Ministry of Construction and Urban Planning,science_agency,1997,1997 TAIS_41654.docx,Lietuvos geologijos tarnyba prie Statybos ir urbanistikos ministerijos,2808.0,,13,39,True
-Lithuanian Geological Survey under the Ministry of Construction and Urban Planning,science_agency,1998,1998 TAR.A94C9B003D30.docx,Lietuvos geologijos tarnyba prie Statybos ir urbanistikos ministerijos,3506.0,"VI. Švietimo, kultūros ir kitos įstaigos bei organizacijos",1,30,True
-Lithuanian History Institute,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvos istorijos institutas,130.0,iš jų:,2,124,True
-Lithuanian History Institute,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvos istorijos institutas,65.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2,116,True
-Lithuanian History Institute,science_agency,2011,2011 TAR.FE51590E2B56.docx,Lietuvos istorijos institutas,130.0,iš jų:,2,99,True
-Lithuanian History Institute,science_agency,2017,2017 XIII-177.docx,Lietuvos istorijos institutas,58.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,111,True
-Lithuanian History Institute,science_agency,2018,2018 XIII-868.docx,Lietuvos istorijos institutas,23.0,iš jų:,2,72,True
-Lithuanian History Institute,science_agency,2019,2019 XIII-1710.docx,Lietuvos istorijos institutas,23.0,iš jų:,2,70,True
-Lithuanian History Institute,science_agency,2020,2020 XIII-2695.docx,Lietuvos istorijos institutas,23.0,iš jų:,2,66,True
-Lithuanian History Institute,science_agency,2022,2022 XIV-745.docx,Lietuvos istorijos institutas,2844.0,iš jų:,1,91,True
-Lithuanian History Institute,science_agency,2023,2023 XIV-1556.docx,Lietuvos istorijos institutas,3408.0,iš jų:,1,90,True
-Lithuanian History Institute,science_agency,2024,2024 XIV-2297.docx,Lietuvos istorijos institutas,5463.0,iš jų:,1,92,True
-Lithuanian History Institute,science_agency,2025,2025 XV-89.docx,Lietuvos istorijos institutas,6881.0,iš jų:,2,92,True
-Lithuanian Institute of Horticulture,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvos sodininkystės ir daržininkystės institutas,1500.0,iš jų:,2,103,True
-Lithuanian Institute of Horticulture,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvos sodininkystės ir daržininkystės institutas,1520.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2,99,True
-Lithuanian Research Centre for Agriculture and Forestry,science_agency,2011,2011 TAR.FE51590E2B56.docx,Lietuvos agrarinių ir miškų mokslų centras,7640.0,iš jų:,2,105,True
-Lithuanian Research Centre for Agriculture and Forestry,science_agency,2017,2017 XIII-177.docx,Lietuvos agrarinių ir miškų mokslų centras,3796.0,iš jų:,2,100,True
-Lithuanian Research Centre for Agriculture and Forestry,science_agency,2018,2018 XIII-868.docx,Lietuvos agrarinių ir miškų mokslų centras,3849.0,iš jų:,2,79,True
-Lithuanian Research Centre for Agriculture and Forestry,science_agency,2019,2019 XIII-1710.docx,Lietuvos agrarinių ir miškų mokslų centras,3963.0,iš jų:,2,77,True
-Lithuanian Research Centre for Agriculture and Forestry,science_agency,2020,2020 XIII-2695.docx,Lietuvos agrarinių ir miškų mokslų centras,3583.0,iš jų:,2,73,True
-Lithuanian Research Centre for Agriculture and Forestry,science_agency,2022,2022 XIV-745.docx,Lietuvos agrarinių ir miškų mokslų centras,5080.0,iš jų:,1,96,True
-Lithuanian Research Centre for Agriculture and Forestry,science_agency,2023,2023 XIV-1556.docx,Lietuvos agrarinių ir miškų mokslų centras,6422.0,iš jų:,1,95,True
-Lithuanian Research Centre for Agriculture and Forestry,science_agency,2024,2024 XIV-2297.docx,Lietuvos agrarinių ir miškų mokslų centras,9213.0,iš jų:,1,97,True
-Lithuanian Research Centre for Agriculture and Forestry,science_agency,2025,2025 XV-89.docx,Lietuvos agrarinių ir miškų mokslų centras,11821.0,iš jų:,2,97,True
-Lithuanian Research Council,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvos mokslo taryba,0.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,196,True
-Lithuanian Research Council,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvos mokslo taryba,0.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,166,True
+IR ĮSTAIGOS",1.0,81.0,True
+Lithuanian Genocide and Resistance Research Centre,science_agency,2019,2019 XIII-1710.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,200.0,iš jų:,2.0,65.0,True
+Lithuanian Genocide and Resistance Research Centre,science_agency,2020,2020 XIII-2695.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,200.0,iš jų:,2.0,61.0,True
+Lithuanian Genocide and Resistance Research Centre,science_agency,2022,2022 XIV-745.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,2571.0,iš jų:,1.0,44.0,True
+Lithuanian Genocide and Resistance Research Centre,science_agency,2023,2023 XIV-1556.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,2737.0,iš jų:,1.0,44.0,True
+Lithuanian Genocide and Resistance Research Centre,science_agency,2024,2024 XIV-2297.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,4734.0,iš jų:,1.0,45.0,True
+Lithuanian Genocide and Resistance Research Centre,science_agency,2025,2025 XV-89.docx,Lietuvos gyventojų genocido ir rezistencijos tyrimo centras,4805.0,iš jų:,2.0,44.0,True
+Lithuanian Geological Survey under the Ministry of Construction and Urban Planning,science_agency,1997,1997 TAIS_41654.docx,Lietuvos geologijos tarnyba prie Statybos ir urbanistikos ministerijos,2808.0,,13.0,39.0,True
+Lithuanian Geological Survey under the Ministry of Construction and Urban Planning,science_agency,1998,1998 TAR.A94C9B003D30.docx,Lietuvos geologijos tarnyba prie Statybos ir urbanistikos ministerijos,3506.0,"VI. Švietimo, kultūros ir kitos įstaigos bei organizacijos",1.0,30.0,True
+Lithuanian History Institute,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvos istorijos institutas,130.0,iš jų:,2.0,124.0,True
+Lithuanian History Institute,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvos istorijos institutas,65.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2.0,116.0,True
+Lithuanian History Institute,science_agency,2011,2011 TAR.FE51590E2B56.docx,Lietuvos istorijos institutas,130.0,iš jų:,2.0,99.0,True
+Lithuanian History Institute,science_agency,2017,2017 XIII-177.docx,Lietuvos istorijos institutas,58.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,111.0,True
+Lithuanian History Institute,science_agency,2018,2018 XIII-868.docx,Lietuvos istorijos institutas,23.0,iš jų:,2.0,72.0,True
+Lithuanian History Institute,science_agency,2019,2019 XIII-1710.docx,Lietuvos istorijos institutas,23.0,iš jų:,2.0,70.0,True
+Lithuanian History Institute,science_agency,2020,2020 XIII-2695.docx,Lietuvos istorijos institutas,23.0,iš jų:,2.0,66.0,True
+Lithuanian History Institute,science_agency,2022,2022 XIV-745.docx,Lietuvos istorijos institutas,2844.0,iš jų:,1.0,91.0,True
+Lithuanian History Institute,science_agency,2023,2023 XIV-1556.docx,Lietuvos istorijos institutas,3408.0,iš jų:,1.0,90.0,True
+Lithuanian History Institute,science_agency,2024,2024 XIV-2297.docx,Lietuvos istorijos institutas,5463.0,iš jų:,1.0,92.0,True
+Lithuanian History Institute,science_agency,2025,2025 XV-89.docx,Lietuvos istorijos institutas,6881.0,iš jų:,2.0,92.0,True
+Lithuanian Institute of Horticulture,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvos sodininkystės ir daržininkystės institutas,1500.0,iš jų:,2.0,103.0,True
+Lithuanian Institute of Horticulture,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvos sodininkystės ir daržininkystės institutas,1520.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2.0,99.0,True
+Lithuanian Research Centre for Agriculture and Forestry,science_agency,2011,2011 TAR.FE51590E2B56.docx,Lietuvos agrarinių ir miškų mokslų centras,7640.0,iš jų:,2.0,105.0,True
+Lithuanian Research Centre for Agriculture and Forestry,science_agency,2012,2012 TAR.B75745DE003E.docx,Lietuvos agrarinių ir miškų mokslų centras,16802.0,"Švietimo, mokslo ir sporto ministerija",0.0,0.0,True
+Lithuanian Research Centre for Agriculture and Forestry,science_agency,2013,2013 TAR.CABB5B7DAFB1.docx,Lietuvos agrarinių ir miškų mokslų centras,18618.0,Lietuvos agrarinių ir miškų mokslų centras,0.0,0.0,True
+Lithuanian Research Centre for Agriculture and Forestry,science_agency,2015,2015 12-1408.docx,Lietuvos agrarinių ir miškų mokslų centras,6033683.0,Lietuvos agrarinių ir miškų mokslų centras,0.0,0.0,True
+Lithuanian Research Centre for Agriculture and Forestry,science_agency,2016,2016 12-2161.docx,Funding for the Lithuanian Research Centre for Agriculture and Forestry,6675.0,Lietuvos agrarinių ir miškų mokslų centras,0.0,0.0,True
+Lithuanian Research Centre for Agriculture and Forestry,science_agency,2017,2017 XIII-177.docx,Lietuvos agrarinių ir miškų mokslų centras,3796.0,iš jų:,2.0,100.0,True
+Lithuanian Research Centre for Agriculture and Forestry,science_agency,2018,2018 XIII-868.docx,Lietuvos agrarinių ir miškų mokslų centras,3849.0,iš jų:,2.0,79.0,True
+Lithuanian Research Centre for Agriculture and Forestry,science_agency,2019,2019 XIII-1710.docx,Lietuvos agrarinių ir miškų mokslų centras,3963.0,iš jų:,2.0,77.0,True
+Lithuanian Research Centre for Agriculture and Forestry,science_agency,2020,2020 XIII-2695.docx,Lietuvos agrarinių ir miškų mokslų centras,3583.0,iš jų:,2.0,73.0,True
+Lithuanian Research Centre for Agriculture and Forestry,science_agency,2022,2022 XIV-745.docx,Lietuvos agrarinių ir miškų mokslų centras,5080.0,iš jų:,1.0,96.0,True
+Lithuanian Research Centre for Agriculture and Forestry,science_agency,2023,2023 XIV-1556.docx,Lietuvos agrarinių ir miškų mokslų centras,6422.0,iš jų:,1.0,95.0,True
+Lithuanian Research Centre for Agriculture and Forestry,science_agency,2024,2024 XIV-2297.docx,Lietuvos agrarinių ir miškų mokslų centras,9213.0,iš jų:,1.0,97.0,True
+Lithuanian Research Centre for Agriculture and Forestry,science_agency,2025,2025 XV-89.docx,Lietuvos agrarinių ir miškų mokslų centras,11821.0,iš jų:,2.0,97.0,True
+Lithuanian Research Council,science_agency,2004,2004 TAR.538D8DA9A346.docx,Lietuvos mokslo taryba,800.0,Švietimo ir mokslo ministerija,0.0,0.0,True
+Lithuanian Research Council,science_agency,2006,2006 TAR.1BAE24CE65A7.docx,Lietuvos mokslo taryba,945.0,Lietuvos mokslo taryba,0.0,0.0,True
+Lithuanian Research Council,science_agency,2007,2007 TAR.802CCF0B0455.docx,Lietuvos mokslo taryba,984.0,Švietimo ir mokslo ministerija,0.0,0.0,True
+Lithuanian Research Council,science_agency,2008,2008 TAR.E51A2DE98B9E.docx,Lietuvos mokslo taryba,2153.0,Lietuvos mokslo taryba,0.0,0.0,True
+Lithuanian Research Council,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvos mokslo taryba,0.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,196.0,True
+Lithuanian Research Council,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvos mokslo taryba,0.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,166.0,True
 Lithuanian Research Council,science_agency,2011,2011 TAR.FE51590E2B56.docx,Lietuvos mokslo taryba,20.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
-ORGANIZACIJOS (INSTITUTAI)",1,126,True
-Lithuanian Research Council,science_agency,2017,2017 XIII-177.docx,Lietuvos mokslo taryba,5.0,iš jų:,2,104,True
-Lithuanian Research Council,science_agency,2018,2018 XIII-868.docx,Lietuvos mokslo taryba,5.0,iš jų:,2,83,True
-Lithuanian Research Council,science_agency,2019,2019 XIII-1710.docx,Lietuvos mokslo taryba,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,114,True
-Lithuanian Research Council,science_agency,2020,2020 XIII-2695.docx,Lietuvos mokslo taryba,5.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,110,True
-Lithuanian Research Council,science_agency,2022,2022 XIV-745.docx,Lietuvos mokslo taryba,2529.0,iš jų:,1,74,True
-Lithuanian Research Council,science_agency,2023,2023 XIV-1556.docx,Lietuvos mokslo taryba,3799.0,iš jų:,1,74,True
-Lithuanian Research Council,science_agency,2024,2024 XIV-2297.docx,Lietuvos mokslo taryba,59870.0,iš jų:,1,75,True
-Lithuanian Research Council,science_agency,2025,2025 XV-89.docx,Lietuvos mokslo taryba,67668.0,iš jų:,2,74,True
-Lithuanian University of Agriculture,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvos žemės ūkio universitetas,12000.0,iš jų:,2,89,False
-Lithuanian University of Agriculture,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvos žemės ūkio universitetas,14900.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2,89,False
+ORGANIZACIJOS (INSTITUTAI)",1.0,126.0,True
+Lithuanian Research Council,science_agency,2012,2012 TAR.B75745DE003E.docx,Lietuvos mokslo taryba,102596.0,"Švietimo, mokslo ir sporto ministerija",0.0,0.0,True
+Lithuanian Research Council,science_agency,2013,2013 TAR.CABB5B7DAFB1.docx,Lietuvos mokslo taryba,101257.0,Lietuvos mokslo taryba,0.0,0.0,True
+Lithuanian Research Council,science_agency,2015,2015 12-1408.docx,Lietuvos mokslo taryba,23549554.0,Lietuvos mokslo taryba,0.0,0.0,True
+Lithuanian Research Council,science_agency,2016,2016 12-2161.docx,Funding for the Lithuanian Research Council,18639.0,Lietuvos mokslo taryba,0.0,0.0,True
+Lithuanian Research Council,science_agency,2017,2017 XIII-177.docx,Lietuvos mokslo taryba,5.0,iš jų:,2.0,104.0,True
+Lithuanian Research Council,science_agency,2018,2018 XIII-868.docx,Lietuvos mokslo taryba,5.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO 
+ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
+ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
+ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
+ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
+ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
+ORGANIZACIJOS (INSTITUTAI)",1.0,115.0,True
+Lithuanian Research Council,science_agency,2019,2019 XIII-1710.docx,Lietuvos mokslo taryba,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,114.0,True
+Lithuanian Research Council,science_agency,2020,2020 XIII-2695.docx,Lietuvos mokslo taryba,5.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,110.0,True
+Lithuanian Research Council,science_agency,2022,2022 XIV-745.docx,Lietuvos mokslo taryba,2529.0,iš jų:,1.0,74.0,True
+Lithuanian Research Council,science_agency,2023,2023 XIV-1556.docx,Lietuvos mokslo taryba,3799.0,iš jų:,1.0,74.0,True
+Lithuanian Research Council,science_agency,2024,2024 XIV-2297.docx,Lietuvos mokslo taryba,59870.0,iš jų:,1.0,75.0,True
+Lithuanian Research Council,science_agency,2025,2025 XV-89.docx,Lietuvos mokslo taryba,67668.0,iš jų:,2.0,74.0,True
+Lithuanian University of Agriculture,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvos žemės ūkio universitetas,12000.0,iš jų:,2.0,89.0,False
+Lithuanian University of Agriculture,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvos žemės ūkio universitetas,14900.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2.0,89.0,False
 Lithuanian University of Agriculture,higher_education,2011,2011 TAR.FE51590E2B56.docx,Lietuvos žemės ūkio universitetas,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
-ORGANIZACIJOS (INSTITUTAI)",1,104,False
-Lithuanian University of Health Sciences,higher_education,2011,2011 TAR.FE51590E2B56.docx,Lietuvos sveikatos mokslų universitetas,39735.0,iš jų:,2,90,False
-Lithuanian University of Health Sciences,higher_education,2017,2017 XIII-177.docx,Lietuvos sveikatos mokslų universitetas,700.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,102,False
+ORGANIZACIJOS (INSTITUTAI)",1.0,104.0,False
+Lithuanian University of Health Sciences,higher_education,2011,2011 TAR.FE51590E2B56.docx,Lietuvos sveikatos mokslų universitetas,39735.0,iš jų:,2.0,90.0,False
+Lithuanian University of Health Sciences,higher_education,2017,2017 XIII-177.docx,Lietuvos sveikatos mokslų universitetas,700.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,102.0,False
 Lithuanian University of Health Sciences,higher_education,2018,2018 XIII-868.docx,Lietuvos sveikatos mokslų universitetas,400.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
-ORGANIZACIJOS (INSTITUTAI)",1,95,False
-Lithuanian University of Health Sciences,higher_education,2019,2019 XIII-1710.docx,Lietuvos sveikatos mokslų universitetas,1613.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,95,False
-Lithuanian University of Health Sciences,higher_education,2020,2020 XIII-2695.docx,Lietuvos sveikatos mokslų universitetas,727.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,91,False
-Lithuanian University of Health Sciences,higher_education,2022,2022 XIV-745.docx,Lietuvos sveikatos mokslų universitetas,36205.0,iš jų:,1,84,False
-Lithuanian University of Health Sciences,higher_education,2023,2023 XIV-1556.docx,Lietuvos sveikatos mokslų universitetas,44079.0,iš jų:,1,83,False
-Lithuanian University of Health Sciences,higher_education,2024,2024 XIV-2297.docx,Lietuvos sveikatos mokslų universitetas,56286.0,iš jų:,1,85,False
-Lithuanian University of Health Sciences,higher_education,2025,2025 XV-89.docx,Lietuvos sveikatos mokslų universitetas,69237.0,iš jų:,2,85,False
-Mykolas Romeris University,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Mykolo Romerio universitetas,20000.0,iš jų:,2,91,False
-Mykolas Romeris University,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Mykolo Romerio universitetas,25030.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2,91,False
+ORGANIZACIJOS (INSTITUTAI)",1.0,95.0,False
+Lithuanian University of Health Sciences,higher_education,2019,2019 XIII-1710.docx,Lietuvos sveikatos mokslų universitetas,1613.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,95.0,False
+Lithuanian University of Health Sciences,higher_education,2020,2020 XIII-2695.docx,Lietuvos sveikatos mokslų universitetas,727.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,91.0,False
+Lithuanian University of Health Sciences,higher_education,2022,2022 XIV-745.docx,Lietuvos sveikatos mokslų universitetas,36205.0,iš jų:,1.0,84.0,False
+Lithuanian University of Health Sciences,higher_education,2023,2023 XIV-1556.docx,Lietuvos sveikatos mokslų universitetas,44079.0,iš jų:,1.0,83.0,False
+Lithuanian University of Health Sciences,higher_education,2024,2024 XIV-2297.docx,Lietuvos sveikatos mokslų universitetas,56286.0,iš jų:,1.0,85.0,False
+Lithuanian University of Health Sciences,higher_education,2025,2025 XV-89.docx,Lietuvos sveikatos mokslų universitetas,69237.0,iš jų:,2.0,85.0,False
+Mykolas Romeris University,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Mykolo Romerio universitetas,20000.0,iš jų:,2.0,91.0,False
+Mykolas Romeris University,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Mykolo Romerio universitetas,25030.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2.0,91.0,False
 Mykolas Romeris University,higher_education,2011,2011 TAR.FE51590E2B56.docx,Mykolo Romerio universitetas,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
-ORGANIZACIJOS (INSTITUTAI)",1,105,False
-Mykolas Romeris University,higher_education,2017,2017 XIII-177.docx,Mykolo Romerio universitetas,62.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,101,False
+ORGANIZACIJOS (INSTITUTAI)",1.0,105.0,False
+Mykolas Romeris University,higher_education,2017,2017 XIII-177.docx,Mykolo Romerio universitetas,62.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,101.0,False
 Mykolas Romeris University,higher_education,2018,2018 XIII-868.docx,Mykolo Romerio universitetas,220.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
-ORGANIZACIJOS (INSTITUTAI)",1,94,False
-Mykolas Romeris University,higher_education,2019,2019 XIII-1710.docx,Mykolo Romerio universitetas,128.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,94,False
-Mykolas Romeris University,higher_education,2020,2020 XIII-2695.docx,Mykolo Romerio universitetas,385.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,90,False
-Mykolas Romeris University,higher_education,2022,2022 XIV-745.docx,Mykolo Romerio universitetas,7756.0,iš jų:,1,83,False
-Mykolas Romeris University,higher_education,2023,2023 XIV-1556.docx,Mykolo Romerio universitetas,10431.0,iš jų:,1,82,False
-Mykolas Romeris University,higher_education,2024,2024 XIV-2297.docx,Mykolo Romerio universitetas,12602.0,iš jų:,1,84,False
-Mykolas Romeris University,higher_education,2025,2025 XV-89.docx,Mykolo Romerio universitetas,17806.0,iš jų:,2,84,False
-National Cancer Institute,science_agency,2017,2017 XIII-177.docx,Nacionalinis vėžio institutas,2888.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,109,True
+ORGANIZACIJOS (INSTITUTAI)",1.0,94.0,False
+Mykolas Romeris University,higher_education,2019,2019 XIII-1710.docx,Mykolo Romerio universitetas,128.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,94.0,False
+Mykolas Romeris University,higher_education,2020,2020 XIII-2695.docx,Mykolo Romerio universitetas,385.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,90.0,False
+Mykolas Romeris University,higher_education,2022,2022 XIV-745.docx,Mykolo Romerio universitetas,7756.0,iš jų:,1.0,83.0,False
+Mykolas Romeris University,higher_education,2023,2023 XIV-1556.docx,Mykolo Romerio universitetas,10431.0,iš jų:,1.0,82.0,False
+Mykolas Romeris University,higher_education,2024,2024 XIV-2297.docx,Mykolo Romerio universitetas,12602.0,iš jų:,1.0,84.0,False
+Mykolas Romeris University,higher_education,2025,2025 XV-89.docx,Mykolo Romerio universitetas,17806.0,iš jų:,2.0,84.0,False
+National Cancer Institute,science_agency,2017,2017 XIII-177.docx,Nacionalinis vėžio institutas,2888.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,109.0,True
 National Cancer Institute,science_agency,2018,2018 XIII-868.docx,Nacionalinis vėžio institutas,2741.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
-ORGANIZACIJOS (INSTITUTAI)",1,102,True
-National Cancer Institute,science_agency,2019,2019 XIII-1710.docx,Nacionalinis vėžio institutas,981.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,101,True
-National Cancer Institute,science_agency,2020,2020 XIII-2695.docx,Nacionalinis vėžio institutas,570.0,iš jų:,2,64,True
-National Cancer Institute,science_agency,2022,2022 XIV-745.docx,Nacionalinis vėžio institutas,1503.0,iš jų:,1,89,True
-National Cancer Institute,science_agency,2023,2023 XIV-1556.docx,Nacionalinis vėžio institutas,1892.0,iš jų:,1,88,True
-National Cancer Institute,science_agency,2024,2024 XIV-2297.docx,Nacionalinis vėžio institutas,1807.0,iš jų:,1,90,True
-National Cancer Institute,science_agency,2025,2025 XV-89.docx,Nacionalinis vėžio institutas,3267.0,iš jų:,2,90,True
-National Energy Efficiency Improvement and Strategy Programs,innovation_instruments,1998,1998 TAR.A94C9B003D30.docx,"Nacionalinės energijos vartojimo efektyvumo didinimo, nacionalinės energetikos strategijos ir kitos programos",4166.0,"VI. Švietimo, kultūros ir kitos įstaigos bei organizacijos",1,18,True
-Nature Research Center,science_agency,2011,2011 TAR.FE51590E2B56.docx,Gamtos tyrimų centras,2503.0,iš jų:,2,106,True
-Nature Research Center,science_agency,2017,2017 XIII-177.docx,Gamtos tyrimų centras,800.0,iš jų:,2,101,True
-Nature Research Center,science_agency,2018,2018 XIII-868.docx,Gamtos tyrimų centras,800.0,iš jų:,2,80,True
-Nature Research Center,science_agency,2019,2019 XIII-1710.docx,Gamtos tyrimų centras,600.0,iš jų:,2,78,True
-Nature Research Center,science_agency,2020,2020 XIII-2695.docx,Gamtos tyrimų centras,600.0,iš jų:,2,74,True
-Nature Research Center,science_agency,2022,2022 XIV-745.docx,Gamtos tyrimų centras,5316.0,iš jų:,1,97,True
-Nature Research Center,science_agency,2023,2023 XIV-1556.docx,Gamtos tyrimų centras,6791.0,iš jų:,1,96,True
-Nature Research Center,science_agency,2024,2024 XIV-2297.docx,Gamtos tyrimų centras,10134.0,iš jų:,1,98,True
-Nature Research Center,science_agency,2025,2025 XV-89.docx,Gamtos tyrimų centras,12649.0,iš jų:,2,98,True
-Science and Studies Programme (Lithuania),rd_ministry,1998,1998 TAR.A94C9B003D30.docx,Mokslas ir studijos,33523.0,"VI. Švietimo, kultūros ir kitos įstaigos bei organizacijos",0,199,False
-Science and Studies Programme (Lithuania),rd_ministry,2001,2001 TAIS_156412.docx,Mokslas ir studijos,39264.0,"VI. Švietimo, kultūros ir kitos įstaigos bei organizacijos",1,188,False
-Science and Studies Programme (Lithuania),rd_ministry,2001,2001 TAIS_156412.docx,mokslas ir studijos,18996.0,Iš jų:,10,9,False
-Special Investigation Service of the Republic of Lithuania,science_agency,2001,2001 TAIS_156412.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,9204.0,"III. Departamentai, tarnybos ir inspekcijos",1,80,False
-Special Investigation Service of the Republic of Lithuania,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,2895.0,"I. PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS",1,22,False
-Special Investigation Service of the Republic of Lithuania,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,163.0,"I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS",1,25,False
+ORGANIZACIJOS (INSTITUTAI)",1.0,102.0,True
+National Cancer Institute,science_agency,2019,2019 XIII-1710.docx,Nacionalinis vėžio institutas,981.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,101.0,True
+National Cancer Institute,science_agency,2020,2020 XIII-2695.docx,Nacionalinis vėžio institutas,570.0,iš jų:,2.0,64.0,True
+National Cancer Institute,science_agency,2022,2022 XIV-745.docx,Nacionalinis vėžio institutas,1503.0,iš jų:,1.0,89.0,True
+National Cancer Institute,science_agency,2023,2023 XIV-1556.docx,Nacionalinis vėžio institutas,1892.0,iš jų:,1.0,88.0,True
+National Cancer Institute,science_agency,2024,2024 XIV-2297.docx,Nacionalinis vėžio institutas,1807.0,iš jų:,1.0,90.0,True
+National Cancer Institute,science_agency,2025,2025 XV-89.docx,Nacionalinis vėžio institutas,3267.0,iš jų:,2.0,90.0,True
+National Energy Efficiency Improvement and Strategy Programs,innovation_instruments,1998,1998 TAR.A94C9B003D30.docx,"Nacionalinės energijos vartojimo efektyvumo didinimo, nacionalinės energetikos strategijos ir kitos programos",4166.0,"VI. Švietimo, kultūros ir kitos įstaigos bei organizacijos",1.0,18.0,True
+Nature Research Center,science_agency,2011,2011 TAR.FE51590E2B56.docx,Gamtos tyrimų centras,2503.0,iš jų:,2.0,106.0,True
+Nature Research Center,science_agency,2012,2012 TAR.B75745DE003E.docx,Gamtos tyrimų centras,11429.0,"Švietimo, mokslo ir sporto ministerija",0.0,0.0,True
+Nature Research Center,science_agency,2013,2013 TAR.CABB5B7DAFB1.docx,Gamtos tyrimų centras,9976.0,Gamtos tyrimų centras,0.0,0.0,True
+Nature Research Center,science_agency,2015,2015 12-1408.docx,Gamtos tyrimų centras,3847457.0,Gamtos tyrimų centras,0.0,0.0,True
+Nature Research Center,science_agency,2017,2017 XIII-177.docx,Gamtos tyrimų centras,800.0,iš jų:,2.0,101.0,True
+Nature Research Center,science_agency,2018,2018 XIII-868.docx,Gamtos tyrimų centras,800.0,iš jų:,2.0,80.0,True
+Nature Research Center,science_agency,2019,2019 XIII-1710.docx,Gamtos tyrimų centras,600.0,iš jų:,2.0,78.0,True
+Nature Research Center,science_agency,2020,2020 XIII-2695.docx,Gamtos tyrimų centras,600.0,iš jų:,2.0,74.0,True
+Nature Research Center,science_agency,2022,2022 XIV-745.docx,Gamtos tyrimų centras,5316.0,iš jų:,1.0,97.0,True
+Nature Research Center,science_agency,2023,2023 XIV-1556.docx,Gamtos tyrimų centras,6791.0,iš jų:,1.0,96.0,True
+Nature Research Center,science_agency,2024,2024 XIV-2297.docx,Gamtos tyrimų centras,10134.0,iš jų:,1.0,98.0,True
+Nature Research Center,science_agency,2025,2025 XV-89.docx,Gamtos tyrimų centras,12649.0,iš jų:,2.0,98.0,True
+Science and Studies Programme (Lithuania),rd_ministry,1991,1991 TAR.D2695B2FA23D.docx,Mokslas ir studijos,241122.0,Mokslas ir studijos,0.0,0.0,False
+Science and Studies Programme (Lithuania),rd_ministry,1992,1992 TAR.143EC1A56B4B.pdf,Mokslas ir studijos,1512446.0,Mokslas ir studijos,0.0,0.0,False
+Science and Studies Programme (Lithuania),rd_ministry,1995,1995 TAIS_25247.docx,Mokslas ir studijos,262695.0,"ŠVIETIMO, KULTŪROS IR KITOS ĮSTAIGOS BEI ORGANIZACIJOS",0.0,0.0,False
+Science and Studies Programme (Lithuania),rd_ministry,1996,1996 TAR.11F4B795287C.docx,Mokslas ir studijos,355450.0,"Švietimo, kultūros ir kitos įstaigos bei organizacijos",0.0,0.0,False
+Science and Studies Programme (Lithuania),rd_ministry,1998,1998 TAR.A94C9B003D30.docx,Mokslas ir studijos,33523.0,"VI. Švietimo, kultūros ir kitos įstaigos bei organizacijos",0.0,199.0,False
+Science and Studies Programme (Lithuania),rd_ministry,2001,2001 TAIS_156412.docx,Mokslas ir studijos,39264.0,"VI. Švietimo, kultūros ir kitos įstaigos bei organizacijos",1.0,188.0,False
+Science and Studies Programme (Lithuania),rd_ministry,2001,2001 TAIS_156412.docx,mokslas ir studijos,18996.0,Iš jų:,10.0,9.0,False
+Science and Studies Programme (Lithuania),rd_ministry,2002,2002 TAR.E8D4F01C9643.docx,Mokslas ir studijos,632236.0,Mokslas ir studijos,0.0,0.0,False
+Science and Studies Programme (Lithuania),rd_ministry,2008,2008 TAR.E51A2DE98B9E.docx,Mokslas ir studijos,75126.0,Mokslas ir studijos,0.0,0.0,False
+Special Investigation Service of the Republic of Lithuania,science_agency,2001,2001 TAIS_156412.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,9204.0,"III. Departamentai, tarnybos ir inspekcijos",1.0,80.0,False
+Special Investigation Service of the Republic of Lithuania,science_agency,2009,2009 TAR.D641C5B5ADFD.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,2895.0,"I. PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS",1.0,22.0,False
+Special Investigation Service of the Republic of Lithuania,science_agency,2010,2010 TAR.E5C7DCAD90FA.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,163.0,"I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS",1.0,25.0,False
 Special Investigation Service of the Republic of Lithuania,science_agency,2011,2011 TAR.FE51590E2B56.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,1163.0,"I. RESPUBLIKOS PREZIDENTUI, SEIMUI, 
 VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, 
 VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, 
 VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, 
 VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, 
-VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS",1,25,False
-Special Investigation Service of the Republic of Lithuania,science_agency,2017,2017 XIII-177.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,1293.0,"I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS",1,29,False
+VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS",1.0,25.0,False
+Special Investigation Service of the Republic of Lithuania,science_agency,2017,2017 XIII-177.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,1293.0,"I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS",1.0,29.0,False
 Special Investigation Service of the Republic of Lithuania,science_agency,2018,2018 XIII-868.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,546.0,"I. RESPUBLIKOS PREZIDENTUI, 
 SEIMUI, VYRIAUSYBEI ATSKAITINGOS 
 INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, 
@@ -281,110 +313,115 @@ INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI,
 SEIMUI, VYRIAUSYBEI ATSKAITINGOS 
 INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, 
 SEIMUI, VYRIAUSYBEI ATSKAITINGOS 
-INSTITUCIJOS",1,28,False
-Special Investigation Service of the Republic of Lithuania,science_agency,2019,2019 XIII-1710.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,2746.0,"I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS",1,29,False
-Special Investigation Service of the Republic of Lithuania,science_agency,2020,2020 XIII-2695.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,746.0,"I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS",1,30,False
-Special Investigation Service of the Republic of Lithuania,science_agency,2022,2022 XIV-745.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,10169.0,iš jų:,1,36,False
-Special Investigation Service of the Republic of Lithuania,science_agency,2023,2023 XIV-1556.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,10476.0,iš jų:,1,35,False
-Special Investigation Service of the Republic of Lithuania,science_agency,2024,2024 XIV-2297.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,17903.0,iš jų:,1,35,False
-Special Investigation Service of the Republic of Lithuania,science_agency,2025,2025 XV-89.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,19738.0,iš jų:,2,32,False
-State Research Centre for the Genocide of the Lithuanian Population,science_agency,1993,1993 TAR.8C4914C2ACED.docx,Valstybinis Lietuvos gyventojų genocido tyrimo centras,3457.0,"IV. Švietimo, kultūros, mokslo ir techninės pažangos įstaigos, organizacijos",2,124,True
-State Research Institute Center for Innovative Medicine,science_agency,2011,2011 TAR.FE51590E2B56.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,2500.0,iš jų:,2,104,True
-State Research Institute Center for Innovative Medicine,science_agency,2017,2017 XIII-177.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,250.0,iš jų:,2,99,True
-State Research Institute Center for Innovative Medicine,science_agency,2018,2018 XIII-868.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,200.0,iš jų:,2,78,True
-State Research Institute Center for Innovative Medicine,science_agency,2019,2019 XIII-1710.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,250.0,iš jų:,2,76,True
-State Research Institute Center for Innovative Medicine,science_agency,2020,2020 XIII-2695.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,270.0,iš jų:,2,72,True
-State Research Institute Center for Innovative Medicine,science_agency,2022,2022 XIV-745.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,1385.0,iš jų:,1,95,True
-State Research Institute Center for Innovative Medicine,science_agency,2023,2023 XIV-1556.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,1701.0,iš jų:,1,94,True
-State Research Institute Center for Innovative Medicine,science_agency,2024,2024 XIV-2297.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,2667.0,iš jų:,1,96,True
-State Research Institute Center for Innovative Medicine,science_agency,2025,2025 XV-89.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,3589.0,iš jų:,2,96,True
-"State Science, Studies and Technology Service (Lithuania)",science_agency,1993,1993 TAR.8C4914C2ACED.docx,"Valstybinė mokslo, studijų ir technologijų tarnyba",754559.0,II. Departamentai ir kitos tarnybos bei inspekcijos II. Departamentai ir kitos tarnybos bei inspekcijos II. Departamentai ir kitos tarnybos bei inspekcijos II. Departamentai ir kitos tarnybos bei inspekcijos II. Departamentai ir kitos tarnybos bei inspekcijos II. Departamentai ir kitos tarnybos bei inspekcijos II. Departamentai ir kitos tarnybos bei inspekcijos II. Departamentai ir kitos tarnybos bei inspekcijos,2,9,True
-"State Science, Studies and Technology Service (Lithuania)",science_agency,2001,2001 TAIS_156412.docx,Mokslo ir studijų departamentas prie Švietimo ir mokslo ministerijos,200.0,"III. Departamentai, tarnybos ir inspekcijos",1,77,True
-Vilnius Academy of Arts,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Vilniaus dailės akademija,8511.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,159,False
-Vilnius Academy of Arts,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Vilniaus dailės akademija,2740.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2,93,False
-Vilnius Academy of Arts,higher_education,2011,2011 TAR.FE51590E2B56.docx,Vilniaus dailės akademija,2700.0,iš jų:,2,91,False
-Vilnius Academy of Arts,higher_education,2017,2017 XIII-177.docx,Vilniaus dailės akademija,300.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,103,False
+INSTITUCIJOS",1.0,28.0,False
+Special Investigation Service of the Republic of Lithuania,science_agency,2019,2019 XIII-1710.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,2746.0,"I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS",1.0,29.0,False
+Special Investigation Service of the Republic of Lithuania,science_agency,2020,2020 XIII-2695.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,746.0,"I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS I. RESPUBLIKOS PREZIDENTUI, SEIMUI, VYRIAUSYBEI ATSKAITINGOS INSTITUCIJOS",1.0,30.0,False
+Special Investigation Service of the Republic of Lithuania,science_agency,2022,2022 XIV-745.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,10169.0,iš jų:,1.0,36.0,False
+Special Investigation Service of the Republic of Lithuania,science_agency,2023,2023 XIV-1556.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,10476.0,iš jų:,1.0,35.0,False
+Special Investigation Service of the Republic of Lithuania,science_agency,2024,2024 XIV-2297.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,17903.0,iš jų:,1.0,35.0,False
+Special Investigation Service of the Republic of Lithuania,science_agency,2025,2025 XV-89.docx,Lietuvos Respublikos specialiųjų tyrimų tarnyba,19738.0,iš jų:,2.0,32.0,False
+State Research Centre for the Genocide of the Lithuanian Population,science_agency,1993,1993 TAR.8C4914C2ACED.docx,Valstybinis Lietuvos gyventojų genocido tyrimo centras,3457.0,"IV. Švietimo, kultūros, mokslo ir techninės pažangos įstaigos, organizacijos",2.0,124.0,True
+State Research Institute Center for Innovative Medicine,science_agency,2011,2011 TAR.FE51590E2B56.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,2500.0,iš jų:,2.0,104.0,True
+State Research Institute Center for Innovative Medicine,science_agency,2012,2012 TAR.B75745DE003E.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,8149.0,"Švietimo, mokslo ir sporto ministerija",0.0,0.0,True
+State Research Institute Center for Innovative Medicine,science_agency,2013,2013 TAR.CABB5B7DAFB1.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,3231.0,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,0.0,0.0,True
+State Research Institute Center for Innovative Medicine,science_agency,2015,2015 12-1408.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,1143622.0,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,0.0,0.0,True
+State Research Institute Center for Innovative Medicine,science_agency,2017,2017 XIII-177.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,250.0,iš jų:,2.0,99.0,True
+State Research Institute Center for Innovative Medicine,science_agency,2018,2018 XIII-868.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,200.0,iš jų:,2.0,78.0,True
+State Research Institute Center for Innovative Medicine,science_agency,2019,2019 XIII-1710.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,250.0,iš jų:,2.0,76.0,True
+State Research Institute Center for Innovative Medicine,science_agency,2020,2020 XIII-2695.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,270.0,iš jų:,2.0,72.0,True
+State Research Institute Center for Innovative Medicine,science_agency,2022,2022 XIV-745.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,1385.0,iš jų:,1.0,95.0,True
+State Research Institute Center for Innovative Medicine,science_agency,2023,2023 XIV-1556.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,1701.0,iš jų:,1.0,94.0,True
+State Research Institute Center for Innovative Medicine,science_agency,2024,2024 XIV-2297.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,2667.0,iš jų:,1.0,96.0,True
+State Research Institute Center for Innovative Medicine,science_agency,2025,2025 XV-89.docx,Valstybinis mokslinių tyrimų institutas Inovatyvios medicinos centras,3589.0,iš jų:,2.0,96.0,True
+"State Science, Studies and Technology Service (Lithuania)",science_agency,1993,1993 TAR.8C4914C2ACED.docx,"Valstybinė mokslo, studijų ir technologijų tarnyba",754559.0,II. Departamentai ir kitos tarnybos bei inspekcijos II. Departamentai ir kitos tarnybos bei inspekcijos II. Departamentai ir kitos tarnybos bei inspekcijos II. Departamentai ir kitos tarnybos bei inspekcijos II. Departamentai ir kitos tarnybos bei inspekcijos II. Departamentai ir kitos tarnybos bei inspekcijos II. Departamentai ir kitos tarnybos bei inspekcijos II. Departamentai ir kitos tarnybos bei inspekcijos,2.0,9.0,True
+"State Science, Studies and Technology Service (Lithuania)",science_agency,2001,2001 TAIS_156412.docx,Mokslo ir studijų departamentas prie Švietimo ir mokslo ministerijos,200.0,"III. Departamentai, tarnybos ir inspekcijos",1.0,77.0,True
+"State Science, Studies and Technology Service (Lithuania)",science_agency,2002,2002 TAR.E8D4F01C9643.docx,Mokslo ir studijų departamentas prie Švietimo ir mokslo ministerijos,2398.0,Mokslo ir studijų departamentas prie Švietimo ir mokslo ministerijos,0.0,0.0,False
+Vilnius Academy of Arts,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Vilniaus dailės akademija,8511.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,159.0,False
+Vilnius Academy of Arts,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Vilniaus dailės akademija,2740.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2.0,93.0,False
+Vilnius Academy of Arts,higher_education,2011,2011 TAR.FE51590E2B56.docx,Vilniaus dailės akademija,2700.0,iš jų:,2.0,91.0,False
+Vilnius Academy of Arts,higher_education,2017,2017 XIII-177.docx,Vilniaus dailės akademija,300.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,103.0,False
 Vilnius Academy of Arts,higher_education,2018,2018 XIII-868.docx,Vilniaus dailės akademija,300.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
-ORGANIZACIJOS (INSTITUTAI)",1,96,False
-Vilnius Academy of Arts,higher_education,2019,2019 XIII-1710.docx,Vilniaus dailės akademija,178.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,96,False
-Vilnius Academy of Arts,higher_education,2020,2020 XIII-2695.docx,Vilniaus dailės akademija,293.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,92,False
-Vilnius Academy of Arts,higher_education,2022,2022 XIV-745.docx,Vilniaus dailės akademija,10582.0,iš jų:,1,85,False
-Vilnius Academy of Arts,higher_education,2023,2023 XIV-1556.docx,Vilniaus dailės akademija,13439.0,iš jų:,1,84,False
-Vilnius Academy of Arts,higher_education,2024,2024 XIV-2297.docx,Vilniaus dailės akademija,16019.0,iš jų:,1,86,False
-Vilnius Academy of Arts,higher_education,2025,2025 XV-89.docx,Vilniaus dailės akademija,20241.0,iš jų:,2,86,False
-Vilnius Gediminas Technical University,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Vilniaus Gedimino technikos universitetas,33000.0,iš jų:,2,87,False
-Vilnius Gediminas Technical University,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Vilniaus Gedimino technikos universitetas,29416.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2,87,False
-Vilnius Gediminas Technical University,higher_education,2011,2011 TAR.FE51590E2B56.docx,Vilniaus Gedimino technikos universitetas,29000.0,iš jų:,2,88,False
-Vilnius Gediminas Technical University,higher_education,2017,2017 XIII-177.docx,Vilniaus Gedimino technikos universitetas,700.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,98,False
+ORGANIZACIJOS (INSTITUTAI)",1.0,96.0,False
+Vilnius Academy of Arts,higher_education,2019,2019 XIII-1710.docx,Vilniaus dailės akademija,178.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,96.0,False
+Vilnius Academy of Arts,higher_education,2020,2020 XIII-2695.docx,Vilniaus dailės akademija,293.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,92.0,False
+Vilnius Academy of Arts,higher_education,2022,2022 XIV-745.docx,Vilniaus dailės akademija,10582.0,iš jų:,1.0,85.0,False
+Vilnius Academy of Arts,higher_education,2023,2023 XIV-1556.docx,Vilniaus dailės akademija,13439.0,iš jų:,1.0,84.0,False
+Vilnius Academy of Arts,higher_education,2024,2024 XIV-2297.docx,Vilniaus dailės akademija,16019.0,iš jų:,1.0,86.0,False
+Vilnius Academy of Arts,higher_education,2025,2025 XV-89.docx,Vilniaus dailės akademija,20241.0,iš jų:,2.0,86.0,False
+Vilnius Gediminas Technical University,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Vilniaus Gedimino technikos universitetas,33000.0,iš jų:,2.0,87.0,False
+Vilnius Gediminas Technical University,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Vilniaus Gedimino technikos universitetas,29416.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2.0,87.0,False
+Vilnius Gediminas Technical University,higher_education,2011,2011 TAR.FE51590E2B56.docx,Vilniaus Gedimino technikos universitetas,29000.0,iš jų:,2.0,88.0,False
+Vilnius Gediminas Technical University,higher_education,2017,2017 XIII-177.docx,Vilniaus Gedimino technikos universitetas,700.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,98.0,False
 Vilnius Gediminas Technical University,higher_education,2018,2018 XIII-868.docx,Vilniaus Gedimino technikos universitetas,200.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
-ORGANIZACIJOS (INSTITUTAI)",1,91,False
-Vilnius Gediminas Technical University,higher_education,2019,2019 XIII-1710.docx,Vilniaus Gedimino technikos universitetas,425.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,92,False
-Vilnius Gediminas Technical University,higher_education,2020,2020 XIII-2695.docx,Vilniaus Gedimino technikos universitetas,1071.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,88,False
-Vilnius Gediminas Technical University,higher_education,2022,2022 XIV-745.docx,Vilniaus Gedimino technikos universitetas,34710.0,iš jų:,1,81,False
-Vilnius Gediminas Technical University,higher_education,2023,2023 XIV-1556.docx,Vilniaus Gedimino technikos universitetas,42021.0,iš jų:,1,80,False
-Vilnius Gediminas Technical University,higher_education,2024,2024 XIV-2297.docx,Vilniaus Gedimino technikos universitetas,47790.0,iš jų:,1,82,False
-Vilnius Gediminas Technical University,higher_education,2025,2025 XV-89.docx,Vilniaus Gedimino technikos universitetas,63596.0,iš jų:,2,82,False
-Vilnius Pedagogical University,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Vilniaus pedagoginis universitetas,15233.0,iš jų:,2,94,False
-Vilnius Pedagogical University,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Vilniaus pedagoginis universitetas,23200.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2,94,False
-Vilnius Pedagogical University,higher_education,2011,2011 TAR.FE51590E2B56.docx,Vilniaus pedagoginis universitetas,23000.0,iš jų:,2,92,False
-Vilnius University,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Vilniaus universitetas,35700.0,iš jų:,2,84,False
-Vilnius University,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Vilniaus universitetas,37050.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2,84,False
-Vilnius University,higher_education,2011,2011 TAR.FE51590E2B56.docx,Vilniaus universitetas,45520.0,iš jų:,2,86,False
-Vilnius University,higher_education,2017,2017 XIII-177.docx,Vilniaus universitetas,500.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,94,False
+ORGANIZACIJOS (INSTITUTAI)",1.0,91.0,False
+Vilnius Gediminas Technical University,higher_education,2019,2019 XIII-1710.docx,Vilniaus Gedimino technikos universitetas,425.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,92.0,False
+Vilnius Gediminas Technical University,higher_education,2020,2020 XIII-2695.docx,Vilniaus Gedimino technikos universitetas,1071.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,88.0,False
+Vilnius Gediminas Technical University,higher_education,2022,2022 XIV-745.docx,Vilniaus Gedimino technikos universitetas,34710.0,iš jų:,1.0,81.0,False
+Vilnius Gediminas Technical University,higher_education,2023,2023 XIV-1556.docx,Vilniaus Gedimino technikos universitetas,42021.0,iš jų:,1.0,80.0,False
+Vilnius Gediminas Technical University,higher_education,2024,2024 XIV-2297.docx,Vilniaus Gedimino technikos universitetas,47790.0,iš jų:,1.0,82.0,False
+Vilnius Gediminas Technical University,higher_education,2025,2025 XV-89.docx,Vilniaus Gedimino technikos universitetas,63596.0,iš jų:,2.0,82.0,False
+Vilnius Pedagogical University,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Vilniaus pedagoginis universitetas,15233.0,iš jų:,2.0,94.0,False
+Vilnius Pedagogical University,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Vilniaus pedagoginis universitetas,23200.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2.0,94.0,False
+Vilnius Pedagogical University,higher_education,2011,2011 TAR.FE51590E2B56.docx,Vilniaus pedagoginis universitetas,23000.0,iš jų:,2.0,92.0,False
+Vilnius University,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Vilniaus universitetas,35700.0,iš jų:,2.0,84.0,False
+Vilnius University,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Vilniaus universitetas,37050.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2.0,84.0,False
+Vilnius University,higher_education,2011,2011 TAR.FE51590E2B56.docx,Vilniaus universitetas,45520.0,iš jų:,2.0,86.0,False
+Vilnius University,higher_education,2016,2016 12-2161.docx,Funding for Vilnius University,50782.0,Vilniaus universitetas,0.0,0.0,False
+Vilnius University,higher_education,2017,2017 XIII-177.docx,Vilniaus universitetas,500.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,94.0,False
 Vilnius University,higher_education,2018,2018 XIII-868.docx,Vilniaus universitetas,200.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
-ORGANIZACIJOS (INSTITUTAI)",1,87,False
-Vilnius University,higher_education,2019,2019 XIII-1710.docx,Vilniaus universitetas,255.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,88,False
-Vilnius University,higher_education,2020,2020 XIII-2695.docx,Vilniaus universitetas,304.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,84,False
-Vilnius University,higher_education,2022,2022 XIV-745.docx,Vilniaus universitetas,107065.0,iš jų:,1,77,False
-Vilnius University,higher_education,2023,2023 XIV-1556.docx,Vilniaus universitetas,133641.0,iš jų:,1,77,False
-Vilnius University,higher_education,2024,2024 XIV-2297.docx,Vilniaus universitetas,157330.0,iš jų:,1,78,False
-Vilnius University,higher_education,2025,2025 XV-89.docx,Vilniaus universitetas,195896.0,iš jų:,2,77,False
-Vytautas Magnus University,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Vytauto Didžiojo universitetas,10000.0,iš jų:,2,85,False
-Vytautas Magnus University,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Vytauto Didžiojo universitetas,12000.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2,85,False
+ORGANIZACIJOS (INSTITUTAI)",1.0,87.0,False
+Vilnius University,higher_education,2019,2019 XIII-1710.docx,Vilniaus universitetas,255.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,88.0,False
+Vilnius University,higher_education,2020,2020 XIII-2695.docx,Vilniaus universitetas,304.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,84.0,False
+Vilnius University,higher_education,2022,2022 XIV-745.docx,Vilniaus universitetas,107065.0,iš jų:,1.0,77.0,False
+Vilnius University,higher_education,2023,2023 XIV-1556.docx,Vilniaus universitetas,133641.0,iš jų:,1.0,77.0,False
+Vilnius University,higher_education,2024,2024 XIV-2297.docx,Vilniaus universitetas,157330.0,iš jų:,1.0,78.0,False
+Vilnius University,higher_education,2025,2025 XV-89.docx,Vilniaus universitetas,195896.0,iš jų:,2.0,77.0,False
+Vytautas Magnus University,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Vytauto Didžiojo universitetas,10000.0,iš jų:,2.0,85.0,False
+Vytautas Magnus University,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Vytauto Didžiojo universitetas,12000.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2.0,85.0,False
 Vytautas Magnus University,higher_education,2011,2011 TAR.FE51590E2B56.docx,Vytauto Didžiojo universitetas,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
-ORGANIZACIJOS (INSTITUTAI)",1,100,False
-Vytautas Magnus University,higher_education,2017,2017 XIII-177.docx,Vytauto Didžiojo universitetas,350.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,96,False
+ORGANIZACIJOS (INSTITUTAI)",1.0,100.0,False
+Vytautas Magnus University,higher_education,2017,2017 XIII-177.docx,Vytauto Didžiojo universitetas,350.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,96.0,False
 Vytautas Magnus University,higher_education,2018,2018 XIII-868.docx,Vytauto Didžiojo universitetas,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
-ORGANIZACIJOS (INSTITUTAI)",1,89,False
-Vytautas Magnus University,higher_education,2019,2019 XIII-1710.docx,Vytauto Didžiojo universitetas,304.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,90,False
-Vytautas Magnus University,higher_education,2020,2020 XIII-2695.docx,Vytauto Didžiojo universitetas,1195.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,86,False
-Vytautas Magnus University,higher_education,2022,2022 XIV-745.docx,Vytauto Didžiojo universitetas,32056.0,iš jų:,1,79,False
-Vytautas Magnus University,higher_education,2024,2024 XIV-2297.docx,Vytauto Didžiojo universitetas,47769.0,iš jų:,1,80,False
-Vytautas Magnus University,higher_education,2025,2025 XV-89.docx,Vytauto Didžiojo universitetas,59695.0,iš jų:,2,80,False
-Šiauliai University,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Šiaulių universitetas,16600.0,iš jų:,2,96,False
-Šiauliai University,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Šiaulių universitetas,22120.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2,96,False
-Šiauliai University,higher_education,2011,2011 TAR.FE51590E2B56.docx,Šiaulių universitetas,20383.0,iš jų:,2,94,False
-Šiauliai University,higher_education,2017,2017 XIII-177.docx,Šiaulių universitetas,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,106,False
+ORGANIZACIJOS (INSTITUTAI)",1.0,89.0,False
+Vytautas Magnus University,higher_education,2019,2019 XIII-1710.docx,Vytauto Didžiojo universitetas,304.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,90.0,False
+Vytautas Magnus University,higher_education,2020,2020 XIII-2695.docx,Vytauto Didžiojo universitetas,1195.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,86.0,False
+Vytautas Magnus University,higher_education,2022,2022 XIV-745.docx,Vytauto Didžiojo universitetas,32056.0,iš jų:,1.0,79.0,False
+Vytautas Magnus University,higher_education,2024,2024 XIV-2297.docx,Vytauto Didžiojo universitetas,47769.0,iš jų:,1.0,80.0,False
+Vytautas Magnus University,higher_education,2025,2025 XV-89.docx,Vytauto Didžiojo universitetas,59695.0,iš jų:,2.0,80.0,False
+Šiauliai University,higher_education,2009,2009 TAR.D641C5B5ADFD.docx,Šiaulių universitetas,16600.0,iš jų:,2.0,96.0,False
+Šiauliai University,higher_education,2010,2010 TAR.E5C7DCAD90FA.docx,Šiaulių universitetas,22120.0,"VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) VII. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",2.0,96.0,False
+Šiauliai University,higher_education,2011,2011 TAR.FE51590E2B56.docx,Šiaulių universitetas,20383.0,iš jų:,2.0,94.0,False
+Šiauliai University,higher_education,2017,2017 XIII-177.docx,Šiaulių universitetas,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,106.0,False
 Šiauliai University,higher_education,2018,2018 XIII-868.docx,Šiaulių universitetas,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
 ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO 
-ORGANIZACIJOS (INSTITUTAI)",1,99,False
-Šiauliai University,higher_education,2019,2019 XIII-1710.docx,Šiaulių universitetas,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,98,False
-Šiauliai University,higher_education,2020,2020 XIII-2695.docx,Šiaulių universitetas,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1,94,False
+ORGANIZACIJOS (INSTITUTAI)",1.0,99.0,False
+Šiauliai University,higher_education,2019,2019 XIII-1710.docx,Šiaulių universitetas,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,98.0,False
+Šiauliai University,higher_education,2020,2020 XIII-2695.docx,Šiaulių universitetas,0.0,"V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI) V. ŠVIETIMO, KULTŪROS IR MOKSLO ORGANIZACIJOS (INSTITUTAI)",1.0,94.0,False

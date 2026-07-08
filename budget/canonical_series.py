@@ -6580,6 +6580,62 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
     # -----------------------------------------------------------------------
     "UK": [
         {
+            # -----------------------------------------------------------------
+            # Headline "total government science/S&T spending" figure.
+            #
+            # AUDIT FINDING (2026-07): The Financial Statement and Budget
+            # Report ("Red Book") is the SAME document series every year from
+            # 1975-2025 — confirmed by inspecting page-1 headers across all 55
+            # source files. From 1994 onward it periodically states a single
+            # headline total, e.g.:
+            #   1994: "Total central government spending on science and
+            #          technology ... 1995-96 will be about £6.1 billion"
+            #   1995: "Total central government spending on science and
+            #          technology in 1996-97 is expected to be about £6 billion"
+            #   1996: "Total central government spending on Science and
+            #          Technology in 1997-98 is expected to be about £6 billion"
+            #   2006/2007: "total UK science spending will be £5.4 billion"
+            #
+            # Despite near-identical phrasing across years, extraction was
+            # inconsistent: 1995's identical-pattern sentence was missed
+            # entirely (0 rows extracted that year); 1994/1996/2006 rows were
+            # extracted but stuck in decision=review; 2006 vs 2007 same phrase
+            # got different item_type from the LLM (section_total vs
+            # line_item), and the UK cleaner's blanket "section_total -> review"
+            # rule then silently dropped 2006 but let 2007 through. This is the
+            # single clearest evidence of the "documents are consistent, the
+            # algorithm wasn't" issue flagged by a peer reviewer.
+            #
+            # This is a TOP-LINE AGGREGATE, not additive with the individual
+            # research-council / UKRI / fund lines below — do not sum this
+            # series with other UK canonical series for the same year.
+            # -----------------------------------------------------------------
+            "canonical_name": "Total UK Science & Technology Spending (headline, HMT Budget)",
+            "category": "national_total",
+            "name_variants": [
+                "total uk science spending",
+                "total central government spending on science and technology",
+                "total central government spending on civil science and technology",
+            ],
+            "preferred_item_type": ["line_item", "section_total", "program_total"],
+            "preferred_match_groups": [[
+                r"total uk science spending",
+                r"total central government spending on (civil )?science and technology",
+                r"total planned central government spending on (civil )?science and technology",
+            ]],
+            "enforce_preferred_match_groups": True,
+            "strict_preferred_item_types": False,
+            "active_years": (1975, 2099),
+            "notes": (
+                "Headline annual total government science/S&T spending figure, as "
+                "announced in the Budget Red Book narrative (not a Supply Estimates "
+                "line). Kept as a separate backbone series for cross-year "
+                "comparability given sparse agency-level coverage pre-2010. NOT "
+                "additive with other UK canonical series in the same year — do not "
+                "sum into a country-year R&D total without deduplicating."
+            ),
+        },
+        {
             "canonical_name": "UKRI (UK Research and Innovation)",
             "category": "science_agency",
             "name_variants": [
@@ -6964,6 +7020,918 @@ CANONICAL_AGENCIES: dict[str, list[dict]] = {
             "preferred_match_groups": [[r"university challenge (scheme|fund|funding)"]],
             "enforce_preferred_match_groups": True,
             "active_years": (1998, 2099),
+        },
+        # ---------------------------------------------------------------
+        # Newly-unlocked named one-off programmes (audit 2026-07): these
+        # rows were previously stuck in decision=review purely because
+        # their description happened to start with "£X million/billion"
+        # (the removed _STARTS_WITH_AMOUNT heuristic in the UK cleaner —
+        # see budget/cleaners/united_kingdom.py _is_multi_year()). Each is
+        # a specific, named, single-year Budget announcement, verified
+        # against source text.
+        # ---------------------------------------------------------------
+        {
+            "canonical_name": "Science Enterprise Challenge",
+            "category": "innovation_instruments",
+            "name_variants": ["science enterprise challenge"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"science enterprise challenge"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (1999, 2099),
+            "notes": "Budget 1999: £25 million Science Enterprise Challenge, verified p.~1999_UK.pdf.",
+        },
+        {
+            "canonical_name": "Joint Infrastructure Fund",
+            "category": "research_infrastructure",
+            "name_variants": ["joint infrastructure fund"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"joint infrastructure fund"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (1999, 2099),
+            "notes": "Budget 1999: £600 million Joint Infrastructure Fund (Government + Wellcome Trust), verified 1999_UK.pdf.",
+        },
+        {
+            "canonical_name": "Institute of Web Science",
+            "category": "research_institute",
+            "name_variants": ["institute of web science"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"institute of web science"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2010, 2099),
+            "notes": "Budget 2010: £30 million funding for the Institute of Web Science, verified 2010_03_UK.pdf.",
+        },
+        {
+            "canonical_name": "Advanced Manufacturing Supply Chain Initiative",
+            "category": "innovation_instruments",
+            "name_variants": ["advanced manufacturing supply chain initiative"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"advanced manufacturing supply chain initiative"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2012, 2099),
+            "notes": "Budget 2012: £125 million Advanced Manufacturing Supply Chain Initiative, verified 2012_UK.pdf.",
+        },
+        {
+            "canonical_name": "UK Collaboration for Research in Infrastructure and Cities (UKCRIC)",
+            "category": "research_infrastructure",
+            "name_variants": [
+                "uk collaboration for research in infrastructure and cities",
+                "ukcric",
+            ],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[
+                r"uk collaboration for research in infrastructure and cities",
+                r"\bukcric\b",
+            ]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2015, 2099),
+            "notes": "Budget 2015 (July): £128 million UKCRIC, verified 2015_07_UK.pdf.",
+        },
+        {
+            "canonical_name": "Energy Research Accelerator",
+            "category": "research_infrastructure",
+            "name_variants": ["energy research accelerator"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"energy research accelerator"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2015, 2099),
+            "notes": "Budget 2015 (March): £60m investment in a new Energy Research Accelerator, verified 2015_03_UK.pdf.",
+        },
+        {
+            "canonical_name": "Compound Semiconductor Catapult",
+            "category": "innovation_instruments",
+            "name_variants": ["compound semiconductor catapult"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"compound semiconductor catapult"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2016, 2099),
+            "notes": "Budget 2016: Compound Semiconductor Catapult, verified 2016_UK.pdf.",
+        },
+        {
+            "canonical_name": "Digital Catapult",
+            "category": "innovation_instruments",
+            "name_variants": ["digital catapult"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"digital catapult"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2018, 2099),
+            "notes": "Budget 2018: £115 million to extend funding for the Digital Catapult, verified 2018_UK.pdf.",
+        },
+        {
+            "canonical_name": "DSIT R&D Budget",
+            "category": "rd_ministry",
+            "name_variants": ["dsit r&d budget", "dsit to invest in r&d"],
+            "preferred_item_type": ["line_item", "program_total", "section_total"],
+            "preferred_match_groups": [[r"dsit.{0,20}(r&d|research and development)"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2023, 2099),
+            "notes": (
+                "Department for Science, Innovation and Technology's own R&D "
+                "envelope — a component of, not equal to, the whole-of-government "
+                "'Public R&D Investment' total for the same year. Do not sum."
+            ),
+        },
+        {
+            "canonical_name": "Alan Turing Institute",
+            "category": "research_institute",
+            "name_variants": ["alan turing institute"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"alan turing institute"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2014, 2099),
+            "notes": "Budget 2014: £42 million over 5 years for the Alan Turing Institute (founding grant).",
+        },
+        {
+            "canonical_name": "GovTech Fund",
+            "category": "innovation_instruments",
+            "name_variants": ["govtech fund"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"govtech fund"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2017, 2099),
+            "notes": "Autumn Budget 2017: up to £20 million over 3 years of R&D NPIF funding for a GovTech Fund.",
+        },
+        # ---------------------------------------------------------------
+        # Round-3 additions (audit 2026-07): case-by-case judgment pass over
+        # ~280 candidate R&D/innovation mentions not previously captured.
+        # Each entry below is a genuine single-year (or single-Budget-
+        # attributable) R&D appropriation, verified against source text,
+        # with multi-year/cumulative pledges and non-R&D adjacent policy
+        # (tax credits, energy/EV/broadband deployment, general business
+        # finance) deliberately excluded — see uk_audit_summary.md §7 for
+        # the full include/exclude decision table.
+        # ---------------------------------------------------------------
+        {
+            "canonical_name": "Venture Capital Challenge Competition",
+            "category": "innovation_instruments",
+            "name_variants": ["venture capital challenge"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"venture capital challenge"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (1999, 2099),
+            "notes": "Budget 1999: £20 million Venture Capital Challenge Competition from the Capital Modernisation Fund.",
+        },
+        {
+            "canonical_name": "UKTI International R&D Strategy",
+            "category": "rd_programme",
+            "name_variants": ["ukti international r&d strategy", "uk trade and investment international r&d"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"UKTI.{0,20}international R&D strategy"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2006, 2099),
+            "notes": "Budget 2006: £9 million UKTI international R&D strategy funding.",
+        },
+        {
+            "canonical_name": "Climate Change Research Capacity Programme",
+            "category": "rd_programme",
+            "name_variants": ["climate change research capacity"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"climate change research.{0,60}African researchers"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2007, 2099),
+            "notes": "Budget 2007: £30 million programme (with Canadian IDRC) to build African research capacity on climate change.",
+        },
+        {
+            "canonical_name": "University Enterprise Capital Fund",
+            "category": "innovation_instruments",
+            "name_variants": ["university enterprise capital fund"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"university enterprise capital fund"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2010, 2099),
+            "notes": "Budget 2010 (March): £25 million University Enterprise Capital Fund for commercialising university innovations.",
+        },
+        {
+            "canonical_name": "UK Centre for Aerodynamics",
+            "category": "research_infrastructure",
+            "name_variants": ["uk centre for aerodynamics"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"UK centre for aerodynamics"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2012, 2099),
+            "notes": "Budget 2012: £60 million UK centre for aerodynamics, opened 2012-13, to support aerospace innovation.",
+        },
+        {
+            "canonical_name": "TSB Digital Content Production Fund",
+            "category": "innovation_instruments",
+            "name_variants": ["digital content production", "visual effects industry investment"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"digital content production industry"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2013, 2099),
+            "notes": "Budget 2013: Technology Strategy Board £15 million competitive fund for digital content production.",
+        },
+        {
+            "canonical_name": "Centre for Process Innovation Chemical Innovation Fund",
+            "category": "innovation_instruments",
+            "name_variants": ["centre for process innovation"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"Centre for Process Innovation.{0,60}chemical"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2015, 2099),
+            "notes": "Budget 2015 (March): £1 million to Centre for Process Innovation for North East chemicals sector innovation/knowledge transfer.",
+        },
+        {
+            "canonical_name": "Northern Tech Incubator Investment",
+            "category": "innovation_instruments",
+            "name_variants": ["tech incub"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"£11 million investment in tech incub"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2015, 2099),
+            "notes": "Budget 2015 (March): £11 million investment in tech incubation to accelerate innovative businesses in the North.",
+        },
+        {
+            "canonical_name": "Francis Crick Institute (MRC asset reinvestment)",
+            "category": "research_institute",
+            "name_variants": ["francis crick institute"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"Francis Crick Institute"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2015, 2099),
+            "notes": "Budget 2015 (March): £30 million reinvested from sale of MRC assets to support research at the Francis Crick Institute.",
+        },
+        {
+            "canonical_name": "Digital Currency Technology Research",
+            "category": "rd_programme",
+            "name_variants": ["digital currency technology"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"digital currency technology"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2015, 2099),
+            "notes": "Budget 2015 (March): £10 million increase in research funding for digital currency technology (research councils, Alan Turing Institute, Digital Catapult).",
+        },
+        {
+            "canonical_name": "Internet of Things Research Programme",
+            "category": "rd_programme",
+            "name_variants": ["internet of things"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"Internet of Things technologies"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2015, 2099),
+            "notes": "Budget 2015 (March): £40 million to develop Internet of Things technologies (demonstrators, incubator space, research centre).",
+        },
+        {
+            "canonical_name": "SMR-Enabling Advanced Manufacturing R&D Programme",
+            "category": "rd_programme",
+            "name_variants": ["smr-enabling advanced manufacturing"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"SMR-enabling advanced manufacturing R&D"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2016, 2099),
+            "notes": "Budget 2016: at least £30 million for an SMR-enabling advanced manufacturing R&D programme to develop nuclear skills capacity.",
+        },
+        {
+            "canonical_name": "ONS Data Science Hub",
+            "category": "research_infrastructure",
+            "name_variants": ["hub for data science"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"hub for data science"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2016, 2099),
+            "notes": "Budget 2016: over £10 million for a new ONS hub for data science and centre for excellence in economic measurement.",
+        },
+        {
+            "canonical_name": "5G Research Facility",
+            "category": "research_infrastructure",
+            "name_variants": ["5g facility", "5g research"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"cutting edge 5G facility"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2017, 2099),
+            "notes": "Spring Budget 2017: up to £16 million in a cutting-edge 5G facility, delivered through 5G research institutions.",
+        },
+        {
+            "canonical_name": "NPIF Disruptive Technologies Initial Investment",
+            "category": "rd_programme",
+            "name_variants": ["disruptive technologies"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"kick-start the development of disruptive technologies"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2017, 2099),
+            "notes": "Spring Budget 2017: £270 million initial investment in 2017-18 to kick-start disruptive technology development.",
+        },
+        {
+            "canonical_name": "Turing AI Fellowships",
+            "category": "rd_programme",
+            "name_variants": ["turing ai fellowships"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"Turing AI Fellowships"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2018, 2099),
+            "notes": "Budget 2018: up to £50 million in new Turing AI Fellowships to attract world-leading AI research talent.",
+        },
+        {
+            "canonical_name": "Regulators' Pioneer Fund",
+            "category": "innovation_instruments",
+            "name_variants": ["regulators' pioneer fund", "regulators pioneer fund"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"Regulators.? Pioneer Fund"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2020, 2099),
+            "notes": "Budget 2020: £10 million in a second round of the Regulators' Pioneer Fund to unlock emerging technologies.",
+        },
+        {
+            "canonical_name": "National Institute for Health Research (uplift)",
+            "category": "research_infrastructure",
+            "name_variants": ["national institute for health research"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"National Institute for Health Research"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2020, 2099),
+            "notes": "Budget 2020: extra £12 million for the National Institute for Health Research in 2020-21.",
+        },
+        {
+            "canonical_name": "Government Chief Scientific Adviser / GO-Science",
+            "category": "rd_ministry",
+            "name_variants": ["government chief scientific adviser", "government office for science"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"Government Chief Scientific Adviser and the Government Office for Science"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2020, 2099),
+            "notes": "Budget 2020: additional £2 million in 2020-21 for strategic science and resilience capability at GCSA/GO-Science.",
+        },
+        {
+            "canonical_name": "Specialist Research Institutions Funding",
+            "category": "research_institute",
+            "name_variants": ["specialist institutions"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"invest £80 million to support the UK.?s foremost specialist institutions"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2020, 2099),
+            "notes": "Budget 2020: £80 million to support the UK's foremost specialist research institutions (PhDs, fellowships, research projects).",
+        },
+        {
+            "canonical_name": "Vaccines R&D and Manufacturing",
+            "category": "rd_programme",
+            "name_variants": ["research and development.{0,10}and vaccines manufacturing"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"for research and development \(R&D\) and vaccines manufacturing"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2021, 2099),
+            "notes": "Budget 2021 (March): £128 million for R&D and vaccines manufacturing (part of the £733M UK Vaccines Taskforce 2021-22 allocation).",
+        },
+        {
+            "canonical_name": "Innovation Accelerators Programme",
+            "category": "innovation_instruments",
+            "name_variants": ["innovation accelerators"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"innovation accelerators"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2023, 2099),
+            "notes": "Spring Budget 2023: £100 million for the Innovation Accelerators programme (Glasgow City Region, Greater Manchester, West Midlands).",
+        },
+        {
+            "canonical_name": "Cambridge Biomedical Campus",
+            "category": "research_infrastructure",
+            "name_variants": ["cambridge biomedical campus"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"Cambridge Biomedical Campus"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2024, 2099),
+            "notes": "Spring Budget 2024: £10.2 million to support development of the Cambridge Biomedical Campus.",
+        },
+        {
+            "canonical_name": "Cancer Research UK Funding",
+            "category": "research_institute",
+            "name_variants": ["cancer research uk"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"funding of £3 million for Cancer Research UK"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2024, 2099),
+            "notes": "Spring Budget 2024: £3 million for Cancer Research UK.",
+        },
+        {
+            "canonical_name": "Medical Research Charities Early Career Researchers Fund",
+            "category": "rd_programme",
+            "name_variants": ["medical research charities early career researchers"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"Medical Research Charities Early Career Researchers"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2024, 2099),
+            "notes": "Spring Budget 2024: £45 million through the Medical Research Charities Early Career Researchers Support Fund.",
+        },
+        {
+            "canonical_name": "UKRI R&D Missions Accelerator",
+            "category": "rd_programme",
+            "name_variants": ["r&d missions accelerator"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"R&D Missions Accelerator"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2025, 2099),
+            "notes": "Budget 2025: UKRI's £500 million R&D Missions Accelerator programme.",
+        },
+        {
+            "canonical_name": "Entrepreneurship-Focused Doctoral Training",
+            "category": "rd_programme",
+            "name_variants": ["entrepreneurship-focused doctoral training"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"entrepreneurship.?focused doctoral training"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2025, 2099),
+            "notes": "Budget 2025: up to £25 million for new entrepreneurship-focused doctoral training schemes (UKRI).",
+        },
+        {
+            "canonical_name": "Women in Innovation Awards",
+            "category": "innovation_instruments",
+            "name_variants": ["women in innovation awards"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"Women in Innovation Awards"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2025, 2099),
+            "notes": "Budget 2025: new £4.5 million round of the Women in Innovation Awards (UKRI).",
+        },
+        {
+            "canonical_name": "Studio Ulster (virtual production R&D studio)",
+            "category": "research_infrastructure",
+            "name_variants": ["studio ulster"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"Studio Ulster"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2025, 2099),
+            "notes": "Budget 2025: £25.2 million government investment in Studio Ulster, a virtual production R&D studio.",
+        },
+        {
+            "canonical_name": "Materials Processing Institute",
+            "category": "research_institute",
+            "name_variants": ["materials processing institute"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"materials processing institute"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2020, 2099),
+            "notes": "Budget 2020: £22 million Materials Processing Institute, verified 2020_UK.pdf.",
+        },
+        # ---------------------------------------------------------------
+        # Round-4 additions (audit 2026-07): 1997, 2002, 2019 and 2022 have
+        # no cached source PDF in Data/input/finance_bills/UK — confirmed
+        # these are genuine gaps in the source corpus, not extraction
+        # failures. No full "Red Book" Budget was held in 2019 (Autumn
+        # Budget 2019 was cancelled for the general election; only a Spring
+        # Statement was delivered) or in 1997/2002 (checked against
+        # gov.uk's published fiscal-event calendar). For 2022 there were two
+        # major fiscal events (September mini-Budget "Growth Plan" and the
+        # November Autumn Statement) that were simply never added to the
+        # local corpus. Official PDFs were fetched directly from gov.uk and
+        # manually reviewed line-by-line for genuine single-year R&D content
+        # (see uk_audit_summary.md Round 4 section for full citations).
+        # ---------------------------------------------------------------
+        {
+            "canonical_name": "Extreme Photonics Application Centre",
+            "category": "research_infrastructure",
+            "name_variants": ["extreme photonics application centre"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"extreme photonics application centre"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2019, 2099),
+            "notes": (
+                "Spring Statement 2019 (13 March 2019), Written Ministerial "
+                "Statement, 'Science and Technology' section: 'Allocating £81 "
+                "million to a national Extreme Photonics Application Centre in "
+                "Oxfordshire.' No full Autumn Budget was held in 2019 (cancelled "
+                "for the general election); this WMS is the only fiscal-event "
+                "document for that year."
+            ),
+        },
+        {
+            "canonical_name": "European Bioinformatics Institute Infrastructure Upgrade",
+            "category": "research_infrastructure",
+            "name_variants": ["european bioinformatics institute", "bioinformatics infrastructure"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"european bioinformatics institute"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2019, 2099),
+            "notes": (
+                "Spring Statement 2019 WMS, 'Science and Technology' section: "
+                "'Investing £45 million in a critical upgrade to data storage "
+                "cloud computing infrastructure at the European Bioinformatics "
+                "Institute in Cambridgeshire.'"
+            ),
+        },
+        {
+            "canonical_name": "ARCHER 2 Supercomputer",
+            "category": "research_infrastructure",
+            "name_variants": ["archer 2", "archer2 supercomputer"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"archer\s?2"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2019, 2099),
+            "notes": (
+                "Spring Statement 2019 WMS, 'Science and Technology' section: "
+                "'Allocating £79 million to a new UK supercomputer (ARCHER 2) "
+                "which will replace the current national high-performance "
+                "computing platform (ARCHER).'"
+            ),
+        },
+        {
+            "canonical_name": "Joint European Torus (JET) Fusion Funding",
+            "category": "research_infrastructure",
+            "name_variants": ["joint european torus", "jet fusion funding", "jet funding"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"joint european torus", r"\bjet\b.{0,20}fusion"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2019, 2099),
+            "notes": (
+                "Spring Statement 2019 WMS, 'Science and Technology' section: "
+                "'Setting aside up to £60 million to confirm funding is "
+                "guaranteed for the [Joint European Torus] facility over "
+                "2019/20.' Explicitly a single fiscal-year (2019/20) commitment."
+            ),
+        },
+        {
+            "canonical_name": "Long-Term Investment for Technology & Science (LIFTS)",
+            "category": "innovation_instruments",
+            "name_variants": ["lifts competition", "long-term investment for technology and science"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"long-term investment for technology"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2022, 2099),
+            "notes": (
+                "The Growth Plan 2022 (23 September 2022, 'mini-Budget'), para "
+                "3.14: 'introducing the Long-Term Investment for Technology & "
+                "Science (LIFTS) competition, providing up to £500 million to "
+                "support new funds designed to catalyse investment from pensions "
+                "schemes and other investors into the UK's pioneering science "
+                "and technology businesses.' Financial-instrument category, "
+                "same treatment as the existing Venture Capital Challenge and "
+                "Research Partnership Investment Fund entries. Checked the "
+                "companion November 2022 Autumn Statement (CP 751) for further "
+                "single-year R&D items: found only multi-year/cumulative "
+                "figures already excluded under the Round-3 rule set (Innovate "
+                "UK's £2.6bn Spending-Review-period allocation, Catapults' "
+                "£1.6bn 5-year funding-cycle increase, and the £20bn-by-2024-25 "
+                "R&D target, which duplicates the 'Public R&D Investment' entry "
+                "already locked for 2024) plus R&D tax-relief reform (a tax "
+                "policy change, not spending). Chapter 5 'Policy Decisions' "
+                "itemised tables were not recoverable via text extraction and "
+                "were not reviewed line-by-line as a result — flagged as a "
+                "residual limitation."
+            ),
+        },
+        # ---------------------------------------------------------------
+        # Round-5 additions (audit 2026-07): systematic recovery of
+        # decision='include' rows in uk_docx_results.csv that were never
+        # matched to any canonical pattern and so were silently dropped
+        # from the final series — a structural gap, not a harvesting gap.
+        # 91 orphaned include-rows were found; each was checked against
+        # already-captured canonicals (to avoid double counting sub-lines
+        # of an existing fund/programme) and against the annual-vs-
+        # multi-year / R&D-vs-adjacent rule set before being added here.
+        # See uk_audit_summary.md §10 for the full orphan disposition
+        # table (34 included, 57 excluded with reasons).
+        # ---------------------------------------------------------------
+        {
+            "canonical_name": "Industrial Innovation Support Measures (1982 package)",
+            "category": "rd_programme",
+            "name_variants": ["industrial innovation", "promote research and innovation in industry"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"promote research and innovation in industry"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (1982, 1984),
+            "notes": (
+                "Budget 1982: 'New measures to promote research and innovation "
+                "in industry will involve additional expenditure of £20 million "
+                "in 1982-83, £35 million in 1983-84 and £45 million in "
+                "1984-85.' Per-year tranches explicitly disaggregated (not a "
+                "vague multi-year total), so each year is locked separately. "
+                "The 1983-84 figure was updated in Budget 1983 to £39 million "
+                "('the cost is £39 million in 1983-84') — the more "
+                "contemporaneous figure is used for 1983. The 1984-85 £45 "
+                "million figure is the 1982 forecast only; it was not "
+                "independently re-confirmed in the 1984 document (no matching "
+                "mention found) — flagged as lower-confidence. This is the "
+                "earliest confirmed genuine R&D appropriation found in the UK "
+                "corpus, extending the series two years earlier than the prior "
+                "1994 start of consistent coverage."
+            ),
+        },
+        {
+            "canonical_name": "Scientific Equipment Challenge Fund",
+            "category": "research_infrastructure",
+            "name_variants": ["challenge fund to finance scientific equipment"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"challenge fund to finance scientific equipment"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (1996, 2099),
+            "notes": "Budget 1996 (1996_UK.pdf p.114): '£20 million in 1997-98 for a challenge fund to finance scientific equipment.'",
+        },
+        {
+            "canonical_name": "Higher Education Innovation Fund (HEIF)",
+            "category": "innovation_instruments",
+            "name_variants": ["higher education innovation fund", "heif"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"higher education innovation fund"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2003, 2099),
+            "notes": "Budget 2003 (2003_UK.pdf p.62): '£187 million Higher Education Innovation Fund (HEIF).'",
+        },
+        {
+            "canonical_name": "PSRE/NHS Science Commercialisation Support",
+            "category": "innovation_instruments",
+            "name_variants": ["commercialisation of science and technology from public sector research"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"commercialisation of science and technology"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2003, 2099),
+            "notes": "Budget 2003 (2003_UK.pdf p.62): '£15 million allocated this year to help catalyse commercialisation of science and technology from Public Sector Research Establishments and NHS Trusts.'",
+        },
+        {
+            "canonical_name": "National Technology Strategy",
+            "category": "rd_programme",
+            "name_variants": ["national technology strategy"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"national technology strategy"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2004, 2099),
+            "notes": "Budget 2004 (2004_UK.pdf p.69): £150 million National Technology Strategy.",
+        },
+        {
+            "canonical_name": "Additional Clinical Research Funding (2005)",
+            "category": "rd_programme",
+            "name_variants": ["additional funding for clinical research"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"additional funding for clinical research"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2005, 2099),
+            "notes": "Budget 2005 (2005_UK.pdf p.71): £25 million additional funding for clinical research.",
+        },
+        {
+            "canonical_name": "Science Research Infrastructure Fund (SRIF)",
+            "category": "research_infrastructure",
+            "name_variants": ["science research infrastructure fund", "srif"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"science research infrastructure fund"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2005, 2099),
+            "notes": "Budget 2005 (2005_UK.pdf p.72): 'Science Research Infrastructure Fund, which provides capital funding of £500 million per annum to renew university infrastructure.'",
+        },
+        {
+            "canonical_name": "DfES Research and Knowledge Transfer Funding (English Universities)",
+            "category": "rd_programme",
+            "name_variants": ["dfes funding for research and knowledge transfer"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"dfes funding for research and knowledge transfer"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2007, 2099),
+            "notes": "Budget 2007 (2007_UK.pdf p.183): DfES funding for research and knowledge transfer in English Universities, £1.655 million.",
+        },
+        {
+            "canonical_name": "Research Councils Co-Investment in TSB Collaborative R&D",
+            "category": "rd_programme",
+            "name_variants": ["investment by research councils in tsb programmes"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"investment by research councils in tsb"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2007, 2099),
+            "notes": "Budget 2007 (2007_UK.pdf p.70): 'Investment by Research Councils in TSB programmes to support collaborative R&D projects', £25 million. Distinct funding stream from the Technology Strategy Board's own £100 million (already captured under the 'Innovate UK' canonical for 2007) — flagged as a modest double-counting risk since both ultimately flow into TSB collaborative R&D, but the source text frames them as two separate contributions.",
+        },
+        {
+            "canonical_name": "Low-Carbon Vehicle RD&D Programme",
+            "category": "rd_programme",
+            "name_variants": ["research, development and demonstration programme for low-carbon vehicles", "research, development and demonstration programme focusing on low-carbon vehicles"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"research, development and demonstration programme.{0,20}low-carbon vehicles"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2008, 2099),
+            "notes": "Budget 2008 (2008_UK.pdf p.102/106, King Review): £40 million research, development and demonstration programme for low-carbon/ultra-low-carbon vehicles.",
+        },
+        {
+            "canonical_name": "TSB Creative Industries R&D Programme",
+            "category": "rd_programme",
+            "name_variants": ["programme of research and development for the creative industries"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"research and development for the creative industries"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2009, 2099),
+            "notes": "Budget 2009 (2009_UK.pdf p.89): '£10 million programme of research and development for the creative industries, led by the TSB.'",
+        },
+        {
+            "canonical_name": "Low-Carbon Aircraft Engine R&D",
+            "category": "rd_programme",
+            "name_variants": ["research and technology critical to the development of low-carbon aircraft engines"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"low-carbon aircraft engines"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2010, 2099),
+            "notes": "Budget March 2010 (2010_03_UK.pdf p.118): £45 million for research and technology critical to the development of low-carbon aircraft engines.",
+        },
+        {
+            "canonical_name": "Science and Innovation Campuses Capital Funding",
+            "category": "research_infrastructure",
+            "name_variants": ["new capital funding in 2011-12 for science and innovation campuses"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"capital funding in 2011-12 for science and innovation campuses"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2011, 2099),
+            "notes": "Budget 2011 (2011_UK.pdf p.56): 'provide £100 million of new capital funding in 2011-12 for science and innovation campuses.' This is the exact item flagged during the FY-notation cleaner fix (Round 1-2) as staying stuck in review — it turned out to also need its own canonical, since it never matched any existing agency pattern.",
+        },
+        {
+            "canonical_name": "University Research Facilities Capital Funding (2012)",
+            "category": "research_infrastructure",
+            "name_variants": ["fund to support investment in major new university research facilities"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"investment in major new university research facilities"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2012, 2099),
+            "notes": "Budget 2012 (2012_UK.pdf p.43): £100 million fund to support investment in major new university research facilities.",
+        },
+        {
+            "canonical_name": "Digital Economy Centres",
+            "category": "research_infrastructure",
+            "name_variants": ["next generation digital economy centres", "digital economy centres"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"digital economy centres"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2015, 2099),
+            "notes": "Summer Budget 2015 (2015_07_UK.pdf p.68/102): investment in 6 Next Generation Digital Economy Centres, £23 million.",
+        },
+        {
+            "canonical_name": "Centre for Agricultural Informatics and Sustainability Metrics",
+            "category": "research_institute",
+            "name_variants": ["centre for agricultural informatics and sustainability metrics"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"agricultural informatics and sustainability metrics"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2015, 2099),
+            "notes": "Budget March 2015 (2015_03_UK.pdf p.78): Centre for Agricultural Informatics and Sustainability Metrics, £11.8 million.",
+        },
+        {
+            "canonical_name": "Advanced Wellbeing Research Centre",
+            "category": "research_institute",
+            "name_variants": ["advanced wellbeing research centre"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"advanced wellbeing research centre"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2015, 2099),
+            "notes": "Budget March 2015 (2015_03_UK.pdf p.77): Advanced Wellbeing Research Centre, £14 million.",
+        },
+        {
+            "canonical_name": "Birmingham STEAMhouse",
+            "category": "innovation_instruments",
+            "name_variants": ["birmingham steamhouse"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"birmingham steamhouse"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2016, 2099),
+            "notes": "Budget 2016 (2016_UK.pdf p.130): Birmingham STEAMhouse innovation hub, £14 million.",
+        },
+        {
+            "canonical_name": "Battery Technology R&D Support (Dyson)",
+            "category": "rd_programme",
+            "name_variants": ["dyson batteries"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"dyson batteries"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2016, 2099),
+            "notes": "Budget 2016 (2016_UK.pdf p.130): government support for Dyson battery technology R&D, £16 million.",
+        },
+        {
+            "canonical_name": "National Institute for Smart Data Innovation",
+            "category": "research_institute",
+            "name_variants": ["national institute for smart data innovation"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"national institute for smart data innovation"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2016, 2099),
+            "notes": "Budget 2016 (2016_UK.pdf p.78/130): 'The government will invest £15 million in the National Institute for Smart Data Innovation.'",
+        },
+        {
+            "canonical_name": "Jodrell Bank Discovery Centre",
+            "category": "research_infrastructure",
+            "name_variants": ["jodrell bank"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"jodrell bank"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2017, 2099),
+            "notes": "Autumn Budget 2017 (2017_11_UK.pdf p.56): £4 million government contribution to Jodrell Bank's £20.5 million project.",
+        },
+        {
+            "canonical_name": "5G Testbeds and Trials Programme",
+            "category": "rd_programme",
+            "name_variants": ["initial trial to test 5g applications"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"initial trial to test 5g applications"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2017, 2099),
+            "notes": "Autumn Budget 2017 (2017_11_UK.pdf p.54): £5 million for an initial trial to test 5G applications and deployment on roads.",
+        },
+        {
+            "canonical_name": "5G Security Testbed Facility",
+            "category": "research_infrastructure",
+            "name_variants": ["facilities where the security of 5g networks can be tested"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"security of 5g networks can be tested"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2017, 2099),
+            "notes": "Autumn Budget 2017 (2017_11_UK.pdf p.54): £10 million to create facilities where the security of 5G networks can be tested.",
+        },
+        {
+            "canonical_name": "NPIF Fellowship Programmes",
+            "category": "rd_programme",
+            "name_variants": ["npif funding for fellowship programmes"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"npif funding for fellowship programmes"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2017, 2099),
+            "notes": "Spring Budget 2017 (2017_03_UK.pdf p.48): NPIF funding for fellowship programmes, £50 million.",
+        },
+        {
+            "canonical_name": "Quantum Technology R&D Programme (2018)",
+            "category": "rd_programme",
+            "name_variants": ["quantum technology: research and development"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"quantum technology: research and development"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2018, 2099),
+            "notes": "Budget 2018 (2018_UK.pdf p.40): Quantum Technology research and development, £5 million.",
+        },
+        {
+            "canonical_name": "UK Nuclear Fusion R&D Support",
+            "category": "rd_programme",
+            "name_variants": ["support for uk nuclear fusion"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"support for uk nuclear fusion"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2018, 2099),
+            "notes": "Budget 2018 (2018_UK.pdf p.40): support for UK nuclear fusion, £20 million.",
+        },
+        {
+            "canonical_name": "International Research Fellowship Scheme (2018)",
+            "category": "rd_programme",
+            "name_variants": ["international fellowship scheme"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"international fellowship scheme"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2018, 2099),
+            "notes": "Budget 2018 (2018_UK.pdf p.60): £100 million in an international fellowship scheme.",
+        },
+        {
+            "canonical_name": "Life Sciences Investment Programme",
+            "category": "innovation_instruments",
+            "name_variants": ["life sciences investment programme"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"life sciences investment programme"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2020, 2099),
+            "notes": "Budget 2020 (2020_UK.pdf p.88): Life Sciences Investment Programme, £200 million.",
+        },
+        {
+            "canonical_name": "Animal Health Science Estate",
+            "category": "research_infrastructure",
+            "name_variants": ["animal health science estate"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"animal health science estate"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2020, 2099),
+            "notes": "Budget 2020 (2020_UK.pdf p.88): Animal health science estate, £1.4 million.",
+        },
+        {
+            "canonical_name": "Future Fund: Breakthrough",
+            "category": "innovation_instruments",
+            "name_variants": ["future fund: breakthrough", "future fund breakthrough"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"future fund:? breakthrough"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2021, 2099),
+            "notes": "Budget March 2021 (2021_03_UK.pdf p.70): 'Future Fund: Breakthrough — Building on the government's Future Fund', £375 million co-investment vehicle for R&D-intensive, high-growth companies.",
+        },
+        {
+            "canonical_name": "Global Underwater Hub",
+            "category": "innovation_instruments",
+            "name_variants": ["global underwater hub"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"global underwater hub"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2021, 2099),
+            "notes": "Budget March 2021 (2021_03_UK.pdf p.68): support for the Global Underwater Hub, £5 million.",
+        },
+        {
+            "canonical_name": "Quantum Computing Mission (initial funding)",
+            "category": "rd_programme",
+            "name_variants": ["progress the quantum computing mission"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"progress the quantum computing mission"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2024, 2099),
+            "notes": "Budget March 2024 (2024_03_UK.pdf p.59): £1.6 million to progress the quantum computing mission.",
+        },
+        {
+            "canonical_name": "Faraday Discovery Fellowships and Green Future Fellowships Endowments",
+            "category": "rd_programme",
+            "name_variants": ["faraday discovery fellowships", "green future fellowships"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"faraday discovery fellowships"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2024, 2099),
+            "notes": "Budget March 2024 (2024_03_UK.pdf p.82): 'The £250 million Faraday Discovery Fellowships and £150 million Green Future Fellowships will be funded through endowments to the Royal Society and the Royal Academy of Engineering' — one-off endowment capital transfers (£400 million combined), treated like the Alan Turing Institute founding grant.",
+        },
+        {
+            "canonical_name": "South Wales Semiconductor Technologies Cluster",
+            "category": "research_infrastructure",
+            "name_variants": ["south wales world-leading semiconductor technologies cluster"],
+            "preferred_item_type": ["line_item", "program_total"],
+            "preferred_match_groups": [[r"south wales.{0,20}semiconductor technologies cluster"]],
+            "enforce_preferred_match_groups": True,
+            "active_years": (2025, 2099),
+            "notes": "Budget 2025 (2025_UK.pdf p.110): £10 million invested in the South Wales world-leading semiconductor technologies cluster.",
         },
     ],
 
@@ -18182,34 +19150,55 @@ def build_canonical_series(
             out.at[target_idx, "page_number"] = str(override_page)
             out.at[target_idx, "series_notes"] = f"{notes}; {override_note}".strip("; ").strip()
 
-        portugal_manual_drops = [
-            (1991, "JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal)"),
-            (1993, "JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal)"),
-            (1995, "JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal)"),
-            (2000, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"),
-            (2001, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
-            (2002, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
-            (2002, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"),
-            (2003, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
-            (2003, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)"),
-            (2004, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
-            (2005, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
-            (2009, "ANI — Agência Nacional de Inovação (Portugal)"),
-            (2014, "ANI — Agência Nacional de Inovação (Portugal)"),
-            (2021, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
-            (2022, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
-            (2024, "ANI — Agência Nacional de Inovação (Portugal)"),
-            (2024, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
-            (2025, "ANI — Agência Nacional de Inovação (Portugal)"),
-            (2025, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)"),
-        ]
-        for drop_year, drop_name in portugal_manual_drops:
+        # Manual drops used to be a hardcoded Python list here. Moved to a plain CSV
+        # (Data/output/budget/Portugal/portugal_manual_drops.csv: year, canonical_name,
+        # reason) so a non-programmer can review, audit, or add an entry without
+        # touching this 800KB+ file — and so a diff on that CSV shows exactly what
+        # changed, instead of disappearing into a Python tuple list. Falls back to
+        # the old hardcoded list (with a generic reason) if the CSV is ever missing,
+        # so this refactor can't silently turn into "Portugal audit rules stopped
+        # applying" if the file gets moved/deleted.
+        _portugal_drops_csv = Path("Data/output/budget/Portugal/portugal_manual_drops.csv")
+        _generic_drop_reason = (
+            "legal text, plurianual project table, or non-institutional support line rather than a clean agency appropriation"
+        )
+        if _portugal_drops_csv.exists():
+            try:
+                _drops_df = pd.read_csv(_portugal_drops_csv)
+                portugal_manual_drops = list(
+                    zip(_drops_df["year"].astype(int), _drops_df["canonical_name"], _drops_df["reason"])
+                )
+            except Exception:
+                portugal_manual_drops = []
+        else:
+            portugal_manual_drops = [
+                (1991, "JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal)", _generic_drop_reason),
+                (1993, "JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal)", _generic_drop_reason),
+                (1995, "JNICT — Junta Nacional de Investigação Científica e Tecnológica (Portugal)", _generic_drop_reason),
+                (2000, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)", _generic_drop_reason),
+                (2001, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)", _generic_drop_reason),
+                (2002, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)", _generic_drop_reason),
+                (2002, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)", _generic_drop_reason),
+                (2003, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)", _generic_drop_reason),
+                (2003, "LNEC — Laboratório Nacional de Engenharia Civil (Portugal)", _generic_drop_reason),
+                (2004, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)", _generic_drop_reason),
+                (2005, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)", _generic_drop_reason),
+                (2009, "ANI — Agência Nacional de Inovação (Portugal)", _generic_drop_reason),
+                (2014, "ANI — Agência Nacional de Inovação (Portugal)", _generic_drop_reason),
+                (2021, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)", _generic_drop_reason),
+                (2022, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)", _generic_drop_reason),
+                (2024, "ANI — Agência Nacional de Inovação (Portugal)", _generic_drop_reason),
+                (2024, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)", _generic_drop_reason),
+                (2025, "ANI — Agência Nacional de Inovação (Portugal)", _generic_drop_reason),
+                (2025, "FCT — Fundação para a Ciência e a Tecnologia (Portugal)", _generic_drop_reason),
+            ]
+        for drop_year, drop_name, drop_reason in portugal_manual_drops:
             drop_mask = canonical.eq(drop_name) & years.eq(drop_year)
             if not drop_mask.any():
                 continue
             notes = out.loc[drop_mask, "series_notes"].fillna("").astype(str)
             out.loc[drop_mask, "series_notes"] = notes.apply(
-                lambda s: f"{s}; dropped after Portugal source audit: original page is a legal text, plurianual project table, or non-institutional support line rather than a clean agency appropriation".strip("; ").strip()
+                lambda s: f"{s}; dropped after Portugal source audit: {drop_reason}".strip("; ").strip()
             )
             out.loc[
                 drop_mask,
